@@ -123,9 +123,19 @@ async function searchRecipes() {
     addAssistantMessage('Searching for recipes...');
 
     try {
-        // Search by ingredient
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`);
-        const data = await response.json();
+        // Search by ingredient - try direct first, then CORS proxy if needed
+        let response;
+        let data;
+
+        try {
+            response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`);
+            data = await response.json();
+        } catch (corsError) {
+            console.log('Direct fetch failed, trying CORS proxy...');
+            // Try with CORS proxy as fallback
+            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`)}`);
+            data = await response.json();
+        }
 
         if (data.meals && data.meals.length > 0) {
             const recipes = data.meals.slice(0, 6); // Show up to 6 recipes
@@ -154,8 +164,17 @@ async function searchRecipes() {
             addAssistantMessage(html, true);
         } else {
             // Try searching by name instead
-            const nameResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`);
-            const nameData = await nameResponse.json();
+            let nameResponse;
+            let nameData;
+
+            try {
+                nameResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`);
+                nameData = await nameResponse.json();
+            } catch (corsError) {
+                console.log('Direct name fetch failed, trying CORS proxy...');
+                nameResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)}`);
+                nameData = await nameResponse.json();
+            }
 
             const messages = document.getElementById('ra-messages');
             messages.removeChild(messages.lastChild);
@@ -194,8 +213,17 @@ async function showRecipeDetails(mealId) {
     addAssistantMessage('Loading recipe details...');
 
     try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
-        const data = await response.json();
+        let response;
+        let data;
+
+        try {
+            response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
+            data = await response.json();
+        } catch (corsError) {
+            console.log('Direct lookup failed, trying CORS proxy...');
+            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)}`);
+            data = await response.json();
+        }
 
         const messages = document.getElementById('ra-messages');
         messages.removeChild(messages.lastChild);
@@ -341,8 +369,17 @@ async function getRandomRecipe() {
     addAssistantMessage('Finding a random recipe for you...');
 
     try {
-        const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
-        const data = await response.json();
+        let response;
+        let data;
+
+        try {
+            response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+            data = await response.json();
+        } catch (corsError) {
+            console.log('Direct random fetch failed, trying CORS proxy...');
+            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.themealdb.com/api/json/v1/1/random.php')}`);
+            data = await response.json();
+        }
 
         const messages = document.getElementById('ra-messages');
         messages.removeChild(messages.lastChild);
@@ -376,8 +413,17 @@ async function searchByCategory(category) {
     addAssistantMessage('Searching...');
 
     try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${encodeURIComponent(category)}`);
-        const data = await response.json();
+        let response;
+        let data;
+
+        try {
+            response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${encodeURIComponent(category)}`);
+            data = await response.json();
+        } catch (corsError) {
+            console.log('Direct category fetch failed, trying CORS proxy...');
+            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)}`);
+            data = await response.json();
+        }
 
         const messages = document.getElementById('ra-messages');
         messages.removeChild(messages.lastChild);
