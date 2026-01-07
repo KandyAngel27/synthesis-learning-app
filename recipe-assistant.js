@@ -4,6 +4,8 @@
 // Only shows in Nutrition Hub
 // ============================================
 
+console.log('Recipe Assistant JS loaded successfully');
+
 // Store current recipe data for saving
 let currentRecipeData = null;
 
@@ -112,8 +114,10 @@ function addUserMessage(text) {
 
 // Search recipes using TheMealDB API
 async function searchRecipes() {
+    console.log('searchRecipes called');
     const input = document.getElementById('ra-input');
     const query = input.value.trim();
+    console.log('Query:', query);
 
     if (!query) return;
 
@@ -127,21 +131,31 @@ async function searchRecipes() {
         let response;
         let data;
 
+        console.log('Attempting direct API call...');
         try {
             response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`);
+            console.log('Direct response status:', response.status);
             data = await response.json();
+            console.log('Direct API data:', data);
         } catch (corsError) {
-            console.log('Direct fetch failed, trying CORS proxy...');
+            console.log('Direct fetch failed:', corsError);
+            console.log('Trying CORS proxy...');
             // Try with CORS proxy as fallback
             response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`)}`);
+            console.log('Proxy response status:', response.status);
             data = await response.json();
+            console.log('Proxy API data:', data);
         }
 
         if (data.meals && data.meals.length > 0) {
-            const recipes = data.meals.slice(0, 6); // Show up to 6 recipes
+            // Store all meals for "show more" functionality
+            window.lastSearchResults = data.meals;
+            window.currentResultsShown = 6;
+
+            const recipes = data.meals.slice(0, 6);
 
             let html = `<p>Found ${data.meals.length} recipes with "${query}":</p>`;
-            html += '<div class="ra-recipes">';
+            html += '<div class="ra-recipes" id="ra-results-grid">';
 
             for (const meal of recipes) {
                 html += `
@@ -154,7 +168,7 @@ async function searchRecipes() {
 
             html += '</div>';
             if (data.meals.length > 6) {
-                html += `<p class="ra-hint">Showing 6 of ${data.meals.length} results</p>`;
+                html += `<button class="ra-show-more" onclick="showMoreResults()">Show More (${data.meals.length - 6} remaining)</button>`;
             }
 
             // Remove "Searching..." message
@@ -311,6 +325,9 @@ function isRecipeAlreadySaved(recipeName) {
 
 // Save current recipe to Recipe Ideas
 function saveRecipeToMyRecipes() {
+    console.log('saveRecipeToMyRecipes called');
+    console.log('currentRecipeData:', currentRecipeData);
+
     if (!currentRecipeData) {
         alert('No recipe to save. Please view a recipe first.');
         return;
@@ -326,11 +343,20 @@ function saveRecipeToMyRecipes() {
         return;
     }
 
+    // Map TheMealDB categories to our categories
+    const categoryMap = {
+        'Beef': 'Dinner', 'Chicken': 'Dinner', 'Lamb': 'Dinner', 'Pork': 'Dinner',
+        'Seafood': 'Dinner', 'Pasta': 'Dinner', 'Vegetarian': 'Dinner', 'Vegan': 'Dinner',
+        'Breakfast': 'Breakfast', 'Dessert': 'Snack', 'Side': 'Snack', 'Starter': 'Snack',
+        'Miscellaneous': 'Dinner', 'Goat': 'Dinner'
+    };
+    const mappedCategory = categoryMap[currentRecipeData.category] || 'Dinner';
+
     // Create recipe object matching the Recipe Ideas format
     const newRecipe = {
         id: 'assistant-' + Date.now(),
         name: currentRecipeData.name,
-        category: currentRecipeData.category || 'Dinner',
+        category: mappedCategory,
         servings: 4,
         prepTime: '15 min',
         cookTime: '30 min',
@@ -340,14 +366,16 @@ function saveRecipeToMyRecipes() {
         fats: 0,
         ingredients: currentRecipeData.ingredients.join('\n'),
         instructions: currentRecipeData.instructions,
-        notes: `Cuisine: ${currentRecipeData.area}${currentRecipeData.youtube ? `\nVideo: ${currentRecipeData.youtube}` : ''}\n\n(Found via Recipe Assistant)`,
+        notes: `Cuisine: ${currentRecipeData.area} (${currentRecipeData.category})${currentRecipeData.youtube ? `\nVideo: ${currentRecipeData.youtube}` : ''}\n\n(Found via Recipe Assistant)`,
         isSuggested: true,
         fromAssistant: true,
         addedAt: new Date().toISOString()
     };
 
+    console.log('Saving recipe:', newRecipe);
     APP_DATA.user.recipeIdeas.push(newRecipe);
     saveProgress();
+    console.log('Recipe saved! Total recipeIdeas:', APP_DATA.user.recipeIdeas.length);
 
     // Award XP if gamification is available
     if (window.gamification) {
@@ -360,7 +388,12 @@ function saveRecipeToMyRecipes() {
         saveBtn.outerHTML = '<span class="ra-saved-badge">Saved to Recipe Ideas!</span>';
     }
 
-    addAssistantMessage(`"${currentRecipeData.name}" has been saved to Recipe Ideas! Scroll up in Nutrition Hub to see it.`);
+    // Refresh the nutrition view to show the new recipe
+    if (window.fitnessTracker && typeof window.fitnessTracker.renderNutrition === 'function') {
+        window.fitnessTracker.renderNutrition();
+    }
+
+    addAssistantMessage(`"${currentRecipeData.name}" saved! Close this chat and scroll up to see it in Recipe Ideas.`);
 }
 
 // Get random recipe suggestion
@@ -450,4 +483,48 @@ async function searchByCategory(category) {
         console.error('Category search error:', error);
         addAssistantMessage('Sorry, there was an error. Please try again.');
     }
+}
+
+// Show more results from the last search
+function showMoreResults() {
+    if (!window.lastSearchResults) return;
+
+    const allMeals = window.lastSearchResults;
+    const currentShown = window.currentResultsShown || 6;
+    const nextBatch = allMeals.slice(currentShown, currentShown + 6);
+
+    if (nextBatch.length === 0) return;
+
+    // Find the last message with results and add more cards
+    const messages = document.getElementById('ra-messages');
+    const lastMessage = messages.lastElementChild;
+    const grid = lastMessage.querySelector('.ra-recipes, #ra-results-grid');
+
+    if (grid) {
+        for (const meal of nextBatch) {
+            const card = document.createElement('div');
+            card.className = 'ra-recipe-card';
+            card.onclick = () => showRecipeDetails(meal.idMeal);
+            card.innerHTML = `
+                <img src="${meal.strMealThumb}/preview" alt="${meal.strMeal}">
+                <span>${meal.strMeal}</span>
+            `;
+            grid.appendChild(card);
+        }
+    }
+
+    window.currentResultsShown = currentShown + nextBatch.length;
+
+    // Update or remove the "Show More" button
+    const showMoreBtn = lastMessage.querySelector('.ra-show-more');
+    const remaining = allMeals.length - window.currentResultsShown;
+
+    if (remaining > 0 && showMoreBtn) {
+        showMoreBtn.textContent = `Show More (${remaining} remaining)`;
+    } else if (showMoreBtn) {
+        showMoreBtn.remove();
+    }
+
+    // Scroll to show new results
+    messages.scrollTop = messages.scrollHeight;
 }

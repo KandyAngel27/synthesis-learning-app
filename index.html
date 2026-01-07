@@ -504,15 +504,13 @@
         <div id="recipe-assistant" class="recipe-assistant hidden">
             <div class="ra-header">
                 <span class="ra-title">Recipe Assistant</span>
-                <div class="ra-header-actions">
-                    <button class="ra-minimize" onclick="toggleRecipeAssistant()" title="Minimize">−</button>
-                    <button class="ra-close" onclick="hideRecipeAssistant()" title="Close">×</button>
-                </div>
+                <button class="ra-close" onclick="toggleRecipeAssistant()" title="Close">×</button>
             </div>
             <div class="ra-messages" id="ra-messages">
                 <div class="ra-message assistant">
-                    <p>Hi! I'm your Recipe Assistant. Tell me what ingredients you have and I'll find recipes for you!</p>
-                    <p class="ra-hint">Try: "chicken" or "pasta" or "beef"</p>
+                    <p>Hi! I'm your Recipe Assistant. Search for recipes by ingredient!</p>
+                    <p class="ra-hint">Try: chicken, beef, pasta, rice, salmon, shrimp, lamb, pork</p>
+                    <p class="ra-hint" style="font-size: 0.75rem; opacity: 0.7;">(Uses TheMealDB - works best with common ingredients)</p>
                 </div>
             </div>
             <div class="ra-input-area">
