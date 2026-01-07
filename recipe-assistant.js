@@ -268,7 +268,13 @@ async function showRecipeDetails(mealId) {
 
                     <div class="ra-section">
                         <strong>Instructions:</strong>
-                        <p>${meal.strInstructions.replace(/\n/g, '<br>')}</p>
+                        <ol class="ra-instructions">
+                            ${meal.strInstructions
+                                .split(/\r?\n/)
+                                .filter(step => step.trim().length > 0)
+                                .map(step => `<li>${step.trim()}</li>`)
+                                .join('')}
+                        </ol>
                     </div>
 
                     <div class="ra-actions">

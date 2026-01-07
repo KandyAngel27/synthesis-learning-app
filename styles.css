@@ -8045,15 +8045,49 @@ body {
     margin: 0;
     padding-left: 1.25rem;
     font-size: 0.85rem;
+    list-style: disc;
 }
 
 .ra-section ul li {
     margin-bottom: 0.25rem;
+    position: static;
+    padding-left: 0;
+}
+
+.ra-section ul li::before {
+    display: none !important;
+    content: none !important;
 }
 
 .ra-section p {
     font-size: 0.85rem;
     line-height: 1.6;
+}
+
+/* Instructions numbered list */
+.ra-instructions {
+    margin: 0;
+    padding-left: 1.5rem;
+    font-size: 0.85rem;
+    list-style: decimal;
+    counter-reset: none !important;
+}
+
+.ra-instructions li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    position: static;
+    padding-left: 0.25rem;
+}
+
+.ra-instructions li::before {
+    display: none !important;
+    content: none !important;
+}
+
+.ra-instructions li::marker {
+    color: var(--color-primary-light);
+    font-weight: 600;
 }
 
 .ra-video-link {
