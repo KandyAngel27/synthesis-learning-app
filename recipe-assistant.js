@@ -112,7 +112,19 @@ function addUserMessage(text) {
     messages.scrollTop = messages.scrollHeight;
 }
 
-// Search recipes using TheMealDB API
+// Helper function to fetch with CORS proxy fallback
+async function fetchWithFallback(url) {
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (corsError) {
+        console.log('Direct fetch failed, trying CORS proxy...');
+        const proxyResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
+        return await proxyResponse.json();
+    }
+}
+
+// Search recipes using TheMealDB API - combines multiple search types for maximum results
 async function searchRecipes() {
     console.log('searchRecipes called');
     const input = document.getElementById('ra-input');
@@ -124,37 +136,47 @@ async function searchRecipes() {
     addUserMessage(query);
     input.value = '';
 
-    addAssistantMessage('Searching for recipes...');
+    addAssistantMessage('Searching all sources...');
 
     try {
-        // Search by ingredient - try direct first, then CORS proxy if needed
-        let response;
-        let data;
+        // Search all three ways simultaneously for maximum results
+        const [ingredientData, nameData, categoryData] = await Promise.all([
+            fetchWithFallback(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`),
+            fetchWithFallback(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`),
+            fetchWithFallback(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${encodeURIComponent(query)}`)
+        ]);
 
-        console.log('Attempting direct API call...');
-        try {
-            response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`);
-            console.log('Direct response status:', response.status);
-            data = await response.json();
-            console.log('Direct API data:', data);
-        } catch (corsError) {
-            console.log('Direct fetch failed:', corsError);
-            console.log('Trying CORS proxy...');
-            // Try with CORS proxy as fallback
-            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`)}`);
-            console.log('Proxy response status:', response.status);
-            data = await response.json();
-            console.log('Proxy API data:', data);
-        }
+        // Combine all results and remove duplicates by meal ID
+        const allMeals = [];
+        const seenIds = new Set();
 
-        if (data.meals && data.meals.length > 0) {
+        const addMeals = (meals) => {
+            if (meals) {
+                for (const meal of meals) {
+                    if (!seenIds.has(meal.idMeal)) {
+                        seenIds.add(meal.idMeal);
+                        allMeals.push(meal);
+                    }
+                }
+            }
+        };
+
+        addMeals(ingredientData.meals);
+        addMeals(nameData.meals);
+        addMeals(categoryData.meals);
+
+        // Remove "Searching..." message
+        const messages = document.getElementById('ra-messages');
+        messages.removeChild(messages.lastChild);
+
+        if (allMeals.length > 0) {
             // Store all meals for "show more" functionality
-            window.lastSearchResults = data.meals;
+            window.lastSearchResults = allMeals;
             window.currentResultsShown = 6;
 
-            const recipes = data.meals.slice(0, 6);
+            const recipes = allMeals.slice(0, 6);
 
-            let html = `<p>Found ${data.meals.length} recipes with "${query}":</p>`;
+            let html = `<p>Found ${allMeals.length} recipes for "${query}":</p>`;
             html += '<div class="ra-recipes" id="ra-results-grid">';
 
             for (const meal of recipes) {
@@ -167,52 +189,13 @@ async function searchRecipes() {
             }
 
             html += '</div>';
-            if (data.meals.length > 6) {
-                html += `<button class="ra-show-more" onclick="showMoreResults()">Show More (${data.meals.length - 6} remaining)</button>`;
+            if (allMeals.length > 6) {
+                html += `<button class="ra-show-more" onclick="showMoreResults()">Show More (${allMeals.length - 6} remaining)</button>`;
             }
-
-            // Remove "Searching..." message
-            const messages = document.getElementById('ra-messages');
-            messages.removeChild(messages.lastChild);
 
             addAssistantMessage(html, true);
         } else {
-            // Try searching by name instead
-            let nameResponse;
-            let nameData;
-
-            try {
-                nameResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`);
-                nameData = await nameResponse.json();
-            } catch (corsError) {
-                console.log('Direct name fetch failed, trying CORS proxy...');
-                nameResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)}`);
-                nameData = await nameResponse.json();
-            }
-
-            const messages = document.getElementById('ra-messages');
-            messages.removeChild(messages.lastChild);
-
-            if (nameData.meals && nameData.meals.length > 0) {
-                const recipes = nameData.meals.slice(0, 6);
-
-                let html = `<p>Found ${nameData.meals.length} recipes matching "${query}":</p>`;
-                html += '<div class="ra-recipes">';
-
-                for (const meal of recipes) {
-                    html += `
-                        <div class="ra-recipe-card" onclick="showRecipeDetails('${meal.idMeal}')">
-                            <img src="${meal.strMealThumb}/preview" alt="${meal.strMeal}">
-                            <span>${meal.strMeal}</span>
-                        </div>
-                    `;
-                }
-
-                html += '</div>';
-                addAssistantMessage(html, true);
-            } else {
-                addAssistantMessage(`No recipes found for "${query}". Try a different ingredient like "chicken", "beef", "pasta", or "rice".`);
-            }
+            addAssistantMessage(`No recipes found for "${query}". Try: chicken, beef, pasta, seafood, dessert, breakfast, vegetarian`);
         }
     } catch (error) {
         console.error('Recipe search error:', error);
