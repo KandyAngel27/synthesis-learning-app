@@ -7801,3 +7801,323 @@ body {
     color: var(--color-text-tertiary);
     font-style: italic;
 }
+
+/* ============================================
+   RECIPE ASSISTANT CHAT WIDGET
+   ============================================ */
+
+/* Floating Action Button */
+.recipe-fab {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.recipe-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(245, 158, 11, 0.5);
+}
+
+.recipe-fab.active {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.recipe-fab svg {
+    color: white;
+}
+
+/* Chat Window */
+.recipe-assistant {
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    max-height: 500px;
+    background: var(--color-bg-secondary);
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.recipe-assistant.hidden {
+    display: none;
+}
+
+/* Header */
+.ra-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    color: white;
+}
+
+.ra-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.ra-header-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ra-minimize,
+.ra-close {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.ra-minimize:hover,
+.ra-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Messages Area */
+.ra-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 350px;
+}
+
+.ra-message {
+    max-width: 90%;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.ra-message.assistant {
+    background: var(--color-bg-tertiary);
+    border-bottom-left-radius: 0.25rem;
+    align-self: flex-start;
+}
+
+.ra-message.user {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+    align-self: flex-end;
+}
+
+.ra-message p {
+    margin: 0 0 0.5rem 0;
+}
+
+.ra-message p:last-child {
+    margin-bottom: 0;
+}
+
+.ra-message .ra-hint {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+/* Recipe Cards Grid */
+.ra-recipes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.ra-recipe-card {
+    background: var(--color-bg-elevated);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ra-recipe-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ra-recipe-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.ra-recipe-card span {
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Recipe Detail */
+.ra-recipe-detail {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.ra-recipe-detail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.ra-recipe-detail h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    color: #f59e0b;
+}
+
+.ra-category {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.ra-section {
+    margin-bottom: 1rem;
+}
+
+.ra-section strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-light);
+}
+
+.ra-section ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.85rem;
+}
+
+.ra-section ul li {
+    margin-bottom: 0.25rem;
+}
+
+.ra-section p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.ra-video-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.ra-video-link:hover {
+    background: #dc2626;
+}
+
+/* Input Area */
+.ra-input-area {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--color-bg-tertiary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#ra-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+#ra-input:focus {
+    outline: none;
+    border-color: #f59e0b;
+}
+
+#ra-input::placeholder {
+    color: var(--color-text-tertiary);
+}
+
+.ra-send {
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ra-send:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .recipe-fab {
+        bottom: 80px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .recipe-assistant {
+        bottom: 140px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+        max-height: 60vh;
+    }
+
+    .ra-recipes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ra-recipe-card img {
+        height: 60px;
+    }
+}

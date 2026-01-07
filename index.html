@@ -500,6 +500,33 @@
             </button>
         </nav>
 
+        <!-- Recipe Assistant Chat Widget -->
+        <div id="recipe-assistant" class="recipe-assistant hidden">
+            <div class="ra-header">
+                <span class="ra-title">Recipe Assistant</span>
+                <div class="ra-header-actions">
+                    <button class="ra-minimize" onclick="toggleRecipeAssistant()" title="Minimize">−</button>
+                    <button class="ra-close" onclick="hideRecipeAssistant()" title="Close">×</button>
+                </div>
+            </div>
+            <div class="ra-messages" id="ra-messages">
+                <div class="ra-message assistant">
+                    <p>Hi! I'm your Recipe Assistant. Tell me what ingredients you have and I'll find recipes for you!</p>
+                    <p class="ra-hint">Try: "chicken" or "pasta" or "beef"</p>
+                </div>
+            </div>
+            <div class="ra-input-area">
+                <input type="text" id="ra-input" placeholder="Enter an ingredient..." onkeypress="if(event.key==='Enter')searchRecipes()">
+                <button class="ra-send" onclick="searchRecipes()">Search</button>
+            </div>
+        </div>
+        <button id="recipe-fab" class="recipe-fab" onclick="toggleRecipeAssistant()" title="Recipe Assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 11h18M3 11v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9M3 11V9a2 2 0 0 1 2-2h2l1-3h8l1 3h2a2 2 0 0 1 2 2v2"/>
+                <circle cx="12" cy="16" r="2"/>
+            </svg>
+        </button>
+
     </div>
 
     <!-- Scripts -->
@@ -512,6 +539,7 @@
     <script src="active-recall.js"></script>
     <script src="random-workout-generator.js?v=1736300001"></script>
     <script src="fitness-tracker.js?v=1736300010"></script>
+    <script src="recipe-assistant.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
