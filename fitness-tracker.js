@@ -5113,8 +5113,44 @@ class FitnessTracker {
         ];
     }
 
+    getCommonSupplements() {
+        return [
+            { name: 'Vitamin D3', dose: '5000', unit: 'IU', reason: 'Immune support, bone health' },
+            { name: 'Vitamin C', dose: '1000', unit: 'mg', reason: 'Immune support, antioxidant' },
+            { name: 'Vitamin B12', dose: '1000', unit: 'mcg', reason: 'Energy, nerve function' },
+            { name: 'Vitamin B Complex', dose: '1', unit: 'cap', reason: 'Energy, metabolism' },
+            { name: 'Multivitamin', dose: '1', unit: 'cap', reason: 'General health' },
+            { name: 'Omega-3 Fish Oil', dose: '1000', unit: 'mg', reason: 'Heart health, brain function' },
+            { name: 'Magnesium', dose: '400', unit: 'mg', reason: 'Muscle relaxation, sleep' },
+            { name: 'Magnesium Glycinate', dose: '400', unit: 'mg', reason: 'Sleep, muscle recovery' },
+            { name: 'Zinc', dose: '30', unit: 'mg', reason: 'Immune support, testosterone' },
+            { name: 'Iron', dose: '18', unit: 'mg', reason: 'Energy, blood health' },
+            { name: 'Calcium', dose: '500', unit: 'mg', reason: 'Bone health' },
+            { name: 'CoQ10', dose: '100', unit: 'mg', reason: 'Heart health, energy' },
+            { name: 'Probiotic', dose: '10', unit: 'billion CFU', reason: 'Gut health, digestion' },
+            { name: 'Ashwagandha', dose: '600', unit: 'mg', reason: 'Stress relief, testosterone' },
+            { name: 'Creatine', dose: '5', unit: 'g', reason: 'Muscle strength, power' },
+            { name: 'Protein Powder', dose: '25', unit: 'g', reason: 'Muscle recovery' },
+            { name: 'Collagen', dose: '10', unit: 'g', reason: 'Skin, joints, hair' },
+            { name: 'Turmeric/Curcumin', dose: '500', unit: 'mg', reason: 'Anti-inflammatory' },
+            { name: 'L-Theanine', dose: '200', unit: 'mg', reason: 'Focus, relaxation' },
+            { name: 'Melatonin', dose: '3', unit: 'mg', reason: 'Sleep support' },
+            { name: 'Biotin', dose: '5000', unit: 'mcg', reason: 'Hair, skin, nails' },
+            { name: 'Vitamin K2', dose: '100', unit: 'mcg', reason: 'Bone health, heart' },
+            { name: 'Alpha Lipoic Acid', dose: '300', unit: 'mg', reason: 'Antioxidant, blood sugar' },
+            { name: 'NAC', dose: '600', unit: 'mg', reason: 'Liver support, antioxidant' },
+            { name: 'Quercetin', dose: '500', unit: 'mg', reason: 'Immune, anti-inflammatory' },
+            { name: 'Elderberry', dose: '500', unit: 'mg', reason: 'Immune support' },
+            { name: 'Saw Palmetto', dose: '320', unit: 'mg', reason: 'Prostate health' },
+            { name: 'DHEA', dose: '25', unit: 'mg', reason: 'Hormone support' },
+            { name: 'Folic Acid', dose: '400', unit: 'mcg', reason: 'Cell health' },
+            { name: 'Potassium', dose: '99', unit: 'mg', reason: 'Electrolyte balance' }
+        ];
+    }
+
     showAddSupplement() {
         const container = document.getElementById('supplements-content');
+        const commonSupps = this.getCommonSupplements();
 
         const html = `
             <div class="add-supp-form">
@@ -5124,6 +5160,19 @@ class FitnessTracker {
                     </button>
                 </div>
                 <h3>Add Supplement</h3>
+
+                <div class="form-group">
+                    <label>Quick Add Common Supplements</label>
+                    <select id="common-supp-select" onchange="window.fitnessTracker.prefillSupplement()">
+                        <option value="">-- Select a common supplement --</option>
+                        ${commonSupps.map((s, i) => `<option value="${i}">${s.name}</option>`).join('')}
+                    </select>
+                </div>
+
+                <div class="form-divider">
+                    <span>or enter manually</span>
+                </div>
+
                 <div class="form-group">
                     <label>Name</label>
                     <input type="text" id="supp-name" placeholder="e.g., Vitamin D3">
@@ -5142,6 +5191,7 @@ class FitnessTracker {
                             <option>mcg</option>
                             <option>cap</option>
                             <option>ml</option>
+                            <option>billion CFU</option>
                         </select>
                     </div>
                 </div>
@@ -5167,6 +5217,28 @@ class FitnessTracker {
         `;
 
         container.innerHTML = html;
+    }
+
+    prefillSupplement() {
+        const select = document.getElementById('common-supp-select');
+        const index = select.value;
+        if (index === '') return;
+
+        const commonSupps = this.getCommonSupplements();
+        const supp = commonSupps[parseInt(index)];
+
+        document.getElementById('supp-name').value = supp.name;
+        document.getElementById('supp-dose').value = supp.dose;
+        document.getElementById('supp-reason').value = supp.reason;
+
+        // Set the unit dropdown
+        const unitSelect = document.getElementById('supp-unit');
+        for (let i = 0; i < unitSelect.options.length; i++) {
+            if (unitSelect.options[i].value === supp.unit) {
+                unitSelect.selectedIndex = i;
+                break;
+            }
+        }
     }
 
     saveSupplement() {

@@ -13121,6 +13121,1034 @@ const APP_DATA = {
                                     explanation: "Incentivizing reviews and buying reviews both violate Google's policies and can get your listing penalized or removed. The right approach: ask genuinely satisfied customers at the right moment (after positive interaction), make it easy with a direct link, and respond professionally to all reviews - including negative ones."
                                 }
                             ]
+                        },
+                        {
+                            id: 7,
+                            title: "SEO Analytics & Measurement",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "What Gets Measured Gets Improved",
+                                    content: "You've done the work - optimized your site, created content, built links. But how do you know it's working? How do you prove ROI?\n\nSEO without analytics is like driving with your eyes closed. You might be moving, but you have no idea if you're heading the right direction.\n\nThe good news: SEO is one of the most measurable marketing channels. Every click, every ranking change, every conversion can be tracked and analyzed.\n\nBut data without insight is just numbers. In this lesson, you'll learn to transform raw data into strategic decisions that drive real business results.\n\nThe difference between amateur and professional SEOs? Professionals let data guide every decision.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">SEO MEASUREMENT PYRAMID</text>
+
+                                    <!-- Pyramid structure -->
+                                    <polygon points="200,50 340,220 60,220" fill="none" stroke="#10b981" stroke-width="2"/>
+
+                                    <!-- Level 1 - Top -->
+                                    <rect x="160" y="70" width="80" height="35" rx="4" fill="rgba(16,185,129,0.3)" stroke="#10b981"/>
+                                    <text x="200" y="92" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">REVENUE</text>
+
+                                    <!-- Level 2 -->
+                                    <rect x="130" y="115" width="140" height="30" rx="4" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="200" y="135" text-anchor="middle" fill="#fff" font-size="8">Conversions & Leads</text>
+
+                                    <!-- Level 3 -->
+                                    <rect x="100" y="155" width="200" height="30" rx="4" fill="rgba(245,158,11,0.3)" stroke="#f59e0b"/>
+                                    <text x="200" y="175" text-anchor="middle" fill="#fff" font-size="8">Traffic & Engagement</text>
+
+                                    <!-- Level 4 - Base -->
+                                    <rect x="70" y="195" width="260" height="30" rx="4" fill="rgba(139,92,246,0.3)" stroke="#8b5cf6"/>
+                                    <text x="200" y="215" text-anchor="middle" fill="#fff" font-size="8">Rankings & Visibility</text>
+
+                                    <!-- Labels -->
+                                    <text x="200" y="250" text-anchor="middle" fill="#888" font-size="8">Each level supports the one above</text>
+                                    <text x="200" y="265" text-anchor="middle" fill="#10b981" font-size="9">Always measure what MATTERS to the business</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Google Search Console Essentials",
+                                    content: "Google Search Console (GSC) is your direct line to Google. It shows you exactly how Google sees your site.\n\n**Key GSC Reports:**\n\n**1. Performance Report**\nThe most important SEO report. Shows:\n• **Queries:** What keywords you rank for\n• **Clicks:** Traffic from each keyword\n• **Impressions:** How often you appeared\n• **CTR:** Click-through rate\n• **Position:** Average ranking\n\n**2. Coverage Report**\n• Which pages are indexed\n• Indexing errors to fix\n• Pages excluded and why\n\n**3. Core Web Vitals**\n• Page speed issues\n• Mobile usability problems\n• Which URLs need attention\n\n**4. Links Report**\n• Who links to you\n• Your most linked pages\n• Internal linking structure\n\n**Pro Tips:**\n• Compare date ranges to spot trends\n• Filter by page to analyze individual URLs\n• Export data for deeper analysis\n• Set up email alerts for critical issues\n\n**Limitation:** Only shows last 16 months of data, so export important data regularly!",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#4285f4" font-weight="bold" font-size="12">GOOGLE SEARCH CONSOLE</text>
+
+                                    <!-- Performance metrics -->
+                                    <rect x="20" y="40" width="175" height="120" rx="8" fill="rgba(66,133,244,0.15)" stroke="#4285f4"/>
+                                    <text x="107" y="58" text-anchor="middle" fill="#4285f4" font-weight="bold" font-size="9">📊 PERFORMANCE</text>
+                                    <text x="30" y="78" fill="#fff" font-size="7">Clicks: 15,234</text>
+                                    <text x="30" y="95" fill="#fff" font-size="7">Impressions: 452,891</text>
+                                    <text x="30" y="112" fill="#fff" font-size="7">CTR: 3.36%</text>
+                                    <text x="30" y="129" fill="#fff" font-size="7">Position: 18.2</text>
+                                    <text x="30" y="150" fill="#888" font-size="6">Filter by: Query, Page, Country, Device</text>
+
+                                    <!-- Coverage -->
+                                    <rect x="205" y="40" width="175" height="55" rx="8" fill="rgba(52,168,83,0.15)" stroke="#34a853"/>
+                                    <text x="292" y="58" text-anchor="middle" fill="#34a853" font-weight="bold" font-size="9">📋 COVERAGE</text>
+                                    <text x="215" y="78" fill="#fff" font-size="7">✓ Valid: 1,234 pages</text>
+                                    <text x="215" y="92" fill="#ef4444" font-size="7">⚠ Errors: 12 pages</text>
+
+                                    <!-- Core Web Vitals -->
+                                    <rect x="205" y="105" width="175" height="55" rx="8" fill="rgba(251,188,4,0.15)" stroke="#fbbc04"/>
+                                    <text x="292" y="123" text-anchor="middle" fill="#fbbc04" font-weight="bold" font-size="9">⚡ CORE WEB VITALS</text>
+                                    <text x="215" y="143" fill="#10b981" font-size="7">Good: 78%</text>
+                                    <text x="280" y="143" fill="#f59e0b" font-size="7">Needs Work: 22%</text>
+
+                                    <!-- Links -->
+                                    <rect x="20" y="170" width="175" height="55" rx="8" fill="rgba(234,67,53,0.15)" stroke="#ea4335"/>
+                                    <text x="107" y="188" text-anchor="middle" fill="#ea4335" font-weight="bold" font-size="9">🔗 LINKS</text>
+                                    <text x="30" y="208" fill="#fff" font-size="7">External links: 4,567</text>
+                                    <text x="30" y="222" fill="#fff" font-size="7">Top linking sites: 234</text>
+
+                                    <!-- Pro tips -->
+                                    <rect x="30" y="240" width="340" height="50" rx="6" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="200" y="258" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="8">PRO TIPS</text>
+                                    <text x="45" y="275" fill="#fff" font-size="6">• Compare date ranges to spot trends • Export data regularly (16 month limit)</text>
+                                    <text x="45" y="287" fill="#fff" font-size="6">• Set up email alerts • Filter by device for mobile insights</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Google Analytics for SEO",
+                                    content: "While GSC shows search visibility, Google Analytics shows what happens AFTER the click.\n\n**Key SEO Metrics in GA4:**\n\n**Traffic Analysis**\n• Organic sessions vs. other channels\n• Landing page performance\n• New vs. returning visitors\n• Geographic breakdown\n\n**Engagement Metrics**\n• Engaged sessions (spent 10+ seconds)\n• Engagement rate (better than bounce rate!)\n• Average engagement time\n• Events and conversions\n\n**Setting Up SEO Tracking:**\n\n1. **Create Segments**\n   • Organic traffic segment\n   • Compare to paid traffic\n\n2. **Set Up Conversions**\n   • Form submissions\n   • Phone calls\n   • Purchases\n   • Downloads\n\n3. **Build Custom Reports**\n   • Landing page + conversions\n   • Device + engagement\n   • Location + revenue\n\n**Connect GSC + GA4**\nLink your Search Console to GA4 to see queries alongside engagement data.\n\n**Attribution:**\nUnderstand the full customer journey. SEO often assists conversions that are credited to other channels.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="12">GOOGLE ANALYTICS 4 FOR SEO</text>
+
+                                    <!-- Traffic funnel -->
+                                    <rect x="30" y="45" width="160" height="100" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="110" y="65" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="9">TRAFFIC</text>
+                                    <text x="40" y="85" fill="#fff" font-size="7">Organic: 45,231</text>
+                                    <text x="40" y="100" fill="#888" font-size="7">Direct: 23,456</text>
+                                    <text x="40" y="115" fill="#888" font-size="7">Paid: 12,345</text>
+                                    <text x="40" y="130" fill="#888" font-size="7">Social: 8,901</text>
+
+                                    <!-- Engagement -->
+                                    <rect x="210" y="45" width="160" height="100" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="290" y="65" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">ENGAGEMENT</text>
+                                    <text x="220" y="85" fill="#fff" font-size="7">Engagement Rate: 62%</text>
+                                    <text x="220" y="100" fill="#fff" font-size="7">Avg Time: 2m 34s</text>
+                                    <text x="220" y="115" fill="#fff" font-size="7">Pages/Session: 3.2</text>
+                                    <text x="220" y="130" fill="#fff" font-size="7">Events: 8,901</text>
+
+                                    <!-- Conversions -->
+                                    <rect x="30" y="160" width="340" height="60" rx="8" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="200" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="10">CONVERSIONS FROM ORGANIC</text>
+
+                                    <rect x="50" y="195" width="80" height="20" rx="4" fill="rgba(16,185,129,0.3)"/>
+                                    <text x="90" y="209" text-anchor="middle" fill="#fff" font-size="7">Forms: 234</text>
+
+                                    <rect x="150" y="195" width="80" height="20" rx="4" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="190" y="209" text-anchor="middle" fill="#fff" font-size="7">Calls: 89</text>
+
+                                    <rect x="250" y="195" width="80" height="20" rx="4" fill="rgba(245,158,11,0.3)"/>
+                                    <text x="290" y="209" text-anchor="middle" fill="#fff" font-size="7">Sales: 45</text>
+
+                                    <!-- Connect box -->
+                                    <rect x="30" y="235" width="340" height="55" rx="8" fill="rgba(234,67,53,0.15)" stroke="#ea4335"/>
+                                    <text x="200" y="255" text-anchor="middle" fill="#ea4335" font-weight="bold" font-size="9">🔗 CONNECT GSC + GA4</text>
+                                    <text x="200" y="275" text-anchor="middle" fill="#fff" font-size="7">See search queries alongside engagement &amp; conversion data</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What's the key difference between Google Search Console and Google Analytics for SEO?",
+                                    options: [
+                                        { text: "GSC is free while GA4 costs money", correct: false },
+                                        { text: "GSC shows search visibility/rankings, GA4 shows post-click behavior and conversions", correct: true },
+                                        { text: "GSC only works for paid ads, GA4 is for organic traffic", correct: false },
+                                        { text: "GSC is more accurate but GA4 has more features", correct: false }
+                                    ],
+                                    explanation: "Google Search Console shows you how your site performs in search results BEFORE the click - queries, impressions, rankings, CTR. Google Analytics shows what happens AFTER the click - engagement, time on site, conversions, revenue. Together, they give you the complete picture of SEO performance."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "KPIs That Actually Matter",
+                                    content: "Not all metrics are created equal. Focus on KPIs that connect to business outcomes.\n\n**Vanity Metrics (Less Important):**\n• Total keywords ranked\n• Domain authority score\n• Total backlinks\n• Social shares\n\n**Meaningful KPIs (Focus Here):**\n\n**1. Organic Traffic Growth**\n• Month-over-month change\n• Year-over-year (for seasonality)\n• By landing page\n\n**2. Keyword Rankings for Money Terms**\n• Not all keywords matter equally\n• Track terms that drive conversions\n• Focus on page 1 positions\n\n**3. Organic Conversions**\n• Form fills\n• Calls\n• Purchases\n• Email signups\n\n**4. Revenue from Organic**\n• The ultimate metric\n• Compare to other channels\n• Calculate cost per acquisition\n\n**5. Click-Through Rate (CTR)**\n• Are your titles compelling?\n• Compare to industry benchmarks\n• Identify opportunities\n\n**6. Engagement Rate**\n• Is content meeting user intent?\n• Time on page for key content\n• Scroll depth\n\n**Pro Tip:** Create a simple dashboard with 5-7 key metrics. Review weekly. Less is more.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 320" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="320" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">SEO KPIs THAT MATTER</text>
+
+                                    <!-- Vanity metrics -->
+                                    <rect x="20" y="40" width="175" height="90" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
+                                    <text x="107" y="58" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="9">⚠️ VANITY METRICS</text>
+                                    <text x="30" y="78" fill="#888" font-size="7">❌ Total keywords ranked</text>
+                                    <text x="30" y="93" fill="#888" font-size="7">❌ Domain authority</text>
+                                    <text x="30" y="108" fill="#888" font-size="7">❌ Total backlinks</text>
+                                    <text x="30" y="123" fill="#888" font-size="7">❌ Social shares</text>
+
+                                    <!-- Meaningful metrics -->
+                                    <rect x="205" y="40" width="175" height="90" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="292" y="58" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">✓ MEANINGFUL KPIs</text>
+                                    <text x="215" y="78" fill="#fff" font-size="7">✓ Organic traffic growth</text>
+                                    <text x="215" y="93" fill="#fff" font-size="7">✓ Money keyword rankings</text>
+                                    <text x="215" y="108" fill="#fff" font-size="7">✓ Organic conversions</text>
+                                    <text x="215" y="123" fill="#fff" font-size="7">✓ Revenue from organic</text>
+
+                                    <!-- Priority pyramid -->
+                                    <rect x="30" y="145" width="340" height="160" rx="8" fill="rgba(99,102,241,0.1)" stroke="#6366f1"/>
+                                    <text x="200" y="165" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="10">KPI PRIORITY PYRAMID</text>
+
+                                    <!-- Revenue at top -->
+                                    <rect x="150" y="180" width="100" height="25" rx="4" fill="#10b981"/>
+                                    <text x="200" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">💰 Revenue</text>
+
+                                    <!-- Conversions -->
+                                    <rect x="120" y="210" width="160" height="25" rx="4" fill="#6366f1"/>
+                                    <text x="200" y="227" text-anchor="middle" fill="#fff" font-size="8">📊 Conversions</text>
+
+                                    <!-- Traffic -->
+                                    <rect x="90" y="240" width="220" height="25" rx="4" fill="#f59e0b"/>
+                                    <text x="200" y="257" text-anchor="middle" fill="#fff" font-size="8">📈 Traffic & Engagement</text>
+
+                                    <!-- Rankings -->
+                                    <rect x="60" y="270" width="280" height="25" rx="4" fill="#8b5cf6"/>
+                                    <text x="200" y="287" text-anchor="middle" fill="#fff" font-size="8">🎯 Rankings & Visibility</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "application",
+                                    title: "Build Your SEO Dashboard",
+                                    content: "**Step 1: Set Up Tracking (Today)**\n□ Verify Google Search Console access\n□ Set up GA4 with conversion tracking\n□ Link GSC and GA4 together\n□ Install a rank tracking tool\n\n**Step 2: Define Your KPIs**\n□ List 5-7 metrics that matter to YOUR business\n□ Set baseline measurements\n□ Define targets for each metric\n□ Determine reporting frequency\n\n**Step 3: Create Your Dashboard**\n□ Use Looker Studio (free) or similar\n□ Connect GSC + GA4 data\n□ Build visualizations for each KPI\n□ Set up automated email reports\n\n**Suggested Dashboard Sections:**\n1. Overall organic traffic trend\n2. Top 10 pages by traffic\n3. Keyword rankings for money terms\n4. Conversions from organic\n5. Page speed/Core Web Vitals\n6. Top referring domains\n\n**Review Schedule:**\n• Daily: Check for major issues\n• Weekly: Review key metrics\n• Monthly: Deep analysis + strategy adjustments\n• Quarterly: ROI calculation and planning",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="12">YOUR SEO DASHBOARD</text>
+
+                                    <!-- Dashboard mockup -->
+                                    <rect x="30" y="40" width="340" height="200" rx="8" fill="rgba(99,102,241,0.1)" stroke="#6366f1"/>
+
+                                    <!-- Traffic chart -->
+                                    <rect x="45" y="55" width="150" height="80" rx="4" fill="#1a1a2e" stroke="#333"/>
+                                    <text x="120" y="72" text-anchor="middle" fill="#10b981" font-size="8">Organic Traffic</text>
+                                    <polyline points="55,120 75,110 95,115 115,100 135,95 155,85 175,75" fill="none" stroke="#10b981" stroke-width="2"/>
+
+                                    <!-- Conversions -->
+                                    <rect x="205" y="55" width="150" height="80" rx="4" fill="#1a1a2e" stroke="#333"/>
+                                    <text x="280" y="72" text-anchor="middle" fill="#f59e0b" font-size="8">Conversions</text>
+                                    <text x="280" y="105" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">234</text>
+                                    <text x="280" y="125" fill="#10b981" font-size="8">↑ 18% from last month</text>
+
+                                    <!-- Rankings -->
+                                    <rect x="45" y="145" width="150" height="80" rx="4" fill="#1a1a2e" stroke="#333"/>
+                                    <text x="120" y="162" text-anchor="middle" fill="#6366f1" font-size="8">Top Keywords</text>
+                                    <text x="55" y="182" fill="#fff" font-size="6">#3 therapy houston</text>
+                                    <text x="55" y="195" fill="#fff" font-size="6">#5 anxiety therapist</text>
+                                    <text x="55" y="208" fill="#fff" font-size="6">#7 marriage counseling</text>
+
+                                    <!-- Core Web Vitals -->
+                                    <rect x="205" y="145" width="150" height="80" rx="4" fill="#1a1a2e" stroke="#333"/>
+                                    <text x="280" y="162" text-anchor="middle" fill="#ec4899" font-size="8">Core Web Vitals</text>
+                                    <circle cx="250" cy="195" r="18" fill="none" stroke="#10b981" stroke-width="3"/>
+                                    <text x="250" y="200" text-anchor="middle" fill="#10b981" font-size="9">85%</text>
+                                    <text x="310" y="195" fill="#fff" font-size="7">Good</text>
+
+                                    <!-- Review schedule -->
+                                    <text x="200" y="260" text-anchor="middle" fill="#888" font-size="8">Daily: Issues | Weekly: Metrics | Monthly: Strategy | Quarterly: ROI</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "Which metric is the MOST important KPI for measuring SEO success?",
+                                    options: [
+                                        { text: "Number of keywords ranked on page 1", correct: false },
+                                        { text: "Domain authority score", correct: false },
+                                        { text: "Revenue/conversions generated from organic traffic", correct: true },
+                                        { text: "Total number of backlinks acquired", correct: false }
+                                    ],
+                                    explanation: "Revenue and conversions from organic traffic are the ultimate measure of SEO success because they tie directly to business outcomes. Rankings, domain authority, and backlinks are leading indicators, but they only matter if they result in actual business results. Always connect SEO metrics to revenue."
+                                }
+                            ]
+                        },
+                        {
+                            id: 8,
+                            title: "Content Strategy for SEO",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "Content Is Still King - If It's Strategic",
+                                    content: "You've heard it a thousand times: 'Content is king.' But here's what they don't tell you: STRATEGIC content is king. Random blog posts? That's just noise.\n\nThe internet is drowning in content. Over 7 million blog posts are published every single day. Most will never be read. Most will never rank.\n\nSo how do you create content that actually drives traffic and conversions? By treating content as a strategic asset, not a to-do list item.\n\nThe best SEO content strategies don't start with 'What should we write about?' They start with 'What do our customers need to know to buy from us?'\n\nIn this lesson, you'll learn to create a content strategy that attracts qualified traffic and guides visitors toward conversion.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="12">THE CONTENT REALITY</text>
+
+                                    <!-- Daily blog posts stat -->
+                                    <rect x="50" y="45" width="300" height="50" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="200" y="70" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="14">7,000,000+</text>
+                                    <text x="200" y="88" text-anchor="middle" fill="#888" font-size="9">blog posts published EVERY DAY</text>
+
+                                    <!-- Bad vs Good comparison -->
+                                    <rect x="30" y="110" width="165" height="100" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
+                                    <text x="112" y="130" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="9">❌ RANDOM CONTENT</text>
+                                    <text x="40" y="150" fill="#888" font-size="7">• Write about anything</text>
+                                    <text x="40" y="165" fill="#888" font-size="7">• Hope someone finds it</text>
+                                    <text x="40" y="180" fill="#888" font-size="7">• No clear purpose</text>
+                                    <text x="40" y="195" fill="#ef4444" font-size="7">= Wasted effort</text>
+
+                                    <rect x="205" y="110" width="165" height="100" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="287" y="130" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">✓ STRATEGIC CONTENT</text>
+                                    <text x="215" y="150" fill="#fff" font-size="7">• Based on customer needs</text>
+                                    <text x="215" y="165" fill="#fff" font-size="7">• Targets specific keywords</text>
+                                    <text x="215" y="180" fill="#fff" font-size="7">• Guides toward conversion</text>
+                                    <text x="215" y="195" fill="#10b981" font-size="7">= Traffic + Revenue</text>
+
+                                    <!-- Key question -->
+                                    <rect x="50" y="225" width="300" height="45" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="200" y="248" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">THE RIGHT QUESTION:</text>
+                                    <text x="200" y="263" text-anchor="middle" fill="#fff" font-size="8">"What do customers need to know to buy from us?"</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "The Content Funnel Framework",
+                                    content: "Not all content serves the same purpose. Map content to the buyer's journey.\n\n**Top of Funnel (TOFU) - Awareness**\n• Audience: People with a problem, not yet aware of solutions\n• Content: Educational, problem-focused\n• Examples: 'What is anxiety?', 'Signs of burnout'\n• Goal: Build trust, capture email\n\n**Middle of Funnel (MOFU) - Consideration**\n• Audience: Researching solutions\n• Content: Comparison, how-to, options\n• Examples: 'Therapy vs medication', 'How to choose a therapist'\n• Goal: Position as best solution\n\n**Bottom of Funnel (BOFU) - Decision**\n• Audience: Ready to act\n• Content: Service pages, pricing, testimonials\n• Examples: 'Anxiety therapy in Houston', 'Book appointment'\n• Goal: Convert!\n\n**Content Distribution:**\n• 60% TOFU (builds traffic)\n• 30% MOFU (nurtures leads)\n• 10% BOFU (converts)\n\n**The Key Insight:**\nYour homepage and service pages are BOFU - but most search traffic comes from TOFU content. You need both.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 320" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="320" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="12">CONTENT FUNNEL FRAMEWORK</text>
+
+                                    <!-- Funnel shape -->
+                                    <polygon points="50,50 350,50 280,290 120,290" fill="none" stroke="#6366f1" stroke-width="2"/>
+
+                                    <!-- TOFU - 60% -->
+                                    <rect x="80" y="55" width="240" height="70" rx="4" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="200" y="80" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="11">TOFU - AWARENESS (60%)</text>
+                                    <text x="200" y="100" text-anchor="middle" fill="#fff" font-size="7">"What is anxiety?" "Signs of burnout"</text>
+                                    <text x="200" y="115" text-anchor="middle" fill="#888" font-size="6">Goal: Build trust, capture email</text>
+
+                                    <!-- MOFU - 30% -->
+                                    <rect x="110" y="135" width="180" height="70" rx="4" fill="rgba(245,158,11,0.3)"/>
+                                    <text x="200" y="160" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="11">MOFU - CONSIDERATION (30%)</text>
+                                    <text x="200" y="180" text-anchor="middle" fill="#fff" font-size="7">"Therapy vs medication" "How to choose"</text>
+                                    <text x="200" y="195" text-anchor="middle" fill="#888" font-size="6">Goal: Position as best solution</text>
+
+                                    <!-- BOFU - 10% -->
+                                    <rect x="135" y="215" width="130" height="70" rx="4" fill="rgba(16,185,129,0.3)"/>
+                                    <text x="200" y="240" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="11">BOFU - DECISION (10%)</text>
+                                    <text x="200" y="260" text-anchor="middle" fill="#fff" font-size="7">"Anxiety therapy Houston"</text>
+                                    <text x="200" y="275" text-anchor="middle" fill="#888" font-size="6">Goal: CONVERT!</text>
+
+                                    <!-- Labels on right -->
+                                    <text x="355" y="90" fill="#6366f1" font-size="8">Educational</text>
+                                    <text x="355" y="170" fill="#f59e0b" font-size="8">Comparison</text>
+                                    <text x="355" y="250" fill="#10b981" font-size="8">Action</text>
+
+                                    <!-- Key insight -->
+                                    <text x="200" y="305" text-anchor="middle" fill="#888" font-size="7">Most traffic = TOFU | Most conversions = BOFU | You need BOTH</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Topic Clusters & Pillar Pages",
+                                    content: "Modern SEO favors comprehensive topic coverage over individual keyword pages.\n\n**The Topic Cluster Model:**\n\n**1. Pillar Page (Comprehensive Guide)**\n• Broad topic overview\n• 3,000-5,000+ words\n• Links to all cluster content\n• Targets broad keyword\n• Example: 'Complete Guide to Anxiety Treatment'\n\n**2. Cluster Content (Supporting Pages)**\n• Deep dive into subtopics\n• 1,500-2,500 words each\n• Links back to pillar page\n• Targets specific long-tail keywords\n• Examples:\n  - 'CBT for Anxiety: How It Works'\n  - 'Anxiety Medication: Pros and Cons'\n  - 'Natural Remedies for Anxiety'\n  - 'Anxiety Therapy for Teens'\n\n**Why This Works:**\n• Shows Google you're an authority on the topic\n• Internal links boost all pages\n• Covers multiple search intents\n• Users can deep dive into areas they care about\n\n**Building a Cluster:**\n1. Identify your main service/topic\n2. List all related questions/subtopics\n3. Create pillar page first\n4. Build cluster content over time\n5. Interlink everything strategically",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 320" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="320" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="12">TOPIC CLUSTER MODEL</text>
+
+                                    <!-- Central pillar -->
+                                    <circle cx="200" cy="150" r="50" fill="rgba(236,72,153,0.3)" stroke="#ec4899" stroke-width="2"/>
+                                    <text x="200" y="145" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="9">PILLAR PAGE</text>
+                                    <text x="200" y="160" text-anchor="middle" fill="#fff" font-size="7">Complete Guide</text>
+                                    <text x="200" y="172" text-anchor="middle" fill="#fff" font-size="7">to Anxiety</text>
+
+                                    <!-- Cluster nodes -->
+                                    <circle cx="80" cy="80" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="80" y="78" text-anchor="middle" fill="#fff" font-size="6">CBT for</text>
+                                    <text x="80" y="88" text-anchor="middle" fill="#fff" font-size="6">Anxiety</text>
+                                    <line x1="110" y1="105" x2="160" y2="115" stroke="#6366f1" stroke-width="2"/>
+
+                                    <circle cx="320" cy="80" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="320" y="78" text-anchor="middle" fill="#fff" font-size="6">Anxiety</text>
+                                    <text x="320" y="88" text-anchor="middle" fill="#fff" font-size="6">Medication</text>
+                                    <line x1="290" y1="105" x2="240" y2="115" stroke="#6366f1" stroke-width="2"/>
+
+                                    <circle cx="60" cy="180" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="60" y="178" text-anchor="middle" fill="#fff" font-size="6">Natural</text>
+                                    <text x="60" y="188" text-anchor="middle" fill="#fff" font-size="6">Remedies</text>
+                                    <line x1="95" y1="170" x2="150" y2="155" stroke="#6366f1" stroke-width="2"/>
+
+                                    <circle cx="340" cy="180" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="340" y="178" text-anchor="middle" fill="#fff" font-size="6">Teen</text>
+                                    <text x="340" y="188" text-anchor="middle" fill="#fff" font-size="6">Anxiety</text>
+                                    <line x1="305" y1="170" x2="250" y2="155" stroke="#6366f1" stroke-width="2"/>
+
+                                    <circle cx="120" cy="250" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="120" y="248" text-anchor="middle" fill="#fff" font-size="6">Panic</text>
+                                    <text x="120" y="258" text-anchor="middle" fill="#fff" font-size="6">Attacks</text>
+                                    <line x1="145" y1="225" x2="175" y2="195" stroke="#6366f1" stroke-width="2"/>
+
+                                    <circle cx="280" cy="250" r="35" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="280" y="248" text-anchor="middle" fill="#fff" font-size="6">Work</text>
+                                    <text x="280" y="258" text-anchor="middle" fill="#fff" font-size="6">Anxiety</text>
+                                    <line x1="255" y1="225" x2="225" y2="195" stroke="#6366f1" stroke-width="2"/>
+
+                                    <!-- Legend -->
+                                    <rect x="100" y="295" width="200" height="20" rx="4" fill="rgba(236,72,153,0.15)" stroke="#ec4899"/>
+                                    <text x="200" y="309" text-anchor="middle" fill="#ec4899" font-size="7">All cluster pages link to &amp; from pillar page</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "example",
+                                    title: "Content Calendar Best Practices",
+                                    content: "Consistency beats intensity. A strategic content calendar keeps you on track.\n\n**How Often to Publish:**\n• Minimum: 1-2 quality pieces per month\n• Ideal: 1 piece per week\n• Maximum: Don't sacrifice quality for quantity!\n\n**Content Mix:**\n• 60% Blog posts (TOFU/MOFU)\n• 20% Updating old content\n• 10% Service/product pages (BOFU)\n• 10% Link-worthy assets (guides, tools, research)\n\n**Calendar Elements:**\n• Publish date\n• Target keyword(s)\n• Funnel stage\n• Content type\n• Word count target\n• Author/owner\n• Status (planned, writing, editing, published)\n\n**Quarterly Planning:**\n1. Identify 1-2 pillar topics to build\n2. Map cluster content for each\n3. Schedule based on seasonality/events\n4. Leave room for reactive content\n\n**The Update Strategy:**\n• Review top 20 posts quarterly\n• Update stats, links, screenshots\n• Add new sections if needed\n• Re-optimize for current keyword data\n\n**Updating old content often delivers faster ROI than creating new content!**",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="12">CONTENT CALENDAR</text>
+
+                                    <!-- Content mix -->
+                                    <rect x="30" y="40" width="340" height="80" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="200" y="58" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="9">CONTENT MIX</text>
+
+                                    <rect x="45" y="70" width="70" height="40" rx="4" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="80" y="88" text-anchor="middle" fill="#fff" font-size="8">Blog</text>
+                                    <text x="80" y="102" text-anchor="middle" fill="#6366f1" font-size="10" font-weight="bold">60%</text>
+
+                                    <rect x="125" y="70" width="70" height="40" rx="4" fill="rgba(16,185,129,0.3)"/>
+                                    <text x="160" y="88" text-anchor="middle" fill="#fff" font-size="8">Updates</text>
+                                    <text x="160" y="102" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">20%</text>
+
+                                    <rect x="205" y="70" width="70" height="40" rx="4" fill="rgba(236,72,153,0.3)"/>
+                                    <text x="240" y="88" text-anchor="middle" fill="#fff" font-size="8">Service</text>
+                                    <text x="240" y="102" text-anchor="middle" fill="#ec4899" font-size="10" font-weight="bold">10%</text>
+
+                                    <rect x="285" y="70" width="70" height="40" rx="4" fill="rgba(139,92,246,0.3)"/>
+                                    <text x="320" y="88" text-anchor="middle" fill="#fff" font-size="8">Assets</text>
+                                    <text x="320" y="102" text-anchor="middle" fill="#8b5cf6" font-size="10" font-weight="bold">10%</text>
+
+                                    <!-- Calendar mockup -->
+                                    <rect x="30" y="135" width="340" height="90" rx="8" fill="rgba(99,102,241,0.1)" stroke="#6366f1"/>
+                                    <text x="45" y="155" fill="#6366f1" font-weight="bold" font-size="8">JANUARY</text>
+
+                                    <rect x="45" y="165" width="75" height="20" rx="3" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="50" y="179" fill="#fff" font-size="6">W1: Blog Post</text>
+
+                                    <rect x="125" y="165" width="75" height="20" rx="3" fill="rgba(16,185,129,0.3)"/>
+                                    <text x="130" y="179" fill="#fff" font-size="6">W2: Update Top10</text>
+
+                                    <rect x="205" y="165" width="75" height="20" rx="3" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="210" y="179" fill="#fff" font-size="6">W3: Blog Post</text>
+
+                                    <rect x="285" y="165" width="75" height="20" rx="3" fill="rgba(139,92,246,0.3)"/>
+                                    <text x="290" y="179" fill="#fff" font-size="6">W4: Guide</text>
+
+                                    <text x="200" y="215" text-anchor="middle" fill="#888" font-size="7">Consistency beats intensity - 1 quality piece/week ideal</text>
+
+                                    <!-- Pro tip -->
+                                    <rect x="50" y="240" width="300" height="30" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+                                    <text x="200" y="260" text-anchor="middle" fill="#10b981" font-size="8">💡 Updating old content often delivers FASTER ROI than new content!</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What is a 'topic cluster' in content strategy?",
+                                    options: [
+                                        { text: "A group of unrelated blog posts published at the same time", correct: false },
+                                        { text: "A pillar page with comprehensive content linked to supporting cluster pages on subtopics", correct: true },
+                                        { text: "A collection of social media posts about the same topic", correct: false },
+                                        { text: "Multiple pages targeting the exact same keyword for more rankings", correct: false }
+                                    ],
+                                    explanation: "A topic cluster consists of a comprehensive pillar page (broad overview, 3,000+ words) that links to and from multiple cluster pages (deep dives into subtopics). This model signals to Google that you're an authority on the topic, boosts internal linking, and covers multiple search intents comprehensively."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Build Your Content Strategy",
+                                    content: "**Week 1: Content Audit**\n□ List all existing content\n□ Identify top performers (traffic + conversions)\n□ Find update opportunities\n□ Spot content gaps\n\n**Week 2: Keyword Research**\n□ List main services/topics\n□ Research keywords for each (TOFU/MOFU/BOFU)\n□ Prioritize by opportunity\n□ Group into clusters\n\n**Week 3: Plan Pillar Content**\n□ Choose 2-3 pillar topics for the year\n□ Outline comprehensive pillar pages\n□ Map cluster content for each\n□ Identify internal linking opportunities\n\n**Week 4: Create Calendar**\n□ Set publishing frequency\n□ Schedule content for next quarter\n□ Assign owners and deadlines\n□ Plan update schedule for top content\n\n**Content Creation Checklist:**\n□ Target keyword in title, H1, first paragraph\n□ Answer the searcher's question\n□ Include original insights/data\n□ Add internal links to related content\n□ Include compelling visuals\n□ Add clear CTA\n□ Optimize meta title and description",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">CONTENT STRATEGY ROADMAP</text>
+
+                                    <!-- 4 weeks -->
+                                    <rect x="30" y="45" width="80" height="80" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="70" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">WEEK 1</text>
+                                    <text x="70" y="85" text-anchor="middle" fill="#fff" font-size="7">Content</text>
+                                    <text x="70" y="98" text-anchor="middle" fill="#fff" font-size="7">Audit</text>
+                                    <text x="70" y="115" text-anchor="middle" fill="#888" font-size="6">What do we have?</text>
+
+                                    <text x="120" y="85" fill="#6366f1" font-size="14">→</text>
+
+                                    <rect x="135" y="45" width="80" height="80" rx="8" fill="rgba(245,158,11,0.2)" stroke="#f59e0b"/>
+                                    <text x="175" y="65" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="9">WEEK 2</text>
+                                    <text x="175" y="85" text-anchor="middle" fill="#fff" font-size="7">Keyword</text>
+                                    <text x="175" y="98" text-anchor="middle" fill="#fff" font-size="7">Research</text>
+                                    <text x="175" y="115" text-anchor="middle" fill="#888" font-size="6">What should we target?</text>
+
+                                    <text x="225" y="85" fill="#f59e0b" font-size="14">→</text>
+
+                                    <rect x="240" y="45" width="80" height="80" rx="8" fill="rgba(236,72,153,0.2)" stroke="#ec4899"/>
+                                    <text x="280" y="65" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="9">WEEK 3</text>
+                                    <text x="280" y="85" text-anchor="middle" fill="#fff" font-size="7">Plan</text>
+                                    <text x="280" y="98" text-anchor="middle" fill="#fff" font-size="7">Pillars</text>
+                                    <text x="280" y="115" text-anchor="middle" fill="#888" font-size="6">What's our structure?</text>
+
+                                    <text x="330" y="85" fill="#ec4899" font-size="14">→</text>
+
+                                    <rect x="345" y="45" width="35" height="80" rx="8" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+                                    <text x="362" y="65" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="7">W4</text>
+                                    <text x="362" y="85" text-anchor="middle" fill="#fff" font-size="6">Cal-</text>
+                                    <text x="362" y="95" text-anchor="middle" fill="#fff" font-size="6">endar</text>
+
+                                    <!-- Content checklist -->
+                                    <rect x="30" y="140" width="340" height="125" rx="8" fill="rgba(99,102,241,0.1)" stroke="#6366f1"/>
+                                    <text x="200" y="160" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">CONTENT CREATION CHECKLIST</text>
+
+                                    <text x="45" y="180" fill="#fff" font-size="7">□ Target keyword in title, H1, first paragraph</text>
+                                    <text x="45" y="195" fill="#fff" font-size="7">□ Answer the searcher's question completely</text>
+                                    <text x="45" y="210" fill="#fff" font-size="7">□ Include original insights/data</text>
+                                    <text x="45" y="225" fill="#fff" font-size="7">□ Add internal links to related content</text>
+                                    <text x="45" y="240" fill="#fff" font-size="7">□ Include visuals + clear CTA</text>
+                                    <text x="45" y="255" fill="#fff" font-size="7">□ Optimize meta title and description</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What's the recommended content mix for a sustainable SEO strategy?",
+                                    options: [
+                                        { text: "100% new blog posts to maximize content output", correct: false },
+                                        { text: "60% blog posts, 20% content updates, 10% service pages, 10% link-worthy assets", correct: true },
+                                        { text: "50% service pages, 50% blog posts", correct: false },
+                                        { text: "Focus only on BOFU content since that converts", correct: false }
+                                    ],
+                                    explanation: "A balanced content mix ensures sustainable growth: 60% blog posts drive traffic, 20% content updates maintain and improve existing rankings (often faster ROI!), 10% service/product pages convert visitors, and 10% link-worthy assets attract backlinks. This balance addresses all funnel stages and growth activities."
+                                }
+                            ]
+                        },
+                        {
+                            id: 9,
+                            title: "AI & The Future of SEO",
+                            duration: 7,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "SEO Is Changing - Here's How to Win",
+                                    content: "AI is transforming search. ChatGPT, Google's AI Overviews, AI-generated content - the landscape is shifting faster than ever.\n\nSome predict SEO is dead. They're wrong. But SEO IS evolving.\n\nThe winners will be those who understand what's changing and what stays the same.\n\n**What's Changing:**\n• AI answers appearing at top of results\n• Zero-click searches increasing\n• Content creation becoming easier (for everyone)\n• Search becoming more conversational\n\n**What Stays the Same:**\n• People still search for information\n• Quality content still wins\n• Trust signals still matter\n• User experience is still critical\n\nThe future of SEO belongs to those who provide genuine value that AI can't replicate. Let's explore how to stay ahead.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="12">THE SEO EVOLUTION</text>
+
+                                    <!-- AI disruption -->
+                                    <rect x="50" y="40" width="300" height="45" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="200" y="60" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="10">🤖 AI IS TRANSFORMING SEARCH</text>
+                                    <text x="200" y="78" text-anchor="middle" fill="#888" font-size="8">ChatGPT • AI Overviews • Voice Search • SGE</text>
+
+                                    <!-- What's changing vs same -->
+                                    <rect x="30" y="100" width="165" height="120" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="112" y="120" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="9">⚡ WHAT'S CHANGING</text>
+                                    <text x="40" y="140" fill="#fff" font-size="7">• AI answers at top</text>
+                                    <text x="40" y="155" fill="#fff" font-size="7">• More zero-click searches</text>
+                                    <text x="40" y="170" fill="#fff" font-size="7">• Easier content creation</text>
+                                    <text x="40" y="185" fill="#fff" font-size="7">• Conversational queries</text>
+                                    <text x="40" y="200" fill="#fff" font-size="7">• Entity-based ranking</text>
+
+                                    <rect x="205" y="100" width="165" height="120" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="287" y="120" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">✓ WHAT STAYS THE SAME</text>
+                                    <text x="215" y="140" fill="#fff" font-size="7">• People still search</text>
+                                    <text x="215" y="155" fill="#fff" font-size="7">• Quality content wins</text>
+                                    <text x="215" y="170" fill="#fff" font-size="7">• Trust signals matter</text>
+                                    <text x="215" y="185" fill="#fff" font-size="7">• User experience is key</text>
+                                    <text x="215" y="200" fill="#fff" font-size="7">• Expertise is valued</text>
+
+                                    <!-- Bottom insight -->
+                                    <rect x="50" y="235" width="300" height="35" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="200" y="255" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">🎯 Winners provide value AI can't replicate</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "AI Overviews & Zero-Click Search",
+                                    content: "Google's AI Overviews (formerly SGE) show AI-generated answers at the top of search results. This changes the game.\n\n**The Impact:**\n• Some queries fully answered without clicks\n• Top organic results pushed further down\n• Users may get answers without visiting your site\n• But AI still cites sources - opportunity exists\n\n**How to Adapt:**\n\n**1. Get Cited by AI Overviews**\n• Provide clear, authoritative answers\n• Use structured data and clear formatting\n• Build topical authority\n• Focus on E-E-A-T signals\n\n**2. Target Complex Queries**\n• AI handles simple questions\n• Complex, nuanced topics need human depth\n• Opinion pieces, analysis, expert takes\n• Personal experience content\n\n**3. Own the Brand Queries**\n• Build brand awareness\n• People who know you search for you\n• Brand searches bypass AI answers\n\n**4. Focus on Conversion, Not Just Traffic**\n• If AI sends less traffic, make traffic count\n• Improve conversion rates\n• Build email lists from visitors\n• Create loyal audiences\n\n**The Shift:** From chasing traffic to building audiences and relationships.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#4285f4" font-weight="bold" font-size="12">AI OVERVIEWS & ADAPTING</text>
+
+                                    <!-- AI Overview mockup -->
+                                    <rect x="30" y="40" width="160" height="120" rx="8" fill="#fff"/>
+                                    <rect x="35" y="45" width="150" height="15" fill="#f3e8ff"/>
+                                    <text x="40" y="55" fill="#8b5cf6" font-size="7">🤖 AI Overview</text>
+                                    <rect x="40" y="65" width="140" height="8" fill="#e8e8e8"/>
+                                    <rect x="40" y="78" width="130" height="8" fill="#e8e8e8"/>
+                                    <rect x="40" y="91" width="140" height="8" fill="#e8e8e8"/>
+                                    <rect x="40" y="104" width="100" height="8" fill="#e8e8e8"/>
+                                    <text x="45" y="125" fill="#4285f4" font-size="6">Sources: site1.com, site2.com</text>
+                                    <rect x="40" y="135" width="140" height="20" fill="#f8f8f8"/>
+                                    <text x="45" y="148" fill="#666" font-size="6">Organic Result 1</text>
+
+                                    <!-- How to adapt -->
+                                    <rect x="205" y="40" width="175" height="120" rx="8" fill="rgba(66,133,244,0.15)" stroke="#4285f4"/>
+                                    <text x="292" y="60" text-anchor="middle" fill="#4285f4" font-weight="bold" font-size="9">HOW TO ADAPT</text>
+                                    <text x="215" y="80" fill="#fff" font-size="7">1. Get cited in AI Overviews</text>
+                                    <text x="215" y="95" fill="#fff" font-size="7">2. Target complex queries</text>
+                                    <text x="215" y="110" fill="#fff" font-size="7">3. Build brand awareness</text>
+                                    <text x="215" y="125" fill="#fff" font-size="7">4. Focus on conversion</text>
+                                    <text x="215" y="140" fill="#fff" font-size="7">5. Create unique insights</text>
+
+                                    <!-- Content types -->
+                                    <rect x="30" y="175" width="340" height="55" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="200" y="195" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">CONTENT AI CAN'T REPLICATE</text>
+                                    <text x="45" y="215" fill="#fff" font-size="7">✓ Original research  ✓ Personal experience  ✓ Expert analysis</text>
+
+                                    <!-- Key shift -->
+                                    <rect x="50" y="245" width="300" height="45" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="200" y="265" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="9">THE SHIFT</text>
+                                    <text x="200" y="282" text-anchor="middle" fill="#fff" font-size="8">From chasing traffic → Building audiences &amp; relationships</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "E-E-A-T: Experience, Expertise, Authority, Trust",
+                                    content: "Google's quality guidelines emphasize E-E-A-T now more than ever. AI makes content easy - expertise makes it valuable.\n\n**E-E-A-T Breakdown:**\n\n**Experience (New!)**\n• First-hand experience with the topic\n• Personal stories and case studies\n• Real photos, not stock images\n• 'I tried this and here's what happened'\n\n**Expertise**\n• Demonstrated knowledge in the field\n• Credentials where relevant\n• Deep, comprehensive coverage\n• Accurate, up-to-date information\n\n**Authoritativeness**\n• Recognition from others\n• Backlinks from respected sources\n• Mentions and citations\n• Industry involvement\n\n**Trustworthiness**\n• Accurate information\n• Transparent about who you are\n• Secure website (HTTPS)\n• Contact information visible\n• Clear editorial standards\n\n**For YMYL Topics (Your Money, Your Life):**\nHealth, finance, legal, and similar topics require EXTRA E-E-A-T signals. Google is especially cautious about content that could harm users.\n\n**How to Build E-E-A-T:**\n• Author bios with credentials\n• Link to professional profiles\n• Get quoted/cited by others\n• Show real client results\n• Be transparent about methodology",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">E-E-A-T FRAMEWORK</text>
+
+                                    <!-- Four pillars -->
+                                    <rect x="25" y="45" width="85" height="100" rx="8" fill="rgba(236,72,153,0.2)" stroke="#ec4899"/>
+                                    <text x="67" y="65" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="10">E</text>
+                                    <text x="67" y="80" text-anchor="middle" fill="#ec4899" font-size="7">Experience</text>
+                                    <text x="67" y="100" text-anchor="middle" fill="#fff" font-size="6">First-hand</text>
+                                    <text x="67" y="112" text-anchor="middle" fill="#fff" font-size="6">knowledge</text>
+                                    <text x="67" y="124" text-anchor="middle" fill="#fff" font-size="6">&amp; stories</text>
+                                    <text x="67" y="140" text-anchor="middle" fill="#888" font-size="5">NEW!</text>
+
+                                    <rect x="117" y="45" width="85" height="100" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="159" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="10">E</text>
+                                    <text x="159" y="80" text-anchor="middle" fill="#6366f1" font-size="7">Expertise</text>
+                                    <text x="159" y="100" text-anchor="middle" fill="#fff" font-size="6">Deep</text>
+                                    <text x="159" y="112" text-anchor="middle" fill="#fff" font-size="6">knowledge</text>
+                                    <text x="159" y="124" text-anchor="middle" fill="#fff" font-size="6">&amp; credentials</text>
+
+                                    <rect x="209" y="45" width="85" height="100" rx="8" fill="rgba(245,158,11,0.2)" stroke="#f59e0b"/>
+                                    <text x="251" y="65" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="10">A</text>
+                                    <text x="251" y="80" text-anchor="middle" fill="#f59e0b" font-size="7">Authority</text>
+                                    <text x="251" y="100" text-anchor="middle" fill="#fff" font-size="6">Recognition</text>
+                                    <text x="251" y="112" text-anchor="middle" fill="#fff" font-size="6">from others</text>
+                                    <text x="251" y="124" text-anchor="middle" fill="#fff" font-size="6">&amp; citations</text>
+
+                                    <rect x="301" y="45" width="75" height="100" rx="8" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+                                    <text x="338" y="65" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="10">T</text>
+                                    <text x="338" y="80" text-anchor="middle" fill="#10b981" font-size="7">Trust</text>
+                                    <text x="338" y="100" text-anchor="middle" fill="#fff" font-size="6">Accurate</text>
+                                    <text x="338" y="112" text-anchor="middle" fill="#fff" font-size="6">&amp; transparent</text>
+
+                                    <!-- YMYL Warning -->
+                                    <rect x="30" y="160" width="340" height="45" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
+                                    <text x="200" y="180" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="9">⚠️ YMYL TOPICS (Health, Finance, Legal)</text>
+                                    <text x="200" y="197" text-anchor="middle" fill="#fff" font-size="7">Require EXTRA E-E-A-T signals - Google is especially cautious</text>
+
+                                    <!-- How to build -->
+                                    <rect x="30" y="220" width="340" height="70" rx="8" fill="rgba(99,102,241,0.1)" stroke="#6366f1"/>
+                                    <text x="200" y="240" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">HOW TO BUILD E-E-A-T</text>
+                                    <text x="45" y="258" fill="#fff" font-size="6">✓ Author bios with credentials    ✓ Get cited by others    ✓ Show real results</text>
+                                    <text x="45" y="273" fill="#fff" font-size="6">✓ Link to professional profiles    ✓ Be transparent about methodology</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "Why is 'Experience' (the first E) a new addition to E-E-A-T?",
+                                    options: [
+                                        { text: "Because Google wants more seasoned SEO professionals", correct: false },
+                                        { text: "AI can generate expert-sounding content, but can't replicate genuine first-hand experience", correct: true },
+                                        { text: "To make ranking more difficult for new websites", correct: false },
+                                        { text: "It was always part of E-A-T but wasn't emphasized", correct: false }
+                                    ],
+                                    explanation: "With AI able to generate expert-sounding content on any topic, Google added 'Experience' to differentiate content from people who have actually done/used/experienced something vs. those just writing about it. First-hand stories, personal case studies, and real photos are things AI cannot authentically create."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Using AI as an SEO Tool",
+                                    content: "AI isn't just changing search - it's a powerful tool FOR SEO when used strategically.\n\n**AI for SEO Research:**\n• Generate content ideas and angles\n• Analyze competitor content\n• Identify content gaps\n• Cluster keywords by intent\n\n**AI for Content Creation:**\n• Draft outlines and structures\n• Overcome writer's block\n• Generate variations and examples\n• Summarize research\n\n**AI for Optimization:**\n• Suggest meta title variations\n• Identify missing subtopics\n• Check content against search intent\n• Generate FAQ sections\n\n**What AI CANNOT Replace:**\n• Original research and data\n• Personal experience stories\n• Expert opinions and analysis\n• Unique perspectives and voice\n• Relationship building\n• Strategic decision making\n\n**The Right Approach:**\nUse AI as a 'first draft' tool and research assistant. Then add:\n• Your unique insights\n• Real examples from your work\n• Expert perspective\n• Your brand voice\n\n**Warning:** Google can likely detect fully AI-generated content. The goal is AI-assisted, human-refined content.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="12">AI AS YOUR SEO ASSISTANT</text>
+
+                                    <!-- AI Good For -->
+                                    <rect x="25" y="40" width="170" height="115" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="110" y="60" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">✓ AI IS GOOD FOR</text>
+                                    <text x="35" y="80" fill="#fff" font-size="7">• Content ideas &amp; angles</text>
+                                    <text x="35" y="95" fill="#fff" font-size="7">• First draft outlines</text>
+                                    <text x="35" y="110" fill="#fff" font-size="7">• Keyword clustering</text>
+                                    <text x="35" y="125" fill="#fff" font-size="7">• Meta title variations</text>
+                                    <text x="35" y="140" fill="#fff" font-size="7">• Competitor analysis</text>
+
+                                    <!-- AI Cannot Replace -->
+                                    <rect x="205" y="40" width="170" height="115" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
+                                    <text x="290" y="60" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="9">✗ AI CANNOT REPLACE</text>
+                                    <text x="215" y="80" fill="#fff" font-size="7">• Original research/data</text>
+                                    <text x="215" y="95" fill="#fff" font-size="7">• Personal experience</text>
+                                    <text x="215" y="110" fill="#fff" font-size="7">• Expert analysis</text>
+                                    <text x="215" y="125" fill="#fff" font-size="7">• Unique perspectives</text>
+                                    <text x="215" y="140" fill="#fff" font-size="7">• Strategic decisions</text>
+
+                                    <!-- Workflow -->
+                                    <rect x="30" y="170" width="340" height="80" rx="8" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="200" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">THE RIGHT WORKFLOW</text>
+
+                                    <rect x="50" y="205" width="65" height="35" rx="4" fill="rgba(139,92,246,0.3)"/>
+                                    <text x="82" y="222" text-anchor="middle" fill="#fff" font-size="7">AI Draft</text>
+                                    <text x="82" y="235" text-anchor="middle" fill="#888" font-size="6">Research</text>
+
+                                    <text x="125" y="225" fill="#6366f1" font-size="14">→</text>
+
+                                    <rect x="140" y="205" width="65" height="35" rx="4" fill="rgba(99,102,241,0.3)"/>
+                                    <text x="172" y="222" text-anchor="middle" fill="#fff" font-size="7">Add Your</text>
+                                    <text x="172" y="235" text-anchor="middle" fill="#888" font-size="6">Expertise</text>
+
+                                    <text x="215" y="225" fill="#6366f1" font-size="14">→</text>
+
+                                    <rect x="230" y="205" width="65" height="35" rx="4" fill="rgba(16,185,129,0.3)"/>
+                                    <text x="262" y="222" text-anchor="middle" fill="#fff" font-size="7">Human</text>
+                                    <text x="262" y="235" text-anchor="middle" fill="#888" font-size="6">Refine</text>
+
+                                    <text x="305" y="225" fill="#10b981" font-size="14">→</text>
+
+                                    <rect x="320" y="205" width="45" height="35" rx="4" fill="#10b981"/>
+                                    <text x="342" y="227" text-anchor="middle" fill="#fff" font-size="7">Publish</text>
+
+                                    <!-- Warning -->
+                                    <rect x="50" y="260" width="300" height="30" rx="6" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="200" y="280" text-anchor="middle" fill="#f59e0b" font-size="8">⚠️ Goal: AI-assisted, human-refined content</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "application",
+                                    title: "Future-Proof Your SEO",
+                                    content: "**Immediate Actions:**\n\n□ **Audit for E-E-A-T**\n  - Add author bios with credentials\n  - Include 'About' and 'Contact' pages\n  - Show real team photos\n  - Add credentials and certifications\n\n□ **Differentiate Your Content**\n  - Add original research/data\n  - Include personal case studies\n  - Share first-hand experience\n  - Develop a unique voice/perspective\n\n□ **Build Your Brand**\n  - Increase brand searches\n  - Get mentioned/cited elsewhere\n  - Build email list\n  - Create loyal audience\n\n**Strategic Shifts:**\n\n1. **From traffic to relationships**\n   - Focus on email capture\n   - Build community\n   - Encourage return visits\n\n2. **From answers to insights**\n   - Don't just answer questions\n   - Provide analysis and opinion\n   - Share what AI cannot\n\n3. **From keywords to topics**\n   - Become THE authority on your topics\n   - Build comprehensive topic clusters\n   - Cover every angle deeply\n\n**Remember:** The future rewards authenticity, expertise, and genuine value. These are your competitive advantages against AI.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">FUTURE-PROOF YOUR SEO</text>
+
+                                    <!-- Three strategic shifts -->
+                                    <rect x="25" y="45" width="110" height="85" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="80" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="8">SHIFT #1</text>
+                                    <text x="80" y="82" text-anchor="middle" fill="#fff" font-size="7">Traffic →</text>
+                                    <text x="80" y="95" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Relationships</text>
+                                    <text x="80" y="115" text-anchor="middle" fill="#888" font-size="6">Email, community</text>
+                                    <text x="80" y="127" text-anchor="middle" fill="#888" font-size="6">loyal audience</text>
+
+                                    <rect x="145" y="45" width="110" height="85" rx="8" fill="rgba(245,158,11,0.2)" stroke="#f59e0b"/>
+                                    <text x="200" y="65" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="8">SHIFT #2</text>
+                                    <text x="200" y="82" text-anchor="middle" fill="#fff" font-size="7">Answers →</text>
+                                    <text x="200" y="95" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Insights</text>
+                                    <text x="200" y="115" text-anchor="middle" fill="#888" font-size="6">Analysis, opinion</text>
+                                    <text x="200" y="127" text-anchor="middle" fill="#888" font-size="6">what AI can't do</text>
+
+                                    <rect x="265" y="45" width="110" height="85" rx="8" fill="rgba(236,72,153,0.2)" stroke="#ec4899"/>
+                                    <text x="320" y="65" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="8">SHIFT #3</text>
+                                    <text x="320" y="82" text-anchor="middle" fill="#fff" font-size="7">Keywords →</text>
+                                    <text x="320" y="95" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Topics</text>
+                                    <text x="320" y="115" text-anchor="middle" fill="#888" font-size="6">Be THE authority</text>
+                                    <text x="320" y="127" text-anchor="middle" fill="#888" font-size="6">comprehensive</text>
+
+                                    <!-- Action checklist -->
+                                    <rect x="30" y="145" width="340" height="85" rx="8" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
+                                    <text x="200" y="165" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">IMMEDIATE ACTIONS</text>
+                                    <text x="45" y="185" fill="#fff" font-size="7">□ Add author bios with credentials</text>
+                                    <text x="45" y="200" fill="#fff" font-size="7">□ Include original research/personal experience</text>
+                                    <text x="45" y="215" fill="#fff" font-size="7">□ Build email list &amp; community</text>
+
+                                    <!-- Bottom insight -->
+                                    <rect x="50" y="245" width="300" height="28" rx="6" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="200" y="264" text-anchor="middle" fill="#8b5cf6" font-size="8">🏆 Authenticity + Expertise + Value = Your Competitive Advantage</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What's the best strategy for SEO in the age of AI Overviews?",
+                                    options: [
+                                        { text: "Stop doing SEO since AI will answer all questions", correct: false },
+                                        { text: "Focus only on simple keyword targeting", correct: false },
+                                        { text: "Create AI-generated content at scale to compete with AI", correct: false },
+                                        { text: "Build E-E-A-T, create unique insights, and focus on building audiences/relationships", correct: true }
+                                    ],
+                                    explanation: "In the AI era, winning SEO strategies focus on what AI cannot replicate: genuine expertise, first-hand experience, original insights, and trusted relationships. Building E-E-A-T signals, creating unique value, and focusing on audience building (not just traffic) positions you for long-term success regardless of how search evolves."
+                                }
+                            ]
+                        },
+                        {
+                            id: 10,
+                            title: "SEO Action Plan & Next Steps",
+                            duration: 6,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "Putting It All Together",
+                                    content: "You've learned a lot. Keyword research, on-page optimization, technical SEO, link building, local SEO, analytics, content strategy, and the future of search.\n\nBut knowledge without action is worthless.\n\nSEO success doesn't come from knowing everything - it comes from consistently executing the fundamentals. The businesses that win at SEO aren't the smartest. They're the most consistent.\n\nIn this final lesson, we'll create your personal SEO action plan. No more theory - just a clear path forward.\n\nBy the end, you'll have:\n• A prioritized 90-day action plan\n• Key metrics to track\n• A sustainable weekly routine\n• Resources for continued learning\n\nLet's turn your SEO knowledge into SEO results.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">FROM KNOWLEDGE TO RESULTS</text>
+
+                                    <!-- Journey arrow -->
+                                    <rect x="50" y="50" width="80" height="50" rx="8" fill="rgba(99,102,241,0.3)" stroke="#6366f1"/>
+                                    <text x="90" y="75" text-anchor="middle" fill="#fff" font-size="9">LEARN</text>
+                                    <text x="90" y="90" text-anchor="middle" fill="#888" font-size="7">Knowledge</text>
+
+                                    <text x="145" y="75" fill="#6366f1" font-size="16">→</text>
+
+                                    <rect x="160" y="50" width="80" height="50" rx="8" fill="rgba(245,158,11,0.3)" stroke="#f59e0b"/>
+                                    <text x="200" y="75" text-anchor="middle" fill="#fff" font-size="9">PLAN</text>
+                                    <text x="200" y="90" text-anchor="middle" fill="#888" font-size="7">Strategy</text>
+
+                                    <text x="255" y="75" fill="#f59e0b" font-size="16">→</text>
+
+                                    <rect x="270" y="50" width="80" height="50" rx="8" fill="rgba(16,185,129,0.3)" stroke="#10b981"/>
+                                    <text x="310" y="75" text-anchor="middle" fill="#fff" font-size="9">EXECUTE</text>
+                                    <text x="310" y="90" text-anchor="middle" fill="#888" font-size="7">Action</text>
+
+                                    <!-- You are here marker -->
+                                    <text x="310" y="115" text-anchor="middle" fill="#10b981" font-size="8">← YOU ARE HERE</text>
+
+                                    <!-- What you'll get -->
+                                    <rect x="50" y="140" width="300" height="100" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="200" y="160" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="10">BY THE END OF THIS LESSON</text>
+                                    <text x="70" y="185" fill="#fff" font-size="8">✓ 90-day prioritized action plan</text>
+                                    <text x="70" y="205" fill="#fff" font-size="8">✓ Key metrics to track weekly</text>
+                                    <text x="70" y="225" fill="#fff" font-size="8">✓ Sustainable SEO routine</text>
+
+                                    <!-- Bottom message -->
+                                    <rect x="50" y="250" width="300" height="25" rx="6" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="200" y="267" text-anchor="middle" fill="#6366f1" font-size="8">Consistency beats complexity. Let's build your system.</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Your 90-Day SEO Action Plan",
+                                    content: "Here's your prioritized roadmap. Focus on high-impact activities first.\n\n**Days 1-30: Foundation**\n\n□ Set up Google Search Console\n□ Set up Google Analytics 4\n□ Run technical SEO audit (fix critical issues)\n□ Claim/optimize Google Business Profile\n□ Perform keyword research for main services\n□ Optimize homepage and 3 top pages\n□ Set baseline metrics\n\n**Days 31-60: Content & Authority**\n\n□ Create content calendar\n□ Publish 4 strategic blog posts\n□ Build 1 comprehensive pillar page\n□ Optimize 5 existing pages\n□ Start review collection campaign\n□ Begin link building outreach\n□ Fix remaining technical issues\n\n**Days 61-90: Scale & Refine**\n\n□ Publish 4 more strategic posts\n□ Build cluster content for pillar\n□ Analyze what's working (double down)\n□ Identify what's not (adjust)\n□ Continue link building\n□ Plan next quarter's priorities\n\n**Remember:** This is a marathon, not a sprint. Consistent weekly effort beats intense sporadic work.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 320" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="320" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">90-DAY SEO ACTION PLAN</text>
+
+                                    <!-- Phase 1 -->
+                                    <rect x="25" y="40" width="350" height="80" rx="8" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="45" y="60" fill="#6366f1" font-weight="bold" font-size="10">DAYS 1-30: FOUNDATION</text>
+                                    <text x="45" y="78" fill="#fff" font-size="7">□ Setup GSC + GA4    □ Technical audit    □ Claim GBP</text>
+                                    <text x="45" y="93" fill="#fff" font-size="7">□ Keyword research   □ Optimize top pages  □ Set baselines</text>
+                                    <rect x="310" y="55" width="55" height="25" rx="4" fill="#6366f1"/>
+                                    <text x="337" y="72" text-anchor="middle" fill="#fff" font-size="8">Week 1-4</text>
+
+                                    <!-- Phase 2 -->
+                                    <rect x="25" y="130" width="350" height="80" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="45" y="150" fill="#f59e0b" font-weight="bold" font-size="10">DAYS 31-60: CONTENT & AUTHORITY</text>
+                                    <text x="45" y="168" fill="#fff" font-size="7">□ Content calendar    □ 4 blog posts    □ 1 pillar page</text>
+                                    <text x="45" y="183" fill="#fff" font-size="7">□ Optimize 5 pages    □ Review campaign  □ Link building</text>
+                                    <rect x="310" y="145" width="55" height="25" rx="4" fill="#f59e0b"/>
+                                    <text x="337" y="162" text-anchor="middle" fill="#fff" font-size="8">Week 5-8</text>
+
+                                    <!-- Phase 3 -->
+                                    <rect x="25" y="220" width="350" height="80" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="45" y="240" fill="#10b981" font-weight="bold" font-size="10">DAYS 61-90: SCALE & REFINE</text>
+                                    <text x="45" y="258" fill="#fff" font-size="7">□ 4 more posts    □ Cluster content    □ Analyze results</text>
+                                    <text x="45" y="273" fill="#fff" font-size="7">□ Double down on wins    □ Continue links    □ Plan Q2</text>
+                                    <rect x="310" y="235" width="55" height="25" rx="4" fill="#10b981"/>
+                                    <text x="337" y="252" text-anchor="middle" fill="#fff" font-size="8">Week 9-12</text>
+
+                                    <!-- Bottom message -->
+                                    <text x="200" y="310" text-anchor="middle" fill="#888" font-size="8">Marathon not sprint: Consistent weekly effort beats intense sporadic work</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "The Weekly SEO Routine",
+                                    content: "Sustainable SEO requires a consistent weekly routine. Here's a practical schedule:\n\n**Monday (30 min): Review & Plan**\n• Check Search Console for issues\n• Review traffic vs. last week\n• Plan content for the week\n• Prioritize tasks\n\n**Tuesday-Wednesday (2-3 hrs): Content**\n• Write or edit content\n• Optimize existing pages\n• Add internal links\n• Create/update visuals\n\n**Thursday (1 hr): Technical & Outreach**\n• Fix any technical issues\n• Send link building outreach\n• Respond to comments/questions\n• Update Google Business Profile\n\n**Friday (30 min): Document & Measure**\n• Record key metrics\n• Note what you published\n• Document wins and learnings\n• Prep for next week\n\n**Monthly:**\n• Deep analytics review\n• Competitor analysis\n• Content audit (what to update)\n• Strategy adjustments\n\n**Total Time:** 4-6 hours per week\n\nThis is manageable even for busy professionals. The key is consistency, not volume.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="12">WEEKLY SEO ROUTINE</text>
+
+                                    <!-- Days -->
+                                    <rect x="25" y="45" width="70" height="70" rx="6" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="60" y="62" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="8">MON</text>
+                                    <text x="60" y="78" text-anchor="middle" fill="#fff" font-size="6">Review</text>
+                                    <text x="60" y="90" text-anchor="middle" fill="#fff" font-size="6">&amp; Plan</text>
+                                    <text x="60" y="108" text-anchor="middle" fill="#888" font-size="7">30 min</text>
+
+                                    <rect x="102" y="45" width="70" height="70" rx="6" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+                                    <text x="137" y="62" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="8">TUE-WED</text>
+                                    <text x="137" y="78" text-anchor="middle" fill="#fff" font-size="6">Content</text>
+                                    <text x="137" y="90" text-anchor="middle" fill="#fff" font-size="6">Creation</text>
+                                    <text x="137" y="108" text-anchor="middle" fill="#888" font-size="7">2-3 hrs</text>
+
+                                    <rect x="179" y="45" width="70" height="70" rx="6" fill="rgba(245,158,11,0.2)" stroke="#f59e0b"/>
+                                    <text x="214" y="62" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="8">THU</text>
+                                    <text x="214" y="78" text-anchor="middle" fill="#fff" font-size="6">Technical</text>
+                                    <text x="214" y="90" text-anchor="middle" fill="#fff" font-size="6">&amp; Outreach</text>
+                                    <text x="214" y="108" text-anchor="middle" fill="#888" font-size="7">1 hr</text>
+
+                                    <rect x="256" y="45" width="70" height="70" rx="6" fill="rgba(236,72,153,0.2)" stroke="#ec4899"/>
+                                    <text x="291" y="62" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="8">FRI</text>
+                                    <text x="291" y="78" text-anchor="middle" fill="#fff" font-size="6">Measure</text>
+                                    <text x="291" y="90" text-anchor="middle" fill="#fff" font-size="6">&amp; Document</text>
+                                    <text x="291" y="108" text-anchor="middle" fill="#888" font-size="7">30 min</text>
+
+                                    <rect x="333" y="45" width="45" height="70" rx="6" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="355" y="65" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="7">MONTHLY</text>
+                                    <text x="355" y="82" text-anchor="middle" fill="#fff" font-size="5">Deep</text>
+                                    <text x="355" y="92" text-anchor="middle" fill="#fff" font-size="5">Review</text>
+                                    <text x="355" y="108" text-anchor="middle" fill="#888" font-size="6">2 hrs</text>
+
+                                    <!-- Detailed breakdown -->
+                                    <rect x="25" y="130" width="175" height="130" rx="8" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
+                                    <text x="112" y="148" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="8">CONTENT DAYS (TUE-WED)</text>
+                                    <text x="35" y="168" fill="#fff" font-size="6">• Write or edit content</text>
+                                    <text x="35" y="183" fill="#fff" font-size="6">• Optimize existing pages</text>
+                                    <text x="35" y="198" fill="#fff" font-size="6">• Add internal links</text>
+                                    <text x="35" y="213" fill="#fff" font-size="6">• Create/update visuals</text>
+                                    <text x="35" y="228" fill="#fff" font-size="6">• Update meta descriptions</text>
+                                    <text x="35" y="248" fill="#10b981" font-size="7">This is where results come from!</text>
+
+                                    <rect x="210" y="130" width="165" height="130" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
+                                    <text x="292" y="148" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="8">OUTREACH DAY (THU)</text>
+                                    <text x="220" y="168" fill="#fff" font-size="6">• Fix technical issues</text>
+                                    <text x="220" y="183" fill="#fff" font-size="6">• Send link building emails</text>
+                                    <text x="220" y="198" fill="#fff" font-size="6">• Respond to reviews</text>
+                                    <text x="220" y="213" fill="#fff" font-size="6">• Update GBP posts</text>
+                                    <text x="220" y="228" fill="#fff" font-size="6">• Check citations</text>
+
+                                    <!-- Total time -->
+                                    <rect x="100" y="270" width="200" height="25" rx="6" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+                                    <text x="200" y="287" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">TOTAL: 4-6 hours/week = Sustainable SEO</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quote",
+                                    content: "The best time to start SEO was a year ago. The second best time is today.",
+                                    author: "SEO Wisdom"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Your Personal Action Plan",
+                                    content: "**Complete This Week:**\n\n□ Choose your top 3 priority pages to optimize\n1. _______________________\n2. _______________________\n3. _______________________\n\n□ Identify your top 5 target keywords\n1. _______________________\n2. _______________________\n3. _______________________\n4. _______________________\n5. _______________________\n\n□ Set up or verify access to:\n   □ Google Search Console\n   □ Google Analytics 4\n   □ Google Business Profile\n\n□ Block time in your calendar:\n   □ Monday AM: Review (30 min)\n   □ Tue/Wed: Content work (2-3 hrs)\n   □ Thursday: Technical/Outreach (1 hr)\n   □ Friday PM: Document (30 min)\n\n□ Record your baseline metrics:\n   • Current organic traffic: _____\n   • Current keyword rankings: _____\n   • Current conversions from organic: _____\n\n**Your 90-Day Goal:**\n_________________________________________________\n\n**Remember:** Start small. Be consistent. Iterate based on data.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="22" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="12">YOUR PERSONAL ACTION PLAN</text>
+
+                                    <!-- Priorities -->
+                                    <rect x="25" y="45" width="170" height="95" rx="8" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="110" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">TOP 3 PAGES</text>
+                                    <text x="35" y="85" fill="#fff" font-size="7">1. ___________________</text>
+                                    <text x="35" y="105" fill="#fff" font-size="7">2. ___________________</text>
+                                    <text x="35" y="125" fill="#fff" font-size="7">3. ___________________</text>
+
+                                    <rect x="205" y="45" width="170" height="95" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
+                                    <text x="290" y="65" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="9">TOP 5 KEYWORDS</text>
+                                    <text x="215" y="82" fill="#fff" font-size="6">1. ________________</text>
+                                    <text x="215" y="97" fill="#fff" font-size="6">2. ________________</text>
+                                    <text x="215" y="112" fill="#fff" font-size="6">3. ________________</text>
+                                    <text x="215" y="127" fill="#fff" font-size="6">4. ________________</text>
+
+                                    <!-- Setup -->
+                                    <rect x="25" y="150" width="170" height="75" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="110" y="170" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">TOOLS SETUP</text>
+                                    <text x="35" y="190" fill="#fff" font-size="7">□ Google Search Console</text>
+                                    <text x="35" y="207" fill="#fff" font-size="7">□ Google Analytics 4</text>
+
+                                    <!-- Baseline -->
+                                    <rect x="205" y="150" width="170" height="75" rx="8" fill="rgba(236,72,153,0.15)" stroke="#ec4899"/>
+                                    <text x="290" y="170" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="9">BASELINE METRICS</text>
+                                    <text x="215" y="190" fill="#fff" font-size="7">Traffic: _____</text>
+                                    <text x="215" y="207" fill="#fff" font-size="7">Conversions: _____</text>
+
+                                    <!-- 90-day goal -->
+                                    <rect x="50" y="235" width="300" height="35" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+                                    <text x="200" y="255" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="9">90-DAY GOAL: _____________________________</text>
+                                </svg>`
+                                    }
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What's the most important factor for long-term SEO success?",
+                                    options: [
+                                        { text: "Finding the perfect keywords", correct: false },
+                                        { text: "Having the biggest budget", correct: false },
+                                        { text: "Consistent weekly effort over months and years", correct: true },
+                                        { text: "Using the most expensive SEO tools", correct: false }
+                                    ],
+                                    explanation: "SEO is a long game. The businesses that win aren't necessarily the smartest or the ones with the biggest budgets - they're the ones who show up consistently week after week, month after month. A sustainable routine of 4-6 hours per week, maintained over time, will outperform sporadic intensive efforts every time."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Congratulations! Key Takeaways",
+                                    content: "You've completed the SEO Mastery course! Here's what you've learned:\n\n**Core Concepts:**\n• How search engines work (crawling, indexing, ranking)\n• Keyword research and search intent\n• On-page optimization best practices\n• Technical SEO essentials\n• Link building strategies\n• Local SEO fundamentals\n• Analytics and measurement\n• Content strategy for SEO\n• AI and the future of search\n\n**Key Principles:**\n• Quality over quantity - always\n• User experience drives rankings\n• E-E-A-T signals matter more than ever\n• Consistency beats intensity\n• Data should guide decisions\n• Build audiences, not just traffic\n\n**What Sets Winners Apart:**\n• They execute consistently\n• They focus on fundamentals\n• They adapt to changes\n• They think long-term\n• They never stop learning\n\n**Your Next Steps:**\n1. Complete your action plan this week\n2. Stick to your weekly routine\n3. Review progress monthly\n4. Keep learning and adapting\n\nNow go make your website visible to the world! 🚀",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 400 280" class="lesson-visual">
+                                    <rect x="0" y="0" width="400" height="280" fill="#1a1a2e"/>
+                                    <text x="200" y="25" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="14">🎉 CONGRATULATIONS!</text>
+                                    <text x="200" y="45" text-anchor="middle" fill="#888" font-size="9">You've completed SEO Mastery</text>
+
+                                    <!-- Achievement badge -->
+                                    <circle cx="200" cy="110" r="50" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                    <text x="200" y="105" text-anchor="middle" fill="#10b981" font-size="30">🏆</text>
+                                    <text x="200" y="130" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">SEO MASTER</text>
+
+                                    <!-- Key principles -->
+                                    <rect x="30" y="175" width="165" height="90" rx="8" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
+                                    <text x="112" y="195" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="9">KEY PRINCIPLES</text>
+                                    <text x="40" y="215" fill="#fff" font-size="6">✓ Quality over quantity</text>
+                                    <text x="40" y="230" fill="#fff" font-size="6">✓ User experience first</text>
+                                    <text x="40" y="245" fill="#fff" font-size="6">✓ Consistency beats intensity</text>
+                                    <text x="40" y="260" fill="#fff" font-size="6">✓ Data-driven decisions</text>
+
+                                    <rect x="205" y="175" width="165" height="90" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
+                                    <text x="287" y="195" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="9">YOUR MISSION</text>
+                                    <text x="215" y="215" fill="#fff" font-size="6">1. Complete action plan</text>
+                                    <text x="215" y="230" fill="#fff" font-size="6">2. Execute weekly routine</text>
+                                    <text x="215" y="245" fill="#fff" font-size="6">3. Review monthly</text>
+                                    <text x="215" y="260" fill="#fff" font-size="6">4. Never stop learning</text>
+                                </svg>`
+                                    }
+                                }
+                            ]
                         }
                     ]
                 },

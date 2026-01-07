@@ -5595,6 +5595,44 @@ body {
     font-style: italic;
 }
 
+.form-divider {
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-lg) 0;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-divider span {
+    padding: 0 var(--spacing-md);
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#common-supp-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#common-supp-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
 .supp-actions {
     display: flex;
     gap: var(--spacing-sm);
