@@ -112,6 +112,7 @@ class FitnessTracker {
     // ============================================
 
     renderWorkoutHub() {
+        window.scrollTo(0, 0);
         const container = document.getElementById('workout-content');
         if (!container) return;
 
@@ -3840,6 +3841,7 @@ class FitnessTracker {
     // ============================================
 
     renderBodyMetrics() {
+        window.scrollTo(0, 0);
         const container = document.getElementById('body-metrics-content');
         if (!container) return;
 
@@ -4030,6 +4032,7 @@ class FitnessTracker {
     // ============================================
 
     renderTRT() {
+        window.scrollTo(0, 0);
         const container = document.getElementById('trt-content');
         if (!container) return;
 
@@ -5048,6 +5051,7 @@ class FitnessTracker {
     // ============================================
 
     renderSupplements() {
+        window.scrollTo(0, 0);
         const container = document.getElementById('supplements-content');
         if (!container) return;
 
@@ -5475,6 +5479,7 @@ class FitnessTracker {
     // ============================================
 
     renderNutrition() {
+        window.scrollTo(0, 0);
         const container = document.getElementById('nutrition-content');
         if (!container) return;
 

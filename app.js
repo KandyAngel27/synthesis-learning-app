@@ -249,6 +249,11 @@ class SynthesisApp {
     }
 
     switchView(viewName) {
+        // Always scroll to top when switching views
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+
         document.querySelectorAll('.view').forEach(view => {
             view.classList.remove('active');
         });
@@ -257,6 +262,8 @@ class SynthesisApp {
         if (targetView) {
             targetView.classList.add('active');
             this.currentView = viewName;
+            // Also scroll the view container to top
+            targetView.scrollTop = 0;
         }
 
         // Update Recipe Assistant visibility (only shows in nutrition hub)

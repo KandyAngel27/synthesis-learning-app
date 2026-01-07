@@ -8045,18 +8045,28 @@ body {
     margin: 0;
     padding-left: 1.25rem;
     font-size: 0.85rem;
-    list-style: disc;
+    list-style: disc !important;
 }
 
-.ra-section ul li {
+.ra-section ul li,
+.ra-recipe-detail ul li {
     margin-bottom: 0.25rem;
-    position: static;
-    padding-left: 0;
+    position: static !important;
+    padding-left: 0 !important;
+    background: none !important;
 }
 
-.ra-section ul li::before {
+.ra-section ul li::before,
+.ra-section ul li::after,
+.ra-recipe-detail ul li::before,
+.ra-recipe-detail ul li::after,
+.ra-recipe-detail li::before,
+.ra-recipe-detail li::after {
     display: none !important;
     content: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .ra-section p {
@@ -8064,30 +8074,48 @@ body {
     line-height: 1.6;
 }
 
-/* Instructions numbered list */
-.ra-instructions {
+/* Instructions numbered list - complete reset */
+.ra-instructions,
+.ra-recipe-detail ol {
     margin: 0;
     padding-left: 1.5rem;
     font-size: 0.85rem;
-    list-style: decimal;
+    list-style: decimal !important;
     counter-reset: none !important;
 }
 
-.ra-instructions li {
+.ra-instructions li,
+.ra-recipe-detail ol li {
     margin-bottom: 0.5rem;
     line-height: 1.5;
-    position: static;
-    padding-left: 0.25rem;
+    position: static !important;
+    padding-left: 0.25rem !important;
+    background: none !important;
 }
 
-.ra-instructions li::before {
+.ra-instructions li::before,
+.ra-instructions li::after,
+.ra-recipe-detail ol li::before,
+.ra-recipe-detail ol li::after {
     display: none !important;
     content: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: static !important;
 }
 
-.ra-instructions li::marker {
+.ra-instructions li::marker,
+.ra-recipe-detail ol li::marker {
     color: var(--color-primary-light);
     font-weight: 600;
+}
+
+/* Nuclear option - remove ALL pseudo-elements in recipe detail */
+.ra-recipe-detail *::before,
+.ra-recipe-detail *::after {
+    display: none !important;
+    content: none !important;
 }
 
 .ra-video-link {
