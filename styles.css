@@ -5633,6 +5633,13 @@ body {
     border-color: var(--color-primary);
 }
 
+.form-hint {
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    margin-top: var(--spacing-xs);
+    font-style: italic;
+}
+
 .supp-actions {
     display: flex;
     gap: var(--spacing-sm);
@@ -5682,13 +5689,15 @@ body {
 
 .log-entry {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .log-name {
     font-weight: 500;
+    flex: 1;
 }
 
 .log-time {
@@ -5696,8 +5705,90 @@ body {
     color: var(--color-text-secondary);
 }
 
+.log-delete {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    font-size: 1rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+.log-delete:hover {
+    opacity: 1;
+}
+
+/* Supplement History */
+.supp-history {
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-header h3 {
+    margin: 0;
+}
+
+.btn-sm {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.75rem;
+}
+
+.history-log {
+    margin-top: var(--spacing-lg);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.history-day {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-day:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.history-date {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.history-entries {
+    padding-left: var(--spacing-md);
+}
+
 .common-supps {
     margin-bottom: var(--spacing-xl);
+}
+
+.common-supps-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.common-supps-header h3 {
+    margin: 0;
+}
+
+.common-supps-hint {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin: 0;
 }
 
 .quick-add-grid {
@@ -5707,7 +5798,16 @@ body {
     margin-top: var(--spacing-lg);
 }
 
+.quick-add-item {
+    position: relative;
+}
+
+.quick-add-item.editing .quick-add-btn {
+    padding-right: 2.5rem;
+}
+
 .quick-add-btn {
+    width: 100%;
     padding: var(--spacing-md);
     background: var(--color-bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -5716,11 +5816,45 @@ body {
     cursor: pointer;
     font-size: 0.75rem;
     transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.quick-add-btn .qa-name {
+    font-weight: 600;
+}
+
+.quick-add-btn .qa-dose {
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
 }
 
 .quick-add-btn:hover {
     border-color: var(--color-primary);
     background: rgba(99, 102, 241, 0.1);
+}
+
+.qa-edit-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: var(--color-bg-tertiary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+}
+
+.qa-edit-btn:hover {
+    opacity: 1;
+    background: var(--color-primary);
 }
 
 .add-supp-form {

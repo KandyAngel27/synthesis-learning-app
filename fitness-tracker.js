@@ -8,6 +8,7 @@ class FitnessTracker {
         this.app = app;
         this.workoutPlans = this.getWorkoutPlans();
         this.calendarDate = new Date(); // Track viewed month
+        this.editingCommonSupps = false; // Track edit mode for common supplements
         this.setupEventListeners();
         this.initializeNADData();
     }
@@ -5085,13 +5086,38 @@ class FitnessTracker {
                 </div>
             </div>
 
+            <div class="supp-history">
+                <div class="history-header">
+                    <h3>Supplement History</h3>
+                    ${supplements.log && supplements.log.length > 0 ?
+                        `<button class="btn-secondary btn-sm" onclick="window.fitnessTracker.clearAllSupplementHistory()">Clear All</button>` :
+                        ''
+                    }
+                </div>
+                <div class="history-log">
+                    ${this.renderSupplementHistory(supplements.log)}
+                </div>
+            </div>
+
             <div class="common-supps">
-                <h3>Quick Add Common Supplements</h3>
+                <div class="common-supps-header">
+                    <h3>Quick Add Common Supplements</h3>
+                    <button class="btn-secondary btn-sm" onclick="window.fitnessTracker.toggleEditCommonSupps()">
+                        ${this.editingCommonSupps ? 'Done' : 'Edit Doses'}
+                    </button>
+                </div>
+                <p class="common-supps-hint">Click to log as taken. ${this.editingCommonSupps ? 'Click pencil to edit your dose.' : 'Click "Edit Doses" to customize.'}</p>
                 <div class="quick-add-grid">
-                    ${this.getCommonSupplements().map(supp => `
-                        <button class="quick-add-btn" onclick="window.fitnessTracker.quickAddSupplement('${supp.name}', '${supp.dose}', '${supp.unit}')">
-                            ${supp.name}
-                        </button>
+                    ${this.getCommonSupplementsWithCustomDoses().map((supp, idx) => `
+                        <div class="quick-add-item ${this.editingCommonSupps ? 'editing' : ''}">
+                            <button class="quick-add-btn" onclick="window.fitnessTracker.quickLogSupplement('${supp.name}', '${supp.dose}', '${supp.unit}')">
+                                <span class="qa-name">${supp.name}</span>
+                                <span class="qa-dose">${supp.dose} ${supp.unit}</span>
+                            </button>
+                            ${this.editingCommonSupps ? `
+                                <button class="qa-edit-btn" onclick="window.fitnessTracker.editCommonSuppDose(${idx})" title="Edit dose">✏️</button>
+                            ` : ''}
+                        </div>
                     `).join('')}
                 </div>
             </div>
@@ -5100,17 +5126,52 @@ class FitnessTracker {
         container.innerHTML = html;
     }
 
-    getCommonSupplements() {
-        return [
-            { name: 'Vitamin D3', dose: '5000', unit: 'IU' },
-            { name: 'Fish Oil', dose: '2', unit: 'g' },
-            { name: 'Magnesium', dose: '400', unit: 'mg' },
-            { name: 'Zinc', dose: '30', unit: 'mg' },
-            { name: 'Creatine', dose: '5', unit: 'g' },
-            { name: 'Vitamin K2', dose: '100', unit: 'mcg' },
-            { name: 'Ashwagandha', dose: '600', unit: 'mg' },
-            { name: 'B Complex', dose: '1', unit: 'cap' }
-        ];
+    renderSupplementHistory(log) {
+        if (!log || log.length === 0) {
+            return '<p class="no-log">No supplement history yet.</p>';
+        }
+
+        // Group logs by date
+        const grouped = {};
+        log.forEach(l => {
+            const dateKey = new Date(l.date).toDateString();
+            if (!grouped[dateKey]) {
+                grouped[dateKey] = [];
+            }
+            grouped[dateKey].push(l);
+        });
+
+        // Sort dates descending (most recent first), skip today
+        const today = new Date().toDateString();
+        const sortedDates = Object.keys(grouped)
+            .filter(d => d !== today)
+            .sort((a, b) => new Date(b) - new Date(a))
+            .slice(0, 7); // Show last 7 days
+
+        if (sortedDates.length === 0) {
+            return '<p class="no-log">No previous history. Check "Today\'s Log" above.</p>';
+        }
+
+        return sortedDates.map(dateKey => {
+            const dateObj = new Date(dateKey);
+            const formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            const entries = grouped[dateKey];
+
+            return `
+                <div class="history-day">
+                    <div class="history-date">${formattedDate}</div>
+                    <div class="history-entries">
+                        ${entries.map(l => `
+                            <div class="log-entry">
+                                <span class="log-name">${l.name}</span>
+                                <span class="log-time">${new Date(l.date).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</span>
+                                <button class="btn-icon delete log-delete" onclick="window.fitnessTracker.deleteSupplementLog('${l.date}')" title="Delete">×</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }).join('');
     }
 
     getCommonSupplements() {
@@ -5148,6 +5209,66 @@ class FitnessTracker {
         ];
     }
 
+    getCommonSupplementsWithCustomDoses() {
+        const commonSupps = this.getCommonSupplements();
+        const customDoses = this.getCustomSuppDoses();
+
+        return commonSupps.map(supp => {
+            const custom = customDoses[supp.name];
+            if (custom) {
+                return { ...supp, dose: custom.dose, unit: custom.unit };
+            }
+            return supp;
+        });
+    }
+
+    getCustomSuppDoses() {
+        const saved = localStorage.getItem('synthesis_custom_supp_doses');
+        return saved ? JSON.parse(saved) : {};
+    }
+
+    saveCustomSuppDose(name, dose, unit) {
+        const customDoses = this.getCustomSuppDoses();
+        customDoses[name] = { dose, unit };
+        localStorage.setItem('synthesis_custom_supp_doses', JSON.stringify(customDoses));
+    }
+
+    toggleEditCommonSupps() {
+        this.editingCommonSupps = !this.editingCommonSupps;
+        this.renderSupplements();
+    }
+
+    editCommonSuppDose(idx) {
+        const supps = this.getCommonSupplementsWithCustomDoses();
+        const supp = supps[idx];
+        if (!supp) return;
+
+        const newDose = prompt(`Enter your dose for ${supp.name}:`, supp.dose);
+        if (newDose === null) return; // Cancelled
+
+        const newUnit = prompt(`Enter unit (mg, g, IU, mcg, cap, ml, billion CFU):`, supp.unit);
+        if (newUnit === null) return; // Cancelled
+
+        this.saveCustomSuppDose(supp.name, newDose, newUnit);
+        this.renderSupplements();
+    }
+
+    quickLogSupplement(name, dose, unit) {
+        // Log directly to today's log without adding to stack
+        if (!APP_DATA.user.supplements) {
+            APP_DATA.user.supplements = { stack: [], log: [] };
+        }
+
+        APP_DATA.user.supplements.log.push({
+            supplementId: 'quick-' + Date.now(),
+            name: `${name} (${dose} ${unit})`,
+            date: new Date().toISOString()
+        });
+
+        saveProgress();
+        this.renderSupplements();
+    }
+
     showAddSupplement() {
         const container = document.getElementById('supplements-content');
         const commonSupps = this.getCommonSupplements();
@@ -5168,6 +5289,8 @@ class FitnessTracker {
                         ${commonSupps.map((s, i) => `<option value="${i}">${s.name}</option>`).join('')}
                     </select>
                 </div>
+
+                <p class="form-hint">Select a supplement above to auto-fill, then adjust the dose as needed</p>
 
                 <div class="form-divider">
                     <span>or enter manually</span>
@@ -5239,6 +5362,11 @@ class FitnessTracker {
                 break;
             }
         }
+
+        // Focus on dose field so user can easily edit it
+        const doseInput = document.getElementById('supp-dose');
+        doseInput.focus();
+        doseInput.select(); // Select all text for easy replacement
     }
 
     saveSupplement() {
@@ -5312,12 +5440,34 @@ class FitnessTracker {
             return '<p class="no-log">No supplements taken today.</p>';
         }
 
-        return todayLog.map(l => `
+        return todayLog.map((l, idx) => `
             <div class="log-entry">
                 <span class="log-name">${l.name}</span>
                 <span class="log-time">${new Date(l.date).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</span>
+                <button class="btn-icon delete log-delete" onclick="window.fitnessTracker.deleteSupplementLog('${l.date}')" title="Delete">×</button>
             </div>
         `).join('');
+    }
+
+    deleteSupplementLog(dateStr) {
+        if (!APP_DATA.user.supplements || !APP_DATA.user.supplements.log) return;
+
+        APP_DATA.user.supplements.log = APP_DATA.user.supplements.log.filter(l => l.date !== dateStr);
+        saveProgress();
+        this.renderSupplements();
+    }
+
+    clearAllSupplementHistory() {
+        if (!confirm('Are you sure you want to clear ALL supplement history? This cannot be undone.')) {
+            return;
+        }
+
+        if (!APP_DATA.user.supplements) {
+            APP_DATA.user.supplements = { stack: [], log: [] };
+        }
+        APP_DATA.user.supplements.log = [];
+        saveProgress();
+        this.renderSupplements();
     }
 
     // ============================================
