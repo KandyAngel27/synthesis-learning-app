@@ -5566,6 +5566,11 @@ class FitnessTracker {
         `;
 
         container.innerHTML = html;
+
+        // Show Recipe Assistant FAB when nutrition is rendered
+        if (typeof checkAndShowRecipeAssistant === 'function') {
+            checkAndShowRecipeAssistant();
+        }
     }
 
     // ============================================
@@ -5573,7 +5578,11 @@ class FitnessTracker {
     // ============================================
 
     getSuggestedRecipes() {
-        return [
+        // Get user's saved recipe ideas from assistant
+        const userRecipeIdeas = APP_DATA.user.recipeIdeas || [];
+
+        // Static suggested recipes
+        const staticRecipes = [
             // BREAKFAST
             {
                 id: 'suggested-1',
@@ -6214,6 +6223,9 @@ Serve as is or over rice.`,
                 isSuggested: true
             }
         ];
+
+        // Merge static recipes with user's saved recipe ideas
+        return [...staticRecipes, ...userRecipeIdeas];
     }
 
     renderSuggestedRecipesSection() {

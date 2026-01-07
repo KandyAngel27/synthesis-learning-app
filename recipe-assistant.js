@@ -18,7 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const chat = document.getElementById('recipe-assistant');
     if (fab) fab.style.display = 'none';
     if (chat) chat.classList.add('hidden');
+
+    // Clear any previous "hidden" preference so users can see it
+    // Remove this line if you want the hide preference to persist
+    localStorage.removeItem('synthesis_hide_recipe_assistant');
 });
+
+// Also try to show when nutrition content is rendered
+function checkAndShowRecipeAssistant() {
+    const nutritionView = document.getElementById('nutrition-view');
+    if (nutritionView && nutritionView.classList.contains('active')) {
+        const fab = document.getElementById('recipe-fab');
+        if (fab && !isAssistantHidden()) {
+            fab.style.display = 'flex';
+        }
+    }
+}
 
 // Show/hide based on current view - called from app.js switchView
 function updateRecipeAssistantVisibility(viewName) {
@@ -233,8 +248,8 @@ async function showRecipeDetails(mealId) {
 
                     <div class="ra-actions">
                         ${alreadySaved ?
-                            `<span class="ra-saved-badge">Already in My Recipes</span>` :
-                            `<button class="ra-save-btn" onclick="saveRecipeToMyRecipes()">Save to My Recipes</button>`
+                            `<span class="ra-saved-badge">Already in Recipe Ideas</span>` :
+                            `<button class="ra-save-btn" onclick="saveRecipeToMyRecipes()">Save to Recipe Ideas</button>`
                         }
                         ${meal.strYoutube ? `
                             <a href="${meal.strYoutube}" target="_blank" class="ra-video-link">
@@ -257,63 +272,67 @@ async function showRecipeDetails(mealId) {
     }
 }
 
-// Check if recipe is already saved
+// Check if recipe is already saved in Recipe Ideas
 function isRecipeAlreadySaved(recipeName) {
-    if (!APP_DATA || !APP_DATA.user || !APP_DATA.user.recipes) return false;
-    return APP_DATA.user.recipes.some(r => r.name === recipeName);
+    if (!APP_DATA || !APP_DATA.user) return false;
+    // Check both recipeIdeas and recipes for completeness
+    const inRecipeIdeas = (APP_DATA.user.recipeIdeas || []).some(r => r.name === recipeName);
+    const inRecipes = (APP_DATA.user.recipes || []).some(r => r.name === recipeName);
+    return inRecipeIdeas || inRecipes;
 }
 
-// Save current recipe to My Recipes
+// Save current recipe to Recipe Ideas
 function saveRecipeToMyRecipes() {
     if (!currentRecipeData) {
         alert('No recipe to save. Please view a recipe first.');
         return;
     }
 
-    if (!APP_DATA.user.recipes) {
-        APP_DATA.user.recipes = [];
+    if (!APP_DATA.user.recipeIdeas) {
+        APP_DATA.user.recipeIdeas = [];
     }
 
     // Check if already saved
-    if (APP_DATA.user.recipes.some(r => r.name === currentRecipeData.name)) {
-        alert('This recipe is already in your collection!');
+    if (APP_DATA.user.recipeIdeas.some(r => r.name === currentRecipeData.name)) {
+        alert('This recipe is already in your Recipe Ideas!');
         return;
     }
 
-    // Create recipe object matching the app's format
+    // Create recipe object matching the Recipe Ideas format
     const newRecipe = {
-        id: 'recipe-' + Date.now(),
+        id: 'assistant-' + Date.now(),
         name: currentRecipeData.name,
-        category: currentRecipeData.category,
-        servings: 4, // Default, user can edit later
-        calories: 0, // Not available from TheMealDB, user can fill in
+        category: currentRecipeData.category || 'Dinner',
+        servings: 4,
+        prepTime: '15 min',
+        cookTime: '30 min',
+        calories: 0, // Not available from TheMealDB
         protein: 0,
         carbs: 0,
         fats: 0,
-        ingredients: currentRecipeData.ingredients,
+        ingredients: currentRecipeData.ingredients.join('\n'),
         instructions: currentRecipeData.instructions,
         notes: `Cuisine: ${currentRecipeData.area}${currentRecipeData.youtube ? `\nVideo: ${currentRecipeData.youtube}` : ''}\n\n(Found via Recipe Assistant)`,
-        source: currentRecipeData.youtube || `TheMealDB ID: ${currentRecipeData.mealId}`,
-        isFavorite: false,
-        wantToTry: true,
+        isSuggested: true,
+        fromAssistant: true,
         addedAt: new Date().toISOString()
     };
 
-    APP_DATA.user.recipes.push(newRecipe);
+    APP_DATA.user.recipeIdeas.push(newRecipe);
     saveProgress();
 
     // Award XP if gamification is available
     if (window.gamification) {
-        window.gamification.awardXP(10, 'Saved Recipe');
+        window.gamification.awardXP(10, 'Saved Recipe Idea');
     }
 
     // Update the button in the chat to show "Already Saved"
     const saveBtn = document.querySelector('.ra-save-btn');
     if (saveBtn) {
-        saveBtn.outerHTML = '<span class="ra-saved-badge">Saved to My Recipes!</span>';
+        saveBtn.outerHTML = '<span class="ra-saved-badge">Saved to Recipe Ideas!</span>';
     }
 
-    addAssistantMessage(`"${currentRecipeData.name}" has been saved to your Recipe Ideas! You can find it in Nutrition > My Recipes.`);
+    addAssistantMessage(`"${currentRecipeData.name}" has been saved to Recipe Ideas! Scroll up in Nutrition Hub to see it.`);
 }
 
 // Get random recipe suggestion
