@@ -123,22 +123,6 @@ class FitnessTracker {
         const progressData = this.getExerciseProgressData();
 
         const html = `
-            <!-- Top Stats Row -->
-            <div class="fitness-stats-row">
-                <div class="fitness-stat">
-                    <span class="fs-value">${stats.totalWorkouts}</span>
-                    <span class="fs-label">Workouts</span>
-                </div>
-                <div class="fitness-stat">
-                    <span class="fs-value">${stats.currentStreak}</span>
-                    <span class="fs-label">Day Streak</span>
-                </div>
-                <div class="fitness-stat">
-                    <span class="fs-value">${Math.round((stats.totalMinutes || 0) / 60)}h</span>
-                    <span class="fs-label">Total Time</span>
-                </div>
-            </div>
-
             <!-- Row 1: Body Metrics, Supplements, Nutrition -->
             <div class="fitness-hub-row three-col">
                 <div class="hub-card" onclick="app.switchView('body-metrics')">
@@ -210,6 +194,22 @@ class FitnessTracker {
                     </div>
                 </div>
                 ${this.renderCompactCalendar()}
+            </div>
+
+            <!-- Stats Row (below calendar) -->
+            <div class="fitness-stats-row">
+                <div class="fitness-stat">
+                    <span class="fs-value">${stats.totalWorkouts}</span>
+                    <span class="fs-label">Workouts</span>
+                </div>
+                <div class="fitness-stat">
+                    <span class="fs-value">${stats.currentStreak}</span>
+                    <span class="fs-label">Day Streak</span>
+                </div>
+                <div class="fitness-stat">
+                    <span class="fs-value">${Math.round((stats.totalMinutes || 0) / 60)}h</span>
+                    <span class="fs-label">Total Time</span>
+                </div>
             </div>
 
             <!-- Row 4: This Week, Workout Plans, Log Workout -->
