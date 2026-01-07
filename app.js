@@ -259,6 +259,11 @@ class SynthesisApp {
             this.currentView = viewName;
         }
 
+        // Update Recipe Assistant visibility (only shows in nutrition hub)
+        if (typeof updateRecipeAssistantVisibility === 'function') {
+            updateRecipeAssistantVisibility(viewName);
+        }
+
         // Render specific view content
         if (viewName === 'profile') {
             this.renderProfile();
