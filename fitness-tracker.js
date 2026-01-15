@@ -164,10 +164,20 @@ class FitnessTracker {
                         </div>
                     </div>
 
-                    <div class="effectiveness-trends">
-                        <h4>Effectiveness Trends</h4>
-                        <div class="effectiveness-chart-container">
-                            <canvas id="effectiveness-chart" class="effectiveness-chart"></canvas>
+                    <div class="effectiveness-chart-container">
+                        <canvas id="effectiveness-chart" class="effectiveness-chart"></canvas>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-row-header">
+                            <span>😴 Sleep</span>
+                            <div class="chart-row-actions">
+                                <button class="btn-icon-sm" onclick="event.stopPropagation(); window.fitnessTracker.showLogSleep()" title="Log Sleep">+</button>
+                                <button class="btn-icon-sm" onclick="event.stopPropagation(); window.fitnessTracker.showSleepHistory()" title="History">📋</button>
+                            </div>
+                        </div>
+                        <div class="sleep-chart-container">
+                            <canvas id="sleep-chart" class="sleep-chart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -247,9 +257,9 @@ class FitnessTracker {
             <!-- Row 5: Random Workout Generator - Featured -->
             <div class="featured-generator-card" onclick="window.fitnessTracker.showRandomGenerator()">
                 <div class="fg-content">
-                    <span class="fg-icon">🎲</span>
+                    <span class="fg-icon">⚡</span>
                     <div class="fg-text">
-                        <h3>Random Workout Generator</h3>
+                        <h3>Workout Generator</h3>
                         <p>Generate fresh, exciting workouts tailored to your equipment</p>
                     </div>
                 </div>
@@ -287,6 +297,7 @@ class FitnessTracker {
         setTimeout(() => {
             this.renderEffectivenessChart();
             this.renderBiomarkersChart();
+            this.renderSleepChart();
         }, 100);
     }
 
@@ -526,8 +537,13 @@ class FitnessTracker {
                     </div>
                 ` : ''}
             </div>
-            <div class="biomarkers-chart-container">
-                <canvas id="biomarkers-chart" class="biomarkers-chart"></canvas>
+            <div class="chart-row">
+                <div class="chart-row-header">
+                    <span>🧪 Total T</span>
+                </div>
+                <div class="biomarkers-chart-container">
+                    <canvas id="biomarkers-chart" class="biomarkers-chart"></canvas>
+                </div>
             </div>
             ${!hideButton ? `<button class="btn-secondary" style="width: 100%; margin-top: 0.5rem;" onclick="window.fitnessTracker.showLogLabs()">Log New Results</button>` : ''}
         `;
@@ -671,14 +687,7 @@ class FitnessTracker {
         canvas.width = canvas.parentElement.offsetWidth - 10;
         canvas.height = 70;
 
-        const topPadding = 15; // Space for label
         const padding = 5;
-
-        // Draw label
-        ctx.fillStyle = '#8b5cf6';
-        ctx.font = 'bold 11px system-ui';
-        ctx.textAlign = 'left';
-        ctx.fillText('Total T (ng/dL)', padding, 12);
 
         if (tData.length === 0) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
@@ -688,7 +697,7 @@ class FitnessTracker {
             return;
         }
 
-        const chartHeight = canvas.height - topPadding - padding;
+        const chartHeight = canvas.height - padding * 2;
         const values = tData.map(d => d.value);
         const minVal = Math.min(...values) * 0.9;
         const maxVal = Math.max(...values) * 1.1;
@@ -788,9 +797,9 @@ class FitnessTracker {
 
         // Set canvas size
         canvas.width = canvas.parentElement.offsetWidth - 10;
-        canvas.height = 100;
+        canvas.height = 70;
 
-        const topPadding = 18;
+        const topPadding = 15;
         const padding = 5;
         const chartWidth = canvas.width - padding * 2;
         const chartHeight = canvas.height - topPadding - padding;
@@ -908,6 +917,224 @@ class FitnessTracker {
                 }
                 const dateStr = this.formatDate(closest.date);
                 tooltip.innerHTML = `<strong style="color:${closest.color}">${closest.type}: ${closest.value}/10</strong><br>${dateStr}`;
+                tooltip.style.left = (e.clientX + 10) + 'px';
+                tooltip.style.top = (e.clientY - 30) + 'px';
+                tooltip.style.display = 'block';
+            } else if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        };
+
+        canvas.onmouseleave = () => {
+            const tooltip = document.getElementById('chart-tooltip');
+            if (tooltip) tooltip.style.display = 'none';
+        };
+    }
+
+    // ============================================
+    // SLEEP TRACKING
+    // ============================================
+
+    getSleepData() {
+        const data = localStorage.getItem('synthesis_sleep_data');
+        return data ? JSON.parse(data) : [];
+    }
+
+    saveSleepData(sleepData) {
+        localStorage.setItem('synthesis_sleep_data', JSON.stringify(sleepData));
+    }
+
+    showLogSleep() {
+        const modal = document.createElement('div');
+        modal.className = 'injection-modal-overlay';
+        modal.innerHTML = `
+            <div class="injection-modal" style="max-width: 400px;">
+                <h3>😴 Log Sleep</h3>
+
+                <div class="injection-form">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="sleep-date" class="fitness-input" value="${new Date().toISOString().split('T')[0]}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hours Slept</label>
+                        <input type="number" id="sleep-hours" class="fitness-input" placeholder="e.g., 7.5" step="0.5" min="0" max="24">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sleep Quality (1-10)</label>
+                        <input type="range" id="sleep-quality" min="1" max="10" value="7" class="fitness-slider">
+                        <div class="slider-value"><span id="quality-display">7</span>/10</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Notes (optional)</label>
+                        <input type="text" id="sleep-notes" class="fitness-input" placeholder="e.g., Woke up once...">
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-secondary" onclick="this.closest('.injection-modal-overlay').remove()">Cancel</button>
+                    <button class="btn-primary" onclick="window.fitnessTracker.saveSleepEntry()">Save</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        // Update quality display on slider change
+        const slider = modal.querySelector('#sleep-quality');
+        const display = modal.querySelector('#quality-display');
+        slider.addEventListener('input', () => {
+            display.textContent = slider.value;
+        });
+    }
+
+    saveSleepEntry() {
+        const date = document.getElementById('sleep-date').value;
+        const hours = parseFloat(document.getElementById('sleep-hours').value);
+        const quality = parseInt(document.getElementById('sleep-quality').value);
+        const notes = document.getElementById('sleep-notes').value;
+
+        if (!date || !hours) {
+            alert('Please enter date and hours slept');
+            return;
+        }
+
+        const sleepData = this.getSleepData();
+        sleepData.push({ date, hours, quality, notes, timestamp: Date.now() });
+        this.saveSleepData(sleepData);
+
+        document.querySelector('.injection-modal-overlay').remove();
+        this.render();
+    }
+
+    showSleepHistory() {
+        const sleepData = this.getSleepData().sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const modal = document.createElement('div');
+        modal.className = 'injection-modal-overlay';
+        modal.innerHTML = `
+            <div class="injection-modal" style="max-width: 500px; max-height: 80vh; overflow-y: auto;">
+                <h3>😴 Sleep History</h3>
+
+                ${sleepData.length === 0 ? '<p style="text-align: center; color: var(--color-text-secondary);">No sleep data logged yet</p>' : `
+                    <div class="history-list">
+                        ${sleepData.map((entry, index) => `
+                            <div class="history-item">
+                                <div class="history-main">
+                                    <strong>${this.formatDate(entry.date)}</strong>
+                                    <span>${entry.hours}h • Quality: ${entry.quality}/10</span>
+                                </div>
+                                ${entry.notes ? `<div class="history-notes">${entry.notes}</div>` : ''}
+                                <button class="btn-delete-sm" onclick="window.fitnessTracker.deleteSleepEntry(${index})" title="Delete">🗑️</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                `}
+
+                <div class="modal-actions">
+                    <button class="btn-secondary" onclick="this.closest('.injection-modal-overlay').remove()">Close</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    deleteSleepEntry(index) {
+        if (!confirm('Delete this sleep entry?')) return;
+
+        const sleepData = this.getSleepData().sort((a, b) => new Date(b.date) - new Date(a.date));
+        sleepData.splice(index, 1);
+        this.saveSleepData(sleepData);
+
+        document.querySelector('.injection-modal-overlay').remove();
+        this.showSleepHistory();
+    }
+
+    renderSleepChart() {
+        const canvas = document.getElementById('sleep-chart');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        const sleepData = this.getSleepData()
+            .sort((a, b) => new Date(a.date) - new Date(b.date))
+            .slice(-14); // Last 14 entries
+
+        canvas.width = canvas.parentElement.offsetWidth - 10;
+        canvas.height = 70;
+
+        const padding = 5;
+        const chartWidth = canvas.width - padding * 2;
+        const chartHeight = canvas.height - padding * 2;
+
+        if (sleepData.length === 0) {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.font = '10px system-ui';
+            ctx.textAlign = 'center';
+            ctx.fillText('Log sleep to see trends', canvas.width / 2, canvas.height / 2);
+            return;
+        }
+
+        // Calculate scale (4-10 hours range typically)
+        const hours = sleepData.map(d => d.hours);
+        const minHours = Math.max(0, Math.min(...hours) - 1);
+        const maxHours = Math.max(...hours) + 1;
+        const range = maxHours - minHours || 1;
+
+        // Store points for hover
+        const allPoints = sleepData.map((point, i) => ({
+            x: padding + (i / (sleepData.length - 1 || 1)) * chartWidth,
+            y: canvas.height - padding - ((point.hours - minHours) / range) * chartHeight,
+            hours: point.hours,
+            quality: point.quality,
+            date: point.date
+        }));
+
+        // Draw line
+        ctx.beginPath();
+        ctx.strokeStyle = '#a78bfa';
+        ctx.lineWidth = 2;
+        allPoints.forEach((p, i) => {
+            if (i === 0) ctx.moveTo(p.x, p.y);
+            else ctx.lineTo(p.x, p.y);
+        });
+        ctx.stroke();
+
+        // Draw points
+        allPoints.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+            ctx.fillStyle = '#a78bfa';
+            ctx.fill();
+        });
+
+        // Add hover listener
+        canvas.onmousemove = (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+
+            let closest = null;
+            let minDist = 20;
+            allPoints.forEach(p => {
+                const dist = Math.sqrt((mx - p.x) ** 2 + (my - p.y) ** 2);
+                if (dist < minDist) {
+                    minDist = dist;
+                    closest = p;
+                }
+            });
+
+            let tooltip = document.getElementById('chart-tooltip');
+            if (closest) {
+                if (!tooltip) {
+                    tooltip = document.createElement('div');
+                    tooltip.id = 'chart-tooltip';
+                    tooltip.className = 'chart-tooltip';
+                    document.body.appendChild(tooltip);
+                }
+                const dateStr = this.formatDate(closest.date);
+                tooltip.innerHTML = `<strong style="color:#a78bfa">${closest.hours}h</strong> • Quality: ${closest.quality}/10<br>${dateStr}`;
                 tooltip.style.left = (e.clientX + 10) + 'px';
                 tooltip.style.top = (e.clientY - 30) + 'px';
                 tooltip.style.display = 'block';
@@ -5262,6 +5489,9 @@ class FitnessTracker {
         if (!APP_DATA.user.supplements) {
             APP_DATA.user.supplements = { stack: [], log: [] };
         }
+        if (!APP_DATA.user.supplements.log) {
+            APP_DATA.user.supplements.log = [];
+        }
 
         APP_DATA.user.supplements.log.push({
             supplementId: 'quick-' + Date.now(),
@@ -6348,7 +6578,7 @@ Serve as is or over rice.`,
                             i.startsWith('---') ? '<hr class="ingredient-divider">' :
                             i.startsWith('For ') || i.startsWith('Also') || i.startsWith('Choose') ?
                             `<div class="ingredient-header">${i}</div>` :
-                            `<div class="ingredient-item">• ${i}</div>`
+                            `<div class="ingredient-item">${i}</div>`
                         ).join('')}
                     </div>
                 </div>
@@ -6654,7 +6884,11 @@ Serve as is or over rice.`,
     }
 
     viewRecipe(id) {
-        const recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        // Check both arrays for the recipe
+        let recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        if (!recipe) {
+            recipe = (APP_DATA.user.recipeIdeas || []).find(r => r.id === id);
+        }
         if (!recipe) return;
 
         const container = document.getElementById('nutrition-content');
@@ -6694,7 +6928,7 @@ Serve as is or over rice.`,
                     <div class="recipe-section">
                         <h4>Ingredients</h4>
                         <div class="recipe-ingredients">
-                            ${recipe.ingredients.split('\n').map(i => i.trim()).filter(i => i).map(i => `<div class="ingredient-item">• ${i}</div>`).join('')}
+                            ${recipe.ingredients.split('\n').map(i => i.trim()).filter(i => i).map(i => `<div class="ingredient-item">${i}</div>`).join('')}
                         </div>
                     </div>
                 ` : ''}
@@ -6744,7 +6978,13 @@ Serve as is or over rice.`,
     }
 
     editRecipe(id) {
-        const recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        // Check both recipes and recipeIdeas arrays
+        let recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        let isRecipeIdea = false;
+        if (!recipe) {
+            recipe = (APP_DATA.user.recipeIdeas || []).find(r => r.id === id);
+            isRecipeIdea = true;
+        }
         if (!recipe) return;
 
         const container = document.getElementById('nutrition-content');
@@ -6758,6 +6998,7 @@ Serve as is or over rice.`,
                 </div>
                 <h3>Edit Recipe</h3>
                 <input type="hidden" id="recipe-edit-id" value="${id}">
+                <input type="hidden" id="recipe-is-idea" value="${isRecipeIdea}">
 
                 <div class="form-group">
                     <label>Recipe Name *</label>
@@ -6853,8 +7094,7 @@ Serve as is or over rice.`,
 
     updateRecipe() {
         const id = document.getElementById('recipe-edit-id').value;
-        const index = (APP_DATA.user.recipes || []).findIndex(r => r.id === id);
-        if (index === -1) return;
+        const isRecipeIdea = document.getElementById('recipe-is-idea').value === 'true';
 
         const name = document.getElementById('recipe-name').value.trim();
         if (!name) {
@@ -6862,8 +7102,7 @@ Serve as is or over rice.`,
             return;
         }
 
-        APP_DATA.user.recipes[index] = {
-            ...APP_DATA.user.recipes[index],
+        const updatedData = {
             name: name,
             category: document.getElementById('recipe-category').value,
             servings: parseInt(document.getElementById('recipe-servings').value) || null,
@@ -6880,13 +7119,31 @@ Serve as is or over rice.`,
             wantToTry: document.getElementById('recipe-to-try').checked
         };
 
+        // Update in the correct array
+        if (isRecipeIdea) {
+            if (!APP_DATA.user.recipeIdeas) APP_DATA.user.recipeIdeas = [];
+            const index = APP_DATA.user.recipeIdeas.findIndex(r => r.id === id);
+            if (index !== -1) {
+                APP_DATA.user.recipeIdeas[index] = { ...APP_DATA.user.recipeIdeas[index], ...updatedData };
+            }
+        } else {
+            if (!APP_DATA.user.recipes) APP_DATA.user.recipes = [];
+            const index = APP_DATA.user.recipes.findIndex(r => r.id === id);
+            if (index !== -1) {
+                APP_DATA.user.recipes[index] = { ...APP_DATA.user.recipes[index], ...updatedData };
+            }
+        }
+
         saveProgress();
-        alert('Recipe updated!');
-        this.viewRecipe(id);
+        this.renderNutrition();
     }
 
     toggleFavoriteRecipe(id) {
-        const recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        // Check both arrays for the recipe
+        let recipe = (APP_DATA.user.recipes || []).find(r => r.id === id);
+        if (!recipe) {
+            recipe = (APP_DATA.user.recipeIdeas || []).find(r => r.id === id);
+        }
         if (!recipe) return;
 
         recipe.isFavorite = !recipe.isFavorite;
@@ -6896,7 +7153,13 @@ Serve as is or over rice.`,
 
     deleteRecipe(id) {
         if (confirm('Delete this recipe?')) {
-            APP_DATA.user.recipes = (APP_DATA.user.recipes || []).filter(r => r.id !== id);
+            // Check which array contains the recipe
+            const inRecipes = (APP_DATA.user.recipes || []).some(r => r.id === id);
+            if (inRecipes) {
+                APP_DATA.user.recipes = (APP_DATA.user.recipes || []).filter(r => r.id !== id);
+            } else {
+                APP_DATA.user.recipeIdeas = (APP_DATA.user.recipeIdeas || []).filter(r => r.id !== id);
+            }
             saveProgress();
             this.renderNutrition();
         }

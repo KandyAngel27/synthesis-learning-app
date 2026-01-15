@@ -98,7 +98,7 @@ Each lesson MUST include this progression:
     content: "Every medical term is constructed from up to four building blocks. Think of them like LEGO pieces - once you know the pieces, you can build (and decode) anything:\n\n**1. WORD ROOT** - The foundation, the core meaning\nExample: CARDI = heart, GASTR = stomach\n\n**2. COMBINING VOWEL** - The glue (usually 'O')\nConnects word parts for pronunciation\n\n**3. PREFIX** - Beginning modifier\nBRADY- = slow, TACHY- = fast\n\n**4. SUFFIX** - The ending that tells the story\n-ITIS = inflammation, -ECTOMY = removal",
     visual: {
         type: "diagram",
-        svg: `<svg viewBox="0 0 400 300">...</svg>`,
+        svg: `<svg viewBox="0 0 700 300">...</svg>`,
         caption: "The 4 building blocks"
     }
 }
@@ -118,7 +118,8 @@ Each lesson MUST include this progression:
 - Supporting text if needed
 
 **SVG Requirements:**
-- Viewbox: `viewBox="0 0 400 300"` or similar (400 width standard)
+- Viewbox: `viewBox="0 0 700 300"` or similar (700 width standard - FULL PAGE WIDTH)
+- CRITICAL: Use FULL WIDTH (700px) to prevent cramped/scrunched graphics
 - Dark background: `fill="#1a1a2e"`
 - Use brand colors:
   - Primary: `#6366f1` (indigo)
@@ -135,16 +136,26 @@ Each lesson MUST include this progression:
 ```javascript
 visual: {
     type: "diagram",
-    svg: `<svg viewBox="0 0 400 300" class="lesson-visual">
-        <rect x="0" y="0" width="400" height="300" fill="#1a1a2e"/>
-        <text x="200" y="25" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="14">DIAGRAM TITLE</text>
+    svg: `<svg viewBox="0 0 700 300" class="lesson-visual">
+        <rect x="0" y="0" width="700" height="300" fill="#1a1a2e"/>
+        <text x="350" y="25" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="14">DIAGRAM TITLE</text>
 
-        <!-- Content boxes -->
-        <rect x="50" y="50" width="120" height="60" rx="10" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
-        <text x="110" y="85" text-anchor="middle" fill="#fff" font-size="12">Label</text>
+        <!-- Content boxes - spread across full 700px width -->
+        <rect x="40" y="50" width="180" height="60" rx="10" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+        <text x="130" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 1</text>
+
+        <rect x="260" y="50" width="180" height="60" rx="10" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+        <text x="350" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 2</text>
+
+        <rect x="480" y="50" width="180" height="60" rx="10" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+        <text x="570" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 3</text>
 
         <!-- Arrows -->
-        <path d="M170 80 L230 80" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M220 80 L260 80" stroke="#14b8a6" stroke-width="2"/>
+        <polygon points="260,80 250,75 250,85" fill="#14b8a6"/>
+
+        <path d="M440 80 L480 80" stroke="#14b8a6" stroke-width="2"/>
+        <polygon points="480,80 470,75 470,85" fill="#14b8a6"/>
 
         <!-- More elements... -->
     </svg>`,
@@ -303,38 +314,71 @@ rgba(239,68,68,0.2)    - red box bg
 rgba(20,184,166,0.15)  - teal box bg
 ```
 
-### Common SVG Patterns
+### Common SVG Patterns (All use 700px width)
 
-**Labeled Box:**
+**Labeled Box (for 700px wide canvas):**
 ```svg
-<rect x="50" y="50" width="100" height="40" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
-<text x="100" y="75" text-anchor="middle" fill="#fff" font-size="10">Label Here</text>
+<!-- Left position -->
+<rect x="40" y="50" width="180" height="50" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
+<text x="130" y="80" text-anchor="middle" fill="#fff" font-size="11">Label Here</text>
+
+<!-- Center position -->
+<rect x="260" y="50" width="180" height="50" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
+<text x="350" y="80" text-anchor="middle" fill="#fff" font-size="11">Center Label</text>
+
+<!-- Right position -->
+<rect x="480" y="50" width="180" height="50" rx="8" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
+<text x="570" y="80" text-anchor="middle" fill="#fff" font-size="11">Right Label</text>
 ```
 
 **Arrow:**
 ```svg
-<path d="M150 70 L200 70" stroke="#14b8a6" stroke-width="2"/>
-<polygon points="200,70 190,65 190,75" fill="#14b8a6"/>
+<path d="M220 75 L260 75" stroke="#14b8a6" stroke-width="2"/>
+<polygon points="260,75 250,70 250,80" fill="#14b8a6"/>
 ```
 
-**Circle Node:**
+**Circle Node (for 700px canvas):**
 ```svg
-<circle cx="100" cy="100" r="25" fill="#6366f1"/>
-<text x="100" y="105" text-anchor="middle" fill="#fff" font-size="12">1</text>
+<!-- Spread across width: positions at ~117, 350, 583 for 3 nodes -->
+<circle cx="117" cy="100" r="30" fill="#6366f1"/>
+<text x="117" y="105" text-anchor="middle" fill="#fff" font-size="14">1</text>
+
+<circle cx="350" cy="100" r="30" fill="#8b5cf6"/>
+<text x="350" y="105" text-anchor="middle" fill="#fff" font-size="14">2</text>
+
+<circle cx="583" cy="100" r="30" fill="#10b981"/>
+<text x="583" y="105" text-anchor="middle" fill="#fff" font-size="14">3</text>
 ```
 
-**Flow Diagram:**
+**Flow Diagram (700px wide - 4 steps):**
 ```svg
-<!-- Box 1 -->
-<rect x="20" y="50" width="80" height="40" rx="6" fill="#ef4444"/>
-<text x="60" y="75" text-anchor="middle" fill="#fff" font-size="9">Step 1</text>
+<!-- Step 1 -->
+<rect x="40" y="50" width="130" height="45" rx="6" fill="#ef4444"/>
+<text x="105" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 1</text>
 
-<!-- Arrow -->
-<text x="115" y="75" fill="#888">→</text>
+<!-- Arrow 1 -->
+<path d="M170 72 L210 72" stroke="#14b8a6" stroke-width="2"/>
+<polygon points="210,72 200,67 200,77" fill="#14b8a6"/>
 
-<!-- Box 2 -->
-<rect x="130" y="50" width="80" height="40" rx="6" fill="#f59e0b"/>
-<text x="170" y="75" text-anchor="middle" fill="#fff" font-size="9">Step 2</text>
+<!-- Step 2 -->
+<rect x="210" y="50" width="130" height="45" rx="6" fill="#f59e0b"/>
+<text x="275" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 2</text>
+
+<!-- Arrow 2 -->
+<path d="M340 72 L380 72" stroke="#14b8a6" stroke-width="2"/>
+<polygon points="380,72 370,67 370,77" fill="#14b8a6"/>
+
+<!-- Step 3 -->
+<rect x="380" y="50" width="130" height="45" rx="6" fill="#10b981"/>
+<text x="445" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 3</text>
+
+<!-- Arrow 3 -->
+<path d="M510 72 L550 72" stroke="#14b8a6" stroke-width="2"/>
+<polygon points="550,72 540,67 540,77" fill="#14b8a6"/>
+
+<!-- Step 4 -->
+<rect x="550" y="50" width="110" height="45" rx="6" fill="#6366f1"/>
+<text x="605" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 4</text>
 ```
 
 ---
@@ -354,7 +398,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Engaging opening that creates curiosity and emotional investment...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 400 300">...</svg>`,
+                svg: `<svg viewBox="0 0 700 300">...</svg>`,  // FULL WIDTH
                 caption: "Visual hook"
             }
         },
@@ -364,7 +408,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Clear explanation with **bold key terms** and bullet points:\n\n• Point one\n• Point two\n• Point three",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 400 300">...</svg>`,
+                svg: `<svg viewBox="0 0 700 300">...</svg>`,  // FULL WIDTH
                 caption: "Concept visualization"
             }
         },
@@ -374,7 +418,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Additional context for the visual...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 400 350">...</svg>`,
+                svg: `<svg viewBox="0 0 700 350">...</svg>`,  // FULL WIDTH
                 caption: "Process flow"
             }
         },
@@ -384,7 +428,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "**Scenario 1**: Specific example...\n\n**Scenario 2**: Another example...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 400 300">...</svg>`
+                svg: `<svg viewBox="0 0 700 300">...</svg>`  // FULL WIDTH
             }
         },
         {
@@ -404,7 +448,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Second major teaching point...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 400 300">...</svg>`
+                svg: `<svg viewBox="0 0 700 300">...</svg>`  // FULL WIDTH
             }
         },
         {

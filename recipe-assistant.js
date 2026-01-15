@@ -261,20 +261,20 @@ async function showRecipeDetails(mealId) {
 
                     <div class="ra-section">
                         <strong>Ingredients:</strong>
-                        <ul>
-                            ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
-                        </ul>
+                        <div class="ra-ingredients-list">
+                            ${ingredients.map(ing => `<div class="ra-ingredient">${ing}</div>`).join('')}
+                        </div>
                     </div>
 
                     <div class="ra-section">
                         <strong>Instructions:</strong>
-                        <ol class="ra-instructions">
+                        <div class="ra-steps-list">
                             ${meal.strInstructions
                                 .split(/\r?\n/)
                                 .filter(step => step.trim().length > 0)
-                                .map(step => `<li>${step.trim()}</li>`)
+                                .map((step, i) => `<div class="ra-step"><span class="ra-step-num">${i + 1}.</span> ${step.trim()}</div>`)
                                 .join('')}
-                        </ol>
+                        </div>
                     </div>
 
                     <div class="ra-actions">
@@ -371,18 +371,13 @@ function saveRecipeToMyRecipes() {
         window.gamification.awardXP(10, 'Saved Recipe Idea');
     }
 
-    // Update the button in the chat to show "Already Saved"
-    const saveBtn = document.querySelector('.ra-save-btn');
-    if (saveBtn) {
-        saveBtn.outerHTML = '<span class="ra-saved-badge">Saved to Recipe Ideas!</span>';
-    }
-
     // Refresh the nutrition view to show the new recipe
     if (window.fitnessTracker && typeof window.fitnessTracker.renderNutrition === 'function') {
         window.fitnessTracker.renderNutrition();
     }
 
-    addAssistantMessage(`"${currentRecipeData.name}" saved! Close this chat and scroll up to see it in Recipe Ideas.`);
+    // Close the assistant and return to Nutrition Hub
+    hideRecipeAssistant();
 }
 
 // Get random recipe suggestion

@@ -1,0 +1,19 @@
+# Temporary files
+tmpclaude-*
+nul
+*.tmp
+
+# Backup files
+*.backup
+*.bak
+*.before_scale
+data_backup.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~

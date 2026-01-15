@@ -2168,8 +2168,11 @@ class RandomWorkoutUI {
                     <div class="rw-warmup-list">
                         ${workout.warmup.map(w => `
                             <div class="rw-warmup-item">
-                                <span class="rw-warmup-name">${w.name}</span>
-                                <span class="rw-warmup-time">${w.time}</span>
+                                <div class="rw-warmup-header">
+                                    <span class="rw-warmup-name">${w.name}</span>
+                                    <span class="rw-warmup-time">${w.time}</span>
+                                </div>
+                                <div class="rw-warmup-instructions">${w.instructions}</div>
                             </div>
                         `).join('')}
                     </div>
@@ -2205,8 +2208,11 @@ class RandomWorkoutUI {
                     <div class="rw-cooldown-list">
                         ${workout.cooldown.map(c => `
                             <div class="rw-cooldown-item">
-                                <span class="rw-cooldown-name">${c.name}</span>
-                                <span class="rw-cooldown-time">${c.time}</span>
+                                <div class="rw-cooldown-header">
+                                    <span class="rw-cooldown-name">${c.name}</span>
+                                    <span class="rw-cooldown-time">${c.time}</span>
+                                </div>
+                                <div class="rw-cooldown-instructions">${c.instructions}</div>
                             </div>
                         `).join('')}
                     </div>

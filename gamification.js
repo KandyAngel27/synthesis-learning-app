@@ -272,10 +272,12 @@ class GamificationSystem {
                     const target = challenge.target || 1;
                     const progress = Math.min(challenge.progress || 0, target);
                     const percentage = (progress / target) * 100;
+                    const template = APP_DATA.user.challengeTemplates.find(t => t.id === challenge.id);
+                    const icon = template ? template.icon : challenge.icon;
 
                     return `
                         <div class="challenge-card ${isCompleted ? 'completed' : ''}">
-                            <div class="challenge-icon">${challenge.icon}</div>
+                            <div class="challenge-icon">${icon}</div>
                             <div class="challenge-info">
                                 <div class="challenge-description">${challenge.description}</div>
                                 <div class="challenge-progress-bar">
