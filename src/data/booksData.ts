@@ -50,6 +50,7 @@ export const categories = [
   { id: 'personal-development', name: 'Personal Development', icon: '🌱', color: '#F38181' },
   { id: 'health-wellness', name: 'Health & Wellness', icon: '💪', color: '#AA96DA' },
   { id: 'history', name: 'History', icon: '📜', color: '#FCBAD3' },
+  { id: 'art-history', name: 'Art History', icon: '🎨', color: '#ec4899' },
   { id: 'business', name: 'Business', icon: '💼', color: '#FFFFD2' },
   { id: 'leadership', name: 'Leadership', icon: '👑', color: '#A8D8EA' },
   { id: 'science-tech', name: 'Science & Technology', icon: '🔬', color: '#FFD93D' }

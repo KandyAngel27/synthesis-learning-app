@@ -118,8 +118,8 @@ Each lesson MUST include this progression:
 - Supporting text if needed
 
 **SVG Requirements:**
-- Viewbox: `viewBox="0 0 700 300"` or similar (700 width standard - FULL PAGE WIDTH)
-- CRITICAL: Use FULL WIDTH (700px) to prevent cramped/scrunched graphics
+- **STANDARD SIZE: `viewBox="0 0 1100 1100"`** - This is the REQUIRED size for all SVGs
+- This large canvas ensures text is readable and graphics are crisp
 - Dark background: `fill="#1a1a2e"`
 - Use brand colors:
   - Primary: `#6366f1` (indigo)
@@ -129,35 +129,54 @@ Each lesson MUST include this progression:
   - Accent: `#14b8a6` (teal)
   - Purple: `#8b5cf6`
   - Pink: `#ec4899`
+  - Gold: `#ffd700` (for highlights/titles)
+  - Blue: `#3b82f6`
+- Text sizes: `font-size="42"` for main titles, `font-size="29-31"` for section headers, `font-size="25-26"` for body text
 - Text: `fill="#fff"` for main, `fill="#888"` for secondary
-- Always include title text at top
+- Always include title text at top (around y="55")
+- Stroke widths: `stroke-width="2"` or `stroke-width="3"` for visibility
 
-**SVG Template:**
+**SVG Template (1100x1100):**
 ```javascript
 visual: {
     type: "diagram",
-    svg: `<svg viewBox="0 0 700 300" class="lesson-visual">
-        <rect x="0" y="0" width="700" height="300" fill="#1a1a2e"/>
-        <text x="350" y="25" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="14">DIAGRAM TITLE</text>
+    svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+        <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
 
-        <!-- Content boxes - spread across full 700px width -->
-        <rect x="40" y="50" width="180" height="60" rx="10" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
-        <text x="130" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 1</text>
+        <!-- Main Title -->
+        <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">DIAGRAM TITLE</text>
+        <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Subtitle or description</text>
 
-        <rect x="260" y="50" width="180" height="60" rx="10" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
-        <text x="350" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 2</text>
+        <!-- Row of content boxes - three across -->
+        <rect x="60" y="150" width="300" height="200" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+        <text x="210" y="200" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">LABEL 1</text>
+        <text x="210" y="250" text-anchor="middle" fill="#fff" font-size="26">Description line 1</text>
+        <text x="210" y="290" text-anchor="middle" fill="#888" font-size="25">Description line 2</text>
 
-        <rect x="480" y="50" width="180" height="60" rx="10" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
-        <text x="570" y="85" text-anchor="middle" fill="#fff" font-size="12">Label 3</text>
+        <rect x="400" y="150" width="300" height="200" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+        <text x="550" y="200" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="31">LABEL 2</text>
+        <text x="550" y="250" text-anchor="middle" fill="#fff" font-size="26">Description line 1</text>
+        <text x="550" y="290" text-anchor="middle" fill="#888" font-size="25">Description line 2</text>
 
-        <!-- Arrows -->
-        <path d="M220 80 L260 80" stroke="#14b8a6" stroke-width="2"/>
-        <polygon points="260,80 250,75 250,85" fill="#14b8a6"/>
+        <rect x="740" y="150" width="300" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+        <text x="890" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">LABEL 3</text>
+        <text x="890" y="250" text-anchor="middle" fill="#fff" font-size="26">Description line 1</text>
+        <text x="890" y="290" text-anchor="middle" fill="#888" font-size="25">Description line 2</text>
 
-        <path d="M440 80 L480 80" stroke="#14b8a6" stroke-width="2"/>
-        <polygon points="480,80 470,75 470,85" fill="#14b8a6"/>
+        <!-- Arrows connecting boxes -->
+        <path d="M360 250 L400 250" stroke="#14b8a6" stroke-width="3"/>
+        <polygon points="400,250 385,240 385,260" fill="#14b8a6"/>
 
-        <!-- More elements... -->
+        <path d="M700 250 L740 250" stroke="#14b8a6" stroke-width="3"/>
+        <polygon points="740,250 725,240 725,260" fill="#14b8a6"/>
+
+        <!-- Circle nodes for visual interest -->
+        <circle cx="200" cy="500" r="72" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="3"/>
+        <text x="200" y="508" text-anchor="middle" fill="#fff" font-weight="bold" font-size="29">Node 1</text>
+
+        <!-- Bottom summary box -->
+        <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+        <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Summary or date information</text>
     </svg>`,
     caption: "How the components connect"
 }
@@ -290,6 +309,15 @@ visual: {
 
 ## SVG Visual Standards
 
+### CRITICAL: Standard Canvas Size
+**ALL SVGs MUST use `viewBox="0 0 1100 1100"`**
+
+This ensures:
+- Large, readable text (42px titles, 26-29px body)
+- Professional, non-cramped layouts
+- Consistent appearance across all lessons
+- Proper scaling on all screen sizes
+
 ### Color Palette
 ```
 Primary:     #6366f1 (indigo)
@@ -300,85 +328,144 @@ Error:       #ef4444 (red)
 Info:        #3b82f6 (blue)
 Accent:      #14b8a6 (teal)
 Pink:        #ec4899
+Gold:        #ffd700 (for main titles)
 Background:  #1a1a2e (dark)
 Text:        #fff (primary), #888 (secondary)
+```
+
+### Text Size Standards (for 1100x1100 canvas)
+```
+Main title:      font-size="42" (at y="55")
+Subtitle:        font-size="29" (at y="100")
+Section header:  font-size="31" (bold, colored)
+Body text:       font-size="26"
+Secondary text:  font-size="25"
+Small text:      font-size="28" (for summaries)
 ```
 
 ### Transparency for Boxes
 ```
 rgba(99,102,241,0.2)   - indigo box bg
+rgba(99,102,241,0.4)   - indigo box bg (more visible)
 rgba(139,92,246,0.2)   - violet box bg
+rgba(139,92,246,0.4)   - violet box bg (more visible)
 rgba(16,185,129,0.2)   - green box bg
+rgba(16,185,129,0.4)   - green box bg (more visible)
 rgba(245,158,11,0.2)   - amber box bg
 rgba(239,68,68,0.2)    - red box bg
 rgba(20,184,166,0.15)  - teal box bg
+rgba(59,130,246,0.4)   - blue box bg
+rgba(236,72,153,0.4)   - pink box bg
+rgba(255,255,255,0.05) - subtle gray bg
 ```
 
-### Common SVG Patterns (All use 700px width)
+### Common SVG Patterns (All use 1100x1100 canvas)
 
-**Labeled Box (for 700px wide canvas):**
+**Standard Header:**
+```svg
+<rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+<text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">MAIN TITLE HERE</text>
+<text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Subtitle or description text</text>
+```
+
+**Labeled Box (for 1100px wide canvas - 3 across):**
 ```svg
 <!-- Left position -->
-<rect x="40" y="50" width="180" height="50" rx="8" fill="rgba(99,102,241,0.2)" stroke="#6366f1"/>
-<text x="130" y="80" text-anchor="middle" fill="#fff" font-size="11">Label Here</text>
+<rect x="60" y="150" width="300" height="160" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+<text x="210" y="200" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">LABEL 1</text>
+<text x="210" y="245" text-anchor="middle" fill="#fff" font-size="26">Description here</text>
+<text x="210" y="285" text-anchor="middle" fill="#888" font-size="25">Secondary info</text>
 
 <!-- Center position -->
-<rect x="260" y="50" width="180" height="50" rx="8" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
-<text x="350" y="80" text-anchor="middle" fill="#fff" font-size="11">Center Label</text>
+<rect x="400" y="150" width="300" height="160" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+<text x="550" y="200" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="31">LABEL 2</text>
+<text x="550" y="245" text-anchor="middle" fill="#fff" font-size="26">Description here</text>
+<text x="550" y="285" text-anchor="middle" fill="#888" font-size="25">Secondary info</text>
 
 <!-- Right position -->
-<rect x="480" y="50" width="180" height="50" rx="8" fill="rgba(16,185,129,0.2)" stroke="#10b981"/>
-<text x="570" y="80" text-anchor="middle" fill="#fff" font-size="11">Right Label</text>
+<rect x="740" y="150" width="300" height="160" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+<text x="890" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">LABEL 3</text>
+<text x="890" y="245" text-anchor="middle" fill="#fff" font-size="26">Description here</text>
+<text x="890" y="285" text-anchor="middle" fill="#888" font-size="25">Secondary info</text>
 ```
 
-**Arrow:**
+**Two Boxes Side by Side:**
 ```svg
-<path d="M220 75 L260 75" stroke="#14b8a6" stroke-width="2"/>
-<polygon points="260,75 250,70 250,80" fill="#14b8a6"/>
+<rect x="60" y="720" width="480" height="160" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+<text x="300" y="775" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="31">LEFT BOX TITLE</text>
+<text x="300" y="820" text-anchor="middle" fill="#fff" font-size="26">Content line 1</text>
+<text x="300" y="855" text-anchor="middle" fill="#888" font-size="25">Content line 2</text>
+
+<rect x="560" y="720" width="480" height="160" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+<text x="800" y="775" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="31">RIGHT BOX TITLE</text>
+<text x="800" y="820" text-anchor="middle" fill="#fff" font-size="26">Content line 1</text>
+<text x="800" y="855" text-anchor="middle" fill="#888" font-size="25">Content line 2</text>
 ```
 
-**Circle Node (for 700px canvas):**
+**Arrow (scaled for 1100px):**
 ```svg
-<!-- Spread across width: positions at ~117, 350, 583 for 3 nodes -->
-<circle cx="117" cy="100" r="30" fill="#6366f1"/>
-<text x="117" y="105" text-anchor="middle" fill="#fff" font-size="14">1</text>
-
-<circle cx="350" cy="100" r="30" fill="#8b5cf6"/>
-<text x="350" y="105" text-anchor="middle" fill="#fff" font-size="14">2</text>
-
-<circle cx="583" cy="100" r="30" fill="#10b981"/>
-<text x="583" y="105" text-anchor="middle" fill="#fff" font-size="14">3</text>
+<path d="M360 250 L400 250" stroke="#14b8a6" stroke-width="3"/>
+<polygon points="400,250 385,240 385,260" fill="#14b8a6"/>
 ```
 
-**Flow Diagram (700px wide - 4 steps):**
+**Dashed Connecting Lines:**
+```svg
+<line x1="340" y1="340" x2="550" y2="260" stroke="#ffd700" stroke-width="3" stroke-dasharray="8" opacity="1"/>
+```
+
+**Circle Node (for 1100px canvas):**
+```svg
+<!-- Large circle nodes - positions at ~200, 550, 900 for 3 nodes -->
+<circle cx="200" cy="400" r="72" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="3"/>
+<text x="200" y="408" text-anchor="middle" fill="#fff" font-weight="bold" font-size="29">Node 1</text>
+
+<circle cx="550" cy="400" r="72" fill="rgba(236,72,153,0.4)" stroke="#ec4899" stroke-width="3"/>
+<text x="550" y="408" text-anchor="middle" fill="#fff" font-weight="bold" font-size="29">Node 2</text>
+
+<circle cx="900" cy="400" r="72" fill="rgba(16,185,129,0.4)" stroke="#10b981" stroke-width="3"/>
+<text x="900" y="408" text-anchor="middle" fill="#fff" font-weight="bold" font-size="29">Node 3</text>
+```
+
+**Ellipse for Map/Region:**
+```svg
+<ellipse cx="550" cy="420" rx="380" ry="260" fill="none" stroke="#444" stroke-width="3"/>
+```
+
+**Flow Diagram (1100px wide - 4 steps):**
 ```svg
 <!-- Step 1 -->
-<rect x="40" y="50" width="130" height="45" rx="6" fill="#ef4444"/>
-<text x="105" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 1</text>
+<rect x="60" y="200" width="220" height="100" rx="15" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="3"/>
+<text x="170" y="260" text-anchor="middle" fill="#fff" font-size="26">Step 1</text>
 
 <!-- Arrow 1 -->
-<path d="M170 72 L210 72" stroke="#14b8a6" stroke-width="2"/>
-<polygon points="210,72 200,67 200,77" fill="#14b8a6"/>
+<path d="M280 250 L340 250" stroke="#14b8a6" stroke-width="3"/>
+<polygon points="340,250 325,240 325,260" fill="#14b8a6"/>
 
 <!-- Step 2 -->
-<rect x="210" y="50" width="130" height="45" rx="6" fill="#f59e0b"/>
-<text x="275" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 2</text>
+<rect x="340" y="200" width="220" height="100" rx="15" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3"/>
+<text x="450" y="260" text-anchor="middle" fill="#fff" font-size="26">Step 2</text>
 
 <!-- Arrow 2 -->
-<path d="M340 72 L380 72" stroke="#14b8a6" stroke-width="2"/>
-<polygon points="380,72 370,67 370,77" fill="#14b8a6"/>
+<path d="M560 250 L620 250" stroke="#14b8a6" stroke-width="3"/>
+<polygon points="620,250 605,240 605,260" fill="#14b8a6"/>
 
 <!-- Step 3 -->
-<rect x="380" y="50" width="130" height="45" rx="6" fill="#10b981"/>
-<text x="445" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 3</text>
+<rect x="620" y="200" width="220" height="100" rx="15" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="3"/>
+<text x="730" y="260" text-anchor="middle" fill="#fff" font-size="26">Step 3</text>
 
 <!-- Arrow 3 -->
-<path d="M510 72 L550 72" stroke="#14b8a6" stroke-width="2"/>
-<polygon points="550,72 540,67 540,77" fill="#14b8a6"/>
+<path d="M840 250 L900 250" stroke="#14b8a6" stroke-width="3"/>
+<polygon points="900,250 885,240 885,260" fill="#14b8a6"/>
 
 <!-- Step 4 -->
-<rect x="550" y="50" width="110" height="45" rx="6" fill="#6366f1"/>
-<text x="605" y="78" text-anchor="middle" fill="#fff" font-size="11">Step 4</text>
+<rect x="900" y="200" width="140" height="100" rx="15" fill="rgba(99,102,241,0.3)" stroke="#6366f1" stroke-width="3"/>
+<text x="970" y="260" text-anchor="middle" fill="#fff" font-size="26">Step 4</text>
+```
+
+**Bottom Summary Bar:**
+```svg
+<rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+<text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Summary text or date range</text>
 ```
 
 ---
@@ -398,7 +485,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Engaging opening that creates curiosity and emotional investment...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 700 300">...</svg>`,  // FULL WIDTH
+                svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">...</svg>`,  // STANDARD SIZE
                 caption: "Visual hook"
             }
         },
@@ -408,7 +495,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Clear explanation with **bold key terms** and bullet points:\n\n• Point one\n• Point two\n• Point three",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 700 300">...</svg>`,  // FULL WIDTH
+                svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">...</svg>`,  // STANDARD SIZE
                 caption: "Concept visualization"
             }
         },
@@ -418,7 +505,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Additional context for the visual...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 700 350">...</svg>`,  // FULL WIDTH
+                svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">...</svg>`,  // STANDARD SIZE
                 caption: "Process flow"
             }
         },
@@ -428,7 +515,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "**Scenario 1**: Specific example...\n\n**Scenario 2**: Another example...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 700 300">...</svg>`  // FULL WIDTH
+                svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">...</svg>`  // STANDARD SIZE
             }
         },
         {
@@ -448,7 +535,7 @@ rgba(20,184,166,0.15)  - teal box bg
             content: "Second major teaching point...",
             visual: {
                 type: "diagram",
-                svg: `<svg viewBox="0 0 700 300">...</svg>`  // FULL WIDTH
+                svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">...</svg>`  // STANDARD SIZE
             }
         },
         {
@@ -569,6 +656,11 @@ options: [
 ## Revision History
 
 - v1.0 - Initial standards based on Medical Terminology lesson analysis
+- v1.1 - **SVG Size Standard Update**: Changed from 700px width to 1100x1100 viewBox
+  - All SVGs now use `viewBox="0 0 1100 1100"` for consistent, readable graphics
+  - Updated text size standards (42px titles, 26-29px body text)
+  - Added new color options (gold, additional transparency values)
+  - Added new pattern examples (ellipse, dashed lines, two-column boxes)
 - Created: January 2026
 
 ---

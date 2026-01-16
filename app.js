@@ -20,6 +20,9 @@ class SynthesisApp {
             this.render();
             this.updateGreeting();
             this.updateDailyInsight();
+
+            // Restore last view from localStorage
+            this.restoreLastView();
         }, 2000);
 
         // Set up event listeners
@@ -264,6 +267,8 @@ class SynthesisApp {
             this.currentView = viewName;
             // Also scroll the view container to top
             targetView.scrollTop = 0;
+            // Save current view to localStorage
+            this.saveCurrentView();
         }
 
         // Update Recipe Assistant visibility (only shows in nutrition hub)
@@ -299,6 +304,79 @@ class SynthesisApp {
         } else if (viewName === 'nutrition') {
             window.fitnessTracker?.renderNutrition();
         }
+    }
+
+    // Save current view state to localStorage for persistence on refresh
+    saveCurrentView() {
+        const state = {
+            view: this.currentView,
+            categoryId: this.currentCategory?.id || null,
+            bookId: this.currentBook?.id || null,
+            lessonId: this.currentLesson?.id || null,
+            cardIndex: this.currentCard
+        };
+        localStorage.setItem('synthesis_last_view', JSON.stringify(state));
+    }
+
+    // Restore last view from localStorage
+    restoreLastView() {
+        try {
+            const savedState = localStorage.getItem('synthesis_last_view');
+            if (!savedState) return;
+
+            const state = JSON.parse(savedState);
+
+            // Don't restore if we're already on home
+            if (!state.view || state.view === 'home') return;
+
+            // Restore based on the saved view
+            if (state.view === 'library') {
+                this.switchView('library');
+                this.renderLibrary();
+            } else if (state.view === 'category' && state.categoryId) {
+                const category = APP_DATA.categories.find(c => c.id === state.categoryId);
+                if (category) {
+                    this.currentCategory = category;
+                    this.switchView('category');
+                    this.renderCategory();
+                }
+            } else if (state.view === 'book' && state.bookId) {
+                const book = this.findBookById(state.bookId);
+                if (book) {
+                    this.currentBook = book;
+                    this.switchView('book');
+                    this.renderBookDetail();
+                }
+            } else if (state.view === 'lesson' && state.bookId && state.lessonId) {
+                const book = this.findBookById(state.bookId);
+                if (book) {
+                    this.currentBook = book;
+                    const lesson = book.lessonList?.find(l => l.id === state.lessonId);
+                    if (lesson) {
+                        this.currentLesson = lesson;
+                        this.currentCard = state.cardIndex || 0;
+                        this.switchView('lesson');
+                        this.renderLesson();
+                    }
+                }
+            } else if (state.view === 'profile') {
+                this.switchView('profile');
+            } else {
+                // For other views (premium features, fitness, etc.)
+                this.switchView(state.view);
+            }
+        } catch (e) {
+            console.log('Could not restore last view:', e);
+        }
+    }
+
+    // Helper to find a book by ID across all categories
+    findBookById(bookId) {
+        for (const category of APP_DATA.categories) {
+            const book = category.books?.find(b => b.id === bookId);
+            if (book) return book;
+        }
+        return null;
     }
 
     updateStreak() {
@@ -445,6 +523,7 @@ class SynthesisApp {
     showBook(bookId) {
         this.currentBook = getBookById(bookId);
         if (!this.currentBook) return;
+        this.saveCurrentView();
 
         const categoryColor = this.getCategoryColor(this.currentBook.category);
         const categoryColorDark = this.getCategoryColorDark(this.currentBook.category);
@@ -631,7 +710,7 @@ class SynthesisApp {
             html += `
                 <div class="example-card">
                     <div class="example-label">Example</div>
-                    <p>${this.formatContent(card.content)}</p>
+                    ${this.formatContent(card.content)}
                     ${card.visual && card.visual.svg ? `
                         <div class="visual-diagram" style="margin-top: 1.5rem;">
                             ${card.visual.svg}
@@ -649,14 +728,14 @@ class SynthesisApp {
                         </div>
                         ${card.visual.caption ? `<p class="visual-caption">${card.visual.caption}</p>` : ''}
                     ` : ''}
-                    ${card.content ? `<p>${this.formatContent(card.content)}</p>` : ''}
+                    ${card.content ? this.formatContent(card.content) : ''}
                 </div>
             `;
         } else if (card.type === 'quiz') {
             html += this.renderQuiz(card);
         } else {
             // Default case handles intro, concept, and other text-based cards
-            html += `<p>${this.formatContent(card.content)}</p>`;
+            html += this.formatContent(card.content);
             // Render visual if present (for intro, concept cards with visuals)
             if (card.visual && card.visual.svg) {
                 html += `
@@ -754,15 +833,17 @@ class SynthesisApp {
         if (this.currentCard > 0) {
             this.currentCard--;
             this.renderLesson();
+            this.saveCurrentView();
         }
     }
 
     nextCard() {
         const totalCards = this.currentLesson.cards.length;
-        
+
         if (this.currentCard < totalCards - 1) {
             this.currentCard++;
             this.renderLesson();
+            this.saveCurrentView();
         } else {
             // Complete lesson
             this.completeLesson();
@@ -822,12 +903,58 @@ class SynthesisApp {
             this.updateHeaderXP();
         }
 
-        // Show completion message
+        // Show completion message with styled modal
         const xpEarned = APP_DATA.user.xpRewards.lessonComplete + (bookJustCompleted ? APP_DATA.user.xpRewards.bookComplete : 0);
-        alert(`🎉 Lesson completed! You've finished "${this.currentLesson.title}"\n\n+${xpEarned} XP earned!\nBook Progress: ${this.currentBook.progress}%`);
+        this.showLessonCompleteModal(this.currentLesson.title, xpEarned, this.currentBook.progress, bookJustCompleted, this.currentBook.id);
+    }
 
-        // Return to book view
-        this.showBook(this.currentBook.id);
+    showLessonCompleteModal(lessonTitle, xpEarned, bookProgress, bookCompleted, bookId) {
+        // Create modal HTML
+        const modal = document.createElement('div');
+        modal.className = 'lesson-complete-modal';
+        modal.innerHTML = `
+            <div class="lesson-complete-content">
+                <div class="lesson-complete-icon">🎉</div>
+                <h2 class="lesson-complete-title">Lesson Complete!</h2>
+                <p class="lesson-complete-subtitle">You've finished "${lessonTitle}"</p>
+
+                <div class="lesson-complete-xp-container">
+                    <div class="lesson-complete-xp">+${xpEarned} XP</div>
+                    <div class="lesson-complete-xp-label">Experience Earned</div>
+                </div>
+
+                <div class="lesson-complete-progress">
+                    <div class="lesson-complete-progress-label">Book Progress</div>
+                    <div class="lesson-complete-progress-bar">
+                        <div class="lesson-complete-progress-fill" style="width: ${bookProgress}%"></div>
+                    </div>
+                    <div class="lesson-complete-progress-text">${bookProgress}% Complete</div>
+                </div>
+
+                ${bookCompleted ? '<div class="lesson-complete-bonus">📚 Book Completed! Bonus XP Earned!</div>' : ''}
+
+                <button class="lesson-complete-btn">Continue</button>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Trigger animation with slight delay to ensure transition
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 50);
+
+        // Handle continue button click
+        const continueBtn = modal.querySelector('.lesson-complete-btn');
+        const self = this;
+        continueBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.remove();
+                // Return to book view showing all lessons
+                self.showBook(bookId);
+            }, 300);
+        });
     }
 
     startDailyLesson() {

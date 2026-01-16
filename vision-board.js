@@ -401,19 +401,59 @@ function updateMoonPhase() {
     const moonPhaseDesc = document.getElementById('moon-phase-desc');
     const moonEnergy = document.getElementById('moon-energy');
 
+    // Custom SVG moon icons with yellow and purple gradient
+    const moonSVG = (fillPercent, direction = 'right') => {
+        const purple = '#8b5cf6';
+        const yellow = '#ffd700';
+        const darkPurple = '#4c1d95';
+
+        if (fillPercent === 0) {
+            // New Moon - dark purple with glow
+            return `<svg viewBox="0 0 100 100" width="48" height="48">
+                <defs><radialGradient id="newGlow"><stop offset="0%" stop-color="${purple}" stop-opacity="0.3"/><stop offset="100%" stop-color="${darkPurple}" stop-opacity="0"/></radialGradient></defs>
+                <circle cx="50" cy="50" r="48" fill="url(#newGlow)"/>
+                <circle cx="50" cy="50" r="40" fill="${darkPurple}" stroke="${purple}" stroke-width="2"/>
+            </svg>`;
+        } else if (fillPercent === 100) {
+            // Full Moon - bright yellow/gold with glow
+            return `<svg viewBox="0 0 100 100" width="48" height="48">
+                <defs><radialGradient id="fullGlow"><stop offset="0%" stop-color="${yellow}"/><stop offset="70%" stop-color="#fbbf24"/><stop offset="100%" stop-color="${purple}" stop-opacity="0.5"/></radialGradient></defs>
+                <circle cx="50" cy="50" r="48" fill="${yellow}" fill-opacity="0.2"/>
+                <circle cx="50" cy="50" r="40" fill="url(#fullGlow)" stroke="${yellow}" stroke-width="2"/>
+            </svg>`;
+        } else {
+            // Partial moons - yellow lit portion, purple shadow
+            const clipId = `clip${fillPercent}${direction}`;
+            const gradId = `grad${fillPercent}`;
+            const litX = direction === 'right' ? 50 + (50 - fillPercent/2) : 50 - (50 - fillPercent/2);
+            return `<svg viewBox="0 0 100 100" width="48" height="48">
+                <defs>
+                    <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="${direction === 'right' ? darkPurple : yellow}"/>
+                        <stop offset="50%" stop-color="${direction === 'right' ? purple : '#fbbf24'}"/>
+                        <stop offset="100%" stop-color="${direction === 'right' ? yellow : darkPurple}"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" fill="${darkPurple}"/>
+                <ellipse cx="${litX}" cy="50" rx="${fillPercent * 0.4}" ry="40" fill="${yellow}" opacity="0.9"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="${purple}" stroke-width="2"/>
+            </svg>`;
+        }
+    };
+
     const phases = {
-        0: { icon: '🌑', name: 'New Moon', desc: 'Perfect time for new beginnings and setting intentions', energy: 'Very High' },
-        1: { icon: '🌒', name: 'Waxing Crescent', desc: 'Time to take action on your intentions', energy: 'High' },
-        2: { icon: '🌓', name: 'First Quarter', desc: 'Overcome challenges and stay committed', energy: 'Medium' },
-        3: { icon: '🌔', name: 'Waxing Gibbous', desc: 'Refine and adjust your goals', energy: 'High' },
-        4: { icon: '🌕', name: 'Full Moon', desc: 'Celebrate achievements and release what no longer serves', energy: 'Very High' },
-        5: { icon: '🌖', name: 'Waning Gibbous', desc: 'Share wisdom and express gratitude', energy: 'Medium' },
-        6: { icon: '🌗', name: 'Last Quarter', desc: 'Let go and forgive', energy: 'Low' },
-        7: { icon: '🌘', name: 'Waning Crescent', desc: 'Rest, reflect, and prepare for renewal', energy: 'Low' }
+        0: { icon: moonSVG(0), name: 'New Moon', desc: 'Perfect time for new beginnings and setting intentions', energy: 'Very High' },
+        1: { icon: moonSVG(25, 'right'), name: 'Waxing Crescent', desc: 'Time to take action on your intentions', energy: 'High' },
+        2: { icon: moonSVG(50, 'right'), name: 'First Quarter', desc: 'Overcome challenges and stay committed', energy: 'Medium' },
+        3: { icon: moonSVG(75, 'right'), name: 'Waxing Gibbous', desc: 'Refine and adjust your goals', energy: 'High' },
+        4: { icon: moonSVG(100), name: 'Full Moon', desc: 'Celebrate achievements and release what no longer serves', energy: 'Very High' },
+        5: { icon: moonSVG(75, 'left'), name: 'Waning Gibbous', desc: 'Share wisdom and express gratitude', energy: 'Medium' },
+        6: { icon: moonSVG(50, 'left'), name: 'Last Quarter', desc: 'Let go and forgive', energy: 'Low' },
+        7: { icon: moonSVG(25, 'left'), name: 'Waning Crescent', desc: 'Rest, reflect, and prepare for renewal', energy: 'Low' }
     };
 
     const currentPhase = phases[phase];
-    moonIcon.textContent = currentPhase.icon;
+    moonIcon.innerHTML = currentPhase.icon;
     moonPhaseName.textContent = currentPhase.name;
     moonPhaseDesc.textContent = currentPhase.desc;
     moonEnergy.textContent = `✨ Manifestation Energy: ${currentPhase.energy}`;

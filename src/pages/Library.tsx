@@ -4,8 +4,23 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Search, Filter, Clock, ChevronRight } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import booksDatabase, { categories, Book } from '../data/booksData';
+import { artHistoryData } from '../data/artHistoryData';
 import Navigation from '../components/Navigation';
 import './Library.css';
+
+// Combined book type for display
+interface DisplayBook {
+  id: string;
+  title: string;
+  author: string;
+  category: string;
+  lessonsCount: number;
+  totalDuration: number;
+  difficulty?: string;
+  tags?: string[];
+  coverGradient?: string[];
+  isArtHistory: boolean;
+}
 
 const Library: React.FC = () => {
   const navigate = useNavigate();
@@ -17,9 +32,44 @@ const Library: React.FC = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'title' | 'duration' | 'popular'>('title');
 
+  // Convert art history books to display format
+  const artHistoryBooks: DisplayBook[] = useMemo(() => {
+    return artHistoryData.books.map(book => ({
+      id: book.id,
+      title: book.title,
+      author: book.author,
+      category: 'art-history',
+      lessonsCount: book.lessonList.length,
+      totalDuration: book.duration,
+      difficulty: 'intermediate',
+      tags: ['Art', 'History', 'Visual Arts'],
+      coverGradient: ['#ec4899', '#8b5cf6'],
+      isArtHistory: true
+    }));
+  }, []);
+
+  // Convert regular books to display format
+  const regularBooks: DisplayBook[] = useMemo(() => {
+    return booksDatabase.map(book => ({
+      id: book.id,
+      title: book.title,
+      author: book.author,
+      category: book.category,
+      lessonsCount: book.lessons.length,
+      totalDuration: book.totalDuration,
+      difficulty: book.difficulty,
+      tags: book.tags,
+      coverGradient: book.coverGradient,
+      isArtHistory: false
+    }));
+  }, []);
+
+  // Combine all books
+  const allBooks = useMemo(() => [...regularBooks, ...artHistoryBooks], [regularBooks, artHistoryBooks]);
+
   // Filter and sort books
   const filteredBooks = useMemo(() => {
-    let filtered = booksDatabase;
+    let filtered = allBooks;
 
     // Category filter
     if (selectedCategory !== 'all') {
@@ -32,8 +82,7 @@ const Library: React.FC = () => {
       filtered = filtered.filter(book =>
         book.title.toLowerCase().includes(query) ||
         book.author.toLowerCase().includes(query) ||
-        book.tags.some(tag => tag.toLowerCase().includes(query)) ||
-        book.keyThemes.some(theme => theme.toLowerCase().includes(query))
+        (book.tags && book.tags.some(tag => tag.toLowerCase().includes(query)))
       );
     }
 
@@ -49,8 +98,8 @@ const Library: React.FC = () => {
           return a.totalDuration - b.totalDuration;
         case 'popular':
           // Sort by number of completions (mock implementation)
-          const aProgress = userProgress[a.id]?.completedLessons.length || 0;
-          const bProgress = userProgress[b.id]?.completedLessons.length || 0;
+          const aProgress = userProgress[a.id]?.completedLessons?.length || 0;
+          const bProgress = userProgress[b.id]?.completedLessons?.length || 0;
           return bProgress - aProgress;
         default:
           return a.title.localeCompare(b.title);
@@ -58,12 +107,20 @@ const Library: React.FC = () => {
     });
 
     return sorted;
-  }, [searchQuery, selectedCategory, selectedDifficulty, sortBy, userProgress]);
+  }, [searchQuery, selectedCategory, selectedDifficulty, sortBy, userProgress, allBooks]);
 
-  const getBookProgress = (book: Book) => {
+  const getBookProgress = (book: DisplayBook) => {
     const progress = userProgress[book.id];
     if (!progress) return 0;
-    return (progress.completedLessons.length / book.lessons.length) * 100;
+    return (progress.completedLessons.length / book.lessonsCount) * 100;
+  };
+
+  const handleBookClick = (book: DisplayBook) => {
+    if (book.isArtHistory) {
+      navigate(`/art-history/${book.id}`);
+    } else {
+      navigate(`/book/${book.id}`);
+    }
   };
 
   return (
@@ -181,50 +238,56 @@ const Library: React.FC = () => {
             {filteredBooks.map((book, index) => (
               <motion.div
                 key={book.id}
-                className="book-card"
+                className={`book-card ${book.isArtHistory ? 'art-history-book' : ''}`}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                onClick={() => navigate(`/book/${book.id}`)}
+                onClick={() => handleBookClick(book)}
               >
-                <div 
+                <div
                   className="book-cover"
                   style={{
-                    background: `linear-gradient(135deg, ${book.coverGradient.join(', ')})`
+                    background: book.coverGradient
+                      ? `linear-gradient(135deg, ${book.coverGradient.join(', ')})`
+                      : 'linear-gradient(135deg, #ec4899, #8b5cf6)'
                   }}
                 >
                   <div className="book-cover-overlay">
                     <span className="book-category-badge">
                       {categories.find(c => c.id === book.category)?.icon}
                     </span>
-                    <span className="book-difficulty-badge">
-                      {book.difficulty}
-                    </span>
+                    {book.difficulty && (
+                      <span className="book-difficulty-badge">
+                        {book.difficulty}
+                      </span>
+                    )}
                   </div>
                 </div>
 
                 <div className="book-info">
                   <h3 className="book-title">{book.title}</h3>
                   <p className="book-author">{book.author}</p>
-                  
+
                   <div className="book-meta">
                     <span className="book-meta-item">
                       <Clock size={14} />
                       {book.totalDuration} min
                     </span>
                     <span className="book-meta-item">
-                      {book.lessons.length} lessons
+                      {book.lessonsCount} lessons
                     </span>
                   </div>
 
-                  <div className="book-tags">
-                    {book.tags.slice(0, 2).map(tag => (
-                      <span key={tag} className="book-tag">{tag}</span>
-                    ))}
-                  </div>
+                  {book.tags && book.tags.length > 0 && (
+                    <div className="book-tags">
+                      {book.tags.slice(0, 2).map(tag => (
+                        <span key={tag} className="book-tag">{tag}</span>
+                      ))}
+                    </div>
+                  )}
 
                   {userProgress[book.id] && (
                     <div className="book-card-progress">
