@@ -29,7 +29,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '8-10' },
                 estimatedTime: 6,
-                instructions: 'Lie flat, grip slightly wider than shoulders, lower to chest, press up.'
+                instructions: 'Lie flat on bench with eyes under the bar. Grip the bar slightly wider than shoulder-width, wrists straight. Unrack and hold the bar directly over your chest with arms locked. Lower the bar slowly to your mid-chest (nipple line), tucking elbows at about 45 degrees - not flared out. Touch your chest lightly (don\'t bounce), then press the bar back up in a slight arc toward your face until arms are locked. Keep your feet flat on the floor, glutes on the bench, and maintain a slight natural arch in your lower back throughout.'
             },
             {
                 id: 'db-bench-press',
@@ -41,7 +41,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 5,
-                instructions: 'Dumbbells at chest level, press up and together, control the descent.'
+                instructions: 'Sit on bench with dumbbells on your thighs. Kick them up as you lie back, positioning them at chest level with palms facing forward. Press the dumbbells up until your arms are extended but not locked, bringing them slightly together at the top (don\'t clank them). Lower slowly with control, allowing a deeper stretch than barbell bench by letting elbows drop slightly below chest level. Keep your shoulder blades squeezed together and pressed into the bench throughout. The independent movement of dumbbells works stabilizer muscles more than barbell.'
             },
             {
                 id: 'overhead-press',
@@ -53,7 +53,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '8-10' },
                 estimatedTime: 6,
-                instructions: 'Bar at shoulders, brace core, press overhead, lower with control.'
+                instructions: 'Stand with feet shoulder-width apart. Grip the bar just outside shoulder width and rest it on your front deltoids and upper chest. Take a deep breath and brace your core hard like you\'re about to be punched. Press the bar straight up, moving your head back slightly to let the bar pass your chin (don\'t lean back excessively). Once the bar clears your head, push your head through and lock out with the bar directly over your mid-foot. Lower with control back to shoulders. Keep your glutes squeezed and core tight to prevent arching your lower back.'
             },
             {
                 id: 'db-shoulder-press',
@@ -65,7 +65,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 5,
-                instructions: 'Seated or standing, press dumbbells from shoulders to overhead.'
+                instructions: 'Sit on a bench with back support, or stand with feet shoulder-width apart. Hold dumbbells at shoulder height with palms facing forward (or facing each other for neutral grip - easier on shoulders). Press the dumbbells straight up until your arms are fully extended overhead, bringing them slightly together at the top. Don\'t let them drift forward. Lower with control until dumbbells are back at shoulder level, elbows at about 90 degrees. Keep your core braced throughout to protect your lower back, especially when standing.'
             },
             {
                 id: 'pushups',
@@ -77,7 +77,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '15-20' },
                 estimatedTime: 4,
-                instructions: 'Hands shoulder-width, body straight, lower chest to floor, push up.'
+                instructions: 'Start in a high plank position with hands slightly wider than shoulder-width, fingers pointing forward or slightly outward. Your body should form a straight line from head to heels - don\'t let your hips sag or pike up. Lower your body by bending your elbows, keeping them at a 45-degree angle from your torso (not flared out to the sides). Lower until your chest nearly touches the floor, then push back up to the starting position. Keep your core tight and glutes engaged throughout. If regular push-ups are too challenging, elevate your hands on a bench or do them from your knees.'
             },
             {
                 id: 'incline-db-press',
@@ -89,7 +89,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 5,
-                instructions: 'Bench at 30-45 degrees, press dumbbells up from upper chest.'
+                instructions: 'Set the bench to a 30-45 degree incline (lower angle = more chest, higher = more shoulders). Sit back with dumbbells at shoulder level, palms facing forward. Press the dumbbells up and slightly together, stopping just short of locking your elbows. Lower slowly, allowing your elbows to drop to about 90 degrees or slightly below for a good stretch in the upper chest. Keep your shoulder blades pinched together and pressed into the bench. Don\'t let your lower back arch excessively - keep your core engaged. This variation emphasizes the upper chest more than flat bench.'
             },
             {
                 id: 'db-lateral-raise',
@@ -101,7 +101,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Arms at sides, raise dumbbells to shoulder height, control down.'
+                instructions: 'Stand with feet hip-width apart, holding light dumbbells at your sides with palms facing your body. Keep a slight bend in your elbows throughout the movement. Raise your arms out to the sides until they reach shoulder height, leading with your elbows rather than your hands. At the top, your arms should be parallel to the floor with pinkies slightly higher than thumbs (like pouring water from a pitcher). Lower with control - don\'t just drop them. Avoid using momentum or swinging your body. Use lighter weight than you think - this exercise humbles everyone!'
             },
             {
                 id: 'tricep-dips',
@@ -113,7 +113,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Hands on bench behind you, lower body by bending elbows, press up.'
+                instructions: 'Sit on the edge of a bench with hands gripping the edge beside your hips, fingers pointing forward. Walk your feet out and slide your butt off the bench. Start with legs bent (easier) or straight (harder). Lower your body by bending your elbows to about 90 degrees, keeping your back close to the bench - don\'t let your butt drift away. Your elbows should point backward, not out to the sides. Press through your palms to straighten your arms and return to the starting position. Don\'t go too deep as this can stress the shoulders. Keep movements controlled, not bouncy.'
             },
             {
                 id: 'close-grip-bench',
@@ -125,7 +125,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 5,
-                instructions: 'Hands shoulder-width or closer, elbows tucked, focus on triceps.'
+                instructions: 'Lie on the bench and grip the bar with hands about shoulder-width apart or slightly narrower (not so close that your wrists hurt). Unrack the bar and hold it over your lower chest. Lower the bar slowly, keeping your elbows tucked close to your body at about a 30-degree angle - they shouldn\'t flare out. Touch your lower chest/sternum area, then press back up, focusing on squeezing your triceps. The narrower grip shifts emphasis from chest to triceps. Use less weight than your regular bench press since triceps are doing more work.'
             },
 
             // ==================== PUSH - CREATIVE ====================
@@ -139,7 +139,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { time: '3:30', note: 'Full song challenge' },
                 estimatedTime: 5,
-                instructions: 'Play "Flower" by Moby. Down on "Bring Sally Down", up on "Bring Sally Up". Hold positions!'
+                instructions: 'Play "Flower" by Moby (search "Bring Sally Up challenge" on YouTube). Start in the up position of a push-up. When you hear "Bring Sally Down," lower yourself slowly to the bottom position and HOLD. When you hear "Bring Sally Up," push back up to the top and HOLD. The song has long holds in both positions that will set your muscles on fire. The challenge is to complete the entire 3:30 song without collapsing. Scale by doing it from your knees if needed. This is a brutal isometric and concentric challenge!'
             },
             {
                 id: 'plate-squeeze-press',
@@ -151,7 +151,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Squeeze two plates together (flat sides out), press from chest to overhead.'
+                instructions: 'Take two weight plates (start with 5-10 lbs each) and press them together with your palms on the flat sides, smooth sides facing out. Squeeze them together HARD using your chest muscles - don\'t let them slip! Hold them at chest level, then press straight out in front of you, maintaining that squeeze. Return to chest and repeat. You can also press them overhead while squeezing. The constant isometric squeeze creates incredible chest activation. If they start slipping, squeeze harder or use lighter plates.'
             },
             {
                 id: 'kb-bottoms-up-press',
@@ -163,7 +163,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '6-8 each' },
                 estimatedTime: 5,
-                instructions: 'Hold KB upside down, stabilize, press overhead. Requires intense grip and control.'
+                instructions: 'Grab a light kettlebell and flip it upside down so the bottom faces the ceiling. Hold it at shoulder height with the bell balanced above your hand. Your grip must be rock-solid to keep it from tipping. Brace your core hard, then press the kettlebell straight overhead while keeping it perfectly balanced. Lower with control. If the bell wobbles or tips, your stabilizers aren\'t engaged enough. Start VERY light (8-12 kg) - this is much harder than it looks. Great for shoulder stability and grip strength.'
             },
             {
                 id: 'archer-pushups',
@@ -175,7 +175,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '6-8 each side' },
                 estimatedTime: 5,
-                instructions: 'Wide stance, shift weight to one arm while extending the other, alternate.'
+                instructions: 'Set up in a push-up position with your hands placed very wide - about 1.5x shoulder width. As you lower down, shift your body toward your right hand, bending that elbow while your left arm straightens out to the side (like an archer drawing a bow). Your right arm does most of the work while your left arm stays nearly straight for support. Push back up, then repeat on the other side. This is a progression toward one-arm push-ups. Keep your core tight and body in a straight line throughout.'
             },
             {
                 id: 'db-floor-fly-press',
@@ -187,7 +187,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10' },
                 estimatedTime: 5,
-                instructions: 'Lying on floor, fly out wide, bring together, then press up. 1 rep = fly + press.'
+                instructions: 'Lie on your back on the floor (not a bench) with dumbbells pressed up over your chest. Open your arms out to the sides in a fly motion, keeping a slight bend in your elbows, until your triceps touch the floor. The floor limits your range of motion to protect your shoulders. Squeeze your chest to bring the dumbbells back together over your chest (that\'s the fly). Now immediately press the dumbbells straight up (that\'s the press). Lower back to chest. That\'s 1 rep. The combo hits your chest from multiple angles.'
             },
             {
                 id: 'tempo-pushups',
@@ -199,7 +199,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10' },
                 estimatedTime: 5,
-                instructions: '4 seconds down, 2 second pause at bottom, 1 second explosive up.'
+                instructions: 'Perform push-ups with a strict tempo: take a full 4 seconds to lower your chest to the floor (count "one-mississippi" four times). Hold the bottom position for 2 full seconds with your chest hovering just above the ground. Then explode up in 1 second to the starting position. The slow lowering (eccentric) phase builds serious strength and muscle. The pause eliminates momentum and the stretch reflex, making the push much harder. You\'ll do fewer reps but the time under tension is brutal.'
             },
             {
                 id: 'plate-front-raise-press',
@@ -211,7 +211,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 4,
-                instructions: 'Hold plate at hips, raise to eye level, continue pressing overhead, reverse.'
+                instructions: 'Stand holding a weight plate with both hands at the 9 and 3 o\'clock positions (or grip the edges). Start with the plate at hip level, arms straight. Keeping your arms straight, raise the plate in front of you to eye level (front raise portion). From there, continue the motion by pressing the plate overhead until your arms are fully extended. Reverse the motion: lower to eye level, then lower to hips. That\'s one rep. Keep your core tight and avoid leaning back. Great for shoulder endurance and core stability.'
             },
             {
                 id: 'band-pushup-plus',
@@ -223,7 +223,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 4,
-                instructions: 'Band around back, pushup then protract shoulders at top for extra push.'
+                instructions: 'Loop a resistance band around your upper back and hold the ends under your palms as you set up for a push-up. The band adds resistance at the top of the movement where you\'re normally strongest. Perform a push-up, and at the top, don\'t stop - push even further by protracting your shoulder blades (spreading them apart), rounding your upper back slightly toward the ceiling. This extra "plus" at the top targets your serratus anterior (the muscles on your ribs under your armpits). Then lower into the next rep.'
             },
 
             // ==================== PULL - BASIC ====================
@@ -237,7 +237,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '8-10' },
                 estimatedTime: 6,
-                instructions: 'Hinge at hips, back flat, pull bar to lower chest, squeeze shoulder blades.'
+                instructions: 'Stand with feet shoulder-width apart, grip the bar slightly wider than shoulder width. Hinge at your hips by pushing your butt back, keeping your back flat and chest up. Your torso should be at about a 45-degree angle to the floor (some prefer more horizontal for more lat activation). Let the bar hang at arm\'s length. Pull the bar toward your lower chest/upper abdomen, driving your elbows back and squeezing your shoulder blades together at the top. Lower with control - don\'t just drop it. Keep your core braced and avoid using momentum or jerking your body to lift the weight.'
             },
             {
                 id: 'db-row',
@@ -249,7 +249,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12 each' },
                 estimatedTime: 5,
-                instructions: 'One hand on bench, row dumbbell to hip, elbow past torso.'
+                instructions: 'Place your left knee and left hand on a bench, with your right foot on the floor slightly back for stability. Your back should be flat and parallel to the floor. Hold a dumbbell in your right hand, letting it hang straight down. Row the dumbbell up toward your hip (not your armpit), leading with your elbow. Pull until your elbow passes your torso and squeeze your lat at the top. Lower slowly with control - this eccentric phase builds muscle. Keep your shoulders square to the floor; don\'t rotate your torso to cheat the weight up. Complete all reps on one side before switching.'
             },
             {
                 id: 'pull-ups',
@@ -261,7 +261,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 4, reps: 'max' },
                 estimatedTime: 6,
-                instructions: 'Overhand grip, pull chin over bar, control the descent.'
+                instructions: 'Grip the bar with hands slightly wider than shoulder-width, palms facing away from you (overhand/pronated grip). Start from a dead hang with arms fully extended. Initiate the pull by depressing your shoulder blades (pulling them down and back), then drive your elbows down toward your hips as you pull your chin over the bar. Focus on pulling with your lats, not just your arms. Lower yourself with control all the way to a dead hang - no half reps! Keep your core tight and avoid swinging or kipping. If you can\'t do full pull-ups, use a band for assistance or do slow negatives (jump up, lower slowly).'
             },
             {
                 id: 'chin-ups',
@@ -273,7 +273,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: 'max' },
                 estimatedTime: 5,
-                instructions: 'Underhand grip, pull chin over bar, great bicep activation.'
+                instructions: 'Grip the bar with hands shoulder-width apart, palms facing toward you (underhand/supinated grip). Start from a dead hang with arms fully extended. Pull yourself up by driving your elbows down toward your sides, focusing on squeezing your biceps and lats. Pull until your chin clears the bar. The underhand grip allows more bicep involvement, making these slightly easier than pull-ups for most people. Lower with control to a full dead hang. Keep your body relatively straight - a slight lean back is okay but don\'t swing. Great for building biceps while also hitting your back.'
             },
             {
                 id: 'db-bicep-curl',
@@ -285,7 +285,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Elbows pinned to sides, curl up with control, squeeze at top.'
+                instructions: 'Stand with feet hip-width apart, holding dumbbells at your sides with palms facing forward (supinated grip). Pin your elbows to your sides - they should not move forward or backward during the exercise. Curl both dumbbells up toward your shoulders by bending only at the elbow, squeezing your biceps hard at the top. Lower with control, taking about 2-3 seconds on the way down - this eccentric phase is where growth happens. Don\'t swing the weights or lean back; if you need momentum, the weight is too heavy. You can alternate arms or curl both simultaneously.'
             },
             {
                 id: 'hammer-curls',
@@ -297,7 +297,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Neutral grip (palms facing each other), curl up, control down.'
+                instructions: 'Stand with feet hip-width apart, holding dumbbells at your sides with palms facing your body (neutral grip - like holding hammers). Keep your elbows pinned to your sides throughout. Curl the weights up toward your shoulders while maintaining that neutral grip - don\'t rotate your wrists. Squeeze at the top, then lower with control. This grip targets the brachialis (muscle under your bicep that adds arm thickness) and the brachioradialis (forearm). You can do both arms together, alternating, or across your body toward the opposite shoulder for variety.'
             },
             {
                 id: 'band-pull-apart',
@@ -309,7 +309,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '15-20' },
                 estimatedTime: 3,
-                instructions: 'Arms extended forward, pull band apart to chest, squeeze back.'
+                instructions: 'Hold a resistance band in front of you at chest or shoulder height, arms extended, hands about shoulder-width apart. Keep your arms straight throughout the movement. Pull the band apart by squeezing your shoulder blades together, bringing the band toward or touching your chest. Focus on using your rear deltoids and upper back muscles, not just pulling with your arms. Hold the stretched position for a brief squeeze, then return to the start with control. Keep your shoulders down (don\'t shrug) and chest proud. Great for posture and shoulder health - do these often!'
             },
             {
                 id: 'db-rear-delt-fly',
@@ -321,7 +321,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Bent over, arms hanging, fly out to sides, squeeze rear delts.'
+                instructions: 'Hinge forward at your hips until your torso is nearly parallel to the floor. Let your arms hang straight down holding light dumbbells, palms facing each other. Keeping a slight bend in your elbows (locked in that position), raise both arms out to the sides like you\'re spreading wings. Lift until your arms are parallel to the floor, squeezing your shoulder blades together at the top. Lower with control. Don\'t swing or use momentum - these should be slow and controlled. Focus on feeling your rear delts (back of shoulders) working. Use lighter weight than you think; rear delts are small muscles.'
             },
             {
                 id: 'barbell-curl',
@@ -333,7 +333,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 4,
-                instructions: 'Shoulder-width grip, curl bar to shoulders, control the negative.'
+                instructions: 'Stand with feet shoulder-width apart, gripping a barbell with an underhand grip (palms up), hands about shoulder-width apart. Let the bar hang at arm\'s length against your thighs. Pin your elbows to your sides and keep them there throughout the movement. Curl the bar up toward your shoulders in an arc, squeezing your biceps hard at the top. Lower the bar slowly with control - take 2-3 seconds to lower it. Don\'t swing the weight or lean back; your body should stay stationary. Using an EZ-curl bar (wavy bar) is easier on the wrists if straight bar causes discomfort.'
             },
 
             // ==================== PULL - CREATIVE ====================
@@ -347,7 +347,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { time: '3 rounds max hold', rest: '60s between' },
                 estimatedTime: 5,
-                instructions: 'Hang from bar as long as possible. Great for grip and shoulder health.'
+                instructions: 'Grip the pull-up bar with an overhand grip, hands shoulder-width apart. Step or jump off the support and hang with your arms fully extended, shoulders relaxed (let them rise toward your ears slightly). Your job is simply to hang as long as possible without letting go. Keep your body still - no swinging or kipping. Breathe steadily and focus on your grip. When you can\'t hold any longer, safely drop or step down. Rest 60 seconds, then go again. Track your times to see improvement. This builds insane grip strength and decompresses your spine. Aim for 60+ seconds per hang.'
             },
             {
                 id: 'kb-gorilla-row',
@@ -359,7 +359,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10 each' },
                 estimatedTime: 5,
-                instructions: 'Two KBs on floor, hinge stance, alternate rowing one while stabilizing with other.'
+                instructions: 'Place two kettlebells on the floor about shoulder-width apart. Stand over them and hinge at the hips, grabbing both handles. Your back should be flat, core braced. While pressing down on the left KB to stabilize, row the right KB up toward your hip, elbow driving back past your body. Lower with control, then row the left KB while stabilizing with the right. Alternate sides. The stabilizing arm works hard to prevent rotation, giving you a massive core workout along with the back work. Keep your hips square - don\'t twist to cheat the weight up.'
             },
             {
                 id: 'band-face-pull',
@@ -371,7 +371,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '15-20' },
                 estimatedTime: 4,
-                instructions: 'Band at face height, pull to face while externally rotating, pause and squeeze.'
+                instructions: 'Anchor a resistance band at face height (door anchor, rack, etc.). Grip the band with both hands, palms facing down, and step back until there\'s tension. Start with arms extended toward the anchor. Pull the band toward your face, separating your hands as you pull so they end up beside your ears. Simultaneously rotate your hands so your thumbs point backward (external rotation). Squeeze your shoulder blades together and hold for 1-2 seconds. Slowly return to start. This exercise is incredible for shoulder health, posture, and hitting often-neglected muscles.'
             },
             {
                 id: 'tempo-pull-ups',
@@ -383,7 +383,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '5-6' },
                 estimatedTime: 5,
-                instructions: '3 seconds up, 1 second hold at top, 3 seconds down. Quality over quantity.'
+                instructions: 'Grip the bar in your normal pull-up position. Take 3 full seconds to pull yourself up - count "one-mississippi, two-mississippi, three-mississippi" on the way up. At the top (chin over bar), hold and squeeze for 1 second. Then take 3 full seconds to lower yourself back to a dead hang. That\'s 7 seconds per rep! The slow tempo eliminates momentum and keeps your muscles under tension much longer. You\'ll do fewer reps but the quality is infinitely better. These build serious strength and control. Expect to do far fewer reps than your normal pull-ups.'
             },
             {
                 id: 'renegade-rows',
@@ -395,7 +395,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '8-10 each' },
                 estimatedTime: 5,
-                instructions: 'Plank on dumbbells, row one arm while stabilizing, alternate.'
+                instructions: 'Get into a push-up position with your hands gripping two dumbbells on the floor (hex dumbbells work best - round ones will roll). Your feet should be wide for stability. While pressing down hard through your left arm to stabilize, row the right dumbbell up toward your hip, keeping your elbow close to your body. Lower with control, then row the left dumbbell while stabilizing with the right. The key is keeping your hips completely still and square to the floor - don\'t rotate or let your hips drop. This is as much a core exercise as a back exercise. Start light!'
             },
             {
                 id: 'kb-high-pull',
@@ -407,7 +407,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 4,
-                instructions: 'Explosive hip hinge, pull KB to chin height, elbows high.'
+                instructions: 'Stand with feet slightly wider than shoulder-width, kettlebell on the floor between your feet. Hinge at the hips and grab the kettlebell with one hand. Explosively drive your hips forward and pull the KB straight up, leading with your elbow. The elbow should go high and wide as the KB comes up to chin/chest height. Your arm should form an "L" shape at the top. This is a powerful, explosive movement - the hip drive does most of the work, not your arm. Lower the KB with control and reset for the next rep. Great for building power and athleticism.'
             },
             {
                 id: '21s-curls',
@@ -419,7 +419,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 2, reps: '21 (7-7-7)' },
                 estimatedTime: 4,
-                instructions: '7 reps bottom half, 7 reps top half, 7 reps full range. Brutal pump!'
+                instructions: 'Use lighter weight than normal curls - you\'ll see why! Start with dumbbells at your thighs. First, do 7 reps of BOTTOM HALF curls: curl from thighs up to elbows at 90 degrees, then back down. Next, do 7 reps of TOP HALF curls: start at 90 degrees and curl up to shoulders, then back to 90. Finally, do 7 reps of FULL range curls: thighs all the way to shoulders. That\'s 21 total reps with NO REST between sections. The pump and burn is absolutely brutal because you\'re eliminating the rest points in the movement. Don\'t be a hero with the weight!'
             },
             {
                 id: 'inverted-rows',
@@ -431,7 +431,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Bar in rack at hip height, hang underneath, pull chest to bar.'
+                instructions: 'Set a barbell in a rack at about hip height (lower bar = harder). Lie underneath the bar and grip it slightly wider than shoulder-width, overhand grip. Your body should be straight from head to heels, core braced. Only your heels touch the ground. Pull your chest up to touch the bar by squeezing your shoulder blades together and driving your elbows back. Lower with control until arms are fully extended. Keep your body rigid like a plank throughout - don\'t let your hips sag. To make it easier, raise the bar higher or bend your knees. This is like an upside-down push-up for your back!'
             },
 
             // ==================== LEGS - BASIC (KNEE-FRIENDLY) ====================
@@ -445,7 +445,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '10-12' },
                 estimatedTime: 6,
-                instructions: 'Slight knee bend, hinge at hips, lower bar along legs, feel hamstring stretch.'
+                instructions: 'Stand with feet hip-width apart, holding the barbell at hip level with an overhand grip. Keep a slight bend in your knees (soft knees) - this angle stays locked throughout the movement. Push your hips BACK (not down) while keeping your back flat and chest proud. The bar should travel straight down, staying close to your legs (almost dragging against them). Lower until you feel a strong stretch in your hamstrings - typically when the bar reaches mid-shin. Drive your hips forward to return to standing, squeezing your glutes at the top. This is a hip hinge, not a squat - your knees barely bend. Keep your core braced to protect your lower back.'
             },
             {
                 id: 'db-rdl',
@@ -457,7 +457,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 5,
-                instructions: 'Same as barbell RDL but with dumbbells for more range of motion.'
+                instructions: 'Stand with feet hip-width apart, holding dumbbells in front of your thighs, palms facing your body. Keep a slight, fixed bend in your knees throughout. Push your hips back while keeping your back flat, lowering the dumbbells along the front of your legs. The dumbbells allow you to go a bit deeper than a barbell since there\'s no bar hitting your shins. Lower until you feel a strong stretch in your hamstrings, then drive your hips forward to return to standing, squeezing your glutes hard at the top. Keep the dumbbells close to your body throughout. Great for beginners learning the hip hinge pattern.'
             },
             {
                 id: 'hip-thrust',
@@ -469,7 +469,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '10-12' },
                 estimatedTime: 6,
-                instructions: 'Upper back on bench, bar on hips, drive hips up, squeeze glutes at top.'
+                instructions: 'Sit on the floor with your upper back resting against a bench (bench should hit just below your shoulder blades). Roll a barbell over your legs so it sits in your hip crease (use a bar pad for comfort). Plant your feet flat on the floor, about shoulder-width apart, positioned so your shins are vertical at the top of the movement. Drive through your heels and squeeze your glutes to lift your hips until your body forms a straight line from shoulders to knees. Hold the top for 1-2 seconds, really squeezing your glutes. Lower with control. Keep your chin slightly tucked and eyes forward throughout - don\'t hyperextend your lower back.'
             },
             {
                 id: 'glute-bridge',
@@ -481,7 +481,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '15-20' },
                 estimatedTime: 4,
-                instructions: 'Lying on back, feet flat, drive hips up, squeeze glutes, lower with control.'
+                instructions: 'Lie flat on your back with your knees bent and feet flat on the floor, hip-width apart. Your feet should be close enough that you can almost touch your heels with your fingertips. Press your lower back into the floor. Drive through your heels (not your toes) and squeeze your glutes to lift your hips toward the ceiling until your body forms a straight line from shoulders to knees. Hold the top position for 1-2 seconds, squeezing your glutes as hard as you can. Lower with control. Don\'t hyperextend at the top - the power comes from your glutes, not arching your back. Great knee-friendly glute builder!'
             },
             {
                 id: 'box-squat',
@@ -493,7 +493,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '8-10' },
                 estimatedTime: 6,
-                instructions: 'Squat back to box, pause briefly (no bouncing), drive up. Easier on knees.'
+                instructions: 'Set up a box or bench behind you at a height where your thighs are parallel to the floor (or slightly above) when seated. Position the barbell on your upper back and stand in front of the box with feet shoulder-width apart. Push your hips back and sit back onto the box - don\'t just drop down. When you touch the box, pause for 1-2 seconds (this eliminates the stretch reflex, making you work harder). Keep your core braced and shins relatively vertical. Drive through your heels to stand back up explosively. The box teaches proper squat depth and is much easier on the knees than regular squats because it reduces forward knee travel.'
             },
             {
                 id: 'goblet-squat',
@@ -505,7 +505,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 5,
-                instructions: 'Hold KB at chest, squat down keeping torso upright, drive up through heels.'
+                instructions: 'Hold a kettlebell or dumbbell vertically at your chest, cupping the weight with both hands like you\'re holding a goblet. Stand with feet slightly wider than shoulder-width, toes pointed out about 15-30 degrees. Keeping your chest up and core tight, push your hips back and bend your knees to squat down. Go as low as you can while keeping your back flat - ideally until your elbows touch the inside of your knees. This position naturally keeps your torso upright and teaches great squat form. Drive through your heels to stand back up, squeezing your glutes at the top. The front-loaded weight makes this easier on your lower back than back squats.'
             },
             {
                 id: 'sumo-deadlift',
@@ -517,7 +517,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '6-8' },
                 estimatedTime: 6,
-                instructions: 'Wide stance, toes out, grip inside knees, drive through floor.'
+                instructions: 'Stand with a very wide stance (about 1.5-2x shoulder width), toes pointed out at 45 degrees or more. The barbell should be over your mid-foot. Bend at the hips and knees, keeping your chest up, and grip the bar with hands inside your knees (about shoulder-width). Your arms should hang straight down. Brace your core, push your knees out toward your toes, and drive through the floor to stand up, keeping the bar close to your body. The wide stance emphasizes your glutes, inner thighs, and allows for a more upright torso, making this easier on the lower back than conventional deadlifts. Lock out by squeezing your glutes, not by leaning back.'
             },
             {
                 id: 'step-ups',
@@ -529,7 +529,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12 each' },
                 estimatedTime: 5,
-                instructions: 'Step onto box driving through heel, control the descent. Low impact on knees.'
+                instructions: 'Stand facing a box or bench that puts your thigh at about parallel when your foot is on top (12-18 inches typically). Hold dumbbells at your sides. Place your entire right foot on the box, then drive through that heel to step up, bringing your left foot onto the box. Step back down with the left foot first, controlling the descent. Complete all reps on one side before switching, or alternate legs. The key is to push through the working leg - don\'t push off with your back foot to cheat. Keep your torso upright. This is a very knee-friendly exercise that builds single-leg strength and balance.'
             },
             {
                 id: 'single-leg-rdl',
@@ -541,7 +541,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10 each' },
                 estimatedTime: 5,
-                instructions: 'Balance on one leg, hinge forward, back leg extends behind. Great for balance.'
+                instructions: 'Stand on your right leg holding a dumbbell in your left hand (this helps counterbalance). Keep a slight bend in your standing knee. Hinge at the hips by pushing them back while simultaneously extending your left leg straight behind you. Your body and back leg should move as one unit, forming a "T" shape at the bottom. Lower until you feel a strong stretch in your standing leg\'s hamstring, then drive your hips forward to return to standing. Keep your hips square (don\'t rotate open). This challenges your balance enormously while building single-leg strength. Start without weight if needed - the balance component is harder than you think!'
             },
             {
                 id: 'wall-sit',
@@ -553,7 +553,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { time: '30-60 seconds', sets: 3 },
                 estimatedTime: 4,
-                instructions: 'Back against wall, thighs parallel to floor, hold. Isometric knee-friendly.'
+                instructions: 'Stand with your back flat against a wall, feet about 2 feet away from the wall. Slide down the wall until your thighs are parallel to the floor (knees at 90 degrees). Your knees should be directly over your ankles, not past your toes. Press your entire back flat against the wall - don\'t let your lower back arch. Place your hands on the wall beside you or on your thighs (not on your knees - that\'s cheating!). Hold this position, breathing steadily. Your quads will burn intensely. This is an isometric exercise that builds quad endurance with zero impact on the knees. Time yourself and try to improve each session.'
             },
 
             // ==================== LEGS - CREATIVE (KNEE-FRIENDLY) ====================
@@ -567,7 +567,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { time: '3:30', note: 'Full song challenge' },
                 estimatedTime: 5,
-                instructions: 'Ball between back and wall. Down on "Sally Down", up on "Sally Up". Hold positions!'
+                instructions: 'Place a yoga/stability ball between your lower back and a wall. Stand with feet shoulder-width apart, slightly in front of you. Play "Flower" by Moby (the Sally Up Challenge song). When you hear "Bring Sally Down," squat down slowly until your thighs are parallel to the floor and HOLD that position. When you hear "Bring Sally Up," stand back up and HOLD at the top. The song has brutal long holds in both positions. The ball supports your back and makes this much easier on your knees than regular squats. Try to complete the entire 3:30 song without your legs giving out. This is a serious quad endurance test!'
             },
             {
                 id: 'kb-swing',
@@ -579,7 +579,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 4, reps: '15-20' },
                 estimatedTime: 5,
-                instructions: 'Hinge and hike KB back, explosive hip snap forward, arms guide not lift.'
+                instructions: 'Stand with feet shoulder-width apart, kettlebell on the floor about a foot in front of you. Hinge at the hips, grab the KB with both hands, and hike it back between your legs like snapping a football. From there, explosively drive your hips forward and squeeze your glutes - this hip snap propels the KB forward and up. Your arms are just along for the ride; they guide the KB but don\'t lift it. The KB should float to about chest or shoulder height at the top. As it falls, hinge back and let it swing between your legs, then repeat. Keep your core braced and back flat throughout. This is a HIP exercise, not a squat or an arm exercise.'
             },
             {
                 id: 'kb-deadlift-to-squat',
@@ -591,7 +591,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10' },
                 estimatedTime: 5,
-                instructions: 'Deadlift KB up, clean to goblet position, squat, reverse. 1 rep = full flow.'
+                instructions: 'Start with a kettlebell on the floor between your feet. Hinge down and grab it with both hands, then perform a deadlift to standing. At the top, clean the KB up to your chest in a goblet position (two hands cupping the sides). Now perform a goblet squat, going as deep as you can with good form. Stand up from the squat, then lower the KB back down to the floor with control (reverse deadlift). That\'s ONE rep. This flow hits your hamstrings, glutes, quads, and core in one continuous movement. Keep the transitions smooth and controlled. Great total lower body conditioning!'
             },
             {
                 id: 'banded-hip-thrust',
@@ -603,7 +603,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '15-20' },
                 estimatedTime: 4,
-                instructions: 'Band around knees, hip thrust while pushing knees out against band.'
+                instructions: 'Loop a resistance band around your legs just above your knees. Set up for a hip thrust with your upper back against a bench, feet flat on the floor. Throughout the movement, actively push your knees OUT against the band - this fires up your glute medius (side glutes). Drive through your heels to thrust your hips up, squeezing your glutes hard at the top while continuing to push against the band. The band creates constant tension on your outer glutes, making this exponentially harder than regular hip thrusts. Hold the top for 1-2 seconds before lowering. The burn is real!'
             },
             {
                 id: 'stair-climb-workout',
@@ -615,7 +615,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { rounds: 5, note: 'Up fast, walk down' },
                 estimatedTime: 6,
-                instructions: 'Power walk or skip steps going up, controlled walk down. Great low-impact cardio.'
+                instructions: 'Find a staircase - the longer the better. Power walk or take two steps at a time going UP, driving through your heels and pumping your arms. Go as fast as you can maintain with control. At the top, walk slowly back down to recover (walking down stairs can be hard on knees, so keep it controlled). Immediately start the next round. Do 5 rounds total. For added challenge, hold light dumbbells or wear a weighted vest. This is incredibly effective cardio that builds leg strength without the joint impact of running. Your heart rate will spike and your glutes will burn!'
             },
             {
                 id: 'tempo-goblet-squat',
@@ -627,7 +627,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10' },
                 estimatedTime: 5,
-                instructions: '5 seconds down, 3 second hold at bottom, 1 second up. Brutal quad burn.'
+                instructions: 'Hold a kettlebell in the goblet position at your chest. Take a full 5 seconds to lower yourself into the squat - count it out slowly. At the bottom (thighs at least parallel), hold perfectly still for 3 seconds. Then drive up to standing in just 1 second. That\'s 9 seconds of time under tension per rep! The slow lowering eliminates momentum, the pause at the bottom removes the stretch reflex, and you have to generate force from a dead stop. Your quads will be screaming by rep 5. Use significantly less weight than your normal goblet squat - the tempo makes this exponentially harder.'
             },
             {
                 id: 'single-leg-hip-thrust',
@@ -639,7 +639,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12 each' },
                 estimatedTime: 5,
-                instructions: 'One leg extended, thrust with single leg, feel the glute isolation.'
+                instructions: 'Set up for a hip thrust with your upper back against a bench, one foot planted on the floor. Extend your other leg straight out in front of you (keep it elevated throughout the set). Drive through the heel of your working leg to thrust your hips up until your body forms a straight line from shoulders to knee. Squeeze your glute hard at the top for 1-2 seconds, then lower with control. Complete all reps on one side before switching. This isolates each glute individually and exposes any strength imbalances. Don\'t be surprised if one side is noticeably harder - that\'s normal and why unilateral work is important!'
             },
             {
                 id: 'yoga-ball-hamstring-curl',
@@ -651,7 +651,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Heels on ball, lift hips, curl ball toward glutes, extend back out.'
+                instructions: 'Lie on your back with your heels resting on top of a stability ball, legs straight, arms by your sides for support. Lift your hips off the floor into a bridge position. From here, bend your knees and use your hamstrings to roll the ball toward your glutes. Your hips should stay elevated the entire time - don\'t let them drop. Roll the ball back out by straightening your legs, keeping your hips up. That\'s one rep. This is one of the best hamstring exercises you can do with minimal equipment. The instability of the ball makes your core and stabilizers work overtime. For an extreme challenge, try it one leg at a time!'
             },
             {
                 id: 'frog-pumps',
@@ -663,7 +663,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '20-30' },
                 estimatedTime: 4,
-                instructions: 'Soles of feet together, knees out, thrust hips up, squeeze glutes hard.'
+                instructions: 'Lie on your back and bring the soles of your feet together, letting your knees fall out to the sides like a frog (butterfly position). Your feet should be relatively close to your glutes. From here, drive through your heels and squeeze your glutes to lift your hips off the floor. Focus on squeezing your glutes as hard as possible at the top - hold for 1 second. Lower with control and repeat. The unique foot position takes your quads and hamstrings out of the movement, isolating your glutes extremely well. These burn like crazy but are very knee-friendly since there\'s no knee flexion involved. Great for glute activation!'
             },
             {
                 id: 'kb-sumo-squat',
@@ -675,7 +675,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '12-15' },
                 estimatedTime: 4,
-                instructions: 'Wide stance, toes out, hold KB between legs, squat deep.'
+                instructions: 'Stand with a very wide stance (about 1.5x shoulder width), toes pointed out at 45 degrees. Hold a kettlebell with both hands, arms hanging straight down so the KB hangs between your legs. Keeping your chest up and back straight, push your knees out toward your toes as you squat down. Go as deep as you can - the wide stance allows for excellent depth. Your torso should stay fairly upright (more upright than a regular squat). Drive through your heels to stand, squeezing your glutes and inner thighs at the top. This variation really targets the glutes and inner thighs while being easier on the lower back due to the upright posture.'
             },
 
             // ==================== CORE - BASIC ====================
@@ -689,7 +689,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { time: '30-60 seconds', sets: 3 },
                 estimatedTime: 4,
-                instructions: 'Forearms and toes, body straight line, brace core, breathe steady.'
+                instructions: 'Get into position on your forearms and toes. Your elbows should be directly under your shoulders, forearms parallel or hands clasped. Your body should form a perfectly straight line from head to heels - don\'t let your hips sag (most common mistake) or pike up. Squeeze your glutes and brace your core like you\'re about to be punched in the stomach. Look at the floor to keep your neck neutral. Breathe steadily - don\'t hold your breath! When your form starts to break (hips sagging), the set is over. Quality over quantity. If shaking, that\'s good - it means your muscles are working!'
             },
             {
                 id: 'dead-bug',
@@ -701,7 +701,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12 each side' },
                 estimatedTime: 4,
-                instructions: 'On back, arms up, knees at 90. Extend opposite arm/leg while keeping back flat.'
+                instructions: 'Lie on your back with arms extended straight up toward the ceiling and legs raised with knees bent at 90 degrees (like you\'re a dead bug on its back). Press your lower back firmly into the floor - this is critical and must be maintained throughout. Slowly extend your right arm overhead and your left leg out straight simultaneously, lowering them toward (but not touching) the floor. Only go as low as you can while keeping your lower back pressed into the floor. Return to start and repeat with opposite arm/leg. The goal is anti-extension - keeping your back from arching. This is harder than it looks when done correctly!'
             },
             {
                 id: 'hanging-leg-raise',
@@ -713,7 +713,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '10-12' },
                 estimatedTime: 4,
-                instructions: 'Hang from bar, raise legs to 90 degrees (or higher), control the descent.'
+                instructions: 'Hang from a pull-up bar with an overhand grip, arms fully extended, body still (no swinging). Keeping your legs straight (or slightly bent for an easier version), raise them by curling your pelvis up and lifting your legs until they\'re at least parallel to the floor. For extra ab work, continue raising until your toes touch the bar. Lower with control - this eccentric portion is where the real work happens. Don\'t swing or use momentum. If you can\'t do straight leg raises, start with knee raises (bring knees to chest). Keep your upper body as still as possible throughout.'
             },
             {
                 id: 'russian-twist',
@@ -725,7 +725,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '20 total' },
                 estimatedTime: 4,
-                instructions: 'Seated, lean back slightly, feet up, rotate side to side with weight.'
+                instructions: 'Sit on the floor with knees bent and heels either on the floor (easier) or elevated (harder). Lean back to about a 45-degree angle, keeping your back straight - don\'t round your spine. Hold a weight (dumbbell, plate, or medicine ball) at chest level with both hands. Rotate your torso to the right, bringing the weight beside your right hip. Rotate to the left, bringing the weight to your left hip. That\'s 2 reps (one each side). Keep your core braced and move with control - don\'t just swing the weight. Your lower body should stay relatively stable while your torso rotates.'
             },
             {
                 id: 'bicycle-crunches',
@@ -737,7 +737,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '20 total' },
                 estimatedTime: 4,
-                instructions: 'On back, hands behind head, alternate elbow to opposite knee.'
+                instructions: 'Lie on your back with hands lightly supporting your head (don\'t pull on your neck!). Lift your shoulders off the ground and raise your legs with knees bent. Bring your right elbow toward your left knee while simultaneously straightening your right leg. Then switch - left elbow to right knee while straightening the left leg. Move in a smooth, controlled pedaling motion. Really focus on the rotation and bringing your shoulder (not just elbow) across to the opposite knee. Keep your lower back pressed into the floor. Go slow and feel each rep - fast bicycle crunches are usually sloppy and less effective.'
             },
             {
                 id: 'bird-dog',
@@ -749,7 +749,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { sets: 3, reps: '10-12 each side' },
                 estimatedTime: 4,
-                instructions: 'On all fours, extend opposite arm/leg, keep hips level, hold 2 sec.'
+                instructions: 'Start on all fours with hands directly under shoulders and knees under hips. Keep your back flat like you could balance a cup of water on it. Simultaneously extend your right arm straight forward and your left leg straight back until both are parallel to the floor. Hold for 2-3 seconds, focusing on keeping your hips and shoulders square to the floor - don\'t let them rotate or tip to one side. Return to the starting position with control, then repeat with the opposite arm and leg. This exercise builds core stability and lower back strength. Move slowly and deliberately - the balance challenge is the point!'
             },
 
             // ==================== CORE - CREATIVE ====================
@@ -763,7 +763,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '8-10 each direction' },
                 estimatedTime: 4,
-                instructions: 'Plank on ball, forearms on ball, make circles like stirring a pot.'
+                instructions: 'Get into a plank position with your forearms resting on top of a stability ball, toes on the floor. Your body should form a straight line from head to heels. Now, keeping your core braced and body stable, use your forearms to move the ball in small circles - like you\'re stirring a giant pot. Make 8-10 circles clockwise, then 8-10 counterclockwise. The instability of the ball forces your entire core to work overtime to maintain position. Keep the circles small and controlled. Your hips should stay perfectly still while only your arms move the ball. This is brutally effective for core stability!'
             },
             {
                 id: 'pallof-press',
@@ -775,7 +775,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '10-12 each side' },
                 estimatedTime: 4,
-                instructions: 'Band at chest height, stand sideways, press out and resist rotation.'
+                instructions: 'Anchor a resistance band at chest height. Stand sideways to the anchor point and hold the band with both hands at your chest. Step away until there\'s significant tension trying to pull you toward the anchor. Stand with feet shoulder-width apart, knees slightly bent. Press the band straight out in front of your chest, extending your arms fully. Hold for 1-2 seconds, resisting the rotation - the band is trying to twist you toward the anchor and your job is to prevent that. Bring hands back to chest. The further you extend, the harder it is. This is an anti-rotation exercise that builds incredible core stability.'
             },
             {
                 id: 'ab-wheel-substitute',
@@ -787,7 +787,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '8-10' },
                 estimatedTime: 4,
-                instructions: 'Kneel with barbell, roll out keeping core tight, roll back. Ab wheel alternative.'
+                instructions: 'Load a barbell with round plates (they need to roll). Kneel on a mat behind the bar and grip it with hands shoulder-width apart. Brace your core HARD - squeeze your abs and glutes. Slowly roll the bar forward, lowering your body toward the floor while keeping your arms straight. Go only as far as you can while maintaining a flat back - don\'t let your lower back arch or hips sag. When you reach your limit (ideally arms extended overhead), squeeze your core and lats to roll the bar back to the starting position. Start with a limited range of motion and increase as you get stronger. This is an advanced exercise - master dead bugs first!'
             },
             {
                 id: 'plank-shoulder-tap',
@@ -799,7 +799,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '20 total' },
                 estimatedTime: 4,
-                instructions: 'High plank, tap opposite shoulder, minimize hip rotation.'
+                instructions: 'Get into a high plank position (on your hands, not forearms), feet slightly wider than normal for stability. Your body should form a straight line from head to heels. Lift your right hand and tap your left shoulder, then return it to the floor. Lift your left hand and tap your right shoulder. That\'s 2 reps. The key is to minimize hip rotation - your hips want to twist when you lift a hand, but you must actively prevent this by bracing your core and squeezing your glutes. Imagine balancing a glass of water on your lower back that can\'t spill. Go slow and focus on stability over speed.'
             },
             {
                 id: 'hollow-body-hold',
@@ -811,7 +811,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { time: '30-45 seconds', sets: 3 },
                 estimatedTime: 4,
-                instructions: 'On back, arms overhead, legs extended, lift shoulders and legs, hold.'
+                instructions: 'Lie on your back with arms extended overhead and legs straight out. Press your lower back firmly into the floor by engaging your core - this is the key to the exercise. Now lift your shoulders and arms off the floor and lift your legs off the floor simultaneously. Your body should form a slight banana or "hollow" shape. The lower your legs go (while keeping your back pressed down), the harder it is. If your lower back starts to arch off the floor, raise your legs higher or bend your knees slightly. Hold this position, breathing steadily. This is a foundational gymnastics position that builds incredible core strength!'
             },
             {
                 id: 'kb-windmill',
@@ -823,7 +823,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '5-6 each side' },
                 estimatedTime: 5,
-                instructions: 'KB overhead, feet angled, hinge sideways reaching other hand to floor.'
+                instructions: 'Press a kettlebell overhead with your right arm, keeping your elbow locked. Turn your feet to point about 45 degrees to the left. Push your right hip out to the right side as you hinge and lower your torso, sliding your left hand down your left leg toward your foot. Keep your eyes on the kettlebell the entire time. Your right arm stays vertical and locked - it doesn\'t move relative to your shoulder, your whole torso tilts as one unit. Go as low as your flexibility allows while maintaining a flat back. Stand back up by reversing the movement. This develops incredible oblique strength, shoulder stability, and hamstring flexibility all at once. Start with no weight to learn the movement!'
             },
 
             // ==================== CARDIO/CONDITIONING - BASIC ====================
@@ -837,7 +837,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { time: '15-20 min', note: '10-15% incline, 3.0-3.5 mph' },
                 estimatedTime: 18,
-                instructions: 'High incline, moderate pace, no holding rails. Zone 2 cardio.'
+                instructions: 'Set the treadmill to a steep incline (10-15% grade) and a moderate walking speed (3.0-3.5 mph). Walk with a natural stride, pumping your arms. The critical rule: DO NOT hold the rails - this drastically reduces the effectiveness. If you need to hold on, lower the incline or speed until you can walk hands-free. Keep your torso upright (don\'t lean forward into the hill). This is "Zone 2" cardio - you should be able to hold a conversation but feel slightly challenged. The incline works your glutes and calves while being much easier on your joints than running. This is one of the best forms of cardio for body composition!'
             },
             {
                 id: 'jump-rope-basic',
@@ -849,7 +849,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { rounds: 5, time: '1 min on / 30 sec rest' },
                 estimatedTime: 8,
-                instructions: 'Steady pace jumping, small jumps, stay on balls of feet.'
+                instructions: 'Jump for 1 minute, then rest 30 seconds. Repeat for 5 rounds. Keep your jumps small - you only need to clear the rope by about an inch. Stay on the balls of your feet, never landing on your heels. Keep your elbows close to your body and rotate the rope primarily with your wrists, not your arms. Look straight ahead, not at your feet. If you trip, just start again - it happens to everyone! As you get better, you can add variations like alternate foot jumps (like running in place) or boxer skip (shifting weight side to side). The coordination challenge makes time fly by.'
             },
             {
                 id: 'cycling-steady',
@@ -861,7 +861,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { time: '20-30 min', note: 'Zone 2 effort' },
                 estimatedTime: 25,
-                instructions: 'Conversational pace, steady effort, great low-impact knee-friendly cardio.'
+                instructions: 'Set up your bike (stationary or road) so your leg has a slight bend at the bottom of the pedal stroke. Cycle at a pace where you could hold a conversation - this is "Zone 2" or aerobic training. If you\'re gasping for breath, slow down. Maintain a steady cadence (pedaling speed) of 70-90 RPM. Keep your upper body relaxed - don\'t death-grip the handlebars or hunch your shoulders. This is fantastic low-impact cardio that builds your aerobic base while being extremely gentle on your knees. For extra glute work, occasionally stand up out of the saddle for 30-60 seconds.'
             },
             {
                 id: 'stair-cardio',
@@ -873,7 +873,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'easy',
                 format: { time: '10-15 min', note: 'Continuous up/down' },
                 estimatedTime: 12,
-                instructions: 'Continuous stair climbing at steady pace. Walk down to recover.'
+                instructions: 'Find a staircase (home stairs, stadium stairs, or stair climber machine). Walk up at a steady, sustainable pace - this isn\'t a sprint, it\'s continuous work. Drive through your heel on each step to engage your glutes more. Use the handrail only for balance if needed. Walk down slowly and carefully to protect your knees (going down is harder on joints than going up). Maintain continuous movement for the full duration. As you get fitter, you can skip steps going up to increase the challenge. This is excellent cardio that also builds leg strength with minimal joint impact.'
             },
 
             // ==================== CARDIO/CONDITIONING - CREATIVE ====================
@@ -887,7 +887,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { rounds: 8, time: '20 sec on / 10 sec rest' },
                 estimatedTime: 5,
-                instructions: '20 seconds all-out punching, 10 seconds rest. 8 rounds = 4 minutes of pain.'
+                instructions: 'Set a Tabata timer (20 seconds work, 10 seconds rest, 8 rounds). When the work period starts, throw punches at the bag as fast and hard as you can - jabs, crosses, hooks, whatever you want. Give it EVERYTHING for those 20 seconds. When the rest period hits, stop completely and catch your breath. As soon as the next work period starts, explode again. The 4 minutes will feel like an eternity. Focus on rotating your hips into each punch and keeping your hands up. This is one of the most effective HIIT protocols ever created - brutal but incredibly efficient for conditioning.'
             },
             {
                 id: 'bag-combo-rounds',
@@ -899,7 +899,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { rounds: 3, time: '3 min / 1 min rest' },
                 estimatedTime: 12,
-                instructions: 'Work combinations for 3 min rounds. Jab-cross, hooks, uppercuts, body shots.'
+                instructions: 'Work the bag for 3-minute rounds like a boxer. Start with basic combinations: jab-cross (1-2), jab-jab-cross (1-1-2), jab-cross-hook (1-2-3). Mix in body shots, uppercuts, and movement around the bag. Don\'t just stand still - circle, bob and weave, throw combinations then move. Keep your hands up to protect your face between combinations. After 3 minutes, rest for 1 minute (walk around, shake out your arms, catch your breath). Then go again. Three rounds equals 12 minutes of work but will feel like an hour. This builds serious conditioning and is incredibly fun!'
             },
             {
                 id: 'kb-emom',
@@ -911,7 +911,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { time: '10 min', note: 'Every minute: 10 swings' },
                 estimatedTime: 10,
-                instructions: 'Every Minute On the Minute: 10 KB swings. Rest remaining time. Repeat.'
+                instructions: 'Set a timer for 10 minutes. At the start of each minute (including minute 0), perform 10 kettlebell swings with perfect form - explosive hip drive, arms floating up, controlled return. Whatever time remains in that minute is your rest. As soon as the next minute starts, do 10 more swings. If the 10 swings take you 20 seconds, you get 40 seconds rest. If they take 30 seconds, you get 30 seconds rest. As fatigue builds, your rest periods will shrink. That\'s 100 total swings in 10 minutes. Use a challenging weight but one that lets you maintain form. EMOM (Every Minute On the Minute) is a brutally effective conditioning protocol!'
             },
             {
                 id: 'cycling-intervals',
@@ -923,7 +923,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { time: '20 min', note: '1 min hard / 2 min easy x 6' },
                 estimatedTime: 20,
-                instructions: 'Find hills or increase resistance. 1 min all-out, 2 min recovery. Repeat 6x.'
+                instructions: 'After a 2-minute warmup, increase resistance significantly (or find a hill if outdoors). Pedal as hard as you can for 1 minute - this should be an 8-9 out of 10 effort where you\'re struggling to maintain the pace. After 1 minute, reduce resistance and pedal easy for 2 minutes to recover. Your breathing should return close to normal during recovery. Repeat this cycle 6 times (1 min hard + 2 min easy = 3 min per cycle, 6 cycles = 18 min + warmup). This interval pattern builds VO2max and leg strength simultaneously. Standing out of the saddle during hard intervals increases the glute activation.'
             },
             {
                 id: 'jump-rope-tricks',
@@ -935,7 +935,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { time: '10 min', note: 'Practice doubles, crossovers' },
                 estimatedTime: 10,
-                instructions: 'Work on double unders, criss-cross, boxer skip. Make it fun!'
+                instructions: 'Spend this time working on jump rope skills beyond basic jumping. DOUBLE UNDERS: Jump higher than normal and spin the rope twice under your feet per jump. Focus on timing and wrist speed. CRISS-CROSS: Cross your arms at chest level on the downswing, then uncross on the next jump. BOXER SKIP: Shift your weight from foot to foot, landing on one foot then the other. HIGH KNEES: Alternate lifting your knees high while jumping. The goal is skill development, not max heart rate. Take breaks when you need them. Learning these tricks makes jumping rope way more engaging and builds incredible coordination. Celebrate small wins - landing your first double under is exciting!'
             },
             {
                 id: 'stair-sprint-intervals',
@@ -947,7 +947,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { rounds: 6, note: 'Sprint up, walk down' },
                 estimatedTime: 8,
-                instructions: 'Sprint up stairs as fast as possible, walk down slowly. Great HIIT option.'
+                instructions: 'Find a staircase with at least 20-30 steps (more is better). Sprint up the stairs as fast as you safely can, driving through your forefoot and pumping your arms. Use the handrail only if needed for safety, not support. At the top, turn around and WALK down slowly - walking down stairs fast is hard on your knees and you need the recovery time anyway. As soon as you reach the bottom, sprint back up immediately. Complete 6 rounds. This is high-intensity interval training at its finest - your heart rate will spike during the sprint and partially recover during the descent. Simple, effective, and free!'
             },
             {
                 id: 'farmer-carry',
@@ -959,7 +959,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, time: '45-60 sec each' },
                 estimatedTime: 5,
-                instructions: 'Heavy dumbbells at sides, walk with tall posture. Core and grip killer.'
+                instructions: 'Pick up the heaviest dumbbells you can safely carry - grip strength is usually the limiting factor. Let them hang at your sides with arms straight. Stand tall with shoulders back and down, chest proud. Walk with normal strides, keeping your core braced to prevent side-to-side tilting. Your traps will burn, your grip will scream, and your core works constantly to stabilize. Walk for 45-60 seconds or as long as you can maintain good posture. Set the weights down with control (don\'t drop them), rest 60-90 seconds, then go again. This simple exercise builds functional strength like few others - grip, core, posture, and conditioning all in one!'
             },
 
             // ==================== FULL BODY - BASIC ====================
@@ -973,7 +973,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 4, reps: '5-6' },
                 estimatedTime: 7,
-                instructions: 'Bar over mid-foot, hinge to grip, brace, drive through floor.'
+                instructions: 'Stand with feet hip-width apart, the barbell over your mid-foot (where you tie your shoes, not your toes). Bend at the hips and knees to grab the bar with arms just outside your knees, either double overhand grip or mixed grip for heavier weights. Your shins should be close to or touching the bar. Flatten your back by lifting your chest and engaging your lats - imagine trying to squeeze oranges in your armpits. Take a deep breath and brace your core hard. Drive through the floor (don\'t pull with your back), keeping the bar close to your body as it travels up your shins and thighs. Stand tall at the top, squeezing your glutes - don\'t lean back. Lower by hinging at the hips first, then bending the knees once the bar passes them. This is the king of all exercises!'
             },
             {
                 id: 'kb-clean-press',
@@ -985,7 +985,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'medium',
                 format: { sets: 3, reps: '8-10 each' },
                 estimatedTime: 6,
-                instructions: 'Clean KB to rack position, press overhead, reverse. Each side.'
+                instructions: 'Stand with a kettlebell between your feet. Hinge and grab it with one hand, then explosively clean it to the "rack" position at your shoulder. In the rack, the KB should rest on your forearm with your elbow tucked tight to your body, wrist straight, and the bell resting against your upper arm. From the rack position, take a breath, brace your core, and press the KB straight overhead until your arm is fully locked out. Lower the KB back to the rack with control, then lower it to the floor (or to the hang position between your legs for continuous reps). That\'s one rep. Complete all reps on one side before switching. This is a fantastic full-body conditioning exercise that builds strength and power.'
             },
 
             // ==================== FULL BODY - CREATIVE ====================
@@ -999,7 +999,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { time: '5 min continuous', note: 'Swing-Clean-Press-Squat' },
                 estimatedTime: 6,
-                instructions: 'Link movements: Swing → Clean → Press → Squat → repeat. No rest.'
+                instructions: 'Set a timer for 5 minutes and flow continuously through this sequence: Perform one kettlebell swing, then on the upswing clean the KB to rack position at your shoulder. Press it overhead, then lower it back to rack. With the KB still in rack position, perform a goblet squat (transfer to goblet grip). Stand up and swing the KB back between your legs to start another swing. That\'s one full flow. Continue without rest for 5 minutes, switching hands as needed. The key is smooth transitions between movements - it should feel like one continuous motion. This builds conditioning, coordination, and mental toughness!'
             },
             {
                 id: 'db-complex',
@@ -1011,7 +1011,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 4, reps: '6 each move' },
                 estimatedTime: 8,
-                instructions: 'RDL → Row → Clean → Press → Squat. 6 reps each, no putting weights down.'
+                instructions: 'Hold a dumbbell in each hand. Perform 6 reps of each movement in sequence WITHOUT putting the dumbbells down: 1) Romanian Deadlifts - hinge at hips, lower DBs to shins. 2) Bent Over Rows - in hinged position, row DBs to hips. 3) Hang Cleans - explosively clean DBs to shoulders. 4) Push Press - dip slightly and press overhead. 5) Goblet Squats - hold one DB at chest, full squat. After completing all 6 reps of all 5 exercises, that\'s ONE set. Rest 90-120 seconds. Use lighter weight than you think - the cumulative fatigue is real. This is metabolic conditioning at its finest!'
             },
             {
                 id: 'man-maker',
@@ -1023,7 +1023,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 3, reps: '6-8' },
                 estimatedTime: 6,
-                instructions: 'Burpee with DBs + pushup + renegade row each side + jump + press. Brutal.'
+                instructions: 'Start standing with dumbbells at your sides. Drop down and place the dumbbells on the floor, jumping your feet back to a push-up position (hands gripping DBs). Perform a push-up. Then do a renegade row on each side - row the right DB while stabilizing with the left, then row left while stabilizing with right. Jump your feet forward toward your hands, stand up explosively, and clean the dumbbells to your shoulders. Finish by pressing both dumbbells overhead. Lower and repeat. That\'s ONE rep. Use light-moderate weight - these are devastating. This is essentially a burpee plus push-up plus two rows plus a clean and press. Absolutely brutal full-body conditioning!'
             },
             {
                 id: 'barbell-complex',
@@ -1035,7 +1035,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 4, reps: '6 each move' },
                 estimatedTime: 8,
-                instructions: 'Deadlift → Row → Clean → Press → Back Squat. No rest between moves.'
+                instructions: 'Load a barbell with moderate weight (start light!). Perform 6 reps of each exercise in sequence without putting the bar down: 1) Deadlifts - full deadlifts from floor. 2) Bent Over Rows - hinge and row bar to lower chest. 3) Hang Cleans - explosively clean bar from hang to shoulders. 4) Push Press - dip and drive bar overhead. 5) Back Squats - lower bar to back, perform full squats. After 6 reps of all 5 exercises, that\'s one set. Rest 2 minutes between sets. The bar never leaves your hands until the set is complete. The cumulative fatigue is immense. This is elite-level metabolic conditioning!'
             },
             {
                 id: 'turkish-getup',
@@ -1047,7 +1047,7 @@ class RandomWorkoutGenerator {
                 difficulty: 'hard',
                 format: { sets: 2, reps: '3-4 each side' },
                 estimatedTime: 8,
-                instructions: 'Floor to standing with KB overhead. Slow and controlled. Ultimate stability exercise.'
+                instructions: 'Lie on your back with a KB pressed up in your right hand, right knee bent, left arm and leg out at 45 degrees. The sequence: 1) Roll onto your left elbow while keeping KB locked out overhead. 2) Press up to your left hand. 3) Bridge your hips high. 4) Sweep your left leg back to a kneeling lunge. 5) Remove your left hand from floor and torso upright. 6) Stand up from the lunge while keeping KB overhead the entire time. 7) Reverse all steps to return to lying. That\'s ONE rep. Each rep takes 30-45 seconds. Go slow - this is about control, not speed. The ultimate full-body stability exercise that exposes every weakness. Start with no weight to learn the pattern!'
             },
 
             // ==================== ADDITIONAL LEG EXERCISES ====================

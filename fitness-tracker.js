@@ -4038,8 +4038,8 @@ class FitnessTracker {
 
         return workouts.map(w => `
             <div class="recent-workout-item">
-                <div class="rw-type">${this.getWorkoutIcon(w.type)} ${w.type}</div>
-                <div class="rw-details">${w.duration} min | ${w.intensity}</div>
+                <div class="rw-type">${this.getWorkoutIcon(w.type)} ${w.type || w.name || 'Workout'}</div>
+                <div class="rw-details">${w.duration} min${w.intensity ? ' | ' + w.intensity : (w.exercises && w.exercises.length ? ' | ' + w.exercises.length + ' exercises' : '')}</div>
                 <div class="rw-date">${formatDateMMDDYYYY(w.date)}</div>
                 <button class="btn-delete-sm" onclick="window.fitnessTracker.deleteWorkout('${w.id}')" title="Delete">×</button>
             </div>
