@@ -3115,6 +3115,916 @@ class FitnessTracker {
                         }
                     ]}
                 ]
+            },
+            {
+                id: 'asian-pilates-3x',
+                name: 'Asian Pilates 3x',
+                description: '3-day Pilates program blending Eastern flow, breath-led movement, and knee-friendly exercises',
+                kneeSafe: true,
+                days: [
+                    { day: 1, name: 'Core Awakening & Spinal Flow', focus: 'Core Activation, Spinal Mobility', exercises: [
+                        {
+                            name: 'Tai Chi Cloud Hands',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Slow weight shifts side to side, arms float like clouds. Inhale 4s, exhale 6s.',
+                            cues: ['Shift weight slowly side to side', 'Arms float like clouds', 'Inhale for 4 seconds', 'Exhale for 6 seconds'],
+                            anatomyTip: 'Warms up the whole body through gentle weight transfer and coordinated breathing'
+                        },
+                        {
+                            name: 'Qigong Shaking',
+                            sets: 1,
+                            reps: '1 min',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Soft bounce through heels, arms loose. Release tension from head to toes.',
+                            cues: ['Bounce softly through heels', 'Keep arms completely loose', 'Release tension from head to toes', 'Let jaw and shoulders relax'],
+                            anatomyTip: 'Shaking releases fascial tension and increases circulation throughout the body'
+                        },
+                        {
+                            name: 'Cat-Cow (Breath-Led)',
+                            sets: 1,
+                            reps: '8 cycles',
+                            muscle: 'Spine',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Inhale to arch, exhale to round. Move one vertebra at a time. Slow, fluid.',
+                            cues: ['Inhale to arch the spine', 'Exhale to round the spine', 'Move one vertebra at a time', 'Keep movement slow and fluid'],
+                            anatomyTip: 'Mobilizes the entire spinal column and warms the erectors and deep spinal muscles'
+                        },
+                        {
+                            name: 'Standing Spinal Roll-Down',
+                            sets: 1,
+                            reps: '4 reps',
+                            muscle: 'Spine/Hamstrings',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Chin to chest, peel down one vertebra at a time. Knees soft. Hang and breathe.',
+                            cues: ['Start with chin to chest', 'Peel down one vertebra at a time', 'Keep knees soft', 'Hang at the bottom and breathe'],
+                            anatomyTip: 'Decompresses the spine and gently lengthens the posterior chain'
+                        },
+                        {
+                            name: 'Modified Hundred (Feet Down)',
+                            sets: 3,
+                            reps: '50-100 pumps',
+                            muscle: 'Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Feet flat on floor, knees bent. Arms pump at sides. Exhale for 5 pumps, inhale for 5.',
+                            cues: ['Keep lower back pressed into mat', 'Pump arms with control', 'Chin slightly tucked', 'Breathe rhythmically'],
+                            anatomyTip: 'Rectus abdominis and transverse abdominis primary movers'
+                        },
+                        {
+                            name: 'Supine Leg Slides',
+                            sets: 2,
+                            reps: '10/side',
+                            muscle: 'Deep Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Slide heel along mat to extend leg. Keep pelvis neutral. Exhale to extend, inhale to return.',
+                            cues: ['Maintain neutral pelvis', 'Move slowly with breath', 'Keep ribs down', 'Feel transverse abdominis engage'],
+                            anatomyTip: 'Transverse abdominis stabilizes while hip flexors move the leg'
+                        },
+                        {
+                            name: 'Pelvic Curls (Bridge Flow)',
+                            sets: 3,
+                            reps: '8',
+                            muscle: 'Glutes/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Articulate spine up bone by bone. Pause at top, breathe. Roll down slowly. No knee pain.',
+                            cues: ['Peel spine off mat one vertebra at a time', 'Squeeze glutes at top', 'Roll down from upper back first', 'Keep knees hip-width apart'],
+                            anatomyTip: 'Glutes and hamstrings lift, spinal erectors articulate'
+                        },
+                        {
+                            name: 'Side-Lying Leg Lift (Tai Chi Pace)',
+                            sets: 3,
+                            reps: '12/side',
+                            muscle: 'Hip Abductors',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lift on 4-count exhale, lower on 4-count inhale. Imagine moving through water.',
+                            cues: ['Stack hips vertically', 'Lead with heel not toe', 'Keep top hip from rolling back', 'Slow controlled movement'],
+                            anatomyTip: 'Gluteus medius primary mover for hip stability'
+                        },
+                        {
+                            name: 'Spine Twist Seated',
+                            sets: 2,
+                            reps: '6/side',
+                            muscle: 'Obliques/Spine',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Tall spine, arms wide. Rotate with exhale, grow taller with inhale. No momentum.',
+                            cues: ['Initiate rotation from ribcage', 'Keep hips anchored', 'Grow taller as you twist', 'Arms stay in peripheral vision'],
+                            anatomyTip: 'Internal and external obliques create rotation while erectors maintain posture'
+                        },
+                        {
+                            name: 'Wall Sit (Qigong Breath)',
+                            sets: 3,
+                            reps: '20-30s hold',
+                            muscle: 'Quads/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Back flat on wall, thighs above 90\u00b0. Breathe into belly 4s in, 6s out. Builds without knee stress.',
+                            cues: ['Back flat on wall', 'Thighs ABOVE parallel never below', 'Breathe deeply through the hold', 'Engage core throughout'],
+                            anatomyTip: 'Isometric quad engagement with minimal knee shear force'
+                        },
+                        {
+                            name: 'Meridian Side Stretch',
+                            sets: 1,
+                            reps: '45s/side',
+                            muscle: 'Lateral Chain',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Seated, one leg extended. Reach over and breathe into the lengthened side.',
+                            cues: ['Breathe into the stretched side', 'Keep both sit bones grounded', 'Reach long not down', 'Relax neck and shoulders'],
+                            anatomyTip: 'Lengthens the obliques, intercostals, and lateral fascial line for improved lateral mobility'
+                        },
+                        {
+                            name: 'Reclined Spinal Twist',
+                            sets: 1,
+                            reps: '1 min/side',
+                            muscle: 'Spine/Hip',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Knees stacked, arms out in T. Let gravity do the work. Exhale to release deeper.',
+                            cues: ['Let gravity do the work', 'Breathe out to deepen', 'Keep both shoulders on mat', 'Relax completely'],
+                            anatomyTip: 'Releases tension in spinal rotators and opens the chest and hip complex'
+                        },
+                        {
+                            name: 'Shavasana with Body Scan',
+                            sets: 1,
+                            reps: '3 min',
+                            muscle: 'Recovery',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Scan from crown to toes. Breathe awareness into each body part, then release.',
+                            cues: ['Progressive relaxation head to toe', 'Natural breathing', 'Release all muscular tension', 'Set intention for the day'],
+                            anatomyTip: 'Activates the parasympathetic nervous system for recovery and stress reduction'
+                        }
+                    ]},
+                    { day: 2, name: 'Hip Stability & Lateral Strength', focus: 'Hip Mobility, Lateral Chain, Rotational Control', exercises: [
+                        {
+                            name: 'Qigong Arm Circles',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Shoulders/Chest',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Slow, wide circles coordinated with breath. Open the chest, soften the shoulders.',
+                            cues: ['Coordinate circles with breath', 'Open the chest on each circle', 'Soften the shoulders', 'Keep movement slow and wide'],
+                            anatomyTip: 'Warms the shoulder girdle and opens the pectoral fascia for improved upper body mobility'
+                        },
+                        {
+                            name: 'Standing Figure-8 Hips',
+                            sets: 1,
+                            reps: '1 min',
+                            muscle: 'Hips/Low Back',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Draw figure-8s with hips. Unlock the sacrum and low back. Gentle, flowing.',
+                            cues: ['Draw smooth figure-8 patterns', 'Keep movement gentle and flowing', 'Unlock the sacrum area', 'Let low back relax'],
+                            anatomyTip: 'Mobilizes the sacroiliac joint and lumbar spine through multi-planar hip movement'
+                        },
+                        {
+                            name: 'Thread the Needle',
+                            sets: 2,
+                            reps: '6/side',
+                            muscle: 'Thoracic Spine',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, reach one arm under and through. Follow with eyes. Exhale to deepen.',
+                            cues: ['Reach arm under and through', 'Follow hand with your eyes', 'Exhale to deepen the rotation', 'Keep hips stacked over knees'],
+                            anatomyTip: 'Opens thoracic rotation and stretches the rhomboids and rear deltoids'
+                        },
+                        {
+                            name: 'Kneeling Hip Flexor Stretch',
+                            sets: 1,
+                            reps: '30s/side',
+                            muscle: 'Hip Flexors',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Pad the down knee well. Tuck pelvis, lean gently forward. Counter desk posture.',
+                            cues: ['Pad the down knee well', 'Tuck pelvis under', 'Lean gently forward', 'Counter desk posture tightness'],
+                            anatomyTip: 'Lengthens the iliopsoas and rectus femoris to restore hip extension range'
+                        },
+                        {
+                            name: 'Pilates Roll-Up (Modified)',
+                            sets: 3,
+                            reps: '6',
+                            muscle: 'Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Use a towel behind thighs if needed. Articulate C-curve. Exhale up, inhale down.',
+                            cues: ['Use towel for assistance if needed', 'Articulate through C-curve', 'Exhale on the way up', 'Control the descent dont just fall'],
+                            anatomyTip: 'Rectus abdominis and hip flexors with spinal flexion control'
+                        },
+                        {
+                            name: 'Clam Shells',
+                            sets: 3,
+                            reps: '15/side',
+                            muscle: 'Hip Rotators',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Heels together, open top knee. Keep pelvis stacked. Slow and controlled, no rocking.',
+                            cues: ['Keep heels together', 'Dont let pelvis rock back', 'Slow controlled movement', 'Feel it in outer hip'],
+                            anatomyTip: 'External hip rotators and gluteus medius for hip stability'
+                        },
+                        {
+                            name: 'Dead Bug (Alternating)',
+                            sets: 3,
+                            reps: '8/side',
+                            muscle: 'Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Press low back into mat. Extend opposite arm/leg on exhale. Return on inhale.',
+                            cues: ['Press low back into mat', 'Exhale as you extend', 'Move slowly', 'Dont let back arch'],
+                            anatomyTip: 'Deep core stabilizers maintain neutral spine under limb movement'
+                        },
+                        {
+                            name: 'Single Leg Circle (Small)',
+                            sets: 2,
+                            reps: '8/direction/leg',
+                            muscle: 'Hip/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Bottom leg bent for support. Small circles, core stays still. Trace a teacup saucer.',
+                            cues: ['Keep circles small and controlled', 'Core stays completely still', 'Bottom leg bent for support', 'Circle both directions'],
+                            anatomyTip: 'Hip flexors and adductors move while core stabilizes pelvis'
+                        },
+                        {
+                            name: 'Bird Dog (Tai Chi Tempo)',
+                            sets: 3,
+                            reps: '8/side',
+                            muscle: 'Core/Posterior Chain',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: '4-count to extend, 4-count to return. Imagine balancing a cup of tea on your low back.',
+                            cues: ['Move on 4-count tempo', 'Keep back flat like a table', 'Reach long through fingers and toes', 'Dont let hips shift'],
+                            anatomyTip: 'Anti-rotation core stability with spinal erector and glute activation'
+                        },
+                        {
+                            name: 'Supported Side Plank (Knee Down)',
+                            sets: 3,
+                            reps: '15-20s/side',
+                            muscle: 'Obliques',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Bottom knee on mat. Stack hips, lift through oblique. Breathe. Build to 30s over weeks.',
+                            cues: ['Bottom knee on mat for support', 'Stack hips vertically', 'Lift through oblique not shoulder', 'Breathe through the hold'],
+                            anatomyTip: 'Obliques and quadratus lumborum for lateral core stability'
+                        },
+                        {
+                            name: 'Seated Forward Fold (Yin Style)',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Posterior Chain',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Soft knees. Drape forward and breathe. No forcing. Target fascial release.',
+                            cues: ['Keep knees soft', 'Drape forward without forcing', 'Breathe into the stretch', 'Target fascial release not muscle stretch'],
+                            anatomyTip: 'Releases the posterior fascial chain including hamstrings, erectors, and thoracolumbar fascia'
+                        },
+                        {
+                            name: 'Supine Butterfly',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Hip Adductors',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Soles of feet together, knees fall open. Hands on belly. Breathe into the hip opening.',
+                            cues: ['Soles of feet together', 'Let knees fall open naturally', 'Hands on belly for breath awareness', 'Breathe into the hip opening'],
+                            anatomyTip: 'Passively lengthens the adductors and opens the hip joint capsule'
+                        },
+                        {
+                            name: '3-Part Breath (Qigong Close)',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Diaphragm/Recovery',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Inhale into belly, ribs, then chest. Exhale chest, ribs, belly. 5 full cycles.',
+                            cues: ['Inhale belly then ribs then chest', 'Exhale chest then ribs then belly', 'Complete 5 full cycles', 'Make each breath slow and complete'],
+                            anatomyTip: 'Trains diaphragmatic breathing and activates the parasympathetic nervous system for recovery'
+                        }
+                    ]},
+                    { day: 3, name: 'Full-Body Integration & Balance', focus: 'Full Body Connection, Posterior Chain, Balance', exercises: [
+                        {
+                            name: 'Tai Chi Waving Hands',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Step and shift weight forward/back. Arms flow with the step. Meditative pace.',
+                            cues: ['Step and shift weight with control', 'Arms flow naturally with steps', 'Maintain meditative pace', 'Coordinate breath with movement'],
+                            anatomyTip: 'Full-body coordination drill that warms joints and improves proprioception'
+                        },
+                        {
+                            name: 'Standing Knee Circles',
+                            sets: 1,
+                            reps: '30s/direction',
+                            muscle: 'Knees/Joints',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Feet together, hands on knees, gentle circles. Warms synovial fluid in knees.',
+                            cues: ['Feet together hands on knees', 'Gentle circles only', 'Warms synovial fluid', 'Circle both directions'],
+                            anatomyTip: 'Stimulates synovial fluid production in the knee joint for lubrication and protection'
+                        },
+                        {
+                            name: 'Pelvic Clocks',
+                            sets: 1,
+                            reps: '8 full circles',
+                            muscle: 'Core/Pelvis',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Supine, knees bent. Rock pelvis through 12, 3, 6, 9 o\'clock. Find and release tension.',
+                            cues: ['Rock pelvis through all clock positions', 'Find areas of tension', 'Release tension with breath', 'Keep movement smooth and continuous'],
+                            anatomyTip: 'Mobilizes the lumbopelvic complex and builds awareness of pelvic positioning'
+                        },
+                        {
+                            name: 'Ankle/Wrist Circles',
+                            sets: 1,
+                            reps: '10/direction each',
+                            muscle: 'Joints',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Mobilize all small joints. Slow, deliberate circles.',
+                            cues: ['Slow deliberate circles', 'Mobilize ankles and wrists', 'Circle both directions', 'Full range of motion'],
+                            anatomyTip: 'Warms small joint structures and increases synovial fluid for injury prevention'
+                        },
+                        {
+                            name: 'Toe Taps (Supine)',
+                            sets: 3,
+                            reps: '12/side',
+                            muscle: 'Deep Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Tabletop legs, alternate lowering one toe to mat. Exhale to lower, inhale to lift. Core stays braced.',
+                            cues: ['Maintain tabletop position', 'Lower one toe at a time', 'Exhale as you lower', 'Keep low back pressed into mat'],
+                            anatomyTip: 'Transverse abdominis maintains pelvic stability while hip flexors control leg movement'
+                        },
+                        {
+                            name: 'Glute Bridge March',
+                            sets: 3,
+                            reps: '8/side',
+                            muscle: 'Glutes/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hold bridge, lift one foot 1 inch off mat. Alternate. Pelvis stays level, no rocking.',
+                            cues: ['Keep hips level throughout', 'Lift foot only 1 inch', 'Alternate with control', 'Squeeze glutes to maintain bridge'],
+                            anatomyTip: 'Glutes maintain bridge while anti-rotation core prevents hip drop'
+                        },
+                        {
+                            name: 'Prone Back Extension (Cobra)',
+                            sets: 3,
+                            reps: '8',
+                            muscle: 'Spinal Erectors',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hands by ribs, peel chest up on inhale. Look forward, not up. Lower with control.',
+                            cues: ['Peel up from chest not chin', 'Look forward not up', 'Use back muscles not hands', 'Lower with control'],
+                            anatomyTip: 'Spinal erectors extend spine while glutes provide pelvic stability'
+                        },
+                        {
+                            name: 'Standing Calf Raises (Wall Support)',
+                            sets: 3,
+                            reps: '15',
+                            muscle: 'Calves',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Slow 3-count up, 3-count down. Full range. Supports knee stability from below.',
+                            cues: ['Slow 3-count up and down', 'Full range of motion', 'Use wall for light balance', 'Squeeze at top'],
+                            anatomyTip: 'Gastrocnemius and soleus strengthen to support knee stability from below'
+                        },
+                        {
+                            name: 'Quadruped Hip Circles',
+                            sets: 2,
+                            reps: '8/direction/side',
+                            muscle: 'Hip Complex',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Draw circles with knee. Opens hip joint, builds stability. Keep core engaged.',
+                            cues: ['Draw smooth circles with knee', 'Keep core braced', 'Explore full range', 'Both directions'],
+                            anatomyTip: 'All hip rotators and stabilizers work through full range of motion'
+                        },
+                        {
+                            name: 'Pilates Swimming (Modified)',
+                            sets: 3,
+                            reps: '30s',
+                            muscle: 'Posterior Chain',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Prone, lift opposite arm/leg 2 inches. Alternate slowly. Breathe naturally. Keep neck neutral.',
+                            cues: ['Lift only 2 inches', 'Alternate slowly', 'Keep neck neutral', 'Breathe naturally'],
+                            anatomyTip: 'Full posterior chain activation - erectors, glutes, rhomboids, rear deltoids'
+                        },
+                        {
+                            name: 'Child\'s Pose (Wide Knee)',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Back/Hips',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Knees wide, big toes touching. Walk hands forward. Breathe into low back and hips.',
+                            cues: ['Knees wide big toes touching', 'Walk hands forward', 'Breathe into low back', 'Relax completely into the pose'],
+                            anatomyTip: 'Decompresses the lumbar spine and gently opens the hips and adductors'
+                        },
+                        {
+                            name: 'Figure-4 Stretch (Supine)',
+                            sets: 1,
+                            reps: '1 min/side',
+                            muscle: 'Glutes/Hip Rotators',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Cross ankle over opposite knee. Gently pull thigh toward chest. Protect the knee.',
+                            cues: ['Cross ankle over opposite knee', 'Gently pull thigh toward chest', 'Protect the knee joint', 'Breathe into the stretch'],
+                            anatomyTip: 'Stretches the piriformis and deep external hip rotators to relieve hip tightness'
+                        },
+                        {
+                            name: 'Legs Up the Wall',
+                            sets: 1,
+                            reps: '3 min',
+                            muscle: 'Recovery/Circulation',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Scoot hips to wall, legs vertical. Eyes closed. Calms the nervous system. Breathe deeply.',
+                            cues: ['Scoot hips close to wall', 'Legs vertical and relaxed', 'Eyes closed', 'Breathe deeply and slowly'],
+                            anatomyTip: 'Inverted position promotes venous return and activates the parasympathetic nervous system'
+                        },
+                        {
+                            name: 'Closing Meditation',
+                            sets: 1,
+                            reps: '2 min',
+                            muscle: 'Recovery',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Seated or supine. Set an intention for the day. Acknowledge your body\'s effort with gratitude.',
+                            cues: ['Find a comfortable position', 'Set an intention for the day', 'Acknowledge your effort with gratitude', 'Carry this calm into your day'],
+                            anatomyTip: 'Mindful closure activates the parasympathetic system and reinforces the mind-body connection'
+                        }
+                    ]}
+                ]
+            },
+            {
+                id: 'military-pelvic-4x',
+                name: 'Military Calisthenics & Pelvic Pilates',
+                description: '4-day program combining military bodyweight conditioning with pelvic floor pilates and hip mobility',
+                kneeSafe: true,
+                days: [
+                    { day: 1, name: 'Military Upper Body + Pelvic Power', focus: 'Upper Body Strength, Pelvic Floor', exercises: [
+                        {
+                            name: 'Tempo Push-Ups (3 down, 1 up)',
+                            sets: 3,
+                            reps: '10',
+                            muscle: 'Chest/Triceps',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lower slowly for 3 counts, push up explosively in 1 count. Hands slightly wider than shoulder width.',
+                            cues: ['3-second controlled descent', 'Explosive push up in 1 count', 'Core tight throughout', 'Full range of motion'],
+                            anatomyTip: 'Tempo creates more time under tension for pectoralis major, anterior deltoid, and triceps'
+                        },
+                        {
+                            name: 'Decline Push-Ups (feet elevated)',
+                            sets: 3,
+                            reps: '8',
+                            muscle: 'Upper Chest/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Place feet on chair or bench. Hands on floor slightly wider than shoulders. Lower chest to floor, push back up.',
+                            cues: ['Feet elevated on bench or chair', 'Core stays rigid no sagging', 'Lower chest to floor', 'Emphasizes upper chest and shoulders'],
+                            anatomyTip: 'Elevation shifts load to upper pectoralis major and anterior deltoids'
+                        },
+                        {
+                            name: 'Plank Up-Downs',
+                            sets: 3,
+                            reps: '10 total',
+                            muscle: 'Core/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Start in forearm plank. Press up to high plank one arm at a time, then lower back down. Alternate leading arm.',
+                            cues: ['Minimize hip rotation', 'Alternate leading arm each rep', 'Keep core braced', 'Controlled tempo'],
+                            anatomyTip: 'Anti-rotation core challenge with tricep and shoulder endurance'
+                        },
+                        {
+                            name: 'Reverse Snow Angels',
+                            sets: 3,
+                            reps: '12',
+                            muscle: 'Upper Back/Rear Delts',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie face down, arms at sides. Lift arms and sweep them overhead in an arc while keeping them off the ground. Return to sides.',
+                            cues: ['Lift chest slightly off ground', 'Arms stay elevated throughout arc', 'Squeeze shoulder blades at bottom', 'Slow controlled movement'],
+                            anatomyTip: 'Rhomboids, lower traps, and rear deltoids work through full range for posture'
+                        },
+                        {
+                            name: 'Tricep Dips with Leg Extension',
+                            sets: 3,
+                            reps: '12',
+                            muscle: 'Triceps',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hands on bench behind you. Extend one leg straight as you lower body by bending elbows to 90 degrees. Push back up. Alternate legs.',
+                            cues: ['Elbows point straight back', 'Lower to 90 degree elbow bend', 'Extend opposite leg at bottom', 'Push through palms'],
+                            anatomyTip: 'All three tricep heads activated with added core challenge from leg extension'
+                        },
+                        {
+                            name: 'Pike Push-Ups',
+                            sets: 3,
+                            reps: '10',
+                            muscle: 'Shoulders/Triceps',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Start in downward dog position, hands shoulder-width. Bend elbows to lower head toward floor. Press back up.',
+                            cues: ['Hips stay high throughout', 'Head moves toward floor between hands', 'Elbows track at 45 degrees', 'Full lockout at top'],
+                            anatomyTip: 'Simulates overhead press - anterior deltoids primary with triceps assisting'
+                        },
+                        {
+                            name: 'Commando Plank Hold',
+                            sets: 3,
+                            reps: '30s',
+                            muscle: 'Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hold high plank position with perfect form. Maintain tight core, squeezed glutes, and steady breathing throughout.',
+                            cues: ['Body straight from head to heels', 'Squeeze glutes hard', 'Breathe steadily dont hold breath', 'Engage every muscle'],
+                            anatomyTip: 'Isometric core endurance training for all abdominal muscles'
+                        },
+                        {
+                            name: 'Marching Bridge with Kegel Coordination',
+                            sets: 3,
+                            reps: '12 each leg',
+                            muscle: 'Glutes/Pelvic Floor',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hold bridge position. March by lifting one foot slightly off ground. Engage pelvic floor on each lift. Lower with control.',
+                            cues: ['Keep hips level no rocking', 'Engage pelvic floor on each march', 'Lift foot only 1-2 inches', 'Maintain bridge height throughout'],
+                            anatomyTip: 'Glute bridge targets glutes while marching adds anti-rotation and pelvic floor coordination'
+                        },
+                        {
+                            name: 'Resistance Band Adductor Squeeze',
+                            sets: 3,
+                            reps: '20 pulses',
+                            muscle: 'Inner Thighs/Pelvic Floor',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on your back with knees bent and feet flat on the floor. Place a pillow, yoga block, or small ball between your knees. Squeeze your knees together against the object using your inner thighs — don\'t use full force, aim for about 70% effort. Hold each squeeze for one second, then release slightly (don\'t fully let go). That\'s one pulse. As you squeeze, exhale and gently engage your pelvic floor (like you\'re stopping the flow of urine). Release both on the inhale.',
+                            cues: ['Squeeze knees together against the pillow or block', 'Exhale and engage pelvic floor on each squeeze', 'Release slightly between pulses — don\'t fully let go', 'Keep feet flat and low back pressed into the mat'],
+                            anatomyTip: 'Adductors work synergistically with pelvic floor muscles'
+                        },
+                        {
+                            name: 'Fire Hydrant with Kegel Hold',
+                            sets: 3,
+                            reps: '10 each side',
+                            muscle: 'Hip Abductors/Pelvic Floor',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, lift knee out to side. Hold at top for 3 seconds while engaging pelvic floor. Lower with control.',
+                            cues: ['Hold kegel for 3 seconds at top', 'Keep hips level', 'Core braced throughout', 'Slow controlled reps'],
+                            anatomyTip: 'Gluteus medius for hip stability combined with pelvic floor strengthening'
+                        }
+                    ]},
+                    { day: 2, name: 'Sensual Flow + Deep Hip Work', focus: 'Hip Mobility, Flow Movement, Pelvic Strength', exercises: [
+                        {
+                            name: 'Hip Circles on All Fours with Band',
+                            sets: 3,
+                            reps: '12 each direction',
+                            muscle: 'Hip Complex',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Place a resistance band just above both knees and get on all fours (hands under shoulders, knees under hips). Keeping your right knee bent at 90 degrees, lift it out to the side and slowly draw a circle with your knee — forward, up and out, back, then down to start. The band will resist the outward part of the circle. Do 12 circles in one direction, then reverse the circle for 12 more. Switch to the left leg and repeat.',
+                            cues: ['Keep knee bent at 90 degrees the entire time', 'Circle should be slow and controlled, not swinging', 'Core stays tight — dont let your hips rock or sag', 'Reverse direction after 12 to hit all the rotators'],
+                            anatomyTip: 'All hip rotators strengthened through full range with added resistance from the band'
+                        },
+                        {
+                            name: 'Thread the Needle to Hip Circle',
+                            sets: 3,
+                            reps: '8 each side',
+                            muscle: 'Thoracic Spine/Hips',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Start on all fours (hands under shoulders, knees under hips). Take your right arm and slide it under your left arm along the floor, rotating your upper body until your right shoulder and ear rest on the mat. Hold for a breath, then push back up to all fours. Now do a hip circle: keeping your right knee bent at 90 degrees, lift it out to the side like a fire hydrant and draw a big circle — forward, up, back, and down. That is one rep. Do all reps on one side, then switch.',
+                            cues: ['Thread arm under opposite arm until shoulder touches mat', 'Let your gaze follow your moving hand the whole time', 'Hip circle: knee stays bent at 90, draw a full circle in the air', 'One thread + one hip circle = one rep, then repeat same side'],
+                            anatomyTip: 'Thoracic rotation combined with hip mobility for integrated movement'
+                        },
+                        {
+                            name: 'Supine Hip Circles with Legs Extended',
+                            sets: 3,
+                            reps: '10 each direction',
+                            muscle: 'Hip Flexors/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on back, one leg extended to ceiling. Draw circles with extended leg while keeping pelvis stable.',
+                            cues: ['Keep pelvis stable', 'Smooth controlled circles', 'Press low back into mat', 'Both directions'],
+                            anatomyTip: 'Hip flexors and adductors work through range while core stabilizes'
+                        },
+                        {
+                            name: 'Elevated Frog Pumps (feet on block)',
+                            sets: 3,
+                            reps: '15',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on back, soles of feet together on yoga block, knees wide. Lift hips by squeezing glutes. Lower with control.',
+                            cues: ['Soles of feet together', 'Keep knees wide open', 'Squeeze glutes at top', 'Elevation increases range'],
+                            anatomyTip: 'Glute max activation maximized with external rotation and elevated range'
+                        },
+                        {
+                            name: 'Standing Hip Isolations',
+                            sets: 3,
+                            reps: '15 each direction',
+                            muscle: 'Hip Complex',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Stand tall, circle hips in smooth controlled motion. Isolate hip movement from upper body. Large fluid circles.',
+                            cues: ['Upper body stays still', 'Large controlled circles', 'Both directions', 'Activate through full range'],
+                            anatomyTip: 'All hip rotators and stabilizers work through controlled range for joint health'
+                        },
+                        {
+                            name: 'Side-Lying Adductor Lifts',
+                            sets: 3,
+                            reps: '15 each leg',
+                            muscle: 'Inner Thighs',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on side, top leg crossed over in front. Lift bottom leg up, squeezing inner thigh. Lower with control.',
+                            cues: ['Lift from inner thigh not momentum', 'Top leg crosses over for stability', 'Control the descent', 'Keep body stacked'],
+                            anatomyTip: 'Adductors isolated through concentric and eccentric phases'
+                        },
+                        {
+                            name: 'Kneeling Hip Hinges with Pelvic Tilt',
+                            sets: 3,
+                            reps: '12',
+                            muscle: 'Glutes/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Kneel upright. Hinge back slightly by tipping pelvis, then thrust forward to upright. Controlled fluid movement.',
+                            cues: ['Engage glutes on thrust forward', 'Controlled hinge back', 'Pelvic tilt coordinates with movement', 'Keep core braced'],
+                            anatomyTip: 'Glute activation through hip extension with pelvic floor coordination'
+                        },
+                        {
+                            name: 'Snake Flow (prone spinal wave)',
+                            sets: 3,
+                            reps: '8',
+                            muscle: 'Full Spine',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie face down. Initiate a wave-like motion from pelvis through spine to head and back. Fluid undulating movement.',
+                            cues: ['Start movement from pelvis', 'Wave flows through each vertebra', 'Fluid continuous motion', 'Breathe naturally'],
+                            anatomyTip: 'Sequential spinal erector activation through full range for spinal mobility'
+                        },
+                        {
+                            name: '90-90 Hip Stretch with Active Lift',
+                            sets: 3,
+                            reps: '8 lifts each position',
+                            muscle: 'Hip Rotators',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Sit with both legs at 90 degrees. Actively lift back knee off floor. Hold 2 seconds. Lower with control. Switch sides.',
+                            cues: ['Both legs at 90 degree angles', 'Lift back knee actively', 'Hold 2 seconds at top', 'Switch sides for both rotations'],
+                            anatomyTip: 'Internal and external hip rotators strengthened through active mobility'
+                        },
+                        {
+                            name: 'Frog Stretch with Pulses',
+                            sets: 1,
+                            reps: '90s + 15 pulses',
+                            muscle: 'Hip Adductors',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, spread knees wide, feet turned out. Rock hips back toward heels. Add small pulses at end range.',
+                            cues: ['Spread knees as wide as comfortable', 'Rock back gently', 'Small pulses at end range', 'Breathe through the stretch'],
+                            anatomyTip: 'Deep adductor and hip flexor stretch for improved pelvic mobility'
+                        }
+                    ]},
+                    { day: 3, name: 'Military Core + Glute Strength', focus: 'Core Power, Glute Building', exercises: [
+                        {
+                            name: 'Plank Hold',
+                            sets: 3,
+                            reps: '45s',
+                            muscle: 'Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Hold perfect high plank. Body straight from head to heels. Squeeze everything. Breathe steadily.',
+                            cues: ['Body straight head to heels', 'Squeeze glutes and core', 'Breathe steadily', 'Dont let hips sag'],
+                            anatomyTip: 'Isometric endurance for transverse abdominis, rectus abdominis, and obliques'
+                        },
+                        {
+                            name: 'Dead Bug Progression (slow tempo)',
+                            sets: 3,
+                            reps: '12 each side',
+                            muscle: 'Deep Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on back, arms up, legs in tabletop. Slowly extend opposite arm and leg. Slower tempo than standard dead bug.',
+                            cues: ['Ultra slow controlled tempo', 'Press low back into mat', 'Exhale on extension', 'Full return before switching'],
+                            anatomyTip: 'Slow tempo increases time under tension for deep stabilizers'
+                        },
+                        {
+                            name: 'Side Plank Thread the Needle',
+                            sets: 3,
+                            reps: '8 each side',
+                            muscle: 'Obliques',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'From side plank on forearm, reach top arm under body in rotation. Return to start with arm extended to ceiling.',
+                            cues: ['Rotate from thoracic spine', 'Keep hips stacked and elevated', 'Reach under with control', 'Return to full extension'],
+                            anatomyTip: 'Obliques maintain side plank while thoracic rotators create movement'
+                        },
+                        {
+                            name: 'Bicycle Crunches',
+                            sets: 3,
+                            reps: '20 total',
+                            muscle: 'Core/Obliques',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on back, hands behind head. Bring opposite elbow toward opposite knee. Rotate through trunk.',
+                            cues: ['Rotate from ribcage not elbows', 'Fully extend the straight leg', 'Control dont rush', 'Exhale on each rotation'],
+                            anatomyTip: 'Obliques create rotation while rectus abdominis assists flexion'
+                        },
+                        {
+                            name: 'Bear Hold',
+                            sets: 3,
+                            reps: '20s',
+                            muscle: 'Core/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, lift knees 1 inch off ground. Hold. Maintain flat back and steady breathing throughout.',
+                            cues: ['Knees hover just 1 inch', 'Back stays perfectly flat', 'Breathe steadily', 'Push ground away with hands'],
+                            anatomyTip: 'Anti-extension core endurance with scapular stabilizer activation'
+                        },
+                        {
+                            name: 'Toe Taps (lying)',
+                            sets: 3,
+                            reps: '20 total',
+                            muscle: 'Lower Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie on back, legs in tabletop. Alternate lowering one toe to touch mat. Return to tabletop. Keep low back pressed down.',
+                            cues: ['Maintain tabletop between taps', 'Low back stays pressed down', 'Exhale as you lower', 'Controlled alternating rhythm'],
+                            anatomyTip: 'Lower fibers of rectus abdominis and transverse abdominis control pelvic stability'
+                        },
+                        {
+                            name: 'Banded Hip Thrust',
+                            sets: 4,
+                            reps: '15',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Upper back on bench or couch, band above knees. Drive hips up until body forms straight line. Squeeze glutes hard at top. Lower with control.',
+                            cues: ['Push knees out against band', 'Full hip extension at top', 'Chin tucked look at wall', '2-second squeeze at top'],
+                            anatomyTip: 'Gluteus maximus primary mover with band forcing medius activation'
+                        },
+                        {
+                            name: 'Banded Clamshell with Lift',
+                            sets: 3,
+                            reps: '15 each side',
+                            muscle: 'Hip Rotators',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Side-lying, band above knees, heels together. Open knee against band resistance. At top, lift both feet off mat slightly. Lower.',
+                            cues: ['Open knee against band', 'Lift both feet at top', 'Keep pelvis stacked', 'Slow controlled movement'],
+                            anatomyTip: 'Gluteus medius and external hip rotators with added stability challenge'
+                        },
+                        {
+                            name: 'Donkey Kicks with Band',
+                            sets: 3,
+                            reps: '15 each leg',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, band above knees. Drive one heel toward ceiling, keeping knee at 90 degrees. Squeeze glute at top. Lower with control.',
+                            cues: ['Keep knee at 90 degrees', 'Drive heel toward ceiling', 'Squeeze glute at top', 'Dont arch lower back'],
+                            anatomyTip: 'Gluteus maximus isolated through hip extension with band resistance'
+                        },
+                        {
+                            name: 'Single Leg RDL (no weight, wall support)',
+                            sets: 3,
+                            reps: '10 each leg',
+                            muscle: 'Hamstrings/Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Stand on one leg near wall for balance. Hinge forward at hip, reaching back leg behind you. Feel hamstring stretch. Return to standing.',
+                            cues: ['Use wall for light balance', 'Hinge from hip not low back', 'Back leg reaches straight behind', 'Soft bend in standing knee'],
+                            anatomyTip: 'Hamstring and glute eccentric strength with unilateral balance challenge'
+                        }
+                    ]},
+                    { day: 4, name: 'Full Body Integration + Power Flow', focus: 'Full Body Circuit, Pelvic Power, Flow', exercises: [
+                        {
+                            name: 'Push-Up to Side Plank',
+                            sets: 3,
+                            reps: '5 each side',
+                            muscle: 'Chest/Core/Obliques',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Perform a push-up, then rotate to side plank with top arm extended. Return to push-up position. Alternate sides.',
+                            cues: ['Full push-up before rotation', 'Stack feet in side plank', 'Extend top arm to ceiling', 'Alternate sides each rep'],
+                            anatomyTip: 'Full push-up chain plus oblique and rotator activation'
+                        },
+                        {
+                            name: 'Hip Thrust with Band',
+                            sets: 4,
+                            reps: '15',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Upper back on bench, band above knees. Drive hips to full extension. Push knees out against band. Squeeze 2 seconds at top.',
+                            cues: ['Push knees out against band', 'Full extension at top', '2-second squeeze', 'Control the descent'],
+                            anatomyTip: 'Maximum glute activation with abductor engagement from band'
+                        },
+                        {
+                            name: 'Reverse Lunge to Knee Drive (step-back only)',
+                            sets: 3,
+                            reps: '8 each leg',
+                            muscle: 'Glutes/Quads',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Step back into shallow lunge, then drive knee forward and up as you return. Dont go deep, keep front knee safe.',
+                            cues: ['Shallow lunge only', 'Step back not forward', 'Drive knee up with power', 'Control throughout'],
+                            anatomyTip: 'Glute and quad activation through hip extension pattern, knee-safe step-back version'
+                        },
+                        {
+                            name: 'Commando Plank',
+                            sets: 3,
+                            reps: '10 total',
+                            muscle: 'Core/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Forearm plank to high plank and back. Alternate leading arm. Minimize hip sway.',
+                            cues: ['Alternate leading arm', 'Minimize hip rotation', 'Tight core throughout', 'Controlled tempo'],
+                            anatomyTip: 'Dynamic core stability with shoulder and tricep endurance'
+                        },
+                        {
+                            name: 'Swimmers (prone)',
+                            sets: 3,
+                            reps: '20 total',
+                            muscle: 'Posterior Chain',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Lie face down, arms extended. Alternate lifting opposite arm and leg. Flutter-like movement with control.',
+                            cues: ['Lift opposite arm and leg', 'Small controlled movements', 'Keep neck neutral', 'Breathe naturally'],
+                            anatomyTip: 'Full posterior chain activation from erectors through glutes'
+                        },
+                        {
+                            name: 'Explosive Hip Thrust',
+                            sets: 3,
+                            reps: '12',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Standard hip thrust setup. Drive hips up explosively. Control the descent for 2 counts. Power up, slow down.',
+                            cues: ['Explosive drive up', '2-count controlled descent', 'Full hip extension', 'Power through heels'],
+                            anatomyTip: 'Rate of force development in glutes through explosive concentric phase'
+                        },
+                        {
+                            name: 'Standing Pelvic Power Circles',
+                            sets: 3,
+                            reps: '15 each direction',
+                            muscle: 'Core/Hip Complex',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Stand tall, perform large powerful hip circles. Control movement through full range. Both directions.',
+                            cues: ['Large powerful circles', 'Control through full range', 'Core braces throughout', 'Both directions'],
+                            anatomyTip: 'Full hip complex and core coordination through dynamic range of motion'
+                        },
+                        {
+                            name: 'Tabletop Hip Pulses',
+                            sets: 3,
+                            reps: '25',
+                            muscle: 'Glutes/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'On all fours, extend hips back toward heels then pulse forward. Small controlled movements through pelvis.',
+                            cues: ['Small controlled pelvic movements', 'Engage core throughout', 'Squeeze glutes on forward pulse', 'Rhythmic breathing'],
+                            anatomyTip: 'Glute and pelvic floor activation through controlled hip articulation'
+                        },
+                        {
+                            name: 'Sphinx to Seal Flow',
+                            sets: 3,
+                            reps: '10',
+                            muscle: 'Spine/Core',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Start in sphinx (forearms down). Flow up to seal (arms extended). Fluid motion between the two positions.',
+                            cues: ['Flow smoothly between positions', 'Dont force the extension', 'Breathe with the movement', 'Progressive spinal extension'],
+                            anatomyTip: 'Progressive spinal extension through erectors with hip flexor stretch'
+                        },
+                        {
+                            name: 'Child\'s Pose to Cobra Flow',
+                            sets: 3,
+                            reps: '10 slow',
+                            muscle: 'Full Body/Recovery',
+                            kneeSafe: true,
+                            trackProgress: true,
+                            instructions: 'Flow from child\'s pose forward through to cobra position and back. Slow continuous wave-like movement.',
+                            cues: ['Slow wave-like movement', 'Flow continuously dont stop', 'Breathe naturally throughout', 'Full body undulation'],
+                            anatomyTip: 'Full spinal range of motion with nervous system down-regulation'
+                        }
+                    ]}
+                ]
             }
         ];
     }

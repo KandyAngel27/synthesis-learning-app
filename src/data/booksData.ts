@@ -684,6 +684,541 @@ export const booksDatabase: Book[] = [
 
   // Additional books would follow the same comprehensive pattern...
   // I'll add more books in the next sections of code
+
+  // PHILOSOPHY - Eight Million Ways to Happiness
+  ,{
+    id: 'eight-million-ways-happiness',
+    title: 'Eight Million Ways to Happiness',
+    author: 'Hiroko Yoda',
+    category: 'philosophy',
+    coverColor: '#1a1a2e',
+    coverGradient: ['#1a1a2e', '#7c3aed', '#ec4899'],
+    description: 'Wisdom for inspiration and healing from the heart of Japan. Explore the Japanese concept of yaoyorozu—eight million spirits—and discover time-tested practices for finding joy, meaning, and peace in everyday life.',
+    totalDuration: 52,
+    difficulty: 'beginner',
+    tags: ['japanese-wisdom', 'spirituality', 'mindfulness', 'healing', 'happiness'],
+    keyThemes: ['yaoyorozu (eight million spirits)', 'finding sacred in the everyday', 'nature connection', 'Japanese healing traditions', 'ikigai and purpose'],
+    relatedBooks: ['atomic-habits', 'thinking-fast-slow'],
+    lessons: [
+      {
+        id: 'emw-lesson-1',
+        title: 'The Land of Eight Million Spirits',
+        duration: 7,
+        content: [
+          "In Japan, there is an ancient phrase: yaoyorozu no kami—literally, 'eight million gods.' But the number isn't meant to be taken literally. It means countless, innumerable, everywhere. In the Japanese worldview, spirit and meaning inhabit everything around you.",
+          "A moss-covered stone in a garden, the steam rising from a bowl of tea, the wind passing through a bamboo grove—each carries its own quiet significance. This isn't abstract theology. It's a way of paying attention to the world.",
+          "Hiroko Yoda grew up immersed in this worldview and spent years bridging Japanese and Western cultures. In 'Eight Million Ways to Happiness,' she shares the insight that happiness isn't something you chase—it's something you notice when you slow down enough to see it.",
+          "The Shinto tradition doesn't separate the sacred from the mundane. There is no hard boundary between the spiritual world and everyday life. The act of sweeping a walkway, arranging flowers, or greeting a neighbor can all be forms of spiritual practice.",
+          "This idea challenges the Western habit of compartmentalizing life into 'work' and 'meaning,' 'productive time' and 'wasted time.' What if every moment already contained something worth appreciating?",
+          "Throughout this course, you'll explore Japanese concepts that have helped people find happiness for centuries—not through grand achievements, but through a shift in how you perceive the ordinary world around you.",
+          "The journey begins with a simple but radical premise: happiness isn't a destination. It's a way of seeing."
+        ],
+        keyTakeaways: [
+          "Yaoyorozu means eight million spirits—representing the sacred in everything",
+          "Japanese spirituality doesn't separate the sacred from the everyday",
+          "Happiness is found through attention, not achievement",
+          "Every ordinary moment can carry extraordinary meaning"
+        ],
+        visualType: 'diagram',
+        visualData: {
+          type: 'concept-map',
+          center: 'Yaoyorozu',
+          branches: ['Nature', 'Daily Rituals', 'Community', 'Mindfulness', 'Gratitude', 'Simplicity']
+        },
+        quiz: [
+          {
+            question: "What does 'yaoyorozu no kami' literally translate to?",
+            options: [
+              "The path to enlightenment",
+              "Eight million gods",
+              "The way of happiness",
+              "The spirit of nature"
+            ],
+            correctAnswer: 1,
+            explanation: "Yaoyorozu no kami literally means 'eight million gods,' but the number represents 'innumerable'—the idea that spirit and meaning exist in everything around us."
+          },
+          {
+            question: "How does Japanese spirituality differ from many Western approaches to meaning?",
+            options: [
+              "It requires years of formal study",
+              "It focuses on achieving major life goals",
+              "It doesn't separate the sacred from everyday life",
+              "It relies on written scripture above all else"
+            ],
+            correctAnswer: 2,
+            explanation: "In the Shinto worldview, there is no hard boundary between the spiritual and the mundane. Sweeping a path or making tea can be spiritual acts."
+          }
+        ],
+        interactive: [
+          {
+            type: 'reflection',
+            prompt: "Think about your day so far. Can you identify one small, ordinary moment that you rushed through but that actually had beauty or meaning in it?",
+            placeholder: "Example: The warmth of my morning coffee, the sound of birds outside my window..."
+          },
+          {
+            type: 'journal',
+            prompt: "Write down three 'invisible' things in your daily routine that you usually take for granted but could see as meaningful.",
+            placeholder: "1. \n2. \n3. "
+          }
+        ],
+        practicalAction: "Today, choose one routine activity—making coffee, walking to your car, washing dishes—and do it with full attention. Notice every detail as if it were the first time."
+      },
+      {
+        id: 'emw-lesson-2',
+        title: 'Ikigai: Your Reason to Get Up',
+        duration: 7,
+        content: [
+          "You've probably heard the word ikigai, often translated as 'reason for being' or 'purpose in life.' But in Japan, ikigai isn't reserved for grand callings or career missions. It's far more personal and humble than that.",
+          "A retired schoolteacher who tends her garden every morning has ikigai. A fisherman who rises before dawn because he loves the sea has ikigai. A grandmother who makes miso soup for her family has ikigai. It's the thing that makes you want to get out of bed.",
+          "The Western internet popularized a Venn diagram of ikigai—the intersection of what you love, what you're good at, what the world needs, and what you can be paid for. But Yoda explains that this diagram is actually a Western invention, not a Japanese one.",
+          "In Japan, ikigai can be small. It can be private. It doesn't need to make money or change the world. It just needs to give your days a sense of direction and quiet joy.",
+          "Research from Okinawa—one of the world's Blue Zones where people regularly live past 100—found that having a clear ikigai was one of the strongest predictors of longevity. People with purpose lived longer, stayed healthier, and reported higher life satisfaction.",
+          "The key insight is that ikigai isn't something you find once and keep forever. It evolves. Your ikigai at twenty may be different from your ikigai at sixty. The practice is to keep asking: 'What makes today worth living?'",
+          "Yoda emphasizes that ikigai is felt, not analyzed. You discover it by paying attention to what energizes you, what you lose track of time doing, and what fills you with quiet satisfaction—even when nobody is watching."
+        ],
+        keyTakeaways: [
+          "Ikigai means 'reason for being' but can be small and personal",
+          "The popular Venn diagram of ikigai is a Western invention, not Japanese",
+          "Having a sense of purpose is linked to longevity in Okinawan research",
+          "Ikigai evolves throughout your life—it's a practice, not a one-time discovery"
+        ],
+        visualType: 'diagram',
+        visualData: {
+          type: 'comparison',
+          left: { label: 'Western Ikigai', items: ['Career-focused', 'Monetizable', 'World-changing', 'Fixed destination'] },
+          right: { label: 'Japanese Ikigai', items: ['Personal & humble', 'May be private', 'Everyday joy', 'Evolving practice'] }
+        },
+        quiz: [
+          {
+            question: "According to Hiroko Yoda, what is the most accurate understanding of ikigai?",
+            options: [
+              "The intersection of passion, profession, mission, and vocation",
+              "A small, personal thing that gives your days direction and quiet joy",
+              "A career that perfectly aligns with your talents",
+              "A life philosophy only accessible to monks and scholars"
+            ],
+            correctAnswer: 1,
+            explanation: "In Japan, ikigai can be humble and private—like tending a garden or cooking for family. The Venn diagram version is a Western adaptation, not the original concept."
+          },
+          {
+            question: "What did research in Okinawa find about ikigai and health?",
+            options: [
+              "Ikigai had no measurable health effects",
+              "People with ikigai exercised more frequently",
+              "Having a clear ikigai was one of the strongest predictors of longevity",
+              "Ikigai was only beneficial for people under 50"
+            ],
+            correctAnswer: 2,
+            explanation: "Studies in Okinawa, one of the world's Blue Zones, found that a sense of purpose was strongly linked to longer life, better health, and higher satisfaction."
+          }
+        ],
+        interactive: [
+          {
+            type: 'reflection',
+            prompt: "Forget the Venn diagram. Ask yourself honestly: What is one thing that makes you want to get out of bed? It can be small.",
+            placeholder: "Example: My morning walk, helping my team solve problems, learning something new..."
+          },
+          {
+            type: 'exercise',
+            prompt: "List three activities where you lose track of time or feel quietly satisfied, even without recognition.",
+            placeholder: "1. \n2. \n3. "
+          }
+        ],
+        practicalAction: "This evening, write down your answer to: 'What made today worth living?' Do this for a week and notice what patterns emerge."
+      },
+      {
+        id: 'emw-lesson-3',
+        title: 'Wabi-Sabi: Beauty in Imperfection',
+        duration: 6,
+        content: [
+          "In the West, beauty often means symmetry, polish, and perfection. In Japan, one of the deepest aesthetic philosophies points in the opposite direction: wabi-sabi, the beauty found in imperfection, impermanence, and incompleteness.",
+          "Wabi originally meant the loneliness of living in nature, far from society. Sabi referred to the passage of time and the deterioration it brings. Together, they describe a worldview that finds beauty in what is worn, weathered, and transient.",
+          "A cracked tea bowl repaired with gold (kintsugi) is more beautiful than an unbroken one. A moss-covered garden wall. The asymmetry of a handmade ceramic. Autumn leaves turning brown. These aren't flaws—they're stories.",
+          "Yoda explains that wabi-sabi offers a powerful antidote to modern perfectionism. In a culture obsessed with filters, optimization, and flawless presentation, wabi-sabi whispers: 'You are enough as you are. This moment is enough as it is.'",
+          "The practice of wabi-sabi isn't about letting everything fall apart. It's about releasing the grip of perfectionism and finding peace with reality as it actually is—messy, unfinished, and constantly changing.",
+          "Sen no Rikyu, the legendary tea master who shaped much of Japanese aesthetics, taught that the essence of tea ceremony is found in imperfection. A perfectly arranged room misses the point. What matters is sincerity, presence, and the acceptance of what is.",
+          "When you apply wabi-sabi to your own life, you stop waiting for conditions to be perfect before you allow yourself to be happy. You begin to see the cracks, the rough edges, and the aging process as part of what makes life real and meaningful."
+        ],
+        keyTakeaways: [
+          "Wabi-sabi is the beauty found in imperfection, impermanence, and incompleteness",
+          "Kintsugi (golden repair) treats cracks as part of an object's story, not as flaws",
+          "Wabi-sabi is a powerful antidote to modern perfectionism",
+          "Happiness doesn't require perfect conditions—it requires acceptance of what is"
+        ],
+        visualType: 'infographic',
+        visualData: {
+          type: 'contrast',
+          perfectionism: ['Symmetry', 'Flawless', 'Permanent', 'Controlled'],
+          wabiSabi: ['Asymmetry', 'Weathered', 'Transient', 'Natural']
+        },
+        quiz: [
+          {
+            question: "What is kintsugi?",
+            options: [
+              "A Japanese meditation technique",
+              "The practice of repairing broken pottery with gold",
+              "A breathing exercise for calm",
+              "A type of Japanese garden design"
+            ],
+            correctAnswer: 1,
+            explanation: "Kintsugi is the art of repairing broken pottery with gold lacquer, treating the cracks as part of the object's history rather than something to hide. It embodies wabi-sabi perfectly."
+          },
+          {
+            question: "What does wabi-sabi teach about the relationship between happiness and perfection?",
+            options: [
+              "You must perfect yourself before you can be happy",
+              "Perfection and happiness are the same thing",
+              "Happiness doesn't require perfect conditions—it requires acceptance",
+              "Only imperfect people can be truly happy"
+            ],
+            correctAnswer: 2,
+            explanation: "Wabi-sabi teaches that happiness comes from accepting reality as it is—imperfect, impermanent, and incomplete—rather than waiting for everything to be just right."
+          }
+        ],
+        interactive: [
+          {
+            type: 'reflection',
+            prompt: "Think of something in your life you consider 'broken' or imperfect—a relationship, a skill, your appearance. How might wabi-sabi help you see it differently?",
+            placeholder: "Write your reflection here..."
+          },
+          {
+            type: 'visualization',
+            prompt: "Imagine a cracked tea bowl repaired with gold. The cracks make it unique and tell its story. What would it look like to apply this metaphor to a 'crack' in your own life?",
+            placeholder: "Describe how you'd reframe this imperfection..."
+          }
+        ],
+        practicalAction: "Find one 'imperfect' thing today—a chipped mug, a crooked picture, a wrinkle—and instead of fixing it, appreciate it. Notice how releasing the need for perfection feels."
+      },
+      {
+        id: 'emw-lesson-4',
+        title: 'Shinrin-Yoku: The Medicine of Trees',
+        duration: 7,
+        content: [
+          "In 1982, the Japanese Ministry of Agriculture, Forestry, and Fisheries coined the term shinrin-yoku—literally, 'forest bathing.' It doesn't mean exercising in the forest. It means slowly, deliberately immersing yourself in the atmosphere of the woods using all five senses.",
+          "The practice emerged from an intuition that modern Japanese life, with its relentless pace and concrete landscapes, was creating a health crisis. People needed nature not as a backdrop for exercise, but as medicine for the mind.",
+          "Research has since validated this intuition spectacularly. Studies led by Dr. Qing Li at Nippon Medical School found that spending time in forests lowers cortisol levels by 16%, reduces blood pressure, decreases heart rate, and boosts immune function by increasing natural killer cells.",
+          "Trees release organic compounds called phytoncides—essentially, their immune system. When you breathe in forest air, you absorb these compounds, and your body responds by producing more NK cells, which fight infections and even cancer cells.",
+          "Yoda emphasizes that shinrin-yoku is not hiking. There is no destination, no step count, no achievement. You walk slowly. You stop often. You touch bark, listen to streams, smell earth, and watch light filter through leaves. The goal is receptivity, not exertion.",
+          "In Japan, there are now over 60 officially designated Forest Therapy trails, and doctors prescribe forest bathing for stress, anxiety, and burnout. It has become an evidence-based medical practice.",
+          "The deeper lesson of shinrin-yoku connects back to yaoyorozu: nature isn't a resource to be used. It's a living presence that can restore you—if you slow down enough to let it."
+        ],
+        keyTakeaways: [
+          "Shinrin-yoku (forest bathing) is deliberate sensory immersion in nature, not exercise",
+          "Research shows it lowers cortisol by 16%, reduces blood pressure, and boosts immunity",
+          "Trees release phytoncides that increase your body's natural killer cells",
+          "In Japan, forest bathing is an evidence-based medical practice prescribed by doctors"
+        ],
+        visualType: 'chart',
+        visualData: {
+          type: 'health-benefits',
+          benefits: [
+            { label: 'Cortisol', change: '-16%', color: '#10b981' },
+            { label: 'Blood Pressure', change: '-5%', color: '#10b981' },
+            { label: 'NK Cells', change: '+50%', color: '#3b82f6' },
+            { label: 'Mood Score', change: '+30%', color: '#8b5cf6' }
+          ]
+        },
+        quiz: [
+          {
+            question: "What are phytoncides?",
+            options: [
+              "A type of Japanese meditation mantra",
+              "Organic compounds released by trees that boost human immune function",
+              "Synthetic supplements that mimic forest air",
+              "A category of forest mushrooms used in traditional medicine"
+            ],
+            correctAnswer: 1,
+            explanation: "Phytoncides are natural organic compounds that trees release as part of their own defense system. When humans breathe them in, our bodies respond by producing more natural killer (NK) cells."
+          },
+          {
+            question: "How does shinrin-yoku differ from hiking?",
+            options: [
+              "It requires special equipment",
+              "It focuses on reaching a summit",
+              "It emphasizes slow, sensory immersion without a destination or goal",
+              "It can only be done in officially designated forests"
+            ],
+            correctAnswer: 2,
+            explanation: "Shinrin-yoku is not about distance, speed, or achievement. It's about walking slowly, stopping often, and engaging all five senses. The goal is receptivity, not exertion."
+          }
+        ],
+        interactive: [
+          {
+            type: 'exercise',
+            prompt: "Plan a mini shinrin-yoku session. Even a park or tree-lined street works. What five senses will you engage?",
+            placeholder: "Sight: \nSound: \nSmell: \nTouch: \nTaste (optional): "
+          },
+          {
+            type: 'reflection',
+            prompt: "When was the last time you were in nature without trying to accomplish something? How did it feel?",
+            placeholder: "Write your reflection here..."
+          }
+        ],
+        practicalAction: "Spend 20 minutes in the most natural setting available to you today—a park, garden, or tree-lined street. Walk slowly, leave your phone in your pocket, and use all five senses. This is your first forest bath."
+      },
+      {
+        id: 'emw-lesson-5',
+        title: 'Mono no Aware: The Bittersweet Beauty of Passing',
+        duration: 6,
+        content: [
+          "Every spring, millions of Japanese people gather under cherry blossom trees for hanami—flower viewing parties. But the real magic isn't the blossoms themselves. It's that they last only about two weeks before falling. This fleeting beauty is the essence of mono no aware.",
+          "Mono no aware (roughly, 'the pathos of things') is a deep sensitivity to the transience of life. It's the bittersweet feeling you get watching a sunset you know will end, or holding a newborn and knowing they'll grow up fast.",
+          "Unlike sadness, mono no aware isn't about despair. It's a gentle, appreciative ache—the recognition that beauty and impermanence are inseparable. Things are beautiful precisely because they don't last.",
+          "Yoda explains that modern culture often tries to fight impermanence—through anti-aging products, permanent records, digital preservation. But mono no aware says: don't fight it. Feel it. Let the transience make the experience more vivid.",
+          "This concept reshapes how you relate to loss and change. Instead of clinging to what was or fearing what's coming, mono no aware invites you to be fully present with what is, knowing it will pass—and loving it more for that.",
+          "The Japanese tea ceremony embodies this perfectly. Every gathering is called ichigo ichie—'one time, one meeting.' This particular moment, with these particular people, will never happen exactly this way again. That awareness elevates an ordinary cup of tea into something sacred.",
+          "When you carry mono no aware with you, goodbyes become more tender, ordinary Tuesdays become more precious, and the people in your life become irreplaceable—not because they're perfect, but because your time together is finite."
+        ],
+        keyTakeaways: [
+          "Mono no aware is the bittersweet beauty of impermanence—things are precious because they pass",
+          "Cherry blossom viewing (hanami) celebrates beauty that lasts only two weeks",
+          "Ichigo ichie means 'one time, one meeting'—every moment is unrepeatable",
+          "Embracing transience makes ordinary moments feel more vivid and meaningful"
+        ],
+        visualType: 'diagram',
+        visualData: {
+          type: 'cycle',
+          stages: ['Bloom', 'Peak Beauty', 'Falling', 'Renewal'],
+          centerLabel: 'Mono no Aware'
+        },
+        quiz: [
+          {
+            question: "What makes cherry blossom viewing (hanami) a practice of mono no aware?",
+            options: [
+              "The blossoms are the most beautiful flowers in the world",
+              "The celebration of beauty that lasts only about two weeks before falling",
+              "It's a religious requirement in Shinto practice",
+              "Cherry trees are considered sacred and eternal"
+            ],
+            correctAnswer: 1,
+            explanation: "Hanami embodies mono no aware because the beauty of cherry blossoms is inseparable from their brevity. They're cherished precisely because they don't last."
+          },
+          {
+            question: "What does 'ichigo ichie' mean?",
+            options: [
+              "Every cherry blossom is unique",
+              "Practice makes perfect",
+              "One time, one meeting—this moment will never happen again",
+              "The spirit lives in all things"
+            ],
+            correctAnswer: 2,
+            explanation: "Ichigo ichie means 'one time, one meeting'—a reminder that each gathering of people and circumstances is unrepeatable, which makes it sacred."
+          }
+        ],
+        interactive: [
+          {
+            type: 'reflection',
+            prompt: "Think of something in your life that is temporary—a season, a phase, a relationship, your children's childhood. How does knowing it will end change how you experience it right now?",
+            placeholder: "Write your reflection here..."
+          },
+          {
+            type: 'journal',
+            prompt: "Write about one 'ichigo ichie' moment from recent memory—a moment that will never happen in exactly that way again. What made it special?",
+            placeholder: "Describe the moment..."
+          }
+        ],
+        practicalAction: "Today, choose one experience—a meal, a conversation, a walk—and remind yourself: 'This exact moment will never happen again.' Notice how that awareness changes your attention."
+      },
+      {
+        id: 'emw-lesson-6',
+        title: 'The Power of Ritual and Ma (Negative Space)',
+        duration: 7,
+        content: [
+          "In Japanese culture, how you do something matters as much as what you do. The tea ceremony, the martial arts bow, the careful wrapping of a gift—these rituals aren't inefficiency. They're a technology for presence.",
+          "Yoda describes how daily rituals create anchors of meaning in your day. The act of saying 'itadakimasu' before eating (literally, 'I humbly receive') transforms a meal from fuel into gratitude. Even small rituals—removing your shoes at the door, arranging your workspace—can shift your mental state.",
+          "Neuroscience supports this: rituals reduce anxiety by creating a sense of order and predictability. A 2016 study in the journal Philosophical Transactions of the Royal Society found that ritualized actions lower cortisol and increase feelings of control during stressful situations.",
+          "Equally important is the Japanese concept of ma—negative space, or the pause between things. Ma is the silence between musical notes, the empty space in a painting, the pause before someone speaks. It's not emptiness—it's fullness waiting to be noticed.",
+          "In Western culture, we tend to fill every gap—silence is awkward, empty space is wasted, downtime is lazy. But Japanese aesthetics teach that the space between things gives meaning to the things themselves.",
+          "Consider how a well-placed pause in a conversation makes the next words land harder. Or how an uncluttered room feels more peaceful than a decorated one. Ma is the art of knowing what to leave out.",
+          "Together, ritual and ma create a framework for mindful living. Rituals ground you in the present moment. Ma gives you permission to breathe. Both resist the modern compulsion to always be doing, filling, optimizing."
+        ],
+        keyTakeaways: [
+          "Japanese rituals are a technology for presence, not inefficiency",
+          "Small daily rituals like 'itadakimasu' transform ordinary acts into meaningful ones",
+          "Ma (negative space) is the meaningful pause between things—not emptiness, but fullness",
+          "Ritual and ma together resist the modern compulsion to always be doing and filling"
+        ],
+        visualType: 'diagram',
+        visualData: {
+          type: 'two-concepts',
+          concept1: { label: 'Ritual', description: 'Anchors of presence', examples: ['Tea ceremony', 'Itadakimasu', 'Gift wrapping'] },
+          concept2: { label: 'Ma', description: 'Meaningful negative space', examples: ['Silence in music', 'Empty space in art', 'Pause in conversation'] }
+        },
+        quiz: [
+          {
+            question: "What does 'itadakimasu' literally mean, and what does it represent?",
+            options: [
+              "'Enjoy your meal'—a casual greeting",
+              "'I humbly receive'—transforming eating into an act of gratitude",
+              "'Let us begin'—a signal to start eating",
+              "'Thank the chef'—showing appreciation for the cook"
+            ],
+            correctAnswer: 1,
+            explanation: "Itadakimasu literally means 'I humbly receive.' Saying it before a meal transforms eating from mere fuel consumption into an act of gratitude and presence."
+          },
+          {
+            question: "What is 'ma' in Japanese aesthetics?",
+            options: [
+              "The decorative elements in traditional art",
+              "A type of meditation posture",
+              "Negative space—the meaningful pause or emptiness between things",
+              "The arrangement of objects in a room"
+            ],
+            correctAnswer: 2,
+            explanation: "Ma is negative space—the silence between notes, the empty space in a painting, the pause in conversation. It's not emptiness but meaningful space that gives form to everything around it."
+          }
+        ],
+        interactive: [
+          {
+            type: 'exercise',
+            prompt: "Design a small daily ritual for yourself. It should take less than 2 minutes and mark a transition in your day (morning start, beginning work, evening wind-down).",
+            placeholder: "My ritual: \nWhen I'll do it: \nWhat it means to me: "
+          },
+          {
+            type: 'reflection',
+            prompt: "Where in your life could you add more 'ma'—more intentional pauses, empty space, or silence? What would you need to remove or stop doing?",
+            placeholder: "Write your reflection here..."
+          }
+        ],
+        practicalAction: "Before your next meal today, pause for five seconds. Say (silently or aloud): 'I humbly receive this.' Notice how this tiny ritual changes your experience of eating."
+      },
+      {
+        id: 'emw-lesson-7',
+        title: 'Gaman and Resilience: Enduring with Dignity',
+        duration: 6,
+        content: [
+          "Japan is a land shaped by adversity—earthquakes, tsunamis, typhoons, volcanic eruptions. Living with constant natural threats has cultivated a cultural value called gaman: the art of enduring difficult situations with patience, dignity, and grace.",
+          "Gaman doesn't mean suppressing your emotions or pretending everything is fine. It means bearing what must be borne without losing your composure or burdening others unnecessarily. It's resilience with poise.",
+          "After the devastating 2011 Tohoku earthquake and tsunami, the world watched in astonishment as displaced Japanese citizens formed orderly lines for water, shared supplies without being asked, and helped strangers without seeking recognition. This was gaman in action.",
+          "Yoda explains that gaman is rooted in a communal ethic: your suffering is real, but so is everyone else's. By bearing your share with grace, you contribute to the collective strength. It's not about being superhuman—it's about being considerate even in crisis.",
+          "There's an important nuance: gaman is not toxic positivity or denial. Japanese culture also values the expression of grief and the acknowledgment of pain. Mono no aware, which we explored earlier, is the permission to feel deeply. Gaman is about how you carry that feeling in public.",
+          "The concept has a practical dimension too: gaman includes the ability to delay gratification, persist through boredom, and continue working when motivation fades. It's the quiet stamina that underlies mastery in martial arts, craftsmanship, and daily life.",
+          "In a culture that often celebrates raw self-expression and instant gratification, gaman offers a counterpoint: sometimes strength looks like patience. Sometimes the bravest thing you can do is quietly keep going."
+        ],
+        keyTakeaways: [
+          "Gaman is enduring hardship with patience, dignity, and grace—not suppression",
+          "It's rooted in communal ethic: bearing your share strengthens everyone",
+          "Gaman coexists with emotional depth—it's not denial, it's composure in public",
+          "It includes practical resilience: delayed gratification and quiet persistence"
+        ],
+        visualType: 'diagram',
+        visualData: {
+          type: 'spectrum',
+          left: { label: 'Suppression', description: 'Denying feelings' },
+          center: { label: 'Gaman', description: 'Enduring with dignity' },
+          right: { label: 'Overwhelm', description: 'Losing composure' }
+        },
+        quiz: [
+          {
+            question: "What distinguishes gaman from simply suppressing emotions?",
+            options: [
+              "Gaman means you should never feel pain",
+              "Gaman is about bearing difficulty with dignity while still feeling deeply",
+              "Gaman requires formal training",
+              "There is no difference—both involve hiding emotions"
+            ],
+            correctAnswer: 1,
+            explanation: "Gaman is not suppression or denial. Japanese culture values feeling deeply (mono no aware). Gaman is about how you carry those feelings in public—with composure and consideration for others."
+          },
+          {
+            question: "How was gaman demonstrated after the 2011 Tohoku earthquake?",
+            options: [
+              "Citizens demanded immediate government action",
+              "People waited in orderly lines, shared supplies, and helped strangers without seeking recognition",
+              "Everyone meditated to manage stress",
+              "Residents refused international aid to show self-sufficiency"
+            ],
+            correctAnswer: 1,
+            explanation: "After the 2011 disaster, the world was moved by the calm, dignified way Japanese citizens responded—forming orderly lines, sharing resources, and helping strangers. This collective grace under pressure is gaman."
+          }
+        ],
+        interactive: [
+          {
+            type: 'reflection',
+            prompt: "Think of a current difficulty in your life. How might approaching it with gaman—patience and quiet dignity—change your experience of it?",
+            placeholder: "Write your reflection here..."
+          },
+          {
+            type: 'exercise',
+            prompt: "Identify one area where you tend to quit when it gets boring or uncomfortable. What would 'quiet persistence' look like there?",
+            placeholder: "Area: \nWhat quitting looks like: \nWhat gaman looks like: "
+          }
+        ],
+        practicalAction: "Today, when you encounter something frustrating—a long wait, a difficult conversation, a tedious task—practice gaman. Instead of reacting, take a breath and endure it with quiet patience. Notice how it changes the situation."
+      },
+      {
+        id: 'emw-lesson-8',
+        title: 'Bringing It All Together: Your Eight Million Paths',
+        duration: 6,
+        content: [
+          "You've now explored seven core Japanese concepts for happiness and healing: yaoyorozu (spirit in everything), ikigai (reason for being), wabi-sabi (beauty in imperfection), shinrin-yoku (forest bathing), mono no aware (the beauty of impermanence), ritual and ma (presence and space), and gaman (dignified resilience).",
+          "What connects all of these ideas? A single thread: paying attention. Japanese wisdom doesn't ask you to escape your life or become someone else. It asks you to see the life you already have with fresh eyes.",
+          "Yoda's central message is that happiness isn't something you build from scratch. It's something you uncover by removing the noise, the rushing, the perfectionism, and the constant craving for 'more' that prevents you from appreciating 'enough.'",
+          "These concepts aren't meant to be practiced in isolation. They weave together naturally. When you slow down for a ritual (ma), you notice beauty in imperfection (wabi-sabi). When you walk in nature (shinrin-yoku), you feel the transience of seasons (mono no aware). When you face difficulty with grace (gaman), you discover what truly matters to you (ikigai).",
+          "The title of the book itself is the lesson: there are eight million ways to find happiness. Not one way. Not the 'right' way. Millions of small, personal, ordinary ways that are already woven into the fabric of your days.",
+          "Your path doesn't need to look like anyone else's. A quiet morning with tea, a walk in the rain, an imperfect conversation with someone you love, the patience to keep going when things are hard—these are all valid paths to happiness.",
+          "The Japanese don't have a word for 'the pursuit of happiness.' Perhaps that's because happiness, in this tradition, isn't pursued. It's received—humbly, gratefully, one moment at a time."
+        ],
+        keyTakeaways: [
+          "All seven concepts share a common thread: the practice of paying attention",
+          "These ideas weave together naturally in daily life—they aren't isolated practices",
+          "Happiness isn't built from scratch—it's uncovered by removing noise and rushing",
+          "There are eight million ways to happiness, and your path doesn't need to look like anyone else's"
+        ],
+        visualType: 'infographic',
+        visualData: {
+          type: 'summary-wheel',
+          concepts: [
+            { label: 'Yaoyorozu', description: 'Spirit in everything' },
+            { label: 'Ikigai', description: 'Reason for being' },
+            { label: 'Wabi-Sabi', description: 'Beauty in imperfection' },
+            { label: 'Shinrin-Yoku', description: 'Forest bathing' },
+            { label: 'Mono no Aware', description: 'Beauty of impermanence' },
+            { label: 'Ritual & Ma', description: 'Presence and space' },
+            { label: 'Gaman', description: 'Dignified resilience' }
+          ],
+          centerLabel: 'Paying Attention'
+        },
+        quiz: [
+          {
+            question: "What single thread connects all seven Japanese concepts covered in this book?",
+            options: [
+              "Religious devotion to Shinto traditions",
+              "The practice of paying attention to your life as it already is",
+              "Achieving financial independence",
+              "Reaching a state of permanent happiness"
+            ],
+            correctAnswer: 1,
+            explanation: "Every concept in the book—from yaoyorozu to gaman—comes back to one thing: paying attention. Japanese wisdom asks you to see the life you already have with fresh eyes."
+          },
+          {
+            question: "According to the book, what is the relationship between happiness and pursuit?",
+            options: [
+              "Happiness must be actively pursued to be found",
+              "The harder you pursue happiness, the faster you find it",
+              "Happiness isn't pursued—it's received, one moment at a time",
+              "Only certain people are capable of finding happiness"
+            ],
+            correctAnswer: 2,
+            explanation: "Yoda's central insight is that happiness isn't something you chase. It's something you uncover by slowing down and receiving what's already there—humbly, gratefully, one moment at a time."
+          }
+        ],
+        interactive: [
+          {
+            type: 'journal',
+            prompt: "Of the seven concepts (yaoyorozu, ikigai, wabi-sabi, shinrin-yoku, mono no aware, ritual/ma, gaman), which resonated most with you? Why? How will you carry it forward?",
+            placeholder: "The concept that spoke to me most: \nWhy: \nHow I'll practice it: "
+          },
+          {
+            type: 'exercise',
+            prompt: "Design your own 'happiness practice' combining 2-3 concepts from this book. What does a single day look like with these woven in?",
+            placeholder: "Morning: \nAfternoon: \nEvening: "
+          }
+        ],
+        practicalAction: "Choose ONE concept from this book that resonated most deeply. Commit to practicing it for the next seven days. Write it on a note where you'll see it each morning."
+      }
+    ]
+  }
 ];
 
 export default booksDatabase;

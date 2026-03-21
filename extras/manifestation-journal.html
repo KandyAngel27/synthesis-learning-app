@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestation Journal - Synthesis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journal-container {
+            min-height: 100vh;
+            background: var(--color-bg-primary);
+            padding-bottom: 2rem;
+        }
+
+        .journal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .journal-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .journal-header p {
+            opacity: 0.9;
+            font-size: 1.125rem;
+        }
+
+        .journal-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .journal-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .journal-tab {
+            background: var(--color-bg-secondary);
+            border: 2px solid transparent;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+
+        .journal-tab:hover {
+            border-color: var(--color-primary);
+        }
+
+        .journal-tab.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .journal-section {
+            display: none;
+        }
+
+        .journal-section.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .entry-card {
+            background: var(--color-bg-secondary);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .entry-date {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .entry-prompt {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-primary-light);
+        }
+
+        .entry-textarea {
+            width: 100%;
+            background: var(--color-bg-tertiary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-text-primary);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.8;
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .entry-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .past-entries {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .past-entry {
+            background: var(--color-bg-secondary);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: var(--color-bg-secondary);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .moon-ritual-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .ritual-steps {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .ritual-step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .step-number {
+            background: white;
+            color: #667eea;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .gratitude-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gratitude-item {
+            background: var(--color-bg-tertiary);
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .gratitude-icon {
+            font-size: 1.5rem;
+        }
+
+        .affirmation-card {
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .affirmation-card:hover {
+            transform: scale(1.02);
+        }
+
+        .affirmation-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="journal-container">
+        
+        <div class="journal-header">
+            <button class="btn-back" onclick="window.location.href='index.html'" style="position: absolute; top: 2rem; left: 2rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <h1>✨ Manifestation Journal ✨</h1>
+            <p>Align your energy with your desires</p>
+        </div>
+
+        <div class="journal-content">
+            
+            <!-- Navigation Tabs -->
+            <div class="journal-nav">
+                <button class="journal-tab active" onclick="showSection('today')">📝 Today</button>
+                <button class="journal-tab" onclick="showSection('gratitude')">🙏 Gratitude</button>
+                <button class="journal-tab" onclick="showSection('affirmations')">💫 Affirmations</button>
+                <button class="journal-tab" onclick="showSection('moon')">🌙 Moon Rituals</button>
+                <button class="journal-tab" onclick="showSection('progress')">📊 Progress</button>
+                <button class="journal-tab" onclick="showSection('past')">📖 Past Entries</button>
+            </div>
+
+            <!-- Today Section -->
+            <div id="today-section" class="journal-section active">
+                <div class="entry-card">
+                    <div class="entry-date" id="today-date">Friday, January 3, 2026</div>
+                    <div class="entry-prompt">What am I calling into my life today?</div>
+                    <textarea class="entry-textarea" id="manifestation-entry" placeholder="I am manifesting..."></textarea>
+                    <div class="entry-actions">
+                        <button class="btn-primary" onclick="saveEntry()">Save Entry</button>
+                        <button class="btn-secondary" onclick="getRandomPrompt()">New Prompt</button>
+                    </div>
+                </div>
+
+                <div class="entry-card">
+                    <div class="entry-prompt">What aligned action will I take today?</div>
+                    <textarea class="entry-textarea" id="action-entry" placeholder="Today I will..."></textarea>
+                </div>
+
+                <div class="entry-card">
+                    <div class="entry-prompt">How do I want to feel?</div>
+                    <textarea class="entry-textarea" id="feeling-entry" placeholder="I choose to feel..."></textarea>
+                </div>
+            </div>
+
+            <!-- Gratitude Section -->
+            <div id="gratitude-section" class="journal-section">
+                <div class="entry-card">
+                    <h2>Today's Gratitude</h2>
+                    <textarea class="entry-textarea" id="gratitude-entry" placeholder="I am grateful for...&#10;1. &#10;2. &#10;3. "></textarea>
+                    <div class="entry-actions">
+                        <button class="btn-primary" onclick="saveGratitudeEntry()">Save</button>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Recent Gratitudes</h3>
+                <ul class="gratitude-list" id="gratitude-list">
+                    <li class="gratitude-item">
+                        <span class="gratitude-icon">🙏</span>
+                        <div>
+                            <em style="color: var(--color-text-secondary);">Your gratitudes will appear here as you add them</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Affirmations Section -->
+            <div id="affirmations-section" class="journal-section">
+                <h2 style="margin-bottom: 1.5rem;">Daily Affirmations</h2>
+                <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">Click any affirmation to repeat it aloud or in your mind</p>
+                
+                <div id="affirmations-container">
+                    <div class="affirmation-card" onclick="speakAffirmation(this)">
+                        <div class="affirmation-text">"I am worthy of all the abundance flowing to me"</div>
+                    </div>
+                    <div class="affirmation-card" onclick="speakAffirmation(this)">
+                        <div class="affirmation-text">"My SEO business attracts high-value clients effortlessly"</div>
+                    </div>
+                    <div class="affirmation-card" onclick="speakAffirmation(this)">
+                        <div class="affirmation-text">"I am strong, healthy, and full of vitality"</div>
+                    </div>
+                    <div class="affirmation-card" onclick="speakAffirmation(this)">
+                        <div class="affirmation-text">"Everything I need comes to me at the perfect time"</div>
+                    </div>
+                </div>
+
+                <div class="entry-card" style="margin-top: 2rem;">
+                    <h3>Create Your Own</h3>
+                    <textarea class="entry-textarea" id="custom-affirmation" placeholder="I am...&#10;I have...&#10;I attract..."></textarea>
+                    <div class="entry-actions">
+                        <button class="btn-primary" onclick="addCustomAffirmation()">Add Affirmation</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moon Rituals Section -->
+            <div id="moon-section" class="journal-section">
+                <div class="moon-ritual-card">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">🌑 New Moon Ritual</h2>
+                    <p style="margin-bottom: 1.5rem;">The New Moon is the perfect time to plant seeds for new beginnings</p>
+                    
+                    <div class="ritual-steps">
+                        <div class="ritual-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>Clear Your Space</strong>
+                                <p style="opacity: 0.9; margin-top: 0.5rem;">Light a candle or incense. Create sacred space.</p>
+                            </div>
+                        </div>
+                        <div class="ritual-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>Set Your Intentions</strong>
+                                <p style="opacity: 0.9; margin-top: 0.5rem;">Write down 3-5 intentions for this lunar cycle.</p>
+                            </div>
+                        </div>
+                        <div class="ritual-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>Visualize</strong>
+                                <p style="opacity: 0.9; margin-top: 0.5rem;">Spend 5-10 minutes seeing your desires as already real.</p>
+                            </div>
+                        </div>
+                        <div class="ritual-step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <strong>Release & Trust</strong>
+                                <p style="opacity: 0.9; margin-top: 0.5rem;">Let go of attachment. Trust the universe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry-card">
+                    <h3>My Moon Intentions</h3>
+                    <textarea class="entry-textarea" id="moon-intentions" placeholder="This New Moon, I am calling in..."></textarea>
+                    <div class="entry-actions">
+                        <button class="btn-primary" onclick="saveMoonIntentions()">Save Intentions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progress-section" class="journal-section">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number" id="total-entries">0</div>
+                        <div class="stat-label">Journal Entries</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="current-streak">1</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="manifestations">0</div>
+                        <div class="stat-label">Manifestations Realized</div>
+                    </div>
+                </div>
+
+                <div class="entry-card">
+                    <h2>Manifestations Tracker</h2>
+                    <p style="color: var(--color-text-secondary); margin: 1rem 0;">Celebrate what you've called into reality!</p>
+                    <textarea class="entry-textarea" placeholder="What have you manifested recently?"></textarea>
+                    <div class="entry-actions">
+                        <button class="btn-primary">Add Manifestation ✨</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Entries Section -->
+            <div id="past-section" class="journal-section">
+                <h2 style="margin-bottom: 1.5rem;">Past Entries</h2>
+                <div class="past-entries" id="past-entries">
+                    <div class="past-entry">
+                        <div class="entry-date">Starting Today - January 3, 2026</div>
+                        <p>I am ready to manifest a thriving SEO consulting business with clients who value my expertise. I see myself helping therapy practices grow and make a real difference in people's lives. This is just the beginning of my journey...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.journal-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.journal-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').classList.add('active');
+            
+            // Activate clicked tab
+            event.target.classList.add('active');
+        }
+
+        function saveEntry() {
+            const entry = document.getElementById('manifestation-entry').value;
+            if (entry.trim()) {
+                alert('✨ Your manifestation has been saved! The universe is conspiring in your favor.');
+                // Save to localStorage
+                const entries = JSON.parse(localStorage.getItem('manifestationEntries') || '[]');
+                entries.unshift({
+                    date: new Date().toISOString(),
+                    content: entry,
+                    type: 'manifestation'
+                });
+                localStorage.setItem('manifestationEntries', JSON.stringify(entries));
+            }
+        }
+
+        function getRandomPrompt() {
+            const prompts = [
+                "What miracles am I ready to receive?",
+                "How can I raise my vibration today?",
+                "What limiting beliefs am I releasing?",
+                "What does my ideal day look like?",
+                "What abundance is flowing to me?",
+                "How am I stepping into my power?",
+                "What am I grateful for right now?",
+                "What version of myself am I becoming?"
+            ];
+            const random = prompts[Math.floor(Math.random() * prompts.length)];
+            document.querySelector('.entry-prompt').textContent = random;
+        }
+
+        function saveGratitudeEntry() {
+            alert('🙏 Gratitude saved! Your positive energy is attracting more blessings.');
+        }
+
+        function speakAffirmation(element) {
+            element.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                element.style.transform = 'scale(1)';
+            }, 300);
+            
+            // Optional: Text-to-speech
+            const text = element.querySelector('.affirmation-text').textContent;
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        function addCustomAffirmation() {
+            const text = document.getElementById('custom-affirmation').value;
+            if (text.trim()) {
+                const container = document.getElementById('affirmations-container');
+                const newCard = document.createElement('div');
+                newCard.className = 'affirmation-card';
+                newCard.onclick = function() { speakAffirmation(this); };
+                newCard.innerHTML = `<div class="affirmation-text">"${text}"</div>`;
+                container.appendChild(newCard);
+                document.getElementById('custom-affirmation').value = '';
+                alert('✨ New affirmation added!');
+            }
+        }
+
+        function saveMoonIntentions() {
+            alert('🌙 Moon intentions saved! Trust the cosmic timing.');
+        }
+
+        // Set today's date
+        document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>

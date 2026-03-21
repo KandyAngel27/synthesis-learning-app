@@ -1,0 +1,36 @@
+# Synthesis Learning App — Claude Instructions
+
+## FIRST THING TO DO
+Before making ANY changes to this app, ALWAYS read these files first:
+1. `LESSON-CREATION-STANDARDS.md` — The gold standard for all book/lesson/card creation
+2. `BOOK-CREATION-TEMPLATE.md` — Step-by-step playbook for creating new books
+
+These files define ALL requirements: card minimums, SVG standards, color palette, text padding rules, college-depth category rules, and quality checklists.
+
+## Key Architecture
+- **Static HTML/JS app** — no build system, no package.json
+- **Main data file**: `data.js` (loaded via `<script>` tag in `index.html`)
+- Do NOT edit `booksData.ts` — it's unused TypeScript source
+- App renders from `APP_DATA.categories` in `data.js`
+
+## Data Structure
+```
+APP_DATA.categories[] → books[] → lessonList[] → cards[]
+```
+- Card types: intro, concept, visual, example, quiz, application, quote
+- EVERY card must have `visual: { type: "diagram", svg: \`<svg>...</svg>\`, caption: "..." }`
+- Quiz cards: `{ type: "quiz", question, options: [{text, correct}], explanation, visual }`
+
+## College-Depth Categories (NO limits)
+These categories have NO lesson maximum and NO card maximum:
+- `him` (Health Information Management)
+- `data-analytics` (Data Analytics & Microsoft 365)
+- `anatomy-physiology` (Anatomy & Physiology)
+- Medical Coding (within `him`)
+
+## Workflow for Recreating a Book
+1. Write lessons to temp files (use parallel agents for speed)
+2. Assemble into one file, validate with `new vm.Script()`
+3. Find old book boundaries in data.js (brace-depth tracking)
+4. Splice new content in, verify comma between books
+5. Clean up temp files, open app to test

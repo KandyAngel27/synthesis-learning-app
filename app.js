@@ -351,7 +351,7 @@ class SynthesisApp {
                 const book = this.findBookById(state.bookId);
                 if (book) {
                     this.currentBook = book;
-                    const lesson = book.lessonList?.find(l => l.id === state.lessonId);
+                    const lesson = book.lessonList?.find(l => String(l.id) === String(state.lessonId));
                     if (lesson) {
                         this.currentLesson = lesson;
                         this.currentCard = state.cardIndex || 0;
@@ -567,12 +567,12 @@ class SynthesisApp {
                 <div class="lessons-list">
                     <h2>Lessons</h2>
                     ${this.currentBook.lessonList.map((lesson, index) => `
-                        <div class="lesson-item" onclick="app.startLesson('${this.currentBook.id}', ${lesson.id})">
+                        <div class="lesson-item" onclick="app.startLesson('${this.currentBook.id}', '${lesson.id}')">
                             <div style="display: flex; align-items: center; flex: 1;">
                                 <div class="lesson-number">${index + 1}</div>
                                 <div class="lesson-item-info">
                                     <div class="lesson-item-title">${lesson.title}</div>
-                                    <div class="lesson-item-duration">${lesson.duration} min</div>
+                                    <div class="lesson-item-duration">${lesson.duration || 11} min</div>
                                 </div>
                             </div>
                             ${lesson.completed ? '<span class="lesson-status">✓ Complete</span>' : ''}
@@ -600,7 +600,7 @@ class SynthesisApp {
         if (!book || !book.lessonList) return;
 
         this.currentBook = book;
-        this.currentLesson = book.lessonList.find(l => l.id === lessonId);
+        this.currentLesson = book.lessonList.find(l => String(l.id) === String(lessonId));
         if (!this.currentLesson) return;
 
         // If lesson doesn't have cards, create placeholder content
@@ -632,8 +632,14 @@ class SynthesisApp {
 
         // Update progress bar
         document.getElementById('lesson-progress-fill').style.width = `${progress}%`;
-        document.getElementById('lesson-progress-text').textContent = 
-            `Lesson ${this.currentLesson.id} • Card ${this.currentCard + 1} of ${totalCards}`;
+        // Format: "HITT 1305 • Lesson 11 • Card 3 of 6"
+        const lessonId = String(this.currentLesson.id); // e.g. "hitt1305-11"
+        const parts = lessonId.split('-');
+        const bookCode = parts[0].replace(/([a-z]+)(\d+)/i, (_, letters, nums) =>
+            letters.toUpperCase() + ' ' + nums).trim(); // "HITT 1305"
+        const lessonNum = parts[1] || '';
+        document.getElementById('lesson-progress-text').textContent =
+            `${bookCode} • Lesson ${lessonNum} • Card ${this.currentCard + 1} of ${totalCards}`;
 
         // Render current card
         const card = this.currentLesson.cards[this.currentCard];
@@ -675,6 +681,14 @@ class SynthesisApp {
         window.scrollTo(0, 0);
     }
 
+    getVisualHtml(visual) {
+        if (!visual) return '';
+        const svg = typeof visual === 'string' ? visual : visual.svg;
+        const caption = typeof visual === 'object' ? visual.caption : '';
+        if (!svg) return '';
+        return `<div class="visual-diagram" style="margin-top:1.5rem;">${svg}</div>${caption ? `<p class="visual-caption">${caption}</p>` : ''}`;
+    }
+
     renderCard(card) {
         const badgeColors = {
             intro: '#6366f1',
@@ -711,40 +725,23 @@ class SynthesisApp {
                 <div class="example-card">
                     <div class="example-label">Example</div>
                     ${this.formatContent(card.content)}
-                    ${card.visual && card.visual.svg ? `
-                        <div class="visual-diagram" style="margin-top: 1.5rem;">
-                            ${card.visual.svg}
-                        </div>
-                        ${card.visual.caption ? `<p class="visual-caption">${card.visual.caption}</p>` : ''}
-                    ` : ''}
+                    ${this.getVisualHtml(card.visual)}
                 </div>
             `;
         } else if (card.type === 'visual') {
             html += `
                 <div class="visual-card">
-                    ${card.visual && card.visual.svg ? `
-                        <div class="visual-diagram">
-                            ${card.visual.svg}
-                        </div>
-                        ${card.visual.caption ? `<p class="visual-caption">${card.visual.caption}</p>` : ''}
-                    ` : ''}
+                    ${this.getVisualHtml(card.visual)}
                     ${card.content ? this.formatContent(card.content) : ''}
                 </div>
             `;
-        } else if (card.type === 'quiz') {
+        } else if (card.type === 'quiz' && card.options) {
             html += this.renderQuiz(card);
+        } else if (card.type === 'quiz' && card.content) {
+            html += this.renderContentQuiz(card);
         } else {
-            // Default case handles intro, concept, and other text-based cards
             html += this.formatContent(card.content);
-            // Render visual if present (for intro, concept cards with visuals)
-            if (card.visual && card.visual.svg) {
-                html += `
-                    <div class="visual-diagram" style="margin-top: 1.5rem;">
-                        ${card.visual.svg}
-                    </div>
-                    ${card.visual.caption ? `<p class="visual-caption">${card.visual.caption}</p>` : ''}
-                `;
-            }
+            html += this.getVisualHtml(card.visual);
         }
 
         html += `</div>`;
@@ -768,6 +765,82 @@ class SynthesisApp {
                 </div>
             </div>
         `;
+    }
+
+    renderContentQuiz(card) {
+        const content = (card.content || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+        // Find correct answer letter anywhere in content
+        const answerMatch = content.match(/answer:\s*\*{0,2}([A-D])\*{0,2}/i);
+        const correctLetter = answerMatch ? answerMatch[1].toUpperCase() : null;
+
+        // Find all option lines (A. / A) / **A)** formats)
+        const optionRegex = /^[ \t]*\*{0,2}([A-D])[.)]\*{0,2}[ \t]+(.+)/gm;
+        const parsedOptions = [];
+        let m;
+        while ((m = optionRegex.exec(content)) !== null) {
+            parsedOptions.push({ letter: m[1].toUpperCase(), text: m[2].trim() });
+        }
+        if (parsedOptions.length === 0) return this.formatContent(content);
+
+        // Question = everything before the first option line
+        const firstOptPos = content.search(/^[ \t]*\*{0,2}[A-D][.)]/m);
+        const questionRaw = content.substring(0, firstOptPos)
+            .replace(/^#+\s+(Quiz\b.*|Question\s*\d*)\s*$/gim, '')
+            .trim();
+
+        // Explanation = everything after last option, minus the answer header
+        const allMatches = [...content.matchAll(/^[ \t]*\*{0,2}[A-D][.)]\*{0,2}[ \t]+.+$/gm)];
+        const lastM = allMatches[allMatches.length - 1];
+        const afterOptions = lastM ? content.substring(lastM.index + lastM[0].length) : '';
+        const explanationText = afterOptions
+            .replace(/-{3,}/g, '')
+            .replace(/\*\*Answer:[^*\n]*\*\*/gi, '')
+            .replace(/^#+\s+Answer[^\n]*/gim, '')
+            .replace(/^\*\*Explanation:\*\*\s*/im, '')
+            .trim();
+
+        this._cqId = (this._cqId || 0) + 1;
+        const expId = `cq-explanation-${this._cqId}`;
+
+        const optionsHtml = parsedOptions.map(({ letter, text }) => {
+            const isCorrect = letter === correctLetter;
+            return `<div class="quiz-option" data-correct="${isCorrect}" data-letter="${letter}" onclick="app.selectContentQuizOption(this, '${expId}')">
+                <span style="font-weight:700;color:#3bafbf;margin-right:0.5rem">${letter})</span>${text}
+            </div>`;
+        }).join('');
+
+        const visualHtml = this.getVisualHtml(card.visual);
+
+        return `
+            <div class="quiz-card">
+                <div class="quiz-question">${this.formatContent(questionRaw)}</div>
+                <div class="quiz-options">${optionsHtml}</div>
+                <div id="${expId}" style="display:none;margin-top:1.5rem;padding:1.5rem;background:var(--color-bg-secondary);border-radius:var(--radius-lg)">
+                    <strong class="exp-result" style="color:var(--color-success)">✓ Correct!</strong>
+                    <div style="margin-top:0.75rem;color:var(--color-text-secondary)">${this.formatContent(explanationText)}</div>
+                </div>
+                ${visualHtml}
+            </div>`;
+    }
+
+    selectContentQuizOption(el, explanationId) {
+        const isCorrect = el.dataset.correct === 'true';
+        el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(opt => {
+            opt.style.pointerEvents = 'none';
+            if (opt.dataset.correct === 'true') opt.classList.add('correct');
+        });
+        if (!isCorrect) el.classList.add('incorrect');
+
+        const exp = document.getElementById(explanationId);
+        if (exp) {
+            exp.style.display = 'block';
+            const label = exp.querySelector('.exp-result');
+            if (!isCorrect && label) {
+                label.textContent = '✗ Incorrect — see explanation below';
+                label.style.color = 'var(--color-error, #ef4444)';
+            }
+        }
     }
 
     selectQuizOption(index, isCorrect) {
@@ -814,19 +887,109 @@ class SynthesisApp {
     }
 
     formatContent(content) {
-        // Convert newlines to paragraphs and format lists
-        return content
-            .split('\n\n')
-            .map(para => {
-                if (para.trim().startsWith('•') || para.trim().startsWith('-')) {
-                    const items = para.split('\n').map(item => 
-                        `<li>${item.replace(/^[•-]\s*/, '')}</li>`
-                    ).join('');
-                    return `<ul>${items}</ul>`;
+        if (!content) return '';
+        content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+        const inlineFormat = (text) => text
+            .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/`([^`]+)`/g, '<code style="background:#1c2833;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:0.9em">$1</code>');
+
+        const lines = content.split('\n');
+        let html = '';
+        let i = 0;
+
+        while (i < lines.length) {
+            const line = lines[i];
+            const trimmed = line.trim();
+
+            // Headings
+            if (/^#{1,6}\s/.test(trimmed)) {
+                const level = trimmed.match(/^(#+)/)[1].length;
+                const text = inlineFormat(trimmed.replace(/^#+\s+/, ''));
+                const sizes = ['2em','1.5em','1.2em','1.1em','1em','1em'];
+                const margins = ['1.2rem 0 0.5rem','1rem 0 0.4rem','0.8rem 0 0.3rem','0.6rem 0 0.2rem','0.5rem 0 0.2rem','0.5rem 0 0.2rem'];
+                html += `<h${level} style="font-size:${sizes[level-1]};margin:${margins[level-1]};color:#e8e8e8;font-weight:700">${text}</h${level}>`;
+                i++; continue;
+            }
+
+            // Horizontal rule
+            if (/^---+$/.test(trimmed) || /^\*\*\*+$/.test(trimmed)) {
+                html += `<hr style="border:none;border-top:1px solid #2a3545;margin:1rem 0">`;
+                i++; continue;
+            }
+
+            // Blockquote
+            if (trimmed.startsWith('>')) {
+                let bqLines = [];
+                while (i < lines.length && lines[i].trim().startsWith('>')) {
+                    bqLines.push(inlineFormat(lines[i].trim().replace(/^>\s?/, '')));
+                    i++;
                 }
-                return `<p>${para}</p>`;
-            })
-            .join('');
+                html += `<blockquote style="border-left:4px solid #3bafbf;padding:0.5rem 1rem;margin:0.8rem 0;background:#1c2833;border-radius:0 8px 8px 0;color:#a8b2c1;font-style:italic">${bqLines.join('<br>')}</blockquote>`;
+                continue;
+            }
+
+            // Table
+            if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+                let tableLines = [];
+                while (i < lines.length && lines[i].trim().startsWith('|')) {
+                    tableLines.push(lines[i].trim());
+                    i++;
+                }
+                const isSeparator = (row) => /^\|[\s\-:|]+\|$/.test(row);
+                let tableHtml = `<div style="overflow-x:auto;margin:0.8rem 0"><table style="border-collapse:collapse;width:100%;font-size:0.9em">`;
+                let inBody = false;
+                for (const row of tableLines) {
+                    if (isSeparator(row)) { inBody = true; continue; }
+                    const cells = row.split('|').slice(1, -1).map(c => c.trim());
+                    const tag = !inBody ? 'th' : 'td';
+                    const style = !inBody
+                        ? 'background:#1c2833;color:#3bafbf;padding:8px 12px;text-align:left;font-weight:700;border:1px solid #2a3545'
+                        : 'padding:7px 12px;border:1px solid #2a3545;color:#e8e8e8;vertical-align:top';
+                    tableHtml += `<tr>${cells.map(c => `<${tag} style="${style}">${inlineFormat(c)}</${tag}>`).join('')}</tr>`;
+                }
+                tableHtml += `</table></div>`;
+                html += tableHtml;
+                continue;
+            }
+
+            // Unordered list
+            if (/^[-•*]\s/.test(trimmed)) {
+                let listHtml = `<ul style="margin:0.5rem 0 0.5rem 1.2rem;padding:0">`;
+                while (i < lines.length && /^[-•*]\s/.test(lines[i].trim())) {
+                    listHtml += `<li style="margin:0.25rem 0;color:#e8e8e8">${inlineFormat(lines[i].trim().replace(/^[-•*]\s+/, ''))}</li>`;
+                    i++;
+                }
+                listHtml += `</ul>`;
+                html += listHtml;
+                continue;
+            }
+
+            // Ordered list
+            if (/^\d+\.\s/.test(trimmed)) {
+                let listHtml = `<ol style="margin:0.5rem 0 0.5rem 1.2rem;padding:0">`;
+                while (i < lines.length && /^\d+\.\s/.test(lines[i].trim())) {
+                    listHtml += `<li style="margin:0.25rem 0;color:#e8e8e8">${inlineFormat(lines[i].trim().replace(/^\d+\.\s+/, ''))}</li>`;
+                    i++;
+                }
+                listHtml += `</ol>`;
+                html += listHtml;
+                continue;
+            }
+
+            // Empty line
+            if (trimmed === '') {
+                i++; continue;
+            }
+
+            // Plain paragraph
+            html += `<p style="margin:0.4rem 0;color:#e8e8e8;line-height:1.6">${inlineFormat(trimmed)}</p>`;
+            i++;
+        }
+
+        return html;
     }
 
     previousCard() {

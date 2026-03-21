@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Board - Synthesis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vision-board.css">
+</head>
+<body>
+    <div class="vision-board-container">
+        
+        <!-- Header -->
+        <header class="vision-header">
+            <button class="btn-back" onclick="window.location.href='index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <h1>My Vision Board</h1>
+            <button class="icon-btn" id="save-board-btn" title="Save Vision Board">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                    <polyline points="7 3 7 8 15 8"></polyline>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Moon Phase Display -->
+        <div class="moon-phase-banner" id="moon-phase-banner">
+            <div class="moon-icon" id="moon-icon">🌑</div>
+            <div class="moon-info">
+                <div class="moon-phase-name" id="moon-phase-name">New Moon</div>
+                <div class="moon-phase-desc" id="moon-phase-desc">Perfect time for new beginnings and setting intentions</div>
+            </div>
+            <div class="moon-energy" id="moon-energy">✨ Manifestation Energy: High</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="vision-content">
+            
+            <!-- Left Sidebar - Tools -->
+            <aside class="vision-sidebar">
+                <h3>Add to Your Vision</h3>
+                
+                <!-- Image Upload -->
+                <div class="tool-section">
+                    <h4>📸 Images</h4>
+                    <input type="file" id="image-upload" accept="image/*" multiple style="display: none;">
+                    <button class="btn-tool" onclick="document.getElementById('image-upload').click()">
+                        Upload Image
+                    </button>
+                    <button class="btn-tool" id="search-images-btn">
+                        Search Images
+                    </button>
+                </div>
+
+                <!-- Text & Affirmations -->
+                <div class="tool-section">
+                    <h4>✍️ Text & Affirmations</h4>
+                    <textarea id="affirmation-input" placeholder="I am manifesting..."></textarea>
+                    <select id="affirmation-style">
+                        <option value="bold">Bold</option>
+                        <option value="script">Script</option>
+                        <option value="elegant">Elegant</option>
+                    </select>
+                    <button class="btn-tool" id="add-affirmation-btn">Add Affirmation</button>
+                </div>
+
+                <!-- Categories -->
+                <div class="tool-section">
+                    <h4>🎯 Goal Categories</h4>
+                    <div class="category-badges">
+                        <button class="category-badge" data-category="career">💼 Career</button>
+                        <button class="category-badge" data-category="health">💪 Health</button>
+                        <button class="category-badge" data-category="relationships">❤️ Love</button>
+                        <button class="category-badge" data-category="wealth">💰 Wealth</button>
+                        <button class="category-badge" data-category="personal">🌱 Personal</button>
+                        <button class="category-badge" data-category="spiritual">✨ Spiritual</button>
+                    </div>
+                </div>
+
+                <!-- Pre-made Templates -->
+                <div class="tool-section">
+                    <h4>🎨 Templates</h4>
+                    <button class="btn-tool" data-template="abundance">Abundance & Wealth</button>
+                    <button class="btn-tool" data-template="health">Health & Vitality</button>
+                    <button class="btn-tool" data-template="success">Career Success</button>
+                    <button class="btn-tool" data-template="love">Love & Relationships</button>
+                </div>
+
+                <!-- Clear Board -->
+                <div class="tool-section">
+                    <button class="btn-danger" id="clear-board-btn">Clear Board</button>
+                </div>
+            </aside>
+
+            <!-- Center - Vision Board Canvas -->
+            <div class="vision-board-canvas" id="vision-board">
+                <div class="canvas-placeholder">
+                    <div class="placeholder-icon">✨</div>
+                    <h2>Create Your Dream Life</h2>
+                    <p>Add images, affirmations, and goals to manifest your desires</p>
+                    <div class="quick-start-tips">
+                        <div class="tip">📸 Upload inspiring images</div>
+                        <div class="tip">✍️ Write powerful affirmations</div>
+                        <div class="tip">🎯 Organize by life category</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Manifestation Tools -->
+            <aside class="manifestation-sidebar">
+                <h3>Manifestation Tools</h3>
+
+                <!-- Gratitude Counter -->
+                <div class="tool-card">
+                    <h4>🙏 Daily Gratitude</h4>
+                    <div class="gratitude-count">
+                        <span class="count-number" id="gratitude-count">0</span>
+                        <span class="count-label">entries today</span>
+                    </div>
+                    <button class="btn-secondary" id="add-gratitude-btn">Add Gratitude</button>
+                </div>
+
+                <!-- Visualization Timer -->
+                <div class="tool-card">
+                    <h4>🧘 Visualization</h4>
+                    <div class="timer-display" id="viz-timer">05:00</div>
+                    <div class="timer-controls">
+                        <button class="btn-timer" id="start-viz-btn">Start</button>
+                        <button class="btn-timer" id="stop-viz-btn" style="display: none;">Stop</button>
+                    </div>
+                    <audio id="meditation-audio" loop>
+                        <source src="meditation.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Manifestation Checklist -->
+                <div class="tool-card">
+                    <h4>✅ Daily Practice</h4>
+                    <div class="checklist">
+                        <label class="check-item">
+                            <input type="checkbox" id="check-visualize"> 
+                            <span>5 min visualization</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" id="check-affirmations"> 
+                            <span>Read affirmations</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" id="check-gratitude"> 
+                            <span>Write gratitude</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" id="check-action"> 
+                            <span>Take aligned action</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Manifestation Journal -->
+                <div class="tool-card">
+                    <h4>📔 Quick Journal</h4>
+                    <button class="btn-secondary" onclick="window.location.href='manifestation-journal.html'">
+                        Open Full Journal
+                    </button>
+                </div>
+
+                <!-- Export Options -->
+                <div class="tool-card">
+                    <h4>💾 Save & Share</h4>
+                    <button class="btn-secondary" id="download-board-btn">Download as Image</button>
+                    <button class="btn-secondary" id="set-wallpaper-btn">Use as Wallpaper</button>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Gratitude Modal -->
+    <div id="gratitude-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>What are you grateful for today?</h2>
+                <button class="modal-close" onclick="closeGratitudeModal()">×</button>
+            </div>
+            <textarea id="gratitude-text" placeholder="I am grateful for..." rows="5"></textarea>
+            <button class="btn-primary" onclick="saveGratitude()">Save Gratitude</button>
+        </div>
+    </div>
+
+    <!-- Image Search Modal -->
+    <div id="image-search-modal" class="modal" style="display: none;">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>Search Inspiration Images</h2>
+                <button class="modal-close" onclick="closeImageSearch()">×</button>
+            </div>
+            <input type="text" id="image-search-input" placeholder="Search for: success, wealth, health, love...">
+            <div id="image-results" class="image-grid"></div>
+        </div>
+    </div>
+
+    <script src="vision-board.js"></script>
+</body>
+</html>

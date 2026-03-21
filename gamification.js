@@ -693,7 +693,7 @@ class GamificationSystem {
                 });
             }
 
-            if (card.type === 'quiz') {
+            if (card.type === 'quiz' && card.options) {
                 // Create flashcard from quiz question
                 const correctOption = card.options.find(o => o.correct);
                 cards.push({
