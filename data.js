@@ -74102,47 +74102,66 @@ const APP_DATA = {
                                 {
                                     type: "intro",
                                     title: "The Language of Medicine",
-                                    content: "Medical terminology is the **universal language of healthcare**. Whether you're in Texas or Tokyo, medical professionals use the same terms to communicate precisely about conditions, procedures, and anatomy.\n\nMost medical terms come from **Greek** and **Latin** roots. Understanding how these terms are built will let you decode almost any medical word—even ones you've never seen before.",
+                                    content: "Imagine walking into a hospital and hearing: 'The patient presents with acute cholecystitis requiring laparoscopic cholecystectomy.' Sounds like a foreign language, right?\n\nThat's because it IS a language — and you're about to become **fluent** in it.\n\nMedical terminology is the **universal language of healthcare**. Whether you're in Texas or Tokyo, medical professionals use the same terms to communicate precisely about conditions, procedures, and anatomy.\n\nMost medical terms come from **Greek** and **Latin** roots. Understanding how these terms are built will let you decode almost any medical word — even ones you've never seen before. Let's crack the code!",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="733" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">ANATOMY OF A MEDICAL TERM</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">ANATOMY OF A MEDICAL TERM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">How medical words are constructed</text>
 
                                             <!-- Example word breakdown -->
-                                            <g transform="translate(50, 60)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#7c3aed" stroke="#a78bfa"/>
-                                                <text x="55" y="91" fill="#fff" font-size="28" text-anchor="middle">GASTRO</text>
-                                                <text x="55" y="201" fill="#a78bfa" font-size="28" text-anchor="middle">Root</text>
-                                                <text x="55" y="245" fill="#94a3b8" font-size="25" text-anchor="middle">(stomach)</text>
-                                            </g>
+                                            <rect x="60" y="160" width="280" height="200" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="200" y="210" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="31">GASTRO</text>
+                                            <text x="200" y="260" text-anchor="middle" fill="#fff" font-size="26">Root</text>
+                                            <text x="200" y="300" text-anchor="middle" fill="#888" font-size="25">(stomach)</text>
 
-                                            <text x="204" y="293" fill="#fff" font-size="31">+</text>
+                                            <text x="370" y="270" fill="#14b8a6" font-size="42" font-weight="bold">+</text>
 
-                                            <g transform="translate(150, 60)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#0d9488" stroke="#5eead4"/>
-                                                <text x="55" y="91" fill="#fff" font-size="28" text-anchor="middle">ENTER</text>
-                                                <text x="55" y="201" fill="#5eead4" font-size="28" text-anchor="middle">Root</text>
-                                                <text x="55" y="245" fill="#94a3b8" font-size="25" text-anchor="middle">(intestine)</text>
-                                            </g>
+                                            <rect x="410" y="160" width="280" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="550" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">ENTER</text>
+                                            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="26">Root</text>
+                                            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="25">(intestine)</text>
 
-                                            <text x="361" y="293" fill="#fff" font-size="31">+</text>
+                                            <text x="720" y="270" fill="#14b8a6" font-size="42" font-weight="bold">+</text>
 
-                                            <g transform="translate(250, 60)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#dc2626" stroke="#fca5a5"/>
-                                                <text x="55" y="91" fill="#fff" font-size="28" text-anchor="middle">ITIS</text>
-                                                <text x="55" y="201" fill="#fca5a5" font-size="28" text-anchor="middle">Suffix</text>
-                                                <text x="55" y="245" fill="#94a3b8" font-size="25" text-anchor="middle">(inflammation)</text>
-                                            </g>
+                                            <rect x="760" y="160" width="280" height="200" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="900" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">ITIS</text>
+                                            <text x="900" y="260" text-anchor="middle" fill="#fff" font-size="26">Suffix</text>
+                                            <text x="900" y="300" text-anchor="middle" fill="#888" font-size="25">(inflammation)</text>
 
-                                            <text x="518" y="293" fill="#fff" font-size="31">=</text>
+                                            <!-- Arrow down -->
+                                            <path d="M550 380 L550 440" stroke="#ffd700" stroke-width="3"/>
+                                            <polygon points="550,450 540,435 560,435" fill="#ffd700"/>
 
                                             <!-- Result -->
-                                            <g transform="translate(100, 140)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                                <text x="157" y="84" fill="#93c5fd" font-size="31" font-weight="bold" text-anchor="middle">GASTROENTERITIS</text>
-                                            </g>
-                                            <text x="314" y="696" fill="#94a3b8" font-size="25" text-anchor="middle">Inflammation of the stomach and intestines</text>
+                                            <rect x="200" y="470" width="700" height="120" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="550" y="530" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="38">GASTROENTERITIS</text>
+                                            <text x="550" y="570" text-anchor="middle" fill="#888" font-size="26">Inflammation of the stomach and intestines</text>
+
+                                            <!-- Building blocks summary -->
+                                            <rect x="100" y="650" width="900" height="380" rx="20" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="700" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="31">THE 4 BUILDING BLOCKS</text>
+
+                                            <circle cx="250" cy="790" r="50" fill="rgba(139,92,246,0.3)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="250" y="798" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">ROOT</text>
+                                            <text x="250" y="870" text-anchor="middle" fill="#888" font-size="25">Core meaning</text>
+
+                                            <circle cx="450" cy="790" r="50" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="450" y="798" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">PREFIX</text>
+                                            <text x="450" y="870" text-anchor="middle" fill="#888" font-size="25">Beginning</text>
+
+                                            <circle cx="650" cy="790" r="50" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="650" y="798" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">SUFFIX</text>
+                                            <text x="650" y="870" text-anchor="middle" fill="#888" font-size="25">Ending</text>
+
+                                            <circle cx="850" cy="790" r="50" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="850" y="790" text-anchor="middle" fill="#fff" font-weight="bold" font-size="22">COMBINING</text>
+                                            <text x="850" y="810" text-anchor="middle" fill="#fff" font-weight="bold" font-size="22">VOWEL</text>
+                                            <text x="850" y="870" text-anchor="middle" fill="#888" font-size="25">The glue</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Medical terms are built from roots, prefixes, and suffixes</text>
                                         </svg>`,
                                         caption: "Medical terms are built from roots, prefixes, and suffixes"
                                     }
@@ -74150,17 +74169,165 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "The Four Word Parts",
-                                    content: "Every medical term is built from **four possible components:**\n\n**1. ROOT (Word Root)**\n• The foundation/core meaning\n• Usually refers to body part or condition\n• Example: CARDI = heart, DERM = skin\n\n**2. PREFIX**\n• Comes BEFORE the root\n• Modifies the meaning\n• Example: TACHY- = fast, BRADY- = slow\n\n**3. SUFFIX**\n• Comes AFTER the root\n• Often indicates procedure, condition, or disease\n• Example: -ITIS = inflammation, -ECTOMY = removal\n\n**4. COMBINING VOWEL**\n• Usually 'O' (sometimes 'I')\n• Connects roots or root to suffix\n• Example: CARDI + O + LOGY = Cardiology"
+                                    content: "Every medical term is built from **four possible components**. Think of them like LEGO pieces — once you know the pieces, you can build (and decode) anything:\n\n**1. WORD ROOT** — The foundation, the core meaning\n• Usually refers to a body part or condition\n• Example: CARDI = heart, DERM = skin, GASTR = stomach\n\n**2. PREFIX** — Comes BEFORE the root\n• Modifies the meaning\n• Example: TACHY- = fast, BRADY- = slow, HYPER- = excessive\n\n**3. SUFFIX** — Comes AFTER the root\n• Often indicates a procedure, condition, or disease\n• Example: -ITIS = inflammation, -ECTOMY = removal, -OLOGY = study of\n\n**4. COMBINING VOWEL** — The glue (usually 'O')\n• Connects word parts for smooth pronunciation\n• Example: CARDI + **O** + LOGY = Cardiology",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THE FOUR WORD PARTS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Every medical term uses these building blocks</text>
+
+                                            <!-- Word Root -->
+                                            <rect x="60" y="150" width="480" height="180" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                            <text x="300" y="200" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">1. WORD ROOT</text>
+                                            <text x="300" y="240" text-anchor="middle" fill="#fff" font-size="26">The foundation — core meaning</text>
+                                            <text x="300" y="280" text-anchor="middle" fill="#888" font-size="25">CARDI = heart | GASTR = stomach | DERM = skin</text>
+
+                                            <!-- Prefix -->
+                                            <rect x="560" y="150" width="480" height="180" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="800" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">2. PREFIX</text>
+                                            <text x="800" y="240" text-anchor="middle" fill="#fff" font-size="26">Beginning modifier</text>
+                                            <text x="800" y="280" text-anchor="middle" fill="#888" font-size="25">TACHY- = fast | BRADY- = slow | HYPER- = excess</text>
+
+                                            <!-- Suffix -->
+                                            <rect x="60" y="370" width="480" height="180" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="300" y="420" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">3. SUFFIX</text>
+                                            <text x="300" y="460" text-anchor="middle" fill="#fff" font-size="26">Ending — tells the story</text>
+                                            <text x="300" y="500" text-anchor="middle" fill="#888" font-size="25">-ITIS = inflammation | -ECTOMY = removal</text>
+
+                                            <!-- Combining Vowel -->
+                                            <rect x="560" y="370" width="480" height="180" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="800" y="420" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">4. COMBINING VOWEL</text>
+                                            <text x="800" y="460" text-anchor="middle" fill="#fff" font-size="26">The glue — usually 'O'</text>
+                                            <text x="800" y="500" text-anchor="middle" fill="#888" font-size="25">CARDI + O + LOGY = Cardiology</text>
+
+                                            <!-- Example breakdown -->
+                                            <rect x="100" y="610" width="900" height="200" rx="20" fill="rgba(20,184,166,0.15)" stroke="#14b8a6" stroke-width="2"/>
+                                            <text x="550" y="660" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="31">PUTTING IT TOGETHER</text>
+                                            <text x="550" y="710" text-anchor="middle" fill="#fff" font-size="26">ELECTR/O + CARDI/O + GRAM</text>
+                                            <text x="550" y="760" text-anchor="middle" fill="#888" font-size="25">electricity + heart + record = Electrocardiogram (heart tracing)</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Master the parts = Decode ANY term</text>
+                                        </svg>`,
+                                        caption: "The 4 building blocks of medical terms"
+                                    }
                                 },
                                 {
-                                    type: "concept",
-                                    title: "Combining Forms",
-                                    content: "A **combining form** is a root + combining vowel.\n\n**Why use combining vowels?**\n• Makes pronunciation easier\n• Connects word parts smoothly\n\n**When to use the combining vowel:**\nâœ“ When connecting TWO ROOTS: Gastro/enter/itis\nâœ“ When suffix starts with CONSONANT: Cardi/o/logy\nâœ— When suffix starts with VOWEL: Cardi/itis (not cardi/o/itis)\n\n**Common combining vowels:**\n• **O** — Most common (90%+)\n• **I** — Less common\n\n**Examples:**\n• CARDI/O = combining form for heart\n• GASTR/O = combining form for stomach\n• HEPAT/O = combining form for liver"
+                                    type: "visual",
+                                    title: "How Combining Forms Work",
+                                    content: "A **combining form** is a root + combining vowel. The combining vowel (usually 'O') makes pronunciation easier and connects word parts smoothly.\n\n**When to use the combining vowel:**\n• **USE IT** when connecting TWO ROOTS: Gastr/o/enter/itis\n• **USE IT** when suffix starts with a CONSONANT: Cardi/o/logy\n• **DROP IT** when suffix starts with a VOWEL: Cardi/itis (not cardi/o/itis)\n\n**Common combining forms:**\n• CARDI/O = heart\n• GASTR/O = stomach\n• HEPAT/O = liver\n• NEPHR/O = kidney\n• NEUR/O = nerve",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">COMBINING FORM RULES</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">When to use (or drop) the combining vowel</text>
+
+                                            <!-- Rule 1: USE -->
+                                            <rect x="60" y="150" width="480" height="250" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="300" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">USE THE VOWEL</text>
+                                            <text x="300" y="250" text-anchor="middle" fill="#fff" font-size="26">Between two roots:</text>
+                                            <text x="300" y="290" text-anchor="middle" fill="#10b981" font-size="26">GASTR/O + ENTER + ITIS</text>
+                                            <text x="300" y="340" text-anchor="middle" fill="#fff" font-size="26">Before a consonant suffix:</text>
+                                            <text x="300" y="380" text-anchor="middle" fill="#10b981" font-size="26">CARDI/O + LOGY</text>
+
+                                            <!-- Rule 2: DROP -->
+                                            <rect x="560" y="150" width="480" height="250" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="800" y="200" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">DROP THE VOWEL</text>
+                                            <text x="800" y="250" text-anchor="middle" fill="#fff" font-size="26">Before a vowel suffix:</text>
+                                            <text x="800" y="290" text-anchor="middle" fill="#ef4444" font-size="26">CARDI + ITIS (not cardi/o/itis)</text>
+                                            <text x="800" y="340" text-anchor="middle" fill="#fff" font-size="26">The suffix vowel replaces it:</text>
+                                            <text x="800" y="380" text-anchor="middle" fill="#ef4444" font-size="26">HEPAT + ITIS = Hepatitis</text>
+
+                                            <!-- Common combining forms -->
+                                            <rect x="100" y="460" width="900" height="350" rx="20" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="510" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="31">COMMON COMBINING FORMS</text>
+
+                                            <text x="200" y="570" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">CARDI/O</text>
+                                            <text x="200" y="600" text-anchor="middle" fill="#888" font-size="25">heart</text>
+
+                                            <text x="400" y="570" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="26">GASTR/O</text>
+                                            <text x="400" y="600" text-anchor="middle" fill="#888" font-size="25">stomach</text>
+
+                                            <text x="600" y="570" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">HEPAT/O</text>
+                                            <text x="600" y="600" text-anchor="middle" fill="#888" font-size="25">liver</text>
+
+                                            <text x="800" y="570" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="26">NEPHR/O</text>
+                                            <text x="800" y="600" text-anchor="middle" fill="#888" font-size="25">kidney</text>
+
+                                            <text x="200" y="680" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="26">NEUR/O</text>
+                                            <text x="200" y="710" text-anchor="middle" fill="#888" font-size="25">nerve</text>
+
+                                            <text x="400" y="680" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="26">DERM/O</text>
+                                            <text x="400" y="710" text-anchor="middle" fill="#888" font-size="25">skin</text>
+
+                                            <text x="600" y="680" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">OSTE/O</text>
+                                            <text x="600" y="710" text-anchor="middle" fill="#888" font-size="25">bone</text>
+
+                                            <text x="800" y="680" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">PULMON/O</text>
+                                            <text x="800" y="710" text-anchor="middle" fill="#888" font-size="25">lung</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">The combining vowel 'O' is used 90%+ of the time</text>
+                                        </svg>`,
+                                        caption: "Rules for using combining vowels"
+                                    }
                                 },
                                 {
                                     type: "example",
                                     title: "Breaking Down 'Electrocardiogram'",
-                                    content: "Let's decode: **ELECTROCARDIOGRAM**\n\n**ELECTR/O** = electricity (combining form)\n**CARDI/O** = heart (combining form)\n**-GRAM** = record/picture (suffix)\n\n**Meaning:** A record of the electrical activity of the heart\n\n**Notice:**\n• Two combining forms joined together\n• Combining vowel 'O' connects each part\n• Suffix tells us it's a recording\n\n**Related terms:**\n• Electrocardiograph = the MACHINE (-graph)\n• Electrocardiography = the PROCESS (-graphy)"
+                                    content: "Let's decode: **ELECTROCARDIOGRAM**\n\n**ELECTR/O** = electricity (combining form)\n**CARDI/O** = heart (combining form)\n**-GRAM** = record/picture (suffix)\n\n**Meaning:** A record of the electrical activity of the heart\n\n**Notice:**\n• Two combining forms joined together\n• Combining vowel 'O' connects each part\n• The suffix tells us it's a recording\n\n**Related terms:**\n• **Electrocardiograph** = the MACHINE (-graph)\n• **Electrocardiography** = the PROCESS (-graphy)\n• **Electrocardiogram** = the RESULT (-gram)\n\nSee the pattern? Same root, different suffixes = different meanings!",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">DECODING: ELECTROCARDIOGRAM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Breaking down a complex medical term</text>
+
+                                            <!-- Three parts -->
+                                            <rect x="60" y="160" width="300" height="200" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                            <text x="210" y="210" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">ELECTR/O</text>
+                                            <text x="210" y="260" text-anchor="middle" fill="#fff" font-size="26">Combining Form</text>
+                                            <text x="210" y="300" text-anchor="middle" fill="#888" font-size="25">= electricity</text>
+
+                                            <path d="M360 260 L400 260" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="400,260 385,250 385,270" fill="#14b8a6"/>
+
+                                            <rect x="400" y="160" width="300" height="200" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="550" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">CARDI/O</text>
+                                            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="26">Combining Form</text>
+                                            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="25">= heart</text>
+
+                                            <path d="M700 260 L740 260" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="740,260 725,250 725,270" fill="#14b8a6"/>
+
+                                            <rect x="740" y="160" width="300" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="890" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">-GRAM</text>
+                                            <text x="890" y="260" text-anchor="middle" fill="#fff" font-size="26">Suffix</text>
+                                            <text x="890" y="300" text-anchor="middle" fill="#888" font-size="25">= record/picture</text>
+
+                                            <!-- Related terms -->
+                                            <rect x="100" y="430" width="900" height="280" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+                                            <text x="550" y="480" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="31">SAME ROOT, DIFFERENT SUFFIXES</text>
+
+                                            <text x="250" y="550" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">-GRAM</text>
+                                            <text x="250" y="580" text-anchor="middle" fill="#fff" font-size="25">The RESULT</text>
+                                            <text x="250" y="610" text-anchor="middle" fill="#888" font-size="25">(the picture)</text>
+
+                                            <text x="550" y="550" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">-GRAPH</text>
+                                            <text x="550" y="580" text-anchor="middle" fill="#fff" font-size="25">The MACHINE</text>
+                                            <text x="550" y="610" text-anchor="middle" fill="#888" font-size="25">(the device)</text>
+
+                                            <text x="850" y="550" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">-GRAPHY</text>
+                                            <text x="850" y="580" text-anchor="middle" fill="#fff" font-size="25">The PROCESS</text>
+                                            <text x="850" y="610" text-anchor="middle" fill="#888" font-size="25">(the procedure)</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">One set of roots + different suffixes = different meanings</text>
+                                        </svg>`,
+                                        caption: "How the same roots produce related terms with different suffixes"
+                                    }
                                 },
                                 {
                                     type: "quiz",
@@ -74176,7 +74343,39 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "The PREFIX Position",
-                                    content: "Prefixes come at the **BEGINNING** and modify meaning.\n\n**Location Prefixes:**\n• **ENDO-** = within (endoscopy)\n• **EXO-** = outside (exocrine)\n• **PERI-** = around (pericardium)\n• **RETRO-** = behind (retroperitoneal)\n• **SUB-** = under (subcutaneous)\n• **SUPRA-** = above (suprarenal)\n\n**Number Prefixes:**\n• **UNI-** = one (unilateral)\n• **BI-** = two (bilateral)\n• **TRI-** = three (tricuspid)\n• **QUAD-** = four (quadriplegia)\n• **POLY-** = many (polyuria)\n\n**Size/Amount:**\n• **MACRO-** = large (macrocyte)\n• **MICRO-** = small (microscope)\n• **HYPER-** = excessive (hypertension)\n• **HYPO-** = deficient (hypoglycemia)"
+                                    content: "Prefixes come at the **BEGINNING** and modify meaning.\n\n**Location Prefixes:**\n• **ENDO-** = within (endoscopy)\n• **EXO-** = outside (exocrine)\n• **PERI-** = around (pericardium)\n• **RETRO-** = behind (retroperitoneal)\n• **SUB-** = under (subcutaneous)\n• **SUPRA-** = above (suprarenal)\n\n**Number Prefixes:**\n• **UNI-** = one (unilateral)\n• **BI-** = two (bilateral)\n• **TRI-** = three (tricuspid)\n• **QUAD-** = four (quadriplegia)\n• **POLY-** = many (polyuria)\n\n**Size/Amount:**\n• **MACRO-** = large (macrocyte)\n• **MICRO-** = small (microscope)\n• **HYPER-** = excessive (hypertension)\n• **HYPO-** = deficient (hypoglycemia)",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">PREFIX CATEGORIES</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Prefixes modify the root's meaning</text>
+
+                                            <rect x="60" y="150" width="480" height="200" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                            <text x="300" y="200" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">LOCATION</text>
+                                            <text x="300" y="240" text-anchor="middle" fill="#fff" font-size="26">ENDO- = within | EXO- = outside</text>
+                                            <text x="300" y="280" text-anchor="middle" fill="#fff" font-size="26">PERI- = around | SUB- = under</text>
+
+                                            <rect x="560" y="150" width="480" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="800" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">NUMBER</text>
+                                            <text x="800" y="240" text-anchor="middle" fill="#fff" font-size="26">UNI- = one | BI- = two | TRI- = three</text>
+                                            <text x="800" y="280" text-anchor="middle" fill="#fff" font-size="26">QUAD- = four | POLY- = many</text>
+
+                                            <rect x="60" y="380" width="480" height="200" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="300" y="430" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">SIZE / AMOUNT</text>
+                                            <text x="300" y="470" text-anchor="middle" fill="#fff" font-size="26">MACRO- = large | MICRO- = small</text>
+                                            <text x="300" y="510" text-anchor="middle" fill="#fff" font-size="26">HYPER- = excess | HYPO- = deficient</text>
+
+                                            <rect x="560" y="380" width="480" height="200" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="800" y="430" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">RATE / SPEED</text>
+                                            <text x="800" y="470" text-anchor="middle" fill="#fff" font-size="26">TACHY- = fast (tachycardia)</text>
+                                            <text x="800" y="510" text-anchor="middle" fill="#fff" font-size="26">BRADY- = slow (bradycardia)</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Prefixes come BEFORE the root and change its meaning</text>
+                                        </svg>`,
+                                        caption: "Major prefix categories"
+                                    }
                                 },
                                 {
                                     type: "quiz",
@@ -74188,82 +74387,83 @@ const APP_DATA = {
                                         { text: "Abnormal", correct: false }
                                     ],
                                     explanation: "TACHY- means fast or rapid. Tachycardia = fast heart rate (above 100 bpm). The opposite is BRADY- (slow), so bradycardia = slow heart rate (below 60 bpm). These are critical prefixes for cardiac documentation!"
+                                },
+                                {
+                                    type: "quote",
+                                    content: "Medical terminology is the foundation of health information management. Master the language, and you master the profession.",
+                                    author: "American Health Information Management Association"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Practice decoding**: Pick any medical term you encounter today — break it into root, prefix, suffix, and combining vowel\n\n2. **Start a flashcard set**: Write 10 common roots (CARDI, GASTR, HEPAT, NEPHR, NEUR, DERM, OSTE, PULMON, ARTHR, CEREBR) with their meanings\n\n3. **Read a medical label**: Next time you see a medication or diagnosis, try to break it down using the building blocks you learned\n\n4. **Use the combining vowel rule**: Practice connecting roots to suffixes — remember, drop the 'O' before vowel suffixes!"
                                 }
                             ]
                         },
                         {
                             id: 2,
                             title: "Essential Prefixes",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
                                     type: "intro",
                                     title: "Mastering Prefixes",
-                                    content: "Prefixes are **power modifiers**. Learn these essential prefixes and you'll instantly understand hundreds of medical terms.\n\nWe'll use the mnemonic **RAPID HELP** to remember the most critical prefix categories.",
+                                    content: "Prefixes are **power modifiers**. Learn these essential prefixes and you'll instantly understand hundreds of medical terms.\n\nThink of it this way: if you know 20 prefixes, 30 roots, and 20 suffixes — that's 20 × 30 × 20 = **12,000 possible medical terms** you can decode!\n\nWe'll use the mnemonic **RAPID HELP** to remember the most critical prefix categories.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="916" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">RAPID HELP - Essential Prefix Categories</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">RAPID HELP</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Essential Prefix Categories Mnemonic</text>
 
-                                            <g transform="translate(30, 45)">
-                                                <circle cx="31" cy="44" r="22" fill="#dc2626"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">R</text>
-                                                <text x="62" y="58" fill="#fca5a5" font-size="25">Rate (tachy-, brady-)</text>
-                                            </g>
+                                            <rect x="60" y="150" width="480" height="100" rx="15" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <circle cx="110" cy="200" r="30" fill="#ef4444"/>
+                                            <text x="110" y="210" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">R</text>
+                                            <text x="340" y="205" text-anchor="middle" fill="#fff" font-size="26">Rate (tachy-, brady-)</text>
 
-                                            <g transform="translate(30, 75)">
-                                                <circle cx="31" cy="44" r="22" fill="#f59e0b"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">A</text>
-                                                <text x="62" y="58" fill="#fcd34d" font-size="25">Amount (hyper-, hypo-, poly-, oligo-)</text>
-                                            </g>
+                                            <rect x="560" y="150" width="480" height="100" rx="15" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <circle cx="610" cy="200" r="30" fill="#f59e0b"/>
+                                            <text x="610" y="210" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">A</text>
+                                            <text x="830" y="205" text-anchor="middle" fill="#fff" font-size="26">Amount (hyper-, hypo-, poly-)</text>
 
-                                            <g transform="translate(30, 105)">
-                                                <circle cx="31" cy="44" r="22" fill="#22c55e"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">P</text>
-                                                <text x="62" y="58" fill="#86efac" font-size="25">Position (endo-, exo-, peri-, retro-)</text>
-                                            </g>
+                                            <rect x="60" y="280" width="480" height="100" rx="15" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <circle cx="110" cy="330" r="30" fill="#10b981"/>
+                                            <text x="110" y="340" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">P</text>
+                                            <text x="340" y="335" text-anchor="middle" fill="#fff" font-size="26">Position (endo-, exo-, peri-)</text>
 
-                                            <g transform="translate(30, 135)">
-                                                <circle cx="31" cy="44" r="22" fill="#3b82f6"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">I</text>
-                                                <text x="62" y="58" fill="#93c5fd" font-size="25">Inverse (a-, an-, anti-, contra-)</text>
-                                            </g>
+                                            <rect x="560" y="280" width="480" height="100" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <circle cx="610" cy="330" r="30" fill="#3b82f6"/>
+                                            <text x="610" y="340" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">I</text>
+                                            <text x="830" y="335" text-anchor="middle" fill="#fff" font-size="26">Inverse (a-, an-, anti-)</text>
 
-                                            <g transform="translate(30, 165)">
-                                                <circle cx="31" cy="44" r="22" fill="#8b5cf6"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">D</text>
-                                                <text x="62" y="58" fill="#c4b5fd" font-size="25">Direction (ab-, ad-, circum-, trans-)</text>
-                                            </g>
+                                            <rect x="60" y="410" width="480" height="100" rx="15" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <circle cx="110" cy="460" r="30" fill="#8b5cf6"/>
+                                            <text x="110" y="470" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">D</text>
+                                            <text x="340" y="465" text-anchor="middle" fill="#fff" font-size="26">Direction (ab-, ad-, trans-)</text>
 
-                                            <g transform="translate(200, 45)">
-                                                <circle cx="31" cy="44" r="22" fill="#ec4899"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">H</text>
-                                                <text x="62" y="58" fill="#f9a8d4" font-size="25">Half (hemi-, semi-)</text>
-                                            </g>
+                                            <rect x="560" y="410" width="480" height="100" rx="15" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="3"/>
+                                            <circle cx="610" cy="460" r="30" fill="#ec4899"/>
+                                            <text x="610" y="470" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">H</text>
+                                            <text x="830" y="465" text-anchor="middle" fill="#fff" font-size="26">Half (hemi-, semi-)</text>
 
-                                            <g transform="translate(200, 75)">
-                                                <circle cx="31" cy="44" r="22" fill="#06b6d4"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">E</text>
-                                                <text x="62" y="58" fill="#67e8f9" font-size="25">Extreme (macro-, micro-, mega-)</text>
-                                            </g>
+                                            <rect x="60" y="540" width="480" height="100" rx="15" fill="rgba(20,184,166,0.2)" stroke="#14b8a6" stroke-width="3"/>
+                                            <circle cx="110" cy="590" r="30" fill="#14b8a6"/>
+                                            <text x="110" y="600" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">E</text>
+                                            <text x="340" y="595" text-anchor="middle" fill="#fff" font-size="26">Extreme (macro-, micro-, mega-)</text>
 
-                                            <g transform="translate(200, 105)">
-                                                <circle cx="31" cy="44" r="22" fill="#84cc16"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">L</text>
-                                                <text x="62" y="58" fill="#bef264" font-size="25">Level (sub-, supra-, infra-, epi-)</text>
-                                            </g>
+                                            <rect x="560" y="540" width="480" height="100" rx="15" fill="rgba(132,204,22,0.2)" stroke="#84cc16" stroke-width="3"/>
+                                            <circle cx="610" cy="590" r="30" fill="#84cc16"/>
+                                            <text x="610" y="600" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">L</text>
+                                            <text x="830" y="595" text-anchor="middle" fill="#fff" font-size="26">Level (sub-, supra-, epi-)</text>
 
-                                            <g transform="translate(200, 135)">
-                                                <circle cx="31" cy="44" r="22" fill="#f97316"/>
-                                                <text x="31" y="58" fill="#fff" font-size="25" font-weight="bold" text-anchor="middle">P</text>
-                                                <text x="62" y="58" fill="#fdba74" font-size="25">Pair (uni-, bi-, tri-, quad-)</text>
-                                            </g>
+                                            <rect x="310" y="670" width="480" height="100" rx="15" fill="rgba(249,115,22,0.2)" stroke="#f97316" stroke-width="3"/>
+                                            <circle cx="360" cy="720" r="30" fill="#f97316"/>
+                                            <text x="360" y="730" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">P</text>
+                                            <text x="590" y="725" text-anchor="middle" fill="#fff" font-size="26">Pair (uni-, bi-, tri-, quad-)</text>
 
-                                            <rect x="47" y="696" width="534" height="165" rx="15" fill="#1e3a5f" stroke="#3b82f6"/>
-                                            <text x="314" y="770" fill="#93c5fd" font-size="28" text-anchor="middle">RAPID HELP = Rate, Amount, Position, Inverse,</text>
-                                            <text x="314" y="825" fill="#93c5fd" font-size="28" text-anchor="middle">Direction, Half, Extreme, Level, Pair</text>
+                                            <rect x="150" y="920" width="800" height="60" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="28">RAPID HELP = Rate, Amount, Position, Inverse, Direction, Half, Extreme, Level, Pair</text>
                                         </svg>`,
                                         caption: "RAPID HELP mnemonic for prefix categories"
                                     }
@@ -74271,7 +74471,43 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Negation Prefixes (Inverse)",
-                                    content: "These prefixes mean **WITHOUT, NOT, or AGAINST:**\n\n**A- / AN-** = without, not\n• **A-** before consonants: Apnea (without breathing)\n• **AN-** before vowels: Anemia (without blood)\n• Aseptic, Anoxia, Aphasia, Anuria\n\n**ANTI-** = against\n• Antibiotic (against life/bacteria)\n• Anticoagulant (against clotting)\n• Antihypertensive (against high BP)\n\n**CONTRA-** = against, opposite\n• Contraindicated (not indicated)\n• Contralateral (opposite side)\n\n**DYS-** = painful, difficult, abnormal\n• Dyspnea (difficult breathing)\n• Dysuria (painful urination)\n• Dysphagia (difficulty swallowing)"
+                                    content: "These prefixes mean **WITHOUT, NOT, or AGAINST:**\n\n**A- / AN-** = without, not\n• **A-** before consonants: Apnea (without breathing)\n• **AN-** before vowels: Anemia (without blood)\n• More examples: Aseptic, Anoxia, Aphasia, Anuria\n\n**ANTI-** = against\n• Antibiotic (against life/bacteria)\n• Anticoagulant (against clotting)\n• Antihypertensive (against high BP)\n\n**CONTRA-** = against, opposite\n• Contraindicated (not indicated)\n• Contralateral (opposite side)\n\n**DYS-** = painful, difficult, abnormal\n• Dyspnea (difficult breathing)\n• Dysuria (painful urination)\n• Dysphagia (difficulty swallowing)",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">NEGATION PREFIXES</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Without, Not, Against, Difficult</text>
+
+                                            <rect x="60" y="150" width="480" height="220" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="300" y="200" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">A- / AN-</text>
+                                            <text x="300" y="240" text-anchor="middle" fill="#fff" font-size="26">= without, not</text>
+                                            <text x="300" y="280" text-anchor="middle" fill="#888" font-size="25">A-pnea = without breathing</text>
+                                            <text x="300" y="310" text-anchor="middle" fill="#888" font-size="25">AN-emia = without blood</text>
+
+                                            <rect x="560" y="150" width="480" height="220" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="800" y="200" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">ANTI-</text>
+                                            <text x="800" y="240" text-anchor="middle" fill="#fff" font-size="26">= against</text>
+                                            <text x="800" y="280" text-anchor="middle" fill="#888" font-size="25">Anti-biotic = against bacteria</text>
+                                            <text x="800" y="310" text-anchor="middle" fill="#888" font-size="25">Anti-coagulant = against clotting</text>
+
+                                            <rect x="60" y="400" width="480" height="220" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="300" y="450" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="31">CONTRA-</text>
+                                            <text x="300" y="490" text-anchor="middle" fill="#fff" font-size="26">= against, opposite</text>
+                                            <text x="300" y="530" text-anchor="middle" fill="#888" font-size="25">Contra-indicated = not indicated</text>
+                                            <text x="300" y="560" text-anchor="middle" fill="#888" font-size="25">Contra-lateral = opposite side</text>
+
+                                            <rect x="560" y="400" width="480" height="220" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="800" y="450" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">DYS-</text>
+                                            <text x="800" y="490" text-anchor="middle" fill="#fff" font-size="26">= painful, difficult, abnormal</text>
+                                            <text x="800" y="530" text-anchor="middle" fill="#888" font-size="25">Dys-pnea = difficult breathing</text>
+                                            <text x="800" y="560" text-anchor="middle" fill="#888" font-size="25">Dys-phagia = difficulty swallowing</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">A- before consonants, AN- before vowels</text>
+                                        </svg>`,
+                                        caption: "Negation prefixes and their meanings"
+                                    }
                                 },
                                 {
                                     type: "concept",
@@ -74281,7 +74517,40 @@ const APP_DATA = {
                                 {
                                     type: "example",
                                     title: "Clinical Application: Thyroid Terms",
-                                    content: "The thyroid gland controls metabolism. Prefix mastery helps you understand:\n\n**HYPER**thyroidism:\n• HYPER = excessive\n• Too much thyroid hormone\n• Symptoms: rapid heart, weight loss, anxiety\n\n**HYPO**thyroidism:\n• HYPO = deficient\n• Too little thyroid hormone\n• Symptoms: slow heart, weight gain, fatigue\n\n**EU**thyroid:\n• EU = normal, good\n• Normal thyroid function\n\n**One root (THYROID) + different prefixes = completely different conditions!**"
+                                    content: "The thyroid gland controls metabolism. Prefix mastery helps you understand these conditions instantly:\n\n**HYPER**thyroidism:\n• HYPER = excessive\n• Too much thyroid hormone\n• Symptoms: rapid heart, weight loss, anxiety\n\n**HYPO**thyroidism:\n• HYPO = deficient\n• Too little thyroid hormone\n• Symptoms: slow heart, weight gain, fatigue\n\n**EU**thyroid:\n• EU = normal, good\n• Normal thyroid function\n\n**One root (THYROID) + different prefixes = completely different conditions!**\n\nThis pattern works everywhere in medicine. The prefix tells you the direction of the abnormality.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THYROID: PREFIX POWER</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Same root + different prefixes = different conditions</text>
+
+                                            <rect x="60" y="160" width="300" height="300" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="210" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">HYPER-</text>
+                                            <text x="210" y="260" text-anchor="middle" fill="#fff" font-size="26">Excessive</text>
+                                            <text x="210" y="310" text-anchor="middle" fill="#888" font-size="25">Fast heart rate</text>
+                                            <text x="210" y="345" text-anchor="middle" fill="#888" font-size="25">Weight loss</text>
+                                            <text x="210" y="380" text-anchor="middle" fill="#888" font-size="25">Anxiety</text>
+
+                                            <rect x="400" y="160" width="300" height="300" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="550" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">EU-</text>
+                                            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="26">Normal</text>
+                                            <text x="550" y="310" text-anchor="middle" fill="#888" font-size="25">Normal heart rate</text>
+                                            <text x="550" y="345" text-anchor="middle" fill="#888" font-size="25">Stable weight</text>
+                                            <text x="550" y="380" text-anchor="middle" fill="#888" font-size="25">Normal energy</text>
+
+                                            <rect x="740" y="160" width="300" height="300" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="890" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">HYPO-</text>
+                                            <text x="890" y="260" text-anchor="middle" fill="#fff" font-size="26">Deficient</text>
+                                            <text x="890" y="310" text-anchor="middle" fill="#888" font-size="25">Slow heart rate</text>
+                                            <text x="890" y="345" text-anchor="middle" fill="#888" font-size="25">Weight gain</text>
+                                            <text x="890" y="380" text-anchor="middle" fill="#888" font-size="25">Fatigue</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">One root + different prefixes = different conditions</text>
+                                        </svg>`,
+                                        caption: "How prefixes change the meaning of thyroid conditions"
+                                    }
                                 },
                                 {
                                     type: "quiz",
@@ -74297,7 +74566,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Position & Direction Prefixes",
-                                    content: "**LOCATION:**\n• **ENDO-** = within â†’ Endoscopy (looking within)\n• **EXO-** = outside â†’ Exocrine (secreting outward)\n• **PERI-** = around â†’ Pericardium (around heart)\n• **PARA-** = beside, near â†’ Parathyroid (beside thyroid)\n\n**DIRECTION:**\n• **AB-** = away from â†’ Abduction (move away)\n• **AD-** = toward â†’ Adduction (move toward)\n• **CIRCUM-** = around â†’ Circumcision\n• **TRANS-** = across â†’ Transfusion (across/through)\n\n**LEVELS:**\n• **SUB-** = under â†’ Subcutaneous (under skin)\n• **SUPRA-** = above â†’ Suprarenal (above kidney)\n• **INFRA-** = below â†’ Infraorbital (below eye orbit)\n• **EPI-** = upon, above â†’ Epidermis (upon skin)"
+                                    content: "**LOCATION:**\n• **ENDO-** = within \u2192 Endoscopy (looking within)\n• **EXO-** = outside \u2192 Exocrine (secreting outward)\n• **PERI-** = around \u2192 Pericardium (around heart)\n• **PARA-** = beside, near \u2192 Parathyroid (beside thyroid)\n\n**DIRECTION:**\n• **AB-** = away from \u2192 Abduction (move away)\n• **AD-** = toward \u2192 Adduction (move toward)\n• **CIRCUM-** = around \u2192 Circumcision\n• **TRANS-** = across \u2192 Transfusion (across/through)\n\n**LEVELS:**\n• **SUB-** = under \u2192 Subcutaneous (under skin)\n• **SUPRA-** = above \u2192 Suprarenal (above kidney)\n• **INFRA-** = below \u2192 Infraorbital (below eye orbit)\n• **EPI-** = upon, above \u2192 Epidermis (upon skin)"
                                 },
                                 {
                                     type: "quiz",
@@ -74309,6 +74578,11 @@ const APP_DATA = {
                                         { text: "Within", correct: false }
                                     ],
                                     explanation: "RETRO- means behind or backward. Retroperitoneal = behind the peritoneum. Retrograde = moving backward. Retrospective = looking backward (in time). Common in anatomical positions and medical procedures."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Use RAPID HELP**: Write the mnemonic on a sticky note — Rate, Amount, Position, Inverse, Direction, Half, Extreme, Level, Pair\n\n2. **Opposite pairs drill**: Practice matching opposites: HYPER/HYPO, TACHY/BRADY, MACRO/MICRO, ENDO/EXO, AB/AD, SUB/SUPRA\n\n3. **Clinical prefix spotting**: Look at any medication you take or see advertised — identify the prefix and what it tells you about the drug's action\n\n4. **Create a prefix chart**: Make a two-column chart with 'More Than Normal' and 'Less Than Normal' prefixes for quick reference"
                                 }
                             ]
                         },
@@ -74321,55 +74595,49 @@ const APP_DATA = {
                                 {
                                     type: "intro",
                                     title: "Suffixes Tell the Story",
-                                    content: "While prefixes modify and roots identify, **suffixes reveal what's happening**—the condition, procedure, or state.\n\nMaster these suffix categories and you'll know whether a term describes a disease, a diagnostic test, or a surgical procedure.",
+                                    content: "While prefixes modify and roots identify, **suffixes reveal what's happening** — the condition, procedure, or state.\n\nHere's why suffixes matter so much: the suffix is often what tells you whether a term describes a **disease**, a **diagnostic test**, or a **surgical procedure**. Master these suffix categories and you'll instantly know what's going on clinically.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="806" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">SUFFIX CATEGORIES</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">SUFFIX CATEGORIES</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Suffixes tell you WHAT is happening</text>
 
-                                            <!-- Conditions -->
-                                            <g transform="translate(20, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="15" fill="#7f1d1d" stroke="#dc2626"/>
-                                                <text x="86" y="73" fill="#fca5a5" font-size="25" font-weight="bold" text-anchor="middle">CONDITIONS</text>
-                                                <text x="86" y="128" fill="#f87171" font-size="25" text-anchor="middle">-ITIS = inflammation</text>
-                                                <text x="86" y="172" fill="#f87171" font-size="25" text-anchor="middle">-OSIS = condition</text>
-                                                <text x="86" y="216" fill="#f87171" font-size="25" text-anchor="middle">-PATHY = disease</text>
-                                            </g>
+                                            <rect x="60" y="150" width="300" height="280" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="210" y="200" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">CONDITIONS</text>
+                                            <text x="210" y="250" text-anchor="middle" fill="#fff" font-size="26">-ITIS = inflammation</text>
+                                            <text x="210" y="290" text-anchor="middle" fill="#fff" font-size="26">-OSIS = condition</text>
+                                            <text x="210" y="330" text-anchor="middle" fill="#fff" font-size="26">-PATHY = disease</text>
+                                            <text x="210" y="370" text-anchor="middle" fill="#fff" font-size="26">-EMIA = blood</text>
 
-                                            <!-- Procedures -->
-                                            <g transform="translate(145, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="15" fill="#1e3a5f" stroke="#3b82f6"/>
-                                                <text x="86" y="73" fill="#93c5fd" font-size="25" font-weight="bold" text-anchor="middle">PROCEDURES</text>
-                                                <text x="86" y="128" fill="#60a5fa" font-size="25" text-anchor="middle">-ECTOMY = removal</text>
-                                                <text x="86" y="172" fill="#60a5fa" font-size="25" text-anchor="middle">-OTOMY = incision</text>
-                                                <text x="86" y="216" fill="#60a5fa" font-size="25" text-anchor="middle">-PLASTY = repair</text>
-                                            </g>
+                                            <rect x="400" y="150" width="300" height="280" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="550" y="200" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">PROCEDURES</text>
+                                            <text x="550" y="250" text-anchor="middle" fill="#fff" font-size="26">-ECTOMY = removal</text>
+                                            <text x="550" y="290" text-anchor="middle" fill="#fff" font-size="26">-OTOMY = incision</text>
+                                            <text x="550" y="330" text-anchor="middle" fill="#fff" font-size="26">-OSTOMY = opening</text>
+                                            <text x="550" y="370" text-anchor="middle" fill="#fff" font-size="26">-PLASTY = repair</text>
 
-                                            <!-- Diagnostics -->
-                                            <g transform="translate(270, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="15" fill="#064e3b" stroke="#10b981"/>
-                                                <text x="86" y="73" fill="#6ee7b7" font-size="25" font-weight="bold" text-anchor="middle">DIAGNOSTICS</text>
-                                                <text x="86" y="128" fill="#34d399" font-size="25" text-anchor="middle">-SCOPY = viewing</text>
-                                                <text x="86" y="172" fill="#34d399" font-size="25" text-anchor="middle">-GRAPHY = recording</text>
-                                                <text x="86" y="216" fill="#34d399" font-size="25" text-anchor="middle">-GRAM = record</text>
-                                            </g>
+                                            <rect x="740" y="150" width="300" height="280" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="890" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">DIAGNOSTICS</text>
+                                            <text x="890" y="250" text-anchor="middle" fill="#fff" font-size="26">-SCOPY = viewing</text>
+                                            <text x="890" y="290" text-anchor="middle" fill="#fff" font-size="26">-GRAPHY = recording</text>
+                                            <text x="890" y="330" text-anchor="middle" fill="#fff" font-size="26">-GRAM = record</text>
+                                            <text x="890" y="370" text-anchor="middle" fill="#fff" font-size="26">-GRAPH = machine</text>
 
-                                            <!-- Specialists -->
-                                            <g transform="translate(80, 135)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="15" fill="#4c1d95" stroke="#8b5cf6"/>
-                                                <text x="86" y="66" fill="#c4b5fd" font-size="25" font-weight="bold" text-anchor="middle">SPECIALISTS</text>
-                                                <text x="86" y="121" fill="#a78bfa" font-size="25" text-anchor="middle">-LOGIST = specialist</text>
-                                                <text x="86" y="165" fill="#a78bfa" font-size="25" text-anchor="middle">-OLOGY = study of</text>
-                                            </g>
+                                            <rect x="180" y="480" width="340" height="220" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="350" y="530" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="31">SPECIALISTS</text>
+                                            <text x="350" y="580" text-anchor="middle" fill="#fff" font-size="26">-LOGIST = specialist</text>
+                                            <text x="350" y="620" text-anchor="middle" fill="#fff" font-size="26">-OLOGY = study of</text>
+                                            <text x="350" y="660" text-anchor="middle" fill="#fff" font-size="26">-IATRIST = physician</text>
 
-                                            <!-- States -->
-                                            <g transform="translate(210, 135)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="15" fill="#713f12" stroke="#f59e0b"/>
-                                                <text x="86" y="66" fill="#fcd34d" font-size="25" font-weight="bold" text-anchor="middle">STATES</text>
-                                                <text x="86" y="121" fill="#fbbf24" font-size="25" text-anchor="middle">-ALGIA = pain</text>
-                                                <text x="86" y="165" fill="#fbbf24" font-size="25" text-anchor="middle">-MEGALY = enlarged</text>
-                                            </g>
+                                            <rect x="560" y="480" width="340" height="220" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="730" y="530" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">STATES</text>
+                                            <text x="730" y="580" text-anchor="middle" fill="#fff" font-size="26">-ALGIA = pain</text>
+                                            <text x="730" y="620" text-anchor="middle" fill="#fff" font-size="26">-MEGALY = enlarged</text>
+                                            <text x="730" y="660" text-anchor="middle" fill="#fff" font-size="26">-MALACIA = soft</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Suffixes categorized by function</text>
                                         </svg>`,
                                         caption: "Suffixes categorized by function"
                                     }
@@ -74380,14 +74648,53 @@ const APP_DATA = {
                                     content: "**Pathological (Disease) Suffixes:**\n\n**-ITIS** = inflammation\n• Appendicitis, Arthritis, Bronchitis, Gastritis\n• One of the MOST common medical suffixes\n\n**-OSIS** = abnormal condition, disease\n• Stenosis (narrowing), Necrosis (death)\n• Cirrhosis, Psychosis, Cyanosis\n\n**-PATHY** = disease, suffering\n• Neuropathy, Cardiomyopathy, Retinopathy\n\n**-MALACIA** = softening\n• Osteomalacia (soft bones), Chondromalacia\n\n**-SCLEROSIS** = hardening\n• Atherosclerosis, Multiple Sclerosis, Arteriosclerosis\n\n**-EMIA** = blood condition\n• Anemia, Leukemia, Septicemia, Hyperglycemia"
                                 },
                                 {
-                                    type: "concept",
-                                    title: "Surgical Suffixes",
-                                    content: "**The Big Three Surgical Suffixes:**\n\n**-ECTOMY** = surgical REMOVAL\n• Appendectomy = remove appendix\n• Mastectomy = remove breast\n• Cholecystectomy = remove gallbladder\n\n**-OTOMY** = surgical INCISION (cutting into)\n• Tracheotomy = incision into trachea\n• Laparotomy = incision into abdomen\n• Craniotomy = incision into skull\n\n**-OSTOMY** = surgical OPENING (creating a mouth/outlet)\n• Colostomy = opening in colon\n• Tracheostomy = opening in trachea\n• Gastrostomy = opening in stomach\n\n**Memory tip:** \n• -ECTOMY = EXIT (remove it)\n• -OTOMY = OPEN (cut into)\n• -OSTOMY = ONGOING (permanent opening)"
+                                    type: "visual",
+                                    title: "The Big Three Surgical Suffixes",
+                                    content: "The three most important surgical suffixes you must know — they sound similar but mean very different things.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THE BIG THREE SURGICAL SUFFIXES</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">These sound similar but mean very different things</text>
+
+                                            <rect x="60" y="160" width="300" height="380" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="210" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">-ECTOMY</text>
+                                            <text x="210" y="260" text-anchor="middle" fill="#fff" font-size="26">Surgical REMOVAL</text>
+                                            <text x="210" y="310" text-anchor="middle" fill="#888" font-size="25">Appendectomy</text>
+                                            <text x="210" y="345" text-anchor="middle" fill="#888" font-size="25">= remove appendix</text>
+                                            <text x="210" y="395" text-anchor="middle" fill="#888" font-size="25">Mastectomy</text>
+                                            <text x="210" y="430" text-anchor="middle" fill="#888" font-size="25">= remove breast</text>
+                                            <text x="210" y="490" text-anchor="middle" fill="#ef4444" font-size="25">Memory: EXIT</text>
+
+                                            <rect x="400" y="160" width="300" height="380" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="550" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">-OTOMY</text>
+                                            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="26">Surgical INCISION</text>
+                                            <text x="550" y="310" text-anchor="middle" fill="#888" font-size="25">Tracheotomy</text>
+                                            <text x="550" y="345" text-anchor="middle" fill="#888" font-size="25">= cut into trachea</text>
+                                            <text x="550" y="395" text-anchor="middle" fill="#888" font-size="25">Craniotomy</text>
+                                            <text x="550" y="430" text-anchor="middle" fill="#888" font-size="25">= cut into skull</text>
+                                            <text x="550" y="490" text-anchor="middle" fill="#3b82f6" font-size="25">Memory: OPEN</text>
+
+                                            <rect x="740" y="160" width="300" height="380" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="890" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">-OSTOMY</text>
+                                            <text x="890" y="260" text-anchor="middle" fill="#fff" font-size="26">Surgical OPENING</text>
+                                            <text x="890" y="310" text-anchor="middle" fill="#888" font-size="25">Colostomy</text>
+                                            <text x="890" y="345" text-anchor="middle" fill="#888" font-size="25">= opening in colon</text>
+                                            <text x="890" y="395" text-anchor="middle" fill="#888" font-size="25">Gastrostomy</text>
+                                            <text x="890" y="430" text-anchor="middle" fill="#888" font-size="25">= opening in stomach</text>
+                                            <text x="890" y="490" text-anchor="middle" fill="#10b981" font-size="25">Memory: ONGOING</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">EXIT (remove) | OPEN (cut into) | ONGOING (permanent opening)</text>
+                                        </svg>`,
+                                        caption: "The three surgical suffixes compared"
+                                    }
                                 },
                                 {
                                     type: "example",
                                     title: "Appendix Scenarios",
-                                    content: "Let's see how suffixes change meaning with the same root:\n\n**APPENDIC** (root = appendix)\n\n**Appendicitis** (-ITIS)\n• Inflammation of the appendix\n• The diagnosis\n\n**Appendectomy** (-ECTOMY)\n• Surgical removal of appendix\n• The treatment/procedure\n\n**ONE ROOT + DIFFERENT SUFFIXES = Different clinical concepts**\n\nSame pattern works everywhere:\n• Tonsillitis â†’ Tonsillectomy\n• Cholecystitis â†’ Cholecystectomy\n• Mastitis â†’ Mastectomy"
+                                    content: "Let's see how suffixes change meaning with the same root:\n\n**APPENDIC** (root = appendix)\n\n**Appendicitis** (-ITIS)\n• Inflammation of the appendix\n• The diagnosis\n\n**Appendectomy** (-ECTOMY)\n• Surgical removal of appendix\n• The treatment/procedure\n\n**ONE ROOT + DIFFERENT SUFFIXES = Different clinical concepts**\n\nSame pattern works everywhere:\n• Tonsillitis \u2192 Tonsillectomy\n• Cholecystitis \u2192 Cholecystectomy\n• Mastitis \u2192 Mastectomy"
                                 },
                                 {
                                     type: "quiz",
@@ -74415,6 +74722,16 @@ const APP_DATA = {
                                         { text: "-SCOPY", correct: false }
                                     ],
                                     explanation: "-GRAM = the record/image (what the doctor reads). -GRAPHY = the process (mammography is performed). -GRAPH = the machine (the mammograph takes the picture). -SCOPY would be visual examination, not imaging."
+                                },
+                                {
+                                    type: "quote",
+                                    content: "The suffix is the part of the medical term that often provides the biggest clue about what is happening to the patient.",
+                                    author: "Medical Terminology for Health Professions"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Memorize the Big Three**: -ECTOMY (EXIT/remove), -OTOMY (OPEN/cut into), -OSTOMY (ONGOING/permanent opening)\n\n2. **Practice the diagnostic trio**: -GRAM (picture), -GRAPH (machine), -GRAPHY (process) — use the ECG/EKG as your example\n\n3. **Quiz yourself**: For each body part root you know, add -ITIS, -ECTOMY, and -OLOGY to create three different terms\n\n4. **Read a medical bill or report**: Identify all the suffixes and categorize them as conditions, procedures, or diagnostics"
                                 }
                             ]
                         },
@@ -74427,55 +74744,59 @@ const APP_DATA = {
                                 {
                                     type: "intro",
                                     title: "Building Your Root Vocabulary",
-                                    content: "Now that you know how to build terms with prefixes and suffixes, it's time to master the **roots**—the core meanings that tell you WHAT body part or system you're dealing with.\n\nWe'll cover roots in **anatomical order**: Head to toe, outside to inside. This matches how you'll see terms organized in medical records and coding manuals.",
+                                    content: "Now that you know how to build terms with prefixes and suffixes, it's time to master the **roots** — the core meanings that tell you WHAT body part or system you're dealing with.\n\nWe'll cover roots in **anatomical order**: Head to toe, outside to inside. This matches how you'll see terms organized in medical records and coding manuals.\n\nBy the end of this lesson, you'll decode terms related to the head, brain, eyes, ears, nose, and throat.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">BODY SYSTEM ROOTS - THE CORE</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">BODY SYSTEM ROOTS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Head to toe, outside to inside</text>
 
                                             <!-- Body outline with labels -->
-                                            <g transform="translate(200, 150)">
-                                                <!-- Head -->
-                                                <circle cx="0" cy="-80" r="45" fill="none" stroke="#60a5fa" stroke-width="4"/>
-                                                <text x="78" y="-80" fill="#93c5fd" font-size="28">CEPHAL/O = head</text>
-                                                <text x="78" y="-68" fill="#93c5fd" font-size="28">ENCEPHAL/O = brain</text>
+                                            <circle cx="350" cy="220" r="60" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="350" y="228" text-anchor="middle" fill="#3b82f6" font-size="26">HEAD</text>
 
-                                                <!-- Neck/Throat -->
-                                                <line x1="0" y1="-55" x2="0" y2="-40" stroke="#60a5fa" stroke-width="4"/>
-                                                <text x="-95" y="-45" fill="#a78bfa" font-size="28">CERVIC/O = neck</text>
+                                            <line x1="350" y1="280" x2="350" y2="320" stroke="#3b82f6" stroke-width="3"/>
 
-                                                <!-- Torso -->
-                                                <rect x="-30" y="-40" width="94" height="256" rx="9" fill="none" stroke="#60a5fa" stroke-width="4"/>
-                                                <text x="78" y="-25" fill="#86efac" font-size="28">THORAC/O = chest</text>
-                                                <text x="78" y="-10" fill="#fcd34d" font-size="28">ABDOMIN/O = abdomen</text>
-                                                <text x="-95" y="18" fill="#f9a8d4" font-size="28">LAPAR/O = abdomen</text>
-                                                <text x="-95" y="73" fill="#fca5a5" font-size="28">(surgical)</text>
+                                            <rect x="290" y="320" width="120" height="250" rx="20" fill="none" stroke="#3b82f6" stroke-width="3"/>
 
-                                                <!-- Arms -->
-                                                <line x1="-30" y1="-30" x2="-60" y2="36" stroke="#60a5fa" stroke-width="4"/>
-                                                <line x1="47" y1="-30" x2="94" y2="36" stroke="#60a5fa" stroke-width="4"/>
+                                            <line x1="290" y1="350" x2="200" y2="480" stroke="#3b82f6" stroke-width="3"/>
+                                            <line x1="410" y1="350" x2="500" y2="480" stroke="#3b82f6" stroke-width="3"/>
 
-                                                <!-- Legs -->
-                                                <line x1="-15" y1="110" x2="-20" y2="293" stroke="#60a5fa" stroke-width="4"/>
-                                                <line x1="23" y1="110" x2="31" y2="293" stroke="#60a5fa" stroke-width="4"/>
-                                            </g>
+                                            <line x1="320" y1="570" x2="290" y2="720" stroke="#3b82f6" stroke-width="3"/>
+                                            <line x1="380" y1="570" x2="410" y2="720" stroke="#3b82f6" stroke-width="3"/>
 
-                                            <rect x="47" y="880" width="534" height="110" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                            <text x="314" y="953" fill="#93c5fd" font-size="25" text-anchor="middle">Learn the roots = Decode ANY medical term!</text>
+                                            <!-- Labels on right side -->
+                                            <text x="600" y="190" fill="#93c5fd" font-size="26">CEPHAL/O = head</text>
+                                            <text x="600" y="225" fill="#93c5fd" font-size="26">ENCEPHAL/O = brain</text>
+                                            <text x="600" y="260" fill="#93c5fd" font-size="26">CRANI/O = skull</text>
+
+                                            <text x="600" y="330" fill="#c4b5fd" font-size="26">OPHTHALM/O = eye</text>
+                                            <text x="600" y="365" fill="#c4b5fd" font-size="26">OT/O = ear</text>
+                                            <text x="600" y="400" fill="#c4b5fd" font-size="26">RHIN/O = nose</text>
+
+                                            <text x="600" y="470" fill="#86efac" font-size="26">THORAC/O = chest</text>
+                                            <text x="600" y="505" fill="#86efac" font-size="26">ABDOMIN/O = abdomen</text>
+
+                                            <text x="600" y="575" fill="#fcd34d" font-size="26">OSTE/O = bone</text>
+                                            <text x="600" y="610" fill="#fcd34d" font-size="26">ARTHR/O = joint</text>
+                                            <text x="600" y="645" fill="#fcd34d" font-size="26">MY/O = muscle</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Learn the roots = Decode ANY medical term!</text>
                                         </svg>`,
-                                        caption: "Body system roots organize by anatomical region"
+                                        caption: "Body system roots organized by anatomical region"
                                     }
                                 },
                                 {
                                     type: "concept",
                                     title: "Head, Brain & Nervous System Roots",
-                                    content: "**HEAD & BRAIN:**\n• **CEPHAL/O** = head â†’ Cephalgia (headache), Hydrocephalus\n• **CRANI/O** = skull â†’ Craniotomy, Cranial nerves\n• **ENCEPHAL/O** = brain â†’ Encephalitis, Electroencephalogram (EEG)\n• **CEREBR/O** = cerebrum (largest brain part) â†’ Cerebrovascular, Cerebral palsy\n• **CEREBELL/O** = cerebellum (balance center) â†’ Cerebellar ataxia\n\n**NERVOUS SYSTEM:**\n• **NEUR/O** = nerve â†’ Neurology, Neuropathy, Neuritis\n• **MENING/O** = meninges (brain coverings) â†’ Meningitis\n• **MYE/O** = spinal cord (also bone marrow) â†’ Myelogram, Myelitis\n\n**Memory Tip:** ENCEPHAL contains 'EN' (within) - the brain is WITHIN the skull!"
+                                    content: "**HEAD & BRAIN:**\n• **CEPHAL/O** = head \u2192 Cephalgia (headache), Hydrocephalus\n• **CRANI/O** = skull \u2192 Craniotomy, Cranial nerves\n• **ENCEPHAL/O** = brain \u2192 Encephalitis, Electroencephalogram (EEG)\n• **CEREBR/O** = cerebrum (largest brain part) \u2192 Cerebrovascular, Cerebral palsy\n• **CEREBELL/O** = cerebellum (balance center) \u2192 Cerebellar ataxia\n\n**NERVOUS SYSTEM:**\n• **NEUR/O** = nerve \u2192 Neurology, Neuropathy, Neuritis\n• **MENING/O** = meninges (brain coverings) \u2192 Meningitis\n• **MYE/O** = spinal cord (also bone marrow) \u2192 Myelogram, Myelitis\n\n**Memory Tip:** ENCEPHAL contains 'EN' (within) — the brain is WITHIN the skull!"
                                 },
                                 {
                                     type: "concept",
                                     title: "Eye & Ear Roots",
-                                    content: "**EYE ROOTS:**\n• **OPHTHALM/O** = eye â†’ Ophthalmology, Ophthalmoscope\n• **OCUL/O** = eye â†’ Ocular, Intraocular\n• **OPT/O** = vision â†’ Optometry, Optic nerve\n• **RETIN/O** = retina â†’ Retinopathy, Retinal detachment\n• **KERAT/O** = cornea (also hard tissue) â†’ Keratitis\n• **CONJUNCTIV/O** = conjunctiva â†’ Conjunctivitis (pink eye)\n• **BLEPHAR/O** = eyelid â†’ Blepharitis, Blepharoplasty\n\n**EAR ROOTS:**\n• **OT/O** = ear â†’ Otitis, Otoscope, Otology\n• **AUDI/O** = hearing â†’ Audiology, Audiogram\n• **TYMPAN/O** = eardrum â†’ Tympanic membrane, Myringotomy\n• **MYRING/O** = eardrum (alternate) â†’ Myringotomy\n\n**Coding Note:** Otitis media (middle ear infection) is one of the most commonly coded diagnoses in pediatrics!"
+                                    content: "**EYE ROOTS:**\n• **OPHTHALM/O** = eye \u2192 Ophthalmology, Ophthalmoscope\n• **OCUL/O** = eye \u2192 Ocular, Intraocular\n• **OPT/O** = vision \u2192 Optometry, Optic nerve\n• **RETIN/O** = retina \u2192 Retinopathy, Retinal detachment\n• **KERAT/O** = cornea (also hard tissue) \u2192 Keratitis\n• **CONJUNCTIV/O** = conjunctiva \u2192 Conjunctivitis (pink eye)\n• **BLEPHAR/O** = eyelid \u2192 Blepharitis, Blepharoplasty\n\n**EAR ROOTS:**\n• **OT/O** = ear \u2192 Otitis, Otoscope, Otology\n• **AUDI/O** = hearing \u2192 Audiology, Audiogram\n• **TYMPAN/O** = eardrum \u2192 Tympanic membrane, Myringotomy\n• **MYRING/O** = eardrum (alternate) \u2192 Myringotomy\n\n**Coding Note:** Otitis media (middle ear infection) is one of the most commonly coded diagnoses in pediatrics!"
                                 },
                                 {
                                     type: "quiz",
@@ -74491,7 +74812,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Mouth, Nose & Throat Roots",
-                                    content: "**MOUTH:**\n• **OR/O** = mouth â†’ Oral, Oropharynx\n• **STOMAT/O** = mouth â†’ Stomatitis (mouth inflammation)\n• **GLOSS/O** = tongue â†’ Glossitis, Glossopharyngeal\n• **LINGU/O** = tongue â†’ Sublingual, Lingual\n• **GINGIV/O** = gums â†’ Gingivitis, Gingivectomy\n• **DENT/O, ODONT/O** = teeth â†’ Dental, Orthodontist\n\n**NOSE:**\n• **NAS/O** = nose â†’ Nasal, Nasogastric (NG tube)\n• **RHIN/O** = nose â†’ Rhinoplasty, Rhinitis, Rhinorrhea\n\n**THROAT:**\n• **PHARYNG/O** = pharynx (throat) â†’ Pharyngitis, Nasopharynx\n• **LARYNG/O** = larynx (voice box) â†’ Laryngitis, Laryngoscopy\n• **TRACHE/O** = trachea (windpipe) â†’ Tracheostomy, Tracheitis\n\n**Clinical Note:** 'Strep throat' is coded as Pharyngitis (PHARYNG + ITIS)!"
+                                    content: "**MOUTH:**\n• **OR/O** = mouth \u2192 Oral, Oropharynx\n• **STOMAT/O** = mouth \u2192 Stomatitis (mouth inflammation)\n• **GLOSS/O** = tongue \u2192 Glossitis, Glossopharyngeal\n• **LINGU/O** = tongue \u2192 Sublingual, Lingual\n• **GINGIV/O** = gums \u2192 Gingivitis, Gingivectomy\n• **DENT/O, ODONT/O** = teeth \u2192 Dental, Orthodontist\n\n**NOSE:**\n• **NAS/O** = nose \u2192 Nasal, Nasogastric (NG tube)\n• **RHIN/O** = nose \u2192 Rhinoplasty, Rhinitis, Rhinorrhea\n\n**THROAT:**\n• **PHARYNG/O** = pharynx (throat) \u2192 Pharyngitis, Nasopharynx\n• **LARYNG/O** = larynx (voice box) \u2192 Laryngitis, Laryngoscopy\n• **TRACHE/O** = trachea (windpipe) \u2192 Tracheostomy, Tracheitis\n\n**Clinical Note:** 'Strep throat' is coded as Pharyngitis (PHARYNG + ITIS)!"
                                 },
                                 {
                                     type: "example",
@@ -74507,7 +74828,12 @@ const APP_DATA = {
                                         { text: "LARYNG/O", correct: true },
                                         { text: "ESOPHAG/O", correct: false }
                                     ],
-                                    explanation: "LARYNG/O = larynx (voice box). The larynx contains the vocal cords. PHARYNG/O = pharynx (throat above larynx). TRACHE/O = trachea (windpipe below larynx). ESOPHAG/O = esophagus (food tube). Remember the order: Pharynx â†’ Larynx â†’ Trachea."
+                                    explanation: "LARYNG/O = larynx (voice box). The larynx contains the vocal cords. PHARYNG/O = pharynx (throat above larynx). TRACHE/O = trachea (windpipe below larynx). ESOPHAG/O = esophagus (food tube). Remember the order: Pharynx \u2192 Larynx \u2192 Trachea."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Map your own anatomy**: Touch your head, eyes, ears, nose, and throat — say the medical root for each body part as you go\n\n2. **Decode three terms**: Pick three terms from this lesson (like rhinoplasty, ophthalmoscope, laryngitis) and break them into root + suffix\n\n3. **Common diagnosis practice**: Look up the medical terms for common conditions — pink eye (conjunctivitis), strep throat (pharyngitis), earache (otalgia)\n\n4. **Create root pairs**: Many body parts have TWO roots (NAS/O and RHIN/O both mean nose). Make a list of these pairs for study"
                                 }
                             ]
                         },
@@ -74520,46 +74846,47 @@ const APP_DATA = {
                                 {
                                     type: "intro",
                                     title: "Internal Organs & Systems",
-                                    content: "Now we move **inside the body** to the major organ systems. These roots appear constantly in clinical documentation, diagnostic codes, and procedural terminology.\n\nMastering these roots is essential for HIM professionals—you'll encounter them in every patient record you review or code.",
+                                    content: "Now we move **inside the body** to the major organ systems. These roots appear constantly in clinical documentation, diagnostic codes, and procedural terminology.\n\nMastering these roots is essential for HIM professionals — you'll encounter them in every patient record you review or code.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">INTERNAL ORGAN ROOTS</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">INTERNAL ORGAN ROOTS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">The organs you'll encounter in every patient record</text>
 
-                                            <!-- Torso diagram -->
-                                            <g transform="translate(120, 45)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="28" fill="none" stroke="#60a5fa" stroke-width="4" stroke-dasharray="5,3"/>
+                                            <!-- Torso outline -->
+                                            <rect x="300" y="150" width="250" height="550" rx="40" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8"/>
 
-                                                <!-- Heart -->
-                                                <ellipse cx="94" cy="146" rx="37" ry="52" fill="#dc2626" opacity="0.7"/>
-                                                <text x="141" y="165" fill="#fca5a5" font-size="25">CARDI/O</text>
+                                            <!-- Heart -->
+                                            <circle cx="390" cy="250" r="35" fill="rgba(239,68,68,0.4)" stroke="#ef4444" stroke-width="2"/>
+                                            <text x="390" y="258" text-anchor="middle" fill="#fff" font-size="20">Heart</text>
+                                            <text x="610" y="250" fill="#fca5a5" font-size="26">CARDI/O = heart</text>
 
-                                                <!-- Lungs -->
-                                                <ellipse cx="47" cy="183" rx="33" ry="88" fill="#3b82f6" opacity="0.5"/>
-                                                <ellipse cx="141" cy="183" rx="33" ry="88" fill="#3b82f6" opacity="0.5"/>
-                                                <text x="157" y="256" fill="#93c5fd" font-size="25">PULMON/O</text>
+                                            <!-- Lungs -->
+                                            <ellipse cx="340" cy="300" rx="30" ry="60" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
+                                            <ellipse cx="460" cy="300" rx="30" ry="60" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
+                                            <text x="610" y="310" fill="#93c5fd" font-size="26">PULMON/O = lung</text>
 
-                                                <!-- Liver -->
-                                                <ellipse cx="62" cy="348" rx="56" ry="44" fill="#b45309" opacity="0.7"/>
-                                                <text x="117" y="366" fill="#fcd34d" font-size="25">HEPAT/O</text>
+                                            <!-- Liver -->
+                                            <ellipse cx="370" cy="420" rx="50" ry="35" fill="rgba(245,158,11,0.4)" stroke="#f59e0b" stroke-width="2"/>
+                                            <text x="610" y="420" fill="#fcd34d" font-size="26">HEPAT/O = liver</text>
 
-                                                <!-- Stomach -->
-                                                <ellipse cx="133" cy="403" rx="37" ry="35" fill="#16a34a" opacity="0.7"/>
-                                                <text x="172" y="421" fill="#86efac" font-size="25">GASTR/O</text>
+                                            <!-- Stomach -->
+                                            <ellipse cx="440" cy="480" rx="30" ry="25" fill="rgba(16,185,129,0.4)" stroke="#10b981" stroke-width="2"/>
+                                            <text x="610" y="485" fill="#86efac" font-size="26">GASTR/O = stomach</text>
 
-                                                <!-- Intestines -->
-                                                <path d="M50,130 Q70,220 220,150 Q50,251 256,165 Q90,267 293,175" fill="none" stroke="#f59e0b" stroke-width="6" opacity="0.7"/>
-                                                <text x="157" y="550" fill="#fcd34d" font-size="25">ENTER/O</text>
+                                            <!-- Intestines -->
+                                            <text x="610" y="545" fill="#fcd34d" font-size="26">ENTER/O = intestine</text>
 
-                                                <!-- Kidneys -->
-                                                <ellipse cx="39" cy="476" rx="18" ry="44" fill="#8b5cf6" opacity="0.7"/>
-                                                <ellipse cx="149" cy="476" rx="18" ry="44" fill="#8b5cf6" opacity="0.7"/>
-                                                <text x="165" y="495" fill="#c4b5fd" font-size="25">NEPHR/O</text>
-                                            </g>
+                                            <!-- Kidneys -->
+                                            <ellipse cx="335" cy="570" rx="18" ry="30" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
+                                            <ellipse cx="465" cy="570" rx="18" ry="30" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
+                                            <text x="610" y="575" fill="#c4b5fd" font-size="26">NEPHR/O = kidney</text>
 
-                                            <rect x="47" y="880" width="534" height="110" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                            <text x="314" y="953" fill="#93c5fd" font-size="25" text-anchor="middle">Each organ has specific roots for coding & documentation</text>
+                                            <text x="610" y="640" fill="#f9a8d4" font-size="26">REN/O = kidney (Latin)</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Each organ has specific roots for coding and documentation</text>
                                         </svg>`,
                                         caption: "Major internal organ roots you must know"
                                     }
@@ -74567,12 +74894,12 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Cardiovascular Roots",
-                                    content: "**HEART:**\n• **CARDI/O** = heart â†’ Cardiology, Cardiomyopathy, Tachycardia\n• **CORON/O** = heart (crown/encircling) â†’ Coronary arteries\n• **ATRI/O** = atrium (upper chambers) â†’ Atrial fibrillation\n• **VENTRICUL/O** = ventricle (lower chambers) â†’ Ventricular tachycardia\n\n**BLOOD VESSELS:**\n• **ANGI/O** = vessel â†’ Angiography, Angioplasty\n• **VAS/O** = vessel â†’ Vascular, Vasodilation\n• **ARTERI/O** = artery â†’ Arteriosclerosis, Arterial\n• **PHLEB/O** = vein â†’ Phlebotomy (blood draw), Phlebitis\n• **VEN/O** = vein â†’ Venous, Intravenous (IV)\n\n**BLOOD:**\n• **HEM/O, HEMAT/O** = blood â†’ Hemorrhage, Hematology, Hematoma\n• **THROMB/O** = clot â†’ Thrombosis, Thrombolytic\n\n**Critical Coding Terms:** Atherosclerosis (ATHER/O = fatty plaque) and Myocardial Infarction (heart muscle death)."
+                                    content: "**HEART:**\n• **CARDI/O** = heart \u2192 Cardiology, Cardiomyopathy, Tachycardia\n• **CORON/O** = heart (crown/encircling) \u2192 Coronary arteries\n• **ATRI/O** = atrium (upper chambers) \u2192 Atrial fibrillation\n• **VENTRICUL/O** = ventricle (lower chambers) \u2192 Ventricular tachycardia\n\n**BLOOD VESSELS:**\n• **ANGI/O** = vessel \u2192 Angiography, Angioplasty\n• **VAS/O** = vessel \u2192 Vascular, Vasodilation\n• **ARTERI/O** = artery \u2192 Arteriosclerosis, Arterial\n• **PHLEB/O** = vein \u2192 Phlebotomy (blood draw), Phlebitis\n• **VEN/O** = vein \u2192 Venous, Intravenous (IV)\n\n**BLOOD:**\n• **HEM/O, HEMAT/O** = blood \u2192 Hemorrhage, Hematology, Hematoma\n• **THROMB/O** = clot \u2192 Thrombosis, Thrombolytic\n\n**Critical Coding Terms:** Atherosclerosis (ATHER/O = fatty plaque) and Myocardial Infarction (heart muscle death)."
                                 },
                                 {
                                     type: "concept",
                                     title: "Respiratory Roots",
-                                    content: "**LUNGS & BREATHING:**\n• **PULMON/O** = lung â†’ Pulmonology, Pulmonary embolism\n• **PNEUM/O, PNEUMON/O** = lung, air â†’ Pneumonia, Pneumothorax\n• **BRONCH/O** = bronchus (airway) â†’ Bronchitis, Bronchoscopy\n• **BRONCHIOL/O** = bronchiole (small airway) â†’ Bronchiolitis\n• **ALVEOL/O** = alveolus (air sac) â†’ Alveolar\n• **PLEUR/O** = pleura (lung membrane) â†’ Pleurisy, Pleural effusion\n\n**BREATHING TERMS:**\n• **SPIR/O** = breathing â†’ Spirometry, Respiration\n• **-PNEA** = breathing (suffix) â†’ Dyspnea (difficult), Apnea (without)\n• **OX/O** = oxygen â†’ Hypoxia, Oximeter\n\n**Common Conditions:** COPD (Chronic Obstructive Pulmonary Disease), Asthma, Pneumonia—all high-volume coding diagnoses."
+                                    content: "**LUNGS & BREATHING:**\n• **PULMON/O** = lung \u2192 Pulmonology, Pulmonary embolism\n• **PNEUM/O, PNEUMON/O** = lung, air \u2192 Pneumonia, Pneumothorax\n• **BRONCH/O** = bronchus (airway) \u2192 Bronchitis, Bronchoscopy\n• **BRONCHIOL/O** = bronchiole (small airway) \u2192 Bronchiolitis\n• **ALVEOL/O** = alveolus (air sac) \u2192 Alveolar\n• **PLEUR/O** = pleura (lung membrane) \u2192 Pleurisy, Pleural effusion\n\n**BREATHING TERMS:**\n• **SPIR/O** = breathing \u2192 Spirometry, Respiration\n• **-PNEA** = breathing (suffix) \u2192 Dyspnea (difficult), Apnea (without)\n• **OX/O** = oxygen \u2192 Hypoxia, Oximeter\n\n**Common Conditions:** COPD (Chronic Obstructive Pulmonary Disease), Asthma, Pneumonia — all high-volume coding diagnoses."
                                 },
                                 {
                                     type: "quiz",
@@ -74588,17 +74915,17 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Digestive System Roots",
-                                    content: "**GI TRACT (mouth to anus):**\n• **ESOPHAG/O** = esophagus â†’ Esophagitis, GERD\n• **GASTR/O** = stomach â†’ Gastritis, Gastroscopy\n• **PYLOR/O** = pylorus (stomach exit) â†’ Pyloric stenosis\n• **DUODEN/O** = duodenum (first part of small intestine) â†’ Duodenal ulcer\n• **JEJUN/O** = jejunum (middle small intestine) â†’ Jejunostomy\n• **ILE/O** = ileum (end of small intestine) â†’ Ileostomy\n• **ENTER/O** = intestine (general) â†’ Enteritis, Gastroenterology\n• **COL/O, COLON/O** = colon (large intestine) â†’ Colonoscopy, Colitis\n• **SIGMOID/O** = sigmoid colon â†’ Sigmoidoscopy\n• **RECT/O** = rectum â†’ Rectal exam\n• **PROCT/O** = rectum/anus â†’ Proctology\n• **AN/O** = anus â†’ Anal fissure\n\n**Order:** Esophagus â†’ Stomach â†’ Duodenum â†’ Jejunum â†’ Ileum â†’ Colon â†’ Rectum â†’ Anus"
+                                    content: "**GI TRACT (mouth to anus):**\n• **ESOPHAG/O** = esophagus \u2192 Esophagitis, GERD\n• **GASTR/O** = stomach \u2192 Gastritis, Gastroscopy\n• **PYLOR/O** = pylorus (stomach exit) \u2192 Pyloric stenosis\n• **DUODEN/O** = duodenum (first part of small intestine) \u2192 Duodenal ulcer\n• **JEJUN/O** = jejunum (middle small intestine) \u2192 Jejunostomy\n• **ILE/O** = ileum (end of small intestine) \u2192 Ileostomy\n• **ENTER/O** = intestine (general) \u2192 Enteritis, Gastroenterology\n• **COL/O, COLON/O** = colon (large intestine) \u2192 Colonoscopy, Colitis\n• **SIGMOID/O** = sigmoid colon \u2192 Sigmoidoscopy\n• **RECT/O** = rectum \u2192 Rectal exam\n• **PROCT/O** = rectum/anus \u2192 Proctology\n• **AN/O** = anus \u2192 Anal fissure\n\n**Order:** Esophagus \u2192 Stomach \u2192 Duodenum \u2192 Jejunum \u2192 Ileum \u2192 Colon \u2192 Rectum \u2192 Anus"
                                 },
                                 {
                                     type: "concept",
                                     title: "Accessory Digestive Organs",
-                                    content: "**LIVER & BILIARY:**\n• **HEPAT/O** = liver â†’ Hepatitis, Hepatomegaly, Hepatic\n• **CHOL/E** = bile, gall â†’ Cholesterol\n• **CHOLECYST/O** = gallbladder â†’ Cholecystitis, Cholecystectomy\n• **CHOLANGI/O** = bile duct â†’ Cholangitis, Cholangiography\n• **CHOLEDOCH/O** = common bile duct â†’ Choledocholithiasis\n\n**PANCREAS:**\n• **PANCREAT/O** = pancreas â†’ Pancreatitis, Pancreatic cancer\n\n**SPLEEN:**\n• **SPLEN/O** = spleen â†’ Splenomegaly, Splenectomy\n\n**Memory Tip for Gallbladder Terms:**\n• CHOLE = bile\n• CYST = bladder/sac\n• LITH = stone\n• Cholecystolithiasis = gallstones in the gallbladder!\n\n**High-Volume Codes:** Cholecystitis and Cholecystectomy are among the most commonly coded diagnoses and procedures."
+                                    content: "**LIVER & BILIARY:**\n• **HEPAT/O** = liver \u2192 Hepatitis, Hepatomegaly, Hepatic\n• **CHOL/E** = bile, gall \u2192 Cholesterol\n• **CHOLECYST/O** = gallbladder \u2192 Cholecystitis, Cholecystectomy\n• **CHOLANGI/O** = bile duct \u2192 Cholangitis, Cholangiography\n• **CHOLEDOCH/O** = common bile duct \u2192 Choledocholithiasis\n\n**PANCREAS:**\n• **PANCREAT/O** = pancreas \u2192 Pancreatitis, Pancreatic cancer\n\n**SPLEEN:**\n• **SPLEN/O** = spleen \u2192 Splenomegaly, Splenectomy\n\n**Memory Tip for Gallbladder Terms:**\n• CHOLE = bile\n• CYST = bladder/sac\n• LITH = stone\n• Cholecystolithiasis = gallstones in the gallbladder!\n\n**High-Volume Codes:** Cholecystitis and Cholecystectomy are among the most commonly coded diagnoses and procedures."
                                 },
                                 {
                                     type: "example",
                                     title: "Breaking Down Gallbladder Terms",
-                                    content: "**The CHOLE- Family:**\n\n**CHOLECYSTITIS**\n• CHOLE = bile\n• CYST = bladder\n• -ITIS = inflammation\n• = Inflamed gallbladder\n\n**CHOLELITHIASIS**\n• CHOLE = bile\n• LITH = stone\n• -IASIS = condition\n• = Gallstones present\n\n**CHOLECYSTECTOMY**\n• CHOLE = bile\n• CYST = bladder\n• -ECTOMY = removal\n• = Gallbladder removal surgery\n\n**CHOLEDOCHOLITHIASIS**\n• CHOLE = bile\n• DOCHO = duct (common bile duct)\n• LITH = stone\n• -IASIS = condition\n• = Stone in the common bile duct\n\n**Coding Connection:** K80 codes for cholelithiasis, K81 for cholecystitis—look for these ICD-10 chapters!"
+                                    content: "**The CHOLE- Family:**\n\n**CHOLECYSTITIS**\n• CHOLE = bile\n• CYST = bladder\n• -ITIS = inflammation\n• = Inflamed gallbladder\n\n**CHOLELITHIASIS**\n• CHOLE = bile\n• LITH = stone\n• -IASIS = condition\n• = Gallstones present\n\n**CHOLECYSTECTOMY**\n• CHOLE = bile\n• CYST = bladder\n• -ECTOMY = removal\n• = Gallbladder removal surgery\n\n**CHOLEDOCHOLITHIASIS**\n• CHOLE = bile\n• DOCHO = duct (common bile duct)\n• LITH = stone\n• -IASIS = condition\n• = Stone in the common bile duct\n\n**Coding Connection:** K80 codes for cholelithiasis, K81 for cholecystitis — look for these ICD-10 chapters!"
                                 },
                                 {
                                     type: "quiz",
@@ -74610,13 +74937,18 @@ const APP_DATA = {
                                         { text: "Pancreas", correct: false }
                                     ],
                                     explanation: "NEPHR/O = kidney. Nephrology is the study of kidneys. Nephrologist = kidney specialist. Nephritis = kidney inflammation. REN/O is the Latin root also meaning kidney (renal = relating to kidneys). Both roots are commonly used!"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Organ root flashcards**: Create flashcards for the major organ roots — CARDI/O, PULMON/O, HEPAT/O, GASTR/O, NEPHR/O, ENTER/O\n\n2. **GI tract order**: Practice listing the GI tract in order from mouth to anus — this matches how medical records document conditions\n\n3. **Build compound terms**: Take HEPAT/O and add different suffixes: -ITIS, -MEGALY, -ECTOMY, -OLOGY, -LOGIST\n\n4. **Decode the CHOLE family**: Practice breaking down all the gallbladder terms — this is a common exam and coding topic"
                                 }
                             ]
                         },
                         {
                             id: 6,
                             title: "Cardiovascular Terminology",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
@@ -74626,30 +74958,45 @@ const APP_DATA = {
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="916" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#dc2626" font-size="31" font-weight="bold" text-anchor="middle">THE HEART - CARDIOVASCULAR SYSTEM</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THE CARDIOVASCULAR SYSTEM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">#1 coded disease category in healthcare</text>
 
-                                            <!-- Heart diagram -->
-                                            <g transform="translate(100, 40)">
-                                                <!-- Heart shape -->
-                                                <path d="M100,30 C130,0 623,0 660,40 C200,31 843,47 843,70 C230,188 660,251 366,200 C20,251 -110,188 -110,70 C-30,47 0,31 73,40 C30,0 256,0 366,30" fill="#7f1d1d" stroke="#dc2626" stroke-width="4"/>
+                                            <!-- Heart chambers -->
+                                            <rect x="150" y="180" width="400" height="500" rx="30" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="350" y="220" text-anchor="middle" fill="#fca5a5" font-weight="bold" font-size="31">HEART STRUCTURE</text>
 
-                                                <!-- Chambers -->
-                                                <text x="62" y="220" fill="#fca5a5" font-size="28">RA</text>
-                                                <text x="204" y="220" fill="#fca5a5" font-size="28">LA</text>
-                                                <text x="62" y="440" fill="#f87171" font-size="28">RV</text>
-                                                <text x="204" y="440" fill="#f87171" font-size="28">LV</text>
-                                            </g>
+                                            <rect x="180" y="260" width="170" height="150" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
+                                            <text x="265" y="310" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">RA</text>
+                                            <text x="265" y="345" text-anchor="middle" fill="#888" font-size="22">Right Atrium</text>
 
-                                            <!-- Labels -->
-                                            <text x="502" y="256" fill="#93c5fd" font-size="28">ATRI/O = atrium</text>
-                                            <text x="502" y="311" fill="#93c5fd" font-size="28">VENTRICUL/O = ventricle</text>
-                                            <text x="502" y="385" fill="#fcd34d" font-size="28">VALVUL/O = valve</text>
-                                            <text x="502" y="458" fill="#86efac" font-size="28">CORON/O = coronary</text>
-                                            <text x="502" y="531" fill="#c4b5fd" font-size="28">SEPT/O = septum</text>
+                                            <rect x="370" y="260" width="170" height="150" rx="15" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="2"/>
+                                            <text x="455" y="310" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">LA</text>
+                                            <text x="455" y="345" text-anchor="middle" fill="#888" font-size="22">Left Atrium</text>
 
-                                            <rect x="47" y="770" width="534" height="110" rx="9" fill="#1e3a5f" stroke="#dc2626"/>
-                                            <text x="314" y="843" fill="#fca5a5" font-size="25" text-anchor="middle">Cardiovascular = #1 coded disease category</text>
+                                            <rect x="180" y="430" width="170" height="170" rx="15" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
+                                            <text x="265" y="490" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">RV</text>
+                                            <text x="265" y="525" text-anchor="middle" fill="#888" font-size="22">Right Ventricle</text>
+
+                                            <rect x="370" y="430" width="170" height="170" rx="15" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="2"/>
+                                            <text x="455" y="490" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">LV</text>
+                                            <text x="455" y="525" text-anchor="middle" fill="#888" font-size="22">Left Ventricle</text>
+
+                                            <!-- Key terms on right -->
+                                            <rect x="620" y="180" width="420" height="500" rx="20" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="830" y="230" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="29">KEY ROOTS</text>
+                                            <text x="830" y="280" text-anchor="middle" fill="#93c5fd" font-size="26">ATRI/O = atrium</text>
+                                            <text x="830" y="320" text-anchor="middle" fill="#93c5fd" font-size="26">VENTRICUL/O = ventricle</text>
+                                            <text x="830" y="360" text-anchor="middle" fill="#fcd34d" font-size="26">VALVUL/O = valve</text>
+                                            <text x="830" y="400" text-anchor="middle" fill="#86efac" font-size="26">CORON/O = coronary</text>
+                                            <text x="830" y="440" text-anchor="middle" fill="#c4b5fd" font-size="26">SEPT/O = septum</text>
+                                            <text x="830" y="500" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">WALL LAYERS:</text>
+                                            <text x="830" y="540" text-anchor="middle" fill="#fca5a5" font-size="25">PERICARDI/O = outer sac</text>
+                                            <text x="830" y="575" text-anchor="middle" fill="#fca5a5" font-size="25">MYOCARDI/O = muscle</text>
+                                            <text x="830" y="610" text-anchor="middle" fill="#fca5a5" font-size="25">ENDOCARDI/O = lining</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Cardiovascular = #1 coded disease category</text>
                                         </svg>`,
                                         caption: "Heart anatomy and key cardiovascular roots"
                                     }
@@ -74657,7 +75004,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Heart Structure Terms",
-                                    content: "**CHAMBERS:**\n• **Right Atrium (RA)** - receives deoxygenated blood from body\n• **Left Atrium (LA)** - receives oxygenated blood from lungs\n• **Right Ventricle (RV)** - pumps to lungs\n• **Left Ventricle (LV)** - pumps to body (strongest chamber)\n\n**VALVES:**\n• **Tricuspid** - between RA and RV (3 cusps)\n• **Mitral/Bicuspid** - between LA and LV (2 cusps)\n• **Pulmonary** - RV to pulmonary artery\n• **Aortic** - LV to aorta\n\n**WALLS & LAYERS:**\n• **PERICARDI/O** = pericardium (outer sac) â†’ Pericarditis\n• **MYOCARDI/O** = myocardium (muscle layer) â†’ Myocardial infarction (MI)\n• **ENDOCARDI/O** = endocardium (inner lining) â†’ Endocarditis\n• **SEPT/O** = septum (wall between chambers) â†’ Septal defect\n\n**Memory Tip:** EPI-MYO-ENDO = outer-middle-inner (like EPIdermis-MYO-muscle-ENDOcardium)"
+                                    content: "**CHAMBERS:**\n• **Right Atrium (RA)** - receives deoxygenated blood from body\n• **Left Atrium (LA)** - receives oxygenated blood from lungs\n• **Right Ventricle (RV)** - pumps to lungs\n• **Left Ventricle (LV)** - pumps to body (strongest chamber)\n\n**VALVES:**\n• **Tricuspid** - between RA and RV (3 cusps)\n• **Mitral/Bicuspid** - between LA and LV (2 cusps)\n• **Pulmonary** - RV to pulmonary artery\n• **Aortic** - LV to aorta\n\n**WALLS & LAYERS:**\n• **PERICARDI/O** = pericardium (outer sac) \u2192 Pericarditis\n• **MYOCARDI/O** = myocardium (muscle layer) \u2192 Myocardial infarction (MI)\n• **ENDOCARDI/O** = endocardium (inner lining) \u2192 Endocarditis\n• **SEPT/O** = septum (wall between chambers) \u2192 Septal defect\n\n**Memory Tip:** EPI-MYO-ENDO = outer-middle-inner"
                                 },
                                 {
                                     type: "concept",
@@ -74678,7 +75025,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Cardiovascular Procedures",
-                                    content: "**DIAGNOSTIC:**\n• **ECG/EKG** = Electrocardiogram (heart electrical activity)\n• **Echocardiogram** = ultrasound of heart (ECHO = sound)\n• **Cardiac Catheterization** = catheter into heart chambers\n• **Angiography** = vessel imaging with contrast\n• **Stress Test** = exercise ECG\n\n**INTERVENTIONAL:**\n• **Angioplasty** = balloon to open vessel (-PLASTY = repair)\n• **Stent Placement** = mesh tube to keep vessel open\n• **Atherectomy** = removal of plaque (-ECTOMY = removal)\n• **CABG** = Coronary Artery Bypass Graft (\"cabbage\")\n\n**SURGICAL:**\n• **Valvuloplasty** = valve repair\n• **Valve Replacement** = artificial/donor valve\n• **Pacemaker** = device regulating heart rhythm\n• **AICD/ICD** = Implantable Cardioverter Defibrillator\n\n**Coding Note:** Cardiovascular procedures have specific CPT codes—catheterizations are in the 93451-93533 range."
+                                    content: "**DIAGNOSTIC:**\n• **ECG/EKG** = Electrocardiogram (heart electrical activity)\n• **Echocardiogram** = ultrasound of heart (ECHO = sound)\n• **Cardiac Catheterization** = catheter into heart chambers\n• **Angiography** = vessel imaging with contrast\n• **Stress Test** = exercise ECG\n\n**INTERVENTIONAL:**\n• **Angioplasty** = balloon to open vessel (-PLASTY = repair)\n• **Stent Placement** = mesh tube to keep vessel open\n• **Atherectomy** = removal of plaque (-ECTOMY = removal)\n• **CABG** = Coronary Artery Bypass Graft (\"cabbage\")\n\n**SURGICAL:**\n• **Valvuloplasty** = valve repair\n• **Valve Replacement** = artificial/donor valve\n• **Pacemaker** = device regulating heart rhythm\n• **AICD/ICD** = Implantable Cardioverter Defibrillator\n\n**Coding Note:** Cardiovascular procedures have specific CPT codes — catheterizations are in the 93451-93533 range."
                                 },
                                 {
                                     type: "example",
@@ -74695,13 +75042,18 @@ const APP_DATA = {
                                         { text: "Removal of the heart's outer membrane", correct: false }
                                     ],
                                     explanation: "PERCUTANEOUS = through the skin. TRANS = across. LUMINAL = lumen (inside of vessel). CORONARY = heart arteries. ANGIOPLASTY = vessel repair. This is a minimally invasive procedure using a catheter to balloon open blocked coronary arteries. Often combined with stent placement."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Learn the heart layers**: PERI (outer), MYO (muscle), ENDO (inner) — each one has its own -ITIS condition\n\n2. **Rhythm prefix pairs**: Practice TACHY- vs BRADY- with CARDIA — these are critical vital sign terms\n\n3. **Decode cardiac abbreviations**: Write out what each means — ECG, MI, CHF, CABG, PCI, AFib\n\n4. **Read a cardiac report**: Find sample cardiac documentation online and try to decode every term using what you've learned"
                                 }
                             ]
                         },
                         {
                             id: 7,
                             title: "Respiratory Terminology",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
@@ -74711,41 +75063,35 @@ const APP_DATA = {
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#3b82f6" font-size="31" font-weight="bold" text-anchor="middle">RESPIRATORY SYSTEM ANATOMY</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">RESPIRATORY SYSTEM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Upper Airway to Lower Airway to Lungs</text>
 
-                                            <!-- Airways diagram -->
-                                            <g transform="translate(80, 40)">
-                                                <!-- Nose/Nasal -->
-                                                <ellipse cx="188" cy="73" rx="28" ry="29" fill="#60a5fa" opacity="0.6"/>
-                                                <text x="235" y="91" fill="#93c5fd" font-size="25">NAS/O, RHIN/O</text>
+                                            <!-- Airway diagram -->
+                                            <ellipse cx="350" cy="200" rx="40" ry="35" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2"/>
+                                            <text x="600" y="205" fill="#93c5fd" font-size="26">NAS/O, RHIN/O = nose</text>
 
-                                                <!-- Pharynx -->
-                                                <rect x="172" y="128" width="31" height="55" fill="#60a5fa" opacity="0.6"/>
-                                                <text x="235" y="172" fill="#93c5fd" font-size="25">PHARYNG/O</text>
+                                            <rect x="335" y="260" width="30" height="60" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
+                                            <text x="600" y="295" fill="#c4b5fd" font-size="26">PHARYNG/O = pharynx</text>
 
-                                                <!-- Larynx -->
-                                                <rect x="169" y="201" width="37" height="55" rx="5" fill="#8b5cf6" opacity="0.6"/>
-                                                <text x="235" y="245" fill="#c4b5fd" font-size="25">LARYNG/O</text>
+                                            <rect x="332" y="340" width="36" height="60" rx="5" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
+                                            <text x="600" y="375" fill="#c4b5fd" font-size="26">LARYNG/O = larynx</text>
 
-                                                <!-- Trachea -->
-                                                <rect x="176" y="275" width="25" height="146" fill="#22c55e" opacity="0.6"/>
-                                                <text x="235" y="366" fill="#86efac" font-size="25">TRACHE/O</text>
+                                            <rect x="340" y="420" width="20" height="130" fill="rgba(16,185,129,0.4)" stroke="#10b981" stroke-width="2"/>
+                                            <text x="600" y="490" fill="#86efac" font-size="26">TRACHE/O = trachea</text>
 
-                                                <!-- Bronchi -->
-                                                <line x1="188" y1="421" x2="125" y2="513" stroke="#f59e0b" stroke-width="18" opacity="0.6"/>
-                                                <line x1="188" y1="421" x2="251" y2="513" stroke="#f59e0b" stroke-width="18" opacity="0.6"/>
-                                                <text x="267" y="476" fill="#fcd34d" font-size="25">BRONCH/O</text>
+                                            <line x1="350" y1="550" x2="280" y2="650" stroke="#f59e0b" stroke-width="12" opacity="0.6"/>
+                                            <line x1="350" y1="550" x2="420" y2="650" stroke="#f59e0b" stroke-width="12" opacity="0.6"/>
+                                            <text x="600" y="600" fill="#fcd34d" font-size="26">BRONCH/O = bronchi</text>
 
-                                                <!-- Lungs -->
-                                                <ellipse cx="94" cy="641" rx="94" ry="161" fill="#3b82f6" opacity="0.3"/>
-                                                <ellipse cx="282" cy="641" rx="94" ry="161" fill="#3b82f6" opacity="0.3"/>
-                                                <text x="94" y="641" fill="#93c5fd" font-size="25" text-anchor="middle">PNEUM/O</text>
-                                                <text x="282" y="641" fill="#93c5fd" font-size="25" text-anchor="middle">PULMON/O</text>
-                                            </g>
+                                            <ellipse cx="240" cy="760" rx="100" ry="140" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
+                                            <ellipse cx="460" cy="760" rx="100" ry="140" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
+                                            <text x="240" y="765" text-anchor="middle" fill="#93c5fd" font-size="25">PNEUM/O</text>
+                                            <text x="460" y="765" text-anchor="middle" fill="#93c5fd" font-size="25">PULMON/O</text>
+                                            <text x="600" y="700" fill="#93c5fd" font-size="26">= lung</text>
 
-                                            <rect x="47" y="898" width="534" height="91" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                            <text x="314" y="960" fill="#93c5fd" font-size="28" text-anchor="middle">Upper Airway â†’ Lower Airway â†’ Lungs â†’ Alveoli</text>
+                                            <rect x="200" y="940" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="978" text-anchor="middle" fill="#888" font-size="28">Upper Airway \u2192 Lower Airway \u2192 Lungs \u2192 Alveoli</text>
                                         </svg>`,
                                         caption: "Respiratory tract anatomy from nose to alveoli"
                                     }
@@ -74753,7 +75099,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Upper Respiratory Terms",
-                                    content: "**NOSE & SINUSES:**\n• **Rhinitis** = inflammation of nasal lining (allergic rhinitis = hay fever)\n• **Rhinorrhea** = runny nose (RRHEA = discharge)\n• **Sinusitis** = sinus inflammation\n• **Epistaxis** = nosebleed\n• **Deviated Septum** = crooked nasal divider\n\n**PHARYNX (Throat):**\n• **Pharyngitis** = sore throat\n• **Nasopharynx** = upper throat behind nose\n• **Oropharynx** = middle throat behind mouth\n• **Laryngopharynx** = lower throat near voice box\n• **Tonsillitis** = inflamed tonsils\n\n**LARYNX (Voice Box):**\n• **Laryngitis** = inflammation (hoarseness)\n• **Laryngospasm** = sudden voice box closure\n• **Epiglottitis** = inflamed epiglottis (emergency!)\n• **Stridor** = high-pitched breathing sound\n\n**URI** = Upper Respiratory Infection (common cold) - extremely high-volume diagnosis!"
+                                    content: "**NOSE & SINUSES:**\n• **Rhinitis** = inflammation of nasal lining (allergic rhinitis = hay fever)\n• **Rhinorrhea** = runny nose (RRHEA = discharge)\n• **Sinusitis** = sinus inflammation\n• **Epistaxis** = nosebleed\n• **Deviated Septum** = crooked nasal divider\n\n**PHARYNX (Throat):**\n• **Pharyngitis** = sore throat\n• **Nasopharynx** = upper throat behind nose\n• **Oropharynx** = middle throat behind mouth\n• **Laryngopharynx** = lower throat near voice box\n• **Tonsillitis** = inflamed tonsils\n\n**LARYNX (Voice Box):**\n• **Laryngitis** = inflammation (hoarseness)\n• **Laryngospasm** = sudden voice box closure\n• **Epiglottitis** = inflamed epiglottis (emergency!)\n• **Stridor** = high-pitched breathing sound\n\n**URI** = Upper Respiratory Infection (common cold) \u2014 extremely high-volume diagnosis!"
                                 },
                                 {
                                     type: "concept",
@@ -74791,55 +75137,76 @@ const APP_DATA = {
                                         { text: "Tachypnea", correct: false }
                                     ],
                                     explanation: "ORTHO = straight/upright. -PNEA = breathing. Orthopnea = difficulty breathing when lying flat, must sit up to breathe. Common in heart failure. Dyspnea = difficult breathing (general). Apnea = no breathing. Tachypnea = rapid breathing."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Master the -PNEA family**: Dyspnea (difficult), Apnea (absent), Tachypnea (fast), Orthopnea (upright), Bradypnea (slow) \u2014 these appear in nearly every patient chart\n\n2. **Airway anatomy drill**: Practice listing the airway structures in order: nose \u2192 pharynx \u2192 larynx \u2192 trachea \u2192 bronchi \u2192 bronchioles \u2192 alveoli\n\n3. **COPD vs Asthma**: Understand the key difference \u2014 COPD is irreversible, asthma is reversible\n\n4. **Decode a chest X-ray report**: Find a sample CXR report and identify all the respiratory terminology"
                                 }
                             ]
                         },
                         {
                             id: 8,
                             title: "Digestive System Terminology",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
                                     type: "intro",
                                     title: "The Gastrointestinal System",
-                                    content: "The digestive system—also called the **GI tract** (gastrointestinal)—processes food from entry to exit. GI terminology is essential for HIM professionals, as digestive disorders account for a significant portion of hospital admissions and outpatient visits.\n\nWe'll follow the path food takes: **mouth â†’ esophagus â†’ stomach â†’ small intestine â†’ large intestine â†’ rectum**.",
+                                    content: "The digestive system \u2014 also called the **GI tract** (gastrointestinal) \u2014 processes food from entry to exit. GI terminology is essential for HIM professionals, as digestive disorders account for a significant portion of hospital admissions and outpatient visits.\n\nWe'll follow the path food takes: **mouth \u2192 esophagus \u2192 stomach \u2192 small intestine \u2192 large intestine \u2192 rectum**.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#22c55e" font-size="31" font-weight="bold" text-anchor="middle">GASTROINTESTINAL TRACT</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">GASTROINTESTINAL TRACT</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Following the path from mouth to rectum</text>
 
-                                            <!-- GI tract diagram -->
-                                            <g transform="translate(100, 35)">
-                                                <!-- Mouth -->
-                                                <ellipse cx="157" cy="55" rx="37" ry="29" fill="#f59e0b" opacity="0.6"/>
-                                                <text x="204" y="73" fill="#fcd34d" font-size="25">OR/O, STOMAT/O</text>
+                                            <!-- GI tract flow diagram -->
+                                            <rect x="60" y="170" width="180" height="80" rx="15" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="150" y="220" text-anchor="middle" fill="#fff" font-size="26">OR/O Mouth</text>
 
-                                                <!-- Esophagus -->
-                                                <rect x="149" y="110" width="15" height="128" fill="#ef4444" opacity="0.6"/>
-                                                <text x="180" y="183" fill="#fca5a5" font-size="25">ESOPHAG/O</text>
+                                            <path d="M240 210 L290 210" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="290,210 275,200 275,220" fill="#14b8a6"/>
 
-                                                <!-- Stomach -->
-                                                <ellipse cx="157" cy="311" rx="56" ry="58" fill="#22c55e" opacity="0.6"/>
-                                                <text x="220" y="330" fill="#86efac" font-size="25">GASTR/O</text>
+                                            <rect x="290" y="170" width="220" height="80" rx="15" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="400" y="220" text-anchor="middle" fill="#fff" font-size="26">ESOPHAG/O</text>
 
-                                                <!-- Small intestine -->
-                                                <path d="M100,105 Q140,180 440,130 Q80,227 366,160 Q130,275 403,185" fill="none" stroke="#f59e0b" stroke-width="13" opacity="0.6"/>
-                                                <text x="227" y="550" fill="#fcd34d" font-size="25">ENTER/O (small)</text>
-                                                <text x="227" y="586" fill="#fcd34d" font-size="25">Duoden/Jejun/Ile</text>
+                                            <path d="M510 210 L560 210" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="560,210 545,200 545,220" fill="#14b8a6"/>
 
-                                                <!-- Large intestine -->
-                                                <path d="M50,110 L50,200 Q50,337 256,215 L130,215 Q150,337 550,200 L150,150" fill="none" stroke="#8b5cf6" stroke-width="22" opacity="0.5"/>
-                                                <text x="0" y="586" fill="#c4b5fd" font-size="25">COL/O</text>
+                                            <rect x="560" y="170" width="200" height="80" rx="15" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="660" y="220" text-anchor="middle" fill="#fff" font-size="26">GASTR/O</text>
 
-                                                <!-- Rectum -->
-                                                <rect x="141" y="788" width="31" height="73" fill="#dc2626" opacity="0.6"/>
-                                                <text x="188" y="843" fill="#fca5a5" font-size="25">RECT/O, PROCT/O</text>
-                                            </g>
+                                            <path d="M760 210 L810 210" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="810,210 795,200 795,220" fill="#14b8a6"/>
 
-                                            <rect x="47" y="916" width="534" height="73" rx="9" fill="#1e3a5f" stroke="#22c55e"/>
-                                            <text x="314" y="968" fill="#86efac" font-size="28" text-anchor="middle">Mouth â†’ Stomach â†’ Small Intestine â†’ Large Intestine â†’ Rectum</text>
+                                            <rect x="810" y="170" width="230" height="80" rx="15" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="925" y="220" text-anchor="middle" fill="#fff" font-size="26">ENTER/O</text>
+
+                                            <!-- Small intestine breakdown -->
+                                            <rect x="100" y="320" width="900" height="180" rx="20" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="360" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="29">SMALL INTESTINE (ENTER/O)</text>
+                                            <text x="250" y="410" text-anchor="middle" fill="#f59e0b" font-size="26">DUODEN/O</text>
+                                            <text x="250" y="445" text-anchor="middle" fill="#888" font-size="25">First 12 inches</text>
+                                            <text x="550" y="410" text-anchor="middle" fill="#f59e0b" font-size="26">JEJUN/O</text>
+                                            <text x="550" y="445" text-anchor="middle" fill="#888" font-size="25">Middle section</text>
+                                            <text x="850" y="410" text-anchor="middle" fill="#f59e0b" font-size="26">ILE/O</text>
+                                            <text x="850" y="445" text-anchor="middle" fill="#888" font-size="25">Final section</text>
+
+                                            <!-- Large intestine and accessory organs -->
+                                            <rect x="100" y="540" width="420" height="160" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="310" y="585" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="29">LARGE INTESTINE</text>
+                                            <text x="310" y="625" text-anchor="middle" fill="#fff" font-size="26">COL/O, COLON/O</text>
+                                            <text x="310" y="660" text-anchor="middle" fill="#888" font-size="25">RECT/O, PROCT/O, AN/O</text>
+
+                                            <rect x="560" y="540" width="440" height="160" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="780" y="585" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="29">ACCESSORY ORGANS</text>
+                                            <text x="780" y="625" text-anchor="middle" fill="#fff" font-size="26">HEPAT/O (liver)</text>
+                                            <text x="780" y="660" text-anchor="middle" fill="#fff" font-size="26">CHOLECYST/O (gallbladder)</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Mouth \u2192 Stomach \u2192 Small Intestine \u2192 Large Intestine \u2192 Rectum</text>
                                         </svg>`,
                                         caption: "The GI tract from mouth to rectum"
                                     }
@@ -74852,7 +75219,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Lower GI Tract Terms",
-                                    content: "**SMALL INTESTINE (ENTER/O):**\n• **Duodenum** (DUODEN/O) - first 12 inches\n• **Jejunum** (JEJUN/O) - middle section\n• **Ileum** (ILE/O) - final section â†’ connects to colon\n• **Enteritis** = intestinal inflammation\n• **Celiac Disease** = gluten intolerance\n• **Crohn's Disease** = inflammatory bowel disease (any GI location)\n\n**LARGE INTESTINE (COL/O, COLON/O):**\n• **Colitis** = colon inflammation\n• **Ulcerative Colitis** = inflammatory bowel disease (colon only)\n• **Diverticulitis** = inflamed outpouchings\n• **Diverticulosis** = presence of outpouchings (no inflammation)\n• **Polyp** = growth on intestinal lining\n• **Irritable Bowel Syndrome (IBS)** = functional disorder\n\n**RECTUM & ANUS (RECT/O, PROCT/O, AN/O):**\n• **Hemorrhoids** = swollen rectal veins\n• **Anal Fissure** = tear in anal lining\n• **Proctitis** = rectal inflammation"
+                                    content: "**SMALL INTESTINE (ENTER/O):**\n• **Duodenum** (DUODEN/O) - first 12 inches\n• **Jejunum** (JEJUN/O) - middle section\n• **Ileum** (ILE/O) - final section \u2192 connects to colon\n• **Enteritis** = intestinal inflammation\n• **Celiac Disease** = gluten intolerance\n• **Crohn's Disease** = inflammatory bowel disease (any GI location)\n\n**LARGE INTESTINE (COL/O, COLON/O):**\n• **Colitis** = colon inflammation\n• **Ulcerative Colitis** = inflammatory bowel disease (colon only)\n• **Diverticulitis** = inflamed outpouchings\n• **Diverticulosis** = presence of outpouchings (no inflammation)\n• **Polyp** = growth on intestinal lining\n• **Irritable Bowel Syndrome (IBS)** = functional disorder\n\n**RECTUM & ANUS (RECT/O, PROCT/O, AN/O):**\n• **Hemorrhoids** = swollen rectal veins\n• **Anal Fissure** = tear in anal lining\n• **Proctitis** = rectal inflammation"
                                 },
                                 {
                                     type: "quiz",
@@ -74885,63 +75252,58 @@ const APP_DATA = {
                                         { text: "Painful swallowing", correct: false }
                                     ],
                                     explanation: "DYS = difficult/painful. PHAG = swallowing/eating. Dysphagia = difficulty swallowing. Don't confuse with: Dysphasia (difficulty speaking), Odynophagia (PAINFUL swallowing - ODYN = pain), or Dyspnea (difficulty breathing)."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **GI tract order drill**: Practice listing the entire tract in order with roots \u2014 OR/O, ESOPHAG/O, GASTR/O, DUODEN/O, JEJUN/O, ILE/O, COL/O, RECT/O, AN/O\n\n2. **-OSIS vs -ITIS practice**: Use diverticulosis/diverticulitis as your model \u2014 then apply to other roots (nephrosis vs nephritis, etc.)\n\n3. **Decode a GI report**: Find a sample operative report for a cholecystectomy and identify every medical term\n\n4. **Accessory organ connections**: Map how the liver, gallbladder, and pancreas connect to the GI tract"
                                 }
                             ]
                         },
                         {
                             id: 9,
                             title: "Musculoskeletal Terminology",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
                                     type: "intro",
                                     title: "The Musculoskeletal System",
-                                    content: "The musculoskeletal system includes **bones, joints, muscles, cartilage, tendons, and ligaments**. Orthopedic terminology is essential for coding injuries, degenerative conditions, and surgical procedures.\n\nOrthopedic surgeries are among the most commonly performed—from joint replacements to fracture repairs. Mastering these terms is crucial for HIM professionals.",
+                                    content: "The musculoskeletal system includes **bones, joints, muscles, cartilage, tendons, and ligaments**. Orthopedic terminology is essential for coding injuries, degenerative conditions, and surgical procedures.\n\nOrthopedic surgeries are among the most commonly performed \u2014 from joint replacements to fracture repairs. Mastering these terms is crucial for HIM professionals.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#f59e0b" font-size="31" font-weight="bold" text-anchor="middle">MUSCULOSKELETAL SYSTEM ROOTS</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">MUSCULOSKELETAL ROOTS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Bones, Joints, Muscles, and Connective Tissue</text>
 
-                                            <!-- Skeleton outline -->
-                                            <g transform="translate(100, 40)">
-                                                <!-- Skull -->
-                                                <circle cx="157" cy="73" rx="37" ry="64" fill="#fcd34d" opacity="0.4"/>
-                                                <text x="212" y="91" fill="#fcd34d" font-size="25">CRANI/O (skull)</text>
+                                            <!-- Key terms in organized boxes -->
+                                            <rect x="60" y="160" width="480" height="200" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="300" y="210" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">BONE</text>
+                                            <text x="300" y="260" text-anchor="middle" fill="#fff" font-size="26">OSTE/O = bone</text>
+                                            <text x="300" y="300" text-anchor="middle" fill="#fff" font-size="26">CRANI/O = skull</text>
+                                            <text x="300" y="340" text-anchor="middle" fill="#888" font-size="25">VERTEBR/O, SPONDYL/O = spine</text>
 
-                                                <!-- Spine -->
-                                                <rect x="152" y="165" width="9" height="293" fill="#fcd34d" opacity="0.4"/>
-                                                <text x="180" y="311" fill="#fcd34d" font-size="25">VERTEBR/O, SPONDYL/O</text>
+                                            <rect x="560" y="160" width="480" height="200" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="800" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">JOINT</text>
+                                            <text x="800" y="260" text-anchor="middle" fill="#fff" font-size="26">ARTHR/O = joint</text>
+                                            <text x="800" y="300" text-anchor="middle" fill="#fff" font-size="26">BURS/O = bursa</text>
+                                            <text x="800" y="340" text-anchor="middle" fill="#888" font-size="25">SYNOVI/O = synovial membrane</text>
 
-                                                <!-- Ribs -->
-                                                <ellipse cx="157" cy="293" rx="66" ry="73" fill="none" stroke="#fcd34d" stroke-width="4" opacity="0.4"/>
-                                                <text x="227" y="256" fill="#fcd34d" font-size="25">COST/O (ribs)</text>
+                                            <rect x="60" y="400" width="480" height="200" rx="20" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="3"/>
+                                            <text x="300" y="450" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="31">MUSCLE</text>
+                                            <text x="300" y="500" text-anchor="middle" fill="#fff" font-size="26">MY/O = muscle</text>
+                                            <text x="300" y="540" text-anchor="middle" fill="#fff" font-size="26">MYOS/O = muscle</text>
+                                            <text x="300" y="580" text-anchor="middle" fill="#888" font-size="25">FASCI/O = fascia</text>
 
-                                                <!-- Arms -->
-                                                <line x1="102" y1="201" x2="47" y2="366" stroke="#fcd34d" stroke-width="9" opacity="0.4"/>
-                                                <line x1="212" y1="201" x2="267" y2="366" stroke="#fcd34d" stroke-width="9" opacity="0.4"/>
+                                            <rect x="560" y="400" width="480" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="800" y="450" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">CONNECTIVE</text>
+                                            <text x="800" y="500" text-anchor="middle" fill="#fff" font-size="26">CHONDR/O = cartilage</text>
+                                            <text x="800" y="540" text-anchor="middle" fill="#fff" font-size="26">TEN/O = tendon</text>
+                                            <text x="800" y="580" text-anchor="middle" fill="#888" font-size="25">LIGAMENT/O = ligament</text>
 
-                                                <!-- Pelvis -->
-                                                <ellipse cx="157" cy="476" rx="56" ry="44" fill="#fcd34d" opacity="0.4"/>
-                                                <text x="220" y="495" fill="#fcd34d" font-size="25">PELV/I</text>
-
-                                                <!-- Legs -->
-                                                <line x1="133" y1="531" x2="117" y2="733" stroke="#fcd34d" stroke-width="9" opacity="0.4"/>
-                                                <line x1="180" y1="531" x2="196" y2="733" stroke="#fcd34d" stroke-width="9" opacity="0.4"/>
-                                            </g>
-
-                                            <!-- Key terms -->
-                                            <g transform="translate(250, 140)">
-                                                <text x="0" y="0" fill="#86efac" font-size="28">OSTE/O = bone</text>
-                                                <text x="0" y="55" fill="#93c5fd" font-size="28">ARTHR/O = joint</text>
-                                                <text x="0" y="110" fill="#f9a8d4" font-size="28">MY/O = muscle</text>
-                                                <text x="0" y="165" fill="#c4b5fd" font-size="28">CHONDR/O = cartilage</text>
-                                                <text x="0" y="220" fill="#fca5a5" font-size="28">TEN/O = tendon</text>
-                                            </g>
-
-                                            <rect x="47" y="898" width="534" height="91" rx="9" fill="#1e3a5f" stroke="#f59e0b"/>
-                                            <text x="314" y="960" fill="#fcd34d" font-size="28" text-anchor="middle">Bones + Joints + Muscles = Movement & Support</text>
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Bones + Joints + Muscles = Movement and Support</text>
                                         </svg>`,
                                         caption: "Key musculoskeletal roots and structures"
                                     }
@@ -74949,12 +75311,12 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Bone (Osteo) Terms",
-                                    content: "**BONE ROOTS:**\n• **OSTE/O** = bone â†’ Osteoporosis, Osteomyelitis\n• **MYEL/O** = bone marrow (also spinal cord) â†’ Myeloma\n\n**BONE CONDITIONS:**\n• **Osteoporosis** = porous/weak bones (POROS = pore)\n• **Osteomalacia** = soft bones (MALACIA = softening)\n• **Osteomyelitis** = bone infection (MYEL = marrow)\n• **Osteonecrosis** = bone death (NECR = death)\n• **Osteosarcoma** = bone cancer\n\n**FRACTURE TYPES:**\n• **Closed/Simple** = bone doesn't break skin\n• **Open/Compound** = bone pierces skin\n• **Comminuted** = bone shattered into pieces\n• **Greenstick** = incomplete break (children)\n• **Pathologic** = due to disease (osteoporosis, cancer)\n• **Stress** = from repetitive trauma\n\n**Coding Tip:** Fracture codes require site, laterality, type, and episode of care (initial, subsequent, sequela)."
+                                    content: "**BONE ROOTS:**\n• **OSTE/O** = bone \u2192 Osteoporosis, Osteomyelitis\n• **MYEL/O** = bone marrow (also spinal cord) \u2192 Myeloma\n\n**BONE CONDITIONS:**\n• **Osteoporosis** = porous/weak bones (POROS = pore)\n• **Osteomalacia** = soft bones (MALACIA = softening)\n• **Osteomyelitis** = bone infection (MYEL = marrow)\n• **Osteonecrosis** = bone death (NECR = death)\n• **Osteosarcoma** = bone cancer\n\n**FRACTURE TYPES:**\n• **Closed/Simple** = bone doesn't break skin\n• **Open/Compound** = bone pierces skin\n• **Comminuted** = bone shattered into pieces\n• **Greenstick** = incomplete break (children)\n• **Pathologic** = due to disease (osteoporosis, cancer)\n• **Stress** = from repetitive trauma\n\n**Coding Tip:** Fracture codes require site, laterality, type, and episode of care (initial, subsequent, sequela)."
                                 },
                                 {
                                     type: "concept",
                                     title: "Joint (Arthro) & Muscle (Myo) Terms",
-                                    content: "**JOINT ROOTS:**\n• **ARTHR/O** = joint â†’ Arthritis, Arthroplasty\n• **BURS/O** = bursa (fluid sac) â†’ Bursitis\n• **SYNOVI/O** = synovial membrane â†’ Synovitis\n\n**JOINT CONDITIONS:**\n• **Osteoarthritis (OA)** = degenerative joint disease (\"wear and tear\")\n• **Rheumatoid Arthritis (RA)** = autoimmune joint inflammation\n• **Gout** = uric acid crystals in joints\n• **Dislocation** = bone displaced from joint\n• **Subluxation** = partial dislocation\n\n**MUSCLE ROOTS:**\n• **MY/O** = muscle â†’ Myalgia, Myopathy\n• **MYOS/O** = muscle â†’ Myositis\n• **FASCI/O** = fascia (connective tissue) â†’ Fasciitis\n\n**MUSCLE CONDITIONS:**\n• **Myalgia** = muscle pain\n• **Myositis** = muscle inflammation\n• **Muscular Dystrophy** = genetic muscle degeneration\n• **Fibromyalgia** = chronic widespread muscle pain\n• **Rhabdomyolysis** = muscle breakdown (dangerous!)"
+                                    content: "**JOINT ROOTS:**\n• **ARTHR/O** = joint \u2192 Arthritis, Arthroplasty\n• **BURS/O** = bursa (fluid sac) \u2192 Bursitis\n• **SYNOVI/O** = synovial membrane \u2192 Synovitis\n\n**JOINT CONDITIONS:**\n• **Osteoarthritis (OA)** = degenerative joint disease (\"wear and tear\")\n• **Rheumatoid Arthritis (RA)** = autoimmune joint inflammation\n• **Gout** = uric acid crystals in joints\n• **Dislocation** = bone displaced from joint\n• **Subluxation** = partial dislocation\n\n**MUSCLE ROOTS:**\n• **MY/O** = muscle \u2192 Myalgia, Myopathy\n• **MYOS/O** = muscle \u2192 Myositis\n• **FASCI/O** = fascia (connective tissue) \u2192 Fasciitis\n\n**MUSCLE CONDITIONS:**\n• **Myalgia** = muscle pain\n• **Myositis** = muscle inflammation\n• **Muscular Dystrophy** = genetic muscle degeneration\n• **Fibromyalgia** = chronic widespread muscle pain\n• **Rhabdomyolysis** = muscle breakdown (dangerous!)"
                                 },
                                 {
                                     type: "quiz",
@@ -74970,7 +75332,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Spine & Connective Tissue Terms",
-                                    content: "**SPINE ROOTS:**\n• **VERTEBR/O** = vertebra â†’ Vertebroplasty\n• **SPONDYL/O** = vertebra â†’ Spondylosis, Spondylolisthesis\n• **LAMIN/O** = lamina (part of vertebra) â†’ Laminectomy\n• **DISC/O** = intervertebral disc â†’ Discectomy\n\n**SPINE CONDITIONS:**\n• **Spondylosis** = degenerative spine disease\n• **Spondylolisthesis** = vertebra slips forward\n• **Herniated Disc** = disc bulges/ruptures (\"slipped disc\")\n• **Spinal Stenosis** = narrowing of spinal canal\n• **Kyphosis** = excessive outward curve (hunchback)\n• **Lordosis** = excessive inward curve (swayback)\n• **Scoliosis** = lateral (sideways) curve\n\n**CONNECTIVE TISSUE:**\n• **TEN/O, TENDIN/O** = tendon â†’ Tendinitis\n• **LIGAMENT/O** = ligament â†’ Ligament tear\n• **CHONDR/O** = cartilage â†’ Chondromalacia\n\n**Common Injuries:** ACL tear, rotator cuff tear, Achilles tendon rupture"
+                                    content: "**SPINE ROOTS:**\n• **VERTEBR/O** = vertebra \u2192 Vertebroplasty\n• **SPONDYL/O** = vertebra \u2192 Spondylosis, Spondylolisthesis\n• **LAMIN/O** = lamina (part of vertebra) \u2192 Laminectomy\n• **DISC/O** = intervertebral disc \u2192 Discectomy\n\n**SPINE CONDITIONS:**\n• **Spondylosis** = degenerative spine disease\n• **Spondylolisthesis** = vertebra slips forward\n• **Herniated Disc** = disc bulges/ruptures (\"slipped disc\")\n• **Spinal Stenosis** = narrowing of spinal canal\n• **Kyphosis** = excessive outward curve (hunchback)\n• **Lordosis** = excessive inward curve (swayback)\n• **Scoliosis** = lateral (sideways) curve\n\n**CONNECTIVE TISSUE:**\n• **TEN/O, TENDIN/O** = tendon \u2192 Tendinitis\n• **LIGAMENT/O** = ligament \u2192 Ligament tear\n• **CHONDR/O** = cartilage \u2192 Chondromalacia\n\n**Common Injuries:** ACL tear, rotator cuff tear, Achilles tendon rupture"
                                 },
                                 {
                                     type: "example",
@@ -74987,55 +75349,64 @@ const APP_DATA = {
                                         { text: "Replacement of a disc", correct: false }
                                     ],
                                     explanation: "LAMIN/O = lamina (the back part of the vertebra that covers the spinal canal). -ECTOMY = surgical removal. Laminectomy removes part of the lamina to relieve pressure on spinal nerves. Often done for spinal stenosis or herniated disc."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Fracture coding practice**: Learn that fracture codes need site + laterality + type + episode \u2014 this is one of the most complex coding areas\n\n2. **OA vs RA**: Understand the difference \u2014 Osteoarthritis is degenerative (wear and tear), Rheumatoid Arthritis is autoimmune\n\n3. **Spine curve trio**: Kyphosis (outward), Lordosis (inward), Scoliosis (sideways) \u2014 draw them to remember\n\n4. **Decode a joint replacement report**: Practice reading orthopedic operative notes \u2014 THA and TKA are extremely common procedures"
                                 }
                             ]
                         },
                         {
                             id: 10,
                             title: "Nervous System Terminology",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
                                     type: "intro",
                                     title: "The Nervous System",
-                                    content: "The nervous system is the body's **command center**—controlling everything from thought to movement to heartbeat. Neurological terminology is critical for HIM professionals, as stroke, traumatic brain injury, and neurological disorders are major drivers of healthcare utilization.\n\nWe'll cover the **Central Nervous System (CNS)** and **Peripheral Nervous System (PNS)**.",
+                                    content: "The nervous system is the body's **command center** \u2014 controlling everything from thought to movement to heartbeat. Neurological terminology is critical for HIM professionals, as stroke, traumatic brain injury, and neurological disorders are major drivers of healthcare utilization.\n\nWe'll cover the **Central Nervous System (CNS)** and **Peripheral Nervous System (PNS)**.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="1026" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#8b5cf6" font-size="31" font-weight="bold" text-anchor="middle">NERVOUS SYSTEM OVERVIEW</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">NERVOUS SYSTEM OVERVIEW</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Central and Peripheral Nervous Systems</text>
 
-                                            <!-- Brain and spine -->
-                                            <g transform="translate(100, 40)">
-                                                <!-- Brain -->
-                                                <ellipse cx="157" cy="146" rx="94" ry="102" fill="#8b5cf6" opacity="0.5"/>
-                                                <text x="157" y="165" fill="#e9d5ff" font-size="25" text-anchor="middle">ENCEPHAL/O</text>
-                                                <text x="267" y="110" fill="#c4b5fd" font-size="25">CEREBR/O (cerebrum)</text>
-                                                <text x="267" y="165" fill="#c4b5fd" font-size="25">CEREBELL/O (cerebellum)</text>
+                                            <!-- Brain -->
+                                            <ellipse cx="350" cy="280" rx="120" ry="100" fill="rgba(139,92,246,0.3)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="350" y="285" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">ENCEPHAL/O</text>
 
-                                                <!-- Spinal cord -->
-                                                <rect x="149" y="293" width="15" height="366" fill="#a78bfa" opacity="0.6"/>
-                                                <text x="180" y="476" fill="#c4b5fd" font-size="25">MYEL/O (spinal cord)</text>
+                                            <!-- Spinal cord -->
+                                            <rect x="340" y="380" width="20" height="350" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
 
-                                                <!-- Nerves branching out -->
-                                                <line x1="149" y1="366" x2="78" y2="330" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <line x1="165" y1="366" x2="235" y2="330" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <line x1="149" y1="476" x2="62" y2="550" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <line x1="165" y1="476" x2="251" y2="550" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <line x1="149" y1="586" x2="94" y2="733" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <line x1="165" y1="586" x2="220" y2="733" stroke="#ddd6fe" stroke-width="4" opacity="0.6"/>
-                                                <text x="251" y="660" fill="#c4b5fd" font-size="25">NEUR/O (nerves)</text>
-                                            </g>
+                                            <!-- Nerve branches -->
+                                            <line x1="340" y1="450" x2="230" y2="420" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
+                                            <line x1="360" y1="450" x2="470" y2="420" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
+                                            <line x1="340" y1="550" x2="200" y2="600" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
+                                            <line x1="360" y1="550" x2="500" y2="600" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
+                                            <line x1="340" y1="650" x2="250" y2="750" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
+                                            <line x1="360" y1="650" x2="450" y2="750" stroke="#c4b5fd" stroke-width="3" opacity="0.7"/>
 
                                             <!-- Labels -->
-                                            <rect x="47" y="861" width="251" height="128" rx="9" fill="#4c1d95" stroke="#8b5cf6"/>
-                                            <text x="172" y="924" fill="#e9d5ff" font-size="28" text-anchor="middle">CNS = Brain + Spinal Cord</text>
-                                            <text x="172" y="971" fill="#c4b5fd" font-size="25" text-anchor="middle">(Central)</text>
+                                            <text x="650" y="230" fill="#c4b5fd" font-size="26">CEREBR/O = cerebrum</text>
+                                            <text x="650" y="270" fill="#c4b5fd" font-size="26">CEREBELL/O = cerebellum</text>
+                                            <text x="650" y="310" fill="#c4b5fd" font-size="26">MENING/O = meninges</text>
+                                            <text x="650" y="480" fill="#c4b5fd" font-size="26">MYEL/O = spinal cord</text>
+                                            <text x="650" y="600" fill="#c4b5fd" font-size="26">NEUR/O = nerve</text>
 
-                                            <rect x="330" y="861" width="251" height="128" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                            <text x="455" y="924" fill="#93c5fd" font-size="28" text-anchor="middle">PNS = All Other Nerves</text>
-                                            <text x="455" y="971" fill="#60a5fa" font-size="25" text-anchor="middle">(Peripheral)</text>
+                                            <!-- CNS vs PNS boxes -->
+                                            <rect x="100" y="820" width="400" height="120" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="300" y="870" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="29">CNS</text>
+                                            <text x="300" y="910" text-anchor="middle" fill="#fff" font-size="25">Brain + Spinal Cord</text>
+
+                                            <rect x="560" y="820" width="400" height="120" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="760" y="870" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">PNS</text>
+                                            <text x="760" y="910" text-anchor="middle" fill="#fff" font-size="25">All Other Nerves</text>
+
+                                            <rect x="200" y="970" width="700" height="50" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="1003" text-anchor="middle" fill="#888" font-size="26">CNS = Central | PNS = Peripheral</text>
                                         </svg>`,
                                         caption: "Central and Peripheral Nervous Systems"
                                     }
@@ -75043,12 +75414,12 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Brain & Spinal Cord Terms",
-                                    content: "**BRAIN ROOTS:**\n• **ENCEPHAL/O** = brain â†’ Encephalitis, Encephalopathy\n• **CEREBR/O** = cerebrum â†’ Cerebrovascular, Cerebral palsy\n• **CEREBELL/O** = cerebellum â†’ Cerebellar ataxia\n• **MENING/O** = meninges (brain coverings) â†’ Meningitis\n\n**BRAIN CONDITIONS:**\n• **CVA/Stroke** = Cerebrovascular Accident (brain blood supply cut off)\n• **TIA** = Transient Ischemic Attack (\"mini-stroke\")\n• **Encephalitis** = brain inflammation (usually viral)\n• **Meningitis** = meninges inflammation (bacterial = emergency!)\n• **Concussion** = mild traumatic brain injury (TBI)\n• **Hydrocephalus** = excess fluid in brain (HYDR = water)\n\n**SPINAL CORD:**\n• **MYEL/O** = spinal cord â†’ Myelitis, Myelopathy\n• **Myelitis** = spinal cord inflammation\n• **Poliomyelitis** = \"polio\" - viral spinal cord infection\n• **Multiple Sclerosis (MS)** = demyelinating disease"
+                                    content: "**BRAIN ROOTS:**\n• **ENCEPHAL/O** = brain \u2192 Encephalitis, Encephalopathy\n• **CEREBR/O** = cerebrum \u2192 Cerebrovascular, Cerebral palsy\n• **CEREBELL/O** = cerebellum \u2192 Cerebellar ataxia\n• **MENING/O** = meninges (brain coverings) \u2192 Meningitis\n\n**BRAIN CONDITIONS:**\n• **CVA/Stroke** = Cerebrovascular Accident (brain blood supply cut off)\n• **TIA** = Transient Ischemic Attack (\"mini-stroke\")\n• **Encephalitis** = brain inflammation (usually viral)\n• **Meningitis** = meninges inflammation (bacterial = emergency!)\n• **Concussion** = mild traumatic brain injury (TBI)\n• **Hydrocephalus** = excess fluid in brain (HYDR = water)\n\n**SPINAL CORD:**\n• **MYEL/O** = spinal cord \u2192 Myelitis, Myelopathy\n• **Myelitis** = spinal cord inflammation\n• **Poliomyelitis** = \"polio\" - viral spinal cord infection\n• **Multiple Sclerosis (MS)** = demyelinating disease"
                                 },
                                 {
                                     type: "concept",
                                     title: "Nerve & Neurological Terms",
-                                    content: "**NERVE ROOTS:**\n• **NEUR/O** = nerve â†’ Neurology, Neuropathy, Neuralgia\n• **GANGLI/O** = ganglion (nerve cluster) â†’ Ganglion cyst\n\n**NERVE CONDITIONS:**\n• **Neuropathy** = nerve disease (common in diabetes)\n• **Neuralgia** = nerve pain\n• **Neuritis** = nerve inflammation\n• **Radiculopathy** = nerve root disorder (pinched nerve)\n• **Sciatica** = sciatic nerve pain down leg\n• **Carpal Tunnel Syndrome** = median nerve compression\n\n**MOVEMENT DISORDERS:**\n• **Paralysis** = loss of movement\n• **Paresis** = partial paralysis/weakness\n• **Hemiplegia** = paralysis of one side of body\n• **Paraplegia** = paralysis of legs (below waist)\n• **Quadriplegia/Tetraplegia** = paralysis of all four limbs\n• **Parkinson's Disease** = tremor, rigidity, slow movement\n• **Epilepsy** = seizure disorder\n\n**Memory Tip:** -PLEGIA = paralysis (complete), -PARESIS = weakness (partial)"
+                                    content: "**NERVE ROOTS:**\n• **NEUR/O** = nerve \u2192 Neurology, Neuropathy, Neuralgia\n• **GANGLI/O** = ganglion (nerve cluster) \u2192 Ganglion cyst\n\n**NERVE CONDITIONS:**\n• **Neuropathy** = nerve disease (common in diabetes)\n• **Neuralgia** = nerve pain\n• **Neuritis** = nerve inflammation\n• **Radiculopathy** = nerve root disorder (pinched nerve)\n• **Sciatica** = sciatic nerve pain down leg\n• **Carpal Tunnel Syndrome** = median nerve compression\n\n**MOVEMENT DISORDERS:**\n• **Paralysis** = loss of movement\n• **Paresis** = partial paralysis/weakness\n• **Hemiplegia** = paralysis of one side of body\n• **Paraplegia** = paralysis of legs (below waist)\n• **Quadriplegia/Tetraplegia** = paralysis of all four limbs\n• **Parkinson's Disease** = tremor, rigidity, slow movement\n• **Epilepsy** = seizure disorder\n\n**Memory Tip:** -PLEGIA = paralysis (complete), -PARESIS = weakness (partial)"
                                 },
                                 {
                                     type: "quiz",
@@ -75081,13 +75452,18 @@ const APP_DATA = {
                                         { text: "Brain swelling", correct: false }
                                     ],
                                     explanation: "ENCEPHAL/O = brain. -PATHY = disease. Encephalopathy is a general term for brain disease/dysfunction. It can have many causes: hepatic (liver failure), hypoxic (lack of oxygen), metabolic, toxic, etc. It's a broad term requiring further specification in documentation."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **-PLEGIA vs -PARESIS**: Practice with all the prefixes \u2014 HEMI (half), PARA (lower), QUADRI (all four) combined with both suffixes\n\n2. **Stroke types**: Remember 85% ischemic (clot), 15% hemorrhagic (bleed) \u2014 treatment is very different\n\n3. **Decode neurological abbreviations**: CVA, TIA, EEG, LP, MS, TBI \u2014 write out the full terms\n\n4. **Left brain = Right body**: Remember that a left-sided stroke causes right-sided symptoms (and vice versa) \u2014 critical for documentation"
                                 }
                             ]
                         },
                         {
                             id: 11,
                             title: "Common Abbreviations",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
@@ -75097,55 +75473,48 @@ const APP_DATA = {
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="916" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#f59e0b" font-size="31" font-weight="bold" text-anchor="middle">ESSENTIAL MEDICAL ABBREVIATIONS</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">ESSENTIAL ABBREVIATIONS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Categories every HIM professional must know</text>
 
-                                            <!-- Categories -->
-                                            <g transform="translate(20, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#7f1d1d" stroke="#dc2626"/>
-                                                <text x="86" y="66" fill="#fca5a5" font-size="28" font-weight="bold" text-anchor="middle">VITAL SIGNS</text>
-                                                <text x="86" y="117" fill="#f87171" font-size="25" text-anchor="middle">BP, HR, RR, T</text>
-                                                <text x="86" y="161" fill="#f87171" font-size="25" text-anchor="middle">O2 sat, BMI</text>
-                                            </g>
+                                            <rect x="60" y="150" width="310" height="200" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="215" y="195" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="29">VITAL SIGNS</text>
+                                            <text x="215" y="240" text-anchor="middle" fill="#fff" font-size="26">BP, HR, RR, T</text>
+                                            <text x="215" y="280" text-anchor="middle" fill="#fff" font-size="26">O2 sat, BMI</text>
+                                            <text x="215" y="320" text-anchor="middle" fill="#888" font-size="25">Measured on every patient</text>
 
-                                            <g transform="translate(140, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                                <text x="86" y="66" fill="#93c5fd" font-size="28" font-weight="bold" text-anchor="middle">DIAGNOSTICS</text>
-                                                <text x="86" y="117" fill="#60a5fa" font-size="25" text-anchor="middle">CBC, CMP, BMP</text>
-                                                <text x="86" y="161" fill="#60a5fa" font-size="25" text-anchor="middle">CT, MRI, US</text>
-                                            </g>
+                                            <rect x="395" y="150" width="310" height="200" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="550" y="195" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">DIAGNOSTICS</text>
+                                            <text x="550" y="240" text-anchor="middle" fill="#fff" font-size="26">CBC, CMP, BMP</text>
+                                            <text x="550" y="280" text-anchor="middle" fill="#fff" font-size="26">CT, MRI, US</text>
+                                            <text x="550" y="320" text-anchor="middle" fill="#888" font-size="25">Labs and imaging</text>
 
-                                            <g transform="translate(260, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#064e3b" stroke="#10b981"/>
-                                                <text x="94" y="66" fill="#6ee7b7" font-size="28" font-weight="bold" text-anchor="middle">TREATMENTS</text>
-                                                <text x="94" y="117" fill="#34d399" font-size="25" text-anchor="middle">IV, IM, PO, SQ</text>
-                                                <text x="94" y="161" fill="#34d399" font-size="25" text-anchor="middle">PRN, BID, TID</text>
-                                            </g>
+                                            <rect x="730" y="150" width="310" height="200" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="885" y="195" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="29">TREATMENTS</text>
+                                            <text x="885" y="240" text-anchor="middle" fill="#fff" font-size="26">IV, IM, PO, SQ</text>
+                                            <text x="885" y="280" text-anchor="middle" fill="#fff" font-size="26">PRN, BID, TID</text>
+                                            <text x="885" y="320" text-anchor="middle" fill="#888" font-size="25">Routes and frequency</text>
 
-                                            <g transform="translate(20, 115)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#4c1d95" stroke="#8b5cf6"/>
-                                                <text x="86" y="66" fill="#c4b5fd" font-size="28" font-weight="bold" text-anchor="middle">HISTORY</text>
-                                                <text x="86" y="117" fill="#a78bfa" font-size="25" text-anchor="middle">Hx, CC, HPI</text>
-                                                <text x="86" y="161" fill="#a78bfa" font-size="25" text-anchor="middle">PMH, FH, SH</text>
-                                            </g>
+                                            <rect x="60" y="380" width="310" height="200" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="215" y="425" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="29">HISTORY</text>
+                                            <text x="215" y="470" text-anchor="middle" fill="#fff" font-size="26">Hx, CC, HPI</text>
+                                            <text x="215" y="510" text-anchor="middle" fill="#fff" font-size="26">PMH, FH, SH</text>
+                                            <text x="215" y="550" text-anchor="middle" fill="#888" font-size="25">Documentation sections</text>
 
-                                            <g transform="translate(140, 115)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#713f12" stroke="#f59e0b"/>
-                                                <text x="86" y="66" fill="#fcd34d" font-size="28" font-weight="bold" text-anchor="middle">CARE SETTINGS</text>
-                                                <text x="86" y="117" fill="#fbbf24" font-size="25" text-anchor="middle">ER/ED, OR, ICU</text>
-                                                <text x="86" y="161" fill="#fbbf24" font-size="25" text-anchor="middle">L&D, PACU, SNF</text>
-                                            </g>
+                                            <rect x="395" y="380" width="310" height="200" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="550" y="425" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="29">CARE SETTINGS</text>
+                                            <text x="550" y="470" text-anchor="middle" fill="#fff" font-size="26">ER/ED, OR, ICU</text>
+                                            <text x="550" y="510" text-anchor="middle" fill="#fff" font-size="26">L&D, PACU, SNF</text>
+                                            <text x="550" y="550" text-anchor="middle" fill="#888" font-size="25">Where care happens</text>
 
-                                            <g transform="translate(260, 115)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#7f1d1d" stroke="#dc2626"/>
-                                                <text x="94" y="66" fill="#fca5a5" font-size="28" font-weight="bold" text-anchor="middle">⚠️ DO NOT USE</text>
-                                                <text x="94" y="117" fill="#f87171" font-size="25" text-anchor="middle">U (use \"units\")</text>
-                                                <text x="94" y="161" fill="#f87171" font-size="25" text-anchor="middle">QD, QOD, MS</text>
-                                            </g>
+                                            <rect x="730" y="380" width="310" height="200" rx="20" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="885" y="425" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="29">DO NOT USE</text>
+                                            <text x="885" y="470" text-anchor="middle" fill="#fff" font-size="26">U (use \"units\")</text>
+                                            <text x="885" y="510" text-anchor="middle" fill="#fff" font-size="26">QD, QOD, MS</text>
+                                            <text x="885" y="550" text-anchor="middle" fill="#888" font-size="25">Joint Commission banned</text>
 
-                                            <rect x="47" y="678" width="534" height="201" rx="9" fill="#1e293b" stroke="#475569"/>
-                                            <text x="314" y="751" fill="#cbd5e1" font-size="25" text-anchor="middle">Know the abbreviations, but remember:</text>
-                                            <text x="314" y="825" fill="#94a3b8" font-size="28" text-anchor="middle">When in doubt, spell it out!</text>
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">When in doubt, spell it out!</text>
                                         </svg>`,
                                         caption: "Abbreviation categories every HIM professional must know"
                                     }
@@ -75158,7 +75527,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Documentation & History Abbreviations",
-                                    content: "**HISTORY & DOCUMENTATION:**\n• **CC** = Chief Complaint\n• **HPI** = History of Present Illness\n• **PMH / PMHx** = Past Medical History\n• **PSH** = Past Surgical History\n• **FH / FHx** = Family History\n• **SH** = Social History\n• **Hx** = History\n• **Dx** = Diagnosis\n• **DDx** = Differential Diagnosis\n• **Rx** = Prescription/Treatment\n• **Tx** = Treatment\n• **Sx** = Symptoms (or Surgery)\n• **Px** = Prognosis\n\n**DOCUMENTATION TYPES:**\n• **H&P** = History & Physical\n• **D/C** = Discharge (or Discontinue - context matters!)\n• **F/U** = Follow-Up\n• **SOAP** = Subjective, Objective, Assessment, Plan\n• **I&O** = Intake & Output\n• **VS** = Vital Signs\n\n**IMPORTANT:** \"D/C\" can mean Discharge OR Discontinue—context is critical!"
+                                    content: "**HISTORY & DOCUMENTATION:**\n• **CC** = Chief Complaint\n• **HPI** = History of Present Illness\n• **PMH / PMHx** = Past Medical History\n• **PSH** = Past Surgical History\n• **FH / FHx** = Family History\n• **SH** = Social History\n• **Hx** = History\n• **Dx** = Diagnosis\n• **DDx** = Differential Diagnosis\n• **Rx** = Prescription/Treatment\n• **Tx** = Treatment\n• **Sx** = Symptoms (or Surgery)\n• **Px** = Prognosis\n\n**DOCUMENTATION TYPES:**\n• **H&P** = History & Physical\n• **D/C** = Discharge (or Discontinue \u2014 context matters!)\n• **F/U** = Follow-Up\n• **SOAP** = Subjective, Objective, Assessment, Plan\n• **I&O** = Intake & Output\n• **VS** = Vital Signs\n\n**IMPORTANT:** \"D/C\" can mean Discharge OR Discontinue \u2014 context is critical!"
                                 },
                                 {
                                     type: "quiz",
@@ -75169,12 +75538,12 @@ const APP_DATA = {
                                         { text: "Physical Exam Report Ready for Legal Action", correct: false },
                                         { text: "Primary Evaluation and Respiratory Rate Log Assessment", correct: false }
                                     ],
-                                    explanation: "PERRLA = Pupils Equal, Round, Reactive to Light and Accommodation. This is a standard neurological assessment documenting normal pupil function. Abnormal findings might be: \"Pupils unequal, R>L, sluggish reaction\" - which could indicate brain injury or drug effects."
+                                    explanation: "PERRLA = Pupils Equal, Round, Reactive to Light and Accommodation. This is a standard neurological assessment documenting normal pupil function. Abnormal findings might be: 'Pupils unequal, R>L, sluggish reaction' \u2014 which could indicate brain injury or drug effects."
                                 },
                                 {
                                     type: "concept",
                                     title: "Medication & Treatment Abbreviations",
-                                    content: "**ROUTES OF ADMINISTRATION:**\n• **PO** = Per Os (by mouth)\n• **IV** = Intravenous\n• **IM** = Intramuscular\n• **SQ / SubQ** = Subcutaneous\n• **PR** = Per Rectum\n• **SL** = Sublingual (under tongue)\n• **TOP** = Topical\n• **INH** = Inhaled\n\n**FREQUENCY:**\n• **PRN** = Pro Re Nata (as needed)\n• **BID** = Twice daily (Bis In Die)\n• **TID** = Three times daily\n• **QID** = Four times daily\n• **Q4H** = Every 4 hours\n• **QHS** = At bedtime (Quaque Hora Somni)\n• **AC** = Before meals | **PC** = After meals\n• **STAT** = Immediately\n\n**⚠️ DO NOT USE (per Joint Commission):**\n• **QD** = Daily â†’ Write \"daily\"\n• **QOD** = Every other day â†’ Write \"every other day\"\n• **U** = Units â†’ Write \"units\"\n• **IU** = International Units â†’ Write \"international units\""
+                                    content: "**ROUTES OF ADMINISTRATION:**\n• **PO** = Per Os (by mouth)\n• **IV** = Intravenous\n• **IM** = Intramuscular\n• **SQ / SubQ** = Subcutaneous\n• **PR** = Per Rectum\n• **SL** = Sublingual (under tongue)\n• **TOP** = Topical\n• **INH** = Inhaled\n\n**FREQUENCY:**\n• **PRN** = Pro Re Nata (as needed)\n• **BID** = Twice daily (Bis In Die)\n• **TID** = Three times daily\n• **QID** = Four times daily\n• **Q4H** = Every 4 hours\n• **QHS** = At bedtime (Quaque Hora Somni)\n• **AC** = Before meals | **PC** = After meals\n• **STAT** = Immediately\n\n**DO NOT USE (per Joint Commission):**\n• **QD** = Daily \u2192 Write \"daily\"\n• **QOD** = Every other day \u2192 Write \"every other day\"\n• **U** = Units \u2192 Write \"units\"\n• **IU** = International Units \u2192 Write \"international units\""
                                 },
                                 {
                                     type: "concept",
@@ -75190,65 +75559,73 @@ const APP_DATA = {
                                         { text: "QD (daily)", correct: true },
                                         { text: "PO (by mouth)", correct: false }
                                     ],
-                                    explanation: "QD (daily) is on the 'Do Not Use' list because it can be confused with QID (four times daily) or QOD (every other day). This confusion has led to medication errors. Always write out \"daily\" instead. Other banned abbreviations: U (units), IU, QOD, trailing zeros, MS, MSO4, MgSO4."
+                                    explanation: "QD (daily) is on the 'Do Not Use' list because it can be confused with QID (four times daily) or QOD (every other day). This confusion has led to medication errors. Always write out 'daily' instead. Other banned abbreviations: U (units), IU, QOD, trailing zeros, MS, MSO4, MgSO4."
+                                },
+                                {
+                                    type: "quote",
+                                    content: "Abbreviations are a convenience, not a necessity. Patient safety must always come first.",
+                                    author: "The Joint Commission"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Memorize the Do Not Use list**: QD, QOD, U, IU, MS, MSO4, MgSO4 \u2014 and trailing zeros (X.0 mg) and missing leading zeros (.X mg)\n\n2. **Practice medication orders**: \"Metformin 1000mg PO BID\" \u2014 decode: Metformin, 1000 milligrams, by mouth, twice daily\n\n3. **Learn the SOAP format**: Subjective (patient says), Objective (you observe), Assessment (diagnosis), Plan (treatment) \u2014 this is how clinical notes are structured\n\n4. **Lab value categories**: Group them \u2014 blood counts (CBC), metabolic (CMP/BMP), liver (LFTs), kidney (BUN/Cr), cardiac (troponin, BNP)"
                                 }
                             ]
                         },
-{
+                        {
                             id: 12,
                             title: "Medical Terminology in Practice",
-                            duration: 7,
+                            duration: 8,
                             completed: false,
                             cards: [
                                 {
                                     type: "intro",
                                     title: "Putting It All Together",
-                                    content: "You've learned prefixes, suffixes, roots, and abbreviations. Now it's time to **apply your knowledge** to real clinical documentation.\n\nThis lesson focuses on reading and interpreting actual medical reports—the skill you'll use every day as an HIM professional. We'll decode operative reports, discharge summaries, and clinical notes.",
+                                    content: "You've learned prefixes, suffixes, roots, and abbreviations. Now it's time to **apply your knowledge** to real clinical documentation.\n\nThis lesson focuses on reading and interpreting actual medical reports \u2014 the skill you'll use every day as an HIM professional. We'll decode operative reports, discharge summaries, and clinical notes.",
                                     visual: {
                                         type: "diagram",
                                         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
-                                            <rect width="628" height="916" fill="#1a1a2e"/>
-                                            <text x="314" y="91" fill="#0d9488" font-size="31" font-weight="bold" text-anchor="middle">MEDICAL TERMINOLOGY IN ACTION</text>
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">TERMINOLOGY IN ACTION</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Reading and interpreting clinical documentation</text>
 
-                                            <!-- Document types -->
-                                            <g transform="translate(30, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#1e3a5f" stroke="#3b82f6"/>
-                                                <text x="78" y="73" fill="#93c5fd" font-size="28" font-weight="bold" text-anchor="middle">H&P</text>
-                                                <text x="78" y="128" fill="#60a5fa" font-size="25" text-anchor="middle">History &</text>
-                                                <text x="78" y="172" fill="#60a5fa" font-size="25" text-anchor="middle">Physical</text>
-                                                <text x="78" y="227" fill="#94a3b8" font-size="25" text-anchor="middle">Admission</text>
-                                            </g>
+                                            <!-- Document flow -->
+                                            <rect x="60" y="170" width="300" height="280" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="210" y="220" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">H&P</text>
+                                            <text x="210" y="270" text-anchor="middle" fill="#fff" font-size="26">History &</text>
+                                            <text x="210" y="305" text-anchor="middle" fill="#fff" font-size="26">Physical</text>
+                                            <text x="210" y="355" text-anchor="middle" fill="#888" font-size="25">CC, HPI, PMH</text>
+                                            <text x="210" y="390" text-anchor="middle" fill="#888" font-size="25">ROS, PE, A/P</text>
 
-                                            <g transform="translate(150, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#7f1d1d" stroke="#dc2626"/>
-                                                <text x="78" y="73" fill="#fca5a5" font-size="28" font-weight="bold" text-anchor="middle">OP NOTE</text>
-                                                <text x="78" y="128" fill="#f87171" font-size="25" text-anchor="middle">Operative</text>
-                                                <text x="78" y="172" fill="#f87171" font-size="25" text-anchor="middle">Report</text>
-                                                <text x="78" y="227" fill="#94a3b8" font-size="25" text-anchor="middle">Surgery</text>
-                                            </g>
+                                            <path d="M360 310 L400 310" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="400,310 385,300 385,320" fill="#14b8a6"/>
 
-                                            <g transform="translate(270, 50)">
-                                                <rect x="0" y="0" width="1100" height="1100" rx="9" fill="#064e3b" stroke="#10b981"/>
-                                                <text x="78" y="73" fill="#6ee7b7" font-size="28" font-weight="bold" text-anchor="middle">D/C SUMMARY</text>
-                                                <text x="78" y="128" fill="#34d399" font-size="25" text-anchor="middle">Discharge</text>
-                                                <text x="78" y="172" fill="#34d399" font-size="25" text-anchor="middle">Summary</text>
-                                                <text x="78" y="227" fill="#94a3b8" font-size="25" text-anchor="middle">Leaving</text>
-                                            </g>
+                                            <rect x="400" y="170" width="300" height="280" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="550" y="220" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">OP NOTE</text>
+                                            <text x="550" y="270" text-anchor="middle" fill="#fff" font-size="26">Operative</text>
+                                            <text x="550" y="305" text-anchor="middle" fill="#fff" font-size="26">Report</text>
+                                            <text x="550" y="355" text-anchor="middle" fill="#888" font-size="25">Pre/Post Op Dx</text>
+                                            <text x="550" y="390" text-anchor="middle" fill="#888" font-size="25">Procedure, Findings</text>
 
-                                            <!-- Arrow showing flow -->
-                                            <path d="M80,130 L320,130" stroke="#475569" stroke-width="4" marker-end="url(#arrowhead)"/>
-                                            <defs>
-                                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                                    <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
-                                                </marker>
-                                            </defs>
-                                            <text x="314" y="531" fill="#94a3b8" font-size="25" text-anchor="middle">Patient Journey Through Documentation</text>
+                                            <path d="M700 310 L740 310" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="740,310 725,300 725,320" fill="#14b8a6"/>
+
+                                            <rect x="740" y="170" width="300" height="280" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="890" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">D/C SUMMARY</text>
+                                            <text x="890" y="270" text-anchor="middle" fill="#fff" font-size="26">Discharge</text>
+                                            <text x="890" y="305" text-anchor="middle" fill="#fff" font-size="26">Summary</text>
+                                            <text x="890" y="355" text-anchor="middle" fill="#888" font-size="25">Hospital Course</text>
+                                            <text x="890" y="390" text-anchor="middle" fill="#888" font-size="25">Discharge Dx, Plan</text>
 
                                             <!-- Skills box -->
-                                            <rect x="78" y="605" width="471" height="256" rx="15" fill="#1e293b" stroke="#0d9488"/>
-                                            <text x="314" y="678" fill="#5eead4" font-size="25" font-weight="bold" text-anchor="middle">HIM PROFESSIONAL SKILLS</text>
-                                            <text x="314" y="740" fill="#94a3b8" font-size="25" text-anchor="middle">Read â†’ Understand â†’ Abstract â†’ Code</text>
-                                            <text x="314" y="806" fill="#64748b" font-size="25" text-anchor="middle">Every term has meaning. Every detail matters for coding.</text>
+                                            <rect x="150" y="530" width="800" height="200" rx="20" fill="rgba(20,184,166,0.15)" stroke="#14b8a6" stroke-width="2"/>
+                                            <text x="550" y="580" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="31">HIM PROFESSIONAL WORKFLOW</text>
+                                            <text x="550" y="640" text-anchor="middle" fill="#fff" font-size="26">Read \u2192 Understand \u2192 Abstract \u2192 Code</text>
+                                            <text x="550" y="690" text-anchor="middle" fill="#888" font-size="25">Every term has meaning. Every detail matters for coding.</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Documentation types you'll encounter in HIM</text>
                                         </svg>`,
                                         caption: "Documentation types you'll encounter in HIM"
                                     }
@@ -75256,7 +75633,7 @@ const APP_DATA = {
                                 {
                                     type: "concept",
                                     title: "Reading an H&P (History & Physical)",
-                                    content: "**STANDARD H&P SECTIONS:**\n\n**CC (Chief Complaint):** Why the patient came in\n\"CC: Chest pain x 2 hours\"\n\n**HPI (History of Present Illness):** The story\n\"72 y/o M with substernal chest pain radiating to left arm, associated with diaphoresis and dyspnea.\"\n\n**PMH (Past Medical History):** Previous conditions\n\"HTN, DM2, Hyperlipidemia, s/p CABG 2019\"\n\n**Medications:** Current meds\n\"Metformin 1000mg PO BID, Lisinopril 20mg PO daily\"\n\n**Allergies:** Drug reactions\n\"NKDA\" (No Known Drug Allergies) or \"PCN â†’ hives\"\n\n**ROS (Review of Systems):** System-by-system symptoms\n\n**PE (Physical Exam):** Objective findings\n\"VS: BP 158/92, HR 102, RR 22, T 98.6, O2 94% RA\"\n\n**Assessment/Plan:** Diagnosis and treatment plan"
+                                    content: "**STANDARD H&P SECTIONS:**\n\n**CC (Chief Complaint):** Why the patient came in\n\"CC: Chest pain x 2 hours\"\n\n**HPI (History of Present Illness):** The story\n\"72 y/o M with substernal chest pain radiating to left arm, associated with diaphoresis and dyspnea.\"\n\n**PMH (Past Medical History):** Previous conditions\n\"HTN, DM2, Hyperlipidemia, s/p CABG 2019\"\n\n**Medications:** Current meds\n\"Metformin 1000mg PO BID, Lisinopril 20mg PO daily\"\n\n**Allergies:** Drug reactions\n\"NKDA\" (No Known Drug Allergies) or \"PCN \u2192 hives\"\n\n**ROS (Review of Systems):** System-by-system symptoms\n\n**PE (Physical Exam):** Objective findings\n\"VS: BP 158/92, HR 102, RR 22, T 98.6, O2 94% RA\"\n\n**Assessment/Plan:** Diagnosis and treatment plan"
                                 },
                                 {
                                     type: "example",
@@ -75272,7 +75649,7 @@ const APP_DATA = {
                                         { text: "Surgical planning", correct: false },
                                         { text: "Secondary to problem", correct: false }
                                     ],
-                                    explanation: "s/p = Status Post, meaning 'after' or 'following.' 's/p CABG 2019' means the patient had coronary artery bypass graft surgery in 2019. This is critical history—it tells you the patient has coronary artery disease and has had open heart surgery."
+                                    explanation: "s/p = Status Post, meaning 'after' or 'following.' 's/p CABG 2019' means the patient had coronary artery bypass graft surgery in 2019. This is critical history \u2014 it tells you the patient has coronary artery disease and has had open heart surgery."
                                 },
                                 {
                                     type: "concept",
@@ -75282,7 +75659,7 @@ const APP_DATA = {
                                 {
                                     type: "example",
                                     title: "Operative Report Analysis",
-                                    content: "**Operative Report Excerpt:**\n\"PROCEDURE: Right total knee arthroplasty\nANESTHESIA: Spinal with sedation\nFINDINGS: Severe tricompartmental osteoarthritis with bone-on-bone changes. Medial and lateral menisci torn. ACL absent.\nPROCEDURE DESCRIPTION: Midline incision made. Medial parapatellar arthrotomy performed. Osteophytes resected. Femoral and tibial cuts made. Trial components placed with good ROM. Cemented prosthesis implanted. Wound irrigated and closed in layers.\"\n\n**Key Terms:**\n• **Arthroplasty** = joint reconstruction (ARTHR/O + PLASTY)\n• **Tricompartmental** = all 3 knee compartments affected\n• **Bone-on-bone** = complete cartilage loss\n• **Menisci** = knee cartilage pads\n• **ACL** = Anterior Cruciate Ligament\n• **Parapatellar** = beside the kneecap (PARA = beside, PATELL = kneecap)\n• **Arthrotomy** = incision into joint\n• **Osteophytes** = bone spurs (OSTE/O = bone, PHYTE = growth)\n• **ROM** = Range of Motion\n• **Cemented** = fixed with bone cement"
+                                    content: "**Operative Report Excerpt:**\n\"PROCEDURE: Right total knee arthroplasty\nANESTHESIA: Spinal with sedation\nFINDINGS: Severe tricompartmental osteoarthritis with bone-on-bone changes. Medial and lateral menisci torn. ACL absent.\nPROCEDURE DESCRIPTION: Midline incision made. Medial parapatellar arthrotomy performed. Osteophytes resected. Femoral and tibial cuts made. Trial components placed with good ROM. Cemented prosthesis implanted. Wound irrigated and closed in layers.\"\n\n**Key Terms:**\n• **Arthroplasty** = joint reconstruction (ARTHR/O + PLASTY)\n• **Tricompartmental** = all 3 knee compartments affected\n• **Bone-on-bone** = complete cartilage loss\n• **Menisci** = knee cartilage pads\n• **ACL** = Anterior Cruciate Ligament\n• **Parapatellar** = beside the kneecap (PARA = beside)\n• **Arthrotomy** = incision into joint\n• **Osteophytes** = bone spurs (OSTE/O = bone, PHYTE = growth)\n• **ROM** = Range of Motion"
                                 },
                                 {
                                     type: "quiz",
@@ -75294,6 +75671,16 @@ const APP_DATA = {
                                         { text: "Knee surgery for arthritis", correct: false }
                                     ],
                                     explanation: "THA = Total Hip Arthroplasty (hip replacement). AVN = Avascular Necrosis (death of bone tissue from lack of blood supply). Femoral head = the ball part of the hip joint (top of the thigh bone). The patient had a hip replacement because the bone in their hip joint died from poor blood supply."
+                                },
+                                {
+                                    type: "quote",
+                                    content: "The art of medicine consists of amusing the patient while nature cures the disease. But the science of HIM consists of accurately documenting every detail.",
+                                    author: "Adapted from Voltaire"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Read a full H&P**: Find a sample History & Physical and identify every abbreviation and medical term \u2014 this is your daily work in HIM\n\n2. **Practice the coding workflow**: Read \u2192 Understand \u2192 Abstract \u2192 Code \u2014 take a sample operative report and identify the principal diagnosis and procedure\n\n3. **Build your medical vocabulary journal**: Start a reference sheet with the most common terms from each body system you've learned\n\n4. **Celebrate your progress**: You've completed 12 lessons covering medical terminology from word building to clinical documentation \u2014 you now have the foundation to decode virtually any medical term you encounter!"
                                 }
                             ]
                         }
