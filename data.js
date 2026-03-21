@@ -33200,7 +33200,7 @@ const APP_DATA = {
                     title: "Feynman's Lectures on Physics",
                     author: "Richard Feynman",
                     description: "The greatest physics teacher of all time explains the universe. Learn physics the Feynman way—with clarity, humor, and deep insight.",
-                    lessons: 12,
+                    lessons: 17,
                     duration: 75,
                     progress: 0,
                     category: "science",
@@ -48536,7 +48536,7 @@ const APP_DATA = {
                     title: "The Daily Stoic",
                     author: "Ryan Holiday",
                     description: "366 meditations on wisdom, perseverance, and the art of living - a modern guide to ancient Stoic practices.",
-                    lessons: 12,
+                    lessons: 17,
                     duration: 60,
                     progress: 0,
                     category: "stoicism",
@@ -66414,7 +66414,7 @@ const APP_DATA = {
                     title: "GO! Microsoft 365: Excel",
                     author: "Gaskin, Vargas, Geoghan & Graviett",
                     description: "2021 Edition - Master spreadsheets, formulas, functions, data analysis, pivot tables, and charts for healthcare data management.",
-                    lessons: 12,
+                    lessons: 17,
                     duration: 80,
                     progress: 0,
                     category: "data-analytics",
@@ -74087,8 +74087,8 @@ const APP_DATA = {
                     title: "HITT 1305: Medical Terminology",
                     author: "Lone Star College",
                     description: "Introduction to the structure of medical terms, including prefixes, suffixes, roots, and combining forms. Study of terms related to body systems.",
-                    lessons: 12,
-                    duration: 90,
+                    lessons: 17,
+                    duration: 130,
                     progress: 0,
                     category: "him",
                     featured: true,
@@ -75462,6 +75462,522 @@ const APP_DATA = {
                         },
                         {
                             id: 11,
+                            title: "Integumentary System",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "Your Largest Organ",
+                                    content: "Did you know your **skin** is the largest organ in your body? It weighs about 8 pounds and covers roughly 22 square feet. The **integumentary system** \u2014 skin, hair, nails, and glands \u2014 is your body's protective fortress.\n\nFor medical coders, integumentary terminology shows up **constantly**. From office visits for rashes and acne to complex burn debridement and skin graft procedures, you need to know these terms cold.\n\nIn this lesson you'll master skin layer anatomy, common conditions from dermatitis to melanoma, lesion terminology, and burn classifications.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THE INTEGUMENTARY SYSTEM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Skin, Hair, Nails \u2014 Your body's largest organ</text>
+
+                                            <rect x="60" y="160" width="480" height="200" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="300" y="210" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="31">SKIN ROOTS</text>
+                                            <text x="300" y="260" text-anchor="middle" fill="#fff" font-size="26">DERM/O, DERMAT/O = skin (Greek)</text>
+                                            <text x="300" y="300" text-anchor="middle" fill="#fff" font-size="26">CUTANE/O = skin (Latin)</text>
+
+                                            <rect x="560" y="160" width="480" height="200" rx="20" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="3"/>
+                                            <text x="800" y="210" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="31">RELATED ROOTS</text>
+                                            <text x="800" y="260" text-anchor="middle" fill="#fff" font-size="26">MELAN/O = dark, black</text>
+                                            <text x="800" y="300" text-anchor="middle" fill="#fff" font-size="26">LIP/O, ADIP/O = fat</text>
+
+                                            <rect x="60" y="400" width="300" height="250" rx="20" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                            <text x="210" y="450" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">EPIDERMIS</text>
+                                            <text x="210" y="490" text-anchor="middle" fill="#fff" font-size="25">Outermost layer</text>
+                                            <text x="210" y="525" text-anchor="middle" fill="#fff" font-size="25">No blood vessels</text>
+                                            <text x="210" y="560" text-anchor="middle" fill="#888" font-size="25">Contains melanocytes</text>
+                                            <text x="210" y="600" text-anchor="middle" fill="#6366f1" font-size="25">EPI- = upon</text>
+
+                                            <rect x="400" y="400" width="300" height="250" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="550" y="450" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="29">DERMIS</text>
+                                            <text x="550" y="490" text-anchor="middle" fill="#fff" font-size="25">Middle layer</text>
+                                            <text x="550" y="525" text-anchor="middle" fill="#fff" font-size="25">Blood vessels, nerves</text>
+                                            <text x="550" y="560" text-anchor="middle" fill="#888" font-size="25">Hair follicles, glands</text>
+                                            <text x="550" y="600" text-anchor="middle" fill="#ef4444" font-size="25">DERM/O = skin</text>
+
+                                            <rect x="740" y="400" width="300" height="250" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="890" y="450" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="29">SUBCUTANEOUS</text>
+                                            <text x="890" y="490" text-anchor="middle" fill="#fff" font-size="25">Deepest layer</text>
+                                            <text x="890" y="525" text-anchor="middle" fill="#fff" font-size="25">Adipose (fat) tissue</text>
+                                            <text x="890" y="560" text-anchor="middle" fill="#888" font-size="25">Also: Hypodermis</text>
+                                            <text x="890" y="600" text-anchor="middle" fill="#f59e0b" font-size="25">SUB- = below</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Epidermis \u2192 Dermis \u2192 Subcutaneous (Hypodermis)</text>
+                                        </svg>`,
+                                        caption: "Three layers of skin with combining forms"
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Common Skin Conditions",
+                                    content: "**Inflammatory Conditions:**\n\u2022 **Dermatitis** = skin inflammation (contact, atopic, seborrheic types)\n\u2022 **Eczema** = chronic itchy, inflamed skin (= atopic dermatitis)\n\u2022 **Psoriasis** = autoimmune; thick, silvery, scaly patches\n\u2022 **Urticaria** = hives; raised, itchy welts from allergic reaction\n\u2022 **Acne vulgaris** = inflammation of hair follicles/oil glands\n\n**Infectious Conditions:**\n\u2022 **Cellulitis** = bacterial infection of deeper skin layers\n\u2022 **Impetigo** = contagious superficial bacterial infection\n\u2022 **Tinea** = fungal infection (tinea pedis = athlete's foot)\n\n**Skin Cancers (Critical for Coding!):**\n\u2022 **Melanoma** (MELAN = dark + -OMA = tumor) \u2014 most dangerous\n\u2022 **Basal cell carcinoma (BCC)** \u2014 most common, rarely spreads\n\u2022 **Squamous cell carcinoma (SCC)** \u2014 second most common\n\n**Coding Tip:** Skin cancers require **site-specific** ICD-10 codes. A melanoma on the right arm codes differently than one on the left ear!"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Lesion Types",
+                                    content: "Physicians use **specific terms** to describe what they see on the skin:\n\n**Primary Lesions (initial changes):**\n\u2022 **Macule** = flat, discolored spot < 1 cm (freckle)\n\u2022 **Patch** = flat, discolored area > 1 cm (vitiligo)\n\u2022 **Papule** = raised, solid bump < 1 cm (wart)\n\u2022 **Nodule** = raised, solid bump > 1 cm, deeper\n\u2022 **Vesicle** = small fluid-filled blister < 1 cm (chickenpox)\n\u2022 **Bulla** = large fluid-filled blister > 1 cm (burn blister)\n\u2022 **Pustule** = vesicle filled with PUS (acne pimple)\n\u2022 **Wheal** = raised, temporary, itchy area (hive)\n\u2022 **Cyst** = enclosed sac with fluid or semi-solid material\n\n**Secondary Lesions (changes to primary):**\n\u2022 **Ulcer** = open sore with skin loss (pressure ulcer)\n\u2022 **Fissure** = crack-like break in the skin\n\u2022 **Crust** = dried exudate (scab)\n\u2022 **Scale** = flaking dead skin cells (psoriasis)\n\u2022 **Scar/Cicatrix** = fibrous tissue after injury\n\n**Size Ladder:** macule \u2192 patch (flat), papule \u2192 nodule (solid raised), vesicle \u2192 bulla (fluid-filled)"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A physician documents 'erythematous, pruritic patches consistent with atopic dermatitis.' What condition is this?",
+                                    options: [
+                                        { text: "Psoriasis \u2014 silvery scaly patches", correct: false },
+                                        { text: "Eczema \u2014 chronic inflamed, itchy skin", correct: true },
+                                        { text: "Cellulitis \u2014 deep bacterial infection", correct: false },
+                                        { text: "Urticaria \u2014 allergic hives", correct: false }
+                                    ],
+                                    explanation: "Atopic dermatitis IS eczema \u2014 they're used interchangeably. Erythematous = reddened (ERYTHR/O = red). Pruritic = itchy (PRURIT = itching). Psoriasis has silvery scales, cellulitis is a deep infection with warmth/swelling, and urticaria presents as raised welts, not chronic patches."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Burns & Wound Terminology",
+                                    content: "**Burn Classification by Depth:**\n\u2022 **First-degree (superficial)** = epidermis only; redness, pain, no blisters (sunburn)\n\u2022 **Second-degree (partial-thickness)** = into dermis; blistering, severe pain\n\u2022 **Third-degree (full-thickness)** = destroys epidermis AND dermis; white/charred, NO pain (nerves destroyed)\n\u2022 **Fourth-degree** = extends into muscle, tendon, or bone\n\n**Rule of Nines (Body Surface Area):**\n\u2022 Head = 9% | Each arm = 9% | Each leg = 18%\n\u2022 Anterior trunk = 18% | Posterior trunk = 18% | Perineum = 1%\n\n**Key Wound Terms:**\n\u2022 **Debridement** = removal of dead/damaged tissue\n\u2022 **Autograft** (AUTO = self) = graft using patient's own skin\n\u2022 **Allograft** (ALLO = other) = graft from human donor\n\u2022 **Xenograft** (XENO = foreign) = graft from different species (pig skin)\n\u2022 **Escharotomy** (ESCHAR = burned tissue) = incision through burned tissue\n\u2022 **I&D** = Incision and Drainage of abscess/cyst\n\n**Coding Alert:** Burn codes need THREE specifics: **site**, **degree**, and **extent** (% body surface)."
+                                },
+                                {
+                                    type: "example",
+                                    title: "Dermatology Documentation Decoded",
+                                    content: "**Clinical Note:**\n\"Patient presents with a 2.5 cm erythematous, indurated nodule on the right posterior auricular region. Excisional biopsy performed. Histopathology reveals squamous cell carcinoma in situ. Margins clear. Wound closed with subcuticular sutures.\"\n\n**Breaking it down:**\n\u2022 **Erythematous** = reddened (ERYTHR/O = red)\n\u2022 **Indurated** = hardened, firm to touch\n\u2022 **Nodule** = raised, solid lesion > 1 cm\n\u2022 **Right posterior auricular** = behind the right ear (AURICUL/O = ear)\n\u2022 **Excisional biopsy** = surgically cutting out tissue for examination\n\u2022 **Histopathology** = microscopic study of diseased tissue (HIST/O = tissue)\n\u2022 **Squamous cell carcinoma in situ** = SCC that hasn't spread (\"in situ\" = in place)\n\u2022 **Margins clear** = cancer doesn't extend to edges \u2014 good news!\n\u2022 **Subcuticular sutures** = stitches placed beneath skin surface\n\n**Coding:** This involves both an E/M service (evaluation) and a procedure (biopsy) \u2014 coders must determine if both are separately reportable."
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A third-degree burn is painless at the burn site because:",
+                                    options: [
+                                        { text: "Only the epidermis is affected", correct: false },
+                                        { text: "Nerve endings in the dermis are destroyed", correct: true },
+                                        { text: "Anti-inflammatory medications numb the area", correct: false },
+                                        { text: "The subcutaneous fat insulates the nerves", correct: false }
+                                    ],
+                                    explanation: "Third-degree (full-thickness) burns destroy both the epidermis AND entire dermis, including the nerve endings. No nerves = no pain sensation at the burn site. First-degree burns are painful (nerves intact). Second-degree burns are VERY painful. This is a counterintuitive but critical concept!"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Root word drill**: Write DERM/O, DERMAT/O (Greek) and CUTANE/O (Latin) with example terms for each \u2014 notice they mean the same thing from different origins\n\n2. **Lesion size ladder**: Create a chart: macule \u2192 patch (flat), papule \u2192 nodule (raised), vesicle \u2192 bulla (fluid). Same features, just bigger!\n\n3. **Rule of Nines practice**: If a patient has burns on both legs and the anterior trunk, what percentage? (18 + 18 + 18 = 54%)\n\n4. **Skin cancer trio**: BCC (most common, least dangerous), SCC (second most common), Melanoma (least common, most dangerous) \u2014 remember this hierarchy"
+                                }
+                            ]
+                        },
+                        {
+                            id: 12,
+                            title: "Urinary System Terminology",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "The Body's Filtration System",
+                                    content: "Your kidneys are absolute workhorses \u2014 they filter about **200 liters of blood every single day**, producing roughly 1\u20132 liters of urine. That's like running your entire blood supply through a filter **60+ times daily**.\n\nWhen this system fails, the consequences show up fast in medical records. Urinary terminology is everywhere: lab reports, surgical notes, dialysis records, and ER encounters.\n\nAs a coder, you'll see these terms constantly. Let's break them down.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">URINARY SYSTEM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">The path of urine: Filter \u2192 Transport \u2192 Store \u2192 Exit</text>
+
+                                            <rect x="60" y="160" width="230" height="160" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="175" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="29">KIDNEYS</text>
+                                            <text x="175" y="250" text-anchor="middle" fill="#fff" font-size="25">NEPHR/O (Greek)</text>
+                                            <text x="175" y="280" text-anchor="middle" fill="#fff" font-size="25">REN/O (Latin)</text>
+
+                                            <path d="M290 240 L350 240" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="350,240 335,230 335,250" fill="#14b8a6"/>
+
+                                            <rect x="350" y="160" width="230" height="160" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="465" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="29">URETERS</text>
+                                            <text x="465" y="250" text-anchor="middle" fill="#fff" font-size="25">URETER/O</text>
+                                            <text x="465" y="280" text-anchor="middle" fill="#888" font-size="25">2 tubes to bladder</text>
+
+                                            <path d="M580 240 L640 240" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="640,240 625,230 625,250" fill="#14b8a6"/>
+
+                                            <rect x="640" y="160" width="230" height="160" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="755" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">BLADDER</text>
+                                            <text x="755" y="250" text-anchor="middle" fill="#fff" font-size="25">CYST/O</text>
+                                            <text x="755" y="280" text-anchor="middle" fill="#888" font-size="25">Stores urine</text>
+
+                                            <path d="M870 240 L930 240" stroke="#14b8a6" stroke-width="3"/>
+                                            <polygon points="930,240 915,230 915,250" fill="#14b8a6"/>
+
+                                            <rect x="60" y="370" width="230" height="130" rx="20" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="3"/>
+                                            <text x="175" y="420" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="29">URETHRA</text>
+                                            <text x="175" y="460" text-anchor="middle" fill="#fff" font-size="25">URETHR/O</text>
+
+                                            <rect x="350" y="370" width="230" height="130" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="465" y="420" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="29">RENAL PELVIS</text>
+                                            <text x="465" y="460" text-anchor="middle" fill="#fff" font-size="25">PYEL/O</text>
+
+                                            <rect x="640" y="370" width="230" height="130" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="755" y="420" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="29">GLOMERULUS</text>
+                                            <text x="755" y="460" text-anchor="middle" fill="#fff" font-size="25">GLOMERUL/O</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">UreTER = 2 tubes (to bladder) | UreTHRA = 1 tube (out of body)</text>
+                                        </svg>`,
+                                        caption: "Urinary system anatomy and root words"
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Kidney Conditions",
+                                    content: "**KIDNEY INFLAMMATION & INFECTION:**\n\u2022 **Nephritis** = general kidney inflammation\n\u2022 **Glomerulonephritis** = inflammation of glomeruli (tiny filters) \u2014 leading cause of kidney failure\n\u2022 **Pyelonephritis** = infection of renal pelvis and kidney (PYEL/O + NEPHR/O + ITIS) \u2014 from ascending UTI\n\n**KIDNEY STONES & STRUCTURAL:**\n\u2022 **Nephrolithiasis** = kidney stones (LITH = stone) \u2014 extremely painful\n\u2022 **Hydronephrosis** = kidney swelling from urine backup (HYDR = water)\n\u2022 **Polycystic kidney disease (PKD)** = genetic; fluid-filled cysts throughout kidneys\n\n**KIDNEY FAILURE:**\n\u2022 **Acute renal failure (ARF)** = sudden loss of function, potentially reversible\n\u2022 **Chronic kidney disease (CKD)** = progressive, irreversible loss over months/years\n\u2022 CKD staged 1\u20135 based on **GFR** (Glomerular Filtration Rate)\n\n**Root Note:** NEPHR/O (Greek) appears in disease names. REN/O (Latin) appears in descriptive terms (renal failure, renal artery). Both mean kidney!"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Bladder & Urine Conditions",
+                                    content: "**BLADDER:**\n\u2022 **Cystitis** = bladder inflammation (usually bacterial infection)\n\u2022 **UTI** = urinary tract infection \u2014 most common in the bladder\n\u2022 **Urinary incontinence** = inability to control urination (stress, urge, overflow types)\n\n**URINE ABNORMALITIES (the -URIA suffix family):**\n\u2022 **Hematuria** = blood in urine (HEMAT = blood)\n\u2022 **Proteinuria** = protein in urine \u2014 key sign of kidney damage\n\u2022 **Glycosuria** = glucose in urine \u2014 sign of diabetes\n\u2022 **Dysuria** = painful/difficult urination (DYS = difficult)\n\u2022 **Oliguria** = abnormally low urine output (OLIG = few)\n\u2022 **Anuria** = NO urine output \u2014 medical emergency\n\u2022 **Polyuria** = excessive urine output (POLY = many) \u2014 common in diabetes\n\u2022 **Nocturia** = excessive urination at night (NOCT = night)\n\n**Key Insight:** The suffix **-URIA** means \"urine condition.\" Once you know that, hematuria, dysuria, oliguria, and polyuria practically define themselves!"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A patient is diagnosed with 'pyelonephritis.' Breaking this term apart, what does it mean?",
+                                    options: [
+                                        { text: "Inflammation of the bladder lining", correct: false },
+                                        { text: "Kidney stones blocking the ureter", correct: false },
+                                        { text: "Inflammation/infection of the renal pelvis and kidney", correct: true },
+                                        { text: "Swelling of the kidney due to fluid backup", correct: false }
+                                    ],
+                                    explanation: "PYEL/O = renal pelvis + NEPHR/O = kidney + -ITIS = inflammation. Pyelonephritis is infection/inflammation of the renal pelvis and kidney tissue, typically from bacteria traveling up from the bladder (ascending UTI). Bladder inflammation = cystitis. Kidney swelling from backup = hydronephrosis."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Urinary Procedures & Labs",
+                                    content: "**DIAGNOSTIC:**\n\u2022 **Urinalysis (UA)** = lab test examining urine for color, pH, protein, glucose, blood, bacteria\n\u2022 **Cystoscopy** = scope through urethra to view bladder (-SCOPY = viewing)\n\u2022 **Renal biopsy** = removing kidney tissue for examination\n\n**PROCEDURES:**\n\u2022 **Dialysis** = artificial blood filtration when kidneys fail\n  - **Hemodialysis** = blood filtered through external machine (3x/week)\n  - **Peritoneal dialysis** = fluid in abdomen; peritoneum acts as filter\n\u2022 **Nephrectomy** = surgical removal of kidney (-ECTOMY = removal)\n\u2022 **Lithotripsy** = crushing kidney stones with shock waves (LITH = stone, TRIPSY = crushing)\n\u2022 **Catheterization** = inserting tube into bladder to drain urine\n\n**KEY LAB VALUES:**\n\u2022 **BUN** (Blood Urea Nitrogen) = measures waste; elevated = poor filtration\n\u2022 **Creatinine (Cr)** = muscle waste; elevated = kidney dysfunction\n\u2022 **GFR** (Glomerular Filtration Rate) = gold standard for kidney function; <60 = kidney disease\n\n**Coding Note:** Dialysis is one of the highest-volume procedures in medical coding."
+                                },
+                                {
+                                    type: "example",
+                                    title: "Urinary Clinical Note Decoded",
+                                    content: "**Clinical Note:**\n\"68 y/o M with CKD Stage 3 presents with worsening oliguria and peripheral edema. History of nephrolithiasis treated with lithotripsy in 2023. Labs: BUN 42 (normal 7\u201320), Cr 3.8 (normal 0.7\u20131.3), GFR 28 (normal >60). UA shows proteinuria and hematuria. Renal US reveals bilateral hydronephrosis. If renal function declines, hemodialysis access planning will be initiated.\"\n\n**Breaking it down:**\n\u2022 **CKD Stage 3** = Chronic Kidney Disease, moderate loss of function\n\u2022 **Oliguria** = decreased urine output \u2014 kidneys struggling\n\u2022 **Nephrolithiasis** = history of kidney stones\n\u2022 **Lithotripsy** = previous stone-crushing procedure\n\u2022 **BUN 42** = elevated \u2014 kidneys not filtering waste well\n\u2022 **Cr 3.8** = very elevated \u2014 poor kidney function\n\u2022 **GFR 28** = significantly reduced (Stage 4 approaching)\n\u2022 **Proteinuria & Hematuria** = protein and blood in urine \u2014 kidney damage\n\u2022 **Bilateral hydronephrosis** = both kidneys swollen from urine backup\n\u2022 **Hemodialysis** = blood filtration by machine if kidneys fail"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A patient undergoes 'lithotripsy.' What procedure was performed?",
+                                    options: [
+                                        { text: "Removal of the kidney", correct: false },
+                                        { text: "Insertion of a catheter into the bladder", correct: false },
+                                        { text: "Crushing kidney stones using shock waves", correct: true },
+                                        { text: "Visual examination of the inside of the bladder", correct: false }
+                                    ],
+                                    explanation: "LITH/O = stone + -TRIPSY = crushing/breaking. Lithotripsy (ESWL \u2014 extracorporeal shock wave lithotripsy) uses shock waves to break kidney stones into smaller fragments that can pass naturally. Kidney removal = nephrectomy. Catheter insertion = catheterization. Bladder viewing = cystoscopy."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Master the -URIA suffix**: List all -uria terms (hematuria, proteinuria, dysuria, oliguria, anuria, polyuria, glycosuria, nocturia) and quiz yourself on each prefix\n\n2. **URETER vs URETHRA**: UreTER has 2 syllables and there are 2 of them (to bladder). UreTHRA has 3 syllables and there is 1 (out of body)\n\n3. **Know your kidney labs**: BUN, Creatinine, and GFR are the big three \u2014 memorize normal values and what abnormals mean\n\n4. **Dialysis distinction**: Hemodialysis = external machine filters blood. Peritoneal = patient's own abdominal membrane filters \u2014 very different coding"
+                                }
+                            ]
+                        },
+                        {
+                            id: 13,
+                            title: "Reproductive Systems & Obstetrics",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "Reproductive & OB/GYN Terminology",
+                                    content: "Reproductive system terminology is essential for HIM professionals. **OB/GYN** is one of the highest-volume coding specialties \u2014 from routine prenatal visits to complex surgical procedures like hysterectomies and cesarean sections.\n\nThis lesson covers both **female** and **male** reproductive roots, conditions, obstetric terminology, and the procedures you'll see most often in clinical documentation.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">REPRODUCTIVE SYSTEMS</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Female, Male, and Obstetric Terminology</text>
+
+                                            <rect x="60" y="160" width="480" height="350" rx="20" fill="rgba(236,72,153,0.15)" stroke="#ec4899" stroke-width="3"/>
+                                            <text x="300" y="210" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="31">FEMALE ROOTS</text>
+                                            <text x="300" y="260" text-anchor="middle" fill="#fff" font-size="26">GYNEC/O = woman</text>
+                                            <text x="300" y="300" text-anchor="middle" fill="#fff" font-size="26">UTER/O, HYSTER/O = uterus</text>
+                                            <text x="300" y="340" text-anchor="middle" fill="#fff" font-size="26">OOPHOR/O = ovary</text>
+                                            <text x="300" y="380" text-anchor="middle" fill="#fff" font-size="26">SALPING/O = fallopian tube</text>
+                                            <text x="300" y="420" text-anchor="middle" fill="#fff" font-size="26">COLP/O, VAGIN/O = vagina</text>
+                                            <text x="300" y="460" text-anchor="middle" fill="#fff" font-size="26">MAMM/O, MAST/O = breast</text>
+
+                                            <rect x="560" y="160" width="480" height="350" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="800" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">MALE ROOTS</text>
+                                            <text x="800" y="260" text-anchor="middle" fill="#fff" font-size="26">ORCH/O, ORCHID/O = testis</text>
+                                            <text x="800" y="300" text-anchor="middle" fill="#fff" font-size="26">PROSTAT/O = prostate</text>
+                                            <text x="800" y="340" text-anchor="middle" fill="#fff" font-size="26">VAS/O = vas deferens</text>
+                                            <text x="800" y="380" text-anchor="middle" fill="#fff" font-size="26">SEMIN/O = semen</text>
+                                            <text x="800" y="420" text-anchor="middle" fill="#fff" font-size="26">BALAN/O = glans penis</text>
+                                            <text x="800" y="460" text-anchor="middle" fill="#888" font-size="26">ANDR/O = male</text>
+
+                                            <rect x="200" y="560" width="700" height="150" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="550" y="610" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">OBSTETRIC ROOTS</text>
+                                            <text x="550" y="660" text-anchor="middle" fill="#fff" font-size="26">GRAVIDA = pregnancies | PARA = births</text>
+                                            <text x="550" y="695" text-anchor="middle" fill="#888" font-size="25">NAT/O = birth | LACT/O = milk | AMNI/O = amnion</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">OB/GYN = one of the highest-volume coding specialties</text>
+                                        </svg>`,
+                                        caption: "Key reproductive and obstetric root words"
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Female Reproductive Conditions",
+                                    content: "**UTERINE CONDITIONS:**\n\u2022 **Endometriosis** = endometrial tissue grows OUTSIDE the uterus\n\u2022 **Leiomyoma/Fibroid** = benign uterine muscle tumor\n\u2022 **Cervical dysplasia** = abnormal cervical cells (precancerous)\n\u2022 **PID** = Pelvic Inflammatory Disease (infection of reproductive organs)\n\n**OVARIAN & TUBAL:**\n\u2022 **Ovarian cyst** = fluid-filled sac on ovary\n\u2022 **PCOS** = Polycystic Ovary Syndrome\n\u2022 **Salpingitis** = fallopian tube inflammation\n\n**MENSTRUAL DISORDERS:**\n\u2022 **Menorrhagia** = heavy/excessive menstrual bleeding (MEN/O = menstruation, -RRHAGIA = excessive flow)\n\u2022 **Amenorrhea** = absence of menstruation (A- = without)\n\u2022 **Dysmenorrhea** = painful menstruation (DYS- = painful)\n\u2022 **Metrorrhagia** = irregular uterine bleeding between periods\n\n**BREAST:**\n\u2022 **Mastitis** = breast inflammation\n\u2022 **Mammography** = breast imaging (-GRAPHY = recording process)\n\u2022 **Breast carcinoma** = breast cancer \u2014 one of the most commonly coded malignancies"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Male Reproductive Conditions",
+                                    content: "**PROSTATE:**\n\u2022 **BPH** = Benign Prostatic Hyperplasia (enlarged prostate) \u2014 extremely common in older men\n\u2022 **Prostatitis** = prostate inflammation\n\u2022 **Prostate cancer** = one of the most common male cancers\n\u2022 **PSA** = Prostate-Specific Antigen (screening blood test)\n\n**TESTICULAR:**\n\u2022 **Cryptorchidism** = undescended testis (CRYPT = hidden + ORCH = testis)\n\u2022 **Orchitis** = testicular inflammation\n\u2022 **Varicocele** = varicose veins in the scrotum\n\u2022 **Testicular torsion** = twisted spermatic cord \u2014 surgical emergency!\n\n**OTHER:**\n\u2022 **Erectile dysfunction (ED)** = inability to maintain erection\n\u2022 **Epididymitis** = inflammation of the epididymis\n\u2022 **Phimosis** = tight foreskin that can't retract\n\n**Coding Note:** BPH (N40.x) is one of the most frequently coded diagnoses in urology."
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What does the term 'OOPHORECTOMY' mean?",
+                                    options: [
+                                        { text: "Removal of the uterus", correct: false },
+                                        { text: "Removal of an ovary", correct: true },
+                                        { text: "Removal of a fallopian tube", correct: false },
+                                        { text: "Incision into the cervix", correct: false }
+                                    ],
+                                    explanation: "OOPHOR/O = ovary + -ECTOMY = surgical removal. Oophorectomy is the removal of an ovary. Uterus removal = hysterectomy (HYSTER/O). Fallopian tube removal = salpingectomy (SALPING/O). Cervix incision would be cervicotomy (CERVIC/O + -OTOMY)."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Obstetric Terminology",
+                                    content: "**THE GRAVIDA/PARA SYSTEM:**\n\u2022 **Gravida (G)** = number of pregnancies\n\u2022 **Para (P)** = number of births after 20 weeks\n\u2022 **G3P2** = 3 pregnancies, 2 births (delivered twice)\n\u2022 **Nulligravida** = never pregnant | **Primigravida** = first pregnancy\n\u2022 **Nullipara** = never delivered | **Multipara** = delivered 2+ times\n\n**PREGNANCY TERMS:**\n\u2022 **Prenatal/Antepartum** = before birth\n\u2022 **Perinatal** = around the time of birth\n\u2022 **Postnatal/Postpartum** = after birth\n\u2022 **Trimester** = 3-month pregnancy periods (1st, 2nd, 3rd)\n\u2022 **Amniocentesis** = sampling amniotic fluid for testing (AMNI/O + -CENTESIS = puncture)\n\n**PREGNANCY COMPLICATIONS:**\n\u2022 **Ectopic pregnancy** = embryo implants OUTSIDE uterus (usually fallopian tube)\n\u2022 **Preeclampsia** = high BP + proteinuria during pregnancy\n\u2022 **Placenta previa** = placenta covers the cervical opening\n\u2022 **Gestational diabetes** = diabetes developing during pregnancy\n\u2022 **Miscarriage/Spontaneous abortion** = pregnancy loss before 20 weeks"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A patient's OB history is documented as 'G4P2.' What does this mean?",
+                                    options: [
+                                        { text: "4 births, 2 pregnancies", correct: false },
+                                        { text: "4 pregnancies, 2 births (deliveries)", correct: true },
+                                        { text: "4 weeks pregnant, 2nd trimester", correct: false },
+                                        { text: "4th prenatal visit, 2 complications", correct: false }
+                                    ],
+                                    explanation: "G = Gravida = number of PREGNANCIES. P = Para = number of BIRTHS (deliveries after 20 weeks). G4P2 means the patient has been pregnant 4 times and delivered 2 times. The other 2 pregnancies could have ended in miscarriage, ectopic, or current ongoing pregnancy."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Reproductive Procedures",
+                                    content: "**FEMALE PROCEDURES:**\n\u2022 **Hysterectomy** = uterus removal (HYSTER/O = uterus)\n  - Total = uterus + cervix | Radical = + surrounding tissue\n\u2022 **Oophorectomy** = ovary removal\n\u2022 **Salpingectomy** = fallopian tube removal\n\u2022 **Colposcopy** = magnified viewing of cervix (COLP/O = vagina)\n\u2022 **D&C** = Dilation and Curettage (dilating cervix, scraping uterine lining)\n\u2022 **Mammography** = breast imaging screening\n\u2022 **Tubal ligation** = female sterilization (\"tying tubes\")\n\u2022 **Cesarean section (C-section)** = surgical delivery through abdomen\n\u2022 **Episiotomy** = incision of perineum during delivery\n\n**MALE PROCEDURES:**\n\u2022 **Vasectomy** = cutting vas deferens (male sterilization)\n\u2022 **TURP** = Transurethral Resection of Prostate (for BPH)\n\u2022 **Orchiectomy** = testis removal\n\u2022 **Circumcision** = removal of foreskin\n\u2022 **Prostatectomy** = prostate removal (for cancer)"
+                                },
+                                {
+                                    type: "example",
+                                    title: "OB/GYN Documentation Decoded",
+                                    content: "**Clinical Note:**\n\"28 y/o G2P1 at 38 weeks gestation presents with regular contractions. PMH: prior C-section for breech presentation. Current pregnancy complicated by gestational diabetes managed with diet. Ultrasound shows cephalic presentation, adequate amniotic fluid. Plan: trial of labor after cesarean (TOLAC). If unsuccessful, repeat cesarean delivery.\"\n\n**Breaking it down:**\n\u2022 **G2P1** = 2nd pregnancy, 1 prior delivery\n\u2022 **38 weeks gestation** = near full term (40 weeks)\n\u2022 **C-section** = cesarean delivery (surgical)\n\u2022 **Breech presentation** = baby was feet/buttocks first (not head)\n\u2022 **Gestational diabetes** = diabetes during pregnancy\n\u2022 **Cephalic presentation** = head-first (CEPHAL/O = head) \u2014 normal\n\u2022 **Amniotic fluid** = fluid surrounding the baby (AMNI/O)\n\u2022 **TOLAC** = Trial of Labor After Cesarean \u2014 attempting vaginal delivery after prior C-section\n\n**Coding Connection:** Prior C-section delivery and current delivery method (vaginal vs repeat C-section) have different ICD-10 and CPT codes."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Female root pairs**: Many organs have TWO roots \u2014 UTER/O and HYSTER/O (uterus), COLP/O and VAGIN/O (vagina), MAMM/O and MAST/O (breast). Make flashcards for both\n\n2. **Gravida/Para practice**: Decode these: G1P0 (first pregnancy, no deliveries yet), G5P3 (5 pregnancies, 3 deliveries), G2P2 (2 pregnancies, 2 deliveries)\n\n3. **Menstrual prefix drill**: A- (without) = amenorrhea, DYS- (painful) = dysmenorrhea, MENO- (excessive) = menorrhagia\n\n4. **Procedure suffix review**: Apply -ECTOMY to reproductive roots: hysterectomy, oophorectomy, salpingectomy, orchiectomy, mastectomy, prostatectomy"
+                                }
+                            ]
+                        },
+                        {
+                            id: 14,
+                            title: "Endocrine System Terminology",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "The Chemical Messenger System",
+                                    content: "Hormones are your body's **chemical messengers** \u2014 they travel through the bloodstream telling organs what to do and when to do it. The **endocrine system** is a network of glands that produce these hormones.\n\nFor HIM professionals, endocrine terminology matters because **diabetes mellitus** alone is one of the **top 5 most coded diagnoses** in healthcare. Add thyroid disorders, adrenal conditions, and hormonal imbalances, and you'll see endocrine terms in a huge percentage of patient records.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">ENDOCRINE SYSTEM</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Glands and their hormone functions</text>
+
+                                            <rect x="60" y="160" width="480" height="130" rx="20" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+                                            <text x="300" y="210" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="29">PITUITARY</text>
+                                            <text x="300" y="250" text-anchor="middle" fill="#fff" font-size="25">"Master gland" \u2014 controls other glands</text>
+
+                                            <rect x="560" y="160" width="480" height="130" rx="20" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="3"/>
+                                            <text x="800" y="210" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="29">PINEAL</text>
+                                            <text x="800" y="250" text-anchor="middle" fill="#fff" font-size="25">Melatonin \u2014 sleep/wake cycles</text>
+
+                                            <rect x="60" y="320" width="480" height="130" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="300" y="370" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="29">THYROID (THYR/O)</text>
+                                            <text x="300" y="410" text-anchor="middle" fill="#fff" font-size="25">Metabolism, T3/T4 hormones</text>
+
+                                            <rect x="560" y="320" width="480" height="130" rx="20" fill="rgba(20,184,166,0.2)" stroke="#14b8a6" stroke-width="3"/>
+                                            <text x="800" y="370" text-anchor="middle" fill="#14b8a6" font-weight="bold" font-size="29">PARATHYROID</text>
+                                            <text x="800" y="410" text-anchor="middle" fill="#fff" font-size="25">Calcium regulation (PTH)</text>
+
+                                            <rect x="60" y="480" width="480" height="130" rx="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+                                            <text x="300" y="530" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="29">ADRENAL (ADREN/O)</text>
+                                            <text x="300" y="570" text-anchor="middle" fill="#fff" font-size="25">Cortisol, aldosterone, epinephrine</text>
+
+                                            <rect x="560" y="480" width="480" height="130" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="800" y="530" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">PANCREAS (PANCREAT/O)</text>
+                                            <text x="800" y="570" text-anchor="middle" fill="#fff" font-size="25">Insulin and glucagon</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">ADEN/O = gland | Endocrine glands secrete hormones into blood</text>
+                                        </svg>`,
+                                        caption: "Major endocrine glands and their functions"
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Endocrine Root Words",
+                                    content: "**GENERAL:**\n\u2022 **ADEN/O** = gland \u2192 Adenoma, Adenopathy\n\u2022 **ENDOCRIN/O** = endocrine \u2192 Endocrinology\n\n**SPECIFIC GLANDS:**\n\u2022 **THYR/O, THYROID/O** = thyroid gland \u2192 Thyroidectomy, Thyroiditis\n\u2022 **PARATHYROID/O** = parathyroid glands \u2192 Hyperparathyroidism\n\u2022 **ADREN/O, ADRENAL/O** = adrenal glands \u2192 Adrenalectomy\n\u2022 **PANCREAT/O** = pancreas \u2192 Pancreatitis\n\u2022 **PITUITAR/O** = pituitary gland \u2192 Hypopituitarism\n\u2022 **PINEAL/O** = pineal gland\n\u2022 **THYM/O** = thymus gland\n\u2022 **GONAD/O** = sex glands (ovaries/testes)\n\n**HORMONE-RELATED:**\n\u2022 **GLYC/O, GLUC/O** = sugar/glucose \u2192 Hyperglycemia, Glucometer\n\u2022 **CALC/O** = calcium \u2192 Hypocalcemia\n\u2022 **INSULIN/O** = insulin\n\u2022 **CORTIC/O** = cortex (outer layer) \u2192 Corticosteroid"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Thyroid Disorders",
+                                    content: "The thyroid controls **metabolism** \u2014 how fast or slow your body's systems run.\n\n**HYPERTHYROIDISM (too much thyroid hormone):**\n\u2022 **Graves' disease** = autoimmune; most common cause\n\u2022 Symptoms: rapid heart, weight loss, anxiety, heat intolerance\n\u2022 **Thyroid storm** = life-threatening hyperthyroid crisis\n\u2022 **Exophthalmos** = protruding eyeballs (Graves' sign)\n\n**HYPOTHYROIDISM (too little thyroid hormone):**\n\u2022 **Hashimoto's thyroiditis** = autoimmune; most common cause\n\u2022 Symptoms: slow heart, weight gain, fatigue, cold intolerance\n\u2022 **Myxedema** = severe hypothyroidism\n\n**OTHER THYROID CONDITIONS:**\n\u2022 **Goiter** = enlarged thyroid gland\n\u2022 **Thyroid nodules** = lumps in the thyroid (may be benign or malignant)\n\u2022 **Thyroidectomy** = surgical removal of thyroid\n\n**PARATHYROID:**\n\u2022 **Hyperparathyroidism** = excess PTH \u2192 high calcium (bones weaken)\n\u2022 **Hypoparathyroidism** = deficient PTH \u2192 low calcium (muscle spasms)\n\n**Remember:** HYPER = too much, HYPO = too little. Same root, opposite prefixes!"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A patient with Graves' disease would have which condition?",
+                                    options: [
+                                        { text: "Hypothyroidism \u2014 too little thyroid hormone", correct: false },
+                                        { text: "Hyperthyroidism \u2014 too much thyroid hormone", correct: true },
+                                        { text: "Hyperparathyroidism \u2014 too much parathyroid hormone", correct: false },
+                                        { text: "Hypoadrenalism \u2014 adrenal insufficiency", correct: false }
+                                    ],
+                                    explanation: "Graves' disease is the most common cause of HYPERthyroidism \u2014 an autoimmune condition where antibodies stimulate the thyroid to overproduce hormones. Symptoms include rapid heart rate, weight loss, anxiety, and exophthalmos (bulging eyes). The opposite, HYPOthyroidism, is most commonly caused by Hashimoto's thyroiditis."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Diabetes Mellitus",
+                                    content: "Diabetes is one of the **TOP 5 most coded diagnoses** in healthcare. Every HIM professional must master this terminology.\n\n**TYPE 1 DIABETES (DM1):**\n\u2022 **Autoimmune** \u2014 body destroys insulin-producing cells\n\u2022 Usually diagnosed in childhood/young adulthood\n\u2022 Must take insulin to survive\n\u2022 ICD-10: E10.x codes\n\n**TYPE 2 DIABETES (DM2):**\n\u2022 **Insulin resistance** \u2014 body doesn't use insulin effectively\n\u2022 Most common type (~90% of cases)\n\u2022 Associated with obesity, lifestyle factors\n\u2022 ICD-10: E11.x codes\n\n**KEY DIABETES TERMS:**\n\u2022 **Hyperglycemia** = high blood sugar (HYPER + GLYC/O + EMIA)\n\u2022 **Hypoglycemia** = low blood sugar (dangerous!)\n\u2022 **DKA** = Diabetic Ketoacidosis \u2014 life-threatening complication of DM1\n\u2022 **HbA1c** = Hemoglobin A1c \u2014 3-month average blood sugar (goal: <7%)\n\u2022 **Glucose** = blood sugar measured in mg/dL\n\u2022 **Insulin** = hormone that lowers blood sugar\n\u2022 **Glucagon** = hormone that raises blood sugar\n\n**Coding Complexity:** Diabetes codes require TYPE + COMPLICATION (retinopathy, nephropathy, neuropathy, etc.)"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Adrenal & Pituitary Disorders",
+                                    content: "**ADRENAL GLANDS (sit on top of kidneys):**\n\u2022 **Cushing syndrome** = EXCESS cortisol\n  - Moon face, buffalo hump, weight gain, thin skin\n  - Often from prolonged steroid use\n\u2022 **Addison disease** = adrenal INSUFFICIENCY\n  - Fatigue, weight loss, low BP, skin darkening\n  - JFK had Addison disease!\n\u2022 **Pheochromocytoma** = adrenal tumor producing excess epinephrine\n  - Causes severe hypertension, rapid heart rate\n\n**PITUITARY GLAND (\"master gland\" in brain):**\n\u2022 **Acromegaly** = excess growth hormone in ADULTS\n  - Enlarged hands, feet, jaw\n\u2022 **Gigantism** = excess growth hormone in CHILDREN\n\u2022 **Dwarfism/Growth hormone deficiency** = insufficient GH\n\u2022 **SIADH** = Syndrome of Inappropriate ADH \u2192 fluid retention\n\u2022 **Diabetes insipidus** = insufficient ADH \u2192 excessive dilute urine\n  - NOT the same as diabetes mellitus (different mechanism entirely!)\n\n**Important Distinction:** Diabetes MELLITUS = sugar problem (pancreas). Diabetes INSIPIDUS = water problem (pituitary). Same word 'diabetes' but completely different diseases!"
+                                },
+                                {
+                                    type: "example",
+                                    title: "Endocrine Documentation Decoded",
+                                    content: "**Clinical Note:**\n\"52 y/o F with poorly controlled DM2 presents for follow-up. HbA1c 9.2% (goal <7%). Fasting glucose 210 mg/dL. Patient reports polyuria, polydipsia, and blurred vision. Fundoscopic exam reveals non-proliferative diabetic retinopathy. Cr 1.8 with microalbuminuria suggesting early diabetic nephropathy. Current meds: Metformin 1000mg PO BID, Glipizide 10mg PO daily. Plan: Add insulin glargine 10 units SQ QHS.\"\n\n**Breaking it down:**\n\u2022 **DM2** = Type 2 Diabetes Mellitus\n\u2022 **HbA1c 9.2%** = 3-month blood sugar average (very high)\n\u2022 **Fasting glucose 210** = high (normal: 70-100)\n\u2022 **Polyuria** = excessive urination (POLY = many)\n\u2022 **Polydipsia** = excessive thirst (DIPSIA = thirst)\n\u2022 **Diabetic retinopathy** = diabetes damaging the retina (RETIN/O + -PATHY)\n\u2022 **Microalbuminuria** = small amounts of protein in urine (early kidney damage)\n\u2022 **Diabetic nephropathy** = diabetes damaging the kidneys (NEPHR/O + -PATHY)\n\u2022 **Metformin PO BID** = oral diabetes med, twice daily\n\u2022 **Insulin glargine SQ QHS** = long-acting insulin, subcutaneous injection at bedtime\n\n**Coding:** This patient has DM2 with retinopathy AND nephropathy \u2014 each complication gets its own code!"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What is the difference between diabetes MELLITUS and diabetes INSIPIDUS?",
+                                    options: [
+                                        { text: "They are the same disease with different names", correct: false },
+                                        { text: "Mellitus is Type 1, Insipidus is Type 2", correct: false },
+                                        { text: "Mellitus = sugar/insulin problem (pancreas); Insipidus = water/ADH problem (pituitary)", correct: true },
+                                        { text: "Mellitus affects adults, Insipidus affects children", correct: false }
+                                    ],
+                                    explanation: "Despite sharing the name 'diabetes' (meaning 'to pass through'), these are completely different diseases. Diabetes MELLITUS = 'honey-sweet' (glucose in urine) \u2014 a pancreas/insulin problem. Diabetes INSIPIDUS = 'tasteless' (dilute urine) \u2014 a pituitary/ADH problem causing excessive water loss. Different organs, different mechanisms, different codes!"
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Diabetes coding practice**: DM1 = E10.x, DM2 = E11.x \u2014 learn that complications (retinopathy, nephropathy, neuropathy) are coded as part of the diabetes code\n\n2. **Thyroid prefix drill**: HYPER-thyroidism (Graves') vs HYPO-thyroidism (Hashimoto's) \u2014 opposite prefixes, opposite symptoms\n\n3. **Cushing vs Addison**: Cushing = EXCESS cortisol (moon face, weight gain). Addison = DEFICIENT cortisol (weight loss, fatigue). Think: Cushing's Cushion (excess) vs Addison's Away (deficient)\n\n4. **The diabetes trio**: Learn that diabetic patients commonly develop retinopathy (eyes), nephropathy (kidneys), and neuropathy (nerves) \u2014 these complications drive most diabetes coding complexity"
+                                }
+                            ]
+                        },
+                        {
+                            id: 15,
+                            title: "Blood, Lymphatic & Immune Systems",
+                            duration: 8,
+                            completed: false,
+                            cards: [
+                                {
+                                    type: "intro",
+                                    title: "Blood, Defense & Immunity",
+                                    content: "Blood is the **river of life** \u2014 it carries oxygen, nutrients, hormones, and immune cells to every corner of your body. The lymphatic system is your body's **drainage and defense network**, and the immune system is your **army against invaders**.\n\nThese three systems are deeply interconnected. For HIM professionals, blood disorders (anemias, leukemias), lymphatic cancers (lymphomas), and immune conditions (HIV, autoimmune diseases) are major coding categories.\n\nLet's master the terminology that ties them all together.",
+                                    visual: {
+                                        type: "diagram",
+                                        svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+                                            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+                                            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">BLOOD, LYMPHATIC & IMMUNE</text>
+                                            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Three interconnected defense systems</text>
+
+                                            <rect x="60" y="160" width="300" height="350" rx="20" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+                                            <text x="210" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">BLOOD</text>
+                                            <text x="210" y="260" text-anchor="middle" fill="#fff" font-size="25">HEM/O, HEMAT/O</text>
+                                            <text x="210" y="300" text-anchor="middle" fill="#888" font-size="25">ERYTHR/O = red</text>
+                                            <text x="210" y="335" text-anchor="middle" fill="#888" font-size="25">LEUK/O = white</text>
+                                            <text x="210" y="370" text-anchor="middle" fill="#888" font-size="25">THROMB/O = clot</text>
+                                            <text x="210" y="405" text-anchor="middle" fill="#888" font-size="25">PLASM/O = plasma</text>
+                                            <text x="210" y="460" text-anchor="middle" fill="#ef4444" font-size="25">Transport &amp; clotting</text>
+
+                                            <rect x="400" y="160" width="300" height="350" rx="20" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+                                            <text x="550" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">LYMPHATIC</text>
+                                            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="25">LYMPH/O</text>
+                                            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="25">SPLEN/O = spleen</text>
+                                            <text x="550" y="335" text-anchor="middle" fill="#888" font-size="25">THYM/O = thymus</text>
+                                            <text x="550" y="370" text-anchor="middle" fill="#888" font-size="25">TONSILL/O = tonsils</text>
+                                            <text x="550" y="405" text-anchor="middle" fill="#888" font-size="25">LYMPHADEN/O = nodes</text>
+                                            <text x="550" y="460" text-anchor="middle" fill="#10b981" font-size="25">Drainage &amp; filtering</text>
+
+                                            <rect x="740" y="160" width="300" height="350" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+                                            <text x="890" y="210" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">IMMUNE</text>
+                                            <text x="890" y="260" text-anchor="middle" fill="#fff" font-size="25">IMMUN/O</text>
+                                            <text x="890" y="300" text-anchor="middle" fill="#888" font-size="25">Antibodies</text>
+                                            <text x="890" y="335" text-anchor="middle" fill="#888" font-size="25">T-cells &amp; B-cells</text>
+                                            <text x="890" y="370" text-anchor="middle" fill="#888" font-size="25">Autoimmune diseases</text>
+                                            <text x="890" y="405" text-anchor="middle" fill="#888" font-size="25">Immunodeficiency</text>
+                                            <text x="890" y="460" text-anchor="middle" fill="#3b82f6" font-size="25">Defense &amp; attack</text>
+
+                                            <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
+                                            <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">Blood transports | Lymph drains &amp; filters | Immune defends</text>
+                                        </svg>`,
+                                        caption: "Three interconnected systems and their root words"
+                                    }
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Blood Components & Roots",
+                                    content: "**BLOOD ROOTS:**\n\u2022 **HEM/O, HEMAT/O** = blood \u2192 Hemorrhage, Hematology, Hematoma\n\n**THREE TYPES OF BLOOD CELLS:**\n\n**1. Red Blood Cells (RBCs) = Erythrocytes**\n\u2022 **ERYTHR/O** = red \u2192 Erythrocyte, Erythropoietin\n\u2022 Carry oxygen using **hemoglobin** (HGB)\n\u2022 Measured by **Hematocrit (HCT)** = % of blood that is RBCs\n\n**2. White Blood Cells (WBCs) = Leukocytes**\n\u2022 **LEUK/O** = white \u2192 Leukocyte, Leukemia, Leukocytosis\n\u2022 Fight infection \u2014 5 types:\n  - **Neutrophils** (most common, first responders)\n  - **Lymphocytes** (T-cells and B-cells)\n  - **Monocytes** (become macrophages)\n  - **Eosinophils** (allergies, parasites)\n  - **Basophils** (allergic reactions, histamine)\n\n**3. Platelets = Thrombocytes**\n\u2022 **THROMB/O** = clot \u2192 Thrombocyte, Thrombosis, Thrombocytopenia\n\u2022 Essential for blood clotting\n\n**PLASMA:**\n\u2022 **PLASM/O** = plasma (liquid portion of blood, ~55%)"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Blood Conditions",
+                                    content: "**ANEMIAS (decreased RBCs or hemoglobin):**\n\u2022 **Iron deficiency anemia** = most common type worldwide\n\u2022 **Sickle cell anemia** = genetic; abnormally shaped RBCs\n\u2022 **Pernicious anemia** = B12 deficiency\n\u2022 **Aplastic anemia** = bone marrow failure\n\n**BLOOD CANCERS:**\n\u2022 **Leukemia** (LEUK = white + EMIA = blood condition) = cancer of blood-forming cells\n  - **ALL** = Acute Lymphoblastic Leukemia (children)\n  - **AML** = Acute Myeloid Leukemia (adults)\n  - **CLL** = Chronic Lymphocytic Leukemia\n  - **CML** = Chronic Myeloid Leukemia\n\n**CLOTTING DISORDERS:**\n\u2022 **Hemophilia** = genetic bleeding disorder (blood doesn't clot properly)\n\u2022 **Thrombocytopenia** = low platelet count (risk of bleeding)\n\u2022 **DVT** = Deep Vein Thrombosis (blood clot in deep vein, usually leg)\n\u2022 **PE** = Pulmonary Embolism (clot travels to lung \u2014 life-threatening!)\n\u2022 **DIC** = Disseminated Intravascular Coagulation (widespread abnormal clotting)\n\u2022 **Polycythemia** = too many RBCs (POLY = many + CYTE = cell)"
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "A patient has 'THROMBOCYTOPENIA.' Breaking this term apart, what does it mean?",
+                                    options: [
+                                        { text: "Excessive blood clotting", correct: false },
+                                        { text: "Low platelet count", correct: true },
+                                        { text: "White blood cell cancer", correct: false },
+                                        { text: "Red blood cell deficiency", correct: false }
+                                    ],
+                                    explanation: "THROMB/O = clot, CYT/O = cell, -PENIA = deficiency/decrease. Thrombocytes = platelets (clotting cells). Thrombocytopenia = deficiency of platelets = low platelet count. This puts the patient at risk for bleeding. Excessive clotting = thrombosis. WBC cancer = leukemia. RBC deficiency = anemia."
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Lymphatic & Immune System",
+                                    content: "**LYMPHATIC SYSTEM:**\n\u2022 **LYMPH/O** = lymph \u2192 Lymphedema, Lymphocyte\n\u2022 **LYMPHADEN/O** = lymph node \u2192 Lymphadenopathy (swollen nodes), Lymphadenitis\n\u2022 **SPLEN/O** = spleen \u2192 Splenomegaly (enlarged), Splenectomy\n\u2022 **THYM/O** = thymus \u2192 Thymectomy, Thymoma\n\n**LYMPHATIC CONDITIONS:**\n\u2022 **Lymphedema** = fluid buildup from blocked lymph drainage\n\u2022 **Lymphoma** = lymphatic cancer (two major types):\n  - **Hodgkin lymphoma** = has Reed-Sternberg cells\n  - **Non-Hodgkin lymphoma** = more common, many subtypes\n\n**IMMUNE SYSTEM:**\n\u2022 **IMMUN/O** = immune \u2192 Immunology, Immunosuppression\n\n**AUTOIMMUNE DISEASES (body attacks itself):**\n\u2022 **Lupus/SLE** = Systemic Lupus Erythematosus\n\u2022 **Rheumatoid arthritis** = autoimmune joint inflammation\n\u2022 **Multiple sclerosis (MS)** = attacks nerve coverings\n\u2022 **Type 1 diabetes** = destroys insulin-producing cells\n\n**IMMUNODEFICIENCY:**\n\u2022 **HIV/AIDS** = Human Immunodeficiency Virus / Acquired Immunodeficiency Syndrome\n\u2022 **Anaphylaxis** = severe, life-threatening allergic reaction"
+                                },
+                                {
+                                    type: "concept",
+                                    title: "Blood Labs & Procedures",
+                                    content: "**CBC (Complete Blood Count) \u2014 most ordered lab test:**\n\u2022 **RBC count** = red blood cell count\n\u2022 **WBC count** = white blood cell count (elevated = infection)\n\u2022 **HGB** = Hemoglobin (oxygen-carrying protein)\n\u2022 **HCT** = Hematocrit (% of blood that is RBCs)\n\u2022 **Platelet count** = clotting cells\n\u2022 **WBC differential** = breakdown of the 5 WBC types\n\n**OTHER IMPORTANT LABS:**\n\u2022 **PT/INR** = Prothrombin Time / International Normalized Ratio (clotting speed)\n\u2022 **ESR** = Erythrocyte Sedimentation Rate (inflammation marker)\n\u2022 **Blood type** = ABO system (A, B, AB, O) + Rh factor (+ or -)\n\n**PROCEDURES:**\n\u2022 **Transfusion** = giving blood products to a patient\n\u2022 **Phlebotomy** = drawing blood (PHLEB/O = vein + -OTOMY = incision)\n\u2022 **Bone marrow biopsy** = sampling marrow for cancer diagnosis\n\u2022 **Lymph node biopsy** = sampling node tissue\n\u2022 **Splenectomy** = spleen removal\n\n**Coding Note:** CBC results help coders determine anemia type, infection, and bleeding risk."
+                                },
+                                {
+                                    type: "example",
+                                    title: "Hematology Documentation Decoded",
+                                    content: "**Clinical Note:**\n\"45 y/o M presents with fatigue, pallor, and petechiae. CBC: WBC 52,000 (normal 4,500-11,000), RBC 3.1 (low), HGB 9.2 (low), HCT 28% (low), Platelets 45,000 (low). Peripheral smear shows blast cells. Bone marrow biopsy performed. Dx: Acute Myeloid Leukemia (AML). Plan: Induction chemotherapy.\"\n\n**Breaking it down:**\n\u2022 **Pallor** = paleness (from low RBCs/hemoglobin)\n\u2022 **Petechiae** = tiny red/purple spots from bleeding under skin (low platelets)\n\u2022 **WBC 52,000** = markedly elevated (LEUK/O + CYTOSIS = too many white cells)\n\u2022 **RBC 3.1, HGB 9.2, HCT 28%** = all low = anemia\n\u2022 **Platelets 45,000** = thrombocytopenia (low platelets = bleeding risk)\n\u2022 **Blast cells** = immature, abnormal cells \u2014 hallmark of leukemia\n\u2022 **Bone marrow biopsy** = confirms the diagnosis\n\u2022 **AML** = Acute Myeloid Leukemia \u2014 cancer of myeloid blood cells\n\u2022 **Induction chemotherapy** = first round of aggressive chemo treatment\n\n**Coding:** AML codes are in the C92.x range. The anemia and thrombocytopenia may be coded separately if they require clinical attention."
+                                },
+                                {
+                                    type: "quiz",
+                                    question: "What does 'LYMPHADENOPATHY' mean?",
+                                    options: [
+                                        { text: "Cancer of the lymph nodes", correct: false },
+                                        { text: "Disease/swelling of the lymph nodes", correct: true },
+                                        { text: "Surgical removal of lymph nodes", correct: false },
+                                        { text: "Inflammation of the lymph vessels", correct: false }
+                                    ],
+                                    explanation: "LYMPHADEN/O = lymph node + -PATHY = disease. Lymphadenopathy = disease of (swollen) lymph nodes. It's a general term \u2014 nodes can be swollen from infection, inflammation, or cancer. Cancer OF the lymph nodes = lymphoma. Surgical removal = lymphadenectomy. Vessel inflammation = lymphangitis."
+                                },
+                                {
+                                    type: "application",
+                                    title: "Apply This Today",
+                                    content: "1. **Blood cell trio**: Erythrocytes (red \u2014 oxygen), Leukocytes (white \u2014 infection), Thrombocytes (platelets \u2014 clotting). Know the roots: ERYTHR/O, LEUK/O, THROMB/O\n\n2. **CBC interpretation**: Practice reading CBC results \u2014 high WBC = infection or leukemia, low RBC/HGB = anemia, low platelets = bleeding risk\n\n3. **Leukemia types**: ALL (kids, lymph), AML (adults, myeloid), CLL (chronic, lymph), CML (chronic, myeloid) \u2014 A = Acute, C = Chronic, L = Lymph, M = Myeloid\n\n4. **Autoimmune vs Immunodeficiency**: Autoimmune = body attacks ITSELF (lupus, RA, MS). Immunodeficiency = body CAN'T fight (HIV/AIDS). Opposite problems!"
+                                }
+                            ]
+                        },
+                        {
+                            id: 16,
                             title: "Common Abbreviations",
                             duration: 8,
                             completed: false,
@@ -75574,7 +76090,7 @@ const APP_DATA = {
                             ]
                         },
                         {
-                            id: 12,
+                            id: 17,
                             title: "Medical Terminology in Practice",
                             duration: 8,
                             completed: false,
