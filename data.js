@@ -86933,7 +86933,7 @@ function formatDateMMDDYYYY(dateString) {
 }
 
 // Data version - increment when making breaking changes
-const DATA_VERSION = 3;
+const DATA_VERSION = 4;
 
 // Helper function to save progress to localStorage
 function saveProgress() {
