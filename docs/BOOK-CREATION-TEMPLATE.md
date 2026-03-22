@@ -159,12 +159,12 @@ Background: #1a1a2e
 
 ### Text Sizing (for 1100x1100 canvas)
 ```
-Main title:      font-size="40"   max ~27 chars    y="55"
-Subtitle:        font-size="27"   max ~38 chars    y="100"
-Section header:  font-size="24-26" max ~45 chars   bold, colored
-Body text:       font-size="20-22" max ~55 chars
-Secondary text:  font-size="18"    max ~60 chars   fill="#888"
-Small text:      font-size="16"    max ~65 chars
+Main title:      font-size="36"   max ~29 chars    y="55"
+Subtitle:        font-size="23"   max ~40 chars    y="100"
+Section header:  font-size="22-24" max ~48 chars   bold, colored
+Body text:       font-size="18-20" max ~58 chars
+Secondary text:  font-size="14"    max ~65 chars   fill="#888"
+Small text:      font-size="12"    max ~70 chars
 ```
 
 ### TEXT PADDING RULES (Critical — Prevents Overflow)
@@ -178,8 +178,8 @@ Small text:      font-size="16"    max ~65 chars
 ```svg
 <svg viewBox="0 0 1100 1100" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-    <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="40">TITLE</text>
-    <text x="550" y="100" text-anchor="middle" fill="#888" font-size="27">Subtitle</text>
+    <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">TITLE</text>
+    <text x="550" y="100" text-anchor="middle" fill="#888" font-size="23">Subtitle</text>
     <!-- Content below -->
 </svg>
 ```
@@ -189,24 +189,24 @@ Small text:      font-size="16"    max ~65 chars
 **Two-Column Comparison:**
 ```svg
 <rect x="60" y="170" width="460" height="320" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
-<text x="290" y="220" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">LEFT TITLE</text>
+<text x="290" y="220" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">LEFT TITLE</text>
 <!-- Left content: x centered at 290, padding starts at y=260 -->
 
 <rect x="580" y="170" width="460" height="320" rx="20" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="2"/>
-<text x="810" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">RIGHT TITLE</text>
+<text x="810" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">RIGHT TITLE</text>
 <!-- Right content: x centered at 810 -->
 ```
 
 **Three-Column Grid:**
 ```svg
 <rect x="80" y="170" width="300" height="180" rx="20" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
-<text x="230" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">COL 1</text>
+<text x="230" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="20">COL 1</text>
 
 <rect x="400" y="170" width="300" height="180" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
-<text x="550" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">COL 2</text>
+<text x="550" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="20">COL 2</text>
 
 <rect x="720" y="170" width="300" height="180" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
-<text x="870" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">COL 3</text>
+<text x="870" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="20">COL 3</text>
 ```
 
 **Four-Box Grid:**
@@ -227,24 +227,24 @@ Small text:      font-size="16"    max ~65 chars
 **Stacked Steps (for application/process cards):**
 ```svg
 <rect x="150" y="170" width="800" height="90" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
-<text x="200" y="225" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
-<text x="240" y="225" text-anchor="start" fill="#fff" font-size="22">Step description here</text>
+<text x="200" y="225" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">1.</text>
+<text x="240" y="225" text-anchor="start" fill="#fff" font-size="20">Step description here</text>
 <!-- Repeat at y+130 for each step -->
 ```
 
 **Quiz Knowledge Check (for quiz card SVGs):**
 ```svg
-<text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">KNOWLEDGE CHECK</text>
+<text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
 <rect x="150" y="120" width="800" height="180" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
-<text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">KEY CONCEPT</text>
-<text x="550" y="225" text-anchor="middle" fill="#fff" font-size="20">One-line summary of what's being tested</text>
-<text x="550" y="260" text-anchor="middle" fill="#888" font-size="18">Supporting detail</text>
+<text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">KEY CONCEPT</text>
+<text x="550" y="225" text-anchor="middle" fill="#fff" font-size="18">One-line summary of what's being tested</text>
+<text x="550" y="260" text-anchor="middle" fill="#888" font-size="16">Supporting detail</text>
 ```
 
 **Summary Takeaway Bar:**
 ```svg
 <rect x="200" y="600" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
-<text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="22">Key takeaway text here</text>
+<text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="20">Key takeaway text here</text>
 ```
 
 ---
@@ -579,12 +579,12 @@ grep "book-id-here" data.js
 ```svg
 <!-- WRONG: 60-char text at font-size 26 in a 400px-wide box -->
 <rect x="100" y="200" width="400" height="100"/>
-<text x="300" y="250" font-size="26">This text is way too long to fit inside this narrow box</text>
+<text x="300" y="250" font-size="24">This text is way too long to fit inside this narrow box</text>
 
 <!-- RIGHT: Split into two lines, reduce font size -->
 <rect x="100" y="200" width="400" height="120"/>
-<text x="300" y="245" font-size="20">This text is split across</text>
-<text x="300" y="275" font-size="20">two properly sized lines</text>
+<text x="300" y="245" font-size="18">This text is split across</text>
+<text x="300" y="275" font-size="18">two properly sized lines</text>
 ```
 
 ### Weak Quiz Distractors
