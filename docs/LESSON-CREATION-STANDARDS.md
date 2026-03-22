@@ -291,11 +291,11 @@ Even quiz cards get a relevant SVG — a simple graphic reinforcing the concept 
         type: "diagram",
         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
             <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">KNOWLEDGE CHECK</text>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">KNOWLEDGE CHECK</text>
             <rect x="150" y="120" width="800" height="180" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
-            <text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">KINTSUGI</text>
-            <text x="550" y="225" text-anchor="middle" fill="#fff" font-size="22">Broken pottery repaired with gold</text>
-            <text x="550" y="260" text-anchor="middle" fill="#888" font-size="20">Cracks become the most beautiful part</text>
+            <text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">KINTSUGI</text>
+            <text x="550" y="225" text-anchor="middle" fill="#fff" font-size="20">Broken pottery repaired with gold</text>
+            <text x="550" y="260" text-anchor="middle" fill="#888" font-size="18">Cracks become the most beautiful part</text>
         </svg>`,
         caption: "Test your understanding"
     }
@@ -322,11 +322,11 @@ Even quiz cards get a relevant SVG — a simple graphic reinforcing the concept 
         type: "diagram",
         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
             <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">WISDOM</text>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">WISDOM</text>
             <rect x="100" y="150" width="900" height="200" rx="20" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6" stroke-width="2"/>
-            <text x="150" y="220" text-anchor="start" fill="#fff" font-style="italic" font-size="26">"We can be blind to the obvious,</text>
-            <text x="150" y="265" text-anchor="start" fill="#fff" font-style="italic" font-size="26">and we are also blind to our blindness."</text>
-            <text x="850" y="320" text-anchor="end" fill="#8b5cf6" font-size="22">— Daniel Kahneman</text>
+            <text x="150" y="220" text-anchor="start" fill="#fff" font-style="italic" font-size="24">"We can be blind to the obvious,</text>
+            <text x="150" y="265" text-anchor="start" fill="#fff" font-style="italic" font-size="24">and we are also blind to our blindness."</text>
+            <text x="850" y="320" text-anchor="end" fill="#8b5cf6" font-size="20">— Daniel Kahneman</text>
         </svg>`,
         caption: "A moment of reflection"
     }
@@ -357,23 +357,23 @@ Even quiz cards get a relevant SVG — a simple graphic reinforcing the concept 
         type: "diagram",
         svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
             <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">YOUR PRACTICE</text>
-            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Five steps to your first forest bath</text>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="40">YOUR PRACTICE</text>
+            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="27">Five steps to your first forest bath</text>
             <rect x="150" y="170" width="800" height="80" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
-            <text x="200" y="220" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
-            <text x="240" y="220" text-anchor="start" fill="#fff" font-size="22">Find your spot</text>
+            <text x="200" y="220" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">1.</text>
+            <text x="240" y="220" text-anchor="start" fill="#fff" font-size="20">Find your spot</text>
             <rect x="150" y="290" width="800" height="80" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
-            <text x="200" y="340" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="24">2.</text>
-            <text x="240" y="340" text-anchor="start" fill="#fff" font-size="22">Set aside 20 minutes</text>
+            <text x="200" y="340" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="22">2.</text>
+            <text x="240" y="340" text-anchor="start" fill="#fff" font-size="20">Set aside 20 minutes</text>
             <rect x="150" y="410" width="800" height="80" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
-            <text x="200" y="460" text-anchor="start" fill="#10b981" font-weight="bold" font-size="24">3.</text>
-            <text x="240" y="460" text-anchor="start" fill="#fff" font-size="22">Walk at half your normal speed</text>
+            <text x="200" y="460" text-anchor="start" fill="#10b981" font-weight="bold" font-size="22">3.</text>
+            <text x="240" y="460" text-anchor="start" fill="#fff" font-size="20">Walk at half your normal speed</text>
             <rect x="150" y="530" width="800" height="80" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
-            <text x="200" y="580" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="24">4.</text>
-            <text x="240" y="580" text-anchor="start" fill="#fff" font-size="22">Engage all five senses</text>
+            <text x="200" y="580" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="22">4.</text>
+            <text x="240" y="580" text-anchor="start" fill="#fff" font-size="20">Engage all five senses</text>
             <rect x="150" y="650" width="800" height="80" rx="20" fill="rgba(236,72,153,0.12)" stroke="#ec4899" stroke-width="2"/>
-            <text x="200" y="700" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="24">5.</text>
-            <text x="240" y="700" text-anchor="start" fill="#fff" font-size="22">Stop and sit for 5 minutes</text>
+            <text x="200" y="700" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="22">5.</text>
+            <text x="240" y="700" text-anchor="start" fill="#fff" font-size="20">Stop and sit for 5 minutes</text>
         </svg>`,
         caption: "Today's action plan"
     }
@@ -426,8 +426,8 @@ This ensures:
 ```svg
 <svg viewBox="0 0 1100 1100" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-    <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">TITLE</text>
-    <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Subtitle</text>
+    <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="40">TITLE</text>
+    <text x="550" y="100" text-anchor="middle" fill="#888" font-size="27">Subtitle</text>
     <!-- Content below -->
 </svg>
 ```
@@ -450,12 +450,12 @@ Background:  #1a1a2e                                — Dark background
 
 ### Text Size Standards
 ```
-Main title:      font-size="42"    max ~25 chars    y="55"
-Subtitle:        font-size="29"    max ~35 chars    y="100"
-Section header:  font-size="26-28" max ~40 chars    bold, colored
-Body text:       font-size="22-24" max ~50 chars    fill="#fff"
-Secondary text:  font-size="20"    max ~55 chars    fill="#888"
-Small text:      font-size="18"    max ~60 chars
+Main title:      font-size="40"    max ~27 chars    y="55"
+Subtitle:        font-size="27"    max ~38 chars    y="100"
+Section header:  font-size="24-26" max ~45 chars    bold, colored
+Body text:       font-size="20-22" max ~55 chars    fill="#fff"
+Secondary text:  font-size="18"    max ~60 chars    fill="#888"
+Small text:      font-size="16"    max ~65 chars
 ```
 
 ### CRITICAL: Text Must Stay Inside Box Borders
@@ -463,12 +463,12 @@ Small text:      font-size="18"    max ~60 chars
 **Maximum characters per line by font size:**
 | Font Size | Max Chars | Recommended Box Width |
 |-----------|-----------|----------------------|
-| 42px | ~25 chars | 900-1000px |
-| 36-38px | ~30 chars | 900-1000px |
-| 28-32px | ~40 chars | 800-900px |
-| 24-26px | ~50 chars | 700-800px |
-| 20-22px | ~55 chars | 600-700px |
-| 18px | ~65 chars | 600px |
+| 40px | ~27 chars | 900-1000px |
+| 34-36px | ~32 chars | 900-1000px |
+| 26-30px | ~45 chars | 800-900px |
+| 22-24px | ~55 chars | 700-800px |
+| 18-20px | ~60 chars | 600-700px |
+| 16px | ~70 chars | 600px |
 
 ### Padding & Spacing Rules
 1. **Padding**: Always leave **40-60px** padding inside boxes — text must NEVER touch edges
@@ -482,10 +482,10 @@ Small text:      font-size="18"    max ~60 chars
 <!-- Box at x=150, width=800 → center is x=550 -->
 <rect x="150" y="200" width="800" height="160" rx="20" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
 <!-- Title with 50px top padding: y = 200 + 50 = 250 -->
-<text x="550" y="250" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">SECTION TITLE</text>
+<text x="550" y="250" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">SECTION TITLE</text>
 <!-- Body text with 40px line spacing -->
-<text x="550" y="295" text-anchor="middle" fill="#fff" font-size="22">First line of content here</text>
-<text x="550" y="335" text-anchor="middle" fill="#888" font-size="20">Second line with smaller text</text>
+<text x="550" y="295" text-anchor="middle" fill="#fff" font-size="20">First line of content here</text>
+<text x="550" y="335" text-anchor="middle" fill="#888" font-size="18">Second line with smaller text</text>
 ```
 
 **Common Mistakes to AVOID:**
@@ -516,92 +516,92 @@ rgba(255,255,255,0.05)       subtle gray background
 ### Two-Column Comparison
 ```svg
 <rect x="60" y="170" width="460" height="320" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
-<text x="290" y="220" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">LEFT TITLE</text>
-<text x="290" y="265" text-anchor="middle" fill="#fff" font-size="22">Content line 1</text>
-<text x="290" y="300" text-anchor="middle" fill="#888" font-size="20">Content line 2</text>
+<text x="290" y="220" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">LEFT TITLE</text>
+<text x="290" y="265" text-anchor="middle" fill="#fff" font-size="20">Content line 1</text>
+<text x="290" y="300" text-anchor="middle" fill="#888" font-size="18">Content line 2</text>
 
 <rect x="580" y="170" width="460" height="320" rx="20" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="2"/>
-<text x="810" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">RIGHT TITLE</text>
-<text x="810" y="265" text-anchor="middle" fill="#fff" font-size="22">Content line 1</text>
-<text x="810" y="300" text-anchor="middle" fill="#888" font-size="20">Content line 2</text>
+<text x="810" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">RIGHT TITLE</text>
+<text x="810" y="265" text-anchor="middle" fill="#fff" font-size="20">Content line 1</text>
+<text x="810" y="300" text-anchor="middle" fill="#888" font-size="18">Content line 2</text>
 ```
 
 ### Three-Column Grid
 ```svg
 <rect x="80" y="170" width="300" height="180" rx="20" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
-<text x="230" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">COL 1</text>
-<text x="230" y="265" text-anchor="middle" fill="#fff" font-size="20">Description</text>
+<text x="230" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">COL 1</text>
+<text x="230" y="265" text-anchor="middle" fill="#fff" font-size="18">Description</text>
 
 <rect x="400" y="170" width="300" height="180" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
-<text x="550" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">COL 2</text>
-<text x="550" y="265" text-anchor="middle" fill="#fff" font-size="20">Description</text>
+<text x="550" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">COL 2</text>
+<text x="550" y="265" text-anchor="middle" fill="#fff" font-size="18">Description</text>
 
 <rect x="720" y="170" width="300" height="180" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
-<text x="870" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">COL 3</text>
-<text x="870" y="265" text-anchor="middle" fill="#fff" font-size="20">Description</text>
+<text x="870" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">COL 3</text>
+<text x="870" y="265" text-anchor="middle" fill="#fff" font-size="18">Description</text>
 ```
 
 ### Four-Box Grid
 ```svg
 <rect x="80" y="170" width="440" height="160" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
-<text x="300" y="235" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">BOX 1</text>
-<text x="300" y="275" text-anchor="middle" fill="#888" font-size="20">Description</text>
+<text x="300" y="235" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">BOX 1</text>
+<text x="300" y="275" text-anchor="middle" fill="#888" font-size="18">Description</text>
 
 <rect x="580" y="170" width="440" height="160" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
-<text x="800" y="235" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">BOX 2</text>
-<text x="800" y="275" text-anchor="middle" fill="#888" font-size="20">Description</text>
+<text x="800" y="235" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">BOX 2</text>
+<text x="800" y="275" text-anchor="middle" fill="#888" font-size="18">Description</text>
 
 <rect x="80" y="390" width="440" height="160" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
-<text x="300" y="455" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">BOX 3</text>
-<text x="300" y="495" text-anchor="middle" fill="#888" font-size="20">Description</text>
+<text x="300" y="455" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">BOX 3</text>
+<text x="300" y="495" text-anchor="middle" fill="#888" font-size="18">Description</text>
 
 <rect x="580" y="390" width="440" height="160" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
-<text x="800" y="455" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">BOX 4</text>
-<text x="800" y="495" text-anchor="middle" fill="#888" font-size="20">Description</text>
+<text x="800" y="455" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">BOX 4</text>
+<text x="800" y="495" text-anchor="middle" fill="#888" font-size="18">Description</text>
 ```
 
 ### Stacked Steps (for application/process cards)
 ```svg
 <rect x="150" y="170" width="800" height="80" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
-<text x="200" y="220" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
-<text x="240" y="220" text-anchor="start" fill="#fff" font-size="22">First step description</text>
+<text x="200" y="220" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">1.</text>
+<text x="240" y="220" text-anchor="start" fill="#fff" font-size="20">First step description</text>
 <!-- Repeat with y+120 for each step, cycling through colors -->
 ```
 
 ### Flow Diagram (4 steps with arrows)
 ```svg
 <rect x="60" y="200" width="220" height="100" rx="15" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="2"/>
-<text x="170" y="260" text-anchor="middle" fill="#fff" font-size="22">Step 1</text>
+<text x="170" y="260" text-anchor="middle" fill="#fff" font-size="20">Step 1</text>
 
 <path d="M280 250 L340 250" stroke="#14b8a6" stroke-width="2"/>
 <polygon points="340,250 328,242 328,258" fill="#14b8a6"/>
 
 <rect x="340" y="200" width="220" height="100" rx="15" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="2"/>
-<text x="450" y="260" text-anchor="middle" fill="#fff" font-size="22">Step 2</text>
+<text x="450" y="260" text-anchor="middle" fill="#fff" font-size="20">Step 2</text>
 
 <path d="M560 250 L620 250" stroke="#14b8a6" stroke-width="2"/>
 <polygon points="620,250 608,242 608,258" fill="#14b8a6"/>
 
 <rect x="620" y="200" width="220" height="100" rx="15" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="2"/>
-<text x="730" y="260" text-anchor="middle" fill="#fff" font-size="22">Step 3</text>
+<text x="730" y="260" text-anchor="middle" fill="#fff" font-size="20">Step 3</text>
 
 <path d="M840 250 L900 250" stroke="#14b8a6" stroke-width="2"/>
 <polygon points="900,250 888,242 888,258" fill="#14b8a6"/>
 
 <rect x="900" y="200" width="140" height="100" rx="15" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="2"/>
-<text x="970" y="260" text-anchor="middle" fill="#fff" font-size="22">Step 4</text>
+<text x="970" y="260" text-anchor="middle" fill="#fff" font-size="20">Step 4</text>
 ```
 
 ### Circle Nodes (for concept maps)
 ```svg
 <circle cx="200" cy="400" r="65" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
-<text x="200" y="407" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">Node 1</text>
+<text x="200" y="407" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="20">Node 1</text>
 
 <circle cx="550" cy="400" r="65" fill="rgba(236,72,153,0.3)" stroke="#ec4899" stroke-width="2"/>
-<text x="550" y="407" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="22">Node 2</text>
+<text x="550" y="407" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="20">Node 2</text>
 
 <circle cx="900" cy="400" r="65" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="2"/>
-<text x="900" y="407" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">Node 3</text>
+<text x="900" y="407" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="20">Node 3</text>
 ```
 
 ### Connecting Elements
@@ -617,16 +617,16 @@ rgba(255,255,255,0.05)       subtle gray background
 ### Summary Takeaway Bar
 ```svg
 <rect x="200" y="600" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
-<text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="24">Key takeaway text here</text>
+<text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="22">Key takeaway text here</text>
 ```
 
 ### Quiz Knowledge Check Header
 ```svg
-<text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">KNOWLEDGE CHECK</text>
+<text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">KNOWLEDGE CHECK</text>
 <rect x="150" y="120" width="800" height="180" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
-<text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">CONCEPT NAME</text>
-<text x="550" y="225" text-anchor="middle" fill="#fff" font-size="22">One-line summary</text>
-<text x="550" y="260" text-anchor="middle" fill="#888" font-size="20">Supporting detail</text>
+<text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">CONCEPT NAME</text>
+<text x="550" y="225" text-anchor="middle" fill="#fff" font-size="20">One-line summary</text>
+<text x="550" y="260" text-anchor="middle" fill="#888" font-size="18">Supporting detail</text>
 ```
 
 ---
@@ -807,14 +807,14 @@ Before considering a book complete, verify ALL of the following:
 
 ### Text Overflow in SVG
 ```svg
-<!-- WRONG: 55-char text at font-size 28 in a 400px box -->
+<!-- WRONG: 55-char text at font-size 26 in a 400px box -->
 <rect x="100" y="200" width="400" height="100"/>
-<text x="300" y="250" font-size="28">This long sentence will overflow the box on both sides</text>
+<text x="300" y="250" font-size="26">This long sentence will overflow the box on both sides</text>
 
 <!-- RIGHT: Split into lines, reduced font, proper padding -->
 <rect x="100" y="200" width="400" height="120"/>
-<text x="300" y="245" text-anchor="middle" font-size="20">This text is properly split</text>
-<text x="300" y="275" text-anchor="middle" font-size="20">across two sized lines</text>
+<text x="300" y="245" text-anchor="middle" font-size="18">This text is properly split</text>
+<text x="300" y="275" text-anchor="middle" font-size="18">across two sized lines</text>
 ```
 
 ### Weak Quiz Distractors

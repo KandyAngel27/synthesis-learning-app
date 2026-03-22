@@ -17,3 +17,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+data.js.bak*
+temp-*.js
+*.backup.js
