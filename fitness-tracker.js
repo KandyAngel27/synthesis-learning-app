@@ -4025,6 +4025,1038 @@ class FitnessTracker {
                         }
                     ]}
                 ]
+            },
+            {
+                id: 'mobility-snacks-4x',
+                name: 'MovesMethod Mobility Snacks',
+                description: '4 short mobility routines (10-12 min each). No equipment. Knee-modified. Use as desk breaks, morning snacks, pre-workout primers, or standalone sessions 3-5x/week.',
+                kneeSafe: true,
+                days: [
+                    { day: 1, name: 'Spine & Thoracic', focus: 'Thoracic rotation, lateral flexion, spinal loading in forbidden planes', exercises: [
+                        {
+                            name: 'Cat-Cow + Lateral Bow',
+                            sets: 1,
+                            reps: '5 each direction',
+                            muscle: 'Spine/Thoracic',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Two yoga moves combined - first arch and round your back like a stretching cat, then add a sideways bend like trying to look at your own hip. HOW TO DO IT: Start on all fours, hands under shoulders, knees under hips. Inhale into Cow (drop belly, lift chest and tailbone). Exhale into Cat (round spine, tuck pelvis). After each rep, add a lateral C-curve: bend your spine sideways, looking toward your hip on the same side. Alternate left and right curves.',
+                            cues: [
+                                'Move slowly with your breath',
+                                'Reach the curve all the way from tailbone to skull',
+                                'Look toward your hip on the lateral bow',
+                                'Keep arms straight and weight evenly through hands',
+                                'Pad knees if sensitive'
+                            ],
+                            anatomyTip: 'Combines sagittal-plane flexion/extension with frontal-plane lateral flexion to mobilize the spine through planes that desk work neglects.'
+                        },
+                        {
+                            name: 'Thread the Needle',
+                            sets: 1,
+                            reps: '8 each side',
+                            muscle: 'Thoracic Spine/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A twist that wrings out your mid-back. From hands and knees, slide one arm under your body like threading a needle through fabric, then unwind and reach the same arm up to the sky. HOW TO DO IT: From all-fours, slide one arm under your body palm-up, threading it as far as it will go. Let your shoulder and temple lower toward the floor. Follow your hand with your eyes through the entire range. Unwind back to start and open the same arm to the sky to complete one rep.',
+                            cues: [
+                                'Eyes track the moving hand the whole way',
+                                'Keep hips stacked over knees, do not collapse to one side',
+                                'Breathe out as you thread, in as you open',
+                                'Press through the planted hand for stability',
+                                'Move slowly - this is mobility, not stretch holding'
+                            ],
+                            anatomyTip: 'Active thoracic rotation under load, with the eye-tracking driving cervical rotation through the same plane.'
+                        },
+                        {
+                            name: 'Standing Thoracic Rotation',
+                            sets: 1,
+                            reps: '10 each side',
+                            muscle: 'Thoracic Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A standing upper-body twist. Arms folded across chest, hips stay forward, only your upper body turns side to side. HOW TO DO IT: Stand with feet hip-width. Cross arms over chest (hands on opposite shoulders). Rotate fully to one side - upper body only. Pause at end range, then rotate to the other side. Hips and feet stay forward.',
+                            cues: [
+                                'Hips stay square - rotation comes from mid-back only',
+                                'Reach full end range before reversing',
+                                'Stack ribs over pelvis - do not lean',
+                                'Inhale center, exhale into the twist',
+                                'Knees soft but not bent'
+                            ],
+                            anatomyTip: 'Isolates thoracic rotation by locking out the lumbar spine and hips, training rotation where it should happen.'
+                        },
+                        {
+                            name: 'Side-Lying Book Opens',
+                            sets: 1,
+                            reps: '8 each side',
+                            muscle: 'Thoracic Spine/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lie on your side with your palms pressed together like a closed book. Slowly open the top arm to the floor behind you like opening the book - while your knees stay glued together. HOW TO DO IT: Lie on your side with knees stacked at 90 degrees and a small pillow under your head if needed. Extend both arms forward at shoulder height, palms together. Keeping knees pressed together and stacked, open the top arm in a slow arc back toward the floor behind you. Follow the hand with your eyes. Return to start.',
+                            cues: [
+                                'Knees stay stacked and pinned together',
+                                'Reach for the floor behind you - do not force it',
+                                'Eyes follow the moving hand',
+                                'Exhale as you open, inhale as you close',
+                                'Move slowly through the full arc'
+                            ],
+                            anatomyTip: 'Locks the lumbar spine and pelvis with stacked knees, isolating pure thoracic rotation in a supported position.'
+                        },
+                        {
+                            name: 'Spine Flexion/Extension in Squat',
+                            sets: 1,
+                            reps: '8',
+                            muscle: 'Spine/Hips',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hold onto a door for balance, sit into a half-squat, then do the cat-cow spine roll (round, then arch) while you stay down in the squat. The door takes weight off your knees. HOW TO DO IT: Hold a doorframe or sturdy post with both hands. Sit back into a shallow squat (only as deep as your knees allow). From this loaded position, round your spine fully (chin to chest, tuck pelvis) then arch (lift chest, untuck pelvis, look up). Use the doorframe to support your weight.',
+                            cues: [
+                                'Use the doorframe to take load off your knees',
+                                'Round and arch from tailbone to skull',
+                                'Stay only as deep as comfortable',
+                                'Slow and controlled - feel each vertebra',
+                                'Skip the squat hold if knees crunch - hinge at hips instead'
+                            ],
+                            anatomyTip: 'Loads the spine through flexion and extension in a hip-flexed position - a range most people never train.'
+                        },
+                        {
+                            name: 'Standing Lateral Reach',
+                            sets: 1,
+                            reps: '6 each side',
+                            muscle: 'Lateral Chain',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A standing side-bend. Reach one arm up and lean your whole body to the opposite side like a tree bending in the wind. HOW TO DO IT: Stand with feet hip-width. Reach one arm straight overhead. Lean your entire torso to the opposite side, lengthening through the side of your body. This is a controlled movement, not a stretch hold - flow into the lean and back to vertical.',
+                            cues: [
+                                'Lean from the waist, not by bending the knee',
+                                'Reach long through the fingertips',
+                                'Keep both feet flat - do not shift weight',
+                                'Inhale center, exhale into the lean',
+                                'Controlled tempo - no bouncing'
+                            ],
+                            anatomyTip: 'Trains lateral flexion through the quadratus lumborum, obliques, and lats - the lateral chain rarely engaged in daily life.'
+                        }
+                    ]},
+                    { day: 2, name: 'Hips & Pelvis', focus: 'Hip rotation in all planes, hip flexor control, glute engagement', exercises: [
+                        {
+                            name: '90/90 Hip Switches',
+                            sets: 1,
+                            reps: '5 slow transitions',
+                            muscle: 'Hips',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit on the floor with both knees bent at 90 degrees - one leg in front of you, the other out to the side (like a pretzel position). Sweep both legs over to the OTHER side like windshield wipers, ending in the mirror image. HOW TO DO IT: Sit on the floor with both knees bent at 90 degrees - one leg in front (knee out to side, shin parallel to body) and one leg out to the side (knee out, shin behind). Place hands behind you for support. Like windshield wipers, sweep both legs over to the opposite side, ending in the mirror image position.',
+                            cues: [
+                                'Move slowly - this is a control drill, not a stretch',
+                                'Sit tall, do not collapse forward',
+                                'Place a folded towel under outside knee if it complains',
+                                'Move to the edge of comfort - never force the range',
+                                'Use hands behind for support as needed'
+                            ],
+                            anatomyTip: 'Trains active hip internal and external rotation simultaneously. Knee-sensitive: pad the outside knee and stay within pain-free range.'
+                        },
+                        {
+                            name: 'Hip CARs (Controlled Articular Rotations)',
+                            sets: 1,
+                            reps: '3 full circles each side',
+                            muscle: 'Hips',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: CAR means "Controlled Articular Rotation" - jargon for moving a joint through its biggest possible slow circle. For your hip: stand on one leg, lift the other knee, and draw a huge slow circle with that knee like stirring a pot with your leg. HOW TO DO IT: Stand tall, holding a wall or chair for balance. Lift one knee toward your chest, then draw the biggest, slowest possible circle with that knee - out to the side, behind you, back to start. Move at the very edge of your range. Reverse direction after 3 reps. Switch sides.',
+                            cues: [
+                                'Move SLOWLY - 5+ seconds per circle',
+                                'Maximize the range at every point',
+                                'Keep standing leg locked, hips level',
+                                'Brace core hard the entire time',
+                                'Use a wall for balance - no swinging'
+                            ],
+                            anatomyTip: 'Trains active range of motion in every direction at the hip joint - flexion, abduction, extension, internal/external rotation - all in one controlled circle.'
+                        },
+                        {
+                            name: 'Half-Kneeling Hip Flexor + Rotation',
+                            sets: 1,
+                            reps: '8 each side',
+                            muscle: 'Hip Flexors/Thoracic',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Get into a proposing-marriage position (one knee on the floor, other foot forward and flat). Tuck your butt under to feel a stretch in the front of the back hip, then twist your upper body toward the front leg. HOW TO DO IT: Drop into a half-kneeling lunge: one knee down (padded), the other foot forward and flat. Tuck your pelvis under (posterior tilt = scoop the tailbone forward) to lengthen the back-leg hip flexor. From there, rotate your torso toward the front leg, opening the chest. Return to center. Maintain pelvic tuck the whole time.',
+                            cues: [
+                                'PAD the down knee with a folded towel or mat',
+                                'Tuck pelvis BEFORE you rotate - feel the front of the back hip stretch',
+                                'Rotate from the mid-back, hips stay square',
+                                'Reach the rotating arm long and high',
+                                'Slow and controlled - 2 seconds in, 2 seconds out'
+                            ],
+                            anatomyTip: 'Combines hip flexor lengthening with thoracic rotation - addresses the desk-worker pattern of tight hip flexors and stiff mid-back together.'
+                        },
+                        {
+                            name: 'Frog Rocks',
+                            sets: 1,
+                            reps: '10',
+                            muscle: 'Hip Adductors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: On hands and knees, spread your knees as wide as a frog. Rock your hips back toward your heels (deeper inner-thigh stretch), then forward. HOW TO DO IT: On all fours, widen knees as far as comfortable (toes pointed out, inner thighs to mat). Keep hips stacked over knees to start. Rock your hips back toward your heels - feel the inner-thigh stretch deepen - then return forward.',
+                            cues: [
+                                'Knees only as wide as comfort allows',
+                                'Pad the knees with a folded mat or pillow',
+                                'Rock SLOWLY back and forth',
+                                'Keep spine long - do not round the lower back',
+                                'Stop short of any sharp knee or groin pinch'
+                            ],
+                            anatomyTip: 'Mobilizes the hip joint through abduction and progressive flexion - opens the adductors and posterior hip capsule.'
+                        },
+                        {
+                            name: 'Side-Lying Clamshell + Hip ER',
+                            sets: 1,
+                            reps: '10 each side',
+                            muscle: 'Glutes (Med/Min)',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: ER = External Rotation (turning the leg outward). Lie on your side with knees bent. Open the top knee like a clamshell opening, then at the top add a small extra lift backward. Heels stay glued together the whole time. HOW TO DO IT: Lie on your side, knees stacked and bent at 45 degrees, feet aligned with hips. Keeping heels glued together, open the top knee like a clamshell. At the TOP of the clamshell, hold and extend the top hip backward slightly (lift the knee back and up). Return slowly.',
+                            cues: [
+                                'Heels stay touching the whole time',
+                                'Do NOT roll your top hip backward to cheat',
+                                'Pause at the top before adding the extension',
+                                'Squeeze the glute hard at full open',
+                                'Slow controlled lowering'
+                            ],
+                            anatomyTip: 'Combines clamshell (glute med activation) with hip extension to wake up the glutes in two distinct functions - critical for hip stability.'
+                        },
+                        {
+                            name: 'Standing Hip Hinge + Hip Internal Rotation',
+                            sets: 1,
+                            reps: '8 each side',
+                            muscle: 'Hips/Posterior Chain',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hinge forward at the hips (like trying to touch your toes with a flat back). While still hinged, let one heel lift up so that knee turns slightly INWARD - then put it down and do the other side. HOW TO DO IT: Stand with feet hip-width. Hinge forward at the hips (RDL position = slight knee bend, flat back, butt back). From the hinged position, allow one heel to rise off the floor while the same hip rotates internally (the knee turns inward slightly). Return both heels down. Alternate sides.',
+                            cues: [
+                                'Maintain the hinge throughout - do not stand back up',
+                                'Allow the hip to rotate INWARD - this is normally trained',
+                                'Small subtle range - this is not a big movement',
+                                'Keep flat back, neutral neck',
+                                'Move with control - no swinging'
+                            ],
+                            anatomyTip: 'Trains hip internal rotation under hinge load - a critical pattern for gait, running, and rotational sports that most people lose by age 30.'
+                        }
+                    ]},
+                    { day: 3, name: 'Shoulders & Upper Body', focus: 'Shoulder full-circle strength, scapular control, wrist/neck', exercises: [
+                        {
+                            name: 'Shoulder Dislocates',
+                            sets: 1,
+                            reps: '10',
+                            muscle: 'Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Scary name but harmless. Hold a broomstick wide, then pass it all the way over your head and behind your back, then back to the front. Nothing actually dislocates - your shoulders just move through their full range. HOW TO DO IT: Hold a broomstick, resistance band, or PVC pipe in front of you with a wide grip (wider than shoulders). Keeping arms straight, slowly raise the stick overhead and continue all the way behind your back, then reverse the motion back to the front. Use a wider grip if it feels restrictive, narrower as mobility improves.',
+                            cues: [
+                                'Keep arms COMPLETELY STRAIGHT throughout',
+                                'Move SLOW - 3 seconds up, 3 seconds back',
+                                'Wider grip = easier, narrower = harder',
+                                'Do not arch the lower back to compensate',
+                                'Stop short of any pinch or shoulder pain'
+                            ],
+                            anatomyTip: 'Mobilizes the glenohumeral joint through full flexion-to-extension while training scapular rhythm and posterior capsule mobility.'
+                        },
+                        {
+                            name: 'Shoulder CARs',
+                            sets: 1,
+                            reps: '3 full circles each side',
+                            muscle: 'Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Same idea as Hip CARs but for your shoulder. Draw the biggest possible slow circle with one arm - through every direction your shoulder can move. Scapula = your shoulder blade; let it glide naturally. HOW TO DO IT: Stand tall. Lift one arm straight in front. Draw the biggest possible circle - up overhead, behind you, down to your side, and back to front. Keep the scapula (shoulder blade) moving freely. Reverse direction after 3 reps. Switch sides.',
+                            cues: [
+                                'Maximize the circle - reach the very edge of your range',
+                                'Move SLOWLY - 5+ seconds per full circle',
+                                'Keep the OTHER shoulder still and pressed down',
+                                'Let the shoulder blade glide naturally',
+                                'Brace core to prevent ribs from flaring'
+                            ],
+                            anatomyTip: 'Trains active ROM through every angle of the shoulder joint, integrating the scapulothoracic and glenohumeral joints together.'
+                        },
+                        {
+                            name: 'Wall Slide + Protraction',
+                            sets: 1,
+                            reps: '10',
+                            muscle: 'Shoulders/Serratus',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Protraction = pushing your shoulder blades APART (the opposite of pinching them together). Stand at a wall, press forearms flat against it, slide them up overhead, then at the top push the wall away by reaching forward with both hands. HOW TO DO IT: Stand facing a wall. Place forearms flat against the wall, elbows at shoulder height, wrists above elbows. Keeping forearms pressed firmly into the wall, slide them up overhead as far as you can. At the TOP, push your hands INTO the wall, protracting your shoulder blades (push the wall away). Hold 1 second, then slide back down.',
+                            cues: [
+                                'Forearms STAY pressed flat against the wall the entire time',
+                                'Do not lose contact at the top',
+                                'PUSH the wall away at the top - feel the serratus engage',
+                                'Ribs down, do not let lower back arch',
+                                'Slow controlled slide both directions'
+                            ],
+                            anatomyTip: 'Pairs scapular upward rotation with protraction (serratus anterior activation) - critical for shoulder health and overhead pressing strength.'
+                        },
+                        {
+                            name: 'Bear Plank Hold + Shoulder Tap',
+                            sets: 1,
+                            reps: '6 each side',
+                            muscle: 'Core/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: "Bear" position means hands and knees on the floor with knees HOVERING 1 inch off the ground (knees never touch down). Hold that position steady, then alternate tapping one hand to the opposite shoulder. HOW TO DO IT: Start on hands and knees (hands under shoulders, knees under hips). Lift knees just 1 inch off the floor - hover. Hold this bear position rock-steady, then slowly tap one hand to the opposite shoulder. Replace. Tap with the other hand. Keep hips dead still.',
+                            cues: [
+                                'Knees hover just 1 inch - this is not a high plank',
+                                'HIPS STAY LEVEL - do not let them sway',
+                                'Move the hand SLOWLY - 2 seconds up, 2 seconds back',
+                                'Squeeze glutes and brace core hard',
+                                'Look at the floor between your hands'
+                            ],
+                            anatomyTip: 'Anti-rotation core challenge with shoulder stability - the lifted-knee bear position is more demanding and quad-safe than a quadruped.'
+                        },
+                        {
+                            name: 'Doorway Chest Opener + Rotation',
+                            sets: 1,
+                            reps: '8',
+                            muscle: 'Chest/Thoracic',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand in a doorway, plant a forearm vertically on the door frame (like you are about to high-five the frame). Step through the doorway with the same-side foot to open your chest, then twist away from the planted arm to open it even more. HOW TO DO IT: Stand in a doorway. Place one forearm vertically against the door frame (elbow at 90 degrees, hand up). Step the same-side foot forward through the doorway, letting your chest open. From that position, rotate your torso AWAY from the planted arm, deepening the opening. Hold 2 seconds, then come back. Switch sides halfway through reps.',
+                            cues: [
+                                'Forearm stays glued to the doorway',
+                                'Step through gently - do not overstretch',
+                                'Rotate from the mid-back, not the shoulder',
+                                'Breathe deeply into the open ribcage',
+                                'Back off if the shoulder pinches'
+                            ],
+                            anatomyTip: 'Lengthens the pec minor and anterior shoulder capsule while adding active thoracic rotation - directly counters the rounded desk posture.'
+                        },
+                        {
+                            name: 'Neck CARs',
+                            sets: 1,
+                            reps: '3 circles each direction',
+                            muscle: 'Cervical Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Same idea as Hip/Shoulder CARs but for your neck. A slow, full head-roll: chin to chest, ear to shoulder, head back, ear to other shoulder, chin to chest. Like a slow circle traced with your nose. HOW TO DO IT: Stand or sit tall. Slowly draw the largest possible circle with your head: chin to chest, ear toward shoulder, head tilted back, ear to other shoulder, and back to chin-to-chest. Reverse direction after 3 reps.',
+                            cues: [
+                                'Move VERY SLOWLY - 10 seconds per circle',
+                                'Maximize the range in every direction',
+                                'Keep shoulders DOWN and still',
+                                'Stop short of any sharp pain or dizziness',
+                                'Breathe steadily throughout'
+                            ],
+                            anatomyTip: 'Trains active range through the entire cervical spine - rare to do consciously and critical for offsetting forward-head posture.'
+                        }
+                    ]},
+                    { day: 4, name: 'Full Body Integration', focus: 'Coordination, multi-joint movement, locomotion patterns', exercises: [
+                        {
+                            name: 'Bear Crawl',
+                            sets: 1,
+                            reps: '4 forward + 4 back',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Crawl on hands and FEET (not knees) like a bear, with knees hovering 1 inch off the floor. Move opposite hand and opposite foot at the same time (right hand moves with left foot). This is called contralateral movement - same way you walk. HOW TO DO IT: Start on hands and knees, knees lifted just 1 inch off the floor. Move forward by stepping opposite hand and opposite foot simultaneously (right hand + left foot, then left hand + right foot). Move SLOWLY. After 4 steps forward, reverse the same pattern backward for 4 steps.',
+                            cues: [
+                                'OPPOSITE limbs move together (contralateral)',
+                                'Hips stay LEVEL - no sway side to side',
+                                'Knees hover - do not let them touch down',
+                                'Go SLOW - this is control, not speed',
+                                'Look at the floor a few feet ahead'
+                            ],
+                            anatomyTip: 'Trains contralateral coordination, the most fundamental locomotor pattern - integrates core, shoulders, and hips into one system.'
+                        },
+                        {
+                            name: 'Tightrope Walk',
+                            sets: 1,
+                            reps: '20 steps each way',
+                            muscle: 'Balance/Feet/Ankles',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Walk in a straight line, heel touching toe with each step, like a balance beam or tightrope walker. Arms out for balance. HOW TO DO IT: Imagine a tightrope on the floor. Walk along it heel-to-toe - the heel of the front foot touches the toes of the back foot at each step. Arms out to the sides for balance. Move slowly and with control. Return the same way (you can walk backward heel-to-toe, or turn around).',
+                            cues: [
+                                'Heel touches toe at every step',
+                                'Arms out wide for balance',
+                                'Look ahead 6-8 feet, not down at your feet',
+                                'SLOW deliberate steps - feel each foot',
+                                'Engage the foot arch as you load'
+                            ],
+                            anatomyTip: 'Challenges proprioception, ankle stability, and single-leg balance - foundational for fall prevention and athletic performance.'
+                        },
+                        {
+                            name: 'Lizard Lunge + Thoracic Rotation',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Hips/Thoracic',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A deep yoga-style lunge with your hand INSIDE the front foot (close to your front ankle). The back knee rests on the ground. From there, reach the other arm up and twist toward the ceiling like opening a book. HOW TO DO IT: Step into a deep lunge with the right foot forward. Lower the LEFT (back) knee to the floor (padded). Place your RIGHT hand on the floor INSIDE the right foot (between your front foot and your body). Reach the LEFT arm straight up toward the ceiling, rotating your torso open. Follow the hand with your eyes. Return hand to floor. Repeat for reps, then switch sides.',
+                            cues: [
+                                'PAD the down knee - mandatory',
+                                'Plant hand INSIDE the front foot, not outside',
+                                'Reach the top hand HIGH - open the chest fully',
+                                'Eyes follow the moving hand',
+                                'Breathe out as you rotate, in as you return'
+                            ],
+                            anatomyTip: 'Combines deep hip mobilization (front hip flexion, back hip extension) with thoracic rotation - one of the highest-value mobility patterns.'
+                        },
+                        {
+                            name: 'Froggy Jumps (Modified - No Jump)',
+                            sets: 1,
+                            reps: '8',
+                            muscle: 'Hips/Legs',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Squat down deep with hands resting on the floor (frog position). Stand up while reaching both arms overhead. No actual jumping - just stand up smoothly. The original version has a jump, but your knees say no, so we kept the squat-to-overhead pattern without the impact. HOW TO DO IT: Squat down as deep as comfortable, hands resting on the floor in front of you. From that low position, stand up while reaching both arms straight overhead. Return slowly to the deep squat. NO jumping - this is the knee-safe version. WEEK 1: If knees crunch loudly, swap this for a standing hip hinge (RDL pattern - hinge forward keeping a flat back) instead.',
+                            cues: [
+                                'NO JUMPING - smooth controlled stand-up only',
+                                'Reach arms HIGH overhead at the top',
+                                'Squat only as deep as comfortable',
+                                'Drive through whole foot when standing',
+                                'Swap for hip hinge if knees protest'
+                            ],
+                            anatomyTip: 'Trains full-range squat-to-overhead pattern without impact. Modification preserves the movement pattern while protecting the knee joint.'
+                        },
+                        {
+                            name: 'Lateral Bear Crawl',
+                            sets: 1,
+                            reps: '4 steps each way',
+                            muscle: 'Full Body/Hips',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Same bear position as before (hands and knees hovering 1 inch off the floor), but you walk SIDEWAYS instead of forward. This time, same-side hand and foot move together (right hand + right foot reach out, then left hand + left foot follow). HOW TO DO IT: Start in the bear position (hands and knees, knees 1 inch off the floor). Move sideways: same-side hand and same-side foot step out together, then the opposite hand and foot follow. Take 4 steps one direction, then 4 steps back the other way.',
+                            cues: [
+                                'Same-side limbs lead this time (not opposite)',
+                                'Knees hover throughout',
+                                'Hips stay level - do not pike up',
+                                'Move slow - this is harder than it looks',
+                                'Brace core to control the lateral demand'
+                            ],
+                            anatomyTip: 'Same bear position, different demand - frontal-plane hip control loads abductors and adductors in a way forward bear crawls do not.'
+                        },
+                        {
+                            name: 'Slow Controlled Deep Squat + Exit',
+                            sets: 1,
+                            reps: '5',
+                            muscle: 'Hips/Legs',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hold a door (or TRX strap) for assistance. Slowly squat down as deep as your knees allow, pause at the bottom, then stand back up. The door supports some of your weight so your knees don\'t have to work as hard. HOW TO DO IT: Hold a door frame, TRX, or sturdy post for assistance. Slowly lower (3-5 seconds) into the deepest squat your knees allow. Use the post to take load off. Pause at the bottom, then stand back up with control. The assistance lets you train range without forcing the knee.',
+                            cues: [
+                                'USE THE DOOR/TRX for support - take load off knees',
+                                '3-5 second descent every rep',
+                                'Only as deep as truly comfortable',
+                                'Pause 1-2 seconds at the bottom',
+                                'Stand with control - no rush'
+                            ],
+                            anatomyTip: 'Loaded-assisted deep squat trains range and hip/ankle mobility while letting the joint adapt safely under partial bodyweight.'
+                        }
+                    ]}
+                ]
+            },
+            {
+                id: 'joint-mobility-mastery-7x',
+                name: 'Joint Mobility Mastery',
+                description: '7 short joint-focused mini-workouts (8-12 min each). One joint per day: ankles, knees, hips, spine, shoulders, wrists, neck. Builds end-range strength and resilience at every joint.',
+                kneeSafe: true,
+                days: [
+                    { day: 1, name: 'Ankles', focus: 'Ankle dorsiflexion, plantarflexion, inversion, eversion, balance', exercises: [
+                        {
+                            name: 'Ankle CARs',
+                            sets: 1,
+                            reps: '3 circles each direction, each foot',
+                            muscle: 'Ankle Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: CAR = Controlled Articular Rotation. Sit in a chair, lift one foot off the floor, and draw the biggest possible slow circle with that foot (just the foot - keep the knee still). Toes point down, then in, then up, then out. HOW TO DO IT: Sit tall in a chair, knee at 90 degrees. Lift one foot off the floor. Without moving your knee, slowly trace the largest circle you can with your foot - point toes down, then sweep inward toward the other foot, then up, then outward. 3 circles, then reverse direction. Repeat with other foot.',
+                            cues: ['Knee stays COMPLETELY still', 'Move from the ankle only', 'Maximize the range', 'SLOW - 5+ seconds per circle', 'Both directions equally'],
+                            anatomyTip: 'Trains active range in all four ankle movements: dorsiflexion, plantarflexion, inversion, eversion. Stiff ankles are upstream of knee and hip pain.'
+                        },
+                        {
+                            name: 'Wall Knee Drive (Ankle Dorsiflexion)',
+                            sets: 1,
+                            reps: '10 each side',
+                            muscle: 'Ankle/Calf',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand a few inches in front of a wall. Bend one knee forward to TOUCH the wall with your knee - keeping your heel glued to the floor. The further your foot is from the wall, the harder. HOW TO DO IT: Place one foot a few inches from the wall. Drive your knee forward to tap the wall WITHOUT your heel lifting off the floor. Return. Each rep, move your foot back a tiny bit further. Find the furthest distance where your heel still stays down.',
+                            cues: ['HEEL stays glued to the floor', 'Knee tracks straight forward toward the wall', 'Move slow - feel the calf stretch', 'Increase distance gradually', 'Equal reps each side'],
+                            anatomyTip: 'Dorsiflexion is the most-lost ankle range. Restoring it unlocks deep squats and reduces shin splints, plantar fasciitis, and knee tracking issues.'
+                        },
+                        {
+                            name: 'Tibialis Raises',
+                            sets: 2,
+                            reps: '15',
+                            muscle: 'Tibialis Anterior (Shin)',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand with your heels on the floor, toes pointing up at the ceiling - like a reverse calf raise. Pull your toes toward your shins as hard as you can, then lower. The muscle on the FRONT of your shin works. HOW TO DO IT: Stand 6-12 inches from a wall, leaning your butt against it for support. Keep heels on the floor and lift your toes and the balls of your feet as high as possible toward your shins. Hold 1 second, then lower with control.',
+                            cues: ['Pull toes UP as high as possible', 'Heels stay grounded', 'Slow controlled descent', 'Squeeze at the top', 'Burn in the shin = correct'],
+                            anatomyTip: 'The tibialis anterior is critical for ankle stability and gait. Most people never train it - rebuilds the lift phase of every step and prevents falls.'
+                        },
+                        {
+                            name: 'Heel-Elevated Squat Pulse',
+                            sets: 1,
+                            reps: '10',
+                            muscle: 'Quads/Ankles',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand with your heels on a small platform (book, plate, folded towel about 1-2 inches). Squat down to a comfortable depth, then pulse up and down a few inches in the bottom of the squat. The heel elevation makes deep squat safer for knees. HOW TO DO IT: Place 1-2 inch elevation under heels. Stand with feet hip-width. Lower into a squat as deep as comfortable, then perform 10 small pulses (rise 3 inches, lower 3 inches) in the deep position. Stand up.',
+                            cues: ['Hold a door for balance if needed', 'Small controlled pulses only', 'Stay in the comfort zone for knees', 'Chest stays UP', 'Stop immediately if knees pinch'],
+                            anatomyTip: 'Heel elevation reduces ankle dorsiflexion demand, letting you train deeper hip and quad ranges without straining the knee.'
+                        },
+                        {
+                            name: 'Single-Leg Balance (Eyes Closed)',
+                            sets: 1,
+                            reps: '30 seconds each side',
+                            muscle: 'Ankle/Balance',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand on one foot. Once steady, close your eyes. Hold for 30 seconds. The lift of vision forces your ankle and inner ear to do all the balance work. HOW TO DO IT: Stand on one foot near a wall (in case you wobble). Get balanced with eyes open. Close eyes. Hold for 30 seconds. Switch sides. Open eyes if you feel like falling - safety first.',
+                            cues: ['Have a wall within arm reach', 'Spread toes wide for grip', 'Soft knee, not locked', 'Brace core gently', 'Build up - 10 sec then 20 then 30'],
+                            anatomyTip: 'Eyes-closed balance forces the proprioceptors in the ankle, foot, and inner ear to coordinate. Single best drill for fall prevention.'
+                        }
+                    ]},
+                    { day: 2, name: 'Knees', focus: 'Knee strength, end-range tolerance, quad/hamstring balance (knee-safe)', exercises: [
+                        {
+                            name: 'Wall Sit Isometric',
+                            sets: 3,
+                            reps: '30-60 seconds',
+                            muscle: 'Quads',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lean your back against a wall and slide down into a sitting position with your thighs parallel to the floor (or as low as your knees allow). Hold. Isometric = no movement, just hold steady. HOW TO DO IT: Stand with back against a wall, feet 1-2 feet out from the wall. Slide down until thighs are parallel to floor (or wherever knees feel safe - higher is fine). Knees over ankles, not past toes. Hold 30-60 seconds. Stand up. 3 rounds.',
+                            cues: ['Knees stack OVER ankles, not past toes', 'Higher position is fine - work up to parallel', 'Press lower back into wall', 'Breathe normally during the hold', 'Stop if knees pinch'],
+                            anatomyTip: 'Isometric quad work builds tendon resilience and quad strength without movement stress on the knee joint - one of the safest knee-strengthening drills.'
+                        },
+                        {
+                            name: 'Reverse Nordic (Modified)',
+                            sets: 2,
+                            reps: '5',
+                            muscle: 'Quads/Knees',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Kneel on the floor with knees padded. Lean your whole body BACKWARD (still upright, just tilting back from the knees) only as far as you can with control. Return to upright. This is the modified version - the full version goes much further back. HOW TO DO IT: Kneel on a thick pad with knees hip-width. Sit tall, glutes squeezed. Slowly lean your torso backward as a straight line (head, shoulders, hips all tilt back together from the knees). Only go as far as comfortable - even 10 degrees is fine starting out. Return to upright by squeezing the quads.',
+                            cues: ['PAD the knees thickly', 'Keep body in a straight line - no folding at the hip', 'Tiny range to start - build up over weeks', 'Squeeze quads to pull yourself back up', 'STOP at any sharp knee pain'],
+                            anatomyTip: 'Eccentric quad strength at deep knee flexion - extremely protective for knees but requires gradual progression. Do not push the range early.'
+                        },
+                        {
+                            name: 'Terminal Knee Extension',
+                            sets: 2,
+                            reps: '15 each side',
+                            muscle: 'VMO (inner quad)',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit in a chair with one leg out straight. Squeeze the muscle just above your kneecap (especially the inner part) to fully straighten the knee - like trying to push the back of your knee down into the chair. Tiny but important. HOW TO DO IT: Sit on a chair. Extend one leg straight out in front. Place a fingertip on the muscle just above the inner side of your kneecap (the VMO). Slowly straighten the knee fully - feel that muscle harden under your finger. Hold 2 seconds. Relax. 15 reps each side.',
+                            cues: ['SQUEEZE the inner quad hard', 'Hold the lockout 2 seconds', 'Feel the muscle harden under your fingertip', 'This is small but powerful - do not skip', 'Both legs equally'],
+                            anatomyTip: 'The VMO (vastus medialis oblique) is critical for kneecap tracking. Weak VMO = lateral kneecap drift = knee pain. This drill is gold for knee rehab.'
+                        },
+                        {
+                            name: 'Slow Step Down',
+                            sets: 2,
+                            reps: '10 each side',
+                            muscle: 'Glutes/Quads',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand on a step (4-8 inches high). Lower the opposite foot SLOWLY toward the floor over 3-5 seconds, lightly tap your heel down, then drive back up through the standing leg. Most of the work is in the GLUTE of the standing leg. HOW TO DO IT: Stand on a step with one foot. Hinge slightly at the hip, then slowly lower the opposite foot toward the floor over 3-5 seconds. Lightly tap the heel - do not put weight on it. Drive back up through the heel and glute of the standing leg. 10 reps each side.',
+                            cues: ['Hinge at the HIP to load the glute', '3-5 second descent', 'Light heel tap, do not transfer weight', 'Drive through the standing heel', 'Stop if standing knee pinches'],
+                            anatomyTip: 'Eccentric glute and quad loading - one of the highest-value knee-friendly leg drills. Builds the muscles that control the kneecap during stair descent.'
+                        }
+                    ]},
+                    { day: 3, name: 'Hips', focus: 'Hip rotation, end-range strength, flexor and glute balance', exercises: [
+                        {
+                            name: 'Hip CARs (Standing)',
+                            sets: 1,
+                            reps: '3 circles each direction, each side',
+                            muscle: 'Hip Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand on one leg holding a wall. Lift the other knee and draw a huge slow circle through every direction your hip can move - front, side, back, around. Reverse. HOW TO DO IT: Stand tall, hand on a wall for balance. Lift one knee toward chest. From there, sweep the knee out to the side, then drop it behind you, then back to start. 3 slow circles, then reverse direction. Switch sides.',
+                            cues: ['Move SLOWLY - 5+ seconds per circle', 'Maximize range in every direction', 'Standing leg stays locked', 'Hips stay LEVEL', 'Core braced throughout'],
+                            anatomyTip: 'Full active range training at the hip joint - flexion, abduction, extension, internal/external rotation - the gold-standard hip joint health drill.'
+                        },
+                        {
+                            name: '90/90 Hip Lift-Off',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Hip External Rotators',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit in the 90/90 position (both knees bent at 90 degrees, one front, one side - pretzel-style). From there, lift the FRONT knee off the floor just 1-2 inches by squeezing the glute of that leg. Tiny but very hard. HOW TO DO IT: Sit on the floor in 90/90 position - one leg in front, knee bent 90 with shin out to the side; other leg out to the side, knee bent 90 with shin behind. Sit tall. Now try to lift the front knee off the floor by squeezing the glute on that side. It will be tiny. Hold 2 seconds. Lower. 5 reps. Switch sides.',
+                            cues: ['Pad the outside knee if it complains', 'Lift comes from the glute, not the back', 'Tiny lift is fine - 1-2 inches', 'Hold 2 seconds at the top', 'Stay tall, do not collapse forward'],
+                            anatomyTip: 'Active end-range hip external rotation strength - notoriously weak in most people. Translates directly to squat and lunge knee stability.'
+                        },
+                        {
+                            name: 'Cossack Squat (Assisted)',
+                            sets: 2,
+                            reps: '5 each side',
+                            muscle: 'Hips/Inner Thighs',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A side-to-side squat. Stand wide. Hold a door for support. Shift your weight all the way to one side, bending that knee while the other leg stays straight out to the side. Toes of the straight leg can point up. HOW TO DO IT: Stand with feet wider than shoulders, holding a door or post for support. Shift weight to your right side, bending your right knee and lowering into a side-squat while the left leg straightens out to the side (toes can point up). Push back to standing, then shift to the other side. Use the door to take load off.',
+                            cues: ['USE THE DOOR for support - this is mandatory if knees are sensitive', 'Toes of the straight leg point up or stay flat', 'Knee tracks toward toes on the bending side', 'Only as deep as comfortable', 'Slow and controlled both directions'],
+                            anatomyTip: 'Trains hip mobility in the frontal plane (side-to-side) - a movement direction Western fitness almost never trains. Opens adductors and rebuilds lateral hip strength.'
+                        },
+                        {
+                            name: 'Couch Stretch with Active Extension',
+                            sets: 1,
+                            reps: '5 contractions each side',
+                            muscle: 'Hip Flexors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Kneel with one shin against a wall or couch (top of foot against the wall, knee on floor). Front leg in a lunge. Tuck your butt under, then squeeze the glute of the back leg HARD for 5 seconds. Relax. Repeat 5 times. Active stretching beats passive stretching. HOW TO DO IT: Kneel facing away from a wall or couch. Place the top of your back foot against the wall, back knee on a thick pad. Front foot forward in a lunge. Tuck pelvis under (scoop tailbone forward) to lengthen the back hip flexor. Now squeeze the glute of the back leg as hard as you can for 5 seconds. Relax. 5 reps each side.',
+                            cues: ['PAD the back knee thickly', 'Tuck pelvis FIRST to find the stretch', 'Squeeze the back-leg glute HARD', 'Hold each contraction 5 seconds', 'Do not push past sharp pain'],
+                            anatomyTip: 'Active contraction at end range (PAILs/RAILs) creates real mobility gains - passive stretching alone rarely changes anything long-term.'
+                        }
+                    ]},
+                    { day: 4, name: 'Spine', focus: 'Segmental spine control, flexion/extension/rotation strength', exercises: [
+                        {
+                            name: 'Segmental Cat-Cow',
+                            sets: 1,
+                            reps: '5 very slow',
+                            muscle: 'Full Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Regular cat-cow but SUPER slow - move one vertebra at a time, starting from your tailbone and rolling up to your head. Then reverse: head down first, then chest, then lower back. Like a slow wave through your spine. HOW TO DO IT: On all fours. Start the arch (Cow) from your TAILBONE first - tilt it up, then chest lifts, then head looks up LAST. To round (Cat), start by tucking the tail under FIRST, then round the lower back, then mid-back, then chin to chest LAST. Each rep should take 15-20 seconds.',
+                            cues: ['Move one vertebra at a time', 'Start the wave from the tail', 'Each rep takes 15-20 seconds', 'Feel each section moving separately', 'Breath flows with the movement'],
+                            anatomyTip: 'Segmental spinal control - the ability to move one vertebra at a time - is the foundation of healthy back movement. Lost in most adults by age 30.'
+                        },
+                        {
+                            name: 'Jefferson Curl (Bodyweight)',
+                            sets: 2,
+                            reps: '5 very slow',
+                            muscle: 'Spinal Erectors/Hamstrings',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A controlled rounding of the spine forward, one vertebra at a time. Stand tall, then slowly fold forward, rounding from your head down to your tailbone (chin first, then upper back, mid back, low back, tailbone last). Reverse: tailbone first to come up, head last. Bodyweight only - no added load. HOW TO DO IT: Stand on a small platform or stable surface. Knees soft but mostly straight. Start the curl from the TOP: drop chin to chest first, then round the upper back, then mid, then lower, then tilt the pelvis. Hands hang and reach toward the floor. Come up the same way reversed: untilt the pelvis FIRST, then unroll the lower back, mid, upper, head last.',
+                            cues: ['NO LOAD - bodyweight only', 'Move one segment at a time', 'Knees stay soft and slightly bent', 'Reverse the order on the way up', 'Stop if you feel a pinch or zap'],
+                            anatomyTip: 'Controlled spinal flexion under no load builds the spine\'s tolerance to bending - the very movement most people are TOLD not to do. Counter-intuitive but research-backed.'
+                        },
+                        {
+                            name: 'Cobra Press-Up (No Load)',
+                            sets: 2,
+                            reps: '8',
+                            muscle: 'Spinal Extensors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lie face-down. Press your upper body up off the floor like a cobra rising. Hips stay on the floor. Lower with control. HOW TO DO IT: Lie face-down, hands flat under shoulders, elbows tucked. Press your chest off the floor, straightening arms only as much as feels comfortable - HIPS STAY ON THE FLOOR. Look up gently. Hold 2 seconds at the top. Lower with control.',
+                            cues: ['Hips stay glued to the floor', 'Only press up as much as feels good', 'Look up gently - do not crank the neck', '2 second hold at the top', 'Slow controlled lowering'],
+                            anatomyTip: 'Active spinal extension trains the erector spinae through their full shortened range - opposite of the rounded posture most adults default to.'
+                        },
+                        {
+                            name: 'Side-Lying Thoracic Windmill',
+                            sets: 1,
+                            reps: '8 each side',
+                            muscle: 'Thoracic Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lie on your side with the top knee bent and resting on the floor in front of you (or on a pillow). Sweep the top arm in a HUGE circle over your head and behind you - like making a snow angel. Eyes follow your hand. HOW TO DO IT: Lie on your right side. Bend your left (top) knee 90 degrees and rest it on the floor (or pillow) in front of your hips. Extend both arms straight in front, palms together. Sweep the top arm in a giant slow circle: up overhead, behind you to the floor (or as close as you can get), past your hips, and back to start. Eyes follow the hand. 8 circles, then switch sides.',
+                            cues: ['Keep the bottom knee pinned to the floor', 'Sweep the arm in the BIGGEST circle possible', 'Eyes track the hand all the way around', 'Reach for the floor behind you', 'Slow, never forced'],
+                            anatomyTip: 'Combines thoracic rotation, shoulder ROM, and visual tracking - the eye-tracking adds cervical rotation training in the same plane.'
+                        }
+                    ]},
+                    { day: 5, name: 'Shoulders', focus: 'Full shoulder ROM, scapular control, end-range strength', exercises: [
+                        {
+                            name: 'Shoulder CARs',
+                            sets: 1,
+                            reps: '3 circles each direction, each side',
+                            muscle: 'Shoulder Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Draw the biggest possible slow circle with one arm - up overhead, behind you, down by your side, back to front. Through every direction your shoulder can move. The shoulder blade glides naturally with the arm. HOW TO DO IT: Stand tall. Lift one arm straight in front of you. Slowly sweep it up overhead, then behind you (rotating the palm/thumb back), then down by your side, then back to front. Big slow circle. 3 reps, then reverse direction. Switch sides.',
+                            cues: ['SLOW - 5-8 seconds per full circle', 'Maximize range in every direction', 'OTHER shoulder stays still and pressed down', 'Brace core to prevent ribs from flaring', 'Let the shoulder blade glide'],
+                            anatomyTip: 'Comprehensive shoulder joint training: integrates the glenohumeral joint and the scapulothoracic joint through their full active range together.'
+                        },
+                        {
+                            name: 'Wall Angels',
+                            sets: 2,
+                            reps: '10',
+                            muscle: 'Shoulders/Upper Back',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand against a wall - head, shoulders, butt, heels all touching. Press your arms against the wall in a "Y" shape, then slide them down to a "W" shape (elbows tucked to ribs), maintaining wall contact the whole time. Like making a snow angel against a wall. HOW TO DO IT: Stand with back to a wall, feet 6 inches out. Press head, upper back, and butt into the wall. Lift arms overhead in a Y, backs of hands on the wall. Slowly slide arms down to a W (elbows at sides, hands at shoulder level). All contact points stay on the wall - if your forearms lose contact, do not force it.',
+                            cues: ['Maintain ALL wall contact: head, shoulders, butt, arms', 'If arms lose contact, REDUCE range', 'Tuck ribs - no lower back arch', 'Slow and controlled', 'Both directions equally'],
+                            anatomyTip: 'Trains scapular control through full overhead range. The wall provides feedback so you cannot cheat with thoracic extension or shrugged shoulders.'
+                        },
+                        {
+                            name: 'Prone Y-T-W',
+                            sets: 1,
+                            reps: '5 each letter',
+                            muscle: 'Rear Delts/Mid Back',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lie face down. Make a "Y" with your arms overhead - lift them off the floor. Lower. Make a "T" with arms straight out to the sides - lift. Lower. Make a "W" with elbows bent at 90, hands at head height - lift. Lower. 5 reps of each letter. HOW TO DO IT: Lie face-down on the floor or a bench. With thumbs up: Y position - arms overhead in a wide V. Lift arms off the floor 2-4 inches, squeeze shoulder blades, hold 2 sec, lower. Repeat for T (arms straight out to sides at shoulder height) and W (elbows bent to 90, hands at head height like a W). 5 reps of each.',
+                            cues: ['Thumbs UP for all three positions', 'Lift comes from the upper back, not the lower back', 'Forehead can rest on a rolled towel', '2 second hold at the top', 'Do not crank the neck'],
+                            anatomyTip: 'Trains the rear delts, rhomboids, and lower traps - the upper-back muscles responsible for shoulder positioning. Direct antidote to rounded desk shoulders.'
+                        },
+                        {
+                            name: 'Active Hang',
+                            sets: 2,
+                            reps: '20-30 seconds',
+                            muscle: 'Shoulders/Lats',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Grab a pull-up bar (or any sturdy overhead bar). Hang from it with arms straight. ACTIVE means: push your shoulders DOWN AWAY from your ears (do not let them shrug up to your ears). Hold for 20-30 seconds. HOW TO DO IT: Grip an overhead bar slightly wider than shoulders, palms forward. Hang with arms fully extended. Engage your lats by pulling your shoulder blades DOWN and slightly together - your body should rise a tiny bit when you do this. Hold the active position 20-30 seconds. 2 sets.',
+                            cues: ['DO NOT let shoulders shrug up to ears', 'Pull shoulder blades down and slightly together', 'Lats stay engaged the whole time', 'Brace core gently', 'Build up - start with 10 sec'],
+                            anatomyTip: 'Decompresses the spine, opens the shoulder capsule, and builds grip and lat strength. Critical for shoulder health and traction relief from desk sitting.'
+                        }
+                    ]},
+                    { day: 6, name: 'Wrists', focus: 'Wrist mobility and strength in all four directions', exercises: [
+                        {
+                            name: 'Wrist CARs',
+                            sets: 1,
+                            reps: '5 circles each direction, each wrist',
+                            muscle: 'Wrist Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Extend one arm in front. Make a fist. Slowly draw the biggest possible circle with your fist by moving the WRIST only (keep the arm still). Like stirring a tiny pot with your fist. HOW TO DO IT: Extend one arm straight in front, palm down. Make a relaxed fist. Without moving the elbow or shoulder, slowly trace the largest circle you can with the fist - up, in toward you, down, out away. 5 circles, then reverse. Switch sides.',
+                            cues: ['Arm stays still - move ONLY the wrist', 'Maximize the circle range', 'SLOW - 5 sec per circle', 'Both directions equally', 'Both wrists'],
+                            anatomyTip: 'Wrists are ignored joints. Daily CARs preserve range and prevent the stiffness that creeps in from typing, phone use, and aging.'
+                        },
+                        {
+                            name: 'Wrist Push-Ups (Palms Down)',
+                            sets: 2,
+                            reps: '5',
+                            muscle: 'Wrist Extensors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Get on hands and knees with palms flat on the floor, fingers pointing FORWARD. Lift the palms off the floor while leaving the fingers down - just the heels of your hands move up. Then press the palms back down. Tiny range. HOW TO DO IT: On hands and knees, palms flat, fingers pointed forward. Keeping fingers planted, lift the heels of your hands off the floor by curling at the wrist. Lower the palms back down. 5 reps. This builds wrist strength in extension.',
+                            cues: ['Fingers STAY planted on the floor', 'Only the palm/wrist lifts', 'Slow and controlled', 'Build up to weight on hands gradually', 'Stop if wrists pinch'],
+                            anatomyTip: 'Loads the wrist extensors in their working range - directly builds wrist strength for push-ups, planks, and bodyweight movement.'
+                        },
+                        {
+                            name: 'Reverse Wrist Push-Ups (Backs of Hands)',
+                            sets: 2,
+                            reps: '5',
+                            muscle: 'Wrist Flexors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: On hands and knees, but flip your hands over so the BACKS of your hands are on the floor (knuckles up) and fingers point back toward your knees. Press the backs of your hands harder into the floor to lift the knuckles up. Tiny range. HOW TO DO IT: On hands and knees, flip your hands so the backs are on the floor, fingers pointing back toward your knees. Apply gentle pressure. Then press the backs of your hands into the floor to lift the knuckles (curling at the wrist the opposite way). 5 reps. SCALE: keep most of your weight on your knees.',
+                            cues: ['Keep weight LIGHT on the hands at first', 'Build up gradually - this is intense', 'If pain - stop and shake out', 'Tiny range only', 'Both hands equally'],
+                            anatomyTip: 'Loads the wrist flexors and the often-stiff anterior wrist capsule. Critical for restoring full wrist range and resilience.'
+                        },
+                        {
+                            name: 'Finger Tendon Glides',
+                            sets: 2,
+                            reps: '5 full cycles each hand',
+                            muscle: 'Hand/Finger Tendons',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Five hand positions in sequence: 1) fingers straight, 2) curl into a hook (knuckles bend, fingertips touch palm), 3) curl into a full fist, 4) tabletop (fingers bent 90 at base only), 5) straight fist. Cycle through each position slowly. HOW TO DO IT: Hold your hand out, palm up. Position 1: All fingers fully straight. Position 2: Bend just the middle knuckles, making a hook with straight fingertips. Position 3: Full fist - all knuckles bent, fingertips into palm. Position 4: Tabletop - fingers bent 90 degrees at the base knuckles only. Position 5: Straight fist - fingers fully curled at base and middle, fingertips on palm at the base. Cycle through 1-5 then back. 5 full cycles each hand.',
+                            cues: ['Move slowly through each position', 'Feel the difference between positions', 'Both hands equally', 'No pain - this should feel good', 'Great desk break'],
+                            anatomyTip: 'Maintains glide of the finger flexor and extensor tendons. Prevents trigger finger, carpal tunnel symptoms, and arthritis stiffness.'
+                        }
+                    ]},
+                    { day: 7, name: 'Neck', focus: 'Cervical spine mobility and isometric strength in all directions', exercises: [
+                        {
+                            name: 'Neck CARs',
+                            sets: 1,
+                            reps: '3 circles each direction',
+                            muscle: 'Cervical Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A slow head-roll. Chin to chest, ear to shoulder, head tilted back, ear to other shoulder, chin to chest. Like a slow circle traced with your nose. HOW TO DO IT: Sit tall. Slowly trace a circle with your head: chin down to chest, then sweep the ear toward one shoulder, then tilt the head back, then sweep the ear to the other shoulder, then back to chin-on-chest. 3 circles, reverse. SHOULDERS STAY DOWN.',
+                            cues: ['Move VERY slowly - 8-10 seconds per circle', 'Shoulders stay DOWN', 'Maximize the range at each point', 'Stop if dizzy or sharp pain', 'Breathe through it'],
+                            anatomyTip: 'Active full-range cervical mobility - rare to train consciously and critical for offsetting forward-head posture from screen time.'
+                        },
+                        {
+                            name: 'Chin Tucks (Isometric)',
+                            sets: 2,
+                            reps: '10 reps × 3-second holds',
+                            muscle: 'Deep Neck Flexors',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Make a double chin on purpose. Sit tall, glide your head straight back (like making yourself shorter), pull your chin slightly down. You should look like you have a triple chin. Hold 3 seconds. Release. The "deep neck flexors" are the muscles that pull your head back into proper alignment. HOW TO DO IT: Sit tall, look straight ahead. Without tilting your head down, GLIDE your whole head straight backward - like trying to make a double chin. Hold 3 seconds. Release. 10 reps. Two sets.',
+                            cues: ['DO NOT tilt the head down', 'GLIDE the head straight back', 'Embrace the double chin', '3 second hold each rep', 'Great desk drill'],
+                            anatomyTip: 'Strengthens the deep neck flexors - the muscles responsible for proper head-neck alignment. Direct fix for forward-head posture and tension headaches.'
+                        },
+                        {
+                            name: 'Lateral Neck Press (Isometric)',
+                            sets: 1,
+                            reps: '5 holds × 5 seconds each side',
+                            muscle: 'Lateral Neck',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Place your hand on the side of your head. Press your head against your hand. Hand and head push against each other equally - neither moves. Hold 5 seconds. This is "isometric" - working without movement. HOW TO DO IT: Sit tall. Place your right palm flat against your right temple. Push your head into your hand AND resist with the hand - neither side moves. Push at about 30-50% effort. Hold 5 seconds. Relax. 5 reps each side.',
+                            cues: ['Push at 30-50% effort - not max', 'Head and hand do not move', '5 second holds', 'Both sides equally', 'Breathe through the hold'],
+                            anatomyTip: 'Isometric strengthening of lateral neck flexors without joint movement. Safe for almost any neck issue and builds resilience for daily life.'
+                        },
+                        {
+                            name: 'Rotation Isometric',
+                            sets: 1,
+                            reps: '5 holds × 5 seconds each side',
+                            muscle: 'Neck Rotators',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Place your hand on your forehead near the side. Try to TURN your head against your hand. Hand resists - neither moves. Hold 5 seconds. Works the rotation muscles. HOW TO DO IT: Sit tall. Place your right palm on the right side of your forehead. Try to turn your head to the right while the hand resists - neither side moves. 30-50% effort. Hold 5 seconds. Relax. 5 reps. Switch sides.',
+                            cues: ['30-50% effort - not maximal', 'No actual movement happens', '5 second holds', 'Both sides equally', 'Excellent neck rehab drill'],
+                            anatomyTip: 'Strengthens cervical rotators without straining joints. Particularly useful after whiplash, tension headaches, or chronic neck stiffness.'
+                        }
+                    ]}
+                ]
+            },
+            {
+                id: 'movesmethod-workouts-3x',
+                name: 'MovesMethod Workouts',
+                description: '3 longer (20-30 min) full-body mobility sessions. Builds flexibility through full-range strength training - no endless stretching. Can be your primary training.',
+                kneeSafe: true,
+                days: [
+                    { day: 1, name: 'Full Body Movement Flow', focus: 'Head-to-toe integrated mobility session (25 min)', exercises: [
+                        {
+                            name: 'Cat-Cow Flow',
+                            sets: 2,
+                            reps: '8 reps',
+                            muscle: 'Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Start the workout with slow cat-cow on hands and knees. Inhale into the arch (Cow - belly drops, chest lifts), exhale into the round (Cat - back rounds, chin to chest). Move with breath. HOW TO DO IT: On all fours, hands under shoulders, knees under hips. Inhale: drop belly, lift chest and tailbone (Cow). Exhale: round spine, tuck pelvis (Cat). 8 slow reps, 2 rounds. Use this as your spinal warm-up.',
+                            cues: ['Move with breath', 'Slow and full range', 'Pad knees', 'Wave through the spine', 'No rushing'],
+                            anatomyTip: 'Warms up the spinal flexion/extension pattern and primes the nervous system for spinal movement.'
+                        },
+                        {
+                            name: 'Standing Roll-Down',
+                            sets: 1,
+                            reps: '5 very slow',
+                            muscle: 'Full Spine/Hamstrings',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand tall. Slowly fold forward by rolling down one vertebra at a time, starting from the head, until you reach as far as comfortable. Then roll back up the same way reversed. Like Jefferson curl but standing on the floor. HOW TO DO IT: Stand with feet hip-width, knees soft. Drop chin to chest. Slowly roll down vertebra by vertebra - upper back rounds, then mid, then lower, then pelvis tilts. Arms hang. Pause at the bottom, then reverse: pelvis untilts first, then lower back, mid, upper, head last. Each rep takes 15-20 seconds.',
+                            cues: ['Move one segment at a time', 'Knees stay soft', 'No load - bodyweight only', 'Stop if any sharp pain or zap', 'Breathe through it'],
+                            anatomyTip: 'Builds spinal flexion tolerance under gravity - the most-feared movement pattern that needs to be trained to be resilient.'
+                        },
+                        {
+                            name: 'World\'s Greatest Stretch Flow',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A 3-step flow per side: 1) deep lunge with hand inside foot (lizard), 2) reach the inside hand up and twist to open the chest, 3) place hand back down and straighten the front leg to stretch the hamstring. Then switch sides. HOW TO DO IT: Step into a deep lunge with the right foot forward. Lower the LEFT (back) knee to a pad. Place RIGHT hand inside right foot (lizard). Now: reach LEFT arm to the ceiling, twist torso open. Plant left hand on floor. Straighten the right leg (push hips back, pull toes up) - feel the hamstring. Re-bend, switch sides. 5 full flows per side.',
+                            cues: ['PAD the back knee', 'Move slowly through the 3 positions', 'Twist comes from the mid-back', 'Both sides equally', 'Use a yoga block under the inside hand if floor is too far'],
+                            anatomyTip: 'One of the highest-value full-body mobility flows - hits hips, thoracic spine, shoulders, and hamstrings in one move.'
+                        },
+                        {
+                            name: 'Standing Hip CARs',
+                            sets: 1,
+                            reps: '3 circles each direction, each side',
+                            muscle: 'Hip Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand on one leg holding a wall. Lift the other knee and draw a huge slow circle with the knee - front, side, back, around. Stir a pot with your leg. HOW TO DO IT: Stand tall, hand on a wall for balance. Lift one knee toward chest, then sweep it out to the side, then drop it behind you, then return. 3 circles, reverse direction. Switch sides.',
+                            cues: ['Move SLOWLY', 'Maximize the range in every direction', 'Standing leg stays locked', 'Hips level', 'Both directions'],
+                            anatomyTip: 'Full active range at the hip joint - foundational drill for hip health.'
+                        },
+                        {
+                            name: 'Cossack Squat Flow (Assisted)',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Hips/Inner Thighs',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: A wide side-to-side squat. Hold a door for support. Shift weight to one side, bending that knee while the other leg extends out to the side. Push back to standing, then shift to the other side. Flowing rhythm. HOW TO DO IT: Stand feet wider than shoulders, holding a door or sturdy post. Shift weight right, bending right knee into a side-squat while the left leg straightens. Pause at depth. Push back to wide standing, then shift to the left side. Flow side-to-side. 5 each side.',
+                            cues: ['USE THE DOOR for support', 'Only as deep as knees allow', 'Knee tracks toward toes on bending side', 'Toes of straight leg can point up', 'Flow continuously'],
+                            anatomyTip: 'Frontal-plane hip mobility under load - trains a movement direction most people never train.'
+                        },
+                        {
+                            name: 'Shoulder CARs',
+                            sets: 1,
+                            reps: '3 circles each direction, each side',
+                            muscle: 'Shoulder Joint',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Same idea as Hip CARs but for shoulders. Draw the biggest possible slow circle with one arm. HOW TO DO IT: Stand tall. Lift one arm in front. Sweep it up overhead, behind you (rotating palm back), down by your side, back to front. 3 circles, reverse. Switch sides.',
+                            cues: ['SLOW - 5-8 seconds per circle', 'Maximize the range', 'Other shoulder stays still', 'Brace core', 'Both sides'],
+                            anatomyTip: 'Comprehensive shoulder joint mobility training.'
+                        },
+                        {
+                            name: 'Standing Spinal Twists',
+                            sets: 1,
+                            reps: '10 each side',
+                            muscle: 'Thoracic Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand with feet hip-width. Cross arms over chest. Twist your upper body fully to one side, then the other. Hips stay forward. HOW TO DO IT: Feet hip-width, arms crossed at chest (hands on opposite shoulders). Rotate fully to one side, pause at end range, then to the other side. Hips stay square. 10 each direction.',
+                            cues: ['Hips stay forward', 'Rotate from mid-back', 'Stack ribs over pelvis', 'Full range, not partial', 'Breath flows'],
+                            anatomyTip: 'Thoracic rotation training in a standing functional position.'
+                        },
+                        {
+                            name: 'Active Hang',
+                            sets: 2,
+                            reps: '20-30 seconds',
+                            muscle: 'Shoulders/Lats',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hang from a pull-up bar with arms straight. ACTIVE means: pull your shoulder blades DOWN AWAY from your ears (do not let them shrug up). Hold. HOW TO DO IT: Grip overhead bar slightly wider than shoulders. Hang with arms extended. Pull shoulder blades DOWN and slightly together - your body rises a tiny bit when engaged. Hold 20-30 seconds. 2 sets.',
+                            cues: ['NO shoulder shrugging', 'Pull shoulder blades down', 'Lats stay engaged', 'Brace core gently', 'Build up gradually'],
+                            anatomyTip: 'Decompresses spine, opens shoulders, builds grip. Critical for shoulder and posture health.'
+                        },
+                        {
+                            name: 'Deep Squat Hold',
+                            sets: 1,
+                            reps: '30-60 seconds',
+                            muscle: 'Hips/Ankles',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hold a door for assistance. Squat down as deep as your knees allow and just HANG OUT in the bottom. Rock side to side gently. Breathe. This was the human resting position for most of history. HOW TO DO IT: Hold a door frame or TRX. Squat down as deep as comfortable. Settle in - rock gently side to side, breathe deeply, look around. 30-60 seconds total. Stand up slowly with control.',
+                            cues: ['USE the door - take load off knees', 'Only as deep as comfortable', 'Breathe deeply', 'Rock gently to find comfort', 'Build duration over weeks'],
+                            anatomyTip: 'The deep squat is a fundamental human resting position. Spending time here daily reopens the hips, ankles, and lower back.'
+                        }
+                    ]},
+                    { day: 2, name: 'Posterior Chain Mobility', focus: 'Back of body session: spine, glutes, hamstrings (25 min)', exercises: [
+                        {
+                            name: 'Cat-Cow + Hip Rocks',
+                            sets: 2,
+                            reps: '8 reps each',
+                            muscle: 'Spine/Hips',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Two warm-ups in one. On all fours, do 8 cat-cows. Then in the same position, rock your hips backward toward your heels (sit your butt back) and forward again. HOW TO DO IT: On all fours. 8 cat-cow reps with breath. Stay on all fours. Now rock your hips BACK toward your heels (sit butt back, arms reach forward) and then forward to start position. 8 hip rocks. Repeat the whole sequence twice.',
+                            cues: ['Pad the knees', 'Breath with the movement', 'Hip rocks: sit butt back fully', 'Arms can reach forward on the rock-back', 'Both movements slow'],
+                            anatomyTip: 'Warms up the entire posterior chain: spine, hip flexors, hamstrings, calves.'
+                        },
+                        {
+                            name: 'Glute Bridge Isometric',
+                            sets: 3,
+                            reps: '30 second holds',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Lie on your back, knees bent, feet flat. Lift your hips up so your body is a straight line from knees to shoulders. Hold. Squeeze your glutes the entire time. HOW TO DO IT: Lie on your back. Bend knees, feet flat hip-width. Press through your heels and lift your hips until straight line from knee to shoulder. SQUEEZE glutes hard. Hold 30 seconds. Lower with control. 3 sets.',
+                            cues: ['SQUEEZE glutes the entire hold', 'Press through HEELS, not toes', 'Ribs tucked - no lower back arch', 'Breathe normally', 'Knees track over toes'],
+                            anatomyTip: 'Builds glute strength and endurance without spinal compression. Direct fix for desk-induced sleeping glutes.'
+                        },
+                        {
+                            name: 'Quadruped Hip Extension',
+                            sets: 2,
+                            reps: '10 each side',
+                            muscle: 'Glutes',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: On hands and knees. Lift one leg backward, knee bent at 90 degrees, foot toward the ceiling like pressing the sole of your foot up. Squeeze the glute. Lower. HOW TO DO IT: On all fours, knees padded. Keep one knee bent at 90 degrees and lift that leg backward, pressing the sole of the foot toward the ceiling. Squeeze the glute hard. Lower with control. 10 reps each side.',
+                            cues: ['Foot points UP toward ceiling', 'Squeeze the glute at the top', 'Hips stay LEVEL - no twisting', 'Slow controlled both directions', 'Pad knees'],
+                            anatomyTip: 'Direct glute activation in an isolated position - cannot cheat with hamstrings or lower back.'
+                        },
+                        {
+                            name: 'Single-Leg RDL (Assisted)',
+                            sets: 2,
+                            reps: '8 each side',
+                            muscle: 'Hamstrings/Glutes',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand on one leg. Hold a wall for balance. Hinge forward at the hips, kicking the other leg back behind you as a counterweight. Flat back, slight knee bend. Return upright. HOW TO DO IT: Stand on right leg, left hand lightly on a wall. Hinge at the right hip, keeping the right knee slightly bent. The left leg kicks back behind you as a counterweight (like a teeter-totter). Reach with the right hand toward the floor. Stop where you feel a stretch in the right hamstring. Stand back up by squeezing the right glute. 8 reps. Switch sides.',
+                            cues: ['Use a wall for balance', 'Standing knee soft, not locked', 'Hinge at the HIP, not the back', 'Back leg straight, kicks back as counterweight', 'Squeeze glute to return'],
+                            anatomyTip: 'Single-leg posterior chain training with balance demand. Builds hip stability and hamstring mobility together.'
+                        },
+                        {
+                            name: 'Cobra to Child\'s Pose Flow',
+                            sets: 2,
+                            reps: '8',
+                            muscle: 'Spine',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Flow between two yoga poses. Lie face-down, then push up into Cobra (chest up, hips on floor). Then push back into Child\'s Pose (knees under hips, butt to heels, arms reach forward). Flow back and forth. HOW TO DO IT: Lie face down, hands under shoulders. Press up into Cobra: chest off floor, hips stay on floor. Push back through your hips into Child\'s Pose: knees wide or together, butt sits toward heels, arms reach forward, forehead on floor. Return through Cobra. Flow continuously for 8 cycles.',
+                            cues: ['Pad knees if Child\'s Pose hurts', 'Cobra: only as high as feels good', 'Child\'s Pose: rest the forehead', 'Slow flowing transitions', 'Breathe with the movement'],
+                            anatomyTip: 'Full spinal extension and flexion in alternation. Mobilizes the whole spinal column safely.'
+                        },
+                        {
+                            name: 'Active Pancake Stretch',
+                            sets: 1,
+                            reps: '5 contractions',
+                            muscle: 'Adductors/Hamstrings',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit on the floor with legs spread wide (straddle position). Reach forward between your legs only as far as comfortable. Then PUSH your heels into the floor for 5 seconds (active contraction), relax, and reach further. Repeat 5 times. Active stretching beats passive. HOW TO DO IT: Sit with legs spread wide in a V, knees facing up, toes pulled toward you. Hinge forward at the hips with a flat back as far as comfortable. From that position, press your heels DOWN into the floor for 5 seconds (you will not actually move - it is an isometric). Relax. Try to reach a tiny bit further. Repeat 5 times.',
+                            cues: ['Only as wide as comfortable', 'Hinge at the HIP, flat back', 'Press heels into floor for 5 sec each contraction', 'Reach a tiny bit further after each', 'No bouncing'],
+                            anatomyTip: 'Active stretching with isometric contractions (PNF-style) creates real ROM gains. Passive stretching alone rarely works long-term.'
+                        },
+                        {
+                            name: 'Deep Squat to Stand (Assisted)',
+                            sets: 1,
+                            reps: '8',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Hold a door for assistance. Slowly squat down as deep as comfortable, pause, then stand back up. The door helps the knees. HOW TO DO IT: Hold a door frame. Lower over 3-5 seconds into your deepest comfortable squat. Pause 1-2 sec. Stand up with control. 8 reps.',
+                            cues: ['USE the door', '3-5 second descent', 'Only as deep as knees allow', 'Pause briefly at the bottom', 'Drive up through heels'],
+                            anatomyTip: 'Closing drill - reinforces the deep squat pattern with full-range hip and ankle work.'
+                        }
+                    ]},
+                    { day: 3, name: 'Move Like a Human', focus: 'Locomotion patterns, multi-plane movement (25 min)', exercises: [
+                        {
+                            name: 'Bear Crawl',
+                            sets: 2,
+                            reps: '4 forward + 4 back',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Crawl on hands and feet (not knees) with knees hovering 1 inch off the floor. Opposite hand and foot move together. HOW TO DO IT: Hands and knees, knees lifted 1 inch off floor. Move forward by stepping right hand + left foot, then left hand + right foot. 4 steps forward, 4 back. 2 rounds.',
+                            cues: ['Opposite limbs move together', 'Hips stay level', 'Knees hover - never touch', 'Slow and controlled', 'Look at the floor ahead'],
+                            anatomyTip: 'The fundamental contralateral locomotor pattern - integrates core, shoulders, and hips into one system.'
+                        },
+                        {
+                            name: 'Crab Walk',
+                            sets: 1,
+                            reps: '4 forward + 4 back',
+                            muscle: 'Glutes/Shoulders',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit on the floor, lean back with palms on the floor behind you, feet flat in front. Lift your hips off the floor (tabletop). Walk forward and backward on hands and feet like a crab. HOW TO DO IT: Sit on the floor, palms behind you (fingers facing your feet or out to the sides - whichever is easier on wrists). Feet flat in front. Lift hips off the floor into a reverse tabletop. Walk: step right hand back, left foot back, then left hand back, right foot back. 4 steps each way. Lower hips only if tired.',
+                            cues: ['Palms positioned for wrist comfort', 'Hips stay UP off the floor', 'Squeeze glutes throughout', 'Slow and controlled', 'Lower if grip or wrist fatigue'],
+                            anatomyTip: 'Reverse-bear locomotion - trains posterior chain, glutes, shoulders, and triceps in a coordinated pattern most adults never do.'
+                        },
+                        {
+                            name: 'Lateral Lunge Flow',
+                            sets: 2,
+                            reps: '5 each side',
+                            muscle: 'Hips/Quads',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Stand wide. Lunge sideways to one side - bend that knee, the other leg stays straight. Push back to standing. Then lunge to the other side. HOW TO DO IT: Stand wider than shoulders. Shift weight to the right, bending the right knee into a side-lunge while the left leg stays straight (toes can turn up). Push back to standing. Shift to the left side. 5 each direction. Use a door for support if needed.',
+                            cues: ['Use door for balance if needed', 'Knee tracks toward toes', 'Straight leg can flex toes up', 'Only as deep as comfortable', 'Flow continuously'],
+                            anatomyTip: 'Frontal-plane locomotion training - rarely done in modern life but essential for hip and knee resilience.'
+                        },
+                        {
+                            name: 'Lizard Lunge + Rotation',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Hips/Thoracic',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Deep lunge with hand INSIDE the front foot. Back knee on a pad. Then reach the other arm up to the ceiling and twist open. HOW TO DO IT: Step into a deep lunge with right foot forward. Lower the left (back) knee to a pad. Right hand on floor INSIDE the right foot. Reach left arm to the ceiling, rotating torso open. Eyes follow the hand. Return hand to floor. 5 reps. Switch sides.',
+                            cues: ['Pad the back knee', 'Hand INSIDE the front foot', 'Reach the top hand HIGH', 'Eyes follow the hand', 'Slow and controlled'],
+                            anatomyTip: 'Combines deep hip flexion/extension with thoracic rotation - one of the most valuable mobility movements.'
+                        },
+                        {
+                            name: 'Tightrope Walk',
+                            sets: 1,
+                            reps: '20 steps each way',
+                            muscle: 'Balance/Ankles',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Walk in a straight line, heel touching toe each step, like a tightrope. Arms out for balance. HOW TO DO IT: Walk forward heel-to-toe in a straight line. Arms out wide. 20 steps. Return backward heel-to-toe (or turn around).',
+                            cues: ['Heel touches toe each step', 'Arms wide for balance', 'Look ahead, not down', 'Slow controlled steps', 'Engage foot arches'],
+                            anatomyTip: 'Single-leg balance and ankle stability in dynamic walking - foundational for fall prevention.'
+                        },
+                        {
+                            name: 'Slow Get-Up to Standing',
+                            sets: 1,
+                            reps: '5 each side',
+                            muscle: 'Full Body',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Sit on the floor. Stand up using only one side of your body (one arm + one leg leading). Then sit back down the same way. This is from Turkish get-up family - tests how well you can transition from floor to standing. HOW TO DO IT: Sit on the floor. Use your right hand and right foot to push yourself up to standing without using the left side much. Reverse: slowly lower yourself back to sitting using just the right side. 5 reps. Switch to the left side.',
+                            cues: ['Slow and controlled both directions', 'Use a wall or door for assistance if needed', 'Both sides equally', 'Find what works for your knees', 'Build up gradually'],
+                            anatomyTip: 'Floor-to-standing transitions predict longevity and independence. Practicing this skill keeps it available.'
+                        },
+                        {
+                            name: 'Deep Squat Walk-Around',
+                            sets: 1,
+                            reps: '5 small steps',
+                            muscle: 'Hips/Ankles',
+                            kneeSafe: true,
+                            trackProgress: false,
+                            instructions: 'PLAIN ENGLISH: Get into the deepest squat your knees allow (use a door for help). From the bottom of the squat, take 5 tiny steps - rotate yourself in a small circle while staying in the squat. Then stand up. HOW TO DO IT: Hold a door for assistance. Squat down as deep as comfortable. From the bottom, take small foot-steps to rotate in place (or shuffle in a small circle). 5 steps total. Stand up with control.',
+                            cues: ['USE THE DOOR for support', 'Stay only as deep as comfortable', 'Tiny shuffling steps', 'Breathe through it', 'Skip if knees hurt'],
+                            anatomyTip: 'Loaded movement in a deep squat - builds hip and ankle adaptability at end range. Skip if knees are unhappy.'
+                        }
+                    ]}
+                ]
             }
         ];
     }
