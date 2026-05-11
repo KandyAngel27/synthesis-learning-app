@@ -1194,7 +1194,78 @@ class SynthesisApp {
     }
 
     showSearch() {
-        alert('Search functionality coming soon! 🔍');
+        // Build the search overlay once, then reuse it
+        let overlay = document.getElementById('search-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'search-overlay';
+            overlay.innerHTML = `
+                <style>
+                    #search-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; display:flex; align-items:flex-start; justify-content:center; padding-top:8vh; }
+                    #search-overlay .search-modal { background:var(--color-bg, #fff); width:min(640px, 92vw); max-height:80vh; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 24px 60px rgba(0,0,0,0.4); }
+                    #search-overlay .search-input-row { display:flex; align-items:center; gap:12px; padding:18px 22px; border-bottom:1px solid rgba(0,0,0,0.08); }
+                    #search-overlay .search-input-row svg { flex-shrink:0; opacity:0.5; }
+                    #search-overlay input { flex:1; border:none; outline:none; font-size:1.05rem; background:transparent; color:var(--color-text, #111); }
+                    #search-overlay .search-close { background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--color-text-secondary, #666); padding:4px 8px; }
+                    #search-overlay .search-results { overflow-y:auto; padding:8px 0; flex:1; }
+                    #search-overlay .search-result-item { padding:12px 22px; cursor:pointer; transition:background 0.15s; }
+                    #search-overlay .search-result-item:hover { background:rgba(0,0,0,0.04); }
+                    #search-overlay .search-result-title { font-weight:600; color:var(--color-text, #111); margin:0 0 2px; font-size:0.95rem; }
+                    #search-overlay .search-result-meta { color:var(--color-text-secondary, #666); font-size:0.82rem; }
+                    #search-overlay .search-empty { text-align:center; padding:32px 22px; color:var(--color-text-secondary, #666); font-size:0.9rem; }
+                </style>
+                <div class="search-modal" onclick="event.stopPropagation()">
+                    <div class="search-input-row">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                        <input id="search-input" type="text" placeholder="Search books and authors..." autocomplete="off">
+                        <button class="search-close" onclick="app.closeSearch()" aria-label="Close">&times;</button>
+                    </div>
+                    <div class="search-results" id="search-results">
+                        <div class="search-empty">Start typing to search ${getAllBooks().length} books</div>
+                    </div>
+                </div>
+            `;
+            overlay.addEventListener('click', () => this.closeSearch());
+            document.body.appendChild(overlay);
+            const input = overlay.querySelector('#search-input');
+            input.addEventListener('input', (e) => this.renderSearchResults(e.target.value));
+            input.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.closeSearch(); });
+        }
+        overlay.style.display = 'flex';
+        setTimeout(() => document.getElementById('search-input').focus(), 50);
+    }
+
+    closeSearch() {
+        const overlay = document.getElementById('search-overlay');
+        if (overlay) {
+            overlay.style.display = 'none';
+            const input = document.getElementById('search-input');
+            if (input) input.value = '';
+        }
+    }
+
+    renderSearchResults(query) {
+        const results = document.getElementById('search-results');
+        const q = (query || '').trim().toLowerCase();
+        if (!q) {
+            results.innerHTML = `<div class="search-empty">Start typing to search ${getAllBooks().length} books</div>`;
+            return;
+        }
+        const matches = getAllBooks().filter(b => {
+            const title = (b.title || '').toLowerCase();
+            const author = (b.author || '').toLowerCase();
+            return title.includes(q) || author.includes(q);
+        }).slice(0, 25);
+        if (matches.length === 0) {
+            results.innerHTML = `<div class="search-empty">No books match "${query.replace(/[<>"']/g,'')}"</div>`;
+            return;
+        }
+        results.innerHTML = matches.map(b => `
+            <div class="search-result-item" onclick="app.closeSearch(); app.showBook('${b.id}')">
+                <div class="search-result-title">${(b.title || '').replace(/</g,'&lt;')}</div>
+                <div class="search-result-meta">${(b.author || '').replace(/</g,'&lt;')} &middot; ${b.lessons || 0} lessons</div>
+            </div>
+        `).join('');
     }
 
     // ============================================
