@@ -67,7 +67,7 @@ Plan **12 lessons minimum** (more is fine, fewer is not). Each lesson should cov
 
 ### Card Structure: MINIMUM 10 Cards Per Lesson (More If the Concept Demands It)
 
-**The more knowledge the better.** If a concept needs 14 cards to teach properly, use 14 cards. 10 is the floor, not the ceiling. Never artificially truncate knowledge to save cards.
+**The more knowledge the better.** If a concept needs 14 cards to teach properly, use 14 cards. 12 is the floor, not the ceiling. Use as many cards as needed to help the user learn the content AND check that they remember it. Never artificially truncate knowledge to save cards.
 
 Every lesson MUST follow this progression at minimum:
 
@@ -85,7 +85,7 @@ Every lesson MUST follow this progression at minimum:
 | 10 | `quiz` | Final knowledge check | **YES** |
 | 11+ | `concept`, `quote`, `example` | Additional depth — add as many as needed | **ENCOURAGED** |
 
-**When to add more than 10 cards:**
+**When to add more than 12 cards:**
 - The concept has sub-ideas that each deserve their own card
 - There are more than 2 great real-world examples
 - A quote from the author would add emotional resonance
@@ -352,7 +352,7 @@ grep "book-id-here" data.js
 
 **Structure**
 - [ ] 12+ lessons
-- [ ] Every lesson has 10+ cards
+- [ ] Every lesson has 12+ cards
 - [ ] Every lesson starts with `intro` card
 - [ ] Every lesson ends with `quiz` card
 - [ ] Every lesson has an `application` card
@@ -549,7 +549,7 @@ grep "book-id-here" data.js
 
 ### Stats
 - 12 lessons
-- 87 total cards (this was the first book — all future books require 10+ cards per lesson)
+- 87 total cards (this was the first book — all future books require 12+ cards per lesson)
 - 87 SVG diagrams
 - 24 quiz questions
 - 78 minutes total duration
@@ -609,7 +609,7 @@ options: [
 ### Fewer Than 10 Cards
 ```
 7 cards per lesson  // WRONG — below minimum
-10+ cards per lesson // RIGHT — meets the standard
+12+ cards per lesson // RIGHT — meets the standard
 ```
 
 ---

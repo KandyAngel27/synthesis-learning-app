@@ -43,7 +43,7 @@ The following categories are part of the user's **college degree program** and r
 1. **NO lesson maximum** — A book can have 15, 20, 25, or more lessons. Cover every topic the college course covers.
 2. **NO card maximum** — A lesson can have 12, 15, 20, or more cards. If a concept needs 18 cards to teach properly at college depth, use 18 cards.
 3. **Minimum 12 lessons** still applies — but there is NO ceiling. More is better.
-4. **Minimum 10 cards per lesson** still applies — but there is NO ceiling. More is better.
+4. **Minimum 12 cards per lesson** still applies — but there is NO ceiling. More is better.
 5. **College-course depth required**:
    - Cover the same topics a professor would cover in a full semester
    - Include terminology, definitions, classifications, and taxonomies
@@ -97,9 +97,9 @@ The following categories are part of the user's **college degree program** and r
 
 ## Required Card Structure
 
-### Minimum 10 Cards Per Lesson (No Exceptions)
+### Minimum 12 Cards Per Lesson, Minimum 2 Quizzes (No Exceptions)
 
-If a concept is rich enough to warrant more cards, **use more cards**. The more knowledge the better. 10 is the floor, not the ceiling. Complex lessons may need 12-15 cards.
+Use as many cards as the content needs to **help the user learn it AND check that they remember it**. 12 cards is the floor, not the ceiling. Complex lessons may need 14-18 cards. Add cards whenever they earn their place — additional concept depth, another concrete example, an extra knowledge check, a quote that resonates.
 
 Every lesson MUST include this progression at minimum:
 
@@ -113,11 +113,15 @@ Every lesson MUST include this progression at minimum:
 | 6 | `concept` | Second core concept | **YES** |
 | 7 | `visual` or `concept` | Visual or deeper layer for concept 2 | **YES** |
 | 8 | `example` | Real-world application of concept 2 | **YES** |
-| 9 | `application` | "How to apply this TODAY" — numbered, specific steps | **YES** |
-| 10 | `quiz` | Final knowledge check (tests concept 2 or full lesson) | **YES** |
-| 11+ | Any type | Additional depth — more concepts, examples, quotes, visuals | **ENCOURAGED** |
+| 9 | `concept` or `example` | Third concept OR third example OR quote — earn the slot | **YES** |
+| 10 | `application` | "How to apply this TODAY" — numbered, specific steps | **YES** |
+| 11 | `concept`, `quote`, or `example` | Final reinforcement — earn the slot | **YES** |
+| 12 | `quiz` | Final knowledge check (tests concept 2 or full lesson) | **YES** |
+| 13+ | Any type | Additional depth — more concepts, examples, quotes, visuals | **ENCOURAGED** |
 
-**When to add more than 10 cards:**
+**Minimum 2 quizzes per lesson** — one mid-lesson check (around card 5) and one final check (the last card or near it). Add a third or fourth quiz whenever the material has more than two distinct ideas worth testing.
+
+**When to add more than 12 cards:**
 - The concept has multiple sub-ideas that each deserve their own card
 - There are more than 2 great real-world examples worth showing
 - A quote from the author would add emotional resonance
@@ -745,7 +749,7 @@ Before considering a book complete, verify ALL of the following:
 - [ ] Lesson 12 synthesizes all concepts into a cohesive whole
 
 ### Per Lesson
-- [ ] **Minimum 10 cards** (no maximum for college-depth categories — use as many as needed)
+- [ ] **Minimum 12 cards** (no maximum for college-depth categories — use as many as needed)
 - [ ] Starts with an engaging `intro` card
 - [ ] At least **2 quiz cards** (mid-lesson + end)
 - [ ] At least 1 `application` card with specific actions
@@ -839,7 +843,7 @@ options: [
 ### Fewer Than 10 Cards
 ```
 7 cards per lesson   // WRONG — below minimum, knowledge is being cut short
-10+ cards per lesson // RIGHT — meets the standard, add more if needed
+12+ cards per lesson // RIGHT — meets the standard, add more if needed
 ```
 
 ### Fewer Than 12 Lessons
