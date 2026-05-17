@@ -492,11 +492,44 @@ class SynthesisApp {
         if (!this.currentCategory) return;
 
         document.getElementById('category-title').textContent = this.currentCategory.name;
-        
+
         const container = document.getElementById('category-books');
         container.innerHTML = this.currentCategory.books.map(book => `
             <div class="featured-book-card" onclick="app.showBook('${book.id}')">
                 <div class="book-cover" style="background: linear-gradient(135deg, ${this.currentCategory.color} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
+                    <div class="book-cover-text">${book.title}</div>
+                </div>
+                <div class="book-info">
+                    <div class="book-title">${book.title}</div>
+                    <div class="book-author">${book.author}</div>
+                    <div class="book-meta">
+                        <span class="book-lessons">${book.lessons} lessons</span>
+                        <span class="book-time">${book.duration} min</span>
+                    </div>
+                    ${book.progress > 0 ? `
+                        <div class="progress-container" style="margin-top: 0.5rem;">
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: ${book.progress}%"></div>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `).join('');
+
+        this.switchView('category');
+    }
+
+    showAllBooks() {
+        this.currentCategory = null;
+
+        const allBooks = APP_DATA.categories.flatMap(c => c.books || []);
+        document.getElementById('category-title').textContent = `All Books (${allBooks.length})`;
+
+        const container = document.getElementById('category-books');
+        container.innerHTML = allBooks.map(book => `
+            <div class="featured-book-card" onclick="app.showBook('${book.id}')">
+                <div class="book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(book.category)} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
                     <div class="book-cover-text">${book.title}</div>
                 </div>
                 <div class="book-info">
