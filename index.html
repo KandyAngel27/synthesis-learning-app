@@ -9,6 +9,7 @@
     <title>Synthesis - Master Knowledge in Minutes</title>
     <link rel="stylesheet" href="styles.css?v=1736300010">
     <link rel="stylesheet" href="random-workout-generator.css?v=1736300001">
+    <link rel="stylesheet" href="exam-center.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -102,6 +103,10 @@
                         <button class="quick-action-btn" onclick="app.switchView('quick-quiz')">
                             <span class="quick-action-icon">&#9889;</span>
                             <span class="quick-action-label">Quick Quiz</span>
+                        </button>
+                        <button class="quick-action-btn" onclick="app.switchView('exam')">
+                            <span class="quick-action-icon">&#128221;</span>
+                            <span class="quick-action-label">Exam Center</span>
                         </button>
                         <button class="quick-action-btn" onclick="app.switchView('feynman')">
                             <span class="quick-action-icon">&#129504;</span>
@@ -372,6 +377,22 @@
                 </div>
             </div>
 
+            <!-- Exam Center View -->
+            <div id="exam-view" class="view">
+                <div class="view-header">
+                    <button class="btn-back" id="exam-back-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Back
+                    </button>
+                    <h1>📝 Exam Center</h1>
+                </div>
+                <div class="exam-content" id="exam-content">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
             <!-- Feynman Technique View -->
             <div id="feynman-view" class="view">
                 <div class="view-header">
@@ -534,13 +555,14 @@
     <!-- External category modules must load BEFORE data.js -->
     <script src="medical-coding-data.js"></script>
     <script src="art-history-v2.js"></script>
-    <script src="data.js?v=20260525CE"></script>
+    <script src="data.js?v=20260608mbc"></script>
     <script src="premium-features.js"></script>
     <script src="gamification.js"></script>
     <script src="active-recall.js"></script>
+    <script src="exam-center.js?v=1"></script>
     <script src="random-workout-generator.js?v=1778516142"></script>
     <script src="fitness-tracker.js?v=1778516142"></script>
     <script src="recipe-assistant.js"></script>
-    <script src="app.js?v=1778518960"></script>
+    <script src="app.js?v=20260608mbc"></script>
 </body>
 </html>
