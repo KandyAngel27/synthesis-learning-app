@@ -47,6 +47,12 @@ class SynthesisApp {
             window.activeRecall = new ActiveRecallSystem(this);
         }
 
+        // Initialize exam center
+        if (typeof ExamCenter !== 'undefined') {
+            window.examCenter = new ExamCenter(this);
+            examCenter = window.examCenter;
+        }
+
         // Initialize fitness tracker
         if (typeof FitnessTracker !== 'undefined') {
             window.fitnessTracker = new FitnessTracker(this);
@@ -234,6 +240,13 @@ class SynthesisApp {
             this.switchView('home');
         });
 
+        const examBackBtn = document.getElementById('exam-back-btn');
+        if (examBackBtn) {
+            examBackBtn.addEventListener('click', () => {
+                this.switchView('home');
+            });
+        }
+
         // Lesson navigation
         document.getElementById('prev-card-btn').addEventListener('click', () => {
             this.previousCard();
@@ -293,6 +306,8 @@ class SynthesisApp {
             window.activeRecall?.renderFlashcards();
         } else if (viewName === 'quick-quiz') {
             window.activeRecall?.renderQuickQuiz();
+        } else if (viewName === 'exam') {
+            window.examCenter?.renderExamHome();
         } else if (viewName === 'feynman') {
             window.activeRecall?.renderFeynman();
         } else if (viewName === 'body-metrics') {
@@ -599,18 +614,29 @@ class SynthesisApp {
             ${this.currentBook.lessonList ? `
                 <div class="lessons-list">
                     <h2>Lessons</h2>
-                    ${this.currentBook.lessonList.map((lesson, index) => `
-                        <div class="lesson-item" onclick="app.startLesson('${this.currentBook.id}', '${lesson.id}')">
+                    ${this.currentBook.lessonList.map((lesson, index) => {
+                        const bookId = this.currentBook.id;
+                        const unlocked = window.examCenter ? window.examCenter.isLessonUnlocked(bookId, lesson.id) : true;
+                        const passed = window.examCenter ? window.examCenter.isLessonPassed(bookId, lesson.id) : false;
+                        let statusHtml = '';
+                        if (passed) statusHtml = '<span class="lesson-status">✓ Passed</span>';
+                        else if (lesson.completed) statusHtml = '<span class="lesson-status" style="color:#3bafbf">Read</span>';
+                        else if (!unlocked) statusHtml = '<span class="lesson-status" style="color:#888">🔒 Locked</span>';
+                        const click = unlocked
+                            ? `app.startLesson('${bookId}', '${lesson.id}')`
+                            : `window.examCenter && window.examCenter.toast('Locked — pass the previous lesson\\'s quiz (80%) to unlock this.')`;
+                        return `
+                        <div class="lesson-item" style="${unlocked ? '' : 'opacity:0.55;'}" onclick="${click}">
                             <div style="display: flex; align-items: center; flex: 1;">
-                                <div class="lesson-number">${index + 1}</div>
+                                <div class="lesson-number">${unlocked ? (index + 1) : '🔒'}</div>
                                 <div class="lesson-item-info">
                                     <div class="lesson-item-title">${lesson.title}</div>
                                     <div class="lesson-item-duration">${lesson.duration || 11} min</div>
                                 </div>
                             </div>
-                            ${lesson.completed ? '<span class="lesson-status">✓ Complete</span>' : ''}
-                        </div>
-                    `).join('')}
+                            ${statusHtml}
+                        </div>`;
+                    }).join('')}
                 </div>
             ` : ''}
         `;
@@ -631,6 +657,12 @@ class SynthesisApp {
     startLesson(bookId, lessonId) {
         const book = getBookById(bookId);
         if (!book || !book.lessonList) return;
+
+        // Strict gating: block locked curriculum lessons
+        if (window.examCenter && !window.examCenter.isLessonUnlocked(bookId, lessonId)) {
+            window.examCenter.toast('Locked — pass the previous lesson\'s quiz (80%) to unlock this.');
+            return;
+        }
 
         this.currentBook = book;
         this.currentLesson = book.lessonList.find(l => String(l.id) === String(lessonId));
@@ -1101,10 +1133,15 @@ class SynthesisApp {
 
         // Show completion message with styled modal
         const xpEarned = APP_DATA.user.xpRewards.lessonComplete + (bookJustCompleted ? APP_DATA.user.xpRewards.bookComplete : 0);
-        this.showLessonCompleteModal(this.currentLesson.title, xpEarned, this.currentBook.progress, bookJustCompleted, this.currentBook.id);
+        this.showLessonCompleteModal(this.currentLesson.title, xpEarned, this.currentBook.progress, bookJustCompleted, this.currentBook.id, this.currentLesson.id);
     }
 
-    showLessonCompleteModal(lessonTitle, xpEarned, bookProgress, bookCompleted, bookId) {
+    showLessonCompleteModal(lessonTitle, xpEarned, bookProgress, bookCompleted, bookId, lessonId) {
+        // Does this lesson have a gating quiz? (curriculum lessons)
+        const hasQuiz = !!(window.examCenter && window.examCenter.lessonHasContent(
+            (getBookById(bookId)?.lessonList || []).find(l => String(l.id) === String(lessonId)) || {}
+        ));
+        const alreadyPassed = !!(window.examCenter && window.examCenter.isLessonPassed(bookId, lessonId));
         // Create modal HTML
         const modal = document.createElement('div');
         modal.className = 'lesson-complete-modal';
@@ -1129,6 +1166,9 @@ class SynthesisApp {
 
                 ${bookCompleted ? '<div class="lesson-complete-bonus">📚 Book Completed! Bonus XP Earned!</div>' : ''}
 
+                ${hasQuiz && !alreadyPassed ? '<div class="lesson-complete-bonus" style="background:rgba(99,102,241,0.18);color:#c7d2fe;">📝 Pass the lesson quiz (80%) to unlock the next lesson.</div>' : ''}
+
+                ${hasQuiz && !alreadyPassed ? '<button class="lesson-complete-btn lesson-complete-quiz-btn" style="background:#6366f1;margin-bottom:0.6rem;">Take Quiz to Unlock Next →</button>' : ''}
                 <button class="lesson-complete-btn">Continue</button>
             </div>
         `;
@@ -1141,7 +1181,7 @@ class SynthesisApp {
         }, 50);
 
         // Handle continue button click
-        const continueBtn = modal.querySelector('.lesson-complete-btn');
+        const continueBtn = modal.querySelector('.lesson-complete-btn:not(.lesson-complete-quiz-btn)');
         const self = this;
         continueBtn.addEventListener('click', function() {
             modal.classList.remove('active');
@@ -1151,6 +1191,19 @@ class SynthesisApp {
                 self.showBook(bookId);
             }, 300);
         });
+
+        // Handle "Take Quiz" button — launch the gating lesson quiz
+        const quizBtn = modal.querySelector('.lesson-complete-quiz-btn');
+        if (quizBtn) {
+            quizBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.remove();
+                    self.switchView('exam');
+                    window.examCenter.startLessonQuiz(bookId, lessonId);
+                }, 300);
+            });
+        }
     }
 
     startDailyLesson() {
