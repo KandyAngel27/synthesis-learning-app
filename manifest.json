@@ -2,12 +2,12 @@
   "name": "Synthesis — Master Knowledge in Minutes",
   "short_name": "Synthesis",
   "description": "Your personal learning library — books, exams, flashcards, and spaced practice.",
-  "start_url": "/?source=pwa",
+  "start_url": "./?source=pwa",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#1a1a2e",
   "theme_color": "#6366f1",
-  "scope": "/",
+  "scope": "./",
   "icons": [
     {
       "src": "icon.svg",

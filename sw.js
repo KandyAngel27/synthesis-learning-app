@@ -2,17 +2,18 @@
 // Network-first for app code (so updates always reach you), cache-first
 // for the heavy data.js so the app launches instantly on second visit.
 
-const CACHE_VERSION = 'synthesis-v1';
+const CACHE_VERSION = 'synthesis-v2';
+// Relative paths so this works at GitHub Pages subdirectory too
 const CORE_ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/gamification.js',
-  '/exam-center.js',
-  '/exam-center.css',
-  '/manifest.json',
-  '/icon.svg'
+  './',
+  './index.html',
+  './styles.css',
+  './app.js',
+  './gamification.js',
+  './exam-center.js',
+  './exam-center.css',
+  './manifest.json',
+  './icon.svg'
 ];
 
 self.addEventListener('install', event => {
