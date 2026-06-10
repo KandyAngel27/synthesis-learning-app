@@ -547,7 +547,36 @@ class SynthesisApp {
         document.getElementById('category-title').textContent = this.currentCategory.name;
 
         const container = document.getElementById('category-books');
-        container.innerHTML = this.currentCategory.books.map(book => `
+
+        // Exam Center track banner — explains how the curriculum + Exam Center
+        // work together, shows direct links to the exam modes.
+        let banner = '';
+        if (this.currentCategory.examCenterTrack) {
+            banner = `
+                <div class="exam-track-banner" style="background: linear-gradient(135deg, #0ea5e9, #0369a1); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">📘 How This Course Works</h3>
+                    <p style="margin: 0 0 1rem 0; opacity: 0.95; line-height: 1.5;">
+                        This is a <strong>10-book curriculum</strong> paired with the <strong>Exam Center</strong>. Start at the top book (US Healthcare & Insurance 101) and work down. After each lesson, take its quiz in the Exam Center. <strong>Score 80% or higher to unlock the next lesson.</strong>
+                    </p>
+                    <ul style="margin: 0 0 1rem 1.25rem; padding: 0; opacity: 0.95; line-height: 1.6;">
+                        <li><strong>Lesson mode:</strong> one lesson's quiz — gating exam, must pass 80%</li>
+                        <li><strong>Unit mode:</strong> one book's unlocked questions, mixed</li>
+                        <li><strong>Comprehensive:</strong> ALL unlocked questions across the whole track</li>
+                        <li><strong>Daily mode:</strong> spaced-repetition queue of due + previously-missed questions</li>
+                    </ul>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <button onclick="app.switchView('exam')" style="background: white; color: #0369a1; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                            Open Exam Center →
+                        </button>
+                        <button onclick="if(window.examCenter){window.examCenter.startDailyReview();} app.switchView('exam');" style="background: rgba(255,255,255,0.18); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                            Start Today's Spaced Review
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        container.innerHTML = banner + this.currentCategory.books.map(book => `
             <div class="featured-book-card" onclick="app.showBook('${book.id}')">
                 <div class="book-cover" style="background: linear-gradient(135deg, ${this.currentCategory.color} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
                     <div class="book-cover-text">${book.title}</div>
