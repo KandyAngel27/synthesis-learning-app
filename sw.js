@@ -37,6 +37,16 @@ self.addEventListener('fetch', event => {
 
   const url = new URL(req.url);
 
+  // Never intercept Firebase / Google auth / Firestore traffic — must hit live
+  if (url.hostname.includes('googleapis.com') ||
+      url.hostname.includes('gstatic.com') ||
+      url.hostname.includes('firebaseio.com') ||
+      url.hostname.includes('firebaseapp.com') ||
+      url.hostname.includes('google.com') ||
+      url.hostname.includes('firebase')) {
+    return; // let the browser handle it normally
+  }
+
   // For data.js (large, mostly static) — cache-first, falls back to network
   if (url.pathname.endsWith('/data.js') || url.pathname.endsWith('/medical-coding-data.js')) {
     event.respondWith(

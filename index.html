@@ -66,9 +66,14 @@
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </button>
+                    <button id="cloud-sync-btn" title="Sign in with Google to sync across devices"
+                            style="display:inline-flex;align-items:center;gap:0.35rem;background:rgba(99,102,241,0.15);color:#a5b4fc;border:1px solid rgba(99,102,241,0.4);padding:0.4rem 0.75rem;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.85rem;">
+                        <span style="font-size:1rem;">☁️</span><span>Sign in</span>
+                    </button>
                 </div>
             </div>
         </header>
+        <div id="cloud-sync-status" style="text-align:center;font-size:0.75rem;color:#94a3b8;padding:0.25rem 0;background:rgba(0,0,0,0.1);"></div>
 
         <!-- Main Content Area -->
         <main class="main-content">
@@ -573,7 +578,7 @@
     <!-- External category modules must load BEFORE data.js -->
     <script src="medical-coding-data.js"></script>
     <script src="art-history-v2.js"></script>
-    <script src="data.js?v=20260525DH"></script>
+    <script src="data.js?v=20260525DI"></script>
     <script src="premium-features.js"></script>
     <script src="gamification.js"></script>
     <script src="active-recall.js"></script>
@@ -582,6 +587,11 @@
     <script src="fitness-tracker.js?v=1778516142"></script>
     <script src="recipe-assistant.js"></script>
     <script src="app.js?v=20260608mbc"></script>
+    <!-- Firebase compat SDKs — exposes global `firebase` so we can use script tags (no bundler) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <script src="firebase-sync.js?v=1"></script>
     <script>
       // PWA: register the service worker (installable on phone home screen, offline shell)
       if ('serviceWorker' in navigator) {
