@@ -7,6 +7,14 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Synthesis - Master Knowledge in Minutes</title>
+    <!-- PWA: installable home-screen app -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Synthesis">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
     <link rel="stylesheet" href="styles.css?v=1736300010">
     <link rel="stylesheet" href="random-workout-generator.css?v=1736300001">
     <link rel="stylesheet" href="exam-center.css?v=1">
@@ -565,7 +573,7 @@
     <!-- External category modules must load BEFORE data.js -->
     <script src="medical-coding-data.js"></script>
     <script src="art-history-v2.js"></script>
-    <script src="data.js?v=20260525DF"></script>
+    <script src="data.js?v=20260525DG"></script>
     <script src="premium-features.js"></script>
     <script src="gamification.js"></script>
     <script src="active-recall.js"></script>
@@ -574,5 +582,15 @@
     <script src="fitness-tracker.js?v=1778516142"></script>
     <script src="recipe-assistant.js"></script>
     <script src="app.js?v=20260608mbc"></script>
+    <script>
+      // PWA: register the service worker (installable on phone home screen, offline shell)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(err => {
+            console.warn('SW register failed:', err);
+          });
+        });
+      }
+    </script>
 </body>
 </html>
