@@ -604,7 +604,15 @@ class ExamCenter {
 
     quitToHome() {
         this.session = null;
-        this.renderExamHome();
+        // Send the user back to the MBC course hub — the exam center is
+        // scoped to the Medical Billing track, so that's the natural home
+        // base when quitting a quiz/daily/comprehensive session.
+        const target = this.app || window.app;
+        if (target && typeof target.goToMBCHub === 'function') {
+            target.goToMBCHub();
+        } else {
+            this.renderExamHome();
+        }
     }
 
     toast(msg) {

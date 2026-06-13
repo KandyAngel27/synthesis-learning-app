@@ -233,7 +233,11 @@ class SynthesisApp {
         });
 
         document.getElementById('lesson-back-btn').addEventListener('click', () => {
-            this.showBook(this.currentBook.id);
+            if (this.currentBook && this.isMBCBook(this.currentBook.id)) {
+                this.goToMBCHub();
+            } else {
+                this.showBook(this.currentBook.id);
+            }
         });
 
         document.getElementById('profile-back-btn').addEventListener('click', () => {
@@ -243,7 +247,7 @@ class SynthesisApp {
         const examBackBtn = document.getElementById('exam-back-btn');
         if (examBackBtn) {
             examBackBtn.addEventListener('click', () => {
-                this.switchView('home');
+                this.goToMBCHub();
             });
         }
 
@@ -1726,6 +1730,21 @@ class SynthesisApp {
         } else {
             alert('Error: Reset function not found. Please refresh the page and try again.');
         }
+    }
+
+    // MBC track helpers — when the user is anywhere in the Medical Billing,
+    // Coding & HIM Track, the "back" buttons land them on the course hub
+    // rather than the global home.
+    isMBCBook(bookId) {
+        const cat = APP_DATA.categories.find(c => c.id === 'medical-billing-coding');
+        return !!(cat && cat.books && cat.books.some(b => b.id === bookId));
+    }
+
+    goToMBCHub() {
+        const cat = APP_DATA.categories.find(c => c.id === 'medical-billing-coding');
+        if (!cat) { this.switchView('home'); return; }
+        this.currentCategory = cat;
+        this.showCategory('medical-billing-coding');
     }
 
     getCategoryColor(categoryId) {
