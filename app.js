@@ -546,6 +546,9 @@ class SynthesisApp {
 
         document.getElementById('category-title').textContent = this.currentCategory.name;
 
+        const container = document.getElementById('category-books');
+        container.classList.toggle('mbc-mode', categoryId === 'medical-billing-coding');
+
         // Medical Billing, Coding & HIM Track gets a dedicated course-and-exam
         // hub layout instead of the generic book grid.
         if (categoryId === 'medical-billing-coding') {
@@ -553,8 +556,6 @@ class SynthesisApp {
             this.switchView('category');
             return;
         }
-
-        const container = document.getElementById('category-books');
 
         // Exam Center track banner — explains how the curriculum + Exam Center
         // work together, shows direct links to the exam modes.
@@ -853,6 +854,7 @@ class SynthesisApp {
         document.getElementById('category-title').textContent = `All Books (${allBooks.length})`;
 
         const container = document.getElementById('category-books');
+        container.classList.remove('mbc-mode');
         container.innerHTML = allBooks.map(book => `
             <div class="featured-book-card" onclick="app.showBook('${book.id}')">
                 <div class="book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(book.category)} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
