@@ -392,6 +392,19 @@ class ExamCenter {
         this.beginSession({ mode: 'unit', title: `Unit Exam — ${book ? book.title : bookId}`, gate: null }, qs);
     }
 
+    // After passing a gate quiz, jump straight into the newly-unlocked lesson.
+    goToNextLesson(bookId, lessonId) {
+        if (!this.isLessonUnlocked(bookId, lessonId)) {
+            this.toast('Locked — pass the previous lesson first.');
+            return;
+        }
+        if (this.app && typeof this.app.startLesson === 'function') {
+            this.app.startLesson(bookId, lessonId);
+        } else if (window.app && typeof window.app.startLesson === 'function') {
+            window.app.startLesson(bookId, lessonId);
+        }
+    }
+
     startLessonQuiz(bookId, lessonId) {
         if (!this.isLessonUnlocked(bookId, lessonId)) {
             this.toast('Locked — pass the previous lesson first.');
@@ -499,6 +512,7 @@ class ExamCenter {
 
         // Record gate result for lesson quizzes
         let unlockedMsg = '';
+        let nextLessonBtn = '';
         if (cfg.mode === 'lesson' && cfg.gate) {
             const key = this.lessonKey(cfg.gate.bookId, cfg.gate.lessonId);
             const prev = APP_DATA.user.lessonExamPass[key];
@@ -508,10 +522,19 @@ class ExamCenter {
                 date: new Date().toISOString()
             };
             if (passed) {
-                const nextName = this.nextLessonName(cfg.gate.bookId, cfg.gate.lessonId);
-                unlockedMsg = nextName
-                    ? `<div class="exam-unlock">🔓 Unlocked: <strong>${nextName}</strong></div>`
-                    : `<div class="exam-unlock">🎉 You've passed every unlocked lesson!</div>`;
+                const next = this.nextLessonInfo(cfg.gate.bookId, cfg.gate.lessonId);
+                if (next) {
+                    unlockedMsg = next.newBook
+                        ? `<div class="exam-unlock">🔓 New book unlocked: <strong>${next.bookTitle}</strong><br><span style="font-weight:400">Starting with: ${next.title}</span></div>`
+                        : `<div class="exam-unlock">🔓 Unlocked: <strong>${next.title}</strong></div>`;
+                    // Direct-to-next-lesson button (the headline action on a pass)
+                    nextLessonBtn = `<button class="btn-primary exam-next-lesson-btn" style="background:#10b981;font-size:1.05rem;padding:0.85rem 1.4rem;"
+                        onclick="window.examCenter.goToNextLesson('${next.bookId}','${next.lessonId}')">
+                        ${next.newBook ? 'Start Next Book' : 'Start Next Lesson'} →
+                    </button>`;
+                } else {
+                    unlockedMsg = `<div class="exam-unlock">🎉 You've completed the entire curriculum — every lesson passed!</div>`;
+                }
             } else {
                 unlockedMsg = `<div class="exam-locked-note">You need ${Math.round(EXAM_PASS_THRESHOLD * 100)}% to unlock the next lesson. Review and retake.</div>`;
             }
@@ -542,10 +565,13 @@ class ExamCenter {
                 <div class="exam-result-pct">${Math.round(pct)}%</div>
                 ${unlockedMsg}
                 <div class="exam-result-actions">
+                    ${nextLessonBtn}
                     <button class="btn-secondary" onclick="window.examCenter.renderExamHome()">Back to Exam Center</button>
                     ${cfg.mode === 'lesson' && !passed
                         ? `<button class="btn-primary" onclick="window.examCenter.startLessonQuiz('${cfg.gate.bookId}','${cfg.gate.lessonId}')">Retake Now</button>`
-                        : `<button class="btn-primary" onclick="window.examCenter.startDaily()">Daily Review</button>`}
+                        : (cfg.mode === 'lesson' && passed
+                            ? ''
+                            : `<button class="btn-primary" onclick="window.examCenter.startDaily()">Daily Review</button>`)}
                 </div>
             </div>`;
 
@@ -556,11 +582,24 @@ class ExamCenter {
     }
 
     nextLessonName(bookId, lessonId) {
+        const nxt = this.nextLessonInfo(bookId, lessonId);
+        return nxt ? nxt.title : null;
+    }
+
+    // Returns the next lesson across the whole curriculum (crosses book
+    // boundaries), or null if this is the last lesson of the last book.
+    nextLessonInfo(bookId, lessonId) {
         const ordered = this.getOrderedLessons();
         const pos = ordered.findIndex(o => o.book.id === bookId && String(o.lesson.id) === String(lessonId));
         if (pos === -1 || pos + 1 >= ordered.length) return null;
         const nxt = ordered[pos + 1];
-        return `${nxt.lesson.title}`;
+        return {
+            bookId: nxt.book.id,
+            lessonId: nxt.lesson.id,
+            title: nxt.lesson.title,
+            newBook: nxt.book.id !== bookId,
+            bookTitle: nxt.book.title
+        };
     }
 
     quitToHome() {
