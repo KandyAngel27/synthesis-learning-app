@@ -546,6 +546,14 @@ class SynthesisApp {
 
         document.getElementById('category-title').textContent = this.currentCategory.name;
 
+        // Medical Billing, Coding & HIM Track gets a dedicated course-and-exam
+        // hub layout instead of the generic book grid.
+        if (categoryId === 'medical-billing-coding') {
+            this.renderMedicalBillingCourse();
+            this.switchView('category');
+            return;
+        }
+
         const container = document.getElementById('category-books');
 
         // Exam Center track banner — explains how the curriculum + Exam Center
@@ -600,6 +608,242 @@ class SynthesisApp {
         `).join('');
 
         this.switchView('category');
+    }
+
+    // ============================================================
+    // Medical Billing, Coding & HIM Track — dedicated course page
+    // ============================================================
+    getMBCStats(category) {
+        const books = category.books || [];
+        const ec = window.examCenter;
+        let lessonsTotal = 0, lessonsPassed = 0;
+        let nextBookId = null, nextLessonId = null;
+        let questionsTotal = 0, questionsMastered = 0;
+        const bookStats = [];
+
+        for (const book of books) {
+            const lessons = book.lessonList || [];
+            let bookLessonsPassed = 0;
+            let bookLessonsUnlocked = 0;
+            for (const lesson of lessons) {
+                lessonsTotal++;
+                const unlocked = ec ? ec.isLessonUnlocked(book.id, lesson.id) : (lessonsTotal === 1);
+                const passed = ec ? ec.isLessonPassed(book.id, lesson.id) : false;
+                if (unlocked) bookLessonsUnlocked++;
+                if (passed) { lessonsPassed++; bookLessonsPassed++; }
+                if (unlocked && !passed && !nextBookId) {
+                    nextBookId = book.id;
+                    nextLessonId = lesson.id;
+                }
+            }
+            let pool = [];
+            if (ec) {
+                try { pool = ec.harvestPool({ bookId: book.id }); } catch (_) { pool = []; }
+            }
+            const bookMastered = pool.filter(q =>
+                ec && ec.masteryOf(q.id) >= 0.85 && ec.getStat(q.id).seen > 0
+            ).length;
+            questionsTotal += pool.length;
+            questionsMastered += bookMastered;
+            const pct = lessons.length ? Math.round((bookLessonsPassed / lessons.length) * 100) : 0;
+            bookStats.push({
+                book,
+                lessons: lessons.length,
+                passed: bookLessonsPassed,
+                unlocked: bookLessonsUnlocked,
+                percent: pct,
+                pool: pool.length,
+                mastered: bookMastered,
+            });
+        }
+
+        const booksCompleted = bookStats.filter(s => s.lessons > 0 && s.passed === s.lessons).length;
+        const percentComplete = lessonsTotal ? Math.round((lessonsPassed / lessonsTotal) * 100) : 0;
+        const examHistory = (APP_DATA.user && APP_DATA.user.examHistory) || [];
+        const examsTaken = examHistory.length;
+        const avgScore = examsTaken
+            ? Math.round(examHistory.reduce((a, e) => a + e.pct, 0) / examsTaken)
+            : 0;
+
+        return {
+            books, bookStats,
+            lessonsTotal, lessonsPassed, percentComplete,
+            booksTotal: books.length, booksCompleted,
+            questionsTotal, questionsMastered,
+            examsTaken, avgScore,
+            nextBookId, nextLessonId,
+        };
+    }
+
+    renderMedicalBillingCourse() {
+        const cat = this.currentCategory;
+        const s = this.getMBCStats(cat);
+        const container = document.getElementById('category-books');
+        const ecReady = !!window.examCenter;
+
+        const continueLabel = s.lessonsPassed === 0 ? 'Start the Course' : 'Continue Course';
+        const continueTarget = s.nextBookId && s.nextLessonId
+            ? `app.startLesson('${s.nextBookId}','${s.nextLessonId}')`
+            : (s.books[0] ? `app.showBook('${s.books[0].id}')` : '');
+
+        // Split into two parts: Billing & Coding (1-5) and HIM/Data/Quality (6-10).
+        const part1Ids = new Set(['him-insurance-101','him-revenue-cycle','him-coding-fundamentals','him-claim-forms','him-compliance']);
+        const part1 = s.bookStats.filter(b => part1Ids.has(b.book.id));
+        const part2 = s.bookStats.filter(b => !part1Ids.has(b.book.id));
+
+        const renderModule = (entry, indexInCourse) => {
+            const b = entry.book;
+            const pct = entry.percent;
+            let statusPill;
+            if (entry.lessons === 0) statusPill = '<span class="mbc-pill mbc-pill-locked">No content</span>';
+            else if (entry.passed === entry.lessons) statusPill = '<span class="mbc-pill mbc-pill-done">✓ Completed</span>';
+            else if (entry.passed > 0) statusPill = `<span class="mbc-pill mbc-pill-active">In Progress · ${entry.passed}/${entry.lessons}</span>`;
+            else if (entry.unlocked > 0) statusPill = '<span class="mbc-pill mbc-pill-ready">Ready to Start</span>';
+            else statusPill = '<span class="mbc-pill mbc-pill-locked">🔒 Locked</span>';
+
+            const unitBtn = (ecReady && entry.pool > 0)
+                ? `<button class="mbc-mod-btn mbc-mod-btn-secondary" onclick="event.stopPropagation(); window.examCenter && (app.switchView('exam'), window.examCenter.startUnit('${b.id}'))">Unit Quiz</button>`
+                : '';
+
+            return `
+                <div class="mbc-module" onclick="app.showBook('${b.id}')">
+                    <div class="mbc-mod-number">${indexInCourse}</div>
+                    <div class="mbc-mod-body">
+                        <div class="mbc-mod-head">
+                            <div class="mbc-mod-title">${b.title}</div>
+                            ${statusPill}
+                        </div>
+                        <div class="mbc-mod-meta">
+                            <span>${entry.lessons} lessons</span>
+                            <span>·</span>
+                            <span>${b.duration} min</span>
+                            ${entry.pool > 0 ? `<span>·</span><span>${entry.mastered}/${entry.pool} Qs mastered</span>` : ''}
+                        </div>
+                        <div class="mbc-mod-progress">
+                            <div class="mbc-mod-progress-bar" style="width:${pct}%"></div>
+                        </div>
+                    </div>
+                    <div class="mbc-mod-actions">
+                        <button class="mbc-mod-btn mbc-mod-btn-primary" onclick="event.stopPropagation(); app.showBook('${b.id}')">Open</button>
+                        ${unitBtn}
+                    </div>
+                </div>`;
+        };
+
+        let cursor = 0;
+        const part1Html = part1.map(e => renderModule(e, ++cursor)).join('');
+        const part2Html = part2.map(e => renderModule(e, ++cursor)).join('');
+
+        container.innerHTML = `
+            <div class="mbc-page">
+                <section class="mbc-hero">
+                    <div class="mbc-hero-top">
+                        <span class="mbc-hero-icon">${cat.icon || '🩺'}</span>
+                        <div class="mbc-hero-title-block">
+                            <div class="mbc-hero-eyebrow">Full Course · Exam-Gated Curriculum</div>
+                            <h1 class="mbc-hero-title">${cat.name}</h1>
+                        </div>
+                    </div>
+                    <p class="mbc-hero-desc">${cat.description || ''}</p>
+                    <div class="mbc-hero-progress">
+                        <div class="mbc-hero-progress-row">
+                            <span class="mbc-hero-progress-label">Course Progress</span>
+                            <span class="mbc-hero-progress-pct">${s.percentComplete}%</span>
+                        </div>
+                        <div class="mbc-hero-progress-bar-bg">
+                            <div class="mbc-hero-progress-bar-fill" style="width:${s.percentComplete}%"></div>
+                        </div>
+                        <div class="mbc-hero-progress-meta">
+                            ${s.lessonsPassed}/${s.lessonsTotal} lessons passed · ${s.booksCompleted}/${s.booksTotal} books completed${s.questionsTotal ? ` · ${s.questionsMastered}/${s.questionsTotal} questions mastered` : ''}
+                        </div>
+                    </div>
+                    <div class="mbc-hero-actions">
+                        <button class="mbc-cta mbc-cta-primary" onclick="${continueTarget}">
+                            <span class="mbc-cta-icon">▶</span> ${continueLabel}
+                        </button>
+                        <button class="mbc-cta mbc-cta-secondary" onclick="app.switchView('exam'); window.examCenter && window.examCenter.startDaily && window.examCenter.startDaily();">
+                            <span class="mbc-cta-icon">🔁</span> Today's Spaced Review
+                        </button>
+                        <button class="mbc-cta mbc-cta-tertiary" onclick="app.switchView('exam')">
+                            Open Exam Center →
+                        </button>
+                    </div>
+                </section>
+
+                <section class="mbc-stats">
+                    <div class="mbc-stat-tile">
+                        <span class="mbc-stat-val">${s.booksTotal}</span>
+                        <span class="mbc-stat-lbl">Books</span>
+                    </div>
+                    <div class="mbc-stat-tile">
+                        <span class="mbc-stat-val">${s.lessonsTotal}</span>
+                        <span class="mbc-stat-lbl">Lessons</span>
+                    </div>
+                    <div class="mbc-stat-tile">
+                        <span class="mbc-stat-val">${s.examsTaken}</span>
+                        <span class="mbc-stat-lbl">Exams Taken</span>
+                    </div>
+                    <div class="mbc-stat-tile">
+                        <span class="mbc-stat-val">${s.avgScore}%</span>
+                        <span class="mbc-stat-lbl">Avg Score</span>
+                    </div>
+                </section>
+
+                <section class="mbc-exam-panel">
+                    <div class="mbc-section-head">
+                        <h2 class="mbc-section-title">🎓 Exam Center</h2>
+                        <p class="mbc-section-sub">Retrieval practice — get tested, miss some, repeat.</p>
+                    </div>
+                    <div class="mbc-exam-grid">
+                        <button class="mbc-exam-tile mbc-exam-lesson" onclick="app.switchView('exam')">
+                            <span class="mbc-exam-tile-icon">📝</span>
+                            <span class="mbc-exam-tile-title">Lesson Quizzes</span>
+                            <span class="mbc-exam-tile-desc">80% to unlock the next lesson</span>
+                        </button>
+                        <button class="mbc-exam-tile mbc-exam-unit" onclick="app.switchView('exam')">
+                            <span class="mbc-exam-tile-icon">📚</span>
+                            <span class="mbc-exam-tile-title">Unit Exams</span>
+                            <span class="mbc-exam-tile-desc">One book's unlocked questions, mixed</span>
+                        </button>
+                        <button class="mbc-exam-tile mbc-exam-comp" onclick="app.switchView('exam'); window.examCenter && window.examCenter.chooseComprehensive && window.examCenter.chooseComprehensive();">
+                            <span class="mbc-exam-tile-icon">🎓</span>
+                            <span class="mbc-exam-tile-title">Comprehensive</span>
+                            <span class="mbc-exam-tile-desc">Every unlocked question across the track</span>
+                        </button>
+                        <button class="mbc-exam-tile mbc-exam-daily" onclick="app.switchView('exam'); window.examCenter && window.examCenter.startDaily && window.examCenter.startDaily();">
+                            <span class="mbc-exam-tile-icon">🔁</span>
+                            <span class="mbc-exam-tile-title">Daily Review</span>
+                            <span class="mbc-exam-tile-desc">Spaced repetition — due + missed first</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="mbc-roadmap">
+                    <div class="mbc-section-head">
+                        <h2 class="mbc-section-title">📚 Curriculum Roadmap</h2>
+                        <p class="mbc-section-sub">${s.booksTotal} books, ${s.lessonsTotal} lessons — work top to bottom. Pass each lesson's quiz (80%) to unlock the next.</p>
+                    </div>
+
+                    <div class="mbc-part">
+                        <div class="mbc-part-header">
+                            <span class="mbc-part-num">Part I</span>
+                            <span class="mbc-part-title">Billing &amp; Coding Core</span>
+                            <span class="mbc-part-count">${part1.length} books</span>
+                        </div>
+                        <div class="mbc-modules">${part1Html}</div>
+                    </div>
+
+                    <div class="mbc-part">
+                        <div class="mbc-part-header">
+                            <span class="mbc-part-num">Part II</span>
+                            <span class="mbc-part-title">HIM, Data &amp; Quality</span>
+                            <span class="mbc-part-count">${part2.length} books</span>
+                        </div>
+                        <div class="mbc-modules">${part2Html}</div>
+                    </div>
+                </section>
+            </div>
+        `;
     }
 
     showAllBooks() {

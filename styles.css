@@ -8519,3 +8519,430 @@ body {
         height: 60px;
     }
 }
+
+/* ============================================
+   MED-BILLING COURSE PAGE — Medical Billing,
+   Coding & HIM Track dedicated course-and-exam hub
+   ============================================ */
+
+.mbc-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg) var(--spacing-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* ---------- Hero ---------- */
+.mbc-hero {
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    color: #fff;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+.mbc-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.35) 0%, transparent 70%);
+    pointer-events: none;
+}
+.mbc-hero-top {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+.mbc-hero-icon {
+    font-size: 2.75rem;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(4px);
+}
+.mbc-hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #bae6fd;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.mbc-hero-title {
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin: 0;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+.mbc-hero-desc {
+    margin: 0 0 var(--spacing-lg) 0;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.55;
+    font-size: 0.98rem;
+    position: relative;
+    max-width: 680px;
+}
+.mbc-hero-progress {
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+.mbc-hero-progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+.mbc-hero-progress-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e0f2fe;
+}
+.mbc-hero-progress-pct {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+}
+.mbc-hero-progress-bar-bg {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.mbc-hero-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.55);
+}
+.mbc-hero-progress-meta {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+.mbc-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    position: relative;
+}
+.mbc-cta {
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    font-family: var(--font-sans);
+}
+.mbc-cta:hover { transform: translateY(-1px); }
+.mbc-cta-primary {
+    background: #10b981;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+}
+.mbc-cta-primary:hover { background: #059669; }
+.mbc-cta-secondary {
+    background: rgba(255, 255, 255, 0.92);
+    color: #0c4a6e;
+}
+.mbc-cta-secondary:hover { background: #fff; }
+.mbc-cta-tertiary {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mbc-cta-tertiary:hover { background: rgba(255, 255, 255, 0.22); }
+.mbc-cta-icon { font-size: 1rem; }
+
+/* ---------- Quick-stat tiles ---------- */
+.mbc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+.mbc-stat-tile {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.mbc-stat-val {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    line-height: 1.1;
+}
+.mbc-stat-lbl {
+    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ---------- Shared section heads ---------- */
+.mbc-section-head { margin-bottom: var(--spacing-md); }
+.mbc-section-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-text-primary);
+}
+.mbc-section-sub {
+    margin: 0.3rem 0 0 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ---------- Exam panel ---------- */
+.mbc-exam-panel {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+}
+.mbc-exam-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+.mbc-exam-tile {
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    text-align: left;
+}
+.mbc-exam-tile:hover {
+    transform: translateY(-2px);
+    border-color: rgba(14, 165, 233, 0.5);
+    background: var(--color-bg-elevated);
+}
+.mbc-exam-tile-icon { font-size: 1.5rem; line-height: 1; }
+.mbc-exam-tile-title { font-weight: 700; font-size: 1rem; margin-top: 0.2rem; }
+.mbc-exam-tile-desc { font-size: 0.78rem; color: var(--color-text-secondary); line-height: 1.4; }
+.mbc-exam-lesson { border-left: 3px solid #0ea5e9; }
+.mbc-exam-unit { border-left: 3px solid #8b5cf6; }
+.mbc-exam-comp { border-left: 3px solid #f59e0b; }
+.mbc-exam-daily { border-left: 3px solid #10b981; }
+
+/* ---------- Roadmap ---------- */
+.mbc-roadmap {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+}
+.mbc-part { margin-top: var(--spacing-lg); }
+.mbc-part:first-of-type { margin-top: var(--spacing-md); }
+.mbc-part-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mbc-part-num {
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.mbc-part-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    flex: 1;
+}
+.mbc-part-count {
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+}
+.mbc-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.mbc-module {
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-md);
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+.mbc-module:hover {
+    transform: translateX(2px);
+    border-color: rgba(14, 165, 233, 0.5);
+    background: var(--color-bg-elevated);
+}
+.mbc-mod-number {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.35);
+}
+.mbc-mod-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+}
+.mbc-mod-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.mbc-mod-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    flex: 1;
+    min-width: 0;
+}
+.mbc-mod-meta {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+.mbc-mod-progress {
+    height: 5px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+.mbc-mod-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+.mbc-mod-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-self: center;
+    flex: 0 0 auto;
+}
+.mbc-mod-btn {
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.45rem 0.8rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+    white-space: nowrap;
+}
+.mbc-mod-btn-primary {
+    background: #0ea5e9;
+    color: #fff;
+}
+.mbc-mod-btn-primary:hover { background: #0284c7; transform: translateY(-1px); }
+.mbc-mod-btn-secondary {
+    background: rgba(139, 92, 246, 0.18);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+}
+.mbc-mod-btn-secondary:hover { background: rgba(139, 92, 246, 0.3); }
+
+/* ---------- Status pills ---------- */
+.mbc-pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+.mbc-pill-done {
+    background: rgba(16, 185, 129, 0.18);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.mbc-pill-active {
+    background: rgba(14, 165, 233, 0.18);
+    color: #7dd3fc;
+    border: 1px solid rgba(14, 165, 233, 0.45);
+}
+.mbc-pill-ready {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+.mbc-pill-locked {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .mbc-page { padding: 0 var(--spacing-md) var(--spacing-xl); gap: var(--spacing-lg); }
+    .mbc-hero { padding: var(--spacing-lg); }
+    .mbc-hero-title { font-size: 1.45rem; }
+    .mbc-hero-icon { font-size: 2.1rem; padding: 0.5rem 0.65rem; }
+    .mbc-stats { grid-template-columns: repeat(2, 1fr); }
+    .mbc-exam-grid { grid-template-columns: repeat(2, 1fr); }
+    .mbc-exam-panel, .mbc-roadmap { padding: var(--spacing-lg); }
+    .mbc-module { flex-wrap: wrap; }
+    .mbc-mod-actions { flex-direction: row; width: 100%; }
+    .mbc-mod-btn { flex: 1; }
+    .mbc-cta { font-size: 0.88rem; padding: 0.65rem 1rem; }
+}
