@@ -2969,7 +2969,7 @@ body {
 
 .quick-actions-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: var(--spacing-md);
 }
 
@@ -6328,7 +6328,7 @@ body {
 
 @media (max-width: 768px) {
     .quick-actions-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .quiz-options {
