@@ -664,12 +664,13 @@ class SynthesisApp {
         document.getElementById('category-title').textContent = this.currentCategory.name;
 
         const container = document.getElementById('category-books');
-        container.classList.toggle('mbc-mode', categoryId === 'medical-billing-coding');
+        // Any category flagged as a "course hub" (legacy MBC, or any of the
+        // new tracks via `courseHub: true`) gets the rich course-page layout.
+        const isCourseHub = categoryId === 'medical-billing-coding' || this.currentCategory.courseHub;
+        container.classList.toggle('mbc-mode', !!isCourseHub);
 
-        // Medical Billing, Coding & HIM Track gets a dedicated course-and-exam
-        // hub layout instead of the generic book grid.
-        if (categoryId === 'medical-billing-coding') {
-            this.renderMedicalBillingCourse();
+        if (isCourseHub) {
+            this.renderCourseHub(this.currentCategory);
             this.switchView('category');
             return;
         }
@@ -731,9 +732,12 @@ class SynthesisApp {
     // ============================================================
     // Medical Billing, Coding & HIM Track — dedicated course page
     // ============================================================
-    getMBCStats(category) {
+    getCourseStats(category) {
         const books = category.books || [];
         const ec = window.examCenter;
+        // The exam-center unlock logic only knows about the MBC curriculum.
+        // For non-MBC tracks, treat every lesson as unlocked (no strict gating yet).
+        const examGated = category.examCenterTrack === true;
         let lessonsTotal = 0, lessonsPassed = 0;
         let nextBookId = null, nextLessonId = null;
         let questionsTotal = 0, questionsMastered = 0;
@@ -745,7 +749,7 @@ class SynthesisApp {
             let bookLessonsUnlocked = 0;
             for (const lesson of lessons) {
                 lessonsTotal++;
-                const unlocked = ec ? ec.isLessonUnlocked(book.id, lesson.id) : (lessonsTotal === 1);
+                const unlocked = examGated && ec ? ec.isLessonUnlocked(book.id, lesson.id) : true;
                 const passed = ec ? ec.isLessonPassed(book.id, lesson.id) : false;
                 if (unlocked) bookLessonsUnlocked++;
                 if (passed) { lessonsPassed++; bookLessonsPassed++; }
@@ -793,21 +797,52 @@ class SynthesisApp {
         };
     }
 
-    renderMedicalBillingCourse() {
-        const cat = this.currentCategory;
-        const s = this.getMBCStats(cat);
+    // Default curriculum split for the legacy MBC track, retained so the
+    // track keeps its familiar Part I / Part II layout without needing
+    // a `parts` array on the category.
+    defaultMBCParts() {
+        return [
+            { romanNum: 'Part I', title: 'Billing & Coding Core',
+              bookIds: ['him-insurance-101','him-revenue-cycle','him-coding-fundamentals','him-claim-forms','him-compliance'] },
+            { romanNum: 'Part II', title: 'HIM, Data & Quality',
+              bookIds: ['him-foundations','him-statistics','him-data-analytics','him-health-it','him-quality-reporting'] },
+        ];
+    }
+
+    renderCourseHub(category) {
+        const cat = category || this.currentCategory;
+        const s = this.getCourseStats(cat);
         const container = document.getElementById('category-books');
         const ecReady = !!window.examCenter;
+        const isMBC = cat.id === 'medical-billing-coding';
+        const examGated = cat.examCenterTrack === true;
 
         const continueLabel = s.lessonsPassed === 0 ? 'Start the Course' : 'Continue Course';
         const continueTarget = s.nextBookId && s.nextLessonId
             ? `app.startLesson('${s.nextBookId}','${s.nextLessonId}')`
             : (s.books[0] ? `app.showBook('${s.books[0].id}')` : '');
 
-        // Split into two parts: Billing & Coding (1-5) and HIM/Data/Quality (6-10).
-        const part1Ids = new Set(['him-insurance-101','him-revenue-cycle','him-coding-fundamentals','him-claim-forms','him-compliance']);
-        const part1 = s.bookStats.filter(b => part1Ids.has(b.book.id));
-        const part2 = s.bookStats.filter(b => !part1Ids.has(b.book.id));
+        // Resolve curriculum parts. Categories can declare a custom split
+        // via `parts: [{romanNum, title, bookIds: [...]}]`. MBC falls back
+        // to the legacy two-part default. Everything else falls back to a
+        // single "Curriculum" part containing all books.
+        let parts = Array.isArray(cat.parts) && cat.parts.length ? cat.parts
+            : (isMBC ? this.defaultMBCParts()
+                     : [{ romanNum: 'Curriculum', title: 'Track Books', bookIds: cat.books.map(b => b.id) }]);
+        // Resolve parts → bookStat groups in declared order.
+        const seen = new Set();
+        const partGroups = parts.map(p => {
+            const stats = (p.bookIds || [])
+                .map(id => s.bookStats.find(bs => bs.book.id === id))
+                .filter(Boolean);
+            stats.forEach(bs => seen.add(bs.book.id));
+            return { ...p, stats };
+        });
+        // Books not assigned to any part fall into a final "Additional Books" part.
+        const orphans = s.bookStats.filter(bs => !seen.has(bs.book.id));
+        if (orphans.length) {
+            partGroups.push({ romanNum: 'Extras', title: 'Additional Books', stats: orphans });
+        }
 
         const renderModule = (entry, indexInCourse) => {
             const b = entry.book;
@@ -849,18 +884,34 @@ class SynthesisApp {
         };
 
         let cursor = 0;
-        const part1Html = part1.map(e => renderModule(e, ++cursor)).join('');
-        const part2Html = part2.map(e => renderModule(e, ++cursor)).join('');
+        const partsHtml = partGroups.map(p => {
+            const modules = p.stats.map(e => renderModule(e, ++cursor)).join('');
+            return `
+                <div class="mbc-part">
+                    <div class="mbc-part-header">
+                        <span class="mbc-part-num">${p.romanNum || ''}</span>
+                        <span class="mbc-part-title">${p.title}</span>
+                        <span class="mbc-part-count">${p.stats.length} book${p.stats.length === 1 ? '' : 's'}</span>
+                    </div>
+                    <div class="mbc-modules">${modules}</div>
+                </div>`;
+        }).join('');
         const dueToday = (ecReady && window.examCenter.dailyQueueSize)
             ? window.examCenter.dailyQueueSize() : 0;
+        const eyebrow = examGated
+            ? 'Full Course · Exam-Gated Curriculum'
+            : 'Full Course · Sequential Curriculum';
+        const roadmapNote = examGated
+            ? `${s.booksTotal} books, ${s.lessonsTotal} lessons — work top to bottom. Pass each lesson's quiz (80%) to unlock the next.`
+            : `${s.booksTotal} books, ${s.lessonsTotal} lessons — work top to bottom. The first book of each track is seeded; the rest are being built out.`;
 
         container.innerHTML = `
             <div class="mbc-page">
-                <section class="mbc-hero">
+                <section class="mbc-hero" style="${cat.color ? `background: linear-gradient(135deg, ${cat.color}33 0%, ${cat.color}88 50%, ${cat.color} 100%);` : ''}">
                     <div class="mbc-hero-top">
                         <span class="mbc-hero-icon">${cat.icon || '🩺'}</span>
                         <div class="mbc-hero-title-block">
-                            <div class="mbc-hero-eyebrow">Full Course · Exam-Gated Curriculum</div>
+                            <div class="mbc-hero-eyebrow">${eyebrow}</div>
                             <h1 class="mbc-hero-title">${cat.name}</h1>
                         </div>
                     </div>
@@ -909,6 +960,7 @@ class SynthesisApp {
                     </div>
                 </section>
 
+                ${examGated ? `
                 <section class="mbc-exam-panel">
                     <div class="mbc-section-head">
                         <h2 class="mbc-section-title">🎓 Exam Center</h2>
@@ -942,34 +994,28 @@ class SynthesisApp {
                         </button>
                     </div>
                 </section>
+                ` : `
+                <section class="mbc-exam-panel mbc-coming-soon">
+                    <div class="mbc-section-head">
+                        <h2 class="mbc-section-title">🎓 Exam Center — Coming Soon for This Track</h2>
+                        <p class="mbc-section-sub">Daily Review, Unit Exams, and Mock Cert Exams turn on once enough lesson content lands to make a fair question bank. In the meantime, the seed book's lesson quizzes already count toward your study streak.</p>
+                    </div>
+                </section>
+                `}
 
                 <section class="mbc-roadmap">
                     <div class="mbc-section-head">
                         <h2 class="mbc-section-title">📚 Curriculum Roadmap</h2>
-                        <p class="mbc-section-sub">${s.booksTotal} books, ${s.lessonsTotal} lessons — work top to bottom. Pass each lesson's quiz (80%) to unlock the next.</p>
+                        <p class="mbc-section-sub">${roadmapNote}</p>
                     </div>
-
-                    <div class="mbc-part">
-                        <div class="mbc-part-header">
-                            <span class="mbc-part-num">Part I</span>
-                            <span class="mbc-part-title">Billing &amp; Coding Core</span>
-                            <span class="mbc-part-count">${part1.length} books</span>
-                        </div>
-                        <div class="mbc-modules">${part1Html}</div>
-                    </div>
-
-                    <div class="mbc-part">
-                        <div class="mbc-part-header">
-                            <span class="mbc-part-num">Part II</span>
-                            <span class="mbc-part-title">HIM, Data &amp; Quality</span>
-                            <span class="mbc-part-count">${part2.length} books</span>
-                        </div>
-                        <div class="mbc-modules">${part2Html}</div>
-                    </div>
+                    ${partsHtml}
                 </section>
             </div>
         `;
     }
+
+    // Back-compat alias — earlier code paths still call renderMedicalBillingCourse.
+    renderMedicalBillingCourse() { this.renderCourseHub(this.currentCategory); }
 
     showAllBooks() {
         this.currentCategory = null;

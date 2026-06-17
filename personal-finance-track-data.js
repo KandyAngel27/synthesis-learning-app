@@ -983,6 +983,12 @@ You have **$180 left in restaurants**, $90 in fun money, $200 in vacation sinkin
         color: '#f59e0b',
         description: 'A 7-book life-skills sequence: budget → debt payoff → emergency fund → taxes → retirement accounts → investing → real estate. Goes deeper than the single Personal Finance 101 book in Civics & Economics and is designed to be worked top to bottom over a year.',
         examCenterTrack: false,
+        courseHub: true,
+        parts: [
+            { romanNum: 'Part I',   title: 'Cash Flow',               bookIds: ['pf-budgeting'] },
+            { romanNum: 'Part II',  title: 'Stability',               bookIds: ['pf-debt','pf-emergency-fund'] },
+            { romanNum: 'Part III', title: 'Long-Term Wealth',        bookIds: ['pf-taxes','pf-retirement','pf-investing','pf-real-estate'] },
+        ],
         books: BOOKS,
     };
 })();

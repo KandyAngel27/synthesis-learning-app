@@ -458,6 +458,13 @@ Drill 10 mixed priority + first-action stems daily. After two weeks, you will ru
         color: '#ec4899',
         description: 'A 10-book NCLEX-RN/PN prep track. Pairs with the A&P I & II and Pathophysiology books already in the HIM category to give nursing-pivot students a complete prep system — priority frameworks, pharm, med-surg, peds, maternal, mental health, critical care, plus the test-taking strategy and full-length mock exams.',
         examCenterTrack: false,
+        courseHub: true,
+        parts: [
+            { romanNum: 'Part I',   title: 'Frameworks',              bookIds: ['nclex-fundamentals','nclex-strategy'] },
+            { romanNum: 'Part II',  title: 'Pharm & Med-Surg',        bookIds: ['nclex-pharmacology','nclex-med-surg','nclex-pathophys'] },
+            { romanNum: 'Part III', title: 'Specialty Nursing',       bookIds: ['nclex-pediatrics','nclex-maternal','nclex-mental-health','nclex-critical-care'] },
+            { romanNum: 'Part IV',  title: 'Mock Exam',               bookIds: ['nclex-mock'] },
+        ],
         books: BOOKS,
     };
 })();

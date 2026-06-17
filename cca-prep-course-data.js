@@ -965,6 +965,13 @@ The CCA exam tests these distinctions constantly. Curiosity is not a permitted p
         color: '#8b5cf6',
         description: 'An 8-book track aligned to AHIMA\'s Certified Coding Associate exam blueprint. CCA is the recommended first coding credential after the MBC track — same exam-gated, spaced-repetition study system, organized by the 7 official CCA domains.',
         examCenterTrack: false,
+        courseHub: true,
+        parts: [
+            { romanNum: 'Part I',   title: 'Foundation',                  bookIds: ['cca-domain-1'] },
+            { romanNum: 'Part II',  title: 'Coding Systems',              bookIds: ['cca-domain-2','cca-domain-3','cca-domain-4'] },
+            { romanNum: 'Part III', title: 'Compliance & Operations',     bookIds: ['cca-domain-5','cca-domain-6','cca-domain-7'] },
+            { romanNum: 'Part IV',  title: 'Mock Exam',                   bookIds: ['cca-mock'] },
+        ],
         books: BOOKS,
     };
 })();

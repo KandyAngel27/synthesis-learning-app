@@ -1154,7 +1154,14 @@ This single skill, practiced consistently, is **the highest-ROI study habit in C
         icon: '📋',
         color: '#0ea5e9',
         description: 'A 10-book track for the AAPC Certified Professional Coder exam — the most-sought medical-coding credential in the US. Starts with the anatomy/terminology base every CPC question assumes, then walks the code books (ICD-10-CM, CPT, HCPCS) section by section, finishes with modifiers, compliance, and full-length mock exams.',
-        examCenterTrack: false, // toggle to true once enough content lands to gate it
+        examCenterTrack: false,
+        courseHub: true,
+        parts: [
+            { romanNum: 'Part I',   title: 'Foundation',                bookIds: ['cpc-foundation'] },
+            { romanNum: 'Part II',  title: 'Code Books',                bookIds: ['cpc-icd10cm','cpc-cpt-surg-1','cpc-cpt-surg-2','cpc-cpt-radpath','cpc-em'] },
+            { romanNum: 'Part III', title: 'Modifiers & HCPCS',         bookIds: ['cpc-modifiers','cpc-hcpcs'] },
+            { romanNum: 'Part IV',  title: 'Compliance & Mock Exam',    bookIds: ['cpc-compliance','cpc-mock'] },
+        ],
         books: BOOKS,
     };
 })();
