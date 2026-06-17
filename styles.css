@@ -8957,3 +8957,170 @@ body {
     .mbc-mod-btn { flex: 1; }
     .mbc-cta { font-size: 0.88rem; padding: 0.65rem 1rem; }
 }
+
+/* ============================================
+   STREAK + ACTIVITY HEATMAP (home page)
+   ============================================ */
+.streak-section { padding: 0 var(--spacing-lg); max-width: 1200px; margin: 0 auto var(--spacing-lg); }
+.streak-card {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: minmax(220px, auto) 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+.streak-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+.streak-stat {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 0.5rem;
+    align-items: center;
+}
+.streak-current { background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-md); padding: 0.35rem 0.6rem; }
+.streak-current.streak-on-fire { background: rgba(245, 158, 11, 0.18); box-shadow: 0 0 18px rgba(245, 158, 11, 0.25); }
+.streak-icon { grid-row: 1 / span 2; font-size: 1.6rem; line-height: 1; }
+.streak-value { grid-column: 2; font-size: 1.5rem; font-weight: 800; color: var(--color-text-primary); line-height: 1; }
+.streak-label { grid-column: 2 / span 2; font-size: 0.72rem; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.streak-heatmap-wrap { min-width: 0; }
+.streak-heatmap-title { font-size: 0.78rem; color: var(--color-text-secondary); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+.streak-heatmap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-auto-flow: column;
+    gap: 3px;
+    max-width: 540px;
+}
+.streak-cell {
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.05);
+    transition: transform 0.15s ease;
+}
+.streak-cell:hover { transform: scale(1.4); z-index: 1; }
+.streak-cell-l-1 { background: transparent; pointer-events: none; }     /* future */
+.streak-cell-l0 { background: rgba(255,255,255,0.05); }
+.streak-cell-l1 { background: rgba(16, 185, 129, 0.35); }
+.streak-cell-l2 { background: rgba(16, 185, 129, 0.55); }
+.streak-cell-l3 { background: rgba(16, 185, 129, 0.78); }
+.streak-cell-l4 { background: rgba(16, 185, 129, 0.98); box-shadow: 0 0 6px rgba(16,185,129,0.4); }
+.streak-legend {
+    display: flex; align-items: center; gap: 0.3rem;
+    margin-top: 0.6rem; font-size: 0.7rem; color: var(--color-text-tertiary);
+}
+.streak-legend .streak-cell { width: 12px; height: 12px; }
+
+@media (max-width: 768px) {
+    .streak-card { grid-template-columns: 1fr; gap: var(--spacing-md); }
+    .streak-stats { flex-direction: row; flex-wrap: wrap; }
+    .streak-heatmap { max-width: 100%; }
+}
+
+/* ============================================
+   MOCK CERT EXAMS — timer, pause, picker
+   ============================================ */
+.mock-preset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+.mock-preset-card {
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    text-align: left;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-family: var(--font-sans);
+    position: relative;
+}
+.mock-preset-card:hover { transform: translateY(-2px); background: var(--color-bg-elevated); }
+.mock-untimed { border-left-color: #10b981; }
+.mock-preset-icon { font-size: 1.7rem; line-height: 1; }
+.mock-preset-title { font-size: 1.05rem; font-weight: 800; }
+.mock-preset-sub { font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; }
+.mock-preset-meta { font-size: 0.78rem; color: var(--color-text-tertiary); margin-top: 0.2rem; }
+.mock-resume-badge {
+    position: absolute; top: 0.55rem; right: 0.55rem;
+    background: rgba(16,185,129,0.25);
+    color: #6ee7b7;
+    border: 1px solid rgba(16,185,129,0.55);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem; font-weight: 700;
+}
+
+.mock-timer-wrap {
+    margin-left: auto;
+    background: rgba(245, 158, 11, 0.12);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+}
+.mock-timer-wrap.mock-timer-warning { background: rgba(245, 158, 11, 0.25); }
+.mock-timer-wrap.mock-timer-critical {
+    background: rgba(239, 68, 68, 0.3);
+    color: #fecaca;
+    border-color: rgba(239, 68, 68, 0.6);
+    animation: mock-pulse 1s ease-in-out infinite;
+}
+@keyframes mock-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+.mock-pause-btn {
+    margin-left: auto;
+    background: rgba(255,255,255,0.08);
+    color: var(--color-text-primary);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-weight: 700; font-size: 0.85rem; cursor: pointer;
+    transition: background var(--transition-fast);
+    font-family: var(--font-sans);
+}
+.mock-pause-btn:hover { background: rgba(255,255,255,0.16); }
+.mock-paused {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    max-width: 540px;
+    margin: var(--spacing-2xl) auto;
+    color: var(--color-text-primary);
+}
+.mock-paused-icon { font-size: 3rem; margin-bottom: var(--spacing-md); }
+.mock-paused h2 { margin: 0 0 var(--spacing-sm) 0; }
+.mock-paused p { color: var(--color-text-secondary); margin-bottom: var(--spacing-lg); }
+.mock-paused .btn-primary { margin-right: 0.5rem; }
+
+.mbc-exam-mock { border-left: 3px solid #f59e0b; }
+.mbc-due-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.55);
+    padding: 0.08rem 0.45rem;
+    border-radius: var(--radius-full);
+    font-size: 0.65rem;
+    font-weight: 800;
+    margin-left: 0.4rem;
+    letter-spacing: 0.02em;
+}

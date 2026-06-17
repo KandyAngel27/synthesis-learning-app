@@ -171,7 +171,15 @@ class ExamCenter {
 
     // ---------- Mastery stats ----------
     getStat(qid) {
-        return APP_DATA.user.examStats[qid] || { seen: 0, correct: 0, wrong: 0, streak: 0, lastResult: null, lastSeen: null };
+        return APP_DATA.user.examStats[qid] || {
+            seen: 0, correct: 0, wrong: 0, streak: 0,
+            lastResult: null, lastSeen: null,
+            // SM-2 scheduler fields (added by the spaced-repetition scheduler).
+            interval: 0,       // days until next review
+            easeFactor: 2.5,   // SM-2 ease (1.3 .. 3.0)
+            repetitions: 0,    // consecutive correct reps
+            dueDate: null,     // ISO string of next due date
+        };
     }
 
     recordAnswer(qid, isCorrect) {
@@ -181,6 +189,50 @@ class ExamCenter {
         else { s.wrong += 1; s.streak = 0; s.lastResult = 'wrong'; }
         s.lastSeen = new Date().toISOString();
         APP_DATA.user.examStats[qid] = s;
+        this.scheduleNext(qid, isCorrect);
+        if (window.app && typeof window.app.recordDailyActivity === 'function') {
+            window.app.recordDailyActivity();
+        }
+    }
+
+    // ---------- Spaced-repetition scheduler (SM-2 style) ----------
+    // Updates the per-question SR fields after each answer:
+    //   - Correct: lengthen interval by easeFactor, bump ease slightly.
+    //   - Wrong:  reset to 1 day, drop ease.
+    // Resulting `dueDate` is read by isDue() and startDaily().
+    scheduleNext(qid, isCorrect) {
+        const s = APP_DATA.user.examStats[qid];
+        if (!s) return;
+        if (!isCorrect) {
+            s.repetitions = 0;
+            s.interval = 1;
+            s.easeFactor = Math.max(1.3, (s.easeFactor || 2.5) - 0.2);
+        } else {
+            s.repetitions = (s.repetitions || 0) + 1;
+            if (s.repetitions === 1) s.interval = 1;
+            else if (s.repetitions === 2) s.interval = 6;
+            else s.interval = Math.max(1, Math.round((s.interval || 1) * (s.easeFactor || 2.5)));
+            s.easeFactor = Math.min(3.0, (s.easeFactor || 2.5) + 0.1);
+        }
+        const due = new Date();
+        due.setDate(due.getDate() + s.interval);
+        s.dueDate = due.toISOString();
+    }
+
+    isDue(qid) {
+        const s = APP_DATA.user.examStats[qid];
+        if (!s || s.seen === 0) return true;       // never seen → always due
+        if (!s.dueDate) return true;               // no schedule (legacy) → due
+        return new Date(s.dueDate) <= new Date();
+    }
+
+    getDueQuestions(pool) {
+        return pool.filter(q => this.isDue(q.id));
+    }
+
+    dailyQueueSize() {
+        try { return this.getDueQuestions(this.harvestPool({})).length; }
+        catch (_) { return 0; }
     }
 
     masteryOf(qid) {
@@ -378,8 +430,23 @@ class ExamCenter {
         const pool = this.harvestPool({});
         if (!pool.length) return;
         const newest = this.newestUnlockedLessonKey();
-        // Daily prioritizes weak/missed/new; default 10 (or fewer if pool small)
-        const qs = this.weightedSample(pool, Math.min(10, pool.length), newest);
+        // Spaced-repetition daily review:
+        //   - Prefer questions that are DUE (per SM-2 scheduler).
+        //   - If we have ≥ 10 due, sample 20 from those, weighted.
+        //   - If 1–9 due, take all of them and fill the rest from the weighted pool.
+        //   - If nothing due (yet), fall back to the legacy weighted sample.
+        const due = this.getDueQuestions(pool);
+        let qs;
+        if (due.length >= 10) {
+            qs = this.weightedSample(due, Math.min(20, due.length), newest);
+        } else if (due.length > 0) {
+            const dueSet = new Set(due.map(q => q.id));
+            const rest = pool.filter(q => !dueSet.has(q.id));
+            const fill = this.weightedSample(rest, Math.max(0, 10 - due.length), newest);
+            qs = [...due, ...fill];
+        } else {
+            qs = this.weightedSample(pool, Math.min(10, pool.length), newest);
+        }
         this.beginSession({ mode: 'daily', title: 'Daily Review', gate: null }, qs);
     }
 
@@ -424,6 +491,192 @@ class ExamCenter {
         }, qs);
     }
 
+    // ---------- Mock cert exams ----------
+    // Preset list of mock exams modeled after real certs. `timeLimit` is in
+    // minutes; null means untimed (then `pausable: true` shows a Pause button
+    // and the session can be resumed after the user navigates away).
+    mockExamPresets() {
+        return [
+            {
+                id: 'cca-style',
+                title: 'CCA-Style Mock Exam',
+                subtitle: 'AHIMA Certified Coding Associate format',
+                count: 100, timeLimit: 90, passingPct: 65, timed: true,
+                icon: '🏆',
+            },
+            {
+                id: 'cpc-style',
+                title: 'CPC-Style Mock Exam',
+                subtitle: 'AAPC Certified Professional Coder format',
+                count: 100, timeLimit: 240, passingPct: 70, timed: true,
+                icon: '📋',
+            },
+            {
+                id: 'quick-mock',
+                title: 'Quick Mock (Timed)',
+                subtitle: '25 questions in 25 minutes — pacing practice',
+                count: 25, timeLimit: 25, passingPct: 70, timed: true,
+                icon: '⏱️',
+            },
+            {
+                id: 'untimed-50',
+                title: 'Practice Test (Untimed)',
+                subtitle: '50 questions, no clock — pause and resume anytime',
+                count: 50, timeLimit: null, passingPct: 70, timed: false,
+                icon: '📝',
+            },
+            {
+                id: 'untimed-100',
+                title: 'Full Practice (Untimed)',
+                subtitle: '100 questions, no clock — pause and resume anytime',
+                count: 100, timeLimit: null, passingPct: 70, timed: false,
+                icon: '📚',
+            },
+        ];
+    }
+
+    startMockExam(presetId) {
+        const preset = this.mockExamPresets().find(p => p.id === presetId);
+        if (!preset) return;
+
+        // Resume in-progress untimed session if one exists for this preset.
+        if (!preset.timed) {
+            const saved = this.loadPausedMock(presetId);
+            if (saved) {
+                this.session = saved.session;
+                this.session.config.startedAt = Date.now();
+                this.showQuestion();
+                this.toast('Resumed your paused practice test.');
+                return;
+            }
+        }
+
+        const pool = this.harvestPool({});
+        if (!pool.length) { this.toast('No unlocked questions yet — pass a lesson first.'); return; }
+        const newest = this.newestUnlockedLessonKey();
+        const n = Math.min(preset.count, pool.length);
+        const qs = this.weightedSample(pool, n, newest);
+        const cfg = {
+            mode: 'mock',
+            presetId: preset.id,
+            title: preset.title,
+            gate: null,
+            timed: preset.timed,
+            timeLimitSec: preset.timeLimit ? preset.timeLimit * 60 : null,
+            passingPct: preset.passingPct,
+            startedAt: Date.now(),
+            pausedAccumMs: 0,
+        };
+        this.beginSession(cfg, qs);
+        if (cfg.timed) this.startMockTimer();
+    }
+
+    pauseMock() {
+        const s = this.session;
+        if (!s || s.config.mode !== 'mock' || s.config.timed) return;
+        s.config.pausedAt = Date.now();
+        this.savePausedMock();
+        const container = document.getElementById('exam-content');
+        if (container) {
+            container.innerHTML = `
+                <div class="mock-paused">
+                    <div class="mock-paused-icon">⏸️</div>
+                    <h2>Paused — ${s.index} / ${s.questions.length} answered</h2>
+                    <p>Your progress is saved. Resume anytime from the Mock Exams picker.</p>
+                    <button class="btn-primary" onclick="window.examCenter.resumeMock()">Resume Now</button>
+                    <button class="btn-secondary" onclick="window.examCenter.quitToHome()">Exit to Course Hub</button>
+                </div>`;
+        }
+    }
+
+    resumeMock() {
+        const s = this.session;
+        if (!s || !s.config.pausedAt) { this.showQuestion(); return; }
+        s.config.pausedAccumMs += Date.now() - s.config.pausedAt;
+        s.config.pausedAt = null;
+        this.showQuestion();
+    }
+
+    savePausedMock() {
+        const s = this.session;
+        if (!s || s.config.mode !== 'mock' || s.config.timed) return;
+        try {
+            const key = `synthesis_paused_mock_${s.config.presetId}`;
+            localStorage.setItem(key, JSON.stringify({ session: s, savedAt: Date.now() }));
+        } catch (_) { /* quota / privacy mode */ }
+    }
+
+    loadPausedMock(presetId) {
+        try {
+            const raw = localStorage.getItem(`synthesis_paused_mock_${presetId}`);
+            if (!raw) return null;
+            return JSON.parse(raw);
+        } catch (_) { return null; }
+    }
+
+    clearPausedMock(presetId) {
+        try { localStorage.removeItem(`synthesis_paused_mock_${presetId}`); } catch (_) {}
+    }
+
+    startMockTimer() {
+        if (this.mockTimer) clearInterval(this.mockTimer);
+        this.mockTimer = setInterval(() => this.tickMockTimer(), 1000);
+    }
+    stopMockTimer() {
+        if (this.mockTimer) { clearInterval(this.mockTimer); this.mockTimer = null; }
+    }
+    tickMockTimer() {
+        const s = this.session;
+        if (!s || s.config.mode !== 'mock' || !s.config.timed) { this.stopMockTimer(); return; }
+        const elapsedSec = Math.floor((Date.now() - s.config.startedAt) / 1000);
+        const remaining = Math.max(0, s.config.timeLimitSec - elapsedSec);
+        const el = document.getElementById('mock-timer-value');
+        if (el) {
+            const mm = Math.floor(remaining / 60);
+            const ss = remaining % 60;
+            el.textContent = `${mm}:${ss.toString().padStart(2,'0')}`;
+            const wrap = document.getElementById('mock-timer-wrap');
+            if (wrap) {
+                wrap.classList.toggle('mock-timer-warning', remaining > 0 && remaining <= 300);
+                wrap.classList.toggle('mock-timer-critical', remaining > 0 && remaining <= 60);
+            }
+        }
+        if (remaining <= 0) {
+            this.stopMockTimer();
+            this.toast("Time's up — submitting your exam.");
+            this.showResults();
+        }
+    }
+
+    chooseMockExam() {
+        const container = document.getElementById('exam-content');
+        if (!container) return;
+        const presets = this.mockExamPresets();
+        const tiles = presets.map(p => {
+            const paused = !p.timed && this.loadPausedMock(p.id);
+            const resumeNote = paused
+                ? `<div class="mock-resume-badge">⏸️ Paused at Q${paused.session.index + 1}</div>` : '';
+            return `
+                <button class="mock-preset-card${p.timed ? ' mock-timed' : ' mock-untimed'}"
+                        onclick="window.examCenter.startMockExam('${p.id}')">
+                    <span class="mock-preset-icon">${p.icon}</span>
+                    <span class="mock-preset-title">${p.title}</span>
+                    <span class="mock-preset-sub">${p.subtitle}</span>
+                    <span class="mock-preset-meta">
+                        ${p.count} Qs · ${p.timeLimit ? p.timeLimit + ' min' : 'Untimed'} · pass ${p.passingPct}%
+                    </span>
+                    ${resumeNote}
+                </button>`;
+        }).join('');
+        container.innerHTML = `
+            <div class="exam-choose">
+                <button class="btn-back-inline" onclick="window.examCenter.renderExamHome()">← Back</button>
+                <h2>🏆 Mock Cert Exams</h2>
+                <p>Full-length practice exams modeled after real certifications. Timed exams have a countdown; untimed exams can be paused and resumed.</p>
+                <div class="mock-preset-grid">${tiles}</div>
+            </div>`;
+    }
+
     // ---------- Session runner ----------
     beginSession(config, questions) {
         if (!questions.length) return;
@@ -443,11 +696,28 @@ class ExamCenter {
             ? `<span class="exam-q-type exam-q-${q.qType}">${q.qType === 'scenario' ? '🩺 Scenario' : '🛠️ Applied'}</span>`
             : '';
 
+        // Mock-exam header extras: countdown timer (timed) or pause button (untimed).
+        let mockExtras = '';
+        if (s.config.mode === 'mock') {
+            if (s.config.timed) {
+                const elapsed = Math.floor((Date.now() - s.config.startedAt) / 1000);
+                const remaining = Math.max(0, s.config.timeLimitSec - elapsed);
+                const mm = Math.floor(remaining / 60), ss = remaining % 60;
+                mockExtras = `
+                    <div class="mock-timer-wrap" id="mock-timer-wrap">
+                        ⏱ <span id="mock-timer-value">${mm}:${ss.toString().padStart(2,'0')}</span>
+                    </div>`;
+            } else {
+                mockExtras = `<button class="mock-pause-btn" onclick="window.examCenter.pauseMock()">⏸️ Pause</button>`;
+            }
+        }
+
         container.innerHTML = `
             <div class="exam-running">
                 <div class="exam-run-head">
                     <button class="btn-back-inline" onclick="window.examCenter.quitToHome()">← Quit</button>
                     <span class="exam-run-counter">Q ${s.index + 1} / ${s.questions.length}</span>
+                    ${mockExtras}
                 </div>
                 <div class="exam-progress-track"><div class="exam-progress-fill" style="width:${pct}%"></div></div>
                 <div class="exam-q-source">${q.bookTitle} · ${q.lessonTitle} ${typeBadge}</div>
@@ -505,10 +775,19 @@ class ExamCenter {
     showResults() {
         const s = this.session;
         if (!s) return;
+        // Clean up mock-exam state (timer + paused-session save).
+        this.stopMockTimer();
+        if (s.config.mode === 'mock' && s.config.presetId) {
+            this.clearPausedMock(s.config.presetId);
+        }
         const total = s.questions.length;
         const pct = total ? (s.score / total) * 100 : 0;
         const cfg = s.config;
-        const passed = pct >= EXAM_PASS_THRESHOLD * 100;
+        // Mock exams use the preset's passing pct; everything else uses the 80% gate.
+        const threshold = (cfg.mode === 'mock' && cfg.passingPct)
+            ? cfg.passingPct
+            : EXAM_PASS_THRESHOLD * 100;
+        const passed = pct >= threshold;
 
         // Record gate result for lesson quizzes
         let unlockedMsg = '';
@@ -603,6 +882,7 @@ class ExamCenter {
     }
 
     quitToHome() {
+        this.stopMockTimer();
         this.session = null;
         // Send the user back to the MBC course hub — the exam center is
         // scoped to the Medical Billing track, so that's the natural home
