@@ -380,6 +380,13 @@ Save the file. Now hand the workbook to a colleague (mentally, or for real). Can
         color: '#10b981',
         description: 'A 9-book sequence that takes you from "I can use SUM" to "I shipped a Power BI dashboard the executive team uses." Maps cleanly to Microsoft\'s MO-200/MO-201 (Excel Associate/Expert) and the PL-300 (Power BI Data Analyst) certifications.',
         examCenterTrack: false,
+        courseHub: true,
+        parts: [
+            { romanNum: 'Part I',   title: 'Excel Mastery',           bookIds: ['excel-foundations','excel-formulas','excel-pivot'] },
+            { romanNum: 'Part II',  title: 'Power Query & DAX',       bookIds: ['excel-power-query','excel-dax'] },
+            { romanNum: 'Part III', title: 'Power BI',                bookIds: ['excel-pbi-desktop','excel-pbi-service','excel-dashboards'] },
+            { romanNum: 'Part IV',  title: 'Capstone',                bookIds: ['excel-capstone'] },
+        ],
         books: BOOKS,
     };
 })();
