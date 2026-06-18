@@ -3782,7 +3782,7 @@ Notice the language tells you everything: "scheduled," "stable," "baseline" = lo
             title: 'Pharmacology for the NCLEX',
             author: 'Synthesis Learning',
             description: 'High-yield drug classes, prefixes/suffixes that tell you the class, lab values, and the side effects NCLEX always tests.',
-            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
+            lessons: 12, duration: 180, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-pharmacology-lesson-1",
@@ -4480,6 +4480,308 @@ Treatment: **stop the drug**, cool the patient, benzos for agitation, **cyprohep
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">Antibiotic Shift Workflow</text><rect x="60" y="110" width="980" height="160" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="155" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">PRE-DOSE EVERY TIME</text><text x="200" y="210" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Allergy band</text><text x="400" y="210" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Cultures done?</text><text x="600" y="210" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">BUN/Cr</text><text x="800" y="210" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Interactions</text><text x="950" y="210" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">5 Rights</text><text x="550" y="250" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Verify, document, then administer</text><rect x="60" y="295" width="310" height="280" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="215" y="335" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">PENICILLINS</text><text x="215" y="380" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Watch 1st 30 min</text><text x="215" y="415" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Cross-allergy ~5-10%</text><text x="215" y="465" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Teach:</text><text x="215" y="500" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Full course</text><text x="215" y="525" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Report rash/throat tightness</text><text x="215" y="555" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Diarrhea = call</text><rect x="395" y="295" width="310" height="280" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="335" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">AMINOGLYCOSIDES</text><text x="550" y="380" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Peak 30 min post</text><text x="550" y="415" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Trough pre-dose</text><text x="550" y="465" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Monitor:</text><text x="550" y="500" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">BUN/Cr, urine output</text><text x="550" y="525" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Hearing &amp; balance</text><text x="550" y="555" font-family="Arial" font-size="16" fill="#ef4444" text-anchor="middle">Tinnitus = stop</text><rect x="730" y="295" width="310" height="280" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="885" y="335" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">FLUOROQUINOLONES</text><text x="885" y="380" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">No dairy/iron w/in 2 hr</text><text x="885" y="415" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Not for &lt; 18 yo</text><text x="885" y="465" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Teach:</text><text x="885" y="500" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Tendon pain → STOP</text><text x="885" y="525" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Severe diarrhea → call</text><text x="885" y="555" font-family="Arial" font-size="16" fill="#ef4444" text-anchor="middle">QT risk: check meds</text><rect x="60" y="605" width="980" height="200" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="650" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">VANCOMYCIN</text><text x="200" y="700" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Infuse ≥ 60 min</text><text x="500" y="700" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Trough 10-20</text><text x="800" y="700" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Red man = slow it down</text><text x="200" y="730" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">(longer for 1 g+)</text><text x="500" y="730" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">30 min pre-dose draw</text><text x="800" y="730" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Not a true allergy</text><text x="550" y="780" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Trend BUN/Cr; double risk if also on aminoglycoside</text><rect x="60" y="830" width="980" height="180" rx="15" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="875" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">C. DIFF VIGILANCE</text><text x="550" y="920" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Diarrhea + recent broad-spectrum ABX?</text><text x="550" y="955" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Stool toxin + contact precautions</text><text x="550" y="990" font-family="Arial" font-size="20" fill="#ef4444" text-anchor="middle" font-weight="bold">Soap + water (alcohol doesn't kill spores)</text></svg>`,
           caption: "Daily checks: allergy, cultures, renal labs, levels, and C. diff vigilance."
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-pharmacology-lesson-10",
+    title: "Respiratory Meds — Bronchodilators, Corticosteroids, Mucolytics",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Opening the Airways",
+        content: `Respiratory medications are about **two goals**: open the airways fast (bronchodilators) and calm the inflammation underneath (corticosteroids). The NCLEX loves to test whether you know which drug is the **rescue** and which is the **controller** — confusing them can be fatal.
+
+A patient in an acute asthma attack needs a **short-acting beta-agonist (SABA)** like **albuterol** within seconds. A patient with daily wheezing needs an **inhaled corticosteroid (ICS)** taken every day, even when they feel fine.
+
+The big traps: **salmeterol is NEVER a rescue inhaler**, **fluticasone causes oral thrush if you don't rinse**, and **montelukast carries a black-box warning** for mood changes and suicidal thoughts. Master the order — SABA first, wait, then ICS — and you'll handle every respiratory question.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Rescue vs Controller</text><rect x="80" y="160" width="440" height="380" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="300" y="220" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">RESCUE</text><text x="300" y="270" text-anchor="middle" fill="#ffffff" font-size="22">SABA — albuterol</text><text x="300" y="310" text-anchor="middle" fill="#ffffff" font-size="22">Onset: minutes</text><text x="300" y="350" text-anchor="middle" fill="#ffffff" font-size="22">Use: acute attack</text><text x="300" y="400" text-anchor="middle" fill="#ffd700" font-size="20">"Open it NOW"</text><circle cx="300" cy="470" r="40" fill="#10b981"/><text x="300" y="482" text-anchor="middle" fill="#1a1a2e" font-size="36" font-weight="bold">!</text><rect x="580" y="160" width="440" height="380" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="800" y="220" text-anchor="middle" fill="#6366f1" font-size="32" font-weight="bold">CONTROLLER</text><text x="800" y="270" text-anchor="middle" fill="#ffffff" font-size="22">ICS — fluticasone</text><text x="800" y="310" text-anchor="middle" fill="#ffffff" font-size="22">Onset: days–weeks</text><text x="800" y="350" text-anchor="middle" fill="#ffffff" font-size="22">Use: daily prevention</text><text x="800" y="400" text-anchor="middle" fill="#ffd700" font-size="20">"Calm it DOWN"</text><circle cx="800" cy="470" r="40" fill="#6366f1"/><text x="800" y="482" text-anchor="middle" fill="#ffffff" font-size="32">Rx</text><rect x="80" y="600" width="940" height="180" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="4"/><text x="550" y="660" text-anchor="middle" fill="#ef4444" font-size="30" font-weight="bold">NEVER confuse them</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="22">Salmeterol (LABA) used as rescue = death risk</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="22">ICS alone in active attack = no immediate relief</text><rect x="80" y="820" width="940" height="220" rx="20" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="4"/><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Inhaler Order Rule</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="24">1. SABA (open airways)</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="24">2. Wait 5 minutes</text><text x="550" y="1010" text-anchor="middle" fill="#ffffff" font-size="24">3. ICS (steroid reaches deeper)</text></svg>`,
+          caption: "Rescue opens; controller prevents. Order matters."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Five Drug Classes",
+        content: `**1. Short-Acting Beta-Agonists (SABA) — albuterol**: rescue inhaler, onset 5 min. Side effects: **tremor, tachycardia, palpitations, nervousness**. Overuse signals poor asthma control.
+
+**2. Long-Acting Beta-Agonists (LABA) — salmeterol, formoterol**: 12-hour duration. **NEVER as rescue. NEVER as monotherapy** — must be paired with an **ICS** (increases asthma death risk alone).
+
+**3. Inhaled Corticosteroids (ICS) — fluticasone, budesonide**: daily controller. **Rinse mouth after use** to prevent **oral candidiasis (thrush)** and dysphonia. May slow growth in children.
+
+**4. Anticholinergics — ipratropium (Atrovent), tiotropium (Spiriva)**: dry secretions, bronchodilate. **First-line for COPD**. Watch for **dry mouth, urinary retention, blurred vision**. Avoid in narrow-angle glaucoma.
+
+**5. Leukotriene modifier — montelukast (Singulair)**: oral, once daily. **Black-box warning: neuropsychiatric events** — depression, agitation, suicidal ideation. Teach families to watch mood.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Five Classes — One Chart</text><rect x="60" y="120" width="980" height="170" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="90" y="170" fill="#10b981" font-size="26" font-weight="bold">SABA — albuterol</text><text x="90" y="210" fill="#ffffff" font-size="20">Rescue. Onset 5 min. Side effects: tremor, tachycardia.</text><text x="90" y="250" fill="#ffd700" font-size="20">Overuse = poor control → reassess therapy</text><rect x="60" y="310" width="980" height="170" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="90" y="360" fill="#ef4444" font-size="26" font-weight="bold">LABA — salmeterol</text><text x="90" y="400" fill="#ffffff" font-size="20">12-hr maintenance. NEVER rescue. NEVER alone.</text><text x="90" y="440" fill="#ffd700" font-size="20">Always paired with ICS (combo inhaler)</text><rect x="60" y="500" width="980" height="170" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="90" y="550" fill="#6366f1" font-size="26" font-weight="bold">ICS — fluticasone</text><text x="90" y="590" fill="#ffffff" font-size="20">Daily controller. Anti-inflammatory.</text><text x="90" y="630" fill="#ffd700" font-size="20">RINSE MOUTH → prevents thrush</text><rect x="60" y="690" width="980" height="170" rx="16" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="90" y="740" fill="#0ea5e9" font-size="26" font-weight="bold">Anticholinergic — ipratropium</text><text x="90" y="780" fill="#ffffff" font-size="20">First-line COPD. Dries secretions.</text><text x="90" y="820" fill="#ffd700" font-size="20">Avoid: glaucoma, BPH, retention</text><rect x="60" y="880" width="980" height="170" rx="16" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="90" y="930" fill="#8b5cf6" font-size="26" font-weight="bold">Montelukast (Singulair)</text><text x="90" y="970" fill="#ffffff" font-size="20">Oral once daily. Leukotriene blocker.</text><text x="90" y="1010" fill="#ef4444" font-size="22" font-weight="bold">BLACK BOX: mood/suicidal ideation</text></svg>`,
+          caption: "One row per class. Memorize the warning column."
+        }
+      },
+      {
+        type: "example",
+        title: "Inhaler Teaching — Step by Step",
+        content: `Mrs. Patel, 52, is newly diagnosed with **moderate persistent asthma**. She is prescribed **albuterol PRN** and **fluticasone BID**. The nurse coaches her through correct technique.
+
+**Step 1 — Shake the SABA.** Albuterol first to open the airways.
+
+**Step 2 — Exhale, then inhale slowly** as she presses the canister. Hold breath **10 seconds**.
+
+**Step 3 — Wait 5 minutes.** This lets albuterol fully dilate the bronchi so the steroid can reach the small airways.
+
+**Step 4 — Take fluticasone.** Same slow inhale, 10-second hold.
+
+**Step 5 — RINSE MOUTH** with water and spit. Prevents **oral candidiasis** and hoarseness.
+
+**Teach back**: "Why do you rinse?" — "So I don't grow yeast in my mouth from the steroid." Correct answer accepted.
+
+Red flag to report: using albuterol **more than 2 days a week** indicates inadequate control — call the provider.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Inhaler Sequence</text><circle cx="170" cy="220" r="60" fill="#10b981"/><text x="170" y="235" text-anchor="middle" fill="#1a1a2e" font-size="40" font-weight="bold">1</text><text x="270" y="200" fill="#ffffff" font-size="24" font-weight="bold">Shake SABA (albuterol)</text><text x="270" y="240" fill="#888" font-size="20">Rescue first — open the airways</text><circle cx="170" cy="370" r="60" fill="#10b981"/><text x="170" y="385" text-anchor="middle" fill="#1a1a2e" font-size="40" font-weight="bold">2</text><text x="270" y="350" fill="#ffffff" font-size="24" font-weight="bold">Exhale, inhale slow, hold 10s</text><text x="270" y="390" fill="#888" font-size="20">Slow + deep = drug reaches small airways</text><circle cx="170" cy="520" r="60" fill="#ffd700"/><text x="170" y="535" text-anchor="middle" fill="#1a1a2e" font-size="40" font-weight="bold">3</text><text x="270" y="500" fill="#ffd700" font-size="24" font-weight="bold">WAIT 5 minutes</text><text x="270" y="540" fill="#888" font-size="20">Bronchi must dilate before steroid</text><circle cx="170" cy="670" r="60" fill="#6366f1"/><text x="170" y="685" text-anchor="middle" fill="#ffffff" font-size="40" font-weight="bold">4</text><text x="270" y="650" fill="#ffffff" font-size="24" font-weight="bold">Take fluticasone (ICS)</text><text x="270" y="690" fill="#888" font-size="20">Same slow inhale, 10-second hold</text><circle cx="170" cy="820" r="60" fill="#ef4444"/><text x="170" y="835" text-anchor="middle" fill="#ffffff" font-size="40" font-weight="bold">5</text><text x="270" y="800" fill="#ef4444" font-size="24" font-weight="bold">RINSE MOUTH + spit</text><text x="270" y="840" fill="#888" font-size="20">Prevents thrush and hoarseness</text><rect x="80" y="920" width="940" height="140" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="4"/><text x="550" y="975" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">RED FLAG</text><text x="550" y="1020" text-anchor="middle" fill="#ffffff" font-size="22">SABA used &gt; 2 days/week → call provider</text></svg>`,
+          caption: "SABA, wait, ICS, rinse. One sequence, every time."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX Check — Inhaler Teaching",
+        content: `Test your understanding.`,
+        question: "A nurse is teaching a client newly prescribed fluticasone and salmeterol inhalers. Which client statement requires immediate correction?",
+        options: [
+          { text: "\"I will rinse my mouth after the fluticasone inhaler.\"", correct: false },
+          { text: "\"I'll use salmeterol when I feel an asthma attack starting.\"", correct: true },
+          { text: "\"I'll take fluticasone every day even when I feel well.\"", correct: false },
+          { text: "\"I'll call my provider if I need my rescue inhaler more than twice a week.\"", correct: false }
+        ],
+        explanation: `**Salmeterol is a LABA — NEVER a rescue inhaler.** Using a LABA for acute symptoms delays effective treatment and increases asthma death risk. The client needs a SABA (albuterol) for rescue. The other three statements are correct teaching: rinse to prevent thrush, take controllers daily, and report frequent rescue use as a sign of poor control.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">LABA ≠ Rescue</text><rect x="150" y="200" width="800" height="300" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="6"/><text x="550" y="300" text-anchor="middle" fill="#ef4444" font-size="44" font-weight="bold">SALMETEROL</text><text x="550" y="370" text-anchor="middle" fill="#ffffff" font-size="28">Long-Acting Beta-Agonist</text><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="26">Onset: 30+ minutes</text><text x="550" y="475" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">USELESS in acute attack</text><rect x="150" y="560" width="800" height="300" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="6"/><text x="550" y="660" text-anchor="middle" fill="#10b981" font-size="44" font-weight="bold">ALBUTEROL</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="28">Short-Acting Beta-Agonist</text><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="26">Onset: 5 minutes</text><text x="550" y="835" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">THIS is the rescue</text><text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="26">Long-acting = slow start = wrong for emergencies</text></svg>`,
+          caption: "Long-acting drugs are slow — never the rescue."
+        }
+      },
+      {
+        type: "application",
+        title: "Putting It Together",
+        content: `**You're caring for a 14-year-old admitted with an asthma exacerbation.** SpO₂ is 89%, audible wheezing, accessory muscle use. Home meds: fluticasone BID, montelukast nightly.
+
+**Priority 1 — Open the airways.** Give **albuterol nebulizer** STAT (often combined with **ipratropium** in severe attacks). Place the client upright. Apply oxygen.
+
+**Priority 2 — Reduce inflammation.** Expect an order for **IV/PO systemic corticosteroid** (methylprednisolone or prednisone). Inhaled steroids work too slowly for an active exacerbation.
+
+**Priority 3 — Reassess.** Watch for decreased wheezing (good) versus a silent chest (very bad — minimal air movement = imminent respiratory failure).
+
+**Priority 4 — Discharge teaching.** Reinforce the **SABA-wait-ICS** order. Screen for **montelukast mood changes** — ask the teen and parents directly about depression, agitation, sleep, or any thoughts of self-harm. Document and report any positive findings.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Asthma Exacerbation Priorities</text><rect x="80" y="140" width="940" height="180" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="120" y="190" fill="#10b981" font-size="28" font-weight="bold">1. Open airways NOW</text><text x="120" y="230" fill="#ffffff" font-size="22">Albuterol neb (± ipratropium)</text><text x="120" y="270" fill="#ffffff" font-size="22">Upright position, oxygen on</text><text x="120" y="305" fill="#ffd700" font-size="20">Goal: SpO₂ &gt; 92%</text><rect x="80" y="340" width="940" height="180" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="120" y="390" fill="#6366f1" font-size="28" font-weight="bold">2. Calm inflammation</text><text x="120" y="430" fill="#ffffff" font-size="22">SYSTEMIC steroid (PO/IV)</text><text x="120" y="470" fill="#ffffff" font-size="22">Inhaled steroid too slow for acute</text><text x="120" y="505" fill="#ffd700" font-size="20">Methylprednisolone IV typical</text><rect x="80" y="540" width="940" height="180" rx="16" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="4"/><text x="120" y="590" fill="#f59e0b" font-size="28" font-weight="bold">3. Reassess airflow</text><text x="120" y="630" fill="#ffffff" font-size="22">Less wheeze + better SpO₂ = good</text><text x="120" y="670" fill="#ef4444" font-size="22" font-weight="bold">SILENT CHEST = emergency</text><text x="120" y="705" fill="#ffd700" font-size="20">Prepare for intubation</text><rect x="80" y="740" width="940" height="290" rx="16" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="4"/><text x="120" y="790" fill="#8b5cf6" font-size="28" font-weight="bold">4. Discharge teaching</text><text x="120" y="830" fill="#ffffff" font-size="22">Reinforce SABA → wait 5 → ICS → rinse</text><text x="120" y="870" fill="#ffffff" font-size="22">Asthma action plan in writing</text><text x="120" y="910" fill="#ef4444" font-size="22" font-weight="bold">Montelukast mood screen</text><text x="120" y="950" fill="#ffffff" font-size="20">Ask client AND parent directly</text><text x="120" y="990" fill="#ffd700" font-size="20">Depression, agitation, self-harm thoughts</text></svg>`,
+          caption: "Open, calm, reassess, teach. In that order."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pharmacology-lesson-11",
+    title: "GI Meds — PPIs, H2 Blockers, Antiemetics, Laxatives, Antidiarrheals",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The GI Toolkit",
+        content: `GI medications come in five workhorses on the NCLEX: **acid suppressors** (PPIs and H2 blockers), **antiemetics**, **laxatives**, and **antidiarrheals**. Each has classic side effects the test loves to ask about — usually about **long-term harm** or **when NOT to use** a drug.
+
+**PPIs** (omeprazole, pantoprazole) are powerful but carry hidden long-term risks: **B12 deficiency**, **osteoporosis**, **C. difficile infection**, and **hypomagnesemia**. **H2 blockers** (famotidine) are weaker but kick in faster and are safer long-term.
+
+**Ondansetron** is the go-to antiemetic but can cause **QT prolongation**. **Loperamide** stops diarrhea — but giving it during an **infectious diarrhea** (C. diff, salmonella) traps the pathogen and worsens illness. Master these warnings and GI questions become predictable.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The GI Toolkit</text><rect x="80" y="150" width="440" height="220" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="300" y="200" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">PPIs</text><text x="300" y="245" text-anchor="middle" fill="#ffffff" font-size="22">omeprazole, pantoprazole</text><text x="300" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Strong acid block</text><text x="300" y="330" text-anchor="middle" fill="#ef4444" font-size="20">Long-term: B12, bone, C.diff</text><rect x="580" y="150" width="440" height="220" rx="16" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="4"/><text x="800" y="200" text-anchor="middle" fill="#0ea5e9" font-size="28" font-weight="bold">H2 Blockers</text><text x="800" y="245" text-anchor="middle" fill="#ffffff" font-size="22">famotidine</text><text x="800" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Weaker but faster</text><text x="800" y="330" text-anchor="middle" fill="#10b981" font-size="20">Safer long-term</text><rect x="80" y="400" width="940" height="220" rx="16" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="4"/><text x="550" y="450" text-anchor="middle" fill="#8b5cf6" font-size="28" font-weight="bold">Antiemetics</text><text x="550" y="500" text-anchor="middle" fill="#ffffff" font-size="22">ondansetron — watch QT</text><text x="550" y="545" text-anchor="middle" fill="#ffffff" font-size="22">promethazine — sedation, EPS</text><text x="550" y="590" text-anchor="middle" fill="#ffd700" font-size="20">Both common, both have catches</text><rect x="80" y="650" width="440" height="220" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="300" y="700" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Laxatives</text><text x="300" y="745" text-anchor="middle" fill="#ffffff" font-size="20">Osmotic / Stimulant / Bulk</text><text x="300" y="790" text-anchor="middle" fill="#ffffff" font-size="20">Match to the patient</text><text x="300" y="835" text-anchor="middle" fill="#ffd700" font-size="20">Bulk needs WATER</text><rect x="580" y="650" width="440" height="220" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="4"/><text x="800" y="700" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">Antidiarrheals</text><text x="800" y="745" text-anchor="middle" fill="#ffffff" font-size="22">loperamide</text><text x="800" y="790" text-anchor="middle" fill="#ffffff" font-size="20">NEVER for infectious</text><text x="800" y="835" text-anchor="middle" fill="#ffd700" font-size="20">C. diff = STOP</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Right drug, right gut, right time</text></svg>`,
+          caption: "Five classes — each with a single signature warning."
+        }
+      },
+      {
+        type: "concept",
+        title: "Drugs, Doses, Danger Signs",
+        content: `**PPIs (-prazole)** — omeprazole, pantoprazole. Take **30 min before meals**. Long-term: **↓ B12**, **↓ Mg²⁺**, **↑ fracture risk** (hip, spine), **↑ C. difficile**, **↑ pneumonia**. Reassess need every 8 weeks.
+
+**H2 Blockers** — famotidine. Less potent, **faster onset**. Safer for elderly long-term. Cimetidine has many drug interactions (mostly historical).
+
+**Ondansetron (Zofran)** — serotonin blocker. Side effects: **headache, constipation, QT prolongation**. Get a baseline ECG if combining with other QT-prolonging drugs (haloperidol, methadone).
+
+**Promethazine (Phenergan)** — antihistamine antiemetic. Causes **sedation, EPS, dystonia**. IV: severe **tissue necrosis** if extravasated — push slowly through a large vein.
+
+**Laxatives**: **osmotic** (polyethylene glycol, lactulose) pull water in. **Stimulant** (senna, bisacodyl) — short-term only. **Bulk** (psyllium) — **must drink full glass of water** or obstruction risk.
+
+**Loperamide** — slows gut. **Contraindicated in infectious diarrhea** (C. diff, E. coli O157, salmonella) — traps the toxin.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Drug — Catch — Teach</text><rect x="60" y="110" width="980" height="140" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="85" y="155" fill="#6366f1" font-size="24" font-weight="bold">Omeprazole (PPI)</text><text x="85" y="195" fill="#ffffff" font-size="20">30 min before meals · long-term: B12, bone, C.diff</text><text x="85" y="230" fill="#ffd700" font-size="19">Reassess need every 8 weeks</text><rect x="60" y="265" width="980" height="140" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="85" y="310" fill="#0ea5e9" font-size="24" font-weight="bold">Famotidine (H2)</text><text x="85" y="350" fill="#ffffff" font-size="20">Faster onset · weaker · safer long-term</text><text x="85" y="385" fill="#ffd700" font-size="19">Good first choice in elderly</text><rect x="60" y="420" width="980" height="140" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="85" y="465" fill="#8b5cf6" font-size="24" font-weight="bold">Ondansetron</text><text x="85" y="505" fill="#ffffff" font-size="20">Headache, constipation, QT prolongation</text><text x="85" y="540" fill="#ffd700" font-size="19">Baseline ECG if combo-therapy</text><rect x="60" y="575" width="980" height="140" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="85" y="620" fill="#f59e0b" font-size="24" font-weight="bold">Promethazine</text><text x="85" y="660" fill="#ffffff" font-size="20">Sedation, EPS · IV: tissue necrosis risk</text><text x="85" y="695" fill="#ffd700" font-size="19">Push slow, large vein only</text><rect x="60" y="730" width="980" height="140" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="85" y="775" fill="#10b981" font-size="24" font-weight="bold">Laxatives</text><text x="85" y="815" fill="#ffffff" font-size="20">Osmotic · Stimulant (short-term) · Bulk (water!)</text><text x="85" y="850" fill="#ffd700" font-size="19">Match to patient and need</text><rect x="60" y="885" width="980" height="170" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="85" y="930" fill="#ef4444" font-size="24" font-weight="bold">Loperamide</text><text x="85" y="970" fill="#ffffff" font-size="20">Slows gut motility</text><text x="85" y="1005" fill="#ef4444" font-size="22" font-weight="bold">NEVER in infectious diarrhea</text><text x="85" y="1040" fill="#ffd700" font-size="18">C. diff, salmonella, E. coli O157 → STOP</text></svg>`,
+          caption: "Each row: the drug, the catch, the teach point."
+        }
+      },
+      {
+        type: "example",
+        title: "Two Patients, Two GI Calls",
+        content: `**Patient A — Mr. Lopez, 72.** On omeprazole 4 years for GERD. New complaints: **numbness in feet, fatigue**. Labs: **B12 = 180 (low)**, **Mg = 1.4 (low)**.
+
+**Nursing action**: notify provider — long-term PPI has caused **B12 and Mg deficiency**. Expect an order to **deprescribe** the PPI (taper or switch to famotidine), supplement B12 and Mg, and check a **DEXA scan** for bone density. Educate the client that PPIs are not meant for indefinite use.
+
+**Patient B — Mrs. Chen, 34.** Three days of profuse watery diarrhea after recent antibiotic course. Asks for **loperamide** so she can return to work.
+
+**Nursing action**: HOLD loperamide. The history (recent antibiotic + watery diarrhea) screams **C. difficile**. Slowing motility **traps the toxin** and risks **toxic megacolon**. Obtain a **C. diff stool sample**, isolate with **contact precautions**, hand-wash with **soap and water** (alcohol gel doesn't kill spores). Expect an order for **oral vancomycin or fidaxomicin**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Two Cases, Two Calls</text><rect x="60" y="120" width="980" height="430" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="100" y="170" fill="#6366f1" font-size="26" font-weight="bold">Patient A — Long-Term PPI</text><text x="100" y="215" fill="#ffffff" font-size="22">Mr. Lopez, 72 · omeprazole x 4 years</text><text x="100" y="255" fill="#ffffff" font-size="22">Numb feet, fatigue</text><text x="100" y="295" fill="#ffd700" font-size="22">B12 = 180 LOW · Mg = 1.4 LOW</text><text x="100" y="350" fill="#10b981" font-size="24" font-weight="bold">Action:</text><text x="100" y="390" fill="#ffffff" font-size="20">• Notify provider — deprescribe PPI</text><text x="100" y="425" fill="#ffffff" font-size="20">• Switch to famotidine; replace B12, Mg</text><text x="100" y="460" fill="#ffffff" font-size="20">• Order DEXA scan</text><text x="100" y="510" fill="#ffd700" font-size="20">PPIs are not forever drugs</text><rect x="60" y="580" width="980" height="470" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="4"/><text x="100" y="630" fill="#ef4444" font-size="26" font-weight="bold">Patient B — Recent Antibiotics</text><text x="100" y="675" fill="#ffffff" font-size="22">Mrs. Chen, 34 · 3 days watery diarrhea</text><text x="100" y="715" fill="#ffffff" font-size="22">Requests loperamide</text><text x="100" y="760" fill="#ef4444" font-size="24" font-weight="bold">HOLD loperamide → think C. diff</text><text x="100" y="815" fill="#10b981" font-size="24" font-weight="bold">Action:</text><text x="100" y="855" fill="#ffffff" font-size="20">• Stool sample for C. diff PCR/toxin</text><text x="100" y="890" fill="#ffffff" font-size="20">• Contact precautions; SOAP + WATER</text><text x="100" y="925" fill="#ffffff" font-size="20">• Expect PO vancomycin or fidaxomicin</text><text x="100" y="980" fill="#ffd700" font-size="20">Slow gut + toxin = megacolon risk</text><text x="100" y="1015" fill="#ffd700" font-size="20">Alcohol gel does NOT kill spores</text></svg>`,
+          caption: "Long-term PPI = nutrient checks. Post-abx diarrhea = think C. diff."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX Check — GI Pitfalls",
+        content: `Test your understanding.`,
+        question: "A client with acute watery diarrhea that started 2 days after finishing clindamycin asks for loperamide. What is the nurse's BEST response?",
+        options: [
+          { text: "\"Take two tablets now, then one after each loose stool.\"", correct: false },
+          { text: "\"I'll hold the loperamide and notify the provider — we need a stool sample first.\"", correct: true },
+          { text: "\"Loperamide is safe; recent antibiotics often cause harmless diarrhea.\"", correct: false },
+          { text: "\"Alcohol-based hand sanitizer will protect your roommate from infection.\"", correct: false }
+        ],
+        explanation: `**Recent antibiotic use (especially clindamycin) plus watery diarrhea = suspect C. difficile.** Loperamide slows gut motility, which **traps the toxin** and can cause toxic megacolon or sepsis. The nurse must hold the antidiarrheal, obtain a C. diff stool test, and initiate **contact precautions with soap-and-water hand hygiene** (alcohol gel does not kill C. diff spores). Expect oral vancomycin or fidaxomicin.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">When NOT to give loperamide</text><rect x="100" y="180" width="900" height="280" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="6"/><text x="550" y="260" text-anchor="middle" fill="#ef4444" font-size="32" font-weight="bold">STOP signs</text><text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="24">Recent antibiotics (esp. clindamycin)</text><text x="550" y="360" text-anchor="middle" fill="#ffffff" font-size="24">Fever, blood, mucus in stool</text><text x="550" y="400" text-anchor="middle" fill="#ffffff" font-size="24">Suspected C. diff, salmonella, E. coli O157</text><text x="550" y="440" text-anchor="middle" fill="#ffd700" font-size="22">→ trapping toxin = worse outcome</text><rect x="100" y="500" width="900" height="280" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="6"/><text x="550" y="580" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">Correct steps</text><text x="550" y="640" text-anchor="middle" fill="#ffffff" font-size="24">Hold the drug, notify provider</text><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="24">Stool sample for C. diff</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="24">Contact precautions · soap + water</text><text x="550" y="760" text-anchor="middle" fill="#ffd700" font-size="22">PO vancomycin or fidaxomicin</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">"Recent abx + watery diarrhea"</text><text x="550" y="940" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">= think C. diff every time</text></svg>`,
+          caption: "Recent antibiotic + watery diarrhea = C. diff until proven otherwise."
+        }
+      },
+      {
+        type: "application",
+        title: "Building a Safe GI Med Pass",
+        content: `**Scenario** — Your morning med pass for a 78-year-old post-op cholecystectomy patient:
+- Pantoprazole 40 mg PO daily
+- Ondansetron 4 mg IV q6h PRN nausea
+- Polyethylene glycol 17 g PO daily
+- Psyllium 1 packet PO BID
+
+**Step 1 — Sequence and timing**: Give pantoprazole **30 min before breakfast** for full acid suppression. Polyethylene glycol can be given with any fluid. **Psyllium must be given with a full 240 mL glass of water** — explain risk of esophageal/GI obstruction.
+
+**Step 2 — Monitor**: Before ondansetron, review the **ECG or QT interval** if on other QT-prolonging drugs (haloperidol, methadone, citalopram). Check baseline bowel sounds — multiple constipation drugs together can mask paralytic ileus.
+
+**Step 3 — Teach**: At discharge, plan to **deprescribe the PPI** as soon as the stress ulcer indication ends. Long-term PPI was not prescribed for daily home use — clarify with the provider so the client doesn't leave on an unintended forever med.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Safe GI Med Pass</text><rect x="80" y="130" width="940" height="240" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="110" y="180" fill="#6366f1" font-size="26" font-weight="bold">1. Timing</text><text x="110" y="225" fill="#ffffff" font-size="22">Pantoprazole: 30 min before breakfast</text><text x="110" y="265" fill="#ffffff" font-size="22">PEG: any fluid OK</text><text x="110" y="305" fill="#ef4444" font-size="22" font-weight="bold">Psyllium: FULL glass water</text><text x="110" y="345" fill="#ffd700" font-size="20">Dry psyllium = obstruction risk</text><rect x="80" y="390" width="940" height="240" rx="16" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="4"/><text x="110" y="440" fill="#8b5cf6" font-size="26" font-weight="bold">2. Monitor</text><text x="110" y="485" fill="#ffffff" font-size="22">Ondansetron + QT-prolonging combo?</text><text x="110" y="525" fill="#ffffff" font-size="22">Check ECG, baseline QTc</text><text x="110" y="565" fill="#ffffff" font-size="22">Bowel sounds before laxatives</text><text x="110" y="605" fill="#ffd700" font-size="20">Multiple laxatives can mask ileus</text><rect x="80" y="650" width="940" height="240" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="110" y="700" fill="#10b981" font-size="26" font-weight="bold">3. Deprescribe</text><text x="110" y="745" fill="#ffffff" font-size="22">PPI for stress ulcer = short-term only</text><text x="110" y="785" fill="#ffffff" font-size="22">Stop before discharge unless GERD dx</text><text x="110" y="825" fill="#ffd700" font-size="22" font-weight="bold">Avoid the "forever med" trap</text><text x="110" y="865" fill="#ffd700" font-size="20">Clarify intent with provider</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Right drug · right time · right duration</text></svg>`,
+          caption: "Timing, monitoring, and an exit plan for every GI drug."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pharmacology-lesson-12",
+    title: "Capstone: The 4-Step Medication Reasoning Algorithm",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Memorization to Reasoning",
+        content: `The NCLEX rarely asks "what is this drug?" Instead, it gives you a **patient, a scenario, and a med order**, then asks **what to do next**. You need a repeatable algorithm so you don't freeze when the drug name is unfamiliar.
+
+**The 4-Step Medication Reasoning Algorithm**:
+
+**Step 1 — Identify the class** from the suffix or stem. (-pril = ACE inhibitor, -olol = beta-blocker, -prazole = PPI.)
+
+**Step 2 — Recall the action and side effects**. What does this class DO and what does it BREAK?
+
+**Step 3 — Check for contraindications**. Allergies, organ function, pregnancy, drug interactions.
+
+**Step 4 — Verify the 5 Rights**. Right patient, right drug, right dose, right route, right time — plus right documentation.
+
+Used in this order, the algorithm turns a scary question into a 4-step checklist. Practice it on every question until it's automatic.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">4-Step Reasoning</text><circle cx="200" cy="280" r="80" fill="#6366f1"/><text x="200" y="295" text-anchor="middle" fill="#ffffff" font-size="56" font-weight="bold">1</text><text x="350" y="260" fill="#6366f1" font-size="30" font-weight="bold">IDENTIFY</text><text x="350" y="300" fill="#ffffff" font-size="22">Suffix → class</text><text x="350" y="335" fill="#888" font-size="20">-pril, -olol, -prazole...</text><circle cx="200" cy="470" r="80" fill="#10b981"/><text x="200" y="485" text-anchor="middle" fill="#1a1a2e" font-size="56" font-weight="bold">2</text><text x="350" y="450" fill="#10b981" font-size="30" font-weight="bold">RECALL</text><text x="350" y="490" fill="#ffffff" font-size="22">Action + side effects</text><text x="350" y="525" fill="#888" font-size="20">What it does, what it breaks</text><circle cx="200" cy="660" r="80" fill="#f59e0b"/><text x="200" y="675" text-anchor="middle" fill="#1a1a2e" font-size="56" font-weight="bold">3</text><text x="350" y="640" fill="#f59e0b" font-size="30" font-weight="bold">CHECK</text><text x="350" y="680" fill="#ffffff" font-size="22">Contraindications</text><text x="350" y="715" fill="#888" font-size="20">Allergy, organ, pregnancy, interactions</text><circle cx="200" cy="850" r="80" fill="#ec4899"/><text x="200" y="865" text-anchor="middle" fill="#ffffff" font-size="56" font-weight="bold">4</text><text x="350" y="830" fill="#ec4899" font-size="30" font-weight="bold">VERIFY</text><text x="350" y="870" fill="#ffffff" font-size="22">The 5 Rights</text><text x="350" y="905" fill="#888" font-size="20">Patient, drug, dose, route, time</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Every question. Every time.</text></svg>`,
+          caption: "Four numbered steps — a checklist that never changes."
+        }
+      },
+      {
+        type: "concept",
+        title: "Inside Each Step",
+        content: `**Step 1 — Identify**: scan for a suffix or stem. **-pril** (ACE), **-sartan** (ARB), **-olol** (beta-blocker), **-dipine** (CCB), **-statin** (cholesterol), **-prazole** (PPI), **-floxacin** (fluoroquinolone), **-cillin** (penicillin), **-azepam** (benzodiazepine), **-caine** (anesthetic). If no suffix matches, look for a stem (heparin, warfarin, digoxin).
+
+**Step 2 — Recall**: state one therapeutic action and one top side effect in your head. "ACE → lowers BP → dry cough, angioedema, hyperkalemia."
+
+**Step 3 — Check contraindications**: scan the stem for clues — **renal/hepatic dysfunction**, **pregnancy**, **allergy** (PCN/sulfa), **age** (Beers list), **other meds** (additive effects). Look up labs (K⁺, INR, creatinine, glucose, ANC).
+
+**Step 4 — Verify the 5 Rights**: right **patient** (two identifiers), right **drug** (match MAR), right **dose** (recalculate weight-based), right **route**, right **time** — plus **right documentation** and **right to refuse**. Any mismatch = hold and clarify.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Inside Each Step</text><rect x="60" y="100" width="980" height="220" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="90" y="145" fill="#6366f1" font-size="26" font-weight="bold">Step 1 — Identify the Class</text><text x="90" y="185" fill="#ffffff" font-size="20">-pril ACE · -sartan ARB · -olol BB · -dipine CCB</text><text x="90" y="220" fill="#ffffff" font-size="20">-statin lipid · -prazole PPI · -floxacin · -cillin</text><text x="90" y="255" fill="#ffffff" font-size="20">-azepam benzo · -caine anesthetic</text><text x="90" y="295" fill="#ffd700" font-size="19">No suffix? Look for stem (heparin, digoxin)</text><rect x="60" y="340" width="980" height="180" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="90" y="385" fill="#10b981" font-size="26" font-weight="bold">Step 2 — Recall Action + Side Effect</text><text x="90" y="425" fill="#ffffff" font-size="20">One sentence: "It does X, it breaks Y"</text><text x="90" y="465" fill="#ffffff" font-size="20">ACE: lowers BP → cough, angioedema, K↑</text><text x="90" y="500" fill="#ffd700" font-size="19">Always pair benefit with risk</text><rect x="60" y="540" width="980" height="200" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="90" y="585" fill="#f59e0b" font-size="26" font-weight="bold">Step 3 — Check Contraindications</text><text x="90" y="625" fill="#ffffff" font-size="20">Allergy · renal/hepatic · pregnancy · age</text><text x="90" y="665" fill="#ffffff" font-size="20">Drug interactions and additive effects</text><text x="90" y="700" fill="#ffffff" font-size="20">Relevant labs: K, INR, Cr, glucose, ANC</text><text x="90" y="730" fill="#ffd700" font-size="19">Any red flag → hold and clarify</text><rect x="60" y="760" width="980" height="280" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="90" y="805" fill="#ec4899" font-size="26" font-weight="bold">Step 4 — Verify the 5 Rights</text><text x="90" y="845" fill="#ffffff" font-size="20">Right PATIENT (two identifiers)</text><text x="90" y="880" fill="#ffffff" font-size="20">Right DRUG (match MAR)</text><text x="90" y="915" fill="#ffffff" font-size="20">Right DOSE (recalculate)</text><text x="90" y="950" fill="#ffffff" font-size="20">Right ROUTE</text><text x="90" y="985" fill="#ffffff" font-size="20">Right TIME + documentation</text><text x="90" y="1020" fill="#ffd700" font-size="19">Plus right to refuse</text></svg>`,
+          caption: "Each step has its own small checklist."
+        }
+      },
+      {
+        type: "example",
+        title: "Walking a Real Question",
+        content: `**Question**: A nurse is preparing to administer **lisinopril 20 mg PO** to a 64-year-old client with HTN. Latest labs: **K⁺ 5.6**, **creatinine 1.8** (baseline 1.0). Vital signs: BP 138/82. What action does the nurse take?
+
+**Step 1 — Identify**: **-pril** = **ACE inhibitor**.
+
+**Step 2 — Recall**: ACE lowers BP by blocking angiotensin II. Side effects: **dry cough, angioedema, HYPERKALEMIA, acute kidney injury, hypotension**.
+
+**Step 3 — Check contraindications**: K⁺ **5.6 is HIGH** (normal 3.5–5.0). Creatinine **jumped from 1.0 to 1.8** (AKI). Giving ACE now would worsen both — potentially fatal hyperkalemia and progression to dialysis.
+
+**Step 4 — Verify the 5 Rights**: doesn't matter how perfect the dose and route — Step 3 already triggered a HOLD.
+
+**Action**: **Hold lisinopril**, notify the provider, recheck K⁺, anticipate orders to **discontinue ACE temporarily**, treat hyperkalemia (calcium gluconate, insulin/D50, kayexalate), and investigate the cause of AKI.
+
+This is why Step 3 saves lives.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Lisinopril 20 mg PO</text><rect x="60" y="110" width="980" height="170" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="90" y="155" fill="#6366f1" font-size="24" font-weight="bold">Step 1 — Identify</text><text x="90" y="195" fill="#ffffff" font-size="22">-pril → ACE inhibitor</text><text x="90" y="240" fill="#ffd700" font-size="20">Easy: trust the suffix</text><rect x="60" y="300" width="980" height="180" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="90" y="345" fill="#10b981" font-size="24" font-weight="bold">Step 2 — Recall</text><text x="90" y="385" fill="#ffffff" font-size="20">Lowers BP via angiotensin II block</text><text x="90" y="420" fill="#ffffff" font-size="20">Side effects: cough, angioedema</text><text x="90" y="455" fill="#ef4444" font-size="20" font-weight="bold">HYPERKALEMIA + AKI risk</text><rect x="60" y="500" width="980" height="280" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="90" y="545" fill="#ef4444" font-size="24" font-weight="bold">Step 3 — Check Contraindications</text><text x="90" y="585" fill="#ffffff" font-size="22">K⁺ 5.6 (normal 3.5–5.0) ⚠</text><text x="90" y="625" fill="#ffffff" font-size="22">Creatinine 1.0 → 1.8 (AKI) ⚠</text><text x="90" y="665" fill="#ef4444" font-size="24" font-weight="bold">STOP — Do NOT give</text><text x="90" y="710" fill="#ffd700" font-size="20">Giving ACE → worsens both</text><text x="90" y="745" fill="#ffd700" font-size="20">Potentially fatal hyperkalemia</text><rect x="60" y="800" width="980" height="250" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="90" y="845" fill="#ec4899" font-size="24" font-weight="bold">Step 4 — Action</text><text x="90" y="885" fill="#ffffff" font-size="20">Hold the dose, notify provider</text><text x="90" y="920" fill="#ffffff" font-size="20">Recheck K⁺, treat hyperkalemia</text><text x="90" y="955" fill="#ffffff" font-size="20">Investigate cause of AKI</text><text x="90" y="990" fill="#ffffff" font-size="20">Document hold + rationale</text><text x="90" y="1030" fill="#ffd700" font-size="20">Step 3 saved this client's life</text></svg>`,
+          caption: "Step 3 is where lives are saved — labs always count."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX Check — Apply the Algorithm",
+        content: `Test your understanding.`,
+        question: "Using the 4-step algorithm, which medication order should the nurse question FIRST?",
+        options: [
+          { text: "Atorvastatin 40 mg PO at bedtime for a client with LDL 160.", correct: false },
+          { text: "Metoprolol 25 mg PO for a client with HR 56 and BP 96/54.", correct: true },
+          { text: "Famotidine 20 mg PO for a client with GERD.", correct: false },
+          { text: "Albuterol 2 puffs via inhaler PRN for a client with wheezing.", correct: false }
+        ],
+        explanation: `Apply the algorithm to metoprolol: **Step 1** — -olol = beta-blocker. **Step 2** — slows HR and lowers BP. **Step 3** — contraindicated if HR < 60 or SBP < 100. This client has **HR 56 and BP 96/54** — both red flags. Giving metoprolol would worsen bradycardia and cause hypotension/syncope. HOLD and notify the provider. The other orders match their indications without lab/VS contraindications.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Beta-Blocker HOLD Rules</text><rect x="100" y="180" width="900" height="320" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="6"/><text x="550" y="250" text-anchor="middle" fill="#ef4444" font-size="34" font-weight="bold">HOLD if:</text><text x="550" y="330" text-anchor="middle" fill="#ffffff" font-size="32">HR &lt; 60 bpm</text><text x="550" y="390" text-anchor="middle" fill="#ffffff" font-size="32">SBP &lt; 100 mmHg</text><text x="550" y="450" text-anchor="middle" fill="#ffd700" font-size="24">This client: HR 56, BP 96/54 → STOP</text><rect x="100" y="540" width="900" height="240" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="550" y="600" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">Algorithm in action</text><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="22">1. Identify: -olol = beta-blocker</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="22">2. Recall: slows HR, lowers BP</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="22">3. Check: VS contraindicate dose</text><text x="550" y="770" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">4. Verify never reached → HOLD</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">Always check VS BEFORE giving</text><text x="550" y="945" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">cardiac and BP meds</text></svg>`,
+          caption: "Vital signs are part of every cardiac med decision."
+        }
+      },
+      {
+        type: "application",
+        title: "Carry It Into Practice",
+        content: `**Mastery looks like this**: every time you pick up a med, you silently run the algorithm in under 10 seconds.
+
+**Build the habit on shift**:
+- Before the first med pass, jot the **top 5 suffixes** you'll see today.
+- For each med, whisper aloud: **"Class? Action? Contraindication? Five Rights?"**
+- When labs are abnormal or VS unstable, **slow down at Step 3**.
+
+**For the NCLEX**:
+- Read the **stem first** for VS, labs, allergies — these are usually the answer to Step 3.
+- Then read the question and options.
+- Eliminate options that violate Step 3 immediately.
+- The remaining options usually test Step 4 (right patient, dose, route, time).
+
+**Across this course you've learned**: name-suffix logic, the 6 Rights, lab thresholds, cardiac drugs, anticoagulants, diabetes, pain meds, mental health drugs, antibiotics, respiratory meds, and GI meds. The 4-step algorithm is the **single key** that opens every one of those doors. **Trust it. Run it. Pass.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Carry It Into Practice</text><rect x="80" y="140" width="940" height="280" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="550" y="195" text-anchor="middle" fill="#6366f1" font-size="30" font-weight="bold">On Shift</text><text x="550" y="250" text-anchor="middle" fill="#ffffff" font-size="22">Jot the top 5 suffixes you'll see today</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="22">Whisper the 4 questions for each med</text><text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="22">Slow down at Step 3 when labs/VS abnormal</text><text x="550" y="390" text-anchor="middle" fill="#ffd700" font-size="22">Holding is a nursing intervention</text><rect x="80" y="440" width="940" height="280" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="495" text-anchor="middle" fill="#10b981" font-size="30" font-weight="bold">On the NCLEX</text><text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="22">Read the stem first — VS, labs, allergies</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="22">Eliminate options that fail Step 3</text><text x="550" y="640" text-anchor="middle" fill="#ffffff" font-size="22">Remaining options test Step 4</text><text x="550" y="690" text-anchor="middle" fill="#ffd700" font-size="22">The algorithm = your test strategy</text><rect x="80" y="740" width="940" height="300" rx="20" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="5"/><text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">12 lessons. 1 algorithm.</text><text x="550" y="860" text-anchor="middle" fill="#ffffff" font-size="22">Suffixes · 6 Rights · Labs · Cardiac</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">Anticoags · Diabetes · Pain · Mental Health</text><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="22">Antibiotics · Respiratory · GI · Reasoning</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Trust it. Run it. Pass.</text></svg>`,
+          caption: "From classroom to clinic to NCLEX — one algorithm."
         }
       }
     ]
