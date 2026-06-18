@@ -3509,7 +3509,7 @@ A CCA who knows these five items is **immediately valuable** to any HIM director
             id: 'cca-domain-2', title: 'CCA Domain 2: ICD-10-CM Diagnosis Coding',
             author: 'Synthesis Learning',
             description: 'The Official Guidelines, alphabetic/tabular workflow, principal vs. additional diagnoses, and the conditions that always trip up new coders.',
-            lessons: 9, duration: 135, progress: 0, category: 'cca-prep',
+            lessons: 12, duration: 180, progress: 0, category: 'cca-prep',
             lessonList: [
 {
     id: "cca-domain-2-lesson-1",
@@ -5306,6 +5306,360 @@ Memorize this — every CCA diabetes question depends on it.`,
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">The Diabetes Audit Checklist</text><text x="550" y="105" text-anchor="middle" fill="#ffffff" font-size="20">Uncontrolled T2DM, DKA, CKD3, neuropathy, foot ulcer</text><rect x="80" y="140" width="940" height="70" rx="10" fill="#ef4444"/><text x="120" y="183" fill="#ffffff" font-size="22" font-weight="bold">1.</text><text x="200" y="180" fill="#ffffff" font-size="20" font-weight="bold">E11.10</text><text x="500" y="180" fill="#ffffff" font-size="18">DKA without coma (PRINCIPAL)</text><rect x="80" y="220" width="940" height="70" rx="10" fill="#10b981" opacity="0.85"/><text x="120" y="263" fill="#ffffff" font-size="22" font-weight="bold">2.</text><text x="200" y="260" fill="#ffffff" font-size="20" font-weight="bold">E11.22</text><text x="500" y="260" fill="#ffffff" font-size="18">DM with diabetic CKD</text><rect x="80" y="300" width="940" height="70" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="120" y="343" fill="#ffffff" font-size="22" font-weight="bold">3.</text><text x="200" y="340" fill="#ffffff" font-size="20" font-weight="bold">E11.42</text><text x="500" y="340" fill="#ffffff" font-size="18">DM with diabetic polyneuropathy</text><rect x="80" y="380" width="940" height="70" rx="10" fill="#f59e0b" opacity="0.85"/><text x="120" y="423" fill="#ffffff" font-size="22" font-weight="bold">4.</text><text x="200" y="420" fill="#ffffff" font-size="20" font-weight="bold">E11.621</text><text x="500" y="420" fill="#ffffff" font-size="18">DM with foot ulcer</text><rect x="80" y="460" width="940" height="70" rx="10" fill="#ec4899" opacity="0.85"/><text x="120" y="503" fill="#ffffff" font-size="22" font-weight="bold">5.</text><text x="200" y="500" fill="#ffffff" font-size="20" font-weight="bold">L97.511</text><text x="500" y="500" fill="#ffffff" font-size="18">Right great toe ulcer (site)</text><rect x="80" y="540" width="940" height="70" rx="10" fill="#10b981" opacity="0.85"/><text x="120" y="583" fill="#ffffff" font-size="22" font-weight="bold">6.</text><text x="200" y="580" fill="#ffffff" font-size="20" font-weight="bold">N18.30</text><text x="500" y="580" fill="#ffffff" font-size="18">CKD stage 3 unspecified</text><rect x="80" y="620" width="940" height="70" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="120" y="663" fill="#ffffff" font-size="22" font-weight="bold">7.</text><text x="200" y="660" fill="#ffffff" font-size="20" font-weight="bold">I10</text><text x="500" y="660" fill="#ffffff" font-size="18">Essential hypertension</text><rect x="80" y="700" width="940" height="70" rx="10" fill="#6366f1" opacity="0.85"/><text x="120" y="743" fill="#ffffff" font-size="22" font-weight="bold">8.</text><text x="200" y="740" fill="#ffffff" font-size="20" font-weight="bold">Z79.4</text><text x="500" y="740" fill="#ffffff" font-size="18">Long-term insulin use</text><rect x="80" y="780" width="940" height="70" rx="10" fill="#888"/><text x="120" y="823" fill="#ffffff" font-size="22" font-weight="bold">9.</text><text x="200" y="820" fill="#ffffff" font-size="20" font-weight="bold">Z79.84</text><text x="500" y="820" fill="#ffffff" font-size="18">Long-term oral hypoglycemics (metformin)</text><rect x="100" y="870" width="900" height="180" rx="14" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="920" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Query Trigger</text><text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="18">If chart says only "diabetes" with no type</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="18">but complications are documented →</text><text x="550" y="1035" text-anchor="middle" fill="#ffffff" font-size="18">QUERY for type and specificity</text></svg>`,
           caption: "Complete audit checklist — 9 codes for a complex diabetic admission with multiple complications."
+        }
+      }
+    ]
+  },
+{
+    id: "cca-domain-2-lesson-10",
+    title: "Cardiovascular Disease Chapter (I00-I99)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Heart of Chapter 9",
+        content: `**Chapter 9 (I00-I99)** covers diseases of the **circulatory system** — and it's the most heavily coded chapter on the CCA exam. Three giants dominate: **hypertension**, **myocardial infarction**, and **heart failure**.
+
+What makes this chapter tricky is the **'with' convention**. When the Alphabetic Index lists a condition under 'with' (e.g., 'Hypertension, with heart disease'), ICD-10-CM **assumes a causal relationship** — you do NOT need a physician to state it explicitly. This single rule changes how you sequence and combine codes.
+
+You'll also master the **time-based logic of MI coding** (initial vs. subsequent vs. old) and the **specificity required for CHF** (systolic, diastolic, acute, chronic, or combined). Master these three categories and you've conquered 60% of cardiovascular questions.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">Chapter 9: I00-I99</text><text x="550" y="130" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">The Big Three of Cardiovascular Coding</text><rect x="80" y="200" width="300" height="280" rx="20" fill="#ef4444" opacity="0.85"/><text x="230" y="260" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">HYPERTENSION</text><text x="230" y="310" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle">I10</text><text x="230" y="370" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Essential (primary)</text><text x="230" y="410" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">+ &quot;with&quot; rule</text><text x="230" y="445" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">I11 heart, I12 CKD</text><rect x="400" y="200" width="300" height="280" rx="20" fill="#f59e0b" opacity="0.85"/><text x="550" y="260" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">MI</text><text x="550" y="310" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle">I21</text><text x="550" y="370" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Initial (≤4 weeks)</text><text x="550" y="410" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">I22 subsequent</text><text x="550" y="445" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">I25.2 old/healed</text><rect x="720" y="200" width="300" height="280" rx="20" fill="#6366f1" opacity="0.9"/><text x="870" y="260" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">HEART FAILURE</text><text x="870" y="310" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle">I50</text><text x="870" y="370" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Systolic / Diastolic</text><text x="870" y="410" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Acute / Chronic</text><text x="870" y="445" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Specificity wins</text><rect x="80" y="540" width="940" height="200" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="585" font-family="Arial" font-size="26" fill="#10b981" text-anchor="middle" font-weight="bold">The 'with' Convention</text><text x="550" y="630" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">When the Index lists a condition under &quot;with&quot;,</text><text x="550" y="660" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">ICD-10-CM ASSUMES a causal relationship.</text><text x="550" y="700" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">No physician statement required.</text><rect x="80" y="780" width="940" height="220" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="2"/><text x="550" y="825" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">Exam Weight</text><text x="550" y="875" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Chapter 9 = ~60% of cardiovascular CCA questions</text><text x="550" y="920" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">HTN + MI + CHF = the three pillars</text><text x="550" y="965" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">Master these and you own the chapter.</text></svg>`,
+          caption: "Three pillars of Chapter 9: hypertension, MI, and heart failure"
+        }
+      },
+      {
+        type: "concept",
+        title: "Hypertension, MI Timing, and CHF Specificity",
+        content: `**Hypertension (I10)** is **essential (primary)** HTN — the default when no cause is documented. The **'with' rule** kicks in for two scenarios:
+
+- **HTN + heart disease** (CHF, etc.) → **I11.x** (causal relationship assumed)
+- **HTN + CKD** → **I12.x** (causal relationship assumed)
+- **HTN + heart + CKD** → **I13.x** (combination code)
+
+**MI is time-based**:
+- **I21** = **initial MI**, within the first **4 weeks** (28 days) from onset
+- **I22** = **subsequent MI** occurring within those 4 weeks of the I21
+- **I25.2** = **old/healed MI**, no longer receiving care for it
+
+**Heart failure (I50)** requires **type + acuity**:
+- **I50.1** = left ventricular failure
+- **I50.2x** = **systolic** (HFrEF) — acute, chronic, or acute on chronic
+- **I50.3x** = **diastolic** (HFpEF) — same acuity split
+- **I50.4x** = **combined** systolic and diastolic
+- **I50.9** = unspecified (avoid — query if possible)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Three Coding Frameworks</text><rect x="50" y="110" width="1000" height="280" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="150" font-family="Arial" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="bold">HYPERTENSION: The 'with' Cascade</text><rect x="80" y="180" width="200" height="80" rx="10" fill="#ef4444"/><text x="180" y="225" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">I10</text><text x="180" y="250" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">essential HTN</text><text x="300" y="225" font-family="Arial" font-size="30" fill="#ffd700">→</text><rect x="340" y="180" width="200" height="80" rx="10" fill="#f59e0b"/><text x="440" y="220" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">I11</text><text x="440" y="248" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">+ heart dz</text><text x="560" y="225" font-family="Arial" font-size="30" fill="#ffd700">→</text><rect x="600" y="180" width="200" height="80" rx="10" fill="#6366f1"/><text x="700" y="220" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">I12</text><text x="700" y="248" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">+ CKD</text><text x="820" y="225" font-family="Arial" font-size="30" fill="#ffd700">→</text><rect x="860" y="180" width="160" height="80" rx="10" fill="#8b5cf6"/><text x="940" y="220" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">I13</text><text x="940" y="248" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">heart + CKD</text><text x="550" y="310" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">'with' convention = causal link ASSUMED</text><text x="550" y="345" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">No physician statement needed</text><rect x="50" y="410" width="1000" height="280" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="450" font-family="Arial" font-size="28" fill="#f59e0b" text-anchor="middle" font-weight="bold">MI: The 4-Week Clock</text><rect x="100" y="490" width="260" height="100" rx="10" fill="#f59e0b"/><text x="230" y="530" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">I21</text><text x="230" y="560" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">INITIAL MI</text><text x="230" y="580" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">first 4 weeks (28 days)</text><rect x="420" y="490" width="260" height="100" rx="10" fill="#ef4444"/><text x="550" y="530" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">I22</text><text x="550" y="560" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">SUBSEQUENT MI</text><text x="550" y="580" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">within 4 wks of I21</text><rect x="740" y="490" width="260" height="100" rx="10" fill="#888"/><text x="870" y="530" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">I25.2</text><text x="870" y="560" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">OLD / HEALED</text><text x="870" y="580" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">no current care</text><text x="550" y="640" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">If both I21 + I22 apply, code BOTH</text><text x="550" y="670" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Sequence per circumstances of admission</text><rect x="50" y="710" width="1000" height="370" rx="15" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="750" font-family="Arial" font-size="28" fill="#6366f1" text-anchor="middle" font-weight="bold">CHF (I50): Type + Acuity</text><rect x="80" y="780" width="220" height="120" rx="10" fill="#6366f1"/><text x="190" y="820" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">I50.2x</text><text x="190" y="850" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">SYSTOLIC</text><text x="190" y="875" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">(HFrEF)</text><rect x="320" y="780" width="220" height="120" rx="10" fill="#10b981"/><text x="430" y="820" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">I50.3x</text><text x="430" y="850" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">DIASTOLIC</text><text x="430" y="875" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">(HFpEF)</text><rect x="560" y="780" width="220" height="120" rx="10" fill="#8b5cf6"/><text x="670" y="820" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">I50.4x</text><text x="670" y="850" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">COMBINED</text><text x="670" y="875" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">sys + dia</text><rect x="800" y="780" width="220" height="120" rx="10" fill="#888"/><text x="910" y="820" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">I50.9</text><text x="910" y="850" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">UNSPEC</text><text x="910" y="875" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">avoid — query</text><text x="550" y="950" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Each gets 4th/5th digit for acuity:</text><text x="550" y="985" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">.20 unsp · .21 acute · .22 chronic · .23 acute on chronic</text><text x="550" y="1040" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle" font-weight="bold">Specificity = clean claim</text></svg>`,
+          caption: "Hypertension cascade, MI timing, and CHF specificity rules"
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example: HTN, CHF, and an MI",
+        content: `**Scenario:** A 68-year-old male is admitted with **acute on chronic systolic heart failure**. He has a long history of **essential hypertension** and **stage 3 CKD**. During the stay, he sustains an **acute inferior STEMI** treated with PCI.
+
+**Step 1 — Apply the 'with' rule:**
+HTN + heart failure + CKD → causal relationship assumed → use **I13.0** (HTN heart and CKD with heart failure, stage 1-4 CKD).
+
+**Step 2 — Add the CHF type code:**
+Per the I13 'use additional code' note → **I50.23** (acute on chronic systolic CHF).
+
+**Step 3 — Add the CKD stage code:**
+**N18.30** (stage 3 CKD, unspecified) — the I13 note also requires this.
+
+**Step 4 — Code the MI:**
+Acute inferior STEMI → **I21.19** (STEMI involving other coronary artery of inferior wall).
+
+**Final sequencing** (principal = reason for admission, the CHF exacerbation drove the stay):
+1. **I13.0** — HTN, heart dz, CKD, with HF
+2. **I50.23** — acute on chronic systolic CHF
+3. **N18.30** — stage 3 CKD
+4. **I21.19** — acute STEMI`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">Worked Example: Layered Cardiac Case</text><rect x="40" y="100" width="1020" height="160" rx="15" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/><text x="60" y="135" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">PATIENT</text><text x="60" y="170" font-family="Arial" font-size="18" fill="#ffffff">68 y/o M, admitted for acute on chronic systolic CHF</text><text x="60" y="200" font-family="Arial" font-size="18" fill="#ffffff">Hx: essential HTN, stage 3 CKD</text><text x="60" y="230" font-family="Arial" font-size="18" fill="#ef4444">During stay: acute inferior STEMI → PCI</text><rect x="40" y="285" width="1020" height="140" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2"/><text x="60" y="320" font-family="Arial" font-size="22" fill="#ef4444" font-weight="bold">STEP 1: 'with' rule fires</text><text x="60" y="355" font-family="Arial" font-size="18" fill="#ffffff">HTN + heart failure + CKD → causal link assumed</text><text x="60" y="390" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">→ I13.0 (HTN heart + CKD with HF, stage 1-4)</text><rect x="40" y="450" width="1020" height="140" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/><text x="60" y="485" font-family="Arial" font-size="22" fill="#f59e0b" font-weight="bold">STEP 2: Add CHF type code (per I13 note)</text><text x="60" y="520" font-family="Arial" font-size="18" fill="#ffffff">Acute on chronic systolic HF</text><text x="60" y="555" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">→ I50.23</text><rect x="40" y="615" width="1020" height="120" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/><text x="60" y="650" font-family="Arial" font-size="22" fill="#6366f1" font-weight="bold">STEP 3: Add CKD stage</text><text x="60" y="685" font-family="Arial" font-size="18" fill="#ffffff">Stage 3 → N18.30</text><text x="60" y="720" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">N18.30</text><rect x="40" y="760" width="1020" height="120" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="60" y="795" font-family="Arial" font-size="22" fill="#10b981" font-weight="bold">STEP 4: Code the MI</text><text x="60" y="830" font-family="Arial" font-size="18" fill="#ffffff">Acute inferior STEMI → I21.19</text><rect x="40" y="905" width="1020" height="180" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="945" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">FINAL SEQUENCE</text><text x="60" y="985" font-family="Arial" font-size="18" fill="#ffffff">1. I13.0 — HTN/heart/CKD with HF  (PRINCIPAL)</text><text x="60" y="1015" font-family="Arial" font-size="18" fill="#ffffff">2. I50.23 — acute on chronic systolic CHF</text><text x="60" y="1045" font-family="Arial" font-size="18" fill="#ffffff">3. N18.30 — stage 3 CKD</text><text x="60" y="1075" font-family="Arial" font-size="18" fill="#ffffff">4. I21.19 — acute STEMI</text></svg>`,
+          caption: "Sequencing a layered cardiovascular admission"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A patient is admitted with chronic diastolic heart failure and a documented history of essential hypertension. Per ICD-10-CM conventions, how should this be coded?",
+        options: [
+          { text: "I10 + I50.32 separately, since no causal link is stated by the physician", correct: false },
+          { text: "I11.0 (HTN heart disease with HF) + I50.32 (chronic diastolic CHF) — the 'with' rule assumes causation", correct: true },
+          { text: "Only I50.32; hypertension is implied and does not need a code", correct: false },
+          { text: "I13.0 + I50.32 + N18.9 — must always include CKD code", correct: false }
+        ],
+        explanation: "The 'with' convention in the Alphabetic Index automatically links HTN to heart disease — no physician statement is required. Code I11.0 (HTN with HF) plus I50.32 (chronic diastolic CHF) per the 'use additional code' note. CKD is not mentioned, so N18 is not appropriate.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" font-family="Arial" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">Quick Check</text><circle cx="550" cy="550" r="280" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="4"/><text x="550" y="500" font-family="Arial" font-size="100" fill="#ffd700" text-anchor="middle" font-weight="bold">?</text><text x="550" y="600" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">The 'with' Convention</text><text x="550" y="640" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle">HTN + heart dz = automatic link</text><text x="550" y="950" font-family="Arial" font-size="22" fill="#888" text-anchor="middle">Apply the Index convention</text></svg>`,
+          caption: "Test the 'with' convention"
+        }
+      },
+      {
+        type: "application",
+        title: "On the Job: The Cardiology Floor Coder",
+        content: `**Real-world workflow** on a busy cardiology unit:
+
+1. **Pull the H&P and discharge summary first** — these state principal dx and document the 'circumstances of admission.'
+2. **Identify the cardiac syndrome** — CHF exacerbation? Acute MI? Unstable angina? This drives sequencing.
+3. **Check timing on every MI** — when did symptoms start? If within 4 weeks → I21. New event during that window → also I22.
+4. **Hunt the 'with' relationships** — HTN + CHF, HTN + CKD, diabetes + CKD. The Index does the linking for you.
+5. **Demand acuity for CHF** — never code I50.9 without trying to query for systolic vs diastolic and acute vs chronic.
+6. **Capture EF in the record** — EF ≤40% supports systolic (HFrEF); EF ≥50% supports diastolic (HFpEF).
+7. **Add the procedure codes** — PCI, CABG, cath all need ICD-10-PCS or CPT depending on setting.
+
+This is where DRG dollars live. A missed I50.23 vs I50.9 can drop the case from MS-DRG 291 to 293 — thousands of dollars lost.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">Cardiology Coder Workflow</text><rect x="80" y="110" width="940" height="80" rx="10" fill="#6366f1" opacity="0.8"/><text x="110" y="160" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">1. Read H&amp;P + discharge summary FIRST</text><rect x="80" y="210" width="940" height="80" rx="10" fill="#10b981" opacity="0.8"/><text x="110" y="260" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">2. Identify the cardiac syndrome (CHF? MI? angina?)</text><rect x="80" y="310" width="940" height="80" rx="10" fill="#f59e0b" opacity="0.8"/><text x="110" y="360" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">3. Check MI timing — 4-week clock matters</text><rect x="80" y="410" width="940" height="80" rx="10" fill="#ef4444" opacity="0.8"/><text x="110" y="460" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">4. Hunt 'with' links — HTN+CHF, HTN+CKD</text><rect x="80" y="510" width="940" height="80" rx="10" fill="#8b5cf6" opacity="0.8"/><text x="110" y="560" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">5. Demand CHF acuity — never default to I50.9</text><rect x="80" y="610" width="940" height="80" rx="10" fill="#ec4899" opacity="0.8"/><text x="110" y="660" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">6. Capture EF — supports systolic vs diastolic</text><rect x="80" y="710" width="940" height="80" rx="10" fill="#0ea5e9" opacity="0.8"/><text x="110" y="760" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">7. Add procedure codes (PCI, CABG, cath)</text><rect x="80" y="830" width="940" height="240" rx="15" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="880" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">DRG Dollars Live Here</text><text x="550" y="930" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">I50.23 (acute on chronic systolic) → MS-DRG 291</text><text x="550" y="970" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">I50.9 (unspecified) → MS-DRG 293</text><text x="550" y="1020" font-family="Arial" font-size="24" fill="#10b981" text-anchor="middle" font-weight="bold">Difference = thousands of dollars</text><text x="550" y="1055" font-family="Arial" font-size="20" fill="#888" text-anchor="middle">Query when documentation is vague.</text></svg>`,
+          caption: "Specificity drives DRG reimbursement"
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-11",
+    title: "Injury Coding (Chapter 19, S00-T88)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Injury Chapter: Where the 7th Character Rules",
+        content: `**Chapter 19 (S00-T88)** is **trauma territory** — fractures, dislocations, sprains, burns, poisonings, and the wreckage that brings patients to the ED. It's also where the **7th character** earns its keep.
+
+Almost every injury code requires a 7th character that tells the **episode of care**:
+- **A** = **initial encounter** — active treatment (ED visit, surgery, first cast)
+- **D** = **subsequent encounter** — routine healing (cast removal, follow-up visit)
+- **S** = **sequela** — late effect or complication (post-traumatic arthritis years later)
+
+Two more rules dominate this chapter:
+1. **Multiple injuries are sequenced most-severe first** — the trauma that drove the admission gets the principal slot.
+2. **Fractures and burns get extra specificity** — fracture type (open/closed, displaced/nondisplaced, Gustilo grade) and burn site + degree + body surface area (Rule of Nines).
+
+This lesson teaches you to navigate trauma codes with confidence.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">Chapter 19: Injury</text><text x="550" y="130" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">S00-T88 — Where the 7th Character Rules</text><rect x="60" y="180" width="1000" height="280" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="220" font-family="Arial" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="bold">The 7th Character: Episode of Care</text><rect x="100" y="250" width="280" height="180" rx="15" fill="#ef4444" opacity="0.85"/><text x="240" y="305" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle" font-weight="bold">A</text><text x="240" y="360" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">INITIAL</text><text x="240" y="395" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">active treatment</text><text x="240" y="420" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">ED, surgery, 1st cast</text><rect x="410" y="250" width="280" height="180" rx="15" fill="#f59e0b" opacity="0.85"/><text x="550" y="305" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle" font-weight="bold">D</text><text x="550" y="360" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">SUBSEQUENT</text><text x="550" y="395" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">routine healing</text><text x="550" y="420" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">cast removal, f/u</text><rect x="720" y="250" width="280" height="180" rx="15" fill="#6366f1" opacity="0.9"/><text x="860" y="305" font-family="Arial" font-size="80" fill="#ffffff" text-anchor="middle" font-weight="bold">S</text><text x="860" y="360" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">SEQUELA</text><text x="860" y="395" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">late effect</text><text x="860" y="420" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">post-trauma arthritis</text><rect x="60" y="490" width="1000" height="180" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="530" font-family="Arial" font-size="26" fill="#10b981" text-anchor="middle" font-weight="bold">Sequencing Rule</text><text x="550" y="580" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Multiple injuries? → most severe FIRST</text><text x="550" y="620" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">The injury that drove admission = principal dx</text><text x="550" y="655" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Minor injuries come after, in order of severity</text><rect x="60" y="700" width="480" height="370" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="300" y="740" font-family="Arial" font-size="26" fill="#f59e0b" text-anchor="middle" font-weight="bold">FRACTURES</text><text x="80" y="785" font-family="Arial" font-size="18" fill="#ffffff">Open vs Closed</text><text x="80" y="820" font-family="Arial" font-size="18" fill="#ffffff">Displaced vs Nondisplaced</text><text x="80" y="855" font-family="Arial" font-size="18" fill="#ffffff">Anatomic site &amp; laterality</text><text x="80" y="890" font-family="Arial" font-size="18" fill="#ffffff">Gustilo grade (open fx)</text><text x="80" y="935" font-family="Arial" font-size="16" fill="#ffd700">  I, II, IIIA, IIIB, IIIC</text><text x="80" y="980" font-family="Arial" font-size="16" fill="#888">Default = closed if not specified</text><text x="80" y="1010" font-family="Arial" font-size="16" fill="#888">Default = displaced if not specified</text><rect x="560" y="700" width="500" height="370" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="810" y="740" font-family="Arial" font-size="26" fill="#ec4899" text-anchor="middle" font-weight="bold">BURNS (T20-T32)</text><text x="580" y="785" font-family="Arial" font-size="18" fill="#ffffff">Site (head, trunk, arm…)</text><text x="580" y="820" font-family="Arial" font-size="18" fill="#ffffff">Degree (1st, 2nd, 3rd)</text><text x="580" y="855" font-family="Arial" font-size="18" fill="#ffffff">% TBSA (T31/T32)</text><text x="580" y="900" font-family="Arial" font-size="18" fill="#ffd700" font-weight="bold">Rule of Nines:</text><text x="580" y="930" font-family="Arial" font-size="15" fill="#ffffff">Head 9%, each arm 9%</text><text x="580" y="955" font-family="Arial" font-size="15" fill="#ffffff">Trunk front 18%, back 18%</text><text x="580" y="980" font-family="Arial" font-size="15" fill="#ffffff">Each leg 18%, perineum 1%</text><text x="580" y="1030" font-family="Arial" font-size="16" fill="#888">Sequence highest degree first</text></svg>`,
+          caption: "Chapter 19 essentials: 7th character, fractures, burns"
+        }
+      },
+      {
+        type: "concept",
+        title: "Fractures, Burns, and the Rule of Nines",
+        content: `**Fracture coding** stacks several axes:
+- **Site + laterality** (e.g., S72.001A = unsp fx upper end right femur, initial)
+- **Open vs closed** — default is **closed** if not specified
+- **Displaced vs nondisplaced** — default is **displaced** if not specified
+- **Gustilo classification** for open long-bone fractures: **type I** (clean, <1cm), **II** (1-10cm), **IIIA** (>10cm, adequate coverage), **IIIB** (>10cm, periosteal stripping), **IIIC** (vascular injury)
+
+**Burns** require three pieces:
+- **Site** code (T20-T28 head/trunk/limbs; T26-T28 internal)
+- **Degree** — 1st (erythema), 2nd (blister), 3rd (full thickness)
+- **% TBSA** — code **T31** (or T32 for corrosions) shows total body surface area burned
+
+**Rule of Nines** estimates TBSA in adults:
+- **Head & neck = 9%**
+- **Each arm = 9%**
+- **Trunk front = 18%**, **back = 18%**
+- **Each leg = 18%**
+- **Perineum = 1%**
+
+**Sequence the highest-degree burn first.** Multiple injuries → most severe first.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">Rule of Nines (Adult)</text><text x="550" y="100" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Estimating Total Body Surface Area</text><circle cx="550" cy="200" r="55" fill="#ec4899" opacity="0.8" stroke="#ffd700" stroke-width="3"/><text x="550" y="195" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">HEAD</text><text x="550" y="222" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">9%</text><rect x="450" y="270" width="200" height="280" rx="20" fill="#f59e0b" opacity="0.7" stroke="#ffd700" stroke-width="3"/><text x="550" y="370" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">TRUNK</text><text x="550" y="405" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">front 18%</text><text x="550" y="435" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">back 18%</text><text x="550" y="475" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">36%</text><rect x="320" y="290" width="100" height="240" rx="15" fill="#6366f1" opacity="0.7" stroke="#ffd700" stroke-width="3"/><text x="370" y="395" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">ARM</text><text x="370" y="430" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">9%</text><rect x="680" y="290" width="100" height="240" rx="15" fill="#6366f1" opacity="0.7" stroke="#ffd700" stroke-width="3"/><text x="730" y="395" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">ARM</text><text x="730" y="430" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">9%</text><rect x="430" y="570" width="100" height="280" rx="15" fill="#10b981" opacity="0.7" stroke="#ffd700" stroke-width="3"/><text x="480" y="695" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">LEG</text><text x="480" y="735" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">18%</text><rect x="570" y="570" width="100" height="280" rx="15" fill="#10b981" opacity="0.7" stroke="#ffd700" stroke-width="3"/><text x="620" y="695" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">LEG</text><text x="620" y="735" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">18%</text><text x="550" y="900" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Perineum = 1% · Total = 100%</text><rect x="60" y="940" width="1000" height="140" rx="15" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="980" font-family="Arial" font-size="22" fill="#8b5cf6" text-anchor="middle" font-weight="bold">Gustilo Open Fracture Grades</text><text x="80" y="1020" font-family="Arial" font-size="16" fill="#ffffff">I: clean wound &lt;1cm  |  II: 1-10cm  |  IIIA: &gt;10cm + coverage</text><text x="80" y="1055" font-family="Arial" font-size="16" fill="#ffffff">IIIB: &gt;10cm + periosteal stripping  |  IIIC: + arterial injury</text></svg>`,
+          caption: "Rule of Nines for TBSA and Gustilo grades for open fractures"
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example: MVA Polytrauma",
+        content: `**Scenario:** A 32-year-old female is brought to the ED after a high-speed **motor vehicle crash**. She sustains:
+- **Open displaced fracture of the right femoral shaft**, Gustilo type **IIIA**
+- **Closed nondisplaced fracture of the left distal radius**
+- **Second-degree burn** of the right forearm (~3% TBSA) from the airbag
+- **Concussion without loss of consciousness**
+
+She's admitted, undergoes femur **ORIF**, and the burn is dressed.
+
+**Step 1 — Identify the most severe injury:**
+Open femur fracture with Gustilo IIIA is the driver of admission → **principal diagnosis**.
+
+**Step 2 — Code each injury with 7th character A (initial):**
+- **S72.301B** — Open displaced fx shaft of right femur, type I or II — *but* this is IIIA so → **S72.301C** (initial encounter, open fx type IIIA/IIIB/IIIC). 7th char **B** = type I/II open, **C** = type IIIA/B/C.
+- **S52.501A** — Closed unsp fx left lower radius (default closed, default displaced — but documentation says nondisplaced → **S52.502A** if codeable; per index, use the nondisplaced subcategory).
+- **T22.211A** — 2nd-degree burn right forearm, initial
+- **T31.0** — Burn involving <10% TBSA
+- **S06.0X0A** — Concussion w/o LOC, initial
+
+**Step 3 — Sequence most severe first:** femur fx → radius fx → burn → concussion.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">MVA Polytrauma: Sequencing Practice</text><rect x="40" y="100" width="1020" height="160" rx="15" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/><text x="60" y="135" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">PATIENT</text><text x="60" y="170" font-family="Arial" font-size="17" fill="#ffffff">32 y/o F, high-speed MVA, admitted for ORIF of femur</text><text x="60" y="200" font-family="Arial" font-size="17" fill="#ffffff">Injuries: open R femur (Gustilo IIIA), closed L radius,</text><text x="60" y="230" font-family="Arial" font-size="17" fill="#ffffff">2nd-degree burn R forearm 3%, concussion w/o LOC</text><rect x="40" y="290" width="1020" height="200" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="60" y="330" font-family="Arial" font-size="22" fill="#ef4444" font-weight="bold">PRINCIPAL DIAGNOSIS (most severe)</text><text x="60" y="370" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">S72.301C</text><text x="60" y="400" font-family="Arial" font-size="17" fill="#ffffff">Unspec open fx shaft R femur, Gustilo IIIA, initial enc</text><text x="60" y="440" font-family="Arial" font-size="15" fill="#888">7th char C = type IIIA/B/C open · B = type I/II</text><text x="60" y="470" font-family="Arial" font-size="15" fill="#888">A would mean closed; here injury is open IIIA → C</text><rect x="40" y="510" width="1020" height="110" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/><text x="60" y="545" font-family="Arial" font-size="20" fill="#f59e0b" font-weight="bold">SECONDARY: closed L distal radius fx</text><text x="60" y="580" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">S52.502A</text><text x="60" y="608" font-family="Arial" font-size="15" fill="#ffffff">nondisplaced (per documentation), initial</text><rect x="40" y="640" width="1020" height="140" rx="15" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="2"/><text x="60" y="675" font-family="Arial" font-size="20" fill="#ec4899" font-weight="bold">SECONDARY: 2nd-degree burn R forearm</text><text x="60" y="710" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">T22.211A  +  T31.0</text><text x="60" y="745" font-family="Arial" font-size="15" fill="#ffffff">site/degree + TBSA &lt;10%</text><rect x="40" y="800" width="1020" height="110" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/><text x="60" y="835" font-family="Arial" font-size="20" fill="#6366f1" font-weight="bold">SECONDARY: concussion</text><text x="60" y="870" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">S06.0X0A</text><text x="60" y="898" font-family="Arial" font-size="15" fill="#ffffff">w/o LOC, initial</text><rect x="40" y="930" width="1020" height="150" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="970" font-family="Arial" font-size="24" fill="#10b981" text-anchor="middle" font-weight="bold">REMEMBER</text><text x="550" y="1010" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Most severe first → Femur → Radius → Burn → Concussion</text><text x="550" y="1050" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Every injury gets a 7th character — A for active treatment</text></svg>`,
+          caption: "Polytrauma: sequence by severity, 7th char on every injury"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A patient returns to the orthopedic clinic for routine cast removal six weeks after a closed displaced fracture of the right tibial shaft. What 7th character should be appended to the fracture code?",
+        options: [
+          { text: "A — initial encounter, because the fracture is still healing", correct: false },
+          { text: "D — subsequent encounter for routine healing", correct: true },
+          { text: "S — sequela, because the cast removal is a late effect", correct: false },
+          { text: "No 7th character is needed once the patient is past the initial encounter", correct: false }
+        ],
+        explanation: "Subsequent encounter (7th character D) is used during the routine healing phase — cast removal, follow-up visits, suture removal, and medication adjustments. Initial encounter (A) is for active treatment (ED, surgery, first cast). Sequela (S) is for late effects like post-traumatic arthritis that arise after healing is complete.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" font-family="Arial" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">Quick Check</text><circle cx="550" cy="550" r="280" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="4"/><text x="550" y="520" font-family="Arial" font-size="120" fill="#f59e0b" text-anchor="middle" font-weight="bold">D</text><text x="550" y="610" font-family="Arial" font-size="26" fill="#ffffff" text-anchor="middle">Subsequent encounter</text><text x="550" y="650" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle">routine healing phase</text><text x="550" y="950" font-family="Arial" font-size="22" fill="#888" text-anchor="middle">A → active · D → healing · S → late effect</text></svg>`,
+          caption: "Episode of care determines the 7th character"
+        }
+      },
+      {
+        type: "application",
+        title: "On the Job: Trauma Service Coder",
+        content: `**Trauma coding moves fast and the documentation is sprawling.** Here's your workflow on a busy Level 1 trauma service:
+
+1. **Pull the trauma flow sheet AND op reports** — H&P alone misses procedures and intraop findings.
+2. **List every injury** — small skin lacs and minor sprains still need codes (and contribute to severity adjustment).
+3. **Rank by severity** — life-threatening first, then DRG-impacting injuries, then minor.
+4. **Confirm fracture details** — open or closed? Displaced? Gustilo grade? **Query if unclear** — the default of 'closed displaced' may not match reality.
+5. **For burns: site + degree + TBSA** — pull the TBSA from the burn flow sheet or nursing notes if not in the H&P.
+6. **Every injury gets a 7th character** — A for the inpatient stay, D for follow-up clinic, S only when explicitly documented as a sequela.
+7. **External cause codes (V, W, X, Y)** — most facilities require these for trauma cases. Add place, activity, and status codes too.
+
+Trauma is where coder skill shows. The chart is messy; your sequencing must be clean.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">Trauma Service Coder Workflow</text><rect x="80" y="110" width="940" height="75" rx="10" fill="#ef4444" opacity="0.85"/><text x="110" y="158" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">1. Trauma flow sheet + op reports — H&amp;P alone is incomplete</text><rect x="80" y="200" width="940" height="75" rx="10" fill="#f59e0b" opacity="0.85"/><text x="110" y="248" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">2. List every injury — even minor lacs/sprains</text><rect x="80" y="290" width="940" height="75" rx="10" fill="#10b981" opacity="0.85"/><text x="110" y="338" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">3. Rank by severity — life-threatening first</text><rect x="80" y="380" width="940" height="75" rx="10" fill="#6366f1" opacity="0.85"/><text x="110" y="428" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">4. Confirm fracture details — query if unclear</text><rect x="80" y="470" width="940" height="75" rx="10" fill="#ec4899" opacity="0.85"/><text x="110" y="518" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">5. Burn: site + degree + TBSA from nursing notes</text><rect x="80" y="560" width="940" height="75" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="110" y="608" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">6. 7th character on EVERY injury (A / D / S)</text><rect x="80" y="650" width="940" height="75" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="110" y="698" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">7. Add external cause + place + activity + status codes</text><rect x="80" y="780" width="940" height="280" rx="15" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="825" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">Coder Habits That Save Time</text><text x="100" y="875" font-family="Arial" font-size="20" fill="#ffffff">• Build a per-patient injury list before assigning any code</text><text x="100" y="910" font-family="Arial" font-size="20" fill="#ffffff">• Mark each injury with episode (A/D/S) up front</text><text x="100" y="945" font-family="Arial" font-size="20" fill="#ffffff">• Highlight unclear fracture details for batch query</text><text x="100" y="980" font-family="Arial" font-size="20" fill="#ffffff">• Cross-check Rule of Nines against burn diagram</text><text x="100" y="1015" font-family="Arial" font-size="20" fill="#10b981">• Never skip external cause codes — facility policy</text><text x="100" y="1050" font-family="Arial" font-size="20" fill="#10b981">• Sequence MOST SEVERE first — always</text></svg>`,
+          caption: "Workflow habits that keep trauma coding clean"
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-12",
+    title: "Capstone: A Full Inpatient Coder Workflow",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Putting It All Together",
+        content: `This is the **capstone** — you're going to walk through a realistic inpatient case from H&P to final code set. Everything you've learned in Domain 2 converges here:
+
+- Reading clinical documentation efficiently
+- Identifying the **principal diagnosis** using the UHDDS definition
+- Capturing all **secondary diagnoses** that meet the 'affects care' threshold
+- Sequencing per **OGCR Section II** rules
+- Applying **combination codes** when the 'with' convention applies
+- Verifying every code in the **Tabular List** (never code from the Index alone)
+- Sequencing **Z codes** appropriately (status codes after acute conditions)
+
+This isn't memorization — it's professional judgment. CCA-certified coders run this workflow dozens of times a day. By the end of this lesson, you should be able to take a record, work through it systematically, and produce a defensible code set.
+
+Let's do this.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">Capstone</text><text x="550" y="130" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">The Full Inpatient Coding Workflow</text><rect x="80" y="180" width="940" height="80" rx="10" fill="#6366f1" opacity="0.85"/><text x="110" y="220" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">1. Read H&amp;P + discharge summary</text><text x="110" y="248" font-family="Arial" font-size="16" fill="#ffffff">Establish the clinical story</text><rect x="80" y="275" width="940" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="110" y="315" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">2. Identify the principal dx (UHDDS)</text><text x="110" y="343" font-family="Arial" font-size="16" fill="#ffffff">The condition that, after study, occasioned the admission</text><rect x="80" y="370" width="940" height="80" rx="10" fill="#f59e0b" opacity="0.85"/><text x="110" y="410" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">3. List secondary dx — 'affects care' test</text><text x="110" y="438" font-family="Arial" font-size="16" fill="#ffffff">Tx, dx workup, monitoring, extended stay, or nursing care</text><rect x="80" y="465" width="940" height="80" rx="10" fill="#ef4444" opacity="0.85"/><text x="110" y="505" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">4. Sequence per OGCR Section II</text><text x="110" y="533" font-family="Arial" font-size="16" fill="#ffffff">Two equal candidates → either may be principal</text><rect x="80" y="560" width="940" height="80" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="110" y="600" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">5. Apply 'with' combination codes</text><text x="110" y="628" font-family="Arial" font-size="16" fill="#ffffff">HTN, diabetes, hypertensive heart, etc.</text><rect x="80" y="655" width="940" height="80" rx="10" fill="#ec4899" opacity="0.85"/><text x="110" y="695" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">6. Verify EVERY code in the Tabular</text><text x="110" y="723" font-family="Arial" font-size="16" fill="#ffffff">Index → Tabular check (Excludes, 5th/6th/7th char)</text><rect x="80" y="750" width="940" height="80" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="110" y="790" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">7. Place Z codes appropriately</text><text x="110" y="818" font-family="Arial" font-size="16" fill="#ffffff">Status/history Z codes AFTER acute conditions</text><rect x="80" y="850" width="940" height="220" rx="15" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="900" font-family="Arial" font-size="26" fill="#ffd700" text-anchor="middle" font-weight="bold">The Coder's Promise</text><text x="550" y="950" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Every code defensible. Every sequence justified.</text><text x="550" y="990" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Every query thoughtful. Every claim clean.</text><text x="550" y="1040" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">This is professional coding.</text></svg>`,
+          caption: "Seven-step inpatient workflow you'll use every day"
+        }
+      },
+      {
+        type: "concept",
+        title: "The Seven-Step Method",
+        content: `**The disciplined coder's process:**
+
+1. **Read the discharge summary first** — it's the final clinical story. Then go back and verify with H&P, op reports, progress notes.
+2. **Highlight every diagnosis mentioned** — both acute and chronic, both 'history of' and active.
+3. **Find the principal dx** — UHDDS: "the condition established after study to be **chiefly responsible** for occasioning the admission."
+4. **Test each secondary dx** — does it require **treatment, dx workup, monitoring, extended LOS, or increased nursing care**? If yes → code it. If no → don't.
+5. **Apply the 'with' rule** — diabetes with CKD (E11.22), HTN with heart failure (I11.0), etc.
+6. **Verify in the Tabular** — never code straight from the Alphabetic Index. Check Excludes1, Excludes2, and required additional digits.
+7. **Sequence Z codes properly** — long-term drug status (Z79), history of (Z85, Z86), tobacco use (Z72.0/F17.2x) come **after** active conditions unless they themselves are the reason for admission.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">The Seven-Step Method</text><circle cx="170" cy="200" r="60" fill="#6366f1"/><text x="170" y="215" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text><text x="260" y="185" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Read DC summary first</text><text x="260" y="215" font-family="Arial" font-size="17" fill="#ffffff">Then verify w/ H&amp;P, op reports, progress notes</text><circle cx="170" cy="320" r="60" fill="#10b981"/><text x="170" y="335" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text><text x="260" y="305" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Highlight every dx mentioned</text><text x="260" y="335" font-family="Arial" font-size="17" fill="#ffffff">Acute, chronic, history of, status</text><circle cx="170" cy="440" r="60" fill="#f59e0b"/><text x="170" y="455" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text><text x="260" y="425" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Find principal dx (UHDDS)</text><text x="260" y="455" font-family="Arial" font-size="17" fill="#ffffff">Chiefly responsible for the admission</text><circle cx="170" cy="560" r="60" fill="#ef4444"/><text x="170" y="575" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text><text x="260" y="545" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Test each secondary dx</text><text x="260" y="575" font-family="Arial" font-size="17" fill="#ffffff">Tx, workup, monitoring, LOS, nursing care?</text><circle cx="170" cy="680" r="60" fill="#8b5cf6"/><text x="170" y="695" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text><text x="260" y="665" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Apply 'with' combination codes</text><text x="260" y="695" font-family="Arial" font-size="17" fill="#ffffff">E11.22, I11.0, I13.x, etc.</text><circle cx="170" cy="800" r="60" fill="#ec4899"/><text x="170" y="815" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text><text x="260" y="785" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Verify in Tabular ALWAYS</text><text x="260" y="815" font-family="Arial" font-size="17" fill="#ffffff">Excludes1/2, required digits, 7th char</text><circle cx="170" cy="920" r="60" fill="#0ea5e9"/><text x="170" y="935" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text><text x="260" y="905" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">Sequence Z codes properly</text><text x="260" y="935" font-family="Arial" font-size="17" fill="#ffffff">Status/history AFTER active conditions</text><rect x="80" y="1010" width="940" height="70" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="1055" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">Discipline over speed → quality over volume</text></svg>`,
+          caption: "Seven repeatable steps — the coder's daily discipline"
+        }
+      },
+      {
+        type: "example",
+        title: "Full Case: H&P → Final Code Set",
+        content: `**H&P (abbreviated):** 72 y/o M presents to ED with 3-day hx of **shortness of breath, fatigue, and bilateral leg swelling**. PMH: **type 2 DM** on metformin, **HTN**, **stage 3 CKD**, **COPD** (former smoker, quit 2018), **old MI 2019**.
+
+**Workup:** BNP 1850, EF 35%, chest X-ray w/ pulmonary edema. Diagnosed with **acute on chronic systolic CHF**. A1c 8.2%. Creatinine 1.9 (baseline). No acute MI on troponin.
+
+**Course:** IV diuresis, ACE inhibitor up-titrated, diabetes regimen adjusted. **DC home day 4**.
+
+**Step-by-step coding:**
+
+**Principal dx** (chiefly responsible): acute on chronic systolic CHF — but with HTN + CKD documented → **'with' rule fires** → **I13.0** (HTN heart + CKD with HF, stage 1-4).
+
+**Secondary dx that affected care:**
+- **I50.23** — acute on chronic systolic CHF (required by I13 note)
+- **N18.30** — stage 3 CKD unspecified (required by I13 note)
+- **E11.65** — type 2 DM with hyperglycemia (A1c 8.2, regimen adjusted)
+- **J44.9** — COPD unspecified (chronic, monitored)
+- **I25.2** — old (healed) MI (history affecting care planning)
+- **Z79.4** — long-term insulin/metformin use (if applicable)
+- **Z87.891** — personal hx of nicotine dependence (former smoker)
+
+**Sequence Z codes last** — Z79.4 and Z87.891 come after all active disease codes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Capstone Case: Final Code Set</text><rect x="40" y="90" width="1020" height="170" rx="15" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/><text x="60" y="125" font-family="Arial" font-size="18" fill="#ffd700" font-weight="bold">CLINICAL SNAPSHOT</text><text x="60" y="155" font-family="Arial" font-size="16" fill="#ffffff">72 M, dyspnea + edema, EF 35%, BNP 1850</text><text x="60" y="185" font-family="Arial" font-size="16" fill="#ffffff">PMH: T2DM (A1c 8.2), HTN, CKD3, COPD, old MI</text><text x="60" y="215" font-family="Arial" font-size="16" fill="#ffffff">Dx: acute on chronic systolic CHF</text><text x="60" y="245" font-family="Arial" font-size="16" fill="#10b981">Tx: IV diuresis, ACE up-titrate, DM adjust, DC d4</text><rect x="40" y="280" width="1020" height="110" rx="15" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="60" y="315" font-family="Arial" font-size="20" fill="#ef4444" font-weight="bold">PRINCIPAL DX  (the 'with' rule fires)</text><text x="60" y="350" font-family="Arial" font-size="26" fill="#ffd700" font-weight="bold">I13.0</text><text x="60" y="378" font-family="Arial" font-size="15" fill="#ffffff">HTN heart + CKD w/ heart failure, stage 1-4</text><rect x="40" y="405" width="1020" height="380" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="60" y="440" font-family="Arial" font-size="20" fill="#f59e0b" font-weight="bold">SECONDARY DX (affected care)</text><text x="60" y="475" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">I50.23</text><text x="220" y="475" font-family="Arial" font-size="16" fill="#ffffff">acute on chronic systolic CHF</text><text x="60" y="510" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">N18.30</text><text x="220" y="510" font-family="Arial" font-size="16" fill="#ffffff">stage 3 CKD unspecified</text><text x="60" y="545" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">E11.65</text><text x="220" y="545" font-family="Arial" font-size="16" fill="#ffffff">T2DM with hyperglycemia (A1c 8.2, regimen adj.)</text><text x="60" y="580" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">J44.9</text><text x="220" y="580" font-family="Arial" font-size="16" fill="#ffffff">COPD unspecified (chronic, monitored)</text><text x="60" y="615" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">I25.2</text><text x="220" y="615" font-family="Arial" font-size="16" fill="#ffffff">old (healed) MI — affects care planning</text><text x="60" y="680" font-family="Arial" font-size="20" fill="#0ea5e9" font-weight="bold">Z CODES (sequence LAST)</text><text x="60" y="715" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">Z79.4</text><text x="220" y="715" font-family="Arial" font-size="16" fill="#ffffff">long-term insulin/metformin use</text><text x="60" y="750" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">Z87.891</text><text x="220" y="750" font-family="Arial" font-size="16" fill="#ffffff">personal hx of nicotine dependence</text><rect x="40" y="810" width="1020" height="270" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="850" font-family="Arial" font-size="24" fill="#10b981" text-anchor="middle" font-weight="bold">WHY THIS SEQUENCE WORKS</text><text x="60" y="895" font-family="Arial" font-size="17" fill="#ffffff">• HTN + HF + CKD → I13.0 by 'with' convention (no MD link needed)</text><text x="60" y="925" font-family="Arial" font-size="17" fill="#ffffff">• I13 'use additional code' note requires I50.23 and N18.30</text><text x="60" y="955" font-family="Arial" font-size="17" fill="#ffffff">• Diabetes E11.65 — A1c &amp; regimen change = affects care</text><text x="60" y="985" font-family="Arial" font-size="17" fill="#ffffff">• COPD J44.9, old MI I25.2 — chronic conditions monitored</text><text x="60" y="1015" font-family="Arial" font-size="17" fill="#ffffff">• Z codes for status/history come AFTER active conditions</text><text x="550" y="1060" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Defensible. Sequenced. Audit-ready.</text></svg>`,
+          caption: "Full case worked end-to-end: H&P to final defensible code set"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "In the capstone case above, a colleague suggests coding I10 (essential HTN) and I50.23 (acute on chronic systolic CHF) as separate codes instead of using I13.0. Why is the combination code I13.0 the correct choice?",
+        options: [
+          { text: "I10 and I50.23 can never be reported together on the same claim", correct: false },
+          { text: "The 'with' convention in the Alphabetic Index assumes a causal relationship between HTN, heart failure, and CKD — so I13.0 is required when all three are present", correct: true },
+          { text: "I13.0 only applies when the physician explicitly documents 'hypertensive heart and kidney disease'", correct: false },
+          { text: "I50.23 already includes hypertension, so I10 would be a duplicate", correct: false }
+        ],
+        explanation: "The 'with' convention in ICD-10-CM automatically links hypertension to heart disease AND to CKD when both are present — no physician statement is required. With all three (HTN, HF, CKD stage 3) documented, the combination code I13.0 must be used. The 'use additional code' note then requires I50.23 and N18.30 to add specificity.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" font-family="Arial" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">Quick Check</text><circle cx="300" cy="500" r="120" fill="#ef4444" opacity="0.7"/><text x="300" y="495" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">HTN</text><text x="300" y="525" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">I10</text><circle cx="550" cy="500" r="120" fill="#6366f1" opacity="0.7"/><text x="550" y="495" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">HF</text><text x="550" y="525" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">I50</text><circle cx="800" cy="500" r="120" fill="#10b981" opacity="0.7"/><text x="800" y="495" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">CKD</text><text x="800" y="525" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">N18</text><text x="550" y="720" font-family="Arial" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">↓</text><rect x="350" y="760" width="400" height="120" rx="20" fill="#ffd700"/><text x="550" y="815" font-family="Arial" font-size="48" fill="#1a1a2e" text-anchor="middle" font-weight="bold">I13.0</text><text x="550" y="855" font-family="Arial" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">combination code</text><text x="550" y="950" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle">'with' = automatic causal link</text></svg>`,
+          caption: "Combination code captures all three conditions"
+        }
+      },
+      {
+        type: "application",
+        title: "Your Career Starts Here",
+        content: `**You've completed Domain 2.** You now have the toolkit a working inpatient coder uses every day:
+
+- Read clinical documentation efficiently and pull the right facts
+- Identify the **principal diagnosis** using the UHDDS standard
+- Capture **secondary diagnoses** that meet the 'affects care' test
+- Apply **combination codes** via the 'with' convention
+- Sequence per **OGCR Section II**
+- Use **7th characters** correctly for injuries
+- Place **Z codes** in the right slot
+- Verify every code in the **Tabular List**
+
+**What to do next:**
+1. **Practice with old cases** — your textbook, AHIMA case studies, or de-identified records.
+2. **Time yourself** — CCA expects ~2 minutes per code on the exam.
+3. **Build a personal cheat sheet** of 'with' relationships and combination codes.
+4. **Join an AHIMA component association** — networking opens doors.
+5. **Apply for entry-level coder positions** — many hospitals hire CCA-credentialed coders straight out of certification.
+
+The CCA is your launching pad. From here you can pursue **CCS**, **CCS-P**, **CDIP**, or **RHIT/RHIA**. Welcome to the profession.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">Your Career Starts Here</text><text x="550" y="115" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle">Domain 2 — Complete</text><rect x="80" y="160" width="940" height="380" rx="15" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="200" font-family="Arial" font-size="24" fill="#6366f1" text-anchor="middle" font-weight="bold">Toolkit You Now Own</text><text x="120" y="245" font-family="Arial" font-size="18" fill="#ffffff">✓ Read clinical docs efficiently</text><text x="120" y="280" font-family="Arial" font-size="18" fill="#ffffff">✓ Identify principal dx (UHDDS)</text><text x="120" y="315" font-family="Arial" font-size="18" fill="#ffffff">✓ Capture secondary dx ('affects care' test)</text><text x="120" y="350" font-family="Arial" font-size="18" fill="#ffffff">✓ Apply combination codes via 'with' convention</text><text x="120" y="385" font-family="Arial" font-size="18" fill="#ffffff">✓ Sequence per OGCR Section II</text><text x="120" y="420" font-family="Arial" font-size="18" fill="#ffffff">✓ Use 7th characters for injuries</text><text x="120" y="455" font-family="Arial" font-size="18" fill="#ffffff">✓ Place Z codes correctly</text><text x="120" y="490" font-family="Arial" font-size="18" fill="#ffffff">✓ Verify every code in Tabular</text><text x="120" y="525" font-family="Arial" font-size="18" fill="#10b981">✓ Defend every sequencing decision</text><rect x="80" y="570" width="940" height="280" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="610" font-family="Arial" font-size="24" fill="#f59e0b" text-anchor="middle" font-weight="bold">Next Steps</text><text x="120" y="655" font-family="Arial" font-size="18" fill="#ffffff">1. Practice with old AHIMA case studies</text><text x="120" y="690" font-family="Arial" font-size="18" fill="#ffffff">2. Time yourself — ~2 min per code on exam</text><text x="120" y="725" font-family="Arial" font-size="18" fill="#ffffff">3. Build a 'with' cheat sheet</text><text x="120" y="760" font-family="Arial" font-size="18" fill="#ffffff">4. Join an AHIMA component association</text><text x="120" y="795" font-family="Arial" font-size="18" fill="#ffffff">5. Apply for entry-level coder positions</text><text x="120" y="830" font-family="Arial" font-size="18" fill="#ffd700">Future credentials: CCS · CCS-P · CDIP · RHIT · RHIA</text><rect x="80" y="880" width="940" height="180" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="930" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">Welcome to the Profession</text><text x="550" y="980" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">You are no longer studying coding.</text><text x="550" y="1015" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">You are a coder.</text><text x="550" y="1050" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Now go pass the CCA.</text></svg>`,
+          caption: "Domain 2 complete — your CCA launching pad"
         }
       }
     ]
