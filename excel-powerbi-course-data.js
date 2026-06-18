@@ -4556,8 +4556,374 @@ Group By is also how you **deduplicate while keeping useful aggregates**: group 
             title: 'DAX Basics for Power Pivot and Power BI',
             author: 'Synthesis Learning',
             description: 'Measures vs. calculated columns, CALCULATE as the heart of DAX, time-intelligence, filter context — the parts you actually need to ship a dashboard.',
-            lessons: 1, duration: 5, progress: 0, category: 'excel-powerbi',
-            lessonList: comingSoonLessons('measures vs calculated columns, CALCULATE, time-intelligence functions, and filter context in DAX'),
+            lessons: 3, duration: 45, progress: 0, category: 'excel-powerbi',
+            lessonList: [
+{
+    id: "excel-dax-lesson-1",
+    title: "DAX Fundamentals: Calculated Columns vs Measures",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Welcome to DAX",
+        content: `**DAX (Data Analysis Expressions)** is the formula language that powers **Power Pivot**, **Power BI**, and **Analysis Services Tabular**. If Excel formulas feel like a calculator, DAX feels like a programming language for data models. It looks similar — \`SUM()\`, \`IF()\`, \`AVERAGE()\` — but it operates on entire **tables** and **columns**, not individual cells.
+
+The single most important choice in DAX is: **calculated column** or **measure**? Choose wrong and your model bloats, your reports slow down, and your numbers come out wrong. Choose right and a million-row dataset feels instant.
+
+This lesson nails that decision. Once you internalize **row context** versus **filter context**, every other DAX concept clicks into place.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" font-family="Arial" font-size="44" font-weight="bold" fill="#ffd700" text-anchor="middle">DAX: The Language of Data Models</text><text x="550" y="150" font-family="Arial" font-size="26" fill="#ffffff" text-anchor="middle">Power Pivot · Power BI · Analysis Services</text><rect x="120" y="220" width="380" height="380" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="310" y="280" font-family="Arial" font-size="32" font-weight="bold" fill="#6366f1" text-anchor="middle">Calculated Column</text><text x="310" y="330" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Evaluated at refresh</text><text x="310" y="365" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Stored in the table</text><text x="310" y="400" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Uses RAM + disk</text><text x="310" y="450" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Row context</text><text x="310" y="510" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">"Filter / group by it"</text><rect x="600" y="220" width="380" height="380" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="790" y="280" font-family="Arial" font-size="32" font-weight="bold" fill="#10b981" text-anchor="middle">Measure</text><text x="790" y="330" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Evaluated at query</text><text x="790" y="365" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Not stored</text><text x="790" y="400" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Returns a value</text><text x="790" y="450" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Filter context</text><text x="790" y="510" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">"Aggregate it"</text><rect x="150" y="680" width="800" height="320" rx="20" fill="#888" opacity="0.15" stroke="#ffd700" stroke-width="2"/><text x="550" y="740" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">The Rule of Thumb</text><text x="550" y="800" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Filter or group BY it? → Calculated Column</text><text x="550" y="845" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Aggregate or summarize it? → Measure</text><text x="550" y="920" font-family="Arial" font-size="20" fill="#ef4444" text-anchor="middle">Wrong choice = 10× model bloat</text><text x="550" y="960" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">Right choice = fast, lean reports</text></svg>`,
+          caption: "DAX gives you two tools — calculated columns and measures. Knowing when to use each is the foundation."
+        }
+      },
+      {
+        type: "concept",
+        title: "Two Engines: Row Context vs Filter Context",
+        content: `A **calculated column** runs once per row when the model **refreshes**. It sees a single row at a time — this is **row context**. The result is **stored in the table**, which means it eats RAM, increases the file size, and slows refresh. Use it when you need a value you'll **filter by, slice by, or group by** — like a \`Year\` bucket or a \`Customer Segment\` label.
+
+A **measure** is just a formula that runs **at query time**, when a visual asks for a number. It sees the current **filter context** — whatever slicers, rows, and columns are active — and returns a **single scalar value**. Nothing is stored. Use it for **aggregations**: \`Total Sales\`, \`Avg LTV\`, \`% of Total\`.
+
+Beginner mistake: turning every calculation into a calculated column. A 10M-row table with five calculated columns can balloon **10×** in size — and queries still slow down because measures would have been free.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">Row Context vs Filter Context</text><rect x="80" y="140" width="460" height="420" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="310" y="195" font-family="Arial" font-size="28" font-weight="bold" fill="#6366f1" text-anchor="middle">Row Context (Column)</text><text x="310" y="240" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Sees ONE row at a time</text><rect x="120" y="270" width="380" height="40" fill="#1a1a2e" stroke="#888"/><text x="310" y="297" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">Profit = Sales[Qty] * Sales[Price]</text><rect x="120" y="330" width="380" height="200" fill="#1a1a2e" stroke="#888"/><text x="140" y="360" font-family="monospace" font-size="14" fill="#ffffff">Row 1: 10 × $5  → $50  ✓ stored</text><text x="140" y="395" font-family="monospace" font-size="14" fill="#ffffff">Row 2: 20 × $5  → $100 ✓ stored</text><text x="140" y="430" font-family="monospace" font-size="14" fill="#ffffff">Row 3: 15 × $8  → $120 ✓ stored</text><text x="140" y="465" font-family="monospace" font-size="14" fill="#ef4444">...million rows = RAM cost</text><text x="140" y="510" font-family="monospace" font-size="14" fill="#10b981">Good for: filtering, grouping</text><rect x="560" y="140" width="460" height="420" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="790" y="195" font-family="Arial" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">Filter Context (Measure)</text><text x="790" y="240" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Sees ALL filtered rows</text><rect x="600" y="270" width="380" height="40" fill="#1a1a2e" stroke="#888"/><text x="790" y="297" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">Total Sales = SUM(Sales[Amt])</text><rect x="600" y="330" width="380" height="200" fill="#1a1a2e" stroke="#888"/><text x="620" y="360" font-family="monospace" font-size="14" fill="#ffffff">Slicer: Region = West</text><text x="620" y="395" font-family="monospace" font-size="14" fill="#ffffff">Row: Year = 2025</text><text x="620" y="430" font-family="monospace" font-size="14" fill="#ffd700">→ SUM applied to filtered rows</text><text x="620" y="465" font-family="monospace" font-size="14" fill="#10b981">Result: $42,000 (one value)</text><text x="620" y="510" font-family="monospace" font-size="14" fill="#10b981">Good for: KPIs, totals, ratios</text><rect x="100" y="600" width="900" height="440" rx="16" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="650" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Model Size: The Cost of Bad Choices</text><rect x="180" y="700" width="120" height="280" fill="#10b981" opacity="0.6"/><text x="240" y="1005" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Measures</text><text x="240" y="690" font-family="Arial" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">120 MB</text><rect x="400" y="850" width="120" height="130" fill="#f59e0b" opacity="0.6"/><text x="460" y="1005" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Mixed</text><text x="460" y="840" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">180 MB</text><rect x="620" y="720" width="120" height="260" fill="#ef4444" opacity="0.6"/><text x="680" y="1005" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">All Columns</text><text x="680" y="710" font-family="Arial" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">1.2 GB</text><text x="870" y="850" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">10× bloat</text><text x="870" y="880" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">slow refresh</text><text x="870" y="910" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">slow queries</text></svg>`,
+          caption: "Calculated columns operate on one row at a time and live in RAM. Measures operate on filtered sets at query time and cost nothing to store."
+        }
+      },
+      {
+        type: "example",
+        title: "Same Number, Different Choice",
+        content: `Imagine a \`Sales\` table with **Quantity** and **UnitPrice**. You want **Revenue**.
+
+**Option A — Calculated Column** (wrong choice here):
+\`\`\`
+Revenue = Sales[Quantity] * Sales[UnitPrice]
+\`\`\`
+Runs once per row at refresh. A 10M-row table now stores 10M extra decimals. Model grows ~80 MB just for this column.
+
+**Option B — Measure** (right choice):
+\`\`\`
+Total Revenue = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])
+\`\`\`
+Nothing stored. **SUMX** iterates rows at query time, multiplies, and returns one number per filter context. Model size unchanged.
+
+When IS a calculated column right? When you need to **slice by** the result — e.g., a \`Price Tier\` column (Low/Mid/High) that drives a slicer. You can't slice by a measure; you can slice by a column.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Revenue: Column vs Measure</text><rect x="60" y="130" width="480" height="430" rx="14" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3"/><text x="300" y="180" font-family="Arial" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">✗ Calculated Column</text><rect x="90" y="210" width="420" height="60" fill="#1a1a2e" stroke="#888"/><text x="300" y="248" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">Revenue = Qty * UnitPrice</text><text x="300" y="320" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">10M rows → 10M values</text><text x="300" y="360" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">stored on disk + RAM</text><rect x="90" y="390" width="420" height="40" fill="#ef4444" opacity="0.3"/><text x="300" y="417" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">+80 MB to model</text><text x="300" y="470" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">Slower refresh</text><text x="300" y="510" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">No flexibility</text><rect x="560" y="130" width="480" height="430" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="800" y="180" font-family="Arial" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">✓ Measure</text><rect x="590" y="210" width="420" height="60" fill="#1a1a2e" stroke="#888"/><text x="800" y="248" font-family="monospace" font-size="15" fill="#ffd700" text-anchor="middle">Total Revenue = SUMX(...)</text><text x="800" y="320" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Computed at query time</text><text x="800" y="360" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Nothing stored</text><rect x="590" y="390" width="420" height="40" fill="#10b981" opacity="0.3"/><text x="800" y="417" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">0 MB to model</text><text x="800" y="470" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Respects filter context</text><text x="800" y="510" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Reusable everywhere</text><rect x="80" y="600" width="940" height="440" rx="16" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="650" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">When a Column DOES make sense</text><rect x="120" y="690" width="860" height="60" fill="#1a1a2e" stroke="#6366f1"/><text x="550" y="728" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">PriceTier = IF([UnitPrice]&lt;10,"Low",IF([UnitPrice]&lt;50,"Mid","High"))</text><text x="550" y="790" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Needed as a SLICER → must be a column</text><text x="550" y="830" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Only ~3 distinct values → tiny RAM cost</text><rect x="200" y="870" width="220" height="80" rx="10" fill="#6366f1" opacity="0.4" stroke="#6366f1"/><text x="310" y="905" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Slice by tier?</text><text x="310" y="935" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">→ Column</text><rect x="680" y="870" width="220" height="80" rx="10" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="790" y="905" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Sum revenue?</text><text x="790" y="935" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">→ Measure</text><text x="550" y="1010" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Same data, two formulas, two different jobs.</text></svg>`,
+          caption: "Revenue lives in a measure. Price Tier — used in a slicer — earns its calculated column."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "You build a Power BI report and write `Profit = Sales[Revenue] - Sales[Cost]` as a calculated column on a 20-million-row Sales table. The model size jumps from 200 MB to 950 MB and refresh slows down. What is the best fix?",
+        options: [
+          { text: "Add an index to the Sales table", correct: false },
+          { text: "Convert Profit to a measure: `Total Profit = SUMX(Sales, Sales[Revenue] - Sales[Cost])`", correct: true },
+          { text: "Hide the Profit column from the report view", correct: false },
+          { text: "Replace `-` with `MINUS()` for performance", correct: false }
+        ],
+        explanation: "Since Profit is only being aggregated (totaled), it belongs in a **measure**. SUMX iterates at query time without storing anything, so the model shrinks back. You'd only keep it as a calculated column if you needed to slice or group by individual row-level profit — which you almost never do.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">Decision Tree</text><rect x="380" y="160" width="340" height="100" rx="14" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="3"/><text x="550" y="200" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Do I need to FILTER or</text><text x="550" y="230" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">GROUP BY this value?</text><line x1="450" y1="270" x2="250" y2="370" stroke="#10b981" stroke-width="3"/><line x1="650" y1="270" x2="850" y2="370" stroke="#ef4444" stroke-width="3"/><text x="330" y="330" font-family="Arial" font-size="22" fill="#10b981">YES</text><text x="770" y="330" font-family="Arial" font-size="22" fill="#ef4444">NO</text><rect x="100" y="380" width="320" height="120" rx="14" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="260" y="425" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Calculated Column</text><text x="260" y="465" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Year, Tier, Segment</text><rect x="680" y="380" width="320" height="120" rx="14" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="840" y="425" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Measure</text><text x="840" y="465" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Total Profit, AvgLTV</text><rect x="150" y="560" width="800" height="440" rx="16" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="620" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Why Measure Wins for Profit</text><text x="200" y="680" font-family="Arial" font-size="20" fill="#ffffff">• You only ever SUM profit → aggregation</text><text x="200" y="725" font-family="Arial" font-size="20" fill="#ffffff">• Nothing to slice by at the row level</text><text x="200" y="770" font-family="Arial" font-size="20" fill="#ffffff">• SUMX evaluates lazily — no storage</text><text x="200" y="815" font-family="Arial" font-size="20" fill="#ffffff">• Filter context handles Region, Year, etc.</text><rect x="200" y="860" width="700" height="100" rx="10" fill="#10b981" opacity="0.2" stroke="#10b981"/><text x="550" y="900" font-family="monospace" font-size="20" fill="#ffd700" text-anchor="middle">Total Profit =</text><text x="550" y="935" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">SUMX(Sales, Sales[Revenue] - Sales[Cost])</text></svg>`,
+          caption: "Ask one question: do I filter by it, or aggregate it? That answer picks the tool."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: Audit Your Model",
+        content: `**Try this on a real model today:**
+
+1. Open Power BI Desktop. View → **Model view**.
+2. For every **calculated column** in your model, ask: *"Do I slice, filter, or group by this anywhere in any visual?"*
+3. If the answer is **no** — refactor it into a **measure** using \`SUM\`, \`SUMX\`, \`AVERAGE\`, or \`AVERAGEX\`. Delete the column.
+4. Watch the model size drop in **External Tools → DAX Studio → VertiPaq Analyzer**.
+
+**Pro habits to build:**
+- Default to **measures**. Only create a column when a slicer or row/column visual demands it.
+- Name measures clearly: \`Total Sales\`, \`Sales YoY %\`, \`# Customers\`. Prefix with \`#\` for counts, \`%\` for ratios.
+- Store measures in a dedicated **measures table** for easy navigation.
+- Never write a calculated column on a fact table with more than a few million rows unless absolutely required.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Model Audit Checklist</text><rect x="100" y="140" width="900" height="80" rx="10" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="2"/><text x="550" y="190" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 1: List every calculated column</text><rect x="100" y="240" width="900" height="80" rx="10" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/><text x="550" y="290" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 2: Is it used in a slicer, axis, or legend?</text><rect x="100" y="340" width="900" height="80" rx="10" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/><text x="550" y="390" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 3: If NO → refactor to measure with SUMX/AVERAGEX</text><rect x="100" y="440" width="900" height="80" rx="10" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="2"/><text x="550" y="490" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 4: Delete the column, validate visuals still work</text><rect x="100" y="540" width="900" height="80" rx="10" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/><text x="550" y="590" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 5: Measure size drop in VertiPaq Analyzer</text><rect x="150" y="680" width="800" height="360" rx="16" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="730" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Naming Conventions</text><text x="200" y="790" font-family="monospace" font-size="20" fill="#10b981">Total Sales</text><text x="600" y="790" font-family="Arial" font-size="18" fill="#ffffff">→ revenue sum</text><text x="200" y="835" font-family="monospace" font-size="20" fill="#10b981"># Customers</text><text x="600" y="835" font-family="Arial" font-size="18" fill="#ffffff">→ distinct count</text><text x="200" y="880" font-family="monospace" font-size="20" fill="#10b981">Sales YoY %</text><text x="600" y="880" font-family="Arial" font-size="18" fill="#ffffff">→ ratio measure</text><text x="200" y="925" font-family="monospace" font-size="20" fill="#10b981">Avg Order Value</text><text x="600" y="925" font-family="Arial" font-size="18" fill="#ffffff">→ AVERAGEX result</text><text x="550" y="1000" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Clear names = self-documenting reports</text></svg>`,
+          caption: "Audit, refactor, measure, repeat. Lean models are fast models."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-2",
+    title: "CALCULATE: The Heart of DAX",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The One Function That Rules Them All",
+        content: `If you only ever learn one DAX function, learn **CALCULATE**. Every advanced pattern — time intelligence, percent-of-total, what-if analysis, ranking, comparisons — sits on top of \`CALCULATE\`.
+
+What makes it special? Most DAX functions read the filter context. **CALCULATE rewrites it.** It evaluates an expression in a **modified** filter context that you specify with filter arguments.
+
+\`\`\`
+CALCULATE( <expression>, <filter1>, <filter2>, ... )
+\`\`\`
+
+That tiny signature unlocks enormous power: change a region, lift a year filter, ignore all slicers, or pivot to last quarter — all without touching the visual. Master the order of operations and the difference between **Boolean filters** and **table filters**, and you'll write DAX that other analysts call magic.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" font-family="Arial" font-size="44" font-weight="bold" fill="#ffd700" text-anchor="middle">CALCULATE</text><text x="550" y="140" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">The function that rewrites filter context</text><rect x="100" y="200" width="900" height="120" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="245" font-family="monospace" font-size="22" fill="#ffd700" text-anchor="middle">CALCULATE(</text><text x="550" y="280" font-family="monospace" font-size="20" fill="#10b981" text-anchor="middle">expression, filter1, filter2, ...</text><text x="550" y="310" font-family="monospace" font-size="22" fill="#ffd700" text-anchor="middle">)</text><rect x="100" y="360" width="280" height="320" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="240" y="410" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Boolean Filter</text><rect x="120" y="440" width="240" height="60" fill="#1a1a2e" stroke="#888"/><text x="240" y="478" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">Region = "West"</text><text x="240" y="540" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Single column</text><text x="240" y="570" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">No iterators</text><text x="240" y="620" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Simple &amp; fast</text><rect x="410" y="360" width="280" height="320" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="410" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Table Filter</text><rect x="430" y="440" width="240" height="60" fill="#1a1a2e" stroke="#888"/><text x="550" y="478" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">FILTER(Sales, ...)</text><text x="550" y="540" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Multi-column logic</text><text x="550" y="570" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Returns a table</text><text x="550" y="620" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Most flexible</text><rect x="720" y="360" width="280" height="320" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="860" y="410" font-family="Arial" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Modifiers</text><rect x="740" y="440" width="240" height="60" fill="#1a1a2e" stroke="#888"/><text x="860" y="478" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">ALL, ALLEXCEPT</text><text x="860" y="540" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Remove filters</text><text x="860" y="570" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">KEEPFILTERS</text><text x="860" y="620" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Sculpt context</text><rect x="150" y="730" width="800" height="320" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="785" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Order of Operations</text><text x="550" y="845" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">1. Filters apply first → context is rewritten</text><text x="550" y="890" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">2. Expression evaluates in NEW context</text><text x="550" y="935" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">3. Single scalar value returned</text><text x="550" y="1000" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">Remember this order → CALCULATE clicks.</text></svg>`,
+          caption: "CALCULATE has one job: rewrite the filter context, then evaluate. Get that, get DAX."
+        }
+      },
+      {
+        type: "concept",
+        title: "Filters, Modifiers, and Context Transition",
+        content: `Three things CALCULATE can do to the filter context:
+
+**1. ADD a filter** — Boolean: \`Sales[Region] = "West"\` adds a constraint.
+\`\`\`
+Sales West = CALCULATE([Total Sales], Sales[Region] = "West")
+\`\`\`
+
+**2. REMOVE filters** — \`ALL\` clears them, useful for **percent-of-total**.
+\`\`\`
+% of Total = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Sales)))
+\`\`\`
+
+**3. KEEP some filters** — \`ALLEXCEPT(Sales, Sales[Year])\` clears every filter on Sales except Year, perfect for *running totals within a year*.
+
+\`KEEPFILTERS\` adds your filter to existing ones instead of overriding them — important when slicers are already narrowing the column you're filtering.
+
+**Bonus power: context transition.** When CALCULATE runs inside a row context (like inside a calculated column or an iterator), it automatically **converts the current row into an equivalent filter** — turning row context into filter context. This is the magic behind \`[Measure]\` references in calculated columns.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Ways CALCULATE Reshapes Context</text><rect x="60" y="140" width="320" height="380" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="220" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#6366f1" text-anchor="middle">ADD</text><text x="220" y="225" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Narrow the context</text><rect x="80" y="250" width="280" height="120" fill="#1a1a2e" stroke="#888"/><text x="220" y="285" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">CALCULATE(</text><text x="220" y="310" font-family="monospace" font-size="13" fill="#0ea5e9" text-anchor="middle">[Sales],</text><text x="220" y="335" font-family="monospace" font-size="13" fill="#10b981" text-anchor="middle">Region="West"</text><text x="220" y="358" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">)</text><text x="220" y="410" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Result: only West rows</text><text x="220" y="455" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Use: regional breakouts</text><rect x="390" y="140" width="320" height="380" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">REMOVE</text><text x="550" y="225" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Clear filters with ALL</text><rect x="410" y="250" width="280" height="120" fill="#1a1a2e" stroke="#888"/><text x="550" y="285" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">CALCULATE(</text><text x="550" y="310" font-family="monospace" font-size="13" fill="#0ea5e9" text-anchor="middle">[Sales],</text><text x="550" y="335" font-family="monospace" font-size="13" fill="#10b981" text-anchor="middle">ALL(Sales)</text><text x="550" y="358" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">)</text><text x="550" y="410" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Result: grand total</text><text x="550" y="455" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Use: % of total</text><rect x="720" y="140" width="320" height="380" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="880" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">KEEP SOME</text><text x="880" y="225" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">ALLEXCEPT(table, col)</text><rect x="740" y="250" width="280" height="120" fill="#1a1a2e" stroke="#888"/><text x="880" y="285" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">CALCULATE(</text><text x="880" y="310" font-family="monospace" font-size="13" fill="#0ea5e9" text-anchor="middle">[Sales],</text><text x="880" y="335" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">ALLEXCEPT(S,Year)</text><text x="880" y="358" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">)</text><text x="880" y="410" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Keep only Year filter</text><text x="880" y="455" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Use: YTD baselines</text><rect x="100" y="560" width="900" height="480" rx="16" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="615" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Context Transition (The Hidden Superpower)</text><text x="550" y="665" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Inside a row context, CALCULATE turns the current row</text><text x="550" y="695" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">into a filter context — automatically.</text><rect x="200" y="730" width="700" height="100" rx="10" fill="#6366f1" opacity="0.25" stroke="#6366f1"/><text x="550" y="770" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">CustomerTotal =</text><text x="550" y="805" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Total Sales])   -- inside Customers col</text><text x="550" y="870" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">→ Returns total sales FOR THIS CUSTOMER</text><text x="550" y="910" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">because row context became filter context.</text><text x="550" y="975" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">Same trick happens inside SUMX, FILTER, AVERAGEX.</text><text x="550" y="1010" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">This is why measures "just work" inside iterators.</text></svg>`,
+          caption: "ADD, REMOVE, or KEEP filters — plus the magic of context transition. Every CALCULATE does one of these."
+        }
+      },
+      {
+        type: "example",
+        title: "Percent of Total — The Classic Pattern",
+        content: `You want each region's share of total sales. The trick: the **numerator** uses the current filter context; the **denominator** lifts the region filter.
+
+\`\`\`
+Total Sales = SUM(Sales[Amount])
+
+Sales All Regions = CALCULATE(
+    [Total Sales],
+    ALL(Sales[Region])
+)
+
+% of Total =
+DIVIDE([Total Sales], [Sales All Regions])
+\`\`\`
+
+In a visual sliced by Region, \`[Total Sales]\` returns just that region's number. But \`CALCULATE([Total Sales], ALL(Sales[Region]))\` **lifts the Region filter**, so it returns the grand total across regions. \`DIVIDE\` gives you the percentage and handles divide-by-zero.
+
+Want % of country instead? Replace \`ALL(Sales[Region])\` with \`ALLEXCEPT(Sales, Sales[Country])\` — keeps Country, drops everything else. Same five lines, totally different metric.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">% of Total Pattern</text><rect x="100" y="130" width="900" height="280" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="2"/><text x="550" y="175" font-family="monospace" font-size="20" fill="#ffd700" text-anchor="middle">Total Sales = SUM(Sales[Amount])</text><text x="550" y="225" font-family="monospace" font-size="20" fill="#ffd700" text-anchor="middle">Sales All Regions =</text><text x="550" y="255" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">CALCULATE([Total Sales], ALL(Sales[Region]))</text><text x="550" y="320" font-family="monospace" font-size="20" fill="#ffd700" text-anchor="middle">% of Total =</text><text x="550" y="350" font-family="monospace" font-size="18" fill="#10b981" text-anchor="middle">DIVIDE([Total Sales], [Sales All Regions])</text><rect x="100" y="450" width="900" height="380" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="500" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Visual Output</text><line x1="200" y1="540" x2="900" y2="540" stroke="#ffd700" stroke-width="2"/><text x="240" y="570" font-family="monospace" font-size="18" fill="#ffffff">Region</text><text x="490" y="570" font-family="monospace" font-size="18" fill="#ffffff">Total Sales</text><text x="780" y="570" font-family="monospace" font-size="18" fill="#ffffff">% of Total</text><line x1="200" y1="585" x2="900" y2="585" stroke="#888"/><text x="240" y="620" font-family="monospace" font-size="18" fill="#10b981">West</text><text x="490" y="620" font-family="monospace" font-size="18" fill="#0ea5e9">$420,000</text><text x="780" y="620" font-family="monospace" font-size="18" fill="#ffd700">42.0%</text><text x="240" y="660" font-family="monospace" font-size="18" fill="#10b981">East</text><text x="490" y="660" font-family="monospace" font-size="18" fill="#0ea5e9">$310,000</text><text x="780" y="660" font-family="monospace" font-size="18" fill="#ffd700">31.0%</text><text x="240" y="700" font-family="monospace" font-size="18" fill="#10b981">North</text><text x="490" y="700" font-family="monospace" font-size="18" fill="#0ea5e9">$180,000</text><text x="780" y="700" font-family="monospace" font-size="18" fill="#ffd700">18.0%</text><text x="240" y="740" font-family="monospace" font-size="18" fill="#10b981">South</text><text x="490" y="740" font-family="monospace" font-size="18" fill="#0ea5e9">$90,000</text><text x="780" y="740" font-family="monospace" font-size="18" fill="#ffd700">9.0%</text><line x1="200" y1="765" x2="900" y2="765" stroke="#888"/><text x="240" y="800" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700">Total</text><text x="490" y="800" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700">$1,000,000</text><text x="780" y="800" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700">100.0%</text><rect x="150" y="860" width="800" height="180" rx="14" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="550" y="910" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Variation: % of Country</text><text x="550" y="955" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">CALCULATE([Total Sales], ALLEXCEPT(Sales, Sales[Country]))</text><text x="550" y="1005" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Keeps Country, drops Region — get share within country.</text></svg>`,
+          caption: "ALL lifts a filter to reveal the grand total. DIVIDE turns the ratio into a clean percent."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "You write `Sales 2025 = CALCULATE([Total Sales], Sales[Year] = 2025)` and a slicer on Region is set to \"East\". What does this measure return?",
+        options: [
+          { text: "Total sales across all years and all regions, ignoring slicers", correct: false },
+          { text: "Total sales for Year 2025 only — slicer filters are ignored", correct: false },
+          { text: "Total sales for Year 2025 AND Region = East (slicer still applies)", correct: true },
+          { text: "An error, because you can't combine a CALCULATE filter with a slicer", correct: false }
+        ],
+        explanation: "CALCULATE **adds** a filter on Year = 2025 to the **existing** filter context, which already includes Region = East from the slicer. Filters compose unless you explicitly remove them with ALL or ALLEXCEPT. To ignore the Region slicer too, you'd add `ALL(Sales[Region])` as another filter argument.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Filter Composition</text><rect x="100" y="140" width="900" height="100" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="185" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Starting filter context (from visual + slicer)</text><text x="550" y="220" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">Region = "East"</text><text x="550" y="285" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle">↓ CALCULATE adds Year = 2025</text><rect x="100" y="320" width="900" height="100" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="365" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">New filter context</text><text x="550" y="400" font-family="monospace" font-size="18" fill="#0ea5e9" text-anchor="middle">Region = "East" AND Year = 2025</text><rect x="100" y="460" width="900" height="100" rx="14" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="505" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">[Total Sales] evaluates here</text><text x="550" y="540" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">→ East sales for 2025 only</text><rect x="100" y="600" width="900" height="440" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="650" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Want to IGNORE the slicer?</text><rect x="200" y="690" width="700" height="100" rx="10" fill="#1a1a2e" stroke="#888"/><text x="550" y="730" font-family="monospace" font-size="20" fill="#ffd700" text-anchor="middle">Sales 2025 All Regions =</text><text x="550" y="765" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Total Sales], Sales[Year]=2025, ALL(Region))</text><text x="550" y="840" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Add ALL(Region) → removes Region filter</text><text x="550" y="880" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">Year filter stays, Region slicer is cleared</text><text x="550" y="950" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Filters compose — they don't replace.</text><text x="550" y="995" font-family="Arial" font-size="18" fill="#ec4899" text-anchor="middle">Use ALL/ALLEXCEPT when you want to clear them.</text></svg>`,
+          caption: "CALCULATE adds to the existing context. To wipe a filter, name it with ALL."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: Build a Comparison Measure",
+        content: `**Goal:** In your sales report, show **current period vs same period last year**, both as values and as a % change.
+
+**Three measures, one pattern:**
+\`\`\`
+Total Sales = SUM(Sales[Amount])
+
+Sales LY = CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR(Calendar[Date])
+)
+
+YoY % = DIVIDE([Total Sales] - [Sales LY], [Sales LY])
+\`\`\`
+
+**Why it works:** \`SAMEPERIODLASTYEAR\` returns a table of dates one year earlier, and CALCULATE swaps the date filter to that table. The visual's existing Region/Product filters stay intact.
+
+**Quick wins to add today:**
+- **Sales QoQ** using \`PARALLELPERIOD(Calendar[Date], -1, QUARTER)\`
+- **Top 5 customers** using \`CALCULATE([Total Sales], TOPN(5, ALL(Customer), [Total Sales]))\`
+- **% of grand total** using \`ALL\` on the whole fact table
+
+Every one of these is just CALCULATE with a different filter argument. Master the pattern; the variations write themselves.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">CALCULATE Pattern Library</text><rect x="80" y="140" width="940" height="220" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="185" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Same Period Last Year</text><rect x="120" y="210" width="860" height="120" fill="#1a1a2e" stroke="#888"/><text x="550" y="248" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">Sales LY =</text><text x="550" y="283" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Total Sales],</text><text x="550" y="313" font-family="monospace" font-size="16" fill="#10b981" text-anchor="middle">SAMEPERIODLASTYEAR(Calendar[Date]))</text><rect x="80" y="380" width="940" height="200" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="425" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Quarter over Quarter</text><rect x="120" y="450" width="860" height="100" fill="#1a1a2e" stroke="#888"/><text x="550" y="488" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">Sales PQ =</text><text x="550" y="523" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Sales], PARALLELPERIOD(Calendar[Date],-1,QUARTER))</text><rect x="80" y="600" width="940" height="200" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="645" font-family="Arial" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Top 5 Customers</text><rect x="120" y="670" width="860" height="100" fill="#1a1a2e" stroke="#888"/><text x="550" y="708" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">Sales Top5 =</text><text x="550" y="743" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Sales], TOPN(5, ALL(Customer), [Sales]))</text><rect x="80" y="820" width="940" height="220" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="865" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">YoY Growth %</text><rect x="120" y="890" width="860" height="120" fill="#1a1a2e" stroke="#888"/><text x="550" y="930" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">YoY % =</text><text x="550" y="965" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">DIVIDE([Total Sales] - [Sales LY],</text><text x="550" y="995" font-family="monospace" font-size="16" fill="#10b981" text-anchor="middle">[Sales LY])</text></svg>`,
+          caption: "Four common business questions, one CALCULATE pattern. Learn the shape, swap the filter."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-3",
+    title: "Time Intelligence Functions",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Make Time Bend to Your Will",
+        content: `Every business question eventually becomes a time question. **YTD revenue. Last quarter's margin. This month vs last month. Rolling 12-month average.** DAX has a dozen functions designed exactly for this — collectively called **time intelligence**.
+
+\`TOTALYTD\`, \`SAMEPERIODLASTYEAR\`, \`DATEADD\`, \`DATESYTD\`, \`PARALLELPERIOD\`, \`DATESBETWEEN\` — they all share one prerequisite: a proper **Date Table**.
+
+Most beginners try to use the date column directly from their fact table and get mysterious, wrong answers. The fix is a **separate calendar table** with one row per day, zero gaps, marked as a Date Table in the model. Get that right and every time intelligence function suddenly works. Get it wrong and nothing makes sense.
+
+This lesson teaches you the patterns and — even more importantly — the pitfalls.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" font-family="Arial" font-size="42" font-weight="bold" fill="#ffd700" text-anchor="middle">Time Intelligence</text><text x="550" y="140" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Built-in shortcuts for time-based analysis</text><rect x="80" y="200" width="940" height="280" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="250" font-family="Arial" font-size="26" font-weight="bold" fill="#6366f1" text-anchor="middle">Common Functions</text><text x="180" y="300" font-family="monospace" font-size="18" fill="#10b981">TOTALYTD</text><text x="450" y="300" font-family="Arial" font-size="16" fill="#ffffff">year-to-date sum</text><text x="180" y="340" font-family="monospace" font-size="18" fill="#10b981">TOTALMTD / TOTALQTD</text><text x="450" y="340" font-family="Arial" font-size="16" fill="#ffffff">month / quarter to date</text><text x="180" y="380" font-family="monospace" font-size="18" fill="#10b981">SAMEPERIODLASTYEAR</text><text x="450" y="380" font-family="Arial" font-size="16" fill="#ffffff">prior-year baseline</text><text x="180" y="420" font-family="monospace" font-size="18" fill="#10b981">DATEADD</text><text x="450" y="420" font-family="Arial" font-size="16" fill="#ffffff">shift dates ±N units</text><text x="180" y="460" font-family="monospace" font-size="18" fill="#10b981">DATESBETWEEN</text><text x="450" y="460" font-family="Arial" font-size="16" fill="#ffffff">arbitrary range</text><rect x="80" y="510" width="940" height="500" rx="16" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="550" y="565" font-family="Arial" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">Prerequisite: A Real Date Table</text><text x="550" y="615" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">One row per day. No gaps. Marked as Date Table.</text><rect x="180" y="650" width="740" height="60" fill="#1a1a2e" stroke="#ffd700"/><text x="220" y="688" font-family="monospace" font-size="16" fill="#ffd700">Date</text><text x="420" y="688" font-family="monospace" font-size="16" fill="#ffd700">Year</text><text x="560" y="688" font-family="monospace" font-size="16" fill="#ffd700">Quarter</text><text x="720" y="688" font-family="monospace" font-size="16" fill="#ffd700">Month</text><text x="850" y="688" font-family="monospace" font-size="16" fill="#ffd700">Day</text><rect x="180" y="710" width="740" height="35" fill="#1a1a2e" stroke="#888"/><text x="220" y="735" font-family="monospace" font-size="14" fill="#ffffff">2024-01-01</text><text x="420" y="735" font-family="monospace" font-size="14" fill="#ffffff">2024</text><text x="560" y="735" font-family="monospace" font-size="14" fill="#ffffff">Q1</text><text x="720" y="735" font-family="monospace" font-size="14" fill="#ffffff">Jan</text><text x="850" y="735" font-family="monospace" font-size="14" fill="#ffffff">1</text><rect x="180" y="745" width="740" height="35" fill="#1a1a2e" stroke="#888"/><text x="220" y="770" font-family="monospace" font-size="14" fill="#ffffff">2024-01-02</text><text x="420" y="770" font-family="monospace" font-size="14" fill="#ffffff">2024</text><text x="560" y="770" font-family="monospace" font-size="14" fill="#ffffff">Q1</text><text x="720" y="770" font-family="monospace" font-size="14" fill="#ffffff">Jan</text><text x="850" y="770" font-family="monospace" font-size="14" fill="#ffffff">2</text><text x="550" y="820" font-family="monospace" font-size="14" fill="#888" text-anchor="middle">... continuous through 2024-12-31 ...</text><rect x="180" y="850" width="740" height="35" fill="#1a1a2e" stroke="#888"/><text x="220" y="875" font-family="monospace" font-size="14" fill="#ffffff">2024-12-31</text><text x="420" y="875" font-family="monospace" font-size="14" fill="#ffffff">2024</text><text x="560" y="875" font-family="monospace" font-size="14" fill="#ffffff">Q4</text><text x="720" y="875" font-family="monospace" font-size="14" fill="#ffffff">Dec</text><text x="850" y="875" font-family="monospace" font-size="14" fill="#ffffff">31</text><text x="550" y="940" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Right-click table → Mark as Date Table</text><text x="550" y="980" font-family="Arial" font-size="18" fill="#ec4899" text-anchor="middle">No calendar table = wrong YTD, every time.</text></svg>`,
+          caption: "Time intelligence is powerful — but only with a proper, marked Date Table backing it."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Patterns You'll Use Every Day",
+        content: `Three patterns cover 90% of real-world time intelligence.
+
+**1. Year-To-Date** — running total from Jan 1 to current date:
+\`\`\`
+Sales YTD = TOTALYTD([Total Sales], Calendar[Date])
+\`\`\`
+
+**2. Same Period Last Year** — comparison baseline:
+\`\`\`
+Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Calendar[Date]))
+\`\`\`
+
+**3. Year-over-Year Growth %** — combine the above:
+\`\`\`
+YoY Growth % = DIVIDE([Total Sales] - [Sales LY], [Sales LY])
+\`\`\`
+
+The **always-true rules:**
+- All time functions take a **date column from the calendar table**, not the fact table.
+- The calendar must be **marked as Date Table** (right-click → Mark as Date Table → pick the date column).
+- The calendar must be **contiguous** — no missing days.
+- Your fact table joins to the calendar on a date relationship.
+
+Break any rule and you get silent wrong answers — no error, just numbers that don't add up.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Patterns, Limitless Reports</text><rect x="80" y="130" width="940" height="200" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="175" font-family="Arial" font-size="24" font-weight="bold" fill="#6366f1" text-anchor="middle">1. Year-to-Date (YTD)</text><rect x="120" y="200" width="860" height="100" fill="#1a1a2e" stroke="#888"/><text x="550" y="240" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">Sales YTD =</text><text x="550" y="275" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">TOTALYTD([Total Sales], Calendar[Date])</text><rect x="80" y="350" width="940" height="200" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="395" font-family="Arial" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">2. Same Period Last Year (LY)</text><rect x="120" y="420" width="860" height="100" fill="#1a1a2e" stroke="#888"/><text x="550" y="460" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">Sales LY =</text><text x="550" y="495" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date]))</text><rect x="80" y="570" width="940" height="200" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="615" font-family="Arial" font-size="24" font-weight="bold" fill="#ec4899" text-anchor="middle">3. YoY Growth %</text><rect x="120" y="640" width="860" height="100" fill="#1a1a2e" stroke="#888"/><text x="550" y="680" font-family="monospace" font-size="18" fill="#ffd700" text-anchor="middle">YoY % =</text><text x="550" y="715" font-family="monospace" font-size="16" fill="#0ea5e9" text-anchor="middle">DIVIDE([Sales] - [Sales LY], [Sales LY])</text><rect x="80" y="790" width="940" height="260" rx="14" fill="#888" opacity="0.15" stroke="#ffd700" stroke-width="2"/><text x="550" y="840" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The Non-Negotiable Rules</text><text x="160" y="890" font-family="Arial" font-size="18" fill="#10b981">✓</text><text x="200" y="890" font-family="Arial" font-size="18" fill="#ffffff">Use CALENDAR[Date], never Sales[OrderDate]</text><text x="160" y="925" font-family="Arial" font-size="18" fill="#10b981">✓</text><text x="200" y="925" font-family="Arial" font-size="18" fill="#ffffff">Mark calendar table as Date Table</text><text x="160" y="960" font-family="Arial" font-size="18" fill="#10b981">✓</text><text x="200" y="960" font-family="Arial" font-size="18" fill="#ffffff">Calendar must be contiguous — no gaps</text><text x="160" y="995" font-family="Arial" font-size="18" fill="#10b981">✓</text><text x="200" y="995" font-family="Arial" font-size="18" fill="#ffffff">Fact table joins to calendar on date</text><text x="160" y="1030" font-family="Arial" font-size="18" fill="#ef4444">✗</text><text x="200" y="1030" font-family="Arial" font-size="18" fill="#ffffff">Break a rule → silent wrong answers</text></svg>`,
+          caption: "Three patterns. Four rules. Every YTD, LY, QoQ, and rolling metric falls out of these."
+        }
+      },
+      {
+        type: "example",
+        title: "From Raw Sales to a Full Comparison",
+        content: `Suppose your **Sales** table has \`OrderDate\` and \`Amount\`, and you have a **Calendar** table with continuous dates joined to Sales on \`OrderDate = Calendar[Date]\`.
+
+**Step 1 — base measure:**
+\`\`\`
+Total Sales = SUM(Sales[Amount])
+\`\`\`
+
+**Step 2 — Sales YTD:**
+\`\`\`
+Sales YTD = TOTALYTD([Total Sales], Calendar[Date])
+\`\`\`
+
+**Step 3 — Sales same period last year:**
+\`\`\`
+Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Calendar[Date]))
+\`\`\`
+
+**Step 4 — Sales YTD LY (the most common KPI):**
+\`\`\`
+Sales YTD LY = CALCULATE([Sales YTD], SAMEPERIODLASTYEAR(Calendar[Date]))
+\`\`\`
+
+**Step 5 — Growth %:**
+\`\`\`
+YTD Growth % = DIVIDE([Sales YTD] - [Sales YTD LY], [Sales YTD LY])
+\`\`\`
+
+Notice how **measures compose**. \`Sales YTD LY\` doesn't redo the YTD math — it just reuses \`[Sales YTD]\` inside a shifted date context. That composition is the elegant heart of DAX.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">Measures Compose</text><rect x="80" y="130" width="940" height="100" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/><text x="130" y="170" font-family="monospace" font-size="18" fill="#ffd700">1.</text><text x="180" y="170" font-family="monospace" font-size="18" fill="#ffffff">Total Sales = SUM(Sales[Amount])</text><text x="180" y="205" font-family="Arial" font-size="14" fill="#10b981">↳ base aggregation</text><rect x="80" y="250" width="940" height="100" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/><text x="130" y="290" font-family="monospace" font-size="18" fill="#ffd700">2.</text><text x="180" y="290" font-family="monospace" font-size="18" fill="#ffffff">Sales YTD = TOTALYTD([Total Sales], Calendar[Date])</text><text x="180" y="325" font-family="Arial" font-size="14" fill="#10b981">↳ uses #1</text><rect x="80" y="370" width="940" height="100" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="130" y="410" font-family="monospace" font-size="18" fill="#ffd700">3.</text><text x="180" y="410" font-family="monospace" font-size="16" fill="#ffffff">Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(...))</text><text x="180" y="445" font-family="Arial" font-size="14" fill="#10b981">↳ uses #1 in shifted context</text><rect x="80" y="490" width="940" height="100" rx="12" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/><text x="130" y="530" font-family="monospace" font-size="18" fill="#ffd700">4.</text><text x="180" y="530" font-family="monospace" font-size="16" fill="#ffffff">Sales YTD LY = CALCULATE([Sales YTD], SAMEPERIODLASTYEAR(...))</text><text x="180" y="565" font-family="Arial" font-size="14" fill="#10b981">↳ uses #2 in shifted context</text><rect x="80" y="610" width="940" height="100" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="2"/><text x="130" y="650" font-family="monospace" font-size="18" fill="#ffd700">5.</text><text x="180" y="650" font-family="monospace" font-size="16" fill="#ffffff">YTD Growth % = DIVIDE([Sales YTD] - [Sales YTD LY], [Sales YTD LY])</text><text x="180" y="685" font-family="Arial" font-size="14" fill="#10b981">↳ uses #2 and #4</text><rect x="80" y="740" width="940" height="320" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="790" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Sample Output (June 2025)</text><line x1="180" y1="820" x2="920" y2="820" stroke="#ffd700"/><text x="220" y="850" font-family="monospace" font-size="16" fill="#ffffff">Total Sales</text><text x="700" y="850" font-family="monospace" font-size="16" fill="#10b981">$ 82,400</text><text x="220" y="885" font-family="monospace" font-size="16" fill="#ffffff">Sales YTD</text><text x="700" y="885" font-family="monospace" font-size="16" fill="#10b981">$ 461,200</text><text x="220" y="920" font-family="monospace" font-size="16" fill="#ffffff">Sales YTD LY</text><text x="700" y="920" font-family="monospace" font-size="16" fill="#0ea5e9">$ 392,800</text><text x="220" y="955" font-family="monospace" font-size="16" fill="#ffffff">YTD Growth %</text><text x="700" y="955" font-family="monospace" font-size="16" fill="#ffd700">+17.4%</text><text x="550" y="1020" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Each measure builds on the previous — no duplicated logic.</text></svg>`,
+          caption: "Five measures, each reusing the one above. Composition keeps DAX clean and fast."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "Your `Sales YTD` measure returns surprising results: it equals `Total Sales` instead of accumulating through the year. The Calendar table has dates only from 2023-01-01 through 2024-06-30, while Sales has orders up to 2025-12-31. What's the most likely root cause?",
+        options: [
+          { text: "TOTALYTD is the wrong function; you should use SUM with FILTER", correct: false },
+          { text: "The Calendar table is missing dates that exist in the Sales table, so context is broken", correct: true },
+          { text: "DIVIDE is required even though you're not dividing anything", correct: false },
+          { text: "Power BI caches stale values; just refresh the model", correct: false }
+        ],
+        explanation: "Time intelligence requires a **contiguous** calendar that covers **every date in your fact table**. When Sales has orders past the Calendar's last date, those rows don't get a YTD context — they fall outside any year/month bucket in Calendar. Fix it by extending the Calendar table to cover the full fact-table range (and beyond), then mark it as a Date Table.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">The Calendar Gap Problem</text><rect x="80" y="140" width="940" height="280" rx="14" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3"/><text x="550" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">Broken Setup</text><rect x="140" y="220" width="820" height="50" fill="#10b981" opacity="0.3"/><text x="160" y="250" font-family="monospace" font-size="14" fill="#ffffff">Calendar:</text><text x="270" y="250" font-family="monospace" font-size="14" fill="#10b981">2023-01-01 ─────────── 2024-06-30</text><rect x="140" y="290" width="820" height="50" fill="#0ea5e9" opacity="0.3"/><text x="160" y="320" font-family="monospace" font-size="14" fill="#ffffff">Sales:</text><text x="220" y="320" font-family="monospace" font-size="14" fill="#0ea5e9">2023-01-01 ─────────────────── 2025-12-31</text><rect x="660" y="360" width="300" height="40" fill="#ef4444" opacity="0.5"/><text x="810" y="387" font-family="monospace" font-size="14" fill="#ffffff" text-anchor="middle">orphaned rows</text><rect x="80" y="450" width="940" height="280" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="550" y="500" font-family="Arial" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">Fixed Setup</text><rect x="140" y="530" width="820" height="50" fill="#10b981" opacity="0.3"/><text x="160" y="560" font-family="monospace" font-size="14" fill="#ffffff">Calendar:</text><text x="270" y="560" font-family="monospace" font-size="14" fill="#10b981">2023-01-01 ───────────────────────── 2026-12-31</text><rect x="140" y="600" width="820" height="50" fill="#0ea5e9" opacity="0.3"/><text x="160" y="630" font-family="monospace" font-size="14" fill="#ffffff">Sales:</text><text x="220" y="630" font-family="monospace" font-size="14" fill="#0ea5e9">2023-01-01 ─────────────────── 2025-12-31</text><text x="550" y="690" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Every Sales row finds a matching Calendar row.</text><rect x="80" y="760" width="940" height="280" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="810" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Checklist Before Debugging Time Intel</text><text x="160" y="860" font-family="Arial" font-size="18" fill="#ffffff">1. Calendar covers MIN(Fact[Date]) to MAX(Fact[Date]) + future</text><text x="160" y="900" font-family="Arial" font-size="18" fill="#ffffff">2. No missing dates in calendar (use CALENDAR() or CALENDARAUTO())</text><text x="160" y="940" font-family="Arial" font-size="18" fill="#ffffff">3. Table is Marked as Date Table</text><text x="160" y="980" font-family="Arial" font-size="18" fill="#ffffff">4. Relationship: Fact[Date] → Calendar[Date]</text><text x="160" y="1020" font-family="Arial" font-size="18" fill="#ffd700">5. Time functions use Calendar[Date], not Fact[Date]</text></svg>`,
+          caption: "A short calendar quietly breaks every YTD, LY, and QoQ measure. Extend, mark, and join correctly."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: Build a Date Table and a YTD Dashboard",
+        content: `**Build it today in Power BI Desktop:**
+
+**1. Create a calendar table** (Modeling → New Table):
+\`\`\`
+Calendar =
+ADDCOLUMNS(
+    CALENDARAUTO(),
+    "Year", YEAR([Date]),
+    "Quarter", "Q" & QUARTER([Date]),
+    "MonthNum", MONTH([Date]),
+    "MonthName", FORMAT([Date], "MMM")
+)
+\`\`\`
+\`CALENDARAUTO()\` scans your model and builds a contiguous range covering every fact-table date.
+
+**2. Mark it as a Date Table** — right-click \`Calendar\` → **Mark as Date Table** → select \`Date\`.
+
+**3. Build the relationship** — drag \`Sales[OrderDate]\` to \`Calendar[Date]\`.
+
+**4. Create your KPI measures** (\`Total Sales\`, \`Sales YTD\`, \`Sales YTD LY\`, \`YTD Growth %\`).
+
+**5. Build the dashboard** — card visuals for the KPIs, a line chart with \`Calendar[Date]\` on the axis showing YTD vs YTD LY, a slicer for \`Calendar[Year]\`.
+
+You now have a re-usable foundation that powers every time-based report you'll ever build.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">YTD Dashboard Build</text><rect x="80" y="130" width="940" height="170" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Step 1 · Calendar Table</text><rect x="120" y="190" width="860" height="90" fill="#1a1a2e" stroke="#888"/><text x="550" y="220" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">Calendar = ADDCOLUMNS(CALENDARAUTO(),</text><text x="550" y="245" font-family="monospace" font-size="14" fill="#0ea5e9" text-anchor="middle">"Year",YEAR([Date]),"Quarter","Q"&amp;QUARTER([Date]),</text><text x="550" y="270" font-family="monospace" font-size="14" fill="#0ea5e9" text-anchor="middle">"MonthName",FORMAT([Date],"MMM"))</text><rect x="80" y="320" width="940" height="100" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="360" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Step 2 · Mark as Date Table</text><text x="550" y="395" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Right-click Calendar → Mark as Date Table → Date</text><rect x="80" y="440" width="940" height="100" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="480" font-family="Arial" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Step 3 · Build Relationship</text><text x="550" y="515" font-family="monospace" font-size="18" fill="#ffffff" text-anchor="middle">Sales[OrderDate] → Calendar[Date]</text><rect x="80" y="560" width="940" height="160" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="600" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">Step 4 · Create Measures</text><text x="550" y="640" font-family="monospace" font-size="16" fill="#ffffff" text-anchor="middle">Total Sales · Sales YTD · Sales YTD LY · YTD Growth %</text><text x="550" y="685" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Store them in a "_Measures" table for organization</text><rect x="80" y="740" width="940" height="300" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="790" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Step 5 · Visualize</text><rect x="120" y="820" width="240" height="100" rx="10" fill="#6366f1" opacity="0.4" stroke="#6366f1"/><text x="240" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">KPI Cards</text><text x="240" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">YTD, LY, Growth%</text><rect x="380" y="820" width="340" height="100" rx="10" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="550" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Line Chart</text><text x="550" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">YTD vs YTD LY over time</text><rect x="740" y="820" width="240" height="100" rx="10" fill="#f59e0b" opacity="0.4" stroke="#f59e0b"/><text x="860" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Year Slicer</text><text x="860" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Calendar[Year]</text><text x="550" y="980" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Reusable foundation for every time-based report</text><text x="550" y="1015" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Build once, leverage forever.</text></svg>`,
+          caption: "Five steps from raw data to a YTD dashboard. The Calendar table pays dividends forever."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'excel-pbi-desktop',
