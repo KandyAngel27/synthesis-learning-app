@@ -2398,6 +2398,1102 @@ A CCA who knows these five items is **immediately valuable** to any HIM director
         }
       }
     ]
+  },
+{
+    id: "cca-domain-1-lesson-10",
+    title: "Specialty Records: Behavioral Health, Trauma, OB-GYN, Pediatrics",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Specialty Records Need Their Own Rules",
+        content: `Not all health records look the same. **Specialty care settings** generate documentation that does not fit the general inpatient or outpatient mold, and each has rules a CCA must know cold. A **behavioral health** record carries the strictest privacy protections in U.S. law, with **psychotherapy notes** receiving an additional layer of protection beyond standard PHI. A **trauma record** is built around a time-stamped activation log, because seconds matter and every intervention must be traceable. An **OB-GYN record** spans nine months of prenatal flow sheets, antepartum testing, labor and delivery summaries, and a newborn record that must link cleanly to the mother. A **pediatric record** layers growth charts, immunization registries, developmental milestones, and **consent-by-proxy** documentation onto every visit. This lesson walks through the unique data elements, required forms, and HIM handling rules for each setting. Master these and you can route, code, and release any specialty chart correctly.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Four Specialty Record Types</text>
+            <text x="550" y="92" font-size="17" fill="#888" text-anchor="middle">Each has unique forms, rules, and HIM handling requirements</text>
+            <rect x="60" y="130" width="480" height="220" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+            <text x="300" y="170" font-size="22" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Behavioral Health</text>
+            <text x="80" y="205" font-size="15" fill="#ffffff">Psychiatric notes (part of PHI)</text>
+            <text x="80" y="232" font-size="15" fill="#ffffff">Psychotherapy notes (EXTRA protection)</text>
+            <text x="80" y="259" font-size="15" fill="#ffffff">Treatment plans, group session logs</text>
+            <text x="80" y="286" font-size="15" fill="#ffffff">42 CFR Part 2 if substance use</text>
+            <text x="80" y="313" font-size="15" fill="#ffd700">Separate consent required for release</text>
+            <rect x="560" y="130" width="480" height="220" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="800" y="170" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Trauma</text>
+            <text x="580" y="205" font-size="15" fill="#ffffff">Trauma activation log (Level I/II/III)</text>
+            <text x="580" y="232" font-size="15" fill="#ffffff">Timed intervention sheet (every action)</text>
+            <text x="580" y="259" font-size="15" fill="#ffffff">Mechanism of injury, GCS, ISS</text>
+            <text x="580" y="286" font-size="15" fill="#ffffff">Reported to state trauma registry</text>
+            <text x="580" y="313" font-size="15" fill="#ffd700">Every minute documented from arrival</text>
+            <rect x="60" y="380" width="480" height="220" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="300" y="420" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">OB-GYN</text>
+            <text x="80" y="455" font-size="15" fill="#ffffff">Prenatal flow sheet (weight, BP, FHT)</text>
+            <text x="80" y="482" font-size="15" fill="#ffffff">Antepartum tests (NST, BPP, AFI)</text>
+            <text x="80" y="509" font-size="15" fill="#ffffff">L&amp;D summary, partogram, APGAR</text>
+            <text x="80" y="536" font-size="15" fill="#ffffff">Newborn record linked to mother</text>
+            <text x="80" y="563" font-size="15" fill="#ffd700">Two charts, one event</text>
+            <rect x="560" y="380" width="480" height="220" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="800" y="420" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Pediatrics</text>
+            <text x="580" y="455" font-size="15" fill="#ffffff">Growth charts (WHO 0-2, CDC 2-20)</text>
+            <text x="580" y="482" font-size="15" fill="#ffffff">Immunization record (state registry)</text>
+            <text x="580" y="509" font-size="15" fill="#ffffff">Developmental milestones, ASQ-3</text>
+            <text x="580" y="536" font-size="15" fill="#ffffff">Consent by parent/legal guardian</text>
+            <text x="580" y="563" font-size="15" fill="#ffd700">Mature minor doctrine varies by state</text>
+            <rect x="60" y="630" width="980" height="200" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="550" y="668" font-size="20" font-weight="bold" fill="#6366f1" text-anchor="middle">Common Thread: Each Generates Documentation A General Inpatient Chart Does Not</text>
+            <text x="80" y="702" font-size="15" fill="#ffffff">HIM must know which forms belong to which setting, which require special consent for release,</text>
+            <text x="80" y="728" font-size="15" fill="#ffffff">which are coded under specific guidelines (e.g., OB pregnancy codes always take sequencing priority),</text>
+            <text x="80" y="754" font-size="15" fill="#ffffff">and which feed external registries (trauma registry, immunization registry, birth certificate).</text>
+            <text x="80" y="788" font-size="15" fill="#ffd700">Misrouting a psychotherapy note under a standard ROI is a reportable HIPAA breach.</text>
+            <rect x="60" y="860" width="980" height="180" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="550" y="898" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">CCA Exam Focus</text>
+            <text x="80" y="930" font-size="15" fill="#ffffff">- Distinguish psychiatric notes (regular PHI) from psychotherapy notes (extra protection)</text>
+            <text x="80" y="956" font-size="15" fill="#ffffff">- Know that 42 CFR Part 2 protects substance use disorder records beyond HIPAA</text>
+            <text x="80" y="982" font-size="15" fill="#ffffff">- Identify the trauma activation log as the time-stamped backbone of any trauma chart</text>
+            <text x="80" y="1008" font-size="15" fill="#ffffff">- Recognize OB pregnancy codes always sequence first when pregnancy is the reason for visit</text>
+          </svg>`,
+          caption: "Four specialty record types and the unique documentation each generates."
+        }
+      },
+      {
+        type: "concept",
+        title: "Psychotherapy Notes vs. Everything Else",
+        content: `The single most tested specialty-records concept on the CCA is the distinction between **psychiatric records** and **psychotherapy notes**. A **psychiatric record** is the standard mental health chart: diagnosis, medications, treatment plan, progress notes, hospitalization summaries. It is **protected PHI** under HIPAA and can be released under the standard ROI process. A **psychotherapy note**, by contrast, is the private analysis a therapist keeps **separate** from the rest of the record, documenting impressions during counseling sessions. Under **45 CFR §164.508**, psychotherapy notes require a **separate, specific authorization** to release — they cannot be bundled into a general ROI. They are also excluded from a patient's right to access under the standard accounting rule. **42 CFR Part 2** layers an additional federal protection over **substance use disorder** records held by federally-assisted programs, requiring patient consent even for many treatment, payment, and operations disclosures that HIPAA would otherwise permit.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Tiers of Behavioral Health Protection</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">Standard PHI &lt; Psychotherapy Notes &lt; 42 CFR Part 2 SUD Records</text>
+            <line x1="60" y1="130" x2="1040" y2="130" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="170" font-size="18" font-weight="bold" fill="#ffd700">Tier</text>
+            <text x="280" y="170" font-size="18" font-weight="bold" fill="#ffd700">What It Covers</text>
+            <text x="640" y="170" font-size="18" font-weight="bold" fill="#ffd700">Release Rule</text>
+            <text x="900" y="170" font-size="18" font-weight="bold" fill="#ffd700">Authority</text>
+            <line x1="60" y1="185" x2="1040" y2="185" stroke="#888" stroke-width="1"/>
+            <rect x="60" y="200" width="980" height="150" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="232" font-size="17" font-weight="bold" fill="#6366f1">Tier 1: Standard</text>
+            <text x="80" y="254" font-size="15" fill="#ffffff">Psychiatric PHI</text>
+            <text x="280" y="232" font-size="15" fill="#ffffff">Diagnosis, meds, treatment plan,</text>
+            <text x="280" y="254" font-size="15" fill="#ffffff">progress notes, discharge summary</text>
+            <text x="280" y="276" font-size="15" fill="#ffffff">in the main mental health chart</text>
+            <text x="640" y="232" font-size="15" fill="#ffffff">Standard ROI form covers it</text>
+            <text x="640" y="254" font-size="15" fill="#ffffff">if patient checks &quot;mental health&quot;</text>
+            <text x="640" y="276" font-size="15" fill="#ffffff">box explicitly</text>
+            <text x="900" y="232" font-size="15" fill="#ffffff">HIPAA</text>
+            <text x="900" y="254" font-size="15" fill="#ffffff">45 CFR 164</text>
+            <text x="900" y="276" font-size="15" fill="#ffffff">+ state law</text>
+            <rect x="60" y="370" width="980" height="180" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="3" rx="8"/>
+            <text x="80" y="402" font-size="17" font-weight="bold" fill="#8b5cf6">Tier 2: Psychotherapy</text>
+            <text x="80" y="424" font-size="15" fill="#ffffff">Notes (separated)</text>
+            <text x="280" y="402" font-size="15" fill="#ffffff">Therapist's private analysis,</text>
+            <text x="280" y="424" font-size="15" fill="#ffffff">impressions, hypothesis notes</text>
+            <text x="280" y="446" font-size="15" fill="#ffffff">KEPT PHYSICALLY/LOGICALLY</text>
+            <text x="280" y="468" font-size="15" fill="#ffffff">SEPARATE from main chart</text>
+            <text x="640" y="402" font-size="15" fill="#ef4444">SPECIFIC, SEPARATE</text>
+            <text x="640" y="424" font-size="15" fill="#ef4444">authorization required</text>
+            <text x="640" y="446" font-size="15" fill="#ffffff">Cannot be bundled with</text>
+            <text x="640" y="468" font-size="15" fill="#ffffff">general PHI release</text>
+            <text x="900" y="402" font-size="15" fill="#ffffff">HIPAA</text>
+            <text x="900" y="424" font-size="15" fill="#ffffff">45 CFR</text>
+            <text x="900" y="446" font-size="15" fill="#ffffff">164.508(a)(2)</text>
+            <rect x="60" y="570" width="980" height="180" fill="#ef4444" opacity="0.20" stroke="#ef4444" stroke-width="3" rx="8"/>
+            <text x="80" y="602" font-size="17" font-weight="bold" fill="#ef4444">Tier 3: 42 CFR Part 2</text>
+            <text x="80" y="624" font-size="15" fill="#ffffff">SUD records</text>
+            <text x="280" y="602" font-size="15" fill="#ffffff">Any record from a federally</text>
+            <text x="280" y="624" font-size="15" fill="#ffffff">assisted substance use program</text>
+            <text x="280" y="646" font-size="15" fill="#ffffff">that would IDENTIFY a person</text>
+            <text x="280" y="668" font-size="15" fill="#ffffff">as having an SUD diagnosis</text>
+            <text x="640" y="602" font-size="15" fill="#ef4444">Patient consent for almost</text>
+            <text x="640" y="624" font-size="15" fill="#ef4444">ALL disclosures, including</text>
+            <text x="640" y="646" font-size="15" fill="#ffffff">many TPO uses HIPAA</text>
+            <text x="640" y="668" font-size="15" fill="#ffffff">would otherwise allow</text>
+            <text x="900" y="602" font-size="15" fill="#ffffff">42 CFR</text>
+            <text x="900" y="624" font-size="15" fill="#ffffff">Part 2</text>
+            <text x="900" y="646" font-size="15" fill="#ffffff">(SAMHSA)</text>
+            <rect x="60" y="780" width="980" height="260" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="818" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">HIM Practical Rules</text>
+            <text x="80" y="855" font-size="15" fill="#ffffff">1. When ROI is requested for a behavioral health patient, FIRST ask: does the request specify psychotherapy notes?</text>
+            <text x="80" y="882" font-size="15" fill="#ffffff">2. If yes, require a SEPARATE, SPECIFIC authorization that names psychotherapy notes by name.</text>
+            <text x="80" y="909" font-size="15" fill="#ffffff">3. NEVER include psychotherapy notes in a general PHI release, even with the patient's signed standard ROI.</text>
+            <text x="80" y="936" font-size="15" fill="#ffffff">4. For substance use records, verify if the program is federally assisted (most Medicare/Medicaid-funded ones are).</text>
+            <text x="80" y="963" font-size="15" fill="#ffffff">5. Part 2 records carry a required disclosure prohibition notice that MUST travel with any release.</text>
+            <text x="80" y="990" font-size="15" fill="#ffd700">6. State laws may add further restrictions on minors' mental health and HIV/AIDS records.</text>
+            <text x="80" y="1017" font-size="15" fill="#ffd700">7. When in doubt, do not release. Escalate to the Privacy Officer.</text>
+          </svg>`,
+          caption: "Three-tier protection model for behavioral health and SUD records."
+        }
+      },
+      {
+        type: "example",
+        title: "Trauma, OB, and Pediatric Records in Practice",
+        content: `Consider three real charts crossing the HIM desk. **Trauma**: A Level I activation arrives at 14:02. The trauma flow sheet must time-stamp arrival, initial vitals, the **mechanism of injury** narrative, **Glasgow Coma Scale** at intake, every fluid bolus and blood product, every imaging order, and the disposition. The HIM tech verifies the trauma registry abstract pulls these elements — **ISS (Injury Severity Score)** is calculated downstream from these data. **OB-GYN**: A 38-week patient arrives for delivery. The chart spans the **prenatal flow sheet** (weight, BP, fundal height, fetal heart tones plotted across visits), labs and antepartum tests, the **partogram** during labor, the delivery summary with **APGAR** scores at 1 and 5 minutes, and a **separate newborn record** that is linked to the mother by a unique mother-baby identifier. **Pediatrics**: A 4-year well-child visit captures height, weight, and head circumference plotted on the **CDC growth chart**, today's immunizations reported to the **state immunization registry**, and an **ASQ-3** developmental screen filed in the chart.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Real Charts: Required Elements Side by Side</text>
+            <rect x="50" y="100" width="330" height="900" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="215" y="140" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">TRAUMA</text>
+            <text x="215" y="165" font-size="14" fill="#888" text-anchor="middle">Level I activation, 14:02</text>
+            <line x1="70" y1="180" x2="360" y2="180" stroke="#888"/>
+            <text x="70" y="210" font-size="14" fill="#ffd700">Activation log</text>
+            <text x="80" y="232" font-size="13" fill="#ffffff">Time-stamped from page</text>
+            <text x="70" y="265" font-size="14" fill="#ffd700">Trauma flow sheet</text>
+            <text x="80" y="287" font-size="13" fill="#ffffff">Vitals every 5 min</text>
+            <text x="80" y="307" font-size="13" fill="#ffffff">All meds &amp; fluids logged</text>
+            <text x="70" y="340" font-size="14" fill="#ffd700">Mechanism of injury</text>
+            <text x="80" y="362" font-size="13" fill="#ffffff">Narrative description</text>
+            <text x="70" y="395" font-size="14" fill="#ffd700">GCS at arrival</text>
+            <text x="80" y="417" font-size="13" fill="#ffffff">Eye/Verbal/Motor</text>
+            <text x="70" y="450" font-size="14" fill="#ffd700">Imaging log</text>
+            <text x="80" y="472" font-size="13" fill="#ffffff">FAST, CT pan-scan</text>
+            <text x="70" y="505" font-size="14" fill="#ffd700">OR/ICU disposition</text>
+            <text x="80" y="527" font-size="13" fill="#ffffff">With handoff time</text>
+            <text x="70" y="560" font-size="14" fill="#ffd700">Procedure consent</text>
+            <text x="80" y="582" font-size="13" fill="#ffffff">Or emergency exception</text>
+            <text x="70" y="615" font-size="14" fill="#ffd700">Trauma registry abstract</text>
+            <text x="80" y="637" font-size="13" fill="#ffffff">ISS, AIS, outcomes</text>
+            <text x="70" y="670" font-size="14" fill="#ffd700">Family notification log</text>
+            <text x="80" y="692" font-size="13" fill="#ffffff">Who, when, by whom</text>
+            <text x="70" y="725" font-size="14" fill="#ffd700">Resuscitation team</text>
+            <text x="80" y="747" font-size="13" fill="#ffffff">All names &amp; roles</text>
+            <text x="70" y="780" font-size="14" fill="#ffd700">M&amp;M referral?</text>
+            <text x="80" y="802" font-size="13" fill="#ffffff">If applicable</text>
+            <text x="70" y="840" font-size="14" fill="#10b981">FEEDS:</text>
+            <text x="80" y="862" font-size="13" fill="#ffffff">State trauma registry</text>
+            <text x="80" y="882" font-size="13" fill="#ffffff">ACS verification data</text>
+            <text x="80" y="902" font-size="13" fill="#ffffff">Hospital QI dashboard</text>
+            <text x="80" y="922" font-size="13" fill="#ffffff">Coroner if death</text>
+            <text x="80" y="960" font-size="13" font-style="italic" fill="#ffd700">Every minute</text>
+            <text x="80" y="978" font-size="13" font-style="italic" fill="#ffd700">accounted for</text>
+            <rect x="390" y="100" width="330" height="900" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="555" y="140" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">OB-GYN</text>
+            <text x="555" y="165" font-size="14" fill="#888" text-anchor="middle">38-week delivery</text>
+            <line x1="410" y1="180" x2="700" y2="180" stroke="#888"/>
+            <text x="410" y="210" font-size="14" fill="#ffd700">Prenatal flow sheet</text>
+            <text x="420" y="232" font-size="13" fill="#ffffff">Weight, BP each visit</text>
+            <text x="420" y="252" font-size="13" fill="#ffffff">Fundal height plotted</text>
+            <text x="410" y="285" font-size="14" fill="#ffd700">Antepartum labs</text>
+            <text x="420" y="307" font-size="13" fill="#ffffff">Type/screen, HIV, GBS</text>
+            <text x="410" y="340" font-size="14" fill="#ffd700">Ultrasound history</text>
+            <text x="420" y="362" font-size="13" fill="#ffffff">Dating + anatomy + BPP</text>
+            <text x="410" y="395" font-size="14" fill="#ffd700">Genetic screening</text>
+            <text x="420" y="417" font-size="13" fill="#ffffff">If elected by patient</text>
+            <text x="410" y="450" font-size="14" fill="#ffd700">Admission H&amp;P</text>
+            <text x="420" y="472" font-size="13" fill="#ffffff">L&amp;D specific</text>
+            <text x="410" y="505" font-size="14" fill="#ffd700">Partogram</text>
+            <text x="420" y="527" font-size="13" fill="#ffffff">Dilation, station, FHR</text>
+            <text x="410" y="560" font-size="14" fill="#ffd700">Delivery summary</text>
+            <text x="420" y="582" font-size="13" fill="#ffffff">Type, EBL, lacerations</text>
+            <text x="410" y="615" font-size="14" fill="#ffd700">APGAR 1, 5 min</text>
+            <text x="420" y="637" font-size="13" fill="#ffffff">Plus 10 min if &lt; 7</text>
+            <text x="410" y="670" font-size="14" fill="#ffd700">Newborn record</text>
+            <text x="420" y="692" font-size="13" fill="#ffffff">SEPARATE chart, linked</text>
+            <text x="410" y="725" font-size="14" fill="#ffd700">Birth certificate data</text>
+            <text x="420" y="747" font-size="13" fill="#ffffff">To state vital records</text>
+            <text x="410" y="780" font-size="14" fill="#ffd700">Postpartum notes</text>
+            <text x="420" y="802" font-size="13" fill="#ffffff">Until discharge</text>
+            <text x="410" y="840" font-size="14" fill="#10b981">FEEDS:</text>
+            <text x="420" y="862" font-size="13" fill="#ffffff">Vital records (birth)</text>
+            <text x="420" y="882" font-size="13" fill="#ffffff">Newborn screen registry</text>
+            <text x="420" y="902" font-size="13" fill="#ffffff">Joint Commission PC-02</text>
+            <text x="420" y="922" font-size="13" fill="#ffffff">Hospital quality data</text>
+            <text x="420" y="960" font-size="13" font-style="italic" fill="#ffd700">Two charts,</text>
+            <text x="420" y="978" font-size="13" font-style="italic" fill="#ffd700">one event</text>
+            <rect x="730" y="100" width="320" height="900" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="890" y="140" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">PEDIATRICS</text>
+            <text x="890" y="165" font-size="14" fill="#888" text-anchor="middle">4-year well-child visit</text>
+            <line x1="750" y1="180" x2="1040" y2="180" stroke="#888"/>
+            <text x="750" y="210" font-size="14" fill="#ffd700">Vital signs</text>
+            <text x="760" y="232" font-size="13" fill="#ffffff">Age-appropriate ranges</text>
+            <text x="750" y="265" font-size="14" fill="#ffd700">Growth chart (CDC)</text>
+            <text x="760" y="287" font-size="13" fill="#ffffff">Height, weight, BMI</text>
+            <text x="760" y="307" font-size="13" fill="#ffffff">Percentiles plotted</text>
+            <text x="750" y="340" font-size="14" fill="#ffd700">Head circumference</text>
+            <text x="760" y="362" font-size="13" fill="#ffffff">Through age 3 (WHO 0-2)</text>
+            <text x="750" y="395" font-size="14" fill="#ffd700">Immunization record</text>
+            <text x="760" y="417" font-size="13" fill="#ffffff">Today's vaccines + lot #</text>
+            <text x="760" y="437" font-size="13" fill="#ffffff">VIS given, date</text>
+            <text x="750" y="470" font-size="14" fill="#ffd700">ASQ-3 screen</text>
+            <text x="760" y="492" font-size="13" fill="#ffffff">Developmental milestones</text>
+            <text x="750" y="525" font-size="14" fill="#ffd700">Vision/hearing screen</text>
+            <text x="760" y="547" font-size="13" fill="#ffffff">Snellen, pure-tone</text>
+            <text x="750" y="580" font-size="14" fill="#ffd700">Dental varnish?</text>
+            <text x="760" y="602" font-size="13" fill="#ffffff">Per Bright Futures</text>
+            <text x="750" y="635" font-size="14" fill="#ffd700">Anticipatory guidance</text>
+            <text x="760" y="657" font-size="13" fill="#ffffff">Safety, nutrition counsel</text>
+            <text x="750" y="690" font-size="14" fill="#ffd700">Consent by parent</text>
+            <text x="760" y="712" font-size="13" fill="#ffffff">Or legal guardian</text>
+            <text x="750" y="745" font-size="14" fill="#ffd700">School/sports form</text>
+            <text x="760" y="767" font-size="13" fill="#ffffff">If applicable</text>
+            <text x="750" y="800" font-size="14" fill="#ffd700">Lead screen (if due)</text>
+            <text x="760" y="822" font-size="13" fill="#ffffff">Per CDC schedule</text>
+            <text x="750" y="855" font-size="14" fill="#10b981">FEEDS:</text>
+            <text x="760" y="877" font-size="13" fill="#ffffff">State immunization registry</text>
+            <text x="760" y="897" font-size="13" fill="#ffffff">School health forms</text>
+            <text x="760" y="917" font-size="13" fill="#ffffff">EPSDT (Medicaid)</text>
+            <text x="760" y="960" font-size="13" font-style="italic" fill="#ffd700">Consent by</text>
+            <text x="760" y="978" font-size="13" font-style="italic" fill="#ffd700">proxy required</text>
+          </svg>`,
+          caption: "Trauma, OB-GYN, and pediatric charts: side-by-side required documentation."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Knowledge",
+        content: `Which release scenario is **most likely a HIPAA violation**?`,
+        question: "A patient signs a standard ROI authorization to release their behavioral health treatment records to a new outpatient psychiatrist. The HIM tech, in good faith, includes the therapist's psychotherapy notes (kept in a separate logical folder in the EHR) along with the rest of the chart. Why is this a problem?",
+        options: [
+          { text: "Behavioral health records cannot be released to other providers under any circumstance without a court order.", correct: false },
+          { text: "Psychotherapy notes are excluded from a standard ROI authorization and require a separate, specific authorization that names them explicitly.", correct: true },
+          { text: "The ROI is invalid because behavioral health records always require notarized signatures.", correct: false },
+          { text: "Psychotherapy notes can never be released, even with patient authorization, under 42 CFR Part 2.", correct: false }
+        ],
+        explanation: "Under 45 CFR 164.508(a)(2), psychotherapy notes require a SEPARATE authorization that specifically identifies them. A general or standard ROI does not cover psychotherapy notes, even if the patient signed it. The HIM tech, no matter how well-intentioned, has made an unauthorized disclosure. (Behavioral health records CAN be released with proper authorization — option A is wrong. ROIs do not require notarization under federal law — option C is wrong. 42 CFR Part 2 covers substance use disorder records, not psychotherapy notes per se — option D is wrong.)",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Decision Tree: Releasing Behavioral Health Records</text>
+            <rect x="400" y="110" width="300" height="80" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3" rx="10"/>
+            <text x="550" y="145" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">ROI Request Received</text>
+            <text x="550" y="172" font-size="14" fill="#888" text-anchor="middle">Behavioral health patient</text>
+            <line x1="550" y1="190" x2="550" y2="220" stroke="#ffd700" stroke-width="2"/>
+            <polygon points="550,225 540,215 560,215" fill="#ffd700"/>
+            <rect x="350" y="230" width="400" height="80" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3" rx="10"/>
+            <text x="550" y="262" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Does request name psychotherapy notes?</text>
+            <text x="550" y="288" font-size="14" fill="#888" text-anchor="middle">Or could the requested records include them?</text>
+            <line x1="350" y1="310" x2="200" y2="370" stroke="#10b981" stroke-width="2"/>
+            <line x1="750" y1="310" x2="900" y2="370" stroke="#ef4444" stroke-width="2"/>
+            <text x="240" y="345" font-size="16" font-weight="bold" fill="#10b981">NO</text>
+            <text x="850" y="345" font-size="16" font-weight="bold" fill="#ef4444">YES</text>
+            <rect x="50" y="380" width="320" height="180" fill="#10b981" opacity="0.20" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="210" y="415" font-size="17" font-weight="bold" fill="#10b981" text-anchor="middle">Standard PHI Release</text>
+            <text x="70" y="445" font-size="14" fill="#ffffff">- Validate ROI form</text>
+            <text x="70" y="470" font-size="14" fill="#ffffff">- Validate signature</text>
+            <text x="70" y="495" font-size="14" fill="#ffffff">- Check expiration</text>
+            <text x="70" y="520" font-size="14" fill="#ffffff">- Process standard fields</text>
+            <text x="70" y="545" font-size="14" fill="#ffffff">- Log disclosure</text>
+            <rect x="730" y="380" width="320" height="180" fill="#ef4444" opacity="0.20" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="890" y="415" font-size="17" font-weight="bold" fill="#ef4444" text-anchor="middle">SEPARATE Authorization</text>
+            <text x="750" y="445" font-size="14" fill="#ffffff">- Specific to psychotherapy</text>
+            <text x="750" y="470" font-size="14" fill="#ffffff">- Names notes explicitly</text>
+            <text x="750" y="495" font-size="14" fill="#ffffff">- Stand-alone document</text>
+            <text x="750" y="520" font-size="14" fill="#ffffff">- Cannot be combined</text>
+            <text x="750" y="545" font-size="14" fill="#ffffff">- Per 164.508(a)(2)</text>
+            <line x1="210" y1="560" x2="210" y2="610" stroke="#ffd700" stroke-width="2"/>
+            <line x1="890" y1="560" x2="890" y2="610" stroke="#ffd700" stroke-width="2"/>
+            <rect x="50" y="620" width="320" height="100" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="210" y="655" font-size="15" font-weight="bold" fill="#10b981" text-anchor="middle">Release authorized portions</text>
+            <text x="210" y="685" font-size="14" fill="#ffffff" text-anchor="middle">Log to Accounting of</text>
+            <text x="210" y="705" font-size="14" fill="#ffffff" text-anchor="middle">Disclosures</text>
+            <rect x="730" y="620" width="320" height="100" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="890" y="655" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">Request separate auth from</text>
+            <text x="890" y="680" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">patient before release</text>
+            <text x="890" y="708" font-size="13" fill="#ffffff" text-anchor="middle">Do NOT bundle with general ROI</text>
+            <rect x="60" y="770" width="980" height="260" fill="#ffd700" opacity="0.10" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="810" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Why The Quiz Scenario Failed</text>
+            <text x="80" y="852" font-size="15" fill="#ffffff">The tech treated the standard ROI as covering everything in the EHR, including the separately</text>
+            <text x="80" y="880" font-size="15" fill="#ffffff">stored psychotherapy notes folder. Under 45 CFR 164.508(a)(2), psychotherapy notes need an</text>
+            <text x="80" y="908" font-size="15" fill="#ffffff">authorization that SPECIFICALLY names them. A general &quot;release my behavioral health records&quot;</text>
+            <text x="80" y="936" font-size="15" fill="#ffffff">box, even when signed in good faith, does not satisfy the specific-authorization requirement.</text>
+            <text x="80" y="975" font-size="15" font-weight="bold" fill="#ef4444">This is an unauthorized disclosure - a reportable HIPAA breach,</text>
+            <text x="80" y="1002" font-size="15" font-weight="bold" fill="#ef4444">even though the tech was not malicious.</text>
+          </svg>`,
+          caption: "Decision tree: when behavioral health ROIs need a separate authorization."
+        }
+      },
+      {
+        type: "application",
+        title: "Building a Specialty-Records Checklist",
+        content: `Apply what you have learned by building a **specialty intake checklist** for your HIM department. For every chart that enters the workflow, the tech asks: (1) **What setting?** Behavioral health, trauma, OB-GYN, pediatric, or general. (2) **What protected categories are present?** Psychotherapy notes, substance use treatment, HIV/AIDS, minor's reproductive health, genetic data. (3) **What special forms must be present?** Trauma activation log, partogram, growth chart, immunization registry receipt. (4) **What downstream registries are fed?** State trauma, immunization, vital records, EPSDT. (5) **What special consent rules apply?** Separate psychotherapy authorization, Part 2 redisclosure prohibition, parental consent or mature-minor exception. A checklist prevents the **good-faith mistake** the previous quiz illustrated — every release is filtered through the same questions, every chart is held to the same standard. Build one, post it at every ROI workstation, and audit compliance quarterly.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Specialty Records Intake Checklist</text>
+            <text x="550" y="90" font-size="16" fill="#888" text-anchor="middle">Post at every ROI workstation. Walk through it for every chart.</text>
+            <rect x="60" y="120" width="980" height="170" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="80" y="155" font-size="20" font-weight="bold" fill="#6366f1">1. SETTING IDENTIFICATION</text>
+            <text x="80" y="185" font-size="15" fill="#ffffff">[ ] General inpatient / outpatient (default workflow)</text>
+            <text x="80" y="210" font-size="15" fill="#ffffff">[ ] Behavioral health (Tier 1, possible Tier 2 psychotherapy)</text>
+            <text x="80" y="235" font-size="15" fill="#ffffff">[ ] Substance use disorder (42 CFR Part 2 applies if federally assisted)</text>
+            <text x="80" y="260" font-size="15" fill="#ffffff">[ ] Trauma / OB / Pediatric (specialty forms required)</text>
+            <rect x="60" y="305" width="980" height="170" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="80" y="340" font-size="20" font-weight="bold" fill="#8b5cf6">2. PROTECTED CATEGORIES PRESENT?</text>
+            <text x="80" y="370" font-size="15" fill="#ffffff">[ ] Psychotherapy notes (SEPARATE authorization needed)</text>
+            <text x="80" y="395" font-size="15" fill="#ffffff">[ ] SUD treatment record (Part 2 consent + redisclosure notice)</text>
+            <text x="80" y="420" font-size="15" fill="#ffffff">[ ] HIV/AIDS status (state-specific rules)</text>
+            <text x="80" y="445" font-size="15" fill="#ffffff">[ ] Minor's reproductive or mental health (state-specific consent rules)</text>
+            <rect x="60" y="490" width="980" height="170" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="80" y="525" font-size="20" font-weight="bold" fill="#ec4899">3. SPECIALTY FORMS COMPLETE?</text>
+            <text x="80" y="555" font-size="15" fill="#ffffff">[ ] Trauma: activation log, flow sheet, MOI, GCS, registry abstract</text>
+            <text x="80" y="580" font-size="15" fill="#ffffff">[ ] OB: prenatal sheet, antepartum labs, partogram, delivery summary, APGAR</text>
+            <text x="80" y="605" font-size="15" fill="#ffffff">[ ] Newborn: separate chart linked to mother by identifier</text>
+            <text x="80" y="630" font-size="15" fill="#ffffff">[ ] Peds: growth chart, immunization record, developmental screen, VIS log</text>
+            <rect x="60" y="675" width="980" height="170" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="80" y="710" font-size="20" font-weight="bold" fill="#10b981">4. DOWNSTREAM REGISTRY FEEDS?</text>
+            <text x="80" y="740" font-size="15" fill="#ffffff">[ ] State trauma registry (Level I/II requirement)</text>
+            <text x="80" y="765" font-size="15" fill="#ffffff">[ ] State immunization registry (today's vaccines reported within 24 hr)</text>
+            <text x="80" y="790" font-size="15" fill="#ffffff">[ ] Vital records (birth, death certificates)</text>
+            <text x="80" y="815" font-size="15" fill="#ffffff">[ ] EPSDT, Joint Commission core measures, cancer registry as applicable</text>
+            <rect x="60" y="860" width="980" height="170" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="80" y="895" font-size="20" font-weight="bold" fill="#f59e0b">5. CONSENT &amp; AUTHORIZATION VERIFIED?</text>
+            <text x="80" y="925" font-size="15" fill="#ffffff">[ ] Standard ROI signed, dated, not expired</text>
+            <text x="80" y="950" font-size="15" fill="#ffffff">[ ] Separate psychotherapy authorization if applicable</text>
+            <text x="80" y="975" font-size="15" fill="#ffffff">[ ] Part 2 redisclosure prohibition notice attached if applicable</text>
+            <text x="80" y="1000" font-size="15" fill="#ffd700">[ ] Parent/legal guardian for minor; mature-minor exception documented if used</text>
+          </svg>`,
+          caption: "A five-section checklist that prevents specialty-records release errors."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-1-lesson-11",
+    title: "AHIMA's 10 Data Quality Characteristics",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why AHIMA Defined the 10 Characteristics",
+        content: `In 1998 AHIMA published the **Data Quality Management Model**, naming **10 characteristics** that any clinical or administrative datum must satisfy to be considered high quality. Memorizing the list is table-stakes for the CCA exam — but understanding **how each fails** and **how HIM audits for each** is what makes you valuable on the floor. The 10 are: **accuracy, accessibility, comprehensiveness, consistency, currency, definition, granularity, precision, relevancy,** and **timeliness**. Each is a different lens on "is this data good enough to bill, treat, and report on?" An admission timestamp can be **precise** (down to the second) but **inaccurate** (wrong by 12 hours). A discharge summary can be **timely** (filed within 24 hours) but **incomplete** (missing medication reconciliation). A problem list can be **comprehensive** (every diagnosis recorded) but **inconsistent** (different spellings of the same condition). HIM teams design audits that catch each failure mode.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">AHIMA's 10 Data Quality Characteristics</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">Memorize the list. Master the failure modes. Audit for each.</text>
+            <rect x="60" y="130" width="225" height="170" fill="#6366f1" opacity="0.20" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="172" y="170" font-size="20" font-weight="bold" fill="#6366f1" text-anchor="middle">Accuracy</text>
+            <text x="172" y="200" font-size="14" fill="#ffffff" text-anchor="middle">Data is correct,</text>
+            <text x="172" y="222" font-size="14" fill="#ffffff" text-anchor="middle">free of error</text>
+            <text x="172" y="252" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="172" y="274" font-size="13" fill="#ffffff" text-anchor="middle">typos, wrong patient,</text>
+            <text x="172" y="290" font-size="13" fill="#ffffff" text-anchor="middle">wrong unit</text>
+            <rect x="295" y="130" width="225" height="170" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="407" y="170" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Accessibility</text>
+            <text x="407" y="200" font-size="14" fill="#ffffff" text-anchor="middle">Authorized users</text>
+            <text x="407" y="222" font-size="14" fill="#ffffff" text-anchor="middle">can retrieve it</text>
+            <text x="407" y="252" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="407" y="274" font-size="13" fill="#ffffff" text-anchor="middle">downtime, locked</text>
+            <text x="407" y="290" font-size="13" fill="#ffffff" text-anchor="middle">accounts, archived</text>
+            <rect x="530" y="130" width="225" height="170" fill="#ec4899" opacity="0.20" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="642" y="170" font-size="18" font-weight="bold" fill="#ec4899" text-anchor="middle">Comprehensiveness</text>
+            <text x="642" y="200" font-size="14" fill="#ffffff" text-anchor="middle">All required</text>
+            <text x="642" y="222" font-size="14" fill="#ffffff" text-anchor="middle">elements present</text>
+            <text x="642" y="252" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="642" y="274" font-size="13" fill="#ffffff" text-anchor="middle">missing H&amp;P, no</text>
+            <text x="642" y="290" font-size="13" fill="#ffffff" text-anchor="middle">discharge summary</text>
+            <rect x="765" y="130" width="225" height="170" fill="#10b981" opacity="0.20" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="877" y="170" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Consistency</text>
+            <text x="877" y="200" font-size="14" fill="#ffffff" text-anchor="middle">Same value</text>
+            <text x="877" y="222" font-size="14" fill="#ffffff" text-anchor="middle">across all records</text>
+            <text x="877" y="252" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="877" y="274" font-size="13" fill="#ffffff" text-anchor="middle">name spelled 3 ways,</text>
+            <text x="877" y="290" font-size="13" fill="#ffffff" text-anchor="middle">DOB differs by chart</text>
+            <rect x="60" y="320" width="225" height="170" fill="#f59e0b" opacity="0.20" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="172" y="360" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">Currency</text>
+            <text x="172" y="390" font-size="14" fill="#ffffff" text-anchor="middle">Data is up to date</text>
+            <text x="172" y="412" font-size="14" fill="#ffffff" text-anchor="middle">at point of use</text>
+            <text x="172" y="442" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="172" y="464" font-size="13" fill="#ffffff" text-anchor="middle">old allergies shown,</text>
+            <text x="172" y="480" font-size="13" fill="#ffffff" text-anchor="middle">discontinued meds</text>
+            <rect x="295" y="320" width="225" height="170" fill="#ef4444" opacity="0.20" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="407" y="360" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">Definition</text>
+            <text x="407" y="390" font-size="14" fill="#ffffff" text-anchor="middle">Clear meaning,</text>
+            <text x="407" y="412" font-size="14" fill="#ffffff" text-anchor="middle">documented</text>
+            <text x="407" y="442" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="407" y="464" font-size="13" fill="#ffffff" text-anchor="middle">no data dictionary,</text>
+            <text x="407" y="480" font-size="13" fill="#ffffff" text-anchor="middle">field name ambiguous</text>
+            <rect x="530" y="320" width="225" height="170" fill="#0ea5e9" opacity="0.20" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="642" y="360" font-size="20" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Granularity</text>
+            <text x="642" y="390" font-size="14" fill="#ffffff" text-anchor="middle">Appropriate</text>
+            <text x="642" y="412" font-size="14" fill="#ffffff" text-anchor="middle">level of detail</text>
+            <text x="642" y="442" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="642" y="464" font-size="13" fill="#ffffff" text-anchor="middle">&quot;pain&quot; instead of</text>
+            <text x="642" y="480" font-size="13" fill="#ffffff" text-anchor="middle">site/severity/onset</text>
+            <rect x="765" y="320" width="225" height="170" fill="#6366f1" opacity="0.20" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="877" y="360" font-size="20" font-weight="bold" fill="#6366f1" text-anchor="middle">Precision</text>
+            <text x="877" y="390" font-size="14" fill="#ffffff" text-anchor="middle">Fine-grained</text>
+            <text x="877" y="412" font-size="14" fill="#ffffff" text-anchor="middle">enough for use</text>
+            <text x="877" y="442" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="877" y="464" font-size="13" fill="#ffffff" text-anchor="middle">BP rounded to 100,</text>
+            <text x="877" y="480" font-size="13" fill="#ffffff" text-anchor="middle">weight in whole kg</text>
+            <rect x="180" y="510" width="225" height="170" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="292" y="550" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Relevancy</text>
+            <text x="292" y="580" font-size="14" fill="#ffffff" text-anchor="middle">Meaningful</text>
+            <text x="292" y="602" font-size="14" fill="#ffffff" text-anchor="middle">for purpose</text>
+            <text x="292" y="632" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="292" y="654" font-size="13" fill="#ffffff" text-anchor="middle">collected but never</text>
+            <text x="292" y="670" font-size="13" fill="#ffffff" text-anchor="middle">used in care/billing</text>
+            <rect x="650" y="510" width="225" height="170" fill="#ec4899" opacity="0.20" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="762" y="550" font-size="20" font-weight="bold" fill="#ec4899" text-anchor="middle">Timeliness</text>
+            <text x="762" y="580" font-size="14" fill="#ffffff" text-anchor="middle">Available when</text>
+            <text x="762" y="602" font-size="14" fill="#ffffff" text-anchor="middle">needed</text>
+            <text x="762" y="632" font-size="13" fill="#ffd700" text-anchor="middle">FAILS WHEN:</text>
+            <text x="762" y="654" font-size="13" fill="#ffffff" text-anchor="middle">H&amp;P signed 72 hr</text>
+            <text x="762" y="670" font-size="13" fill="#ffffff" text-anchor="middle">after admission</text>
+            <rect x="60" y="710" width="980" height="320" fill="#ffd700" opacity="0.10" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="750" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Memory Trick: A-A-C-C-C-D-G-P-R-T</text>
+            <text x="550" y="785" font-size="16" fill="#ffffff" text-anchor="middle">Three A's, three C's, then D-G-P-R-T</text>
+            <text x="80" y="825" font-size="15" fill="#ffffff">- Accuracy + Accessibility + Comprehensiveness</text>
+            <text x="80" y="855" font-size="15" fill="#ffffff">- Consistency + Currency</text>
+            <text x="80" y="885" font-size="15" fill="#ffffff">- Definition + Granularity</text>
+            <text x="80" y="915" font-size="15" fill="#ffffff">- Precision + Relevancy + Timeliness</text>
+            <text x="80" y="955" font-size="15" fill="#ffd700">A CCA candidate should be able to define each, give an example failure, and name a HIM audit method</text>
+            <text x="80" y="985" font-size="15" fill="#ffd700">that detects the failure. We unpack each in the next card.</text>
+            <text x="80" y="1015" font-size="14" fill="#888" italic="true">Source: AHIMA Data Quality Management Model (1998, updated 2015)</text>
+          </svg>`,
+          caption: "AHIMA's 10 data quality characteristics with failure modes."
+        }
+      },
+      {
+        type: "concept",
+        title: "How HIM Teams Audit Each Characteristic",
+        content: `Each characteristic has a **canonical audit method**. **Accuracy**: random-sample chart review comparing source documents against the EHR; e.g., does the recorded weight match the scale printout? **Accessibility**: downtime drills, account-lock audits, retrieval-time benchmarks. **Comprehensiveness**: deficiency analysis, the daily report of missing H&Ps, op notes, and discharge summaries. **Consistency**: MPI duplicate-record audits and cross-field rules (e.g., gender vs. procedure compatibility). **Currency**: medication reconciliation timestamps; problem-list update audits. **Definition**: data dictionary review, where every field has a documented meaning. **Granularity**: chart audits looking for "unspecified" codes that could have been more specific. **Precision**: comparing measurement device output (e.g., scale to one decimal) versus what was entered (whole number). **Relevancy**: data-use audits — is each collected element actually consumed by clinical, billing, or quality? **Timeliness**: tracking the gap between event occurrence and documentation entry — H&P within 24 hours, op note immediately post-procedure, discharge summary within 30 days.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Audit Method Matrix</text>
+            <text x="550" y="90" font-size="16" fill="#888" text-anchor="middle">For each characteristic: how HIM detects, measures, and reports failures</text>
+            <line x1="40" y1="120" x2="1060" y2="120" stroke="#ffd700" stroke-width="2"/>
+            <text x="55" y="150" font-size="15" font-weight="bold" fill="#ffd700">Characteristic</text>
+            <text x="280" y="150" font-size="15" font-weight="bold" fill="#ffd700">Audit Method</text>
+            <text x="640" y="150" font-size="15" font-weight="bold" fill="#ffd700">Metric/Target</text>
+            <text x="900" y="150" font-size="15" font-weight="bold" fill="#ffd700">Owner</text>
+            <line x1="40" y1="165" x2="1060" y2="165" stroke="#888" stroke-width="1"/>
+            <rect x="40" y="170" width="1020" height="40" fill="#6366f1" opacity="0.10"/>
+            <text x="55" y="197" font-size="14" fill="#ffffff">Accuracy</text>
+            <text x="280" y="197" font-size="14" fill="#ffffff">Source-vs-EHR sampling</text>
+            <text x="640" y="197" font-size="14" fill="#ffffff">&gt;98% match</text>
+            <text x="900" y="197" font-size="14" fill="#ffffff">HIM QA</text>
+            <rect x="40" y="215" width="1020" height="40" fill="#8b5cf6" opacity="0.10"/>
+            <text x="55" y="242" font-size="14" fill="#ffffff">Accessibility</text>
+            <text x="280" y="242" font-size="14" fill="#ffffff">Downtime/retrieval time</text>
+            <text x="640" y="242" font-size="14" fill="#ffffff">&lt;5 min retrieval</text>
+            <text x="900" y="242" font-size="14" fill="#ffffff">IT + HIM</text>
+            <rect x="40" y="260" width="1020" height="40" fill="#ec4899" opacity="0.10"/>
+            <text x="55" y="287" font-size="14" fill="#ffffff">Comprehensiveness</text>
+            <text x="280" y="287" font-size="14" fill="#ffffff">Deficiency analysis</text>
+            <text x="640" y="287" font-size="14" fill="#ffffff">&lt;2% delinquent</text>
+            <text x="900" y="287" font-size="14" fill="#ffffff">HIM</text>
+            <rect x="40" y="305" width="1020" height="40" fill="#10b981" opacity="0.10"/>
+            <text x="55" y="332" font-size="14" fill="#ffffff">Consistency</text>
+            <text x="280" y="332" font-size="14" fill="#ffffff">MPI dup audit, field rules</text>
+            <text x="640" y="332" font-size="14" fill="#ffffff">&lt;0.5% duplicates</text>
+            <text x="900" y="332" font-size="14" fill="#ffffff">MPI Coord</text>
+            <rect x="40" y="350" width="1020" height="40" fill="#f59e0b" opacity="0.10"/>
+            <text x="55" y="377" font-size="14" fill="#ffffff">Currency</text>
+            <text x="280" y="377" font-size="14" fill="#ffffff">Med rec timestamp audit</text>
+            <text x="640" y="377" font-size="14" fill="#ffffff">100% on admit</text>
+            <text x="900" y="377" font-size="14" fill="#ffffff">Pharm + HIM</text>
+            <rect x="40" y="395" width="1020" height="40" fill="#ef4444" opacity="0.10"/>
+            <text x="55" y="422" font-size="14" fill="#ffffff">Definition</text>
+            <text x="280" y="422" font-size="14" fill="#ffffff">Data dictionary review</text>
+            <text x="640" y="422" font-size="14" fill="#ffffff">100% fields defined</text>
+            <text x="900" y="422" font-size="14" fill="#ffffff">Data Gov</text>
+            <rect x="40" y="440" width="1020" height="40" fill="#0ea5e9" opacity="0.10"/>
+            <text x="55" y="467" font-size="14" fill="#ffffff">Granularity</text>
+            <text x="280" y="467" font-size="14" fill="#ffffff">Unspecified-code rate</text>
+            <text x="640" y="467" font-size="14" fill="#ffffff">&lt;5% unspec on key dx</text>
+            <text x="900" y="467" font-size="14" fill="#ffffff">Coding QA</text>
+            <rect x="40" y="485" width="1020" height="40" fill="#6366f1" opacity="0.10"/>
+            <text x="55" y="512" font-size="14" fill="#ffffff">Precision</text>
+            <text x="280" y="512" font-size="14" fill="#ffffff">Device vs entry compare</text>
+            <text x="640" y="512" font-size="14" fill="#ffffff">No truncation</text>
+            <text x="900" y="512" font-size="14" fill="#ffffff">HIM + Clin</text>
+            <rect x="40" y="530" width="1020" height="40" fill="#8b5cf6" opacity="0.10"/>
+            <text x="55" y="557" font-size="14" fill="#ffffff">Relevancy</text>
+            <text x="280" y="557" font-size="14" fill="#ffffff">Data use audit</text>
+            <text x="640" y="557" font-size="14" fill="#ffffff">All elements used</text>
+            <text x="900" y="557" font-size="14" fill="#ffffff">Data Gov</text>
+            <rect x="40" y="575" width="1020" height="40" fill="#ec4899" opacity="0.10"/>
+            <text x="55" y="602" font-size="14" fill="#ffffff">Timeliness</text>
+            <text x="280" y="602" font-size="14" fill="#ffffff">Event-to-entry lag report</text>
+            <text x="640" y="602" font-size="14" fill="#ffffff">H&amp;P &lt;24hr; DC &lt;30d</text>
+            <text x="900" y="602" font-size="14" fill="#ffffff">HIM</text>
+            <line x1="40" y1="625" x2="1060" y2="625" stroke="#ffd700" stroke-width="2"/>
+            <rect x="60" y="650" width="465" height="380" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="293" y="690" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">A Good Audit Cadence</text>
+            <text x="80" y="725" font-size="15" fill="#ffffff">DAILY: deficiency report,</text>
+            <text x="80" y="747" font-size="15" fill="#ffffff">retrieval-time log</text>
+            <text x="80" y="780" font-size="15" fill="#ffffff">WEEKLY: MPI duplicate</text>
+            <text x="80" y="802" font-size="15" fill="#ffffff">scan, query open-rate</text>
+            <text x="80" y="835" font-size="15" fill="#ffffff">MONTHLY: random chart</text>
+            <text x="80" y="857" font-size="15" fill="#ffffff">accuracy sample (5%)</text>
+            <text x="80" y="890" font-size="15" fill="#ffffff">QUARTERLY: data dictionary</text>
+            <text x="80" y="912" font-size="15" fill="#ffffff">review, unspecified-code</text>
+            <text x="80" y="934" font-size="15" fill="#ffffff">trending</text>
+            <text x="80" y="967" font-size="15" fill="#ffffff">ANNUAL: full data quality</text>
+            <text x="80" y="989" font-size="15" fill="#ffffff">scorecard + remediation</text>
+            <text x="80" y="1011" font-size="15" fill="#ffffff">plan</text>
+            <rect x="555" y="650" width="485" height="380" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="797" y="690" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">Reporting Up</text>
+            <text x="575" y="725" font-size="15" fill="#ffffff">Roll all 10 metrics into a</text>
+            <text x="575" y="747" font-size="15" fill="#ffffff">single DATA QUALITY</text>
+            <text x="575" y="770" font-size="15" fill="#ffffff">SCORECARD presented to</text>
+            <text x="575" y="792" font-size="15" fill="#ffffff">the HIM Committee monthly.</text>
+            <text x="575" y="825" font-size="15" fill="#ffd700">Each measure gets a Red/</text>
+            <text x="575" y="847" font-size="15" fill="#ffd700">Yellow/Green status. Red</text>
+            <text x="575" y="869" font-size="15" fill="#ffd700">triggers a written remedi-</text>
+            <text x="575" y="891" font-size="15" fill="#ffd700">ation plan with owner and</text>
+            <text x="575" y="913" font-size="15" fill="#ffd700">due date.</text>
+            <text x="575" y="950" font-size="15" fill="#ffffff">This is how data quality</text>
+            <text x="575" y="972" font-size="15" fill="#ffffff">moves from concept to</text>
+            <text x="575" y="994" font-size="15" fill="#ffffff">accountable practice in</text>
+            <text x="575" y="1016" font-size="15" fill="#ffffff">a real HIM department.</text>
+          </svg>`,
+          caption: "Audit method, metric, and owner for each of the 10 characteristics."
+        }
+      },
+      {
+        type: "example",
+        title: "Mr. Garcia's Chart: A Failure of All 10",
+        content: `Let us walk a single problematic chart through all 10 characteristics. **Mr. Garcia, 67, admitted for chest pain.** **Accuracy**: triage weight is 80 kg, but the scale strip shows 86 kg — typo. **Accessibility**: prior records are in the old archived system, takes 45 minutes to retrieve. **Comprehensiveness**: no H&P at 26 hours after admission — deficient. **Consistency**: name appears as "Garcia, J" in the cardiology consult but "Garcia, Juan" in the ED note — MPI ambiguity. **Currency**: problem list shows an aspirin allergy noted in 2019, but Mr. Garcia tells the nurse "I take aspirin every day now." **Definition**: a field labeled "score" has no associated rubric in the data dictionary. **Granularity**: diagnosis recorded as **R07.9 Chest pain, unspecified** when documentation supports **R07.2 Precordial pain**. **Precision**: BP recorded as "140/90" when device output was 138/87. **Relevancy**: a "patient hobbies" field collected at intake is never used. **Timeliness**: discharge summary signed 35 days post-discharge — late.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Mr. Garcia's Chart: 10 Failures, 10 Lessons</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">A single chart with one issue per AHIMA characteristic</text>
+            <rect x="60" y="120" width="480" height="100" fill="#6366f1" opacity="0.20" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="150" font-size="17" font-weight="bold" fill="#6366f1">1. ACCURACY</text>
+            <text x="80" y="175" font-size="14" fill="#ffffff">Recorded: 80 kg. Scale tape: 86 kg.</text>
+            <text x="80" y="198" font-size="14" fill="#ffd700">Fix: chart audit caught typo; weight corrected with addendum.</text>
+            <rect x="560" y="120" width="480" height="100" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="580" y="150" font-size="17" font-weight="bold" fill="#8b5cf6">2. ACCESSIBILITY</text>
+            <text x="580" y="175" font-size="14" fill="#ffffff">Old records take 45 min to retrieve from archive.</text>
+            <text x="580" y="198" font-size="14" fill="#ffd700">Fix: re-index archive; build EHR view of legacy data.</text>
+            <rect x="60" y="240" width="480" height="100" fill="#ec4899" opacity="0.20" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="80" y="270" font-size="17" font-weight="bold" fill="#ec4899">3. COMPREHENSIVENESS</text>
+            <text x="80" y="295" font-size="14" fill="#ffffff">No H&amp;P at 26 hr post-admission.</text>
+            <text x="80" y="318" font-size="14" fill="#ffd700">Fix: deficiency report flags; physician notified.</text>
+            <rect x="560" y="240" width="480" height="100" fill="#10b981" opacity="0.20" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="270" font-size="17" font-weight="bold" fill="#10b981">4. CONSISTENCY</text>
+            <text x="580" y="295" font-size="14" fill="#ffffff">&quot;Garcia, J&quot; vs &quot;Garcia, Juan&quot; in two notes.</text>
+            <text x="580" y="318" font-size="14" fill="#ffd700">Fix: MPI merge after duplicate-record investigation.</text>
+            <rect x="60" y="360" width="480" height="100" fill="#f59e0b" opacity="0.20" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="390" font-size="17" font-weight="bold" fill="#f59e0b">5. CURRENCY</text>
+            <text x="80" y="415" font-size="14" fill="#ffffff">2019 aspirin allergy still listed; pt now takes ASA daily.</text>
+            <text x="80" y="438" font-size="14" fill="#ffd700">Fix: med reconciliation updates problem list.</text>
+            <rect x="560" y="360" width="480" height="100" fill="#ef4444" opacity="0.20" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="580" y="390" font-size="17" font-weight="bold" fill="#ef4444">6. DEFINITION</text>
+            <text x="580" y="415" font-size="14" fill="#ffffff">Field &quot;score&quot; lacks documented meaning.</text>
+            <text x="580" y="438" font-size="14" fill="#ffd700">Fix: add to data dictionary with allowed values.</text>
+            <rect x="60" y="480" width="480" height="100" fill="#0ea5e9" opacity="0.20" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="80" y="510" font-size="17" font-weight="bold" fill="#0ea5e9">7. GRANULARITY</text>
+            <text x="80" y="535" font-size="14" fill="#ffffff">Coded R07.9 unspec; docs support R07.2 precordial.</text>
+            <text x="80" y="558" font-size="14" fill="#ffd700">Fix: coder query, recoded with specificity.</text>
+            <rect x="560" y="480" width="480" height="100" fill="#6366f1" opacity="0.20" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="580" y="510" font-size="17" font-weight="bold" fill="#6366f1">8. PRECISION</text>
+            <text x="580" y="535" font-size="14" fill="#ffffff">BP charted as 140/90; device reported 138/87.</text>
+            <text x="580" y="558" font-size="14" fill="#ffd700">Fix: configure device-to-EHR feed, no rounding.</text>
+            <rect x="60" y="600" width="480" height="100" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="80" y="630" font-size="17" font-weight="bold" fill="#8b5cf6">9. RELEVANCY</text>
+            <text x="80" y="655" font-size="14" fill="#ffffff">&quot;Hobbies&quot; field collected but never used.</text>
+            <text x="80" y="678" font-size="14" fill="#ffd700">Fix: governance review removes or repurposes field.</text>
+            <rect x="560" y="600" width="480" height="100" fill="#ec4899" opacity="0.20" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="580" y="630" font-size="17" font-weight="bold" fill="#ec4899">10. TIMELINESS</text>
+            <text x="580" y="655" font-size="14" fill="#ffffff">Discharge summary signed at day 35.</text>
+            <text x="580" y="678" font-size="14" fill="#ffd700">Fix: late-summary alert; physician privilege review.</text>
+            <rect x="60" y="720" width="980" height="310" fill="#ffd700" opacity="0.10" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="760" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">The Lesson</text>
+            <text x="80" y="800" font-size="16" fill="#ffffff">No single chart will be perfect on all 10 characteristics every time. The HIM team's job is to build</text>
+            <text x="80" y="828" font-size="16" fill="#ffffff">the audit routines that surface failures fast, attach them to the right owner, and trend them.</text>
+            <text x="80" y="870" font-size="16" fill="#ffffff">When Mr. Garcia's chart is processed:</text>
+            <text x="100" y="900" font-size="15" fill="#ffffff">- Daily deficiency report flags the missing H&amp;P (comprehensiveness)</text>
+            <text x="100" y="925" font-size="15" fill="#ffffff">- MPI scan flags name inconsistency (consistency)</text>
+            <text x="100" y="950" font-size="15" fill="#ffffff">- Coding QA flags R07.9 (granularity)</text>
+            <text x="100" y="975" font-size="15" fill="#ffffff">- Med-rec workflow updates allergies (currency)</text>
+            <text x="100" y="1000" font-size="15" fill="#ffd700">- Each failure is logged with owner, remediation, and a follow-up date.</text>
+          </svg>`,
+          caption: "One patient chart illustrating all 10 data quality failures and fixes."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Knowledge",
+        content: `Diagnose the failure mode.`,
+        question: "A coder reviews a discharge summary that lists 'pain' as a diagnosis with no further description of site, severity, onset, or laterality. The documentation is fully present, signed within 24 hours, and accurately reflects what the physician wrote. Which AHIMA data quality characteristic has most clearly failed?",
+        options: [
+          { text: "Timeliness — because the chart is now stuck in coding longer.", correct: false },
+          { text: "Accuracy — because 'pain' is not a precise medical term.", correct: false },
+          { text: "Granularity — because the level of detail is insufficient for coding and clinical use, even though the entry is accurate and timely.", correct: true },
+          { text: "Comprehensiveness — because the chart is missing required elements.", correct: false }
+        ],
+        explanation: "Granularity is the right answer: the chart is accurate (the physician really did write 'pain'), timely (signed within 24 hours), and comprehensive (no required form is missing). What failed is the level of DETAIL — the documentation lacks site, severity, onset, and laterality needed for specific coding and clinical decision-making. This is the classic granularity failure that triggers a CDI query. (Accuracy is wrong because the chart accurately reflects what was written. Timeliness is wrong because the entry was on time. Comprehensiveness is wrong because no element is missing — the element present is just not detailed enough.)",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Granularity: The Hardest Characteristic to Catch</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">It looks fine on every other axis. Only depth-of-detail audit catches it.</text>
+            <rect x="60" y="130" width="480" height="280" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="300" y="170" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">LOW GRANULARITY</text>
+            <text x="80" y="210" font-size="16" fill="#ffffff">Diagnosis: &quot;Pain&quot;</text>
+            <text x="80" y="240" font-size="14" fill="#888">Status checks:</text>
+            <text x="80" y="265" font-size="15" fill="#10b981">[OK] Accurate (matches physician's words)</text>
+            <text x="80" y="290" font-size="15" fill="#10b981">[OK] Timely (signed within 24 hr)</text>
+            <text x="80" y="315" font-size="15" fill="#10b981">[OK] Comprehensive (present, not missing)</text>
+            <text x="80" y="340" font-size="15" fill="#10b981">[OK] Accessible, current, defined</text>
+            <text x="80" y="375" font-size="16" font-weight="bold" fill="#ef4444">[FAIL] Granularity</text>
+            <text x="80" y="397" font-size="14" fill="#ffffff">Cannot code, cannot trend, cannot treat</text>
+            <rect x="560" y="130" width="480" height="280" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="800" y="170" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">HIGH GRANULARITY</text>
+            <text x="580" y="210" font-size="16" fill="#ffffff">Diagnosis: &quot;Acute, severe (7/10),</text>
+            <text x="580" y="232" font-size="16" fill="#ffffff">sub-sternal chest pain,</text>
+            <text x="580" y="254" font-size="16" fill="#ffffff">onset 02:30, radiating to left arm&quot;</text>
+            <text x="580" y="288" font-size="14" fill="#888">Now allows:</text>
+            <text x="580" y="313" font-size="15" fill="#10b981">[OK] Specific coding (e.g., I20.x angina)</text>
+            <text x="580" y="338" font-size="15" fill="#10b981">[OK] Trending pain patterns</text>
+            <text x="580" y="363" font-size="15" fill="#10b981">[OK] Treatment decisions</text>
+            <text x="580" y="388" font-size="15" fill="#10b981">[OK] Quality measurement</text>
+            <rect x="60" y="430" width="980" height="180" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="470" font-size="20" font-weight="bold" fill="#0ea5e9" text-anchor="middle">How HIM Audits for Granularity</text>
+            <text x="80" y="510" font-size="15" fill="#ffffff">- UNSPECIFIED-CODE RATE: % of records coded with &quot;.9 unspecified&quot; on key diagnoses</text>
+            <text x="80" y="540" font-size="15" fill="#ffffff">- CDI QUERY RATE: queries sent per discharge — high rate signals documentation depth issue</text>
+            <text x="80" y="570" font-size="15" fill="#ffffff">- TREND CONCERNED DIAGNOSES: pain, infection site, fracture laterality, organism specificity</text>
+            <text x="80" y="600" font-size="15" fill="#ffd700">- TARGET: less than 5% unspecified codes on diagnoses where specificity drives DRG/HCC</text>
+            <rect x="60" y="630" width="980" height="180" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="550" y="670" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Why It Matters</text>
+            <text x="80" y="710" font-size="15" fill="#ffffff">- Reimbursement: unspecified codes may map to lower-paying DRGs or HCCs</text>
+            <text x="80" y="740" font-size="15" fill="#ffffff">- Quality measurement: registries and core measures need specific codes</text>
+            <text x="80" y="770" font-size="15" fill="#ffffff">- Clinical decision support: alerts and protocols trigger off specific codes, not vague ones</text>
+            <text x="80" y="800" font-size="15" fill="#ffd700">- Population health: cannot stratify or compare without granular data</text>
+            <rect x="60" y="830" width="980" height="200" fill="#ffd700" opacity="0.10" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="870" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Why The Other Options Are Wrong</text>
+            <text x="80" y="908" font-size="15" fill="#ffffff">- Timeliness: signed within 24 hr is on time. The data IS there, it's just not detailed enough.</text>
+            <text x="80" y="938" font-size="15" fill="#ffffff">- Accuracy: the entry accurately reflects what was written. Accuracy = matches source.</text>
+            <text x="80" y="968" font-size="15" fill="#ffffff">- Comprehensiveness: nothing is MISSING — the diagnosis field is filled. The fill is just too shallow.</text>
+            <text x="80" y="1005" font-size="15" font-weight="bold" fill="#ffd700">Granularity is uniquely the &quot;depth of detail&quot; characteristic.</text>
+          </svg>`,
+          caption: "Granularity vs. accuracy, timeliness, comprehensiveness."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Department's DQ Scorecard",
+        content: `Synthesize the lesson by sketching a **monthly Data Quality Scorecard** for an HIM department. The scorecard has **one row per AHIMA characteristic** and four columns: **Metric, Target, Actual, Status**. Each metric maps to a concrete data source: the deficiency report for comprehensiveness; the MPI duplicate rate for consistency; the unspecified-code rate for granularity; the event-to-entry lag for timeliness; the data-dictionary completeness for definition; and so on. Status is **Red, Yellow, or Green** based on threshold bands the HIM Committee adopts. Red metrics trigger a written **remediation plan** with a named owner and due date. Yellow metrics get monitored. Green metrics get celebrated and re-baselined upward. Present the scorecard to the HIM Committee monthly, and surface annual trends to the **HIPAA Privacy and Security Committee**, the **Medical Staff Quality Committee**, and ultimately the **C-suite**. This is how data quality becomes a managed program rather than a slogan.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">HIM Monthly Data Quality Scorecard</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">Sample design — one row per characteristic, color-coded status</text>
+            <line x1="40" y1="120" x2="1060" y2="120" stroke="#ffd700" stroke-width="2"/>
+            <text x="55" y="148" font-size="14" font-weight="bold" fill="#ffd700">Characteristic</text>
+            <text x="265" y="148" font-size="14" font-weight="bold" fill="#ffd700">Metric</text>
+            <text x="615" y="148" font-size="14" font-weight="bold" fill="#ffd700">Target</text>
+            <text x="785" y="148" font-size="14" font-weight="bold" fill="#ffd700">Actual</text>
+            <text x="945" y="148" font-size="14" font-weight="bold" fill="#ffd700">Status</text>
+            <line x1="40" y1="160" x2="1060" y2="160" stroke="#888" stroke-width="1"/>
+            <rect x="40" y="165" width="1020" height="40" fill="#6366f1" opacity="0.10"/>
+            <text x="55" y="192" font-size="14" fill="#ffffff">Accuracy</text>
+            <text x="265" y="192" font-size="14" fill="#ffffff">Source-vs-EHR match rate</text>
+            <text x="615" y="192" font-size="14" fill="#ffffff">98%</text>
+            <text x="785" y="192" font-size="14" fill="#ffffff">98.3%</text>
+            <rect x="935" y="178" width="80" height="22" fill="#10b981" rx="4"/>
+            <text x="975" y="194" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">GREEN</text>
+            <rect x="40" y="210" width="1020" height="40" fill="#8b5cf6" opacity="0.10"/>
+            <text x="55" y="237" font-size="14" fill="#ffffff">Accessibility</text>
+            <text x="265" y="237" font-size="14" fill="#ffffff">Avg retrieval time (min)</text>
+            <text x="615" y="237" font-size="14" fill="#ffffff">&lt; 5</text>
+            <text x="785" y="237" font-size="14" fill="#ffffff">4.1</text>
+            <rect x="935" y="223" width="80" height="22" fill="#10b981" rx="4"/>
+            <text x="975" y="239" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">GREEN</text>
+            <rect x="40" y="255" width="1020" height="40" fill="#ec4899" opacity="0.10"/>
+            <text x="55" y="282" font-size="14" fill="#ffffff">Comprehensiveness</text>
+            <text x="265" y="282" font-size="14" fill="#ffffff">Delinquent record rate</text>
+            <text x="615" y="282" font-size="14" fill="#ffffff">&lt; 2%</text>
+            <text x="785" y="282" font-size="14" fill="#ffffff">3.4%</text>
+            <rect x="935" y="268" width="80" height="22" fill="#f59e0b" rx="4"/>
+            <text x="975" y="284" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YELLOW</text>
+            <rect x="40" y="300" width="1020" height="40" fill="#10b981" opacity="0.10"/>
+            <text x="55" y="327" font-size="14" fill="#ffffff">Consistency</text>
+            <text x="265" y="327" font-size="14" fill="#ffffff">MPI duplicate rate</text>
+            <text x="615" y="327" font-size="14" fill="#ffffff">&lt; 0.5%</text>
+            <text x="785" y="327" font-size="14" fill="#ffffff">0.3%</text>
+            <rect x="935" y="313" width="80" height="22" fill="#10b981" rx="4"/>
+            <text x="975" y="329" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">GREEN</text>
+            <rect x="40" y="345" width="1020" height="40" fill="#f59e0b" opacity="0.10"/>
+            <text x="55" y="372" font-size="14" fill="#ffffff">Currency</text>
+            <text x="265" y="372" font-size="14" fill="#ffffff">Med rec on admission</text>
+            <text x="615" y="372" font-size="14" fill="#ffffff">100%</text>
+            <text x="785" y="372" font-size="14" fill="#ffffff">97%</text>
+            <rect x="935" y="358" width="80" height="22" fill="#f59e0b" rx="4"/>
+            <text x="975" y="374" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YELLOW</text>
+            <rect x="40" y="390" width="1020" height="40" fill="#ef4444" opacity="0.10"/>
+            <text x="55" y="417" font-size="14" fill="#ffffff">Definition</text>
+            <text x="265" y="417" font-size="14" fill="#ffffff">Dictionary completeness</text>
+            <text x="615" y="417" font-size="14" fill="#ffffff">100%</text>
+            <text x="785" y="417" font-size="14" fill="#ffffff">82%</text>
+            <rect x="935" y="403" width="80" height="22" fill="#ef4444" rx="4"/>
+            <text x="975" y="419" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">RED</text>
+            <rect x="40" y="435" width="1020" height="40" fill="#0ea5e9" opacity="0.10"/>
+            <text x="55" y="462" font-size="14" fill="#ffffff">Granularity</text>
+            <text x="265" y="462" font-size="14" fill="#ffffff">Unspecified code rate</text>
+            <text x="615" y="462" font-size="14" fill="#ffffff">&lt; 5%</text>
+            <text x="785" y="462" font-size="14" fill="#ffffff">7.2%</text>
+            <rect x="935" y="448" width="80" height="22" fill="#f59e0b" rx="4"/>
+            <text x="975" y="464" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YELLOW</text>
+            <rect x="40" y="480" width="1020" height="40" fill="#6366f1" opacity="0.10"/>
+            <text x="55" y="507" font-size="14" fill="#ffffff">Precision</text>
+            <text x="265" y="507" font-size="14" fill="#ffffff">Device-EHR feed compliance</text>
+            <text x="615" y="507" font-size="14" fill="#ffffff">100%</text>
+            <text x="785" y="507" font-size="14" fill="#ffffff">100%</text>
+            <rect x="935" y="493" width="80" height="22" fill="#10b981" rx="4"/>
+            <text x="975" y="509" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">GREEN</text>
+            <rect x="40" y="525" width="1020" height="40" fill="#8b5cf6" opacity="0.10"/>
+            <text x="55" y="552" font-size="14" fill="#ffffff">Relevancy</text>
+            <text x="265" y="552" font-size="14" fill="#ffffff">Unused field count</text>
+            <text x="615" y="552" font-size="14" fill="#ffffff">0</text>
+            <text x="785" y="552" font-size="14" fill="#ffffff">4</text>
+            <rect x="935" y="538" width="80" height="22" fill="#f59e0b" rx="4"/>
+            <text x="975" y="554" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YELLOW</text>
+            <rect x="40" y="570" width="1020" height="40" fill="#ec4899" opacity="0.10"/>
+            <text x="55" y="597" font-size="14" fill="#ffffff">Timeliness</text>
+            <text x="265" y="597" font-size="14" fill="#ffffff">DC summary &lt; 30 days</text>
+            <text x="615" y="597" font-size="14" fill="#ffffff">100%</text>
+            <text x="785" y="597" font-size="14" fill="#ffffff">94%</text>
+            <rect x="935" y="583" width="80" height="22" fill="#f59e0b" rx="4"/>
+            <text x="975" y="599" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YELLOW</text>
+            <line x1="40" y1="620" x2="1060" y2="620" stroke="#ffd700" stroke-width="2"/>
+            <rect x="60" y="650" width="980" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="690" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">Remediation Plan: RED &quot;Definition&quot; Metric</text>
+            <text x="80" y="725" font-size="15" fill="#ffffff">Issue: Data dictionary 82% complete; 18% of new fields lack documented meaning.</text>
+            <text x="80" y="752" font-size="15" fill="#ffffff">Owner: Data Governance Lead</text>
+            <text x="80" y="779" font-size="15" fill="#ffffff">Action: 90-day sprint to backfill all undefined fields with Data Steward review.</text>
+            <text x="80" y="806" font-size="15" fill="#ffffff">Due date: 90 days from this scorecard.</text>
+            <text x="80" y="833" font-size="15" fill="#ffd700">Status: Reported to HIM Committee monthly until back to GREEN.</text>
+            <rect x="60" y="870" width="980" height="160" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="908" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Reporting Up</text>
+            <text x="80" y="945" font-size="15" fill="#ffffff">- HIM Committee: monthly scorecard, all 10 rows.</text>
+            <text x="80" y="972" font-size="15" fill="#ffffff">- Privacy &amp; Security Committee: accessibility + consistency rows quarterly.</text>
+            <text x="80" y="999" font-size="15" fill="#ffffff">- Medical Staff Quality Committee: granularity + timeliness rows quarterly.</text>
+            <text x="80" y="1024" font-size="15" fill="#ffd700">- C-suite annual data quality summary with year-over-year trends.</text>
+          </svg>`,
+          caption: "Sample HIM monthly Data Quality Scorecard with status, remediation, reporting cadence."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-1-lesson-12",
+    title: "Capstone: A Day in the Life of an HIM Coding Tech",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "What Domain 1 Looks Like at 7 a.m.",
+        content: `Every CCA-relevant concept in Domain 1 — record types, data sets, HIPAA, MPI, ROI, retention, documentation quality, specialty records — converges on **what an actual HIM coding tech does in an 8-hour shift**. This capstone walks through a realistic Tuesday in the life of **Maria**, a coding tech in a 300-bed community hospital. She arrives at 7:00 a.m., logs into the **EHR**, the **encoder** (3M 360 or Optum EncoderPro), the **CAC (Computer-Assisted Coding)** system, and the **ROI queue**. Her morning is **coding charts** from the discharged-not-final-billed list. Her midday brings **ROI requests** from patients, attorneys, and insurers. Her afternoon includes a **CDI query response** review and a **payer audit** sampling. End of day is **claim scrubbing** and a brief huddle with the coding supervisor. Every chart she touches passes through HIPAA, MPI verification, documentation review, and data quality lenses you have learned across this Domain.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Maria's Tuesday: 7 a.m. to 4 p.m.</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">HIM Coding Tech, 300-bed community hospital</text>
+            <line x1="80" y1="150" x2="80" y2="1020" stroke="#ffd700" stroke-width="3"/>
+            <circle cx="80" cy="180" r="14" fill="#6366f1"/>
+            <text x="80" y="186" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+            <text x="110" y="175" font-size="18" font-weight="bold" fill="#6366f1">7:00 - LOG IN &amp; QUEUE REVIEW</text>
+            <text x="110" y="200" font-size="14" fill="#ffffff">EHR, encoder (3M 360), CAC system, ROI queue all unlocked</text>
+            <text x="110" y="220" font-size="14" fill="#ffffff">Reviews overnight DNFB (Discharged Not Final Billed) report</text>
+            <circle cx="80" cy="260" r="14" fill="#8b5cf6"/>
+            <text x="80" y="266" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+            <text x="110" y="255" font-size="18" font-weight="bold" fill="#8b5cf6">8:00 - INPATIENT CODING BLOCK</text>
+            <text x="110" y="280" font-size="14" fill="#ffffff">Codes 6 inpatient discharges, ICD-10-CM/PCS</text>
+            <text x="110" y="300" font-size="14" fill="#ffffff">Uses CAC suggestions, validates against documentation</text>
+            <circle cx="80" cy="340" r="14" fill="#ec4899"/>
+            <text x="80" y="346" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+            <text x="110" y="335" font-size="18" font-weight="bold" fill="#ec4899">10:00 - CDI QUERY RESPONSE</text>
+            <text x="110" y="360" font-size="14" fill="#ffffff">Reviews 2 queries returned by physicians overnight</text>
+            <text x="110" y="380" font-size="14" fill="#ffffff">Updates codes based on clarified documentation</text>
+            <circle cx="80" cy="420" r="14" fill="#10b981"/>
+            <text x="80" y="426" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">11</text>
+            <text x="110" y="415" font-size="18" font-weight="bold" fill="#10b981">11:00 - ROI REQUESTS</text>
+            <text x="110" y="440" font-size="14" fill="#ffffff">8 release-of-information requests in queue</text>
+            <text x="110" y="460" font-size="14" fill="#ffffff">Verifies authorizations, checks for psychotherapy notes flag</text>
+            <circle cx="80" cy="500" r="14" fill="#f59e0b"/>
+            <text x="80" y="506" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">12</text>
+            <text x="110" y="495" font-size="18" font-weight="bold" fill="#f59e0b">12:00 - LUNCH</text>
+            <text x="110" y="520" font-size="14" fill="#ffffff">30 minutes - laptop locked, badge in pocket</text>
+            <text x="110" y="540" font-size="14" fill="#ffffff">HIPAA: no PHI discussion in the cafeteria</text>
+            <circle cx="80" cy="580" r="14" fill="#0ea5e9"/>
+            <text x="80" y="586" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+            <text x="110" y="575" font-size="18" font-weight="bold" fill="#0ea5e9">12:30 - OUTPATIENT CODING</text>
+            <text x="110" y="600" font-size="14" fill="#ffffff">Codes 15 outpatient encounters (ED, observation, surgery)</text>
+            <text x="110" y="620" font-size="14" fill="#ffffff">ICD-10-CM + CPT + HCPCS; OPPS/APC validation</text>
+            <circle cx="80" cy="660" r="14" fill="#6366f1"/>
+            <text x="80" y="666" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+            <text x="110" y="655" font-size="18" font-weight="bold" fill="#6366f1">2:00 - PAYER AUDIT PULL</text>
+            <text x="110" y="680" font-size="14" fill="#ffffff">3 charts requested by Medicare RAC contractor</text>
+            <text x="110" y="700" font-size="14" fill="#ffffff">Pulls complete encounter, signs disclosure log</text>
+            <circle cx="80" cy="740" r="14" fill="#ef4444"/>
+            <text x="80" y="746" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+            <text x="110" y="735" font-size="18" font-weight="bold" fill="#ef4444">3:00 - NEW CDI QUERIES</text>
+            <text x="110" y="760" font-size="14" fill="#ffffff">Issues 4 queries for unspecified diagnoses</text>
+            <text x="110" y="780" font-size="14" fill="#ffffff">Uses approved query templates (compliant, non-leading)</text>
+            <circle cx="80" cy="820" r="14" fill="#10b981"/>
+            <text x="80" y="826" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3:30</text>
+            <text x="120" y="815" font-size="18" font-weight="bold" fill="#10b981">3:30 - CLAIM SCRUBBING</text>
+            <text x="120" y="840" font-size="14" fill="#ffffff">Reviews coded charts in scrubber for edits before billing</text>
+            <text x="120" y="860" font-size="14" fill="#ffffff">NCCI edits, MUE checks, medical necessity</text>
+            <circle cx="80" cy="900" r="14" fill="#ec4899"/>
+            <text x="80" y="906" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3:45</text>
+            <text x="120" y="895" font-size="18" font-weight="bold" fill="#ec4899">3:45 - HUDDLE</text>
+            <text x="120" y="920" font-size="14" fill="#ffffff">15-min team check-in with coding supervisor</text>
+            <text x="120" y="940" font-size="14" fill="#ffffff">Productivity, accuracy, problem charts discussed</text>
+            <circle cx="80" cy="980" r="14" fill="#ffd700"/>
+            <text x="80" y="986" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">4</text>
+            <text x="110" y="975" font-size="18" font-weight="bold" fill="#ffd700">4:00 - LOG OUT</text>
+            <text x="110" y="1000" font-size="14" fill="#ffffff">All systems locked, badge swiped out, daily metrics submitted</text>
+          </svg>`,
+          caption: "Maria's hour-by-hour Tuesday in HIM coding."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Tools That Make It Work",
+        content: `Maria touches **five distinct software systems** every hour, and Domain 1 expects you to know each. The **EHR** (Epic, Cerner, Meditech) is her source of truth for documentation. The **encoder** (3M 360 Encompass, Optum EncoderPro) helps her select ICD-10-CM, ICD-10-PCS, CPT, and HCPCS codes correctly — it walks her through code books interactively and applies guideline edits. The **CAC (Computer-Assisted Coding)** system uses **natural language processing** to read clinical documents and **suggest** codes — Maria's job is to **validate** every suggestion against the actual documentation, accepting, rejecting, or adding codes. The **CDI query system** (e.g., 3M Compliant Documentation) generates non-leading queries to physicians using AHIMA-approved templates. The **claim scrubber** (e.g., SSI, Optum CES) applies **NCCI edits, MUE limits, LCDs/NCDs,** and medical necessity rules before claims drop. Underneath it all, the **MPI** keeps the patient identity stable across every system. Each tool has a HIPAA audit log that records every access.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Maria's Tech Stack: Five Tools Working Together</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">EHR is source of truth. Encoder + CAC drive coding. Scrubber gates billing.</text>
+            <rect x="400" y="120" width="300" height="120" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3" rx="10"/>
+            <text x="550" y="160" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">EHR</text>
+            <text x="550" y="190" font-size="14" fill="#ffffff" text-anchor="middle">Epic / Cerner / Meditech</text>
+            <text x="550" y="215" font-size="14" fill="#ffffff" text-anchor="middle">Source of truth: documentation</text>
+            <line x1="550" y1="240" x2="200" y2="320" stroke="#ffd700" stroke-width="2"/>
+            <line x1="550" y1="240" x2="900" y2="320" stroke="#ffd700" stroke-width="2"/>
+            <line x1="550" y1="240" x2="550" y2="320" stroke="#ffd700" stroke-width="2"/>
+            <rect x="50" y="320" width="300" height="180" fill="#8b5cf6" opacity="0.20" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+            <text x="200" y="360" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">CAC</text>
+            <text x="200" y="385" font-size="14" fill="#ffffff" text-anchor="middle">Computer-Assisted Coding</text>
+            <text x="70" y="415" font-size="13" fill="#ffffff">NLP reads documents</text>
+            <text x="70" y="438" font-size="13" fill="#ffffff">Suggests ICD/CPT codes</text>
+            <text x="70" y="461" font-size="13" fill="#ffffff">Coder validates each</text>
+            <text x="70" y="484" font-size="13" fill="#ffd700">Productivity boost ~30-40%</text>
+            <rect x="400" y="320" width="300" height="180" fill="#10b981" opacity="0.20" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="550" y="360" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">ENCODER</text>
+            <text x="550" y="385" font-size="14" fill="#ffffff" text-anchor="middle">3M 360 / Optum</text>
+            <text x="420" y="415" font-size="13" fill="#ffffff">Walks coder through</text>
+            <text x="420" y="438" font-size="13" fill="#ffffff">ICD-10-CM/PCS tabular</text>
+            <text x="420" y="461" font-size="13" fill="#ffffff">Applies coding guidelines</text>
+            <text x="420" y="484" font-size="13" fill="#ffd700">DRG grouper integrated</text>
+            <rect x="750" y="320" width="300" height="180" fill="#ec4899" opacity="0.20" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="900" y="360" font-size="20" font-weight="bold" fill="#ec4899" text-anchor="middle">CDI QUERY</text>
+            <text x="900" y="385" font-size="14" fill="#ffffff" text-anchor="middle">Compliant query tool</text>
+            <text x="770" y="415" font-size="13" fill="#ffffff">AHIMA-approved templates</text>
+            <text x="770" y="438" font-size="13" fill="#ffffff">Non-leading wording</text>
+            <text x="770" y="461" font-size="13" fill="#ffffff">Tracks response time</text>
+            <text x="770" y="484" font-size="13" fill="#ffd700">Becomes part of legal record</text>
+            <line x1="200" y1="500" x2="550" y2="580" stroke="#ffd700" stroke-width="2"/>
+            <line x1="550" y1="500" x2="550" y2="580" stroke="#ffd700" stroke-width="2"/>
+            <line x1="900" y1="500" x2="550" y2="580" stroke="#ffd700" stroke-width="2"/>
+            <rect x="400" y="580" width="300" height="120" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3" rx="10"/>
+            <text x="550" y="620" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">CLAIM SCRUBBER</text>
+            <text x="550" y="650" font-size="14" fill="#ffffff" text-anchor="middle">NCCI, MUE, LCD/NCD edits</text>
+            <text x="550" y="675" font-size="14" fill="#ffffff" text-anchor="middle">Medical necessity validation</text>
+            <line x1="550" y1="700" x2="550" y2="750" stroke="#ffd700" stroke-width="2"/>
+            <rect x="400" y="750" width="300" height="80" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3" rx="10"/>
+            <text x="550" y="785" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">BILLING / PAYER</text>
+            <text x="550" y="812" font-size="14" fill="#ffffff" text-anchor="middle">837i / 837p claim drops</text>
+            <rect x="60" y="860" width="980" height="170" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="900" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">Under Every Tool: MPI + HIPAA Audit Trail</text>
+            <text x="80" y="935" font-size="15" fill="#ffffff">- The MPI (Master Patient Index) supplies the consistent patient identifier every system uses.</text>
+            <text x="80" y="962" font-size="15" fill="#ffffff">- Every chart access, code change, query, and release is LOGGED with user, timestamp, action.</text>
+            <text x="80" y="989" font-size="15" fill="#ffffff">- HIM and Privacy Officers can pull audit reports for any patient, any time period, any user.</text>
+            <text x="80" y="1016" font-size="15" fill="#ffd700">- Snooping (accessing PHI without a job-related reason) is the #1 cause of HIPAA termination.</text>
+          </svg>`,
+          caption: "Five tools in Maria's stack, all governed by MPI and HIPAA audit trails."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Decisions Maria Made Today",
+        content: `Domain 1 lives in the **judgement calls** Maria makes on real charts. **10:15 a.m.**: a CDI query came back. Physician initially documented "pneumonia." CDI asked: "Can you specify the organism if known?" Physician replied: "Documentation indicates **Streptococcus pneumoniae** pneumonia." Maria updates **J18.9 unspecified** to **J13 Pneumonia due to Streptococcus pneumoniae** — a more granular code, supports correct DRG. **11:30 a.m.**: an ROI request from an attorney for a behavioral health patient's full record. Maria sees the chart contains **psychotherapy notes** kept in a separate folder. The standard authorization the attorney provided does NOT specifically name psychotherapy notes. Maria releases the standard PHI, withholds the psychotherapy notes, and sends a letter explaining the separate-authorization requirement. **2:45 p.m.**: a CDI query opportunity arises — physician wrote "AKI," and labs show a clear creatinine pattern. Maria issues a non-leading query: "Documentation reflects AKI. Please clarify if AKI is due to dehydration, ATN, sepsis, or other specified etiology." She does NOT lead the physician to a higher-paying answer.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Real Decisions: The Domain 1 Lens</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">Every decision tested against documentation, HIPAA, and integrity rules</text>
+            <rect x="60" y="120" width="980" height="280" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="80" y="160" font-size="20" font-weight="bold" fill="#10b981">DECISION 1 - 10:15 a.m. - CDI Query Response on Pneumonia</text>
+            <text x="80" y="195" font-size="14" fill="#ffffff">SITUATION: Physician documented &quot;pneumonia&quot; - coded J18.9 unspecified pre-query.</text>
+            <text x="80" y="218" font-size="14" fill="#ffffff">QUERY: &quot;Can you specify organism if known?&quot;</text>
+            <text x="80" y="241" font-size="14" fill="#ffffff">RESPONSE: Physician documented &quot;Streptococcus pneumoniae pneumonia.&quot;</text>
+            <text x="80" y="264" font-size="14" fill="#ffffff">ACTION: Maria recodes J18.9 -&gt; J13 Pneumonia due to S. pneumoniae.</text>
+            <text x="80" y="295" font-size="15" font-weight="bold" fill="#ffd700">DOMAIN 1 LENSES APPLIED:</text>
+            <text x="80" y="320" font-size="14" fill="#ffffff">- Granularity (data quality): more specific code, supports outcomes tracking</text>
+            <text x="80" y="343" font-size="14" fill="#ffffff">- Documentation integrity: code matches physician's explicit statement</text>
+            <text x="80" y="366" font-size="14" fill="#ffffff">- Legal record: the query &amp; response are saved AS PART OF THE LEGAL RECORD</text>
+            <text x="80" y="389" font-size="14" fill="#ffffff">- Reimbursement: J13 maps to a CC, increases DRG appropriately</text>
+            <rect x="60" y="415" width="980" height="280" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="80" y="455" font-size="20" font-weight="bold" fill="#8b5cf6">DECISION 2 - 11:30 a.m. - ROI for Behavioral Health Patient</text>
+            <text x="80" y="490" font-size="14" fill="#ffffff">SITUATION: Attorney requests &quot;full medical record&quot; with patient's signed standard ROI.</text>
+            <text x="80" y="513" font-size="14" fill="#ffffff">DISCOVERY: Chart contains psychotherapy notes in a separately stored folder.</text>
+            <text x="80" y="536" font-size="14" fill="#ffffff">DECISION: Release standard PHI; WITHHOLD psychotherapy notes.</text>
+            <text x="80" y="559" font-size="14" fill="#ffffff">FOLLOWUP: Letter to attorney explaining 45 CFR 164.508(a)(2) and need for specific auth.</text>
+            <text x="80" y="590" font-size="15" font-weight="bold" fill="#ffd700">DOMAIN 1 LENSES APPLIED:</text>
+            <text x="80" y="615" font-size="14" fill="#ffffff">- HIPAA: psychotherapy notes require separate, specific authorization</text>
+            <text x="80" y="638" font-size="14" fill="#ffffff">- Specialty records rule: behavioral health has extra protections</text>
+            <text x="80" y="661" font-size="14" fill="#ffffff">- Accounting of Disclosures: logged with disclosure type, recipient, date</text>
+            <text x="80" y="684" font-size="14" fill="#ffffff">- Minimum necessary: only what is authorized is sent</text>
+            <rect x="60" y="710" width="980" height="320" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="80" y="750" font-size="20" font-weight="bold" fill="#ec4899">DECISION 3 - 2:45 p.m. - CDI Query for Unspecified AKI</text>
+            <text x="80" y="785" font-size="14" fill="#ffffff">SITUATION: Physician documented &quot;AKI&quot; without etiology. Creatinine pattern suggests cause.</text>
+            <text x="80" y="808" font-size="14" fill="#ffffff">QUERY (Maria's draft): &quot;Documentation reflects AKI. Please clarify etiology if known:</text>
+            <text x="80" y="831" font-size="14" fill="#ffffff">  dehydration, ATN, sepsis-related, contrast-induced, post-renal, or other specified.&quot;</text>
+            <text x="80" y="854" font-size="14" fill="#ffffff">WHY THIS WORDING WORKS: lists multiple plausible options, none favored, &quot;if known.&quot;</text>
+            <text x="80" y="877" font-size="14" fill="#ffd700">WHAT MARIA DID NOT DO: write &quot;Was the AKI due to ATN?&quot; - that would be LEADING.</text>
+            <text x="80" y="908" font-size="15" font-weight="bold" fill="#ffd700">DOMAIN 1 LENSES APPLIED:</text>
+            <text x="80" y="933" font-size="14" fill="#ffffff">- AHIMA query practice brief: open-ended, non-leading, multiple options</text>
+            <text x="80" y="956" font-size="14" fill="#ffffff">- Compliance: queries that lead to higher reimbursement are coding fraud</text>
+            <text x="80" y="979" font-size="14" fill="#ffffff">- Documentation integrity: query response becomes part of permanent record</text>
+            <text x="80" y="1002" font-size="14" fill="#ffffff">- Granularity: open the door to specific etiology without dictating answer</text>
+          </svg>`,
+          caption: "Three real decisions: pneumonia coding, behavioral health ROI, AKI query."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Knowledge",
+        content: `Identify the compliant query.`,
+        question: "Maria is about to send a CDI query to Dr. Patel. The patient has AKI documented but no etiology, and labs strongly suggest acute tubular necrosis (ATN). Which of the following query wordings is COMPLIANT with AHIMA's non-leading query standards?",
+        options: [
+          { text: "'Given the lab pattern, the AKI is clearly due to ATN. Please document ATN.'", correct: false },
+          { text: "'The AKI is due to ATN, correct? Please confirm.'", correct: false },
+          { text: "'Documentation reflects AKI. Please clarify the etiology if known: dehydration, ATN, sepsis-related, contrast-induced, post-renal, other specified, or unable to determine.'", correct: true },
+          { text: "'Hospital coding policy requires you to document ATN if labs support it. Please add ATN to your note.'", correct: false }
+        ],
+        explanation: "Option C is the compliant query. It identifies what is documented (AKI), asks for clarification, offers multiple plausible options including 'unable to determine,' and does not favor one answer. AHIMA's Guidelines for Compliant Query Practice require queries to be open-ended, non-leading, and offer multiple reasonable options. Options A and B are leading because they presuppose ATN. Option D inappropriately pressures the physician using coding policy as leverage. A leading query that results in changed documentation can be construed as coding fraud, which puts the coder, the physician, and the facility at risk. The right query gives the physician the FULL space of plausible answers, including 'unable to determine.'",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Anatomy of a Compliant CDI Query</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">AHIMA Guidelines for Achieving a Compliant Query Practice</text>
+            <rect x="60" y="120" width="980" height="240" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="80" y="160" font-size="20" font-weight="bold" fill="#10b981">COMPLIANT QUERY (Option C)</text>
+            <text x="80" y="195" font-size="15" fill="#ffffff">&quot;Documentation reflects AKI. Please clarify the etiology if known:</text>
+            <text x="80" y="220" font-size="15" fill="#ffffff">  - dehydration</text>
+            <text x="80" y="245" font-size="15" fill="#ffffff">  - acute tubular necrosis (ATN)</text>
+            <text x="80" y="270" font-size="15" fill="#ffffff">  - sepsis-related</text>
+            <text x="80" y="295" font-size="15" fill="#ffffff">  - contrast-induced</text>
+            <text x="80" y="320" font-size="15" fill="#ffffff">  - post-renal / other specified / unable to determine&quot;</text>
+            <text x="80" y="350" font-size="15" font-weight="bold" fill="#10b981">WHY: open-ended, multiple options, no favored answer, includes &quot;unable to determine&quot;</text>
+            <rect x="60" y="380" width="980" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="80" y="420" font-size="20" font-weight="bold" fill="#ef4444">NON-COMPLIANT EXAMPLES (Options A, B, D)</text>
+            <text x="80" y="455" font-size="14" fill="#ffffff">A. &quot;Given lab pattern, AKI is clearly due to ATN&quot; -- LEADING (asserts conclusion)</text>
+            <text x="80" y="485" font-size="14" fill="#ffffff">B. &quot;AKI is due to ATN, correct?&quot; -- LEADING (yes/no, presupposes answer)</text>
+            <text x="80" y="515" font-size="14" fill="#ffffff">D. &quot;Hospital policy requires you to document ATN&quot; -- COERCIVE (pressure tactic)</text>
+            <text x="80" y="550" font-size="14" fill="#ffd700">Each of these can be construed as coding fraud if it changes documentation.</text>
+            <rect x="60" y="600" width="980" height="220" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="550" y="640" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">AHIMA Compliant Query Checklist</text>
+            <text x="80" y="675" font-size="14" fill="#ffffff">[ ] Based on specific clinical indicators in the record</text>
+            <text x="80" y="700" font-size="14" fill="#ffffff">[ ] Offers multiple plausible clinical options (or open-ended)</text>
+            <text x="80" y="725" font-size="14" fill="#ffffff">[ ] Includes &quot;unable to determine&quot; or &quot;not clinically significant&quot;</text>
+            <text x="80" y="750" font-size="14" fill="#ffffff">[ ] Does NOT lead, suggest, or favor any single answer</text>
+            <text x="80" y="775" font-size="14" fill="#ffffff">[ ] Does NOT mention reimbursement, DRG, HCC, or hospital metrics</text>
+            <text x="80" y="800" font-size="14" fill="#ffd700">[ ] Becomes part of the permanent legal record</text>
+            <rect x="60" y="840" width="980" height="190" fill="#ffd700" opacity="0.10" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="880" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Why This Matters for Maria</text>
+            <text x="80" y="918" font-size="15" fill="#ffffff">A leading query that increases reimbursement is a False Claims Act violation if discovered.</text>
+            <text x="80" y="945" font-size="15" fill="#ffffff">Hospitals have paid eight- and nine-figure settlements over leading query practices.</text>
+            <text x="80" y="972" font-size="15" fill="#ffffff">Maria's compliant query protects her, the physician, and the hospital from compliance risk.</text>
+            <text x="80" y="1005" font-size="15" font-weight="bold" fill="#ffd700">When in doubt: more options, never fewer. Always include &quot;unable to determine.&quot;</text>
+          </svg>`,
+          caption: "Compliant vs. leading queries — the AHIMA standard."
+        }
+      },
+      {
+        type: "application",
+        title: "Domain 1 Mastery Checklist",
+        content: `Wrap Domain 1 by tying every lesson to a single mental checklist for the **CCA exam** and the **first day on the job**. (1) **Record types**: distinguish legal, clinical, financial, and administrative documents; know which travel under ROI. (2) **Data sets**: UHDDS for inpatient, UACDS for ambulatory, MDS for long-term care, OASIS for home health. (3) **HIPAA**: Privacy Rule (use/disclose), Security Rule (safeguards), Breach Notification Rule (>500 = HHS within 60 days). (4) **HIM roles**: coder, CDI specialist, ROI tech, privacy officer, MPI coordinator. (5) **Retention**: state-specific minimums, often 10 years adult / 21+ years minor. (6) **Documentation quality**: complete, timely, legible, signed; H&P in 24 hours, op note immediately, discharge summary 30 days. (7) **MPI**: one number per patient, dedup audits. (8) **ROI**: valid authorization, accounting of disclosures, minimum necessary. (9) **Storage**: physical security, encryption, audit logs, business associate agreements. (10) **Specialty rules** for behavioral, trauma, OB, peds. (11) **AHIMA's 10 data quality characteristics** as your daily audit framework. (12) **The compliant query** as the gold standard for documentation improvement.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Domain 1 Mastery Checklist</text>
+            <text x="550" y="92" font-size="16" fill="#888" text-anchor="middle">Twelve lessons, twelve must-knows for the CCA exam and the floor</text>
+            <rect x="60" y="120" width="480" height="120" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="150" font-size="17" font-weight="bold" fill="#6366f1">[1] Record Types</text>
+            <text x="80" y="175" font-size="13" fill="#ffffff">Legal / clinical / financial / admin</text>
+            <text x="80" y="195" font-size="13" fill="#ffffff">Which travels under ROI &amp; how</text>
+            <text x="80" y="218" font-size="13" fill="#ffd700">Lesson 1</text>
+            <rect x="560" y="120" width="480" height="120" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="580" y="150" font-size="17" font-weight="bold" fill="#8b5cf6">[2] Standardized Data Sets</text>
+            <text x="580" y="175" font-size="13" fill="#ffffff">UHDDS inpatient, UACDS ambulatory</text>
+            <text x="580" y="195" font-size="13" fill="#ffffff">MDS long-term, OASIS home health</text>
+            <text x="580" y="218" font-size="13" fill="#ffd700">Lesson 2</text>
+            <rect x="60" y="255" width="480" height="120" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="80" y="285" font-size="17" font-weight="bold" fill="#ec4899">[3] HIPAA Three Rules</text>
+            <text x="80" y="310" font-size="13" fill="#ffffff">Privacy / Security / Breach</text>
+            <text x="80" y="330" font-size="13" fill="#ffffff">&gt;500 = HHS 60 days</text>
+            <text x="80" y="353" font-size="13" fill="#ffd700">Lesson 3</text>
+            <rect x="560" y="255" width="480" height="120" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="285" font-size="17" font-weight="bold" fill="#10b981">[4] HIM Roles</text>
+            <text x="580" y="310" font-size="13" fill="#ffffff">Coder, CDI, ROI, Privacy Officer</text>
+            <text x="580" y="330" font-size="13" fill="#ffffff">MPI Coordinator, Data Steward</text>
+            <text x="580" y="353" font-size="13" fill="#ffd700">Lesson 4</text>
+            <rect x="60" y="390" width="480" height="120" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="420" font-size="17" font-weight="bold" fill="#f59e0b">[5] Retention</text>
+            <text x="80" y="445" font-size="13" fill="#ffffff">10 yr adult typical</text>
+            <text x="80" y="465" font-size="13" fill="#ffffff">21+ yr minor; state varies</text>
+            <text x="80" y="488" font-size="13" fill="#ffd700">Lesson 5</text>
+            <rect x="560" y="390" width="480" height="120" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="580" y="420" font-size="17" font-weight="bold" fill="#ef4444">[6] Documentation Quality</text>
+            <text x="580" y="445" font-size="13" fill="#ffffff">H&amp;P 24hr, op note immediate</text>
+            <text x="580" y="465" font-size="13" fill="#ffffff">DC summary 30 days</text>
+            <text x="580" y="488" font-size="13" fill="#ffd700">Lesson 6</text>
+            <rect x="60" y="525" width="480" height="120" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="80" y="555" font-size="17" font-weight="bold" fill="#0ea5e9">[7] MPI</text>
+            <text x="80" y="580" font-size="13" fill="#ffffff">One number per patient</text>
+            <text x="80" y="600" font-size="13" fill="#ffffff">Duplicate audits weekly</text>
+            <text x="80" y="623" font-size="13" fill="#ffd700">Lesson 7</text>
+            <rect x="560" y="525" width="480" height="120" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="580" y="555" font-size="17" font-weight="bold" fill="#6366f1">[8] ROI</text>
+            <text x="580" y="580" font-size="13" fill="#ffffff">Valid auth, AoD, min necessary</text>
+            <text x="580" y="600" font-size="13" fill="#ffffff">Separate auth for psychotherapy</text>
+            <text x="580" y="623" font-size="13" fill="#ffd700">Lesson 8</text>
+            <rect x="60" y="660" width="480" height="120" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="80" y="690" font-size="17" font-weight="bold" fill="#8b5cf6">[9] Storage &amp; Security</text>
+            <text x="80" y="715" font-size="13" fill="#ffffff">Encryption at rest &amp; in transit</text>
+            <text x="80" y="735" font-size="13" fill="#ffffff">BAA + audit logs</text>
+            <text x="80" y="758" font-size="13" fill="#ffd700">Lesson 9</text>
+            <rect x="560" y="660" width="480" height="120" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="580" y="690" font-size="17" font-weight="bold" fill="#ec4899">[10] Specialty Records</text>
+            <text x="580" y="715" font-size="13" fill="#ffffff">Behavioral, trauma, OB, peds</text>
+            <text x="580" y="735" font-size="13" fill="#ffffff">Each has unique forms &amp; rules</text>
+            <text x="580" y="758" font-size="13" fill="#ffd700">Lesson 10</text>
+            <rect x="60" y="795" width="480" height="120" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="825" font-size="17" font-weight="bold" fill="#10b981">[11] 10 Data Quality Chars.</text>
+            <text x="80" y="850" font-size="13" fill="#ffffff">A-A-C-C-C-D-G-P-R-T</text>
+            <text x="80" y="870" font-size="13" fill="#ffffff">Monthly scorecard, RYG status</text>
+            <text x="80" y="893" font-size="13" fill="#ffd700">Lesson 11</text>
+            <rect x="560" y="795" width="480" height="120" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="580" y="825" font-size="17" font-weight="bold" fill="#f59e0b">[12] Compliant Query</text>
+            <text x="580" y="850" font-size="13" fill="#ffffff">Multiple options, non-leading</text>
+            <text x="580" y="870" font-size="13" fill="#ffffff">Becomes legal record</text>
+            <text x="580" y="893" font-size="13" fill="#ffd700">Lesson 12 (THIS LESSON)</text>
+            <rect x="60" y="935" width="980" height="100" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="970" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">YOU ARE READY FOR CCA DOMAIN 1</text>
+            <text x="550" y="1000" font-size="15" fill="#ffffff" text-anchor="middle">12 lessons - 60 cards - every CCA Domain 1 concept covered with audit-grade depth.</text>
+            <text x="550" y="1024" font-size="15" fill="#ffffff" text-anchor="middle">Next stop: Domain 2 - Clinical Classification Systems.</text>
+          </svg>`,
+          caption: "Domain 1 mastery summary: twelve lessons mapped to twelve must-knows."
+        }
+      }
+    ]
   }
 ];
 
@@ -2406,7 +3502,7 @@ A CCA who knows these five items is **immediately valuable** to any HIM director
             id: 'cca-domain-1', title: 'CCA Domain 1: Health Information Concepts',
             author: 'Synthesis Learning',
             description: 'The legal/clinical/financial roles of the health record, the standard data sets that drive coding, and HIPAA\'s rules around protected health information.',
-            lessons: 9, duration: 135, progress: 0, category: 'cca-prep',
+            lessons: 12, duration: 180, progress: 0, category: 'cca-prep',
             lessonList: DOMAIN1_PLACEHOLDER_LESSONS,
         },
         {

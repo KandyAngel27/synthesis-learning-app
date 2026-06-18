@@ -2815,6 +2815,956 @@ A safe shift = every patient screened, every bundle applied, every documentation
         }
       }
     ]
+  },
+{
+    id: "nclex-fundamentals-lesson-10",
+    title: "Documentation and Charting: SOAP, DAR, Narrative, Charting by Exception",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Documentation Wins (or Loses) Cases",
+        content: `**If it wasn't charted, it wasn't done.** That single sentence is the foundation of nursing documentation and the legal standard the NCLEX expects you to internalize. Your chart is a **legal document**, a **communication tool** between shifts and disciplines, a **billing record**, and the primary evidence in any malpractice claim — sometimes years after the patient is discharged.
+
+The NCLEX tests four major charting formats: **SOAP** (Subjective, Objective, Assessment, Plan), **DAR/Focus** (Data, Action, Response), **Narrative** (free-text chronological story), and **Charting by Exception** (CBE — only deviations from the established norm). Each has a sweet spot.
+
+Beyond format, the exam tests the **non-negotiable legal rules**: never erase, never use Wite-Out, sign every entry, use **late entry** notation with the original date/time, and never document something before you actually do it. Miss any of these and the chart becomes evidence *against* the nurse.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">The Chart Is a Legal Document</text>
+            <text x="550" y="100" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">"If it wasn't charted, it wasn't done."</text>
+            <rect x="60" y="140" width="980" height="100" fill="#6366f1" rx="10"/>
+            <text x="550" y="180" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">FOUR PURPOSES OF THE CHART</text>
+            <text x="550" y="215" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">1. Legal record  2. Interdisciplinary communication  3. Billing  4. Quality/research data</text>
+            <rect x="60" y="270" width="470" height="370" fill="#10b981" rx="10"/>
+            <text x="295" y="305" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">DO</text>
+            <text x="80" y="340" font-family="Arial" font-size="17" fill="#ffffff">- Chart immediately after care</text>
+            <text x="80" y="370" font-family="Arial" font-size="17" fill="#ffffff">- Use objective, measurable language</text>
+            <text x="80" y="400" font-family="Arial" font-size="17" fill="#ffffff">- Sign every entry (name + credentials)</text>
+            <text x="80" y="430" font-family="Arial" font-size="17" fill="#ffffff">- Use approved abbreviations only</text>
+            <text x="80" y="460" font-family="Arial" font-size="17" fill="#ffffff">- Single line through errors + initial</text>
+            <text x="80" y="490" font-family="Arial" font-size="17" fill="#ffffff">- Mark "late entry" with original time</text>
+            <text x="80" y="520" font-family="Arial" font-size="17" fill="#ffffff">- Quote patient ("I have chest pain")</text>
+            <text x="80" y="550" font-family="Arial" font-size="17" fill="#ffffff">- Document refusals + teaching given</text>
+            <text x="80" y="580" font-family="Arial" font-size="17" fill="#ffffff">- Chart in chronological order</text>
+            <text x="80" y="610" font-family="Arial" font-size="17" fill="#ffffff">- Note who was notified + response</text>
+            <rect x="570" y="270" width="470" height="370" fill="#ef4444" rx="10"/>
+            <text x="805" y="305" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">DO NOT</text>
+            <text x="590" y="340" font-family="Arial" font-size="17" fill="#ffffff">- Erase, scribble out, or use Wite-Out</text>
+            <text x="590" y="370" font-family="Arial" font-size="17" fill="#ffffff">- Chart before care is performed</text>
+            <text x="590" y="400" font-family="Arial" font-size="17" fill="#ffffff">- Document for another nurse</text>
+            <text x="590" y="430" font-family="Arial" font-size="17" fill="#ffffff">- Leave blank lines or spaces</text>
+            <text x="590" y="460" font-family="Arial" font-size="17" fill="#ffffff">- Use vague terms ("appears OK")</text>
+            <text x="590" y="490" font-family="Arial" font-size="17" fill="#ffffff">- Make personal judgments ("rude")</text>
+            <text x="590" y="520" font-family="Arial" font-size="17" fill="#ffffff">- Use non-approved abbreviations</text>
+            <text x="590" y="550" font-family="Arial" font-size="17" fill="#ffffff">- Chart in pencil</text>
+            <text x="590" y="580" font-family="Arial" font-size="17" fill="#ffffff">- Share login credentials</text>
+            <text x="590" y="610" font-family="Arial" font-size="17" fill="#ffffff">- Alter entries after the fact</text>
+            <rect x="60" y="670" width="980" height="380" fill="#ffd700" rx="10"/>
+            <text x="550" y="710" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">THE FOUR FORMATS AT A GLANCE</text>
+            <line x1="60" y1="730" x2="1040" y2="730" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="80" y="770" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e">SOAP:</text>
+            <text x="180" y="770" font-family="Arial" font-size="18" fill="#1a1a2e">Subjective - Objective - Assessment - Plan (problem-oriented, MDs love it)</text>
+            <text x="80" y="830" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e">DAR:</text>
+            <text x="180" y="830" font-family="Arial" font-size="18" fill="#1a1a2e">Data - Action - Response (Focus charting; quick + outcome-driven)</text>
+            <text x="80" y="890" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e">NARRATIVE:</text>
+            <text x="260" y="890" font-family="Arial" font-size="18" fill="#1a1a2e">Free-text chronological story (rich detail, but slow + redundant)</text>
+            <text x="80" y="950" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e">CBE:</text>
+            <text x="180" y="950" font-family="Arial" font-size="18" fill="#1a1a2e">Chart only EXCEPTIONS to the established norm (fastest, risky if norms unclear)</text>
+            <text x="550" y="1010" font-family="Arial" font-size="18" font-style="italic" fill="#1a1a2e" text-anchor="middle">No matter the format: objective, timely, signed, and legally defensible.</text>
+          </svg>`,
+          caption: "The chart is evidence. Every entry must be timely, objective, signed, and never altered with Wite-Out or erasure."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Four Formats — Side-by-Side",
+        content: `**SOAP** is the classic problem-oriented format. **S**ubjective = what the patient says ("My pain is 8/10"). **O**bjective = what you measure (BP 168/94, grimacing, guarding RLQ). **A**ssessment = your nursing judgment ("Acute pain related to surgical incision"). **P**lan = the intervention ("Administer morphine 2 mg IV per order; reassess in 30 min"). Best for: complex problems, MD-collaborative settings.
+
+**DAR (Focus charting)** trims SOAP into three columns. **D**ata combines subjective + objective. **A**ction = what you did. **R**esponse = how the patient reacted. Best for: busy med-surg units, single-issue notes.
+
+**Narrative** is the oldest format — a paragraph telling the patient's story chronologically. Strength: nuance and storytelling. Weakness: slow, repetitive, easy to bury key data.
+
+**Charting by Exception (CBE)** assumes everything is **WNL** (within normal limits) unless documented otherwise. You only chart deviations. Fastest format, but if "normal" isn't crystal-clear in policy, abnormal findings can be missed — a legal landmine.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Four Charting Formats: Same Patient</text>
+            <text x="550" y="90" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Mrs. Lee, post-op day 1, complains of incisional pain</text>
+            <rect x="40" y="120" width="510" height="450" fill="#6366f1" rx="10"/>
+            <text x="295" y="155" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">SOAP</text>
+            <line x1="60" y1="170" x2="530" y2="170" stroke="#ffd700" stroke-width="2"/>
+            <text x="55" y="200" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">S (Subjective):</text>
+            <text x="55" y="225" font-family="Arial" font-size="15" fill="#ffffff">"My belly hurts a lot, like an 8/10."</text>
+            <text x="55" y="265" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">O (Objective):</text>
+            <text x="55" y="290" font-family="Arial" font-size="15" fill="#ffffff">BP 168/94, HR 112, grimacing,</text>
+            <text x="55" y="312" font-family="Arial" font-size="15" fill="#ffffff">guarding RLQ. Incision dry/intact.</text>
+            <text x="55" y="352" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">A (Assessment):</text>
+            <text x="55" y="377" font-family="Arial" font-size="15" fill="#ffffff">Acute pain r/t surgical incision.</text>
+            <text x="55" y="417" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">P (Plan):</text>
+            <text x="55" y="442" font-family="Arial" font-size="15" fill="#ffffff">Morphine 2 mg IV per order.</text>
+            <text x="55" y="464" font-family="Arial" font-size="15" fill="#ffffff">Reassess pain + VS in 30 min.</text>
+            <text x="55" y="486" font-family="Arial" font-size="15" fill="#ffffff">Reposition; teach splinting.</text>
+            <text x="55" y="540" font-family="Arial" font-size="14" font-style="italic" fill="#ffd700">Best: complex/multi-problem patients</text>
+            <rect x="560" y="120" width="510" height="450" fill="#10b981" rx="10"/>
+            <text x="815" y="155" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">DAR (Focus)</text>
+            <line x1="580" y1="170" x2="1050" y2="170" stroke="#ffd700" stroke-width="2"/>
+            <text x="575" y="200" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">Focus:</text>
+            <text x="575" y="222" font-family="Arial" font-size="15" fill="#ffffff">Acute incisional pain</text>
+            <text x="575" y="262" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">D (Data):</text>
+            <text x="575" y="287" font-family="Arial" font-size="15" fill="#ffffff">Pt reports 8/10 abd pain.</text>
+            <text x="575" y="309" font-family="Arial" font-size="15" fill="#ffffff">BP 168/94, HR 112, grimacing.</text>
+            <text x="575" y="349" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">A (Action):</text>
+            <text x="575" y="374" font-family="Arial" font-size="15" fill="#ffffff">Morphine 2 mg IV given 0830.</text>
+            <text x="575" y="396" font-family="Arial" font-size="15" fill="#ffffff">Repositioned L side. Splinting</text>
+            <text x="575" y="418" font-family="Arial" font-size="15" fill="#ffffff">technique taught.</text>
+            <text x="575" y="458" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">R (Response):</text>
+            <text x="575" y="483" font-family="Arial" font-size="15" fill="#ffffff">0900: pain 3/10, BP 138/82,</text>
+            <text x="575" y="505" font-family="Arial" font-size="15" fill="#ffffff">resting comfortably.</text>
+            <text x="575" y="540" font-family="Arial" font-size="14" font-style="italic" fill="#ffd700">Best: single focus, fast turnaround</text>
+            <rect x="40" y="590" width="510" height="450" fill="#f59e0b" rx="10"/>
+            <text x="295" y="625" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">NARRATIVE</text>
+            <line x1="60" y1="640" x2="530" y2="640" stroke="#ffffff" stroke-width="2"/>
+            <text x="55" y="670" font-family="Arial" font-size="15" fill="#ffffff">0830: Pt c/o sharp abdominal</text>
+            <text x="55" y="692" font-family="Arial" font-size="15" fill="#ffffff">pain rated 8/10, located in RLQ</text>
+            <text x="55" y="714" font-family="Arial" font-size="15" fill="#ffffff">near surgical incision. Observed</text>
+            <text x="55" y="736" font-family="Arial" font-size="15" fill="#ffffff">grimacing, guarding. BP 168/94,</text>
+            <text x="55" y="758" font-family="Arial" font-size="15" fill="#ffffff">HR 112, RR 22, SpO2 97% RA.</text>
+            <text x="55" y="780" font-family="Arial" font-size="15" fill="#ffffff">Incision dry/intact, no drainage.</text>
+            <text x="55" y="802" font-family="Arial" font-size="15" fill="#ffffff">Morphine 2 mg IV administered.</text>
+            <text x="55" y="824" font-family="Arial" font-size="15" fill="#ffffff">Pt repositioned to L side, taught</text>
+            <text x="55" y="846" font-family="Arial" font-size="15" fill="#ffffff">to splint incision when coughing.</text>
+            <text x="55" y="876" font-family="Arial" font-size="15" fill="#ffffff">0900: Pain re-rated 3/10, VS:</text>
+            <text x="55" y="898" font-family="Arial" font-size="15" fill="#ffffff">BP 138/82, HR 88. Resting. ---J.S., RN</text>
+            <text x="55" y="990" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Best: rich story, complex events</text>
+            <text x="55" y="1014" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Risk: slow, key data buried</text>
+            <rect x="560" y="590" width="510" height="450" fill="#ec4899" rx="10"/>
+            <text x="815" y="625" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">CHARTING BY EXCEPTION</text>
+            <line x1="580" y1="640" x2="1050" y2="640" stroke="#ffffff" stroke-width="2"/>
+            <text x="575" y="675" font-family="Arial" font-size="15" font-weight="bold" fill="#ffd700">Assumption: All WNL per protocol</text>
+            <text x="815" y="715" font-family="Arial" font-size="40" fill="#10b981" text-anchor="middle">[checkmark]</text>
+            <text x="575" y="755" font-family="Arial" font-size="15" fill="#ffffff">Only EXCEPTIONS charted:</text>
+            <text x="575" y="785" font-family="Arial" font-size="15" fill="#ffffff">0830: PAIN - exception flagged.</text>
+            <text x="575" y="807" font-family="Arial" font-size="15" fill="#ffffff">Pt 8/10 RLQ. Morphine 2 mg IV.</text>
+            <text x="575" y="847" font-family="Arial" font-size="15" fill="#ffffff">0900: Pain 3/10 - resolved.</text>
+            <text x="575" y="887" font-family="Arial" font-size="15" fill="#ffffff">All other systems WNL per</text>
+            <text x="575" y="909" font-family="Arial" font-size="15" fill="#ffffff">unit protocol parameters.</text>
+            <text x="575" y="975" font-family="Arial" font-size="14" font-style="italic" fill="#ffd700">Best: stable patients, fast</text>
+            <text x="575" y="999" font-family="Arial" font-size="14" font-style="italic" fill="#ffd700">Risk: "normal" must be defined</text>
+            <text x="575" y="1023" font-family="Arial" font-size="14" font-style="italic" fill="#ffd700">in writing - legal exposure</text>
+          </svg>`,
+          caption: "Same patient, four formats. SOAP is thorough, DAR is fast, narrative is rich, CBE is fastest but legally riskiest."
+        }
+      },
+      {
+        type: "example",
+        title: "Late Entry, Error Correction, and the Legal Rules in Action",
+        content: `**Scenario:** It's 1430. You realize you forgot to chart a pain medication you administered at 0930. You also notice a peer charted "BP 130/80" but the strip clearly shows 130/180 — a typo in someone else's note.
+
+**The late entry rule:** You write a new entry **at the current time** but label it clearly. Example: *"1430 — Late entry for 0930: Morphine 4 mg IV administered for pain rated 7/10. Pt tolerated well, pain 2/10 at 1000. — J. Smith, RN."* You **never** squeeze the entry between earlier notes, change the time stamp, or pretend it happened at 0930.
+
+**Error correction rule:** You **never** correct another nurse's entry. You alert the original charter and let them fix it with a single line through the error, their initials, the date, and "error" written above. **No Wite-Out, no scribbling, no erasing.**
+
+**Refusal documentation:** If a patient refuses a med, chart it: *"Pt refused 0900 lisinopril. Stated 'I don't feel like taking it.' Educated re: BP control; pt verbalized understanding. MD Dr. Patel notified at 0915."*`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Documentation in Action: The Legal Rules</text>
+            <rect x="50" y="100" width="1000" height="280" fill="#ffffff" rx="10" stroke="#ffd700" stroke-width="3"/>
+            <text x="550" y="135" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">SCENARIO 1: Late Entry (forgot to chart 0930 pain med, now 1430)</text>
+            <line x1="80" y1="155" x2="1020" y2="155" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="80" y="190" font-family="Arial" font-size="18" font-weight="bold" fill="#ef4444">WRONG:</text>
+            <text x="80" y="215" font-family="Arial" font-size="16" fill="#1a1a2e">Squeeze between earlier notes / backdate to 0930 / use a pencil to insert.</text>
+            <text x="80" y="260" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981">RIGHT:</text>
+            <rect x="80" y="275" width="940" height="80" fill="#0ea5e9" rx="5"/>
+            <text x="100" y="305" font-family="Courier" font-size="16" fill="#ffffff">1430 - LATE ENTRY for 0930:</text>
+            <text x="100" y="328" font-family="Courier" font-size="16" fill="#ffffff">Morphine 4 mg IV administered for pain 7/10. Tolerated well.</text>
+            <text x="100" y="350" font-family="Courier" font-size="16" fill="#ffffff">Reassessment 1000: pain 2/10. ----- J. Smith, RN</text>
+            <rect x="50" y="395" width="1000" height="280" fill="#ffffff" rx="10" stroke="#ffd700" stroke-width="3"/>
+            <text x="550" y="430" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">SCENARIO 2: Correcting Your Own Error</text>
+            <line x1="80" y1="450" x2="1020" y2="450" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="80" y="485" font-family="Arial" font-size="18" font-weight="bold" fill="#ef4444">WRONG:</text>
+            <text x="80" y="510" font-family="Arial" font-size="16" fill="#1a1a2e">Wite-Out / scribble out / erase / tear out page / delete electronic note</text>
+            <text x="80" y="555" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981">RIGHT:</text>
+            <rect x="80" y="570" width="940" height="80" fill="#0ea5e9" rx="5"/>
+            <text x="100" y="600" font-family="Courier" font-size="16" fill="#ffffff">BP 130/80 -- error JS 6/18 -- correct: BP 130/180</text>
+            <text x="100" y="623" font-family="Courier" font-size="16" fill="#ffffff">Single line through error. Initial, date, write "error" above.</text>
+            <text x="100" y="645" font-family="Courier" font-size="16" fill="#ffffff">Original entry remains LEGIBLE.</text>
+            <rect x="50" y="690" width="1000" height="370" fill="#ffffff" rx="10" stroke="#ffd700" stroke-width="3"/>
+            <text x="550" y="725" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">SCENARIO 3: Patient Refuses Medication</text>
+            <line x1="80" y1="745" x2="1020" y2="745" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="80" y="780" font-family="Arial" font-size="18" font-weight="bold" fill="#ef4444">WRONG:</text>
+            <text x="80" y="805" font-family="Arial" font-size="16" fill="#1a1a2e">Chart "med refused" with no further detail. No MD notification. No teaching.</text>
+            <text x="80" y="850" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981">RIGHT (5 elements):</text>
+            <rect x="80" y="865" width="940" height="180" fill="#0ea5e9" rx="5"/>
+            <text x="100" y="895" font-family="Courier" font-size="15" fill="#ffffff">0900 - Pt refused lisinopril 10 mg PO.</text>
+            <text x="100" y="918" font-family="Courier" font-size="15" fill="#ffffff">1. Pt's words: "I don't feel like taking it today."</text>
+            <text x="100" y="940" font-family="Courier" font-size="15" fill="#ffffff">2. Teaching: Educated re: BP control + stroke risk.</text>
+            <text x="100" y="962" font-family="Courier" font-size="15" fill="#ffffff">3. Understanding: Pt verbalized understanding of risks.</text>
+            <text x="100" y="984" font-family="Courier" font-size="15" fill="#ffffff">4. MD notified: Dr. Patel notified at 0915, no new orders.</text>
+            <text x="100" y="1006" font-family="Courier" font-size="15" fill="#ffffff">5. Signature: ----- J. Smith, RN</text>
+          </svg>`,
+          caption: "Late entries: label clearly. Errors: single line, initial, no Wite-Out. Refusals: words, teaching, understanding, MD, signature."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX-Style Question: Documentation",
+        content: `**Question:** A nurse realizes at the end of shift that she forgot to document a dressing change she performed 4 hours earlier. Which action is **most appropriate**?
+
+The NCLEX is testing whether you understand that **omitted entries are added as late entries** — never backdated, never squeezed in, never falsified. The chart is a legal document; altering its appearance to hide an omission is **fraud**, even if the care was actually performed correctly. The right move is transparency: write a new entry now, label it "late entry," reference the original time, and sign it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">NCLEX Practice: Late Entry</text>
+            <rect x="50" y="90" width="1000" height="120" fill="#6366f1" rx="10"/>
+            <text x="70" y="125" font-family="Arial" font-size="18" fill="#ffffff">A nurse realizes at 1900, end of shift, that a dressing change</text>
+            <text x="70" y="150" font-family="Arial" font-size="18" fill="#ffffff">she performed at 1500 was never documented. Which action</text>
+            <text x="70" y="175" font-family="Arial" font-size="18" fill="#ffffff">is MOST appropriate?</text>
+            <rect x="50" y="240" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="275" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">A. Insert the entry between the 1430 and 1530 notes,</text>
+            <text x="70" y="300" font-family="Arial" font-size="18" fill="#ffffff">     timing it as 1500 to preserve chronology.</text>
+            <text x="70" y="330" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] Backdating = falsification. Never alter time stamps after the fact.</text>
+            <rect x="50" y="370" width="1000" height="110" fill="#10b981" rx="10"/>
+            <text x="70" y="405" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">B. Document now at 1900: "Late entry for 1500: dressing</text>
+            <text x="70" y="430" font-family="Arial" font-size="18" fill="#ffffff">     change performed as ordered..." with signature.</text>
+            <text x="70" y="460" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[CORRECT] Transparent, dated to current time, references original time, signed.</text>
+            <rect x="50" y="500" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="535" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">C. Skip the documentation - the care was completed and</text>
+            <text x="70" y="560" font-family="Arial" font-size="18" fill="#ffffff">     no harm was done.</text>
+            <text x="70" y="590" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] "If it wasn't charted, it wasn't done." Skipping = legal liability.</text>
+            <rect x="50" y="630" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="665" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">D. Ask the oncoming nurse to chart it during their shift.</text>
+            <text x="70" y="700" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] Never document for, or have someone document for, care you provided.</text>
+            <rect x="50" y="770" width="1000" height="290" fill="#ffd700" rx="10"/>
+            <text x="550" y="810" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">EXPLANATION</text>
+            <line x1="450" y1="822" x2="650" y2="822" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="70" y="860" font-family="Arial" font-size="17" fill="#1a1a2e">Answer B is correct. The standard late-entry rule has three parts:</text>
+            <text x="70" y="895" font-family="Arial" font-size="17" fill="#1a1a2e">1. Chart at the CURRENT time (1900), never backdate.</text>
+            <text x="70" y="925" font-family="Arial" font-size="17" fill="#1a1a2e">2. Label clearly: "Late entry for [original time]."</text>
+            <text x="70" y="955" font-family="Arial" font-size="17" fill="#1a1a2e">3. Sign and credential.</text>
+            <text x="70" y="1000" font-family="Arial" font-size="17" font-weight="bold" fill="#1a1a2e">A is fraud. C is negligence. D violates the rule that you only chart your</text>
+            <text x="70" y="1025" font-family="Arial" font-size="17" font-weight="bold" fill="#1a1a2e">own care. Transparency protects the nurse AND the patient.</text>
+          </svg>`,
+          caption: "Late entries: current time, labeled, signed. Never backdate, skip, or delegate documentation of your own care."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Application: The 5-Second Charting Check",
+        content: `Before you click **"Sign and Submit"** (or set down your pen), run this 5-second check. It catches 90% of charting errors before they become legal problems.
+
+**1. Time:** Is the time accurate? Current time, not the time you wished you'd charted.
+**2. Tense:** Past tense for what happened ("administered," "assessed"). Never future or speculative ("will give").
+**3. Objective:** Did I use measurable language? "BP 168/94" — not "BP was high." "Patient ambulated 50 feet" — not "ambulated well."
+**4. Yours:** Am I charting only **my own** care? Not what the CNA said. If you didn't see it, you can't chart it as fact.
+**5. Signed:** Full name + credentials at the end of the entry.
+
+**At handoff,** use **SBAR** (Situation, Background, Assessment, Recommendation) for verbal report — but never let SBAR replace written documentation. The chart is the permanent record; the handoff is the conversation. When in doubt, **chart it.** The exam loves the answer that includes documentation, MD notification, and patient teaching together.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">The 5-Second Charting Check</text>
+            <text x="550" y="90" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Run this before every signature</text>
+            <circle cx="180" cy="220" r="70" fill="#6366f1"/>
+            <text x="180" y="215" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">1</text>
+            <text x="180" y="245" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">TIME</text>
+            <text x="280" y="200" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Is the time accurate?</text>
+            <text x="280" y="225" font-family="Arial" font-size="16" fill="#ffffff">Current time, not retro. If late, label "Late entry"</text>
+            <text x="280" y="248" font-family="Arial" font-size="16" fill="#ffffff">and reference the original time.</text>
+            <circle cx="180" cy="380" r="70" fill="#10b981"/>
+            <text x="180" y="375" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">2</text>
+            <text x="180" y="405" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">TENSE</text>
+            <text x="280" y="360" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Past tense only.</text>
+            <text x="280" y="385" font-family="Arial" font-size="16" fill="#ffffff">"Administered," "assessed," "ambulated."</text>
+            <text x="280" y="408" font-family="Arial" font-size="16" fill="#ef4444">NEVER: "will give" / "is going to..."</text>
+            <circle cx="180" cy="540" r="70" fill="#f59e0b"/>
+            <text x="180" y="535" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">3</text>
+            <text x="180" y="565" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">OBJECTIVE</text>
+            <text x="280" y="520" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Measurable, specific language.</text>
+            <text x="280" y="545" font-family="Arial" font-size="16" fill="#10b981">"BP 168/94"  "Ambulated 50 feet"</text>
+            <text x="280" y="568" font-family="Arial" font-size="16" fill="#ef4444">"BP was high"  "Did well"  "Appeared OK"</text>
+            <circle cx="180" cy="700" r="70" fill="#8b5cf6"/>
+            <text x="180" y="695" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">4</text>
+            <text x="180" y="725" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">YOURS</text>
+            <text x="280" y="680" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Only YOUR care. Only what you witnessed.</text>
+            <text x="280" y="705" font-family="Arial" font-size="16" fill="#ffffff">If the CNA reported it, quote them:</text>
+            <text x="280" y="728" font-family="Arial" font-size="16" fill="#ffffff">"CNA reports pt voided 300 mL at 0815."</text>
+            <circle cx="180" cy="860" r="70" fill="#ec4899"/>
+            <text x="180" y="855" font-family="Arial" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">5</text>
+            <text x="180" y="885" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">SIGNED</text>
+            <text x="280" y="840" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Full name + credentials.</text>
+            <text x="280" y="865" font-family="Arial" font-size="16" fill="#ffffff">"J. Smith, RN" or "M. Garcia, BSN, RN"</text>
+            <text x="280" y="888" font-family="Arial" font-size="16" fill="#ef4444">Initials alone = not legally sufficient.</text>
+            <rect x="50" y="950" width="1000" height="120" fill="#ffd700" rx="10"/>
+            <text x="550" y="985" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">HANDOFF = SBAR (verbal). CHART = permanent record (written).</text>
+            <text x="550" y="1015" font-family="Arial" font-size="17" fill="#1a1a2e" text-anchor="middle">SBAR: Situation -- Background -- Assessment -- Recommendation</text>
+            <text x="550" y="1045" font-family="Arial" font-size="17" font-style="italic" fill="#1a1a2e" text-anchor="middle">When in doubt: chart it. NCLEX loves "document + notify MD + educate patient."</text>
+          </svg>`,
+          caption: "Time, tense, objective, yours, signed. Five seconds before every signature prevents most documentation errors."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-fundamentals-lesson-11",
+    title: "Cultural Competence and Ethical Principles",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Ethics + Culture: The Twin Pillars of Nursing Judgment",
+        content: `Two questions on every NCLEX exam quietly test the same thing: *Can you honor the patient's values even when they conflict with your own — and can you name the ethical principle at stake?*
+
+The five core principles are **autonomy** (the patient's right to choose), **beneficence** (do good), **nonmaleficence** (do no harm), **justice** (fair treatment for all), and **fidelity** (keep your promises). When these collide — for example, a Jehovah's Witness refusing a life-saving transfusion — **autonomy almost always wins** for a competent adult.
+
+Cultural competence layers on top: knowing that a Muslim patient may decline pork-derived insulin, that a Hispanic family may want the eldest son to receive bad news first, that Orthodox Jewish patients may need a same-sex provider, that direct eye contact is disrespectful in some Asian and Indigenous cultures. The exam doesn't expect you to memorize every culture — it expects you to **ask, not assume**, and to advocate for the patient's stated preferences.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Two Pillars: Ethics + Cultural Competence</text>
+            <rect x="50" y="100" width="490" height="450" fill="#6366f1" rx="10"/>
+            <text x="295" y="140" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">THE 5 ETHICAL PRINCIPLES</text>
+            <line x1="80" y1="155" x2="510" y2="155" stroke="#ffd700" stroke-width="2"/>
+            <text x="70" y="195" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">AUTONOMY</text>
+            <text x="70" y="220" font-family="Arial" font-size="15" fill="#ffffff">Patient's right to self-determination,</text>
+            <text x="70" y="240" font-family="Arial" font-size="15" fill="#ffffff">to accept or refuse treatment.</text>
+            <text x="70" y="280" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">BENEFICENCE</text>
+            <text x="70" y="305" font-family="Arial" font-size="15" fill="#ffffff">Acting in the patient's best interest.</text>
+            <text x="70" y="325" font-family="Arial" font-size="15" fill="#ffffff">"Do good."</text>
+            <text x="70" y="365" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">NONMALEFICENCE</text>
+            <text x="70" y="390" font-family="Arial" font-size="15" fill="#ffffff">"Do no harm." Avoid causing</text>
+            <text x="70" y="410" font-family="Arial" font-size="15" fill="#ffffff">injury through action or omission.</text>
+            <text x="70" y="450" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">JUSTICE</text>
+            <text x="70" y="475" font-family="Arial" font-size="15" fill="#ffffff">Fair, equitable distribution of</text>
+            <text x="70" y="495" font-family="Arial" font-size="15" fill="#ffffff">care and resources.</text>
+            <text x="70" y="525" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">FIDELITY</text>
+            <text x="70" y="544" font-family="Arial" font-size="15" fill="#ffffff">Keep promises, advocate, be loyal.</text>
+            <rect x="560" y="100" width="490" height="450" fill="#10b981" rx="10"/>
+            <text x="805" y="140" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">CULTURAL COMPETENCE</text>
+            <line x1="590" y1="155" x2="1020" y2="155" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="195" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">The 3 Rules of Culturally Safe Care:</text>
+            <text x="600" y="230" font-family="Arial" font-size="17" fill="#ffffff">1. ASK, don't assume.</text>
+            <text x="620" y="252" font-family="Arial" font-size="14" fill="#ffd700">"What's important to you about your care?"</text>
+            <text x="600" y="290" font-family="Arial" font-size="17" fill="#ffffff">2. HONOR the patient's stated values,</text>
+            <text x="620" y="310" font-family="Arial" font-size="17" fill="#ffffff">    not your own assumptions about</text>
+            <text x="620" y="330" font-family="Arial" font-size="17" fill="#ffffff">    their group.</text>
+            <text x="600" y="370" font-family="Arial" font-size="17" fill="#ffffff">3. USE a trained medical interpreter,</text>
+            <text x="620" y="390" font-family="Arial" font-size="17" fill="#ffffff">    never family (especially children)</text>
+            <text x="620" y="410" font-family="Arial" font-size="17" fill="#ffffff">    for clinical conversations.</text>
+            <text x="580" y="455" font-family="Arial" font-size="17" font-weight="bold" fill="#ffd700">Each individual differs from group norms.</text>
+            <text x="580" y="485" font-family="Arial" font-size="15" fill="#ffffff">Generalizations are starting points,</text>
+            <text x="580" y="505" font-family="Arial" font-size="15" fill="#ffffff">not finish lines. Confirm with the patient.</text>
+            <rect x="50" y="585" width="1000" height="470" fill="#ffd700" rx="10"/>
+            <text x="550" y="625" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">WHEN PRINCIPLES COLLIDE: AUTONOMY USUALLY WINS</text>
+            <line x1="200" y1="640" x2="900" y2="640" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="70" y="685" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">Scenario:</text>
+            <text x="200" y="685" font-family="Arial" font-size="17" fill="#1a1a2e">Competent adult Jehovah's Witness refuses blood.</text>
+            <text x="70" y="720" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">Conflict:</text>
+            <text x="200" y="720" font-family="Arial" font-size="17" fill="#1a1a2e">Beneficence (save life) vs. Autonomy (honor refusal).</text>
+            <text x="70" y="755" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">Resolution:</text>
+            <text x="200" y="755" font-family="Arial" font-size="17" fill="#1a1a2e">AUTONOMY wins. Honor refusal. Document. Offer alternatives.</text>
+            <line x1="70" y1="785" x2="1030" y2="785" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="70" y="820" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">EXCEPTIONS where autonomy may yield:</text>
+            <text x="90" y="855" font-family="Arial" font-size="17" fill="#1a1a2e">- Minors (parents/court decide, but mature minor rules vary)</text>
+            <text x="90" y="885" font-family="Arial" font-size="17" fill="#1a1a2e">- Mentally incompetent patient (surrogate / advance directive applies)</text>
+            <text x="90" y="915" font-family="Arial" font-size="17" fill="#1a1a2e">- Public health emergencies (e.g., TB isolation orders)</text>
+            <text x="90" y="945" font-family="Arial" font-size="17" fill="#1a1a2e">- Emergencies with no time for consent (implied consent doctrine)</text>
+            <text x="550" y="1005" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">Nurse's job = advocate, inform, document, NEVER coerce.</text>
+            <text x="550" y="1035" font-family="Arial" font-size="16" font-style="italic" fill="#1a1a2e" text-anchor="middle">You may share concerns; you may not override a competent adult's choice.</text>
+          </svg>`,
+          caption: "Five ethical principles plus three rules of cultural safety. For competent adults, autonomy wins almost every collision."
+        }
+      },
+      {
+        type: "concept",
+        title: "Informed Consent, Advance Directives, and the Nurse's Role",
+        content: `**Informed consent** has three parts: (1) **disclosure** of risks, benefits, and alternatives; (2) **comprehension** by the patient; (3) **voluntary agreement** without coercion. The **physician/surgeon** is responsible for obtaining consent for procedures. The **nurse's** role is to **witness the signature** and verify the patient understands. If the patient says "I don't really understand what they're doing to me," **stop the process** and call the provider back. Do not have the patient sign.
+
+**Advance directives** include the **living will** (written instructions for end-of-life care) and the **durable power of attorney for healthcare** (DPOA-HC, names a surrogate decision-maker). A **DNR** (Do Not Resuscitate) order must be written by a physician based on the patient's wishes — it is not the same as comfort care, and a DNR patient still gets pain meds, antibiotics, and all non-resuscitative care unless otherwise specified.
+
+Key NCLEX trap: a family member **cannot override** a competent patient's advance directive. If grandma's living will says "no intubation" and her son screams "do everything," **the living will controls**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Informed Consent + Advance Directives</text>
+            <rect x="50" y="100" width="1000" height="400" fill="#6366f1" rx="10"/>
+            <text x="550" y="140" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">INFORMED CONSENT: 3 Ingredients</text>
+            <line x1="350" y1="155" x2="750" y2="155" stroke="#ffd700" stroke-width="2"/>
+            <rect x="80" y="180" width="290" height="290" fill="#0ea5e9" rx="10"/>
+            <text x="225" y="215" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">1. DISCLOSURE</text>
+            <text x="100" y="250" font-family="Arial" font-size="15" fill="#ffffff">- Diagnosis explained</text>
+            <text x="100" y="275" font-family="Arial" font-size="15" fill="#ffffff">- Procedure described</text>
+            <text x="100" y="300" font-family="Arial" font-size="15" fill="#ffffff">- Risks listed</text>
+            <text x="100" y="325" font-family="Arial" font-size="15" fill="#ffffff">- Benefits explained</text>
+            <text x="100" y="350" font-family="Arial" font-size="15" fill="#ffffff">- Alternatives offered</text>
+            <text x="100" y="375" font-family="Arial" font-size="15" fill="#ffffff">- Right to refuse stated</text>
+            <text x="100" y="425" font-family="Arial" font-size="15" font-weight="bold" fill="#ffd700">RESPONSIBILITY:</text>
+            <text x="100" y="448" font-family="Arial" font-size="15" font-weight="bold" fill="#ffd700">PROVIDER (MD/DO/NP)</text>
+            <rect x="405" y="180" width="290" height="290" fill="#10b981" rx="10"/>
+            <text x="550" y="215" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">2. COMPREHENSION</text>
+            <text x="425" y="250" font-family="Arial" font-size="15" fill="#ffffff">- Pt restates in own words</text>
+            <text x="425" y="275" font-family="Arial" font-size="15" fill="#ffffff">- Mentally competent</text>
+            <text x="425" y="300" font-family="Arial" font-size="15" fill="#ffffff">- Not sedated/intoxicated</text>
+            <text x="425" y="325" font-family="Arial" font-size="15" fill="#ffffff">- Language understood</text>
+            <text x="425" y="350" font-family="Arial" font-size="15" fill="#ffffff">  (use interpreter PRN)</text>
+            <text x="425" y="375" font-family="Arial" font-size="15" fill="#ffffff">- Adequate health literacy</text>
+            <text x="425" y="425" font-family="Arial" font-size="15" font-weight="bold" fill="#ffd700">RESPONSIBILITY:</text>
+            <text x="425" y="448" font-family="Arial" font-size="15" font-weight="bold" fill="#ffd700">NURSE VERIFIES + WITNESSES</text>
+            <rect x="730" y="180" width="290" height="290" fill="#f59e0b" rx="10"/>
+            <text x="875" y="215" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">3. VOLUNTARY</text>
+            <text x="750" y="250" font-family="Arial" font-size="15" fill="#ffffff">- No coercion</text>
+            <text x="750" y="275" font-family="Arial" font-size="15" fill="#ffffff">- No undue influence</text>
+            <text x="750" y="300" font-family="Arial" font-size="15" fill="#ffffff">- Time to ask questions</text>
+            <text x="750" y="325" font-family="Arial" font-size="15" fill="#ffffff">- May withdraw consent</text>
+            <text x="750" y="350" font-family="Arial" font-size="15" fill="#ffffff">  at any time</text>
+            <text x="750" y="375" font-family="Arial" font-size="15" fill="#ffffff">- Signed freely</text>
+            <text x="750" y="425" font-family="Arial" font-size="15" font-weight="bold" fill="#ffffff">If "I don't understand"</text>
+            <text x="750" y="448" font-family="Arial" font-size="15" font-weight="bold" fill="#ffffff">--> STOP. Call MD back.</text>
+            <rect x="50" y="525" width="490" height="525" fill="#10b981" rx="10"/>
+            <text x="295" y="565" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">LIVING WILL</text>
+            <line x1="80" y1="580" x2="510" y2="580" stroke="#ffd700" stroke-width="2"/>
+            <text x="70" y="615" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">What it is:</text>
+            <text x="70" y="640" font-family="Arial" font-size="15" fill="#ffffff">Written instructions for end-of-life</text>
+            <text x="70" y="660" font-family="Arial" font-size="15" fill="#ffffff">care (intubation, CPR, feeding tube).</text>
+            <text x="70" y="695" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Activates when:</text>
+            <text x="70" y="720" font-family="Arial" font-size="15" fill="#ffffff">Patient is incapacitated AND</text>
+            <text x="70" y="740" font-family="Arial" font-size="15" fill="#ffffff">terminally ill / permanently unconscious.</text>
+            <text x="70" y="775" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">CANNOT be overridden by family</text>
+            <text x="70" y="797" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">if patient was competent when signed.</text>
+            <text x="70" y="840" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Nurse's role:</text>
+            <text x="70" y="865" font-family="Arial" font-size="15" fill="#ffffff">- Ensure copy is in chart</text>
+            <text x="70" y="890" font-family="Arial" font-size="15" fill="#ffffff">- Honor stated wishes</text>
+            <text x="70" y="915" font-family="Arial" font-size="15" fill="#ffffff">- Advocate if team deviates</text>
+            <text x="70" y="940" font-family="Arial" font-size="15" fill="#ffffff">- Update with changes in status</text>
+            <text x="70" y="985" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">DNR is a SEPARATE order;</text>
+            <text x="70" y="1010" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">must be written by MD/provider.</text>
+            <text x="70" y="1035" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">DNR != comfort care. Pain meds continue.</text>
+            <rect x="560" y="525" width="490" height="525" fill="#8b5cf6" rx="10"/>
+            <text x="805" y="565" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">DPOA-HC (Proxy)</text>
+            <line x1="590" y1="580" x2="1020" y2="580" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="615" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">What it is:</text>
+            <text x="580" y="640" font-family="Arial" font-size="15" fill="#ffffff">Patient names a SURROGATE to make</text>
+            <text x="580" y="660" font-family="Arial" font-size="15" fill="#ffffff">healthcare decisions if incapacitated.</text>
+            <text x="580" y="695" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Activates when:</text>
+            <text x="580" y="720" font-family="Arial" font-size="15" fill="#ffffff">Patient loses decision-making capacity</text>
+            <text x="580" y="740" font-family="Arial" font-size="15" fill="#ffffff">(determined by physician).</text>
+            <text x="580" y="775" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">Surrogate must follow patient's</text>
+            <text x="580" y="797" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">KNOWN wishes, not their own.</text>
+            <text x="580" y="840" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Hierarchy when no DPOA:</text>
+            <text x="580" y="865" font-family="Arial" font-size="15" fill="#ffffff">1. Spouse</text>
+            <text x="580" y="890" font-family="Arial" font-size="15" fill="#ffffff">2. Adult children (consensus)</text>
+            <text x="580" y="915" font-family="Arial" font-size="15" fill="#ffffff">3. Parents</text>
+            <text x="580" y="940" font-family="Arial" font-size="15" fill="#ffffff">4. Adult siblings</text>
+            <text x="580" y="965" font-family="Arial" font-size="15" fill="#ffffff">5. Closest relative</text>
+            <text x="580" y="1005" font-family="Arial" font-size="15" fill="#ffffff">(varies by state - know yours)</text>
+            <text x="580" y="1035" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">Competent pt always trumps surrogate.</text>
+          </svg>`,
+          caption: "Provider gets consent. Nurse witnesses understanding. Family cannot override a competent patient's advance directive."
+        }
+      },
+      {
+        type: "example",
+        title: "Four Cultural Scenarios the NCLEX Loves",
+        content: `**Scenario 1 — Jehovah's Witness.** Mr. Holt is bleeding post-op, Hgb 6.5. Doctor orders 2 units packed red cells; Mr. Holt refuses on religious grounds. **You honor the refusal**, notify the provider, document, and advocate for alternatives (cell salvage, erythropoietin, IV iron, volume expanders).
+
+**Scenario 2 — Muslim dietary + Ramadan.** Mrs. Hassan is admitted during Ramadan with a UTI. She's fasting sunrise to sunset. She also can't have pork-derived insulin or gelatin. **Action:** ask about her specific practices, request a halal diet consult, time medications with the provider for sundown when possible, and document.
+
+**Scenario 3 — Hispanic/Latino family-centered care.** Mr. Reyes was just diagnosed with metastatic cancer. His adult daughter asks the team **not** to tell him directly — she wants the family to share the news. **Action:** explore the patient's preference (some patients **want** the family to be the buffer; this is called **familism**). Ask Mr. Reyes: *"Some patients want all the information; others prefer family decide together. What do you prefer?"* Honor his answer.
+
+**Scenario 4 — Native American end-of-life.** Mrs. Whitehorse is dying. Family requests a traditional ceremony and that the body not be touched until an elder arrives. **Action:** accommodate within hospital policy. Notify chaplain, mortuary, and unit leadership.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Four Cultural Scenarios the Exam Loves</text>
+            <rect x="50" y="100" width="490" height="450" fill="#6366f1" rx="10"/>
+            <text x="295" y="135" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">1. JEHOVAH'S WITNESS</text>
+            <line x1="80" y1="150" x2="510" y2="150" stroke="#ffd700" stroke-width="2"/>
+            <text x="70" y="185" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Situation:</text>
+            <text x="70" y="208" font-family="Arial" font-size="15" fill="#ffffff">Mr. Holt, Hgb 6.5, refuses blood.</text>
+            <text x="70" y="248" font-family="Arial" font-size="16" font-weight="bold" fill="#10b981">Right action:</text>
+            <text x="70" y="273" font-family="Arial" font-size="15" fill="#ffffff">- Honor refusal (competent adult)</text>
+            <text x="70" y="295" font-family="Arial" font-size="15" fill="#ffffff">- Notify provider immediately</text>
+            <text x="70" y="317" font-family="Arial" font-size="15" fill="#ffffff">- Document refusal + teaching</text>
+            <text x="70" y="339" font-family="Arial" font-size="15" fill="#ffffff">- Offer ALTERNATIVES:</text>
+            <text x="90" y="361" font-family="Arial" font-size="14" fill="#ffd700">  cell salvage, EPO, IV iron,</text>
+            <text x="90" y="381" font-family="Arial" font-size="14" fill="#ffd700">  volume expanders, albumin</text>
+            <text x="70" y="421" font-family="Arial" font-size="16" font-weight="bold" fill="#ef4444">Wrong: coerce, judge, hide blood</text>
+            <text x="70" y="443" font-family="Arial" font-size="16" font-weight="bold" fill="#ef4444">in a "saline" bag, override</text>
+            <text x="70" y="495" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Principle: AUTONOMY > beneficence</text>
+            <text x="70" y="525" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Note: minors are court-decided</text>
+            <rect x="560" y="100" width="490" height="450" fill="#10b981" rx="10"/>
+            <text x="805" y="135" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">2. MUSLIM PATIENT (Ramadan)</text>
+            <line x1="590" y1="150" x2="1020" y2="150" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="185" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Situation:</text>
+            <text x="580" y="208" font-family="Arial" font-size="15" fill="#ffffff">Mrs. Hassan, UTI, fasting Ramadan.</text>
+            <text x="580" y="248" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">Right action:</text>
+            <text x="580" y="273" font-family="Arial" font-size="15" fill="#ffffff">- ASK her specific practices</text>
+            <text x="580" y="295" font-family="Arial" font-size="15" fill="#ffffff">- Sick exemption is OPTIONAL,</text>
+            <text x="580" y="317" font-family="Arial" font-size="15" fill="#ffffff">  not automatic - she decides</text>
+            <text x="580" y="339" font-family="Arial" font-size="15" fill="#ffffff">- Halal diet consult</text>
+            <text x="580" y="361" font-family="Arial" font-size="15" fill="#ffffff">- Avoid pork-derived meds</text>
+            <text x="580" y="381" font-family="Arial" font-size="15" fill="#ffffff">  (insulin, heparin, gelatin caps)</text>
+            <text x="580" y="403" font-family="Arial" font-size="15" fill="#ffffff">- Time meds with sundown PRN</text>
+            <text x="580" y="425" font-family="Arial" font-size="15" fill="#ffffff">- Same-sex provider if requested</text>
+            <text x="580" y="447" font-family="Arial" font-size="15" fill="#ffffff">- Allow space/time for salat (prayer)</text>
+            <text x="580" y="495" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Principle: FIDELITY + autonomy</text>
+            <text x="580" y="525" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Note: needs vary widely - ASK</text>
+            <rect x="50" y="580" width="490" height="460" fill="#f59e0b" rx="10"/>
+            <text x="295" y="615" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">3. HISPANIC/LATINO FAMILY</text>
+            <line x1="80" y1="630" x2="510" y2="630" stroke="#ffffff" stroke-width="2"/>
+            <text x="70" y="665" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Situation:</text>
+            <text x="70" y="688" font-family="Arial" font-size="15" fill="#ffffff">Daughter asks team to tell HER</text>
+            <text x="70" y="708" font-family="Arial" font-size="15" fill="#ffffff">cancer dx so SHE can tell dad.</text>
+            <text x="70" y="748" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Right action:</text>
+            <text x="70" y="773" font-family="Arial" font-size="15" fill="#ffffff">ASK the PATIENT first:</text>
+            <text x="70" y="800" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">"Some people want all the info;</text>
+            <text x="70" y="820" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">others prefer the family decide</text>
+            <text x="70" y="840" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">together. What do you prefer?"</text>
+            <text x="70" y="880" font-family="Arial" font-size="15" fill="#ffffff">If pt wants familism-based</text>
+            <text x="70" y="900" font-family="Arial" font-size="15" fill="#ffffff">shared decisions, HONOR it.</text>
+            <text x="70" y="950" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Principle: AUTONOMY (defined by</text>
+            <text x="70" y="970" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">patient, not by Western default)</text>
+            <text x="70" y="1010" font-family="Arial" font-size="14" fill="#ffffff">Patient may DELEGATE autonomy</text>
+            <text x="70" y="1030" font-family="Arial" font-size="14" fill="#ffffff">- that is itself an autonomous choice.</text>
+            <rect x="560" y="580" width="490" height="460" fill="#8b5cf6" rx="10"/>
+            <text x="805" y="615" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">4. NATIVE AMERICAN END-OF-LIFE</text>
+            <line x1="590" y1="630" x2="1020" y2="630" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="665" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Situation:</text>
+            <text x="580" y="688" font-family="Arial" font-size="15" fill="#ffffff">Mrs. Whitehorse dying. Family</text>
+            <text x="580" y="708" font-family="Arial" font-size="15" fill="#ffffff">wants ceremony + no touching</text>
+            <text x="580" y="728" font-family="Arial" font-size="15" fill="#ffffff">body until elder arrives.</text>
+            <text x="580" y="768" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Right action:</text>
+            <text x="580" y="793" font-family="Arial" font-size="15" fill="#ffffff">- Accommodate ceremony</text>
+            <text x="580" y="815" font-family="Arial" font-size="15" fill="#ffffff">- Pause routine post-mortem care</text>
+            <text x="580" y="837" font-family="Arial" font-size="15" fill="#ffffff">- Notify chaplain + leadership</text>
+            <text x="580" y="859" font-family="Arial" font-size="15" fill="#ffffff">- Coordinate with mortuary</text>
+            <text x="580" y="881" font-family="Arial" font-size="15" fill="#ffffff">- Quiet, dim environment</text>
+            <text x="580" y="903" font-family="Arial" font-size="15" fill="#ffffff">- Allow space for smudging if requested</text>
+            <text x="580" y="945" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">Principle: FIDELITY + cultural</text>
+            <text x="580" y="965" font-family="Arial" font-size="14" font-style="italic" fill="#ffffff">humility</text>
+            <text x="580" y="1010" font-family="Arial" font-size="14" fill="#ffffff">Same humility extends to Orthodox</text>
+            <text x="580" y="1030" font-family="Arial" font-size="14" fill="#ffffff">Jewish + Buddhist death rituals.</text>
+          </svg>`,
+          caption: "Four scenarios, one rule: ask the patient, honor the answer, document, and accommodate within policy."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX-Style Question: Ethics",
+        content: `**Question:** A 78-year-old patient with end-stage COPD has a signed living will stating "no intubation, no CPR." She becomes unresponsive with agonal breathing. Her adult son arrives, sobbing, and shouts at the nurse: *"Do EVERYTHING — intubate her, save her!"* Which action by the nurse is **most appropriate**?
+
+This question tests **fidelity to the patient's advance directive** versus emotional pressure from a family surrogate. A competent adult's prior written wishes — when documented and witnessed — bind the healthcare team. The family does **not** have the legal authority to override the patient's own decision. The nurse's role is to **honor the directive, support the family emotionally, and document**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">NCLEX Practice: Advance Directive Override</text>
+            <rect x="50" y="90" width="1000" height="140" fill="#6366f1" rx="10"/>
+            <text x="70" y="125" font-family="Arial" font-size="17" fill="#ffffff">78 y/o with end-stage COPD has a signed, witnessed living will:</text>
+            <text x="70" y="150" font-family="Arial" font-size="17" fill="#ffffff">"NO intubation, NO CPR." She becomes unresponsive with agonal breathing.</text>
+            <text x="70" y="175" font-family="Arial" font-size="17" fill="#ffffff">Her son arrives and demands: "DO EVERYTHING - intubate her, SAVE HER!"</text>
+            <text x="70" y="205" font-family="Arial" font-size="17" font-weight="bold" fill="#ffd700">Which action is MOST appropriate?</text>
+            <rect x="50" y="250" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="285" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">A. Initiate full CPR and intubation per the son's request.</text>
+            <text x="70" y="320" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] Family CANNOT override a competent adult's prior directive.</text>
+            <text x="70" y="345" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">Doing so = battery + violation of autonomy.</text>
+            <rect x="50" y="380" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="415" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">B. Tell the son: "I'm sorry, but I can't talk to you right now"</text>
+            <text x="70" y="440" font-family="Arial" font-size="18" fill="#ffffff">     and leave the room.</text>
+            <text x="70" y="475" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] Abandons the family in crisis. Violates therapeutic communication.</text>
+            <rect x="50" y="510" width="1000" height="135" fill="#10b981" rx="10"/>
+            <text x="70" y="545" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">C. Honor the living will, provide comfort care, notify the</text>
+            <text x="70" y="570" font-family="Arial" font-size="18" fill="#ffffff">     provider and chaplain, and offer emotional support to</text>
+            <text x="70" y="595" font-family="Arial" font-size="18" fill="#ffffff">     the son.</text>
+            <text x="70" y="625" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[CORRECT] Honors autonomy, fulfills fidelity, supports family with empathy.</text>
+            <rect x="50" y="665" width="1000" height="110" fill="#ef4444" rx="10"/>
+            <text x="70" y="700" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">D. Call the hospital ethics committee for an emergency vote</text>
+            <text x="70" y="725" font-family="Arial" font-size="18" fill="#ffffff">     to decide whether to intubate.</text>
+            <text x="70" y="760" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">[WRONG] No ethical conflict exists - directive is clear. No time, no need.</text>
+            <rect x="50" y="800" width="1000" height="260" fill="#ffd700" rx="10"/>
+            <text x="550" y="840" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">EXPLANATION</text>
+            <line x1="450" y1="852" x2="650" y2="852" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="70" y="885" font-family="Arial" font-size="16" fill="#1a1a2e">Answer C honors all 5 principles:</text>
+            <text x="90" y="915" font-family="Arial" font-size="16" fill="#1a1a2e">- AUTONOMY: respects the patient's prior decision</text>
+            <text x="90" y="940" font-family="Arial" font-size="16" fill="#1a1a2e">- BENEFICENCE: comfort care, dignified death</text>
+            <text x="90" y="965" font-family="Arial" font-size="16" fill="#1a1a2e">- NONMALEFICENCE: no painful, futile intubation</text>
+            <text x="90" y="990" font-family="Arial" font-size="16" fill="#1a1a2e">- FIDELITY: keeps the promise made by the directive</text>
+            <text x="90" y="1015" font-family="Arial" font-size="16" fill="#1a1a2e">- THERAPEUTIC COMMUNICATION: chaplain + emotional support for son</text>
+            <text x="70" y="1045" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">A is battery. B is abandonment. D wastes time on a non-conflict.</text>
+          </svg>`,
+          caption: "Family grief is real, but cannot override a competent patient's signed advance directive. Honor + comfort + chaplain."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Toolkit: Asking, Listening, Honoring",
+        content: `Use these three sentences at the bedside and you will satisfy 90% of the cultural-competence NCLEX answers.
+
+**Opening question (every admission):** *"Are there any cultural, religious, or personal practices that are important to your care while you're here?"* This single question unlocks dietary needs, prayer times, modesty requirements, family decision-making patterns, end-of-life rituals, and acceptable providers.
+
+**Mid-care check (when a values conflict appears):** *"Help me understand what's most important to you about this decision."* This converts confrontation ("you have to take this") into collaboration. It surfaces values you can document and the team can honor.
+
+**Closing check (before any major intervention):** *"Is there anyone you'd like with you, or anything we should do before we begin?"* Catches missed family notifications, last prayers, religious objects (rosary, prayer rug, Bible), and surrogate involvement.
+
+Pair these with the **5 ethical principles** as labels — when the exam asks *"What principle is the nurse upholding?"*, you'll always have language ready: **autonomy, beneficence, nonmaleficence, justice, fidelity.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Bedside Toolkit: Three Questions, Five Principles</text>
+            <rect x="50" y="100" width="1000" height="190" fill="#6366f1" rx="10"/>
+            <text x="550" y="138" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">QUESTION 1 - ADMISSION</text>
+            <line x1="380" y1="152" x2="720" y2="152" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="190" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">"Are there any cultural, religious, or personal practices</text>
+            <text x="550" y="218" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">that are important to your care while you're here?"</text>
+            <text x="550" y="258" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle">Unlocks: diet, prayer times, modesty, decision-making, rituals, providers</text>
+            <rect x="50" y="310" width="1000" height="190" fill="#10b981" rx="10"/>
+            <text x="550" y="348" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">QUESTION 2 - MID-CARE (when values conflict)</text>
+            <line x1="280" y1="362" x2="820" y2="362" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="400" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">"Help me understand what's most</text>
+            <text x="550" y="428" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">important to you about this decision."</text>
+            <text x="550" y="468" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle">Converts confrontation into collaboration. Surfaces values to document.</text>
+            <rect x="50" y="520" width="1000" height="190" fill="#f59e0b" rx="10"/>
+            <text x="550" y="558" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">QUESTION 3 - BEFORE ANY MAJOR INTERVENTION</text>
+            <line x1="220" y1="572" x2="880" y2="572" stroke="#ffffff" stroke-width="2"/>
+            <text x="550" y="610" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">"Is there anyone you'd like with you, or</text>
+            <text x="550" y="638" font-family="Arial" font-size="20" font-style="italic" fill="#ffffff" text-anchor="middle">anything we should do before we begin?"</text>
+            <text x="550" y="678" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Catches family, prayers, religious objects, surrogate involvement.</text>
+            <rect x="50" y="735" width="1000" height="325" fill="#ffd700" rx="10"/>
+            <text x="550" y="775" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">5 PRINCIPLES = 5 LABELS FOR EVERY EXAM ANSWER</text>
+            <line x1="200" y1="790" x2="900" y2="790" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="80" y="830" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">AUTONOMY</text>
+            <text x="350" y="830" font-family="Arial" font-size="17" fill="#1a1a2e">"Refusing chemo." "Choosing alternative tx."</text>
+            <text x="80" y="870" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">BENEFICENCE</text>
+            <text x="350" y="870" font-family="Arial" font-size="17" fill="#1a1a2e">Giving the antibiotic; pain management.</text>
+            <text x="80" y="910" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">NONMALEFICENCE</text>
+            <text x="350" y="910" font-family="Arial" font-size="17" fill="#1a1a2e">Holding a med when contraindicated.</text>
+            <text x="80" y="950" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">JUSTICE</text>
+            <text x="350" y="950" font-family="Arial" font-size="17" fill="#1a1a2e">Equal triage care regardless of insurance.</text>
+            <text x="80" y="990" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">FIDELITY</text>
+            <text x="350" y="990" font-family="Arial" font-size="17" fill="#1a1a2e">"I'll be back in 15 minutes" - and you are.</text>
+            <text x="550" y="1040" font-family="Arial" font-size="18" font-style="italic" fill="#1a1a2e" text-anchor="middle">Ask. Listen. Honor. Label. Document.</text>
+          </svg>`,
+          caption: "Three sentences at the bedside. Five principles for every answer choice. Cultural humility = active inquiry, not memorization."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-fundamentals-lesson-12",
+    title: "Capstone: The 4-Step Priority Algorithm for ANY NCLEX Question",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "One Algorithm to Rule Them All",
+        content: `The NCLEX is, at its core, a **prioritization exam**. You're rarely asked "what is correct?" You're asked "what is correct **FIRST**?" That word — *first*, *initial*, *priority*, *most important*, *best* — appears on roughly half of all questions. If you can prioritize, you can pass.
+
+Across the first 11 lessons, you've built every tool you need. This lesson welds them into a **4-Step Priority Algorithm** you can run on any question in under 30 seconds.
+
+**Step 1: ABCs check** — is anyone's Airway, Breathing, or Circulation threatened? (Lesson 1)
+**Step 2: Maslow check** — if ABCs are clear, who has the most pressing physiologic, then safety, need? (Lesson 2)
+**Step 3: Acute vs. Chronic check** — among similar-priority patients, the new/unstable problem beats the chronic/stable one.
+**Step 4: Nursing Process check** — what step of ADPIE are you on? **Assess before intervene.** (Lesson 3)
+
+Run these in order. The first step that decisively picks a winner is your answer. Don't skip ahead.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">The 4-Step Priority Algorithm</text>
+            <text x="550" y="92" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Run in order. First step that picks a winner = your answer.</text>
+            <rect x="100" y="130" width="900" height="190" fill="#ef4444" rx="15"/>
+            <text x="160" y="180" font-family="Arial" font-size="44" font-weight="bold" fill="#ffffff">1</text>
+            <text x="230" y="170" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700">ABCs CHECK</text>
+            <text x="230" y="200" font-family="Arial" font-size="18" fill="#ffffff">Is Airway, Breathing, or Circulation threatened?</text>
+            <text x="230" y="225" font-family="Arial" font-size="16" fill="#ffffff">Stridor, RR &lt; 10, SpO2 &lt; 90%, no pulse, active bleeding, chest pain</text>
+            <text x="230" y="255" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">If YES --&gt; that patient/intervention WINS. Stop here.</text>
+            <text x="230" y="285" font-family="Arial" font-size="16" font-style="italic" fill="#ffffff">A before B before C. Airway always trumps.</text>
+            <line x1="550" y1="320" x2="550" y2="345" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="540,345 560,345 550,360" fill="#ffd700"/>
+            <rect x="100" y="365" width="900" height="190" fill="#f59e0b" rx="15"/>
+            <text x="160" y="415" font-family="Arial" font-size="44" font-weight="bold" fill="#ffffff">2</text>
+            <text x="230" y="405" font-family="Arial" font-size="26" font-weight="bold" fill="#ffffff">MASLOW CHECK</text>
+            <text x="230" y="435" font-family="Arial" font-size="18" fill="#ffffff">If ABCs clear: who has the lower-Maslow need?</text>
+            <text x="230" y="460" font-family="Arial" font-size="16" fill="#ffffff">Physiologic &gt; Safety &gt; Love/Belonging &gt; Esteem &gt; Self-Actualization</text>
+            <text x="230" y="490" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">Hunger/sleep/pain beats safety. Safety beats loneliness.</text>
+            <text x="230" y="520" font-family="Arial" font-size="16" font-style="italic" fill="#ffffff">Tip: pain, oxygen, elimination, nutrition all = physiologic.</text>
+            <line x1="550" y1="555" x2="550" y2="580" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="540,580 560,580 550,595" fill="#ffd700"/>
+            <rect x="100" y="600" width="900" height="190" fill="#10b981" rx="15"/>
+            <text x="160" y="650" font-family="Arial" font-size="44" font-weight="bold" fill="#ffffff">3</text>
+            <text x="230" y="640" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700">ACUTE vs CHRONIC CHECK</text>
+            <text x="230" y="670" font-family="Arial" font-size="18" fill="#ffffff">Among similar Maslow priorities: NEW/UNSTABLE wins.</text>
+            <text x="230" y="695" font-family="Arial" font-size="16" fill="#ffffff">Sudden chest pain &gt; chronic stable angina</text>
+            <text x="230" y="720" font-family="Arial" font-size="16" fill="#ffffff">New confusion &gt; baseline dementia</text>
+            <text x="230" y="750" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">Watch for: "suddenly," "new onset," "first time," "worsening"</text>
+            <text x="230" y="778" font-family="Arial" font-size="16" font-style="italic" fill="#ffffff">Unexpected findings &gt; expected findings.</text>
+            <line x1="550" y1="790" x2="550" y2="815" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="540,815 560,815 550,830" fill="#ffd700"/>
+            <rect x="100" y="835" width="900" height="225" fill="#6366f1" rx="15"/>
+            <text x="160" y="885" font-family="Arial" font-size="44" font-weight="bold" fill="#ffffff">4</text>
+            <text x="230" y="875" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700">NURSING PROCESS CHECK (ADPIE)</text>
+            <text x="230" y="905" font-family="Arial" font-size="18" fill="#ffffff">What step are you on? ASSESS before INTERVENE.</text>
+            <text x="230" y="935" font-family="Arial" font-size="16" fill="#ffffff">Assessment --&gt; Diagnosis --&gt; Planning --&gt; Implementation --&gt; Evaluation</text>
+            <text x="230" y="970" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">If two answers are correct, the ASSESSMENT one wins</text>
+            <text x="230" y="995" font-family="Arial" font-size="16" font-weight="bold" fill="#ffd700">(unless ABCs demand immediate action).</text>
+            <text x="230" y="1030" font-family="Arial" font-size="16" font-style="italic" fill="#ffffff">Exception: unwitnessed cardiac arrest --&gt; CPR FIRST, then assess rhythm.</text>
+          </svg>`,
+          caption: "Four steps, in order. ABCs first, then Maslow, then acute vs chronic, then nursing process. First decisive step wins."
+        }
+      },
+      {
+        type: "concept",
+        title: "How the Algorithm Resolves Every Question Type",
+        content: `**"Which patient should the nurse see first?"** Run all 4 patients through Step 1. If one has compromised ABCs, you're done. If two have ABC issues, see the **airway** problem first (A > B > C). If none do, move to Step 2 (Maslow), then Step 3 (acute vs chronic).
+
+**"What is the priority nursing action?"** Step 1 asks: does any option directly address an ABC threat? If yes, pick it. Step 4 asks: is the question phrased "what should the nurse do first?" with one assess option and three intervention options? Pick **assess** — unless ABCs are already failing.
+
+**"Which task can be delegated to the UAP?"** Layer the delegation rules (Lesson 5) onto the algorithm. UAPs do **stable, predictable, routine** tasks (bathing, ambulation, vitals on stable patients). LPNs handle stable patients, sterile dressings, meds (except IV push in most states). RNs handle the **acute, unstable, teaching, assessment, IV push, blood**.
+
+**"What should the nurse do next?"** This is an ADPIE step question. You already assessed — what's next? Diagnose. You already planned — what's next? Implement. Then evaluate.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">How the Algorithm Resolves Every Question Type</text>
+            <rect x="50" y="100" width="490" height="230" fill="#ef4444" rx="10"/>
+            <text x="295" y="135" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">"WHICH PATIENT FIRST?"</text>
+            <line x1="80" y1="148" x2="510" y2="148" stroke="#ffd700" stroke-width="2"/>
+            <text x="70" y="180" font-family="Arial" font-size="16" fill="#ffffff">1. Run all 4 patients through ABCs</text>
+            <text x="70" y="205" font-family="Arial" font-size="16" fill="#ffffff">2. If only 1 has ABC issue --&gt; that one</text>
+            <text x="70" y="230" font-family="Arial" font-size="16" fill="#ffffff">3. If 2 do --&gt; airway beats breathing</text>
+            <text x="70" y="255" font-family="Arial" font-size="16" fill="#ffffff">     beats circulation</text>
+            <text x="70" y="285" font-family="Arial" font-size="16" fill="#ffd700">4. If none --&gt; lowest Maslow tier</text>
+            <text x="70" y="310" font-family="Arial" font-size="16" fill="#ffd700">5. Tie-break with acute/new onset</text>
+            <rect x="560" y="100" width="490" height="230" fill="#f59e0b" rx="10"/>
+            <text x="805" y="135" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">"WHAT ACTION FIRST?"</text>
+            <line x1="590" y1="148" x2="1020" y2="148" stroke="#ffffff" stroke-width="2"/>
+            <text x="580" y="180" font-family="Arial" font-size="16" fill="#ffffff">1. Does any option directly fix an</text>
+            <text x="580" y="202" font-family="Arial" font-size="16" fill="#ffffff">     ABC threat? --&gt; pick that one</text>
+            <text x="580" y="232" font-family="Arial" font-size="16" fill="#ffffff">2. No ABC threat? --&gt; ASSESS first</text>
+            <text x="580" y="257" font-family="Arial" font-size="16" fill="#ffffff">     before intervening</text>
+            <text x="580" y="287" font-family="Arial" font-size="16" fill="#1a1a2e" font-weight="bold">3. Exception: cardiac arrest -&gt; CPR FIRST</text>
+            <text x="580" y="312" font-family="Arial" font-size="16" fill="#1a1a2e" font-weight="bold">4. Exception: choking -&gt; clear airway FIRST</text>
+            <rect x="50" y="360" width="490" height="230" fill="#10b981" rx="10"/>
+            <text x="295" y="395" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">"WHAT TO DELEGATE?"</text>
+            <line x1="80" y1="408" x2="510" y2="408" stroke="#ffd700" stroke-width="2"/>
+            <text x="70" y="440" font-family="Arial" font-size="15" fill="#ffffff">UAP/CNA: stable, predictable, routine</text>
+            <text x="90" y="462" font-family="Arial" font-size="14" fill="#ffd700">  bath, ambulate, VS on stable, feed</text>
+            <text x="70" y="490" font-family="Arial" font-size="15" fill="#ffffff">LPN: stable pt, sterile dressing, PO meds</text>
+            <text x="90" y="512" font-family="Arial" font-size="14" fill="#ffd700">  re-do dressings, give insulin, foley</text>
+            <text x="70" y="540" font-family="Arial" font-size="15" fill="#ffffff">RN ONLY: acute, unstable, teach, IV push,</text>
+            <text x="90" y="562" font-family="Arial" font-size="14" fill="#ffd700">  blood, assess, plan, initial admit eval</text>
+            <rect x="560" y="360" width="490" height="230" fill="#6366f1" rx="10"/>
+            <text x="805" y="395" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">"WHAT NEXT?" (ADPIE step)</text>
+            <line x1="590" y1="408" x2="1020" y2="408" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="440" font-family="Arial" font-size="16" fill="#ffffff">After Assess --&gt; Diagnose</text>
+            <text x="580" y="465" font-family="Arial" font-size="16" fill="#ffffff">After Diagnose --&gt; Plan</text>
+            <text x="580" y="490" font-family="Arial" font-size="16" fill="#ffffff">After Plan --&gt; Implement</text>
+            <text x="580" y="515" font-family="Arial" font-size="16" fill="#ffffff">After Implement --&gt; Evaluate</text>
+            <text x="580" y="540" font-family="Arial" font-size="16" fill="#ffffff">After Evaluate --&gt; Reassess</text>
+            <text x="580" y="572" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">Loop back -- the cycle continues.</text>
+            <rect x="50" y="620" width="1000" height="430" fill="#ffd700" rx="10"/>
+            <text x="550" y="660" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">QUICK-PICK TRIGGER WORDS</text>
+            <line x1="380" y1="675" x2="720" y2="675" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="80" y="710" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"First," "Initial," "Priority," "Most important," "Best"</text>
+            <text x="80" y="735" font-family="Arial" font-size="16" fill="#1a1a2e">  --&gt; This is a PRIORITY question. Run the 4-step algorithm.</text>
+            <text x="80" y="775" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"Suddenly," "New onset," "Acute," "Worsening"</text>
+            <text x="80" y="800" font-family="Arial" font-size="16" fill="#1a1a2e">  --&gt; Step 3 trigger - this beats the chronic stable patient.</text>
+            <text x="80" y="840" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"Stable," "Chronic," "Baseline," "Scheduled"</text>
+            <text x="80" y="865" font-family="Arial" font-size="16" fill="#1a1a2e">  --&gt; Lower priority - delegate-friendly.</text>
+            <text x="80" y="905" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"Best response," "Therapeutic"</text>
+            <text x="80" y="930" font-family="Arial" font-size="16" fill="#1a1a2e">  --&gt; Communication question. Reflect feelings, open-ended (Lesson 4).</text>
+            <text x="80" y="970" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"Most appropriate teaching," "Verifies understanding"</text>
+            <text x="80" y="995" font-family="Arial" font-size="16" fill="#1a1a2e">  --&gt; Evaluation step (ADPIE E). Look for pt's own correct restatement.</text>
+            <text x="80" y="1035" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a2e">"Needs further teaching" --&gt; pick the WRONG statement.</text>
+          </svg>`,
+          caption: "Each question type maps to one or two algorithm steps. Trigger words tell you which step to enter on."
+        }
+      },
+      {
+        type: "example",
+        title: "The Algorithm in Action: Three Worked NCLEX Questions",
+        content: `**Q1 — Which patient first?** *(a) 70 y/o post-op day 2 with pain 4/10; (b) 55 y/o new-onset chest pain radiating to jaw; (c) 30 y/o stable diabetic awaiting discharge; (d) 80 y/o with chronic CHF, baseline edema.*
+**Step 1 (ABCs):** Option (b) — new chest pain = possible MI = C-circulation threat. **WINNER: (b)**. Don't even run step 2.
+
+**Q2 — What action first?** Patient gasping for air, SpO2 84%. Options: (a) call rapid response; (b) raise HOB and apply O2; (c) document; (d) assess lung sounds.
+**Step 1 (ABCs):** (b) directly fixes B-Breathing. **WINNER: (b)**. Assessment normally beats intervention, but ABCs override.
+
+**Q3 — What next?** Nurse has just assessed a fall risk patient, identified disorientation and gait instability, written the diagnosis "Risk for falls related to weakness." What is the next step?
+**Step 4 (ADPIE):** Assessment ✓. Diagnosis ✓. Next = **Planning**. Set goals (no falls in 24h) and choose interventions (bed alarm, call light, non-skid socks). **WINNER: Plan**, not implement-yet.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">The Algorithm in Action: 3 Worked Questions</text>
+            <rect x="40" y="85" width="1020" height="320" fill="#ef4444" rx="10"/>
+            <text x="550" y="120" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Q1: WHICH PATIENT FIRST?</text>
+            <line x1="350" y1="132" x2="750" y2="132" stroke="#ffd700" stroke-width="2"/>
+            <text x="60" y="160" font-family="Arial" font-size="15" fill="#ffffff">(a) 70 y/o post-op day 2, pain 4/10 - expected, chronic-ish, Maslow physiologic</text>
+            <text x="60" y="185" font-family="Arial" font-size="15" fill="#ffffff">(b) 55 y/o NEW chest pain radiating to jaw - C threat, possible MI</text>
+            <text x="60" y="210" font-family="Arial" font-size="15" fill="#ffffff">(c) 30 y/o stable diabetic awaiting discharge - safety/esteem, stable</text>
+            <text x="60" y="235" font-family="Arial" font-size="15" fill="#ffffff">(d) 80 y/o CHF, BASELINE edema - chronic, expected, stable</text>
+            <text x="60" y="280" font-family="Arial" font-size="17" font-weight="bold" fill="#ffd700">STEP 1 (ABCs): Option (b) threatens Circulation. STOP - done.</text>
+            <text x="60" y="320" font-family="Arial" font-size="17" font-weight="bold" fill="#10b981">WINNER: (b) - new chest pain. Algorithm exited at Step 1.</text>
+            <text x="60" y="360" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">Key trigger: "NEW" + chest pain + radiating to jaw = classic MI presentation.</text>
+            <text x="60" y="385" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">Time = muscle. Cannot wait.</text>
+            <rect x="40" y="425" width="1020" height="300" fill="#f59e0b" rx="10"/>
+            <text x="550" y="460" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Q2: WHAT ACTION FIRST?</text>
+            <line x1="380" y1="472" x2="720" y2="472" stroke="#ffffff" stroke-width="2"/>
+            <text x="60" y="500" font-family="Arial" font-size="15" fill="#ffffff">Pt gasping, SpO2 84%. Options:</text>
+            <text x="60" y="525" font-family="Arial" font-size="15" fill="#ffffff">(a) Call rapid response</text>
+            <text x="60" y="548" font-family="Arial" font-size="15" fill="#ffffff">(b) Raise HOB and apply O2</text>
+            <text x="60" y="571" font-family="Arial" font-size="15" fill="#ffffff">(c) Document the findings</text>
+            <text x="60" y="594" font-family="Arial" font-size="15" fill="#ffffff">(d) Auscultate lung sounds</text>
+            <text x="60" y="630" font-family="Arial" font-size="17" font-weight="bold" fill="#1a1a2e">STEP 1 (ABCs): (b) directly fixes BREATHING. Done.</text>
+            <text x="60" y="660" font-family="Arial" font-size="17" font-weight="bold" fill="#1a1a2e">WINNER: (b). ABCs override the usual "assess first" rule.</text>
+            <text x="60" y="695" font-family="Arial" font-size="15" font-style="italic" fill="#ffffff">After (b): call rapid response. Then auscultate while waiting. Document after.</text>
+            <rect x="40" y="745" width="1020" height="300" fill="#6366f1" rx="10"/>
+            <text x="550" y="780" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Q3: WHAT NEXT? (ADPIE)</text>
+            <line x1="400" y1="792" x2="700" y2="792" stroke="#ffd700" stroke-width="2"/>
+            <text x="60" y="820" font-family="Arial" font-size="15" fill="#ffffff">Nurse has assessed: disoriented, unsteady gait.</text>
+            <text x="60" y="843" font-family="Arial" font-size="15" fill="#ffffff">Nurse wrote: "Risk for falls r/t weakness."</text>
+            <text x="60" y="866" font-family="Arial" font-size="15" fill="#ffffff">What is the NEXT step?</text>
+            <text x="60" y="902" font-family="Arial" font-size="17" font-weight="bold" fill="#ffd700">STEP 4 (ADPIE check):</text>
+            <text x="60" y="930" font-family="Arial" font-size="15" fill="#ffffff">A done. D done. Next is P - PLANNING.</text>
+            <text x="60" y="955" font-family="Arial" font-size="15" fill="#ffffff">Plan = set goals + select interventions</text>
+            <text x="60" y="980" font-family="Arial" font-size="15" fill="#ffffff">(e.g., "no falls in 24h"; bed alarm, call light, non-skid socks, hourly rounds).</text>
+            <text x="60" y="1020" font-family="Arial" font-size="17" font-weight="bold" fill="#10b981">WINNER: Planning. Implementation comes AFTER the plan is written.</text>
+          </svg>`,
+          caption: "Q1 stopped at Step 1 (ABCs). Q2 stopped at Step 1 (ABCs override assess-first). Q3 needed Step 4 (ADPIE)."
+        }
+      },
+      {
+        type: "quiz",
+        title: "NCLEX-Style Question: The Capstone",
+        content: `**Question:** A nurse on a busy med-surg unit receives report on 4 patients. Which patient should the nurse assess **first**?
+
+This question is built specifically to make you run the 4-step algorithm. Multiple patients have problems; all sound urgent. The trick is to identify which problem is an **ABC threat** versus which is *concerning but stable*. Use Step 1 first. If multiple ABCs are flagged, A beats B beats C. If no clear ABC, move to Step 2 (Maslow) and Step 3 (acute vs chronic).
+
+Notice the language tells you everything: "scheduled," "stable," "baseline" = lower priority. "New," "increasing," "worsening," "sudden" = higher priority. Tie that to the ABCs and you have your winner.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" font-family="Arial" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">NCLEX Capstone: Which Patient First?</text>
+            <rect x="40" y="85" width="1020" height="120" fill="#6366f1" rx="10"/>
+            <text x="60" y="120" font-family="Arial" font-size="17" fill="#ffffff">A nurse receives report on 4 patients on a busy med-surg unit.</text>
+            <text x="60" y="148" font-family="Arial" font-size="17" fill="#ffffff">Which patient should the nurse assess FIRST?</text>
+            <text x="60" y="183" font-family="Arial" font-size="16" font-style="italic" fill="#ffd700">Run the 4-step priority algorithm on each option.</text>
+            <rect x="40" y="220" width="1020" height="100" fill="#ef4444" rx="10"/>
+            <text x="60" y="252" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">A. 65 y/o post-CABG, scheduled to ambulate, stable VS.</text>
+            <text x="60" y="282" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">"Scheduled" + "stable" = routine. Algorithm Step 1: no ABC threat. NOT first.</text>
+            <text x="60" y="307" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">Delegate ambulation to UAP after RN clears.</text>
+            <rect x="40" y="335" width="1020" height="130" fill="#10b981" rx="10"/>
+            <text x="60" y="367" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">B. 50 y/o asthmatic with NEW expiratory wheeze, SpO2 88%,</text>
+            <text x="60" y="392" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">      using accessory muscles, tripod posture.</text>
+            <text x="60" y="425" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">[CORRECT] AIRWAY + BREATHING threat. "New," "88%," tripod = severe</text>
+            <text x="60" y="448" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">distress. Algorithm Step 1 picks this immediately. STOP.</text>
+            <rect x="40" y="480" width="1020" height="100" fill="#ef4444" rx="10"/>
+            <text x="60" y="512" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">C. 72 y/o with chronic CHF, BASELINE 2+ pedal edema, no chg.</text>
+            <text x="60" y="542" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">"Baseline" + "no change" = chronic, expected. Step 3 loses to (B).</text>
+            <text x="60" y="567" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">Important but not URGENT.</text>
+            <rect x="40" y="595" width="1020" height="100" fill="#ef4444" rx="10"/>
+            <text x="60" y="627" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">D. 28 y/o post-op appy, pain 3/10, request ice chips.</text>
+            <text x="60" y="657" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">Pain 3/10 = tolerable. Comfort request = Maslow physiologic but stable.</text>
+            <text x="60" y="682" font-family="Arial" font-size="15" font-style="italic" fill="#ffd700">Delegate ice chips to UAP. Pain reassess later.</text>
+            <rect x="40" y="715" width="1020" height="340" fill="#ffd700" rx="10"/>
+            <text x="550" y="755" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">FULL ALGORITHM TRACE</text>
+            <line x1="430" y1="767" x2="670" y2="767" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="60" y="800" font-family="Arial" font-size="17" fill="#1a1a2e">STEP 1 (ABCs):</text>
+            <text x="290" y="800" font-family="Arial" font-size="17" fill="#1a1a2e">B has airway/breathing threat (SpO2 88%, accessory)</text>
+            <text x="60" y="830" font-family="Arial" font-size="17" fill="#1a1a2e">DECISIVE PICK:</text>
+            <text x="290" y="830" font-family="Arial" font-size="17" font-weight="bold" fill="#1a1a2e">B (Step 1 already chose - don't run Steps 2-4)</text>
+            <text x="60" y="875" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">ANSWER: B - the asthmatic in respiratory distress.</text>
+            <text x="60" y="915" font-family="Arial" font-size="16" fill="#1a1a2e">After assessing B: high-Fowler's, O2, albuterol nebulizer per order,</text>
+            <text x="60" y="940" font-family="Arial" font-size="16" fill="#1a1a2e">notify provider, prepare for possible escalation.</text>
+            <text x="60" y="985" font-family="Arial" font-size="15" font-style="italic" fill="#1a1a2e">Lesson: trigger words tell you everything. "New" + low SpO2 + tripod</text>
+            <text x="60" y="1010" font-family="Arial" font-size="15" font-style="italic" fill="#1a1a2e">= Step 1 instant win. "Scheduled," "baseline," "stable" = NOT first.</text>
+            <text x="60" y="1035" font-family="Arial" font-size="15" font-style="italic" fill="#1a1a2e">The algorithm picked B in &lt;10 seconds. That is the goal.</text>
+          </svg>`,
+          caption: "Step 1 (ABCs) picked B in seconds. Trigger words: 'new,' SpO2 88, tripod = severe distress. Algorithm exits immediately."
+        }
+      },
+      {
+        type: "application",
+        title: "Test-Day Game Plan: 30 Seconds Per Question",
+        content: `On test day, you have ~90 seconds per question. Spend **30 seconds running the algorithm**, **30 seconds eliminating wrong answers**, and **30 seconds confirming**. Here's the workflow.
+
+**Read 1 (10 sec):** Read the stem. Identify the **trigger word** — *first, priority, next, best, most appropriate, needs further teaching, expected outcome*. The trigger word tells you which algorithm step you'll lean on.
+
+**Read 2 (10 sec):** Identify the **patient population** (post-op, peds, pregnant, psych) and **what's stable vs unstable**. Underline new/sudden/worsening mentally.
+
+**Algorithm (10 sec):** Run Step 1 (ABCs) → Step 2 (Maslow) → Step 3 (acute) → Step 4 (ADPIE). Stop at the first decisive step.
+
+**Eliminate (30 sec):** Cross off any option that is unsafe, outside scope, requires an order you don't have, or that **does** before it **assesses** (unless ABC override). Cross off "always/never" absolutes.
+
+**Confirm (30 sec):** Re-read the stem. Does your answer match the trigger word? If "needs further teaching," did you pick the wrong statement? If "best response," is it therapeutic? **Trust the algorithm. Move on.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Test-Day Game Plan: 90 Seconds Per Question</text>
+            <rect x="50" y="90" width="200" height="900" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="5"/>
+            <text x="150" y="125" font-family="Arial" font-size="18" font-weight="bold" fill="#ffd700" text-anchor="middle">TIMER</text>
+            <rect x="80" y="160" width="140" height="60" fill="#10b981" rx="5"/>
+            <text x="150" y="195" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">0-10s</text>
+            <rect x="80" y="245" width="140" height="60" fill="#10b981" rx="5"/>
+            <text x="150" y="280" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">10-20s</text>
+            <rect x="80" y="330" width="140" height="60" fill="#f59e0b" rx="5"/>
+            <text x="150" y="365" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">20-30s</text>
+            <rect x="80" y="415" width="140" height="100" fill="#6366f1" rx="5"/>
+            <text x="150" y="470" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">30-60s</text>
+            <rect x="80" y="540" width="140" height="100" fill="#ec4899" rx="5"/>
+            <text x="150" y="595" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">60-90s</text>
+            <text x="150" y="675" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle">~90 sec</text>
+            <text x="150" y="695" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle">total</text>
+            <rect x="280" y="160" width="770" height="60" fill="#10b981" rx="5"/>
+            <text x="305" y="185" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">READ 1: stem + trigger word</text>
+            <text x="305" y="210" font-family="Arial" font-size="14" fill="#ffffff">"first" / "priority" / "best" / "needs further teaching" / "expected outcome"</text>
+            <rect x="280" y="245" width="770" height="60" fill="#10b981" rx="5"/>
+            <text x="305" y="270" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">READ 2: population + stable vs unstable</text>
+            <text x="305" y="295" font-family="Arial" font-size="14" fill="#ffffff">Underline mentally: new, sudden, worsening, scheduled, stable, baseline</text>
+            <rect x="280" y="330" width="770" height="60" fill="#f59e0b" rx="5"/>
+            <text x="305" y="355" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">RUN ALGORITHM: ABCs --&gt; Maslow --&gt; Acute --&gt; ADPIE</text>
+            <text x="305" y="380" font-family="Arial" font-size="14" fill="#ffffff">Stop at the first decisive step. Don't overthink. Don't keep running steps.</text>
+            <rect x="280" y="415" width="770" height="100" fill="#6366f1" rx="5"/>
+            <text x="305" y="445" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">ELIMINATE: cross off wrong options</text>
+            <text x="305" y="470" font-family="Arial" font-size="14" fill="#ffffff">- Unsafe (med error, scope violation)</text>
+            <text x="305" y="490" font-family="Arial" font-size="14" fill="#ffffff">- Requires unwritten order</text>
+            <text x="305" y="510" font-family="Arial" font-size="14" fill="#ffffff">- Intervenes before assessing (unless ABC override)</text>
+            <rect x="280" y="540" width="770" height="100" fill="#ec4899" rx="5"/>
+            <text x="305" y="570" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff">CONFIRM: does answer match the trigger word?</text>
+            <text x="305" y="595" font-family="Arial" font-size="14" fill="#ffffff">- "needs further teaching" --&gt; pick WRONG statement</text>
+            <text x="305" y="615" font-family="Arial" font-size="14" fill="#ffffff">- "best response" --&gt; therapeutic (reflect, open-ended)</text>
+            <text x="305" y="635" font-family="Arial" font-size="14" fill="#ffffff">- "first" --&gt; ABC winner (or assess if no ABC threat)</text>
+            <rect x="280" y="660" width="770" height="320" fill="#ffd700" rx="10"/>
+            <text x="665" y="700" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">FINAL RULES OF THE ROAD</text>
+            <line x1="450" y1="713" x2="880" y2="713" stroke="#1a1a2e" stroke-width="2"/>
+            <text x="305" y="745" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">1. ABCs always come first. Airway &gt; Breathing &gt; Circulation.</text>
+            <text x="305" y="775" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">2. Assess before intervene -- unless ABCs are failing.</text>
+            <text x="305" y="805" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">3. New/acute beats chronic/stable.</text>
+            <text x="305" y="835" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">4. Delegate stable + routine. RN keeps unstable + teaching.</text>
+            <text x="305" y="865" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">5. Therapeutic = reflect feelings, open-ended, no advice.</text>
+            <text x="305" y="895" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">6. Document objectively, sign every entry, never alter.</text>
+            <text x="305" y="925" font-family="Arial" font-size="16" font-weight="bold" fill="#1a1a2e">7. Autonomy wins for the competent adult patient.</text>
+            <text x="665" y="965" font-family="Arial" font-size="17" font-style="italic" fill="#1a1a2e" text-anchor="middle">Trust the algorithm. Move on. You've got this.</text>
+          </svg>`,
+          caption: "90 seconds per question: 20 to read, 10 to run the algorithm, 30 to eliminate, 30 to confirm. Trust the process."
+        }
+      }
+    ]
   }
 ];
 
@@ -2824,7 +3774,7 @@ A safe shift = every patient screened, every bundle applied, every documentation
             title: 'NCLEX Fundamentals: The ABCs, Maslow, and Nursing Process',
             author: 'Synthesis Learning',
             description: 'The three priority frameworks every NCLEX question hides behind its wording — the ABCs (airway/breathing/circulation), Maslow\'s hierarchy as a triage tool, and the nursing process (ADPIE).',
-            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
+            lessons: 12, duration: 180, progress: 0, category: 'nclex-foundations',
             lessonList: FUND_PLACEHOLDER_LESSONS,
         },
         {
