@@ -3098,6 +3098,930 @@ Send compliance queries to MDs **within 24 hours** for any vague documentation. 
         }
       }
     ]
+  },
+{
+    id: "cpc-foundation-lesson-10",
+    title: "Integumentary System for Coders: Lesion Excision and the Size + Margin Rule",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Skin Coding Trips Up New Coders",
+        content: `The **integumentary system** — skin, hair, nails, glands — looks simple but its CPT code section (**10021-19499**) is one of the most error-prone in outpatient coding. Why? Because the codes hinge on three measurements coders often miss: **lesion type** (benign vs malignant), **anatomical location** (trunk vs face vs scalp), and **excised diameter**, which is *not* the same as lesion size.
+
+The skin has three layers: the **epidermis** (outermost, avascular), the **dermis** (collagen, vessels, nerves, glands), and the **subcutaneous** layer (fat, connective tissue). A lesion confined to epidermis may only need destruction (**17000 series**); one extending into dermis or deeper needs **excision** (**11400-11646**).
+
+This lesson covers the **Size + Margin Rule**, the **repair add-on hierarchy** (simple/intermediate/complex), and **Mohs micrographic surgery** (**17311-17315**) — the four pillars every CPC candidate must master before sitting for the exam.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Skin Layer Anatomy &amp; Code Family Map</text>
+            <rect x="80" y="120" width="940" height="140" fill="#f59e0b" opacity="0.85"/>
+            <text x="550" y="180" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">EPIDERMIS</text>
+            <text x="550" y="220" text-anchor="middle" fill="#1a1a2e" font-size="20">Destruction codes 17000-17286 (benign/premalignant)</text>
+            <rect x="80" y="270" width="940" height="220" fill="#ec4899" opacity="0.85"/>
+            <text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">DERMIS</text>
+            <text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="20">Excision codes 11400-11646</text>
+            <text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="20">Biopsy 11102-11107 | Shave 11300-11313</text>
+            <text x="550" y="460" text-anchor="middle" fill="#ffffff" font-size="20">Mohs 17311-17315 (specialty layered excision)</text>
+            <rect x="80" y="500" width="940" height="280" fill="#ffd700" opacity="0.4"/>
+            <text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">SUBCUTANEOUS TISSUE</text>
+            <text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="20">Repair: Simple 12001-12021</text>
+            <text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="20">Intermediate 12031-12057 (layered closure)</text>
+            <text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="20">Complex 13100-13160 (undermining, debridement)</text>
+            <text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="20">Adjacent tissue transfer 14000-14302</text>
+            <line x1="80" y1="820" x2="1020" y2="820" stroke="#ffd700" stroke-width="3"/>
+            <text x="550" y="870" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">KEY: Depth determines family. Margin determines size code.</text>
+            <text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="18">Always document: lesion type, location, lesion diameter, narrowest margin</text>
+            <text x="550" y="970" text-anchor="middle" fill="#0ea5e9" font-size="20">Excised diameter = lesion + (narrowest margin x 2)</text>
+            <text x="550" y="1030" text-anchor="middle" fill="#8b5cf6" font-size="18">Path report confirms benign vs malignant AFTER coding family is chosen</text>
+          </svg>`,
+          caption: "Each skin layer maps to a different CPT code family. Coders must know the depth before picking the section."
+        }
+      },
+      {
+        type: "concept",
+        title: "Benign vs Malignant Code Families and the Anatomic Site Split",
+        content: `CPT splits lesion excision into two code families: **benign lesions (11400-11471)** and **malignant lesions (11600-11646)**. The path report is the source of truth — if the surgeon documents "suspected basal cell" but pathology returns "seborrheic keratosis," you code **benign**.
+
+Within each family, codes split by **anatomic location** into three groups:
+- **Trunk, arms, legs** (e.g., 11400-11406 benign; 11600-11606 malignant)
+- **Scalp, neck, hands, feet, genitalia** (11420-11426; 11620-11626)
+- **Face, ears, eyelids, nose, lips, mucous membrane** (11440-11446; 11640-11646)
+
+Why the split? Cosmetically sensitive areas demand more precise technique and are reimbursed higher. After picking the family and location, the final digit captures **size in cm**:
+- **-1** = 0.5 cm or less
+- **-2** = 0.6 to 1.0 cm
+- **-3** = 1.1 to 2.0 cm
+- **-4** = 2.1 to 3.0 cm
+- **-5** = 3.1 to 4.0 cm
+- **-6** = over 4.0 cm
+
+Memorize this grid — it appears on the CPC exam every cycle.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Excision Code Grid: Benign vs Malignant</text>
+            <rect x="50" y="100" width="500" height="450" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/>
+            <text x="300" y="140" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">BENIGN (11400-11471)</text>
+            <text x="70" y="190" fill="#ffffff" font-size="18" font-weight="bold">Trunk/Arms/Legs:</text>
+            <text x="90" y="220" fill="#ffffff" font-size="16">11400 to 11406 (by size)</text>
+            <text x="70" y="260" fill="#ffffff" font-size="18" font-weight="bold">Scalp/Neck/Hands/Feet/Gen:</text>
+            <text x="90" y="290" fill="#ffffff" font-size="16">11420 to 11426</text>
+            <text x="70" y="330" fill="#ffffff" font-size="18" font-weight="bold">Face/Ears/Eyelid/Nose/Lip:</text>
+            <text x="90" y="360" fill="#ffffff" font-size="16">11440 to 11446</text>
+            <text x="70" y="410" fill="#ffd700" font-size="16">Skin tags: 11200 + 11201</text>
+            <text x="70" y="440" fill="#ffd700" font-size="16">Shave removal: 11300-11313</text>
+            <text x="70" y="470" fill="#ffd700" font-size="16">Paring/cutting: 11055-11057</text>
+            <text x="70" y="510" fill="#ffffff" font-size="14">Path: SK, nevus, lipoma, cyst, fibroma</text>
+            <rect x="560" y="100" width="500" height="450" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/>
+            <text x="810" y="140" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">MALIGNANT (11600-11646)</text>
+            <text x="580" y="190" fill="#ffffff" font-size="18" font-weight="bold">Trunk/Arms/Legs:</text>
+            <text x="600" y="220" fill="#ffffff" font-size="16">11600 to 11606</text>
+            <text x="580" y="260" fill="#ffffff" font-size="18" font-weight="bold">Scalp/Neck/Hands/Feet/Gen:</text>
+            <text x="600" y="290" fill="#ffffff" font-size="16">11620 to 11626</text>
+            <text x="580" y="330" fill="#ffffff" font-size="18" font-weight="bold">Face/Ears/Eyelid/Nose/Lip:</text>
+            <text x="600" y="360" fill="#ffffff" font-size="16">11640 to 11646</text>
+            <text x="580" y="410" fill="#ffd700" font-size="16">Path required to use!</text>
+            <text x="580" y="440" fill="#ffd700" font-size="16">BCC, SCC, melanoma codes here</text>
+            <text x="580" y="470" fill="#ffd700" font-size="16">Re-excision: same code + path</text>
+            <text x="580" y="510" fill="#ffffff" font-size="14">Mohs surgery: 17311-17315 instead</text>
+            <rect x="50" y="580" width="1010" height="220" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="555" y="615" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">FINAL DIGIT = SIZE IN CM</text>
+            <text x="100" y="660" fill="#ffffff" font-size="18">-1 = 0.5 cm or less</text>
+            <text x="600" y="660" fill="#ffffff" font-size="18">-2 = 0.6 to 1.0 cm</text>
+            <text x="100" y="700" fill="#ffffff" font-size="18">-3 = 1.1 to 2.0 cm</text>
+            <text x="600" y="700" fill="#ffffff" font-size="18">-4 = 2.1 to 3.0 cm</text>
+            <text x="100" y="740" fill="#ffffff" font-size="18">-5 = 3.1 to 4.0 cm</text>
+            <text x="600" y="740" fill="#ffffff" font-size="18">-6 = over 4.0 cm</text>
+            <text x="555" y="780" text-anchor="middle" fill="#10b981" font-size="16">Round up: 2.05 cm rounds to -4 (2.1-3.0)</text>
+            <rect x="50" y="830" width="1010" height="230" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+            <text x="555" y="870" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">REPAIR ADD-ON HIERARCHY</text>
+            <text x="555" y="910" text-anchor="middle" fill="#ffffff" font-size="18">Simple (12001-12021): Included in excision — DO NOT code separately</text>
+            <text x="555" y="950" text-anchor="middle" fill="#ffffff" font-size="18">Intermediate (12031-12057): Layered closure — code SEPARATELY</text>
+            <text x="555" y="990" text-anchor="middle" fill="#ffffff" font-size="18">Complex (13100-13160): Undermining/debridement — code SEPARATELY</text>
+            <text x="555" y="1030" text-anchor="middle" fill="#ec4899" font-size="16">Repair size = total cm of closure, same anatomic group</text>
+          </svg>`,
+          caption: "Excision code = family + location + size. Repair add-ons follow a strict hierarchy."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example: The Size + Margin Rule in Action",
+        content: `Surgeon documents: *"Excised 1.4 cm malignant melanoma from left forearm with 0.5 cm margins on all sides. Layered closure 3.2 cm performed."*
+
+**Step 1 — Calculate excised diameter:**
+- Lesion: 1.4 cm
+- Narrowest margin: 0.5 cm (taken on BOTH sides — add twice)
+- **Excised diameter = 1.4 + 0.5 + 0.5 = 2.4 cm**
+
+**Step 2 — Pick family and location:**
+- Malignant + forearm (arm) → **11600 series**
+- 2.4 cm falls in the **2.1-3.0 cm** range → ends in **-4**
+- **CPT 11604** = Excision, malignant lesion, trunk/arms/legs, 2.1-3.0 cm
+
+**Step 3 — Repair add-on:**
+- "Layered closure" = **intermediate repair**, code separately
+- 3.2 cm on the forearm (extremities group) → **CPT 12032** (intermediate repair, 2.6-7.5 cm)
+
+**Final claim:** 11604 + 12032
+
+**Common mistakes:**
+- Using the *path report size* (often smaller from shrinkage) — use the **pre-excision measurement** the surgeon documented
+- Forgetting that simple repair is **bundled** and reporting 12001 here
+- Adding margin only once instead of doubling`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Size + Margin Rule Visualized</text>
+            <circle cx="550" cy="450" r="280" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="8,8"/>
+            <text x="550" y="160" text-anchor="middle" fill="#888" font-size="18">Excised tissue boundary</text>
+            <circle cx="550" cy="450" r="140" fill="#ef4444" opacity="0.6" stroke="#ef4444" stroke-width="3"/>
+            <text x="550" y="455" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">LESION</text>
+            <text x="550" y="485" text-anchor="middle" fill="#ffffff" font-size="20">1.4 cm</text>
+            <line x1="270" y1="450" x2="410" y2="450" stroke="#ffd700" stroke-width="3" marker-end="url(#arr)"/>
+            <line x1="690" y1="450" x2="830" y2="450" stroke="#ffd700" stroke-width="3" marker-end="url(#arr)"/>
+            <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#ffd700"/></marker></defs>
+            <text x="340" y="440" text-anchor="middle" fill="#ffd700" font-size="16">0.5 cm</text>
+            <text x="340" y="460" text-anchor="middle" fill="#ffd700" font-size="16">margin</text>
+            <text x="760" y="440" text-anchor="middle" fill="#ffd700" font-size="16">0.5 cm</text>
+            <text x="760" y="460" text-anchor="middle" fill="#ffd700" font-size="16">margin</text>
+            <rect x="80" y="780" width="940" height="100" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">EXCISED DIAMETER = 1.4 + 0.5 + 0.5 = 2.4 cm</text>
+            <text x="550" y="855" text-anchor="middle" fill="#ffd700" font-size="20">Falls in 2.1-3.0 cm range = code ending -4</text>
+            <rect x="80" y="910" width="455" height="160" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/>
+            <text x="307" y="950" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">EXCISION</text>
+            <text x="307" y="985" text-anchor="middle" fill="#ffd700" font-size="24">CPT 11604</text>
+            <text x="307" y="1015" text-anchor="middle" fill="#ffffff" font-size="14">Malignant, arm, 2.1-3.0 cm</text>
+            <text x="307" y="1045" text-anchor="middle" fill="#ffffff" font-size="14">$ higher RVU than benign</text>
+            <rect x="565" y="910" width="455" height="160" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/>
+            <text x="792" y="950" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">REPAIR ADD-ON</text>
+            <text x="792" y="985" text-anchor="middle" fill="#ffd700" font-size="24">CPT 12032</text>
+            <text x="792" y="1015" text-anchor="middle" fill="#ffffff" font-size="14">Intermediate, extremity, 2.6-7.5 cm</text>
+            <text x="792" y="1045" text-anchor="middle" fill="#ffffff" font-size="14">Layered closure = code separate</text>
+          </svg>`,
+          caption: "Margin is added on BOTH sides. Forgetting to double is the most common excision coding error."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding: Lesion Coding",
+        content: `A surgeon excises a 2.0 cm basal cell carcinoma from the patient's nose with 0.4 cm margins on each side. The wound is closed with a single-layer suture (simple closure). What is the correct CPT code or codes?`,
+        question: "A surgeon excises a 2.0 cm basal cell carcinoma from the patient's nose with 0.4 cm margins on each side. Simple closure is performed. What is the correct CPT code(s)?",
+        options: [
+          { text: "11642 only", correct: false },
+          { text: "11643 only", correct: true },
+          { text: "11643 + 12011", correct: false },
+          { text: "11604 + 12011", correct: false }
+        ],
+        explanation: "Excised diameter = 2.0 + 0.4 + 0.4 = 2.8 cm, which falls in the 2.1-3.0 cm range (final digit -3). The nose is in the face/ear/eyelid/nose/lip group. Malignant lesion = 11640 series. Therefore 11643. Simple closure is BUNDLED into the excision code and is NEVER reported separately — that eliminates choices with 12011. Option A (11642) under-sizes the lesion by ignoring the margin entirely. Option D wrongly puts the nose in the trunk/arm/leg family.",
+        explanation_detail: "Always double the margin and never report simple closure with an excision.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Quiz Walkthrough: BCC of Nose</text>
+            <rect x="80" y="110" width="940" height="180" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="150" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 1: Excised Diameter</text>
+            <text x="550" y="195" text-anchor="middle" fill="#ffffff" font-size="20">Lesion 2.0 cm + Margin 0.4 cm + Margin 0.4 cm</text>
+            <text x="550" y="235" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">= 2.8 cm total</text>
+            <text x="550" y="270" text-anchor="middle" fill="#0ea5e9" font-size="16">Falls in 2.1-3.0 cm bracket → final digit -3</text>
+            <rect x="80" y="310" width="940" height="180" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="2"/>
+            <text x="550" y="350" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 2: Family + Location</text>
+            <text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="20">BCC = malignant → 11600 series</text>
+            <text x="550" y="430" text-anchor="middle" fill="#ffffff" font-size="20">Nose = face/ear/eyelid/nose/lip group → 11640 range</text>
+            <text x="550" y="470" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">→ CPT 11643</text>
+            <rect x="80" y="510" width="940" height="180" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="550" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 3: Repair?</text>
+            <text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="20">"Simple closure" = single layer = BUNDLED</text>
+            <text x="550" y="635" text-anchor="middle" fill="#ef4444" font-size="20">DO NOT report 12011 separately</text>
+            <text x="550" y="675" text-anchor="middle" fill="#10b981" font-size="20">Only intermediate or complex earn add-ons</text>
+            <rect x="80" y="710" width="940" height="160" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="755" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">FINAL ANSWER: 11643</text>
+            <text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="18">Excision malignant, face/nose/lip, 2.1-3.0 cm</text>
+            <text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="18">No repair add-on. Path report confirms BCC.</text>
+            <rect x="80" y="890" width="940" height="170" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/>
+            <text x="550" y="930" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Common Trap Answers</text>
+            <text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="16">11642 — wrong, ignored margin (used lesion size only)</text>
+            <text x="550" y="995" text-anchor="middle" fill="#ffffff" font-size="16">11643 + 12011 — wrong, simple closure bundled</text>
+            <text x="550" y="1025" text-anchor="middle" fill="#ffffff" font-size="16">11604 — wrong, nose is not trunk/arm/leg</text>
+          </svg>`,
+          caption: "Three-step workflow: size, family/location, repair check. Apply on every excision."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Application: Mohs Micrographic Surgery",
+        content: `**Mohs surgery** is a specialized layered excision used for **high-risk malignancies on cosmetically sensitive areas** (face, hands, genitalia). The same physician acts as **surgeon AND pathologist**, removing tissue in stages and examining each stage microscopically before taking the next layer.
+
+**Mohs codes split by anatomic site:**
+- **17311** — Head, neck, hands, feet, genitalia, first stage, up to 5 tissue blocks
+- **+17312** — Each additional stage, same site (add-on)
+- **17313** — Trunk, arms, legs, first stage, up to 5 blocks
+- **+17314** — Each additional stage, trunk/arms/legs
+- **+17315** — Each additional block beyond 5 in any stage
+
+**Critical billing rules:**
+- The surgeon must perform **both** the surgery and the pathology. If a separate pathologist reads the slides, Mohs codes don't apply — bill standard excision + frozen section.
+- Do **not** bill standard excision (11600 series) on the same lesion — Mohs replaces it.
+- **Repair is still separately billable** when intermediate or complex.
+
+**Example:** Mohs on facial BCC, 2 stages, 4 blocks stage 1, 3 blocks stage 2 → **17311 + 17312**. No extra block code (none exceeded 5).
+
+Mohs is heavily audited. Documentation must show stages, block counts, and that the surgeon read the slides.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Mohs Micrographic Surgery Workflow</text>
+            <rect x="50" y="100" width="320" height="180" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/>
+            <text x="210" y="135" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">STAGE 1</text>
+            <text x="210" y="170" text-anchor="middle" fill="#ffffff" font-size="16">Excise visible tumor</text>
+            <text x="210" y="200" text-anchor="middle" fill="#ffffff" font-size="16">Map and slice tissue</text>
+            <text x="210" y="230" text-anchor="middle" fill="#ffffff" font-size="16">Read slides under microscope</text>
+            <text x="210" y="265" text-anchor="middle" fill="#10b981" font-size="16">CPT 17311 (head/neck/face)</text>
+            <line x1="370" y1="190" x2="430" y2="190" stroke="#ffd700" stroke-width="4" marker-end="url(#arr2)"/>
+            <defs><marker id="arr2" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#ffd700"/></marker></defs>
+            <rect x="430" y="100" width="320" height="180" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+            <text x="590" y="135" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">MARGINS CLEAR?</text>
+            <text x="590" y="175" text-anchor="middle" fill="#ffffff" font-size="16">Yes → close wound, done</text>
+            <text x="590" y="210" text-anchor="middle" fill="#ffffff" font-size="16">No → take another layer</text>
+            <text x="590" y="245" text-anchor="middle" fill="#ffffff" font-size="16">where tumor remains</text>
+            <line x1="750" y1="190" x2="810" y2="190" stroke="#ffd700" stroke-width="4" marker-end="url(#arr2)"/>
+            <rect x="810" y="100" width="240" height="180" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/>
+            <text x="930" y="135" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">STAGE 2+</text>
+            <text x="930" y="175" text-anchor="middle" fill="#ffffff" font-size="14">Repeat layer + slides</text>
+            <text x="930" y="210" text-anchor="middle" fill="#ffffff" font-size="14">Continue until clear</text>
+            <text x="930" y="250" text-anchor="middle" fill="#10b981" font-size="14">+17312 each stage</text>
+            <rect x="50" y="320" width="1000" height="280" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="360" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">CODE FAMILY MAP</text>
+            <text x="80" y="405" fill="#ffffff" font-size="18" font-weight="bold">17311 — Head, neck, hands, feet, genitalia, stage 1, up to 5 blocks</text>
+            <text x="80" y="440" fill="#ffffff" font-size="18" font-weight="bold">+17312 — Each additional stage, same site (add-on)</text>
+            <text x="80" y="475" fill="#ffffff" font-size="18" font-weight="bold">17313 — Trunk, arms, legs, stage 1, up to 5 blocks</text>
+            <text x="80" y="510" fill="#ffffff" font-size="18" font-weight="bold">+17314 — Each additional stage, trunk/arms/legs</text>
+            <text x="80" y="545" fill="#ffffff" font-size="18" font-weight="bold">+17315 — Each block over 5 in any stage</text>
+            <text x="80" y="585" fill="#0ea5e9" font-size="16">Add-on codes (+) are NEVER reported alone</text>
+            <rect x="50" y="630" width="1000" height="200" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="670" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">CASE EXAMPLE</text>
+            <text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="18">Facial BCC, 2 stages, 4 blocks then 3 blocks</text>
+            <text x="550" y="745" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Bill: 17311 + 17312</text>
+            <text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="16">No 17315 — no stage exceeded 5 blocks</text>
+            <text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="16">Intermediate repair? Add 12051-12057 separately</text>
+            <rect x="50" y="860" width="1000" height="190" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="900" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">AUDIT TRIGGERS</text>
+            <text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="16">Surgeon must read slides — separate path = no Mohs codes</text>
+            <text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="16">Do NOT also bill 11640 series for same lesion</text>
+            <text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="16">Documentation must list stages and block counts</text>
+            <text x="550" y="1040" text-anchor="middle" fill="#ffffff" font-size="16">Repair codes ARE still separately billable when applicable</text>
+          </svg>`,
+          caption: "Mohs replaces standard excision codes. Stages and block counts drive the add-on tail."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-foundation-lesson-11",
+    title: "Genitourinary System for Coders: Cystoscopy, TURP, and the Male/Female Divergence",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why the GU Section Splits at the Bladder Neck",
+        content: `The **genitourinary (GU) system** filters blood, makes urine, stores it, and — depending on sex — handles reproduction through shared anatomy. CPT mirrors this with **Urinary System (50010-53899)**, **Male Genital System (54000-55899)**, and **Female Genital System (56405-58999)**.
+
+The shared parts — **kidneys, ureters, bladder, urethra** — sit in the urinary section. Then the codes **diverge sharply** at the bladder neck because male anatomy includes the **prostate** (wraps the urethra) and female anatomy includes the **uterus and ovaries**.
+
+For CPC candidates, three pillars matter:
+1. The **cystourethroscopy** code family (**52000-52356**) — the workhorse of urology
+2. The **TURP family** (**52601, 52630, 52647, 52648, 52649**) — five competing prostate procedures
+3. The **male/female divergence** — when to leave 5xxxx and enter 54xxx (male) or 57xxx-58xxx (female)
+
+And one tricky modifier: **-53 (discontinued procedure)** for when the surgeon stops mid-procedure due to patient instability.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">GU Anatomy + Code Section Map</text>
+            <ellipse cx="350" cy="200" rx="80" ry="120" fill="#ec4899" opacity="0.7" stroke="#ec4899" stroke-width="3"/>
+            <ellipse cx="750" cy="200" rx="80" ry="120" fill="#ec4899" opacity="0.7" stroke="#ec4899" stroke-width="3"/>
+            <text x="350" y="180" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">L KIDNEY</text>
+            <text x="350" y="210" text-anchor="middle" fill="#ffffff" font-size="14">50010-50593</text>
+            <text x="750" y="180" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">R KIDNEY</text>
+            <text x="750" y="210" text-anchor="middle" fill="#ffffff" font-size="14">50010-50593</text>
+            <rect x="335" y="330" width="30" height="200" fill="#0ea5e9" opacity="0.8"/>
+            <rect x="735" y="330" width="30" height="200" fill="#0ea5e9" opacity="0.8"/>
+            <text x="200" y="430" fill="#0ea5e9" font-size="18" font-weight="bold">URETERS</text>
+            <text x="200" y="455" fill="#0ea5e9" font-size="14">50600-50980</text>
+            <text x="850" y="430" fill="#0ea5e9" font-size="18" font-weight="bold">URETERS</text>
+            <text x="850" y="455" fill="#0ea5e9" font-size="14">50600-50980</text>
+            <ellipse cx="550" cy="600" rx="180" ry="120" fill="#f59e0b" opacity="0.7" stroke="#f59e0b" stroke-width="3"/>
+            <text x="550" y="590" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">BLADDER</text>
+            <text x="550" y="625" text-anchor="middle" fill="#1a1a2e" font-size="16">51020-52700 (cysto here)</text>
+            <text x="550" y="655" text-anchor="middle" fill="#1a1a2e" font-size="14">Cystourethroscopy 52000-52356</text>
+            <rect x="525" y="720" width="50" height="100" fill="#8b5cf6" opacity="0.8"/>
+            <text x="650" y="775" fill="#8b5cf6" font-size="18" font-weight="bold">URETHRA</text>
+            <text x="650" y="800" fill="#8b5cf6" font-size="14">53000-53899</text>
+            <line x1="80" y1="850" x2="1020" y2="850" stroke="#ffd700" stroke-width="3" stroke-dasharray="10,5"/>
+            <text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">↓ DIVERGENCE: below bladder neck, codes split by sex ↓</text>
+            <rect x="50" y="910" width="490" height="170" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="295" y="950" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">MALE 54000-55899</text>
+            <text x="295" y="985" text-anchor="middle" fill="#ffffff" font-size="16">Penis, testis, epididymis,</text>
+            <text x="295" y="1010" text-anchor="middle" fill="#ffffff" font-size="16">vas, seminal vesicle, PROSTATE</text>
+            <text x="295" y="1045" text-anchor="middle" fill="#ffd700" font-size="14">TURP/HoLEP/Greenlight live here too</text>
+            <rect x="560" y="910" width="490" height="170" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/>
+            <text x="805" y="950" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">FEMALE 56405-58999</text>
+            <text x="805" y="985" text-anchor="middle" fill="#ffffff" font-size="16">Vulva, vagina, cervix,</text>
+            <text x="805" y="1010" text-anchor="middle" fill="#ffffff" font-size="16">uterus, tubes, ovaries</text>
+            <text x="805" y="1045" text-anchor="middle" fill="#ffd700" font-size="14">Hysterectomy 58150-58294</text>
+          </svg>`,
+          caption: "Above the bladder neck, codes are unisex. Below it, you pick male (54xxx) or female (57-58xxx)."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Cystourethroscopy Code Family and TURP's Five Cousins",
+        content: `**Cystourethroscopy (cysto)** is the urologist's swiss-army-knife procedure: a scope through the urethra into the bladder. The base code is **52000** — diagnostic cysto alone. Anything *added* during cysto bumps you to a higher code.
+
+**Common cysto add-on codes:**
+- **52204** — with biopsy
+- **52214** — with fulguration of trigone/bladder neck/prostatic fossa
+- **52234-52240** — with tumor fulguration/resection (size-based)
+- **52281** — with urethral dilation
+- **52310** — with stent/foreign body removal
+- **52332** — with insertion of indwelling ureteral stent
+
+You may **only report one base cysto code per session** — they're mutually exclusive. Pick the one that captures the most extensive work.
+
+**TURP and its competitors** treat **BPH (benign prostatic hyperplasia)**:
+- **52601** — TURP (transurethral resection of prostate, classic)
+- **52630** — TURP, residual or regrowth (re-resection)
+- **52647** — **Laser coagulation** of prostate (older laser)
+- **52648** — **Laser vaporization** of prostate (Greenlight PVP)
+- **52649** — **Laser enucleation** of prostate (HoLEP, ThuLEP)
+
+Pick by **energy source** documented in the op note — coag, vaporization, or enucleation. They're mutually exclusive.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Cystoscopy + TURP Code Trees</text>
+            <rect x="50" y="100" width="1000" height="40" fill="#6366f1"/>
+            <text x="550" y="128" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">52000 — DIAGNOSTIC CYSTOURETHROSCOPY (base)</text>
+            <line x1="550" y1="140" x2="200" y2="180" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="140" x2="400" y2="180" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="140" x2="600" y2="180" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="140" x2="800" y2="180" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="140" x2="1000" y2="180" stroke="#888" stroke-width="2"/>
+            <rect x="80" y="180" width="180" height="80" fill="#10b981" opacity="0.3" stroke="#10b981"/>
+            <text x="170" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">+ biopsy</text>
+            <text x="170" y="240" text-anchor="middle" fill="#ffffff" font-size="16">52204</text>
+            <rect x="280" y="180" width="180" height="80" fill="#10b981" opacity="0.3" stroke="#10b981"/>
+            <text x="370" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">+ fulgur trigone</text>
+            <text x="370" y="240" text-anchor="middle" fill="#ffffff" font-size="16">52214</text>
+            <rect x="480" y="180" width="180" height="80" fill="#10b981" opacity="0.3" stroke="#10b981"/>
+            <text x="570" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">+ tumor resect</text>
+            <text x="570" y="240" text-anchor="middle" fill="#ffffff" font-size="16">52234-52240</text>
+            <rect x="680" y="180" width="180" height="80" fill="#10b981" opacity="0.3" stroke="#10b981"/>
+            <text x="770" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">+ urethral dilation</text>
+            <text x="770" y="240" text-anchor="middle" fill="#ffffff" font-size="16">52281</text>
+            <rect x="880" y="180" width="180" height="80" fill="#10b981" opacity="0.3" stroke="#10b981"/>
+            <text x="970" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">+ stent insert</text>
+            <text x="970" y="240" text-anchor="middle" fill="#ffffff" font-size="16">52332</text>
+            <rect x="80" y="300" width="980" height="50" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+            <text x="570" y="332" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">RULE: One cysto base code per session. The most extensive work wins.</text>
+            <line x1="50" y1="380" x2="1050" y2="380" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="425" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">TURP &amp; its Five Cousins (treat BPH)</text>
+            <rect x="50" y="450" width="320" height="120" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="210" y="490" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52601 — TURP</text>
+            <text x="210" y="520" text-anchor="middle" fill="#ffffff" font-size="14">Transurethral resection</text>
+            <text x="210" y="545" text-anchor="middle" fill="#ffffff" font-size="14">Classic electrocautery loop</text>
+            <rect x="390" y="450" width="320" height="120" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="490" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52630 — TURP re-do</text>
+            <text x="550" y="520" text-anchor="middle" fill="#ffffff" font-size="14">Residual or regrowth</text>
+            <text x="550" y="545" text-anchor="middle" fill="#ffffff" font-size="14">Different code from primary</text>
+            <rect x="730" y="450" width="320" height="120" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+            <text x="890" y="490" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52647 — Laser Coag</text>
+            <text x="890" y="520" text-anchor="middle" fill="#ffffff" font-size="14">Older laser technology</text>
+            <text x="890" y="545" text-anchor="middle" fill="#ffffff" font-size="14">Less commonly used today</text>
+            <rect x="200" y="600" width="320" height="120" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/>
+            <text x="360" y="640" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52648 — Laser Vapor</text>
+            <text x="360" y="670" text-anchor="middle" fill="#ffffff" font-size="14">Greenlight PVP</text>
+            <text x="360" y="695" text-anchor="middle" fill="#ffffff" font-size="14">Tissue is vaporized away</text>
+            <rect x="580" y="600" width="320" height="120" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+            <text x="740" y="640" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52649 — Laser Enuc</text>
+            <text x="740" y="670" text-anchor="middle" fill="#ffffff" font-size="14">HoLEP / ThuLEP</text>
+            <text x="740" y="695" text-anchor="middle" fill="#ffffff" font-size="14">Tissue enucleated as a unit</text>
+            <rect x="50" y="760" width="1000" height="160" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="800" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">PICK BY ENERGY SOURCE IN OP NOTE</text>
+            <text x="550" y="835" text-anchor="middle" fill="#ffffff" font-size="18">Electrocautery loop → 52601 or 52630</text>
+            <text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="18">Laser + "coag/vapor/enuc" → 52647/48/49</text>
+            <text x="550" y="905" text-anchor="middle" fill="#ffffff" font-size="18">Mutually exclusive — never report two together</text>
+            <rect x="50" y="940" width="1000" height="120" fill="#888" opacity="0.2" stroke="#888"/>
+            <text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Cysto bundled with TURP</text>
+            <text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="16">Don't separately code 52000 — included in 52601-52649</text>
+            <text x="550" y="1045" text-anchor="middle" fill="#ffffff" font-size="16">Cysto is the access route, not separate work</text>
+          </svg>`,
+          caption: "Cysto base codes are mutually exclusive. TURP family splits by energy source — read the op note."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example: HoLEP with Discontinued Procedure",
+        content: `**Op note:** *"Patient brought to OR for planned HoLEP for BPH. Cystoscopy performed, prostatic enucleation begun with holmium laser. After 12 minutes the patient developed sustained bradycardia and hypotension unresponsive to atropine. Procedure aborted, scope withdrawn, patient transferred to PACU stable."*
+
+**Step 1 — Identify intended procedure:**
+- HoLEP = **Holmium Laser Enucleation of Prostate**
+- Maps to **CPT 52649** (laser enucleation of prostate)
+- Cystoscopy is **bundled** as the access route — do NOT separately code 52000
+
+**Step 2 — Procedure was discontinued.** This is where modifiers matter:
+- **Modifier -53 (Discontinued procedure)** applies when the surgeon stops due to **patient instability or extenuating circumstance** AFTER anesthesia induction
+- **Modifier -52 (Reduced services)** is for **elective** reduction — does NOT apply here
+- **Modifier -73/-74** is for **ASC/facility** billing — different setting
+
+**Step 3 — Final claim (physician side):**
+- **52649-53** — Laser enucleation of prostate, discontinued
+
+**Documentation must include:** the reason for discontinuation, the percent of procedure completed, and the patient's status at termination. Without those three, the -53 will be denied.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">HoLEP Discontinued — Coding Walkthrough</text>
+            <rect x="50" y="100" width="1000" height="170" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="140" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 1: Map procedure name → CPT</text>
+            <text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="20">HoLEP = Holmium Laser Enucleation of Prostate</text>
+            <text x="550" y="215" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">→ CPT 52649</text>
+            <text x="550" y="250" text-anchor="middle" fill="#0ea5e9" font-size="16">Cystoscopy 52000 is BUNDLED — never separately reported</text>
+            <rect x="50" y="290" width="1000" height="240" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="330" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 2: Discontinued — which modifier?</text>
+            <rect x="80" y="350" width="300" height="160" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+            <text x="230" y="390" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">-53 ✓</text>
+            <text x="230" y="420" text-anchor="middle" fill="#ffffff" font-size="14">Patient instability</text>
+            <text x="230" y="445" text-anchor="middle" fill="#ffffff" font-size="14">Threatens patient welfare</text>
+            <text x="230" y="470" text-anchor="middle" fill="#ffffff" font-size="14">Physician billing</text>
+            <text x="230" y="495" text-anchor="middle" fill="#10b981" font-size="14">USE THIS</text>
+            <rect x="400" y="350" width="300" height="160" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="390" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">-52</text>
+            <text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="14">Reduced services</text>
+            <text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="14">Elective scope-back</text>
+            <text x="550" y="470" text-anchor="middle" fill="#ffffff" font-size="14">No patient threat</text>
+            <text x="550" y="495" text-anchor="middle" fill="#ef4444" font-size="14">WRONG HERE</text>
+            <rect x="720" y="350" width="300" height="160" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/>
+            <text x="870" y="390" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">-73 / -74</text>
+            <text x="870" y="420" text-anchor="middle" fill="#ffffff" font-size="14">ASC / facility only</text>
+            <text x="870" y="445" text-anchor="middle" fill="#ffffff" font-size="14">Before/after anesthesia</text>
+            <text x="870" y="470" text-anchor="middle" fill="#ffffff" font-size="14">Hospital outpatient</text>
+            <text x="870" y="495" text-anchor="middle" fill="#ef4444" font-size="14">WRONG SETTING</text>
+            <rect x="50" y="550" width="1000" height="170" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="595" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">FINAL CLAIM</text>
+            <text x="550" y="645" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">52649 - 53</text>
+            <text x="550" y="685" text-anchor="middle" fill="#ffffff" font-size="18">Laser enucleation of prostate, discontinued</text>
+            <rect x="50" y="740" width="1000" height="180" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="780" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">DOCUMENTATION REQUIRED FOR -53</text>
+            <text x="80" y="820" fill="#ffffff" font-size="18">1. Reason for discontinuation (bradycardia/hypotension)</text>
+            <text x="80" y="855" fill="#ffffff" font-size="18">2. Percent of procedure completed (approx 25% here)</text>
+            <text x="80" y="890" fill="#ffffff" font-size="18">3. Patient's status at termination (stable to PACU)</text>
+            <rect x="50" y="940" width="1000" height="120" fill="#888" opacity="0.2" stroke="#888"/>
+            <text x="550" y="980" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">COMMON ERROR</text>
+            <text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="16">Coders often skip -53 and report 52000 instead</text>
+            <text x="550" y="1045" text-anchor="middle" fill="#ffffff" font-size="16">Wrong — surgeon intended HoLEP; that intent drives the code</text>
+          </svg>`,
+          caption: "Intent + modifier -53 captures discontinued procedure. Don't fall back to the diagnostic code."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding: Cysto with Stent",
+        content: `A urologist performs cystourethroscopy, identifies a 1.5 cm bladder tumor, fulgurates it, and inserts a right-sided indwelling ureteral stent. What is the correct CPT coding?`,
+        question: "A urologist performs cystourethroscopy with fulguration of a 1.5 cm bladder tumor AND insertion of a right-sided indwelling ureteral stent. What is the correct coding?",
+        options: [
+          { text: "52000 + 52235 + 52332", correct: false },
+          { text: "52235 + 52332", correct: true },
+          { text: "52234 only", correct: false },
+          { text: "52235-50 + 52332", correct: false }
+        ],
+        explanation: "The fulguration of a 1.5 cm tumor maps to 52235 (cystourethroscopy with fulguration, medium 0.5-2.0 cm). The stent insertion is a separate, distinct service: 52332. Both are reported. Choice A wrongly adds 52000 — the diagnostic cysto is the access route bundled into any therapeutic cysto code. Choice C codes only the smaller size code (52234 = under 0.5 cm) and misses the stent. Choice D adds modifier -50 (bilateral), but the stent was right-sided only — no bilateral modifier.",
+        explanation_detail: "Two distinct services in one cysto session = two codes (no bundling between fulgur and stent).",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Quiz Walkthrough: Cysto + Tumor + Stent</text>
+            <rect x="50" y="100" width="1000" height="180" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="140" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">SERVICE 1: Tumor Fulguration</text>
+            <text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="20">Bladder tumor 1.5 cm fulgurated</text>
+            <text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="18">Size bracket 0.5-2.0 cm = 52235</text>
+            <text x="550" y="255" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">→ CPT 52235</text>
+            <rect x="50" y="300" width="1000" height="180" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="2"/>
+            <text x="550" y="340" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">SERVICE 2: Stent Insertion</text>
+            <text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="20">Right ureteral indwelling stent placed</text>
+            <text x="550" y="415" text-anchor="middle" fill="#ffffff" font-size="18">Cysto with stent = 52332</text>
+            <text x="550" y="455" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">→ CPT 52332</text>
+            <rect x="50" y="500" width="1000" height="140" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="540" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">52000 BUNDLING CHECK</text>
+            <text x="550" y="580" text-anchor="middle" fill="#ffffff" font-size="18">Diagnostic cysto is the ACCESS for both procedures</text>
+            <text x="550" y="615" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Do NOT report 52000 separately</text>
+            <rect x="50" y="660" width="1000" height="140" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="705" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">FINAL ANSWER: 52235 + 52332</text>
+            <text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="18">Both are full work codes — no modifier -51 needed</text>
+            <text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="18">(CMS NCCI policy on stent-with-cysto bundling)</text>
+            <rect x="50" y="820" width="1000" height="240" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/>
+            <text x="550" y="860" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">TRAP ANSWERS</text>
+            <text x="80" y="900" fill="#ffffff" font-size="16">52000 + 52235 + 52332 — diagnostic cysto bundled</text>
+            <text x="80" y="935" fill="#ffffff" font-size="16">52234 only — wrong size bracket and missing the stent service</text>
+            <text x="80" y="970" fill="#ffffff" font-size="16">52235-50 + 52332 — modifier -50 = bilateral; tumor wasn't bilateral</text>
+            <text x="80" y="1005" fill="#ffffff" font-size="16">Modifier -50 belongs on the stent if BOTH ureters were stented</text>
+            <text x="80" y="1040" fill="#ffffff" font-size="16">Right-only stent = just 52332 (or 52332-RT if payer requires laterality)</text>
+          </svg>`,
+          caption: "Two distinct services = two codes. Diagnostic cysto bundles into both."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Application: Male vs Female Divergence in Hysterectomy/Prostatectomy",
+        content: `Below the bladder neck, **GU coding splits sharply by sex** — and CPC exam questions love to test this.
+
+**Female path — hysterectomy family (58150-58294, 58541-58579):**
+- **58150** — Total abdominal hysterectomy (TAH), with or without tubes/ovaries
+- **58180** — Supracervical abdominal hysterectomy (uterus only, cervix stays)
+- **58260-58270** — Vaginal hysterectomy, by uterine weight
+- **58541-58544** — Laparoscopic supracervical
+- **58570-58573** — Total laparoscopic hysterectomy (TLH), by uterine weight + tubes/ovaries
+
+The split hinges on **approach (abdominal vs vaginal vs lap)**, **completeness (total vs supracervical)**, and **uterine weight (250 g threshold)**.
+
+**Male path — prostatectomy family (55801-55867):**
+- **55801** — Perineal prostatectomy
+- **55810-55815** — Radical perineal
+- **55840-55845** — Radical retropubic, with/without nerve sparing and lymph nodes
+- **55866** — Laparoscopic / robotic radical prostatectomy
+
+The split hinges on **approach (perineal vs retropubic vs lap/robotic)** and **radical vs simple** (radical = full prostate + seminal vesicles for cancer; simple = BPH treatment via TURP family instead).
+
+**Coding tip:** Robotic = same code as laparoscopic (55866). No separate "robotic" code exists in CPT — the **robot is a tool, not a procedure**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Male vs Female GU Code Divergence</text>
+            <rect x="40" y="100" width="510" height="470" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/>
+            <text x="295" y="140" text-anchor="middle" fill="#ec4899" font-size="26" font-weight="bold">FEMALE: Hysterectomy</text>
+            <text x="295" y="170" text-anchor="middle" fill="#ffffff" font-size="16">58150-58294 + 58541-58579</text>
+            <rect x="60" y="190" width="470" height="60" fill="#ec4899" opacity="0.3" stroke="#ec4899"/>
+            <text x="295" y="215" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">58150 — TAH (abdominal, total)</text>
+            <text x="295" y="240" text-anchor="middle" fill="#ffffff" font-size="14">Uterus + cervix, ± tubes/ovaries</text>
+            <rect x="60" y="260" width="470" height="60" fill="#ec4899" opacity="0.3" stroke="#ec4899"/>
+            <text x="295" y="285" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">58180 — Supracervical abd</text>
+            <text x="295" y="310" text-anchor="middle" fill="#ffffff" font-size="14">Uterus only, cervix preserved</text>
+            <rect x="60" y="330" width="470" height="60" fill="#ec4899" opacity="0.3" stroke="#ec4899"/>
+            <text x="295" y="355" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">58260-58270 — Vaginal</text>
+            <text x="295" y="380" text-anchor="middle" fill="#ffffff" font-size="14">By uterine weight (250 g split)</text>
+            <rect x="60" y="400" width="470" height="60" fill="#ec4899" opacity="0.3" stroke="#ec4899"/>
+            <text x="295" y="425" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">58541-58544 — Lap supracervical</text>
+            <text x="295" y="450" text-anchor="middle" fill="#ffffff" font-size="14">By weight + tubes/ovaries</text>
+            <rect x="60" y="470" width="470" height="80" fill="#ec4899" opacity="0.3" stroke="#ec4899"/>
+            <text x="295" y="495" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">58570-58573 — TLH (total lap)</text>
+            <text x="295" y="520" text-anchor="middle" fill="#ffffff" font-size="14">Robotic uses same lap codes</text>
+            <text x="295" y="540" text-anchor="middle" fill="#0ea5e9" font-size="14">Decision: approach + weight + extras</text>
+            <rect x="555" y="100" width="510" height="470" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/>
+            <text x="810" y="140" text-anchor="middle" fill="#0ea5e9" font-size="26" font-weight="bold">MALE: Prostatectomy</text>
+            <text x="810" y="170" text-anchor="middle" fill="#ffffff" font-size="16">55801-55867</text>
+            <rect x="575" y="190" width="470" height="60" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/>
+            <text x="810" y="215" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">55801 — Perineal (simple)</text>
+            <text x="810" y="240" text-anchor="middle" fill="#ffffff" font-size="14">For BPH, between scrotum + anus</text>
+            <rect x="575" y="260" width="470" height="60" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/>
+            <text x="810" y="285" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">55810-55815 — Radical perineal</text>
+            <text x="810" y="310" text-anchor="middle" fill="#ffffff" font-size="14">For prostate cancer</text>
+            <rect x="575" y="330" width="470" height="60" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/>
+            <text x="810" y="355" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">55840-55845 — Radical retropubic</text>
+            <text x="810" y="380" text-anchor="middle" fill="#ffffff" font-size="14">Nerve-sparing + LN dissection vary</text>
+            <rect x="575" y="400" width="470" height="60" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/>
+            <text x="810" y="425" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">55866 — Lap/robotic radical</text>
+            <text x="810" y="450" text-anchor="middle" fill="#ffffff" font-size="14">No separate "robotic" code</text>
+            <rect x="575" y="470" width="470" height="80" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/>
+            <text x="810" y="495" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">BPH? Go to TURP family</text>
+            <text x="810" y="520" text-anchor="middle" fill="#ffffff" font-size="14">52601-52649 instead of 55xxx</text>
+            <text x="810" y="540" text-anchor="middle" fill="#0ea5e9" font-size="14">Decision: cancer vs BPH first</text>
+            <rect x="40" y="600" width="1025" height="200" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
+            <text x="555" y="640" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">COMMON CPC EXAM TRAPS</text>
+            <text x="555" y="680" text-anchor="middle" fill="#ffffff" font-size="18">"Robotic" → still use lap code (55866 or 58570-73)</text>
+            <text x="555" y="715" text-anchor="middle" fill="#ffffff" font-size="18">"Total" vs "Supracervical" — cervix in or out?</text>
+            <text x="555" y="750" text-anchor="middle" fill="#ffffff" font-size="18">Uterine weight changes the code (above/below 250 g)</text>
+            <text x="555" y="785" text-anchor="middle" fill="#ffffff" font-size="18">Salpingo-oophorectomy: same code or separate? Check the descriptor</text>
+            <rect x="40" y="830" width="1025" height="230" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/>
+            <text x="555" y="870" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">DOCUMENTATION CHECKLIST</text>
+            <text x="80" y="910" fill="#ffffff" font-size="16">1. Approach: open abdominal / vaginal / lap / robotic / perineal / retropubic</text>
+            <text x="80" y="945" fill="#ffffff" font-size="16">2. Completeness: total / supracervical / simple / radical</text>
+            <text x="80" y="980" fill="#ffffff" font-size="16">3. Structures removed: uterus, cervix, tubes, ovaries, prostate, seminal vesicles, LN</text>
+            <text x="80" y="1015" fill="#ffffff" font-size="16">4. Uterine weight (for vaginal/lap hysterectomy codes)</text>
+            <text x="80" y="1050" fill="#ffffff" font-size="16">5. Indication: BPH vs prostate Ca (drives TURP vs prostatectomy)</text>
+          </svg>`,
+          caption: "Below the bladder neck, sex determines section. Documentation must capture approach + extent."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-foundation-lesson-12",
+    title: "Capstone: Reading an Op Report and Picking the Right Codes",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Op Report Is Your Single Source of Truth",
+        content: `Every CPT code on a surgical claim must be supported by the **operative report**. The path report confirms diagnoses; the op report justifies procedures. If it isn't documented, **it didn't happen** — and the code gets denied.
+
+A good coder reads the op report in a **specific order**, not start to finish. The header skips the chart; the body holds the truth. We use a five-pass workflow:
+
+1. **Indication** — Why was the patient in OR? (drives ICD-10-CM)
+2. **Procedure(s) Performed** — Surgeon's stated procedure list (first cut at CPT)
+3. **Findings** — What was actually seen (may change the code)
+4. **Description of Procedure** — The narrative; confirms or overrides #2 and #3
+5. **Specimens / Pathology / Modifiers** — Bilateral? Discontinued? Multiple surgeons?
+
+This capstone walks through a **laparoscopic cholecystectomy with intraoperative cholangiogram (IOC)** — one of the most common general surgery cases and a perennial CPC exam favorite. We'll land on the right CPT codes, the right modifier choices, and explain why **modifier -51 is NOT needed when codes are designed to be reported together**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Five-Pass Op Report Read-Through</text>
+            <rect x="80" y="100" width="940" height="130" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/>
+            <text x="550" y="135" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS 1 — Indication / Preop Diagnosis</text>
+            <text x="550" y="170" text-anchor="middle" fill="#ffffff" font-size="18">Why is the patient in OR? Symptoms, imaging findings, plan</text>
+            <text x="550" y="205" text-anchor="middle" fill="#0ea5e9" font-size="16">Drives ICD-10-CM. Read this BEFORE the procedure list.</text>
+            <rect x="80" y="250" width="940" height="130" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="285" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS 2 — Procedures Performed</text>
+            <text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="18">Surgeon's bullet list of procedures done</text>
+            <text x="550" y="355" text-anchor="middle" fill="#0ea5e9" font-size="16">First cut at CPT. May be incomplete — verify in pass 4.</text>
+            <rect x="80" y="400" width="940" height="130" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="3"/>
+            <text x="550" y="435" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS 3 — Findings</text>
+            <text x="550" y="470" text-anchor="middle" fill="#ffffff" font-size="18">What did the surgeon actually see?</text>
+            <text x="550" y="505" text-anchor="middle" fill="#0ea5e9" font-size="16">May change the code (e.g., perforation, cancer, anatomic variant)</text>
+            <rect x="80" y="550" width="940" height="130" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="3"/>
+            <text x="550" y="585" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS 4 — Description of Procedure</text>
+            <text x="550" y="620" text-anchor="middle" fill="#ffffff" font-size="18">Step-by-step narrative — the truth</text>
+            <text x="550" y="655" text-anchor="middle" fill="#0ea5e9" font-size="16">If narrative contradicts pass 2 list, narrative wins</text>
+            <rect x="80" y="700" width="940" height="130" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3"/>
+            <text x="550" y="735" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS 5 — Specimens / Modifiers</text>
+            <text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="18">Bilateral? Discontinued? Distinct? Multiple surgeons?</text>
+            <text x="550" y="805" text-anchor="middle" fill="#0ea5e9" font-size="16">Apply -50, -53, -59, -62, -78, -RT/-LT as documented</text>
+            <rect x="80" y="850" width="940" height="200" fill="#888" opacity="0.2" stroke="#888" stroke-width="2"/>
+            <text x="550" y="890" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">GOLDEN RULES</text>
+            <text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="18">If it's not documented, it didn't happen</text>
+            <text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">Narrative trumps the procedure list header</text>
+            <text x="550" y="995" text-anchor="middle" fill="#ffffff" font-size="18">Pre-op diagnosis can change after pathology — re-code if needed</text>
+            <text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="18">Code to the highest specificity supported by the note</text>
+          </svg>`,
+          caption: "Five-pass read avoids missed procedures and wrong codes. The narrative is the source of truth."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Sample Op Report: Lap Chole with Intraop Cholangiogram",
+        content: `**Patient:** 52F | **Surgeon:** Dr. M | **Date:** 04/14/2026
+
+**Preoperative Diagnosis:** Symptomatic cholelithiasis with suspected choledocholithiasis (RUQ pain, mildly elevated LFTs, US showed gallstones + dilated CBD).
+
+**Postoperative Diagnosis:** Same. **Findings:** Inflamed gallbladder with multiple stones; cholangiogram showed normal biliary tree, no CBD stones.
+
+**Procedures Performed:**
+1. Laparoscopic cholecystectomy
+2. Intraoperative cholangiogram
+
+**Description of Procedure (excerpt):** "Patient placed supine. Pneumoperitoneum established via Veress needle. Four laparoscopic ports placed. Gallbladder grasped and retracted cephalad. Critical view of safety obtained. **Cholangiogram catheter inserted into cystic duct, contrast injected under fluoroscopy by the operating surgeon; images obtained and interpreted intraoperatively — normal anatomy, no filling defects.** Cystic duct and artery clipped and divided. Gallbladder dissected off the liver bed and removed via umbilical port. Hemostasis confirmed. Ports removed under direct vision. Skin closed."
+
+**Specimens:** Gallbladder to path.
+**Estimated Blood Loss:** 20 mL.
+
+Read it again — the IOC was performed AND interpreted by the operating surgeon. That detail drives whether we add **modifier -26** to the radiology code.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Op Report Breakdown: Lap Chole + IOC</text>
+            <rect x="50" y="100" width="1000" height="50" fill="#6366f1" opacity="0.4"/>
+            <text x="555" y="132" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">PREOP DX: Symptomatic cholelithiasis + suspected CBD stones</text>
+            <rect x="50" y="160" width="1000" height="50" fill="#10b981" opacity="0.4"/>
+            <text x="555" y="192" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">POSTOP DX: Same; FINDINGS: gallstones, normal CBD on IOC</text>
+            <rect x="50" y="220" width="1000" height="120" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+            <text x="555" y="255" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PROCEDURES PERFORMED</text>
+            <text x="80" y="290" fill="#ffffff" font-size="18">1. Laparoscopic cholecystectomy</text>
+            <text x="80" y="320" fill="#ffffff" font-size="18">2. Intraoperative cholangiogram (IOC)</text>
+            <rect x="50" y="350" width="1000" height="380" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="2"/>
+            <text x="555" y="385" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">DESCRIPTION OF PROCEDURE — KEY EXCERPTS</text>
+            <text x="70" y="420" fill="#ffffff" font-size="16">• Veress needle, pneumoperitoneum, 4 lap ports</text>
+            <text x="70" y="450" fill="#ffffff" font-size="16">• Gallbladder retracted cephalad, critical view of safety</text>
+            <rect x="70" y="465" width="970" height="100" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="2"/>
+            <text x="555" y="495" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">CRITICAL DETAIL FOR CODING</text>
+            <text x="555" y="525" text-anchor="middle" fill="#ffffff" font-size="16">"Cholangiogram catheter, contrast injected under fluoroscopy</text>
+            <text x="555" y="550" text-anchor="middle" fill="#ffffff" font-size="16">by the operating surgeon; images obtained AND interpreted"</text>
+            <text x="70" y="595" fill="#ffffff" font-size="16">• Cystic duct &amp; artery clipped + divided</text>
+            <text x="70" y="625" fill="#ffffff" font-size="16">• Gallbladder removed via umbilical port</text>
+            <text x="70" y="655" fill="#ffffff" font-size="16">• Hemostasis confirmed, ports out, skin closed</text>
+            <text x="70" y="700" fill="#0ea5e9" font-size="16">Specimens: gallbladder | EBL: 20 mL</text>
+            <rect x="50" y="750" width="1000" height="170" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3"/>
+            <text x="555" y="785" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">WHY THE INTERPRETATION DETAIL MATTERS</text>
+            <text x="555" y="825" text-anchor="middle" fill="#ffffff" font-size="18">74300 has technical + professional components</text>
+            <text x="555" y="860" text-anchor="middle" fill="#ffffff" font-size="18">Surgeon interpreting = professional only = modifier -26</text>
+            <text x="555" y="895" text-anchor="middle" fill="#ffffff" font-size="18">Hospital owns the fluoro equipment (technical -TC)</text>
+            <rect x="50" y="940" width="1000" height="120" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="555" y="980" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PASS-LIST OUTCOMES SO FAR</text>
+            <text x="555" y="1015" text-anchor="middle" fill="#ffffff" font-size="16">Pass 1: K80.20 (calculus of GB w/o obstruction) — refine after path</text>
+            <text x="555" y="1045" text-anchor="middle" fill="#ffffff" font-size="16">Pass 2-4: lap chole + IOC w/ surgeon interpretation</text>
+          </svg>`,
+          caption: "Read the narrative for who interpreted the cholangiogram — it determines the -26 modifier."
+        }
+      },
+      {
+        type: "example",
+        title: "Picking the Codes: 47563 + 74300-26",
+        content: `**Mapping the procedures:**
+
+**Procedure 1 — Lap chole with cholangiogram:** CPT splits laparoscopic cholecystectomy by whether IOC is performed:
+- **47562** — Lap chole **without** cholangiography
+- **47563** — Lap chole **with** cholangiography ← this case
+- **47564** — Lap chole with exploration of common bile duct
+
+The IOC is **bundled into 47563** — there is no separate surgical code for the IOC itself. **Do not also report 47550 (intraop cholangiogram, separate procedure)** — that's used only when the cholangiogram is done at open exploration WITHOUT a chole.
+
+**Procedure 2 — Radiology supervision and interpretation:** The fluoroscopic interpretation has its own code:
+- **74300** — Cholangiography and/or pancreatography; intraoperative, radiological supervision and interpretation (S&I)
+
+Because the **operating surgeon** interpreted the images (not a radiologist), append **modifier -26 (professional component)** to 74300. The hospital separately bills 74300-TC (technical component).
+
+**Final claim (physician side):**
+- **47563** — Lap chole with IOC
+- **74300-26** — S&I, professional component
+
+**ICD-10-CM:** K80.20 — Calculus of gallbladder without cholecystitis, without obstruction (refine after pathology).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Code Selection: Lap Chole + IOC</text>
+            <rect x="50" y="100" width="1000" height="40" fill="#6366f1"/>
+            <text x="550" y="128" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">LAP CHOLE FAMILY DECISION TREE</text>
+            <rect x="50" y="160" width="320" height="180" fill="#888" opacity="0.3" stroke="#888" stroke-width="2"/>
+            <text x="210" y="200" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">47562</text>
+            <text x="210" y="235" text-anchor="middle" fill="#ffffff" font-size="16">Lap chole alone</text>
+            <text x="210" y="265" text-anchor="middle" fill="#ffffff" font-size="16">NO cholangiogram</text>
+            <text x="210" y="305" text-anchor="middle" fill="#ef4444" font-size="14">Wrong for this case</text>
+            <rect x="390" y="160" width="320" height="180" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">47563 ✓</text>
+            <text x="550" y="235" text-anchor="middle" fill="#ffffff" font-size="16">Lap chole WITH</text>
+            <text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="16">cholangiography</text>
+            <text x="550" y="305" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">THIS CASE</text>
+            <rect x="730" y="160" width="320" height="180" fill="#888" opacity="0.3" stroke="#888" stroke-width="2"/>
+            <text x="890" y="200" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">47564</text>
+            <text x="890" y="235" text-anchor="middle" fill="#ffffff" font-size="16">Lap chole + CBD</text>
+            <text x="890" y="260" text-anchor="middle" fill="#ffffff" font-size="16">exploration</text>
+            <text x="890" y="305" text-anchor="middle" fill="#ef4444" font-size="14">No CBD work here</text>
+            <rect x="50" y="370" width="1000" height="40" fill="#ec4899"/>
+            <text x="550" y="398" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">RADIOLOGY S&amp;I + MODIFIER -26</text>
+            <rect x="50" y="430" width="490" height="220" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="295" y="470" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">74300</text>
+            <text x="295" y="510" text-anchor="middle" fill="#ffffff" font-size="16">Cholangiography S&amp;I</text>
+            <text x="295" y="540" text-anchor="middle" fill="#ffffff" font-size="16">Intraoperative</text>
+            <text x="295" y="585" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Two components:</text>
+            <text x="295" y="610" text-anchor="middle" fill="#ffffff" font-size="14">-26 Professional (read by surgeon)</text>
+            <text x="295" y="635" text-anchor="middle" fill="#ffffff" font-size="14">-TC Technical (hospital equipment)</text>
+            <rect x="560" y="430" width="490" height="220" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+            <text x="805" y="470" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">SURGEON BILLS</text>
+            <text x="805" y="510" text-anchor="middle" fill="#ffffff" font-size="18">74300-26</text>
+            <text x="805" y="545" text-anchor="middle" fill="#ffffff" font-size="14">Surgeon interpreted images</text>
+            <text x="805" y="580" text-anchor="middle" fill="#ffffff" font-size="14">Hospital bills 74300-TC</text>
+            <text x="805" y="615" text-anchor="middle" fill="#ec4899" font-size="14">If radiologist read it later,</text>
+            <text x="805" y="635" text-anchor="middle" fill="#ec4899" font-size="14">radiologist would bill -26</text>
+            <rect x="50" y="680" width="1000" height="200" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="555" y="720" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">FINAL CLAIM</text>
+            <text x="555" y="770" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">47563 + 74300-26</text>
+            <text x="555" y="815" text-anchor="middle" fill="#ffffff" font-size="18">ICD-10-CM: K80.20 (calculus, no obstruction)</text>
+            <text x="555" y="850" text-anchor="middle" fill="#0ea5e9" font-size="16">Refine to K80.50 if path shows mixed CBD stones</text>
+            <rect x="50" y="900" width="1000" height="160" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+            <text x="555" y="940" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">DO NOT</text>
+            <text x="555" y="975" text-anchor="middle" fill="#ffffff" font-size="18">Add 47550 (separate IOC) — bundled into 47563</text>
+            <text x="555" y="1010" text-anchor="middle" fill="#ffffff" font-size="18">Add 47562 — wrong base, IOC was performed</text>
+            <text x="555" y="1045" text-anchor="middle" fill="#ffffff" font-size="18">Add modifier -51 — see next card</text>
+          </svg>`,
+          caption: "Two codes, one modifier (-26). The IOC is bundled into 47563 — never add 47550 separately."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding: Modifier -51 Question",
+        content: `For this lap cholecystectomy with intraoperative cholangiogram case (47563 + 74300-26), should the coder append modifier -51 (multiple procedures) to the second-listed code?`,
+        question: "For the claim 47563 + 74300-26, should modifier -51 (multiple procedures) be appended to either code?",
+        options: [
+          { text: "Yes — append -51 to 74300-26 because it is the secondary procedure", correct: false },
+          { text: "Yes — append -51 to 47563 because lap chole has the higher RVU", correct: false },
+          { text: "No — 74300 is a radiology S&I code and is exempt from -51 (modifier 51-exempt)", correct: true },
+          { text: "No — modifier -51 was retired by AMA in 2020", correct: false }
+        ],
+        explanation: "Modifier -51 indicates multiple procedures on the same day by the same surgeon, applied to secondary procedures with reduced reimbursement. However, CPT designates many codes as -51 exempt — they appear with a '⊘' symbol in the codebook. Radiology S&I codes including 74300 are in the exempt list because they're already designed to accompany a surgical service. Choice A and B both wrongly apply -51 to a -51-exempt code or to the primary procedure. Choice D is false — -51 is still active; the AMA did NOT retire it.",
+        explanation_detail: "Radiology S&I codes are -51 exempt. Always check the codebook for the exempt symbol before applying -51.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Modifier -51 Logic Map</text>
+            <rect x="50" y="100" width="1000" height="180" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="555" y="140" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">WHAT MODIFIER -51 DOES</text>
+            <text x="555" y="180" text-anchor="middle" fill="#ffffff" font-size="18">Signals multiple procedures by same surgeon, same day</text>
+            <text x="555" y="215" text-anchor="middle" fill="#ffffff" font-size="18">Payer reduces secondary code (often 50% off allowable)</text>
+            <text x="555" y="250" text-anchor="middle" fill="#ffffff" font-size="18">Applied to LOWER-RVU code, not the primary</text>
+            <rect x="50" y="300" width="1000" height="220" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/>
+            <text x="555" y="340" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">-51 EXEMPT CODE FAMILIES</text>
+            <text x="80" y="380" fill="#ffffff" font-size="18">• Add-on codes (+) — already designed to accompany primary</text>
+            <text x="80" y="415" fill="#ffffff" font-size="18">• Radiology S&amp;I codes (e.g., 74300, 76000-series)</text>
+            <text x="80" y="450" fill="#ffffff" font-size="18">• E/M codes (use -25 instead)</text>
+            <text x="80" y="485" fill="#ffffff" font-size="18">• Codes marked with ⊘ symbol in CPT codebook</text>
+            <rect x="50" y="540" width="1000" height="180" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/>
+            <text x="555" y="580" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">FOR THIS CASE</text>
+            <text x="555" y="625" text-anchor="middle" fill="#ffffff" font-size="20">47563 = primary procedure (no -51 anyway)</text>
+            <text x="555" y="660" text-anchor="middle" fill="#ffffff" font-size="20">74300 = radiology S&amp;I = -51 EXEMPT</text>
+            <text x="555" y="695" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">→ Neither code gets -51</text>
+            <rect x="50" y="740" width="1000" height="170" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="555" y="780" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">WHEN WOULD -51 APPLY?</text>
+            <text x="555" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Lap chole + unrelated lap appendectomy same session:</text>
+            <text x="555" y="855" text-anchor="middle" fill="#ffffff" font-size="20">47562 + 44970-51</text>
+            <text x="555" y="890" text-anchor="middle" fill="#0ea5e9" font-size="16">Two distinct primary surgical procedures, lower RVU gets -51</text>
+            <rect x="50" y="930" width="1000" height="130" fill="#888" opacity="0.2" stroke="#888"/>
+            <text x="555" y="970" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">TRAPS BUSTED</text>
+            <text x="555" y="1005" text-anchor="middle" fill="#ffffff" font-size="16">"-51 was retired" — FALSE. Still in CPT.</text>
+            <text x="555" y="1035" text-anchor="middle" fill="#ffffff" font-size="16">Some payers (Medicare) auto-apply MPR without needing -51</text>
+          </svg>`,
+          caption: "Radiology S&I codes are -51 exempt. Memorize the exempt symbol list before exam day."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Application: Building Your Daily Coder Checklist",
+        content: `Now bring it all together. Every op report you code from this point forward should run through this **daily checklist** — it catches 90% of common errors and audit findings.
+
+**The Coder's Daily Checklist:**
+
+1. **Read all five passes** — never code from the procedure header alone.
+2. **Match indication to ICD-10-CM** — pre-op is your draft; refine after path.
+3. **List every procedure performed** — including bundled ones, to test for separate reportability.
+4. **Apply NCCI bundling edits** — CMS publishes column-1/column-2 pairs; bundled codes can't be reported together without modifier -59 or -XU/-XS/-XE/-XP.
+5. **Check for radiology S&I** — when imaging is part of the procedure, look for an S&I code and decide -26 vs -TC vs global.
+6. **Modifier decision sequence:**
+   - **-LT / -RT** for laterality
+   - **-50** for bilateral
+   - **-22** for unusual effort (must document why)
+   - **-53** for discontinued (patient instability)
+   - **-59 / -X{EPSU}** for distinct services
+   - **-78 / -79** for unplanned/unrelated return to OR
+   - **-62 / -82** for two surgeons / assistant
+7. **Audit yourself:** Does the documentation support every code?
+
+**Build muscle memory** by coding 3-5 op reports daily and reviewing them with this checklist. The CPC exam rewards process — and so does production work after you're certified.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The Daily Coder Checklist</text>
+            <rect x="50" y="100" width="1000" height="70" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="2"/>
+            <text x="555" y="135" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">1. READ ALL FIVE PASSES</text>
+            <text x="555" y="160" text-anchor="middle" fill="#ffffff" font-size="14">Indication → Procedures → Findings → Description → Specimens/Modifiers</text>
+            <rect x="50" y="180" width="1000" height="70" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="2"/>
+            <text x="555" y="215" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">2. MATCH INDICATION → ICD-10-CM</text>
+            <text x="555" y="240" text-anchor="middle" fill="#ffffff" font-size="14">Use pre-op dx as draft; refine after pathology report posts</text>
+            <rect x="50" y="260" width="1000" height="70" fill="#f59e0b" opacity="0.4" stroke="#f59e0b" stroke-width="2"/>
+            <text x="555" y="295" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">3. LIST EVERY PROCEDURE — INCLUDING BUNDLED</text>
+            <text x="555" y="320" text-anchor="middle" fill="#ffffff" font-size="14">Bundled procedures test your ability to recognize what NOT to bill</text>
+            <rect x="50" y="340" width="1000" height="70" fill="#ec4899" opacity="0.4" stroke="#ec4899" stroke-width="2"/>
+            <text x="555" y="375" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">4. APPLY NCCI EDITS</text>
+            <text x="555" y="400" text-anchor="middle" fill="#ffffff" font-size="14">CMS column-1/column-2 pairs; unbundle only with documented justification</text>
+            <rect x="50" y="420" width="1000" height="70" fill="#8b5cf6" opacity="0.4" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="555" y="455" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">5. CHECK FOR S&amp;I CODES</text>
+            <text x="555" y="480" text-anchor="middle" fill="#ffffff" font-size="14">Imaging used? Find S&amp;I code → decide -26 / -TC / global</text>
+            <rect x="50" y="500" width="1000" height="240" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="3"/>
+            <text x="555" y="540" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">6. MODIFIER DECISION SEQUENCE</text>
+            <text x="80" y="580" fill="#ffffff" font-size="16">-LT / -RT — laterality (single side)</text>
+            <text x="80" y="610" fill="#ffffff" font-size="16">-50 — bilateral (both sides)</text>
+            <text x="80" y="640" fill="#ffffff" font-size="16">-22 — unusual effort (must document why)</text>
+            <text x="80" y="670" fill="#ffffff" font-size="16">-53 — discontinued for patient safety (NOT -52)</text>
+            <text x="80" y="700" fill="#ffffff" font-size="16">-59 / -X{EPSU} — distinct service (last resort)</text>
+            <text x="80" y="730" fill="#ffffff" font-size="16">-62 / -82 — two surgeons / assistant surgeon</text>
+            <rect x="50" y="750" width="1000" height="70" fill="#ef4444" opacity="0.4" stroke="#ef4444" stroke-width="2"/>
+            <text x="555" y="785" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">7. AUDIT YOURSELF</text>
+            <text x="555" y="810" text-anchor="middle" fill="#ffffff" font-size="14">Does the documentation support every code? If not, query the surgeon.</text>
+            <rect x="50" y="840" width="1000" height="220" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+            <text x="555" y="880" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">BUILDING THE MUSCLE</text>
+            <text x="555" y="920" text-anchor="middle" fill="#ffffff" font-size="18">Code 3-5 op reports per day with this checklist</text>
+            <text x="555" y="955" text-anchor="middle" fill="#ffffff" font-size="18">Review against AAPC practice answers</text>
+            <text x="555" y="990" text-anchor="middle" fill="#ffffff" font-size="18">Track which step trips you up most often</text>
+            <text x="555" y="1025" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Process beats memorization. Trust the workflow.</text>
+          </svg>`,
+          caption: "Seven-step checklist applied to every op report. Process catches errors memorization misses."
+        }
+      }
+    ]
   }
 ];
 
@@ -3107,7 +4031,7 @@ Send compliance queries to MDs **within 24 hours** for any vague documentation. 
             title: 'CPC Foundation: Med Term & A&P Review for Coders',
             author: 'Synthesis Learning',
             description: 'The anatomy, body planes, and medical-term decoding system that every CPC exam question assumes you already know. The base layer for everything else in the track.',
-            lessons: 9, duration: 135, progress: 0,
+            lessons: 12, duration: 180, progress: 0,
             category: 'cpc-prep',
             lessonList: FOUNDATION_PLACEHOLDER_LESSONS, // replaced by seed content when available
         },
