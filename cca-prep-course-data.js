@@ -6559,7 +6559,7 @@ The 7 PCS approaches answer all three with a single character. Mastering them �
             id: 'cca-domain-4', title: 'CCA Domain 4: CPT Outpatient Coding',
             author: 'Synthesis Learning',
             description: 'CPT structure, E/M services, surgery section bundling, modifiers — focused on the outpatient encounters CCA emphasizes.',
-            lessons: 9, duration: 135, progress: 0, category: 'cca-prep',
+            lessons: 12, duration: 180, progress: 0, category: 'cca-prep',
             lessonList: [
 {
     id: "cca-domain-4-lesson-1",
@@ -7351,6 +7351,343 @@ Code: **87880-QW**.`,
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Capstone Decision Tree</text><rect x="300" y="100" width="500" height="100" rx="12" fill="#ffd700"/><text x="550" y="140" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Was patient formally ADMITTED</text><text x="550" y="170" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">+ expected stay ≥ 2 midnights?</text><line x1="550" y1="200" x2="250" y2="240" stroke="#ffd700" stroke-width="3"/><line x1="550" y1="200" x2="850" y2="240" stroke="#ffd700" stroke-width="3"/><text x="380" y="230" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">YES</text><text x="720" y="230" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">NO</text><g><rect x="60" y="250" width="450" height="380" rx="14" fill="#6366f1" opacity="0.85"/><text x="285" y="295" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">INPATIENT TRACK</text><line x1="100" y1="315" x2="470" y2="315" stroke="#ffffff" stroke-width="2"/><text x="285" y="355" text-anchor="middle" fill="#ffd700" font-size="18">Diagnoses</text><text x="285" y="385" text-anchor="middle" fill="#ffffff" font-size="18">ICD-10-CM</text><text x="285" y="425" text-anchor="middle" fill="#ffd700" font-size="18">Procedures</text><text x="285" y="455" text-anchor="middle" fill="#ffffff" font-size="18">ICD-10-PCS</text><text x="285" y="495" text-anchor="middle" fill="#ffd700" font-size="18">Payment</text><text x="285" y="525" text-anchor="middle" fill="#ffffff" font-size="18">MS-DRG</text><text x="285" y="565" text-anchor="middle" fill="#ffd700" font-size="18">Dx Rules</text><text x="285" y="595" text-anchor="middle" fill="#ffffff" font-size="16">UHDDS principal +</text><text x="285" y="615" text-anchor="middle" fill="#10b981" font-size="16">uncertain dx OK</text></g><g><rect x="590" y="250" width="450" height="380" rx="14" fill="#10b981" opacity="0.85"/><text x="815" y="295" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">OUTPATIENT TRACK</text><line x1="630" y1="315" x2="1000" y2="315" stroke="#ffffff" stroke-width="2"/><text x="815" y="355" text-anchor="middle" fill="#ffd700" font-size="18">Diagnoses</text><text x="815" y="385" text-anchor="middle" fill="#ffffff" font-size="18">ICD-10-CM</text><text x="815" y="425" text-anchor="middle" fill="#ffd700" font-size="18">Procedures</text><text x="815" y="455" text-anchor="middle" fill="#ffffff" font-size="18">CPT / HCPCS</text><text x="815" y="495" text-anchor="middle" fill="#ffd700" font-size="18">Payment</text><text x="815" y="525" text-anchor="middle" fill="#ffffff" font-size="18">OPPS / APC</text><text x="815" y="565" text-anchor="middle" fill="#ffd700" font-size="18">Dx Rules</text><text x="815" y="595" text-anchor="middle" fill="#ffffff" font-size="16">First-listed +</text><text x="815" y="615" text-anchor="middle" fill="#ef4444" font-size="16">symptom only if uncertain</text></g><rect x="60" y="660" width="980" height="400" rx="14" fill="#1a1a2e" stroke="#ef4444" stroke-width="3"/><text x="550" y="710" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">CCA EXAM TRAP LIST</text><g><text x="100" y="760" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="760" fill="#ffffff" font-size="18">Observation overnight = OUTPATIENT (not inpatient)</text></g><g><text x="100" y="800" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="800" fill="#ffffff" font-size="18">ED visit, any length = OUTPATIENT</text></g><g><text x="100" y="840" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="840" fill="#ffffff" font-size="18">Same-day surgery = OUTPATIENT (admit + d/c same day)</text></g><g><text x="100" y="880" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="880" fill="#ffffff" font-size="18">Outpatient "rule-out" → code SYMPTOM (e.g., R07.9), not I21.4</text></g><g><text x="100" y="920" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="920" fill="#ffffff" font-size="18">Outpatient procedures use CPT — NEVER ICD-10-PCS</text></g><g><text x="100" y="960" fill="#ef4444" font-size="20" font-weight="bold">⚠</text><text x="140" y="960" fill="#ffffff" font-size="18">Inpatient may code suspected dx as confirmed (UHDDS II.H)</text></g><g><text x="100" y="1010" fill="#ffd700" font-size="20" font-weight="bold">★</text><text x="140" y="1010" fill="#ffd700" font-size="18">Identify the SETTING first — everything else follows</text></g></svg>`,
           caption: "Classify setting first; track determines code sets, payment, principal vs first-listed, and uncertain dx handling"
+        }
+      }
+    ]
+  },
+{
+    id: "cca-domain-4-lesson-10",
+    title: "HCPCS Level II Codes for Outpatient",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When CPT Isn't Enough",
+        content: `**HCPCS Level II** (Healthcare Common Procedure Coding System) fills the gaps **CPT leaves behind**. While CPT (Level I) covers physician services and procedures, it does NOT code for **supplies, durable medical equipment (DME), injectable drugs, ambulance services, or orthotics**. That's where HCPCS Level II steps in.
+
+Format: **5-character alphanumeric** code (one letter + four digits), ranging A0000–V9999. Maintained by **CMS**, updated quarterly (drugs) and annually (other sections).
+
+**Golden rule**: If CPT has an appropriate code, use it. If CPT doesn't, look to HCPCS Level II. For Medicare claims, **HCPCS is mandatory** for supplies and drugs — you can't bill a J-code drug with a CPT code.
+
+This lesson maps the alphabet of HCPCS so you'll know exactly where to look.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">CPT vs HCPCS Level II</text><rect x="80" y="140" width="440" height="380" rx="14" fill="#6366f1" opacity="0.85"/><text x="300" y="200" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">CPT (Level I)</text><text x="300" y="250" text-anchor="middle" fill="#ffffff" font-size="22">Physician services</text><text x="300" y="290" text-anchor="middle" fill="#ffffff" font-size="22">Procedures &amp; surgery</text><text x="300" y="330" text-anchor="middle" fill="#ffffff" font-size="22">E/M visits</text><text x="300" y="370" text-anchor="middle" fill="#ffffff" font-size="22">5 numeric digits</text><text x="300" y="430" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Maintained by AMA</text><text x="300" y="480" text-anchor="middle" fill="#ffffff" font-size="22">Example: 99213</text><rect x="580" y="140" width="440" height="380" rx="14" fill="#10b981" opacity="0.85"/><text x="800" y="200" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">HCPCS Level II</text><text x="800" y="250" text-anchor="middle" fill="#ffffff" font-size="22">Supplies &amp; DME</text><text x="800" y="290" text-anchor="middle" fill="#ffffff" font-size="22">Drugs (injectable)</text><text x="800" y="330" text-anchor="middle" fill="#ffffff" font-size="22">Ambulance, orthotics</text><text x="800" y="370" text-anchor="middle" fill="#ffffff" font-size="22">Letter + 4 digits</text><text x="800" y="430" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Maintained by CMS</text><text x="800" y="480" text-anchor="middle" fill="#ffffff" font-size="22">Example: J0696</text><rect x="200" y="580" width="700" height="200" rx="14" fill="#f59e0b" opacity="0.9"/><text x="550" y="640" text-anchor="middle" fill="#1a1a2e" font-size="30" font-weight="bold">The Decision Rule</text><text x="550" y="690" text-anchor="middle" fill="#1a1a2e" font-size="22">Does CPT have a code? → use CPT</text><text x="550" y="730" text-anchor="middle" fill="#1a1a2e" font-size="22">No CPT code? → check HCPCS Level II</text><rect x="150" y="830" width="800" height="180" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Medicare REQUIRES HCPCS</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="22">for drugs, supplies, DME, ambulance</text><text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="22">Updated quarterly (J-codes) &amp; annually</text></svg>`,
+          caption: "CPT codes services; HCPCS Level II codes the things — supplies, drugs, DME, transport."
+        }
+      },
+      {
+        type: "concept",
+        title: "The HCPCS Alphabet — Sections by Letter",
+        content: `Each HCPCS Level II section begins with a **letter that signals what it covers**:
+
+**A codes** (A0021–A9999): **Transportation** (ambulance A0021–A0999) and **medical/surgical supplies** (A4000+). Includes A4253 test strips, A4550 surgical trays.
+
+**E codes** (E0100–E1830): **Durable Medical Equipment (DME)** — wheelchairs, walkers, hospital beds, CPAP machines, oxygen equipment.
+
+**J codes** (J0120–J9999): **Drugs administered other than oral** — the famous **J-code billing** for chemotherapy, injectable antibiotics, contrast agents. Each J-code specifies drug + unit dose (e.g., J0696 ceftriaxone 250 mg).
+
+**G codes**: Medicare **temporary procedures/services** awaiting CPT codes.
+**K codes**: **DMERC temporary** (durable medical equipment regional carrier).
+**Q codes**: **Temporary codes** for drugs, biologicals, and devices.
+**V codes**: **Vision (V2020+) and hearing (V5000+)** services and supplies.
+
+Knowing the letter tells you instantly where to search.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">HCPCS Level II Sections</text><rect x="60" y="120" width="320" height="140" rx="12" fill="#6366f1" opacity="0.9"/><text x="220" y="170" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">A codes</text><text x="220" y="210" text-anchor="middle" fill="#ffffff" font-size="20">Transportation +</text><text x="220" y="240" text-anchor="middle" fill="#ffffff" font-size="20">Medical supplies</text><rect x="390" y="120" width="320" height="140" rx="12" fill="#10b981" opacity="0.9"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">E codes</text><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="20">Durable Medical</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="20">Equipment (DME)</text><rect x="720" y="120" width="320" height="140" rx="12" fill="#ef4444" opacity="0.9"/><text x="880" y="170" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">J codes</text><text x="880" y="210" text-anchor="middle" fill="#ffffff" font-size="20">Injectable drugs</text><text x="880" y="240" text-anchor="middle" fill="#ffffff" font-size="20">(non-oral)</text><rect x="60" y="290" width="320" height="140" rx="12" fill="#f59e0b" opacity="0.9"/><text x="220" y="340" text-anchor="middle" fill="#1a1a2e" font-size="36" font-weight="bold">G codes</text><text x="220" y="380" text-anchor="middle" fill="#1a1a2e" font-size="20">Medicare temp</text><text x="220" y="410" text-anchor="middle" fill="#1a1a2e" font-size="20">procedures</text><rect x="390" y="290" width="320" height="140" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="550" y="340" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">K codes</text><text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="20">DMERC</text><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="20">temporary</text><rect x="720" y="290" width="320" height="140" rx="12" fill="#0ea5e9" opacity="0.9"/><text x="880" y="340" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Q codes</text><text x="880" y="380" text-anchor="middle" fill="#ffffff" font-size="20">Temp drugs /</text><text x="880" y="410" text-anchor="middle" fill="#ffffff" font-size="20">biologicals</text><rect x="220" y="460" width="660" height="140" rx="12" fill="#ec4899" opacity="0.9"/><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">V codes</text><text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="22">Vision (V2020+) &amp; Hearing (V5000+)</text><text x="550" y="580" text-anchor="middle" fill="#ffffff" font-size="20">glasses, contacts, hearing aids</text><rect x="80" y="640" width="940" height="160" rx="14" fill="#f59e0b" opacity="0.85"/><text x="550" y="690" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">HCPCS Modifiers</text><text x="550" y="730" text-anchor="middle" fill="#1a1a2e" font-size="20">-LT / -RT (left/right)  •  -E1–E4 (eyelids)</text><text x="550" y="765" text-anchor="middle" fill="#1a1a2e" font-size="20">-FA–F9 (fingers)  •  -TA–T9 (toes)  •  -RC / -LD (coronary)</text><rect x="200" y="830" width="700" height="180" rx="14" fill="#6366f1" opacity="0.85"/><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Example: J0696</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="22">Ceftriaxone sodium injection</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="22">per 250 mg unit</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="20">Bill 4 units = 1 gram dose</text></svg>`,
+          caption: "Letter signals section: A supplies, E DME, J drugs, G/K/Q temporary, V vision/hearing."
+        }
+      },
+      {
+        type: "example",
+        title: "Coding Supplies, Drugs, and Anatomical Specifics",
+        content: `**Scenario 1 — Drug administration**: Patient receives 1 gram of **ceftriaxone IV** in the ED. CPT covers the **infusion service** (96365). HCPCS covers the drug: **J0696 × 4 units** (J0696 = 250 mg per unit, so 1000 mg = 4 units). Without J0696 the drug isn't reimbursed.
+
+**Scenario 2 — DME**: Patient is discharged with a **standard wheelchair**. Code **E1130** (standard wheelchair, fixed full-length arms). Add **-NU modifier** for new equipment purchase.
+
+**Scenario 3 — Anatomical modifiers**: Cataract surgery on the **right eye** requires **-RT**. Excision of a lesion on the **left index finger** uses **-F1** (left index = F1; right thumb = FA). Toe injection at the **right great toe** uses **-T5**. Coronary intervention on the **left anterior descending** uses **-LD**.
+
+**Scenario 4 — Ambulance**: Basic Life Support emergency transport = **A0429** with origin/destination modifier (e.g., **-RH** for residence to hospital).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">HCPCS in Action</text><rect x="60" y="120" width="980" height="200" rx="14" fill="#ef4444" opacity="0.85"/><text x="550" y="165" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Drug: 1 g Ceftriaxone IV</text><text x="550" y="210" text-anchor="middle" fill="#ffd700" font-size="22">CPT 96365 (IV infusion service)</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="22">+ HCPCS J0696 × 4 units</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="20">(J0696 = 250 mg per unit → 1000 mg = 4 units)</text><rect x="60" y="350" width="980" height="170" rx="14" fill="#10b981" opacity="0.85"/><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">DME: Standard Wheelchair</text><text x="550" y="440" text-anchor="middle" fill="#ffd700" font-size="22">E1130 + modifier -NU (new equipment)</text><text x="550" y="480" text-anchor="middle" fill="#ffffff" font-size="20">RR = rental, UE = used equipment</text><rect x="60" y="550" width="980" height="270" rx="14" fill="#6366f1" opacity="0.85"/><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Anatomical Modifiers</text><text x="120" y="645" fill="#ffd700" font-size="22" font-weight="bold">Fingers:</text><text x="280" y="645" fill="#ffffff" font-size="20">FA=R thumb  F1=L index  F5=R thumb</text><text x="120" y="685" fill="#ffd700" font-size="22" font-weight="bold">Toes:</text><text x="280" y="685" fill="#ffffff" font-size="20">TA=L great  T5=R great toe</text><text x="120" y="725" fill="#ffd700" font-size="22" font-weight="bold">Eyelids:</text><text x="280" y="725" fill="#ffffff" font-size="20">E1=upper L  E2=lower L  E3=upper R  E4=lower R</text><text x="120" y="765" fill="#ffd700" font-size="22" font-weight="bold">Coronary:</text><text x="280" y="765" fill="#ffffff" font-size="20">LD = Left Anterior Descending  RC = Right Coronary</text><text x="120" y="800" fill="#ffd700" font-size="22" font-weight="bold">Side:</text><text x="280" y="800" fill="#ffffff" font-size="20">-LT = left  -RT = right</text><rect x="60" y="850" width="980" height="180" rx="14" fill="#f59e0b" opacity="0.9"/><text x="550" y="895" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Ambulance Transport</text><text x="550" y="940" text-anchor="middle" fill="#1a1a2e" font-size="22">A0429 = BLS emergency transport</text><text x="550" y="975" text-anchor="middle" fill="#1a1a2e" font-size="20">Origin/destination modifier required (e.g., -RH = residence → hospital)</text><text x="550" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="20">First letter = origin, second letter = destination</text></svg>`,
+          caption: "Drug + infusion service, DME with -NU, anatomical modifiers FA-F9/TA-T9/E1-E4/LD/RC."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check — HCPCS Level II",
+        question: "An outpatient receives 500 mg of ceftriaxone IV (HCPCS J0696 = 250 mg per unit). The coder also reports the IV infusion service. What is the correct HCPCS billing?",
+        options: [
+          { text: "J0696 × 1 unit (one drug, one unit)", correct: false },
+          { text: "J0696 × 2 units (500 mg ÷ 250 mg per unit)", correct: true },
+          { text: "J0696 × 5 units (one unit per 100 mg)", correct: false },
+          { text: "No HCPCS needed — CPT infusion code covers the drug", correct: false }
+        ],
+        explanation: "J0696 is defined as 250 mg per unit. A 500 mg dose = 500 ÷ 250 = 2 units. CPT 96365 codes the infusion service, but the drug itself MUST be reported with a J-code in units matching the dose. Mismatched units = denied or underpaid claims.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">J-Code Unit Math</text><rect x="100" y="160" width="900" height="180" rx="14" fill="#6366f1" opacity="0.85"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">J0696 — Ceftriaxone sodium</text><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Per 250 mg unit</text><text x="550" y="315" text-anchor="middle" fill="#ffffff" font-size="22">Read the descriptor carefully!</text><rect x="100" y="380" width="900" height="220" rx="14" fill="#10b981" opacity="0.9"/><text x="550" y="440" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Dose ordered: 500 mg</text><text x="550" y="500" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">500 ÷ 250 = 2 units</text><text x="550" y="560" text-anchor="middle" fill="#ffffff" font-size="22">Report: J0696 × 2</text><rect x="100" y="640" width="900" height="180" rx="14" fill="#ef4444" opacity="0.85"/><text x="550" y="700" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Common Trap</text><text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="22">Billing "1 unit" regardless of dose</text><text x="550" y="785" text-anchor="middle" fill="#ffd700" font-size="22">= massive underpayment</text><rect x="100" y="860" width="900" height="180" rx="14" fill="#f59e0b" opacity="0.9"/><text x="550" y="920" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Always check unit definition</text><text x="550" y="965" text-anchor="middle" fill="#1a1a2e" font-size="22">in the HCPCS descriptor</text><text x="550" y="1005" text-anchor="middle" fill="#1a1a2e" font-size="20">Units vary: per mg, per 10 mg, per 250 mg, per vial</text></svg>`,
+          caption: "Dose ÷ unit-size = units billed. Read the J-code descriptor every time."
+        }
+      },
+      {
+        type: "application",
+        title: "Applying HCPCS in the Outpatient Setting",
+        content: `**Workflow tips for clean HCPCS claims**:
+
+1. **Check CPT first**. Only reach for HCPCS when CPT has no appropriate code or when **payer policy requires HCPCS** (Medicare drug claims always do).
+
+2. **Read the unit descriptor**. J-code units vary wildly: J0696 is per 250 mg, J7050 is per 250 mL, J1100 is per 4 mg. Wrong units = wrong payment.
+
+3. **Apply anatomical modifiers precisely**. For bilateral procedures, **-LT and -RT** on separate lines are often preferred over -50 for Medicare outpatient.
+
+4. **Verify drug-administration pairing**. A J-code without an administration CPT (96365, 96372, etc.) often triggers a denial — the payer needs to know how the drug was given.
+
+5. **Stay current**. **J-codes update quarterly**; new drugs and dose changes appear constantly. **C-codes** for new technology pass-through expire and convert.
+
+Mastering HCPCS is what separates accurate outpatient coders from those who quietly leave money on the table.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">HCPCS Workflow Checklist</text><rect x="80" y="130" width="940" height="130" rx="12" fill="#6366f1" opacity="0.9"/><text x="120" y="180" fill="#ffd700" font-size="36" font-weight="bold">1</text><text x="180" y="180" fill="#ffffff" font-size="24" font-weight="bold">CPT first, HCPCS second</text><text x="180" y="220" fill="#ffffff" font-size="20">Unless payer mandates HCPCS for supplies/drugs</text><rect x="80" y="280" width="940" height="130" rx="12" fill="#10b981" opacity="0.9"/><text x="120" y="330" fill="#ffd700" font-size="36" font-weight="bold">2</text><text x="180" y="330" fill="#ffffff" font-size="24" font-weight="bold">Read the unit descriptor</text><text x="180" y="370" fill="#ffffff" font-size="20">per 10 mg? per 250 mg? per vial? — calc carefully</text><rect x="80" y="430" width="940" height="130" rx="12" fill="#f59e0b" opacity="0.9"/><text x="120" y="480" fill="#1a1a2e" font-size="36" font-weight="bold">3</text><text x="180" y="480" fill="#1a1a2e" font-size="24" font-weight="bold">Anatomical modifiers</text><text x="180" y="520" fill="#1a1a2e" font-size="20">LT/RT, FA-F9, TA-T9, E1-E4, LD/RC</text><rect x="80" y="580" width="940" height="130" rx="12" fill="#ef4444" opacity="0.9"/><text x="120" y="630" fill="#ffffff" font-size="36" font-weight="bold">4</text><text x="180" y="630" fill="#ffffff" font-size="24" font-weight="bold">Pair drug with administration</text><text x="180" y="670" fill="#ffffff" font-size="20">J-code alone → denial. Add 96365 / 96372 etc.</text><rect x="80" y="730" width="940" height="130" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="120" y="780" fill="#ffd700" font-size="36" font-weight="bold">5</text><text x="180" y="780" fill="#ffffff" font-size="24" font-weight="bold">Stay current — quarterly updates</text><text x="180" y="820" fill="#ffffff" font-size="20">New J-codes, expiring C-codes, dose changes</text><rect x="200" y="900" width="700" height="160" rx="14" fill="#ffd700"/><text x="550" y="955" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Master HCPCS =</text><text x="550" y="1000" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Capture all legitimate revenue</text></svg>`,
+          caption: "Five habits that turn HCPCS from afterthought into clean-claim discipline."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-4-lesson-11",
+    title: "APC and the OPPS Payment System",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "How Outpatient Hospitals Get Paid",
+        content: `Medicare pays outpatient hospital services through the **Outpatient Prospective Payment System (OPPS)**, launched in 2000. The currency of OPPS is the **Ambulatory Payment Classification (APC)** — a grouping of services that are **clinically similar AND require similar resources**.
+
+Each CPT/HCPCS code reported on an outpatient claim is mapped to an APC. Each APC has a **relative weight** that, multiplied by the **conversion factor** (an annual dollar amount set by CMS), yields the **payment**.
+
+**Formula**: APC weight × Conversion factor × Wage index adjustment = Payment
+
+The system rewards efficiency: hospitals receive one bundled payment per APC, regardless of actual cost. **Wrong APC assignment = lost revenue (or compliance risk)**. Coders don't pick APCs directly — but the codes they assign **drive APC grouping**, which is why CPT/HCPCS accuracy is the foundation of outpatient revenue.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">OPPS &amp; APC Payment Flow</text><rect x="100" y="140" width="900" height="120" rx="12" fill="#6366f1" opacity="0.9"/><text x="550" y="195" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Coder assigns CPT + HCPCS codes</text><text x="550" y="235" text-anchor="middle" fill="#ffd700" font-size="20">(based on documentation)</text><text x="550" y="295" text-anchor="middle" fill="#ffd700" font-size="40">↓</text><rect x="100" y="320" width="900" height="120" rx="12" fill="#10b981" opacity="0.9"/><text x="550" y="375" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Grouper maps codes to APC</text><text x="550" y="415" text-anchor="middle" fill="#ffd700" font-size="20">Clinical + resource similarity</text><text x="550" y="475" text-anchor="middle" fill="#ffd700" font-size="40">↓</text><rect x="100" y="500" width="900" height="160" rx="12" fill="#f59e0b" opacity="0.9"/><text x="550" y="555" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">APC weight × CF × wage index</text><text x="550" y="600" text-anchor="middle" fill="#1a1a2e" font-size="22">= Hospital payment</text><text x="550" y="640" text-anchor="middle" fill="#1a1a2e" font-size="20">CF set annually by CMS</text><text x="550" y="695" text-anchor="middle" fill="#ffd700" font-size="40">↓</text><rect x="100" y="720" width="900" height="160" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="550" y="775" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Hospital receives bundled payment</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="22">Regardless of actual cost</text><text x="550" y="855" text-anchor="middle" fill="#ffd700" font-size="20">Efficient hospitals profit; inefficient ones lose</text><rect x="200" y="920" width="700" height="140" rx="14" fill="#ef4444" opacity="0.9"/><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Wrong codes → wrong APC</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22">→ lost revenue or compliance risk</text></svg>`,
+          caption: "Codes drive APC, APC drives payment. Coding errors = revenue errors."
+        }
+      },
+      {
+        type: "concept",
+        title: "Status Indicators — The APC Decoder",
+        content: `Every APC carries a **Status Indicator (SI)** — a letter telling the claims processor **HOW** the service is paid:
+
+**S — Significant procedure, NOT subject to multiple-procedure discount**. Paid at 100% even when combined with other procedures.
+
+**T — Significant procedure, SUBJECT to multiple-procedure discount**. Highest-weighted T procedure paid at 100%; additional T procedures reduced (typically 50%).
+
+**V — Clinic or ED visit (E/M)**. Paid separately under OPPS.
+
+**N — Packaged service**. **No separate payment** — bundled into another APC (e.g., supplies, anesthesia recovery).
+
+**J1 — Comprehensive APC (C-APC)**. One bundled payment covers the primary service plus virtually **all adjunctive items** on the claim.
+
+**J2 — Comprehensive observation services APC**. Bundles qualifying observation stays.
+
+**Q1/Q2/Q3 — Conditionally packaged** (depends on what else is on the claim).
+
+Reading status indicators tells you **what gets paid, what bundles, and what discounts** — critical for chargemaster and revenue integrity work.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">APC Status Indicators</text><rect x="60" y="100" width="500" height="140" rx="12" fill="#10b981" opacity="0.9"/><text x="120" y="150" fill="#ffd700" font-size="44" font-weight="bold">S</text><text x="200" y="145" fill="#ffffff" font-size="22" font-weight="bold">Significant procedure</text><text x="200" y="180" fill="#ffffff" font-size="20">NOT subject to discount</text><text x="200" y="215" fill="#ffd700" font-size="20">Paid at 100%</text><rect x="580" y="100" width="460" height="140" rx="12" fill="#f59e0b" opacity="0.9"/><text x="620" y="150" fill="#1a1a2e" font-size="44" font-weight="bold">T</text><text x="700" y="145" fill="#1a1a2e" font-size="22" font-weight="bold">Significant procedure</text><text x="700" y="180" fill="#1a1a2e" font-size="20">SUBJECT to discount</text><text x="700" y="215" fill="#1a1a2e" font-size="20">Highest=100%, others 50%</text><rect x="60" y="260" width="500" height="140" rx="12" fill="#6366f1" opacity="0.9"/><text x="120" y="310" fill="#ffd700" font-size="44" font-weight="bold">V</text><text x="200" y="305" fill="#ffffff" font-size="22" font-weight="bold">Clinic / ED visit</text><text x="200" y="340" fill="#ffffff" font-size="20">E/M services</text><text x="200" y="375" fill="#ffd700" font-size="20">Paid separately</text><rect x="580" y="260" width="460" height="140" rx="12" fill="#ef4444" opacity="0.9"/><text x="620" y="310" fill="#ffd700" font-size="44" font-weight="bold">N</text><text x="700" y="305" fill="#ffffff" font-size="22" font-weight="bold">Packaged service</text><text x="700" y="340" fill="#ffffff" font-size="20">No separate payment</text><text x="700" y="375" fill="#ffd700" font-size="20">Bundled into APC</text><rect x="60" y="420" width="500" height="160" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="120" y="475" fill="#ffd700" font-size="40" font-weight="bold">J1</text><text x="220" y="465" fill="#ffffff" font-size="22" font-weight="bold">Comprehensive APC</text><text x="220" y="500" fill="#ffffff" font-size="20">One bundled payment for</text><text x="220" y="530" fill="#ffffff" font-size="20">primary + all adjunctive</text><text x="220" y="560" fill="#ffd700" font-size="20">on the claim</text><rect x="580" y="420" width="460" height="160" rx="12" fill="#0ea5e9" opacity="0.9"/><text x="620" y="475" fill="#ffd700" font-size="40" font-weight="bold">J2</text><text x="720" y="465" fill="#ffffff" font-size="22" font-weight="bold">Comprehensive</text><text x="720" y="500" fill="#ffffff" font-size="22" font-weight="bold">observation APC</text><text x="720" y="540" fill="#ffd700" font-size="20">Bundles qualifying obs</text><rect x="60" y="600" width="980" height="140" rx="12" fill="#ec4899" opacity="0.9"/><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Q1 / Q2 / Q3</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="22">Conditionally packaged</text><text x="550" y="720" text-anchor="middle" fill="#ffd700" font-size="20">Depends on what else is on the claim</text><rect x="100" y="780" width="900" height="260" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Payment Formula</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="24">APC weight</text><text x="550" y="925" text-anchor="middle" fill="#ffd700" font-size="28">×</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="24">Conversion factor (CF)</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="28">×</text><text x="550" y="1020" text-anchor="middle" fill="#ffffff" font-size="24">Wage index = Payment</text></svg>`,
+          caption: "Status indicator tells you HOW each line pays — separately, bundled, or discounted."
+        }
+      },
+      {
+        type: "example",
+        title: "OPPS in Action — Multiple Procedures on One Claim",
+        content: `**Case**: Outpatient surgery with three procedures on the same date:
+
+| Code | Description | Status | APC Weight |
+|---|---|---|---|
+| 19120 | Excision breast lesion | T | 30.5 |
+| 11042 | Wound debridement | T | 8.2 |
+| 96372 | IM injection | N | — |
+
+**Step 1**: Identify status indicators. Two **T procedures** + one **N (packaged)**.
+
+**Step 2**: Apply the **multiple-procedure discount**. The **highest-weighted T** (19120, weight 30.5) is paid at **100%**. The lower-weighted T (11042) is paid at **50%**.
+
+**Step 3**: The N-status injection (96372) is **packaged** — no separate payment; it's bundled into the surgical APC.
+
+**Step 4**: Calculate. If CF = $87 and wage index = 1.0:
+• 19120: 30.5 × $87 = $2,653.50
+• 11042: 8.2 × $87 × 0.5 = $356.70
+• 96372: $0 (packaged)
+• **Total: $3,010.20**
+
+Coders who understand SI logic explain "why" to revenue cycle teams.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Multi-Procedure APC Payment</text><rect x="60" y="110" width="980" height="60" rx="8" fill="#6366f1"/><text x="150" y="150" fill="#ffd700" font-size="22" font-weight="bold">Code</text><text x="380" y="150" fill="#ffd700" font-size="22" font-weight="bold">Description</text><text x="780" y="150" fill="#ffd700" font-size="22" font-weight="bold">SI</text><text x="900" y="150" fill="#ffd700" font-size="22" font-weight="bold">Weight</text><rect x="60" y="180" width="980" height="70" rx="8" fill="#10b981" opacity="0.85"/><text x="150" y="225" fill="#ffffff" font-size="22" font-weight="bold">19120</text><text x="380" y="225" fill="#ffffff" font-size="20">Breast lesion excision</text><text x="780" y="225" fill="#ffd700" font-size="22" font-weight="bold">T</text><text x="900" y="225" fill="#ffffff" font-size="22">30.5</text><rect x="60" y="260" width="980" height="70" rx="8" fill="#f59e0b" opacity="0.85"/><text x="150" y="305" fill="#1a1a2e" font-size="22" font-weight="bold">11042</text><text x="380" y="305" fill="#1a1a2e" font-size="20">Wound debridement</text><text x="780" y="305" fill="#1a1a2e" font-size="22" font-weight="bold">T</text><text x="900" y="305" fill="#1a1a2e" font-size="22">8.2</text><rect x="60" y="340" width="980" height="70" rx="8" fill="#ef4444" opacity="0.85"/><text x="150" y="385" fill="#ffffff" font-size="22" font-weight="bold">96372</text><text x="380" y="385" fill="#ffffff" font-size="20">IM injection</text><text x="780" y="385" fill="#ffd700" font-size="22" font-weight="bold">N</text><text x="900" y="385" fill="#ffffff" font-size="22">pkg</text><rect x="60" y="450" width="980" height="160" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="550" y="495" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Multiple T discount applies</text><text x="550" y="540" text-anchor="middle" fill="#ffd700" font-size="22">Highest T (19120) = 100%</text><text x="550" y="575" text-anchor="middle" fill="#ffd700" font-size="22">Other T (11042) = 50%</text><text x="550" y="605" text-anchor="middle" fill="#ffffff" font-size="20">N (96372) = packaged, $0 separate</text><rect x="60" y="630" width="980" height="280" rx="14" fill="#0ea5e9" opacity="0.85"/><text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Payment Calculation (CF=$87, WI=1.0)</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="22">19120: 30.5 × $87 = $2,653.50</text><text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="22">11042: 8.2 × $87 × 0.5 = $356.70</text><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="22">96372: $0 (packaged)</text><line x1="220" y1="830" x2="880" y2="830" stroke="#ffd700" stroke-width="3"/><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Total: $3,010.20</text><rect x="100" y="940" width="900" height="120" rx="14" fill="#ffd700"/><text x="550" y="990" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Reading SI = predicting payment</text><text x="550" y="1030" text-anchor="middle" fill="#1a1a2e" font-size="20">Coders are the front line of OPPS revenue</text></svg>`,
+          caption: "Two T procedures = highest at 100%, others 50%. N = packaged, no separate pay."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check — APC Logic",
+        question: "An outpatient encounter has CPT 45380 (status T, APC weight 18.0) and CPT 45385 (status T, APC weight 22.0). The conversion factor is $90 and wage index = 1.0. What is the total OPPS payment?",
+        options: [
+          { text: "$3,600 — both procedures paid at 100%", correct: false },
+          { text: "$1,800 — only the highest-weighted procedure is paid", correct: false },
+          { text: "$2,790 — 45385 at 100% + 45380 at 50% discount", correct: true },
+          { text: "$1,395 — both procedures at 50% discount", correct: false }
+        ],
+        explanation: "Both are status T (subject to multiple-procedure discount). The HIGHER-weighted procedure (45385, weight 22.0) is paid at 100%: 22.0 × $90 = $1,980. The lower-weighted (45380, weight 18.0) is discounted 50%: 18.0 × $90 × 0.5 = $810. Total = $1,980 + $810 = $2,790.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Multiple T Discount Math</text><rect x="80" y="150" width="940" height="200" rx="14" fill="#10b981" opacity="0.9"/><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">45385 (Status T, weight 22.0)</text><text x="550" y="245" text-anchor="middle" fill="#ffd700" font-size="24">HIGHEST → paid at 100%</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="24">22.0 × $90 = $1,980.00</text><rect x="80" y="380" width="940" height="200" rx="14" fill="#f59e0b" opacity="0.9"/><text x="550" y="430" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">45380 (Status T, weight 18.0)</text><text x="550" y="475" text-anchor="middle" fill="#1a1a2e" font-size="24">LOWER → discounted 50%</text><text x="550" y="525" text-anchor="middle" fill="#1a1a2e" font-size="24">18.0 × $90 × 0.5 = $810.00</text><rect x="80" y="610" width="940" height="180" rx="14" fill="#6366f1" opacity="0.9"/><text x="550" y="665" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Total Payment</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">$1,980 + $810 = $2,790</text><text x="550" y="765" text-anchor="middle" fill="#ffffff" font-size="20">Per claim</text><rect x="80" y="820" width="940" height="240" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Why this matters</text><text x="550" y="915" text-anchor="middle" fill="#ffffff" font-size="20">If both billed at 100%, claim would be flagged</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="20">If only highest paid, hospital loses $810</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22">Coders must understand SI rules</text><text x="550" y="1030" text-anchor="middle" fill="#ffd700" font-size="20">to validate expected reimbursement</text></svg>`,
+          caption: "Highest T = 100%, additional T = 50%. Total = $2,790."
+        }
+      },
+      {
+        type: "application",
+        title: "Why Coders Drive OPPS Revenue",
+        content: `**The coder's leverage in OPPS**:
+
+1. **Code accuracy = APC accuracy**. Wrong CPT → wrong APC → wrong payment. A high-weight comprehensive APC (J1) can be worth thousands more than a packaged service.
+
+2. **The 2-day E/M rule**. When an E/M visit is **related to a same-day or prior-day procedure**, the E/M is **packaged into the procedural APC** (no separate pay). Unrelated E/M needs **modifier -25** to break the bundle.
+
+3. **Status N awareness**. Don't omit packaged services — they still need to be **coded for utilization data**, even though they don't pay separately.
+
+4. **Comprehensive APC (J1)** rolls up adjunctive services. Adding more codes won't increase payment — but **missing the qualifying primary procedure** will tank it.
+
+5. **Watch for separately payable drugs**. Pass-through drugs (status G) and high-cost drugs **do pay separately** even under J1 in some cases.
+
+6. **Document → code → APC → payment**. Each link is the coder's responsibility to verify.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Coder's OPPS Leverage</text><rect x="80" y="130" width="940" height="130" rx="12" fill="#6366f1" opacity="0.9"/><text x="120" y="180" fill="#ffd700" font-size="36" font-weight="bold">1</text><text x="180" y="180" fill="#ffffff" font-size="24" font-weight="bold">Code accuracy = APC accuracy</text><text x="180" y="220" fill="#ffffff" font-size="20">One wrong CPT can shift APC by thousands</text><rect x="80" y="280" width="940" height="130" rx="12" fill="#10b981" opacity="0.9"/><text x="120" y="330" fill="#ffd700" font-size="36" font-weight="bold">2</text><text x="180" y="330" fill="#ffffff" font-size="24" font-weight="bold">2-day E/M rule</text><text x="180" y="370" fill="#ffffff" font-size="20">Related E/M packaged. Use -25 for unrelated.</text><rect x="80" y="430" width="940" height="130" rx="12" fill="#f59e0b" opacity="0.9"/><text x="120" y="480" fill="#1a1a2e" font-size="36" font-weight="bold">3</text><text x="180" y="480" fill="#1a1a2e" font-size="24" font-weight="bold">Status N still coded</text><text x="180" y="520" fill="#1a1a2e" font-size="20">Utilization tracking + future rate-setting</text><rect x="80" y="580" width="940" height="130" rx="12" fill="#ef4444" opacity="0.9"/><text x="120" y="630" fill="#ffffff" font-size="36" font-weight="bold">4</text><text x="180" y="630" fill="#ffffff" font-size="24" font-weight="bold">J1 rolls up adjuncts</text><text x="180" y="670" fill="#ffffff" font-size="20">Missing primary procedure = tanked payment</text><rect x="80" y="730" width="940" height="130" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="120" y="780" fill="#ffd700" font-size="36" font-weight="bold">5</text><text x="180" y="780" fill="#ffffff" font-size="24" font-weight="bold">Pass-through drugs (G)</text><text x="180" y="820" fill="#ffffff" font-size="20">May pay separately even with J1</text><rect x="80" y="880" width="940" height="130" rx="12" fill="#0ea5e9" opacity="0.9"/><text x="120" y="930" fill="#ffd700" font-size="36" font-weight="bold">6</text><text x="180" y="930" fill="#ffffff" font-size="24" font-weight="bold">Verify the chain</text><text x="180" y="970" fill="#ffffff" font-size="20">Doc → Code → APC → Payment</text><rect x="250" y="1030" width="600" height="60" rx="10" fill="#ffd700"/><text x="550" y="1070" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Coders ARE the revenue cycle</text></svg>`,
+          caption: "Six levers a coder controls to protect outpatient revenue under OPPS."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-4-lesson-12",
+    title: "Capstone: Full Outpatient Coding Workflow",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Chart to Clean Claim",
+        content: `Time to put it all together. The outpatient coding workflow is a **disciplined sequence** that turns clinical documentation into a payable claim:
+
+**Step 1 — ICD-10-CM diagnoses**: What brought the patient in? What did the provider find? Sequence the **first-listed diagnosis** correctly (different rules than IP principal dx).
+
+**Step 2 — CPT procedures**: What was actually done? Match codes to documentation.
+
+**Step 3 — HCPCS Level II**: Supplies, drugs, DME, ambulance — anything CPT can't capture.
+
+**Step 4 — Modifiers**: Anatomical, payment, informational. Each tells a story.
+
+**Step 5 — NCCI / bundling check**: Verify code pairs are allowed; apply modifiers where override is justified.
+
+**Step 6 — Sequence and submit**: Build the claim, audit for completeness, send it clean.
+
+We'll walk a screening colonoscopy that becomes a therapeutic procedure mid-case — one of the most common (and most miscoded) outpatient scenarios.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Outpatient Coding Workflow</text><rect x="80" y="120" width="940" height="120" rx="12" fill="#6366f1" opacity="0.9"/><text x="120" y="170" fill="#ffd700" font-size="34" font-weight="bold">1</text><text x="180" y="170" fill="#ffffff" font-size="24" font-weight="bold">ICD-10-CM diagnoses</text><text x="180" y="210" fill="#ffffff" font-size="20">First-listed dx, secondary conditions</text><rect x="80" y="255" width="940" height="120" rx="12" fill="#10b981" opacity="0.9"/><text x="120" y="305" fill="#ffd700" font-size="34" font-weight="bold">2</text><text x="180" y="305" fill="#ffffff" font-size="24" font-weight="bold">CPT procedures</text><text x="180" y="345" fill="#ffffff" font-size="20">Match codes to documentation</text><rect x="80" y="390" width="940" height="120" rx="12" fill="#f59e0b" opacity="0.9"/><text x="120" y="440" fill="#1a1a2e" font-size="34" font-weight="bold">3</text><text x="180" y="440" fill="#1a1a2e" font-size="24" font-weight="bold">HCPCS Level II</text><text x="180" y="480" fill="#1a1a2e" font-size="20">Drugs, supplies, DME, transport</text><rect x="80" y="525" width="940" height="120" rx="12" fill="#ef4444" opacity="0.9"/><text x="120" y="575" fill="#ffffff" font-size="34" font-weight="bold">4</text><text x="180" y="575" fill="#ffffff" font-size="24" font-weight="bold">Modifiers</text><text x="180" y="615" fill="#ffffff" font-size="20">Anatomical, payment, informational</text><rect x="80" y="660" width="940" height="120" rx="12" fill="#8b5cf6" opacity="0.9"/><text x="120" y="710" fill="#ffd700" font-size="34" font-weight="bold">5</text><text x="180" y="710" fill="#ffffff" font-size="24" font-weight="bold">NCCI / bundling check</text><text x="180" y="750" fill="#ffffff" font-size="20">Verify edits, justify any overrides</text><rect x="80" y="795" width="940" height="120" rx="12" fill="#0ea5e9" opacity="0.9"/><text x="120" y="845" fill="#ffd700" font-size="34" font-weight="bold">6</text><text x="180" y="845" fill="#ffffff" font-size="24" font-weight="bold">Sequence + submit</text><text x="180" y="885" fill="#ffffff" font-size="20">Audit, build claim, send clean</text><rect x="200" y="950" width="700" height="120" rx="14" fill="#ffd700"/><text x="550" y="1000" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Capstone Case Next:</text><text x="550" y="1045" text-anchor="middle" fill="#1a1a2e" font-size="22">Screening → therapeutic colonoscopy</text></svg>`,
+          caption: "Six disciplined steps from chart to clean claim. We'll walk all six on one case."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Case — Screening Colonoscopy with Polyp Found",
+        content: `**Patient**: 65-year-old Medicare beneficiary, asymptomatic, presents to outpatient surgery center for **screening colonoscopy**.
+
+**Procedure**: Colonoscopy advanced to cecum. A **0.8 cm pedunculated polyp** found in **ascending colon**. **Snared and removed** intact. Path returns: **benign tubular adenoma**.
+
+**Step 1 — ICD-10-CM (first-listed)**: **Z12.11** — *Encounter for screening for malignant neoplasm of colon*. Even though a polyp was found, the **intent of the visit was screening** — Z12.11 stays first-listed.
+
+**Secondary dx**: **D12.2** — *Benign neoplasm of ascending colon* (the polyp finding).
+
+**Step 2 — CPT**: **45385** — *Colonoscopy, flexible; with removal of tumor(s), polyp(s), or other lesion(s) by snare technique*.
+
+**Step 3 — Modifier -33** — *Preventive service*. Tells the payer the procedure **began as preventive screening**. For Medicare specifically, use **-PT** (colorectal screening converted to diagnostic).
+
+**Step 4 — HCPCS**: Conscious sedation included in 45385; if separate anesthesia provided, code with appropriate anesthesia codes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Case Build-Up</text><rect x="60" y="100" width="980" height="160" rx="14" fill="#6366f1" opacity="0.85"/><text x="550" y="150" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Clinical Picture</text><text x="550" y="190" text-anchor="middle" fill="#ffffff" font-size="20">65 y/o, asymptomatic, Medicare</text><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="20">Screening colonoscopy → polyp found, snared</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="20">Path: benign tubular adenoma</text><rect x="60" y="290" width="980" height="160" rx="14" fill="#10b981" opacity="0.85"/><text x="550" y="335" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Step 1 — ICD-10-CM</text><text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="22">Z12.11 (screening) — first-listed</text><text x="550" y="415" text-anchor="middle" fill="#ffffff" font-size="22">D12.2 (benign neoplasm asc colon) — secondary</text><rect x="60" y="480" width="980" height="160" rx="14" fill="#f59e0b" opacity="0.85"/><text x="550" y="525" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Step 2 — CPT</text><text x="550" y="570" text-anchor="middle" fill="#1a1a2e" font-size="22">45385 — Colonoscopy with snare polypectomy</text><text x="550" y="605" text-anchor="middle" fill="#1a1a2e" font-size="20">Includes conscious sedation (post-2017)</text><rect x="60" y="670" width="980" height="180" rx="14" fill="#ef4444" opacity="0.85"/><text x="550" y="715" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Step 3 — Modifier</text><text x="550" y="760" text-anchor="middle" fill="#ffd700" font-size="22">-33 = preventive (non-Medicare)</text><text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="22">-PT = colorectal screening converted (Medicare)</text><text x="550" y="835" text-anchor="middle" fill="#ffffff" font-size="20">Waives patient deductible/coinsurance</text><rect x="60" y="880" width="980" height="180" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="550" y="925" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Step 4 — HCPCS</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="22">Sedation bundled into 45385</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="22">Add anesthesia codes if separate provider</text><text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="20">G0500 etc. — Medicare-specific anes for screening</text></svg>`,
+          caption: "Intent-of-visit (Z12.11) stays first-listed; finding goes secondary; -33 or -PT signals screening."
+        }
+      },
+      {
+        type: "example",
+        title: "NCCI Check, Sequence, and Common Pitfalls",
+        content: `**Step 5 — NCCI verification**: Look up **CPT 45385** in NCCI edits. **45378** (diagnostic colonoscopy) is bundled into 45385 — you cannot bill both for the same colonoscopy. Other snare-related codes also bundle. Our case has only 45385 — clean.
+
+**Step 6 — Final claim**:
+• Dx 1 (first-listed): **Z12.11**
+• Dx 2: **D12.2**
+• CPT: **45385**
+• Modifier: **-PT** (Medicare) or **-33** (commercial)
+
+**Common pitfalls** to avoid:
+
+**Pitfall A**: Coding D12.2 first because "the polyp is the finding." Wrong — the **intent was screening**, so Z12.11 stays first-listed per outpatient guidelines.
+
+**Pitfall B**: Forgetting -33/-PT, causing the patient to be billed deductible/coinsurance they shouldn't owe under ACA preventive provisions.
+
+**Pitfall C**: Billing 45378 + 45385. NCCI denies the diagnostic code — only the most extensive procedure (snare polypectomy) is reportable.
+
+**Pitfall D**: For **diagnostic colonoscopy** (symptoms present from the start), do NOT use Z12.11 — use the symptom or finding code instead.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Final Claim &amp; Pitfalls</text><rect x="80" y="110" width="940" height="220" rx="14" fill="#10b981" opacity="0.9"/><text x="550" y="155" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Step 6 — Final Claim Build</text><text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="22">Dx 1: Z12.11 (screening)</text><text x="550" y="235" text-anchor="middle" fill="#ffd700" font-size="22">Dx 2: D12.2 (benign neoplasm)</text><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="22">CPT: 45385</text><text x="550" y="305" text-anchor="middle" fill="#ffd700" font-size="22">Modifier: -PT (Medicare) / -33 (commercial)</text><rect x="80" y="360" width="940" height="160" rx="14" fill="#ef4444" opacity="0.85"/><text x="120" y="405" fill="#ffd700" font-size="26" font-weight="bold">Pitfall A</text><text x="120" y="445" fill="#ffffff" font-size="20">Coding D12.2 first instead of Z12.11</text><text x="120" y="480" fill="#ffffff" font-size="20">→ wrong: intent of visit was screening</text><text x="120" y="510" fill="#ffd700" font-size="18">Outpatient guideline: code intent, not just finding</text><rect x="80" y="540" width="940" height="160" rx="14" fill="#f59e0b" opacity="0.85"/><text x="120" y="585" fill="#1a1a2e" font-size="26" font-weight="bold">Pitfall B</text><text x="120" y="625" fill="#1a1a2e" font-size="20">Omitting -33 / -PT modifier</text><text x="120" y="660" fill="#1a1a2e" font-size="20">→ patient wrongly charged deductible/coinsurance</text><text x="120" y="690" fill="#1a1a2e" font-size="18">ACA preventive: $0 patient cost when modifier used</text><rect x="80" y="720" width="940" height="160" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="120" y="765" fill="#ffd700" font-size="26" font-weight="bold">Pitfall C</text><text x="120" y="805" fill="#ffffff" font-size="20">Billing 45378 + 45385 together</text><text x="120" y="840" fill="#ffffff" font-size="20">→ NCCI edit denies the diagnostic code</text><text x="120" y="870" fill="#ffd700" font-size="18">Only most extensive procedure reportable</text><rect x="80" y="900" width="940" height="160" rx="14" fill="#6366f1" opacity="0.85"/><text x="120" y="945" fill="#ffd700" font-size="26" font-weight="bold">Pitfall D</text><text x="120" y="985" fill="#ffffff" font-size="20">Using Z12.11 when patient has symptoms</text><text x="120" y="1020" fill="#ffffff" font-size="20">→ diagnostic colonoscopy uses symptom/finding code</text><text x="120" y="1050" fill="#ffd700" font-size="18">Z12.11 = asymptomatic screening only</text></svg>`,
+          caption: "Clean claim plus four traps that miscode preventive colonoscopies every day."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Capstone Quiz — Real Outpatient Case",
+        question: "A 62-year-old Medicare patient comes in for a screening colonoscopy. During the procedure, a polyp is found in the sigmoid colon and removed by snare technique. Pathology confirms benign. What is the CORRECT first-listed ICD-10-CM diagnosis?",
+        options: [
+          { text: "D12.5 (benign neoplasm of sigmoid colon) — the actual finding", correct: false },
+          { text: "Z12.11 (encounter for screening for malignant neoplasm of colon)", correct: true },
+          { text: "K63.5 (polyp of colon) — the pathologic finding", correct: false },
+          { text: "Z00.00 (general adult exam without abnormal findings)", correct: false }
+        ],
+        explanation: "Per ICD-10-CM Outpatient Coding Guidelines, when a screening exam is performed, the screening code (Z12.11) is listed FIRST, even if a condition is found during the screening. The benign neoplasm (D12.5) is reported as a secondary diagnosis. The intent of the visit — screening — drives the first-listed diagnosis selection.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Screening Stays First</text><rect x="80" y="140" width="940" height="200" rx="14" fill="#6366f1" opacity="0.9"/><text x="550" y="190" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">The Rule</text><text x="550" y="240" text-anchor="middle" fill="#ffd700" font-size="22">When intent of visit = screening</text><text x="550" y="280" text-anchor="middle" fill="#ffd700" font-size="22">Z screening code = first-listed</text><text x="550" y="315" text-anchor="middle" fill="#ffffff" font-size="20">Even if condition is found</text><rect x="80" y="370" width="940" height="240" rx="14" fill="#10b981" opacity="0.9"/><text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">This Case</text><text x="550" y="475" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Dx 1: Z12.11 (screening)</text><text x="550" y="515" text-anchor="middle" fill="#ffd700" font-size="22">Dx 2: D12.5 (benign neoplasm sigmoid)</text><text x="550" y="555" text-anchor="middle" fill="#ffffff" font-size="20">CPT 45385 + modifier -PT (Medicare)</text><text x="550" y="585" text-anchor="middle" fill="#ffffff" font-size="20">Patient owes $0 under ACA preventive</text><rect x="80" y="640" width="940" height="180" rx="14" fill="#ef4444" opacity="0.85"/><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Why It Matters</text><text x="550" y="730" text-anchor="middle" fill="#ffd700" font-size="22">Wrong first-listed dx →</text><text x="550" y="765" text-anchor="middle" fill="#ffffff" font-size="20">payer rejects preventive coverage,</text><text x="550" y="795" text-anchor="middle" fill="#ffffff" font-size="20">patient billed cost-share, complaint, rework</text><rect x="80" y="850" width="940" height="200" rx="14" fill="#ffd700"/><text x="550" y="900" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Outpatient Guideline</text><text x="550" y="945" text-anchor="middle" fill="#1a1a2e" font-size="22">"If the reason for the encounter is</text><text x="550" y="980" text-anchor="middle" fill="#1a1a2e" font-size="22">screening, the screening code</text><text x="550" y="1015" text-anchor="middle" fill="#1a1a2e" font-size="22">is sequenced first."</text></svg>`,
+          caption: "Screening intent locks Z12.11 to position 1; finding goes secondary."
+        }
+      },
+      {
+        type: "application",
+        title: "You've Built an Outpatient Coder",
+        content: `**What you now own**:
+
+You can take any outpatient encounter — surgery, ED, observation, clinic — and march through the **six-step workflow**: dx → CPT → HCPCS → modifiers → NCCI → sequence/submit. You read **status indicators** to predict OPPS payment. You spot **packaged services** that still need coding for utilization. You apply **-25, -59, -33, -PT, -LT/-RT** with intent, not habit. You know **when CPT stops and HCPCS starts**.
+
+**The CCA exam tests these scenarios constantly**. Practice with real op notes and ED records. Time yourself. Train your eye to spot:
+
+• Intent of visit (screening vs diagnostic)
+• Bundled vs separately payable services
+• Anatomical specificity (which side, which finger, which eyelid)
+• Drug units (always check descriptor)
+• Modifier necessity (don't add unless documentation supports)
+
+**Outpatient coding is the backbone of healthcare revenue** — and you're now equipped to protect it. On to Domain 5: Compliance.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">You've Built a Coder</text><rect x="80" y="130" width="940" height="180" rx="14" fill="#6366f1" opacity="0.9"/><text x="550" y="180" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The 6-Step Workflow is Yours</text><text x="550" y="225" text-anchor="middle" fill="#ffffff" font-size="22">Dx → CPT → HCPCS → Modifiers</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="22">→ NCCI → Sequence + Submit</text><text x="550" y="295" text-anchor="middle" fill="#ffd700" font-size="20">Same flow for surgery, ED, obs, clinic</text><rect x="80" y="330" width="940" height="200" rx="14" fill="#10b981" opacity="0.9"/><text x="550" y="375" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Skills You Carry</text><text x="120" y="420" fill="#ffd700" font-size="20" font-weight="bold">•</text><text x="160" y="420" fill="#ffffff" font-size="20">Read status indicators → predict payment</text><text x="120" y="455" fill="#ffd700" font-size="20" font-weight="bold">•</text><text x="160" y="455" fill="#ffffff" font-size="20">Spot bundled vs separately payable</text><text x="120" y="490" fill="#ffd700" font-size="20" font-weight="bold">•</text><text x="160" y="490" fill="#ffffff" font-size="20">Apply -25, -59, -33, -PT, -LT/-RT with intent</text><text x="120" y="520" fill="#ffd700" font-size="20" font-weight="bold">•</text><text x="160" y="520" fill="#ffffff" font-size="20">Know exactly when CPT stops and HCPCS starts</text><rect x="80" y="550" width="940" height="240" rx="14" fill="#f59e0b" opacity="0.9"/><text x="550" y="600" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">CCA Exam Eye-Training</text><text x="120" y="650" fill="#1a1a2e" font-size="20" font-weight="bold">•</text><text x="160" y="650" fill="#1a1a2e" font-size="20">Intent of visit (screening vs diagnostic)</text><text x="120" y="685" fill="#1a1a2e" font-size="20" font-weight="bold">•</text><text x="160" y="685" fill="#1a1a2e" font-size="20">Bundled vs separately payable</text><text x="120" y="720" fill="#1a1a2e" font-size="20" font-weight="bold">•</text><text x="160" y="720" fill="#1a1a2e" font-size="20">Anatomical specificity</text><text x="120" y="755" fill="#1a1a2e" font-size="20" font-weight="bold">•</text><text x="160" y="755" fill="#1a1a2e" font-size="20">Drug units &amp; modifier necessity</text><rect x="80" y="810" width="940" height="160" rx="14" fill="#8b5cf6" opacity="0.9"/><text x="550" y="860" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Outpatient = Revenue Backbone</text><text x="550" y="905" text-anchor="middle" fill="#ffffff" font-size="22">You're equipped to protect it</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="20">Document → Code → APC → Payment</text><rect x="200" y="990" width="700" height="80" rx="14" fill="#ffd700"/><text x="550" y="1042" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">Next: Domain 5 — Compliance</text></svg>`,
+          caption: "Six steps mastered. Status indicators decoded. CCA exam ready. On to compliance."
         }
       }
     ]
