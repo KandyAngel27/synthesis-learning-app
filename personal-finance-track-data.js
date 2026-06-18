@@ -8605,7 +8605,7 @@ If she **bumps contributions 3%/yr** with raises (which she should), she crosses
             title: 'Real Estate Basics: Renting vs. Buying, Mortgages, Equity',
             author: 'Synthesis Learning',
             description: 'The rent vs. buy math that\'s not just "rent is throwing money away," mortgage types, PMI, closing costs, and the equity build that\'s hidden in the amortization table.',
-            lessons: 6, duration: 90, progress: 0, category: 'personal-finance-track',
+            lessons: 9, duration: 135, progress: 0, category: 'personal-finance-track',
             lessonList: [
 {
     id: "pf-real-estate-lesson-1",
@@ -9108,6 +9108,341 @@ But here's the catch: every dollar of equity you borrow is **SECURED by your hou
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Should You Tap Your Equity?</text><rect x="60" y="110" width="500" height="380" fill="#0f0f1e" stroke="#10b981" stroke-width="3" rx="12"/><text x="310" y="155" font-family="Arial" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">GOOD Uses</text><text x="80" y="200" font-family="Arial" font-size="17" fill="#10b981">- Kitchen remodel</text><text x="100" y="225" font-family="Arial" font-size="15" fill="#fff">65-75% resale ROI</text><text x="80" y="265" font-family="Arial" font-size="17" fill="#10b981">- Bathroom remodel</text><text x="100" y="290" font-family="Arial" font-size="15" fill="#fff">60-70% resale ROI</text><text x="80" y="330" font-family="Arial" font-size="17" fill="#10b981">- Education investment</text><text x="100" y="355" font-family="Arial" font-size="15" fill="#fff">Lifetime earnings boost</text><text x="80" y="395" font-family="Arial" font-size="17" fill="#10b981">- Debt consolidation</text><text x="100" y="420" font-family="Arial" font-size="15" fill="#fff">Carefully - cut up cards</text><text x="100" y="445" font-family="Arial" font-size="15" fill="#fff">Trade 24% for 8%</text><text x="100" y="470" font-family="Arial" font-size="15" fill="#ef4444">Risk: recurring debt</text><rect x="580" y="110" width="500" height="380" fill="#3a1a1a" stroke="#ef4444" stroke-width="3" rx="12"/><text x="830" y="155" font-family="Arial" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">BAD Uses</text><text x="600" y="200" font-family="Arial" font-size="17" fill="#ef4444">- Vacations</text><text x="620" y="225" font-family="Arial" font-size="15" fill="#fff">Borrowing for memories</text><text x="600" y="265" font-family="Arial" font-size="17" fill="#ef4444">- Cars (depreciating)</text><text x="620" y="290" font-family="Arial" font-size="15" fill="#fff">Auto loans exist for reason</text><text x="600" y="330" font-family="Arial" font-size="17" fill="#ef4444">- Stock speculation</text><text x="620" y="355" font-family="Arial" font-size="15" fill="#fff">Leverage compounds risk</text><text x="600" y="395" font-family="Arial" font-size="17" fill="#ef4444">- Pools (low ROI)</text><text x="620" y="420" font-family="Arial" font-size="15" fill="#fff">15-30% resale return</text><text x="600" y="445" font-family="Arial" font-size="17" fill="#ef4444">- Lifestyle inflation</text><text x="620" y="470" font-family="Arial" font-size="15" fill="#fff">Recipe for foreclosure</text><rect x="80" y="510" width="940" height="240" fill="#0f0f1e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="550" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">5-Question Checklist Before Borrowing</text><text x="120" y="595" font-family="Arial" font-size="17" fill="#fff">1. Is the use producing future value? (ROI improvement, career, debt cut)</text><text x="120" y="625" font-family="Arial" font-size="17" fill="#fff">2. Does new total PITI stay under 28% of gross income?</text><text x="120" y="655" font-family="Arial" font-size="17" fill="#fff">3. Do I have 6+ months emergency fund (untouched by this borrowing)?</text><text x="120" y="685" font-family="Arial" font-size="17" fill="#fff">4. Is the rate genuinely better than alternatives (personal loan, 0% APR card)?</text><text x="120" y="715" font-family="Arial" font-size="17" fill="#ffd700">5. Do I have a written payoff plan with a date?</text><rect x="80" y="770" width="940" height="280" fill="#3a1a1a" stroke="#ef4444" stroke-width="2" rx="10"/><text x="550" y="810" font-family="Arial" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">The Foreclosure Warning</text><text x="120" y="850" font-family="Arial" font-size="17" fill="#fff">Home equity loans, HELOCs, and cash-out refis are ALL secured</text><text x="120" y="880" font-family="Arial" font-size="17" fill="#fff">by your house. Default = foreclosure - period.</text><text x="120" y="920" font-family="Arial" font-size="17" fill="#ffd700">In 2008-2010, millions used HELOCs as piggy banks then lost homes</text><text x="120" y="950" font-family="Arial" font-size="17" fill="#ffd700">when housing crashed and they couldn't make payments.</text><text x="120" y="995" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981">If in doubt, DON'T borrow. The cheapest loan is the one you never take.</text><text x="120" y="1025" font-family="Arial" font-size="17" fill="#10b981">Build cash savings instead, even if it takes 2-3 extra years.</text></svg>`,
           caption: "Five-question filter to separate smart equity use from foreclosure-bait borrowing."
+        }
+      }
+    ]
+  },
+{
+    id: "pf-real-estate-lesson-7",
+    title: "Investment Property Financing and Returns",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Beyond Primary Residences",
+        content: `Investment properties are a **different financial animal** than your primary home. Lenders see them as **higher risk** — if money gets tight, owners default on rentals before their own residence. So banks demand more: **20-25% down payments**, interest rates **0.5-1.0% higher**, stricter credit (700+), and **6 months of cash reserves** covering all property payments. But the math can still work beautifully when you run the numbers correctly. Successful investors use **proven formulas** like the 1% Rule, the 50% Rule, Cap Rate, and Cash-on-Cash Return to filter out bad deals before signing. This lesson teaches the **financial vocabulary** of real estate investing — the same framework professional landlords use to evaluate properties and build wealth that lasts generations.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" font-size="42" font-weight="bold" fill="#ffd700">Primary vs Investment Property</text><rect x="80" y="160" width="430" height="780" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="295" y="220" text-anchor="middle" font-size="32" font-weight="bold" fill="#10b981">PRIMARY HOME</text><text x="120" y="290" font-size="24" fill="#ffffff">Down Payment: 3-20%</text><text x="120" y="350" font-size="24" fill="#ffffff">Interest Rate: Base</text><text x="120" y="410" font-size="24" fill="#ffffff">Credit Min: 620</text><text x="120" y="470" font-size="24" fill="#ffffff">Reserves: 2 months</text><text x="120" y="530" font-size="24" fill="#ffffff">FHA/VA Eligible</text><text x="120" y="590" font-size="24" fill="#ffffff">Owner-Occupied</text><text x="120" y="680" font-size="22" fill="#10b981">Example $300k home:</text><text x="120" y="730" font-size="22" fill="#ffffff">3.5% down = $10,500</text><text x="120" y="780" font-size="22" fill="#ffffff">Rate: 6.5%</text><text x="120" y="830" font-size="22" fill="#ffffff">Payment: $1,830/mo</text><rect x="590" y="160" width="430" height="780" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="805" y="220" text-anchor="middle" font-size="32" font-weight="bold" fill="#f59e0b">INVESTMENT</text><text x="630" y="290" font-size="24" fill="#ffffff">Down Payment: 20-25%</text><text x="630" y="350" font-size="24" fill="#ffffff">Interest Rate: +0.75%</text><text x="630" y="410" font-size="24" fill="#ffffff">Credit Min: 700</text><text x="630" y="470" font-size="24" fill="#ffffff">Reserves: 6 months</text><text x="630" y="530" font-size="24" fill="#ffffff">Conventional Only</text><text x="630" y="590" font-size="24" fill="#ffffff">Non Owner-Occupied</text><text x="630" y="680" font-size="22" fill="#f59e0b">Example $300k rental:</text><text x="630" y="730" font-size="22" fill="#ffffff">25% down = $75,000</text><text x="630" y="780" font-size="22" fill="#ffffff">Rate: 7.25%</text><text x="630" y="830" font-size="22" fill="#ffffff">Payment: $1,535/mo</text><text x="550" y="1020" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffd700">More down, higher rate, stricter rules</text></svg>`,
+          caption: "Investment loans require more skin in the game"
+        }
+      },
+      {
+        type: "concept",
+        title: "The Key Investment Formulas",
+        content: `Four formulas separate winners from losers in rental real estate:
+
+**1. The 1% Rule** — Monthly rent should be **≥1%** of purchase price. A **$200,000** property needs **$2,000+/month** rent for cash flow viability. Below 1%, expect to feed the property.
+
+**2. The 50% Rule** — Assume **50% of rent** gets eaten by **operating expenses** (taxes, insurance, vacancy, repairs, management) BEFORE the mortgage. $2,000 rent = $1,000 for expenses + $1,000 to cover mortgage.
+
+**3. Cap Rate** = **NOI ÷ Purchase Price**. NOI = annual rent minus operating expenses (excluding mortgage). **6-8%** = good rental; **under 5%** = appreciation play, not cash flow.
+
+**4. Cash-on-Cash Return** = annual pre-tax cash flow ÷ total cash invested (down payment + closing + repairs). Active investors target **8-12%**. Always budget a **5-8% vacancy reserve** for empty months.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">The Four Rental Formulas</text><rect x="60" y="120" width="490" height="430" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="305" y="175" text-anchor="middle" font-size="28" font-weight="bold" fill="#6366f1">1% Rule</text><text x="305" y="240" text-anchor="middle" font-size="22" fill="#ffffff">Monthly Rent</text><line x1="180" y1="260" x2="430" y2="260" stroke="#ffffff" stroke-width="2"/><text x="305" y="295" text-anchor="middle" font-size="22" fill="#ffffff">Purchase Price</text><text x="305" y="350" text-anchor="middle" font-size="32" font-weight="bold" fill="#10b981">≥ 1%</text><text x="80" y="420" font-size="20" fill="#ffd700">Example:</text><text x="80" y="460" font-size="20" fill="#ffffff">$200k home</text><text x="80" y="500" font-size="20" fill="#ffffff">Needs $2,000+/mo rent</text><rect x="570" y="120" width="490" height="430" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="815" y="175" text-anchor="middle" font-size="28" font-weight="bold" fill="#f59e0b">50% Rule</text><text x="815" y="240" text-anchor="middle" font-size="22" fill="#ffffff">Half of rent goes to</text><text x="815" y="280" text-anchor="middle" font-size="22" fill="#ffffff">expenses (NOT mortgage)</text><text x="815" y="340" text-anchor="middle" font-size="26" font-weight="bold" fill="#f59e0b">$2,000 rent</text><text x="815" y="380" text-anchor="middle" font-size="22" fill="#ffffff">= $1,000 expenses</text><text x="815" y="420" text-anchor="middle" font-size="22" fill="#ffffff">+ $1,000 mortgage</text><text x="815" y="480" text-anchor="middle" font-size="22" fill="#10b981">Quick screening tool</text><rect x="60" y="580" width="490" height="430" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="305" y="635" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">Cap Rate</text><text x="305" y="700" text-anchor="middle" font-size="22" fill="#ffffff">NOI</text><line x1="240" y1="720" x2="370" y2="720" stroke="#ffffff" stroke-width="2"/><text x="305" y="755" text-anchor="middle" font-size="22" fill="#ffffff">Price</text><text x="305" y="810" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">6-8% target</text><text x="80" y="880" font-size="20" fill="#ffd700">Under 5%:</text><text x="80" y="920" font-size="20" fill="#ffffff">Appreciation play</text><text x="80" y="960" font-size="20" fill="#ffffff">Not cash flow</text><rect x="570" y="580" width="490" height="430" rx="20" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="815" y="635" text-anchor="middle" font-size="28" font-weight="bold" fill="#8b5cf6">Cash-on-Cash</text><text x="815" y="700" text-anchor="middle" font-size="20" fill="#ffffff">Annual Cash Flow</text><line x1="650" y1="720" x2="980" y2="720" stroke="#ffffff" stroke-width="2"/><text x="815" y="755" text-anchor="middle" font-size="20" fill="#ffffff">Total Cash Invested</text><text x="815" y="810" text-anchor="middle" font-size="26" font-weight="bold" fill="#8b5cf6">8-12% target</text><text x="590" y="880" font-size="20" fill="#ffd700">Includes:</text><text x="590" y="920" font-size="20" fill="#ffffff">Down + Closing</text><text x="590" y="960" font-size="20" fill="#ffffff">+ Initial repairs</text></svg>`,
+          caption: "Four formulas to evaluate any rental deal"
+        }
+      },
+      {
+        type: "example",
+        title: "Running the Numbers on a Duplex",
+        content: `**Property:** Duplex at **$250,000**, two units renting **$1,400/month each** = **$2,800/month** total ($33,600/year).
+
+**1% Rule check:** $2,800 ÷ $250,000 = **1.12%** — passes!
+
+**Operating expenses (annual):**
+- Property tax: $3,500
+- Insurance: $1,800
+- Vacancy reserve (7%): $2,350
+- Repairs/maintenance: $2,500
+- Property management (8%): $2,690
+- **Total OpEx: $12,840**
+
+**NOI** = $33,600 - $12,840 = **$20,760**
+**Cap Rate** = $20,760 ÷ $250,000 = **8.3%** — excellent!
+
+**Financing:** 25% down ($62,500) + $5,000 closing + $3,000 repairs = **$70,500 cash invested**. Mortgage on $187,500 at 7.25% = **$1,279/month** = $15,348/year.
+
+**Annual cash flow** = $20,760 - $15,348 = **$5,412**
+**Cash-on-Cash** = $5,412 ÷ $70,500 = **7.7%** — solid deal, plus mortgage paydown, appreciation, and tax benefits on top.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">$250k Duplex Analysis</text><rect x="60" y="110" width="980" height="100" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="150" text-anchor="middle" font-size="26" fill="#ffffff">Gross Annual Rent: 2 units x $1,400 x 12</text><text x="550" y="190" text-anchor="middle" font-size="32" font-weight="bold" fill="#10b981">$33,600</text><rect x="60" y="240" width="475" height="380" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="297" y="285" text-anchor="middle" font-size="24" font-weight="bold" fill="#ef4444">Operating Expenses</text><text x="80" y="335" font-size="20" fill="#ffffff">Property Tax</text><text x="510" y="335" text-anchor="end" font-size="20" fill="#ffffff">$3,500</text><text x="80" y="375" font-size="20" fill="#ffffff">Insurance</text><text x="510" y="375" text-anchor="end" font-size="20" fill="#ffffff">$1,800</text><text x="80" y="415" font-size="20" fill="#ffffff">Vacancy (7%)</text><text x="510" y="415" text-anchor="end" font-size="20" fill="#ffffff">$2,350</text><text x="80" y="455" font-size="20" fill="#ffffff">Repairs</text><text x="510" y="455" text-anchor="end" font-size="20" fill="#ffffff">$2,500</text><text x="80" y="495" font-size="20" fill="#ffffff">Mgmt (8%)</text><text x="510" y="495" text-anchor="end" font-size="20" fill="#ffffff">$2,690</text><line x1="80" y1="520" x2="510" y2="520" stroke="#ffd700" stroke-width="2"/><text x="80" y="560" font-size="22" font-weight="bold" fill="#ffd700">Total OpEx</text><text x="510" y="560" text-anchor="end" font-size="22" font-weight="bold" fill="#ffd700">$12,840</text><rect x="565" y="240" width="475" height="380" rx="15" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="802" y="285" text-anchor="middle" font-size="24" font-weight="bold" fill="#6366f1">Cash Invested</text><text x="585" y="335" font-size="20" fill="#ffffff">Down (25%)</text><text x="1015" y="335" text-anchor="end" font-size="20" fill="#ffffff">$62,500</text><text x="585" y="375" font-size="20" fill="#ffffff">Closing Costs</text><text x="1015" y="375" text-anchor="end" font-size="20" fill="#ffffff">$5,000</text><text x="585" y="415" font-size="20" fill="#ffffff">Initial Repairs</text><text x="1015" y="415" text-anchor="end" font-size="20" fill="#ffffff">$3,000</text><line x1="585" y1="450" x2="1015" y2="450" stroke="#ffd700" stroke-width="2"/><text x="585" y="490" font-size="22" font-weight="bold" fill="#ffd700">Total</text><text x="1015" y="490" text-anchor="end" font-size="22" font-weight="bold" fill="#ffd700">$70,500</text><text x="585" y="555" font-size="20" fill="#ffffff">Mortgage/yr</text><text x="1015" y="555" text-anchor="end" font-size="20" fill="#ffffff">$15,348</text><rect x="60" y="650" width="980" height="380" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="700" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffd700">The Returns</text><text x="120" y="760" font-size="22" fill="#ffffff">NOI = $33,600 - $12,840 =</text><text x="900" y="760" text-anchor="end" font-size="26" font-weight="bold" fill="#10b981">$20,760</text><text x="120" y="820" font-size="22" fill="#ffffff">Cap Rate = $20,760 / $250k =</text><text x="900" y="820" text-anchor="end" font-size="26" font-weight="bold" fill="#10b981">8.3%</text><text x="120" y="880" font-size="22" fill="#ffffff">Cash Flow = NOI - Mortgage =</text><text x="900" y="880" text-anchor="end" font-size="26" font-weight="bold" fill="#10b981">$5,412</text><text x="120" y="940" font-size="22" fill="#ffffff">Cash-on-Cash = $5,412 / $70,500 =</text><text x="900" y="940" text-anchor="end" font-size="28" font-weight="bold" fill="#ffd700">7.7%</text><text x="550" y="1000" text-anchor="middle" font-size="22" fill="#ffd700">Plus appreciation + paydown + tax benefits</text></svg>`,
+          caption: "Full deal analysis with all formulas applied"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Test Your Knowledge",
+        question: "A rental property costs $300,000 with annual rent of $24,000 and operating expenses of $7,500. What is the cap rate?",
+        options: [
+          { text: "8.0% — divide annual rent by purchase price", correct: false },
+          { text: "5.5% — NOI ($16,500) divided by purchase price ($300,000)", correct: true },
+          { text: "2.5% — divide expenses by purchase price", correct: false },
+          { text: "12.0% — divide rent by expenses", correct: false }
+        ],
+        explanation: "Cap Rate = NOI ÷ Purchase Price. NOI = $24,000 rent - $7,500 OpEx = $16,500. Cap Rate = $16,500 ÷ $300,000 = 5.5%. This is below the 6-8% sweet spot for cash-flow rentals, suggesting it's more of an appreciation play. Note: NOI excludes mortgage payments — those are factored in later when calculating cash flow.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">Cap Rate Calculation</text><rect x="100" y="160" width="900" height="180" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="220" text-anchor="middle" font-size="28" fill="#ffffff">Step 1: Calculate NOI</text><text x="550" y="280" text-anchor="middle" font-size="26" fill="#ffd700">$24,000 rent - $7,500 expenses</text><text x="550" y="320" text-anchor="middle" font-size="32" font-weight="bold" fill="#10b981">NOI = $16,500</text><rect x="100" y="380" width="900" height="180" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="440" text-anchor="middle" font-size="28" fill="#ffffff">Step 2: Divide by Price</text><text x="550" y="500" text-anchor="middle" font-size="26" fill="#ffd700">$16,500 / $300,000</text><text x="550" y="540" text-anchor="middle" font-size="32" font-weight="bold" fill="#10b981">= 0.055</text><rect x="100" y="600" width="900" height="200" rx="20" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="670" text-anchor="middle" font-size="36" font-weight="bold" fill="#ffd700">Cap Rate = 5.5%</text><text x="550" y="730" text-anchor="middle" font-size="22" fill="#ffffff">Below 6-8% target zone</text><text x="550" y="770" text-anchor="middle" font-size="22" fill="#ffffff">= Appreciation play, not cash flow</text><rect x="100" y="840" width="900" height="180" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="900" text-anchor="middle" font-size="24" font-weight="bold" fill="#ef4444">REMEMBER</text><text x="550" y="950" text-anchor="middle" font-size="22" fill="#ffffff">NOI excludes mortgage payments</text><text x="550" y="990" text-anchor="middle" font-size="22" fill="#ffffff">Mortgage matters for cash flow, not cap rate</text></svg>`,
+          caption: "Cap Rate measures property performance, not financing"
+        }
+      },
+      {
+        type: "application",
+        title: "Your Investment Property Checklist",
+        content: `Before making any rental property offer, work through this checklist:
+
+**Pre-purchase financial screen:**
+- Run the **1% Rule** — passes? If no, skip.
+- Apply the **50% Rule** — does estimated mortgage fit in the other half?
+- Calculate **Cap Rate** — target 6-8% minimum
+- Calculate **Cash-on-Cash** — target 8-12%
+
+**Financing readiness:**
+- 700+ credit score, **20-25% down** saved
+- **6 months reserves** for ALL property payments
+- DTI under 43% including new mortgage
+
+**Risk management:**
+- Budget **5-8% vacancy reserve**
+- Get landlord insurance (NOT homeowners)
+- Verify local rent control / tenant laws
+
+**Tax strategy:**
+- Learn **depreciation** (27.5-year residential schedule)
+- Consider **1031 Exchange** for future sales (defers capital gains by reinvesting in 'like-kind' property within **180 days**)
+- Track ALL expenses for Schedule E`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">Investment Checklist</text><rect x="80" y="120" width="940" height="220" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="170" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">FINANCIAL SCREEN</text><text x="110" y="220" font-size="22" fill="#ffffff">[✓] 1% Rule passes</text><text x="110" y="260" font-size="22" fill="#ffffff">[✓] 50% Rule fits</text><text x="610" y="220" font-size="22" fill="#ffffff">[✓] Cap Rate 6-8%+</text><text x="610" y="260" font-size="22" fill="#ffffff">[✓] CoC Return 8-12%</text><text x="110" y="310" font-size="20" fill="#ffd700">Skip deals that fail screening</text><rect x="80" y="360" width="940" height="220" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="410" text-anchor="middle" font-size="26" font-weight="bold" fill="#6366f1">FINANCING READY</text><text x="110" y="460" font-size="22" fill="#ffffff">[✓] 700+ credit</text><text x="110" y="500" font-size="22" fill="#ffffff">[✓] 20-25% down</text><text x="610" y="460" font-size="22" fill="#ffffff">[✓] 6 mo reserves</text><text x="610" y="500" font-size="22" fill="#ffffff">[✓] DTI under 43%</text><text x="110" y="550" font-size="20" fill="#ffd700">Get pre-approved before shopping</text><rect x="80" y="600" width="940" height="220" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="650" text-anchor="middle" font-size="26" font-weight="bold" fill="#f59e0b">RISK MANAGEMENT</text><text x="110" y="700" font-size="22" fill="#ffffff">[✓] 5-8% vacancy reserve</text><text x="110" y="740" font-size="22" fill="#ffffff">[✓] Landlord insurance</text><text x="610" y="700" font-size="22" fill="#ffffff">[✓] Local tenant laws</text><text x="610" y="740" font-size="22" fill="#ffffff">[✓] Inspection clause</text><text x="110" y="790" font-size="20" fill="#ffd700">Plan for problems, not perfection</text><rect x="80" y="840" width="940" height="200" rx="20" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="890" text-anchor="middle" font-size="26" font-weight="bold" fill="#ec4899">TAX STRATEGY</text><text x="110" y="940" font-size="22" fill="#ffffff">[✓] Depreciation: 27.5 yr</text><text x="110" y="980" font-size="22" fill="#ffffff">[✓] 1031 Exchange (180 days)</text><text x="110" y="1020" font-size="22" fill="#ffffff">[✓] Track all Schedule E expenses</text></svg>`,
+          caption: "A repeatable system filters bad deals fast"
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-real-estate-lesson-8",
+    title: "House Hacking and Short-Term Rentals (Airbnb)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Creative Strategies",
+        content: `Most beginners think rental investing requires **stacks of cash** and years of saving — but two creative strategies break that pattern: **House Hacking** and **Short-Term Rentals (STRs)**. House hacking lets you buy a **2-4 unit property as your primary residence**, qualify for **owner-occupied financing** (FHA at 3.5% down, VA at 0% down), live in one unit, and rent the others. Your tenants pay your mortgage while you build equity. Short-term rentals (Airbnb, VRBO) **flip the rental model** — instead of long-term tenants paying $1,500/month, you charge $150/night and potentially **earn 1.5-2.5x more**. But STRs come with **massive regulatory risk** (NYC, San Francisco, Honolulu have crushed them) and operational headaches. Both strategies can accelerate your wealth-building — if you understand the tradeoffs.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">Two Creative Strategies</text><rect x="60" y="140" width="490" height="850" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="305" y="200" text-anchor="middle" font-size="30" font-weight="bold" fill="#10b981">HOUSE HACKING</text><circle cx="305" cy="320" r="60" fill="#10b981" opacity="0.4"/><text x="305" y="335" text-anchor="middle" font-size="50">🏠</text><text x="80" y="430" font-size="22" fill="#ffffff">Buy 2-4 unit building</text><text x="80" y="480" font-size="22" fill="#ffffff">Live in 1 unit</text><text x="80" y="530" font-size="22" fill="#ffffff">Rent out others</text><text x="80" y="600" font-size="22" fill="#ffd700">Owner-occupied loan:</text><text x="100" y="650" font-size="20" fill="#ffffff">FHA: 3.5% down</text><text x="100" y="690" font-size="20" fill="#ffffff">VA: 0% down (if eligible)</text><text x="100" y="730" font-size="20" fill="#ffffff">Conventional: 5% down</text><text x="80" y="810" font-size="22" fill="#10b981">Tenants pay mortgage</text><text x="80" y="860" font-size="22" fill="#10b981">Build equity for free</text><text x="80" y="910" font-size="22" fill="#10b981">Landlord experience</text><rect x="570" y="140" width="490" height="850" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="815" y="200" text-anchor="middle" font-size="30" font-weight="bold" fill="#f59e0b">SHORT-TERM RENTAL</text><circle cx="815" cy="320" r="60" fill="#f59e0b" opacity="0.4"/><text x="815" y="335" text-anchor="middle" font-size="50">🏖️</text><text x="590" y="430" font-size="22" fill="#ffffff">Airbnb / VRBO model</text><text x="590" y="480" font-size="22" fill="#ffffff">Charge by the night</text><text x="590" y="530" font-size="22" fill="#ffffff">1.5-2.5x more revenue</text><text x="590" y="600" font-size="22" fill="#ffd700">But higher risk:</text><text x="610" y="650" font-size="20" fill="#ffffff">Local STR bans</text><text x="610" y="690" font-size="20" fill="#ffffff">Cleaning + supplies</text><text x="610" y="730" font-size="20" fill="#ffffff">Variable occupancy</text><text x="590" y="810" font-size="22" fill="#ef4444">Need STR insurance</text><text x="590" y="860" font-size="22" fill="#ef4444">Heavy management</text><text x="590" y="910" font-size="22" fill="#ef4444">Regulatory risk</text><text x="550" y="1050" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffd700">Two paths to accelerated wealth</text></svg>`,
+          caption: "Each strategy has unique upside and risk profile"
+        }
+      },
+      {
+        type: "concept",
+        title: "How House Hacking Builds Wealth",
+        content: `House hacking is the **most leveraged entry** into real estate investing. Here's why it works:
+
+**The financing advantage:** Investment loans demand **20-25% down**. But primary residence loans? **FHA: 3.5% down up to 4 units. VA: 0% down for eligible veterans.** A $400,000 fourplex costs only **$14,000 down** via FHA — versus $100,000 as a pure investment.
+
+**The math:** Live in one unit ($1,200 rental value), rent out 3 units at $1,200 each = **$3,600 income** offsetting your $2,800 mortgage. You live **nearly free** OR profit modestly.
+
+**Variations:**
+- **Rent rooms** in single-family home for partial offset
+- **Buy duplex/triplex/fourplex**, occupy one unit
+- **Convert basement/ADU** into rental
+
+**Four wealth levers stack:**
+1. Tenants pay down your mortgage
+2. Property appreciates
+3. You save vs. renting
+4. Tax benefits (depreciation on rented portion)
+
+After **12 months occupancy**, refinance or buy another house hack.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">House Hack: $400k Fourplex</text><rect x="100" y="120" width="900" height="180" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" text-anchor="middle" font-size="26" font-weight="bold" fill="#6366f1">FHA 3.5% Down</text><text x="280" y="230" text-anchor="middle" font-size="22" fill="#ffffff">Investment loan:</text><text x="280" y="270" text-anchor="middle" font-size="28" font-weight="bold" fill="#ef4444">$100,000</text><text x="820" y="230" text-anchor="middle" font-size="22" fill="#ffffff">House hack FHA:</text><text x="820" y="270" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">$14,000</text><rect x="100" y="340" width="900" height="320" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="390" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">Monthly Cash Flow</text><rect x="140" y="430" width="180" height="180" rx="10" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="230" y="460" text-anchor="middle" font-size="18" fill="#ffd700">Unit 1</text><text x="230" y="490" text-anchor="middle" font-size="18" fill="#ffffff">YOU</text><text x="230" y="540" text-anchor="middle" font-size="22" fill="#ffffff">$0</text><text x="230" y="580" text-anchor="middle" font-size="14" fill="#888">no rent paid</text><rect x="340" y="430" width="180" height="180" rx="10" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="430" y="460" text-anchor="middle" font-size="18" fill="#ffd700">Unit 2</text><text x="430" y="490" text-anchor="middle" font-size="18" fill="#ffffff">Tenant</text><text x="430" y="540" text-anchor="middle" font-size="22" fill="#10b981">$1,200</text><rect x="540" y="430" width="180" height="180" rx="10" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="630" y="460" text-anchor="middle" font-size="18" fill="#ffd700">Unit 3</text><text x="630" y="490" text-anchor="middle" font-size="18" fill="#ffffff">Tenant</text><text x="630" y="540" text-anchor="middle" font-size="22" fill="#10b981">$1,200</text><rect x="740" y="430" width="180" height="180" rx="10" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="830" y="460" text-anchor="middle" font-size="18" fill="#ffd700">Unit 4</text><text x="830" y="490" text-anchor="middle" font-size="18" fill="#ffffff">Tenant</text><text x="830" y="540" text-anchor="middle" font-size="22" fill="#10b981">$1,200</text><rect x="100" y="700" width="900" height="290" rx="20" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="750" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffd700">The Result</text><text x="550" y="810" text-anchor="middle" font-size="24" fill="#ffffff">Rent income: $3,600</text><text x="550" y="850" text-anchor="middle" font-size="24" fill="#ffffff">Mortgage + PITI: -$2,800</text><line x1="200" y1="870" x2="900" y2="870" stroke="#ffd700" stroke-width="2"/><text x="550" y="920" text-anchor="middle" font-size="30" font-weight="bold" fill="#10b981">+$800/month cash flow</text><text x="550" y="970" text-anchor="middle" font-size="20" fill="#ffd700">PLUS living FREE + equity + appreciation</text></svg>`,
+          caption: "Fourplex math: tenants cover mortgage, you live free"
+        }
+      },
+      {
+        type: "example",
+        title: "Short-Term Rentals: The Regulation Reality",
+        content: `**Cautionary tale:** Maria buys a $500,000 NYC condo in 2022 expecting $5,000+/month from Airbnb. In **September 2023**, NYC enforces **Local Law 18** — bans short-term rentals under 30 days **without host present**. Her Airbnb income vanishes overnight. Long-term rental nets only $3,200 — she now **loses $800/month**.
+
+**Major STR regulations to know:**
+- **NYC**: Local Law 18 (2023) bans most STRs
+- **San Francisco**: 60-day primary residence requirement
+- **Honolulu**: 30-day minimum stays in most areas
+- **Barcelona/Amsterdam**: Restrictive licensing
+- **Many HOAs**: STR-prohibited by deed restriction
+
+**Operating costs explode:**
+- Cleaning fees: $80-200 per turnover
+- Supplies (toiletries, coffee): $50+/month
+- Higher wear and tear: 2-3x normal
+- Channel fees: Airbnb 3%, VRBO 8%
+- **STR-specific insurance** (Proper Insurance, Slice): homeowners policies EXCLUDE short-term rental activity
+
+**Always verify local STR rules BEFORE buying.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">STR Regulatory Risk</text><rect x="80" y="120" width="940" height="280" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="170" text-anchor="middle" font-size="26" font-weight="bold" fill="#ef4444">Maria's NYC Disaster</text><text x="110" y="220" font-size="22" fill="#ffffff">2022: Buys $500k condo</text><text x="110" y="260" font-size="22" fill="#ffffff">Expected Airbnb: $5,000/mo</text><text x="110" y="300" font-size="22" fill="#ffffff">Sept 2023: Local Law 18 enforced</text><text x="110" y="340" font-size="22" fill="#ffd700">Long-term rent: $3,200</text><text x="110" y="380" font-size="22" fill="#ef4444">Loses $800/month</text><rect x="80" y="420" width="940" height="320" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="470" text-anchor="middle" font-size="26" font-weight="bold" fill="#f59e0b">Major STR Bans / Limits</text><text x="110" y="520" font-size="22" fill="#ffffff">NYC: Local Law 18 (2023)</text><text x="700" y="520" font-size="20" fill="#888">Most STRs banned</text><text x="110" y="560" font-size="22" fill="#ffffff">San Francisco</text><text x="700" y="560" font-size="20" fill="#888">60-day primary req</text><text x="110" y="600" font-size="22" fill="#ffffff">Honolulu</text><text x="700" y="600" font-size="20" fill="#888">30-day minimum</text><text x="110" y="640" font-size="22" fill="#ffffff">Barcelona, Amsterdam</text><text x="700" y="640" font-size="20" fill="#888">Licensing restrictive</text><text x="110" y="680" font-size="22" fill="#ffffff">Many HOAs</text><text x="700" y="680" font-size="20" fill="#888">STR prohibited</text><text x="110" y="720" font-size="22" fill="#ef4444">Verify BEFORE buying</text><rect x="80" y="760" width="940" height="270" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="810" text-anchor="middle" font-size="26" font-weight="bold" fill="#6366f1">Hidden Costs</text><text x="110" y="860" font-size="22" fill="#ffffff">Cleaning</text><text x="900" y="860" text-anchor="end" font-size="22" fill="#ffd700">$80-200/turnover</text><text x="110" y="900" font-size="22" fill="#ffffff">Supplies</text><text x="900" y="900" text-anchor="end" font-size="22" fill="#ffd700">$50+/month</text><text x="110" y="940" font-size="22" fill="#ffffff">Channel fees (Airbnb/VRBO)</text><text x="900" y="940" text-anchor="end" font-size="22" fill="#ffd700">3-8%</text><text x="110" y="980" font-size="22" fill="#ffffff">STR insurance</text><text x="900" y="980" text-anchor="end" font-size="22" fill="#ffd700">Required</text></svg>`,
+          caption: "Cities are aggressively restricting Airbnb-style rentals"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Test Your Knowledge",
+        question: "What is the maximum number of units allowed for an FHA loan on a house hack?",
+        options: [
+          { text: "1 unit (single-family only)", correct: false },
+          { text: "2 units (duplex only)", correct: false },
+          { text: "4 units (up to fourplex, owner-occupied)", correct: true },
+          { text: "Unlimited if owner lives in one", correct: false }
+        ],
+        explanation: "FHA loans allow up to 4 units (fourplex) with just 3.5% down — provided the borrower lives in one of the units as a primary residence for at least 12 months. This makes house hacking the most leveraged entry into real estate investing. VA loans (for eligible veterans) offer the same 4-unit limit with 0% down. After 12 months, you can move out and convert it to a pure rental, then potentially house-hack another property.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">FHA House Hack Limits</text><rect x="100" y="140" width="900" height="240" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="195" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">FHA: Up to 4 Units</text><rect x="180" y="230" width="150" height="120" rx="10" fill="#10b981" opacity="0.4"/><text x="255" y="295" text-anchor="middle" font-size="50">🏠</text><rect x="350" y="230" width="150" height="120" rx="10" fill="#10b981" opacity="0.4"/><text x="425" y="295" text-anchor="middle" font-size="50">🏠</text><rect x="520" y="230" width="150" height="120" rx="10" fill="#10b981" opacity="0.4"/><text x="595" y="295" text-anchor="middle" font-size="50">🏠</text><rect x="690" y="230" width="150" height="120" rx="10" fill="#10b981" opacity="0.4"/><text x="765" y="295" text-anchor="middle" font-size="50">🏠</text><text x="550" y="375" text-anchor="middle" font-size="22" fill="#ffffff">All four units in ONE building</text><rect x="100" y="420" width="900" height="240" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="475" text-anchor="middle" font-size="28" font-weight="bold" fill="#6366f1">The Requirements</text><text x="130" y="525" font-size="22" fill="#ffffff">[✓] Must live in 1 unit (12 months min)</text><text x="130" y="570" font-size="22" fill="#ffffff">[✓] Only 3.5% down payment</text><text x="130" y="615" font-size="22" fill="#ffffff">[✓] FHA mortgage insurance required</text><rect x="100" y="700" width="900" height="200" rx="20" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="755" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffd700">VA Alternative</text><text x="550" y="810" text-anchor="middle" font-size="22" fill="#ffffff">Eligible veterans: same 4-unit limit</text><text x="550" y="850" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">0% down payment</text><text x="550" y="970" text-anchor="middle" font-size="22" fill="#ffd700">Move out after 12 mo, repeat the strategy</text></svg>`,
+          caption: "FHA permits up to 4-unit owner-occupied properties"
+        }
+      },
+      {
+        type: "application",
+        title: "Choose Your Path: Hack or Host",
+        content: `Which strategy fits your situation?
+
+**House Hacking — best for:**
+- First-time buyer with limited cash
+- Comfortable being a landlord-neighbor
+- Willing to live in modest unit for 1-2 years
+- Stable W-2 income for FHA/VA qualification
+
+**Action plan:**
+1. Get **FHA pre-approval** ($15k saved goal)
+2. Hunt 2-4 unit properties in growth markets
+3. Run numbers: rents from OTHER units cover 70%+ of mortgage
+4. Live 12 months minimum (FHA requirement)
+5. Buy your next house hack — repeat!
+
+**Short-Term Rentals — best for:**
+- Tourist/business destination ownership
+- Operator personality (hospitality, responsive)
+- Cash reserves for variable occupancy
+
+**Action plan:**
+1. **Verify local laws first** — STR-friendly only
+2. Buy in destination (beach, mountain, downtown)
+3. Get **STR insurance** before listing
+4. Budget 25% for cleaning + supplies + fees
+5. Set aside vacancy reserves — winter months kill cash flow`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">Pick Your Strategy</text><rect x="60" y="120" width="490" height="880" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="305" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">HOUSE HACK</text><text x="305" y="225" text-anchor="middle" font-size="20" fill="#ffd700">Best for new buyers</text><text x="80" y="290" font-size="22" font-weight="bold" fill="#ffffff">Ideal Profile:</text><text x="100" y="330" font-size="20" fill="#ffffff">Limited cash ($15k+)</text><text x="100" y="370" font-size="20" fill="#ffffff">Stable W-2 income</text><text x="100" y="410" font-size="20" fill="#ffffff">OK living modestly</text><text x="100" y="450" font-size="20" fill="#ffffff">Landlord-curious</text><text x="80" y="530" font-size="22" font-weight="bold" fill="#ffd700">Action Plan:</text><text x="100" y="580" font-size="20" fill="#ffffff">1. FHA pre-approval</text><text x="100" y="620" font-size="20" fill="#ffffff">2. Hunt 2-4 units</text><text x="100" y="660" font-size="20" fill="#ffffff">3. Run rent numbers</text><text x="100" y="700" font-size="20" fill="#ffffff">4. Live 12 months</text><text x="100" y="740" font-size="20" fill="#ffffff">5. Buy next, repeat</text><text x="80" y="840" font-size="22" fill="#10b981">Lower risk</text><text x="80" y="880" font-size="22" fill="#10b981">Steady cash flow</text><text x="80" y="920" font-size="22" fill="#10b981">Sleep at night</text><rect x="570" y="120" width="490" height="880" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="815" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="#f59e0b">SHORT-TERM</text><text x="815" y="225" text-anchor="middle" font-size="20" fill="#ffd700">Best for operators</text><text x="590" y="290" font-size="22" font-weight="bold" fill="#ffffff">Ideal Profile:</text><text x="610" y="330" font-size="20" fill="#ffffff">Tourist destination</text><text x="610" y="370" font-size="20" fill="#ffffff">Hospitality mindset</text><text x="610" y="410" font-size="20" fill="#ffffff">Cash reserves deep</text><text x="610" y="450" font-size="20" fill="#ffffff">Phone always on</text><text x="590" y="530" font-size="22" font-weight="bold" fill="#ffd700">Action Plan:</text><text x="610" y="580" font-size="20" fill="#ffffff">1. CHECK LOCAL LAWS</text><text x="610" y="620" font-size="20" fill="#ffffff">2. Destination buy</text><text x="610" y="660" font-size="20" fill="#ffffff">3. STR insurance</text><text x="610" y="700" font-size="20" fill="#ffffff">4. 25% expense budget</text><text x="610" y="740" font-size="20" fill="#ffffff">5. Winter reserves</text><text x="590" y="840" font-size="22" fill="#ef4444">High variance</text><text x="590" y="880" font-size="22" fill="#ef4444">Regulation risk</text><text x="590" y="920" font-size="22" fill="#ef4444">Active management</text><text x="550" y="1060" text-anchor="middle" font-size="22" fill="#ffd700">Match strategy to your temperament</text></svg>`,
+          caption: "Self-knowledge picks the right strategy"
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-real-estate-lesson-9",
+    title: "Getting Started: A Beginner's Real Estate Investing Roadmap",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Zero to Portfolio",
+        content: `Real estate investing builds **generational wealth** — but jumping in unprepared destroys beginners faster than any other asset class. Over-leveraged investors in 2007 lost everything. STR hopefuls in 2023 NYC lost everything. The difference between **lasting success and crushing failure** isn't market timing or luck — it's **sequence**. Build the foundation before chasing returns. Use boring, low-effort exposure first (REITs). Master one property before scaling. Avoid the **classic beginner traps**: skipping inspections, FOMO-buying in hot markets, ignoring local economic fundamentals, underestimating maintenance costs. This final lesson maps the **complete roadmap** from financial novice to real estate investor: six clear steps, in order, plus the mistakes you'll be tempted to make at each stage. Follow the sequence — your future self will thank you.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">The Sequence Matters</text><rect x="100" y="130" width="900" height="180" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="180" text-anchor="middle" font-size="26" font-weight="bold" fill="#ef4444">Wrong Order = Disaster</text><text x="130" y="225" font-size="20" fill="#ffffff">Buy first, save later</text><text x="130" y="260" font-size="20" fill="#ffffff">Skip emergency fund</text><text x="130" y="295" font-size="20" fill="#ffffff">FOMO into hot markets</text><text x="600" y="225" font-size="20" fill="#ffffff">Max leverage</text><text x="600" y="260" font-size="20" fill="#ffffff">Skip inspection</text><text x="600" y="295" font-size="20" fill="#ffffff">Hope for the best</text><rect x="100" y="350" width="900" height="180" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="400" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">Right Order = Wealth</text><text x="130" y="445" font-size="20" fill="#ffffff">Foundation first</text><text x="130" y="480" font-size="20" fill="#ffffff">REITs for exposure</text><text x="130" y="515" font-size="20" fill="#ffffff">Boring beats sexy</text><text x="600" y="445" font-size="20" fill="#ffffff">Buy in known markets</text><text x="600" y="480" font-size="20" fill="#ffffff">Conservative numbers</text><text x="600" y="515" font-size="20" fill="#ffffff">Scale carefully</text><rect x="100" y="570" width="900" height="240" rx="20" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="625" text-anchor="middle" font-size="26" font-weight="bold" fill="#6366f1">6 Steps Ahead</text><text x="130" y="680" font-size="22" fill="#ffffff">1. Foundation</text><text x="130" y="725" font-size="22" fill="#ffffff">2. REITs (VNQ)</text><text x="130" y="770" font-size="22" fill="#ffffff">3. Save for first deal</text><text x="600" y="680" font-size="22" fill="#ffffff">4. Acquire</text><text x="600" y="725" font-size="22" fill="#ffffff">5. BRRRR (advanced)</text><text x="600" y="770" font-size="22" fill="#ffffff">6. Scale carefully</text><rect x="100" y="850" width="900" height="180" rx="20" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="905" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffd700">Sustainable Beats Fast</text><text x="550" y="960" text-anchor="middle" font-size="22" fill="#ffffff">Most beginners over-leverage</text><text x="550" y="1000" text-anchor="middle" font-size="22" fill="#ffffff">Steady growth survives downturns</text></svg>`,
+          caption: "Sequence trumps speed in real estate wealth-building"
+        }
+      },
+      {
+        type: "concept",
+        title: "The Six-Step Roadmap",
+        content: `**Step 1 — Foundation:** Emergency fund **$25k+**, max **401k match**, pay off **high-interest debt** (credit cards >7%). No real estate until this is solid.
+
+**Step 2 — REIT Exposure:** Open **Roth IRA**, add **VNQ** (Vanguard Real Estate ETF). Instant diversified real estate at $50/share — no tenants, no toilets.
+
+**Step 3 — Save the Down Payment:** Either **20% down + 6 months reserves** for traditional investment property OR **3.5-5% down** for HOUSE HACKING via FHA. Most leveraged entry point.
+
+**Step 4 — Acquire First Property:** Buy in a market you KNOW (live there or have deep family ties). Run **conservative numbers** — assume worst case. Build your team: experienced **agent + lender + inspector**.
+
+**Step 5 — BRRRR (Advanced):** **B**uy distressed property below market → **R**ehab to force equity → **R**ent to qualified tenant → **R**efinance to pull capital out → **R**epeat. Accelerates portfolio but requires expertise.
+
+**Step 6 — Scale Carefully:** Most beginners over-leverage. **Sustainable growth beats fast growth.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">The 6-Step Roadmap</text><rect x="80" y="100" width="940" height="140" rx="15" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><circle cx="140" cy="170" r="40" fill="#6366f1"/><text x="140" y="185" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">1</text><text x="210" y="155" font-size="24" font-weight="bold" fill="#6366f1">FOUNDATION</text><text x="210" y="195" font-size="20" fill="#ffffff">$25k emergency + 401k match + kill debt</text><rect x="80" y="255" width="940" height="140" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><circle cx="140" cy="325" r="40" fill="#10b981"/><text x="140" y="340" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">2</text><text x="210" y="310" font-size="24" font-weight="bold" fill="#10b981">REIT EXPOSURE</text><text x="210" y="350" font-size="20" fill="#ffffff">Roth IRA + VNQ — instant low-effort RE</text><rect x="80" y="410" width="940" height="140" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><circle cx="140" cy="480" r="40" fill="#f59e0b"/><text x="140" y="495" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">3</text><text x="210" y="465" font-size="24" font-weight="bold" fill="#f59e0b">SAVE DOWN PAYMENT</text><text x="210" y="505" font-size="20" fill="#ffffff">20% + reserves OR FHA 3.5% house hack</text><rect x="80" y="565" width="940" height="140" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><circle cx="140" cy="635" r="40" fill="#ec4899"/><text x="140" y="650" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">4</text><text x="210" y="620" font-size="24" font-weight="bold" fill="#ec4899">ACQUIRE FIRST</text><text x="210" y="660" font-size="20" fill="#ffffff">Known market + conservative + great team</text><rect x="80" y="720" width="940" height="140" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><circle cx="140" cy="790" r="40" fill="#8b5cf6"/><text x="140" y="805" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">5</text><text x="210" y="775" font-size="24" font-weight="bold" fill="#8b5cf6">BRRRR (Advanced)</text><text x="210" y="815" font-size="20" fill="#ffffff">Buy-Rehab-Rent-Refi-Repeat</text><rect x="80" y="875" width="940" height="140" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><circle cx="140" cy="945" r="40" fill="#ffd700"/><text x="140" y="960" text-anchor="middle" font-size="32" font-weight="bold" fill="#1a1a2e">6</text><text x="210" y="930" font-size="24" font-weight="bold" fill="#ffd700">SCALE CAREFULLY</text><text x="210" y="970" font-size="20" fill="#ffffff">Sustainable growth beats fast growth</text></svg>`,
+          caption: "Follow the sequence — each step earns the next"
+        }
+      },
+      {
+        type: "example",
+        title: "James's 5-Year Journey",
+        content: `**Year 0 (age 25):** James earns $65k as engineer, $8k credit card debt at 22%, $2k savings.
+
+**Year 1 — Foundation:** Aggressively pays off CC debt, maxes 401k match (5%), builds $15k emergency fund.
+
+**Year 2 — REIT exposure:** Opens **Roth IRA**, contributes $6,500 into VNQ. Real estate exposure achieved with zero hassle.
+
+**Year 3 — Saves for house hack:** Hits **$22k cash**, gets FHA pre-approved for $380k.
+
+**Year 4 — First property:** Buys $360k triplex, lives in smallest unit. Two tenants pay **$1,400 each** = $2,800 covering most of $2,650 PITI. Lives nearly free, saves $1,500/month extra.
+
+**Year 5 — Second property:** Rents former unit (now $1,350), moves into new $400k duplex via FHA. **Total portfolio:**
+- Equity: ~$45,000
+- Monthly cash flow: $1,800
+- 5 rental units
+- VNQ Roth IRA: $35,000
+
+Boring, sequential, and **wealth-building**. No FOMO, no over-leverage.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">James: 5-Year Journey</text><line x1="100" y1="950" x2="1000" y2="950" stroke="#ffd700" stroke-width="3"/><circle cx="180" cy="950" r="15" fill="#ef4444"/><text x="180" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 0</text><text x="180" y="1020" text-anchor="middle" font-size="16" fill="#888">debt</text><circle cx="340" cy="950" r="15" fill="#f59e0b"/><text x="340" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 1</text><text x="340" y="1020" text-anchor="middle" font-size="16" fill="#888">foundation</text><circle cx="500" cy="950" r="15" fill="#10b981"/><text x="500" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 2</text><text x="500" y="1020" text-anchor="middle" font-size="16" fill="#888">VNQ</text><circle cx="660" cy="950" r="15" fill="#6366f1"/><text x="660" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 3</text><text x="660" y="1020" text-anchor="middle" font-size="16" fill="#888">save</text><circle cx="820" cy="950" r="15" fill="#ec4899"/><text x="820" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 4</text><text x="820" y="1020" text-anchor="middle" font-size="16" fill="#888">triplex</text><circle cx="980" cy="950" r="15" fill="#ffd700"/><text x="980" y="990" text-anchor="middle" font-size="18" fill="#ffffff">Year 5</text><text x="980" y="1020" text-anchor="middle" font-size="16" fill="#888">duplex</text><rect x="80" y="110" width="940" height="170" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="160" text-anchor="middle" font-size="24" font-weight="bold" fill="#ec4899">Year 4: First Property — $360k Triplex</text><text x="110" y="205" font-size="20" fill="#ffffff">FHA 3.5% down</text><text x="900" y="205" text-anchor="end" font-size="20" fill="#ffd700">$12,600</text><text x="110" y="240" font-size="20" fill="#ffffff">Tenants pay (2 x $1,400)</text><text x="900" y="240" text-anchor="end" font-size="20" fill="#10b981">$2,800/mo</text><text x="110" y="275" font-size="20" fill="#ffffff">PITI</text><text x="900" y="275" text-anchor="end" font-size="20" fill="#ef4444">-$2,650/mo</text><rect x="80" y="300" width="940" height="170" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="350" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffd700">Year 5: Second Property — $400k Duplex</text><text x="110" y="395" font-size="20" fill="#ffffff">FHA again on new property</text><text x="110" y="430" font-size="20" fill="#ffffff">Old unit now rents</text><text x="900" y="430" text-anchor="end" font-size="20" fill="#10b981">$1,350/mo</text><text x="110" y="465" font-size="20" fill="#ffffff">5 rental units total</text><rect x="80" y="490" width="940" height="380" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="540" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">Year 5 Snapshot</text><text x="110" y="600" font-size="22" fill="#ffffff">Equity built</text><text x="900" y="600" text-anchor="end" font-size="24" font-weight="bold" fill="#10b981">$45,000</text><text x="110" y="650" font-size="22" fill="#ffffff">Monthly cash flow</text><text x="900" y="650" text-anchor="end" font-size="24" font-weight="bold" fill="#10b981">$1,800</text><text x="110" y="700" font-size="22" fill="#ffffff">Rental units</text><text x="900" y="700" text-anchor="end" font-size="24" font-weight="bold" fill="#10b981">5</text><text x="110" y="750" font-size="22" fill="#ffffff">VNQ Roth IRA</text><text x="900" y="750" text-anchor="end" font-size="24" font-weight="bold" fill="#10b981">$35,000</text><text x="550" y="820" text-anchor="middle" font-size="22" fill="#ffd700">Boring sequence = real wealth</text></svg>`,
+          caption: "Slow, sequential moves built 5 rental units in 5 years"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Test Your Knowledge",
+        question: "Which step should come BEFORE buying your first investment property?",
+        options: [
+          { text: "Find a hot market where prices are rising fast", correct: false },
+          { text: "Build emergency fund, max 401k match, kill high-interest debt", correct: true },
+          { text: "Take a real estate licensing course to save on commissions", correct: false },
+          { text: "Wait for a recession to buy at the bottom", correct: false }
+        ],
+        explanation: "Building the foundation FIRST is non-negotiable. An emergency fund ($25k+) protects you from forced sales during unexpected job loss or major repairs. Maxing 401k match captures free money. Killing high-interest debt (credit cards >7%) ensures you're not paying 22% on debt while earning 8% on rentals. Skip these and one bad month destroys your investment. Hot market FOMO, licensing courses, and timing the bottom are all classic distractions that derail beginners.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffd700">Foundation Before Property</text><rect x="100" y="140" width="900" height="380" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="195" text-anchor="middle" font-size="28" font-weight="bold" fill="#10b981">Step 1: FOUNDATION</text><text x="130" y="260" font-size="22" fill="#ffffff">[✓] Emergency fund</text><text x="900" y="260" text-anchor="end" font-size="22" fill="#ffd700">$25k+</text><text x="130" y="310" font-size="22" fill="#ffffff">[✓] Max 401k match</text><text x="900" y="310" text-anchor="end" font-size="22" fill="#ffd700">Free money</text><text x="130" y="360" font-size="22" fill="#ffffff">[✓] Pay off CC debt (&gt;7%)</text><text x="900" y="360" text-anchor="end" font-size="22" fill="#ffd700">No 22% drag</text><text x="130" y="430" font-size="20" fill="#ffffff">Protects against forced sales,</text><text x="130" y="465" font-size="20" fill="#ffffff">job loss, major repairs</text><text x="130" y="500" font-size="20" fill="#ffffff">One bad month = wipeout</text><rect x="100" y="560" width="900" height="430" rx="20" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="615" text-anchor="middle" font-size="28" font-weight="bold" fill="#ef4444">Common Distractions</text><text x="130" y="675" font-size="22" fill="#ffffff">Hot market FOMO</text><text x="900" y="675" text-anchor="end" font-size="20" fill="#888">DERAILS BEGINNERS</text><text x="130" y="725" font-size="22" fill="#ffffff">Real estate license</text><text x="900" y="725" text-anchor="end" font-size="20" fill="#888">NOT REQUIRED</text><text x="130" y="775" font-size="22" fill="#ffffff">Timing the bottom</text><text x="900" y="775" text-anchor="end" font-size="20" fill="#888">IMPOSSIBLE</text><text x="130" y="825" font-size="22" fill="#ffffff">YouTube gurus</text><text x="900" y="825" text-anchor="end" font-size="20" fill="#888">SELL COURSES</text><text x="550" y="920" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffd700">Build the boring foundation first</text><text x="550" y="960" text-anchor="middle" font-size="22" fill="#ffffff">Everything else follows naturally</text></svg>`,
+          caption: "Foundation work is unglamorous — and non-negotiable"
+        }
+      },
+      {
+        type: "application",
+        title: "Mistakes That Crush Beginners",
+        content: `Avoid these classic traps as you execute the roadmap:
+
+**Mistake 1 — Skipping inspection:** Saves $400, costs $40,000 in surprises. NEVER waive inspection on first investment.
+
+**Mistake 2 — Over-leveraging in low-rate periods:** 2021's 3% rates seduced buyers into max leverage. When rates jumped to 7%+, refinancing options disappeared. Buy what you can afford **at current rates**.
+
+**Mistake 3 — Hot market FOMO:** Austin, Boise, Phoenix surged 2020-2022, then dropped 15-20%. Buying at the top destroys equity overnight.
+
+**Mistake 4 — Ignoring local fundamentals:** Population trends, **job market diversity**, school ratings, crime data. Detroit was cheap for decades — for reasons.
+
+**Mistake 5 — Underestimating maintenance:** Plan for **1-2% of property value annually**. $300k house = $3,000-$6,000/year. New roof = $15k, HVAC = $8k, water heater = $2k.
+
+**Final principle:** Real estate rewards **patience, discipline, and conservative numbers**. The boring investor wins.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">5 Beginner Mistakes</text><rect x="80" y="120" width="940" height="160" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="165" text-anchor="middle" font-size="24" font-weight="bold" fill="#ef4444">1. Skipping Inspection</text><text x="110" y="210" font-size="20" fill="#ffffff">Saves $400, costs $40,000 in surprises</text><text x="110" y="250" font-size="20" fill="#ffd700">NEVER waive on first investment</text><rect x="80" y="300" width="940" height="160" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="345" text-anchor="middle" font-size="24" font-weight="bold" fill="#f59e0b">2. Over-Leveraging</text><text x="110" y="390" font-size="20" fill="#ffffff">3% rates of 2021 tempted max leverage</text><text x="110" y="430" font-size="20" fill="#ffd700">Buy affordable at current rates</text><rect x="80" y="480" width="940" height="160" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="525" text-anchor="middle" font-size="24" font-weight="bold" fill="#ec4899">3. Hot Market FOMO</text><text x="110" y="570" font-size="20" fill="#ffffff">Austin/Boise/Phoenix dropped 15-20%</text><text x="110" y="610" font-size="20" fill="#ffd700">Buy boring markets, not hot ones</text><rect x="80" y="660" width="940" height="160" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="705" text-anchor="middle" font-size="24" font-weight="bold" fill="#8b5cf6">4. Ignoring Local Data</text><text x="110" y="750" font-size="20" fill="#ffffff">Jobs, population, schools, crime trends</text><text x="110" y="790" font-size="20" fill="#ffd700">Cheap usually means broken</text><rect x="80" y="840" width="940" height="180" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="890" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffd700">5. Underestimating Maintenance</text><text x="110" y="935" font-size="20" fill="#ffffff">Budget 1-2% of property value annually</text><text x="110" y="975" font-size="20" fill="#ffffff">Roof $15k, HVAC $8k, water heater $2k</text><text x="110" y="1010" font-size="20" fill="#10b981">Boring investor wins long term</text></svg>`,
+          caption: "Avoiding mistakes matters more than chasing winners"
         }
       }
     ]
