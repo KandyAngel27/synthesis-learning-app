@@ -3826,7 +3826,7 @@ Now Jenna needs to move for work. Her four options:
             title: 'The Emergency Fund: Sizing, Where to Hold It, When to Use It',
             author: 'Synthesis Learning',
             description: 'How much you actually need (1/3/6/12 months by life stage), high-yield savings vs. money market vs. T-bills, and what counts as a real emergency.',
-            lessons: 9, duration: 135, progress: 0, category: 'personal-finance-track',
+            lessons: 12, duration: 180, progress: 0, category: 'personal-finance-track',
             lessonList: [
 {
     id: "pf-emergency-fund-lesson-1",
@@ -4778,6 +4778,353 @@ The whole emergency fund system you've built across nine lessons fits inside thi
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="sans-serif" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Your Dashboard + Quarterly</text><rect x="80" y="130" width="940" height="430" fill="#1a1a2e" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="175" font-family="sans-serif" font-size="24" font-weight="bold" fill="#6366f1" text-anchor="middle">The 5-Bucket Dashboard Template</text><line x1="100" y1="210" x2="1000" y2="210" stroke="#888" stroke-width="2"/><line x1="100" y1="250" x2="1000" y2="250" stroke="#888" stroke-width="1"/><text x="120" y="235" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffd700">BUCKET</text><text x="500" y="235" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffd700">TARGET</text><text x="720" y="235" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffd700">CURRENT</text><text x="900" y="235" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffd700">STATUS</text><text x="120" y="290" font-family="sans-serif" font-size="18" fill="#10b981">1. Starter</text><text x="500" y="290" font-family="sans-serif" font-size="18" fill="#ffffff">$1,000</text><text x="720" y="290" font-family="sans-serif" font-size="18" fill="#ffffff">$_____</text><text x="900" y="290" font-family="sans-serif" font-size="18" fill="#888">___</text><line x1="100" y1="310" x2="1000" y2="310" stroke="#888" stroke-width="1" stroke-dasharray="4 4"/><text x="120" y="345" font-family="sans-serif" font-size="18" fill="#ef4444">2. Debt &gt;7%</text><text x="500" y="345" font-family="sans-serif" font-size="18" fill="#ffffff">$0 owed</text><text x="720" y="345" font-family="sans-serif" font-size="18" fill="#ffffff">$_____</text><text x="900" y="345" font-family="sans-serif" font-size="18" fill="#888">___</text><line x1="100" y1="365" x2="1000" y2="365" stroke="#888" stroke-width="1" stroke-dasharray="4 4"/><text x="120" y="400" font-family="sans-serif" font-size="18" fill="#0ea5e9">3. Full E-fund</text><text x="500" y="400" font-family="sans-serif" font-size="18" fill="#ffffff">$_____ (3–6 mo)</text><text x="720" y="400" font-family="sans-serif" font-size="18" fill="#ffffff">$_____</text><text x="900" y="400" font-family="sans-serif" font-size="18" fill="#888">___</text><line x1="100" y1="420" x2="1000" y2="420" stroke="#888" stroke-width="1" stroke-dasharray="4 4"/><text x="120" y="455" font-family="sans-serif" font-size="18" fill="#8b5cf6">4. Sinking</text><text x="500" y="455" font-family="sans-serif" font-size="18" fill="#ffffff">per goal</text><text x="720" y="455" font-family="sans-serif" font-size="18" fill="#ffffff">$_____</text><text x="900" y="455" font-family="sans-serif" font-size="18" fill="#888">___</text><line x1="100" y1="475" x2="1000" y2="475" stroke="#888" stroke-width="1" stroke-dasharray="4 4"/><text x="120" y="510" font-family="sans-serif" font-size="18" fill="#ec4899">5. Growth</text><text x="500" y="510" font-family="sans-serif" font-size="18" fill="#ffffff">per plan</text><text x="720" y="510" font-family="sans-serif" font-size="18" fill="#ffffff">$_____</text><text x="900" y="510" font-family="sans-serif" font-size="18" fill="#888">___</text><rect x="80" y="600" width="940" height="420" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="14"/><text x="550" y="650" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The 90-Minute Quarterly Agenda</text><text x="550" y="685" font-family="sans-serif" font-size="18" fill="#888" text-anchor="middle">Last Sunday of Mar / Jun / Sep / Dec</text><circle cx="130" cy="730" r="22" fill="#ffd700"/><text x="130" y="738" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">1</text><text x="170" y="738" font-family="sans-serif" font-size="20" fill="#ffffff">Recalculate essential monthly spend (last 90 days)</text><circle cx="130" cy="785" r="22" fill="#ffd700"/><text x="130" y="793" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">2</text><text x="170" y="793" font-family="sans-serif" font-size="20" fill="#ffffff">Reset E-fund target if spend changed &gt;10%</text><circle cx="130" cy="840" r="22" fill="#ffd700"/><text x="130" y="848" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">3</text><text x="170" y="848" font-family="sans-serif" font-size="20" fill="#ffffff">Mark every bucket: Under / On-track / Full</text><circle cx="130" cy="895" r="22" fill="#ffd700"/><text x="130" y="903" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">4</text><text x="170" y="903" font-family="sans-serif" font-size="20" fill="#ffffff">Redirect auto-transfers from any full bucket</text><circle cx="130" cy="950" r="22" fill="#ffd700"/><text x="130" y="958" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">5</text><text x="170" y="958" font-family="sans-serif" font-size="20" fill="#ffffff">Confirm beneficiaries, joint access, password vault</text><circle cx="130" cy="1000" r="22" fill="#ffd700"/><text x="130" y="1008" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">6</text><text x="170" y="1008" font-family="sans-serif" font-size="20" fill="#ffffff">One open conversation: what's changing in life?</text></svg>`,
           caption: "An hour and a half, four times a year — and your emergency fund system runs itself."
+        }
+      }
+    ]
+  },
+{
+    id: "pf-emergency-fund-lesson-10",
+    title: "Insurance as Emergency Fund Multiplier",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Insurance Lets You Hold Less Cash",
+        content: `**Your emergency fund and your insurance policies are partners.** The reason most people need only **3-6 months** of expenses in cash — not 24 months — is that **catastrophic risks are insured away**.
+
+A burst pipe? **Homeowners** pays. A car totaled? **Auto** pays. A surgery? **Health** pays. A lawsuit from the family you rear-ended? **Umbrella** pays. **Disability** at age 42? **Long-term disability** replaces 60% of income for 25 years.
+
+Without insurance, your "emergency fund" would need to be **$500,000+** to handle a single bad day. With proper coverage, a **$15,000 fund** can absorb the deductibles and gaps.
+
+This lesson: the seven policies that let you sleep at night with a modest cash cushion.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">Insurance + E-Fund = Full Protection</text><circle cx="550" cy="560" r="140" fill="#10b981" opacity="0.85"/><text x="550" y="555" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">E-Fund</text><text x="550" y="595" font-size="22" fill="#ffffff" text-anchor="middle">$15k cash</text><circle cx="280" cy="320" r="95" fill="#6366f1" opacity="0.8"/><text x="280" y="315" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Health</text><text x="280" y="345" font-size="16" fill="#ffffff" text-anchor="middle">HDHP+HSA</text><circle cx="820" cy="320" r="95" fill="#0ea5e9" opacity="0.8"/><text x="820" y="315" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Auto</text><text x="820" y="345" font-size="16" fill="#ffffff" text-anchor="middle">Liability+Coll</text><circle cx="180" cy="560" r="95" fill="#8b5cf6" opacity="0.8"/><text x="180" y="555" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Home/Rent</text><text x="180" y="585" font-size="16" fill="#ffffff" text-anchor="middle">HO-3/HO-5</text><circle cx="920" cy="560" r="95" fill="#ec4899" opacity="0.8"/><text x="920" y="555" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Umbrella</text><text x="920" y="585" font-size="16" fill="#ffffff" text-anchor="middle">$1-5M</text><circle cx="280" cy="800" r="95" fill="#f59e0b" opacity="0.8"/><text x="280" y="795" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Disability</text><text x="280" y="825" font-size="16" fill="#ffffff" text-anchor="middle">60-70% inc</text><circle cx="820" cy="800" r="95" fill="#ef4444" opacity="0.8"/><text x="820" y="795" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Term Life</text><text x="820" y="825" font-size="16" fill="#ffffff" text-anchor="middle">10x salary</text><line x1="375" y1="370" x2="450" y2="490" stroke="#888" stroke-width="2"/><line x1="725" y1="370" x2="650" y2="490" stroke="#888" stroke-width="2"/><line x1="275" y1="560" x2="410" y2="560" stroke="#888" stroke-width="2"/><line x1="825" y1="560" x2="690" y2="560" stroke="#888" stroke-width="2"/><line x1="375" y1="750" x2="450" y2="630" stroke="#888" stroke-width="2"/><line x1="725" y1="750" x2="650" y2="630" stroke="#888" stroke-width="2"/><text x="550" y="1020" font-size="22" fill="#ffd700" text-anchor="middle">Insurance handles catastrophes. Cash handles deductibles.</text></svg>`,
+          caption: "Seven policies surround a modest cash buffer — each absorbs one class of disaster."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Seven Policies, Sized",
+        content: `**1. Health insurance — HDHP + HSA**: pair a high-deductible plan with an HSA, the **only triple-tax-advantaged account** (deductible in, grows tax-free, withdrawals tax-free for medical).
+
+**2. Auto — collision/comprehensive**: drop these on cars worth **under $3,000** (premiums exceed payout cap).
+
+**3. Homeowners HO-3** (named-peril contents) or **HO-5** (open-peril, broader). **Renters insurance: ~$15/mo, covers $30k of stuff — a no-brainer**.
+
+**4. Umbrella**: $1M-$5M extra liability for **$200-$500/year**. Protects against the catastrophic lawsuit.
+
+**5. Short-term disability**: covers weeks to 3 months.
+
+**6. Long-term disability**: kicks in at **3-6 months**, replaces **60-70% of income** to retirement age.
+
+**7. Term life**: **10x annual salary**, only if you have dependents.
+
+**The rule**: good insurance lets your emergency fund stay **smaller**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">The Seven Policies — Cost vs. Coverage</text><line x1="80" y1="140" x2="1020" y2="140" stroke="#ffd700" stroke-width="2"/><text x="100" y="125" font-size="20" font-weight="bold" fill="#ffffff">Policy</text><text x="450" y="125" font-size="20" font-weight="bold" fill="#ffffff">Annual Cost</text><text x="780" y="125" font-size="20" font-weight="bold" fill="#ffffff">Protects Against</text><g font-size="18" fill="#ffffff"><text x="100" y="195">Health HDHP+HSA</text><text x="450" y="195" fill="#10b981">$2,400</text><text x="780" y="195">$1M+ surgeries</text><text x="100" y="255">Auto (full)</text><text x="450" y="255" fill="#10b981">$1,500</text><text x="780" y="255">Liability + car loss</text><text x="100" y="315">Renters</text><text x="450" y="315" fill="#10b981">$180</text><text x="780" y="315">$30k contents + liab</text><text x="100" y="375">Homeowners HO-3</text><text x="450" y="375" fill="#10b981">$1,800</text><text x="780" y="375">Dwelling + contents</text><text x="100" y="435">Umbrella $1M</text><text x="450" y="435" fill="#ffd700">$200</text><text x="780" y="435">Catastrophic lawsuit</text><text x="100" y="495">Short-term disability</text><text x="450" y="495" fill="#10b981">$300</text><text x="780" y="495">Weeks-3mo income</text><text x="100" y="555">Long-term disability</text><text x="450" y="555" fill="#ffd700">$600</text><text x="780" y="555">60-70% income to 65</text><text x="100" y="615">Term life (20yr)</text><text x="450" y="615" fill="#10b981">$400</text><text x="780" y="615">10x salary if you die</text></g><line x1="80" y1="660" x2="1020" y2="660" stroke="#ffd700" stroke-width="2"/><rect x="100" y="700" width="900" height="320" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="750" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Without insurance:</text><text x="550" y="800" font-size="22" fill="#ef4444" text-anchor="middle">E-fund needs $500,000+ to absorb a single bad event</text><text x="550" y="860" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">With insurance:</text><text x="550" y="910" font-size="22" fill="#10b981" text-anchor="middle">E-fund only needs $15k-$30k for deductibles + gaps</text><text x="550" y="975" font-size="22" fill="#ffffff" text-anchor="middle">Insurance is the multiplier on every emergency dollar.</text></svg>`,
+          caption: "Total premium ~$7,400/year insures against millions in potential loss."
+        }
+      },
+      {
+        type: "example",
+        title: "Maria's $3,200 Premium vs. $187,000 ER Bill",
+        content: `**Maria, age 38, software engineer, $95k salary.** Her insurance stack:
+
+- HDHP plan: **$280/mo premium**, $3,500 deductible
+- HSA contribution: **$4,150/yr** (deductible from taxes)
+- Renters: **$18/mo** ($216/yr)
+- Long-term disability: **$52/mo** ($624/yr)
+- Term life $1M, 20-yr: **$32/mo** ($384/yr)
+- Umbrella $1M: **$220/yr**
+
+**Total annual cost: ~$7,200**.
+
+**The event**: Maria has a seizure while driving, crashes, ICU for 9 days. **Hospital bill: $187,000**.
+
+**What insurance pays**: Health covers everything after her $3,500 deductible. Her HSA pays the deductible **with pre-tax dollars** (effective cost: $2,450). Auto covers the car. Disability replaces **$5,400/mo** during 14-week recovery.
+
+**E-fund hit**: $2,450 (the HSA-adjusted deductible). Without insurance? **$187,000 hit — financial ruin**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">Maria's Crisis — Insured vs. Uninsured</text><text x="275" y="160" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">UNINSURED</text><rect x="100" y="190" width="350" height="700" fill="#2d1b1b" stroke="#ef4444" stroke-width="3" rx="10"/><text x="275" y="240" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Hospital ICU 9 days</text><text x="275" y="275" font-size="24" fill="#ef4444" text-anchor="middle">$187,000</text><text x="275" y="330" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Car totaled</text><text x="275" y="365" font-size="24" fill="#ef4444" text-anchor="middle">$22,000</text><text x="275" y="420" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Lost wages 14 wk</text><text x="275" y="455" font-size="24" fill="#ef4444" text-anchor="middle">$25,500</text><line x1="130" y1="490" x2="420" y2="490" stroke="#ef4444" stroke-width="2"/><text x="275" y="540" font-size="22" fill="#ffffff" text-anchor="middle">TOTAL HIT:</text><text x="275" y="585" font-size="38" font-weight="bold" fill="#ef4444" text-anchor="middle">$234,500</text><text x="275" y="650" font-size="18" fill="#ffffff" text-anchor="middle">E-fund needed:</text><text x="275" y="690" font-size="28" font-weight="bold" fill="#ef4444" text-anchor="middle">IMPOSSIBLE</text><text x="275" y="750" font-size="18" fill="#ffffff" text-anchor="middle">Result: bankruptcy,</text><text x="275" y="780" font-size="18" fill="#ffffff" text-anchor="middle">medical debt,</text><text x="275" y="810" font-size="18" fill="#ffffff" text-anchor="middle">credit destroyed</text><text x="825" y="160" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">INSURED ($7.2k/yr)</text><rect x="650" y="190" width="350" height="700" fill="#1b2d1b" stroke="#10b981" stroke-width="3" rx="10"/><text x="825" y="240" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Hospital ICU</text><text x="825" y="275" font-size="22" fill="#10b981" text-anchor="middle">Insurance pays all</text><text x="825" y="330" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">HSA pays deductible</text><text x="825" y="365" font-size="22" fill="#10b981" text-anchor="middle">$2,450 post-tax</text><text x="825" y="420" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Disability income</text><text x="825" y="455" font-size="22" fill="#10b981" text-anchor="middle">$5,400/mo replaces</text><line x1="680" y1="490" x2="970" y2="490" stroke="#10b981" stroke-width="2"/><text x="825" y="540" font-size="22" fill="#ffffff" text-anchor="middle">E-FUND HIT:</text><text x="825" y="585" font-size="38" font-weight="bold" fill="#10b981" text-anchor="middle">$2,450</text><text x="825" y="650" font-size="18" fill="#ffffff" text-anchor="middle">Her $15k fund</text><text x="825" y="690" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">absorbs it easily</text><text x="825" y="750" font-size="18" fill="#ffffff" text-anchor="middle">Result: full recovery,</text><text x="825" y="780" font-size="18" fill="#ffffff" text-anchor="middle">no debt, finances</text><text x="825" y="810" font-size="18" fill="#ffffff" text-anchor="middle">intact</text><text x="550" y="970" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">$7,200/year insurance = $232,050 of protection</text><text x="550" y="1015" font-size="20" fill="#ffd700" text-anchor="middle">Return on premium: 32x in a single event</text></svg>`,
+          caption: "Insurance turned a $234k catastrophe into a $2.4k inconvenience."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "Which account is the ONLY one with triple-tax-advantaged status (deductible contribution, tax-free growth, AND tax-free withdrawal for qualified expenses)?",
+        options: [
+          { text: "Roth IRA", correct: false },
+          { text: "Traditional 401(k)", correct: false },
+          { text: "HSA (Health Savings Account)", correct: true },
+          { text: "High-yield savings account", correct: false }
+        ],
+        explanation: "The HSA is uniquely triple-tax-advantaged: contributions reduce taxable income, balances grow tax-free, and qualified medical withdrawals are tax-free. Roth has tax-free growth/withdrawal but no deduction. Traditional 401(k) deducts and grows tax-free but is fully taxed on withdrawal. HYSA has zero tax advantages.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">Tax Advantages Compared</text><line x1="80" y1="160" x2="1020" y2="160" stroke="#ffd700" stroke-width="2"/><text x="100" y="140" font-size="20" font-weight="bold" fill="#ffffff">Account</text><text x="450" y="140" font-size="20" font-weight="bold" fill="#ffffff">Deduct In</text><text x="650" y="140" font-size="20" font-weight="bold" fill="#ffffff">Grow Free</text><text x="850" y="140" font-size="20" font-weight="bold" fill="#ffffff">Free Out</text><g font-size="22"><text x="100" y="230" fill="#ffffff">Traditional 401(k)</text><text x="490" y="230" fill="#10b981" text-anchor="middle">YES</text><text x="700" y="230" fill="#10b981" text-anchor="middle">YES</text><text x="900" y="230" fill="#ef4444" text-anchor="middle">NO</text><text x="100" y="320" fill="#ffffff">Roth IRA</text><text x="490" y="320" fill="#ef4444" text-anchor="middle">NO</text><text x="700" y="320" fill="#10b981" text-anchor="middle">YES</text><text x="900" y="320" fill="#10b981" text-anchor="middle">YES</text><text x="100" y="410" fill="#ffffff">HYSA</text><text x="490" y="410" fill="#ef4444" text-anchor="middle">NO</text><text x="700" y="410" fill="#ef4444" text-anchor="middle">NO</text><text x="900" y="410" fill="#ef4444" text-anchor="middle">NO</text></g><rect x="80" y="470" width="940" height="100" fill="#1b2d1b" stroke="#ffd700" stroke-width="3" rx="10"/><text x="100" y="510" font-size="22" font-weight="bold" fill="#ffd700">HSA</text><text x="490" y="535" fill="#ffd700" font-size="26" text-anchor="middle" font-weight="bold">YES</text><text x="700" y="535" fill="#ffd700" font-size="26" text-anchor="middle" font-weight="bold">YES</text><text x="900" y="535" fill="#ffd700" font-size="26" text-anchor="middle" font-weight="bold">YES</text><text x="550" y="650" font-size="32" font-weight="bold" fill="#10b981" text-anchor="middle">HSA = Triple Tax Advantage</text><text x="550" y="720" font-size="22" fill="#ffffff" text-anchor="middle">2025 limits: $4,300 individual / $8,550 family</text><text x="550" y="770" font-size="22" fill="#ffffff" text-anchor="middle">Requires HDHP enrollment</text><text x="550" y="850" font-size="22" fill="#ffd700" text-anchor="middle">After age 65: HSA becomes like a traditional IRA</text><text x="550" y="890" font-size="22" fill="#ffd700" text-anchor="middle">(non-medical withdrawals taxed but no penalty)</text><text x="550" y="970" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Max it out before Roth if you have an HDHP</text></svg>`,
+          caption: "Three tax checkmarks — no other account has all three."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Insurance Audit Checklist",
+        content: `**Run this audit this weekend.** For each policy, write YES/NO/NEED:
+
+**[ ] Health**: Are you on an HDHP? Maxing the HSA?
+**[ ] Auto**: Liability ≥ **$250k/$500k/$100k**? Drop collision on cars worth **<$3,000**?
+**[ ] Home/Renters**: Replacement-cost contents? Renters at **~$15/mo** if you don't own?
+**[ ] Umbrella**: Net worth above **$200k**? Get **$1M** umbrella ($200/yr).
+**[ ] Disability**: Long-term policy covering **60% of income**? Most miss this — leading cause of bankruptcy.
+**[ ] Life**: Dependents? Term life at **10x salary**, 20-year level.
+
+**Adjust your E-fund target accordingly**:
+- All seven boxes checked → **3-month** E-fund is enough
+- Missing disability or umbrella → bump to **6 months**
+- Self-employed, no LTD → **9-12 months**
+
+**The math**: every $1 of premium buys roughly $30-100 of catastrophe coverage. The E-fund handles the gaps.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Weekend Insurance Audit</text><rect x="80" y="120" width="940" height="780" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><g font-size="22" fill="#ffffff"><text x="120" y="180">[ ] Health: HDHP + maxed HSA ($4,300/$8,550)</text><text x="120" y="240">[ ] Auto liability ≥ 250/500/100k</text><text x="120" y="300">[ ] Dropped collision on cars under $3,000</text><text x="120" y="360">[ ] Renters policy ($15-20/mo) OR HO-3/HO-5</text><text x="120" y="420">[ ] Umbrella $1M (if net worth &gt; $200k)</text><text x="120" y="480">[ ] Long-term disability covering 60% income</text><text x="120" y="540">[ ] Short-term disability OR 3mo E-fund cushion</text><text x="120" y="600">[ ] Term life 10x salary (if dependents)</text><text x="120" y="660">[ ] All beneficiaries updated this year</text><text x="120" y="720">[ ] All deductibles match your E-fund capacity</text></g><line x1="80" y1="760" x2="1020" y2="760" stroke="#ffd700" stroke-width="2"/><text x="550" y="810" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">7/10 boxes → 3-month E-fund OK</text><text x="550" y="850" font-size="26" font-weight="bold" fill="#f59e0b" text-anchor="middle">4-6 boxes → 6-month E-fund</text><text x="550" y="890" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">&lt;4 boxes → 9-12 month E-fund</text><text x="550" y="980" font-size="24" fill="#ffd700" text-anchor="middle">Insurance gaps = bigger cash cushion needed</text><text x="550" y="1030" font-size="22" fill="#ffffff" text-anchor="middle">Fix the policies; right-size the cash.</text></svg>`,
+          caption: "Tick the boxes, then size your fund to match the holes."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-emergency-fund-lesson-11",
+    title: "Anti-Patterns: How People Lose Their Emergency Funds",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Five Ways People Wreck Their Cushion",
+        content: `Building the fund is hard. **Keeping it is harder.** Most emergency funds don't disappear in a real emergency — they disappear in **slow leaks** that feel rational at the moment.
+
+The five anti-patterns:
+
+1. **Using it for non-emergencies** — the #1 cause. Sales, vacations, "good deals."
+2. **Keeping it in checking** — guaranteed to be spent or eroded by inflation.
+3. **Investing it in stocks** — the S&P fell **33% in 2020** right when you needed cash.
+4. **Borrowing from 401(k)** — penalties, taxes, lost compounding, repayment risk.
+5. **No separate account** — mixing E-fund with regular savings means you don't know what's earmarked.
+
+This lesson is the **autopsy**: how each pattern destroys a fund, and the defense that stops it. We end with **Sarah's $20k → $0** in 2022.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Five Anti-Patterns That Drain E-Funds</text><g><rect x="100" y="170" width="900" height="120" fill="#2d1b1b" stroke="#ef4444" stroke-width="3" rx="10"/><text x="135" y="220" font-size="28" font-weight="bold" fill="#ef4444">1</text><text x="200" y="220" font-size="24" font-weight="bold" fill="#ffffff">Non-emergency spending</text><text x="200" y="260" font-size="20" fill="#888">"It's such a good deal" — 64% of fund failures</text></g><g><rect x="100" y="310" width="900" height="120" fill="#2d1b1b" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="135" y="360" font-size="28" font-weight="bold" fill="#f59e0b">2</text><text x="200" y="360" font-size="24" font-weight="bold" fill="#ffffff">Held in checking account</text><text x="200" y="400" font-size="20" fill="#888">Spent by accident + loses 4%/yr to inflation</text></g><g><rect x="100" y="450" width="900" height="120" fill="#2d1b1b" stroke="#ef4444" stroke-width="3" rx="10"/><text x="135" y="500" font-size="28" font-weight="bold" fill="#ef4444">3</text><text x="200" y="500" font-size="24" font-weight="bold" fill="#ffffff">Invested in stocks</text><text x="200" y="540" font-size="20" fill="#888">Crashes when you need it most — 2008, 2020, 2022</text></g><g><rect x="100" y="590" width="900" height="120" fill="#2d1b1b" stroke="#8b5cf6" stroke-width="3" rx="10"/><text x="135" y="640" font-size="28" font-weight="bold" fill="#8b5cf6">4</text><text x="200" y="640" font-size="24" font-weight="bold" fill="#ffffff">401(k) loan as backup</text><text x="200" y="680" font-size="20" fill="#888">10% penalty + taxes + lost compounding = ~40% lost</text></g><g><rect x="100" y="730" width="900" height="120" fill="#2d1b1b" stroke="#ec4899" stroke-width="3" rx="10"/><text x="135" y="780" font-size="28" font-weight="bold" fill="#ec4899">5</text><text x="200" y="780" font-size="24" font-weight="bold" fill="#ffffff">No separate account</text><text x="200" y="820" font-size="20" fill="#888">Mixed with savings — you forget what's "untouchable"</text></g><text x="550" y="930" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Defense beats discipline.</text><text x="550" y="980" font-size="22" fill="#ffffff" text-anchor="middle">Structure your accounts so the temptation never reaches you.</text></svg>`,
+          caption: "Five patterns, ranked by frequency — slow leaks more common than crashes."
+        }
+      },
+      {
+        type: "concept",
+        title: "Each Pattern, Each Defense",
+        content: `**Pattern 1 — Non-emergency spending.** Defense: the **24-hour test**. Before any withdrawal, write the reason and wait one day. 80% evaporate.
+
+**Pattern 2 — Held in checking.** Defense: separate **high-yield savings** at a different bank (**Ally, Marcus, Wealthfront** at 4-5% APY). Friction is your friend.
+
+**Pattern 3 — Invested in stocks.** Defense: cash + Treasury bills only. **VTI dropped 25% in 2022** — if your "fund" was there, you locked in 25% losses to pay rent.
+
+**Pattern 4 — 401(k) loan as Plan B.** Defense: don't count it. Penalties (**10%**) + ordinary income tax (**22-32%**) + missed compounding + **immediate repayment** if you leave the job. A $20k loan often costs **$8k+** in true cost.
+
+**Pattern 5 — No separate account.** Defense: name it. "**Emergency-Only**" account with no debit card. If you can see the balance is "$28,400 across savings," you can't tell what's protected.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">Pattern → Defense Matrix</text><line x1="80" y1="140" x2="1020" y2="140" stroke="#ffd700" stroke-width="2"/><text x="100" y="125" font-size="22" font-weight="bold" fill="#ef4444">Anti-Pattern</text><text x="600" y="125" font-size="22" font-weight="bold" fill="#10b981">Defense</text><g font-size="20" fill="#ffffff"><text x="100" y="200">1. "It's a great deal..."</text><text x="600" y="200" fill="#10b981">24-hr rule + written reason</text><text x="100" y="270">2. Sitting in checking</text><text x="600" y="270" fill="#10b981">Separate HYSA, no debit</text><text x="100" y="340">3. In VTI/stocks</text><text x="600" y="340" fill="#10b981">Cash + T-bills only</text><text x="100" y="410">4. "I'll use 401k loan"</text><text x="600" y="410" fill="#10b981">Never count retirement</text><text x="100" y="480">5. Lumped with savings</text><text x="600" y="480" fill="#10b981">Named "Emergency-Only"</text></g><line x1="80" y1="540" x2="1020" y2="540" stroke="#ffd700" stroke-width="2"/><text x="550" y="600" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">The 401(k) Loan Trap (worked example)</text><rect x="100" y="640" width="900" height="320" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="10"/><g font-size="22" fill="#ffffff"><text x="140" y="690">Borrow from 401(k):</text><text x="700" y="690" fill="#ffd700">$20,000</text><text x="140" y="740">Lost market gains (avg 8% × 5yr):</text><text x="700" y="740" fill="#ef4444">-$9,400</text><text x="140" y="790">If you leave job (60% of borrowers):</text><text x="700" y="790"></text><text x="140" y="830">  10% early penalty:</text><text x="700" y="830" fill="#ef4444">-$2,000</text><text x="140" y="870">  Ordinary income tax (24%):</text><text x="700" y="870" fill="#ef4444">-$4,800</text></g><line x1="140" y1="895" x2="860" y2="895" stroke="#ef4444" stroke-width="2"/><text x="140" y="935" font-size="24" font-weight="bold" fill="#ffffff">True cost of $20k "loan":</text><text x="700" y="935" font-size="28" font-weight="bold" fill="#ef4444">~$16,200</text><text x="550" y="1010" font-size="22" fill="#ffd700" text-anchor="middle">A real E-fund avoids all of this.</text></svg>`,
+          caption: "Map each leak to its plumbing fix. Most are structural, not behavioral."
+        }
+      },
+      {
+        type: "example",
+        title: "Sarah's $20k → $0 (2022 Autopsy)",
+        content: `**Sarah, age 31, marketing manager, Austin.** She built $20,000 across 18 months. Hit FOMO during the late-2021 bull run.
+
+**Dec 2021**: moves $20k into VTI/QQQ "for a few months until rates rise." Rationalization: "cash is trash."
+
+**Feb 2022**: car needs **$4,200** transmission. Sells VTI at **-12%** → gets $3,700, has to use credit card for the gap.
+
+**May 2022**: company lays off 12%. Sarah keeps her job but takes a **$15k pay cut**. She wants the cushion back — VTI is now **-22%**.
+
+**Aug 2022**: medical procedure, **$2,800 deductible**. Sells more VTI at **-25%**.
+
+**Nov 2022**: lover moves out, $1,400 lease relet fee. She sells the rest at **-30%**.
+
+**Final tally**: $20k invested → **$11,800 cash recovered** + $2,200 credit card debt = **net $9,600**.
+
+**She lost $10,400 (52%) of her emergency fund** — at the moment she needed it most.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">Sarah's 2022 E-Fund Autopsy</text><line x1="100" y1="850" x2="1000" y2="850" stroke="#888" stroke-width="2"/><line x1="100" y1="200" x2="100" y2="850" stroke="#888" stroke-width="2"/><text x="60" y="220" font-size="18" fill="#ffffff" text-anchor="end">$20k</text><text x="60" y="380" font-size="18" fill="#ffffff" text-anchor="end">$15k</text><text x="60" y="540" font-size="18" fill="#ffffff" text-anchor="end">$10k</text><text x="60" y="700" font-size="18" fill="#ffffff" text-anchor="end">$5k</text><text x="60" y="855" font-size="18" fill="#ffffff" text-anchor="end">$0</text><polyline points="150,220 280,260 410,425 540,520 670,650 800,790 950,830" stroke="#ef4444" stroke-width="4" fill="none"/><circle cx="150" cy="220" r="8" fill="#10b981"/><text x="150" y="190" font-size="16" fill="#10b981" text-anchor="middle">Dec '21</text><text x="150" y="170" font-size="14" fill="#10b981" text-anchor="middle">Moves to VTI</text><circle cx="280" cy="260" r="8" fill="#f59e0b"/><text x="280" y="240" font-size="14" fill="#f59e0b" text-anchor="middle">Feb: -12%</text><text x="280" y="285" font-size="14" fill="#ffffff" text-anchor="middle">Car $4.2k</text><circle cx="410" cy="425" r="8" fill="#f59e0b"/><text x="410" y="405" font-size="14" fill="#f59e0b" text-anchor="middle">May: -22%</text><text x="410" y="450" font-size="14" fill="#ffffff" text-anchor="middle">Pay cut</text><circle cx="670" cy="650" r="8" fill="#ef4444"/><text x="670" y="630" font-size="14" fill="#ef4444" text-anchor="middle">Aug: -25%</text><text x="670" y="675" font-size="14" fill="#ffffff" text-anchor="middle">Medical $2.8k</text><circle cx="950" cy="830" r="8" fill="#ef4444"/><text x="950" y="810" font-size="14" fill="#ef4444" text-anchor="middle">Nov: -30%</text><text x="950" y="875" font-size="14" fill="#ffffff" text-anchor="middle">$0 left</text><rect x="100" y="920" width="900" height="140" fill="#2d1b1b" stroke="#ef4444" stroke-width="2" rx="10"/><text x="550" y="970" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Started: $20,000 cash equivalent</text><text x="550" y="1010" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Ended: $0 + $2,200 credit card debt</text><text x="550" y="1045" font-size="20" fill="#ffffff" text-anchor="middle">Net loss: $10,400 (52%) — at the exact wrong moment</text></svg>`,
+          caption: "Real losses, real timeline. Stocks aren't an emergency fund."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "You have $25,000 saved across one checking account. Your spouse asks 'how much of that is emergency fund?' You say '$15k of it.' What's the structural problem with this setup?",
+        options: [
+          { text: "$25k is too much in one place; FDIC only insures $250k", correct: false },
+          { text: "Without a named separate account, the boundary is psychological only — both of you will tap it for non-emergencies", correct: true },
+          { text: "Checking accounts earn no interest, so you're losing $1,000/yr", correct: false },
+          { text: "Joint accounts are bad for emergency funds; only individual accounts work", correct: false }
+        ],
+        explanation: "Anti-Pattern #5 — no separate account. When the E-fund and spending money share an account, the 'emergency-only' designation lives only in your heads. Behavioral research shows mixed funds get spent 4x more often than segregated ones. Defense: a separate high-yield savings account at a different bank, named 'Emergency-Only,' with no debit card attached. FDIC limits and yield matter, but the structural failure here is the lack of boundary.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Same Money, Two Setups</text><text x="275" y="180" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">MIXED (fragile)</text><rect x="80" y="210" width="390" height="600" fill="#2d1b1b" stroke="#ef4444" stroke-width="3" rx="10"/><rect x="120" y="260" width="310" height="500" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="10"/><text x="275" y="310" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Chase Checking</text><text x="275" y="360" font-size="20" fill="#ffffff" text-anchor="middle">Balance: $25,000</text><text x="275" y="420" font-size="18" fill="#888" text-anchor="middle">"$15k of that</text><text x="275" y="445" font-size="18" fill="#888" text-anchor="middle">is emergency"</text><text x="275" y="510" font-size="18" fill="#ef4444" text-anchor="middle">Vacation: -$3k</text><text x="275" y="545" font-size="18" fill="#ef4444" text-anchor="middle">New TV: -$1.2k</text><text x="275" y="580" font-size="18" fill="#ef4444" text-anchor="middle">Holidays: -$2k</text><text x="275" y="640" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">6mo later: $18.8k</text><text x="275" y="700" font-size="18" fill="#888" text-anchor="middle">"Was that emergency</text><text x="275" y="725" font-size="18" fill="#888" text-anchor="middle">money? Spending?"</text><text x="825" y="180" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">SEPARATED (sturdy)</text><rect x="630" y="210" width="390" height="600" fill="#1b2d1b" stroke="#10b981" stroke-width="3" rx="10"/><rect x="670" y="240" width="310" height="160" fill="#16213e" stroke="#10b981" stroke-width="2" rx="10"/><text x="825" y="280" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Chase Checking</text><text x="825" y="320" font-size="18" fill="#ffffff" text-anchor="middle">$10,000 spending</text><text x="825" y="365" font-size="16" fill="#888" text-anchor="middle">Bills + lifestyle</text><rect x="670" y="430" width="310" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/><text x="825" y="470" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Ally HYSA</text><text x="825" y="500" font-size="18" font-weight="bold" fill="#ffd700" text-anchor="middle">"Emergency-Only"</text><text x="825" y="535" font-size="22" fill="#10b981" text-anchor="middle">$15,000 @ 4.4%</text><text x="825" y="575" font-size="16" fill="#888" text-anchor="middle">No debit card</text><text x="825" y="600" font-size="16" fill="#888" text-anchor="middle">Different bank</text><text x="825" y="680" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">6mo later: $15,330</text><text x="825" y="730" font-size="18" fill="#10b981" text-anchor="middle">Untouchable + earning</text><text x="550" y="900" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Structure beats willpower.</text><text x="550" y="960" font-size="22" fill="#ffffff" text-anchor="middle">A boundary you can see is a boundary you keep.</text></svg>`,
+          caption: "Same dollars. Different fate. Separation is the cheap insurance."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Anti-Pattern Self-Audit",
+        content: `**Check yourself against the five.** Honest yes/no:
+
+**[ ] Pattern 1**: In the last 12 months, did I tap my E-fund for anything that wasn't a true emergency (job loss, medical, urgent home/auto repair)? If yes → install the **24-hour rule** with a written log.
+
+**[ ] Pattern 2**: Is my E-fund in the same account as my spending money? → Open a HYSA at **Ally/Marcus/Wealthfront** this week.
+
+**[ ] Pattern 3**: Is any portion in stocks, crypto, or "high-yield" non-FDIC products? → Move to cash/T-bills by month-end.
+
+**[ ] Pattern 4**: Do I mentally count my 401(k) as backup? → Stop. Build a real fund.
+
+**[ ] Pattern 5**: Could I tell you, **right now**, the exact dollar amount of my E-fund? If no → name a dedicated account today.
+
+**Action this week**: fix one. Just one. The leakiest pattern is the one to plug first. Compounding works on plugged leaks too.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Plug One Leak This Week</text><rect x="80" y="120" width="940" height="780" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="175" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Self-Audit Worksheet</text><g font-size="20" fill="#ffffff"><text x="120" y="245">Q1: Last tap of E-fund — was it a real emergency?</text><text x="160" y="280" fill="#888">If no → install 24-hour rule + written log</text><text x="120" y="345">Q2: Is E-fund in same account as spending money?</text><text x="160" y="380" fill="#888">If yes → open Ally/Marcus HYSA this week</text><text x="120" y="445">Q3: Any portion in stocks, crypto, or non-FDIC?</text><text x="160" y="480" fill="#888">If yes → move to cash/T-bills this month</text><text x="120" y="545">Q4: Do I count 401(k) as backup?</text><text x="160" y="580" fill="#888">If yes → stop counting it; build real cash</text><text x="120" y="645">Q5: Can I name the exact E-fund balance right now?</text><text x="160" y="680" fill="#888">If no → name a dedicated "Emergency-Only" acct</text></g><line x1="120" y1="730" x2="980" y2="730" stroke="#ffd700" stroke-width="2"/><text x="550" y="785" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">Pick the leakiest pattern</text><text x="550" y="830" font-size="22" fill="#ffffff" text-anchor="middle">Calendar a 30-minute slot this week to fix it.</text><text x="550" y="870" font-size="22" fill="#ffffff" text-anchor="middle">One change = thousands saved over a decade.</text><text x="550" y="970" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Defense compounds. Start with one.</text><text x="550" y="1020" font-size="20" fill="#ffffff" text-anchor="middle">The plugged fund is the fund that's there in 2030.</text></svg>`,
+          caption: "Five questions, one action. Fix the worst leak this week."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-emergency-fund-lesson-12",
+    title: "Capstone: Your 30-Day Emergency Fund Sprint",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "30 Days From Zero to Real Cushion",
+        content: `You've learned **why**, **how much**, **where**, and **how not** to lose it. Now we execute.
+
+This is a **30-day sprint** with specific actions each week. By Day 30 you will have:
+
+- Calculated your **bare-bones monthly need** and your **3-6 month target**
+- Opened a **separate high-yield savings account** at a real bank
+- Set up an **automatic transfer** the day after each payday
+- Funded the **$1,000 starter** emergency fund
+- Scaled toward your **first month** of coverage
+- A **quarterly review** on your calendar to keep it right-sized
+
+This is not theory. It's a checklist with dates. Print it. Tape it to your fridge. **Cross off the boxes.** In 30 days, you join the 36% of Americans who can handle a $1,000 surprise without panic.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" font-weight="bold" fill="#ffd700" text-anchor="middle">30-Day Emergency Fund Sprint</text><line x1="100" y1="200" x2="1000" y2="200" stroke="#888" stroke-width="3"/><circle cx="160" cy="200" r="35" fill="#ef4444"/><text x="160" y="210" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">D1</text><text x="160" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Calculate</text><text x="160" y="310" font-size="18" fill="#ffffff" text-anchor="middle">target</text><circle cx="320" cy="200" r="35" fill="#f59e0b"/><text x="320" y="210" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">D2-7</text><text x="320" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Open</text><text x="320" y="310" font-size="18" fill="#ffffff" text-anchor="middle">HYSA</text><circle cx="480" cy="200" r="35" fill="#ffd700"/><text x="480" y="210" font-size="20" font-weight="bold" fill="#1a1a2e" text-anchor="middle">D8-14</text><text x="480" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Automate</text><text x="480" y="310" font-size="18" fill="#ffffff" text-anchor="middle">transfer</text><circle cx="640" cy="200" r="35" fill="#10b981"/><text x="640" y="210" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">D15-21</text><text x="640" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Hit $1k</text><text x="640" y="310" font-size="18" fill="#ffffff" text-anchor="middle">starter</text><circle cx="800" cy="200" r="35" fill="#6366f1"/><text x="800" y="210" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">D22-30</text><text x="800" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Scale to</text><text x="800" y="310" font-size="18" fill="#ffffff" text-anchor="middle">1 month</text><circle cx="960" cy="200" r="35" fill="#8b5cf6"/><text x="960" y="210" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">D30</text><text x="960" y="285" font-size="18" fill="#ffffff" text-anchor="middle">Quarterly</text><text x="960" y="310" font-size="18" fill="#ffffff" text-anchor="middle">review</text><rect x="100" y="420" width="900" height="520" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="475" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">By Day 30 You Will Have:</text><g font-size="22" fill="#ffffff"><text x="140" y="545">- Bare-bones monthly need calculated</text><text x="140" y="595">- 3-6 month target written down</text><text x="140" y="645">- Separate HYSA opened (4-5% APY)</text><text x="140" y="695">- Automatic transfer running</text><text x="140" y="745">- $1,000 starter fund in place</text><text x="140" y="795">- Path to 1-month coverage clear</text><text x="140" y="845">- Quarterly review on calendar</text></g><text x="550" y="1010" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Print this. Tape it up. Cross off the boxes.</text></svg>`,
+          caption: "Six milestones. Thirty days. One fund."
+        }
+      },
+      {
+        type: "concept",
+        title: "Day 1 — Calculate Your Number",
+        content: `Before any action, **find your number**. Add only the truly essential lines:
+
+**Bare-bones monthly expenses** =
+- **Housing** (rent/mortgage + property tax + HOA)
+- **Utilities** (power, water, internet — skip cable)
+- **Food** (groceries only — no eating out)
+- **Insurance** (health + auto + home/renters)
+- **Transport** (gas, basic maintenance, transit pass)
+- **Minimum debt** payments (not extras)
+- **Childcare** (if non-negotiable for income)
+
+**Skip**: streaming, gym, restaurants, travel, gifts, hobby spend, clothes beyond basics.
+
+**Example — Jordan (renter, no kids, Denver)**:
+Rent $1,650 + utilities $180 + groceries $400 + insurance $290 + transport $220 + minimum credit card $85 = **$2,825/month**
+
+**Target**: 3 months = **$8,475**. 6 months = **$16,950**.
+
+**Round up**: $9,000 / $17,000. This is your **Day 1 deliverable**. Write both numbers down.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Day 1 — Find Your Number</text><rect x="80" y="120" width="940" height="540" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="175" font-size="26" font-weight="bold" fill="#ffd700" text-anchor="middle">Jordan's Bare-Bones Budget (Denver)</text><line x1="120" y1="210" x2="980" y2="210" stroke="#888" stroke-width="2"/><g font-size="22"><text x="140" y="260" fill="#ffffff">Rent</text><text x="900" y="260" fill="#10b981" text-anchor="end">$1,650</text><text x="140" y="310" fill="#ffffff">Utilities (power/water/internet)</text><text x="900" y="310" fill="#10b981" text-anchor="end">$180</text><text x="140" y="360" fill="#ffffff">Groceries</text><text x="900" y="360" fill="#10b981" text-anchor="end">$400</text><text x="140" y="410" fill="#ffffff">Insurance (health + auto + renters)</text><text x="900" y="410" fill="#10b981" text-anchor="end">$290</text><text x="140" y="460" fill="#ffffff">Transport (gas + maintenance)</text><text x="900" y="460" fill="#10b981" text-anchor="end">$220</text><text x="140" y="510" fill="#ffffff">Minimum credit card</text><text x="900" y="510" fill="#10b981" text-anchor="end">$85</text></g><line x1="120" y1="540" x2="980" y2="540" stroke="#ffd700" stroke-width="3"/><text x="140" y="600" font-size="26" font-weight="bold" fill="#ffd700">Monthly need:</text><text x="900" y="600" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="end">$2,825</text><rect x="80" y="700" width="450" height="320" fill="#1b2d1b" stroke="#10b981" stroke-width="2" rx="10"/><text x="305" y="755" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">3-MONTH TARGET</text><text x="305" y="820" font-size="48" font-weight="bold" fill="#ffd700" text-anchor="middle">$9,000</text><text x="305" y="870" font-size="20" fill="#ffffff" text-anchor="middle">For stable W-2 jobs,</text><text x="305" y="900" font-size="20" fill="#ffffff" text-anchor="middle">good insurance,</text><text x="305" y="930" font-size="20" fill="#ffffff" text-anchor="middle">2-income household</text><rect x="570" y="700" width="450" height="320" fill="#2d1b1b" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="795" y="755" font-size="24" font-weight="bold" fill="#f59e0b" text-anchor="middle">6-MONTH TARGET</text><text x="795" y="820" font-size="48" font-weight="bold" fill="#ffd700" text-anchor="middle">$17,000</text><text x="795" y="870" font-size="20" fill="#ffffff" text-anchor="middle">Single income, variable</text><text x="795" y="900" font-size="20" fill="#ffffff" text-anchor="middle">income, kids, or weak</text><text x="795" y="930" font-size="20" fill="#ffffff" text-anchor="middle">insurance coverage</text></svg>`,
+          caption: "Bare-bones, not lifestyle. The fund covers survival, not comfort."
+        }
+      },
+      {
+        type: "example",
+        title: "Days 2-30 — Action by Action",
+        content: `**Days 2-7 — Open the HYSA.**
+Go to **Ally, Marcus, or Wealthfront** today. ~**10 minutes online**. Need: SSN, driver's license, $0 minimum. FDIC-insured to **$250k**. APY around **4-5%** in 2026.
+
+**Days 8-14 — Automate.**
+In the new HYSA, set **automatic transfer** from checking, **one day after payday**. Start small: **$50/week** or **$200/month**. Increase by $25 each week until it bites a little.
+
+**Days 15-21 — Hit $1,000 starter.**
+Three boosters:
+- **Sell** unused stuff (used phones, old laptop, sports gear) → easy **$300-800**
+- **Side hustle one weekend** (Uber/DoorDash/Instacart) → **$200-400**
+- **Cut one subscription per week** ($60/yr each adds up)
+
+**Days 22-30 — Scale to 1 month.**
+Bank any tax refund. Bank any bonus. Bank found money. Set **quarterly review** reminder for the 1st of every quarter to revisit the target as life changes.
+
+**Day 30**: you have momentum, automation, and a real number.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">29 Days of Action</text><rect x="80" y="100" width="940" height="200" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="120" y="145" font-size="22" font-weight="bold" fill="#f59e0b">Days 2-7: Open HYSA</text><g font-size="18" fill="#ffffff"><text x="120" y="180">- Pick: Ally, Marcus, or Wealthfront</text><text x="120" y="210">- ~10 min online, $0 minimum, FDIC $250k</text><text x="120" y="240">- 4-5% APY, no debit card</text><text x="120" y="275">- Name it "Emergency-Only"</text></g><rect x="80" y="320" width="940" height="180" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="120" y="365" font-size="22" font-weight="bold" fill="#ffd700">Days 8-14: Automate Transfer</text><g font-size="18" fill="#ffffff"><text x="120" y="400">- Set up day-after-payday auto-transfer</text><text x="120" y="430">- Start at $50/week ($200/month)</text><text x="120" y="460">- Increase by $25/week until it bites a little</text><text x="120" y="490">- Calendar reminder: review amount monthly</text></g><rect x="80" y="520" width="940" height="200" fill="#16213e" stroke="#10b981" stroke-width="2" rx="10"/><text x="120" y="565" font-size="22" font-weight="bold" fill="#10b981">Days 15-21: Build $1,000 Starter</text><g font-size="18" fill="#ffffff"><text x="120" y="600">- Sell unused stuff (eBay/FB Marketplace): $300-800</text><text x="120" y="630">- Side hustle one weekend (Uber/DoorDash): $200-400</text><text x="120" y="660">- Cut one subscription per week (~$60/yr each)</text><text x="120" y="695">- TARGET: $1,000 in HYSA by Day 21</text></g><rect x="80" y="740" width="940" height="200" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="10"/><text x="120" y="785" font-size="22" font-weight="bold" fill="#6366f1">Days 22-30: Scale to 1 Month</text><g font-size="18" fill="#ffffff"><text x="120" y="820">- Bank every tax refund, bonus, rebate, found money</text><text x="120" y="850">- Set quarterly review (calendar 1st of Q)</text><text x="120" y="880">- Re-check target: any income, family, insurance changes?</text><text x="120" y="915">- Celebrate when starter hits 1 month coverage</text></g><text x="550" y="1010" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Day 30: real cushion, real automation, real peace of mind</text></svg>`,
+          caption: "Specific actions per week. Each box is a checkmark, not a chapter."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "On Day 14 of the sprint you've opened a HYSA at Ally and set up a $50/week auto-transfer the day after payday. You have $200 in the account. A friend invites you on a $700 weekend trip that 'you'd really benefit from.' What does the sprint plan say to do?",
+        options: [
+          { text: "Pause the transfer for a month to fund the trip — you can resume later", correct: false },
+          { text: "Move the $200 from the HYSA to cover part of the trip and put the rest on a credit card", correct: false },
+          { text: "Decline or fund the trip from a separate 'fun money' source. Keep the transfer running — the sprint is the priority through Day 30", correct: true },
+          { text: "Take a 401(k) loan since you'll repay it from your next paycheck anyway", correct: false }
+        ],
+        explanation: "The sprint depends on automation surviving its first month of friction. Tapping a brand-new E-fund for a vacation breaks Anti-Pattern #1 immediately, ruins the habit, and resets your momentum to zero. Pausing the transfer (Anti-Pattern #2) is the same problem in slower form. The 401(k) loan idea is Anti-Pattern #4 — penalties + taxes + lost compounding for a weekend trip. The correct play: protect the sprint. Fun comes from a separate sinking fund, not the E-fund.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">The Day 14 Temptation Test</text><rect x="80" y="140" width="940" height="160" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="190" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The Scenario</text><text x="550" y="235" font-size="20" fill="#ffffff" text-anchor="middle">Day 14: $200 in new HYSA, transfer running.</text><text x="550" y="270" font-size="20" fill="#ffffff" text-anchor="middle">Friend invites you on a $700 weekend trip.</text><rect x="80" y="330" width="450" height="540" fill="#2d1b1b" stroke="#ef4444" stroke-width="3" rx="10"/><text x="305" y="380" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">If you tap it:</text><g font-size="18" fill="#ffffff"><text x="305" y="430" text-anchor="middle">- Habit broken on day 14</text><text x="305" y="465" text-anchor="middle">- Brain learns "E-fund is</text><text x="305" y="490" text-anchor="middle">spendable"</text><text x="305" y="540" text-anchor="middle">- Anti-Pattern #1 installed</text><text x="305" y="590" text-anchor="middle">- Automation feels pointless</text><text x="305" y="640" text-anchor="middle">- Sprint resets to zero</text></g><text x="305" y="720" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Cost: not $700.</text><text x="305" y="755" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Cost: the whole habit.</text><rect x="570" y="330" width="450" height="540" fill="#1b2d1b" stroke="#10b981" stroke-width="3" rx="10"/><text x="795" y="380" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">If you protect it:</text><g font-size="18" fill="#ffffff"><text x="795" y="430" text-anchor="middle">- Decline OR fund from</text><text x="795" y="455" text-anchor="middle">separate "fun" sinking fund</text><text x="795" y="510" text-anchor="middle">- Transfer keeps running</text><text x="795" y="560" text-anchor="middle">- Day 30 hits $1k starter</text><text x="795" y="610" text-anchor="middle">- Habit cements</text><text x="795" y="660" text-anchor="middle">- Year 1 hits 3mo coverage</text></g><text x="795" y="720" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Cost: one trip.</text><text x="795" y="755" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Gain: financial freedom.</text><text x="550" y="970" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Protect the sprint. Future you wins.</text></svg>`,
+          caption: "Day 14 is the riskiest day. Protect the habit, not the convenience."
+        }
+      },
+      {
+        type: "application",
+        title: "Print This. Start Today.",
+        content: `Your **30-day deliverable**. Cross off as you go.
+
+**Day 1**: Bare-bones monthly = **$______**. 3-month target = **$______**. 6-month target = **$______**.
+
+**Days 2-7**: HYSA opened at **___________**, named "**Emergency-Only**." Initial deposit **$______**.
+
+**Days 8-14**: Auto-transfer set: **$______** every **__________**. Day after each payday.
+
+**Days 15-21**: Sold: **$______**. Side hustle: **$______**. Cut subs: **$______**. Starter total: **$______** (target $1,000).
+
+**Days 22-30**: Tax refund / bonus banked: **$______**. Quarterly review set for: **__/__/____**.
+
+**Day 30 status**:
+- HYSA balance: **$______**
+- Monthly auto-deposit: **$______**
+- Months of coverage: **____**
+- Path to full target (months remaining at current pace): **____**
+
+**Next milestone**: 1 month → 3 months → 6 months. Each level cuts your panic. **The first $1,000 changes your life. The first month changes your decisions.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">Your 30-Day Sprint Tracker</text><rect x="80" y="120" width="940" height="860" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="120" y="175" font-size="22" font-weight="bold" fill="#ef4444">Day 1 — The Number</text><g font-size="18" fill="#ffffff"><text x="140" y="210">Bare-bones monthly: $________</text><text x="140" y="240">3-month target: $________</text><text x="140" y="270">6-month target: $________</text></g><text x="120" y="320" font-size="22" font-weight="bold" fill="#f59e0b">Days 2-7 — Open HYSA</text><g font-size="18" fill="#ffffff"><text x="140" y="355">Bank chosen: ________________</text><text x="140" y="385">Account named: "Emergency-Only"</text><text x="140" y="415">Initial deposit: $________</text></g><text x="120" y="465" font-size="22" font-weight="bold" fill="#ffd700">Days 8-14 — Automate</text><g font-size="18" fill="#ffffff"><text x="140" y="500">Auto-transfer: $______ per __________</text><text x="140" y="530">Date relative to payday: day after</text></g><text x="120" y="580" font-size="22" font-weight="bold" fill="#10b981">Days 15-21 — $1,000 Starter</text><g font-size="18" fill="#ffffff"><text x="140" y="615">Sold stuff: $______ Side hustle: $______</text><text x="140" y="645">Cut subscriptions: $______/yr</text><text x="140" y="675">Starter balance: $______ / $1,000</text></g><text x="120" y="725" font-size="22" font-weight="bold" fill="#6366f1">Days 22-30 — Scale</text><g font-size="18" fill="#ffffff"><text x="140" y="760">Tax refund/bonus banked: $______</text><text x="140" y="790">Quarterly review date: __/__/____</text></g><line x1="120" y1="820" x2="980" y2="820" stroke="#ffd700" stroke-width="2"/><text x="120" y="865" font-size="22" font-weight="bold" fill="#8b5cf6">Day 30 — Status</text><g font-size="18" fill="#ffffff"><text x="140" y="900">HYSA balance: $______ Months covered: ____</text><text x="140" y="935">Monthly auto-deposit: $______</text><text x="140" y="965">Months to full target at current pace: ____</text></g><text x="550" y="1050" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">First $1,000 changes your life. First month changes your decisions.</text></svg>`,
+          caption: "Blanks to fill. Dates to honor. The sprint is real when it's written down."
         }
       }
     ]
