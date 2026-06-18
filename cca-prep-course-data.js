@@ -3509,7 +3509,7 @@ A CCA who knows these five items is **immediately valuable** to any HIM director
             id: 'cca-domain-2', title: 'CCA Domain 2: ICD-10-CM Diagnosis Coding',
             author: 'Synthesis Learning',
             description: 'The Official Guidelines, alphabetic/tabular workflow, principal vs. additional diagnoses, and the conditions that always trip up new coders.',
-            lessons: 3, duration: 45, progress: 0, category: 'cca-prep',
+            lessons: 6, duration: 90, progress: 0, category: 'cca-prep',
             lessonList: [
 {
     id: "cca-domain-2-lesson-1",
@@ -4591,6 +4591,409 @@ The conventions are small. The career impact is not.`,
             <text x="550" y="1030" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Each rung up = deeper mastery of the conventions in this lesson</text>
           </svg>`,
           caption: "Five checkpoints on every chart. Strong convention audit skills are what separates line coders from auditors and CDI specialists."
+        }
+      }
+    ]
+  },
+{
+    id: "cca-domain-2-lesson-4",
+    title: "Z Codes (Factors Influencing Health Status, Z00-Z99)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Z Codes Matter",
+        content: `**Z codes (Z00–Z99)** describe **factors influencing health status** and contact with health services — when the patient is **not currently sick** or when a **circumstance** (history, status, screening) affects care.
+
+Critical point for the CCA: **Z codes ARE valid as a principal diagnosis**. They are not "secondary-only" codes. When a patient is admitted **specifically for** the service the Z code describes (rehab, prosthetic fitting, chemotherapy administration), the Z code **IS** the principal diagnosis.
+
+In other situations, Z codes appear as **secondary** codes — for example, **Z85** (personal history of malignancy) reported alongside a current condition, or **Z79** (long-term drug therapy) supporting a current encounter.
+
+Key Z-code families to memorize: **Z00** (routine exams), **Z23** (immunization), **Z51.11** (chemotherapy encounter), **Z85** (history of malignancy), **Z79** (long-term drug therapy).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Z Codes (Z00-Z99)</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="20">Factors Influencing Health Status</text><rect x="80" y="150" width="940" height="120" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="195" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">Used when patient is NOT currently sick</text><text x="550" y="235" text-anchor="middle" fill="#ffffff" font-size="18">OR a circumstance/history/status affects care</text><rect x="80" y="310" width="290" height="140" fill="none" stroke="#10b981" stroke-width="2" rx="8"/><text x="225" y="345" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Z00</text><text x="225" y="375" text-anchor="middle" fill="#ffffff" font-size="14">Routine general</text><text x="225" y="395" text-anchor="middle" fill="#ffffff" font-size="14">exam without dx</text><text x="225" y="425" text-anchor="middle" fill="#888" font-size="12">Annual physical</text><rect x="405" y="310" width="290" height="140" fill="none" stroke="#10b981" stroke-width="2" rx="8"/><text x="550" y="345" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Z23</text><text x="550" y="375" text-anchor="middle" fill="#ffffff" font-size="14">Encounter for</text><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="14">immunization</text><text x="550" y="425" text-anchor="middle" fill="#888" font-size="12">Vaccine admin</text><rect x="730" y="310" width="290" height="140" fill="none" stroke="#10b981" stroke-width="2" rx="8"/><text x="875" y="345" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Z51.11</text><text x="875" y="375" text-anchor="middle" fill="#ffffff" font-size="14">Encounter for</text><text x="875" y="395" text-anchor="middle" fill="#ffffff" font-size="14">antineoplastic chemo</text><text x="875" y="425" text-anchor="middle" fill="#888" font-size="12">Chemo session</text><rect x="80" y="490" width="445" height="140" fill="none" stroke="#f59e0b" stroke-width="2" rx="8"/><text x="302" y="525" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Z85</text><text x="302" y="555" text-anchor="middle" fill="#ffffff" font-size="14">Personal history of</text><text x="302" y="575" text-anchor="middle" fill="#ffffff" font-size="14">malignant neoplasm</text><text x="302" y="605" text-anchor="middle" fill="#888" font-size="12">Cancer treated, no recurrence</text><rect x="555" y="490" width="465" height="140" fill="none" stroke="#f59e0b" stroke-width="2" rx="8"/><text x="787" y="525" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Z79</text><text x="787" y="555" text-anchor="middle" fill="#ffffff" font-size="14">Long-term (current)</text><text x="787" y="575" text-anchor="middle" fill="#ffffff" font-size="14">drug therapy</text><text x="787" y="605" text-anchor="middle" fill="#888" font-size="12">Anticoagulants, insulin</text><rect x="80" y="670" width="940" height="170" fill="none" stroke="#ffd700" stroke-width="3" rx="10"/><text x="550" y="710" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">KEY CCA RULE</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="18">Z codes CAN be principal diagnosis</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="16">when the encounter is specifically FOR the Z-code reason</text><text x="550" y="815" text-anchor="middle" fill="#10b981" font-size="16">(rehab, chemo admin, prosthetic fitting, aftercare)</text><rect x="80" y="870" width="940" height="180" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="550" y="910" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Principal vs Secondary</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="16">PRINCIPAL: admission FOR chemo → Z51.11 principal, cancer secondary</text><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="16">SECONDARY: admission for pneumonia, hx breast ca → J18.9 principal, Z85.3 secondary</text><text x="550" y="1015" text-anchor="middle" fill="#ec4899" font-size="14">The reason for the visit drives Z-code placement</text></svg>`,
+          caption: "Z00-Z99 captures health-status factors. Z codes ARE valid principal diagnoses when the encounter is specifically for the Z-code reason."
+        }
+      },
+      {
+        type: "concept",
+        title: "When Z Codes Are Principal vs Secondary",
+        content: `**Z codes as PRINCIPAL diagnosis** — Use when the patient is admitted/seen **specifically for** the service:
+- **Z51.11** — admission for chemotherapy administration (the cancer is **secondary**)
+- **Z51.12** — admission for immunotherapy
+- **Z47** — aftercare for orthopedic surgery (joint replacement follow-up)
+- **Z44** — fitting/adjustment of external prosthetic device
+- **Z48** — surgical aftercare encounters
+- **Z00.00** — routine adult exam, no abnormal findings
+
+**Z codes as SECONDARY diagnosis** — Use when they describe a **status, history, or circumstance** that affects current care:
+- **Z85.3** — history of breast cancer (used with current condition)
+- **Z79.01** — long-term anticoagulant use
+- **Z87** — personal history of other conditions
+- **Z66** — DNR status
+- **Z68** — BMI codes (always secondary)
+
+**Key rule**: Ask "**Why is the patient here?**" If the answer IS the Z code (chemo, rehab, fitting), Z code is principal. If the answer is a disease and the Z code just provides context (history, status), Z code is secondary.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Z Code Placement Decision</text><rect x="350" y="110" width="400" height="80" fill="none" stroke="#6366f1" stroke-width="3" rx="40"/><text x="550" y="155" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Why is patient here?</text><text x="550" y="178" text-anchor="middle" fill="#ffffff" font-size="14">(Reason for encounter)</text><line x1="450" y1="200" x2="280" y2="260" stroke="#10b981" stroke-width="3"/><line x1="650" y1="200" x2="820" y2="260" stroke="#f59e0b" stroke-width="3"/><rect x="80" y="270" width="420" height="100" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="290" y="305" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">FOR the Z-code service</text><text x="290" y="335" text-anchor="middle" fill="#ffffff" font-size="14">chemo, rehab, fitting,</text><text x="290" y="355" text-anchor="middle" fill="#ffffff" font-size="14">routine exam, immunization</text><rect x="600" y="270" width="420" height="100" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="810" y="305" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">FOR a disease/condition</text><text x="810" y="335" text-anchor="middle" fill="#ffffff" font-size="14">Z code adds context</text><text x="810" y="355" text-anchor="middle" fill="#ffffff" font-size="14">(history, status, drug)</text><rect x="80" y="400" width="420" height="80" fill="none" stroke="#ffd700" stroke-width="2" rx="8"/><text x="290" y="435" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Z code = PRINCIPAL</text><text x="290" y="463" text-anchor="middle" fill="#ffffff" font-size="14">Disease coded as secondary</text><rect x="600" y="400" width="420" height="80" fill="none" stroke="#ffd700" stroke-width="2" rx="8"/><text x="810" y="435" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Disease = PRINCIPAL</text><text x="810" y="463" text-anchor="middle" fill="#ffffff" font-size="14">Z code as secondary</text><rect x="80" y="520" width="940" height="240" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="555" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">PRINCIPAL Examples</text><text x="110" y="595" fill="#ffffff" font-size="16">• Z51.11 — admission for chemotherapy (cancer = secondary)</text><text x="110" y="625" fill="#ffffff" font-size="16">• Z47.1 — joint replacement aftercare encounter</text><text x="110" y="655" fill="#ffffff" font-size="16">• Z44.001 — fitting of right artificial arm</text><text x="110" y="685" fill="#ffffff" font-size="16">• Z00.00 — adult well-visit, no findings</text><text x="110" y="715" fill="#ffffff" font-size="16">• Z38.00 — newborn, born in hospital (always principal on birth record)</text><text x="110" y="745" fill="#ffffff" font-size="16">• Z23 — encounter for immunization</text><rect x="80" y="780" width="940" height="240" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="550" y="815" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">SECONDARY Examples</text><text x="110" y="855" fill="#ffffff" font-size="16">• Z85.3 — hx of breast cancer (with current condition)</text><text x="110" y="885" fill="#ffffff" font-size="16">• Z79.01 — long-term anticoagulant use</text><text x="110" y="915" fill="#ffffff" font-size="16">• Z66 — DNR status</text><text x="110" y="945" fill="#ffffff" font-size="16">• Z68.41 — BMI 40.0–44.9 (always secondary)</text><text x="110" y="975" fill="#ffffff" font-size="16">• Z87.891 — personal hx of nicotine dependence</text><text x="110" y="1005" fill="#ffffff" font-size="16">• Z79.4 — long-term insulin use (with diabetes code)</text></svg>`,
+          caption: "Z code placement depends on the reason for the encounter — admitted FOR the service = principal; describing status/history = secondary."
+        }
+      },
+      {
+        type: "example",
+        title: "Z Code Coding Walkthrough",
+        content: `**Case 1 — Chemotherapy admission**
+A 58-year-old with **breast cancer** is admitted for the third cycle of **chemotherapy**.
+- **Principal**: **Z51.11** (encounter for antineoplastic chemotherapy)
+- **Secondary**: **C50.911** (malignant neoplasm of breast, right, female)
+- The cancer still exists, but the **reason for admission** is the chemo service.
+
+**Case 2 — Pneumonia in cancer survivor**
+A patient with a **history of colon cancer (no current disease, treated 4 years ago)** is admitted for **pneumonia**.
+- **Principal**: **J18.9** (pneumonia, unspecified organism)
+- **Secondary**: **Z85.038** (personal history of other malignant neoplasm of large intestine)
+- The Z code provides context but is **not** the reason for the visit.
+
+**Case 3 — Routine exam**
+Adult **annual physical**, no complaints, normal results.
+- **Principal**: **Z00.00** (encounter for general adult medical exam without abnormal findings)
+- No additional codes needed.
+
+**Case 4 — Prosthetic fitting**
+Patient returns for **fitting of left lower-limb prosthesis** after BKA last month.
+- **Principal**: **Z44.121** (fitting/adjustment of left artificial leg)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Z Code Cases</text><rect x="60" y="100" width="980" height="220" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="90" y="135" fill="#10b981" font-size="20" font-weight="bold">Case 1 — Chemotherapy Admission</text><text x="90" y="170" fill="#ffffff" font-size="16">Patient admitted for chemotherapy; has breast cancer</text><text x="90" y="210" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: Z51.11</text><text x="90" y="235" fill="#ffffff" font-size="14">Encounter for antineoplastic chemotherapy</text><text x="90" y="275" fill="#8b5cf6" font-size="16" font-weight="bold">Secondary: C50.911</text><text x="90" y="300" fill="#ffffff" font-size="14">Malignant neoplasm of right breast, female</text><rect x="60" y="340" width="980" height="220" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="90" y="375" fill="#0ea5e9" font-size="20" font-weight="bold">Case 2 — Pneumonia in Cancer Survivor</text><text x="90" y="410" fill="#ffffff" font-size="16">Admitted for pneumonia; hx of colon cancer (no recurrence)</text><text x="90" y="450" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: J18.9</text><text x="90" y="475" fill="#ffffff" font-size="14">Pneumonia, unspecified organism</text><text x="90" y="515" fill="#8b5cf6" font-size="16" font-weight="bold">Secondary: Z85.038</text><text x="90" y="540" fill="#ffffff" font-size="14">Personal history of malignant neoplasm of large intestine</text><rect x="60" y="580" width="980" height="180" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="90" y="615" fill="#f59e0b" font-size="20" font-weight="bold">Case 3 — Routine Adult Physical</text><text x="90" y="650" fill="#ffffff" font-size="16">Annual exam, no complaints, normal findings</text><text x="90" y="690" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: Z00.00</text><text x="90" y="715" fill="#ffffff" font-size="14">General adult medical exam without abnormal findings</text><text x="90" y="745" fill="#888" font-size="13">No additional codes required</text><rect x="60" y="780" width="980" height="240" fill="none" stroke="#ec4899" stroke-width="2" rx="10"/><text x="90" y="815" fill="#ec4899" font-size="20" font-weight="bold">Case 4 — Prosthetic Fitting</text><text x="90" y="850" fill="#ffffff" font-size="16">Patient returns for fitting of left lower-limb prosthesis</text><text x="90" y="890" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: Z44.121</text><text x="90" y="915" fill="#ffffff" font-size="14">Fitting/adjustment of left artificial leg</text><text x="90" y="950" fill="#10b981" font-size="14">Z code drives the encounter — no underlying disease needed as principal</text><text x="90" y="985" fill="#888" font-size="13">May add Z89 (acquired absence of limb) as secondary status code</text></svg>`,
+          caption: "Four scenarios showing how the reason for the visit determines whether the Z code is principal or secondary."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check — Z Codes",
+        question: `A patient with **active prostate cancer** is admitted for **administration of antineoplastic chemotherapy**. What is the **principal diagnosis**?`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quiz: Principal Dx</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">Chemotherapy Admission</text><rect x="100" y="180" width="900" height="200" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="225" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Scenario</text><text x="550" y="270" text-anchor="middle" fill="#ffffff" font-size="18">Active prostate cancer patient</text><text x="550" y="305" text-anchor="middle" fill="#ffffff" font-size="18">Admitted FOR antineoplastic chemo</text><text x="550" y="350" text-anchor="middle" fill="#10b981" font-size="16">Why was he admitted? — for the chemo service</text><rect x="100" y="420" width="900" height="100" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="465" fill="#ef4444" font-size="18" font-weight="bold">A.</text><text x="180" y="465" fill="#ffffff" font-size="16">C61 — Malignant neoplasm of prostate</text><text x="180" y="495" fill="#888" font-size="13">Cancer exists but is not the reason for THIS encounter</text><rect x="100" y="540" width="900" height="100" fill="none" stroke="#10b981" stroke-width="3" rx="10"/><text x="130" y="585" fill="#10b981" font-size="18" font-weight="bold">B.</text><text x="180" y="585" fill="#ffffff" font-size="16">Z51.11 — Encounter for antineoplastic chemotherapy</text><text x="180" y="615" fill="#10b981" font-size="13">CORRECT — admission is FOR the chemo service</text><rect x="100" y="660" width="900" height="100" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="705" fill="#ef4444" font-size="18" font-weight="bold">C.</text><text x="180" y="705" fill="#ffffff" font-size="16">Z85.46 — Personal history of prostate malignancy</text><text x="180" y="735" fill="#888" font-size="13">Wrong — cancer is ACTIVE, not history</text><rect x="100" y="780" width="900" height="100" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="825" fill="#ef4444" font-size="18" font-weight="bold">D.</text><text x="180" y="825" fill="#ffffff" font-size="16">Z79.899 — Long-term drug therapy</text><text x="180" y="855" fill="#888" font-size="13">Wrong — chemo is not "long-term drug therapy"</text><rect x="100" y="910" width="900" height="160" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="945" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Explanation</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="15">When admission is specifically for chemo administration,</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="15">Z51.11 is the PRINCIPAL diagnosis (per ICD-10-CM Guidelines I.C.21.c.10).</text><text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="15">The cancer code (C61) is sequenced as SECONDARY.</text></svg>`,
+          caption: "When admission is FOR chemotherapy, Z51.11 is principal — the cancer is secondary."
+        },
+        options: [
+          { text: "C61 — Malignant neoplasm of prostate", correct: false },
+          { text: "Z51.11 — Encounter for antineoplastic chemotherapy", correct: true },
+          { text: "Z85.46 — Personal history of prostate malignancy", correct: false },
+          { text: "Z79.899 — Long-term drug therapy", correct: false }
+        ],
+        explanation: "Per ICD-10-CM Guideline I.C.21.c.10, when a patient is admitted **specifically for** chemo, immunotherapy, or radiation, the **Z51.1x** code is the **principal diagnosis** and the malignancy is **secondary**. Z85 codes are only used when the cancer has been completely treated and there is **no current disease** — not the case here."
+      },
+      {
+        type: "application",
+        title: "Coder Workflow — Spotting Z Code Opportunities",
+        content: `**Step 1 — Read the reason for encounter first.**
+Look for phrases like "**admitted for**…", "**came in for**…", "**status post**…", "**history of**…", "**routine**…", "**screening**…". These are Z-code triggers.
+
+**Step 2 — Decide: service or status?**
+- "Admitted for chemo" → **service** → Z code principal
+- "Admitted for pneumonia, has hx of cancer" → **status** → Z code secondary
+
+**Step 3 — Always add status Z codes when relevant**
+Even when not principal, these affect care and **must be coded**:
+- **Z79** — long-term medication use (anticoagulants, insulin, steroids)
+- **Z68** — BMI (when documented and clinically relevant)
+- **Z66** — DNR
+- **Z3A** — weeks of gestation (with pregnancy codes)
+- **Z16** — antibiotic resistance
+
+**Step 4 — Newborn rule**
+**Z38** (newborn, born in hospital) is **always principal** on the birth record — never secondary.
+
+**Step 5 — Coder pitfall**
+Do **not** confuse **personal history (Z85–Z87)** with **current disease**. "Hx of MI 5 years ago, no current symptoms" → **Z86.79**, not I21.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Coder Workflow: Z Codes</text><rect x="80" y="100" width="940" height="120" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="120" y="140" fill="#6366f1" font-size="20" font-weight="bold">STEP 1 — Read the reason for encounter</text><text x="120" y="170" fill="#ffffff" font-size="15">Look for: "admitted for", "status post", "history of", "routine", "screening"</text><text x="120" y="200" fill="#888" font-size="14">These phrases trigger Z-code consideration</text><rect x="80" y="240" width="940" height="120" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="120" y="280" fill="#10b981" font-size="20" font-weight="bold">STEP 2 — Service or Status?</text><text x="120" y="310" fill="#ffffff" font-size="15">Service (chemo, rehab, fitting) → Z code PRINCIPAL</text><text x="120" y="340" fill="#ffffff" font-size="15">Status / history → Z code SECONDARY</text><rect x="80" y="380" width="940" height="180" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="120" y="420" fill="#f59e0b" font-size="20" font-weight="bold">STEP 3 — Always add relevant status codes</text><text x="120" y="455" fill="#ffffff" font-size="15">• Z79 — long-term meds (anticoag, insulin, steroids)</text><text x="120" y="485" fill="#ffffff" font-size="15">• Z68 — BMI (when relevant)</text><text x="120" y="515" fill="#ffffff" font-size="15">• Z66 — DNR status</text><text x="120" y="545" fill="#ffffff" font-size="15">• Z3A — weeks of gestation</text><rect x="80" y="580" width="940" height="120" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="120" y="620" fill="#0ea5e9" font-size="20" font-weight="bold">STEP 4 — Newborn rule</text><text x="120" y="655" fill="#ffffff" font-size="15">Z38 is ALWAYS principal on the birth record</text><text x="120" y="685" fill="#888" font-size="13">Never use Z38 as secondary; never use it on later encounters</text><rect x="80" y="720" width="940" height="160" fill="none" stroke="#ef4444" stroke-width="3" rx="10"/><text x="120" y="760" fill="#ef4444" font-size="20" font-weight="bold">STEP 5 — Coder pitfall</text><text x="120" y="795" fill="#ffffff" font-size="15">Do NOT use current disease codes when patient has only a history.</text><text x="120" y="825" fill="#ffffff" font-size="15">"Hx MI 5 years ago, no current sx" → Z86.79 (not I21)</text><text x="120" y="855" fill="#ec4899" font-size="14">Active vs history is a documented audit target</text><rect x="80" y="900" width="940" height="170" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="940" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Z Code Quick Wins on the CCA</text><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="15">• "Admitted for chemo" → Z51.11 principal</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="15">• "Newborn born here" → Z38.00 principal</text><text x="550" y="1035" text-anchor="middle" fill="#ffffff" font-size="15">• "Long-term Coumadin" → add Z79.01 as secondary</text><text x="550" y="1060" text-anchor="middle" fill="#ffffff" font-size="15">• "Routine physical, normal" → Z00.00 only</text></svg>`,
+          caption: "Five-step workflow: identify reason, classify as service vs status, add all relevant Z status codes, follow newborn rule, avoid active/history confusion."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-5",
+    title: "Symptom Codes (Chapter 18, R00-R99)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Chapter 18 — Symptoms, Signs, and Abnormal Findings",
+        content: `**Chapter 18 (R00–R99)** covers **symptoms, signs, and abnormal clinical/lab findings** not classified elsewhere. Examples:
+- **R10.9** — abdominal pain, unspecified
+- **R50.9** — fever, unspecified
+- **R06.02** — shortness of breath
+- **R07.9** — chest pain, unspecified
+- **R51.9** — headache, unspecified
+
+These codes are **valid principal diagnoses** — but only **when no definitive diagnosis has been established after study**.
+
+Critical CCA rules:
+1. **Symptoms integral to a confirmed disease are NOT coded separately** (you do not code abdominal pain when appendicitis is confirmed).
+2. **Unrelated symptoms ARE coded** (a confirmed appendicitis patient who also has unrelated chest pain → both codes).
+3. When a workup ends without a definitive diagnosis, the **symptom IS the principal diagnosis**.
+
+These rules are heavily tested on the CCA because new coders frequently over-code symptoms that are part of the disease.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Chapter 18 — R00-R99</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="20">Symptoms, Signs &amp; Abnormal Findings</text><rect x="80" y="140" width="940" height="160" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="180" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Common R Codes</text><text x="120" y="220" fill="#ffffff" font-size="16">• R10.9 — Abdominal pain, unspecified</text><text x="120" y="250" fill="#ffffff" font-size="16">• R50.9 — Fever, unspecified</text><text x="120" y="280" fill="#ffffff" font-size="16">• R06.02 — Shortness of breath</text><text x="600" y="220" fill="#ffffff" font-size="16">• R07.9 — Chest pain, unspecified</text><text x="600" y="250" fill="#ffffff" font-size="16">• R51.9 — Headache</text><text x="600" y="280" fill="#ffffff" font-size="16">• R11.2 — Nausea with vomiting</text><rect x="80" y="330" width="940" height="140" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/><text x="550" y="370" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">When R codes ARE principal</text><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="17">No definitive diagnosis established AFTER STUDY</text><text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="15">(workup done, but cause not found)</text><rect x="80" y="500" width="940" height="180" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="540" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">When R codes are NOT coded</text><text x="550" y="580" text-anchor="middle" fill="#ffffff" font-size="17">When the symptom is INTEGRAL to a confirmed disease</text><text x="550" y="615" text-anchor="middle" fill="#ffffff" font-size="15">e.g., abdominal pain integral to appendicitis = NOT a separate code</text><text x="550" y="650" text-anchor="middle" fill="#888" font-size="14">The disease already implies the symptom</text><rect x="80" y="710" width="940" height="170" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="10"/><text x="550" y="750" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">When R codes ARE coded as secondary</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="17">When the symptom is UNRELATED to the disease</text><text x="550" y="825" text-anchor="middle" fill="#ffffff" font-size="15">e.g., appendicitis patient with unrelated chest pain</text><text x="550" y="855" text-anchor="middle" fill="#8b5cf6" font-size="14">Code BOTH the disease and the unrelated symptom</text><rect x="80" y="910" width="940" height="160" fill="none" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Three Critical Rules</text><text x="550" y="985" text-anchor="middle" fill="#ffffff" font-size="15">1. No dx after study → symptom IS principal</text><text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="15">2. Integral symptom → NOT coded separately</text><text x="550" y="1045" text-anchor="middle" fill="#ffffff" font-size="15">3. Unrelated symptom → coded separately</text></svg>`,
+          caption: "R00-R99 codes are valid principal dx when no definitive diagnosis exists, but integral symptoms are never coded separately."
+        }
+      },
+      {
+        type: "concept",
+        title: "Integral vs Unrelated — The Core Rule",
+        content: `**Guideline I.B.4: Signs and symptoms integral to a disease process should NOT be assigned as additional codes.**
+
+The disease code already **implies** its expected symptoms. Coding both is redundant and inflates DRG/severity inappropriately.
+
+**Examples of INTEGRAL symptoms (do NOT code separately):**
+- **Abdominal pain** with confirmed **appendicitis** → only K35.80
+- **Cough** with confirmed **pneumonia** → only J18.9
+- **Dysuria** with confirmed **UTI** → only N39.0
+- **Chest pain** with confirmed **acute MI** → only I21.x
+- **Headache** with confirmed **migraine** → only G43.x
+
+**Guideline I.B.5: Symptoms NOT routinely associated with a disease SHOULD be coded.**
+
+**Examples of UNRELATED symptoms (DO code separately):**
+- Patient with **appendicitis** also has unrelated **chest pain** → K35.80 **and** R07.9
+- Patient with **diabetes** presents with unrelated **acute headache** → E11.9 **and** R51.9
+- Patient with **chronic kidney disease** admitted for unrelated **vertigo** → R42 **and** N18.x
+
+**Key question**: "Is this symptom an **expected**, **routine** feature of the disease?" If yes → integral, don't code. If no → code it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Integral vs Unrelated</text><rect x="350" y="100" width="400" height="80" fill="none" stroke="#6366f1" stroke-width="3" rx="40"/><text x="550" y="135" text-anchor="middle" fill="#6366f1" font-size="18" font-weight="bold">Is the symptom routine</text><text x="550" y="160" text-anchor="middle" fill="#6366f1" font-size="18" font-weight="bold">for this disease?</text><line x1="450" y1="190" x2="280" y2="260" stroke="#ef4444" stroke-width="3"/><line x1="650" y1="190" x2="820" y2="260" stroke="#10b981" stroke-width="3"/><rect x="80" y="270" width="420" height="100" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/><text x="290" y="305" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">YES → Integral</text><text x="290" y="340" text-anchor="middle" fill="#ffffff" font-size="16">Do NOT code separately</text><text x="290" y="360" text-anchor="middle" fill="#888" font-size="14">Disease implies the symptom</text><rect x="600" y="270" width="420" height="100" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="810" y="305" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">NO → Unrelated</text><text x="810" y="340" text-anchor="middle" fill="#ffffff" font-size="16">DO code separately</text><text x="810" y="360" text-anchor="middle" fill="#888" font-size="14">Both codes appear on claim</text><rect x="80" y="400" width="940" height="260" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="550" y="440" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Integral Examples — NOT coded</text><text x="110" y="480" fill="#ffffff" font-size="16">• Abdominal pain + appendicitis → K35.80 only</text><text x="110" y="510" fill="#ffffff" font-size="16">• Cough + pneumonia → J18.9 only</text><text x="110" y="540" fill="#ffffff" font-size="16">• Dysuria + UTI → N39.0 only</text><text x="110" y="570" fill="#ffffff" font-size="16">• Chest pain + acute MI → I21.x only</text><text x="110" y="600" fill="#ffffff" font-size="16">• Headache + migraine → G43.x only</text><text x="110" y="630" fill="#ef4444" font-size="14">Coding the R code on top is INCORRECT</text><rect x="80" y="690" width="940" height="260" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="730" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Unrelated Examples — DO code both</text><text x="110" y="770" fill="#ffffff" font-size="16">• Appendicitis + unrelated chest pain → K35.80 + R07.9</text><text x="110" y="800" fill="#ffffff" font-size="16">• Diabetes + unrelated acute headache → E11.9 + R51.9</text><text x="110" y="830" fill="#ffffff" font-size="16">• CKD + vertigo → N18.x + R42</text><text x="110" y="860" fill="#ffffff" font-size="16">• COPD + back pain → J44.9 + M54.x</text><text x="110" y="890" fill="#ffffff" font-size="16">• Cellulitis + unrelated nausea → L03.x + R11.0</text><text x="110" y="920" fill="#10b981" font-size="14">Both codes capture true clinical picture</text><rect x="80" y="980" width="940" height="90" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="1015" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Reference: Guidelines I.B.4 and I.B.5</text><text x="550" y="1050" text-anchor="middle" fill="#ffffff" font-size="14">Tested on virtually every CCA exam</text></svg>`,
+          caption: "Integral symptoms (routine for the disease) are not coded; unrelated symptoms are coded as additional diagnoses."
+        }
+      },
+      {
+        type: "example",
+        title: "Symptom Code Scenarios",
+        content: `**Case 1 — Abdominal pain, no diagnosis found**
+A patient is admitted with severe **abdominal pain**. Imaging, labs, and surgical consult — **no cause identified** at discharge.
+- **Principal**: **R10.9** (abdominal pain, unspecified)
+- The symptom IS the principal because no definitive dx after study.
+
+**Case 2 — Abdominal pain with confirmed appendicitis**
+Same admission, but workup confirms **acute appendicitis**.
+- **Principal**: **K35.80** (unspecified acute appendicitis)
+- **Do NOT** code R10.9 — abdominal pain is integral to appendicitis.
+
+**Case 3 — Two unrelated complaints**
+Patient admitted for **acute appendicitis**; during workup, he reports unrelated **chest pain** evaluated and cleared as non-cardiac.
+- **Principal**: **K35.80**
+- **Secondary**: **R07.9** (chest pain, unspecified)
+- Chest pain is **NOT integral** to appendicitis → it is coded.
+
+**Case 4 — Chest pain, rule-out MI negative**
+Patient admitted for **chest pain**; complete cardiac workup is **negative**, no dx established.
+- **Principal**: **R07.9**
+- The rule-out MI is not coded — uncertain dx **never coded** in outpatient and dropped here when not confirmed.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Symptom Code Scenarios</text><rect x="60" y="100" width="980" height="200" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="90" y="135" fill="#0ea5e9" font-size="20" font-weight="bold">Case 1 — Abdominal Pain, No Dx Found</text><text x="90" y="170" fill="#ffffff" font-size="15">Workup negative, no definitive cause identified</text><text x="90" y="210" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: R10.9</text><text x="90" y="235" fill="#ffffff" font-size="14">Abdominal pain, unspecified</text><text x="90" y="270" fill="#10b981" font-size="14">Symptom IS principal because no dx after study (I.B.18)</text><rect x="60" y="320" width="980" height="200" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="90" y="355" fill="#ef4444" font-size="20" font-weight="bold">Case 2 — Abdominal Pain WITH Appendicitis</text><text x="90" y="390" fill="#ffffff" font-size="15">Same patient — workup confirms acute appendicitis</text><text x="90" y="430" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: K35.80 only</text><text x="90" y="455" fill="#ffffff" font-size="14">Acute appendicitis, unspecified</text><text x="90" y="490" fill="#ef4444" font-size="14">Do NOT code R10.9 — pain is integral to appendicitis</text><rect x="60" y="540" width="980" height="220" fill="none" stroke="#8b5cf6" stroke-width="2" rx="10"/><text x="90" y="575" fill="#8b5cf6" font-size="20" font-weight="bold">Case 3 — Two Unrelated Complaints</text><text x="90" y="610" fill="#ffffff" font-size="15">Appendicitis confirmed; also has unrelated chest pain (cleared)</text><text x="90" y="650" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: K35.80</text><text x="90" y="685" fill="#8b5cf6" font-size="16" font-weight="bold">Secondary: R07.9</text><text x="90" y="710" fill="#ffffff" font-size="14">Chest pain (not integral to appendicitis)</text><text x="90" y="740" fill="#10b981" font-size="14">Both codes capture the full picture</text><rect x="60" y="780" width="980" height="290" fill="none" stroke="#ec4899" stroke-width="2" rx="10"/><text x="90" y="815" fill="#ec4899" font-size="20" font-weight="bold">Case 4 — Chest Pain, R/O MI Negative</text><text x="90" y="850" fill="#ffffff" font-size="15">Workup complete; cardiac causes ruled out</text><text x="90" y="890" fill="#ffd700" font-size="16" font-weight="bold">PRINCIPAL: R07.9</text><text x="90" y="915" fill="#ffffff" font-size="14">Chest pain, unspecified</text><text x="90" y="955" fill="#ef4444" font-size="14">Do NOT code "rule-out MI" — uncertain dx never coded outpatient</text><text x="90" y="985" fill="#ef4444" font-size="14">In this inpatient case the rule-out was negated, so not coded</text><text x="90" y="1020" fill="#10b981" font-size="14">Symptom IS principal — no definitive dx after study</text><text x="90" y="1050" fill="#888" font-size="13">Common CCA exam pattern</text></svg>`,
+          caption: "Four scenarios showing the integral/unrelated rule and when symptoms become principal diagnoses."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check — Integral Symptoms",
+        question: `A patient is admitted with **acute pyelonephritis (N10)**. The physician documents **dysuria, fever, and flank pain** — all related to the infection. How are these symptoms coded?`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quiz: Integral Symptoms</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="20">Pyelonephritis case</text><rect x="100" y="180" width="900" height="170" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="220" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Scenario</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="17">Admission for acute pyelonephritis (N10)</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="17">Symptoms: dysuria, fever, flank pain</text><text x="550" y="325" text-anchor="middle" fill="#10b981" font-size="15">All routine features of pyelonephritis</text><rect x="100" y="380" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="420" fill="#ef4444" font-size="18" font-weight="bold">A.</text><text x="180" y="420" fill="#ffffff" font-size="15">N10 + R30.0 (dysuria) + R50.9 (fever) + R10.9 (flank pain)</text><text x="180" y="450" fill="#888" font-size="13">Wrong — over-coding integral symptoms</text><rect x="100" y="485" width="900" height="90" fill="none" stroke="#10b981" stroke-width="3" rx="10"/><text x="130" y="525" fill="#10b981" font-size="18" font-weight="bold">B.</text><text x="180" y="525" fill="#ffffff" font-size="15">N10 only</text><text x="180" y="555" fill="#10b981" font-size="13">CORRECT — symptoms are integral to pyelonephritis</text><rect x="100" y="590" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="630" fill="#ef4444" font-size="18" font-weight="bold">C.</text><text x="180" y="630" fill="#ffffff" font-size="15">R30.0 + R50.9 + R10.9 (symptoms only)</text><text x="180" y="660" fill="#888" font-size="13">Wrong — confirmed dx exists, code the disease</text><rect x="100" y="695" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="735" fill="#ef4444" font-size="18" font-weight="bold">D.</text><text x="180" y="735" fill="#ffffff" font-size="15">N10 + R50.9 only (code only the fever)</text><text x="180" y="765" fill="#888" font-size="13">Wrong — fever is integral; selective coding still violates I.B.4</text><rect x="100" y="810" width="900" height="260" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="850" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Explanation</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="16">Per Guideline I.B.4, signs/symptoms integral to a confirmed</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="16">disease are NOT coded separately.</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="16">Dysuria, fever, and flank pain are routine features of</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="16">pyelonephritis — N10 captures them all.</text><text x="550" y="1030" text-anchor="middle" fill="#ffd700" font-size="16">Only unrelated symptoms (e.g., unrelated chest pain) would add codes.</text></svg>`,
+          caption: "When symptoms are integral to a confirmed disease, code only the disease — never add the R code."
+        },
+        options: [
+          { text: "N10 + R30.0 + R50.9 + R10.9 (disease + all symptoms)", correct: false },
+          { text: "N10 only", correct: true },
+          { text: "R30.0 + R50.9 + R10.9 only (just the symptoms)", correct: false },
+          { text: "N10 + R50.9 only (just code the fever)", correct: false }
+        ],
+        explanation: "Per **Guideline I.B.4**, symptoms **integral to a confirmed disease are NOT coded separately**. Dysuria, fever, and flank pain are routine features of pyelonephritis — N10 alone tells the full story. Adding R codes is over-coding and a common CCA wrong-answer trap. Only **unrelated** symptoms would warrant an additional R code."
+      },
+      {
+        type: "application",
+        title: "Coder Workflow — Symptoms in Practice",
+        content: `**Step 1 — Look for a definitive diagnosis in the discharge summary.**
+The discharge dx drives everything. If a final diagnosis exists, that is the principal — not the presenting symptom.
+
+**Step 2 — If a definitive dx exists, classify each symptom:**
+- **Integral?** → drop it (do not code).
+- **Unrelated?** → keep it as a secondary code.
+
+**Step 3 — If NO definitive dx exists after study:**
+- The principal symptom becomes the principal diagnosis (Guideline II.A).
+- Code other symptoms as secondary.
+- Example: "Abdominal pain, etiology undetermined" → R10.9 principal.
+
+**Step 4 — Outpatient rule (Guideline IV.D)**:
+Code only **confirmed** diagnoses. Do **not** code "rule-out", "probable", "suspected" — code the symptom instead.
+
+**Step 5 — Watch for combination codes.**
+Some diseases have combination codes that already include the symptom. Example: **K57.32** (diverticulitis with bleeding) — do NOT add K92.2 for the GI bleed.
+
+**Step 6 — Documentation tip**: query the physician if symptoms appear to be from a separate process to clarify whether they are integral or unrelated.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Coder Workflow: Symptoms</text><rect x="80" y="100" width="940" height="110" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="120" y="140" fill="#6366f1" font-size="20" font-weight="bold">STEP 1 — Find the definitive dx</text><text x="120" y="170" fill="#ffffff" font-size="15">Read the discharge summary — final dx drives the principal</text><text x="120" y="195" fill="#888" font-size="13">Presenting symptoms ≠ principal if a final dx exists</text><rect x="80" y="225" width="940" height="140" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="120" y="265" fill="#10b981" font-size="20" font-weight="bold">STEP 2 — Classify each symptom</text><text x="120" y="300" fill="#ffffff" font-size="15">Integral → drop</text><text x="120" y="330" fill="#ffffff" font-size="15">Unrelated → keep as secondary</text><text x="120" y="355" fill="#888" font-size="13">Ask: is this routine for the disease?</text><rect x="80" y="380" width="940" height="140" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="120" y="420" fill="#f59e0b" font-size="20" font-weight="bold">STEP 3 — No dx after study</text><text x="120" y="455" fill="#ffffff" font-size="15">Principal symptom = principal diagnosis</text><text x="120" y="485" fill="#ffffff" font-size="15">Per Guideline II.A — symptoms can be principal</text><text x="120" y="510" fill="#888" font-size="13">"Abdominal pain, etiology undetermined" → R10.9</text><rect x="80" y="535" width="940" height="140" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="120" y="575" fill="#0ea5e9" font-size="20" font-weight="bold">STEP 4 — Outpatient rule</text><text x="120" y="610" fill="#ffffff" font-size="15">Never code uncertain dx outpatient (rule out, probable, suspected)</text><text x="120" y="640" fill="#ffffff" font-size="15">Code the symptom instead</text><text x="120" y="665" fill="#888" font-size="13">Guideline IV.D</text><rect x="80" y="690" width="940" height="140" fill="none" stroke="#8b5cf6" stroke-width="2" rx="10"/><text x="120" y="730" fill="#8b5cf6" font-size="20" font-weight="bold">STEP 5 — Combination codes</text><text x="120" y="765" fill="#ffffff" font-size="15">K57.32 (diverticulitis WITH bleeding) — single code</text><text x="120" y="795" fill="#ffffff" font-size="15">Do NOT add K92.2 (GI bleed)</text><text x="120" y="820" fill="#888" font-size="13">Combination codes prevent double counting</text><rect x="80" y="845" width="940" height="105" fill="none" stroke="#ec4899" stroke-width="2" rx="10"/><text x="120" y="885" fill="#ec4899" font-size="20" font-weight="bold">STEP 6 — Query when in doubt</text><text x="120" y="915" fill="#ffffff" font-size="15">If unclear whether symptom is integral or separate process,</text><text x="120" y="940" fill="#ffffff" font-size="15">issue a physician query for clarification</text><rect x="80" y="965" width="940" height="100" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Avoid the #1 coder mistake</text><text x="550" y="1035" text-anchor="middle" fill="#ffffff" font-size="15">Don't code symptoms on top of confirmed diagnoses</text><text x="550" y="1058" text-anchor="middle" fill="#888" font-size="13">It inflates severity and triggers audits</text></svg>`,
+          caption: "Six-step workflow: find dx, classify symptoms, handle no-dx cases, follow outpatient rule, use combination codes, query when unclear."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-6",
+    title: "External Cause Codes (Chapter 20, V00-Y99)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "External Cause Codes — Why and What",
+        content: `**Chapter 20 (V00–Y99)** captures the **external cause** of an injury, poisoning, or adverse event — **how**, **where**, and **what activity** the patient was doing.
+
+These codes are **secondary** — they **NEVER** stand alone as principal. They **support** the injury code that is principal.
+
+Key code families:
+- **V00–V99** — transport accidents (car, pedestrian, bike)
+- **W00–X58** — other accidents (falls, fire, drowning, exposure)
+- **X71–X83** — intentional self-harm
+- **X92–Y08** — assault
+- **Y21–Y33** — undetermined intent
+- **Y62–Y84** — medical/surgical complications
+- **Y92** — **place of occurrence** (home, school, street)
+- **Y93** — **activity** (running, cooking, swimming)
+- **Y99** — external cause status (civilian, military, work)
+
+External cause codes require a **7th character** for **encounter type**:
+- **A** — initial encounter (active treatment)
+- **D** — subsequent encounter (healing)
+- **S** — sequela (late effect)
+
+Most external cause codes need at least **4 characters** to be valid.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Chapter 20 — V00-Y99</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="20">External Causes of Morbidity</text><rect x="80" y="140" width="940" height="80" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="178" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">NEVER principal diagnosis</text><text x="550" y="208" text-anchor="middle" fill="#ffffff" font-size="16">Always SECONDARY to the injury code</text><rect x="80" y="245" width="940" height="280" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="280" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Code Families</text><text x="110" y="320" fill="#ffffff" font-size="15">• V00-V99 — Transport accidents (car, pedestrian, bike)</text><text x="110" y="350" fill="#ffffff" font-size="15">• W00-X58 — Other accidents (falls, fire, drowning)</text><text x="110" y="380" fill="#ffffff" font-size="15">• X71-X83 — Intentional self-harm</text><text x="110" y="410" fill="#ffffff" font-size="15">• X92-Y08 — Assault</text><text x="110" y="440" fill="#ffffff" font-size="15">• Y62-Y84 — Medical / surgical complications</text><text x="110" y="470" fill="#ffd700" font-size="15">• Y92 — Place of occurrence (home, school)</text><text x="110" y="500" fill="#ffd700" font-size="15">• Y93 — Activity (running, cooking)</text><rect x="80" y="545" width="940" height="220" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="585" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">7th Character (Encounter Type)</text><rect x="120" y="610" width="270" height="120" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="8"/><text x="255" y="650" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">A</text><text x="255" y="685" text-anchor="middle" fill="#ffffff" font-size="14">Initial encounter</text><text x="255" y="710" text-anchor="middle" fill="#888" font-size="12">Active treatment</text><rect x="415" y="610" width="270" height="120" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="8"/><text x="550" y="650" text-anchor="middle" fill="#f59e0b" font-size="28" font-weight="bold">D</text><text x="550" y="685" text-anchor="middle" fill="#ffffff" font-size="14">Subsequent encounter</text><text x="550" y="710" text-anchor="middle" fill="#888" font-size="12">Healing / recovery</text><rect x="710" y="610" width="270" height="120" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="8"/><text x="845" y="650" text-anchor="middle" fill="#8b5cf6" font-size="28" font-weight="bold">S</text><text x="845" y="685" text-anchor="middle" fill="#ffffff" font-size="14">Sequela</text><text x="845" y="710" text-anchor="middle" fill="#888" font-size="12">Late effect</text><rect x="80" y="785" width="940" height="120" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="550" y="820" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Minimum 4 Characters</text><text x="550" y="855" text-anchor="middle" fill="#ffffff" font-size="16">Most codes require at least 4 characters to be valid</text><text x="550" y="885" text-anchor="middle" fill="#888" font-size="14">Plus a 7th character placeholder (X) if needed</text><rect x="80" y="925" width="940" height="145" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="965" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Example Sequence</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="15">S72.001A (right femur fx, initial) — PRINCIPAL</text><text x="550" y="1025" text-anchor="middle" fill="#ffffff" font-size="15">W19.XXXA (unspec fall, initial) — secondary</text><text x="550" y="1050" text-anchor="middle" fill="#ffffff" font-size="15">Y92.018 (home setting) + Y93.01 (running) — secondary</text></svg>`,
+          caption: "External cause codes describe how, where, and what activity — always secondary, always supplementing the injury code."
+        }
+      },
+      {
+        type: "concept",
+        title: "Building the External Cause Code Set",
+        content: `**Rule 1 — Never principal.**
+External cause codes are **always secondary**. The injury, poisoning, or condition code is the principal.
+
+**Rule 2 — Code as many as needed.**
+Multiple external cause codes may apply: cause + place + activity + status. **There is no limit** on how many external cause codes you can report.
+
+**Rule 3 — Sequence the cause first.**
+Among external causes, sequence in this order:
+1. **Cause** (V, W, X cause codes)
+2. **Place of occurrence (Y92)** — coded **once**, only at the **initial encounter**
+3. **Activity (Y93)** — coded **once**, only at the **initial encounter**
+4. **Status (Y99)** — civilian / military / work
+
+**Rule 4 — Use 7th character A / D / S** matching the injury code's encounter type. If a base code has fewer than 6 characters but needs a 7th, fill with **X** placeholders (e.g., W19.XXXA = fall, initial).
+
+**Rule 5 — Place and activity NOT repeated on subsequent encounters.** Y92 and Y93 only appear once.
+
+**Rule 6 — Adverse effects vs poisoning**: an adverse effect of a correctly prescribed drug uses **T36–T50** with 5th character **5** (e.g., T36.0X5A), then **Y63.x** for medical misadventure or no external cause if therapeutic use.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Building the External Cause Set</text><rect x="80" y="100" width="940" height="120" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="140" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Rule 1 — NEVER principal</text><text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="16">Injury code = principal; external cause = secondary</text><text x="550" y="205" text-anchor="middle" fill="#888" font-size="14">No exceptions</text><rect x="80" y="240" width="940" height="110" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="275" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Rule 2 — Code as many as needed</text><text x="550" y="310" text-anchor="middle" fill="#ffffff" font-size="15">No limit — cause + place + activity + status all allowed</text><text x="550" y="335" text-anchor="middle" fill="#888" font-size="13">Better data quality with more specificity</text><rect x="80" y="370" width="940" height="200" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="405" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Rule 3 — Sequence order</text><text x="120" y="440" fill="#ffffff" font-size="15">1. Cause (V, W, X codes)</text><text x="120" y="470" fill="#ffffff" font-size="15">2. Place — Y92 (once, initial encounter only)</text><text x="120" y="500" fill="#ffffff" font-size="15">3. Activity — Y93 (once, initial encounter only)</text><text x="120" y="530" fill="#ffffff" font-size="15">4. Status — Y99 (civilian / military / work)</text><text x="120" y="555" fill="#888" font-size="13">Y92 + Y93 NOT repeated on subsequent encounters</text><rect x="80" y="590" width="940" height="160" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="550" y="625" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Rule 4 — 7th character matches injury</text><text x="120" y="660" fill="#ffffff" font-size="15">A — initial, D — subsequent, S — sequela</text><text x="120" y="690" fill="#ffffff" font-size="15">Fill 5th/6th positions with X placeholders if needed</text><text x="120" y="720" fill="#ffd700" font-size="15">Example: W19.XXXA = unspecified fall, initial encounter</text><rect x="80" y="770" width="940" height="120" fill="none" stroke="#8b5cf6" stroke-width="2" rx="10"/><text x="550" y="805" text-anchor="middle" fill="#8b5cf6" font-size="20" font-weight="bold">Rule 5 — Place/activity once</text><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="15">Y92 and Y93 reported only at INITIAL encounter</text><text x="550" y="870" text-anchor="middle" fill="#888" font-size="14">Subsequent encounters drop them</text><rect x="80" y="910" width="940" height="160" fill="none" stroke="#ec4899" stroke-width="2" rx="10"/><text x="550" y="945" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Rule 6 — Adverse effect vs poisoning</text><text x="120" y="985" fill="#ffffff" font-size="15">Adverse effect (correct drug, correct dose) = T36-T50 (5th char "5")</text><text x="120" y="1015" fill="#ffffff" font-size="15">Poisoning (wrong drug, OD, illicit) = T36-T50 (5th char 1-4)</text><text x="120" y="1045" fill="#888" font-size="13">Different sequences; commonly tested on the CCA</text></svg>`,
+          caption: "Six structural rules for building the complete external cause code set in correct sequence."
+        }
+      },
+      {
+        type: "example",
+        title: "External Cause Coding Walkthrough",
+        content: `**Case 1 — Fall at home while running**
+Patient fractures right femur falling while jogging in her **home garage**. ED visit, initial encounter.
+
+| Position | Code | Description |
+|---|---|---|
+| Principal | **S72.001A** | Fracture of right femur, initial |
+| Secondary | **W19.XXXA** | Unspecified fall, initial |
+| Secondary | **Y92.015** | Garage of single-family home |
+| Secondary | **Y93.02** | Running activity |
+
+**Case 2 — MVC, driver of car**
+Driver injured in a two-car collision on a public highway. Initial ED encounter.
+
+| Position | Code | Description |
+|---|---|---|
+| Principal | **S06.0X0A** | Concussion without LOC, initial |
+| Secondary | **V43.52XA** | Car driver injured in collision with car, initial |
+
+**Case 3 — Subsequent encounter (follow-up)**
+Same patient as Case 1, returns for **cast change** 3 weeks later.
+
+| Position | Code | Description |
+|---|---|---|
+| Principal | **S72.001D** | Fracture of right femur, subsequent |
+| Secondary | **W19.XXXD** | Unspecified fall, subsequent |
+
+**Y92 and Y93 are NOT repeated** on subsequent encounters.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">External Cause Walkthrough</text><rect x="60" y="100" width="980" height="290" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="90" y="135" fill="#10b981" font-size="20" font-weight="bold">Case 1 — Fall, Initial Encounter</text><text x="90" y="165" fill="#ffffff" font-size="14">Fractured right femur, fell while running in home garage</text><text x="90" y="205" fill="#ffd700" font-size="15" font-weight="bold">1. S72.001A — Fracture of right femur, initial (PRINCIPAL)</text><text x="90" y="235" fill="#8b5cf6" font-size="15" font-weight="bold">2. W19.XXXA — Unspecified fall, initial</text><text x="90" y="265" fill="#8b5cf6" font-size="15" font-weight="bold">3. Y92.015 — Garage of single-family home</text><text x="90" y="295" fill="#8b5cf6" font-size="15" font-weight="bold">4. Y93.02 — Running activity</text><text x="90" y="330" fill="#10b981" font-size="13">Cause → place → activity (in that order)</text><text x="90" y="358" fill="#888" font-size="12">All carry the A 7th character (initial)</text><rect x="60" y="410" width="980" height="230" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="90" y="445" fill="#0ea5e9" font-size="20" font-weight="bold">Case 2 — Motor Vehicle Collision</text><text x="90" y="475" fill="#ffffff" font-size="14">Driver in two-car crash, concussion w/o LOC, ED initial visit</text><text x="90" y="515" fill="#ffd700" font-size="15" font-weight="bold">1. S06.0X0A — Concussion w/o LOC, initial (PRINCIPAL)</text><text x="90" y="545" fill="#8b5cf6" font-size="15" font-weight="bold">2. V43.52XA — Car driver injured in collision w/ car, initial</text><text x="90" y="580" fill="#10b981" font-size="13">Add Y92 (street/highway) and Y99 if status documented</text><text x="90" y="610" fill="#888" font-size="12">V codes are highly specific — read documentation carefully</text><rect x="60" y="660" width="980" height="270" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="90" y="695" fill="#f59e0b" font-size="20" font-weight="bold">Case 3 — Subsequent Encounter</text><text x="90" y="725" fill="#ffffff" font-size="14">Same patient as Case 1 — cast change 3 weeks later</text><text x="90" y="765" fill="#ffd700" font-size="15" font-weight="bold">1. S72.001D — Fracture right femur, subsequent (PRINCIPAL)</text><text x="90" y="795" fill="#8b5cf6" font-size="15" font-weight="bold">2. W19.XXXD — Unspecified fall, subsequent</text><text x="90" y="830" fill="#ef4444" font-size="14">DO NOT repeat Y92.015 or Y93.02</text><text x="90" y="860" fill="#ffffff" font-size="14">7th character changes from A → D</text><text x="90" y="890" fill="#10b981" font-size="13">Same injury, evolving encounter type</text><rect x="60" y="950" width="980" height="120" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Sequencing reminder</text><text x="550" y="1020" text-anchor="middle" fill="#ffffff" font-size="15">Injury (S/T) first → cause (V/W/X) → place (Y92) → activity (Y93)</text><text x="550" y="1050" text-anchor="middle" fill="#ffffff" font-size="15">7th character must match across the injury and cause codes</text></svg>`,
+          caption: "Three cases showing sequencing, the 4-character minimum with X placeholders, and dropping Y92/Y93 on subsequent encounters."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check — External Cause Principal Rule",
+        question: `A patient is admitted after **falling off a ladder while painting his house**, sustaining a **closed fracture of the right wrist**. Which code is the **principal diagnosis**?`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quiz: Principal Diagnosis</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="20">Fall from ladder — wrist fracture</text><rect x="100" y="180" width="900" height="170" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="550" y="220" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Scenario</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="17">Patient fell from ladder while painting house</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="17">Closed fracture of right wrist (distal radius)</text><text x="550" y="325" text-anchor="middle" fill="#10b981" font-size="15">Which code is PRINCIPAL?</text><rect x="100" y="380" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="420" fill="#ef4444" font-size="18" font-weight="bold">A.</text><text x="180" y="420" fill="#ffffff" font-size="15">W11.XXXA — Fall on/from ladder, initial encounter</text><text x="180" y="450" fill="#888" font-size="13">Wrong — external cause codes are NEVER principal</text><rect x="100" y="485" width="900" height="90" fill="none" stroke="#10b981" stroke-width="3" rx="10"/><text x="130" y="525" fill="#10b981" font-size="18" font-weight="bold">B.</text><text x="180" y="525" fill="#ffffff" font-size="15">S52.501A — Fracture lower end of right radius, initial</text><text x="180" y="555" fill="#10b981" font-size="13">CORRECT — injury code is the principal diagnosis</text><rect x="100" y="590" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="630" fill="#ef4444" font-size="18" font-weight="bold">C.</text><text x="180" y="630" fill="#ffffff" font-size="15">Y92.017 — Garden/yard of single-family home</text><text x="180" y="660" fill="#888" font-size="13">Wrong — Y92 is a place code, never principal</text><rect x="100" y="695" width="900" height="90" fill="none" stroke="#ef4444" stroke-width="2" rx="10"/><text x="130" y="735" fill="#ef4444" font-size="18" font-weight="bold">D.</text><text x="180" y="735" fill="#ffffff" font-size="15">Y93.H9 — Other activity involving exterior property maintenance</text><text x="180" y="765" fill="#888" font-size="13">Wrong — activity code, supplementary only</text><rect x="100" y="810" width="900" height="260" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="850" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Explanation</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="16">External cause codes (V00-Y99) are NEVER principal.</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="16">The injury that brought the patient in is principal.</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="16">Full sequence: S52.501A (principal),</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="16">W11.XXXA, Y92.017, Y93.H9 (all secondary)</text><text x="550" y="1030" text-anchor="middle" fill="#ffd700" font-size="15">Guideline I.C.20 — external causes are supplementary</text></svg>`,
+          caption: "External cause codes (V00-Y99) are NEVER principal — the injury code that brought the patient in is principal."
+        },
+        options: [
+          { text: "W11.XXXA — Fall on/from ladder, initial encounter", correct: false },
+          { text: "S52.501A — Fracture of right radius (distal), initial encounter", correct: true },
+          { text: "Y92.017 — Garden/yard of single-family home", correct: false },
+          { text: "Y93.H9 — Other activity involving exterior property maintenance", correct: false }
+        ],
+        explanation: "Per **Guideline I.C.20**, external cause codes (V00–Y99) are **always secondary** — they describe **how** an injury happened but are never the principal diagnosis. The **injury itself** (the wrist fracture, S52.501A) is the principal. The fall, place, and activity codes all support it as additional codes."
+      },
+      {
+        type: "application",
+        title: "Coder Workflow — External Cause Coding",
+        content: `**Step 1 — Find the injury first.**
+The injury code (S or T) is the principal. Confirm laterality (right vs left), encounter type, and 7th character.
+
+**Step 2 — Identify the external cause.**
+Look in the documentation for **how** the injury happened: fall, MVC, struck by object, fire, drug, animal, weather.
+
+**Step 3 — Apply place and activity (initial encounter only).**
+- **Y92.x** — place (home, school, street, sports facility). Do NOT use for subsequent encounters.
+- **Y93.x** — what the patient was doing. Specificity matters (Y93.02 running, Y93.61 baseball).
+
+**Step 4 — Add status (Y99) if documented.**
+Y99.0 (civilian), Y99.1 (military), Y99.8 (other) — useful for workers' comp claims.
+
+**Step 5 — Match the 7th character.**
+Injury code and cause code must share **A**, **D**, or **S**. Use X placeholders to reach the 7th position.
+
+**Step 6 — Adverse effects vs poisoning.**
+Read carefully. **Correct drug + correct dose = adverse effect (5th char 5)**. **Wrong drug, overdose, or illicit = poisoning (5th char 1–4)**. Sequencing differs.
+
+**Step 7 — No mandatory reporting limit.**
+Code as many external cause codes as paint the full picture — better data, better reimbursement, better public-health surveillance.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Coder Workflow: External Cause</text><rect x="80" y="100" width="940" height="100" fill="none" stroke="#6366f1" stroke-width="2" rx="10"/><text x="120" y="135" fill="#6366f1" font-size="20" font-weight="bold">STEP 1 — Find the injury (S/T code) first</text><text x="120" y="165" fill="#ffffff" font-size="14">Confirm laterality, encounter type, 7th character</text><text x="120" y="190" fill="#888" font-size="13">Injury is always principal</text><rect x="80" y="210" width="940" height="100" fill="none" stroke="#10b981" stroke-width="2" rx="10"/><text x="120" y="245" fill="#10b981" font-size="20" font-weight="bold">STEP 2 — Identify the cause</text><text x="120" y="275" fill="#ffffff" font-size="14">How did it happen? Fall, MVC, struck by, fire, drug, animal</text><text x="120" y="300" fill="#888" font-size="13">V, W, X codes</text><rect x="80" y="320" width="940" height="120" fill="none" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="120" y="355" fill="#f59e0b" font-size="20" font-weight="bold">STEP 3 — Add place &amp; activity (initial only)</text><text x="120" y="385" fill="#ffffff" font-size="14">Y92 — place (home, school, street, sports facility)</text><text x="120" y="410" fill="#ffffff" font-size="14">Y93 — activity (running, cooking, swimming)</text><text x="120" y="432" fill="#ef4444" font-size="13">Not repeated on subsequent encounters</text><rect x="80" y="450" width="940" height="100" fill="none" stroke="#8b5cf6" stroke-width="2" rx="10"/><text x="120" y="485" fill="#8b5cf6" font-size="20" font-weight="bold">STEP 4 — Add status (Y99) if documented</text><text x="120" y="515" fill="#ffffff" font-size="14">Y99.0 civilian, Y99.1 military, Y99.8 other</text><text x="120" y="540" fill="#888" font-size="13">Important for workers' comp claims</text><rect x="80" y="560" width="940" height="100" fill="none" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="120" y="595" fill="#0ea5e9" font-size="20" font-weight="bold">STEP 5 — Match 7th character</text><text x="120" y="625" fill="#ffffff" font-size="14">Injury and cause must share A / D / S</text><text x="120" y="650" fill="#888" font-size="13">Use X placeholders to reach 7th position (e.g., W19.XXXA)</text><rect x="80" y="670" width="940" height="120" fill="none" stroke="#ec4899" stroke-width="2" rx="10"/><text x="120" y="705" fill="#ec4899" font-size="20" font-weight="bold">STEP 6 — Adverse effect vs poisoning</text><text x="120" y="735" fill="#ffffff" font-size="14">Adverse effect = correct drug, correct dose (5th char 5)</text><text x="120" y="760" fill="#ffffff" font-size="14">Poisoning = wrong drug, OD, illicit (5th char 1-4)</text><text x="120" y="782" fill="#888" font-size="13">Sequencing differs — commonly tested</text><rect x="80" y="800" width="940" height="100" fill="none" stroke="#ffd700" stroke-width="2" rx="10"/><text x="120" y="835" fill="#ffd700" font-size="20" font-weight="bold">STEP 7 — Code as many as needed</text><text x="120" y="865" fill="#ffffff" font-size="14">No upper limit — more codes = better data &amp; surveillance</text><text x="120" y="890" fill="#888" font-size="13">Cause + place + activity + status all welcome</text><rect x="80" y="920" width="940" height="150" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="550" y="960" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">CCA Exam Anchors</text><text x="550" y="995" text-anchor="middle" fill="#ffffff" font-size="15">External cause codes NEVER principal</text><text x="550" y="1025" text-anchor="middle" fill="#ffffff" font-size="15">Minimum 4 characters; A/D/S 7th character required</text><text x="550" y="1055" text-anchor="middle" fill="#ffffff" font-size="15">Y92 + Y93 used ONCE at initial encounter only</text></svg>`,
+          caption: "Seven-step workflow: injury first, identify cause, add place/activity at initial only, status, match 7th character, distinguish adverse from poisoning, code freely."
         }
       }
     ]
