@@ -13,6 +13,12 @@ class SynthesisApp {
     }
 
     init() {
+        // Rehydrate per-lesson completed flag from the persisted user store.
+        // saveProgress() only persists APP_DATA.user (not the static categories),
+        // so on a fresh page load we have to re-apply completions to the
+        // in-memory lesson objects that drive the UI.
+        this.rehydrateLessonCompletions();
+
         // Hide loading screen after 2 seconds
         setTimeout(() => {
             document.getElementById('loading-screen').style.display = 'none';
@@ -541,6 +547,21 @@ class SynthesisApp {
         alert('You can add books to your favorites from any book detail page! Look for the star icon.');
     }
 
+    // Re-apply persisted per-lesson completions to the in-memory lesson
+    // objects on app boot. Without this, the progress bar resets to 0 every
+    // page load even though the user store knows the lessons are done.
+    rehydrateLessonCompletions() {
+        const map = APP_DATA.user && APP_DATA.user.lessonCompletions;
+        if (!map || typeof map !== 'object') return;
+        for (const cat of APP_DATA.categories || []) {
+            for (const book of (cat.books || [])) {
+                for (const lesson of (book.lessonList || [])) {
+                    if (map[book.id + '::' + lesson.id]) lesson.completed = true;
+                }
+            }
+        }
+    }
+
     // ---------------- Goals & Deadline pacing ----------------
     // A goal is a per-category target end-date. Pace = lessonsRemaining /
     // daysRemaining. Drives the "X lessons/day to finish by Y" tracker on
@@ -853,7 +874,12 @@ class SynthesisApp {
             for (const lesson of lessons) {
                 lessonsTotal++;
                 const unlocked = examGated && ec ? ec.isLessonUnlocked(book.id, lesson.id) : true;
-                const passed = ec ? ec.isLessonPassed(book.id, lesson.id) : false;
+                // Treat a lesson as "passed" if either the exam-center has it
+                // gated-passed (MBC) OR the user read through to the end and
+                // it was marked completed. Lets non-gated tracks advance their
+                // progress bars from plain reading.
+                const passedExam = ec ? ec.isLessonPassed(book.id, lesson.id) : false;
+                const passed = passedExam || lesson.completed === true;
                 if (unlocked) bookLessonsUnlocked++;
                 if (passed) { lessonsPassed++; bookLessonsPassed++; }
                 if (unlocked && !passed && !nextBookId) {
@@ -1710,8 +1736,16 @@ class SynthesisApp {
     }
 
     completeLesson() {
-        // Mark lesson as completed
+        // Mark lesson as completed — both in-memory (used for the lesson list
+        // UI within this session) and in the user store (which is the only
+        // thing saveProgress persists across reloads).
         this.currentLesson.completed = true;
+        if (!APP_DATA.user) APP_DATA.user = {};
+        if (!APP_DATA.user.lessonCompletions) APP_DATA.user.lessonCompletions = {};
+        const lessonKey = this.currentBook.id + '::' + this.currentLesson.id;
+        if (!APP_DATA.user.lessonCompletions[lessonKey]) {
+            APP_DATA.user.lessonCompletions[lessonKey] = new Date().toISOString();
+        }
 
         // Update book progress
         const completedLessons = this.currentBook.lessonList.filter(l => l.completed).length;
