@@ -988,8 +988,1016 @@ In the Data Validation dialog, Allow = List. What do you enter for Source?`,
             title: 'Excel Formulas: Logic, Lookup, and Text',
             author: 'Synthesis Learning',
             description: 'IF / IFS / SWITCH, XLOOKUP and the legacy VLOOKUP, INDEX/MATCH, text functions, error handling — the formula toolkit every analyst uses daily.',
-            lessons: 1, duration: 5, progress: 0, category: 'excel-powerbi',
-            lessonList: comingSoonLessons('IF/IFS/SWITCH logic, XLOOKUP vs VLOOKUP vs INDEX/MATCH, text functions, and error handling with IFERROR'),
+            lessons: 3, duration: 45, progress: 0, category: 'excel-powerbi',
+            lessonList: [
+{
+    id: "excel-formulas-lesson-1",
+    title: "IF, IFS, SWITCH: The Three Generations of Conditional Logic",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Three Tools, One Decision",
+        content: `Every spreadsheet eventually asks a question: *if this, then what?* Excel gives you **three generations** of tools to answer it, and choosing the wrong one is how formulas become unreadable.
+
+**IF** is the original — a single branch, **TRUE** or **FALSE**. Nest it to handle more cases and you get the classic =IF(...IF(...IF(...))) parenthesis-counting nightmare. Past three levels, your formula becomes a code-review crime scene.
+
+**IFS** (Excel 2019/M365) reads top-to-bottom like a flowchart: condition → result, condition → result. No nesting, no closing-paren panic. It's what your future self will thank you for.
+
+**SWITCH** is pattern-matching: you have **one value** and you want to compare it against a list of possibilities. Grade letters, status codes, region IDs — SWITCH is dramatically cleaner than either IF or IFS when there's a single key.
+
+Pick the right generation up front and the formula reads itself six months from now.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold" font-family="Arial">Three Generations of Conditional Logic</text>
+            <rect x="60" y="110" width="980" height="280" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="80" y="145" fill="#ef4444" font-size="22" font-weight="bold" font-family="Arial">IF (1985) - The Original</text>
+            <text x="80" y="180" fill="#ffffff" font-size="16" font-family="Courier New">=IF(B2&gt;=90,"A",IF(B2&gt;=80,"B",IF(B2&gt;=70,"C",IF(B2&gt;=60,"D","F"))))</text>
+            <text x="80" y="220" fill="#888" font-size="15" font-family="Arial">Single TRUE/FALSE branch. Nest to handle more cases.</text>
+            <text x="80" y="250" fill="#ef4444" font-size="15" font-family="Arial">PAIN: Count those closing parens. Now insert a new tier. Now debug it.</text>
+            <text x="80" y="290" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial">Readability collapses at 4+ levels.</text>
+            <text x="80" y="320" fill="#ffffff" font-size="15" font-family="Arial">Verdict: only use for ONE condition. Two is the absolute ceiling.</text>
+            <text x="80" y="360" fill="#ef4444" font-size="14" font-family="Courier New">))))   &lt;-- where did this come from?</text>
+            <rect x="60" y="410" width="980" height="280" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="445" fill="#10b981" font-size="22" font-weight="bold" font-family="Arial">IFS (2019/M365) - The Flowchart</text>
+            <text x="80" y="480" fill="#ffffff" font-size="16" font-family="Courier New">=IFS(B2&gt;=90,"A", B2&gt;=80,"B", B2&gt;=70,"C", B2&gt;=60,"D", TRUE,"F")</text>
+            <text x="80" y="520" fill="#888" font-size="15" font-family="Arial">Pairs: condition, result, condition, result, ... evaluated top-to-bottom.</text>
+            <text x="80" y="550" fill="#10b981" font-size="15" font-family="Arial">WIN: No nesting. No paren-counting. Add a tier in 5 seconds.</text>
+            <text x="80" y="585" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial">TRUE as the last condition = the default/else case.</text>
+            <text x="80" y="620" fill="#ffffff" font-size="15" font-family="Arial">Verdict: the right answer for 3+ tiers of range-based logic.</text>
+            <text x="80" y="660" fill="#10b981" font-size="14" font-family="Courier New">First TRUE wins. Order matters.</text>
+            <rect x="60" y="710" width="980" height="340" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="745" fill="#6366f1" font-size="22" font-weight="bold" font-family="Arial">SWITCH (2019/M365) - The Pattern Matcher</text>
+            <text x="80" y="780" fill="#ffffff" font-size="16" font-family="Courier New">=SWITCH(B2, "A","Excellent", "B","Good", "C","Pass", "Needs Work")</text>
+            <text x="80" y="820" fill="#888" font-size="15" font-family="Arial">Compare ONE value against a list of exact matches. Last arg = default.</text>
+            <text x="80" y="855" fill="#6366f1" font-size="15" font-family="Arial">WIN: half the keystrokes of IFS when matching a single key.</text>
+            <text x="80" y="890" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial">Use when: grade letters, status codes, region IDs, types.</text>
+            <text x="80" y="925" fill="#ffffff" font-size="15" font-family="Arial">Cannot do: ranges (B2&gt;=90), partial matches, OR conditions.</text>
+            <text x="80" y="960" fill="#ef4444" font-size="14" font-family="Arial">If you need &gt;= or &lt;, you need IFS, not SWITCH.</text>
+            <text x="80" y="1000" fill="#6366f1" font-size="14" font-family="Courier New">value, match1,result1, match2,result2, ..., default</text>
+          </svg>`,
+          caption: "Three generations of conditional logic, ranked by readability."
+        }
+      },
+      {
+        type: "concept",
+        title: "When Each One Wins",
+        content: `The decision tree is short. Ask yourself: **how many conditions?** and **am I matching ranges or exact values?**
+
+**One condition** → plain **IF**. =IF(Amount>1000, "Approve", "Review"). Don't over-engineer.
+
+**Multiple ranges** (>=90, >=80, >=70...) → **IFS** with **TRUE** as the catch-all. =IFS(Score>=90,"A", Score>=80,"B", Score>=70,"C", TRUE,"F"). Order matters — Excel returns the **first TRUE**, so go from strictest to loosest.
+
+**Single value, exact matches** → **SWITCH**. =SWITCH(Status, "P","Paid", "O","Open", "C","Cancelled", "Unknown"). Half the typing of IFS for the same job.
+
+**Never nest IF more than twice.** Every nested IF is a future bug. The closing-paren stack at the end —))))) — is where errors hide and where a colleague will quietly curse you.
+
+**Compatibility note**: IFS and SWITCH require Excel 2019 or M365. If you're sending the file to someone on Excel 2016 or older, fall back to nested IF or warn them.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold" font-family="Arial">Decision Tree: Which Function?</text>
+            <rect x="400" y="100" width="300" height="70" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="130" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Arial">How many conditions?</text>
+            <text x="550" y="155" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Arial">Start here</text>
+            <line x1="550" y1="170" x2="200" y2="220" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="170" x2="900" y2="220" stroke="#888" stroke-width="2"/>
+            <text x="350" y="200" fill="#10b981" font-size="14" font-family="Arial">just 1</text>
+            <text x="720" y="200" fill="#10b981" font-size="14" font-family="Arial">3 or more</text>
+            <rect x="60" y="230" width="280" height="120" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="200" y="265" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Use IF</text>
+            <text x="200" y="295" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">=IF(A1&gt;1000,"OK","No")</text>
+            <text x="200" y="325" text-anchor="middle" fill="#888" font-size="13" font-family="Arial">Don't over-engineer.</text>
+            <rect x="760" y="230" width="280" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="900" y="265" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Arial">Ranges or Exact?</text>
+            <text x="900" y="295" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial">&gt;=, &lt;, BETWEEN ?</text>
+            <text x="900" y="320" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial">or exact string/number?</text>
+            <line x1="800" y1="350" x2="500" y2="430" stroke="#888" stroke-width="2"/>
+            <line x1="1000" y1="350" x2="900" y2="430" stroke="#888" stroke-width="2"/>
+            <text x="600" y="395" fill="#ef4444" font-size="14" font-family="Arial">ranges</text>
+            <text x="940" y="395" fill="#6366f1" font-size="14" font-family="Arial">exact</text>
+            <rect x="340" y="440" width="320" height="160" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="500" y="475" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">Use IFS</text>
+            <text x="500" y="510" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">=IFS(B2&gt;=90,"A",</text>
+            <text x="500" y="530" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">B2&gt;=80,"B",</text>
+            <text x="500" y="550" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">TRUE,"F")</text>
+            <text x="500" y="580" text-anchor="middle" fill="#ffd700" font-size="13" font-family="Arial">First TRUE wins.</text>
+            <rect x="720" y="440" width="320" height="160" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="880" y="475" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">Use SWITCH</text>
+            <text x="880" y="510" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">=SWITCH(St,</text>
+            <text x="880" y="530" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">"P","Paid",</text>
+            <text x="880" y="550" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New">"O","Open","?")</text>
+            <text x="880" y="580" text-anchor="middle" fill="#ffd700" font-size="13" font-family="Arial">Halves the keystrokes.</text>
+            <rect x="60" y="640" width="980" height="180" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="680" fill="#f59e0b" font-size="22" font-weight="bold" font-family="Arial">Rule of Two</text>
+            <text x="80" y="715" fill="#ffffff" font-size="16" font-family="Arial">Never nest IF more than TWICE. =IF(A,IF(B,...)) is fine. =IF(A,IF(B,IF(C,...))) is not.</text>
+            <text x="80" y="745" fill="#888" font-size="15" font-family="Arial">Three nested IFs is your signal to refactor into IFS.</text>
+            <text x="80" y="780" fill="#ef4444" font-size="15" font-family="Courier New">Every )))) is a future bug.</text>
+            <text x="80" y="805" fill="#10b981" font-size="15" font-family="Arial">IFS makes ranges flat. SWITCH makes keys compact. Use them.</text>
+            <rect x="60" y="850" width="980" height="200" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="80" y="890" fill="#0ea5e9" font-size="22" font-weight="bold" font-family="Arial">Compatibility Reality Check</text>
+            <text x="80" y="925" fill="#ffffff" font-size="16" font-family="Arial">IFS and SWITCH require Excel 2019 or Microsoft 365.</text>
+            <text x="80" y="955" fill="#ffffff" font-size="16" font-family="Arial">Sending to Excel 2016 or earlier? They will see #NAME? error.</text>
+            <text x="80" y="990" fill="#f59e0b" font-size="15" font-family="Arial">Workaround: fall back to nested IF in shared/legacy workbooks.</text>
+            <text x="80" y="1020" fill="#888" font-size="15" font-family="Arial">Check File &gt; Info &gt; Check for Issues &gt; Compatibility Checker.</text>
+          </svg>`,
+          caption: "Decision tree for picking the right conditional function."
+        }
+      },
+      {
+        type: "example",
+        title: "Refactoring a Five-Tier Grade Formula",
+        content: `Watch a real-world refactor. We're converting student scores in column B into letter grades in column C.
+
+**The nested-IF original** (technically works, emotionally exhausting):
+=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C",IF(B2>=60,"D","F"))))
+
+Count the closing parens. Now imagine adding an **A+** tier at 95. You have to find the right insert point, add a new IF, and add one more closing paren. Easy to break.
+
+**The IFS rewrite** — same logic, flat structure:
+=IFS(B2>=95,"A+", B2>=90,"A", B2>=80,"B", B2>=70,"C", B2>=60,"D", TRUE,"F")
+
+Read it top-to-bottom like a rubric. Adding a tier? Insert a pair. Done.
+
+**The SWITCH variant** — when grades are already letters, not numbers. If column B contains "A","B","C","D","F" and you want descriptions:
+=SWITCH(B2, "A","Excellent", "B","Above Average", "C","Average", "D","Below Average", "F","Failing", "Invalid")
+
+The trailing "Invalid" catches anything unexpected — bad data, typos, blanks. Always include a default.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold" font-family="Arial">Refactor: Five-Tier Grade Formula</text>
+            <rect x="60" y="100" width="450" height="380" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="285" y="135" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Arial">Source data</text>
+            <line x1="80" y1="155" x2="490" y2="155" stroke="#888" stroke-width="1"/>
+            <text x="100" y="180" fill="#888" font-size="14" font-family="Arial">A</text>
+            <text x="240" y="180" fill="#888" font-size="14" font-family="Arial">B (Score)</text>
+            <text x="400" y="180" fill="#888" font-size="14" font-family="Arial">C (Grade)</text>
+            <line x1="80" y1="190" x2="490" y2="190" stroke="#888" stroke-width="1"/>
+            <text x="100" y="220" fill="#ffffff" font-size="14" font-family="Courier New">Aiden</text>
+            <text x="240" y="220" fill="#ffffff" font-size="14" font-family="Courier New">96</text>
+            <text x="400" y="220" fill="#10b981" font-size="14" font-family="Courier New">A+</text>
+            <text x="100" y="250" fill="#ffffff" font-size="14" font-family="Courier New">Brooke</text>
+            <text x="240" y="250" fill="#ffffff" font-size="14" font-family="Courier New">88</text>
+            <text x="400" y="250" fill="#10b981" font-size="14" font-family="Courier New">B</text>
+            <text x="100" y="280" fill="#ffffff" font-size="14" font-family="Courier New">Cara</text>
+            <text x="240" y="280" fill="#ffffff" font-size="14" font-family="Courier New">74</text>
+            <text x="400" y="280" fill="#10b981" font-size="14" font-family="Courier New">C</text>
+            <text x="100" y="310" fill="#ffffff" font-size="14" font-family="Courier New">Devon</text>
+            <text x="240" y="310" fill="#ffffff" font-size="14" font-family="Courier New">62</text>
+            <text x="400" y="310" fill="#10b981" font-size="14" font-family="Courier New">D</text>
+            <text x="100" y="340" fill="#ffffff" font-size="14" font-family="Courier New">Elia</text>
+            <text x="240" y="340" fill="#ffffff" font-size="14" font-family="Courier New">55</text>
+            <text x="400" y="340" fill="#ef4444" font-size="14" font-family="Courier New">F</text>
+            <text x="100" y="370" fill="#ffffff" font-size="14" font-family="Courier New">Farah</text>
+            <text x="240" y="370" fill="#ffffff" font-size="14" font-family="Courier New">90</text>
+            <text x="400" y="370" fill="#10b981" font-size="14" font-family="Courier New">A</text>
+            <text x="80" y="420" fill="#ffd700" font-size="14" font-family="Arial">Formula goes in C2 and fills down.</text>
+            <text x="80" y="445" fill="#888" font-size="13" font-family="Arial">Same input, three different implementations follow.</text>
+            <rect x="540" y="100" width="500" height="380" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="560" y="135" fill="#ef4444" font-size="18" font-weight="bold" font-family="Arial">BEFORE: Nested IF (5 tiers)</text>
+            <text x="560" y="170" fill="#ffffff" font-size="13" font-family="Courier New">=IF(B2&gt;=95,"A+",</text>
+            <text x="585" y="195" fill="#ffffff" font-size="13" font-family="Courier New">IF(B2&gt;=90,"A",</text>
+            <text x="610" y="220" fill="#ffffff" font-size="13" font-family="Courier New">IF(B2&gt;=80,"B",</text>
+            <text x="635" y="245" fill="#ffffff" font-size="13" font-family="Courier New">IF(B2&gt;=70,"C",</text>
+            <text x="660" y="270" fill="#ffffff" font-size="13" font-family="Courier New">IF(B2&gt;=60,"D","F")))))</text>
+            <text x="560" y="310" fill="#ef4444" font-size="14" font-family="Arial">Closing parens: )))))</text>
+            <text x="560" y="335" fill="#888" font-size="13" font-family="Arial">Each level deeper = harder to read.</text>
+            <text x="560" y="365" fill="#f59e0b" font-size="13" font-family="Arial">Add A++ at 98? Reformat the whole thing.</text>
+            <text x="560" y="395" fill="#f59e0b" font-size="13" font-family="Arial">Remove A+? Find which IF matches which paren.</text>
+            <text x="560" y="430" fill="#ef4444" font-size="14" font-weight="bold" font-family="Arial">Verdict: works, but fragile.</text>
+            <text x="560" y="460" fill="#888" font-size="12" font-family="Arial">This is the formula your auditor will hate.</text>
+            <rect x="60" y="510" width="980" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="545" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">AFTER: IFS (flat, top-to-bottom)</text>
+            <text x="80" y="585" fill="#ffffff" font-size="15" font-family="Courier New">=IFS(B2&gt;=95,"A+", B2&gt;=90,"A", B2&gt;=80,"B",</text>
+            <text x="80" y="610" fill="#ffffff" font-size="15" font-family="Courier New">     B2&gt;=70,"C", B2&gt;=60,"D", TRUE,"F")</text>
+            <text x="80" y="650" fill="#10b981" font-size="15" font-family="Arial">Reads like a rubric. Order: strictest to loosest.</text>
+            <text x="80" y="680" fill="#ffd700" font-size="15" font-family="Arial">TRUE catches everything else (the else case).</text>
+            <text x="80" y="710" fill="#10b981" font-size="14" font-family="Arial">Adding a tier = adding a pair. Removing a tier = deleting a pair.</text>
+            <text x="80" y="735" fill="#888" font-size="13" font-family="Arial">Zero risk of mismatched parens.</text>
+            <rect x="60" y="780" width="980" height="280" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="815" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">BONUS: SWITCH (when grades are letters in B)</text>
+            <text x="80" y="855" fill="#ffffff" font-size="15" font-family="Courier New">=SWITCH(B2,</text>
+            <text x="80" y="880" fill="#ffffff" font-size="15" font-family="Courier New">  "A","Excellent",</text>
+            <text x="80" y="905" fill="#ffffff" font-size="15" font-family="Courier New">  "B","Above Average",</text>
+            <text x="80" y="930" fill="#ffffff" font-size="15" font-family="Courier New">  "C","Average",</text>
+            <text x="80" y="955" fill="#ffffff" font-size="15" font-family="Courier New">  "D","Below Average",</text>
+            <text x="80" y="980" fill="#ffffff" font-size="15" font-family="Courier New">  "F","Failing",</text>
+            <text x="80" y="1005" fill="#ffd700" font-size="15" font-family="Courier New">  "Invalid")  &lt;-- default catches typos/blanks</text>
+            <text x="80" y="1040" fill="#6366f1" font-size="14" font-family="Arial">Always include the default. Bad data is the rule, not the exception.</text>
+          </svg>`,
+          caption: "Same grade rubric expressed three ways. IFS wins for readability."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Pick the Right Generation",
+        content: `You're building a status display where column B contains exact string codes: "P" (Paid), "O" (Open), "C" (Cancelled), or "R" (Refunded). You want column C to show the full status name, plus a default "Unknown" for anything else.
+
+Which function is the cleanest tool for this job, and why?`,
+        options: [
+          { text: "Nested IF — it's the most universally compatible across Excel versions", correct: false },
+          { text: "IFS with TRUE as the default — designed for exactly this kind of mapping", correct: false },
+          { text: "SWITCH — single value compared against a list of exact matches with a default", correct: true },
+          { text: "VLOOKUP against a hidden lookup table — the only scalable answer", correct: false }
+        ],
+        explanation: `**SWITCH** is purpose-built for this: ONE value (B2) compared against a list of EXACT matches ("P", "O", "C", "R"), with the trailing argument acting as the default. =SWITCH(B2,"P","Paid","O","Open","C","Cancelled","R","Refunded","Unknown") reads cleanly and takes roughly half the keystrokes of an equivalent IFS. IFS would work but you'd repeat B2= five times: =IFS(B2="P","Paid", B2="O","Open", ...). Nested IF works but is the worst readability choice. VLOOKUP is overkill for 4 cases — appropriate when the mapping is large or maintained by another team, not for a static 4-entry list.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold" font-family="Arial">Status Code Mapping</text>
+            <rect x="100" y="100" width="900" height="280" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="120" y="135" fill="#ffd700" font-size="18" font-weight="bold" font-family="Arial">Source: column B has exact codes</text>
+            <line x1="120" y1="150" x2="980" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="160" y="180" fill="#888" font-size="14" font-family="Arial">A (Order)</text>
+            <text x="400" y="180" fill="#888" font-size="14" font-family="Arial">B (Code)</text>
+            <text x="700" y="180" fill="#888" font-size="14" font-family="Arial">C (Status, want this)</text>
+            <line x1="120" y1="195" x2="980" y2="195" stroke="#888" stroke-width="1"/>
+            <text x="160" y="225" fill="#ffffff" font-size="14" font-family="Courier New">#10042</text>
+            <text x="400" y="225" fill="#ffffff" font-size="14" font-family="Courier New">P</text>
+            <text x="700" y="225" fill="#10b981" font-size="14" font-family="Courier New">Paid</text>
+            <text x="160" y="255" fill="#ffffff" font-size="14" font-family="Courier New">#10043</text>
+            <text x="400" y="255" fill="#ffffff" font-size="14" font-family="Courier New">O</text>
+            <text x="700" y="255" fill="#f59e0b" font-size="14" font-family="Courier New">Open</text>
+            <text x="160" y="285" fill="#ffffff" font-size="14" font-family="Courier New">#10044</text>
+            <text x="400" y="285" fill="#ffffff" font-size="14" font-family="Courier New">C</text>
+            <text x="700" y="285" fill="#ef4444" font-size="14" font-family="Courier New">Cancelled</text>
+            <text x="160" y="315" fill="#ffffff" font-size="14" font-family="Courier New">#10045</text>
+            <text x="400" y="315" fill="#ffffff" font-size="14" font-family="Courier New">R</text>
+            <text x="700" y="315" fill="#8b5cf6" font-size="14" font-family="Courier New">Refunded</text>
+            <text x="160" y="345" fill="#ffffff" font-size="14" font-family="Courier New">#10046</text>
+            <text x="400" y="345" fill="#ffffff" font-size="14" font-family="Courier New">X</text>
+            <text x="700" y="345" fill="#888" font-size="14" font-family="Courier New">Unknown (default)</text>
+            <rect x="60" y="420" width="980" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="455" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Winner: SWITCH</text>
+            <text x="80" y="490" fill="#ffffff" font-size="14" font-family="Courier New">=SWITCH(B2, "P","Paid", "O","Open", "C","Cancelled",</text>
+            <text x="80" y="515" fill="#ffffff" font-size="14" font-family="Courier New">             "R","Refunded", "Unknown")</text>
+            <text x="80" y="555" fill="#10b981" font-size="14" font-family="Arial">One value (B2), exact matches, default at the end.</text>
+            <text x="80" y="585" fill="#ffd700" font-size="14" font-family="Arial">Cleanest syntax. Half the keystrokes of IFS.</text>
+            <rect x="60" y="650" width="980" height="180" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="685" fill="#f59e0b" font-size="20" font-weight="bold" font-family="Arial">Runner-up: IFS (works, but verbose)</text>
+            <text x="80" y="720" fill="#ffffff" font-size="14" font-family="Courier New">=IFS(B2="P","Paid", B2="O","Open", B2="C","Cancelled",</text>
+            <text x="80" y="745" fill="#ffffff" font-size="14" font-family="Courier New">     B2="R","Refunded", TRUE,"Unknown")</text>
+            <text x="80" y="785" fill="#f59e0b" font-size="14" font-family="Arial">Repeats B2= every time. Use IFS when you have RANGES, not exact keys.</text>
+            <text x="80" y="810" fill="#888" font-size="13" font-family="Arial">Functionally identical result — but SWITCH is the right tool.</text>
+            <rect x="60" y="860" width="980" height="190" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="80" y="895" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">Avoid: Nested IF</text>
+            <text x="80" y="930" fill="#ffffff" font-size="13" font-family="Courier New">=IF(B2="P","Paid",IF(B2="O","Open",IF(B2="C","Cancelled",</text>
+            <text x="80" y="955" fill="#ffffff" font-size="13" font-family="Courier New">  IF(B2="R","Refunded","Unknown"))))</text>
+            <text x="80" y="995" fill="#ef4444" font-size="14" font-family="Arial">Closing parens: )))) — fragile, ugly, harder to extend.</text>
+            <text x="80" y="1025" fill="#888" font-size="13" font-family="Arial">Only acceptable for legacy compatibility (pre-2019 Excel).</text>
+          </svg>`,
+          caption: "When you map one key to one result, SWITCH is the right call."
+        }
+      },
+      {
+        type: "application",
+        title: "The Approval Workflow",
+        content: `**Scenario**: a real expense-approval workbook with two layers of logic.
+
+**Layer 1 — Required approver** based on amount tiers:
+- < $500: Manager
+- $500–$4,999: Director
+- $5,000–$24,999: VP
+- $25,000+: CFO
+
+**Layer 2 — Department-specific override**: if Department is "Legal" or "Compliance", everything escalates one level. (A $400 Legal expense needs Director, not Manager.)
+
+**Build it in two columns, not one mega-formula.**
+
+Column D — base approver from the amount:
+=IFS(C2>=25000,"CFO", C2>=5000,"VP", C2>=500,"Director", TRUE,"Manager")
+
+Column E — final approver after department override:
+=IF(OR(B2="Legal",B2="Compliance"), SWITCH(D2,"Manager","Director","Director","VP","VP","CFO","CFO","CFO"), D2)
+
+**Why split it?** Each column does one thing. Debug column D's tier logic separately from column E's escalation. If the Compliance escalation rule changes next quarter, you change one cell, not a 200-character monster. **One formula, one responsibility.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">Approval Workflow: Two-Layer Logic</text>
+            <rect x="40" y="100" width="1020" height="320" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="135" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">Worksheet</text>
+            <line x1="60" y1="150" x2="1040" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="80" y="180" fill="#888" font-size="13" font-family="Arial">A (Request)</text>
+            <text x="260" y="180" fill="#888" font-size="13" font-family="Arial">B (Dept)</text>
+            <text x="430" y="180" fill="#888" font-size="13" font-family="Arial">C (Amount)</text>
+            <text x="640" y="180" fill="#888" font-size="13" font-family="Arial">D (Base)</text>
+            <text x="850" y="180" fill="#888" font-size="13" font-family="Arial">E (Final)</text>
+            <line x1="60" y1="195" x2="1040" y2="195" stroke="#888" stroke-width="1"/>
+            <text x="80" y="225" fill="#ffffff" font-size="13" font-family="Courier New">REQ-1001</text>
+            <text x="260" y="225" fill="#ffffff" font-size="13" font-family="Courier New">Marketing</text>
+            <text x="430" y="225" fill="#ffffff" font-size="13" font-family="Courier New">$320</text>
+            <text x="640" y="225" fill="#10b981" font-size="13" font-family="Courier New">Manager</text>
+            <text x="850" y="225" fill="#10b981" font-size="13" font-family="Courier New">Manager</text>
+            <text x="80" y="255" fill="#ffffff" font-size="13" font-family="Courier New">REQ-1002</text>
+            <text x="260" y="255" fill="#ffffff" font-size="13" font-family="Courier New">Legal</text>
+            <text x="430" y="255" fill="#ffffff" font-size="13" font-family="Courier New">$400</text>
+            <text x="640" y="255" fill="#10b981" font-size="13" font-family="Courier New">Manager</text>
+            <text x="850" y="255" fill="#f59e0b" font-size="13" font-family="Courier New">Director (esc.)</text>
+            <text x="80" y="285" fill="#ffffff" font-size="13" font-family="Courier New">REQ-1003</text>
+            <text x="260" y="285" fill="#ffffff" font-size="13" font-family="Courier New">Engineering</text>
+            <text x="430" y="285" fill="#ffffff" font-size="13" font-family="Courier New">$8,200</text>
+            <text x="640" y="285" fill="#f59e0b" font-size="13" font-family="Courier New">VP</text>
+            <text x="850" y="285" fill="#f59e0b" font-size="13" font-family="Courier New">VP</text>
+            <text x="80" y="315" fill="#ffffff" font-size="13" font-family="Courier New">REQ-1004</text>
+            <text x="260" y="315" fill="#ffffff" font-size="13" font-family="Courier New">Compliance</text>
+            <text x="430" y="315" fill="#ffffff" font-size="13" font-family="Courier New">$6,000</text>
+            <text x="640" y="315" fill="#f59e0b" font-size="13" font-family="Courier New">VP</text>
+            <text x="850" y="315" fill="#ef4444" font-size="13" font-family="Courier New">CFO (esc.)</text>
+            <text x="80" y="345" fill="#ffffff" font-size="13" font-family="Courier New">REQ-1005</text>
+            <text x="260" y="345" fill="#ffffff" font-size="13" font-family="Courier New">Sales</text>
+            <text x="430" y="345" fill="#ffffff" font-size="13" font-family="Courier New">$42,000</text>
+            <text x="640" y="345" fill="#ef4444" font-size="13" font-family="Courier New">CFO</text>
+            <text x="850" y="345" fill="#ef4444" font-size="13" font-family="Courier New">CFO</text>
+            <text x="80" y="380" fill="#ffd700" font-size="13" font-family="Arial">Legal &amp; Compliance escalate ONE level up.</text>
+            <rect x="40" y="450" width="1020" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="485" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Column D - Base approver (IFS)</text>
+            <text x="60" y="520" fill="#ffffff" font-size="15" font-family="Courier New">=IFS(C2&gt;=25000,"CFO",</text>
+            <text x="60" y="545" fill="#ffffff" font-size="15" font-family="Courier New">     C2&gt;=5000,"VP",</text>
+            <text x="60" y="570" fill="#ffffff" font-size="15" font-family="Courier New">     C2&gt;=500,"Director",</text>
+            <text x="60" y="595" fill="#ffffff" font-size="15" font-family="Courier New">     TRUE,"Manager")</text>
+            <text x="60" y="630" fill="#10b981" font-size="14" font-family="Arial">RANGE-based logic = IFS. Strictest tier first.</text>
+            <text x="60" y="660" fill="#888" font-size="14" font-family="Arial">TRUE catches anything below $500.</text>
+            <rect x="40" y="720" width="1020" height="320" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="755" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">Column E - Final approver (IF + SWITCH)</text>
+            <text x="60" y="790" fill="#ffffff" font-size="14" font-family="Courier New">=IF(OR(B2="Legal",B2="Compliance"),</text>
+            <text x="60" y="815" fill="#ffffff" font-size="14" font-family="Courier New">    SWITCH(D2, "Manager","Director",</text>
+            <text x="60" y="840" fill="#ffffff" font-size="14" font-family="Courier New">               "Director","VP",</text>
+            <text x="60" y="865" fill="#ffffff" font-size="14" font-family="Courier New">               "VP","CFO",</text>
+            <text x="60" y="890" fill="#ffffff" font-size="14" font-family="Courier New">               "CFO","CFO"),</text>
+            <text x="60" y="915" fill="#ffffff" font-size="14" font-family="Courier New">    D2)</text>
+            <text x="60" y="950" fill="#6366f1" font-size="14" font-family="Arial">IF tests the dept. SWITCH does the role escalation.</text>
+            <text x="60" y="975" fill="#ffd700" font-size="14" font-family="Arial">CFO stays CFO - the escalation has a ceiling.</text>
+            <text x="60" y="1005" fill="#10b981" font-size="14" font-family="Arial">Two columns &gt; one mega-formula. Each does ONE job.</text>
+            <text x="60" y="1030" fill="#888" font-size="13" font-family="Arial">Change the escalation rule? Edit column E only.</text>
+          </svg>`,
+          caption: "Split logic across columns: each formula has one job, debugging stays sane."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-formulas-lesson-2",
+    title: "XLOOKUP vs VLOOKUP vs INDEX/MATCH",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Three Lookups, One Modern Answer",
+        content: `Lookups are the bloodstream of every real spreadsheet. You have an order with a customer ID and you need the customer name. You have a product code and you need the price. You have an employee ID and you need the manager. Every business workbook eventually becomes a graph of lookups.
+
+For decades, **VLOOKUP** was the answer — and the source of more spreadsheet bugs than any other function. It can only look right (not left), it breaks the moment someone inserts a column, and its default match mode is **approximate**, which silently returns wrong answers to people who didn't know to type FALSE.
+
+Power users escaped to **INDEX/MATCH** — a two-function combo that bypassed VLOOKUP's limits but required learning two functions and remembering which goes inside which.
+
+Then Microsoft shipped **XLOOKUP** in 2019. One function. Looks any direction. Exact match by default. Built-in if_not_found. Returns arrays. It made VLOOKUP and INDEX/MATCH obsolete overnight — for anyone running Microsoft 365 or Excel 2021+.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold" font-family="Arial">Three Lookups, One Modern Answer</text>
+            <rect x="60" y="100" width="980" height="290" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="80" y="135" fill="#ef4444" font-size="22" font-weight="bold" font-family="Arial">VLOOKUP (1985) - The Legacy Trap</text>
+            <text x="80" y="170" fill="#ffffff" font-size="15" font-family="Courier New">=VLOOKUP(A2, Products, 3, FALSE)</text>
+            <text x="80" y="205" fill="#888" font-size="14" font-family="Arial">Look up A2 in column 1 of "Products", return column 3, exact match.</text>
+            <text x="80" y="240" fill="#ef4444" font-size="15" font-family="Arial">Gotcha 1: lookup column MUST be leftmost. Can't look left.</text>
+            <text x="80" y="270" fill="#ef4444" font-size="15" font-family="Arial">Gotcha 2: column index is hard-coded (3). Insert a column = wrong answer.</text>
+            <text x="80" y="300" fill="#ef4444" font-size="15" font-family="Arial">Gotcha 3: default is APPROXIMATE match. Forget FALSE = silent wrong answer.</text>
+            <text x="80" y="335" fill="#f59e0b" font-size="15" font-family="Arial">Gotcha 4: no built-in if_not_found. Wrap in IFERROR or get #N/A.</text>
+            <text x="80" y="370" fill="#888" font-size="13" font-family="Arial">Reality: still everywhere. Still breaks workbooks weekly.</text>
+            <rect x="60" y="410" width="980" height="280" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="445" fill="#f59e0b" font-size="22" font-weight="bold" font-family="Arial">INDEX/MATCH (1995) - The Power User's Escape</text>
+            <text x="80" y="480" fill="#ffffff" font-size="15" font-family="Courier New">=INDEX(ReturnCol, MATCH(A2, LookupCol, 0))</text>
+            <text x="80" y="515" fill="#888" font-size="14" font-family="Arial">MATCH finds the row number. INDEX grabs that row from any column.</text>
+            <text x="80" y="550" fill="#10b981" font-size="15" font-family="Arial">Win 1: looks any direction (return column can be left of lookup).</text>
+            <text x="80" y="580" fill="#10b981" font-size="15" font-family="Arial">Win 2: references columns by NAME/RANGE, survives column inserts.</text>
+            <text x="80" y="610" fill="#f59e0b" font-size="15" font-family="Arial">Loss: two nested functions to learn. Reads inside-out.</text>
+            <text x="80" y="640" fill="#f59e0b" font-size="15" font-family="Arial">Loss: still needs IFERROR wrapper for missing values.</text>
+            <text x="80" y="670" fill="#888" font-size="13" font-family="Arial">Still relevant in old workbooks. Recognize it.</text>
+            <rect x="60" y="710" width="980" height="340" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="745" fill="#10b981" font-size="22" font-weight="bold" font-family="Arial">XLOOKUP (2019/M365) - The Modern Answer</text>
+            <text x="80" y="780" fill="#ffffff" font-size="14" font-family="Courier New">=XLOOKUP(A2, LookupCol, ReturnCol, "Not Found")</text>
+            <text x="80" y="815" fill="#888" font-size="14" font-family="Arial">Lookup value, lookup array, return array, [if_not_found], [match_mode], [search_mode]</text>
+            <text x="80" y="855" fill="#10b981" font-size="15" font-family="Arial">Win: one function. Looks any direction.</text>
+            <text x="80" y="885" fill="#10b981" font-size="15" font-family="Arial">Win: EXACT match by default. No more silent approximate bugs.</text>
+            <text x="80" y="915" fill="#10b981" font-size="15" font-family="Arial">Win: built-in if_not_found. No IFERROR wrapper needed.</text>
+            <text x="80" y="945" fill="#10b981" font-size="15" font-family="Arial">Win: returns ARRAYS - look up once, return 5 columns of data.</text>
+            <text x="80" y="975" fill="#ffd700" font-size="15" font-family="Arial">Win: match_mode 2 = wildcards, mode -1/1 = next-smaller/larger.</text>
+            <text x="80" y="1005" fill="#ffd700" font-size="15" font-family="Arial">Win: search_mode -1 = search bottom-up (latest record first).</text>
+            <text x="80" y="1035" fill="#10b981" font-size="14" font-weight="bold" font-family="Arial">The migration rule: use XLOOKUP. Stop using the others.</text>
+          </svg>`,
+          caption: "Three generations of lookup. XLOOKUP makes the choice trivial."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Anatomy of XLOOKUP",
+        content: `**XLOOKUP** has six arguments. Three are required, three optional, and the optional ones are where the power lives.
+
+**Required**: =XLOOKUP(*lookup_value*, *lookup_array*, *return_array*)
+- *lookup_value*: what you're searching for (a customer ID, product code, name).
+- *lookup_array*: the column to search IN (single column or row).
+- *return_array*: the column to return FROM. Can be left of, right of, or even multiple columns wide.
+
+**Optional**: =XLOOKUP(..., [*if_not_found*], [*match_mode*], [*search_mode*])
+- *if_not_found*: literal you return when nothing matches. "Not Found", 0, or "". Replaces the IFERROR wrapper habit entirely.
+- *match_mode*: **0** = exact (default), **-1** = exact or next-smaller, **1** = exact or next-larger, **2** = wildcard (* and ?).
+- *search_mode*: **1** = top-to-bottom (default), **-1** = bottom-to-top (great for "latest entry"), **2/-2** = binary search on sorted data.
+
+**The array return** is the underrated superpower. Make *return_array* span multiple columns (e.g., D:F) and XLOOKUP spills back the entire row — name, email, phone — in one formula. One lookup, three results.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold" font-family="Arial">XLOOKUP: Six Arguments Explained</text>
+            <rect x="40" y="100" width="1020" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="140" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Courier New">=XLOOKUP( lookup_value, lookup_array, return_array,</text>
+            <text x="550" y="175" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Courier New">[if_not_found], [match_mode], [search_mode] )</text>
+            <text x="550" y="205" text-anchor="middle" fill="#888" font-size="14" font-family="Arial">3 required + 3 optional</text>
+            <rect x="40" y="240" width="500" height="160" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="275" fill="#10b981" font-size="18" font-weight="bold" font-family="Arial">lookup_value</text>
+            <text x="60" y="305" fill="#ffffff" font-size="14" font-family="Arial">What you're searching for.</text>
+            <text x="60" y="330" fill="#888" font-size="13" font-family="Courier New">A2 (customer ID, code, name)</text>
+            <text x="60" y="360" fill="#ffd700" font-size="13" font-family="Arial">Can be a cell, a literal, or a formula.</text>
+            <rect x="560" y="240" width="500" height="160" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="275" fill="#10b981" font-size="18" font-weight="bold" font-family="Arial">lookup_array</text>
+            <text x="580" y="305" fill="#ffffff" font-size="14" font-family="Arial">The column to search IN.</text>
+            <text x="580" y="330" fill="#888" font-size="13" font-family="Courier New">Customers[ID] or Sheet!B:B</text>
+            <text x="580" y="360" fill="#ffd700" font-size="13" font-family="Arial">Single column or row.</text>
+            <rect x="40" y="420" width="1020" height="160" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="455" fill="#10b981" font-size="18" font-weight="bold" font-family="Arial">return_array - the superpower</text>
+            <text x="60" y="485" fill="#ffffff" font-size="14" font-family="Arial">Column to return FROM. Can be LEFT of lookup_array (no more leftmost lock).</text>
+            <text x="60" y="510" fill="#ffffff" font-size="14" font-family="Arial">Make it MULTIPLE columns wide (D:F) and the formula spills 3 results.</text>
+            <text x="60" y="540" fill="#ffd700" font-size="14" font-family="Courier New">=XLOOKUP(A2, Cust[ID], Cust[Name:Phone])  -- returns name, email, phone</text>
+            <text x="60" y="565" fill="#888" font-size="13" font-family="Arial">One lookup, multiple results. Eliminates 80% of repeated lookup formulas.</text>
+            <rect x="40" y="600" width="500" height="200" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="635" fill="#f59e0b" font-size="18" font-weight="bold" font-family="Arial">if_not_found</text>
+            <text x="60" y="665" fill="#ffffff" font-size="14" font-family="Arial">What to return when no match.</text>
+            <text x="60" y="690" fill="#888" font-size="13" font-family="Courier New">"Not Found", 0, "", "-"</text>
+            <text x="60" y="720" fill="#10b981" font-size="13" font-family="Arial">Kills the IFERROR(VLOOKUP(...),"") habit.</text>
+            <text x="60" y="745" fill="#ffd700" font-size="13" font-family="Arial">Omit it = returns #N/A on miss.</text>
+            <text x="60" y="775" fill="#888" font-size="12" font-family="Arial">Always provide one in production.</text>
+            <rect x="560" y="600" width="500" height="200" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="580" y="635" fill="#6366f1" font-size="18" font-weight="bold" font-family="Arial">match_mode</text>
+            <text x="580" y="665" fill="#ffffff" font-size="14" font-family="Arial">0  Exact match (default)</text>
+            <text x="580" y="690" fill="#ffffff" font-size="14" font-family="Arial">-1 Exact or next-smaller</text>
+            <text x="580" y="715" fill="#ffffff" font-size="14" font-family="Arial">1  Exact or next-larger</text>
+            <text x="580" y="740" fill="#ffd700" font-size="14" font-family="Arial">2  Wildcards (*, ?)</text>
+            <text x="580" y="775" fill="#888" font-size="12" font-family="Arial">Tier lookups: use -1 on a sorted threshold table.</text>
+            <rect x="40" y="820" width="1020" height="230" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="60" y="855" fill="#8b5cf6" font-size="18" font-weight="bold" font-family="Arial">search_mode</text>
+            <text x="60" y="885" fill="#ffffff" font-size="14" font-family="Arial">1  Top-to-bottom (default) - first match wins.</text>
+            <text x="60" y="910" fill="#ffd700" font-size="14" font-family="Arial">-1 Bottom-to-top - LAST match wins. Killer feature.</text>
+            <text x="60" y="940" fill="#ffffff" font-size="14" font-family="Arial">2  Binary search ascending (sorted data only, faster on huge sets)</text>
+            <text x="60" y="970" fill="#ffffff" font-size="14" font-family="Arial">-2 Binary search descending</text>
+            <text x="60" y="1005" fill="#10b981" font-size="14" font-family="Arial">Use -1 to find "latest price", "most recent status", "newest record".</text>
+            <text x="60" y="1035" fill="#888" font-size="13" font-family="Arial">Append-only logs: search bottom-up = get the freshest row.</text>
+          </svg>`,
+          caption: "XLOOKUP's six arguments. The optional ones are where the power lives."
+        }
+      },
+      {
+        type: "example",
+        title: "Same Job, Three Eras",
+        content: `**The task**: given an Order ID in A2, return the Customer Name. Customers table has columns: ID (col 1), Name (col 2), Email (col 3), Region (col 4).
+
+**VLOOKUP** — works, but only because Name is to the RIGHT of ID:
+=VLOOKUP(A2, Customers, 2, FALSE)
+
+If your boss inserts a new column between ID and Name tomorrow, **2** still points to whatever's in position 2 — but that's now the new column, not Name. Silent wrong answer.
+
+Worse: try to look up the **Manager** column that lives LEFT of ID. VLOOKUP can't. You'd have to physically reorder columns. **Not acceptable.**
+
+**INDEX/MATCH** — direction-agnostic:
+=INDEX(Customers[Name], MATCH(A2, Customers[ID], 0))
+
+References columns by NAME, so column inserts can't break it. But it's two functions, and most users read inside-out backwards.
+
+**XLOOKUP** — what you should actually write:
+=XLOOKUP(A2, Customers[ID], Customers[Name], "Unknown")
+
+Reads left-to-right like a sentence. Survives column inserts. Has built-in not-found handling. Looks any direction. **Use this.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold" font-family="Arial">Same Job, Three Eras</text>
+            <rect x="40" y="90" width="1020" height="220" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="125" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">Customers table</text>
+            <line x1="60" y1="140" x2="1040" y2="140" stroke="#888" stroke-width="1"/>
+            <text x="100" y="170" fill="#888" font-size="14" font-family="Arial">ID</text>
+            <text x="320" y="170" fill="#888" font-size="14" font-family="Arial">Name</text>
+            <text x="600" y="170" fill="#888" font-size="14" font-family="Arial">Email</text>
+            <text x="880" y="170" fill="#888" font-size="14" font-family="Arial">Region</text>
+            <line x1="60" y1="185" x2="1040" y2="185" stroke="#888" stroke-width="1"/>
+            <text x="100" y="215" fill="#ffffff" font-size="14" font-family="Courier New">C-1001</text>
+            <text x="320" y="215" fill="#ffffff" font-size="14" font-family="Courier New">Acme Corp</text>
+            <text x="600" y="215" fill="#ffffff" font-size="14" font-family="Courier New">ops@acme.io</text>
+            <text x="880" y="215" fill="#ffffff" font-size="14" font-family="Courier New">NA-East</text>
+            <text x="100" y="245" fill="#ffffff" font-size="14" font-family="Courier New">C-1002</text>
+            <text x="320" y="245" fill="#ffffff" font-size="14" font-family="Courier New">Beacon Ltd</text>
+            <text x="600" y="245" fill="#ffffff" font-size="14" font-family="Courier New">hi@beacon.co</text>
+            <text x="880" y="245" fill="#ffffff" font-size="14" font-family="Courier New">EMEA</text>
+            <text x="100" y="275" fill="#ffffff" font-size="14" font-family="Courier New">C-1003</text>
+            <text x="320" y="275" fill="#ffffff" font-size="14" font-family="Courier New">Crest Inc</text>
+            <text x="600" y="275" fill="#ffffff" font-size="14" font-family="Courier New">team@crest.com</text>
+            <text x="880" y="275" fill="#ffffff" font-size="14" font-family="Courier New">APAC</text>
+            <text x="60" y="305" fill="#ffd700" font-size="13" font-family="Arial">Goal: A2 contains "C-1002"; return "Beacon Ltd" in B2.</text>
+            <rect x="40" y="330" width="1020" height="220" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="365" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">VLOOKUP - fragile</text>
+            <text x="60" y="400" fill="#ffffff" font-size="15" font-family="Courier New">=VLOOKUP(A2, Customers, 2, FALSE)</text>
+            <text x="60" y="435" fill="#888" font-size="14" font-family="Arial">Returns column 2 (Name) by exact match.</text>
+            <text x="60" y="470" fill="#ef4444" font-size="14" font-family="Arial">Hard-coded "2" - insert a column and it points at the wrong field.</text>
+            <text x="60" y="500" fill="#ef4444" font-size="14" font-family="Arial">No way to return Manager if it lives left of ID. Lookup column lock.</text>
+            <text x="60" y="530" fill="#f59e0b" font-size="14" font-family="Arial">Forgot FALSE? Approximate match silently returns nearest. Wrong answers.</text>
+            <rect x="40" y="570" width="1020" height="200" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="605" fill="#f59e0b" font-size="20" font-weight="bold" font-family="Arial">INDEX/MATCH - the workaround</text>
+            <text x="60" y="640" fill="#ffffff" font-size="15" font-family="Courier New">=INDEX(Customers[Name], MATCH(A2, Customers[ID], 0))</text>
+            <text x="60" y="675" fill="#888" font-size="14" font-family="Arial">MATCH(A2, ID, 0) returns the row position; INDEX grabs Name at that row.</text>
+            <text x="60" y="710" fill="#10b981" font-size="14" font-family="Arial">Column inserts? No problem - references by table column name.</text>
+            <text x="60" y="740" fill="#f59e0b" font-size="14" font-family="Arial">Reads inside-out. Two nested functions to keep in your head.</text>
+            <rect x="40" y="790" width="1020" height="270" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="825" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">XLOOKUP - the answer</text>
+            <text x="60" y="860" fill="#ffffff" font-size="15" font-family="Courier New">=XLOOKUP(A2, Customers[ID], Customers[Name], "Unknown")</text>
+            <text x="60" y="895" fill="#10b981" font-size="14" font-family="Arial">Reads like a sentence: "look up A2 in IDs, return from Names, else 'Unknown'".</text>
+            <text x="60" y="925" fill="#10b981" font-size="14" font-family="Arial">Exact match by default. No more forgotten FALSE.</text>
+            <text x="60" y="955" fill="#10b981" font-size="14" font-family="Arial">if_not_found built in - replaces the IFERROR wrapper habit.</text>
+            <text x="60" y="985" fill="#ffd700" font-size="14" font-family="Arial">Want a row's Name + Email + Region in one shot?</text>
+            <text x="60" y="1010" fill="#ffffff" font-size="14" font-family="Courier New">=XLOOKUP(A2, Customers[ID], Customers[[Name]:[Region]], "Unknown")</text>
+            <text x="60" y="1040" fill="#10b981" font-size="14" font-family="Arial">Spills 3 columns. One formula, full record.</text>
+          </svg>`,
+          caption: "Same lookup task in three eras. XLOOKUP is shorter, safer, and more powerful."
+        }
+      },
+      {
+        type: "quiz",
+        title: "The Approximate-Match Trap",
+        content: `A colleague's commission workbook uses this formula to look up a rep's name in B2 and pull their commission rate:
+
+=VLOOKUP(B2, RatesTable, 3)
+
+The formula returns a number that's "close enough" most days but occasionally gives obviously wrong answers — sometimes returning the rate for a totally different rep. What's the bug, and what's the safest fix?`,
+        options: [
+          { text: "RatesTable is too small — extend the named range to cover all rows", correct: false },
+          { text: "The fourth argument is missing, so VLOOKUP defaults to APPROXIMATE match — it needs FALSE (or, better, switch to XLOOKUP which is exact by default", correct: true },
+          { text: "Column index 3 is wrong; commission rates are in column 4", correct: false },
+          { text: "VLOOKUP can't look up text values — the lookup column must be numeric", correct: false }
+        ],
+        explanation: `The missing fourth argument is the bug. VLOOKUP's *range_lookup* argument defaults to **TRUE (approximate match)** when omitted — VLOOKUP assumes the lookup column is sorted ascending and returns the value for the largest entry less than or equal to the lookup. On an unsorted text column of names, that returns whichever rep happens to sort just before the missing one — a silent, plausible-looking wrong answer. The minimum fix is =VLOOKUP(B2, RatesTable, 3, FALSE). The better fix is to migrate to XLOOKUP: =XLOOKUP(B2, RatesTable[Rep], RatesTable[Rate], "Not Found") — exact match by default, no positional column index, built-in not-found handling. This silent-default bug is the #1 reason VLOOKUP has produced more wrong numbers than any other Excel function.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">The Approximate-Match Trap</text>
+            <rect x="40" y="100" width="1020" height="280" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="135" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">RatesTable (unsorted, like real data)</text>
+            <line x1="60" y1="150" x2="1040" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="100" y="180" fill="#888" font-size="14" font-family="Arial">Rep (col 1)</text>
+            <text x="400" y="180" fill="#888" font-size="14" font-family="Arial">Tier (col 2)</text>
+            <text x="700" y="180" fill="#888" font-size="14" font-family="Arial">Rate (col 3)</text>
+            <line x1="60" y1="195" x2="1040" y2="195" stroke="#888" stroke-width="1"/>
+            <text x="100" y="225" fill="#ffffff" font-size="14" font-family="Courier New">Patel, R</text>
+            <text x="400" y="225" fill="#ffffff" font-size="14" font-family="Courier New">Gold</text>
+            <text x="700" y="225" fill="#ffffff" font-size="14" font-family="Courier New">8%</text>
+            <text x="100" y="255" fill="#ffffff" font-size="14" font-family="Courier New">Acosta, M</text>
+            <text x="400" y="255" fill="#ffffff" font-size="14" font-family="Courier New">Silver</text>
+            <text x="700" y="255" fill="#ffffff" font-size="14" font-family="Courier New">5%</text>
+            <text x="100" y="285" fill="#ffffff" font-size="14" font-family="Courier New">Singh, J</text>
+            <text x="400" y="285" fill="#ffffff" font-size="14" font-family="Courier New">Gold</text>
+            <text x="700" y="285" fill="#ffffff" font-size="14" font-family="Courier New">8%</text>
+            <text x="100" y="315" fill="#ffffff" font-size="14" font-family="Courier New">Cho, L</text>
+            <text x="400" y="315" fill="#ffffff" font-size="14" font-family="Courier New">Bronze</text>
+            <text x="700" y="315" fill="#ffffff" font-size="14" font-family="Courier New">3%</text>
+            <text x="60" y="355" fill="#888" font-size="13" font-family="Arial">Looking up "Singh, J" -- but with approx match, who knows what comes back?</text>
+            <rect x="40" y="400" width="1020" height="200" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="435" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">The bug</text>
+            <text x="60" y="470" fill="#ffffff" font-size="15" font-family="Courier New">=VLOOKUP(B2, RatesTable, 3)   &lt;-- missing 4th argument</text>
+            <text x="60" y="510" fill="#888" font-size="14" font-family="Arial">No FALSE = default = APPROXIMATE match.</text>
+            <text x="60" y="540" fill="#ef4444" font-size="14" font-family="Arial">VLOOKUP assumes the lookup column is sorted ASCENDING.</text>
+            <text x="60" y="570" fill="#ef4444" font-size="14" font-family="Arial">On unsorted names, it returns nearest match by sort order = wrong rep's rate.</text>
+            <rect x="40" y="620" width="1020" height="150" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="655" fill="#f59e0b" font-size="20" font-weight="bold" font-family="Arial">Minimum fix - add FALSE</text>
+            <text x="60" y="695" fill="#ffffff" font-size="15" font-family="Courier New">=VLOOKUP(B2, RatesTable, 3, FALSE)</text>
+            <text x="60" y="730" fill="#888" font-size="14" font-family="Arial">Forces exact match. Returns #N/A on miss (wrap in IFERROR for production).</text>
+            <text x="60" y="760" fill="#f59e0b" font-size="13" font-family="Arial">Still hard-codes column 3. Still fragile to column inserts.</text>
+            <rect x="40" y="790" width="1020" height="260" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="825" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Real fix - migrate to XLOOKUP</text>
+            <text x="60" y="865" fill="#ffffff" font-size="15" font-family="Courier New">=XLOOKUP(B2, RatesTable[Rep], RatesTable[Rate], "Not Found")</text>
+            <text x="60" y="905" fill="#10b981" font-size="14" font-family="Arial">Exact match by default. No silent approximate bug.</text>
+            <text x="60" y="935" fill="#10b981" font-size="14" font-family="Arial">References columns by NAME. Column inserts can't break it.</text>
+            <text x="60" y="965" fill="#10b981" font-size="14" font-family="Arial">if_not_found built in. No IFERROR wrapper needed.</text>
+            <text x="60" y="995" fill="#ffd700" font-size="14" font-family="Arial">If you have M365 or Excel 2021+, there is no reason to write a new VLOOKUP.</text>
+            <text x="60" y="1025" fill="#888" font-size="13" font-family="Arial">Estimated bugs prevented by this single migration: industry-wide, millions.</text>
+          </svg>`,
+          caption: "Forgotten FALSE = silent wrong answers. Migrate to XLOOKUP to remove the foot-gun."
+        }
+      },
+      {
+        type: "application",
+        title: "The Multi-Return Customer Card",
+        content: `**Scenario**: a sales rep types an Order ID in A2 and wants to see the full customer record — Name, Email, Phone, Region, Tier — without writing five separate lookups.
+
+**The old way** (five formulas, five places for column-index drift):
+=VLOOKUP(A2, Orders, 2, FALSE)   for Customer ID
+=VLOOKUP([Customer ID], Customers, 2, FALSE)   for Name
+=VLOOKUP([Customer ID], Customers, 3, FALSE)   for Email
+... and so on. Five formulas, five chances to break.
+
+**The XLOOKUP way** — two formulas total:
+
+Step 1 (B2) — get the Customer ID from the order:
+=XLOOKUP(A2, Orders[OrderID], Orders[CustomerID], "")
+
+Step 2 (C2) — spill the full customer record:
+=XLOOKUP(B2, Customers[ID], Customers[[Name]:[Tier]], "Not Found")
+
+Because *return_array* is **multiple columns wide** (Name through Tier), XLOOKUP spills horizontally — Name in C2, Email in D2, Phone in E2, Region in F2, Tier in G2. One formula populates five cells. Change a column order in Customers? Spill follows. Delete a customer? "Not Found" appears, no #N/A.
+
+**This is the single biggest day-to-day reason to migrate**: the array return collapses a wall of repeated lookups into one expressive formula.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">The Multi-Return Customer Card</text>
+            <rect x="40" y="100" width="1020" height="200" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="135" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">Customers table</text>
+            <line x1="60" y1="150" x2="1040" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="80" y="180" fill="#888" font-size="13" font-family="Arial">ID</text>
+            <text x="220" y="180" fill="#888" font-size="13" font-family="Arial">Name</text>
+            <text x="430" y="180" fill="#888" font-size="13" font-family="Arial">Email</text>
+            <text x="660" y="180" fill="#888" font-size="13" font-family="Arial">Phone</text>
+            <text x="830" y="180" fill="#888" font-size="13" font-family="Arial">Region</text>
+            <text x="970" y="180" fill="#888" font-size="13" font-family="Arial">Tier</text>
+            <line x1="60" y1="195" x2="1040" y2="195" stroke="#888" stroke-width="1"/>
+            <text x="80" y="225" fill="#ffffff" font-size="13" font-family="Courier New">C-1001</text>
+            <text x="220" y="225" fill="#ffffff" font-size="13" font-family="Courier New">Acme</text>
+            <text x="430" y="225" fill="#ffffff" font-size="13" font-family="Courier New">a@acme.io</text>
+            <text x="660" y="225" fill="#ffffff" font-size="13" font-family="Courier New">555-0100</text>
+            <text x="830" y="225" fill="#ffffff" font-size="13" font-family="Courier New">NA-East</text>
+            <text x="970" y="225" fill="#ffffff" font-size="13" font-family="Courier New">Gold</text>
+            <text x="80" y="255" fill="#ffffff" font-size="13" font-family="Courier New">C-1002</text>
+            <text x="220" y="255" fill="#ffffff" font-size="13" font-family="Courier New">Beacon</text>
+            <text x="430" y="255" fill="#ffffff" font-size="13" font-family="Courier New">h@beacon.co</text>
+            <text x="660" y="255" fill="#ffffff" font-size="13" font-family="Courier New">555-0200</text>
+            <text x="830" y="255" fill="#ffffff" font-size="13" font-family="Courier New">EMEA</text>
+            <text x="970" y="255" fill="#ffffff" font-size="13" font-family="Courier New">Silver</text>
+            <text x="80" y="285" fill="#ffffff" font-size="13" font-family="Courier New">C-1003</text>
+            <text x="220" y="285" fill="#ffffff" font-size="13" font-family="Courier New">Crest</text>
+            <text x="430" y="285" fill="#ffffff" font-size="13" font-family="Courier New">t@crest.com</text>
+            <text x="660" y="285" fill="#ffffff" font-size="13" font-family="Courier New">555-0300</text>
+            <text x="830" y="285" fill="#ffffff" font-size="13" font-family="Courier New">APAC</text>
+            <text x="970" y="285" fill="#ffffff" font-size="13" font-family="Courier New">Bronze</text>
+            <rect x="40" y="320" width="1020" height="220" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="355" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">Old way - 5 separate VLOOKUPs</text>
+            <text x="60" y="390" fill="#ffffff" font-size="13" font-family="Courier New">C2: =VLOOKUP(B2, Customers, 2, FALSE)   -- Name</text>
+            <text x="60" y="415" fill="#ffffff" font-size="13" font-family="Courier New">D2: =VLOOKUP(B2, Customers, 3, FALSE)   -- Email</text>
+            <text x="60" y="440" fill="#ffffff" font-size="13" font-family="Courier New">E2: =VLOOKUP(B2, Customers, 4, FALSE)   -- Phone</text>
+            <text x="60" y="465" fill="#ffffff" font-size="13" font-family="Courier New">F2: =VLOOKUP(B2, Customers, 5, FALSE)   -- Region</text>
+            <text x="60" y="490" fill="#ffffff" font-size="13" font-family="Courier New">G2: =VLOOKUP(B2, Customers, 6, FALSE)   -- Tier</text>
+            <text x="60" y="525" fill="#ef4444" font-size="14" font-family="Arial">5 formulas, 5 column indexes to maintain. Insert a column = 5 broken cells.</text>
+            <rect x="40" y="560" width="1020" height="230" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="595" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">New way - ONE XLOOKUP that spills</text>
+            <text x="60" y="630" fill="#ffffff" font-size="15" font-family="Courier New">B2: =XLOOKUP(A2, Orders[OrderID], Orders[CustomerID], "")</text>
+            <text x="60" y="665" fill="#ffffff" font-size="14" font-family="Courier New">C2: =XLOOKUP(B2, Customers[ID],</text>
+            <text x="60" y="690" fill="#ffffff" font-size="14" font-family="Courier New">             Customers[[Name]:[Tier]], "Not Found")</text>
+            <text x="60" y="725" fill="#10b981" font-size="14" font-family="Arial">return_array spans Name through Tier - the result SPILLS into C2:G2.</text>
+            <text x="60" y="755" fill="#ffd700" font-size="14" font-family="Arial">One formula populates 5 cells. Edit once, fix everywhere.</text>
+            <rect x="40" y="810" width="1020" height="240" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="845" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">Result: Customer card spills from C2</text>
+            <line x1="60" y1="860" x2="1040" y2="860" stroke="#888" stroke-width="1"/>
+            <text x="80" y="890" fill="#888" font-size="13" font-family="Arial">C2 (Name)</text>
+            <text x="280" y="890" fill="#888" font-size="13" font-family="Arial">D2 (Email)</text>
+            <text x="500" y="890" fill="#888" font-size="13" font-family="Arial">E2 (Phone)</text>
+            <text x="730" y="890" fill="#888" font-size="13" font-family="Arial">F2 (Region)</text>
+            <text x="920" y="890" fill="#888" font-size="13" font-family="Arial">G2 (Tier)</text>
+            <line x1="60" y1="905" x2="1040" y2="905" stroke="#888" stroke-width="1"/>
+            <text x="80" y="935" fill="#10b981" font-size="13" font-family="Courier New">Beacon</text>
+            <text x="280" y="935" fill="#10b981" font-size="13" font-family="Courier New">h@beacon.co</text>
+            <text x="500" y="935" fill="#10b981" font-size="13" font-family="Courier New">555-0200</text>
+            <text x="730" y="935" fill="#10b981" font-size="13" font-family="Courier New">EMEA</text>
+            <text x="920" y="935" fill="#10b981" font-size="13" font-family="Courier New">Silver</text>
+            <text x="80" y="975" fill="#ffd700" font-size="14" font-family="Arial">Type a new Order ID into A2 - the entire row recalculates.</text>
+            <text x="80" y="1005" fill="#888" font-size="13" font-family="Arial">No #N/A. No column-index drift. No IFERROR wrappers.</text>
+            <text x="80" y="1035" fill="#10b981" font-size="14" font-family="Arial">This is the day-to-day reason to migrate.</text>
+          </svg>`,
+          caption: "One XLOOKUP with a multi-column return_array replaces five fragile VLOOKUPs."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-formulas-lesson-3",
+    title: "Text Functions: LEFT, RIGHT, MID, FIND, SEARCH, TEXTJOIN, TEXTSPLIT",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Where Real Data Lives",
+        content: `Open any data dump from an enterprise system. CRM exports. Email lists. SKU codes. Logs. The first thing you notice: **everything is stuck together**. "Smith, John (Premium)". "INV-2024-04-1042". "first.last@company.com". The information is there, just glued into single columns.
+
+Text functions are the **chisel** for that data. With seven functions you can dismantle any string, isolate the part you want, and rebuild it cleanly.
+
+**The substring trio** — **LEFT**, **RIGHT**, **MID** — grab characters from a string by position. Great when the format is fixed.
+
+**The position-finders** — **FIND** and **SEARCH** — locate a marker (a comma, a hyphen, a space) so you can grab everything before or after it. The difference between them is one word: **case-sensitivity**.
+
+**The M365 power couple** — **TEXTJOIN** and **TEXTSPLIT** — solve "smash these cells together with a delimiter" and "tokenize this string into pieces". They replace decade-old workarounds.
+
+Master these and **dirty data stops being a roadblock**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold" font-family="Arial">Seven Tools for Dirty Text</text>
+            <rect x="40" y="100" width="1020" height="180" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="135" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">The substring trio (fixed positions)</text>
+            <text x="60" y="170" fill="#ffffff" font-size="15" font-family="Courier New">LEFT(text, n)     -- first n characters</text>
+            <text x="60" y="200" fill="#ffffff" font-size="15" font-family="Courier New">RIGHT(text, n)    -- last n characters</text>
+            <text x="60" y="230" fill="#ffffff" font-size="15" font-family="Courier New">MID(text, start, n) -- n chars starting at position start</text>
+            <text x="60" y="260" fill="#888" font-size="13" font-family="Arial">Use when format is FIXED. SKU codes, fixed-width IDs, ISO dates.</text>
+            <rect x="40" y="300" width="1020" height="180" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="335" fill="#f59e0b" font-size="20" font-weight="bold" font-family="Arial">The position-finders (dynamic)</text>
+            <text x="60" y="370" fill="#ffffff" font-size="15" font-family="Courier New">FIND(needle, haystack, [start])    -- CASE-SENSITIVE</text>
+            <text x="60" y="400" fill="#ffffff" font-size="15" font-family="Courier New">SEARCH(needle, haystack, [start])  -- case-insensitive, wildcards</text>
+            <text x="60" y="430" fill="#888" font-size="14" font-family="Arial">Both return the position number. Use to find delimiters dynamically.</text>
+            <text x="60" y="460" fill="#ffd700" font-size="14" font-family="Arial">Pair with LEFT/RIGHT/MID to grab "before"/"after" the marker.</text>
+            <rect x="40" y="500" width="1020" height="220" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="535" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">The M365 power couple</text>
+            <text x="60" y="570" fill="#ffffff" font-size="15" font-family="Courier New">TEXTJOIN(delim, ignore_empty, text1, text2, ...)</text>
+            <text x="60" y="600" fill="#888" font-size="13" font-family="Arial">Smash cells together with a delimiter. Skips blanks if you ask.</text>
+            <text x="60" y="635" fill="#ffffff" font-size="15" font-family="Courier New">TEXTSPLIT(text, col_delim, [row_delim])</text>
+            <text x="60" y="665" fill="#888" font-size="13" font-family="Arial">Tokenize a string into multiple cells. The inverse of TEXTJOIN.</text>
+            <text x="60" y="700" fill="#10b981" font-size="14" font-family="Arial">Replaces a decade of "&amp;" concatenation and Text-to-Columns workarounds.</text>
+            <rect x="40" y="740" width="1020" height="310" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="775" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">Anatomy of a string</text>
+            <text x="60" y="810" fill="#ffd700" font-size="16" font-family="Courier New">"INV-2024-04-1042"</text>
+            <text x="60" y="835" fill="#888" font-size="13" font-family="Arial">positions: 1234567890123456</text>
+            <text x="60" y="870" fill="#ffffff" font-size="14" font-family="Courier New">LEFT(s, 3)         -&gt; "INV"</text>
+            <text x="60" y="895" fill="#ffffff" font-size="14" font-family="Courier New">MID(s, 5, 4)       -&gt; "2024"</text>
+            <text x="60" y="920" fill="#ffffff" font-size="14" font-family="Courier New">MID(s, 10, 2)      -&gt; "04"</text>
+            <text x="60" y="945" fill="#ffffff" font-size="14" font-family="Courier New">RIGHT(s, 4)        -&gt; "1042"</text>
+            <text x="60" y="975" fill="#ffd700" font-size="14" font-family="Arial">Don't want to count? Use FIND to locate the hyphens dynamically.</text>
+            <text x="60" y="1005" fill="#ffffff" font-size="14" font-family="Courier New">FIND("-", s)       -&gt; 4   (position of first hyphen)</text>
+            <text x="60" y="1035" fill="#10b981" font-size="14" font-family="Arial">Or skip the manual work entirely: =TEXTSPLIT(s, "-")</text>
+          </svg>`,
+          caption: "Seven text functions: the substring trio, the position-finders, the M365 power couple."
+        }
+      },
+      {
+        type: "concept",
+        title: "FIND vs SEARCH, and TEXTJOIN's Killer Feature",
+        content: `**FIND and SEARCH** look identical at first glance: both find a substring inside another string and return its position. **The difference matters in real data**.
+
+**FIND** is **case-sensitive**. =FIND("S","supplier") returns **#VALUE!** (no capital S). =FIND("s","supplier") returns 1.
+
+**SEARCH** is **case-insensitive** and supports wildcards (* and ?). =SEARCH("S","supplier") returns 1. =SEARCH("sup*", text) finds "Supplier", "supplied", "supplies".
+
+**Rule of thumb**: use **SEARCH** for user-entered data (names, emails, addresses where capitalization is unreliable). Use **FIND** when case actually means something (parsing case-sensitive IDs like "abc-XYZ-123").
+
+**TEXTJOIN's underrated feature** is the *ignore_empty* argument. =TEXTJOIN(", ", **TRUE**, A2:E2) joins five cells with comma+space, but if A2 or D2 are blank, you don't get **"John, , , Smith, "** — you get **"John, Smith"**. Clean. This single argument replaces a decade of nested IF statements that filtered out blanks before concatenation.
+
+**TEXTSPLIT** can split on multiple delimiters at once: =TEXTSPLIT(s, {",",";","|"}) tokenizes a string that mixes any of those separators.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold" font-family="Arial">FIND vs SEARCH, and TEXTJOIN's Trick</text>
+            <rect x="40" y="100" width="500" height="350" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="135" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">FIND - case-sensitive</text>
+            <text x="60" y="170" fill="#ffffff" font-size="14" font-family="Courier New">=FIND("S", "Supplier")  -&gt; 1</text>
+            <text x="60" y="200" fill="#ffffff" font-size="14" font-family="Courier New">=FIND("s", "Supplier")  -&gt; 6</text>
+            <text x="60" y="230" fill="#ef4444" font-size="14" font-family="Courier New">=FIND("S", "supplier")  -&gt; #VALUE!</text>
+            <text x="60" y="265" fill="#888" font-size="13" font-family="Arial">No wildcards. Strict literal matching.</text>
+            <text x="60" y="295" fill="#ffd700" font-size="14" font-family="Arial">Use when CASE MEANS SOMETHING:</text>
+            <text x="60" y="320" fill="#ffffff" font-size="13" font-family="Courier New">- Parsing "abc-XYZ-123" tokens</text>
+            <text x="60" y="345" fill="#ffffff" font-size="13" font-family="Courier New">- Case-sensitive IDs</text>
+            <text x="60" y="370" fill="#ffffff" font-size="13" font-family="Courier New">- File paths on Linux/case-aware</text>
+            <text x="60" y="405" fill="#10b981" font-size="13" font-family="Arial">Strict = predictable.</text>
+            <text x="60" y="435" fill="#888" font-size="12" font-family="Arial">Errors loudly when wrong.</text>
+            <rect x="560" y="100" width="500" height="350" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="135" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">SEARCH - case-insensitive</text>
+            <text x="580" y="170" fill="#ffffff" font-size="14" font-family="Courier New">=SEARCH("S","Supplier")  -&gt; 1</text>
+            <text x="580" y="200" fill="#ffffff" font-size="14" font-family="Courier New">=SEARCH("s","Supplier")  -&gt; 1</text>
+            <text x="580" y="230" fill="#10b981" font-size="14" font-family="Courier New">=SEARCH("S","supplier")  -&gt; 1</text>
+            <text x="580" y="265" fill="#ffd700" font-size="14" font-family="Arial">Supports wildcards * and ?</text>
+            <text x="580" y="295" fill="#ffffff" font-size="13" font-family="Courier New">=SEARCH("sup*", text)</text>
+            <text x="580" y="325" fill="#888" font-size="13" font-family="Arial">Matches "Supplier","supplied","Suppress"</text>
+            <text x="580" y="355" fill="#ffd700" font-size="14" font-family="Arial">Use for USER-ENTERED DATA:</text>
+            <text x="580" y="380" fill="#ffffff" font-size="13" font-family="Courier New">- Names ("Smith" vs "smith")</text>
+            <text x="580" y="405" fill="#ffffff" font-size="13" font-family="Courier New">- Emails</text>
+            <text x="580" y="430" fill="#ffffff" font-size="13" font-family="Courier New">- Addresses, free-text fields</text>
+            <rect x="40" y="470" width="1020" height="260" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="505" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">TEXTJOIN's killer arg: ignore_empty</text>
+            <text x="60" y="540" fill="#ffffff" font-size="14" font-family="Courier New">Cells A2:E2 contain: "John", "", "", "Smith", ""</text>
+            <text x="60" y="580" fill="#ef4444" font-size="14" font-family="Courier New">=A2&amp;", "&amp;B2&amp;", "&amp;C2&amp;", "&amp;D2&amp;", "&amp;E2</text>
+            <text x="60" y="605" fill="#888" font-size="13" font-family="Arial">  -&gt; "John, , , Smith, "    (ugly trailing commas)</text>
+            <text x="60" y="640" fill="#10b981" font-size="14" font-family="Courier New">=TEXTJOIN(", ", TRUE, A2:E2)</text>
+            <text x="60" y="665" fill="#888" font-size="13" font-family="Arial">  -&gt; "John, Smith"          (blanks skipped automatically)</text>
+            <text x="60" y="700" fill="#ffd700" font-size="14" font-family="Arial">Second arg = TRUE -&gt; ignore_empty. One argument, no nested IFs.</text>
+            <rect x="40" y="750" width="1020" height="300" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="60" y="785" fill="#8b5cf6" font-size="20" font-weight="bold" font-family="Arial">TEXTSPLIT with multiple delimiters</text>
+            <text x="60" y="820" fill="#ffffff" font-size="14" font-family="Courier New">Source: "apple, orange; pear | grape"</text>
+            <text x="60" y="855" fill="#ffffff" font-size="14" font-family="Courier New">=TEXTSPLIT(A2, ",")</text>
+            <text x="60" y="880" fill="#888" font-size="13" font-family="Arial">  -&gt; ["apple", " orange; pear | grape"]   (only splits on commas)</text>
+            <text x="60" y="915" fill="#10b981" font-size="14" font-family="Courier New">=TEXTSPLIT(A2, {",", ";", "|"})</text>
+            <text x="60" y="940" fill="#888" font-size="13" font-family="Arial">  -&gt; ["apple", " orange", " pear ", " grape"]</text>
+            <text x="60" y="975" fill="#ffd700" font-size="14" font-family="Arial">Array constant {",",";","|"} = split on ANY of those.</text>
+            <text x="60" y="1005" fill="#ffffff" font-size="14" font-family="Courier New">Wrap in TRIM to clean leading spaces: =TRIM(TEXTSPLIT(...))</text>
+            <text x="60" y="1035" fill="#10b981" font-size="14" font-family="Arial">One formula, many delimiters, clean tokens.</text>
+          </svg>`,
+          caption: "FIND is strict, SEARCH is forgiving. TEXTJOIN's ignore_empty is the real headline."
+        }
+      },
+      {
+        type: "example",
+        title: "Splitting 'Last, First (Tier)' Correctly",
+        content: `**The string**: "Patel, Reema (Gold)" sitting in A2. Goal — three clean columns: Last Name, First Name, Tier.
+
+**Approach 1 — manual with FIND + LEFT/MID/RIGHT** (works in any Excel version):
+
+Last name (everything before the comma):
+=LEFT(A2, FIND(",", A2) - 1) → "Patel"
+
+First name (between ", " and " ("):
+=MID(A2, FIND(",", A2) + 2, FIND(" (", A2) - FIND(",", A2) - 2) → "Reema"
+
+Tier (between "(" and ")"):
+=MID(A2, FIND("(", A2) + 1, FIND(")", A2) - FIND("(", A2) - 1) → "Gold"
+
+It works. It also makes your eyes glaze over.
+
+**Approach 2 — TEXTSPLIT one-liner** (M365):
+=TEXTSPLIT(A2, {", ", " (", ")"})
+
+Spills "Patel", "Reema", "Gold" into three adjacent cells. Done.
+
+The TEXTSPLIT version is **shorter, clearer, and self-documenting** — anyone reading it can see exactly which delimiters drive the split. The FIND/MID version requires you to mentally execute the position math. **If you have M365, there is no reason to write the FIND version anymore** — but recognize it because old workbooks are full of it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">Parsing "Last, First (Tier)"</text>
+            <rect x="40" y="100" width="1020" height="160" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="135" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">Input column A</text>
+            <line x1="60" y1="150" x2="1040" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="80" y="180" fill="#ffffff" font-size="14" font-family="Courier New">A2: "Patel, Reema (Gold)"</text>
+            <text x="80" y="210" fill="#ffffff" font-size="14" font-family="Courier New">A3: "Acosta, Mateo (Silver)"</text>
+            <text x="80" y="240" fill="#ffffff" font-size="14" font-family="Courier New">A4: "Singh, Jay (Gold)"</text>
+            <rect x="40" y="280" width="1020" height="410" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="315" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">Approach 1 - FIND + LEFT/MID/RIGHT (works any version)</text>
+            <text x="60" y="355" fill="#ffd700" font-size="15" font-weight="bold" font-family="Arial">B2 - Last name (before the comma):</text>
+            <text x="60" y="385" fill="#ffffff" font-size="14" font-family="Courier New">=LEFT(A2, FIND(",", A2) - 1)</text>
+            <text x="60" y="410" fill="#888" font-size="13" font-family="Arial">FIND(",", A2) = 6  -&gt;  LEFT(A2, 5) = "Patel"</text>
+            <text x="60" y="450" fill="#ffd700" font-size="15" font-weight="bold" font-family="Arial">C2 - First name (between ", " and " ("):</text>
+            <text x="60" y="480" fill="#ffffff" font-size="13" font-family="Courier New">=MID(A2, FIND(",", A2) + 2,</text>
+            <text x="60" y="505" fill="#ffffff" font-size="13" font-family="Courier New">         FIND(" (", A2) - FIND(",", A2) - 2)</text>
+            <text x="60" y="530" fill="#888" font-size="13" font-family="Arial">Start at position 8, length = 13-6-2 = 5  -&gt;  "Reema"</text>
+            <text x="60" y="570" fill="#ffd700" font-size="15" font-weight="bold" font-family="Arial">D2 - Tier (between "(" and ")"):</text>
+            <text x="60" y="600" fill="#ffffff" font-size="13" font-family="Courier New">=MID(A2, FIND("(", A2) + 1,</text>
+            <text x="60" y="625" fill="#ffffff" font-size="13" font-family="Courier New">         FIND(")", A2) - FIND("(", A2) - 1)</text>
+            <text x="60" y="650" fill="#888" font-size="13" font-family="Arial">Position 15, length = 19-14-1 = 4  -&gt;  "Gold"</text>
+            <text x="60" y="680" fill="#ef4444" font-size="13" font-family="Arial">Works, but reading this is a chore. Off-by-ones lurk in every offset.</text>
+            <rect x="40" y="710" width="1020" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="745" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Approach 2 - TEXTSPLIT one-liner (M365)</text>
+            <text x="60" y="785" fill="#ffffff" font-size="16" font-family="Courier New">=TEXTSPLIT(A2, {", ", " (", ")"})</text>
+            <text x="60" y="820" fill="#10b981" font-size="14" font-family="Arial">Spills horizontally: "Patel" | "Reema" | "Gold" | ""</text>
+            <text x="60" y="850" fill="#ffd700" font-size="14" font-family="Arial">The trailing ")" creates an empty trailing token - drop with [,,,3] if needed.</text>
+            <text x="60" y="880" fill="#888" font-size="13" font-family="Arial">Self-documenting: the delimiters ARE the parse logic.</text>
+            <rect x="40" y="930" width="1020" height="120" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="965" fill="#6366f1" font-size="18" font-weight="bold" font-family="Arial">Verdict</text>
+            <text x="60" y="995" fill="#ffffff" font-size="14" font-family="Arial">On M365: TEXTSPLIT every time. Half the keystrokes, none of the off-by-one math.</text>
+            <text x="60" y="1025" fill="#ffd700" font-size="14" font-family="Arial">Recognize the FIND/MID pattern though - 80% of older workbooks use it.</text>
+          </svg>`,
+          caption: "FIND/MID still works. TEXTSPLIT makes it obsolete on M365."
+        }
+      },
+      {
+        type: "quiz",
+        title: "The Email Domain Extraction",
+        content: `You need a formula that extracts the **domain** from an email address (the part AFTER the @). Inputs are user-entered, so capitalization is inconsistent: "Jane.Doe@COMPANY.com", "alex@partner.io", "M.Singh@CONTRACTOR.net".
+
+You're on Excel 2016 (no TEXTSPLIT). Which formula is the right tool, and why?`,
+        options: [
+          { text: "=RIGHT(A2, 10) — always grab the last 10 characters", correct: false },
+          { text: "=MID(A2, FIND(\"@\", A2) + 1, 100) — FIND locates the @, MID grabs everything after it", correct: true },
+          { text: "=MID(A2, SEARCH(\"@\", A2) + 1, 100) — must use SEARCH because user data has mixed case", correct: false },
+          { text: "=TEXTSPLIT(A2, \"@\") — the M365 modern answer", correct: false }
+        ],
+        explanation: `Option 2 is correct. **FIND** and **SEARCH** would produce identical results here because the @ symbol has no upper/lower case — it's a punctuation character. The case-sensitivity distinction only matters when the **needle is a letter**. So while option 3 isn't wrong in outcome, the "must use SEARCH" justification is wrong; FIND works perfectly. **=MID(A2, FIND("@", A2) + 1, 100)** locates the @ position, starts MID one character after it, and asks for 100 characters (MID happily returns just whatever is available — no error if the string is shorter). Option 1 fails the moment a domain isn't exactly 10 chars. Option 4 is correct *in concept* but the question pins you to Excel 2016 where TEXTSPLIT doesn't exist (it's M365/2024 only).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">Extracting the Email Domain</text>
+            <rect x="40" y="100" width="1020" height="220" fill="#1a1a2e" stroke="#888" stroke-width="1" rx="4"/>
+            <text x="60" y="135" fill="#ffd700" font-size="17" font-weight="bold" font-family="Arial">Input data (mixed case, varied lengths)</text>
+            <line x1="60" y1="150" x2="1040" y2="150" stroke="#888" stroke-width="1"/>
+            <text x="80" y="180" fill="#888" font-size="14" font-family="Arial">A (Email)</text>
+            <text x="600" y="180" fill="#888" font-size="14" font-family="Arial">B (Want this)</text>
+            <line x1="60" y1="195" x2="1040" y2="195" stroke="#888" stroke-width="1"/>
+            <text x="80" y="225" fill="#ffffff" font-size="14" font-family="Courier New">Jane.Doe@COMPANY.com</text>
+            <text x="600" y="225" fill="#10b981" font-size="14" font-family="Courier New">COMPANY.com</text>
+            <text x="80" y="255" fill="#ffffff" font-size="14" font-family="Courier New">alex@partner.io</text>
+            <text x="600" y="255" fill="#10b981" font-size="14" font-family="Courier New">partner.io</text>
+            <text x="80" y="285" fill="#ffffff" font-size="14" font-family="Courier New">M.Singh@CONTRACTOR.net</text>
+            <text x="600" y="285" fill="#10b981" font-size="14" font-family="Courier New">CONTRACTOR.net</text>
+            <rect x="40" y="340" width="1020" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="375" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Winner</text>
+            <text x="60" y="415" fill="#ffffff" font-size="16" font-family="Courier New">=MID(A2, FIND("@", A2) + 1, 100)</text>
+            <text x="60" y="450" fill="#888" font-size="14" font-family="Arial">FIND("@", A2) returns the @ position. MID starts one after, grabs 100 chars.</text>
+            <text x="60" y="480" fill="#10b981" font-size="14" font-family="Arial">MID gracefully returns whatever's available - no error if string &lt; 100 chars.</text>
+            <text x="60" y="510" fill="#ffd700" font-size="14" font-family="Arial">"@" has no case. FIND and SEARCH are equivalent here.</text>
+            <rect x="40" y="560" width="1020" height="160" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="595" fill="#f59e0b" font-size="20" font-weight="bold" font-family="Arial">Why NOT RIGHT(A2, 10)</text>
+            <text x="60" y="630" fill="#ffffff" font-size="14" font-family="Arial">Domain length varies wildly: "io"(2), "com"(3), "co.uk"(5).</text>
+            <text x="60" y="660" fill="#ef4444" font-size="14" font-family="Arial">RIGHT with a hard-coded length breaks the moment a domain isn't that length.</text>
+            <text x="60" y="690" fill="#888" font-size="13" font-family="Arial">"Always grab the last N chars" is the most common text-function bug.</text>
+            <rect x="40" y="740" width="1020" height="160" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="775" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">SEARCH vs FIND - when does it matter?</text>
+            <text x="60" y="810" fill="#ffffff" font-size="14" font-family="Arial">Only when the NEEDLE is a letter. "@", ",", "-", " " have no case.</text>
+            <text x="60" y="840" fill="#ffd700" font-size="14" font-family="Arial">Looking for "@"? FIND and SEARCH return identical results.</text>
+            <text x="60" y="870" fill="#10b981" font-size="14" font-family="Arial">Looking for "Order" or "user"? Use SEARCH for forgiveness.</text>
+            <rect x="40" y="920" width="1020" height="130" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="60" y="955" fill="#8b5cf6" font-size="20" font-weight="bold" font-family="Arial">On M365? Even simpler</text>
+            <text x="60" y="990" fill="#ffffff" font-size="15" font-family="Courier New">=TEXTAFTER(A2, "@")</text>
+            <text x="60" y="1020" fill="#888" font-size="13" font-family="Arial">TEXTAFTER/TEXTBEFORE were added with TEXTSPLIT - retire MID+FIND on M365.</text>
+          </svg>`,
+          caption: "Find the marker dynamically, grab everything after. RIGHT-with-fixed-length is a trap."
+        }
+      },
+      {
+        type: "application",
+        title: "The Dirty-Data Cleanup Workflow",
+        content: `**The scenario**: a CRM export drops you a file. Column A has rows like:
+"  john.smith@acme.io ;Jane.Doe@beacon.co; m.singh@crest.com  "
+
+Mixed whitespace. Mixed capitalization. Semicolons as separators. Your boss wants one row per email, all lowercase, no whitespace, ready to import.
+
+**The pipeline** — in three formulas:
+
+**Step 1 — tokenize** (B2 spills horizontally):
+=TEXTSPLIT(A2, ";")
+
+**Step 2 — clean each token** (TRIM strips spaces, LOWER normalizes case):
+=LOWER(TRIM(B2#))
+
+The **#** turns B2 into a spilled range reference — the cleanup applies to every spilled cell automatically.
+
+**Step 3 — recombine cleanly** with TEXTJOIN if you need a single delimited string back:
+=TEXTJOIN(", ", TRUE, C2#)
+→ "john.smith@acme.io, jane.doe@beacon.co, m.singh@crest.com"
+
+**The pattern**: **TEXTSPLIT → TRIM/LOWER/UPPER/PROPER → TEXTJOIN**. Split it apart, clean each piece, glue it back together. The *ignore_empty* TRUE in TEXTJOIN means stray trailing semicolons silently disappear.
+
+**Master this pipeline** and you can fix in 3 cells what used to require 30 minutes of Find & Replace, Text-to-Columns, and manual scrubbing. This is the daily reality of working with vendor exports.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold" font-family="Arial">Dirty-Data Cleanup Pipeline</text>
+            <rect x="40" y="100" width="1020" height="160" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="135" fill="#ef4444" font-size="20" font-weight="bold" font-family="Arial">A2 - dirty CRM export</text>
+            <text x="60" y="175" fill="#ffffff" font-size="13" font-family="Courier New">"  john.smith@acme.io ;Jane.Doe@beacon.co; m.singh@crest.com  "</text>
+            <text x="60" y="210" fill="#888" font-size="14" font-family="Arial">Mixed case. Stray whitespace. Semicolon delimiter. Three emails, one cell.</text>
+            <text x="60" y="240" fill="#ef4444" font-size="14" font-family="Arial">Old way: Find/Replace + Text-to-Columns + manual cleanup = 30 minutes.</text>
+            <rect x="40" y="280" width="1020" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="315" fill="#10b981" font-size="20" font-weight="bold" font-family="Arial">Step 1 - tokenize with TEXTSPLIT</text>
+            <text x="60" y="355" fill="#ffffff" font-size="16" font-family="Courier New">B2: =TEXTSPLIT(A2, ";")</text>
+            <text x="60" y="390" fill="#888" font-size="14" font-family="Arial">Spills horizontally into B2, C2, D2:</text>
+            <text x="60" y="420" fill="#ffffff" font-size="13" font-family="Courier New">B2: "  john.smith@acme.io "</text>
+            <text x="60" y="445" fill="#ffffff" font-size="13" font-family="Courier New">C2: "Jane.Doe@beacon.co"</text>
+            <text x="60" y="470" fill="#ffffff" font-size="13" font-family="Courier New">D2: " m.singh@crest.com  "</text>
+            <rect x="40" y="500" width="1020" height="200" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="535" fill="#6366f1" font-size="20" font-weight="bold" font-family="Arial">Step 2 - clean every token</text>
+            <text x="60" y="575" fill="#ffffff" font-size="16" font-family="Courier New">B3: =LOWER(TRIM(B2#))</text>
+            <text x="60" y="610" fill="#ffd700" font-size="14" font-family="Arial">The # makes B2 a SPILLED range reference - applies to all spill cells.</text>
+            <text x="60" y="640" fill="#10b981" font-size="13" font-family="Courier New">B3: "john.smith@acme.io"</text>
+            <text x="60" y="665" fill="#10b981" font-size="13" font-family="Courier New">C3: "jane.doe@beacon.co"</text>
+            <text x="60" y="690" fill="#10b981" font-size="13" font-family="Courier New">D3: "m.singh@crest.com"</text>
+            <rect x="40" y="720" width="1020" height="170" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="60" y="755" fill="#8b5cf6" font-size="20" font-weight="bold" font-family="Arial">Step 3 - recombine</text>
+            <text x="60" y="795" fill="#ffffff" font-size="16" font-family="Courier New">B4: =TEXTJOIN(", ", TRUE, B3#)</text>
+            <text x="60" y="830" fill="#10b981" font-size="14" font-family="Courier New">-&gt; "john.smith@acme.io, jane.doe@beacon.co, m.singh@crest.com"</text>
+            <text x="60" y="860" fill="#ffd700" font-size="14" font-family="Arial">ignore_empty=TRUE silently drops blanks from trailing/extra semicolons.</text>
+            <rect x="40" y="910" width="1020" height="140" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="60" y="945" fill="#ffd700" font-size="20" font-weight="bold" font-family="Arial">The pattern, memorized</text>
+            <text x="60" y="980" fill="#ffffff" font-size="16" font-family="Courier New">TEXTSPLIT  -&gt;  TRIM/LOWER/UPPER/PROPER  -&gt;  TEXTJOIN</text>
+            <text x="60" y="1015" fill="#10b981" font-size="14" font-family="Arial">Split it apart, clean each piece, glue it back together.</text>
+            <text x="60" y="1040" fill="#888" font-size="13" font-family="Arial">3 cells replace 30 minutes of scrubbing. This is the daily reality.</text>
+          </svg>`,
+          caption: "TEXTSPLIT to break apart, TRIM/LOWER to clean, TEXTJOIN to rebuild. Three formulas, clean data."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'excel-pivot',
