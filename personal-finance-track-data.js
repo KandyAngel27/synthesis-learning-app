@@ -7340,8 +7340,302 @@ This lesson assembles everything from Lessons 1–11 into a single playbook: **c
             title: 'Investing for Adults: Index Funds, Allocation, Time Horizon',
             author: 'Synthesis Learning',
             description: 'Why index funds beat 90% of active funds, how to think about allocation (stocks/bonds/cash) by horizon, the 4% rule, and target-date funds.',
-            lessons: 1, duration: 5, progress: 0, category: 'personal-finance-track',
-            lessonList: comingSoonLessons('why index funds beat most active funds, allocation by time horizon, the 4% rule, and target-date funds'),
+            lessons: 3, duration: 45, progress: 0, category: 'personal-finance-track',
+            lessonList: [
+{
+    id: "pf-investing-lesson-1",
+    title: "Why Index Funds Beat 80%+ of Active Managers",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Bogle Revolution",
+        content: `In **1974**, **Jack Bogle** founded **Vanguard**. Two years later, in **1976**, he launched the first retail index fund: the **Vanguard First Index Investment Trust** (now **VFIAX**), which simply tracks the **S&P 500**. Critics called it "Bogle's Folly" — why settle for *average* returns? Fifty years later, the joke is on them. According to **SPIVA 2024** data, over a **15-year window**, about **85% of US large-cap active funds** underperform their benchmark. The number climbs to **90% for international** funds and **90% for fixed income** managers. Average is, in fact, *excellent*. This lesson unpacks **why** indexing wins so consistently — and why your future self will thank you for choosing **low-cost index funds** over chasing star managers.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="90" text-anchor="middle" fill="#ffd700" font-size="46" font-weight="bold">SPIVA 15-Year Scorecard</text><text x="550" y="140" text-anchor="middle" fill="#888" font-size="24">% of Active Funds That UNDERPERFORM Their Index</text><g><rect x="150" y="250" width="800" height="80" fill="#ef4444" rx="8"/><text x="550" y="305" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">US Large-Cap: 85%</text></g><g><rect x="150" y="400" width="800" height="80" fill="#ef4444" rx="8"/><text x="550" y="455" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">International Large-Cap: 90%</text></g><g><rect x="150" y="550" width="800" height="80" fill="#ef4444" rx="8"/><text x="550" y="605" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">Fixed Income Bonds: 90%</text></g><g><rect x="150" y="700" width="800" height="80" fill="#10b981" rx="8"/><text x="550" y="755" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">Index Fund: Matches Benchmark</text></g><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Picking the 15% winner in advance?</text><text x="550" y="940" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Nearly impossible.</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="22">Source: SPIVA US Scorecard 2024</text></svg>`,
+          caption: "Across asset classes, the vast majority of active managers lose to a simple index over 15 years."
+        }
+      },
+      {
+        type: "concept",
+        title: "Two Reasons Indexing Wins",
+        content: `**Reason 1: Efficient Market Hypothesis.** Public information — earnings, news, analyst reports — is *already baked into stock prices* within seconds. Beating the market consistently means having an **edge** that thousands of PhDs with supercomputers don't. Possible, but rare.
+
+**Reason 2: The tyranny of compounding costs.** Bogle's famous math: a **1% AUM expense ratio** compounded over **30 years** silently eats roughly **25% of your final balance**. On a **$500K** portfolio, that's **$125K** transferred from you to the fund company. Meanwhile, **Vanguard's VTI** total US market fund charges **0.03%** — about **$3 per $10,000** per year. The active fund industry average is **0.85%** — **28x more expensive**. Active managers don't just need to beat the market; they need to beat it by **0.85%** every single year just to break even with the index. Most can't.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Cost of 1% Over 30 Years</text><text x="550" y="130" text-anchor="middle" fill="#888" font-size="22">$100K invested, 7% gross return</text><g><text x="280" y="220" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Index Fund (0.03%)</text><rect x="180" y="260" width="200" height="500" fill="#10b981" rx="10"/><text x="280" y="540" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">$757K</text><text x="280" y="800" text-anchor="middle" fill="#10b981" font-size="20">Final Balance</text></g><g><text x="820" y="220" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">Active Fund (1%)</text><rect x="720" y="385" width="200" height="375" fill="#ef4444" rx="10"/><text x="820" y="580" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">$574K</text><text x="820" y="800" text-anchor="middle" fill="#ef4444" font-size="20">Final Balance</text></g><g><line x1="500" y1="400" x2="600" y2="400" stroke="#ffd700" stroke-width="3"/><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">$183K</text><text x="550" y="460" text-anchor="middle" fill="#ffd700" font-size="22">lost to fees</text></g><text x="550" y="900" text-anchor="middle" fill="#fff" font-size="28">That's 24% of your nest egg —</text><text x="550" y="940" text-anchor="middle" fill="#fff" font-size="28">silently transferred to Wall Street.</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="20">"The tyranny of compounding costs." — Bogle</text></svg>`,
+          caption: "A 1% fee feels small. Over 30 years, it quietly steals a quarter of your retirement."
+        }
+      },
+      {
+        type: "example",
+        title: "Maya vs. Star Manager Steve",
+        content: `**Maya, 30**, contributes **$500/month** to a **Roth IRA** holding **VTI** (expense ratio: **0.03%**). Her coworker **Steve** picks a celebrity active fund charging **1.0%** that's been "hot" for 3 years. Both contribute the same amount until age 65 — **$6,000/year** for **35 years**.
+
+**Assuming both funds earn 7% gross annually:**
+- **Maya (0.03% fee):** Net return **6.97%** → balance at 65 = **$1,019,000**
+- **Steve (1.0% fee):** Net return **6.00%** → balance at 65 = **$840,000**
+
+That's a **$179,000 gap** — paid for by Steve to fund managers, even though his fund didn't beat the index. And in the typical case (per SPIVA), Steve's fund actually **underperformed** the index by another **1-2% annually**, dropping his balance toward **$640,000**. Same income, same discipline — but a **$380K** retirement difference because of fund choice. The lesson: **fees are the one variable you control**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Maya vs Steve: 35 Years</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="22">$500/month, age 30 to 65</text><g><rect x="100" y="180" width="420" height="380" fill="#10b981" rx="12" opacity="0.2"/><rect x="100" y="180" width="420" height="60" fill="#10b981" rx="12"/><text x="310" y="222" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">MAYA — VTI Index</text><text x="120" y="285" fill="#fff" font-size="22">Expense Ratio: 0.03%</text><text x="120" y="325" fill="#fff" font-size="22">Net Return: 6.97%</text><text x="120" y="365" fill="#fff" font-size="22">Strategy: Boring</text><text x="120" y="430" fill="#10b981" font-size="32" font-weight="bold">$1,019,000</text><text x="120" y="475" fill="#888" font-size="18">at age 65</text></g><g><rect x="580" y="180" width="420" height="380" fill="#ef4444" rx="12" opacity="0.2"/><rect x="580" y="180" width="420" height="60" fill="#ef4444" rx="12"/><text x="790" y="222" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">STEVE — Active Fund</text><text x="600" y="285" fill="#fff" font-size="22">Expense Ratio: 1.0%</text><text x="600" y="325" fill="#fff" font-size="22">Net Return: 6.0%</text><text x="600" y="365" fill="#fff" font-size="22">Strategy: Chase winners</text><text x="600" y="430" fill="#ef4444" font-size="32" font-weight="bold">$840,000</text><text x="600" y="475" fill="#888" font-size="18">if fund matches index</text></g><g><rect x="200" y="630" width="700" height="200" fill="#ffd700" rx="12"/><text x="550" y="690" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">Fee gap: $179,000</text><text x="550" y="740" text-anchor="middle" fill="#1a1a2e" font-size="24">If Steve's fund underperforms by 1%:</text><text x="550" y="790" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">$380,000 gap</text></g><text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Same income. Same effort.</text><text x="550" y="975" text-anchor="middle" fill="#fff" font-size="24">Just one wiser fee decision.</text></svg>`,
+          caption: "Maya's only edge is a 0.97% lower fee — and it buys her a 35-year head start."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Per SPIVA 2024 data, what percentage of US large-cap active mutual funds UNDERPERFORM their benchmark index over a 15-year window?",
+        options: [
+          { text: "About 25% — most active managers beat the market long-term", correct: false },
+          { text: "About 50% — it's basically a coin flip", correct: false },
+          { text: "About 85% — the vast majority of active funds lose to the index", correct: true },
+          { text: "About 100% — no active fund has ever beaten an index", correct: false }
+        ],
+        explanation: "SPIVA data consistently shows roughly 85% of US large-cap active funds underperform the S&P 500 over 15 years. International and bond funds fare even worse (~90%). The 15% who beat the index change every year — there's no reliable way to pick the winners in advance. This is why Bogle's 'own the haystack instead of searching for the needle' approach wins.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">The 85/15 Reality</text><circle cx="550" cy="560" r="320" fill="none" stroke="#888" stroke-width="3"/><path d="M 550 240 A 320 320 0 1 1 374 824 L 550 560 Z" fill="#ef4444"/><path d="M 374 824 A 320 320 0 0 1 550 240 L 550 560 Z" fill="#10b981"/><text x="430" y="500" text-anchor="middle" fill="#fff" font-size="60" font-weight="bold">85%</text><text x="430" y="560" text-anchor="middle" fill="#fff" font-size="22">LOSE to index</text><text x="720" y="540" text-anchor="middle" fill="#fff" font-size="36" font-weight="bold">15%</text><text x="720" y="580" text-anchor="middle" fill="#fff" font-size="18">beat it</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="26">Picking the 15% winner ≈ picking next year's lottery number</text></svg>`,
+          caption: "Active management is a loser's game by the numbers."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Index Fund Starter Kit",
+        content: `**Action steps this week:**
+
+**1. Open the right account.** Use **Vanguard**, **Fidelity**, or **Schwab** — all three offer near-zero-cost index funds. (Avoid full-service brokers who push high-fee products.)
+
+**2. Pick a benchmark index fund.** Beginner-friendly choices:
+- **VTI** / **VTSAX** — Total US Stock Market (0.03% ER)
+- **FZROX** — Fidelity ZERO Total Market (**0.00% ER**)
+- **SWTSX** — Schwab Total Stock Market (0.03% ER)
+
+**3. Check your existing fees.** Log into any **401(k)** or **IRA**. Find each fund's **expense ratio**. If you see anything above **0.50%**, ask: is there a cheaper index alternative in the plan? Usually yes.
+
+**4. Automate.** Set a monthly **auto-contribution** ($50, $500, whatever you can sustain). The hardest part of investing is *not touching it*. Automation removes the decision.
+
+**5. Ignore the noise.** CNBC, hot stock tips, your brother-in-law's crypto pick — all noise. **Stay the course.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Index Investing Starter Kit</text><g><circle cx="120" cy="200" r="40" fill="#6366f1"/><text x="120" y="212" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">1</text><text x="190" y="195" fill="#fff" font-size="26" font-weight="bold">Open account at Vanguard/Fidelity/Schwab</text><text x="190" y="225" fill="#888" font-size="20">Skip the full-service brokers</text></g><g><circle cx="120" cy="340" r="40" fill="#10b981"/><text x="120" y="352" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">2</text><text x="190" y="335" fill="#fff" font-size="26" font-weight="bold">Buy VTI, FZROX, or SWTSX</text><text x="190" y="365" fill="#888" font-size="20">Expense ratio under 0.05%</text></g><g><circle cx="120" cy="480" r="40" fill="#f59e0b"/><text x="120" y="492" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">3</text><text x="190" y="475" fill="#fff" font-size="26" font-weight="bold">Audit existing 401(k) fees</text><text x="190" y="505" fill="#888" font-size="20">Replace anything above 0.50%</text></g><g><circle cx="120" cy="620" r="40" fill="#8b5cf6"/><text x="120" y="632" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">4</text><text x="190" y="615" fill="#fff" font-size="26" font-weight="bold">Set monthly auto-contribution</text><text x="190" y="645" fill="#888" font-size="20">Automation beats willpower</text></g><g><circle cx="120" cy="760" r="40" fill="#ec4899"/><text x="120" y="772" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">5</text><text x="190" y="755" fill="#fff" font-size="26" font-weight="bold">Ignore CNBC, hot tips, crypto pumps</text><text x="190" y="785" fill="#888" font-size="20">Boring portfolios win</text></g><rect x="100" y="870" width="900" height="150" fill="#ffd700" rx="12"/><text x="550" y="935" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">Stay the course.</text><text x="550" y="985" text-anchor="middle" fill="#1a1a2e" font-size="22">— Jack Bogle's three favorite words</text></svg>`,
+          caption: "Five steps. Twenty minutes. A lifetime of compounding in your favor."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-investing-lesson-2",
+    title: "Asset Allocation: Stocks vs Bonds by Time Horizon",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Single Biggest Decision",
+        content: `Studies consistently show that your **asset allocation** — the split between **stocks** and **bonds** — explains **over 90%** of your portfolio's long-term return variability. Picking individual stocks? Almost noise. The big lever is: how much **equity risk** can you stomach?
+
+**Stocks (equities):** higher expected real return of roughly **7-10% per year** long-term, but brutal volatility. The **S&P 500** has lived through **13 bear markets** since **1929** — drops of **20% or more** — including **-57% in 2008** and **-34%** in **March 2020**. Recoveries take **months to years**.
+
+**Bonds:** lower expected real return of roughly **2-4%**, but much calmer. They cushion crashes and provide liquidity for spending.
+
+The right mix isn't about being smart — it's about **time horizon** and the **emotional discipline** to not sell when stocks are bleeding.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Stocks vs Bonds: The Tradeoff</text><g><rect x="80" y="160" width="440" height="780" fill="#6366f1" rx="14" opacity="0.15"/><rect x="80" y="160" width="440" height="80" fill="#6366f1" rx="14"/><text x="300" y="215" text-anchor="middle" fill="#fff" font-size="34" font-weight="bold">STOCKS</text><text x="300" y="295" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Return: 7-10% real</text><text x="300" y="345" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Volatility: HIGH</text><text x="100" y="420" fill="#fff" font-size="22">Bear markets since 1929: 13</text><text x="100" y="465" fill="#fff" font-size="22">2008 crash: -57%</text><text x="100" y="510" fill="#fff" font-size="22">March 2020: -34%</text><text x="100" y="555" fill="#fff" font-size="22">2022: -25%</text><text x="100" y="640" fill="#ffd700" font-size="22" font-weight="bold">Best for:</text><text x="100" y="685" fill="#fff" font-size="20">• 10+ year horizon</text><text x="100" y="725" fill="#fff" font-size="20">• Growth phase</text><text x="100" y="765" fill="#fff" font-size="20">• Young investors</text><text x="100" y="860" fill="#888" font-size="18">Higher reward,</text><text x="100" y="890" fill="#888" font-size="18">white-knuckle ride</text></g><g><rect x="580" y="160" width="440" height="780" fill="#10b981" rx="14" opacity="0.15"/><rect x="580" y="160" width="440" height="80" fill="#10b981" rx="14"/><text x="800" y="215" text-anchor="middle" fill="#fff" font-size="34" font-weight="bold">BONDS</text><text x="800" y="295" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">Return: 2-4% real</text><text x="800" y="345" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Volatility: LOW</text><text x="600" y="420" fill="#fff" font-size="22">Worst bond year (2022): -13%</text><text x="600" y="465" fill="#fff" font-size="22">Typical bear: -3% to -8%</text><text x="600" y="510" fill="#fff" font-size="22">Pays interest steadily</text><text x="600" y="555" fill="#fff" font-size="22">Acts as portfolio ballast</text><text x="600" y="640" fill="#ffd700" font-size="22" font-weight="bold">Best for:</text><text x="600" y="685" fill="#fff" font-size="20">• Under 5-year horizon</text><text x="600" y="725" fill="#fff" font-size="20">• Retirees drawing income</text><text x="600" y="765" fill="#fff" font-size="20">• Stability seekers</text><text x="600" y="860" fill="#888" font-size="18">Lower reward,</text><text x="600" y="890" fill="#888" font-size="18">smooth ride</text></g><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Allocation = % stocks vs % bonds</text></svg>`,
+          caption: "Stocks grow wealth. Bonds protect it. You need both — in different proportions."
+        }
+      },
+      {
+        type: "concept",
+        title: "Time Horizon Drives Allocation",
+        content: `**Time horizon** = how long until you need the money. It's the single most important factor.
+
+**Under 5 years to goal** (house down payment, tuition next year): **mostly bonds and cash**. Why? You can't afford to watch a 30% crash right before you write the check — and stocks have **no reliable floor** on short timeframes.
+
+**10+ years out**: **mostly stocks**. Yes, bear markets happen — but the market has *always* recovered. The **2008 crash recovered by 2013**. Time is the equity investor's superpower.
+
+**30+ years** (a 30-year-old saving for retirement): **90%+ stocks**. Volatility becomes a feature, not a bug — you're buying cheap during dips.
+
+**Rules of thumb:**
+- **"Age in bonds"** (60 yrs old = 60% bonds): outdated, too conservative with longer modern lifespans
+- **"110 minus age in stocks"** (60 yrs old = 50% stocks): more modern
+- **Vanguard Target Date Funds** (e.g., **VFIFX 2050**): auto-glidepath, set it and forget it
+
+Pick the allocation you can hold through a **30% drop** without **panic-selling**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Glidepath</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="22">Allocation by years until you need the money</text><line x1="100" y1="900" x2="1000" y2="900" stroke="#fff" stroke-width="3"/><line x1="100" y1="200" x2="100" y2="900" stroke="#fff" stroke-width="3"/><text x="50" y="220" fill="#fff" font-size="20">100%</text><text x="50" y="560" fill="#fff" font-size="20">50%</text><text x="50" y="910" fill="#fff" font-size="20">0%</text><path d="M 100 250 L 300 280 L 500 380 L 700 600 L 900 800" fill="none" stroke="#6366f1" stroke-width="6"/><path d="M 100 250 L 300 280 L 500 380 L 700 600 L 900 800 L 900 900 L 100 900 Z" fill="#6366f1" opacity="0.25"/><path d="M 100 900 L 300 870 L 500 760 L 700 540 L 900 340 L 900 200 L 100 200 Z" fill="#10b981" opacity="0.25"/><text x="200" y="450" fill="#6366f1" font-size="28" font-weight="bold">STOCKS</text><text x="700" y="350" fill="#10b981" font-size="28" font-weight="bold">BONDS</text><g><line x1="200" y1="900" x2="200" y2="930" stroke="#fff" stroke-width="2"/><text x="200" y="960" text-anchor="middle" fill="#fff" font-size="18">30+ yrs</text><text x="200" y="985" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">90% stocks</text></g><g><line x1="450" y1="900" x2="450" y2="930" stroke="#fff" stroke-width="2"/><text x="450" y="960" text-anchor="middle" fill="#fff" font-size="18">15 yrs</text><text x="450" y="985" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">70/30</text></g><g><line x1="700" y1="900" x2="700" y2="930" stroke="#fff" stroke-width="2"/><text x="700" y="960" text-anchor="middle" fill="#fff" font-size="18">10 yrs</text><text x="700" y="985" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">60/40</text></g><g><line x1="900" y1="900" x2="900" y2="930" stroke="#fff" stroke-width="2"/><text x="900" y="960" text-anchor="middle" fill="#fff" font-size="18">5 yrs</text><text x="900" y="985" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">30% stocks</text></g></svg>`,
+          caption: "Long horizon = more stocks. Short horizon = more bonds. The math is that simple."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Investors, Three Allocations",
+        content: `**Priya, 28, saving for retirement at 65.** Horizon: **37 years**. Allocation: **90% stocks / 10% bonds**. If the market drops 40% next year, she keeps buying — her last contribution won't matter for *decades*. Volatility = friend.
+
+**Marcus, 50, retirement at 65.** Horizon: **15 years** until withdrawal begins, plus **30+ years** in retirement. Allocation: **70% stocks / 30% bonds**. Still equity-heavy because he'll be invested for 45+ more years, but bonds cushion any sequence-of-returns risk near retirement.
+
+**Janet, 62, retired next year.** First **5 years** of expenses must be safe. Allocation: **50% stocks / 40% bonds / 10% cash**. The cash and bonds cover **5+ years of spending** so she never has to sell stocks during a downturn. Her stock portion still funds **decades 2-3** of retirement.
+
+**Same person at different ages = different right answer.** That's why Target Date Funds **auto-glidepath** from stock-heavy to bond-heavy as you age.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Three Investors, Three Mixes</text><g><text x="180" y="160" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Priya, 28</text><text x="180" y="195" text-anchor="middle" fill="#888" font-size="20">37-year horizon</text><circle cx="180" cy="380" r="140" fill="#1a1a2e" stroke="#fff" stroke-width="2"/><path d="M 180 240 A 140 140 0 1 1 165 240 L 180 380 Z" fill="#6366f1"/><path d="M 165 240 A 140 140 0 0 1 180 240 L 180 380 Z" fill="#10b981"/><text x="180" y="370" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">90/10</text><text x="180" y="405" text-anchor="middle" fill="#fff" font-size="18">stock/bond</text><text x="180" y="570" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Max growth</text></g><g><text x="550" y="160" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Marcus, 50</text><text x="550" y="195" text-anchor="middle" fill="#888" font-size="20">15-year horizon</text><circle cx="550" cy="380" r="140" fill="#1a1a2e" stroke="#fff" stroke-width="2"/><path d="M 550 240 A 140 140 0 1 1 458 488 L 550 380 Z" fill="#6366f1"/><path d="M 458 488 A 140 140 0 0 1 550 240 L 550 380 Z" fill="#10b981"/><text x="550" y="370" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">70/30</text><text x="550" y="405" text-anchor="middle" fill="#fff" font-size="18">stock/bond</text><text x="550" y="570" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Balanced</text></g><g><text x="920" y="160" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Janet, 62</text><text x="920" y="195" text-anchor="middle" fill="#888" font-size="20">Retiring next year</text><circle cx="920" cy="380" r="140" fill="#1a1a2e" stroke="#fff" stroke-width="2"/><path d="M 920 240 A 140 140 0 0 1 1060 380 L 920 380 Z" fill="#6366f1"/><path d="M 1060 380 A 140 140 0 0 1 920 520 L 920 380 Z" fill="#6366f1"/><path d="M 920 520 A 140 140 0 0 1 780 380 L 920 380 Z" fill="#10b981"/><path d="M 780 380 A 140 140 0 0 1 920 240 L 920 380 Z" fill="#f59e0b"/><text x="920" y="370" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">50/40/10</text><text x="920" y="405" text-anchor="middle" fill="#fff" font-size="16">stock/bond/cash</text><text x="920" y="570" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Capital preservation</text></g><rect x="100" y="660" width="900" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="12"/><text x="550" y="710" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Same goal (retirement)</text><text x="550" y="755" text-anchor="middle" fill="#fff" font-size="22">Different ages → different right answers</text><text x="550" y="830" text-anchor="middle" fill="#10b981" font-size="22">Priya can ride out a 40% crash.</text><text x="550" y="870" text-anchor="middle" fill="#10b981" font-size="22">Janet can't — she's spending it next year.</text><text x="550" y="915" text-anchor="middle" fill="#888" font-size="20">Time horizon = the key variable</text></svg>`,
+          caption: "Allocation isn't about courage — it's about how soon you need to spend."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Sofia is 32 and saving in a Roth IRA for retirement at age 67 (35-year horizon). The market drops 35% next month. What is the optimal response if she holds a 90/10 stock/bond allocation?",
+        options: [
+          { text: "Sell all stocks immediately to prevent further losses", correct: false },
+          { text: "Switch entirely to bonds until the market recovers", correct: false },
+          { text: "Keep contributing on schedule — she's buying stocks on sale for the next 35 years", correct: true },
+          { text: "Pause contributions and wait for clearer market signals", correct: false }
+        ],
+        explanation: "With 35 years until withdrawal, Sofia's allocation is built for exactly this scenario. Historically every S&P 500 bear market has fully recovered, and her ongoing contributions are now buying shares at a 35% discount. Selling locks in the loss; pausing means missing the recovery. The discipline 'stay the course' is the entire point of choosing an aggressive allocation in the first place — you only deserve high long-term returns if you accept the short-term turbulence.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">S&P 500 Recovery Reality</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="22">Every bear market, fully recovered</text><line x1="100" y1="700" x2="1000" y2="700" stroke="#fff" stroke-width="2"/><g><text x="200" y="780" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">2008-09</text><rect x="160" y="700" width="80" height="180" fill="#ef4444"/><text x="200" y="900" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">-57%</text><text x="200" y="935" text-anchor="middle" fill="#10b981" font-size="18">Back to peak: 2013</text></g><g><text x="400" y="780" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Mar 2020</text><rect x="360" y="700" width="80" height="120" fill="#ef4444"/><text x="400" y="840" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">-34%</text><text x="400" y="935" text-anchor="middle" fill="#10b981" font-size="18">Back to peak: Aug 2020</text></g><g><text x="600" y="780" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">2022</text><rect x="560" y="700" width="80" height="100" fill="#ef4444"/><text x="600" y="820" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">-25%</text><text x="600" y="935" text-anchor="middle" fill="#10b981" font-size="18">Back to peak: 2024</text></g><g><text x="800" y="780" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Dot-com</text><rect x="760" y="700" width="80" height="160" fill="#ef4444"/><text x="800" y="880" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">-49%</text><text x="800" y="935" text-anchor="middle" fill="#10b981" font-size="18">Back to peak: 2007</text></g><rect x="150" y="200" width="800" height="180" fill="#10b981" rx="12" opacity="0.2"/><text x="550" y="260" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">Sofia's playbook:</text><text x="550" y="310" text-anchor="middle" fill="#fff" font-size="26">Keep buying. Stay the course.</text><text x="550" y="350" text-anchor="middle" fill="#fff" font-size="22">She has 35 years for recovery.</text></svg>`,
+          caption: "Bear markets feel terrifying. The data says: just keep buying."
+        }
+      },
+      {
+        type: "application",
+        title: "Pick Your Allocation Today",
+        content: `**Step 1: Calculate your time horizon.** When do you need the money?
+- Retirement at 65? Horizon = **65 − your age**
+- House down payment in 4 years? Horizon = **4 years**
+
+**Step 2: Pick a rule of thumb.** For retirement savings, try **110 minus your age in stocks**:
+- Age 25 → 85% stocks / 15% bonds
+- Age 40 → 70% stocks / 30% bonds
+- Age 60 → 50% stocks / 50% bonds
+- Age 75 → 35% stocks / 65% bonds
+
+**Step 3: Or use a Target Date Fund.** Vanguard **VFIFX (Target 2050)**, **VTIVX (2045)**, **VTHRX (2035)** auto-rebalance every year. **0.08% ER**. One ticker = entire portfolio. Perfect for anyone who'd rather not think about it.
+
+**Step 4: Stress-test your gut.** Picture your **$200K** portfolio dropping to **$130K** in a single month. If you'd sell, your allocation is **too aggressive**. Move 10-15% from stocks to bonds. Sleep beats peak returns.
+
+**Step 5: Write your allocation down.** This is your **Investment Policy Statement**. Re-read it during the next crash.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Your Allocation Cheat Sheet</text><rect x="80" y="140" width="940" height="80" fill="#6366f1" rx="10"/><text x="550" y="190" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">110 minus age = % in stocks</text><g><rect x="80" y="260" width="220" height="120" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="10"/><text x="190" y="305" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Age 25</text><text x="190" y="345" text-anchor="middle" fill="#fff" font-size="22">85% stocks</text><text x="190" y="370" text-anchor="middle" fill="#fff" font-size="22">15% bonds</text></g><g><rect x="320" y="260" width="220" height="120" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="10"/><text x="430" y="305" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Age 40</text><text x="430" y="345" text-anchor="middle" fill="#fff" font-size="22">70% stocks</text><text x="430" y="370" text-anchor="middle" fill="#fff" font-size="22">30% bonds</text></g><g><rect x="560" y="260" width="220" height="120" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="670" y="305" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Age 60</text><text x="670" y="345" text-anchor="middle" fill="#fff" font-size="22">50% stocks</text><text x="670" y="370" text-anchor="middle" fill="#fff" font-size="22">50% bonds</text></g><g><rect x="800" y="260" width="220" height="120" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="910" y="305" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Age 75</text><text x="910" y="345" text-anchor="middle" fill="#fff" font-size="22">35% stocks</text><text x="910" y="370" text-anchor="middle" fill="#fff" font-size="22">65% bonds</text></g><rect x="80" y="430" width="940" height="200" fill="#8b5cf6" rx="12" opacity="0.2"/><rect x="80" y="430" width="940" height="60" fill="#8b5cf6" rx="12"/><text x="550" y="473" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Or: One-Ticker Target Date Funds</text><text x="120" y="525" fill="#fff" font-size="22">• VFIFX — Target 2050 (younger investor)</text><text x="120" y="560" fill="#fff" font-size="22">• VTIVX — Target 2045</text><text x="120" y="595" fill="#fff" font-size="22">• VTHRX — Target 2035 (mid-career)</text><rect x="80" y="680" width="940" height="280" fill="#ef4444" rx="12" opacity="0.15"/><text x="550" y="740" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">The Sleep Test</text><text x="550" y="800" text-anchor="middle" fill="#fff" font-size="22">Picture: $200K portfolio → $130K next month</text><text x="550" y="850" text-anchor="middle" fill="#fff" font-size="22">Would you sell?</text><text x="550" y="910" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">If yes → cut stocks 10-15%</text><text x="550" y="940" text-anchor="middle" fill="#888" font-size="20">Sleep beats peak returns.</text></svg>`,
+          caption: "Pick a number, write it down, and only change it when your life changes — not when the market does."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-investing-lesson-3",
+    title: "The Boglehead 3-Fund Portfolio",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Three Funds. That's the Whole Portfolio.",
+        content: `Walk into any financial advisor's office and you'll be sold **12 mutual funds**, an **annuity**, and a "tactical alpha sleeve." Walk into the **Bogleheads forum** (the global community of **Jack Bogle's** disciples) and you'll be told: **three funds. Done.**
+
+The **Boglehead 3-Fund Portfolio** has historically matched or beaten **90%+ of complex multi-asset portfolios** — at roughly **1/100th of the fees and complexity**. The three funds:
+
+1. **Total US Stock Market** — captures ~4,000 US companies
+2. **Total International Stock Market** — captures ~8,000 foreign companies
+3. **Total Bond Market** — captures ~10,000 US bonds
+
+Together, you own a slice of essentially the *entire investable world*. Combined expense ratio: about **0.04%**. No stock picking. No market timing. No drama.
+
+This is the portfolio recommended by Vanguard founder Jack Bogle himself, William Bernstein, Mike Piper, and Rick Ferri.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The 3-Fund Portfolio</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="22">Own the whole investable world</text><g><circle cx="280" cy="380" r="160" fill="#6366f1" opacity="0.85"/><text x="280" y="360" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">VTI</text><text x="280" y="395" text-anchor="middle" fill="#fff" font-size="20">US Stocks</text><text x="280" y="425" text-anchor="middle" fill="#fff" font-size="18">~4,000 cos</text></g><g><circle cx="820" cy="380" r="160" fill="#0ea5e9" opacity="0.85"/><text x="820" y="360" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">VXUS</text><text x="820" y="395" text-anchor="middle" fill="#fff" font-size="20">Intl Stocks</text><text x="820" y="425" text-anchor="middle" fill="#fff" font-size="18">~8,000 cos</text></g><g><circle cx="550" cy="680" r="160" fill="#10b981" opacity="0.85"/><text x="550" y="660" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">BND</text><text x="550" y="695" text-anchor="middle" fill="#fff" font-size="20">US Bonds</text><text x="550" y="725" text-anchor="middle" fill="#fff" font-size="18">~10,000 bonds</text></g><rect x="200" y="880" width="700" height="180" fill="#ffd700" rx="12"/><text x="550" y="940" text-anchor="middle" fill="#1a1a2e" font-size="30" font-weight="bold">~22,000 securities</text><text x="550" y="985" text-anchor="middle" fill="#1a1a2e" font-size="26">Combined expense ratio: 0.04%</text><text x="550" y="1030" text-anchor="middle" fill="#1a1a2e" font-size="22">Maintenance: rebalance once a year</text></svg>`,
+          caption: "Three tickers, twenty-two thousand holdings, four basis points of cost. That's it."
+        }
+      },
+      {
+        type: "concept",
+        title: "Meet the Three Funds",
+        content: `**Fund 1: VTI — Vanguard Total Stock Market ETF**
+Tracks the **CRSP US Total Market Index**: roughly **4,000 US companies** — the **S&P 500** plus all mid-caps and small-caps. **Expense ratio: 0.03%** (or **VTSAX** as a mutual fund). Owning VTI = owning a tiny piece of Apple, ExxonMobil, your local bank, and 3,997 other US firms.
+
+**Fund 2: VXUS — Vanguard Total International Stock ETF**
+Tracks the **FTSE Global All-Cap ex-US Index**: roughly **8,000 companies** from **developed markets** (Europe, Japan, Canada) and **emerging markets** (China, India, Brazil). **Expense ratio: 0.05%**. Why bother with international? The US is only ~60% of global market cap. Geographic diversification reduces single-country risk.
+
+**Fund 3: BND — Vanguard Total Bond Market ETF**
+Tracks the **Bloomberg US Aggregate Bond Index**: roughly **10,000 US investment-grade bonds** — US Treasuries, agency mortgages, and high-quality corporate bonds. **Expense ratio: 0.03%**. The ballast that cushions equity crashes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">The Three Funds, Up Close</text><g><rect x="60" y="130" width="320" height="800" fill="#6366f1" rx="14" opacity="0.18"/><rect x="60" y="130" width="320" height="80" fill="#6366f1" rx="14"/><text x="220" y="185" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">VTI</text><text x="220" y="260" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Total US Stocks</text><text x="80" y="320" fill="#fff" font-size="18">Index: CRSP US Total</text><text x="80" y="355" fill="#fff" font-size="18">Holdings: ~4,000 cos</text><text x="80" y="390" fill="#fff" font-size="18">ER: 0.03%</text><text x="80" y="460" fill="#888" font-size="16">Includes:</text><text x="80" y="495" fill="#fff" font-size="16">• S&P 500</text><text x="80" y="525" fill="#fff" font-size="16">• Mid-caps</text><text x="80" y="555" fill="#fff" font-size="16">• Small-caps</text><text x="80" y="635" fill="#888" font-size="16">Top holdings:</text><text x="80" y="670" fill="#fff" font-size="16">• Apple, Microsoft</text><text x="80" y="700" fill="#fff" font-size="16">• NVIDIA, Amazon</text><text x="80" y="730" fill="#fff" font-size="16">• Alphabet, Meta</text><text x="80" y="820" fill="#10b981" font-size="18" font-weight="bold">Growth engine</text><text x="80" y="850" fill="#fff" font-size="14">7-10% real long-term</text></g><g><rect x="390" y="130" width="320" height="800" fill="#0ea5e9" rx="14" opacity="0.18"/><rect x="390" y="130" width="320" height="80" fill="#0ea5e9" rx="14"/><text x="550" y="185" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">VXUS</text><text x="550" y="260" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Intl Stocks</text><text x="410" y="320" fill="#fff" font-size="18">Index: FTSE Global ex-US</text><text x="410" y="355" fill="#fff" font-size="18">Holdings: ~8,000 cos</text><text x="410" y="390" fill="#fff" font-size="18">ER: 0.05%</text><text x="410" y="460" fill="#888" font-size="16">Developed:</text><text x="410" y="495" fill="#fff" font-size="16">• Europe, Japan</text><text x="410" y="525" fill="#fff" font-size="16">• Canada, Australia</text><text x="410" y="555" fill="#fff" font-size="16">• UK, Switzerland</text><text x="410" y="635" fill="#888" font-size="16">Emerging:</text><text x="410" y="670" fill="#fff" font-size="16">• China, India</text><text x="410" y="700" fill="#fff" font-size="16">• Brazil, Taiwan</text><text x="410" y="730" fill="#fff" font-size="16">• South Korea</text><text x="410" y="820" fill="#0ea5e9" font-size="18" font-weight="bold">Diversification</text><text x="410" y="850" fill="#fff" font-size="14">Cuts US-only risk</text></g><g><rect x="720" y="130" width="320" height="800" fill="#10b981" rx="14" opacity="0.18"/><rect x="720" y="130" width="320" height="80" fill="#10b981" rx="14"/><text x="880" y="185" text-anchor="middle" fill="#fff" font-size="32" font-weight="bold">BND</text><text x="880" y="260" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Total US Bonds</text><text x="740" y="320" fill="#fff" font-size="18">Index: BBg US Aggregate</text><text x="740" y="355" fill="#fff" font-size="18">Holdings: ~10,000 bonds</text><text x="740" y="390" fill="#fff" font-size="18">ER: 0.03%</text><text x="740" y="460" fill="#888" font-size="16">Bond types:</text><text x="740" y="495" fill="#fff" font-size="16">• US Treasuries</text><text x="740" y="525" fill="#fff" font-size="16">• Agency MBS</text><text x="740" y="555" fill="#fff" font-size="16">• Investment-grade</text><text x="740" y="585" fill="#fff" font-size="16">   corporates</text><text x="740" y="660" fill="#888" font-size="16">Quality:</text><text x="740" y="695" fill="#fff" font-size="16">• AAA to BBB only</text><text x="740" y="725" fill="#fff" font-size="16">• No junk bonds</text><text x="740" y="820" fill="#10b981" font-size="18" font-weight="bold">Ballast</text><text x="740" y="850" fill="#fff" font-size="14">Cushions stock crashes</text></g><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Mutual fund versions: VTSAX, VTIAX, VBTLX</text></svg>`,
+          caption: "Three funds. Three indexes. Three lines on your statement. Total complexity managed: low."
+        }
+      },
+      {
+        type: "example",
+        title: "Rachel's $200K Portfolio",
+        content: `**Rachel, 35, software engineer.** She has **$200,000** saved across a **401(k)** and **Roth IRA**, and she's targeting a **60/25/15** allocation: **60% VTI, 25% VXUS, 15% BND**.
+
+**Today's snapshot:**
+- **VTI:** **$120,000** (60%)
+- **VXUS:** **$50,000** (25%)
+- **BND:** **$30,000** (15%)
+- **Annual fee drag:** **$200K × 0.036% blended ER = $72/year**
+
+Compare to a typical advisor portfolio with **1% AUM + 0.8% fund fees = 1.8%** total. That's **$3,600/year** vs Rachel's **$72** — a **$3,528 annual savings** that compounds for decades.
+
+**One year later**, the market has run hot. Her allocation drifted to **66% VTI / 22% VXUS / 12% BND**. **Rebalancing time.** She sells some VTI and buys VXUS + BND to get back to **60/25/15**. Total time spent: **15 minutes** in her brokerage app. That's the entire annual maintenance of her portfolio.
+
+**Stay the course.** Repeat for **30 years**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Rachel's $200K, Age 35</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Target: 60% VTI / 25% VXUS / 15% BND</text><g><circle cx="280" cy="400" r="180" fill="#1a1a2e" stroke="#fff" stroke-width="2"/><path d="M 280 220 A 180 180 0 0 1 451 458 L 280 400 Z" fill="#6366f1"/><path d="M 451 458 A 180 180 0 0 1 175 543 L 280 400 Z" fill="#0ea5e9"/><path d="M 175 543 A 180 180 0 0 1 280 220 L 280 400 Z" fill="#10b981"/><text x="280" y="630" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Allocation</text></g><g><text x="650" y="240" fill="#6366f1" font-size="26" font-weight="bold">■ VTI</text><text x="780" y="240" fill="#fff" font-size="24">$120,000  (60%)</text><text x="650" y="300" fill="#0ea5e9" font-size="26" font-weight="bold">■ VXUS</text><text x="780" y="300" fill="#fff" font-size="24">$50,000  (25%)</text><text x="650" y="360" fill="#10b981" font-size="26" font-weight="bold">■ BND</text><text x="780" y="360" fill="#fff" font-size="24">$30,000  (15%)</text><line x1="650" y1="395" x2="1000" y2="395" stroke="#888" stroke-width="2"/><text x="650" y="445" fill="#ffd700" font-size="22" font-weight="bold">Total: $200,000</text><text x="650" y="490" fill="#ffd700" font-size="22" font-weight="bold">Blended ER: 0.036%</text><text x="650" y="535" fill="#10b981" font-size="22" font-weight="bold">Fees: $72/year</text></g><rect x="100" y="720" width="900" height="280" fill="#ffd700" rx="12"/><text x="550" y="775" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">Advisor portfolio would cost:</text><text x="550" y="830" text-anchor="middle" fill="#ef4444" font-size="36" font-weight="bold">$3,600/year (1.8%)</text><text x="550" y="890" text-anchor="middle" fill="#1a1a2e" font-size="24">Rachel's savings: $3,528/year</text><text x="550" y="950" text-anchor="middle" fill="#1a1a2e" font-size="22">Over 30 years compounded: ~$350,000</text></svg>`,
+          caption: "Same diversification. 1/50th the cost. Fifteen minutes a year of work."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "After a strong year for US stocks, Rachel's 60/25/15 (VTI/VXUS/BND) portfolio has drifted to 70/20/10. What does the Boglehead playbook say to do?",
+        options: [
+          { text: "Sell everything and switch to a hot momentum fund — VTI is on a roll", correct: false },
+          { text: "Leave it alone forever — never sell winners", correct: false },
+          { text: "Rebalance back to 60/25/15 by trimming VTI and buying VXUS and BND", correct: true },
+          { text: "Shift to 80/10/10 since US stocks are clearly the winner", correct: false }
+        ],
+        explanation: "Rebalancing means restoring your target allocation, which forces you to systematically 'sell high' (trim the winners) and 'buy low' (add to the underperformers). It also keeps your risk level matching your written plan. Chasing winners (option D) is performance chasing — the exact behavior that causes most investors to underperform their own funds. Bogleheads rebalance roughly once a year or when an allocation drifts more than ~5% from target. 'Stay the course' means stay on your plan — not stay frozen.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Rebalancing = Sell High, Buy Low</text><g><text x="280" y="180" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">DRIFTED (70/20/10)</text><circle cx="280" cy="420" r="170" fill="#1a1a2e" stroke="#fff" stroke-width="2"/><path d="M 280 250 A 170 170 0 0 1 442 478 L 280 420 Z" fill="#6366f1"/><path d="M 442 478 A 170 170 0 0 1 200 558 L 280 420 Z" fill="#0ea5e9"/><path d="M 200 558 A 170 170 0 0 1 280 250 L 280 420 Z" fill="#10b981"/><text x="280" y="640" text-anchor="middle" fill="#6366f1" font-size="22">VTI 70%</text><text x="280" y="675" text-anchor="middle" fill="#0ea5e9" font-size="22">VXUS 20%</text><text x="280" y="710" text-anchor="middle" fill="#10b981" font-size="22">BND 10%</text></g><g><text x="550" y="420" text-anchor="middle" fill="#ffd700" font-size="40">→</text><text x="550" y="470" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Rebalance</text></g><g><text x="820" y="180" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">TARGET (60/25/15)</text><circle cx="820" cy="420" r="170" fill="#1a1a2e" stroke="#10b981" stroke-width="4"/><path d="M 820 250 A 170 170 0 0 1 980 478 L 820 420 Z" fill="#6366f1"/><path d="M 980 478 A 170 170 0 0 1 705 526 L 820 420 Z" fill="#0ea5e9"/><path d="M 705 526 A 170 170 0 0 1 820 250 L 820 420 Z" fill="#10b981"/><text x="820" y="640" text-anchor="middle" fill="#6366f1" font-size="22">VTI 60%</text><text x="820" y="675" text-anchor="middle" fill="#0ea5e9" font-size="22">VXUS 25%</text><text x="820" y="710" text-anchor="middle" fill="#10b981" font-size="22">BND 15%</text></g><rect x="100" y="820" width="900" height="200" fill="#10b981" rx="12" opacity="0.2"/><text x="550" y="880" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Trim VTI (winner) → buy VXUS + BND</text><text x="550" y="935" text-anchor="middle" fill="#fff" font-size="22">Once per year. ~15 minutes.</text><text x="550" y="985" text-anchor="middle" fill="#fff" font-size="22">Risk stays where you planned it.</text></svg>`,
+          caption: "Rebalancing automates the discipline of selling high and buying low."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your 3-Fund Portfolio This Weekend",
+        content: `**Step 1: Pick your allocation.** Use lesson 2's framework. For example, a **40-year-old** with a 25-year horizon might choose **60/25/15** (VTI/VXUS/BND) or **65/25/10**.
+
+**Step 2: Open or log into your brokerage.** Vanguard, Fidelity, or Schwab. If you have a **401(k)**, find its **target-date** or **3-fund equivalent**: usually called "Total Stock," "International," and "Total Bond" with similar low-ER index funds (e.g., Fidelity **FXAIX**, **FTIHX**, **FXNAX**).
+
+**Step 3: Buy the three funds in target proportions.** Use **dollar amounts**, not share counts. Have **$50,000**? **$30K VTI / $12.5K VXUS / $7.5K BND**.
+
+**Step 4: Set a yearly rebalance reminder.** Pick a date — your birthday, January 1st. Compare actual vs target. Trade to restore target. **15 minutes.**
+
+**Step 5: Adopt the Boglehead motto:**
+
+**"Stay the course."**
+
+Don't panic sell. Don't chase recent winners. Don't add a "10% crypto sleeve" because your cousin made money. Trust the math, trust the diversification, trust **compounding**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Your Weekend Playbook</text><g><circle cx="120" cy="170" r="38" fill="#6366f1"/><text x="120" y="182" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">1</text><text x="190" y="165" fill="#fff" font-size="24" font-weight="bold">Pick allocation (e.g. 60/25/15)</text><text x="190" y="195" fill="#888" font-size="18">From lesson 2 framework</text></g><g><circle cx="120" cy="290" r="38" fill="#0ea5e9"/><text x="120" y="302" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">2</text><text x="190" y="285" fill="#fff" font-size="24" font-weight="bold">Log into Vanguard/Fidelity/Schwab</text><text x="190" y="315" fill="#888" font-size="18">Find 401(k) index equivalents</text></g><g><circle cx="120" cy="410" r="38" fill="#10b981"/><text x="120" y="422" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">3</text><text x="190" y="405" fill="#fff" font-size="24" font-weight="bold">Buy VTI + VXUS + BND in dollars</text><text x="190" y="435" fill="#888" font-size="18">$50K → $30K / $12.5K / $7.5K</text></g><g><circle cx="120" cy="530" r="38" fill="#f59e0b"/><text x="120" y="542" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">4</text><text x="190" y="525" fill="#fff" font-size="24" font-weight="bold">Set annual rebalance reminder</text><text x="190" y="555" fill="#888" font-size="18">Birthday or January 1</text></g><g><circle cx="120" cy="650" r="38" fill="#ec4899"/><text x="120" y="662" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">5</text><text x="190" y="645" fill="#fff" font-size="24" font-weight="bold">Don't touch it. Don't panic. Don't chase.</text><text x="190" y="675" fill="#888" font-size="18">The hardest step — and the most valuable</text></g><rect x="80" y="760" width="940" height="260" fill="#ffd700" rx="14"/><text x="550" y="830" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">"Stay the course."</text><text x="550" y="885" text-anchor="middle" fill="#1a1a2e" font-size="24">— Jack Bogle</text><text x="550" y="950" text-anchor="middle" fill="#1a1a2e" font-size="22">Boring portfolios build extraordinary wealth.</text><text x="550" y="990" text-anchor="middle" fill="#1a1a2e" font-size="20">Compounding does the rest.</text></svg>`,
+          caption: "Five steps, one weekend, and you've built the same portfolio professional money managers can't beat."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'pf-real-estate',
