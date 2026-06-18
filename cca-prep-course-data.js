@@ -10444,8 +10444,331 @@ Welcome to the profession. **You matter.**`,
             id: 'cca-mock', title: 'CCA Mock Exam Bank & Test-Day Strategy',
             author: 'Synthesis Learning',
             description: '105-question mock exams in CCA format (90 min, 60% pass), domain-weighted, with item analysis after each.',
-            lessons: 1, duration: 5, progress: 0, category: 'cca-prep',
-            lessonList: comingSoonLessons('105-question domain-weighted CCA-format mock exams with item analysis and test-day strategy'),
+            lessons: 3, duration: 45, progress: 0, category: 'cca-prep',
+            lessonList: [
+{
+    id: "cca-mock-lesson-1",
+    title: "Test-Taking Strategy and Time Management",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The CCA Exam: Format and Pacing",
+        content: `The **AHIMA CCA exam** is **105 multiple-choice questions** to be completed in **2 hours (120 minutes)**. Every question has **4 answer options** with exactly one correct answer. That math works out to roughly **70 seconds per question** — you must **keep moving**.
+
+The exam covers seven domains: **Health Information Concepts, ICD-10-CM, ICD-10-PCS, CPT, Compliance, IT, and Reimbursement**. Questions are computer-delivered at Pearson VUE test centers (or remote-proctored).
+
+The **passing scaled score is approximately 300** out of 400, which roughly corresponds to **~70% correct**. There is **no penalty for guessing** — so **never leave a question blank**. This lesson trains the mental discipline and time-management tactics that turn knowledge into a **passing score** on exam day.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">CCA EXAM FORMAT</text><rect x="100" y="140" width="900" height="200" fill="#6366f1" rx="20"/><text x="550" y="220" font-size="80" fill="#ffffff" text-anchor="middle" font-weight="bold">105 Questions</text><text x="550" y="290" font-size="40" fill="#ffd700" text-anchor="middle">120 Minutes</text><rect x="100" y="380" width="900" height="180" fill="#10b981" rx="20"/><text x="550" y="450" font-size="60" fill="#ffffff" text-anchor="middle" font-weight="bold">~70 seconds</text><text x="550" y="510" font-size="32" fill="#ffffff" text-anchor="middle">per question</text><rect x="100" y="600" width="900" height="180" fill="#f59e0b" rx="20"/><text x="550" y="670" font-size="42" fill="#1a1a2e" text-anchor="middle" font-weight="bold">4 options each</text><text x="550" y="730" font-size="32" fill="#1a1a2e" text-anchor="middle">Pass ~70%</text><rect x="100" y="820" width="900" height="180" fill="#ef4444" rx="20"/><text x="550" y="900" font-size="42" fill="#ffffff" text-anchor="middle" font-weight="bold">NO PENALTY</text><text x="550" y="960" font-size="32" fill="#ffffff" text-anchor="middle">for guessing — never leave blank</text></svg>`,
+          caption: "105 questions, 120 minutes, ~70 seconds per question."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Two-Pass Strategy",
+        content: `The **Two-Pass Strategy** is the proven approach for high-stakes timed exams:
+
+**Pass 1 (≈60 minutes):** Move through all 105 questions in order. **Answer the easy ones you immediately know.** When you hit a hard question — **FLAG IT and skip**. Do NOT burn 5 minutes on one stumper while 80 questions remain.
+
+**Pass 2 (≈60 minutes):** Return to the **~30 flagged questions** with your remaining time. Now you have ~2 minutes each to work them carefully.
+
+**Reading discipline:** Read every question **twice**. **Eliminate obvious wrong answers first** to improve guessing odds from 25% to 50%. Watch for **absolute words** ('always,' 'never,' 'only') — they're often wrong. Watch for **negative qualifiers** ('except,' 'NOT,' 'least likely') — re-read these slowly. **No blanks** — guess your best option even if uncertain.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">TWO-PASS STRATEGY</text><rect x="80" y="120" width="940" height="380" fill="#10b981" rx="20"/><text x="550" y="180" font-size="38" fill="#ffffff" text-anchor="middle" font-weight="bold">PASS 1 (~60 min)</text><text x="550" y="240" font-size="26" fill="#ffffff" text-anchor="middle">Answer easy questions immediately</text><text x="550" y="290" font-size="26" fill="#ffffff" text-anchor="middle">FLAG hard ones and SKIP</text><text x="550" y="340" font-size="26" fill="#ffffff" text-anchor="middle">Goal: ~75 questions answered</text><text x="550" y="400" font-size="26" fill="#ffd700" text-anchor="middle">~30 flagged for later</text><text x="550" y="460" font-size="22" fill="#ffffff" text-anchor="middle">48 sec/question average pace</text><rect x="80" y="540" width="940" height="380" fill="#f59e0b" rx="20"/><text x="550" y="600" font-size="38" fill="#1a1a2e" text-anchor="middle" font-weight="bold">PASS 2 (~60 min)</text><text x="550" y="660" font-size="26" fill="#1a1a2e" text-anchor="middle">Return to flagged questions</text><text x="550" y="710" font-size="26" fill="#1a1a2e" text-anchor="middle">~2 minutes each</text><text x="550" y="760" font-size="26" fill="#1a1a2e" text-anchor="middle">Eliminate wrong answers</text><text x="550" y="820" font-size="26" fill="#1a1a2e" text-anchor="middle">GUESS if still unsure</text><text x="550" y="880" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="bold">NEVER LEAVE BLANK</text><rect x="80" y="960" width="940" height="100" fill="#ef4444" rx="15"/><text x="550" y="1020" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">Watch: always/never/except/NOT</text></svg>`,
+          caption: "Two-pass approach: easy first, flag and skip hard, return with discipline."
+        }
+      },
+      {
+        type: "example",
+        title: "Dissecting a Tricky Question",
+        content: `**Sample question:** *"All of the following are TRUE about HIPAA's minimum necessary standard EXCEPT:"*
+
+**A.** Applies to most uses and disclosures of PHI
+**B.** Does NOT apply to treatment communications between providers
+**C.** Applies to disclosures requested by the patient themselves
+**D.** Requires policies limiting access based on role
+
+**Dissection:**
+1. **Spot the trap word**: 'EXCEPT' — we want the **false** statement.
+2. **Eliminate true statements**: A is true (general rule). B is true (treatment is excepted). D is true (role-based access required).
+3. **C is the FALSE statement** — minimum necessary does **NOT** apply when the **patient requests their own PHI**.
+4. **Answer: C**.
+
+**Lesson:** Negative-stem questions reverse the logic. **Slow down**, **mark each option T/F**, then **pick the outlier**. This methodical approach prevents careless errors that drag your score below 70%.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">DISSECT NEGATIVE QUESTIONS</text><rect x="60" y="100" width="980" height="100" fill="#ef4444" rx="15"/><text x="550" y="160" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">"...all are TRUE EXCEPT" → find the FALSE one</text><rect x="60" y="230" width="980" height="140" fill="#10b981" rx="15"/><text x="100" y="280" font-size="26" fill="#ffffff" font-weight="bold">A. Applies to most PHI uses/disclosures</text><text x="100" y="340" font-size="28" fill="#ffd700">TRUE — eliminate</text><rect x="60" y="400" width="980" height="140" fill="#10b981" rx="15"/><text x="100" y="450" font-size="26" fill="#ffffff" font-weight="bold">B. Does NOT apply to treatment comms</text><text x="100" y="510" font-size="28" fill="#ffd700">TRUE — eliminate</text><rect x="60" y="570" width="980" height="140" fill="#ef4444" rx="15"/><text x="100" y="620" font-size="26" fill="#ffffff" font-weight="bold">C. Applies to patient's own requests</text><text x="100" y="680" font-size="28" fill="#ffd700">FALSE — ANSWER!</text><rect x="60" y="740" width="980" height="140" fill="#10b981" rx="15"/><text x="100" y="790" font-size="26" fill="#ffffff" font-weight="bold">D. Role-based access policies required</text><text x="100" y="850" font-size="28" fill="#ffd700">TRUE — eliminate</text><rect x="60" y="910" width="980" height="150" fill="#ffd700" rx="15"/><text x="550" y="975" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ANSWER: C</text><text x="550" y="1030" font-size="22" fill="#1a1a2e" text-anchor="middle">Mark T/F → pick the outlier</text></svg>`,
+          caption: "Negative-stem questions: mark each option T or F, pick the outlier."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Time Management",
+        question: "You have finished Pass 1 of the CCA exam with 85 questions answered and 20 flagged. There are 50 minutes remaining. What is the BEST next step?",
+        options: [
+          { text: "Submit the exam now to avoid running out of time", correct: false },
+          { text: "Return to flagged questions; spend ~2.5 minutes each and guess on any still unsure — leave nothing blank", correct: true },
+          { text: "Review all 85 answered questions to second-guess your answers", correct: false },
+          { text: "Skip the flagged questions since they were too hard the first time", correct: false }
+        ],
+        explanation: "With 50 minutes for 20 flagged questions, you have ~2.5 minutes per question — perfect Pass 2 pacing. Submitting early wastes time you need; reviewing already-answered questions usually hurts (first instinct is often right); skipping flagged questions guarantees zero credit. Always GUESS if still unsure — there's no penalty for guessing, so 25% odds beat 0%.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">PACING MATH</text><rect x="100" y="150" width="900" height="160" fill="#6366f1" rx="20"/><text x="550" y="220" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">20 flagged questions</text><text x="550" y="280" font-size="32" fill="#ffd700" text-anchor="middle">50 minutes remaining</text><text x="550" y="430" font-size="80" fill="#10b981" text-anchor="middle" font-weight="bold">2.5 min</text><text x="550" y="490" font-size="32" fill="#ffffff" text-anchor="middle">per flagged question</text><rect x="100" y="540" width="900" height="140" fill="#10b981" rx="20"/><text x="550" y="610" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">Work each carefully</text><text x="550" y="660" font-size="28" fill="#ffffff" text-anchor="middle">Eliminate, then commit</text><rect x="100" y="710" width="900" height="140" fill="#ef4444" rx="20"/><text x="550" y="780" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">If still unsure: GUESS</text><text x="550" y="830" font-size="28" fill="#ffffff" text-anchor="middle">25% &gt; 0% blank</text><rect x="100" y="880" width="900" height="160" fill="#ffd700" rx="20"/><text x="550" y="960" font-size="34" fill="#1a1a2e" text-anchor="middle" font-weight="bold">NEVER LEAVE BLANK</text><text x="550" y="1010" font-size="26" fill="#1a1a2e" text-anchor="middle">No penalty for wrong answers</text></svg>`,
+          caption: "Pass 2 math: divide remaining time by flagged questions, then commit."
+        }
+      },
+      {
+        type: "application",
+        title: "Exam Day Logistics Checklist",
+        content: `**The night before:**
+- Stop studying by 8 PM. Pack your bag. Get **7–8 hours of sleep**.
+- Lay out **two forms of valid ID** (one government photo ID).
+
+**The morning of:**
+- Eat a **substantial breakfast** — protein + complex carbs (eggs + oatmeal). Avoid heavy sugar that causes crashes.
+- **Dress in layers** — test centers run cold or hot unpredictably.
+- **Arrive 30 minutes early.** Late arrivals are turned away.
+
+**At the test center:**
+- Lock phone/watch in the locker. Computer-based exam — pencil/paper provided.
+- Take the **tutorial** — it doesn't count toward your time.
+- Use the **on-screen FLAG button** religiously.
+
+**Mental approach:**
+- Nervous is **normal**. Breathe deeply between sections.
+- Trust your prep. **You studied for this.** Pass mark is ~70% — perfection is not required.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">EXAM DAY CHECKLIST</text><rect x="60" y="110" width="980" height="220" fill="#6366f1" rx="20"/><text x="550" y="160" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">NIGHT BEFORE</text><text x="100" y="210" font-size="24" fill="#ffffff">- Stop studying by 8 PM</text><text x="100" y="250" font-size="24" fill="#ffffff">- Pack 2 forms of ID (1 photo gov ID)</text><text x="100" y="290" font-size="24" fill="#ffffff">- 7-8 hours sleep</text><rect x="60" y="350" width="980" height="220" fill="#10b981" rx="20"/><text x="550" y="400" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">MORNING OF</text><text x="100" y="450" font-size="24" fill="#ffffff">- Substantial breakfast (protein + carbs)</text><text x="100" y="490" font-size="24" fill="#ffffff">- Dress in LAYERS (center temp varies)</text><text x="100" y="530" font-size="24" fill="#ffffff">- Arrive 30 min early</text><rect x="60" y="590" width="980" height="220" fill="#f59e0b" rx="20"/><text x="550" y="640" font-size="30" fill="#1a1a2e" text-anchor="middle" font-weight="bold">AT TEST CENTER</text><text x="100" y="690" font-size="24" fill="#1a1a2e">- Lock phone/watch in locker</text><text x="100" y="730" font-size="24" fill="#1a1a2e">- Take the tutorial (free time)</text><text x="100" y="770" font-size="24" fill="#1a1a2e">- Use the FLAG button</text><rect x="60" y="830" width="980" height="220" fill="#ffd700" rx="20"/><text x="550" y="890" font-size="30" fill="#1a1a2e" text-anchor="middle" font-weight="bold">MENTAL APPROACH</text><text x="550" y="940" font-size="26" fill="#1a1a2e" text-anchor="middle">Nervous is normal - breathe</text><text x="550" y="990" font-size="26" fill="#1a1a2e" text-anchor="middle">Pass = ~70%, not perfection</text><text x="550" y="1030" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">You studied for this</text></svg>`,
+          caption: "Logistics, fuel, layers, ID, FLAG button, breathe. You're ready."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-mock-lesson-2",
+    title: "Mock Exam Set 1: Domain 1-3 Sample Questions",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Mock Set 1: Foundation Domains",
+        content: `This mock set covers **CCA Domains 1–3**: **Health Information Concepts** (UHDDS, HIPAA), **ICD-10-CM** (diagnosis coding conventions), and **ICD-10-PCS** (inpatient procedure coding). These three domains account for roughly **45–50% of the exam** and test the **foundational coding knowledge** every CCA must master.
+
+The questions you'll see here are **AHIMA-style** — short stem, four plausible options, one best answer. Treat each one like the real thing: **read twice, eliminate wrong answers, commit**.
+
+After each quiz, the **explanation rebuilds the concept** from the ground up — that's how you turn a wrong answer into a learning moment. By the end of this set, you'll have a **diagnostic snapshot** of which foundational domains need the most drill time before exam day. **Let's begin.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">MOCK SET 1: DOMAINS 1-3</text><rect x="100" y="140" width="900" height="220" fill="#6366f1" rx="20"/><text x="550" y="200" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Domain 1</text><text x="550" y="260" font-size="28" fill="#ffffff" text-anchor="middle">Health Information Concepts</text><text x="550" y="320" font-size="24" fill="#ffffff" text-anchor="middle">UHDDS, HIPAA, data governance</text><rect x="100" y="380" width="900" height="220" fill="#10b981" rx="20"/><text x="550" y="440" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">Domain 2</text><text x="550" y="500" font-size="28" fill="#ffffff" text-anchor="middle">ICD-10-CM Diagnosis Coding</text><text x="550" y="560" font-size="24" fill="#ffffff" text-anchor="middle">Excludes notes, conventions</text><rect x="100" y="620" width="900" height="220" fill="#f59e0b" rx="20"/><text x="550" y="680" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Domain 3</text><text x="550" y="740" font-size="28" fill="#1a1a2e" text-anchor="middle">ICD-10-PCS Procedure Coding</text><text x="550" y="800" font-size="24" fill="#1a1a2e" text-anchor="middle">7-char format, root operations</text><rect x="100" y="870" width="900" height="170" fill="#ffd700" rx="20"/><text x="550" y="950" font-size="34" fill="#1a1a2e" text-anchor="middle" font-weight="bold">~45-50% of exam</text><text x="550" y="1010" font-size="26" fill="#1a1a2e" text-anchor="middle">5 questions ahead</text></svg>`,
+          caption: "Mock Set 1 covers the foundational coding domains."
+        }
+      },
+      {
+        type: "concept",
+        title: "Question Anatomy and Attack Plan",
+        content: `Every CCA question has three parts:
+
+**1. The Stem** — sets the scenario (often a 1-2 sentence vignette). Look for **dates, signal words, and key terms** like "principal diagnosis," "Excludes1," or "7-character code."
+
+**2. The Options (A–D)** — four answers. Usually one is **obviously wrong** (distractor), one is a **near-miss** (testing precision), and one is **best**. A fourth is often a **trap** using a common student misconception.
+
+**3. The Best-Answer Rule** — multiple options may be technically true. Pick the one that **most directly answers the stem**.
+
+**Attack plan:**
+1. **Read stem twice**, underline mentally.
+2. **Predict the answer** before looking at options.
+3. **Eliminate** clear wrongs.
+4. **Compare top 2** — which is more specific?
+5. **Commit, flag if unsure, MOVE ON.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">QUESTION ANATOMY</text><rect x="60" y="110" width="980" height="200" fill="#6366f1" rx="20"/><text x="550" y="160" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">1. STEM</text><text x="550" y="210" font-size="24" fill="#ffffff" text-anchor="middle">Vignette + key signal words</text><text x="550" y="260" font-size="24" fill="#ffffff" text-anchor="middle">Read twice, underline mentally</text><rect x="60" y="330" width="980" height="240" fill="#10b981" rx="20"/><text x="550" y="380" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">2. OPTIONS (A-D)</text><text x="550" y="430" font-size="22" fill="#ffffff" text-anchor="middle">1 obvious distractor</text><text x="550" y="470" font-size="22" fill="#ffffff" text-anchor="middle">1 near-miss (precision test)</text><text x="550" y="510" font-size="22" fill="#ffffff" text-anchor="middle">1 trap (common misconception)</text><text x="550" y="550" font-size="22" fill="#ffd700" text-anchor="middle">1 BEST answer</text><rect x="60" y="590" width="980" height="180" fill="#f59e0b" rx="20"/><text x="550" y="650" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">3. BEST ANSWER RULE</text><text x="550" y="700" font-size="24" fill="#1a1a2e" text-anchor="middle">Multiple may be true</text><text x="550" y="740" font-size="24" fill="#1a1a2e" text-anchor="middle">Pick the MOST direct answer</text><rect x="60" y="790" width="980" height="260" fill="#ffd700" rx="20"/><text x="550" y="850" font-size="30" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ATTACK PLAN</text><text x="100" y="900" font-size="24" fill="#1a1a2e">1. Read stem twice</text><text x="100" y="940" font-size="24" fill="#1a1a2e">2. Predict before reading options</text><text x="100" y="980" font-size="24" fill="#1a1a2e">3. Eliminate wrongs</text><text x="100" y="1020" font-size="24" fill="#1a1a2e">4. Compare top 2 - pick specific</text></svg>`,
+          caption: "Stem → options → best answer. Predict, eliminate, commit."
+        }
+      },
+      {
+        type: "example",
+        title: "Walkthrough: Principal Diagnosis Question",
+        content: `**Question:** *"A patient is admitted with chest pain. After workup, the physician documents 'NSTEMI' as the final diagnosis. The patient also has Type 2 diabetes and hypertension. According to UHDDS, which is the principal diagnosis?"*
+
+**A.** Chest pain
+**B.** NSTEMI
+**C.** Type 2 diabetes
+**D.** Hypertension
+
+**Walkthrough:**
+1. **Stem signal:** "principal diagnosis" + "UHDDS."
+2. **UHDDS rule:** principal diagnosis = condition **established after study** chiefly responsible for **occasioning admission**.
+3. **Chest pain** was the **symptom** — drop it once the underlying cause is found.
+4. **Diabetes & hypertension** are **comorbidities** — coded as secondary.
+5. **NSTEMI** = the established cardiac diagnosis that **caused the admission**.
+
+**Answer: B. NSTEMI.**
+
+**Pattern:** When a symptom leads to a diagnosis, **code the diagnosis as principal**, not the symptom.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">PRINCIPAL DX WALKTHROUGH</text><rect x="60" y="110" width="980" height="120" fill="#6366f1" rx="15"/><text x="550" y="160" font-size="26" fill="#ffffff" text-anchor="middle">Admitted: chest pain</text><text x="550" y="200" font-size="26" fill="#ffd700" text-anchor="middle">Final dx: NSTEMI + DM2 + HTN</text><rect x="60" y="260" width="980" height="100" fill="#ef4444" rx="15"/><text x="100" y="320" font-size="24" fill="#ffffff" font-weight="bold">A. Chest pain - symptom, drop it</text><rect x="60" y="380" width="980" height="100" fill="#10b981" rx="15"/><text x="100" y="440" font-size="26" fill="#ffffff" font-weight="bold">B. NSTEMI - caused admission</text><rect x="60" y="500" width="980" height="100" fill="#ef4444" rx="15"/><text x="100" y="560" font-size="24" fill="#ffffff" font-weight="bold">C. DM2 - comorbidity, secondary</text><rect x="60" y="620" width="980" height="100" fill="#ef4444" rx="15"/><text x="100" y="680" font-size="24" fill="#ffffff" font-weight="bold">D. HTN - comorbidity, secondary</text><rect x="60" y="750" width="980" height="140" fill="#ffd700" rx="20"/><text x="550" y="820" font-size="34" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ANSWER: B. NSTEMI</text><text x="550" y="870" font-size="22" fill="#1a1a2e" text-anchor="middle">"After study" — code the cause, not symptom</text><rect x="60" y="910" width="980" height="140" fill="#8b5cf6" rx="20"/><text x="550" y="980" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">UHDDS: condition after study</text><text x="550" y="1030" font-size="24" fill="#ffffff" text-anchor="middle">that occasioned admission</text></svg>`,
+          caption: "Symptom leads to diagnosis → code the diagnosis as principal."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Excludes1 vs Excludes2",
+        question: "An ICD-10-CM category has an Excludes1 note listing 'congenital cataract (Q12.0).' A patient has an acquired senile cataract. The coder is also documenting a separate congenital cataract from a prior diagnosis. What is the correct action?",
+        options: [
+          { text: "Code both the acquired cataract and the congenital cataract from the same category — Excludes1 allows this", correct: false },
+          { text: "Excludes1 means the two conditions are mutually exclusive — they cannot both be coded from the same category at the same encounter", correct: true },
+          { text: "Excludes1 is the same as Excludes2 — code whichever the physician prefers", correct: false },
+          { text: "Skip the Excludes1 note since it is informational only", correct: false }
+        ],
+        explanation: "Excludes1 means 'NOT CODED HERE' — the two conditions are mutually exclusive and cannot occur together (e.g., a cataract can't be BOTH congenital and acquired in the same eye). Excludes2 is different — it means 'NOT INCLUDED HERE' but both conditions CAN coexist and BOTH may be coded if documented. This distinction is one of the most-tested ICD-10-CM convention rules on the CCA.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">EXCLUDES1 vs EXCLUDES2</text><rect x="60" y="120" width="480" height="500" fill="#ef4444" rx="20"/><text x="300" y="180" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">EXCLUDES1</text><text x="300" y="240" font-size="24" fill="#ffffff" text-anchor="middle">"NOT CODED HERE"</text><text x="300" y="300" font-size="22" fill="#ffd700" text-anchor="middle">MUTUALLY EXCLUSIVE</text><text x="300" y="360" font-size="20" fill="#ffffff" text-anchor="middle">Cannot occur together</text><text x="300" y="420" font-size="20" fill="#ffffff" text-anchor="middle">Cannot both be coded</text><text x="300" y="490" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Example:</text><text x="300" y="540" font-size="20" fill="#ffffff" text-anchor="middle">Congenital vs</text><text x="300" y="580" font-size="20" fill="#ffffff" text-anchor="middle">acquired cataract</text><rect x="560" y="120" width="480" height="500" fill="#10b981" rx="20"/><text x="800" y="180" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">EXCLUDES2</text><text x="800" y="240" font-size="24" fill="#ffffff" text-anchor="middle">"NOT INCLUDED HERE"</text><text x="800" y="300" font-size="22" fill="#ffd700" text-anchor="middle">CAN COEXIST</text><text x="800" y="360" font-size="20" fill="#ffffff" text-anchor="middle">Both may be coded</text><text x="800" y="420" font-size="20" fill="#ffffff" text-anchor="middle">if documented</text><text x="800" y="490" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Example:</text><text x="800" y="540" font-size="20" fill="#ffffff" text-anchor="middle">Acute + chronic</text><text x="800" y="580" font-size="20" fill="#ffffff" text-anchor="middle">conditions together</text><rect x="60" y="660" width="980" height="180" fill="#ffd700" rx="20"/><text x="550" y="720" font-size="30" fill="#1a1a2e" text-anchor="middle" font-weight="bold">MEMORY TRICK</text><text x="550" y="770" font-size="24" fill="#1a1a2e" text-anchor="middle">1 = ONE only (mutually exclusive)</text><text x="550" y="810" font-size="24" fill="#1a1a2e" text-anchor="middle">2 = TWO can coexist</text><rect x="60" y="870" width="980" height="180" fill="#6366f1" rx="20"/><text x="550" y="940" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">Most-tested CCA convention</text><text x="550" y="990" font-size="24" fill="#ffffff" text-anchor="middle">Know the difference cold</text></svg>`,
+          caption: "Excludes1 = mutually exclusive. Excludes2 = both can coexist."
+        }
+      },
+      {
+        type: "application",
+        title: "Drilling Weak Domains After the Mock",
+        content: `After completing **Mock Set 1**, **diagnose your weak spots** with a simple post-mock review:
+
+**Step 1 — Categorize misses by domain:**
+- Wrong on UHDDS/HIPAA → drill **Domain 1**.
+- Wrong on Excludes1/2, NEC/NOS, sequencing → drill **Domain 2** (ICD-10-CM).
+- Wrong on root operations, 7-character format → drill **Domain 3** (ICD-10-PCS).
+
+**Step 2 — Sub-categorize by topic:**
+Within Domain 3, was it **root operation selection** (Excision vs Resection) or **approach character** (Open vs Percutaneous)?
+
+**Step 3 — Target study:**
+- For each weak topic, **re-read the official guidelines** for that section.
+- **Re-do 10 practice questions** on that topic.
+- **Re-test** 48 hours later.
+
+**Rule:** **Don't study what you already know.** Spend 80% of remaining prep on your **bottom 20%** of topics.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">DRILL WEAK DOMAINS</text><rect x="60" y="110" width="980" height="220" fill="#6366f1" rx="20"/><text x="550" y="170" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">STEP 1: Categorize</text><text x="100" y="220" font-size="22" fill="#ffffff">UHDDS/HIPAA wrong → Domain 1</text><text x="100" y="260" font-size="22" fill="#ffffff">Excludes/sequencing wrong → Domain 2</text><text x="100" y="300" font-size="22" fill="#ffffff">Root op/format wrong → Domain 3</text><rect x="60" y="350" width="980" height="200" fill="#10b981" rx="20"/><text x="550" y="410" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 2: Sub-categorize</text><text x="550" y="470" font-size="24" fill="#ffffff" text-anchor="middle">Was it Excision vs Resection?</text><text x="550" y="520" font-size="24" fill="#ffffff" text-anchor="middle">Or Open vs Percutaneous approach?</text><rect x="60" y="570" width="980" height="220" fill="#f59e0b" rx="20"/><text x="550" y="630" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">STEP 3: Target study</text><text x="100" y="680" font-size="22" fill="#1a1a2e">- Re-read official guidelines</text><text x="100" y="720" font-size="22" fill="#1a1a2e">- 10 practice questions on topic</text><text x="100" y="760" font-size="22" fill="#1a1a2e">- Re-test 48 hours later</text><rect x="60" y="810" width="980" height="240" fill="#ffd700" rx="20"/><text x="550" y="880" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">80/20 RULE</text><text x="550" y="940" font-size="26" fill="#1a1a2e" text-anchor="middle">80% of prep time on</text><text x="550" y="980" font-size="26" fill="#1a1a2e" text-anchor="middle">bottom 20% of topics</text><text x="550" y="1030" font-size="22" fill="#1a1a2e" text-anchor="middle">Don't study what you already know</text></svg>`,
+          caption: "Categorize misses → sub-categorize → target study → re-test."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-mock-lesson-3",
+    title: "Mock Exam Set 2: Domain 4-7 Sample Questions",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Mock Set 2: After Coding Fundamentals",
+        content: `Welcome to **Mock Set 2** — the second half of your CCA preparation. After mastering the **coding fundamentals** in Domains 1–3, the exam tests **the systems that surround coding**: **CPT outpatient coding (Domain 4)**, **Compliance and regulatory law (Domain 5)**, **Information Technology (Domain 6)**, and **Reimbursement methodologies (Domain 7)**.
+
+These four domains together account for roughly **50–55% of exam questions** and include the **highest-value real-world skills** — modifiers that change payment, the False Claims Act that drives audits, FHIR APIs that are replacing legacy interfaces, and the MS-DRG / Medicare Advantage formulas that determine **how much hospitals actually get paid**.
+
+This is the **final mock** before your real exam. **Treat it seriously.** Time each question. Flag what's hard. We end with a post-mock review process and your final pep talk. **Let's finish strong.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">MOCK SET 2: DOMAINS 4-7</text><rect x="60" y="120" width="480" height="220" fill="#6366f1" rx="20"/><text x="300" y="180" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">Domain 4</text><text x="300" y="230" font-size="24" fill="#ffffff" text-anchor="middle">CPT Outpatient</text><text x="300" y="280" font-size="20" fill="#ffffff" text-anchor="middle">Modifiers, E/M</text><rect x="560" y="120" width="480" height="220" fill="#10b981" rx="20"/><text x="800" y="180" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">Domain 5</text><text x="800" y="230" font-size="24" fill="#ffffff" text-anchor="middle">Compliance</text><text x="800" y="280" font-size="20" fill="#ffffff" text-anchor="middle">FCA, HIPAA, audits</text><rect x="60" y="360" width="480" height="220" fill="#f59e0b" rx="20"/><text x="300" y="420" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Domain 6</text><text x="300" y="470" font-size="24" fill="#1a1a2e" text-anchor="middle">Information Tech</text><text x="300" y="520" font-size="20" fill="#1a1a2e" text-anchor="middle">FHIR, HL7, EHR</text><rect x="560" y="360" width="480" height="220" fill="#ec4899" rx="20"/><text x="800" y="420" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">Domain 7</text><text x="800" y="470" font-size="24" fill="#ffffff" text-anchor="middle">Reimbursement</text><text x="800" y="520" font-size="20" fill="#ffffff" text-anchor="middle">MS-DRG, MA, RAF</text><rect x="60" y="610" width="980" height="200" fill="#8b5cf6" rx="20"/><text x="550" y="680" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">~50-55% of exam</text><text x="550" y="740" font-size="26" fill="#ffffff" text-anchor="middle">Highest real-world value</text><text x="550" y="790" font-size="22" fill="#ffd700" text-anchor="middle">Final mock before exam day</text><rect x="60" y="830" width="980" height="220" fill="#ffd700" rx="20"/><text x="550" y="900" font-size="36" fill="#1a1a2e" text-anchor="middle" font-weight="bold">FINISH STRONG</text><text x="550" y="960" font-size="26" fill="#1a1a2e" text-anchor="middle">5 questions ahead</text><text x="550" y="1010" font-size="26" fill="#1a1a2e" text-anchor="middle">Time. Flag. Commit.</text></svg>`,
+          caption: "Domain 4-7 — systems that surround coding. ~50-55% of the exam."
+        }
+      },
+      {
+        type: "concept",
+        title: "Question Types You'll See in Set 2",
+        content: `Domain 4–7 questions fall into **four recognizable types**. Recognizing the type cues your **mental playbook**:
+
+**Type A — Modifier/Coding Recall:** "When is modifier -25 used?" → memorize definitions; eliminate distractors.
+
+**Type B — Regulatory Definition:** "What is the False Claims Act?" → look for **specific statutory language** (treble damages, qui tam, etc.).
+
+**Type C — Standards/Protocol Compare:** "FHIR vs HL7 v2?" → know **one-line distinction** for each standard; eliminate the obviously dated option.
+
+**Type D — Calculation:** "Calculate MS-DRG payment given base rate × weight × wage index" → write out the **formula** on scratch paper, plug numbers, double-check decimals.
+
+**Common trap:** answers that **sound technical** but reference the wrong domain (e.g., HIPAA when the question is FCA). Always re-anchor on **what statute or system the stem is asking about**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">4 QUESTION TYPES</text><rect x="60" y="110" width="980" height="200" fill="#6366f1" rx="20"/><text x="100" y="160" font-size="28" fill="#ffd700" font-weight="bold">TYPE A: Modifier/Code Recall</text><text x="100" y="210" font-size="22" fill="#ffffff">"When is modifier -25 used?"</text><text x="100" y="250" font-size="22" fill="#ffffff">Memorize definitions, eliminate</text><text x="100" y="290" font-size="22" fill="#10b981">Strategy: rapid pattern match</text><rect x="60" y="330" width="980" height="200" fill="#10b981" rx="20"/><text x="100" y="380" font-size="28" fill="#ffd700" font-weight="bold">TYPE B: Regulatory Definition</text><text x="100" y="430" font-size="22" fill="#ffffff">"What is False Claims Act?"</text><text x="100" y="470" font-size="22" fill="#ffffff">Statutory language: qui tam, treble</text><text x="100" y="510" font-size="22" fill="#ffd700">Strategy: match specific terms</text><rect x="60" y="550" width="980" height="200" fill="#f59e0b" rx="20"/><text x="100" y="600" font-size="28" fill="#1a1a2e" font-weight="bold">TYPE C: Standards Compare</text><text x="100" y="650" font-size="22" fill="#1a1a2e">"FHIR vs HL7 v2?"</text><text x="100" y="690" font-size="22" fill="#1a1a2e">One-line distinction per standard</text><text x="100" y="730" font-size="22" fill="#1a1a2e" font-weight="bold">Strategy: eliminate dated option</text><rect x="60" y="770" width="980" height="200" fill="#ec4899" rx="20"/><text x="100" y="820" font-size="28" fill="#ffd700" font-weight="bold">TYPE D: Calculation</text><text x="100" y="870" font-size="22" fill="#ffffff">"MS-DRG payment formula?"</text><text x="100" y="910" font-size="22" fill="#ffffff">Write formula, plug, check decimals</text><text x="100" y="950" font-size="22" fill="#ffd700">Strategy: scratch paper math</text><rect x="60" y="990" width="980" height="60" fill="#ef4444" rx="15"/><text x="550" y="1030" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Trap: tech-sounding answers from wrong domain</text></svg>`,
+          caption: "Recognize the type → run the right mental playbook."
+        }
+      },
+      {
+        type: "example",
+        title: "Walkthrough: MS-DRG Payment Calculation",
+        content: `**Question:** *"A hospital has a Medicare base rate of $6,000. The patient's case is grouped to MS-DRG 470 with a relative weight of 2.0000. The hospital's wage index is 1.05. Calculate the Medicare payment (ignoring outliers and adjustments)."*
+
+**A.** $6,000
+**B.** $12,000
+**C.** $12,600
+**D.** $13,200
+
+**Walkthrough:**
+1. **Formula:** *Payment = Base Rate × DRG Weight × Wage Index*
+2. **Plug in:** $6,000 × 2.0000 × 1.05
+3. **Step 1:** $6,000 × 2.0000 = **$12,000**
+4. **Step 2:** $12,000 × 1.05 = **$12,600**
+
+**Answer: C. $12,600**
+
+**Trap:** Option B ($12,000) is what you get if you **forget the wage index** — the most common error. Always **multiply ALL THREE** factors when the question gives them. **Write the formula first**, then plug. **Don't try to do it in your head** under time pressure.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">MS-DRG CALCULATION</text><rect x="60" y="110" width="980" height="160" fill="#6366f1" rx="20"/><text x="550" y="170" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">FORMULA</text><text x="550" y="230" font-size="32" fill="#ffffff" text-anchor="middle">Payment = Base x Weight x Wage</text><rect x="60" y="290" width="980" height="200" fill="#10b981" rx="20"/><text x="550" y="350" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">GIVEN</text><text x="100" y="400" font-size="24" fill="#ffffff">Base rate: $6,000</text><text x="100" y="440" font-size="24" fill="#ffffff">Weight: 2.0000</text><text x="100" y="480" font-size="24" fill="#ffffff">Wage index: 1.05</text><rect x="60" y="510" width="980" height="160" fill="#f59e0b" rx="20"/><text x="550" y="570" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">STEP 1</text><text x="550" y="620" font-size="28" fill="#1a1a2e" text-anchor="middle">$6,000 x 2.0000 = $12,000</text><rect x="60" y="690" width="980" height="160" fill="#f59e0b" rx="20"/><text x="550" y="750" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">STEP 2</text><text x="550" y="800" font-size="28" fill="#1a1a2e" text-anchor="middle">$12,000 x 1.05 = $12,600</text><rect x="60" y="870" width="980" height="180" fill="#ffd700" rx="20"/><text x="550" y="940" font-size="36" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ANSWER: C. $12,600</text><text x="550" y="1000" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">Trap: forgetting wage index = B</text></svg>`,
+          caption: "Write the formula, plug carefully, multiply ALL THREE factors."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Modifier -25",
+        question: "An established patient is seen for an annual physical (CPT 99396). During the exam, the physician identifies a suspicious mole and performs a biopsy (CPT 11102) the same visit. Which CPT modifier should be appended to the E/M code?",
+        options: [
+          { text: "Modifier -59 (distinct procedural service)", correct: false },
+          { text: "Modifier -25 (significant, separately identifiable E/M service on the same day as a procedure)", correct: true },
+          { text: "Modifier -57 (decision for surgery)", correct: false },
+          { text: "No modifier needed — bill the E/M and procedure separately", correct: false }
+        ],
+        explanation: "Modifier -25 is appended to the E/M code when a significant, separately identifiable E/M service is performed on the same day as a minor procedure (0- or 10-day global) by the same provider. The annual physical (E/M) is distinct from and significant beyond the biopsy procedure, so -25 unbundles the E/M from the procedure's global package. Modifier -59 applies to distinct procedural services (procedures, not E/M). Modifier -57 is for E/M leading to MAJOR surgery (90-day global). Without -25, the payer will deny the E/M as bundled.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="40" fill="#ffd700" text-anchor="middle" font-weight="bold">MODIFIER -25</text><rect x="60" y="110" width="980" height="160" fill="#6366f1" rx="20"/><text x="550" y="170" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">DEFINITION</text><text x="550" y="220" font-size="24" fill="#ffffff" text-anchor="middle">Significant, separately identifiable</text><text x="550" y="250" font-size="24" fill="#ffffff" text-anchor="middle">E/M on same day as procedure</text><rect x="60" y="290" width="980" height="200" fill="#10b981" rx="20"/><text x="550" y="350" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">SCENARIO</text><text x="550" y="410" font-size="24" fill="#ffffff" text-anchor="middle">99396 (annual) + 11102 (biopsy)</text><text x="550" y="460" font-size="24" fill="#ffd700" text-anchor="middle">Append -25 to 99396</text><rect x="60" y="510" width="980" height="240" fill="#f59e0b" rx="20"/><text x="550" y="570" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">DISTINGUISH</text><text x="100" y="620" font-size="22" fill="#1a1a2e">-25 = E/M w/ minor procedure (0/10-day)</text><text x="100" y="660" font-size="22" fill="#1a1a2e">-57 = E/M leading to MAJOR surgery (90-day)</text><text x="100" y="700" font-size="22" fill="#1a1a2e">-59 = distinct procedure (not E/M)</text><rect x="60" y="770" width="980" height="280" fill="#ffd700" rx="20"/><text x="550" y="840" font-size="34" fill="#1a1a2e" text-anchor="middle" font-weight="bold">WITHOUT -25</text><text x="550" y="900" font-size="26" fill="#1a1a2e" text-anchor="middle">Payer denies E/M as bundled</text><text x="550" y="960" font-size="26" fill="#ef4444" text-anchor="middle" font-weight="bold">Real money lost</text><text x="550" y="1020" font-size="24" fill="#1a1a2e" text-anchor="middle">High-yield CCA topic — know cold</text></svg>`,
+          caption: "Modifier -25 unbundles E/M from same-day minor procedure."
+        }
+      },
+      {
+        type: "application",
+        title: "Post-Mock Review & Final Pep Talk",
+        content: `**Post-mock review process:**
+
+**1. Score by domain.** Calculate % correct in each of Domains 1–7. Anything below **70%** = focused study target.
+
+**2. Categorize wrongs.** For every miss, write:
+- The **domain**
+- The **topic** (e.g., "modifier -25")
+- The **reason** (didn't know / misread / rushed)
+
+**3. Build a focused-study list** — top 5 weakest topics. Spend the remaining days drilling **those five only**.
+
+**4. Final week.** Re-do mocks. Light review. **Sleep.** Don't cram new topics 48 hours out.
+
+**Final pep talk:**
+You've completed **8 books**, hundreds of cards, **two full mocks**. You know UHDDS, Excludes notes, root operations, modifiers, MS-DRGs, FHIR, the False Claims Act. You've **earned this seat**. Walk in calm, work the **two-pass strategy**, **flag and move**, **never leave blank**. **You're ready.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="42" fill="#ffd700" text-anchor="middle" font-weight="bold">YOU'RE READY</text><rect x="60" y="110" width="980" height="180" fill="#6366f1" rx="20"/><text x="550" y="170" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">POST-MOCK REVIEW</text><text x="100" y="220" font-size="22" fill="#ffffff">1. Score by domain (anything &lt;70% = target)</text><text x="100" y="260" font-size="22" fill="#ffffff">2. Categorize wrongs: domain/topic/reason</text><rect x="60" y="310" width="980" height="140" fill="#10b981" rx="20"/><text x="550" y="360" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">FOCUSED-STUDY LIST</text><text x="550" y="410" font-size="24" fill="#ffffff" text-anchor="middle">Top 5 weakest topics only</text><rect x="60" y="470" width="980" height="160" fill="#f59e0b" rx="20"/><text x="550" y="530" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">FINAL WEEK</text><text x="550" y="580" font-size="22" fill="#1a1a2e" text-anchor="middle">Re-do mocks - light review - SLEEP</text><text x="550" y="615" font-size="22" fill="#1a1a2e" text-anchor="middle">Don't cram 48 hrs out</text><rect x="60" y="650" width="980" height="220" fill="#8b5cf6" rx="20"/><text x="550" y="710" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">YOU HAVE LEARNED</text><text x="550" y="760" font-size="22" fill="#ffffff" text-anchor="middle">UHDDS - Excludes - Root Ops</text><text x="550" y="800" font-size="22" fill="#ffffff" text-anchor="middle">Modifiers - MS-DRG - FHIR</text><text x="550" y="840" font-size="22" fill="#ffffff" text-anchor="middle">HIPAA - FCA - Compliance</text><rect x="60" y="890" width="980" height="160" fill="#ffd700" rx="20"/><text x="550" y="950" font-size="38" fill="#1a1a2e" text-anchor="middle" font-weight="bold">FLAG. MOVE. COMMIT.</text><text x="550" y="1010" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">YOU'RE READY.</text></svg>`,
+          caption: "Score, categorize, drill top 5, sleep — then walk in calm and pass."
+        }
+      }
+    ]
+  }
+],
         },
     ];
 
