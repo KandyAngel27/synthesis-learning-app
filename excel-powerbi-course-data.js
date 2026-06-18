@@ -5775,7 +5775,7 @@ The fastest DAX is the one that doesn't have to run — push to the model, push 
             title: 'Power BI Desktop: Visuals and Relationships',
             author: 'Synthesis Learning',
             description: 'Star-schema modeling, the visualization grammar, drill-through, bookmarks, and getting your first useful report on screen.',
-            lessons: 9, duration: 135, progress: 0, category: 'excel-powerbi',
+            lessons: 12, duration: 180, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-pbi-desktop-lesson-1",
@@ -6480,6 +6480,349 @@ If the **DAX query** dominates, the measure or model is the problem. If **visual
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Tune Your Report</text><circle cx="100" cy="170" r="40" fill="#6366f1"/><text x="100" y="180" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">1</text><text x="170" y="160" fill="#ffffff" font-size="22" font-weight="bold">Start Performance Analyzer</text><text x="170" y="190" fill="#888" font-size="18">View tab → Start recording</text><circle cx="100" cy="270" r="40" fill="#0ea5e9"/><text x="100" y="280" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">2</text><text x="170" y="260" fill="#ffffff" font-size="22" font-weight="bold">Refresh visuals + interact</text><text x="170" y="290" fill="#888" font-size="18">Click slicers, switch pages, then Stop</text><circle cx="100" cy="370" r="40" fill="#10b981"/><text x="100" y="380" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">3</text><text x="170" y="360" fill="#ffffff" font-size="22" font-weight="bold">Sort by Total descending</text><text x="170" y="390" fill="#888" font-size="18">Top row = bottleneck</text><circle cx="100" cy="470" r="40" fill="#f59e0b"/><text x="100" y="480" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">4</text><text x="170" y="460" fill="#ffffff" font-size="22" font-weight="bold">Diagnose: DAX or Display?</text><text x="170" y="490" fill="#888" font-size="18">DAX-heavy = measure, Display-heavy = visual</text><circle cx="100" cy="570" r="40" fill="#8b5cf6"/><text x="100" y="580" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">5</text><text x="170" y="560" fill="#ffffff" font-size="22" font-weight="bold">Apply matching fix</text><text x="170" y="590" fill="#888" font-size="18">FILTER, biDir, cardinality / Top N, simplify</text><circle cx="100" cy="670" r="40" fill="#ec4899"/><text x="100" y="680" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">6</text><text x="170" y="660" fill="#ffffff" font-size="22" font-weight="bold">Re-record to confirm</text><text x="170" y="690" fill="#ffd700" font-size="18">Target: &lt; 200ms per visual</text><rect x="60" y="740" width="980" height="160" fill="#ffffff" rx="12"/><text x="550" y="785" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Stretch Goal: DAX Studio</text><text x="80" y="825" fill="#1a1a2e" font-size="18">- Copy DAX Query from Performance Analyzer</text><text x="80" y="855" fill="#1a1a2e" font-size="18">- Paste into DAX Studio → enable Server Timings</text><text x="80" y="885" fill="#1a1a2e" font-size="18">- SE time = scanning, FE time = logic complexity</text><rect x="60" y="920" width="980" height="130" fill="#10b981" rx="12"/><text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Measure → fix → re-measure</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="20">The only reliable performance loop</text><text x="550" y="1035" text-anchor="middle" fill="#ffd700" font-size="18">Always confirm fixes with a fresh recording</text></svg>`,
           caption: "Six steps to a tuned report, plus DAX Studio for measure-level profiling."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-pbi-desktop-lesson-10",
+    title: "Publishing to Power BI Service",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Desktop to Cloud",
+        content: `**Power BI Desktop** builds reports on your laptop — but reports living on your hard drive help nobody. **Power BI Service** (powerbi.com) is the cloud companion where reports are **published**, **shared**, and **refreshed** automatically.
+
+Note: Power BI Service is **separate from Microsoft 365** — it has its own licensing tier. Many people confuse it with SharePoint or Teams content.
+
+To publish: **File → Publish → select a workspace**. The .pbix file uploads, datasets and reports appear in Service, and you can share a URL.
+
+**Workspaces** are containers for related content (reports, datasets, dashboards). **My Workspace** is personal — never put production content there. Use **shared workspaces** for team content. Sharing requires a **Pro license** (~$10-20/user/month).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Desktop to Service Flow</text><rect x="80" y="180" width="280" height="220" fill="#6366f1" rx="14"/><text x="220" y="240" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Power BI Desktop</text><text x="220" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Build report.pbix</text><text x="220" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Local file</text><text x="220" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Free</text><path d="M 380 290 L 720 290" stroke="#ffd700" stroke-width="6" marker-end="url(#a1)"/><defs><marker id="a1" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><polygon points="0 0, 14 7, 0 14" fill="#ffd700"/></marker></defs><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Publish</text><rect x="740" y="180" width="280" height="220" fill="#10b981" rx="14"/><text x="880" y="240" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Power BI Service</text><text x="880" y="290" text-anchor="middle" fill="#ffffff" font-size="20">powerbi.com</text><text x="880" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Cloud-hosted</text><text x="880" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Pro license</text><rect x="100" y="480" width="900" height="540" fill="#0ea5e9" rx="14" opacity="0.15" stroke="#0ea5e9" stroke-width="2"/><text x="550" y="540" text-anchor="middle" fill="#0ea5e9" font-size="28" font-weight="bold">Workspaces (Containers)</text><rect x="160" y="580" width="240" height="180" fill="#888" rx="10"/><text x="280" y="630" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">My Workspace</text><text x="280" y="670" text-anchor="middle" fill="#ffffff" font-size="18">Personal only</text><text x="280" y="700" text-anchor="middle" fill="#ffd700" font-size="18">Not for production</text><rect x="430" y="580" width="240" height="180" fill="#8b5cf6" rx="10"/><text x="550" y="630" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Sales Team WS</text><text x="550" y="670" text-anchor="middle" fill="#ffffff" font-size="18">Shared</text><text x="550" y="700" text-anchor="middle" fill="#ffffff" font-size="18">Pro required</text><rect x="700" y="580" width="240" height="180" fill="#f59e0b" rx="10"/><text x="820" y="630" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Finance WS</text><text x="820" y="670" text-anchor="middle" fill="#ffffff" font-size="18">Shared</text><text x="820" y="700" text-anchor="middle" fill="#ffffff" font-size="18">Pro required</text><text x="550" y="850" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Each workspace holds: Datasets + Reports + Dashboards</text><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="20">Workspace = unit of permission, refresh, and sharing</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Publish once → audience grows infinitely</text></svg>`,
+          caption: "Desktop authors; Service hosts; workspaces organize."
+        }
+      },
+      {
+        type: "concept",
+        title: "Licensing, Workspaces, and Apps",
+        content: `**Power BI Free**: Desktop is free; Service is free for **single-user** consumption only — you can build, but can't share.
+
+**Power BI Pro** (~$10/user/month): Required to **publish to shared workspaces** and **share content** with others. Recipients also need Pro. Standard for most analyst roles.
+
+**Premium Per User (PPU)** (~$20/user/month): Pro features plus larger datasets, more refreshes, AI features. Recipients still need PPU.
+
+**Premium Capacity** (~$5k/month and up): Dedicated cloud capacity for the whole organization. Consumers don't need Pro — read-only viewers are free. Best for large rollouts.
+
+**Apps** are curated, polished collections **published from a workspace**. Consumers see a clean, navigation-optimized view — they never see the raw datasets, draft reports, or hidden measures cluttering the workspace. Think of the workspace as the kitchen and the app as the dining room.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">License Tiers and the Workspace-to-App Pipeline</text><rect x="80" y="140" width="230" height="280" fill="#888" rx="12"/><text x="195" y="190" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Free</text><text x="195" y="230" text-anchor="middle" fill="#ffffff" font-size="18">$0</text><text x="195" y="270" text-anchor="middle" fill="#ffffff" font-size="16">Desktop only</text><text x="195" y="300" text-anchor="middle" fill="#ffffff" font-size="16">Single user</text><text x="195" y="330" text-anchor="middle" fill="#ef4444" font-size="16">No sharing</text><text x="195" y="380" text-anchor="middle" fill="#ffffff" font-size="14">Learn / personal</text><rect x="340" y="140" width="230" height="280" fill="#6366f1" rx="12"/><text x="455" y="190" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pro</text><text x="455" y="230" text-anchor="middle" fill="#ffffff" font-size="18">~$10/user/mo</text><text x="455" y="270" text-anchor="middle" fill="#ffffff" font-size="16">Share + collaborate</text><text x="455" y="300" text-anchor="middle" fill="#ffffff" font-size="16">8 refreshes/day</text><text x="455" y="330" text-anchor="middle" fill="#10b981" font-size="16">All recipients Pro</text><text x="455" y="380" text-anchor="middle" fill="#ffffff" font-size="14">Most analysts</text><rect x="600" y="140" width="230" height="280" fill="#8b5cf6" rx="12"/><text x="715" y="190" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">PPU</text><text x="715" y="230" text-anchor="middle" fill="#ffffff" font-size="18">~$20/user/mo</text><text x="715" y="270" text-anchor="middle" fill="#ffffff" font-size="16">48 refreshes/day</text><text x="715" y="300" text-anchor="middle" fill="#ffffff" font-size="16">100GB datasets</text><text x="715" y="330" text-anchor="middle" fill="#ffffff" font-size="16">AI features</text><text x="715" y="380" text-anchor="middle" fill="#ffffff" font-size="14">Power users</text><rect x="860" y="140" width="160" height="280" fill="#ffd700" rx="12"/><text x="940" y="190" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Premium</text><text x="940" y="230" text-anchor="middle" fill="#1a1a2e" font-size="16">$5k+/mo</text><text x="940" y="270" text-anchor="middle" fill="#1a1a2e" font-size="14">Org-wide</text><text x="940" y="300" text-anchor="middle" fill="#1a1a2e" font-size="14">Free viewers</text><text x="940" y="370" text-anchor="middle" fill="#1a1a2e" font-size="14">Enterprise</text><line x1="80" y1="470" x2="1020" y2="470" stroke="#ffd700" stroke-width="2"/><text x="550" y="520" text-anchor="middle" fill="#ec4899" font-size="28" font-weight="bold">Workspace → App</text><rect x="120" y="560" width="380" height="380" fill="#0ea5e9" rx="14" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="310" y="610" text-anchor="middle" fill="#0ea5e9" font-size="24" font-weight="bold">Workspace (Kitchen)</text><rect x="160" y="640" width="140" height="50" fill="#6366f1" rx="6"/><text x="230" y="672" text-anchor="middle" fill="#ffffff" font-size="14">Dataset v1</text><rect x="320" y="640" width="140" height="50" fill="#6366f1" rx="6"/><text x="390" y="672" text-anchor="middle" fill="#ffffff" font-size="14">Dataset v2</text><rect x="160" y="710" width="140" height="50" fill="#10b981" rx="6"/><text x="230" y="742" text-anchor="middle" fill="#ffffff" font-size="14">Draft Report</text><rect x="320" y="710" width="140" height="50" fill="#10b981" rx="6"/><text x="390" y="742" text-anchor="middle" fill="#ffffff" font-size="14">Test Report</text><rect x="160" y="780" width="140" height="50" fill="#f59e0b" rx="6"/><text x="230" y="812" text-anchor="middle" fill="#ffffff" font-size="14">Hidden tbl</text><rect x="320" y="780" width="140" height="50" fill="#f59e0b" rx="6"/><text x="390" y="812" text-anchor="middle" fill="#ffffff" font-size="14">Scratch</text><text x="310" y="880" text-anchor="middle" fill="#ffffff" font-size="16">Messy, work-in-progress</text><text x="310" y="910" text-anchor="middle" fill="#ef4444" font-size="14">Only authors see this</text><path d="M 520 750 L 660 750" stroke="#ffd700" stroke-width="6" marker-end="url(#a2)"/><defs><marker id="a2" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><polygon points="0 0, 14 7, 0 14" fill="#ffd700"/></marker></defs><text x="590" y="730" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Publish App</text><rect x="680" y="560" width="380" height="380" fill="#10b981" rx="14" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="870" y="610" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">App (Dining Room)</text><rect x="720" y="650" width="300" height="60" fill="#10b981" rx="8"/><text x="870" y="688" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Executive Dashboard</text><rect x="720" y="720" width="300" height="60" fill="#10b981" rx="8"/><text x="870" y="758" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Regional Report</text><rect x="720" y="790" width="300" height="60" fill="#10b981" rx="8"/><text x="870" y="828" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Product Detail</text><text x="870" y="890" text-anchor="middle" fill="#ffffff" font-size="16">Clean, curated, navigable</text><text x="870" y="920" text-anchor="middle" fill="#ffd700" font-size="14">Consumers see ONLY this</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Workspace = author space. App = consumer experience.</text><text x="550" y="1060" text-anchor="middle" fill="#ffffff" font-size="18">Hidden tables, drafts, and measures stay invisible.</text></svg>`,
+          caption: "Tiers gate features; apps gate visibility."
+        }
+      },
+      {
+        type: "example",
+        title: "Publishing the Sales Report",
+        content: `**Scenario**: Maria built **SalesQ3.pbix** in Desktop. Twelve sales managers need to view it weekly. Walk-through:
+
+**1. Get a Pro license** assigned (admin in Microsoft 365 admin center).
+
+**2. Create workspace**: In Service, **Workspaces → Create workspace → "Sales Reporting"**. Add the 12 managers as **Viewers** and her two analysts as **Members**.
+
+**3. In Desktop**: **File → Publish → Publish to Power BI → select "Sales Reporting" workspace**. Upload takes ~30 seconds for a 40MB pbix.
+
+**4. Verify**: Open powerbi.com → Sales Reporting → confirm dataset **SalesQ3** and report **SalesQ3** both appear.
+
+**5. Publish App**: In workspace → **Create app** → set Setup (name, description, logo), Navigation (which reports to include), Permissions (entire sales org). Click **Publish app**.
+
+**6. Share URL**: Managers click the app URL → bookmark it → it auto-refreshes nightly. They never see Maria's scratch tables.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Maria's Publish Walkthrough</text><rect x="80" y="110" width="940" height="100" fill="#6366f1" rx="10"/><text x="120" y="160" fill="#ffffff" font-size="22" font-weight="bold">Step 1</text><text x="120" y="190" fill="#ffffff" font-size="18">Get Pro license assigned via M365 admin center</text><rect x="80" y="230" width="940" height="100" fill="#8b5cf6" rx="10"/><text x="120" y="280" fill="#ffffff" font-size="22" font-weight="bold">Step 2</text><text x="120" y="310" fill="#ffffff" font-size="18">Create workspace "Sales Reporting" — 12 Viewers, 2 Members</text><rect x="80" y="350" width="940" height="100" fill="#10b981" rx="10"/><text x="120" y="400" fill="#ffffff" font-size="22" font-weight="bold">Step 3</text><text x="120" y="430" fill="#ffffff" font-size="18">Desktop: File → Publish → choose "Sales Reporting"</text><rect x="80" y="470" width="940" height="100" fill="#f59e0b" rx="10"/><text x="120" y="520" fill="#ffffff" font-size="22" font-weight="bold">Step 4</text><text x="120" y="550" fill="#ffffff" font-size="18">Verify dataset + report appear at powerbi.com</text><rect x="80" y="590" width="940" height="100" fill="#ec4899" rx="10"/><text x="120" y="640" fill="#ffffff" font-size="22" font-weight="bold">Step 5</text><text x="120" y="670" fill="#ffffff" font-size="18">Workspace → Create app → Setup, Navigation, Permissions → Publish</text><rect x="80" y="710" width="940" height="100" fill="#0ea5e9" rx="10"/><text x="120" y="760" fill="#ffffff" font-size="22" font-weight="bold">Step 6</text><text x="120" y="790" fill="#ffffff" font-size="18">Share app URL → managers bookmark → auto-refresh nightly</text><rect x="200" y="850" width="700" height="180" fill="#ffd700" rx="12"/><text x="550" y="900" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Result</text><text x="550" y="940" text-anchor="middle" fill="#1a1a2e" font-size="18">12 managers see polished app</text><text x="550" y="970" text-anchor="middle" fill="#1a1a2e" font-size="18">Maria's drafts stay hidden in workspace</text><text x="550" y="1000" text-anchor="middle" fill="#1a1a2e" font-size="18">Zero email attachments forever</text></svg>`,
+          caption: "Six steps from local file to enterprise app."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "A sales analyst publishes a report to **My Workspace** and emails the URL to her team. Why is this a poor choice?",
+        options: [
+          { text: "My Workspace is personal — others can't access it; production content belongs in a shared workspace.", correct: true },
+          { text: "My Workspace doesn't support visuals over 10MB.", correct: false },
+          { text: "My Workspace requires Premium Capacity to function.", correct: false },
+          { text: "Reports in My Workspace automatically expire after 7 days.", correct: false }
+        ],
+        explanation: "**My Workspace** is a personal sandbox — other users have no access regardless of license. Production reports belong in a **shared workspace** where permissions, refresh schedules, and apps can be managed centrally.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">My Workspace vs Shared Workspace</text><rect x="100" y="180" width="420" height="700" fill="#ef4444" rx="14" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="310" y="240" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">My Workspace</text><circle cx="310" cy="350" r="80" fill="#ef4444"/><text x="310" y="365" text-anchor="middle" fill="#ffffff" font-size="60" font-weight="bold">1</text><text x="310" y="470" text-anchor="middle" fill="#ffffff" font-size="22">Single user only</text><text x="310" y="510" text-anchor="middle" fill="#ffffff" font-size="20">No collaboration</text><text x="310" y="550" text-anchor="middle" fill="#ffffff" font-size="20">No app publishing</text><text x="310" y="590" text-anchor="middle" fill="#ffffff" font-size="20">Limited governance</text><text x="310" y="650" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">For learning/drafts</text><text x="310" y="780" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">NOT FOR TEAMS</text><rect x="580" y="180" width="420" height="700" fill="#10b981" rx="14" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="790" y="240" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Shared Workspace</text><circle cx="790" cy="350" r="80" fill="#10b981"/><text x="790" y="365" text-anchor="middle" fill="#ffffff" font-size="40" font-weight="bold">N</text><text x="790" y="470" text-anchor="middle" fill="#ffffff" font-size="22">Many users, roles</text><text x="790" y="510" text-anchor="middle" fill="#ffffff" font-size="20">Admin / Member / Viewer</text><text x="790" y="550" text-anchor="middle" fill="#ffffff" font-size="20">App publishing</text><text x="790" y="590" text-anchor="middle" fill="#ffffff" font-size="20">Centralized refresh</text><text x="790" y="650" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">For production</text><text x="790" y="780" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">USE THIS</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">If others need it, it doesn't belong in My Workspace.</text></svg>`,
+          caption: "Personal vs shared workspaces."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Publish Playbook",
+        content: `**Before publishing any report**, run this 5-point checklist:
+
+**1. License check**: Do you have **Pro** (or PPU)? Do all recipients? If recipients lack Pro, you'll need Premium Capacity or stay personal.
+
+**2. Workspace choice**: Never My Workspace for shared content. Pick a workspace named for the **audience or domain** (e.g., "Sales Reporting", not "Maria's Stuff").
+
+**3. Workspace roles**: Assign carefully — **Viewer** for consumers, **Member** for fellow analysts, **Admin** sparingly. Wrong roles leak edit access.
+
+**4. App vs raw workspace**: For executives and broad audiences, always **publish as an App**. It hides drafts and gives a curated experience.
+
+**5. Naming**: Use clear names: "Q3 Sales Performance" beats "SalesQ3_v4_FINAL_actuallyFINAL". Add a description in the app setup — consumers see it on the landing page.
+
+Publishing is a release — treat it like one.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Pre-Publish Checklist</text><rect x="80" y="140" width="940" height="160" fill="#6366f1" rx="12"/><text x="120" y="200" fill="#ffd700" font-size="28" font-weight="bold">1. License Check</text><text x="120" y="240" fill="#ffffff" font-size="20">You and all recipients have Pro/PPU? Or org has Premium?</text><text x="120" y="275" fill="#ffffff" font-size="18">No license = no share</text><rect x="80" y="320" width="940" height="160" fill="#8b5cf6" rx="12"/><text x="120" y="380" fill="#ffd700" font-size="28" font-weight="bold">2. Workspace Choice</text><text x="120" y="420" fill="#ffffff" font-size="20">Named for audience/domain — NOT My Workspace</text><text x="120" y="455" fill="#ffffff" font-size="18">"Sales Reporting" not "Maria's Stuff"</text><rect x="80" y="500" width="940" height="160" fill="#10b981" rx="12"/><text x="120" y="560" fill="#ffd700" font-size="28" font-weight="bold">3. Role Assignment</text><text x="120" y="600" fill="#ffffff" font-size="20">Viewer = consumer, Member = analyst, Admin = sparingly</text><text x="120" y="635" fill="#ffffff" font-size="18">Wrong role = unintended edit access</text><rect x="80" y="680" width="940" height="160" fill="#f59e0b" rx="12"/><text x="120" y="740" fill="#ffd700" font-size="28" font-weight="bold">4. Publish as App</text><text x="120" y="780" fill="#ffffff" font-size="20">For broad audiences — hides drafts, curates experience</text><text x="120" y="815" fill="#ffffff" font-size="18">App = polished; workspace = backstage</text><rect x="80" y="860" width="940" height="160" fill="#ec4899" rx="12"/><text x="120" y="920" fill="#ffd700" font-size="28" font-weight="bold">5. Naming</text><text x="120" y="960" fill="#ffffff" font-size="20">Clear titles + descriptions on app landing</text><text x="120" y="995" fill="#ffffff" font-size="18">"Q3 Sales Performance" beats "Final_v4_FINAL"</text></svg>`,
+          caption: "Five checks before every publish."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-pbi-desktop-lesson-11",
+    title: "Power BI Service Features: Refresh, Subscriptions, Dashboards",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Service Brings Reports to Life",
+        content: `Publishing a report is just step one. **Power BI Service** automates the boring parts: data updates, distribution, alerts.
+
+**Scheduled Refresh** updates your dataset on a calendar — no one re-opens Desktop and re-publishes daily.
+
+**Subscriptions** email rendered reports to inboxes. Executives don't even visit powerbi.com; the report comes to them.
+
+**Data Alerts** ping users when a KPI crosses a threshold — "Revenue dropped below $1M today".
+
+**Dashboards** (distinct from reports!) are single-page summaries built from **pinned tiles** across multiple reports — perfect for executive views.
+
+**Q&A** lets users ask natural-language questions ("show sales by region last month") and the Service returns a visual.
+
+Together these turn a static .pbix into a living, self-running analytics platform.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Power BI Service Capabilities</text><circle cx="550" cy="550" r="140" fill="#ffd700"/><text x="550" y="540" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">Power BI</text><text x="550" y="580" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">Service</text><rect x="100" y="180" width="280" height="140" fill="#6366f1" rx="14"/><text x="240" y="230" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Scheduled Refresh</text><text x="240" y="265" text-anchor="middle" fill="#ffffff" font-size="16">Auto data updates</text><text x="240" y="295" text-anchor="middle" fill="#ffffff" font-size="16">8x Pro / 48x Premium</text><rect x="720" y="180" width="280" height="140" fill="#10b981" rx="14"/><text x="860" y="230" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Subscriptions</text><text x="860" y="265" text-anchor="middle" fill="#ffffff" font-size="16">Email rendered reports</text><text x="860" y="295" text-anchor="middle" fill="#ffffff" font-size="16">On schedule</text><rect x="100" y="780" width="280" height="140" fill="#8b5cf6" rx="14"/><text x="240" y="830" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Data Alerts</text><text x="240" y="865" text-anchor="middle" fill="#ffffff" font-size="16">Threshold notifications</text><text x="240" y="895" text-anchor="middle" fill="#ffffff" font-size="16">Premium feature</text><rect x="720" y="780" width="280" height="140" fill="#ec4899" rx="14"/><text x="860" y="830" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Dashboards + Q&amp;A</text><text x="860" y="865" text-anchor="middle" fill="#ffffff" font-size="16">Pinned tiles, NL queries</text><text x="860" y="895" text-anchor="middle" fill="#ffffff" font-size="16">Cross-report summaries</text><line x1="370" y1="320" x2="450" y2="450" stroke="#ffd700" stroke-width="4"/><line x1="720" y1="320" x2="650" y2="450" stroke="#ffd700" stroke-width="4"/><line x1="370" y1="780" x2="450" y2="650" stroke="#ffd700" stroke-width="4"/><line x1="720" y1="780" x2="650" y2="650" stroke="#ffd700" stroke-width="4"/><text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Service automates distribution + monitoring</text></svg>`,
+          caption: "Refresh, subscribe, alert, summarize."
+        }
+      },
+      {
+        type: "concept",
+        title: "Refresh and the Data Gateway",
+        content: `**Scheduled Refresh** keeps datasets fresh without manual republishing. Limits: **8 refreshes/day on Pro**, **48 refreshes/day on Premium**.
+
+The key question: where does your data live?
+
+**Cloud sources** (Azure SQL, Salesforce, Google Analytics, SharePoint Online) connect **directly** from Service — no gateway needed.
+
+**On-premises sources** (SQL Server on company network, Excel on shared drive, local Access DB) require a **Data Gateway** — a small app you install on a server inside the company network. It acts as a secure tunnel: Service requests data → Gateway pulls it from the local source → returns it encrypted.
+
+Two gateway flavors: **Personal mode** (one user, your laptop) vs **Standard/On-premises gateway** (shared, IT-managed, production-grade).
+
+If refresh fails, common culprits: gateway server offline, credentials expired, source schema changed, query takes >2 hours.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Data Gateway: Bridging Cloud and On-Prem</text><rect x="80" y="120" width="940" height="180" fill="#10b981" rx="12" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="550" y="160" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Cloud Sources — No Gateway Needed</text><rect x="120" y="190" width="170" height="80" fill="#10b981" rx="8"/><text x="205" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Azure SQL</text><rect x="310" y="190" width="170" height="80" fill="#10b981" rx="8"/><text x="395" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Salesforce</text><rect x="500" y="190" width="170" height="80" fill="#10b981" rx="8"/><text x="585" y="240" text-anchor="middle" fill="#ffffff" font-size="18">SharePoint</text><rect x="690" y="190" width="170" height="80" fill="#10b981" rx="8"/><text x="775" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Google Analytics</text><text x="880" y="240" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">→ Direct</text><rect x="80" y="340" width="940" height="320" fill="#f59e0b" rx="12" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="380" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">On-Premises Sources — Gateway Required</text><rect x="120" y="410" width="200" height="100" fill="#f59e0b" rx="8"/><text x="220" y="450" text-anchor="middle" fill="#ffffff" font-size="18">SQL Server</text><text x="220" y="480" text-anchor="middle" fill="#ffffff" font-size="14">(internal)</text><rect x="340" y="410" width="200" height="100" fill="#f59e0b" rx="8"/><text x="440" y="450" text-anchor="middle" fill="#ffffff" font-size="18">Shared Excel</text><text x="440" y="480" text-anchor="middle" fill="#ffffff" font-size="14">file</text><rect x="560" y="410" width="200" height="100" fill="#f59e0b" rx="8"/><text x="660" y="450" text-anchor="middle" fill="#ffffff" font-size="18">Access DB</text><path d="M 220 510 L 480 580" stroke="#ffd700" stroke-width="4"/><path d="M 440 510 L 540 580" stroke="#ffd700" stroke-width="4"/><path d="M 660 510 L 580 580" stroke="#ffd700" stroke-width="4"/><rect x="450" y="580" width="200" height="70" fill="#ec4899" rx="8"/><text x="550" y="625" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Gateway</text><rect x="80" y="700" width="940" height="180" fill="#6366f1" rx="12"/><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Power BI Service (Cloud)</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="18">Sends refresh request → Gateway pulls → returns encrypted</text><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="20">8/day Pro · 48/day Premium</text><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">No gateway = no on-prem refresh.</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="18">Personal Mode = solo · Standard = IT-managed</text></svg>`,
+          caption: "Gateway tunnels Service to on-prem data."
+        }
+      },
+      {
+        type: "example",
+        title: "Dashboard vs Report in Action",
+        content: `**Scenario**: CFO Roberto wants a single-page morning view: revenue today, top region, open deals, conversion rate.
+
+He doesn't want to navigate a 7-page detailed report. He wants **one dashboard**.
+
+Carlos (analyst) builds it:
+1. Opens the **Sales Report** in Service → hovers over the **Revenue card** visual → clicks the **pin icon** → "Pin to dashboard" → creates new dashboard "CFO Morning View".
+2. Opens **Marketing Report** → pins the **Conversion Rate** gauge to the same dashboard.
+3. Opens **Pipeline Report** → pins the **Open Deals** chart.
+4. Adds a **tile** with the **Q&A natural-language box**: "Show top region by revenue today".
+
+The CFO now opens **one URL** and sees four tiles from three reports. He clicks any tile → it drills back to the source report for detail.
+
+Bonus: Carlos sets up a **subscription** so Roberto also gets the dashboard PNG emailed at 7am daily.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Building the CFO Dashboard</text><rect x="60" y="120" width="280" height="200" fill="#6366f1" rx="12"/><text x="200" y="160" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Sales Report</text><rect x="90" y="190" width="100" height="50" fill="#10b981" rx="6"/><text x="140" y="222" text-anchor="middle" fill="#ffffff" font-size="14">Revenue</text><rect x="210" y="190" width="100" height="50" fill="#888" rx="6"/><rect x="90" y="260" width="220" height="50" fill="#888" rx="6"/><text x="140" y="285" fill="#ffd700" font-size="14" font-weight="bold">pin →</text><rect x="410" y="120" width="280" height="200" fill="#8b5cf6" rx="12"/><text x="550" y="160" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Marketing Report</text><rect x="440" y="190" width="100" height="50" fill="#888" rx="6"/><rect x="560" y="190" width="100" height="50" fill="#10b981" rx="6"/><text x="610" y="222" text-anchor="middle" fill="#ffffff" font-size="14">Convert%</text><rect x="440" y="260" width="220" height="50" fill="#888" rx="6"/><text x="490" y="285" fill="#ffd700" font-size="14" font-weight="bold">pin →</text><rect x="760" y="120" width="280" height="200" fill="#f59e0b" rx="12"/><text x="900" y="160" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pipeline Report</text><rect x="790" y="190" width="100" height="50" fill="#10b981" rx="6"/><text x="840" y="222" text-anchor="middle" fill="#ffffff" font-size="14">Deals</text><rect x="910" y="190" width="100" height="50" fill="#888" rx="6"/><rect x="790" y="260" width="220" height="50" fill="#888" rx="6"/><text x="840" y="285" fill="#ffd700" font-size="14" font-weight="bold">pin →</text><path d="M 200 320 L 450 460" stroke="#ffd700" stroke-width="4" marker-end="url(#a3)"/><path d="M 550 320 L 550 460" stroke="#ffd700" stroke-width="4" marker-end="url(#a3)"/><path d="M 900 320 L 650 460" stroke="#ffd700" stroke-width="4" marker-end="url(#a3)"/><defs><marker id="a3" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><polygon points="0 0, 14 7, 0 14" fill="#ffd700"/></marker></defs><rect x="200" y="470" width="700" height="380" fill="#10b981" rx="14" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="550" y="520" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Dashboard: CFO Morning View</text><rect x="240" y="560" width="200" height="120" fill="#10b981" rx="8"/><text x="340" y="610" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Revenue</text><text x="340" y="650" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">$2.4M</text><rect x="460" y="560" width="200" height="120" fill="#10b981" rx="8"/><text x="560" y="610" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Conversion</text><text x="560" y="650" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">18%</text><rect x="680" y="560" width="200" height="120" fill="#10b981" rx="8"/><text x="780" y="610" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Open Deals</text><text x="780" y="650" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">147</text><rect x="240" y="700" width="640" height="130" fill="#0ea5e9" rx="8"/><text x="560" y="745" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Q&amp;A tile</text><text x="560" y="780" text-anchor="middle" fill="#ffffff" font-size="16">"Show top region by revenue today"</text><text x="560" y="810" text-anchor="middle" fill="#ffd700" font-size="16">→ West $890K</text><rect x="100" y="880" width="900" height="160" fill="#ec4899" rx="12"/><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">+ Subscription emails dashboard PNG to CFO at 7am daily</text><text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="18">Click any tile → drill back to source report for detail</text><text x="550" y="1005" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">One URL, four tiles, three reports</text></svg>`,
+          caption: "Pinned tiles aggregate into one view."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "A report reads from a SQL Server database hosted on a company server. Scheduled refresh in Service fails immediately. What is the most likely cause?",
+        options: [
+          { text: "The dataset needs a **Data Gateway** installed to bridge Service and the on-premises SQL Server.", correct: true },
+          { text: "Power BI Service cannot connect to SQL Server under any circumstances.", correct: false },
+          { text: "Scheduled refresh requires a Premium Capacity license, regardless of source.", correct: false },
+          { text: "SQL Server data must be exported to CSV before publishing.", correct: false }
+        ],
+        explanation: "**On-premises sources** are not reachable from cloud Service directly. A **Data Gateway** installed inside the company network creates a secure tunnel that Service uses to pull data on each refresh. Without it, refresh fails immediately.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Why Refresh Failed</text><rect x="100" y="160" width="900" height="380" fill="#ef4444" rx="14" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="210" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Without Gateway — BROKEN</text><rect x="160" y="260" width="220" height="100" fill="#6366f1" rx="10"/><text x="270" y="310" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Service</text><text x="270" y="340" text-anchor="middle" fill="#ffffff" font-size="14">(cloud)</text><path d="M 380 310 L 720 310" stroke="#ef4444" stroke-width="6" stroke-dasharray="14,10"/><text x="550" y="290" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">X blocked</text><rect x="720" y="260" width="220" height="100" fill="#f59e0b" rx="10"/><text x="830" y="310" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">SQL Server</text><text x="830" y="340" text-anchor="middle" fill="#ffffff" font-size="14">(on-prem)</text><text x="550" y="440" text-anchor="middle" fill="#ffffff" font-size="20">Firewall blocks direct cloud access</text><text x="550" y="490" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Refresh fails immediately</text><rect x="100" y="580" width="900" height="380" fill="#10b981" rx="14" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="630" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">With Gateway — WORKS</text><rect x="120" y="680" width="180" height="100" fill="#6366f1" rx="10"/><text x="210" y="730" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Service</text><text x="210" y="760" text-anchor="middle" fill="#ffffff" font-size="14">(cloud)</text><path d="M 300 730 L 450 730" stroke="#10b981" stroke-width="6" marker-end="url(#a4)"/><defs><marker id="a4" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><polygon points="0 0, 14 7, 0 14" fill="#10b981"/></marker></defs><rect x="450" y="680" width="200" height="100" fill="#ec4899" rx="10"/><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Gateway</text><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="14">(secure tunnel)</text><path d="M 650 730 L 800 730" stroke="#10b981" stroke-width="6" marker-end="url(#a4)"/><rect x="800" y="680" width="180" height="100" fill="#f59e0b" rx="10"/><text x="890" y="730" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">SQL Server</text><text x="890" y="760" text-anchor="middle" fill="#ffffff" font-size="14">(on-prem)</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="20">Gateway pulls data inside network → returns encrypted</text><text x="550" y="920" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Refresh succeeds on schedule</text></svg>`,
+          caption: "Gateway = essential for on-prem refresh."
+        }
+      },
+      {
+        type: "application",
+        title: "Setting Up Distribution for Your Report",
+        content: `Once published, configure these in Service to actually deliver value:
+
+**Schedule Refresh**: Workspace → dataset → **Settings** → Scheduled refresh → toggle ON → pick times (e.g., 6am, 1pm). Add gateway connection if on-prem. **Always set failure notification emails** so you find out before users do.
+
+**Subscriptions**: Open report → **Subscribe to report** → set frequency (daily/weekly/monthly), recipients, optional message. Each user can also self-subscribe.
+
+**Dashboards**: For executive audiences, build one **dashboard** that pins the 3-5 critical KPIs across reports. Don't make execs navigate; bring the data to them.
+
+**Comments**: Encourage stakeholders to use the **Comment** feature on visuals — keeps discussion attached to the data instead of buried in email.
+
+**App audiences**: In larger orgs, configure **multiple audiences** within one app — e.g., "Sales" sees sales pages, "Finance" sees financial pages, all from one app shell.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Post-Publish Configuration</text><rect x="80" y="130" width="940" height="160" fill="#6366f1" rx="12"/><text x="120" y="180" fill="#ffd700" font-size="24" font-weight="bold">1. Schedule Refresh</text><text x="120" y="220" fill="#ffffff" font-size="18">Dataset settings → toggle ON → pick times</text><text x="120" y="255" fill="#ffffff" font-size="16">Set failure emails — find out before users do</text><rect x="80" y="310" width="940" height="160" fill="#10b981" rx="12"/><text x="120" y="360" fill="#ffd700" font-size="24" font-weight="bold">2. Subscriptions</text><text x="120" y="400" fill="#ffffff" font-size="18">Report → Subscribe → set frequency + recipients</text><text x="120" y="435" fill="#ffffff" font-size="16">Inbox delivery, no login needed</text><rect x="80" y="490" width="940" height="160" fill="#8b5cf6" rx="12"/><text x="120" y="540" fill="#ffd700" font-size="24" font-weight="bold">3. Executive Dashboard</text><text x="120" y="580" fill="#ffffff" font-size="18">Pin 3-5 critical tiles for execs</text><text x="120" y="615" fill="#ffffff" font-size="16">Don't make leaders navigate — bring data to them</text><rect x="80" y="670" width="940" height="160" fill="#f59e0b" rx="12"/><text x="120" y="720" fill="#ffd700" font-size="24" font-weight="bold">4. Comments</text><text x="120" y="760" fill="#ffffff" font-size="18">Stakeholders comment on visuals</text><text x="120" y="795" fill="#ffffff" font-size="16">Discussion stays attached to data, not lost in email</text><rect x="80" y="850" width="940" height="160" fill="#ec4899" rx="12"/><text x="120" y="900" fill="#ffd700" font-size="24" font-weight="bold">5. App Audiences</text><text x="120" y="940" fill="#ffffff" font-size="18">Configure tailored views within one app</text><text x="120" y="975" fill="#ffffff" font-size="16">Sales sees sales · Finance sees finance · one app shell</text></svg>`,
+          caption: "Distribution turns reports into operations."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-pbi-desktop-lesson-12",
+    title: "Capstone: Build and Publish a Complete Sales Dashboard",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "End-to-End: From Raw Files to Live App",
+        content: `Time to assemble everything. The capstone project: a **complete sales analytics solution** taken from raw CSV files to a published, refreshing, secured app.
+
+The ten-step flow:
+
+1. **Get Data** — load CSVs From Folder
+2. **Transform** — Power Query cleanup
+3. **Model** — star schema relationships
+4. **Measures** — DAX KPIs
+5. **Visualize** — three report pages
+6. **Secure** — Row-Level Security
+7. **Theme** — consistent format
+8. **Publish** — to workspace
+9. **Refresh** — daily schedule
+10. **Distribute** — Power BI App
+
+Every skill from prior lessons converges here. The deliverable is a **production-grade report** the sales VP can demo on Monday morning.
+
+This card-by-card walkthrough is the playbook you'll follow on real projects for the rest of your career.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The 10-Step Capstone Pipeline</text><g><rect x="80" y="130" width="300" height="80" fill="#6366f1" rx="10"/><text x="100" y="180" fill="#ffffff" font-size="22" font-weight="bold">1. Get Data</text><text x="100" y="205" fill="#ffd700" font-size="14">CSV from folder</text><rect x="400" y="130" width="300" height="80" fill="#6366f1" rx="10"/><text x="420" y="180" fill="#ffffff" font-size="22" font-weight="bold">2. Transform</text><text x="420" y="205" fill="#ffd700" font-size="14">Power Query clean</text><rect x="720" y="130" width="300" height="80" fill="#8b5cf6" rx="10"/><text x="740" y="180" fill="#ffffff" font-size="22" font-weight="bold">3. Model</text><text x="740" y="205" fill="#ffd700" font-size="14">Star schema</text></g><g><rect x="80" y="240" width="300" height="80" fill="#8b5cf6" rx="10"/><text x="100" y="290" fill="#ffffff" font-size="22" font-weight="bold">4. Measures</text><text x="100" y="315" fill="#ffd700" font-size="14">DAX KPIs</text><rect x="400" y="240" width="300" height="80" fill="#10b981" rx="10"/><text x="420" y="290" fill="#ffffff" font-size="22" font-weight="bold">5. Visualize</text><text x="420" y="315" fill="#ffd700" font-size="14">3 report pages</text><rect x="720" y="240" width="300" height="80" fill="#ef4444" rx="10"/><text x="740" y="290" fill="#ffffff" font-size="22" font-weight="bold">6. Secure</text><text x="740" y="315" fill="#ffd700" font-size="14">Row-Level Security</text></g><g><rect x="80" y="350" width="300" height="80" fill="#f59e0b" rx="10"/><text x="100" y="400" fill="#ffffff" font-size="22" font-weight="bold">7. Theme</text><text x="100" y="425" fill="#ffd700" font-size="14">Format consistently</text><rect x="400" y="350" width="300" height="80" fill="#0ea5e9" rx="10"/><text x="420" y="400" fill="#ffffff" font-size="22" font-weight="bold">8. Publish</text><text x="420" y="425" fill="#ffd700" font-size="14">To workspace</text><rect x="720" y="350" width="300" height="80" fill="#0ea5e9" rx="10"/><text x="740" y="400" fill="#ffffff" font-size="22" font-weight="bold">9. Refresh</text><text x="740" y="425" fill="#ffd700" font-size="14">Daily schedule</text></g><g><rect x="400" y="460" width="300" height="80" fill="#ec4899" rx="10"/><text x="420" y="510" fill="#ffffff" font-size="22" font-weight="bold">10. App</text><text x="420" y="535" fill="#ffd700" font-size="14">Distribute</text></g><rect x="100" y="600" width="900" height="400" fill="#ffd700" rx="14" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Deliverables</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="20">Executive Summary page (KPI + trend)</text><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="20">Regional Detail page (slicers + map + table)</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="20">Product Drill-Through page (decomposition tree)</text><text x="550" y="860" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Published, refreshing, secured, branded</text><text x="550" y="920" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Ready to demo Monday morning</text></svg>`,
+          caption: "Ten steps from raw to delivered."
+        }
+      },
+      {
+        type: "concept",
+        title: "Layer by Layer: Decisions That Matter",
+        content: `Each layer answers a question. Capture your decisions:
+
+**Get Data**: Use **From Folder** so any new monthly CSV is auto-included. Merge with **Region lookup** from SharePoint.
+
+**Transform**: Promote headers, set types, **remove duplicates** on OrderID, trim whitespace. Filter test rows (CustomerName="TEST").
+
+**Model**: Build **star schema** — Sales **fact** in the center, Calendar, Product, Customer, Region as **dimensions**. Mark Calendar as Date Table.
+
+**Measures**: \`Total Sales = SUM(Sales[Amount])\`, \`Profit Margin % = DIVIDE([Profit], [Total Sales])\`, \`YoY % = DIVIDE([Total Sales]-[PY Sales], [PY Sales])\`. Top N via RANKX.
+
+**Pages**: **Executive Summary** = KPI cards + monthly trend. **Regional Detail** = slicers + filled map + table. **Product Drill-Through** = decomposition tree from category → product.
+
+**Security**: RLS role "Regional Manager" filters \`Region[Manager] = USERPRINCIPALNAME()\`.
+
+**Theme**: Custom JSON — brand colors, fonts, consistent fonts.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Layer-by-Layer Decisions</text><rect x="60" y="110" width="500" height="160" fill="#6366f1" rx="12"/><text x="80" y="150" fill="#ffd700" font-size="22" font-weight="bold">Get + Transform</text><text x="80" y="185" fill="#ffffff" font-size="16">From Folder — auto-include future CSVs</text><text x="80" y="215" fill="#ffffff" font-size="16">Promote headers · set types · trim</text><text x="80" y="245" fill="#ffffff" font-size="16">Remove duplicates on OrderID</text><rect x="580" y="110" width="460" height="160" fill="#8b5cf6" rx="12"/><text x="600" y="150" fill="#ffd700" font-size="22" font-weight="bold">Model — Star Schema</text><text x="600" y="185" fill="#ffffff" font-size="16">Sales fact in center</text><text x="600" y="215" fill="#ffffff" font-size="16">Calendar · Product · Customer · Region dims</text><text x="600" y="245" fill="#ffffff" font-size="16">Mark Calendar as Date Table</text><rect x="60" y="290" width="500" height="180" fill="#10b981" rx="12"/><text x="80" y="330" fill="#ffd700" font-size="22" font-weight="bold">DAX Measures</text><text x="80" y="365" fill="#ffffff" font-size="15">Total Sales = SUM(Sales[Amount])</text><text x="80" y="395" fill="#ffffff" font-size="15">Profit Margin % = DIVIDE(Profit, Total)</text><text x="80" y="425" fill="#ffffff" font-size="15">YoY % = DIVIDE([Sales]-[PY], [PY])</text><text x="80" y="455" fill="#ffffff" font-size="15">Top 10 via RANKX</text><rect x="580" y="290" width="460" height="180" fill="#f59e0b" rx="12"/><text x="600" y="330" fill="#ffd700" font-size="22" font-weight="bold">Report Pages</text><text x="600" y="365" fill="#ffffff" font-size="15">P1 Exec Summary: KPIs + trend</text><text x="600" y="395" fill="#ffffff" font-size="15">P2 Regional Detail: map + slicers</text><text x="600" y="425" fill="#ffffff" font-size="15">P3 Product Drill: decomposition tree</text><rect x="60" y="490" width="500" height="180" fill="#ef4444" rx="12"/><text x="80" y="530" fill="#ffd700" font-size="22" font-weight="bold">Row-Level Security</text><text x="80" y="565" fill="#ffffff" font-size="15">Role: "Regional Manager"</text><text x="80" y="595" fill="#ffffff" font-size="15">DAX filter on Region table:</text><text x="80" y="625" fill="#ffffff" font-size="15">[Manager] = USERPRINCIPALNAME()</text><text x="80" y="655" fill="#ffffff" font-size="15">East mgr sees only East rows</text><rect x="580" y="490" width="460" height="180" fill="#ec4899" rx="12"/><text x="600" y="530" fill="#ffd700" font-size="22" font-weight="bold">Theme + Format</text><text x="600" y="565" fill="#ffffff" font-size="15">Custom JSON theme</text><text x="600" y="595" fill="#ffffff" font-size="15">Brand colors · Segoe UI · 14pt</text><text x="600" y="625" fill="#ffffff" font-size="15">Consistent across all pages</text><text x="600" y="655" fill="#ffffff" font-size="15">Logo top-left, page tabs hidden</text><rect x="60" y="690" width="980" height="180" fill="#0ea5e9" rx="12"/><text x="80" y="730" fill="#ffd700" font-size="22" font-weight="bold">Publish → Refresh → App</text><text x="80" y="765" fill="#ffffff" font-size="15">Workspace "Sales Reporting" · daily 6am refresh · gateway for on-prem CSV folder</text><text x="80" y="795" fill="#ffffff" font-size="15">App audiences: Executives (P1 only), Regional Managers (P1+P2), Analysts (all)</text><text x="80" y="825" fill="#ffffff" font-size="15">Shared with sales leadership distribution list</text><text x="80" y="855" fill="#10b981" font-size="16" font-weight="bold">Each decision is recoverable, documented, reusable.</text><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Document decisions per layer — future you will thank you.</text></svg>`,
+          caption: "Each step is a choice to record."
+        }
+      },
+      {
+        type: "example",
+        title: "Demo Day Walkthrough",
+        content: `**Monday 9am**. You're presenting to the sales VP. Your demo flow:
+
+**Open the App** (not workspace) — the polished view. "This is the published Sales Performance App. Everyone with this link sees the same numbers."
+
+**Executive Summary page**: "Up top — KPI cards. Total Sales $2.4M, +12% YoY. Trend chart shows the dip in Feb tied to the supply issue. **Notice the format** — this matches our brand theme."
+
+**Regional Detail page**: Click West slicer. "Watch the filled map and table update — that's **cross-filtering**." Demo the **drill-down** on the column chart from Quarter → Month.
+
+**Product Drill-Through page**: Right-click any product → **Drill through** → land here. "Decomposition tree shows what's driving the variance."
+
+**RLS demo**: "If I sign in as our East manager, watch — only East rows appear."
+
+**Refresh + Distribution**: "Refreshes daily at 6am. Each VP gets a subscription email at 7. App stays in sync."`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Demo Day Storyboard</text><rect x="80" y="110" width="940" height="170" fill="#6366f1" rx="12"/><text x="120" y="155" fill="#ffd700" font-size="22" font-weight="bold">Scene 1 — Open App</text><text x="120" y="195" fill="#ffffff" font-size="18">"This is the published Sales Performance App"</text><text x="120" y="230" fill="#ffffff" font-size="16">Polished view, consistent branding, single URL</text><text x="120" y="260" fill="#ffd700" font-size="14">Time: 30 seconds</text><rect x="80" y="300" width="940" height="170" fill="#10b981" rx="12"/><text x="120" y="345" fill="#ffd700" font-size="22" font-weight="bold">Scene 2 — Executive Summary</text><text x="120" y="385" fill="#ffffff" font-size="18">KPI cards: $2.4M sales · +12% YoY · 18% margin</text><text x="120" y="415" fill="#ffffff" font-size="16">Monthly trend explains Feb dip</text><text x="120" y="445" fill="#ffd700" font-size="14">Time: 2 minutes</text><rect x="80" y="490" width="940" height="170" fill="#8b5cf6" rx="12"/><text x="120" y="535" fill="#ffd700" font-size="22" font-weight="bold">Scene 3 — Regional Detail</text><text x="120" y="575" fill="#ffffff" font-size="18">Click West slicer → map + table cross-filter</text><text x="120" y="605" fill="#ffffff" font-size="16">Drill down Quarter → Month on column chart</text><text x="120" y="635" fill="#ffd700" font-size="14">Time: 3 minutes</text><rect x="80" y="680" width="940" height="170" fill="#f59e0b" rx="12"/><text x="120" y="725" fill="#ffd700" font-size="22" font-weight="bold">Scene 4 — Product Drill-Through + RLS</text><text x="120" y="765" fill="#ffffff" font-size="18">Right-click → drill through → decomposition tree</text><text x="120" y="795" fill="#ffffff" font-size="16">RLS demo: East manager sees only East rows</text><text x="120" y="825" fill="#ffd700" font-size="14">Time: 3 minutes</text><rect x="80" y="870" width="940" height="170" fill="#ec4899" rx="12"/><text x="120" y="915" fill="#ffd700" font-size="22" font-weight="bold">Scene 5 — Operations</text><text x="120" y="955" fill="#ffffff" font-size="18">Daily 6am refresh · 7am email subscriptions</text><text x="120" y="985" fill="#ffffff" font-size="16">App audiences tailor view per role</text><text x="120" y="1015" fill="#ffd700" font-size="14">Time: 1.5 minutes — total demo ≈ 10 min</text></svg>`,
+          caption: "Ten-minute demo across five scenes."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Understanding",
+        question: "In the capstone, you build **Row-Level Security** so each regional manager sees only their region. Where in the pipeline does this configuration live?",
+        options: [
+          { text: "In Desktop, via **Modeling → Manage Roles** with a DAX filter on the Region table; users are assigned to the role in Service.", correct: true },
+          { text: "In Power Query, by filtering the Sales table before load.", correct: false },
+          { text: "Only in the Power BI App settings, not in Desktop.", correct: false },
+          { text: "Automatically based on Microsoft 365 user properties — no configuration needed.", correct: false }
+        ],
+        explanation: "**Row-Level Security** is defined in **Desktop** under Modeling → Manage Roles using a DAX filter (e.g., \`[Manager] = USERPRINCIPALNAME()\`). After publishing, you assign users or AAD groups to the role in **Service** under dataset security settings.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Row-Level Security: Two-Part Setup</text><rect x="80" y="160" width="430" height="780" fill="#6366f1" rx="14" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="295" y="220" text-anchor="middle" fill="#6366f1" font-size="26" font-weight="bold">Part 1 — Desktop</text><rect x="120" y="260" width="350" height="80" fill="#6366f1" rx="8"/><text x="295" y="310" text-anchor="middle" fill="#ffffff" font-size="20">Modeling → Manage Roles</text><rect x="120" y="360" width="350" height="80" fill="#6366f1" rx="8"/><text x="295" y="410" text-anchor="middle" fill="#ffffff" font-size="20">Create role "Regional Manager"</text><rect x="120" y="460" width="350" height="80" fill="#6366f1" rx="8"/><text x="295" y="510" text-anchor="middle" fill="#ffffff" font-size="16">Region table filter:</text><text x="295" y="535" text-anchor="middle" fill="#ffd700" font-size="14">[Manager]=USERPRINCIPALNAME()</text><rect x="120" y="560" width="350" height="80" fill="#6366f1" rx="8"/><text x="295" y="610" text-anchor="middle" fill="#ffffff" font-size="20">View as Role → test</text><text x="295" y="700" text-anchor="middle" fill="#ffffff" font-size="20">Defines the rule</text><text x="295" y="740" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">but does NOT assign users</text><rect x="590" y="160" width="430" height="780" fill="#10b981" rx="14" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="805" y="220" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Part 2 — Service</text><rect x="630" y="260" width="350" height="80" fill="#10b981" rx="8"/><text x="805" y="310" text-anchor="middle" fill="#ffffff" font-size="20">Publish .pbix → workspace</text><rect x="630" y="360" width="350" height="80" fill="#10b981" rx="8"/><text x="805" y="410" text-anchor="middle" fill="#ffffff" font-size="18">Dataset → Security</text><rect x="630" y="460" width="350" height="80" fill="#10b981" rx="8"/><text x="805" y="510" text-anchor="middle" fill="#ffffff" font-size="18">Add users / AAD groups</text><text x="805" y="535" text-anchor="middle" fill="#ffd700" font-size="14">to "Regional Manager" role</text><rect x="630" y="560" width="350" height="80" fill="#10b981" rx="8"/><text x="805" y="610" text-anchor="middle" fill="#ffffff" font-size="20">Test as user → verify</text><text x="805" y="700" text-anchor="middle" fill="#ffffff" font-size="20">Maps users to rules</text><text x="805" y="740" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">activates the filter</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Both halves required — rule in Desktop, assignment in Service.</text></svg>`,
+          caption: "RLS = Desktop rule + Service assignment."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Capstone Deliverables Checklist",
+        content: `Submit a complete project. Use this checklist as both build guide and self-review:
+
+**Data layer**
+- [ ] Folder source connected; new CSVs auto-load
+- [ ] Power Query steps documented; types correct
+- [ ] Star schema with single-direction relationships
+- [ ] Calendar marked as Date Table
+
+**Logic layer**
+- [ ] Measures organized in folder, named clearly
+- [ ] Total Sales, Profit %, YoY %, Top 10 all working
+- [ ] DAX validated against Excel pivot test
+
+**Presentation layer**
+- [ ] 3 pages: Exec Summary, Regional Detail, Product Drill
+- [ ] Custom theme JSON applied
+- [ ] Buttons or bookmarks for navigation
+- [ ] Tooltips and drill-through configured
+
+**Distribution layer**
+- [ ] Published to shared workspace
+- [ ] Daily refresh scheduled, failure email set
+- [ ] RLS roles assigned in Service
+- [ ] App published with audience-specific views
+- [ ] Subscription set up for leadership
+
+Ship it. You've completed the Power BI Desktop track.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Capstone Deliverables Checklist</text><rect x="60" y="110" width="1000" height="220" fill="#6366f1" rx="12"/><text x="80" y="150" fill="#ffd700" font-size="24" font-weight="bold">Data Layer</text><text x="80" y="185" fill="#ffffff" font-size="17">✓ Folder source, new CSVs auto-load</text><text x="80" y="215" fill="#ffffff" font-size="17">✓ Power Query steps documented, types correct</text><text x="80" y="245" fill="#ffffff" font-size="17">✓ Star schema with single-direction relationships</text><text x="80" y="275" fill="#ffffff" font-size="17">✓ Calendar marked as Date Table</text><rect x="60" y="350" width="1000" height="180" fill="#8b5cf6" rx="12"/><text x="80" y="390" fill="#ffd700" font-size="24" font-weight="bold">Logic Layer</text><text x="80" y="425" fill="#ffffff" font-size="17">✓ Measures in folder, named clearly</text><text x="80" y="455" fill="#ffffff" font-size="17">✓ Total Sales, Profit %, YoY %, Top 10 all working</text><text x="80" y="485" fill="#ffffff" font-size="17">✓ DAX validated against Excel pivot test</text><rect x="60" y="550" width="1000" height="220" fill="#10b981" rx="12"/><text x="80" y="590" fill="#ffd700" font-size="24" font-weight="bold">Presentation Layer</text><text x="80" y="625" fill="#ffffff" font-size="17">✓ 3 pages: Exec Summary, Regional Detail, Product Drill</text><text x="80" y="655" fill="#ffffff" font-size="17">✓ Custom theme JSON applied</text><text x="80" y="685" fill="#ffffff" font-size="17">✓ Buttons or bookmarks for navigation</text><text x="80" y="715" fill="#ffffff" font-size="17">✓ Tooltips and drill-through configured</text><rect x="60" y="790" width="1000" height="240" fill="#ec4899" rx="12"/><text x="80" y="830" fill="#ffd700" font-size="24" font-weight="bold">Distribution Layer</text><text x="80" y="865" fill="#ffffff" font-size="17">✓ Published to shared workspace</text><text x="80" y="895" fill="#ffffff" font-size="17">✓ Daily refresh scheduled, failure email set</text><text x="80" y="925" fill="#ffffff" font-size="17">✓ RLS roles assigned in Service</text><text x="80" y="955" fill="#ffffff" font-size="17">✓ App published with audience-specific views</text><text x="80" y="985" fill="#ffffff" font-size="17">✓ Subscription set up for leadership</text></svg>`,
+          caption: "Ship-ready when all boxes are checked."
         }
       }
     ]
