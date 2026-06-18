@@ -8110,7 +8110,7 @@ If the cholecystectomy was extraordinarily difficult (dense adhesions, +60 min):
             title: 'CPT Radiology, Pathology, and Medicine Sections',
             author: 'Synthesis Learning',
             description: 'Imaging guidance and supervision-vs-interpretation, lab panels, the medicine section\'s odd corners (vaccines, infusions, dialysis).',
-            lessons: 6, duration: 90, progress: 0, category: 'cpc-prep',
+            lessons: 9, duration: 135, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-cpt-radpath-lesson-1",
@@ -8492,6 +8492,321 @@ If the cholecystectomy was extraordinarily difficult (dense adhesions, +60 min):
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Lab Coding Playbook</text><circle cx="120" cy="150" r="35" fill="#6366f1"/><text x="120" y="160" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">1</text><text x="180" y="145" fill="#ffd700" font-size="20" font-weight="bold">Identify each test</text><text x="180" y="175" fill="#ffffff" font-size="17">CMP = one test, not 14</text><circle cx="120" cy="240" r="35" fill="#10b981"/><text x="120" y="250" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">2</text><text x="180" y="235" fill="#ffd700" font-size="20" font-weight="bold">Check panel matches</text><text x="180" y="265" fill="#ffffff" font-size="17">All components? Bill the panel</text><circle cx="120" cy="330" r="35" fill="#f59e0b"/><text x="120" y="340" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">3</text><text x="180" y="325" fill="#ffd700" font-size="20" font-weight="bold">No stacking</text><text x="180" y="355" fill="#ffffff" font-size="17">80053 includes 80048</text><circle cx="120" cy="420" r="35" fill="#ec4899"/><text x="120" y="430" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">4</text><text x="180" y="415" fill="#ffd700" font-size="20" font-weight="bold">UA technique</text><text x="180" y="445" fill="#ffffff" font-size="17">Scope? Automated? → 81000/01/03</text><circle cx="120" cy="510" r="35" fill="#8b5cf6"/><text x="120" y="520" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">5</text><text x="180" y="505" fill="#ffd700" font-size="20" font-weight="bold">Strep neg → culture</text><text x="180" y="535" fill="#ffffff" font-size="17">87880 + 87070 both billable</text><circle cx="120" cy="600" r="35" fill="#0ea5e9"/><text x="120" y="610" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">6</text><text x="180" y="595" fill="#ffd700" font-size="20" font-weight="bold">COVID PCR vs antigen</text><text x="180" y="625" fill="#ffffff" font-size="17">87635 vs 87811 — different codes</text><circle cx="120" cy="690" r="35" fill="#ef4444"/><text x="120" y="700" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">7</text><text x="180" y="685" fill="#ffd700" font-size="20" font-weight="bold">Modifier -91</text><text x="180" y="715" fill="#ffffff" font-size="17">Repeat clinical lab same day</text><circle cx="120" cy="780" r="35" fill="#ffd700"/><text x="120" y="790" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">8</text><text x="180" y="775" fill="#ffd700" font-size="20" font-weight="bold">Medical necessity</text><text x="180" y="805" fill="#ffffff" font-size="17">Link ICD-10 or denial</text><rect x="100" y="870" width="900" height="160" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="920" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Master the panels, the UA variants,</text><text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">and the strep/flu/COVID rapid set</text><text x="550" y="1010" text-anchor="middle" fill="#ffffff" font-size="20">— and you've covered 80% of outpatient lab</text></svg>`,
           caption: "Eight-step playbook for everyday lab coding decisions."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-cpt-radpath-lesson-7",
+    title: "Nuclear Medicine (78012-79999)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Imaging with Radiopharmaceuticals",
+        content: `**Nuclear Medicine** uses small amounts of **radioactive tracers** (radiopharmaceuticals) injected, inhaled, or swallowed to image organ **function**, not just structure. The gamma camera or PET scanner detects emissions to produce physiologic maps.
+
+CPT codes live in **78012-79999**. Key principle: nuclear medicine codes include the **administration** of the radiopharmaceutical, but the **drug itself** is reported separately with a **HCPCS A-code or Q-code** (e.g., **A9587** F-18 FDG, **A9540** Tc-99m MAA).
+
+Major studies: **bone scan 78306**, **MUGA cardiac 78451-78454**, **PET 78815/78816**, **thyroid 78013-78015**, **V/Q lung 78580/78597**. Therapy codes (radioactive iodine I-131) live in **79005-79445**. Always document tracer, dose (mCi), and views.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Nuclear Medicine Code Map</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">CPT 78012-79999 + HCPCS for the tracer</text><rect x="100" y="160" width="900" height="120" fill="#6366f1" rx="14"/><text x="550" y="210" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">Bone Scan 78306 (whole body)</text><text x="550" y="250" text-anchor="middle" fill="#fff" font-size="20">Tracer: Tc-99m MDP (A9503) - reported separately</text><rect x="100" y="310" width="900" height="120" fill="#10b981" rx="14"/><text x="550" y="360" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">MUGA Cardiac 78451-78454</text><text x="550" y="400" text-anchor="middle" fill="#fff" font-size="20">SPECT single/multiple study, with quantification</text><rect x="100" y="460" width="900" height="120" fill="#f59e0b" rx="14"/><text x="550" y="510" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">PET 78815 (no CT) / 78816 (with CT fusion)</text><text x="550" y="550" text-anchor="middle" fill="#fff" font-size="20">F-18 FDG tracer A9587 separate</text><rect x="100" y="610" width="900" height="120" fill="#8b5cf6" rx="14"/><text x="550" y="660" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">Thyroid 78013-78015 (with or without uptake)</text><text x="550" y="700" text-anchor="middle" fill="#fff" font-size="20">I-123 or Tc-99m pertechnetate</text><rect x="100" y="760" width="900" height="120" fill="#ec4899" rx="14"/><text x="550" y="810" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">V/Q Lung 78580 (perfusion) / 78597 (V+Q)</text><text x="550" y="850" text-anchor="middle" fill="#fff" font-size="20">Tc-99m MAA + Xe-133 ventilation</text><rect x="100" y="910" width="900" height="140" fill="#0ea5e9" rx="14"/><text x="550" y="965" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">RULE: Procedure code + separate HCPCS for drug</text><text x="550" y="1005" text-anchor="middle" fill="#fff" font-size="20">Document mCi dose, tracer name, views obtained</text><text x="550" y="1035" text-anchor="middle" fill="#ffd700" font-size="18">Therapy (I-131): 79005-79445</text></svg>`,
+          caption: "Nuclear medicine procedure + separate radiopharmaceutical billing"
+        }
+      },
+      {
+        type: "concept",
+        title: "MUGA, PET, and Tracer Billing",
+        content: `**MUGA scan (78451-78454)** evaluates ventricular function — ejection fraction in chemo patients. Code selection:
+- **78451** SPECT single study (rest OR stress)
+- **78452** SPECT multiple studies (rest AND stress)
+- **78453** planar single, **78454** planar multiple with quantification or wall motion
+
+**PET imaging**:
+- **78815** PET skull-to-mid-thigh **without** concurrent CT for attenuation
+- **78816** PET **with** concurrent CT for attenuation correction and anatomic localization (PET/CT fusion — most common)
+
+**Thyroid 78013-78015**: 78013 imaging only, 78014 with vascular flow, 78015 with single/multiple uptake measurements.
+
+**V/Q lung**: 78580 perfusion only (rules out PE if normal), 78597 perfusion + ventilation with quantification.
+
+**Critical billing rule**: The radiopharmaceutical is **NEVER** included in the CPT code — always bill a separate **HCPCS A or Q code** (A9587 FDG, A9540 MAA, A9512 pertechnetate).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">MUGA + PET + Tracer Pairing</text><rect x="60" y="110" width="500" height="450" fill="#6366f1" rx="14"/><text x="310" y="155" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">MUGA Cardiac SPECT</text><text x="80" y="200" fill="#fff" font-size="19">78451 SPECT single study</text><text x="80" y="235" fill="#fff" font-size="19">78452 SPECT multiple (rest+stress)</text><text x="80" y="270" fill="#fff" font-size="19">78453 Planar single study</text><text x="80" y="305" fill="#fff" font-size="19">78454 Planar multiple/quantified</text><text x="80" y="360" fill="#ffd700" font-size="18">Tracer: Tc-99m sestamibi</text><text x="80" y="390" fill="#ffd700" font-size="18">HCPCS A9500 separate</text><text x="80" y="445" fill="#fff" font-size="17">Measures: ejection fraction,</text><text x="80" y="470" fill="#fff" font-size="17">wall motion, chamber size</text><text x="80" y="515" fill="#fff" font-size="17">Common: pre-chemo baseline</text><rect x="580" y="110" width="460" height="450" fill="#10b981" rx="14"/><text x="810" y="155" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">PET Imaging</text><text x="600" y="200" fill="#fff" font-size="19">78815 PET skull-to-thigh</text><text x="600" y="225" fill="#fff" font-size="17">  (no CT attenuation)</text><text x="600" y="265" fill="#fff" font-size="19">78816 PET WITH CT fusion</text><text x="600" y="290" fill="#fff" font-size="17">  (most common today)</text><text x="600" y="340" fill="#ffd700" font-size="18">Tracer: F-18 FDG</text><text x="600" y="370" fill="#ffd700" font-size="18">HCPCS A9587 separate</text><text x="600" y="420" fill="#fff" font-size="17">Uses: oncology staging,</text><text x="600" y="445" fill="#fff" font-size="17">cardiac viability, neuro</text><text x="600" y="495" fill="#fff" font-size="17">PET/CT 78816 NOT</text><text x="600" y="520" fill="#fff" font-size="17">reported with separate CT</text><rect x="60" y="590" width="980" height="190" fill="#f59e0b" rx="14"/><text x="550" y="635" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Thyroid 78013-78015</text><text x="100" y="685" fill="#fff" font-size="19">78013 imaging only</text><text x="100" y="720" fill="#fff" font-size="19">78014 imaging + vascular flow</text><text x="100" y="755" fill="#fff" font-size="19">78015 imaging + uptake (single/multiple)</text><text x="700" y="685" fill="#ffd700" font-size="18">Tracer options:</text><text x="700" y="715" fill="#fff" font-size="17">I-123 or Tc-99m</text><text x="700" y="745" fill="#fff" font-size="17">pertechnetate (A9512)</text><rect x="60" y="810" width="980" height="240" fill="#ec4899" rx="14"/><text x="550" y="855" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">V/Q Lung Scan</text><text x="100" y="905" fill="#fff" font-size="19">78580 Perfusion only (Q scan)</text><text x="100" y="940" fill="#fff" font-size="17">  Tc-99m MAA - rules out PE if normal</text><text x="100" y="980" fill="#fff" font-size="19">78597 V/Q combined + quantification</text><text x="100" y="1015" fill="#fff" font-size="17">  Adds Xe-133 ventilation phase</text></svg>`,
+          caption: "Code structure for MUGA, PET, thyroid, and V/Q with tracer pairing"
+        }
+      },
+      {
+        type: "example",
+        title: "Coding a PET/CT for Lymphoma Staging",
+        content: `**Scenario**: 58 y/o male with newly diagnosed diffuse large B-cell lymphoma. Oncology orders **whole-body PET/CT** for initial staging. The patient receives **10 mCi of F-18 FDG** IV, waits 60 minutes, then is scanned from skull base to mid-thigh on a PET/CT scanner. Concurrent low-dose CT is acquired for **attenuation correction and anatomic localization**. Radiologist interprets fused images, identifies hypermetabolic lymph nodes.
+
+**Coding**:
+- **78816** — PET imaging with concurrent CT for attenuation correction, skull base to mid-thigh
+- **A9587** — F-18 FDG, diagnostic, per study dose (HCPCS for the radiopharmaceutical)
+
+**Do NOT** also bill a separate diagnostic CT code (e.g., 71250) — the CT in 78816 is for attenuation/localization, **not** a standalone diagnostic CT. If a fully diagnostic CT chest/abdomen/pelvis were separately ordered and performed, modifier **-59** and documentation could justify separate billing.
+
+ICD-10: **C83.30** (DLBCL, unspecified site).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">PET/CT Staging Example</text><rect x="80" y="110" width="940" height="180" fill="#6366f1" rx="14"/><text x="550" y="155" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Clinical Scenario</text><text x="100" y="200" fill="#fff" font-size="19">58yo M, new DLBCL diagnosis</text><text x="100" y="232" fill="#fff" font-size="19">Order: whole-body PET/CT for staging</text><text x="100" y="264" fill="#fff" font-size="19">10 mCi F-18 FDG IV, 60-min uptake</text><rect x="80" y="320" width="940" height="220" fill="#10b981" rx="14"/><text x="550" y="365" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Procedure Performed</text><text x="100" y="410" fill="#fff" font-size="19">PET acquisition skull base to mid-thigh</text><text x="100" y="442" fill="#fff" font-size="19">Concurrent low-dose CT (attenuation/localization)</text><text x="100" y="474" fill="#fff" font-size="19">Fused PET/CT images reconstructed</text><text x="100" y="506" fill="#fff" font-size="19">Radiologist reads - hypermetabolic nodes found</text><rect x="80" y="570" width="940" height="240" fill="#f59e0b" rx="14"/><text x="550" y="615" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Correct Codes</text><text x="100" y="665" fill="#ffd700" font-size="22" font-weight="bold">78816</text><text x="240" y="665" fill="#fff" font-size="20">PET imaging w/ concurrent CT for</text><text x="240" y="690" fill="#fff" font-size="20">attenuation, skull base to mid-thigh</text><text x="100" y="745" fill="#ffd700" font-size="22" font-weight="bold">A9587</text><text x="240" y="745" fill="#fff" font-size="20">F-18 FDG diagnostic, per dose</text><text x="240" y="770" fill="#fff" font-size="20">(HCPCS - radiopharmaceutical)</text><rect x="80" y="840" width="940" height="220" fill="#ef4444" rx="14"/><text x="550" y="885" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">DO NOT Add</text><text x="100" y="935" fill="#fff" font-size="19">CT chest 71250 - bundled into 78816</text><text x="100" y="970" fill="#fff" font-size="19">Separate CT codes - only if true diagnostic</text><text x="100" y="1005" fill="#fff" font-size="19">CT was independently performed</text><text x="100" y="1040" fill="#fff" font-size="19">ICD-10: C83.30 DLBCL</text></svg>`,
+          caption: "PET/CT 78816 + HCPCS A9587 for FDG; no separate CT code"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "A patient has a whole-body bone scan to evaluate metastatic disease. Tc-99m MDP is injected, and planar images are acquired 3 hours later. Which combination correctly reports this study?",
+        options: [
+          { text: "78306 only — the radiopharmaceutical is bundled into the procedure code", correct: false },
+          { text: "78306 for the scan + A9503 for the Tc-99m MDP radiopharmaceutical", correct: true },
+          { text: "78816 + A9587 — bone scans use PET tracer codes", correct: false },
+          { text: "78320 + a separate E/M code for the radiologist's review", correct: false }
+        ],
+        explanation: "Whole-body bone scan is **78306**. The radiopharmaceutical Tc-99m MDP is **never** included in nuclear medicine CPT codes — it must be reported separately with HCPCS **A9503**. PET tracer A9587 is FDG, not MDP. 78320 is older/deleted. E/M is not billed for radiologist interpretation; that's part of the professional component of 78306.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Bone Scan Billing</text><rect x="100" y="180" width="900" height="200" fill="#6366f1" rx="20"/><text x="550" y="250" text-anchor="middle" fill="#fff" font-size="36" font-weight="bold">78306</text><text x="550" y="305" text-anchor="middle" fill="#fff" font-size="22">Bone Scan, Whole Body</text><text x="550" y="345" text-anchor="middle" fill="#fff" font-size="20">CPT procedure code</text><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">+</text><rect x="100" y="470" width="900" height="200" fill="#10b981" rx="20"/><text x="550" y="540" text-anchor="middle" fill="#fff" font-size="36" font-weight="bold">A9503</text><text x="550" y="595" text-anchor="middle" fill="#fff" font-size="22">Tc-99m Medronate (MDP)</text><text x="550" y="635" text-anchor="middle" fill="#fff" font-size="20">HCPCS radiopharmaceutical</text><rect x="100" y="730" width="900" height="280" fill="#f59e0b" rx="20"/><text x="550" y="790" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Why Two Codes?</text><text x="550" y="835" text-anchor="middle" fill="#fff" font-size="20">Procedure code = imaging service</text><text x="550" y="875" text-anchor="middle" fill="#fff" font-size="20">HCPCS = the actual drug supplied</text><text x="550" y="935" text-anchor="middle" fill="#fff" font-size="20">Hospital purchases isotope - billed</text><text x="550" y="975" text-anchor="middle" fill="#fff" font-size="20">to payer separately from the scan</text></svg>`,
+          caption: "Procedure code + HCPCS radiopharmaceutical = complete bill"
+        }
+      },
+      {
+        type: "application",
+        title: "V/Q Scan vs PE Workup Coding",
+        content: `**Workflow**: An ED patient presents with sudden dyspnea and tachycardia. D-dimer is elevated, but she has severe contrast allergy precluding CT pulmonary angiography. Pulmonary consults nuclear medicine for a **V/Q scan**.
+
+**Decision tree**:
+- Perfusion only (rule out PE if normal): **78580** + tracer A9540 (Tc-99m MAA)
+- If perfusion is abnormal or low-probability, ventilation is added: report **78597** (V/Q combined with quantification) — NOT 78580 + a separate ventilation code
+- Tracer codes: **A9540** for MAA, **A4641** for Xe-133
+
+**Documentation pearls**: Always document indication (rule out PE), tracer doses (mCi), views obtained (6-view planar or SPECT), and probability assessment (PIOPED criteria: normal / low / intermediate / high). PE diagnosis ICD-10 **I26.99**; suspected PE without confirmation use **R09.02** (hypoxemia) or **R06.02** (shortness of breath).
+
+**Avoid**: billing both 78580 and a stand-alone ventilation code — bundled into 78597.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">V/Q Scan Coding Workflow</text><rect x="80" y="110" width="940" height="120" fill="#6366f1" rx="14"/><text x="550" y="160" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">ED: Dyspnea + Contrast Allergy</text><text x="550" y="200" text-anchor="middle" fill="#fff" font-size="20">CTPA not feasible - nuc med consulted</text><rect x="80" y="260" width="940" height="220" fill="#10b981" rx="14"/><text x="550" y="305" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Step 1: Perfusion Scan</text><text x="100" y="355" fill="#ffd700" font-size="22" font-weight="bold">78580</text><text x="240" y="355" fill="#fff" font-size="20">Perfusion lung imaging</text><text x="100" y="395" fill="#ffd700" font-size="22" font-weight="bold">A9540</text><text x="240" y="395" fill="#fff" font-size="20">Tc-99m MAA tracer (HCPCS)</text><text x="100" y="445" fill="#fff" font-size="18">If perfusion NORMAL = PE excluded, stop here</text><rect x="80" y="510" width="940" height="240" fill="#f59e0b" rx="14"/><text x="550" y="555" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Step 2: Add Ventilation (if perfusion abnormal)</text><text x="100" y="605" fill="#ffd700" font-size="22" font-weight="bold">78597</text><text x="240" y="605" fill="#fff" font-size="20">V/Q combined + quantification</text><text x="240" y="635" fill="#fff" font-size="18">(REPLACES 78580 - do not bill both)</text><text x="100" y="685" fill="#ffd700" font-size="22" font-weight="bold">A4641</text><text x="240" y="685" fill="#fff" font-size="20">Xe-133 ventilation gas (HCPCS)</text><rect x="80" y="780" width="940" height="280" fill="#ef4444" rx="14"/><text x="550" y="825" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Documentation + Pitfalls</text><text x="100" y="875" fill="#fff" font-size="19">Document mCi doses, views, PIOPED probability</text><text x="100" y="910" fill="#fff" font-size="19">Confirmed PE: ICD-10 I26.99</text><text x="100" y="945" fill="#fff" font-size="19">Suspected PE: R06.02 SOB / R09.02 hypoxemia</text><text x="100" y="990" fill="#fff" font-size="19">PITFALL: never bill 78580 + ventilation code</text><text x="100" y="1025" fill="#fff" font-size="19">- 78597 is the combined service</text></svg>`,
+          caption: "V/Q workflow: 78580 perfusion alone vs 78597 combined V/Q"
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-cpt-radpath-lesson-8",
+    title: "Interventional Radiology",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Catheters, Selectivity, and Bundled Imaging",
+        content: `**Interventional Radiology (IR)** combines **catheter-based access** with **imaging guidance** to diagnose and treat vascular and non-vascular disease. Coders must understand two overlapping concepts: the **catheterization hierarchy** (where the catheter ends up) and the **imaging codes** (angiography/venography of the territory studied).
+
+**Catheter hierarchy**:
+- **Non-selective** **36140-36215**: catheter stays in the **aorta** or the vessel directly punctured (e.g., femoral)
+- **Selective**: catheter advanced into a branch — **first order** (e.g., common iliac), **second order** (external iliac), **third order** (deep femoral)
+
+Higher selectivity includes the lower orders — you bill **only the highest order** in each vascular family. Imaging (aortography **75600-75630**, peripheral angio **75710/75716**) is bundled per CCI when the catheter placement, angiography, and S&I describe the same vessel. Embolization codes **37241-37244** are sorted by purpose.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Catheter Selectivity Hierarchy</text><line x1="550" y1="110" x2="550" y2="1020" stroke="#888" stroke-width="3"/><rect x="200" y="130" width="700" height="120" fill="#6366f1" rx="14"/><text x="550" y="175" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Non-Selective 36140-36215</text><text x="550" y="210" text-anchor="middle" fill="#fff" font-size="18">Catheter in aorta or punctured vessel</text><text x="550" y="235" text-anchor="middle" fill="#fff" font-size="18">e.g., aortography from femoral stick</text><text x="550" y="290" text-anchor="middle" fill="#ffd700" font-size="30">v</text><rect x="200" y="310" width="700" height="120" fill="#10b981" rx="14"/><text x="550" y="355" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">First Order Selective 36215/36245</text><text x="550" y="390" text-anchor="middle" fill="#fff" font-size="18">Catheter into branch off aorta</text><text x="550" y="415" text-anchor="middle" fill="#fff" font-size="18">e.g., common iliac, celiac trunk</text><text x="550" y="470" text-anchor="middle" fill="#ffd700" font-size="30">v</text><rect x="200" y="490" width="700" height="120" fill="#f59e0b" rx="14"/><text x="550" y="535" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Second Order 36216/36246</text><text x="550" y="570" text-anchor="middle" fill="#fff" font-size="18">Sub-branch (external iliac, hepatic)</text><text x="550" y="595" text-anchor="middle" fill="#fff" font-size="18">Includes 1st order in same family</text><text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="30">v</text><rect x="200" y="670" width="700" height="140" fill="#8b5cf6" rx="14"/><text x="550" y="715" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Third Order + 36217/36247</text><text x="550" y="750" text-anchor="middle" fill="#fff" font-size="18">Deep femoral, splenic distal branches</text><text x="550" y="775" text-anchor="middle" fill="#fff" font-size="18">Add-on +36218/+36248 for additional</text><text x="550" y="795" text-anchor="middle" fill="#fff" font-size="18">2nd/3rd order in same family</text><rect x="80" y="840" width="940" height="200" fill="#ec4899" rx="14"/><text x="550" y="885" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">RULE</text><text x="550" y="925" text-anchor="middle" fill="#fff" font-size="19">Bill ONLY the highest order reached in each</text><text x="550" y="955" text-anchor="middle" fill="#fff" font-size="19">vascular family. Lower orders are bundled.</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="18">A "family" = vessels branching off one aortic origin</text></svg>`,
+          caption: "Selectivity ladder: bill only the deepest catheter position per family"
+        }
+      },
+      {
+        type: "concept",
+        title: "Angiography Codes + Embolization Purpose",
+        content: `**Diagnostic angiography S&I codes** (supervision & interpretation):
+- **75600-75630** Aortography — 75600 thoracic, **75625** abdominal, 75630 abdominal with bilateral runoff
+- **75710** Extremity angiography, **unilateral**; **75716** **bilateral**
+- **75726** Selective visceral angio, **75736** internal iliac, **75774** add-on additional vessel after basic
+
+**Bundling rule (post-2011)**: For most diagnostic vessel studies, the catheter placement and S&I are now reported with **combined codes** (e.g., **75710-26** with **36247**), or with newer combo codes like **75710** + selective cath. CCI edits forbid duplicate billing of contrast injection within the same vessel.
+
+**Embolization 37241-37244** — sorted by **purpose**:
+- **37241** Venous (e.g., varicocele, gonadal vein)
+- **37242** Arterial, **NOT** for hemorrhage or tumor (e.g., AVM, organ ischemia)
+- **37243** Organ/tumor ischemia (UFE, TACE, splenic)
+- **37244** Arterial **hemorrhage** or **lymphatic** extravasation
+
+**Biliary drainage (PTBD) 47525-47556** — placement (47533/47534), exchange (47535/47536), conversion external→internal (47537).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Angiography + Embolization Codes</text><rect x="60" y="100" width="500" height="380" fill="#6366f1" rx="14"/><text x="310" y="145" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Aortography 75600-75630</text><text x="80" y="190" fill="#fff" font-size="18">75600 Thoracic aortography</text><text x="80" y="220" fill="#fff" font-size="18">75605 Thoracic, serialography</text><text x="80" y="255" fill="#ffd700" font-size="18" font-weight="bold">75625 Abdominal aortography</text><text x="80" y="290" fill="#fff" font-size="18">75630 Abd. + bilateral iliofem runoff</text><text x="80" y="335" fill="#fff" font-size="17">Always paired with catheter</text><text x="80" y="360" fill="#fff" font-size="17">placement code (36200 aorta)</text><text x="80" y="410" fill="#fff" font-size="17">Use modifier -26 for prof component</text><text x="80" y="445" fill="#fff" font-size="17">when reading films at hospital</text><rect x="580" y="100" width="460" height="380" fill="#10b981" rx="14"/><text x="810" y="145" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Peripheral Angio</text><text x="600" y="200" fill="#ffd700" font-size="20" font-weight="bold">75710</text><text x="700" y="200" fill="#fff" font-size="18">Extremity UNILATERAL</text><text x="600" y="245" fill="#ffd700" font-size="20" font-weight="bold">75716</text><text x="700" y="245" fill="#fff" font-size="18">Extremity BILATERAL</text><text x="600" y="295" fill="#fff" font-size="18">75726 Selective visceral</text><text x="600" y="335" fill="#fff" font-size="18">75736 Internal iliac</text><text x="600" y="380" fill="#fff" font-size="18">75774 Add-on selective</text><text x="600" y="410" fill="#fff" font-size="18">(after basic exam)</text><text x="600" y="455" fill="#ffd700" font-size="17">CCI: don't double-bill</text><rect x="60" y="510" width="980" height="290" fill="#f59e0b" rx="14"/><text x="550" y="555" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Embolization 37241-37244 (by PURPOSE)</text><text x="80" y="605" fill="#ffd700" font-size="20" font-weight="bold">37241</text><text x="200" y="605" fill="#fff" font-size="18">VENOUS (varicocele, gonadal)</text><text x="80" y="650" fill="#ffd700" font-size="20" font-weight="bold">37242</text><text x="200" y="650" fill="#fff" font-size="18">Arterial, NOT bleed/tumor (AVM)</text><text x="80" y="700" fill="#ffd700" font-size="20" font-weight="bold">37243</text><text x="200" y="700" fill="#fff" font-size="18">Organ/tumor ischemia (UFE, TACE)</text><text x="80" y="750" fill="#ffd700" font-size="20" font-weight="bold">37244</text><text x="200" y="750" fill="#fff" font-size="18">Arterial HEMORRHAGE / lymphatic</text><rect x="60" y="830" width="980" height="220" fill="#8b5cf6" rx="14"/><text x="550" y="875" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">PTBD Biliary Drainage 47525-47556</text><text x="80" y="925" fill="#fff" font-size="18">47533 New external biliary drain placement</text><text x="80" y="960" fill="#fff" font-size="18">47534 New internal-external drain</text><text x="80" y="995" fill="#fff" font-size="18">47535 Conversion external to internal-external</text><text x="80" y="1030" fill="#fff" font-size="18">47536 Drainage catheter exchange</text></svg>`,
+          caption: "Diagnostic angiography codes paired with catheter placement; embolization by purpose"
+        }
+      },
+      {
+        type: "example",
+        title: "Coding a Lower Extremity Runoff Study",
+        content: `**Scenario**: 67 y/o with bilateral claudication. IR places a 5F sheath in the **right common femoral artery**, advances a pigtail to the **infrarenal abdominal aorta**. Performs **abdominal aortogram** with **bilateral lower extremity runoff** (digital subtraction angiography from aorta through pedal arch). Selective catheterization of the **left superficial femoral artery** (second-order from L common iliac) is then performed for closer evaluation of a focal stenosis.
+
+**Coding**:
+- **75630-26** Aortography abdominal **with bilateral iliofemoral runoff**, S&I, professional
+- **36246-LT** Selective catheter placement, **second-order** left lower extremity arterial branch (covers the SFA from contralateral approach)
+- **75716** is **NOT** added — runoff is bundled into 75630
+- Non-selective aortic catheterization **36200** is **bundled** when more selective catheterization is performed in same session
+
+**Bundling reminders**: Never bill 36200 + 36246 in the same family. Never bill 75625 + 75630 — 75630 includes the abdominal aortogram. Add-on **75774** would apply if a third additional vessel were imaged.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Bilateral LE Runoff + Selective SFA</text><rect x="80" y="100" width="940" height="200" fill="#6366f1" rx="14"/><text x="550" y="145" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Procedure Performed</text><text x="100" y="190" fill="#fff" font-size="18">Right common femoral arterial access</text><text x="100" y="220" fill="#fff" font-size="18">Pigtail to infrarenal abdominal aorta</text><text x="100" y="250" fill="#fff" font-size="18">Aortogram + bilateral runoff (aorta to feet)</text><text x="100" y="280" fill="#fff" font-size="18">Selective L SFA (2nd order, contralateral)</text><rect x="80" y="330" width="940" height="280" fill="#10b981" rx="14"/><text x="550" y="375" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Correct Codes</text><text x="100" y="430" fill="#ffd700" font-size="22" font-weight="bold">75630-26</text><text x="300" y="430" fill="#fff" font-size="19">Aortogram abdominal + BILATERAL</text><text x="300" y="455" fill="#fff" font-size="19">runoff, S&I, professional</text><text x="100" y="510" fill="#ffd700" font-size="22" font-weight="bold">36246-LT</text><text x="300" y="510" fill="#fff" font-size="19">Selective 2nd order left</text><text x="300" y="535" fill="#fff" font-size="19">arterial extremity branch</text><text x="100" y="585" fill="#fff" font-size="17">Total reportable: 2 codes</text><rect x="80" y="640" width="940" height="260" fill="#ef4444" rx="14"/><text x="550" y="685" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">DO NOT Add</text><text x="100" y="735" fill="#fff" font-size="19">36200 - bundled into 36246 selective</text><text x="100" y="770" fill="#fff" font-size="19">75716 - bundled into 75630 runoff</text><text x="100" y="805" fill="#fff" font-size="19">75625 - included in 75630</text><text x="100" y="840" fill="#fff" font-size="19">75774 - only if 3rd add'l vessel imaged</text><text x="100" y="875" fill="#fff" font-size="19">Separate access codes (sheath)</text><rect x="80" y="930" width="940" height="120" fill="#f59e0b" rx="14"/><text x="550" y="975" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Family Rule</text><text x="550" y="1015" text-anchor="middle" fill="#fff" font-size="18">Each lower extremity = one family; bill highest order only</text></svg>`,
+          caption: "75630 + 36246 with -LT for second-order contralateral selectivity"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "A patient with uterine fibroids undergoes uterine fibroid embolization (UFE). The IR catheterizes the right uterine artery (3rd order) and delivers embolic spheres to devascularize the fibroid. Which embolization code is correct?",
+        options: [
+          { text: "37241 — venous embolization", correct: false },
+          { text: "37242 — arterial embolization, not for hemorrhage or tumor", correct: false },
+          { text: "37243 — embolization for organ or tumor ischemia", correct: true },
+          { text: "37244 — embolization for arterial hemorrhage", correct: false }
+        ],
+        explanation: "Embolization codes are chosen by **purpose**. UFE devascularizes a **tumor** (fibroid is a benign neoplasm — leiomyoma), so **37243** (organ/tumor ischemia) applies. It's also used for TACE (chemo-embolization of HCC) and splenic embolization. 37241 is venous (varicocele). 37242 is arterial non-hemorrhage non-tumor (AVMs, endoleak). 37244 is for active hemorrhage or lymphatic extravasation.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Embolization by Purpose</text><rect x="100" y="160" width="900" height="170" fill="#6366f1" rx="14"/><text x="120" y="215" fill="#fff" font-size="32" font-weight="bold">37241</text><text x="120" y="255" fill="#fff" font-size="22">Venous occlusion</text><text x="120" y="295" fill="#fff" font-size="20">e.g., varicocele, gonadal vein</text><rect x="100" y="360" width="900" height="170" fill="#10b981" rx="14"/><text x="120" y="415" fill="#fff" font-size="32" font-weight="bold">37242</text><text x="120" y="455" fill="#fff" font-size="22">Arterial — NOT bleed/tumor</text><text x="120" y="495" fill="#fff" font-size="20">e.g., AVM, endoleak, aneurysm</text><rect x="100" y="560" width="900" height="170" fill="#ffd700" rx="14" stroke="#fff" stroke-width="5"/><text x="120" y="615" fill="#1a1a2e" font-size="32" font-weight="bold">37243 - UFE answer</text><text x="120" y="655" fill="#1a1a2e" font-size="22">Organ / TUMOR ischemia</text><text x="120" y="695" fill="#1a1a2e" font-size="20">UFE, TACE, splenic embolization</text><rect x="100" y="760" width="900" height="170" fill="#ef4444" rx="14"/><text x="120" y="815" fill="#fff" font-size="32" font-weight="bold">37244</text><text x="120" y="855" fill="#fff" font-size="22">Arterial HEMORRHAGE</text><text x="120" y="895" fill="#fff" font-size="20">Or lymphatic extravasation</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22">Fibroid = benign tumor = 37243</text></svg>`,
+          caption: "Tumor or organ ischemia embolization = 37243"
+        }
+      },
+      {
+        type: "application",
+        title: "PTBD Workflow + Bundling Pitfalls",
+        content: `**Workflow**: 72 y/o with pancreatic head cancer presents with painless jaundice and bilirubin 12. ERCP fails to cannulate. IR consulted for **percutaneous transhepatic biliary drainage (PTBD)**.
+
+**Procedure**: Under fluoro/US guidance, the right hepatic duct is punctured. A wire is advanced past the obstruction into the duodenum, and an **internal-external drainage catheter** is placed with side-holes above the stricture and pigtail in the duodenum.
+
+**Coding**:
+- **47533** PTBD, new access, **external** drain placement, OR
+- **47534** PTBD, new access, **internal-external** drain (use this for our case)
+- Fluoro/US guidance is **bundled** — do not bill 76998 or 76942 separately
+
+**Follow-up routine exchange in 3 months**:
+- **47536** Drainage catheter exchange
+
+**Conversion of pure external to internal-external (later)**:
+- **47535**
+
+**Pitfalls**: Never bill access (36000, 76942) separately; bundled. Never bill 47533 + 47534 same session — internal-external (47534) includes the external component. Cholangiogram done at PTBD placement is bundled into 47533/47534.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">PTBD Coding Workflow</text><rect x="80" y="100" width="940" height="140" fill="#6366f1" rx="14"/><text x="550" y="145" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Indication</text><text x="100" y="185" fill="#fff" font-size="18">Pancreatic head CA, obstructive jaundice</text><text x="100" y="215" fill="#fff" font-size="18">ERCP failed - IR percutaneous approach</text><rect x="80" y="270" width="940" height="240" fill="#10b981" rx="14"/><text x="550" y="315" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Initial Placement</text><text x="100" y="365" fill="#ffd700" font-size="22" font-weight="bold">47533</text><text x="240" y="365" fill="#fff" font-size="20">External drain only (no duodenum)</text><text x="100" y="415" fill="#ffd700" font-size="22" font-weight="bold">47534</text><text x="240" y="415" fill="#fff" font-size="20">Internal-external (across stricture)</text><text x="240" y="445" fill="#fff" font-size="17">- our scenario uses 47534</text><text x="100" y="490" fill="#fff" font-size="17">Imaging guidance bundled</text><rect x="80" y="540" width="940" height="200" fill="#f59e0b" rx="14"/><text x="550" y="585" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Follow-up Procedures</text><text x="100" y="635" fill="#ffd700" font-size="22" font-weight="bold">47535</text><text x="240" y="635" fill="#fff" font-size="20">External - internal-external conversion</text><text x="100" y="685" fill="#ffd700" font-size="22" font-weight="bold">47536</text><text x="240" y="685" fill="#fff" font-size="20">Routine drain exchange (every 3 mo)</text><rect x="80" y="770" width="940" height="280" fill="#ef4444" rx="14"/><text x="550" y="815" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Bundling Pitfalls - DO NOT add</text><text x="100" y="865" fill="#fff" font-size="19">76942 ultrasound guidance - bundled</text><text x="100" y="900" fill="#fff" font-size="19">76998 fluoroscopy - bundled</text><text x="100" y="935" fill="#fff" font-size="19">47533 + 47534 same session - no</text><text x="100" y="970" fill="#fff" font-size="19">Diagnostic cholangiogram at placement</text><text x="100" y="1005" fill="#fff" font-size="19">- included in primary procedure</text></svg>`,
+          caption: "47534 internal-external PTBD; exchange 47536; guidance bundled"
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-cpt-radpath-lesson-9",
+    title: "Medicine: Cardiovascular Diagnostic Procedures",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Global, Technical, Professional",
+        content: `**Cardiovascular Medicine codes (93000-93799)** are dominated by a **three-part split** that mirrors the global/PC/TC concept in radiology:
+- **Global** code — one physician/practice does **both** the tracing and the interpretation
+- **Technical only (TC)** — the equipment, supplies, and tech labor (no MD reading)
+- **Professional only (-26 or dedicated PC code)** — the cardiologist reads and signs the report
+
+**EKG example**:
+- **93000** Global EKG (12-lead, with interpretation and report)
+- **93005** Tracing only (technical) — the EKG was recorded but not read by us
+- **93010** Interpretation and report only (professional) — we read an EKG done elsewhere
+
+**Cardiac stress test**: **93015** global, **93016** physician supervision only, **93017** tracing only, **93018** interpretation only. Splitting reflects the multi-provider, multi-setting reality of cardiac diagnostics (hospital tech + outside reading cardiologist).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">CV Medicine: 3-Part Split</text><rect x="60" y="120" width="320" height="320" fill="#6366f1" rx="14"/><text x="220" y="170" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">GLOBAL</text><text x="220" y="200" text-anchor="middle" fill="#fff" font-size="18">One provider does</text><text x="220" y="225" text-anchor="middle" fill="#fff" font-size="18">tracing + interpretation</text><text x="220" y="280" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">93000</text><text x="220" y="320" text-anchor="middle" fill="#fff" font-size="18">EKG global</text><text x="220" y="370" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">93015</text><text x="220" y="405" text-anchor="middle" fill="#fff" font-size="18">Stress test global</text><rect x="390" y="120" width="320" height="320" fill="#10b981" rx="14"/><text x="550" y="170" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">TECHNICAL</text><text x="550" y="200" text-anchor="middle" fill="#fff" font-size="18">Equipment + tech</text><text x="550" y="225" text-anchor="middle" fill="#fff" font-size="18">no MD reading</text><text x="550" y="280" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">93005</text><text x="550" y="320" text-anchor="middle" fill="#fff" font-size="18">EKG tracing only</text><text x="550" y="370" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">93017</text><text x="550" y="405" text-anchor="middle" fill="#fff" font-size="18">Stress tracing only</text><rect x="720" y="120" width="320" height="320" fill="#f59e0b" rx="14"/><text x="880" y="170" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">PROFESSIONAL</text><text x="880" y="200" text-anchor="middle" fill="#fff" font-size="18">MD reads + signs</text><text x="880" y="225" text-anchor="middle" fill="#fff" font-size="18">written report</text><text x="880" y="280" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">93010</text><text x="880" y="320" text-anchor="middle" fill="#fff" font-size="18">EKG interp only</text><text x="880" y="370" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">93018</text><text x="880" y="405" text-anchor="middle" fill="#fff" font-size="18">Stress interp only</text><rect x="60" y="480" width="980" height="180" fill="#8b5cf6" rx="14"/><text x="550" y="525" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Stress Test Add: 93016</text><text x="550" y="565" text-anchor="middle" fill="#fff" font-size="19">93016 = Physician supervision only</text><text x="550" y="600" text-anchor="middle" fill="#fff" font-size="19">(MD present during exercise, monitoring</text><text x="550" y="630" text-anchor="middle" fill="#fff" font-size="19">but tracing/interp billed separately)</text><rect x="60" y="690" width="980" height="180" fill="#ec4899" rx="14"/><text x="550" y="735" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">When to use each</text><text x="550" y="775" text-anchor="middle" fill="#fff" font-size="19">Office EKG by your cardiologist: 93000</text><text x="550" y="810" text-anchor="middle" fill="#fff" font-size="19">ED EKG, hospital reads: 93005 (tech) + 93010 (pro)</text><text x="550" y="845" text-anchor="middle" fill="#fff" font-size="19">Outside EKG sent to you for reading: 93010 only</text><rect x="60" y="900" width="980" height="140" fill="#0ea5e9" rx="14"/><text x="550" y="945" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Reminder</text><text x="550" y="985" text-anchor="middle" fill="#fff" font-size="18">Never bill 93000 + 93010 - the global already</text><text x="550" y="1015" text-anchor="middle" fill="#fff" font-size="18">includes the interpretation</text></svg>`,
+          caption: "EKG and stress test codes split into global, technical, and professional"
+        }
+      },
+      {
+        type: "concept",
+        title: "Holter Monitors + Echocardiography",
+        content: `**Holter monitor (24-48 hr ambulatory ECG)** codes are also split:
+- **93224** — Global (recording + scanning + interpretation/report)
+- **93225** — Recording only (hookup, scanning excluded)
+- **93226** — Scanning analysis + report only (no recording)
+- **93227** — Interpretation and report only
+
+If the office hooks up and removes the device but a third-party scans, you bill **93225**; the scanning service bills **93226**; the reading cardiologist bills **93227**.
+
+**Echocardiography (93303-93352)**:
+- **93303-93304** Congenital cardiac echo (complete / follow-up)
+- **93306** Transthoracic echo (TTE) **complete with spectral Doppler and color flow** (most common)
+- **93307** TTE complete **without** Doppler; **93308** follow-up/limited
+- **93312-93318** Transesophageal echo (TEE) — 93312 complete with probe placement and interp; 93313 probe placement only; 93314 interp only; 93315-93317 congenital TEE; 93318 intraoperative for monitoring
+- **Stress echo**: **93350** complete stress echo (rest+stress images, supervision, interp); **93351** + treadmill/bike testing (includes 93015 components)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Holter + Echo Code Map</text><rect x="60" y="100" width="980" height="340" fill="#6366f1" rx="14"/><text x="550" y="145" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Holter Monitor 93224-93227 (24-48 hr)</text><text x="80" y="195" fill="#ffd700" font-size="22" font-weight="bold">93224</text><text x="200" y="195" fill="#fff" font-size="19">GLOBAL - recording + scan + interp</text><text x="80" y="245" fill="#ffd700" font-size="22" font-weight="bold">93225</text><text x="200" y="245" fill="#fff" font-size="19">Recording only (hookup/removal)</text><text x="80" y="295" fill="#ffd700" font-size="22" font-weight="bold">93226</text><text x="200" y="295" fill="#fff" font-size="19">Scanning analysis + report</text><text x="80" y="345" fill="#ffd700" font-size="22" font-weight="bold">93227</text><text x="200" y="345" fill="#fff" font-size="19">Interpretation + report only</text><text x="80" y="400" fill="#fff" font-size="17">Split: hospital + scanning service + reading cardiologist</text><rect x="60" y="460" width="490" height="280" fill="#10b981" rx="14"/><text x="305" y="505" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">TTE 93303-93308</text><text x="80" y="555" fill="#ffd700" font-size="20" font-weight="bold">93306</text><text x="80" y="585" fill="#fff" font-size="17">Complete + Doppler</text><text x="80" y="610" fill="#fff" font-size="17">+ color flow (common)</text><text x="80" y="655" fill="#ffd700" font-size="20" font-weight="bold">93307</text><text x="80" y="685" fill="#fff" font-size="17">Complete, no Doppler</text><text x="80" y="715" fill="#ffd700" font-size="20" font-weight="bold">93308 Follow-up/limited</text><rect x="570" y="460" width="470" height="280" fill="#f59e0b" rx="14"/><text x="805" y="505" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">TEE 93312-93318</text><text x="590" y="555" fill="#ffd700" font-size="20" font-weight="bold">93312</text><text x="590" y="585" fill="#fff" font-size="17">Complete + probe placement</text><text x="590" y="615" fill="#fff" font-size="17">+ interpretation</text><text x="590" y="655" fill="#ffd700" font-size="20" font-weight="bold">93313 Probe placement</text><text x="590" y="685" fill="#ffd700" font-size="20" font-weight="bold">93314 Interp only</text><text x="590" y="715" fill="#ffd700" font-size="20" font-weight="bold">93318 Intraop monitoring</text><rect x="60" y="760" width="980" height="280" fill="#ec4899" rx="14"/><text x="550" y="805" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Stress Echo 93350-93351</text><text x="80" y="855" fill="#ffd700" font-size="22" font-weight="bold">93350</text><text x="200" y="855" fill="#fff" font-size="19">Stress echo: rest+stress images, interp</text><text x="80" y="905" fill="#ffd700" font-size="22" font-weight="bold">93351</text><text x="200" y="905" fill="#fff" font-size="19">+ supervision of exercise/stress</text><text x="200" y="935" fill="#fff" font-size="18">(includes 93015 stress test bundled)</text><text x="80" y="990" fill="#fff" font-size="18">Bundling: do NOT bill 93350 + 93015 -</text><text x="80" y="1020" fill="#fff" font-size="18">use 93351 if same MD does both</text></svg>`,
+          caption: "Holter Monitor split, TTE 93306, TEE 93312, stress echo 93350/93351"
+        }
+      },
+      {
+        type: "example",
+        title: "Cardiologist Reads Outside EKG + Orders Echo",
+        content: `**Scenario**: A 64 y/o male presents to an outpatient cardiology office for evaluation of palpitations. He brings a printed **EKG performed yesterday at an urgent care** clinic; the cardiologist reviews and writes a formal interpretation in the chart. The cardiologist then performs a **complete transthoracic echocardiogram with 2D, M-mode, spectral Doppler, and color flow Doppler** in the office.
+
+**Coding**:
+- **93010** Interpretation and report of EKG (no tracing performed by us today)
+- **93306** Complete TTE with spectral Doppler and color flow Doppler imaging — global, includes interpretation
+- Office E/M (e.g., **99214**) with modifier **-25** if a separately identifiable evaluation occurred
+
+**Rejected codes**:
+- 93000 — global would require us to perform the EKG tracing; we didn't
+- 93005 — tracing only is for the facility that recorded it
+- 93307 — wrong (omits Doppler), 93308 (follow-up/limited)
+- 93312 — TEE was not performed; transthoracic only
+
+ICD-10: palpitations **R00.2**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Outside EKG + Office Echo</text><rect x="80" y="100" width="940" height="180" fill="#6366f1" rx="14"/><text x="550" y="145" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Scenario</text><text x="100" y="190" fill="#fff" font-size="19">64yo M, palpitations</text><text x="100" y="220" fill="#fff" font-size="19">Brings outside EKG - cardiologist reads</text><text x="100" y="250" fill="#fff" font-size="19">Cardiologist performs TTE in office</text><rect x="80" y="300" width="940" height="320" fill="#10b981" rx="14"/><text x="550" y="345" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Correct Codes</text><text x="100" y="395" fill="#ffd700" font-size="22" font-weight="bold">93010</text><text x="280" y="395" fill="#fff" font-size="20">EKG interpretation + report</text><text x="280" y="425" fill="#fff" font-size="17">(NO tracing performed today)</text><text x="100" y="475" fill="#ffd700" font-size="22" font-weight="bold">93306</text><text x="280" y="475" fill="#fff" font-size="20">TTE complete + Doppler</text><text x="280" y="505" fill="#fff" font-size="17">+ color flow imaging</text><text x="100" y="560" fill="#ffd700" font-size="22" font-weight="bold">99214-25</text><text x="280" y="560" fill="#fff" font-size="20">E/M with separately</text><text x="280" y="590" fill="#fff" font-size="17">identifiable service</text><rect x="80" y="640" width="940" height="280" fill="#ef4444" rx="14"/><text x="550" y="685" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Why Other Codes Fail</text><text x="100" y="735" fill="#fff" font-size="19">93000 global - we did not record tracing</text><text x="100" y="770" fill="#fff" font-size="19">93005 tracing only - belongs to urgent care</text><text x="100" y="805" fill="#fff" font-size="19">93307 omits Doppler; 93308 is follow-up</text><text x="100" y="840" fill="#fff" font-size="19">93312 TEE - transesophageal not performed</text><text x="100" y="875" fill="#fff" font-size="19">99214 alone - misses separate procedures</text><rect x="80" y="940" width="940" height="100" fill="#f59e0b" rx="14"/><text x="550" y="985" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">ICD-10: R00.2 Palpitations</text></svg>`,
+          caption: "Read-only EKG = 93010; complete TTE with Doppler = 93306"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "A cardiologist supervises a patient on a treadmill stress test in the hospital. The hospital owns the equipment and provides the ECG tracing during exercise. A separate cardiologist later interprets the tracing offsite. What does the supervising cardiologist bill?",
+        options: [
+          { text: "93015 — complete stress test (global)", correct: false },
+          { text: "93016 — physician supervision only", correct: true },
+          { text: "93017 — tracing only (technical)", correct: false },
+          { text: "93018 — interpretation only (professional)", correct: false }
+        ],
+        explanation: "The cardiac stress test splits into four codes. **93016** is **physician supervision only** — the MD is present and monitors the patient during exercise but does not own the equipment or interpret. **93015** is global (one MD does all three components). **93017** is tracing only (belongs to the hospital owning the equipment). **93018** is interpretation only (the offsite reading cardiologist bills this). Each player bills their own piece.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Stress Test 4-Way Split</text><rect x="100" y="160" width="900" height="170" fill="#6366f1" rx="14"/><text x="120" y="215" fill="#fff" font-size="32" font-weight="bold">93015 Global</text><text x="120" y="255" fill="#fff" font-size="20">One MD: supervision + tracing</text><text x="120" y="290" fill="#fff" font-size="20">+ interpretation (private office)</text><rect x="100" y="360" width="900" height="170" fill="#ffd700" rx="14" stroke="#fff" stroke-width="5"/><text x="120" y="415" fill="#1a1a2e" font-size="32" font-weight="bold">93016 Supervision</text><text x="120" y="455" fill="#1a1a2e" font-size="20">MD present during exercise</text><text x="120" y="490" fill="#1a1a2e" font-size="20">Hospital owns gear, other MD reads</text><rect x="100" y="560" width="900" height="170" fill="#10b981" rx="14"/><text x="120" y="615" fill="#fff" font-size="32" font-weight="bold">93017 Tracing</text><text x="120" y="655" fill="#fff" font-size="20">Hospital/facility billing</text><text x="120" y="690" fill="#fff" font-size="20">Technical component only</text><rect x="100" y="760" width="900" height="170" fill="#f59e0b" rx="14"/><text x="120" y="815" fill="#fff" font-size="32" font-weight="bold">93018 Interpretation</text><text x="120" y="855" fill="#fff" font-size="20">Offsite reading cardiologist</text><text x="120" y="890" fill="#fff" font-size="20">Professional report only</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22">Supervising MD = 93016</text></svg>`,
+          caption: "Stress test components: 93015 global, 93016 supervision, 93017 tracing, 93018 interp"
+        }
+      },
+      {
+        type: "application",
+        title: "Hospital Holter Setup Across Providers",
+        content: `**Workflow**: A primary care clinic suspects intermittent atrial fibrillation in a 70 y/o patient with palpitations. The clinic medical assistant **applies the Holter monitor** for 48 hours. The patient returns the device to the clinic. The Holter data is **shipped electronically to a national scanning service** ("XYZ Cardiac Monitoring"), which performs scanning analysis and generates a preliminary report. The clinic's cardiology consultant later reviews the strips, writes the final interpretation, and signs the report.
+
+**Coding by player**:
+- **Primary care clinic**: **93225** — recording only (hookup, removal, patient instruction)
+- **XYZ scanning service**: **93226** — scanning analysis and report
+- **Cardiology consultant**: **93227** — interpretation and report
+
+If a single provider did all three (rare, requires owning scanning equipment), bill **93224 global** — never bill 93225 + 93226 + 93227 to one TIN; that would equal 93224.
+
+ICD-10: **I48.91** atrial fibrillation if confirmed, or **R00.2** palpitations if just symptomatic.
+
+**Pearls**: Documentation must include hookup time, monitoring duration (must be 24-48 hours for 93224 family; longer/extended is 93241-93248), and final signed cardiologist report.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Holter: Three-Provider Workflow</text><rect x="80" y="100" width="940" height="160" fill="#6366f1" rx="14"/><text x="550" y="145" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">PRIMARY CARE CLINIC</text><text x="100" y="185" fill="#fff" font-size="19">Hookup + patient education + removal</text><text x="100" y="220" fill="#ffd700" font-size="24" font-weight="bold">Bills 93225</text><text x="500" y="220" fill="#fff" font-size="19">(recording only)</text><rect x="80" y="290" width="940" height="160" fill="#10b981" rx="14"/><text x="550" y="335" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">SCANNING SERVICE (XYZ)</text><text x="100" y="375" fill="#fff" font-size="19">Receives data - runs algorithm</text><text x="100" y="410" fill="#ffd700" font-size="24" font-weight="bold">Bills 93226</text><text x="500" y="410" fill="#fff" font-size="19">(scanning + report)</text><rect x="80" y="480" width="940" height="160" fill="#f59e0b" rx="14"/><text x="550" y="525" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">CARDIOLOGIST</text><text x="100" y="565" fill="#fff" font-size="19">Reviews strips + signs final report</text><text x="100" y="600" fill="#ffd700" font-size="24" font-weight="bold">Bills 93227</text><text x="500" y="600" fill="#fff" font-size="19">(interp + report)</text><rect x="80" y="670" width="940" height="180" fill="#ec4899" rx="14"/><text x="550" y="715" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">When one provider owns all 3 functions</text><text x="100" y="760" fill="#ffd700" font-size="22" font-weight="bold">93224</text><text x="240" y="760" fill="#fff" font-size="20">GLOBAL Holter monitor</text><text x="100" y="800" fill="#fff" font-size="18">Never bill 93225+93226+93227 to one TIN</text><text x="100" y="830" fill="#fff" font-size="18">- that equals 93224</text><rect x="80" y="870" width="940" height="180" fill="#8b5cf6" rx="14"/><text x="550" y="915" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Documentation + ICD-10</text><text x="100" y="955" fill="#fff" font-size="18">Hookup time + 24-48 hr duration documented</text><text x="100" y="990" fill="#fff" font-size="18">Extended (&gt;48 hr): 93241-93248 family</text><text x="100" y="1025" fill="#fff" font-size="18">Confirmed AF: I48.91 | Symptom only: R00.2</text></svg>`,
+          caption: "93225/93226/93227 split mirrors recording, scanning, interpretation"
         }
       }
     ]

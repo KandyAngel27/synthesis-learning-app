@@ -6307,7 +6307,7 @@ Net result: **same market exposure, $720 cash back, $7,000 stored ammunition** f
             title: 'Retirement Accounts: 401(k), IRA, Roth, HSA',
             author: 'Synthesis Learning',
             description: 'The tax treatment of each account, contribution limits, the employer match, the Roth conversion ladder, and the HSA as the best account no one talks about.',
-            lessons: 6, duration: 90, progress: 0, category: 'personal-finance-track',
+            lessons: 9, duration: 135, progress: 0, category: 'personal-finance-track',
             lessonList: [
 {
     id: "pf-retirement-lesson-1",
@@ -6689,6 +6689,363 @@ Net result: **same market exposure, $720 cash back, $7,000 stored ammunition** f
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Conversion Playbook</text><g transform="translate(80,150)"><rect width="940" height="130" fill="#6366f1" opacity="0.2" rx="10"/><circle cx="60" cy="65" r="32" fill="#6366f1"/><text x="60" y="75" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">1</text><text x="115" y="50" fill="#6366f1" font-size="22" font-weight="bold">Spot a low-income year</text><text x="115" y="85" fill="#ffffff" font-size="17">Sabbatical, job gap, early retirement before SS</text><text x="115" y="115" fill="#888" font-size="15">Project taxable income before converting</text></g><g transform="translate(80,300)"><rect width="940" height="130" fill="#10b981" opacity="0.2" rx="10"/><circle cx="60" cy="65" r="32" fill="#10b981"/><text x="60" y="75" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">2</text><text x="115" y="50" fill="#10b981" font-size="22" font-weight="bold">Fill the bracket, don't spill</text><text x="115" y="85" fill="#ffffff" font-size="17">2026: 12% bracket ends at $48,475 single / $96,950 MFJ</text><text x="115" y="115" fill="#888" font-size="15">Convert just enough to top off — no waste</text></g><g transform="translate(80,450)"><rect width="940" height="130" fill="#ffd700" opacity="0.2" rx="10"/><circle cx="60" cy="65" r="32" fill="#ffd700"/><text x="60" y="75" text-anchor="middle" fill="#1a1a2e" font-size="30" font-weight="bold">3</text><text x="115" y="50" fill="#ffd700" font-size="22" font-weight="bold">Watch the side effects</text><text x="115" y="85" fill="#ffffff" font-size="17">IRMAA, ACA subsidies, capital gains stacking</text><text x="115" y="115" fill="#888" font-size="15">A 2-year IRMAA lookback hits Medicare at 65</text></g><g transform="translate(80,600)"><rect width="940" height="130" fill="#ec4899" opacity="0.2" rx="10"/><circle cx="60" cy="65" r="32" fill="#ec4899"/><text x="60" y="75" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">4</text><text x="115" y="50" fill="#ec4899" font-size="22" font-weight="bold">Execute by Dec 31</text><text x="115" y="85" fill="#ffffff" font-size="17">Conversion year = calendar year — no extensions</text><text x="115" y="115" fill="#888" font-size="15">Schedule it by mid-December to be safe</text></g><g transform="translate(80,750)"><rect width="940" height="130" fill="#0ea5e9" opacity="0.2" rx="10"/><circle cx="60" cy="65" r="32" fill="#0ea5e9"/><text x="60" y="75" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">5</text><text x="115" y="50" fill="#0ea5e9" font-size="22" font-weight="bold">Pay tax from OUTSIDE the IRA</text><text x="115" y="85" fill="#ffffff" font-size="17">Use taxable brokerage cash, never the converted $</text><text x="115" y="115" fill="#888" font-size="15">Maximizes dollars getting the Roth treatment</text></g><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">$100k converted at 22% = $22k tax now. Tax-free forever.</text></svg>`,
           caption: "Five-step conversion: find the year, fill the bracket, watch side effects, execute, pay tax externally."
+        }
+      }
+    ]
+  },
+{
+    id: "pf-retirement-lesson-7",
+    title: "Pension Plans (Defined Benefit)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Disappearing Dinosaur",
+        content: `In 1980, **60% of private-sector workers** had a **defined benefit (DB) pension** — a guaranteed monthly check for life. Today? **Under 15%**. Between 2000-2010, most large employers (GE, IBM, Verizon) **froze** their pensions, replacing them with 401(k)s that shift investment risk onto YOU.
+
+But pensions aren't dead. They still dominate in:
+- **Government** (federal, state, municipal employees)
+- **Military** (20-year retirement = lifetime pension)
+- **Education** (teachers, professors)
+- **Healthcare** (some hospital systems)
+- **Unions** (many trades)
+
+If you have one, you face a HUGE decision at retirement: **monthly annuity for life** or **one-time lump sum**? The wrong choice can cost six figures. This lesson decodes the math.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Private-Sector Pension Coverage</text><text x="550" y="130" text-anchor="middle" fill="#888" font-size="22">Percentage of workers with DB plan</text><line x1="120" y1="900" x2="1000" y2="900" stroke="#888" stroke-width="3"/><line x1="120" y1="200" x2="120" y2="900" stroke="#888" stroke-width="3"/><text x="80" y="910" fill="#ffffff" font-size="20">0%</text><text x="60" y="700" fill="#ffffff" font-size="20">25%</text><text x="60" y="500" fill="#ffffff" font-size="20">50%</text><text x="60" y="300" fill="#ffffff" font-size="20">75%</text><rect x="180" y="220" width="100" height="680" fill="#10b981"/><text x="230" y="940" text-anchor="middle" fill="#ffffff" font-size="20">1980</text><text x="230" y="200" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">60%</text><rect x="340" y="380" width="100" height="520" fill="#10b981" opacity="0.85"/><text x="390" y="940" text-anchor="middle" fill="#ffffff" font-size="20">1995</text><text x="390" y="360" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">40%</text><rect x="500" y="620" width="100" height="280" fill="#f59e0b"/><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="20">2010</text><text x="550" y="600" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">22%</text><rect x="660" y="760" width="100" height="140" fill="#ef4444"/><text x="710" y="940" text-anchor="middle" fill="#ffffff" font-size="20">2026</text><text x="710" y="740" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">14%</text><rect x="820" y="820" width="100" height="80" fill="#ef4444" opacity="0.7"/><text x="870" y="940" text-anchor="middle" fill="#ffffff" font-size="20">2040?</text><text x="870" y="810" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">~8%</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22">Risk shifted from EMPLOYER to EMPLOYEE</text><text x="550" y="1060" text-anchor="middle" fill="#888" font-size="18">401(k) replaced pension as default retirement plan</text></svg>`,
+          caption: "Private-sector DB pension coverage collapsed from 60% in 1980 to ~14% today as companies froze plans."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Pension Formula",
+        content: `Every DB pension uses a **benefit formula** with three inputs:
+
+**Annual benefit = Years of Service × Final Average Salary × Multiplier %**
+
+**Example: Mid-career teacher**
+- 25 years of service
+- $80,000 final average salary (avg of highest 3-5 years)
+- 2% multiplier
+- **Annual pension = 25 × $80,000 × 2% = $40,000/year for life**
+
+**Federal employee (FERS)**: 1% multiplier (1.1% if retire at 62+ with 20+ years)
+**Military (20-year)**: 2.5% × years × base pay = 50% pension at 20 years
+**State teachers**: typically 2.0-2.5% multiplier
+**Private corporate (where they still exist)**: usually 1.0-1.5%
+
+**COLA (Cost-of-Living Adjustment)**: Some pensions adjust for inflation annually (federal, some state). Most private pensions do NOT — the check is **fixed nominal dollars** that lose ~30% of purchasing power over 20 years at 1.5% inflation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The Pension Formula</text><rect x="80" y="130" width="940" height="160" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Annual Benefit =</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="28">Years × Final Avg Salary × Multiplier %</text><text x="550" y="340" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Example Calculations</text><rect x="80" y="370" width="940" height="120" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="100" y="410" fill="#10b981" font-size="22" font-weight="bold">Teacher (25 yrs)</text><text x="100" y="445" fill="#ffffff" font-size="20">25 × $80,000 × 2.0%</text><text x="700" y="445" fill="#ffd700" font-size="24" font-weight="bold">= $40,000/yr</text><text x="100" y="475" fill="#888" font-size="16">Often includes COLA</text><rect x="80" y="510" width="940" height="120" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="100" y="550" fill="#0ea5e9" font-size="22" font-weight="bold">Military (20 yrs)</text><text x="100" y="585" fill="#ffffff" font-size="20">20 × $90,000 × 2.5%</text><text x="700" y="585" fill="#ffd700" font-size="24" font-weight="bold">= $45,000/yr</text><text x="100" y="615" fill="#888" font-size="16">COLA-adjusted, starts immediately</text><rect x="80" y="650" width="940" height="120" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/><text x="100" y="690" fill="#f59e0b" font-size="22" font-weight="bold">Federal FERS (30 yrs)</text><text x="100" y="725" fill="#ffffff" font-size="20">30 × $120,000 × 1.1%</text><text x="700" y="725" fill="#ffd700" font-size="24" font-weight="bold">= $39,600/yr</text><text x="100" y="755" fill="#888" font-size="16">COLA-adjusted (CPI-based)</text><rect x="80" y="790" width="940" height="120" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/><text x="100" y="830" fill="#ef4444" font-size="22" font-weight="bold">Private Corporate (20 yrs)</text><text x="100" y="865" fill="#ffffff" font-size="20">20 × $100,000 × 1.25%</text><text x="700" y="865" fill="#ffd700" font-size="24" font-weight="bold">= $25,000/yr</text><text x="100" y="895" fill="#888" font-size="16">Usually NO COLA — inflation erodes value</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Without COLA: $25k today = ~$17k purchasing power in 20 yrs</text><text x="550" y="1010" text-anchor="middle" fill="#888" font-size="20">at 1.5% inflation. Always ask: does my pension adjust?</text></svg>`,
+          caption: "Pension = Years × Final Salary × Multiplier. COLA adjustments are critical for preserving long-term purchasing power."
+        }
+      },
+      {
+        type: "example",
+        title: "Lump Sum vs Monthly Annuity",
+        content: `**Diane, 65**, just retired from a corporate engineering job. Her pension offer:
+
+**Option A: Monthly annuity** = **$3,200/month** ($38,400/yr) for life, no COLA, 50% to surviving spouse
+**Option B: Lump sum** = **$520,000** rolled to IRA
+
+**Step 1: Calculate the implied "discount rate" of the lump sum**
+At age 65, life expectancy is ~20 years. To generate $38,400/yr from $520,000, the implied return needed is **~5.0%**. That's a reasonable bar — she could invest in a balanced portfolio.
+
+**Step 2: Compare to PBGC max**
+PBGC (federal pension insurance) caps guarantees at **~$87,420/yr** in 2026. Her $38,400 is well under — fully insured if employer fails.
+
+**Step 3: Consider personal factors**
+- Family history: mother lived to 92 → favors annuity
+- Spouse: husband has his own pension → 50% survivor less critical
+- Risk tolerance: low → annuity simpler
+
+**Diane's choice: Annuity.** Longevity + low risk tolerance + PBGC backing = guaranteed income beats lump sum management stress.
+
+**Counter-example: Mark, 65**, offered $1.2M lump or $5,500/mo. He has cancer (poor health) and his pension exceeds PBGC max — **takes the lump sum**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Lump Sum vs Annuity Decision Matrix</text><rect x="60" y="120" width="500" height="440" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="310" y="170" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">TAKE THE ANNUITY</text><text x="80" y="220" fill="#ffffff" font-size="20" font-weight="bold">Favorable factors:</text><text x="80" y="260" fill="#ffffff" font-size="19">Family longevity (parents 85+)</text><text x="80" y="295" fill="#ffffff" font-size="19">Low risk tolerance</text><text x="80" y="330" fill="#ffffff" font-size="19">Benefit under PBGC max ($87k)</text><text x="80" y="365" fill="#ffffff" font-size="19">No spouse / spouse has income</text><text x="80" y="400" fill="#ffffff" font-size="19">COLA-adjusted pension</text><text x="80" y="435" fill="#ffffff" font-size="19">Don't want to manage money</text><text x="80" y="470" fill="#ffffff" font-size="19">Implied rate &gt; 6% to match</text><text x="310" y="525" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Diane's choice: $38k/yr for life</text><rect x="580" y="120" width="460" height="440" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="14"/><text x="810" y="170" text-anchor="middle" fill="#0ea5e9" font-size="28" font-weight="bold">TAKE THE LUMP SUM</text><text x="600" y="220" fill="#ffffff" font-size="20" font-weight="bold">Favorable factors:</text><text x="600" y="260" fill="#ffffff" font-size="19">Poor health / short life expectancy</text><text x="600" y="295" fill="#ffffff" font-size="19">Benefit OVER PBGC max</text><text x="600" y="330" fill="#ffffff" font-size="19">Employer financially shaky</text><text x="600" y="365" fill="#ffffff" font-size="19">High risk tolerance / experienced</text><text x="600" y="400" fill="#ffffff" font-size="19">No COLA — inflation will erode</text><text x="600" y="435" fill="#ffffff" font-size="19">Want estate to heirs</text><text x="600" y="470" fill="#ffffff" font-size="19">Implied rate &lt; 5% to match</text><text x="810" y="525" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Mark's choice: $1.2M lump</text><rect x="60" y="600" width="980" height="280" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">THE TEST: Implied Rate of Return</text><text x="80" y="700" fill="#ffffff" font-size="20">Annual annuity ÷ Lump sum = implied rate to match</text><text x="80" y="745" fill="#10b981" font-size="20" font-weight="bold">$38,400 ÷ $520,000 = 7.4% (annuity is GENEROUS)</text><text x="80" y="785" fill="#ef4444" font-size="20" font-weight="bold">$30,000 ÷ $750,000 = 4.0% (lump sum is GENEROUS)</text><text x="80" y="830" fill="#888" font-size="18">Above 6% favors annuity; below 4% favors lump sum;</text><text x="80" y="860" fill="#888" font-size="18">4-6% depends on health, longevity, COLA, spouse</text><text x="550" y="940" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PBGC max insurance: ~$87,420/yr (2026, age 65 single)</text><text x="550" y="980" text-anchor="middle" fill="#888" font-size="20">Benefits above this are at risk if pension fails</text><text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="22">No universal answer — math + personal factors</text></svg>`,
+          caption: "Compute implied rate of return; weigh health, longevity, COLA, and PBGC coverage before choosing."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "Tom, 62, has a corporate pension offering $4,000/month for life (no COLA, no survivor benefit) OR a $720,000 lump sum. His father died at 70, he has type 2 diabetes, and his benefit exceeds the PBGC max guarantee. What should he most likely choose?",
+        options: [
+          { text: "Annuity, because $4,000/month is more than 4% of $720,000 (better implied return)", correct: false },
+          { text: "Lump sum, because his poor health and short likely lifespan plus PBGC risk both argue against the annuity", correct: true },
+          { text: "Annuity, because guaranteed income is always safer than market-based investing", correct: false },
+          { text: "Split 50/50 — half lump, half annuity — regardless of his health situation", correct: false }
+        ],
+        explanation: `**Correct: Lump sum.** Two factors point strongly to the lump sum: (1) **Poor health/short life expectancy** — if Tom dies in 5 years, annuity pays only $240k of the $720k value, and there's no survivor benefit, so the rest is forfeited. The lump sum becomes an inheritable asset. (2) **Benefit exceeds PBGC max** — if his employer's pension fails, PBGC only insures up to ~$87,420/yr; the rest could be lost. While $4,000/mo ÷ $720,000 = 6.67% implied return (mathematically attractive), the implied return assumes he LIVES long enough to collect. Sick + uninsured benefit + no spouse to protect = lump sum wins. The 50/50 split (option D) is rarely offered and doesn't address either risk.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Tom's Decision Tree</text><rect x="350" y="130" width="400" height="100" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pension offer at 62</text><text x="550" y="205" text-anchor="middle" fill="#ffd700" font-size="20">$48k/yr OR $720k lump</text><line x1="450" y1="230" x2="280" y2="290" stroke="#888" stroke-width="2"/><line x1="650" y1="230" x2="820" y2="290" stroke="#888" stroke-width="2"/><rect x="80" y="290" width="400" height="160" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/><text x="280" y="330" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Annuity Path</text><text x="280" y="370" text-anchor="middle" fill="#ffffff" font-size="18">$4,000/mo × ~8 yrs (diabetes)</text><text x="280" y="400" text-anchor="middle" fill="#ffffff" font-size="18">= $384,000 lifetime</text><text x="280" y="430" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Forfeit $336k on death</text><rect x="620" y="290" width="400" height="160" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/><text x="820" y="330" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Lump Sum Path</text><text x="820" y="370" text-anchor="middle" fill="#ffffff" font-size="18">$720k to IRA, invested</text><text x="820" y="400" text-anchor="middle" fill="#ffffff" font-size="18">~$30k/yr safe withdrawal</text><text x="820" y="430" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Estate to heirs on death</text><rect x="80" y="500" width="940" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="14"/><text x="550" y="540" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">Risk Factors Against Annuity</text><text x="120" y="585" fill="#ffffff" font-size="20">1. Poor health → won't collect full lifetime value</text><text x="120" y="620" fill="#ffffff" font-size="20">2. No survivor benefit → death = total forfeit</text><text x="120" y="655" fill="#ffffff" font-size="20">3. Benefit &gt; PBGC max → company failure = loss</text><text x="120" y="690" fill="#ffffff" font-size="20">4. No COLA → 25 yrs of inflation erodes by ~30%</text><rect x="200" y="740" width="700" height="100" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3" rx="14"/><text x="550" y="780" text-anchor="middle" fill="#0ea5e9" font-size="24" font-weight="bold">Decision: LUMP SUM</text><text x="550" y="815" text-anchor="middle" fill="#ffffff" font-size="20">Health + PBGC risk override the math</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="22">Math says one thing, mortality says another</text><text x="550" y="940" text-anchor="middle" fill="#888" font-size="20">Always weigh personal factors against the formula</text></svg>`,
+          caption: "Annuity math favors Tom, but health + PBGC risk + no survivor benefit overwhelm the implied return."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Pension Action Plan",
+        content: `**If you have (or might have) a DB pension:**
+
+**1. Request your Summary Plan Description (SPD)** — annually. Know your:
+- Multiplier % and vesting schedule (often 5-year cliff)
+- Final salary definition (last 3 yrs? Highest 5?)
+- COLA provisions
+- Survivor options (50%, 75%, 100% J&S — joint & survivor)
+
+**2. Pull your Annual Benefit Statement.** Confirm years of service credited matches reality. Pension miscalculations are common — challenge errors EARLY.
+
+**3. Use pension calculators** at NRECA, MyFRS, OPM (federal), or your employer portal. Run "what if" scenarios: retire at 60 vs 65 vs 67.
+
+**4. Check PBGC coverage** if private sector. Your max guarantee at age 65 is **~$87,420/yr in 2026** (lower if you retire earlier or take J&S). Pension Rights Center has free counselors.
+
+**5. Before deciding lump vs annuity:** Get a fee-only fiduciary financial planner (not a salesperson). Run the math; consider your health, spouse, longevity, other assets.
+
+**6. If frozen pension:** Treat it like a small bond. Plan around it; don't count on it being your primary income.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Pension Action Checklist</text><rect x="80" y="120" width="940" height="120" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="120" y="170" fill="#6366f1" font-size="26" font-weight="bold">1. KNOW YOUR PLAN</text><text x="120" y="205" fill="#ffffff" font-size="20">Read Summary Plan Description annually</text><text x="120" y="232" fill="#888" font-size="17">Multiplier, vesting, final salary def, survivor options</text><rect x="80" y="260" width="940" height="120" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="120" y="310" fill="#10b981" font-size="26" font-weight="bold">2. VERIFY YEARS OF SERVICE</text><text x="120" y="345" fill="#ffffff" font-size="20">Cross-check annual statement vs actual hire date</text><text x="120" y="372" fill="#888" font-size="17">Catch errors early — corrections get harder over time</text><rect x="80" y="400" width="940" height="120" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="120" y="450" fill="#f59e0b" font-size="26" font-weight="bold">3. RUN RETIREMENT SCENARIOS</text><text x="120" y="485" fill="#ffffff" font-size="20">Calculate benefit at age 60 vs 65 vs 67</text><text x="120" y="512" fill="#888" font-size="17">Use employer portal or independent calculator</text><rect x="80" y="540" width="940" height="120" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="14"/><text x="120" y="590" fill="#0ea5e9" font-size="26" font-weight="bold">4. CHECK PBGC COVERAGE</text><text x="120" y="625" fill="#ffffff" font-size="20">Max ~$87,420/yr (age 65, single life, 2026)</text><text x="120" y="652" fill="#888" font-size="17">Higher benefits at risk if private pension fails</text><rect x="80" y="680" width="940" height="120" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="14"/><text x="120" y="730" fill="#8b5cf6" font-size="26" font-weight="bold">5. HIRE A FIDUCIARY (lump-sum offer)</text><text x="120" y="765" fill="#ffffff" font-size="20">Fee-only planner — NOT a commissioned broker</text><text x="120" y="792" fill="#888" font-size="17">$1,500-3,000 well spent on a 6-figure decision</text><rect x="80" y="820" width="940" height="120" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="14"/><text x="120" y="870" fill="#ec4899" font-size="26" font-weight="bold">6. SURVIVOR PROTECTION</text><text x="120" y="905" fill="#ffffff" font-size="20">Choose J&amp;S option if spouse depends on income</text><text x="120" y="932" fill="#888" font-size="17">Trades lower monthly for surviving spouse coverage</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">A pension is a 6-7 figure asset</text><text x="550" y="1050" text-anchor="middle" fill="#888" font-size="20">Treat it with the rigor it deserves</text></svg>`,
+          caption: "Six steps: read SPD, verify service, run scenarios, check PBGC, hire fiduciary, protect spouse."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-retirement-lesson-8",
+    title: "Social Security",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Cornerstone of Retirement",
+        content: `**Social Security replaces ~40% of pre-retirement income** for an average earner — and **far more for low earners** (the formula is progressive). For roughly **half of US retirees**, it's their #1 income source. Yet most people **claim it wrong** and lose $50,000-$150,000 in lifetime benefits.
+
+The system is built on three claiming ages:
+- **62**: earliest possible (permanent ~30% reduction)
+- **Full Retirement Age (FRA)**: 66-67 depending on birth year (you get 100%)
+- **70**: latest worth waiting for (8% bonus per year past FRA = up to 124-132%)
+
+After 70, there's no additional credit. Spousal benefits, survivor benefits, the earnings test, and taxation rules add layers of complexity. This lesson covers the decisions that move the needle.
+
+**Key fact**: Born 1960 or later? Your FRA is **67**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Social Security Benefit by Claim Age</text><text x="550" y="120" text-anchor="middle" fill="#888" font-size="22">% of FRA benefit (FRA = 67 for those born 1960+)</text><line x1="100" y1="900" x2="1020" y2="900" stroke="#888" stroke-width="3"/><line x1="100" y1="200" x2="100" y2="900" stroke="#888" stroke-width="3"/><text x="60" y="910" fill="#ffffff" font-size="20">0%</text><text x="40" y="755" fill="#ffffff" font-size="20">50%</text><text x="30" y="600" fill="#ffffff" font-size="20">100%</text><text x="30" y="445" fill="#ffffff" font-size="20">150%</text><line x1="100" y1="600" x2="1020" y2="600" stroke="#ffd700" stroke-width="2" stroke-dasharray="6,6" opacity="0.5"/><text x="1030" y="608" fill="#ffd700" font-size="20">FRA = 100%</text><rect x="160" y="685" width="100" height="215" fill="#ef4444"/><text x="210" y="940" text-anchor="middle" fill="#ffffff" font-size="20">62</text><text x="210" y="675" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">70%</text><rect x="320" y="635" width="100" height="265" fill="#f59e0b"/><text x="370" y="940" text-anchor="middle" fill="#ffffff" font-size="20">64</text><text x="370" y="625" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">86.7%</text><rect x="480" y="600" width="100" height="300" fill="#ffd700"/><text x="530" y="940" text-anchor="middle" fill="#ffffff" font-size="20">67 (FRA)</text><text x="530" y="590" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">100%</text><rect x="640" y="500" width="100" height="400" fill="#10b981"/><text x="690" y="940" text-anchor="middle" fill="#ffffff" font-size="20">69</text><text x="690" y="490" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">116%</text><rect x="800" y="445" width="100" height="455" fill="#10b981"/><text x="850" y="940" text-anchor="middle" fill="#ffffff" font-size="20">70</text><text x="850" y="435" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">124%</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Waiting 62 → 70 increases monthly check by 77%</text><text x="550" y="1050" text-anchor="middle" fill="#888" font-size="20">Permanent. Inflation-adjusted. Paid for life.</text></svg>`,
+          caption: "Claim at 62 = 70% of FRA benefit. Claim at 70 = 124%. The 77% bump is permanent and inflation-adjusted."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Breakeven Math",
+        content: `Every claiming decision has a **breakeven age** — when total dollars received from waiting catch up to total dollars from claiming early.
+
+**Claim at 62 vs FRA (67) — breakeven ≈ age 78-80**
+- At 62: $1,400/mo × 5 yrs head start = $84,000 banked before FRA claimant gets anything
+- At 67: $2,000/mo (43% higher monthly)
+- Math: $84k ÷ ($600/mo extra) = 140 months = ~11.7 yrs past FRA → age ~78-79
+
+**Claim at FRA vs 70 — breakeven ≈ age 82-83**
+- At 67: $2,000/mo × 3 yrs head start = $72,000 banked
+- At 70: $2,480/mo (24% higher)
+- Math: $72k ÷ ($480/mo extra) = 150 months = ~12.5 yrs past 70 → age ~82-83
+
+**Who should wait?** Average US life expectancy at 65 is **~85** (women: 86, men: 83). **If you're healthy and your parents lived to 80+, waiting wins.** If you're in poor health, claim early.
+
+**The hidden bonus of waiting**: Social Security is an inflation-adjusted lifetime annuity. **Delaying = the cheapest annuity money can buy.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Cumulative Benefits by Claim Age</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Where the lines cross = breakeven age</text><line x1="100" y1="900" x2="1020" y2="900" stroke="#888" stroke-width="3"/><line x1="100" y1="200" x2="100" y2="900" stroke="#888" stroke-width="3"/><text x="60" y="910" fill="#ffffff" font-size="18">$0</text><text x="20" y="750" fill="#ffffff" font-size="18">$200k</text><text x="20" y="600" fill="#ffffff" font-size="18">$400k</text><text x="20" y="450" fill="#ffffff" font-size="18">$600k</text><text x="20" y="300" fill="#ffffff" font-size="18">$800k</text><text x="180" y="930" fill="#888" font-size="18">62</text><text x="370" y="930" fill="#888" font-size="18">70</text><text x="560" y="930" fill="#888" font-size="18">78</text><text x="750" y="930" fill="#888" font-size="18">83</text><text x="940" y="930" fill="#888" font-size="18">90</text><polyline points="180,900 370,802 560,705 750,608 940,510" fill="none" stroke="#ef4444" stroke-width="4"/><text x="700" y="595" fill="#ef4444" font-size="20" font-weight="bold">Claim at 62</text><polyline points="180,900 280,900 370,820 560,690 750,560 940,430" fill="none" stroke="#ffd700" stroke-width="4"/><text x="700" y="555" fill="#ffd700" font-size="20" font-weight="bold">Claim at FRA</text><polyline points="180,900 280,900 370,900 470,820 660,650 850,480 940,400" fill="none" stroke="#10b981" stroke-width="4"/><text x="700" y="470" fill="#10b981" font-size="20" font-weight="bold">Claim at 70</text><circle cx="560" cy="700" r="10" fill="#ffd700"/><text x="500" y="675" fill="#ffd700" font-size="18">~78-79</text><text x="500" y="730" fill="#888" font-size="14">62 vs FRA</text><circle cx="755" cy="565" r="10" fill="#10b981"/><text x="700" y="540" fill="#10b981" font-size="18">~82-83</text><text x="710" y="595" fill="#888" font-size="14">FRA vs 70</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Live past 83? Waiting until 70 wins, decisively.</text><text x="550" y="1040" text-anchor="middle" fill="#888" font-size="20">Avg US life expectancy at 65: ~85 yrs</text></svg>`,
+          caption: "Cumulative benefits: claim-at-70 crosses claim-at-62 around age 80-82. Beyond that, the gap widens fast."
+        }
+      },
+      {
+        type: "example",
+        title: "Spousal and Survivor Strategy",
+        content: `**Linda (62)** and **Robert (65)** are married. Robert was the high earner; Linda stayed home raising kids.
+
+**Their benefits at FRA (67):**
+- Robert's PIA (Primary Insurance Amount): **$3,000/month**
+- Linda's PIA (from her own work record): **$900/month**
+- Linda's spousal benefit (50% of Robert's PIA): **$1,500/month**
+
+Linda gets the **larger of own benefit OR spousal benefit** — so $1,500.
+
+**The optimal strategy: Robert delays to 70.**
+- Robert's benefit at 70: $3,000 × 1.24 = **$3,720/month**
+- Linda's spousal benefit doesn't grow past FRA — still **$1,500/month** (50% of Robert's FRA amount, not his age-70 amount)
+- BUT — when Robert dies, Linda gets the **survivor benefit** = **100% of what Robert was receiving = $3,720/month** for the rest of her life
+
+**Why this matters**: If Linda outlives Robert by 15 years (statistically likely — women live longer), waiting gave her **$720 extra per month × 180 months = ~$130,000 in survivor income**.
+
+**Rule of thumb**: **The higher earner should delay to 70** to maximize the survivor benefit. The lower earner can claim at FRA or even 62 — their benefit doesn't drive long-term household income.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Spousal &amp; Survivor Strategy</text><rect x="60" y="120" width="500" height="280" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="310" y="170" text-anchor="middle" fill="#6366f1" font-size="26" font-weight="bold">Robert (higher earner)</text><text x="80" y="220" fill="#ffffff" font-size="20">Own PIA at FRA:</text><text x="500" y="220" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$3,000/mo</text><text x="80" y="265" fill="#ffffff" font-size="20">If claims at 62:</text><text x="500" y="265" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">$2,100/mo</text><text x="80" y="310" fill="#ffffff" font-size="20">If claims at 70:</text><text x="500" y="310" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">$3,720/mo</text><text x="80" y="365" fill="#888" font-size="18">Strategy: DELAY to maximize survivor</text><rect x="580" y="120" width="460" height="280" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="14"/><text x="810" y="170" text-anchor="middle" fill="#ec4899" font-size="26" font-weight="bold">Linda (lower earner)</text><text x="600" y="220" fill="#ffffff" font-size="20">Own PIA at FRA:</text><text x="1020" y="220" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$900/mo</text><text x="600" y="265" fill="#ffffff" font-size="20">Spousal at FRA:</text><text x="1020" y="265" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$1,500/mo</text><text x="600" y="310" fill="#ffffff" font-size="20">Takes larger:</text><text x="1020" y="310" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">$1,500/mo</text><text x="600" y="365" fill="#888" font-size="18">Spousal doesn't grow past FRA</text><rect x="60" y="430" width="980" height="200" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="550" y="480" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">The Survivor Benefit Lock-In</text><text x="100" y="525" fill="#ffffff" font-size="20">When Robert dies, Linda's check becomes whichever is LARGER:</text><text x="120" y="565" fill="#ffd700" font-size="20">Her own benefit ($1,500) OR Robert's check ($3,720)</text><text x="120" y="605" fill="#10b981" font-size="22" font-weight="bold">→ Linda gets $3,720/mo for life as survivor</text><rect x="60" y="660" width="980" height="220" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="14"/><text x="550" y="710" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">15-Year Survivor Value</text><text x="120" y="755" fill="#ffffff" font-size="20">Robert claims at 62: Linda survivor = $2,100/mo</text><text x="120" y="790" fill="#ffffff" font-size="20">Robert claims at 70: Linda survivor = $3,720/mo</text><text x="120" y="835" fill="#10b981" font-size="22" font-weight="bold">Extra income: $1,620/mo × 180 mos = $291,600</text><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Higher earner delays = couple's longevity insurance</text><text x="550" y="1000" text-anchor="middle" fill="#888" font-size="20">Spouses outlive higher earners ~70% of the time</text></svg>`,
+          caption: "Higher earner delaying to 70 boosts the survivor benefit by ~24%. Often the highest-ROI move in retirement planning."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "Carla, 63, is working full-time earning $60,000/year. If she claims Social Security NOW (before her FRA of 67) and continues working, what happens to her benefits?",
+        options: [
+          { text: "Nothing — her benefits are not affected by her wages until she reaches FRA", correct: false },
+          { text: "Her benefits are reduced by $1 for every $2 earned over $23,400 (2026 limit), so she'd lose ~$18,300 of her benefits this year", correct: true },
+          { text: "Her benefits are permanently forfeited — she should not claim while working", correct: false },
+          { text: "She'd pay an extra 15% federal tax on her benefits but still receive the full amount", correct: false }
+        ],
+        explanation: `**Correct: $1-for-$2 earnings test reduction.** When you claim Social Security before FRA and continue working, the **earnings test** applies. In 2026, you can earn up to **$23,400** with no reduction. Above that, **$1 of benefits is withheld for every $2 earned** over the limit. Carla earns $60,000, which is $36,600 over the limit, so $18,300 of her annual benefit is withheld. Important: the withheld amount isn't permanently lost — at FRA, her benefit is recalculated upward to credit back the withheld months. But the immediate cash flow hit makes claiming-while-working before FRA usually a bad idea. In the YEAR she reaches FRA, a more generous $62,160 limit applies (and only $1-for-$3 reduction). Option D is wrong but related — there's a separate **provisional income tax** issue: up to 85% of benefits can be federally taxable based on total income, but that's a different rule.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The Earnings Test (2026)</text><rect x="80" y="120" width="940" height="180" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="170" text-anchor="middle" fill="#6366f1" font-size="26" font-weight="bold">Working Under FRA</text><text x="120" y="215" fill="#ffffff" font-size="22">Earnings limit:</text><text x="1000" y="215" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$23,400</text><text x="120" y="252" fill="#ffffff" font-size="22">Penalty above limit:</text><text x="1000" y="252" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">$1 withheld per $2 earned</text><text x="120" y="285" fill="#888" font-size="18">Counts only wages/self-employment, NOT investments</text><rect x="80" y="320" width="940" height="180" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="550" y="370" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">Year You Reach FRA</text><text x="120" y="415" fill="#ffffff" font-size="22">Earnings limit:</text><text x="1000" y="415" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$62,160</text><text x="120" y="452" fill="#ffffff" font-size="22">Penalty above limit:</text><text x="1000" y="452" text-anchor="end" fill="#f59e0b" font-size="22" font-weight="bold">$1 withheld per $3 earned</text><text x="120" y="485" fill="#888" font-size="18">More generous — only counts months BEFORE FRA</text><rect x="80" y="520" width="940" height="160" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="550" y="570" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">At or After FRA</text><text x="550" y="615" text-anchor="middle" fill="#ffffff" font-size="22">No earnings test. Work as much as you want.</text><text x="550" y="650" text-anchor="middle" fill="#888" font-size="20">(But you may pay tax on benefits at higher incomes)</text><rect x="80" y="700" width="940" height="220" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="14"/><text x="550" y="750" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Carla's Example</text><text x="120" y="795" fill="#ffffff" font-size="20">Wages: $60,000  |  SS benefit: $24,000/yr</text><text x="120" y="830" fill="#ffffff" font-size="20">Excess earnings: $60,000 − $23,400 = $36,600</text><text x="120" y="865" fill="#ffffff" font-size="20">Withheld: $36,600 ÷ 2 = $18,300</text><text x="120" y="900" fill="#ef4444" font-size="22" font-weight="bold">Net SS for the year: only $5,700</text><text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Withheld benefits are restored at FRA</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="20">But cash flow hit makes claiming-while-working rarely worth it</text></svg>`,
+          caption: "Pre-FRA earnings test: $1 withheld per $2 over $23,400. Working while claiming early usually backfires."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Social Security Game Plan",
+        content: `**Step-by-step optimization:**
+
+**1. Create your my Social Security account** at ssa.gov. Check estimated benefits at 62, FRA, and 70. Verify your earnings history — missing wages = missing benefits.
+
+**2. Get at least 35 years of earnings.** Your PIA is based on the **highest 35 years of indexed earnings**. Fewer than 35 = zeros in the formula. Working a 36th year can replace a low-earning year and boost your benefit.
+
+**3. The default rule: delay if you can.** If you're healthy and have other income (savings, part-time work, pension), waiting from 62 → 70 gives a **77% higher inflation-adjusted check for life**. Best deal in the financial world.
+
+**4. Coordinate with spouse:** Higher earner delays to 70 to maximize survivor benefit. Lower earner can claim earlier (FRA or even 62 if needed for cash flow).
+
+**5. Don't claim while working under FRA.** The earnings test ($1-for-$2 over $23,400) makes it a wash at best.
+
+**6. Plan for taxation.** Up to **85% of benefits become federally taxable** if your provisional income exceeds $34k single / $44k married. 12 states tax benefits.
+
+**7. Divorced? Married 10+ years?** You're entitled to spousal/survivor benefits on an ex's record without their knowledge or permission.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Social Security Optimization</text><rect x="80" y="120" width="940" height="105" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="120" y="165" fill="#6366f1" font-size="24" font-weight="bold">1. CREATE ssa.gov ACCOUNT</text><text x="120" y="200" fill="#ffffff" font-size="18">Verify earnings history — missing wages = lost benefits</text><rect x="80" y="240" width="940" height="105" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="120" y="285" fill="#10b981" font-size="24" font-weight="bold">2. GET 35 YEARS OF EARNINGS</text><text x="120" y="320" fill="#ffffff" font-size="18">Fewer = zeros in formula. Extra years replace low ones.</text><rect x="80" y="360" width="940" height="105" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="14"/><text x="120" y="405" fill="#ffd700" font-size="24" font-weight="bold">3. DEFAULT: DELAY TO 70</text><text x="120" y="440" fill="#ffffff" font-size="18">77% higher inflation-adjusted check. Best annuity in finance.</text><rect x="80" y="480" width="940" height="105" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="14"/><text x="120" y="525" fill="#ec4899" font-size="24" font-weight="bold">4. SPOUSE COORDINATION</text><text x="120" y="560" fill="#ffffff" font-size="18">Higher earner delays to 70; lower earner can claim earlier</text><rect x="80" y="600" width="940" height="105" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="120" y="645" fill="#f59e0b" font-size="24" font-weight="bold">5. AVOID EARNINGS TEST</text><text x="120" y="680" fill="#ffffff" font-size="18">Don't claim pre-FRA while still working full-time</text><rect x="80" y="720" width="940" height="105" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="14"/><text x="120" y="765" fill="#8b5cf6" font-size="24" font-weight="bold">6. PLAN FOR TAXATION</text><text x="120" y="800" fill="#ffffff" font-size="18">Up to 85% taxable above provisional income thresholds</text><rect x="80" y="840" width="940" height="105" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="14"/><text x="120" y="885" fill="#0ea5e9" font-size="24" font-weight="bold">7. KNOW EX-SPOUSE BENEFITS</text><text x="120" y="920" fill="#ffffff" font-size="18">Married 10+ yrs = spousal/survivor on ex's record</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">The avg American leaves $111,000 on the table</text><text x="550" y="1040" text-anchor="middle" fill="#888" font-size="20">by claiming Social Security suboptimally (NBER 2019)</text></svg>`,
+          caption: "Seven optimization steps. The wait-to-70 strategy is the highest-leverage decision in retirement income planning."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-retirement-lesson-9",
+    title: "The 4% Safe Withdrawal Rate and Sequence-of-Returns Risk",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "How Much Can You Spend?",
+        content: `You've saved $1,000,000. Congratulations — but **how much can you withdraw each year without running out**?
+
+In **1994**, financial advisor **William Bengen** ran the numbers on every 30-year retirement period from 1926-1992 using a 50/50 stock/bond portfolio. His finding became gospel: **start with 4% of your starting balance in year 1, adjust upward by CPI inflation each year — and you'd survive every historical 30-year period.**
+
+The **1998 Trinity Study** (Cooley, Hubbard, Walz at Trinity University) confirmed it with **95%+ historical success rates** for 4% withdrawals from balanced portfolios.
+
+So $1,000,000 = **$40,000 first-year withdrawal**, then inflation-adjusted each year (year 2: $41,200 at 3% CPI, year 3: $42,436, etc.).
+
+**But** — the 4% rule was built on historical returns. With **high stock valuations and low bond yields**, recent Morningstar research suggests **3.3-3.7%** may be safer for 2024+ retirees. And one risk towers above all: **sequence-of-returns risk**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The 4% Rule Explained</text><rect x="80" y="120" width="940" height="160" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="170" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">Bengen's Original Rule (1994)</text><text x="100" y="215" fill="#ffffff" font-size="20">Year 1: Withdraw 4% of starting balance</text><text x="100" y="250" fill="#ffffff" font-size="20">Year 2+: Adjust prior year's $ amount up by CPI</text><text x="550" y="320" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">$1M Portfolio Example</text><line x1="100" y1="900" x2="1020" y2="900" stroke="#888" stroke-width="3"/><line x1="100" y1="370" x2="100" y2="900" stroke="#888" stroke-width="3"/><text x="60" y="910" fill="#ffffff" font-size="18">$0</text><text x="20" y="775" fill="#ffffff" font-size="18">$20k</text><text x="20" y="640" fill="#ffffff" font-size="18">$40k</text><text x="20" y="505" fill="#ffffff" font-size="18">$60k</text><text x="20" y="370" fill="#ffffff" font-size="18">$80k</text><rect x="160" y="630" width="60" height="270" fill="#10b981"/><text x="190" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 1</text><text x="190" y="615" text-anchor="middle" fill="#10b981" font-size="16">$40k</text><rect x="240" y="623" width="60" height="277" fill="#10b981"/><text x="270" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 2</text><text x="270" y="608" text-anchor="middle" fill="#10b981" font-size="16">$41.2k</text><rect x="320" y="608" width="60" height="292" fill="#10b981"/><text x="350" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 5</text><text x="350" y="593" text-anchor="middle" fill="#10b981" font-size="16">$45k</text><rect x="400" y="580" width="60" height="320" fill="#10b981"/><text x="430" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 10</text><text x="430" y="565" text-anchor="middle" fill="#10b981" font-size="16">$52k</text><rect x="480" y="535" width="60" height="365" fill="#10b981"/><text x="510" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 15</text><text x="510" y="520" text-anchor="middle" fill="#10b981" font-size="16">$60k</text><rect x="560" y="465" width="60" height="435" fill="#f59e0b"/><text x="590" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 20</text><text x="590" y="450" text-anchor="middle" fill="#f59e0b" font-size="16">$70k</text><rect x="640" y="403" width="60" height="497" fill="#f59e0b"/><text x="670" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 25</text><text x="670" y="388" text-anchor="middle" fill="#f59e0b" font-size="16">$81k</text><rect x="720" y="333" width="60" height="567" fill="#ef4444"/><text x="750" y="930" text-anchor="middle" fill="#ffffff" font-size="16">Yr 30</text><text x="750" y="318" text-anchor="middle" fill="#ef4444" font-size="16">$94k</text><text x="900" y="500" fill="#ffd700" font-size="18">CPI 3%</text><text x="900" y="525" fill="#ffd700" font-size="18">→ withdrawal</text><text x="900" y="550" fill="#ffd700" font-size="18">over 2x</text><text x="900" y="575" fill="#ffd700" font-size="18">in 30 yrs</text><text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Trinity Study: 95%+ historical 30-yr success rate</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="20">at 50-75% stock allocation, 4% start, CPI adjusted</text></svg>`,
+          caption: "The 4% rule: start with 4% of portfolio, raise the dollar withdrawal by CPI each year. Historical 30-yr success: 95%+."
+        }
+      },
+      {
+        type: "concept",
+        title: "Sequence-of-Returns Risk",
+        content: `Two retirees, **same average return (5%)**, **same starting balance ($1M)**, **same $40k/yr withdrawal** — wildly different outcomes:
+
+**Retiree A — bear market FIRST**
+- Year 1: -30% (down to $700k), withdraw $40k → $660k
+- Year 2: -10% (down to $594k), withdraw $41k → $553k
+- Years 3-10: average +10% recovery
+- **Money runs out around year 22**
+
+**Retiree B — bear market LATE**
+- Years 1-20: steady +6% gains while drawing $40-60k inflated
+- Portfolio grows to $1.4M by year 20
+- Year 21: -30% crash → $980k, but only need 9 more years
+- **Money lasts 30+ years, leaves $400k+ to heirs**
+
+**Same average return, drastically different outcome.** Why? **You can't recover from selling shares at low prices in early retirement.** Each $40k withdrawal at a bear-market bottom locks in 30-40% more shares sold than at a peak. Those shares aren't there to recover when markets bounce back.
+
+**The first 5-10 years of retirement are disproportionately important.** A 2000-era retiree who saw the dot-com crash + 2008 crash in their early years faced existential portfolio damage.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Sequence-of-Returns Risk</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Same avg return, same withdrawals — different order of returns</text><line x1="100" y1="700" x2="1020" y2="700" stroke="#888" stroke-width="3"/><line x1="100" y1="180" x2="100" y2="700" stroke="#888" stroke-width="3"/><text x="60" y="710" fill="#ffffff" font-size="18">$0</text><text x="20" y="600" fill="#ffffff" font-size="18">$400k</text><text x="20" y="500" fill="#ffffff" font-size="18">$800k</text><text x="20" y="400" fill="#ffffff" font-size="18">$1.2M</text><text x="20" y="300" fill="#ffffff" font-size="18">$1.6M</text><text x="20" y="200" fill="#ffffff" font-size="18">$2.0M</text><text x="170" y="730" fill="#888" font-size="18">Yr 0</text><text x="350" y="730" fill="#888" font-size="18">Yr 10</text><text x="550" y="730" fill="#888" font-size="18">Yr 15</text><text x="750" y="730" fill="#888" font-size="18">Yr 22</text><text x="950" y="730" fill="#888" font-size="18">Yr 30</text><polyline points="170,500 240,610 320,650 400,665 480,675 580,685 680,695 780,700" fill="none" stroke="#ef4444" stroke-width="5"/><text x="780" y="680" fill="#ef4444" font-size="20" font-weight="bold">Retiree A</text><text x="780" y="700" fill="#ef4444" font-size="16">(bear early)</text><polyline points="170,500 250,480 350,450 460,400 580,330 680,260 780,300 880,340 970,380" fill="none" stroke="#10b981" stroke-width="5"/><text x="980" y="370" fill="#10b981" font-size="20" font-weight="bold">Retiree B</text><text x="980" y="395" fill="#10b981" font-size="16">(bear late)</text><circle cx="240" cy="610" r="8" fill="#ef4444"/><text x="180" y="640" fill="#ef4444" font-size="16">crash</text><circle cx="780" cy="300" r="8" fill="#10b981"/><text x="780" y="280" fill="#10b981" font-size="16">crash</text><rect x="80" y="770" width="940" height="280" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="550" y="815" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">Both portfolios: 5% avg return, $40k+CPI withdrawals</text><text x="100" y="860" fill="#ef4444" font-size="22" font-weight="bold">Retiree A: -30% in Yr 1</text><text x="700" y="860" fill="#ef4444" font-size="20">Broke at age ~87</text><text x="100" y="900" fill="#10b981" font-size="22" font-weight="bold">Retiree B: -30% in Yr 25</text><text x="700" y="900" fill="#10b981" font-size="20">$400k left to heirs</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">First 5-10 years matter disproportionately</text><text x="550" y="1010" text-anchor="middle" fill="#888" font-size="20">Selling at low prices locks in permanent damage</text></svg>`,
+          caption: "Same avg return, opposite outcomes. Bear markets in early retirement destroy portfolios; late bears barely matter."
+        }
+      },
+      {
+        type: "example",
+        title: "Mitigation: Bond Tents and Guardrails",
+        content: `**Defense strategies against sequence risk:**
+
+**1. Bond Tent (Michael Kitces)** — Increase bonds from age 55 to 65, then decrease over time. You're MOST stock-heavy in late career and late retirement, MOST bond-heavy in the 10 years bracketing retirement (peak danger zone).
+- Age 55: 70% stocks / 30% bonds
+- Age 65: 50% stocks / 50% bonds (the "tent peak" — max protection)
+- Age 80: 70% stocks / 30% bonds
+
+**2. Two-Year Cash Bucket** — Hold 2 years of expenses in cash/T-bills. In a bear market, spend from cash, give stocks time to recover. Refill cash from bonds; refill bonds from stocks (only in good years).
+
+**3. Guyton-Klinger Guardrails (2006)** — Dynamic withdrawal rules:
+- Start at **5% withdrawal rate** (more than 4% — higher initial income!)
+- If current withdrawal rate climbs >20% above start (portfolio dropped) → **cut withdrawal 10%**
+- If current rate drops >20% below start (portfolio surged) → **raise withdrawal 10%**
+- Allows starting higher (5%) because you adjust in response to market reality
+
+**Real example**: Frank starts at $50k/yr from $1M. After a 30% crash, $50k now = 7.1% of $700k portfolio (>20% above start) → cuts to $45k. Survives.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Three Defenses Against Sequence Risk</text><rect x="60" y="120" width="500" height="320" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="310" y="170" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">1. BOND TENT</text><line x1="100" y1="380" x2="540" y2="380" stroke="#888" stroke-width="2"/><line x1="100" y1="220" x2="100" y2="380" stroke="#888" stroke-width="2"/><text x="120" y="403" fill="#888" font-size="14">55</text><text x="220" y="403" fill="#888" font-size="14">65</text><text x="320" y="403" fill="#888" font-size="14">75</text><text x="420" y="403" fill="#888" font-size="14">85</text><polyline points="100,290 200,340 300,310 400,260 500,230" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="310" y="425" text-anchor="middle" fill="#f59e0b" font-size="16">% Bonds: 30→50→30</text><text x="80" y="245" fill="#ffffff" font-size="16">Peak bonds at</text><text x="80" y="265" fill="#ffffff" font-size="16">retirement age</text><rect x="580" y="120" width="460" height="320" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="810" y="170" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">2. CASH BUCKET</text><rect x="610" y="200" width="120" height="200" fill="#ffd700" opacity="0.4" stroke="#ffd700" stroke-width="2"/><text x="670" y="310" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">2 yrs</text><text x="670" y="332" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">cash</text><rect x="750" y="240" width="120" height="160" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="2"/><text x="810" y="320" text-anchor="middle" fill="#10b981" font-size="18">5 yrs</text><text x="810" y="342" text-anchor="middle" fill="#10b981" font-size="18">bonds</text><rect x="890" y="220" width="120" height="180" fill="#0ea5e9" opacity="0.4" stroke="#0ea5e9" stroke-width="2"/><text x="950" y="310" text-anchor="middle" fill="#0ea5e9" font-size="18">stocks</text><text x="810" y="430" text-anchor="middle" fill="#ffffff" font-size="14">Refill cash from bonds, bonds from stocks</text><rect x="60" y="460" width="980" height="320" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="14"/><text x="550" y="510" text-anchor="middle" fill="#ec4899" font-size="26" font-weight="bold">3. GUYTON-KLINGER GUARDRAILS</text><text x="100" y="555" fill="#ffffff" font-size="20">Start: 5% withdrawal ($50k from $1M)</text><text x="100" y="590" fill="#10b981" font-size="20">Portfolio rises &gt;20% above plan → RAISE 10% (raise)</text><text x="100" y="625" fill="#ef4444" font-size="20">Portfolio falls &gt;20% below plan → CUT 10% (guardrail)</text><text x="100" y="675" fill="#ffd700" font-size="20" font-weight="bold">Frank: $1M → crash to $700k</text><text x="100" y="710" fill="#ffffff" font-size="20">Current rate: $50k/$700k = 7.1% (was 5%)</text><text x="100" y="745" fill="#ffffff" font-size="20">CUT 10%: new withdrawal = $45k → portfolio survives</text><text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Dynamic rules &gt; rigid 4% rule</text><text x="550" y="890" text-anchor="middle" fill="#888" font-size="20">You'd cut spending in a crisis anyway — formalize it</text><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Combine all three for max protection</text><text x="550" y="990" text-anchor="middle" fill="#888" font-size="20">Bond tent + cash bucket + guardrails = robust plan</text></svg>`,
+          caption: "Bond tent + 2-yr cash bucket + Guyton-Klinger guardrails dramatically reduce sequence-of-returns risk."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "Mei retires in 2026 with $1.5M. The market drops 25% in her first year, but she rigidly follows the 4% rule and withdraws her planned inflation-adjusted amount ($60k year 1, $61.8k year 2). What's the BEST description of what's happening to her portfolio?",
+        options: [
+          { text: "She's fine — the 4% rule was designed to survive bear markets, no adjustment needed", correct: false },
+          { text: "She's experiencing sequence-of-returns risk: selling shares at depressed prices early in retirement causes outsized, often unrecoverable, portfolio damage", correct: true },
+          { text: "She should immediately stop all withdrawals until the market recovers to its previous peak", correct: false },
+          { text: "She's safe because the market always recovers within 18 months historically", correct: false }
+        ],
+        explanation: `**Correct: Sequence-of-returns risk in action.** A 25% drop + $60k withdrawal in year 1 = portfolio falls from $1.5M to $1,065,000 (29% decline). She's now withdrawing $61.8k from $1.065M = **5.8% withdrawal rate** — well above the 4% target. Every share she sells at the bear-market bottom is a share that can't compound when the market recovers. The 4% rule's 95% historical success rate doesn't account for the WORST-CASE sequence (early bear) repeating. Modern research (Morningstar 2024) suggests her safer starting rate would have been **3.3-3.7%**. What should she do? Apply **Guyton-Klinger guardrails** — cut withdrawal 10% to $54k. Or shift to her cash bucket and let stocks recover. Option C (stop withdrawing entirely) is extreme; partial cuts are usually sufficient. Option D is dangerously false — recoveries have taken 2-7 years historically (1973-74, 2000-02, 2008-09).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Mei's Portfolio: Sequence Risk in Real Time</text><rect x="60" y="120" width="500" height="240" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="310" y="165" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">Start of Year 1</text><text x="80" y="215" fill="#ffffff" font-size="22">Portfolio:</text><text x="540" y="215" text-anchor="end" fill="#ffd700" font-size="24" font-weight="bold">$1,500,000</text><text x="80" y="255" fill="#ffffff" font-size="22">Plan:</text><text x="540" y="255" text-anchor="end" fill="#ffd700" font-size="24" font-weight="bold">$60k/yr (4%)</text><text x="80" y="295" fill="#ffffff" font-size="22">Mode:</text><text x="540" y="295" text-anchor="end" fill="#10b981" font-size="20">Optimistic</text><text x="80" y="335" fill="#ffffff" font-size="22">Stress:</text><text x="540" y="335" text-anchor="end" fill="#10b981" font-size="20">None</text><rect x="580" y="120" width="460" height="240" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="14"/><text x="810" y="165" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">End of Year 1 (after −25%)</text><text x="600" y="215" fill="#ffffff" font-size="22">Portfolio:</text><text x="1020" y="215" text-anchor="end" fill="#ef4444" font-size="24" font-weight="bold">$1,065,000</text><text x="600" y="255" fill="#ffffff" font-size="22">Year 2 plan:</text><text x="1020" y="255" text-anchor="end" fill="#ef4444" font-size="24" font-weight="bold">$61,800</text><text x="600" y="295" fill="#ffffff" font-size="22">Effective rate:</text><text x="1020" y="295" text-anchor="end" fill="#ef4444" font-size="24" font-weight="bold">5.8%</text><text x="600" y="335" fill="#ffffff" font-size="22">Danger:</text><text x="1020" y="335" text-anchor="end" fill="#ef4444" font-size="20">High</text><rect x="60" y="390" width="980" height="280" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="550" y="440" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">What Went Wrong</text><text x="100" y="490" fill="#ffffff" font-size="20">1. Market drops 25% → $1.5M becomes $1.125M</text><text x="100" y="525" fill="#ffffff" font-size="20">2. She withdraws $60k → $1.065M</text><text x="100" y="560" fill="#ffffff" font-size="20">3. Year 2: she withdraws $61.8k = 5.8% of remaining</text><text x="100" y="595" fill="#ffffff" font-size="20">4. Every withdrawn share = share NOT compounding</text><text x="100" y="630" fill="#ef4444" font-size="20" font-weight="bold">5. Even if market recovers, those shares are GONE</text><rect x="60" y="700" width="980" height="200" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="550" y="750" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Mei's Best Move: Guardrails</text><text x="100" y="795" fill="#ffffff" font-size="20">Current rate (5.8%) is 45% above target (4%) → CUT 10%</text><text x="100" y="830" fill="#ffffff" font-size="20">Year 2 withdrawal: $61.8k × 0.9 = $55,620</text><text x="100" y="865" fill="#10b981" font-size="20" font-weight="bold">Result: portfolio likely survives full 30-yr horizon</text><text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Flexibility beats rigidity in retirement</text><text x="550" y="1000" text-anchor="middle" fill="#888" font-size="20">The 4% rule was a starting point, not a commandment</text></svg>`,
+          caption: "A 25% drop + rigid 4% withdrawal pushes Mei to 5.8% effective rate. Cut withdrawals 10% to restore safety."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Withdrawal Strategy",
+        content: `**Step-by-step retirement income plan:**
+
+**1. Calculate your target withdrawal rate.** New retirees in 2026 should start with **3.5-4.0%** (not the legacy 4%). Conservative: 3.3-3.5%. Aggressive: 4.0-4.5% if you have flex spending and other income (pension, SS).
+
+**2. Set up a 3-bucket structure:**
+- **Bucket 1 (0-2 yrs)**: Cash, T-bills, MMF (~$80-100k for typical retiree)
+- **Bucket 2 (3-10 yrs)**: Bonds, BND, short-term Treasuries
+- **Bucket 3 (10+ yrs)**: Stocks (VTI, VXUS), the long-term growth engine
+
+**3. Build a bond tent.** Glide from 70/30 → 50/50 → 70/30 (or 60/40) as you cross age 55-65-75-85. Most aggressive bond allocation right around retirement (peak danger zone).
+
+**4. Adopt Guyton-Klinger guardrails.** Write down your rules NOW: "If withdrawal rate exceeds 5%, cut 10%. If below 3%, raise 10%." Pre-commit to avoid panic decisions.
+
+**5. Plan for Social Security to reduce your withdrawal need.** If SS provides $30k/yr starting at 70, your portfolio only needs to cover $30k of an $60k lifestyle = 2% withdrawal rate. Massive safety boost.
+
+**6. Stress test annually**. Run Monte Carlo (Boldin, ProjectionLab) every January. Adjust if probability of success drops below 80%.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Your Retirement Income Plan</text><rect x="80" y="120" width="940" height="105" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="14"/><text x="120" y="165" fill="#6366f1" font-size="24" font-weight="bold">1. TARGET 3.5-4.0% START RATE</text><text x="120" y="200" fill="#ffffff" font-size="18">Lower than legacy 4% — high valuations + low yields</text><rect x="80" y="240" width="940" height="105" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="14"/><text x="120" y="285" fill="#10b981" font-size="24" font-weight="bold">2. THREE BUCKETS</text><text x="120" y="320" fill="#ffffff" font-size="18">2 yrs cash, 8 yrs bonds, 20+ yrs stocks</text><rect x="80" y="360" width="940" height="105" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="120" y="405" fill="#f59e0b" font-size="24" font-weight="bold">3. BOND TENT</text><text x="120" y="440" fill="#ffffff" font-size="18">70/30 → 50/50 → 70/30 (peak bonds at retirement)</text><rect x="80" y="480" width="940" height="105" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="14"/><text x="120" y="525" fill="#ec4899" font-size="24" font-weight="bold">4. GUYTON-KLINGER GUARDRAILS</text><text x="120" y="560" fill="#ffffff" font-size="18">Cut 10% if rate &gt;20% above start; raise 10% if below</text><rect x="80" y="600" width="940" height="105" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="14"/><text x="120" y="645" fill="#0ea5e9" font-size="24" font-weight="bold">5. LAYER SOCIAL SECURITY</text><text x="120" y="680" fill="#ffffff" font-size="18">SS at 70 reduces portfolio dependency — start safer</text><rect x="80" y="720" width="940" height="105" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="14"/><text x="120" y="765" fill="#8b5cf6" font-size="24" font-weight="bold">6. ANNUAL STRESS TEST</text><text x="120" y="800" fill="#ffffff" font-size="18">Monte Carlo each January; adjust if &lt;80% success</text><rect x="80" y="840" width="940" height="120" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="14"/><text x="550" y="885" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">The Compound Defense</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="18">Lower start rate + bond tent + cash bucket + guardrails</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="18">= robust retirement income through any sequence</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="20">Retirement isn't a math problem — it's a risk problem</text></svg>`,
+          caption: "Combine a 3.5-4% start, 3 buckets, bond tent, guardrails, SS layering, and annual stress tests for resilience."
         }
       }
     ]

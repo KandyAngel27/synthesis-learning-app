@@ -4556,7 +4556,7 @@ Group By is also how you **deduplicate while keeping useful aggregates**: group 
             title: 'DAX Basics for Power Pivot and Power BI',
             author: 'Synthesis Learning',
             description: 'Measures vs. calculated columns, CALCULATE as the heart of DAX, time-intelligence, filter context — the parts you actually need to ship a dashboard.',
-            lessons: 6, duration: 90, progress: 0, category: 'excel-powerbi',
+            lessons: 9, duration: 135, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-dax-lesson-1",
@@ -5242,6 +5242,336 @@ The DAX learning curve flattens dramatically once these five patterns are second
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Compose Patterns Into Insights</text><rect x="60" y="120" width="980" height="120" fill="#6366f1" rx="8"/><text x="100" y="160" fill="#ffd700" font-size="22" font-weight="bold">YoY + Running Total</text><text x="100" y="195" fill="#ffffff" font-size="18">Actual climb + growth % on same chart</text><text x="100" y="225" fill="#ffffff" font-size="16">Tells the trend AND the acceleration story</text><rect x="60" y="255" width="980" height="120" fill="#10b981" rx="8"/><text x="100" y="295" fill="#1a1a2e" font-size="22" font-weight="bold">Top N + % of Total</text><text x="100" y="330" fill="#1a1a2e" font-size="18">"Top 10 products = 73% of revenue"</text><text x="100" y="360" fill="#1a1a2e" font-size="16">Pareto in one visual</text><rect x="60" y="390" width="980" height="120" fill="#f59e0b" rx="8"/><text x="100" y="430" fill="#1a1a2e" font-size="22" font-weight="bold">Distinct Count + DIVIDE</text><text x="100" y="465" fill="#1a1a2e" font-size="18" font-family="monospace">DIVIDE([Sales], DISTINCTCOUNT(CustomerID))</text><text x="100" y="495" fill="#1a1a2e" font-size="16">Avg revenue per customer</text><rect x="60" y="525" width="980" height="120" fill="#8b5cf6" rx="8"/><text x="100" y="565" fill="#ffd700" font-size="22" font-weight="bold">ALLSELECTED for slicer-friendly %</text><text x="100" y="600" fill="#ffffff" font-size="18">Respects slicers, ignores visual filters</text><text x="100" y="630" fill="#ffffff" font-size="16">The "smart" alternative to ALL()</text><rect x="60" y="660" width="980" height="120" fill="#ec4899" rx="8"/><text x="100" y="700" fill="#ffffff" font-size="22" font-weight="bold">_Measures table</text><text x="100" y="735" fill="#ffffff" font-size="18">Hidden table holding every measure</text><text x="100" y="765" fill="#ffffff" font-size="16">One folder, organized model</text><rect x="150" y="830" width="800" height="160" fill="#ffd700" rx="8"/><text x="550" y="875" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">DAX Basics complete!</text><text x="550" y="920" fill="#1a1a2e" font-size="20" text-anchor="middle">Most "advanced" measures = 2-3 patterns</text><text x="550" y="955" fill="#1a1a2e" font-size="20" text-anchor="middle">composed together. You have the toolkit.</text></svg>`,
           caption: "Combine patterns to build sophisticated measures — the real DAX advantage."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-dax-lesson-7",
+    title: "Filter Context vs Row Context: The Two Contexts of DAX",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Two Contexts That Rule DAX",
+        content: `DAX has **two evaluation contexts** — and confusing them is the #1 source of "why is my measure wrong?" bugs.
+
+**Row Context** is "the current row." It exists inside **calculated columns** and inside **iterators** like SUMX, FILTER, ADDCOLUMNS. It points at one row at a time but does **not** filter the table.
+
+**Filter Context** is "the set of filters applied to the model." It exists inside **measures** and is created by slicers, visuals, rows/columns of a pivot, and CALCULATE.
+
+The kicker: **row context does not filter.** SUMX iterating Sales can see all 10M rows even while no filter is applied. Filter context, by contrast, narrows what's visible.
+
+**Context transition** — the magic moment when CALCULATE (or a measure call) converts the current row into a filter — bridges the two worlds.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">The Two Contexts of DAX</text><rect x="80" y="140" width="430" height="380" rx="14" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="3"/><text x="295" y="195" font-family="Arial" font-size="28" font-weight="bold" fill="#6366f1" text-anchor="middle">ROW CONTEXT</text><text x="295" y="240" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">"the current row"</text><text x="295" y="290" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Lives in:</text><text x="295" y="325" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">• Calculated columns</text><text x="295" y="360" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">• Iterators (SUMX, FILTER)</text><text x="295" y="420" font-family="Arial" font-size="17" fill="#f59e0b" text-anchor="middle">Does NOT filter the table</text><text x="295" y="455" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Just points at one row</text><text x="295" y="490" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">at a time</text><rect x="590" y="140" width="430" height="380" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="805" y="195" font-family="Arial" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">FILTER CONTEXT</text><text x="805" y="240" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">"the set of filters"</text><text x="805" y="290" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Lives in:</text><text x="805" y="325" font-family="Arial" font-size="18" fill="#0ea5e9" text-anchor="middle">• Measures</text><text x="805" y="360" font-family="Arial" font-size="18" fill="#0ea5e9" text-anchor="middle">• CALCULATE</text><text x="805" y="395" font-family="Arial" font-size="18" fill="#0ea5e9" text-anchor="middle">• Slicers / visuals</text><text x="805" y="445" font-family="Arial" font-size="17" fill="#f59e0b" text-anchor="middle">Narrows what tables see</text><text x="805" y="478" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Shrinks the data</text><rect x="200" y="580" width="700" height="260" rx="14" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="550" y="635" font-family="Arial" font-size="28" font-weight="bold" fill="#ec4899" text-anchor="middle">CONTEXT TRANSITION</text><text x="550" y="685" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">The bridge between them</text><text x="550" y="725" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">CALCULATE (or a measure reference)</text><text x="550" y="760" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">converts the current row</text><text x="550" y="795" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">into a filter on every column</text><text x="550" y="910" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Confusing the two = the #1 DAX bug</text><text x="550" y="960" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Always ask: "which context am I in?"</text></svg>`,
+          caption: "Row context points at a row, filter context shrinks the table — context transition is the bridge."
+        }
+      },
+      {
+        type: "concept",
+        title: "Why Row Context Doesn't Filter",
+        content: `Newcomers expect this calculated column to work: \`Sales[Margin] = Sales[Price] - Sales[Cost]\`. It does — row context exposes **column values for the current row** so you can do arithmetic on them.
+
+But this **fails** in a calculated column: \`= SUM(Sales[Price])\`. SUM doesn't know about row context — it just sees the **whole Sales table** with no filter applied, returning the grand total on every row.
+
+That's the rule: **row context exposes row values, but does not filter aggregations.**
+
+To make SUM respect the current row, you need **context transition** — wrap it in CALCULATE: \`= CALCULATE(SUM(Sales[Price]))\`. Now the row becomes a filter and SUM returns just that row's price.
+
+Inside iterators like \`SUMX(Sales, Sales[Price] * Sales[Qty])\`, row context lets you reference column values **per row** — no CALCULATE needed for the multiplication itself.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Row Context Exposes Values, Not Filters</text><rect x="80" y="130" width="940" height="240" rx="12" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="550" y="175" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">WORKS: Arithmetic on row values</text><rect x="180" y="200" width="740" height="60" rx="8" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="550" y="240" font-family="Courier" font-size="22" fill="#ffd700" text-anchor="middle">Margin = Sales[Price] - Sales[Cost]</text><text x="550" y="300" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Row context says: "for THIS row, Price=10, Cost=4"</text><text x="550" y="335" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Result per row: 6</text><rect x="80" y="400" width="940" height="240" rx="12" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3"/><text x="550" y="445" font-family="Arial" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">BREAKS: SUM ignores row context</text><rect x="180" y="470" width="740" height="60" rx="8" fill="#1a1a2e" stroke="#ef4444" stroke-width="2"/><text x="550" y="510" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle">TotalPrice = SUM(Sales[Price])</text><text x="550" y="570" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">SUM sees the WHOLE table — returns grand total</text><text x="550" y="605" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Same value on every single row</text><rect x="80" y="670" width="940" height="280" rx="12" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3"/><text x="550" y="715" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">FIX: Wrap in CALCULATE for context transition</text><rect x="140" y="740" width="820" height="60" rx="8" fill="#1a1a2e" stroke="#ec4899" stroke-width="2"/><text x="550" y="780" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">RowPrice = CALCULATE(SUM(Sales[Price]))</text><text x="550" y="840" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">CALCULATE converts the current row into a filter</text><text x="550" y="875" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Now SUM is filtered to just that row</text><text x="550" y="910" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Returns the row's actual Price</text><text x="550" y="1010" font-family="Arial" font-size="20" fill="#888" text-anchor="middle">Row context = navigation; filter context = restriction</text></svg>`,
+          caption: "Row context lets you read column values; aggregations like SUM only respect filter context."
+        }
+      },
+      {
+        type: "example",
+        title: "Context Transition Inside SUMX",
+        content: `Here's the classic gotcha. You have a measure: \`[Total Sales] = SUMX(Sales, Sales[Price] * Sales[Qty])\`. Now you want margin: \`[Total Margin] = SUMX(Sales, [Total Sales] - Sales[Cost] * Sales[Qty])\`.
+
+Wait — what does \`[Total Sales]\` return **inside** the SUMX iteration?
+
+You might expect: "the price * qty for the current row." That's **wrong**. You might expect: "the grand total of all sales." That's also **wrong** — at least, not always.
+
+What actually happens: when you reference a **measure** inside a row context, DAX wraps it in an **implicit CALCULATE**. That triggers **context transition** — the current row becomes a filter. So \`[Total Sales]\` recalculates filtering Sales to **just that one row**, returning that row's price * qty.
+
+So in practice, the measure call **does** recalculate per row — but for the right reason. Knowing why prevents the next bug.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Measure Inside SUMX = Context Transition</text><rect x="80" y="130" width="940" height="150" rx="12" fill="#1a1a2e" stroke="#6366f1" stroke-width="3"/><text x="550" y="175" font-family="Arial" font-size="20" font-weight="bold" fill="#6366f1" text-anchor="middle">The Measure</text><text x="550" y="220" font-family="Courier" font-size="20" fill="#ffd700" text-anchor="middle">[Total Sales] =</text><text x="550" y="252" font-family="Courier" font-size="20" fill="#ffd700" text-anchor="middle">SUMX(Sales, Sales[Price] * Sales[Qty])</text><rect x="80" y="310" width="940" height="160" rx="12" fill="#1a1a2e" stroke="#ec4899" stroke-width="3"/><text x="550" y="355" font-family="Arial" font-size="20" font-weight="bold" fill="#ec4899" text-anchor="middle">Used Inside Another SUMX</text><text x="550" y="400" font-family="Courier" font-size="18" fill="#ffffff" text-anchor="middle">[Margin] = SUMX(Sales,</text><text x="550" y="430" font-family="Courier" font-size="18" fill="#ffffff" text-anchor="middle">    [Total Sales] - Sales[Cost] * Sales[Qty])</text><text x="100" y="510" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700">What happens at each row:</text><rect x="80" y="540" width="940" height="100" rx="10" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2"/><text x="100" y="580" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981">Step 1:</text><text x="200" y="580" font-family="Arial" font-size="17" fill="#ffffff">SUMX sets row context to Row N</text><text x="200" y="610" font-family="Arial" font-size="17" fill="#ffffff">(e.g. ProductID=42, Date=Jan 5)</text><rect x="80" y="660" width="940" height="100" rx="10" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2"/><text x="100" y="700" font-family="Arial" font-size="18" font-weight="bold" fill="#0ea5e9">Step 2:</text><text x="200" y="700" font-family="Arial" font-size="17" fill="#ffffff">[Total Sales] reference triggers implicit CALCULATE</text><text x="200" y="730" font-family="Arial" font-size="17" fill="#ffffff">Row 42/Jan5 becomes a FILTER on Sales</text><rect x="80" y="780" width="940" height="100" rx="10" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2"/><text x="100" y="820" font-family="Arial" font-size="18" font-weight="bold" fill="#ec4899">Step 3:</text><text x="200" y="820" font-family="Arial" font-size="17" fill="#ffffff">[Total Sales] recomputes — but filtered to just that row</text><text x="200" y="850" font-family="Arial" font-size="17" fill="#ffffff">Returns that row's Price * Qty</text><text x="550" y="950" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Measure inside iterator → always context transition</text><text x="550" y="1000" font-family="Arial" font-size="17" fill="#888" text-anchor="middle">This is also why measures-in-iterators can be slow</text></svg>`,
+          caption: "Referencing a measure inside SUMX wraps it in implicit CALCULATE, triggering context transition."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Inside a calculated column, you write `= SUM(Sales[Amount])`. What value appears on each row?",
+        options: [
+          { text: "That row's Amount value", correct: false },
+          { text: "The grand total of Sales[Amount] across the whole table", correct: true },
+          { text: "An error, because SUM is not allowed in calculated columns", correct: false },
+          { text: "Zero, because no filter context is applied", correct: false }
+        ],
+        explanation: "Row context exposes column values for navigation but does NOT filter aggregations. SUM ignores row context entirely — it sees the whole table and returns the grand total on every single row. To make it respect the current row, wrap in CALCULATE for context transition.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Quick Check</text><circle cx="550" cy="400" r="220" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="4"/><text x="550" y="370" font-family="Arial" font-size="28" font-weight="bold" fill="#ffd700" text-anchor="middle">Row Context</text><text x="550" y="420" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">≠</text><text x="550" y="460" font-family="Arial" font-size="28" font-weight="bold" fill="#ec4899" text-anchor="middle">Filter</text><text x="550" y="780" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">SUM has no idea what row you're on.</text><text x="550" y="830" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">It just sees the whole table.</text><text x="550" y="940" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle">Wrap in CALCULATE to add filter context</text></svg>`,
+          caption: "Row context navigates; only filter context restricts aggregations."
+        }
+      },
+      {
+        type: "application",
+        title: "Diagnosing Context Bugs in the Wild",
+        content: `When a measure returns wrong values, walk through context step by step:
+
+**1. Where am I?** Calculated column → row context only. Measure → filter context only (until you iterate).
+
+**2. Is there an iterator?** SUMX, AVERAGEX, FILTER, ADDCOLUMNS introduce row context **on top of** the existing filter context.
+
+**3. Am I referencing a measure?** Then expect implicit CALCULATE and context transition — the current row becomes filters.
+
+**4. Did I wrap in CALCULATE?** Then I forced context transition. Any row context becomes filter context.
+
+**Real bug**: A "rolling 7-day sales" measure returns the grand total. Cause: someone used \`SUM(Sales[Amount])\` in a calculated column without CALCULATE, then summed that column. Each row already held the grand total.
+
+**Fix mantra**: aggregations need filter context. To filter by the current row, you need **CALCULATE** — explicit or implicit via a measure reference.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Debugging Checklist: Which Context Am I In?</text><rect x="80" y="130" width="940" height="130" rx="12" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="3"/><text x="110" y="175" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">1.</text><text x="160" y="175" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff">Where am I?</text><text x="160" y="210" font-family="Arial" font-size="17" fill="#ffffff">Calc column → row context | Measure → filter context</text><text x="160" y="240" font-family="Arial" font-size="17" fill="#888">Different rules apply to each</text><rect x="80" y="280" width="940" height="130" rx="12" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="3"/><text x="110" y="325" font-family="Arial" font-size="22" font-weight="bold" fill="#0ea5e9">2.</text><text x="160" y="325" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff">Iterator present?</text><text x="160" y="360" font-family="Arial" font-size="17" fill="#ffffff">SUMX / FILTER / ADDCOLUMNS add row context</text><text x="160" y="390" font-family="Arial" font-size="17" fill="#888">on TOP of existing filter context</text><rect x="80" y="430" width="940" height="130" rx="12" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="110" y="475" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899">3.</text><text x="160" y="475" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff">Measure reference?</text><text x="160" y="510" font-family="Arial" font-size="17" fill="#ffffff">Implicit CALCULATE → context transition kicks in</text><text x="160" y="540" font-family="Arial" font-size="17" fill="#888">Row becomes filters on every column</text><rect x="80" y="580" width="940" height="130" rx="12" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="110" y="625" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981">4.</text><text x="160" y="625" font-family="Arial" font-size="22" font-weight="bold" fill="#ffffff">CALCULATE used?</text><text x="160" y="660" font-family="Arial" font-size="17" fill="#ffffff">You FORCED context transition explicitly</text><text x="160" y="690" font-family="Arial" font-size="17" fill="#888">Row context becomes filter context</text><rect x="180" y="760" width="740" height="220" rx="14" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="810" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The Mantra</text><text x="550" y="860" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Aggregations need filter context.</text><text x="550" y="900" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">To filter by current row,</text><text x="550" y="940" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">you need CALCULATE.</text><text x="550" y="1030" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Walk these 4 steps and most "wrong number" bugs disappear</text></svg>`,
+          caption: "Four-step checklist: where, iterator, measure ref, CALCULATE — catches most context bugs."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-8",
+    title: "Relationships, USERELATIONSHIP, and CROSSFILTER",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Relationships: The Model's Wiring",
+        content: `A data model is a set of tables connected by **relationships**. The default shape is **one-to-many (1:N)**: one Calendar row links to many Sales rows; one Customer links to many Sales.
+
+The relationship has a **direction**. By default, the **1 side filters the N side automatically** — filtering Calendar to January filters Sales to January. The reverse doesn't happen unless you change cross-filter direction.
+
+**Many-to-many** relationships are possible but tricky — historically you needed a **bridge table**; modern Power BI and Excel 2019+ allow direct M:N but with **performance costs**.
+
+DAX gives you two surgical tools to override the default wiring **for one calculation**:
+- **USERELATIONSHIP** activates an inactive relationship
+- **CROSSFILTER** changes direction (one-way → both ways, or flips it)
+
+Both live inside CALCULATE. Both are temporary — they don't change the model.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">The Star Schema</text><rect x="430" y="450" width="240" height="180" rx="12" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="3"/><text x="550" y="510" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Sales</text><text x="550" y="555" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Date, CustomerID,</text><text x="550" y="580" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">ProductID, Amount</text><text x="550" y="610" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">(fact, N side)</text><rect x="100" y="170" width="240" height="140" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="220" y="220" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Calendar</text><text x="220" y="255" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Date, Year, Month</text><text x="220" y="285" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">(dimension, 1 side)</text><rect x="760" y="170" width="240" height="140" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="880" y="220" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Customer</text><text x="880" y="255" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">ID, Name, Region</text><text x="880" y="285" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">(dimension, 1 side)</text><rect x="430" y="800" width="240" height="140" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="550" y="850" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">Product</text><text x="550" y="885" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">ID, Name, Category</text><text x="550" y="915" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">(dimension, 1 side)</text><line x1="280" y1="310" x2="490" y2="450" stroke="#ffd700" stroke-width="3" marker-end="url(#a8)"/><line x1="820" y1="310" x2="610" y2="450" stroke="#ffd700" stroke-width="3" marker-end="url(#a8)"/><line x1="550" y1="800" x2="550" y2="630" stroke="#ffd700" stroke-width="3" marker-end="url(#a8)"/><defs><marker id="a8" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><polygon points="0 0, 12 6, 0 12" fill="#ffd700"/></marker></defs><text x="340" y="385" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">1:N</text><text x="730" y="385" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">1:N</text><text x="580" y="720" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">1:N</text><text x="550" y="1010" font-family="Arial" font-size="20" fill="#888" text-anchor="middle">1 side (dimensions) filters N side (fact) automatically</text><text x="550" y="1050" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Direction matters — and DAX lets you override it temporarily</text></svg>`,
+          caption: "Star schema: dimensions on the 1 side, fact on the N side. The 1 side filters the N side by default."
+        }
+      },
+      {
+        type: "concept",
+        title: "Active vs Inactive Relationships",
+        content: `A Sales table often has two date columns: \`OrderDate\` and \`ShipDate\`. Both need to relate to your Calendar table — but the model only allows **one active relationship between two tables at a time**.
+
+You mark one (say OrderDate ↔ Calendar) as **active**. The other (ShipDate ↔ Calendar) you create as **inactive** — it's still defined in the model but doesn't filter automatically.
+
+When you write \`[Total Sales] = SUM(Sales[Amount])\` and slice by Calendar, you get sales by **OrderDate** — because that's the active relationship.
+
+To get sales by **ShipDate**, write a separate measure:
+
+\`\`\`
+Sales by Ship Date =
+CALCULATE(
+  SUM(Sales[Amount]),
+  USERELATIONSHIP(Sales[ShipDate], Calendar[Date])
+)
+\`\`\`
+
+**USERELATIONSHIP** activates the inactive relationship **for this one calculation**. Use it inside CALCULATE — it's not a filter, it's a relationship modifier.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Active and Inactive Relationships</text><rect x="100" y="160" width="280" height="200" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="240" y="220" font-family="Arial" font-size="24" font-weight="bold" fill="#6366f1" text-anchor="middle">Calendar</text><text x="240" y="260" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Date</text><text x="240" y="290" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Year, Month</text><rect x="720" y="160" width="280" height="240" rx="12" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="3"/><text x="860" y="220" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Sales</text><text x="860" y="260" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">OrderDate</text><text x="860" y="290" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">ShipDate</text><text x="860" y="320" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Amount</text><line x1="380" y1="240" x2="720" y2="250" stroke="#10b981" stroke-width="4"/><text x="550" y="225" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">ACTIVE</text><text x="550" y="275" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">Calendar[Date] → Sales[OrderDate]</text><line x1="380" y1="310" x2="720" y2="320" stroke="#888" stroke-width="3" stroke-dasharray="8 6"/><text x="550" y="345" font-family="Arial" font-size="18" font-weight="bold" fill="#888" text-anchor="middle">INACTIVE</text><text x="550" y="375" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Calendar[Date] → Sales[ShipDate]</text><rect x="80" y="450" width="940" height="180" rx="12" fill="#1a1a2e" stroke="#6366f1" stroke-width="3"/><text x="550" y="495" font-family="Arial" font-size="20" font-weight="bold" fill="#6366f1" text-anchor="middle">Default: slicing Calendar filters by OrderDate</text><text x="550" y="540" font-family="Courier" font-size="20" fill="#ffd700" text-anchor="middle">Total Sales = SUM(Sales[Amount])</text><text x="550" y="585" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Uses the active relationship automatically</text><rect x="80" y="660" width="940" height="280" rx="12" fill="#1a1a2e" stroke="#ec4899" stroke-width="3"/><text x="550" y="705" font-family="Arial" font-size="20" font-weight="bold" fill="#ec4899" text-anchor="middle">USERELATIONSHIP: switch to inactive for one calc</text><text x="550" y="750" font-family="Courier" font-size="17" fill="#ffd700" text-anchor="middle">Sales by Ship Date =</text><text x="550" y="780" font-family="Courier" font-size="17" fill="#ffd700" text-anchor="middle">CALCULATE(</text><text x="550" y="810" font-family="Courier" font-size="17" fill="#ffd700" text-anchor="middle">    SUM(Sales[Amount]),</text><text x="550" y="840" font-family="Courier" font-size="17" fill="#ffd700" text-anchor="middle">    USERELATIONSHIP(</text><text x="550" y="870" font-family="Courier" font-size="17" fill="#ffd700" text-anchor="middle">      Sales[ShipDate], Calendar[Date]))</text><text x="550" y="1020" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Temporary — only this calculation sees the swap</text></svg>`,
+          caption: "Only one active relationship between two tables; USERELATIONSHIP swaps to the inactive one per calc."
+        }
+      },
+      {
+        type: "example",
+        title: "CROSSFILTER for Many-to-Many",
+        content: `Suppose Customers and Products have a many-to-many relationship through a **bridge table** (CustomerProduct). By default, filtering Customer doesn't filter Product (and vice versa) — the bridge breaks the flow.
+
+\`\`\`
+Products Bought =
+CALCULATE(
+  DISTINCTCOUNT(Sales[ProductID]),
+  CROSSFILTER(
+    Sales[CustomerID], Customer[ID], Both
+  )
+)
+\`\`\`
+
+**CROSSFILTER** takes three args: the two columns of an existing relationship, and a direction — \`Both\`, \`OneWay\`, or \`None\`. \`Both\` makes the relationship bidirectional for this calculation, letting customer filters propagate through Sales and back up to other tables.
+
+Real use cases:
+- **Header-detail patterns** where you want detail filters to flow up to headers
+- **Bridge tables** for proper many-to-many counting
+- **Disabling** a relationship temporarily with \`None\` to compare with/without
+
+Warning: \`Both\` can cause **ambiguity** and **performance issues**. Use sparingly and only where the default direction can't express your logic.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">CROSSFILTER: Change Direction</text><rect x="80" y="130" width="940" height="280" rx="14" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3"/><text x="550" y="180" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Default: One-Way (1 → N)</text><rect x="180" y="220" width="180" height="100" rx="10" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/><text x="270" y="280" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Customer</text><rect x="740" y="220" width="180" height="100" rx="10" fill="#ffd700" opacity="0.3" stroke="#ffd700" stroke-width="2"/><text x="830" y="280" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Sales</text><line x1="360" y1="270" x2="740" y2="270" stroke="#10b981" stroke-width="4" marker-end="url(#ar8b)"/><defs><marker id="ar8b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><polygon points="0 0, 12 6, 0 12" fill="#10b981"/></marker></defs><text x="550" y="350" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Customer filters Sales, not reverse</text><rect x="80" y="440" width="940" height="280" rx="14" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3"/><text x="550" y="490" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">CROSSFILTER(..., Both): Bidirectional</text><rect x="180" y="530" width="180" height="100" rx="10" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/><text x="270" y="590" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Customer</text><rect x="740" y="530" width="180" height="100" rx="10" fill="#ffd700" opacity="0.3" stroke="#ffd700" stroke-width="2"/><text x="830" y="590" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Sales</text><line x1="360" y1="565" x2="740" y2="565" stroke="#ec4899" stroke-width="4" marker-end="url(#ar8c)"/><line x1="740" y1="595" x2="360" y2="595" stroke="#ec4899" stroke-width="4" marker-end="url(#ar8d)"/><defs><marker id="ar8c" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><polygon points="0 0, 12 6, 0 12" fill="#ec4899"/></marker><marker id="ar8d" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><polygon points="0 0, 12 6, 0 12" fill="#ec4899"/></marker></defs><text x="550" y="670" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Filters propagate both directions</text><rect x="80" y="750" width="940" height="220" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="800" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Syntax</text><text x="550" y="840" font-family="Courier" font-size="18" fill="#ffd700" text-anchor="middle">CROSSFILTER(</text><text x="550" y="870" font-family="Courier" font-size="18" fill="#ffd700" text-anchor="middle">  Sales[CustomerID], Customer[ID],</text><text x="550" y="900" font-family="Courier" font-size="18" fill="#ffd700" text-anchor="middle">  Both | OneWay | None )</text><text x="550" y="1030" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Powerful — but use Both sparingly (perf + ambiguity)</text></svg>`,
+          caption: "CROSSFILTER toggles direction Both/OneWay/None for a single calculation."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Your Sales table has OrderDate (active relationship to Calendar) and ShipDate (inactive). How do you write a measure that totals sales by ShipDate?",
+        options: [
+          { text: "CALCULATE(SUM(Sales[Amount]), Sales[ShipDate] = Calendar[Date])", correct: false },
+          { text: "CALCULATE(SUM(Sales[Amount]), USERELATIONSHIP(Sales[ShipDate], Calendar[Date]))", correct: true },
+          { text: "Change the active relationship in the model — DAX can't override it", correct: false },
+          { text: "CROSSFILTER(Sales[ShipDate], Calendar[Date], Both)", correct: false }
+        ],
+        explanation: "USERELATIONSHIP activates an inactive relationship for a single calculation — the canonical way to handle multiple date columns linked to one Calendar. It lives inside CALCULATE. The model stays unchanged; only this measure sees the swap.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Quick Check</text><rect x="200" y="350" width="700" height="180" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="410" font-family="Courier" font-size="22" fill="#ffd700" text-anchor="middle">USERELATIONSHIP</text><text x="550" y="450" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Switches the active relationship</text><text x="550" y="490" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">for ONE calculation only</text><text x="550" y="720" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Lives inside CALCULATE</text><text x="550" y="780" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">Model stays unchanged</text></svg>`,
+          caption: "USERELATIONSHIP is the standard pattern for role-playing dimensions like multiple date columns."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Relationship Patterns",
+        content: `Three patterns you'll use constantly:
+
+**1. Multiple dates (role-playing dimension)**: Sales has OrderDate, ShipDate, DueDate. One Calendar table. Make one active, write a measure per "perspective" using USERELATIONSHIP. Avoid duplicating the Calendar table — that explodes the model size.
+
+**2. Header-detail with detail filters flowing up**: Order header + Order line items. Default direction is header → lines. If users filter on a line attribute (e.g., specific product) and want it to filter the header table (e.g., show only those orders' shipping addresses), use CROSSFILTER(..., Both) inside a measure — don't enable it globally.
+
+**3. Many-to-many through a bridge**: Students take Courses; bridge table StudentCourse holds the pairs. Default 1:N from both sides into the bridge means filters don't flow through. CROSSFILTER on the bridge → both sides see each other.
+
+**Rule of thumb**: keep the model **simple by default**, override with DAX for **specific measures**. Easier to debug, faster, and clearer for other devs.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Patterns You'll Use Constantly</text><rect x="80" y="130" width="940" height="240" rx="12" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3"/><text x="120" y="180" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">1. Multiple Dates (Role-Playing)</text><text x="120" y="220" font-family="Arial" font-size="17" fill="#ffffff">Sales has OrderDate, ShipDate, DueDate</text><text x="120" y="250" font-family="Arial" font-size="17" fill="#ffffff">→ One Calendar, multiple measures with USERELATIONSHIP</text><text x="120" y="290" font-family="Arial" font-size="16" fill="#10b981">Sales by Ship = CALCULATE(..., USERELATIONSHIP(Sales[ShipDate], Cal[Date]))</text><text x="120" y="335" font-family="Arial" font-size="15" fill="#888">Don't duplicate Calendar — it bloats the model</text><rect x="80" y="390" width="940" height="240" rx="12" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3"/><text x="120" y="440" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899">2. Header-Detail (Filters Flow Up)</text><text x="120" y="480" font-family="Arial" font-size="17" fill="#ffffff">OrderHeader → OrderLines (default direction)</text><text x="120" y="510" font-family="Arial" font-size="17" fill="#ffffff">Need line filter to flow back up to header?</text><text x="120" y="550" font-family="Arial" font-size="16" fill="#10b981">CALCULATE(..., CROSSFILTER(..., Both)) for THIS measure</text><text x="120" y="595" font-family="Arial" font-size="15" fill="#888">Avoid enabling globally — perf cost</text><rect x="80" y="650" width="940" height="240" rx="12" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="120" y="700" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981">3. Many-to-Many via Bridge</text><text x="120" y="740" font-family="Arial" font-size="17" fill="#ffffff">Students ↔ StudentCourse ↔ Courses</text><text x="120" y="770" font-family="Arial" font-size="17" fill="#ffffff">Default: both sides filter bridge, but not each other</text><text x="120" y="810" font-family="Arial" font-size="16" fill="#0ea5e9">CROSSFILTER on bridge edge → propagation flows</text><text x="120" y="855" font-family="Arial" font-size="15" fill="#888">Modern engines support direct M:N — still slower than bridge</text><text x="550" y="950" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">Simple model + targeted DAX overrides = clean, fast, debuggable</text></svg>`,
+          caption: "Keep the model simple; override per measure. Three patterns cover most real-world cases."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-9",
+    title: "DAX Performance: Storage Engine vs Formula Engine",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Engines Behind Every DAX Query",
+        content: `Every DAX query runs through **two engines**, and understanding which one does what is the key to fast measures.
+
+**VertiPaq (Storage Engine, SE)**: a **columnar, compressed, in-memory** database. It stores each column separately, dedupes values, and is **wildly fast** at simple aggregations on single columns — billions of rows per second. It parallelizes well across CPU cores.
+
+**Formula Engine (FE)**: handles complex DAX logic — iterators with conditionals, joins, ranking, anything VertiPaq can't express in a single scan. **Single-threaded** for most work, and the slow path.
+
+**Performance rule #1**: keep work in the storage engine. Favor \`SUM(Sales[Amount])\` over \`SUMX(Sales, Sales[Price] * Sales[Qty])\` when you can — that's two columns, FE has to merge. If you must iterate, keep the expression simple so the SE handles the heavy lifting.
+
+DAX Studio shows you the SE/FE time split for any query — your first stop when a measure is slow.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">The Two Engines of DAX</text><rect x="80" y="140" width="430" height="500" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="295" y="195" font-family="Arial" font-size="26" font-weight="bold" fill="#10b981" text-anchor="middle">Storage Engine (SE)</text><text x="295" y="225" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">VertiPaq</text><text x="295" y="280" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">Columnar + compressed</text><text x="295" y="310" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">In-memory</text><text x="295" y="340" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">Parallel (multi-core)</text><text x="295" y="400" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Great at:</text><text x="295" y="435" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• SUM, COUNT, MIN, MAX</text><text x="295" y="465" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• Single-column scans</text><text x="295" y="495" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• Simple GROUP BY</text><text x="295" y="555" font-family="Arial" font-size="20" fill="#10b981" text-anchor="middle">BILLIONS rows/sec</text><text x="295" y="600" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">This is where you want to be</text><rect x="590" y="140" width="430" height="500" rx="14" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3"/><text x="805" y="195" font-family="Arial" font-size="26" font-weight="bold" fill="#ef4444" text-anchor="middle">Formula Engine (FE)</text><text x="805" y="225" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">The DAX runtime</text><text x="805" y="280" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">Single-threaded (mostly)</text><text x="805" y="310" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">No compression</text><text x="805" y="340" font-family="Arial" font-size="17" fill="#ffd700" text-anchor="middle">Slow path</text><text x="805" y="400" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Handles:</text><text x="805" y="435" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• Complex iterators</text><text x="805" y="465" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• Joins, conditionals</text><text x="805" y="495" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">• Ranking, time intel</text><text x="805" y="555" font-family="Arial" font-size="20" fill="#ef4444" text-anchor="middle">Orders of magnitude slower</text><text x="805" y="600" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Where bottlenecks hide</text><rect x="200" y="710" width="700" height="280" rx="14" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="760" font-family="Arial" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">Performance Rule #1</text><text x="550" y="810" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Keep work in the storage engine.</text><text x="550" y="850" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">SE wants: simple, columnar, single-pass.</text><text x="550" y="890" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">FE handles what SE can't — and pays for it.</text><text x="550" y="950" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">DAX Studio shows the SE/FE time split</text></svg>`,
+          caption: "VertiPaq SE is fast and parallel; the FE is the slow path. Keep work in SE whenever possible."
+        }
+      },
+      {
+        type: "concept",
+        title: "Writing Engine-Friendly DAX",
+        content: `Three habits dramatically improve performance:
+
+**Favor SE-friendly aggregations**. \`SUM(Sales[Amount])\` is a pure SE scan. \`SUMX(Sales, Sales[Price] * Sales[Qty])\` forces FE to materialize a row-by-row product. If \`Amount\` doesn't exist as a column, **add it during ETL** (Power Query or the source) so the SE can scan it.
+
+**Use SUMMARIZECOLUMNS, not SUMMARIZE**. \`SUMMARIZECOLUMNS\` is the **newer, more performant** replacement — it's what visuals actually generate. It batches filters and aggregations into one SE-friendly call. Use it whenever you return a table from a measure or write a DAX query.
+
+**ADDCOLUMNS extends a table** with calculated expressions — useful for table outputs and intermediate steps in DEFINE/EVALUATE queries. Combine with SUMMARIZECOLUMNS for clean group-then-extend patterns.
+
+**Anti-patterns**: nested SUMX, calling a measure many times when a VAR would cache it, filtering inside iterators when CALCULATE outside the iterator suffices.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Engine-Friendly DAX Habits</text><rect x="80" y="130" width="940" height="240" rx="12" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="120" y="180" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981">1. Favor SE-friendly aggregations</text><rect x="120" y="200" width="400" height="60" rx="8" fill="#1a1a2e" stroke="#10b981" stroke-width="2"/><text x="320" y="240" font-family="Courier" font-size="18" fill="#10b981" text-anchor="middle">SUM(Sales[Amount])</text><text x="560" y="240" font-family="Arial" font-size="20" fill="#ffffff">FAST: pure SE scan</text><rect x="120" y="280" width="400" height="60" rx="8" fill="#1a1a2e" stroke="#ef4444" stroke-width="2"/><text x="320" y="320" font-family="Courier" font-size="16" fill="#ef4444" text-anchor="middle">SUMX(Sales, [Price]*[Qty])</text><text x="560" y="320" font-family="Arial" font-size="18" fill="#ffffff">SLOWER: FE merges columns</text><rect x="80" y="390" width="940" height="240" rx="12" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="440" font-family="Arial" font-size="22" font-weight="bold" fill="#0ea5e9">2. SUMMARIZECOLUMNS &gt; SUMMARIZE</text><text x="120" y="475" font-family="Arial" font-size="17" fill="#ffffff">Newer, batches filter+aggregate into one SE-friendly call</text><text x="120" y="505" font-family="Arial" font-size="17" fill="#ffffff">It's what Power BI visuals actually generate</text><rect x="120" y="525" width="860" height="80" rx="8" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2"/><text x="550" y="560" font-family="Courier" font-size="16" fill="#ffd700" text-anchor="middle">SUMMARIZECOLUMNS(Category[Name], "Sales", [Total Sales])</text><text x="550" y="590" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Use in DAX queries and measures returning tables</text><rect x="80" y="650" width="940" height="240" rx="12" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3"/><text x="120" y="700" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899">3. ADDCOLUMNS extends a table</text><text x="120" y="735" font-family="Arial" font-size="17" fill="#ffffff">Add calculated expressions to any table result</text><rect x="120" y="755" width="860" height="100" rx="8" fill="#1a1a2e" stroke="#ec4899" stroke-width="2"/><text x="550" y="790" font-family="Courier" font-size="16" fill="#ffd700" text-anchor="middle">ADDCOLUMNS(</text><text x="550" y="820" font-family="Courier" font-size="16" fill="#ffd700" text-anchor="middle">  SUMMARIZECOLUMNS(Category[Name]),</text><text x="550" y="850" font-family="Courier" font-size="16" fill="#ffd700" text-anchor="middle">  "Margin %", DIVIDE([Margin], [Sales]))</text><text x="550" y="950" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">Avoid nested SUMX, repeated measure calls without VAR</text></svg>`,
+          caption: "SE-friendly aggregations, SUMMARIZECOLUMNS, and ADDCOLUMNS — the performance toolkit."
+        }
+      },
+      {
+        type: "example",
+        title: "Profiling a Slow Measure in DAX Studio",
+        content: `Your sales dashboard takes 12 seconds to render. Time to profile.
+
+**1. Open DAX Studio**, connect to your model, enable **Server Timings**. Run the query the visual generates (right-click visual → "Performance Analyzer" → Copy Query).
+
+**2. Read the SE/FE split**: Total 11,400 ms. SE: 800 ms. FE: 10,600 ms. **FE-dominated** → the bottleneck is DAX logic, not data volume.
+
+**3. Look at the query plan** — DAX Studio shows it. Spot a CallbackDataID — those are points where SE calls back to FE during a scan. They're a yellow flag.
+
+**4. Common fixes**:
+- Replace nested SUMX with a single iterator
+- Add a helper column to the source so SE handles it (e.g., move \`Price * Qty\` to a calculated column in Power Query)
+- Switch SUMMARIZE → SUMMARIZECOLUMNS
+- Cache repeated expressions in VAR
+- Avoid measures inside iterators (context transition is expensive at scale)
+
+**5. Re-run, measure, iterate.** Aim for 80%+ in SE.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">DAX Studio Workflow</text><rect x="80" y="130" width="940" height="120" rx="12" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="3"/><text x="120" y="175" font-family="Arial" font-size="20" font-weight="bold" fill="#6366f1">Step 1: Capture the query</text><text x="120" y="210" font-family="Arial" font-size="16" fill="#ffffff">Power BI Performance Analyzer → Copy Query → paste into DAX Studio</text><text x="120" y="235" font-family="Arial" font-size="14" fill="#888">Enable Server Timings</text><rect x="80" y="270" width="940" height="180" rx="12" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="315" font-family="Arial" font-size="20" font-weight="bold" fill="#0ea5e9">Step 2: Read SE/FE split</text><rect x="120" y="340" width="200" height="80" rx="8" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/><text x="220" y="375" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">SE</text><text x="220" y="405" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">800 ms</text><rect x="350" y="340" width="600" height="80" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="650" y="375" font-family="Arial" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">FE</text><text x="650" y="405" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">10,600 ms</text><text x="120" y="445" font-family="Arial" font-size="14" fill="#888">FE-dominated → DAX logic problem, not data volume</text><rect x="80" y="470" width="940" height="140" rx="12" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="120" y="515" font-family="Arial" font-size="20" font-weight="bold" fill="#ec4899">Step 3: Inspect query plan</text><text x="120" y="550" font-family="Arial" font-size="16" fill="#ffffff">Look for CallbackDataID — SE asking FE for help mid-scan</text><text x="120" y="580" font-family="Arial" font-size="16" fill="#ffffff">High-frequency callbacks = optimization target</text><rect x="80" y="630" width="940" height="240" rx="12" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="120" y="675" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700">Step 4: Apply fixes</text><text x="120" y="710" font-family="Arial" font-size="15" fill="#ffffff">• Move calc to source/Power Query (helper columns)</text><text x="120" y="740" font-family="Arial" font-size="15" fill="#ffffff">• Replace nested SUMX → single SUMX</text><text x="120" y="770" font-family="Arial" font-size="15" fill="#ffffff">• SUMMARIZE → SUMMARIZECOLUMNS</text><text x="120" y="800" font-family="Arial" font-size="15" fill="#ffffff">• Cache with VAR — don't call same measure 5 times</text><text x="120" y="830" font-family="Arial" font-size="15" fill="#ffffff">• Avoid measures inside iterators when possible</text><text x="550" y="950" font-family="Arial" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Goal: 80%+ time in SE</text></svg>`,
+          caption: "DAX Studio reveals the SE/FE split and the query plan — the foundation of every optimization."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "A DAX query takes 8 seconds: 7 seconds in Formula Engine, 1 second in Storage Engine. What does this tell you?",
+        options: [
+          { text: "The data volume is too large — you need a more powerful machine", correct: false },
+          { text: "The DAX logic is the bottleneck — look for simplifications, helper columns, or SUMMARIZECOLUMNS", correct: true },
+          { text: "VertiPaq compression is broken and needs to be rebuilt", correct: false },
+          { text: "The query is already optimal — most DAX runs in FE", correct: false }
+        ],
+        explanation: "FE-dominated time means the bottleneck is DAX logic, not data volume. The storage engine ran fast (1 sec across all the rows); the formula engine is doing heavy single-threaded work. Look for nested iterators, repeated measure calls, complex conditionals — replace with helper columns or SE-friendly patterns.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Quick Check</text><rect x="150" y="350" width="800" height="100" rx="10" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="550" y="395" font-family="Arial" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">FE: 7000 ms (87%)</text><text x="550" y="425" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">DAX logic doing heavy work, single-threaded</text><rect x="150" y="470" width="120" height="100" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="210" y="515" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">SE</text><text x="210" y="545" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">1000 ms</text><text x="550" y="700" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle">Bottleneck = DAX logic, not data</text><text x="550" y="780" font-family="Arial" font-size="20" fill="#0ea5e9" text-anchor="middle">Simplify, helper columns, SUMMARIZECOLUMNS</text></svg>`,
+          caption: "FE-heavy time = DAX logic to optimize. SE-heavy time = data volume to address."
+        }
+      },
+      {
+        type: "application",
+        title: "A Performance Optimization Playbook",
+        content: `Apply this checklist when a measure is slow:
+
+**1. Measure first**. Don't optimize blind. DAX Studio + Server Timings = ground truth.
+
+**2. SE/FE ratio**. >50% FE means logic is your problem.
+
+**3. Move work upstream**. If \`Price * Qty\` is calculated billions of times, **add it as a column in Power Query** or your warehouse. SE scans the precomputed column in milliseconds.
+
+**4. Simplify iterators**. Replace \`SUMX(table, complex_expression)\` with simpler forms. Avoid nested iterators — turn them inside out or use ADDCOLUMNS + SUMX.
+
+**5. Cache with VAR**. If you call \`[Total Sales]\` four times in a measure, store it in a VAR once.
+
+**6. Prefer SUMMARIZECOLUMNS** for table results.
+
+**7. Watch for CROSSFILTER Both and many-to-many** — they're slow by nature.
+
+**8. Re-measure after every change.** Optimization is empirical — surprising things help, surprising things hurt.
+
+The fastest DAX is the one that doesn't have to run — push to the model, push to ETL, then write DAX last.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="30" font-weight="bold" fill="#ffd700" text-anchor="middle">Performance Optimization Playbook</text><rect x="80" y="120" width="440" height="100" rx="10" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="2"/><text x="100" y="160" font-family="Arial" font-size="20" font-weight="bold" fill="#6366f1">1.</text><text x="135" y="160" font-family="Arial" font-size="18" fill="#ffffff">Measure first</text><text x="135" y="190" font-family="Arial" font-size="14" fill="#888">DAX Studio + Server Timings</text><rect x="560" y="120" width="440" height="100" rx="10" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="2"/><text x="580" y="160" font-family="Arial" font-size="20" font-weight="bold" fill="#0ea5e9">2.</text><text x="615" y="160" font-family="Arial" font-size="18" fill="#ffffff">Check SE/FE ratio</text><text x="615" y="190" font-family="Arial" font-size="14" fill="#888">&gt;50% FE = logic problem</text><rect x="80" y="240" width="440" height="100" rx="10" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/><text x="100" y="280" font-family="Arial" font-size="20" font-weight="bold" fill="#10b981">3.</text><text x="135" y="280" font-family="Arial" font-size="18" fill="#ffffff">Move work upstream</text><text x="135" y="310" font-family="Arial" font-size="14" fill="#888">Helper columns in Power Query</text><rect x="560" y="240" width="440" height="100" rx="10" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="2"/><text x="580" y="280" font-family="Arial" font-size="20" font-weight="bold" fill="#ec4899">4.</text><text x="615" y="280" font-family="Arial" font-size="18" fill="#ffffff">Simplify iterators</text><text x="615" y="310" font-family="Arial" font-size="14" fill="#888">Un-nest, denormalize logic</text><rect x="80" y="360" width="440" height="100" rx="10" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/><text x="100" y="400" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b">5.</text><text x="135" y="400" font-family="Arial" font-size="18" fill="#ffffff">Cache with VAR</text><text x="135" y="430" font-family="Arial" font-size="14" fill="#888">Compute once, reuse</text><rect x="560" y="360" width="440" height="100" rx="10" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/><text x="580" y="400" font-family="Arial" font-size="20" font-weight="bold" fill="#8b5cf6">6.</text><text x="615" y="400" font-family="Arial" font-size="18" fill="#ffffff">Use SUMMARIZECOLUMNS</text><text x="615" y="430" font-family="Arial" font-size="14" fill="#888">Modern, SE-friendly</text><rect x="80" y="480" width="440" height="100" rx="10" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/><text x="100" y="520" font-family="Arial" font-size="20" font-weight="bold" fill="#ef4444">7.</text><text x="135" y="520" font-family="Arial" font-size="18" fill="#ffffff">Watch CROSSFILTER Both</text><text x="135" y="550" font-family="Arial" font-size="14" fill="#888">Slow by nature</text><rect x="560" y="480" width="440" height="100" rx="10" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="2"/><text x="580" y="520" font-family="Arial" font-size="20" font-weight="bold" fill="#ffd700">8.</text><text x="615" y="520" font-family="Arial" font-size="18" fill="#ffffff">Re-measure</text><text x="615" y="550" font-family="Arial" font-size="14" fill="#888">Optimization is empirical</text><rect x="180" y="650" width="740" height="280" rx="14" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="550" y="710" font-family="Arial" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">The Golden Rule</text><text x="550" y="760" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">The fastest DAX is the one</text><text x="550" y="800" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">that doesn't have to run.</text><text x="550" y="860" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Push to model. Push to ETL.</text><text x="550" y="895" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle">Write DAX last.</text><text x="550" y="1010" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Each step compounds — small wins add up to seconds saved</text></svg>`,
+          caption: "Eight-step playbook: measure, ratio, upstream, simplify, cache, modernize, watch, re-measure."
         }
       }
     ]
