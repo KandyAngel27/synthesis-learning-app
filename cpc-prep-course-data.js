@@ -6033,7 +6033,7 @@ The big three rules for this lesson:
             title: 'CPT Surgical Section I: Integumentary, Musculoskeletal, Respiratory',
             author: 'Synthesis Learning',
             description: 'Lesion excisions, fracture care, endoscopies — including the bundling rules and add-on codes that trip up new coders.',
-            lessons: 6, duration: 90, progress: 0, category: 'cpc-prep',
+            lessons: 9, duration: 135, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-cpt-surg-1-lesson-1",
@@ -6520,6 +6520,326 @@ You DO bill **29000-29799** separately when:
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Open Respiratory Coder Workflow</text><rect x="80" y="130" width="940" height="140" rx="16" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="120" y="175" font-family="Arial" font-size="26" font-weight="bold" fill="#6366f1">1</text><text x="170" y="175" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">Identify the family</text><text x="170" y="210" font-family="Arial" font-size="16" fill="#ffffff">Tap (32554-32557) · Airway (31600-31611) · Resection (32440-32674)</text><text x="170" y="245" font-family="Arial" font-size="16" fill="#888">One sentence in the op note title usually tells you</text><rect x="80" y="290" width="940" height="140" rx="16" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="120" y="335" font-family="Arial" font-size="26" font-weight="bold" fill="#10b981">2</text><text x="170" y="335" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">Thoracentesis: imaging + tube</text><text x="170" y="370" font-family="Arial" font-size="16" fill="#ffffff">Two yes/no questions → 32554 / 32555 / 32556 / 32557</text><text x="170" y="405" font-family="Arial" font-size="16" fill="#ef4444">Never add 76942/77002 to the imaging codes</text><rect x="80" y="450" width="940" height="140" rx="16" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="120" y="495" font-family="Arial" font-size="26" font-weight="bold" fill="#f59e0b">3</text><text x="170" y="495" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">Tracheostomy: setting + approach + age</text><text x="170" y="530" font-family="Arial" font-size="16" fill="#ffffff">Planned 31600/31601 · Emergency 31603/31605 · Flaps 31610</text><text x="170" y="565" font-family="Arial" font-size="16" fill="#888">Read "emergency" or "code blue" carefully</text><rect x="80" y="610" width="940" height="140" rx="16" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="655" font-family="Arial" font-size="26" font-weight="bold" fill="#8b5cf6">4</text><text x="170" y="655" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">Resection: approach → extent</text><text x="170" y="690" font-family="Arial" font-size="16" fill="#ffffff">Open 32440-32505 or VATS 32663-32671. Climb wedge→lobe→whole.</text><text x="170" y="725" font-family="Arial" font-size="16" fill="#888">Convert to open mid-case → code OPEN only, ± -22</text><rect x="80" y="770" width="940" height="140" rx="16" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="120" y="815" font-family="Arial" font-size="26" font-weight="bold" fill="#ec4899">5</text><text x="170" y="815" font-family="Arial" font-size="20" font-weight="bold" fill="#ffffff">Modifiers + global period</text><text x="170" y="850" font-family="Arial" font-size="16" fill="#ffffff">-LT/-RT/-50 laterality · 90-day global on open thoracic · -58/-78/-79</text><text x="170" y="885" font-family="Arial" font-size="16" fill="#888">Return to OR within 90 days → identify the right modifier</text><rect x="80" y="930" width="940" height="120" rx="16" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="975" font-family="Arial" font-size="22" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Five-Question Triage</text><text x="550" y="1010" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Family? Imaging? Setting? Approach? Extent?</text><text x="550" y="1040" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">Answer all five, and the right code is unmistakable.</text></svg>`,
           caption: "Five-step workflow that triages every open respiratory procedure to the right code."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-cpt-surg-1-lesson-7",
+    title: "Integumentary II: Skin Grafts and Flaps",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Reconstructing Skin: Grafts and Flaps",
+        content: `When skin is lost to **burns, trauma, tumor excision, or chronic wounds**, the integumentary surgeon rebuilds coverage using grafts and flaps. CPT divides this work into three distinct steps — each separately codable.
+
+First, **surgical preparation** (15002-15005) readies the wound bed. Second, the **graft or flap** itself (15100-15738) restores coverage. Third — and this is the rule most coders miss — the **donor site closure** is reported separately when it requires its own repair work.
+
+A **graft** is detached tissue transplanted to a recipient site; a **flap** keeps its blood supply intact via a pedicle (or via microvascular reattachment). All grafts/flaps are reported by **recipient site size**, never donor size. This lesson maps every code family and the per-100-sq-cm add-on logic that drives accurate billing.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Three Codeable Steps</text><rect x="80" y="140" width="300" height="280" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="230" y="195" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">1. Prep</text><text x="230" y="240" text-anchor="middle" fill="#ffffff" font-size="22">15002-15005</text><text x="230" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Excise scar/</text><text x="230" y="318" text-anchor="middle" fill="#ffffff" font-size="20">create wound bed</text><text x="230" y="370" text-anchor="middle" fill="#10b981" font-size="20">Per 100 sq cm</text><rect x="400" y="140" width="300" height="280" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="195" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">2. Graft/Flap</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="22">15100-15738</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Autograft, allograft,</text><text x="550" y="318" text-anchor="middle" fill="#ffffff" font-size="20">advancement, free flap</text><text x="550" y="370" text-anchor="middle" fill="#10b981" font-size="20">By site + size</text><rect x="720" y="140" width="300" height="280" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="870" y="195" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">3. Donor Site</text><text x="870" y="240" text-anchor="middle" fill="#ffffff" font-size="22">Separate repair</text><text x="870" y="290" text-anchor="middle" fill="#ffffff" font-size="20">If complex closure</text><text x="870" y="318" text-anchor="middle" fill="#ffffff" font-size="20">required</text><text x="870" y="370" text-anchor="middle" fill="#ef4444" font-size="20">12001-13160</text><rect x="150" y="480" width="800" height="240" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="535" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The Golden Rule</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="22">Size codes use RECIPIENT</text><text x="550" y="630" text-anchor="middle" fill="#ffffff" font-size="22">site area — never donor.</text><text x="550" y="685" text-anchor="middle" fill="#10b981" font-size="22">Donor closure billed separately</text><rect x="200" y="770" width="700" height="240" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Add-on Logic</text><text x="550" y="885" text-anchor="middle" fill="#ffffff" font-size="22">First 100 sq cm = primary code</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="22">Each additional 100 sq cm =</text><text x="550" y="960" text-anchor="middle" fill="#0ea5e9" font-size="22">add-on (+) code</text></svg>`,
+          caption: "Three-step framework: prep, graft/flap, donor closure"
+        }
+      },
+      {
+        type: "concept",
+        title: "Code Families: Prep, Autograft, Allograft, Flaps",
+        content: `**Surgical preparation (15002-15005)**: clears scar, granulation, or contracture so a graft can take. 15002 covers first 100 sq cm of trunk/arms/legs; 15003 is the add-on per additional 100 sq cm. 15004/15005 are the face/neck/genitalia/hands version (higher RVUs — delicate sites).
+
+**Autograft (15100-15157)**: patient's own skin. **Split-thickness** (15100/15101) takes epidermis plus partial dermis; **full-thickness** (15200-15261) takes all dermis. Coded by site (trunk, face, eyelids, hands) and area.
+
+**Allograft/skin substitute (15271-15278)**: cadaver skin or bioengineered product (e.g., Apligraf). Temporary biological dressing. 15271 = first 25 sq cm trunk; 15273 = first 100 sq cm.
+
+**Flaps (15570-15738)**: tissue moved with blood supply intact. **Advancement, rotation, transposition** (15570-15576) stay local. **Free flaps** (15756-15758) require **microvascular anastomosis** — surgeon reattaches artery and vein under microscope.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Code Family Map</text><rect x="60" y="110" width="490" height="220" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="305" y="155" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Wound Prep</text><text x="305" y="195" text-anchor="middle" fill="#ffffff" font-size="20">15002/15003: trunk, arm, leg</text><text x="305" y="225" text-anchor="middle" fill="#ffffff" font-size="20">15004/15005: face, hand, genitals</text><text x="305" y="265" text-anchor="middle" fill="#10b981" font-size="20">First 100 + each addt'l 100 sq cm</text><text x="305" y="305" text-anchor="middle" fill="#0ea5e9" font-size="20">Excise scar / debride wound bed</text><rect x="560" y="110" width="490" height="220" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="805" y="155" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Autograft</text><text x="805" y="195" text-anchor="middle" fill="#ffffff" font-size="20">15100/15101: STSG trunk/extr</text><text x="805" y="225" text-anchor="middle" fill="#ffffff" font-size="20">15120/15121: STSG face/hand</text><text x="805" y="265" text-anchor="middle" fill="#ffffff" font-size="20">15200-15261: FTSG by site</text><text x="805" y="305" text-anchor="middle" fill="#10b981" font-size="20">Patient's own skin</text><rect x="60" y="360" width="490" height="220" rx="12" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="305" y="405" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Allograft / Substitute</text><text x="305" y="445" text-anchor="middle" fill="#ffffff" font-size="20">15271-15274: first 25 / addt'l</text><text x="305" y="475" text-anchor="middle" fill="#ffffff" font-size="20">15275-15278: face/hand sizes</text><text x="305" y="515" text-anchor="middle" fill="#ffffff" font-size="20">Cadaver, Apligraf, Integra</text><text x="305" y="555" text-anchor="middle" fill="#0ea5e9" font-size="20">Temporary biological cover</text><rect x="560" y="360" width="490" height="220" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="805" y="405" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Flaps</text><text x="805" y="445" text-anchor="middle" fill="#ffffff" font-size="20">15570-15576: adv/rot/trans local</text><text x="805" y="475" text-anchor="middle" fill="#ffffff" font-size="20">15600-15630: delay of flap</text><text x="805" y="515" text-anchor="middle" fill="#ffffff" font-size="20">15756-15758: free w/ micro</text><text x="805" y="555" text-anchor="middle" fill="#10b981" font-size="20">Blood supply preserved</text><rect x="100" y="620" width="900" height="450" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="675" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Flap Types Visual</text><circle cx="280" cy="830" r="80" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="3"/><text x="280" y="838" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Advancement</text><text x="280" y="935" text-anchor="middle" fill="#ffffff" font-size="18">Slides forward</text><text x="280" y="960" text-anchor="middle" fill="#ffffff" font-size="18">15600 series</text><circle cx="550" cy="830" r="80" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="3"/><text x="550" y="838" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Rotation</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="18">Pivots arc</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">15572-15576</text><circle cx="820" cy="830" r="80" fill="#ec4899" opacity="0.4" stroke="#ec4899" stroke-width="3"/><text x="820" y="838" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Free Flap</text><text x="820" y="935" text-anchor="middle" fill="#ffffff" font-size="18">Microvascular</text><text x="820" y="960" text-anchor="middle" fill="#ffffff" font-size="18">15756-15758</text><text x="550" y="1030" text-anchor="middle" fill="#10b981" font-size="22">All require recipient-site sizing</text></svg>`,
+          caption: "Four code families with anatomic and method splits"
+        }
+      },
+      {
+        type: "example",
+        title: "Real Case: Burn Scar Excision and Graft",
+        content: `A 32-year-old has a **180 sq cm contracted burn scar on the right forearm**. The surgeon performs:
+
+**Step 1 — Wound prep**: excises scar tissue, releases contracture, prepares granulation bed. Total prepped area: 180 sq cm on the arm.
+- **15002** (first 100 sq cm of arm)
+- **15003** (additional 80 sq cm — single add-on unit because it's within the next 100)
+
+**Step 2 — Split-thickness autograft**: harvests STSG from left thigh, applies to 180 sq cm recipient bed.
+- **15100** (first 100 sq cm STSG to trunk/arm/leg)
+- **15101** × 1 (each additional 100 sq cm)
+
+**Step 3 — Donor site**: thigh harvest site requires only a simple Tegaderm dressing — no separate repair code (dressing is bundled). **But** if the donor site needed a complex closure (e.g., 13120), it would be billed separately.
+
+**Final claim**: 15002, 15003, 15100, 15101 — four lines. Recipient-area math drives every unit count.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Forearm Burn Case: 180 sq cm</text><rect x="100" y="120" width="900" height="200" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Step 1: Wound Prep</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="22">15002 = first 100 sq cm (arm)</text><text x="550" y="255" text-anchor="middle" fill="#ffffff" font-size="22">15003 x 1 = additional 80 sq cm</text><text x="550" y="295" text-anchor="middle" fill="#10b981" font-size="22">Scar excised, bed prepared</text><rect x="100" y="350" width="900" height="200" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="400" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Step 2: STSG Autograft</text><text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="22">15100 = first 100 sq cm STSG</text><text x="550" y="485" text-anchor="middle" fill="#ffffff" font-size="22">15101 x 1 = next 80 sq cm</text><text x="550" y="525" text-anchor="middle" fill="#10b981" font-size="22">Harvested from thigh donor</text><rect x="100" y="580" width="900" height="200" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="630" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Step 3: Donor Site</text><text x="550" y="675" text-anchor="middle" fill="#ffffff" font-size="22">Simple dressing = bundled</text><text x="550" y="715" text-anchor="middle" fill="#ffffff" font-size="22">Complex closure = separate code</text><text x="550" y="755" text-anchor="middle" fill="#ef4444" font-size="22">In this case: NOT billed</text><rect x="200" y="820" width="700" height="240" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="875" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Final Claim</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="24">15002 + 15003 + 15100 + 15101</text><text x="550" y="975" text-anchor="middle" fill="#10b981" font-size="22">Four lines, recipient area driven</text><text x="550" y="1020" text-anchor="middle" fill="#0ea5e9" font-size="20">Donor closure bundled here</text></svg>`,
+          caption: "Worked case: four codes from a single graft procedure"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Graft Coding",
+        question: "A surgeon performs an advancement flap of 30 sq cm on the cheek to close a defect after Mohs excision. The donor area is closed primarily. What is the correct primary CPT code family?",
+        options: [
+          { text: "15002-15005 (wound prep only)", correct: false },
+          { text: "15100-15101 (split-thickness autograft)", correct: false },
+          { text: "15574 (adjacent tissue transfer/rearrangement, face)", correct: true },
+          { text: "15756 (free flap with microvascular anastomosis)", correct: false }
+        ],
+        explanation: "Advancement, rotation, and transposition flaps on the face fall in the **15570-15576** adjacent tissue transfer family. A free flap (15756) requires microvascular anastomosis — not used here. Wound prep codes apply only when scar excision/bed preparation is the standalone work. Autografts (15100) are detached split-thickness skin, not flaps.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Quiz: Pick the Code Family</text><rect x="150" y="160" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="22">15002-15005</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — prep only, not closure</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Used to ready the bed</text><rect x="150" y="340" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="390" text-anchor="middle" fill="#ffffff" font-size="22">15100-15101 (STSG)</text><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — graft, not flap</text><text x="550" y="470" text-anchor="middle" fill="#ffffff" font-size="20">No blood supply preserved</text><rect x="150" y="520" width="800" height="160" rx="14" fill="#10b981" opacity="0.35" stroke="#10b981" stroke-width="4"/><text x="550" y="570" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">15574 ADJACENT TRANSFER FACE</text><text x="550" y="615" text-anchor="middle" fill="#ffffff" font-size="22">CORRECT</text><text x="550" y="655" text-anchor="middle" fill="#ffffff" font-size="20">Advancement = flap, face site</text><rect x="150" y="700" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="22">15756 free flap</text><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — no microvascular</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="20">Local advancement, not free</text><rect x="200" y="900" width="700" height="160" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="955" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Memory hook</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="22">Local flap face = 15574</text><text x="550" y="1035" text-anchor="middle" fill="#10b981" font-size="20">Recipient site + size drive selection</text></svg>`,
+          caption: "Match modality (graft vs flap) with anatomic site"
+        }
+      },
+      {
+        type: "application",
+        title: "Coder's Workflow for Grafts and Flaps",
+        content: `**Step 1**: Identify each separately billable step — was the bed prepped (15002-15005)? Was a graft or flap placed? Was the donor site closed with a separate technique?
+
+**Step 2**: Decide **graft vs flap**. A graft is detached; a flap stays attached or is reattached microvascularly.
+
+**Step 3**: For grafts, pick **STSG (15100s) vs FTSG (15200s) vs allograft (15271s)** based on op-note language. Match the anatomic site to the right code.
+
+**Step 4**: Total the **recipient-area square centimeters** (or sq mm for tiny face lesions). Apply the first-N + add-on math.
+
+**Step 5**: Check donor site documentation. Simple primary closure is bundled; intermediate (12031-12057) or complex (13100+) repair is separately reportable.
+
+**Step 6**: Sequence the highest-RVU code first. Append **modifier 51** for multiple procedures or **59** if same-session distinct services would otherwise bundle under NCCI edits. Documentation must support every unit.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Coder Workflow</text><rect x="80" y="120" width="940" height="120" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="120" y="170" fill="#ffd700" font-size="24" font-weight="bold">1</text><text x="160" y="170" fill="#ffffff" font-size="22">Separate prep, graft, donor steps</text><text x="160" y="210" fill="#10b981" font-size="20">Each step gets its own code if documented</text><rect x="80" y="260" width="940" height="120" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="120" y="310" fill="#ffd700" font-size="24" font-weight="bold">2</text><text x="160" y="310" fill="#ffffff" font-size="22">Graft vs Flap</text><text x="160" y="350" fill="#10b981" font-size="20">Detached = graft; pedicle/micro = flap</text><rect x="80" y="400" width="940" height="120" rx="12" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="120" y="450" fill="#ffd700" font-size="24" font-weight="bold">3</text><text x="160" y="450" fill="#ffffff" font-size="22">STSG vs FTSG vs allograft</text><text x="160" y="490" fill="#10b981" font-size="20">Op-note depth language</text><rect x="80" y="540" width="940" height="120" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="120" y="590" fill="#ffd700" font-size="24" font-weight="bold">4</text><text x="160" y="590" fill="#ffffff" font-size="22">Sum recipient sq cm</text><text x="160" y="630" fill="#10b981" font-size="20">First + add-on units</text><rect x="80" y="680" width="940" height="120" rx="12" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="730" fill="#ffd700" font-size="24" font-weight="bold">5</text><text x="160" y="730" fill="#ffffff" font-size="22">Check donor closure type</text><text x="160" y="770" fill="#10b981" font-size="20">Simple bundled; intermediate/complex separate</text><rect x="80" y="820" width="940" height="120" rx="12" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="870" fill="#ffd700" font-size="24" font-weight="bold">6</text><text x="160" y="870" fill="#ffffff" font-size="22">Sequence and modifier (51, 59)</text><text x="160" y="910" fill="#10b981" font-size="20">Highest RVU first</text><rect x="200" y="970" width="700" height="100" rx="12" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="1025" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Documentation supports every unit</text></svg>`,
+          caption: "Six-step coder workflow for grafts and flaps"
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-cpt-surg-1-lesson-8",
+    title: "Musculoskeletal III: Spinal Procedures",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Spine Surgery in CPT",
+        content: `Spinal surgery generates some of the highest-value claims in MSK coding — and some of the most audited. CPT organizes spine procedures by **approach** (anterior vs posterior vs combined), **region** (cervical, thoracic, lumbar, lumbosacral), and **what is done** (fusion, decompression, augmentation).
+
+The cornerstone is **arthrodesis (22532-22634)**: surgical fusion of two or more vertebrae. It is coded for the **first interspace** with a primary code; each **additional level** uses an add-on code. Approach matters enormously — an anterior cervical fusion (22554) is a completely different code from a posterior lumbar fusion (22612).
+
+Beyond fusion, **vertebral corpectomy (63081-63103)** removes a vertebral body for decompression, and **percutaneous augmentation (22510-22515)** — kyphoplasty and vertebroplasty — injects cement into a fractured vertebra. This lesson covers all three families and the add-on math that drives accurate reporting.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Spine Code Architecture</text><rect x="100" y="120" width="900" height="180" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Three Variables Drive Codes</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="22">APPROACH + REGION + PROCEDURE</text><text x="550" y="260" text-anchor="middle" fill="#10b981" font-size="20">Miss one and the code is wrong</text><rect x="100" y="320" width="280" height="200" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="240" y="365" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Approach</text><text x="240" y="410" text-anchor="middle" fill="#ffffff" font-size="20">Anterior</text><text x="240" y="445" text-anchor="middle" fill="#ffffff" font-size="20">Posterior</text><text x="240" y="480" text-anchor="middle" fill="#ffffff" font-size="20">Combined</text><rect x="410" y="320" width="280" height="200" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="365" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Region</text><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="20">Cervical</text><text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="20">Thoracic</text><text x="550" y="480" text-anchor="middle" fill="#ffffff" font-size="20">Lumbar/sacral</text><rect x="720" y="320" width="280" height="200" rx="14" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="860" y="365" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Procedure</text><text x="860" y="410" text-anchor="middle" fill="#ffffff" font-size="20">Fusion</text><text x="860" y="445" text-anchor="middle" fill="#ffffff" font-size="20">Corpectomy</text><text x="860" y="480" text-anchor="middle" fill="#ffffff" font-size="20">Augmentation</text><rect x="100" y="560" width="900" height="220" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="615" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Add-on Logic for Fusion</text><text x="550" y="665" text-anchor="middle" fill="#ffffff" font-size="22">First interspace = primary code</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="22">Each additional level = (+) add-on</text><text x="550" y="755" text-anchor="middle" fill="#10b981" font-size="22">Example: 22612 + 22614 + 22614</text><rect x="200" y="820" width="700" height="220" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="875" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Bone Graft Codes Separate</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="22">20930-20938 added alongside</text><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="22">arthrodesis when graft used</text><text x="550" y="1020" text-anchor="middle" fill="#10b981" font-size="20">Instrumentation: 22840-22848</text></svg>`,
+          caption: "Approach + region + procedure define the spine code"
+        }
+      },
+      {
+        type: "concept",
+        title: "Arthrodesis, Corpectomy, and Augmentation",
+        content: `**Arthrodesis (spinal fusion)** uses bone grafts and often hardware to fuse two vertebrae permanently.
+- **22532-22534**: lateral extracavitary, thoracic/lumbar
+- **22548-22558**: anterior interbody fusion (ALIF) — 22551 cervical below C2, 22554 cervical, 22556 thoracic, 22558 lumbar
+- **22600-22614**: posterior — 22600 cervical, 22610 thoracic, 22612 lumbar; **22614** is the add-on per additional level
+- **22630-22634**: posterior lumbar interbody fusion (PLIF) — 22630 first level, 22632 add-on
+
+**Vertebral corpectomy (63081-63103)** removes the vertebral body itself for decompression of cord/nerves — typically after trauma, tumor, or severe stenosis. 63081 = cervical anterior first segment; 63082 = add-on for each additional segment.
+
+**Percutaneous augmentation (22510-22515)** injects PMMA bone cement into a fractured vertebra under fluoroscopy.
+- **22510**: vertebroplasty, cervicothoracic
+- **22511**: vertebroplasty, lumbosacral
+- **22513-22515**: kyphoplasty (balloon then cement) — imaging IS bundled here`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Three Procedure Families</text><rect x="60" y="100" width="980" height="260" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="145" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Arthrodesis (Fusion)</text><text x="550" y="190" text-anchor="middle" fill="#ffffff" font-size="20">22551 anterior cervical (sub-C2)</text><text x="550" y="225" text-anchor="middle" fill="#ffffff" font-size="20">22554 cervical ALIF</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="20">22612 posterior lumbar / 22614 addt'l level</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="20">22630 PLIF / 22632 addt'l</text><text x="550" y="335" text-anchor="middle" fill="#10b981" font-size="20">Add 20930-20938 for bone graft, 22840+ for hardware</text><rect x="60" y="380" width="980" height="240" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="425" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Corpectomy</text><text x="550" y="470" text-anchor="middle" fill="#ffffff" font-size="20">63081 anterior cervical, 1 segment</text><text x="550" y="505" text-anchor="middle" fill="#ffffff" font-size="20">63082 each additional segment (add-on)</text><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="20">63085-63091 thoracic/lumbar by approach</text><text x="550" y="580" text-anchor="middle" fill="#10b981" font-size="20">Remove vertebral body — decompresses cord</text><rect x="60" y="640" width="980" height="280" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="685" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Percutaneous Augmentation</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="20">22510 vertebroplasty cervicothoracic</text><text x="550" y="765" text-anchor="middle" fill="#ffffff" font-size="20">22511 vertebroplasty lumbosacral</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="20">22513 kyphoplasty thoracic + 22515 addt'l</text><text x="550" y="835" text-anchor="middle" fill="#ffffff" font-size="20">22514 kyphoplasty lumbar</text><text x="550" y="880" text-anchor="middle" fill="#ec4899" font-size="20">Imaging guidance INCLUDED in these codes</text><rect x="200" y="940" width="700" height="130" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Vertebroplasty vs Kyphoplasty</text><text x="550" y="1035" text-anchor="middle" fill="#ffffff" font-size="20">Vert = cement only; Kypho = balloon then cement</text></svg>`,
+          caption: "Three core spine families with their key codes"
+        }
+      },
+      {
+        type: "example",
+        title: "Case: L4-L5-S1 Posterior Fusion",
+        content: `A 62-year-old with degenerative spondylolisthesis undergoes **posterior arthrodesis at L4-L5 and L5-S1** with pedicle screw instrumentation and iliac crest autograft.
+
+**Two interspaces fused** = primary + one add-on.
+- **22612** — Posterior arthrodesis, lumbar, first interspace
+- **22614** — Each additional interspace (× 1 for L5-S1)
+
+**Bone graft** harvested from iliac crest:
+- **20937** — Autograft, structural, harvested through separate skin/fascial incision
+
+**Instrumentation** (pedicle screws across two segments):
+- **22842** — Posterior segmental instrumentation, 3 to 6 vertebral segments (L4, L5, S1 = 3 segments)
+
+**Final claim**: 22612 + 22614 + 20937 + 22842 — four lines.
+
+Modifier 51 applies to secondary procedures per payer rules; add-on codes (22614) are **51-exempt** by definition. The iliac crest graft and the instrumentation each have their own RVUs and bundle separately. Always confirm laterality and segment count in the op note before final submission.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">L4-L5-S1 Posterior Fusion</text><rect x="100" y="120" width="900" height="160" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Fusion Levels</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="22">22612 = L4-L5 (first interspace)</text><text x="550" y="255" text-anchor="middle" fill="#ffffff" font-size="22">22614 = L5-S1 (each additional)</text><rect x="100" y="300" width="900" height="160" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="350" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Bone Graft</text><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="22">20937 = autograft, separate incision</text><text x="550" y="435" text-anchor="middle" fill="#10b981" font-size="20">Iliac crest harvest, structural</text><rect x="100" y="480" width="900" height="160" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="530" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Instrumentation</text><text x="550" y="575" text-anchor="middle" fill="#ffffff" font-size="22">22842 = posterior segmental</text><text x="550" y="615" text-anchor="middle" fill="#10b981" font-size="20">3-6 segments (L4, L5, S1)</text><rect x="200" y="680" width="700" height="220" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="735" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Final Claim</text><text x="550" y="785" text-anchor="middle" fill="#ffffff" font-size="24">22612 + 22614 + 20937 + 22842</text><text x="550" y="830" text-anchor="middle" fill="#10b981" font-size="22">Four lines submitted</text><text x="550" y="875" text-anchor="middle" fill="#0ea5e9" font-size="20">Add-on 22614 is 51-exempt</text><rect x="200" y="930" width="700" height="140" rx="14" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Modifier 51 check</text><text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="20">Applies to secondary, not add-ons</text></svg>`,
+          caption: "Two-level fusion case with graft and instrumentation"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Spine Coding",
+        question: "A surgeon performs balloon kyphoplasty on T11 and T12 for compression fractures, using fluoroscopic guidance. What is the correct coding?",
+        options: [
+          { text: "22510 + 22512 (vertebroplasty primary + add-on)", correct: false },
+          { text: "22513 + 22515 (kyphoplasty thoracic + each additional)", correct: true },
+          { text: "22514 + 22515 (kyphoplasty lumbar + add-on)", correct: false },
+          { text: "22513 + 22515 + 77002 (kyphoplasty + add-on + fluoro)", correct: false }
+        ],
+        explanation: "**22513** is kyphoplasty thoracic first level; **22515** is the add-on for each additional level (T12). Imaging guidance is **bundled** into the kyphoplasty codes — never separately reported. 22514 is lumbar (wrong region), and 22510/22512 are vertebroplasty (no balloon).",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Quiz: T11/T12 Kyphoplasty</text><rect x="150" y="160" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="22">22510 + 22512</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — vertebroplasty, no balloon</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Wrong technique</text><rect x="150" y="340" width="800" height="160" rx="14" fill="#10b981" opacity="0.35" stroke="#10b981" stroke-width="4"/><text x="550" y="390" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">22513 + 22515</text><text x="550" y="435" text-anchor="middle" fill="#ffffff" font-size="22">CORRECT</text><text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="20">Thoracic + each additional level</text><rect x="150" y="520" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="22">22514 + 22515</text><text x="550" y="610" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — lumbar region</text><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="20">T11/T12 are thoracic</text><rect x="150" y="700" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="22">22513 + 22515 + 77002</text><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — fluoro is BUNDLED</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="20">Cannot separately report</text><rect x="200" y="900" width="700" height="160" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Remember</text><text x="550" y="995" text-anchor="middle" fill="#ffffff" font-size="22">Imaging guidance bundled in 22510-22515</text><text x="550" y="1035" text-anchor="middle" fill="#10b981" font-size="20">Match region + technique exactly</text></svg>`,
+          caption: "Match technique, region, and bundling rules"
+        }
+      },
+      {
+        type: "application",
+        title: "Auditor's Spine Checklist",
+        content: `**1. Read the operative title first.** It usually states approach + region + technique. Cross-reference with the body of the note.
+
+**2. Count interspaces, not vertebrae.** L4-L5-S1 = 2 interspaces = primary + 1 add-on. New coders miscount this constantly.
+
+**3. Match approach to code series.** Anterior interbody = 22551-22558; posterior = 22600-22614; PLIF = 22630-22632; combined = both reported.
+
+**4. Code bone graft and instrumentation separately.** 20930-20938 for graft; 22840-22848 for hardware. Both are **51-exempt** add-ons.
+
+**5. Watch for bundling.** Kyphoplasty and vertebroplasty include imaging guidance — do NOT add 77002/77003. Corpectomy includes initial discectomy at the same level.
+
+**6. Modifier 62.** When two co-surgeons of different specialties each perform a distinct part (e.g., vascular surgeon opens anterior approach, neurosurgeon does the fusion), each reports the same code with **modifier 62**.
+
+**7. Verify segment count for 22840-22848.** Pedicle screw instrumentation is coded by total vertebral segments spanned.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Auditor's Checklist</text><rect x="80" y="120" width="940" height="110" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="120" y="170" fill="#ffd700" font-size="24" font-weight="bold">1</text><text x="160" y="170" fill="#ffffff" font-size="22">Read op title first</text><text x="160" y="205" fill="#10b981" font-size="20">Approach + region + technique</text><rect x="80" y="250" width="940" height="110" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="120" y="300" fill="#ffd700" font-size="24" font-weight="bold">2</text><text x="160" y="300" fill="#ffffff" font-size="22">Count INTERSPACES, not vertebrae</text><text x="160" y="335" fill="#10b981" font-size="20">L4-L5-S1 = 2 interspaces</text><rect x="80" y="380" width="940" height="110" rx="12" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="120" y="430" fill="#ffd700" font-size="24" font-weight="bold">3</text><text x="160" y="430" fill="#ffffff" font-size="22">Match approach to series</text><text x="160" y="465" fill="#10b981" font-size="20">22600s post / 22550s ant / 22630 PLIF</text><rect x="80" y="510" width="940" height="110" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="120" y="560" fill="#ffd700" font-size="24" font-weight="bold">4</text><text x="160" y="560" fill="#ffffff" font-size="22">Bone graft + instrumentation</text><text x="160" y="595" fill="#10b981" font-size="20">20930-20938 + 22840-22848</text><rect x="80" y="640" width="940" height="110" rx="12" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="690" fill="#ffd700" font-size="24" font-weight="bold">5</text><text x="160" y="690" fill="#ffffff" font-size="22">Bundling: imaging in 22510-22515</text><text x="160" y="725" fill="#ef4444" font-size="20">Do NOT add 77002/77003</text><rect x="80" y="770" width="940" height="110" rx="12" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="820" fill="#ffd700" font-size="24" font-weight="bold">6</text><text x="160" y="820" fill="#ffffff" font-size="22">Mod 62: two co-surgeons</text><text x="160" y="855" fill="#10b981" font-size="20">Both report same code</text><rect x="80" y="900" width="940" height="110" rx="12" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="120" y="950" fill="#ffd700" font-size="24" font-weight="bold">7</text><text x="160" y="950" fill="#ffffff" font-size="22">Count segments for 22840-22848</text><text x="160" y="985" fill="#10b981" font-size="20">Pedicle screws by total vertebrae</text></svg>`,
+          caption: "Seven-step spine audit checklist"
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-cpt-surg-1-lesson-9",
+    title: "Burn Treatment",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Burn Coding: TBSA Drives Everything",
+        content: `Burn surgery codes hinge on **TBSA — Total Body Surface Area** affected. CPT divides treatment into four streams: **dressings/local treatment** (16020-16030), **excisional debridement** (11042-11047), **escharotomy** (16035-16036) for life-threatening compartment pressure, and **subsequent reconstruction** with grafts (covered in Lesson 7).
+
+The clinician estimates TBSA using the **Rule of Nines** — a memorized body map that assigns 9% (or multiples) to each region. This drives both **fluid resuscitation** (the Parkland formula) and **CPT code selection**.
+
+**Initial treatment** codes are sized:
+- **16020**: small (less than 5% TBSA)
+- **16025**: medium (5-10% TBSA)
+- **16030**: large (greater than 10% TBSA)
+
+Escharotomy is an emergency: deep circumferential burns form rigid eschar that constricts tissue and cuts off blood flow. The surgeon slices through the eschar to release pressure — often bedside in the ICU.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Burn Coding Streams</text><rect x="60" y="120" width="490" height="200" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="305" y="170" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Local Treatment</text><text x="305" y="215" text-anchor="middle" fill="#ffffff" font-size="20">16020 small &lt; 5%</text><text x="305" y="250" text-anchor="middle" fill="#ffffff" font-size="20">16025 medium 5-10%</text><text x="305" y="285" text-anchor="middle" fill="#ffffff" font-size="20">16030 large &gt; 10%</text><rect x="560" y="120" width="490" height="200" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="805" y="170" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Debridement</text><text x="805" y="215" text-anchor="middle" fill="#ffffff" font-size="20">11042-11047 by depth</text><text x="805" y="250" text-anchor="middle" fill="#ffffff" font-size="20">First 20 sq cm + add-on</text><text x="805" y="285" text-anchor="middle" fill="#ffffff" font-size="20">per additional 20 sq cm</text><rect x="60" y="360" width="490" height="200" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="305" y="410" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Escharotomy</text><text x="305" y="455" text-anchor="middle" fill="#ffffff" font-size="20">16035 initial incision</text><text x="305" y="490" text-anchor="middle" fill="#ffffff" font-size="20">16036 each additional</text><text x="305" y="525" text-anchor="middle" fill="#10b981" font-size="20">Emergency, releases pressure</text><rect x="560" y="360" width="490" height="200" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="805" y="410" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Reconstruction</text><text x="805" y="455" text-anchor="middle" fill="#ffffff" font-size="20">15002-15005 prep</text><text x="805" y="490" text-anchor="middle" fill="#ffffff" font-size="20">15100+ grafts</text><text x="805" y="525" text-anchor="middle" fill="#10b981" font-size="20">Lesson 7 territory</text><rect x="100" y="600" width="900" height="450" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="655" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">TBSA Drives Everything</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="22">TBSA determines:</text><text x="550" y="755" text-anchor="middle" fill="#10b981" font-size="22">Code tier (small/med/large)</text><text x="550" y="800" text-anchor="middle" fill="#10b981" font-size="22">Fluid resuscitation volume</text><text x="550" y="845" text-anchor="middle" fill="#10b981" font-size="22">Burn-center transfer criteria</text><text x="550" y="895" text-anchor="middle" fill="#ffffff" font-size="22">Rule of Nines = the field tool</text><text x="550" y="950" text-anchor="middle" fill="#0ea5e9" font-size="22">Memorize it cold for the CPC exam</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Every burn note will reference TBSA</text></svg>`,
+          caption: "Four burn-code streams converging on TBSA"
+        }
+      },
+      {
+        type: "concept",
+        title: "Rule of Nines and Code Selection",
+        content: `**Rule of Nines (adult)** — memorize this body map:
+- **Head and neck**: 9%
+- **Each upper extremity (arm)**: 9%
+- **Each lower extremity (leg)**: 18%
+- **Anterior trunk**: 18%
+- **Posterior trunk**: 18%
+- **Perineum/genitalia**: 1%
+- **Total**: 100%
+
+Pediatric percentages differ (larger head, smaller legs), but the CPC exam tests the adult chart.
+
+**Initial treatment codes (16020-16030)** reflect local wound care: cleansing, removal of blistered skin, topicals like silver sulfadiazine, and dressing application. They are once-per-day codes.
+
+**Debridement of burns (11042-11047)** is excisional — surgeon takes deeper tissue with a scalpel or dermatome:
+- **11042**: subcutaneous tissue, first 20 sq cm
+- **11045**: add-on, each additional 20 sq cm subcutaneous
+- **11043/11046**: muscle/fascia
+- **11044/11047**: bone
+
+**Escharotomy (16035/16036)**: 16035 covers the first incision; 16036 is the add-on for each additional incision. A single chest burn may need 4 escharotomies = 16035 + 16036 × 3.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Rule of Nines (Adult)</text><ellipse cx="550" cy="160" rx="60" ry="70" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">9%</text><text x="700" y="165" fill="#ffffff" font-size="22">Head + neck</text><rect x="470" y="240" width="160" height="220" rx="10" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="3"/><text x="550" y="320" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Ant trunk</text><text x="550" y="360" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">18%</text><text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="18">Post trunk also 18%</text><rect x="370" y="240" width="80" height="220" rx="10" fill="#f59e0b" opacity="0.4" stroke="#f59e0b" stroke-width="3"/><text x="410" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">9%</text><text x="410" y="370" text-anchor="middle" fill="#ffffff" font-size="16">L arm</text><rect x="650" y="240" width="80" height="220" rx="10" fill="#f59e0b" opacity="0.4" stroke="#f59e0b" stroke-width="3"/><text x="690" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">9%</text><text x="690" y="370" text-anchor="middle" fill="#ffffff" font-size="16">R arm</text><rect x="450" y="480" width="100" height="240" rx="10" fill="#ec4899" opacity="0.4" stroke="#ec4899" stroke-width="3"/><text x="500" y="605" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">18%</text><text x="500" y="635" text-anchor="middle" fill="#ffffff" font-size="16">L leg</text><rect x="550" y="480" width="100" height="240" rx="10" fill="#ec4899" opacity="0.4" stroke="#ec4899" stroke-width="3"/><text x="600" y="605" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">18%</text><text x="600" y="635" text-anchor="middle" fill="#ffffff" font-size="16">R leg</text><circle cx="550" cy="475" r="14" fill="#ffd700"/><text x="600" y="480" fill="#ffd700" font-size="18" font-weight="bold">Perineum 1%</text><rect x="100" y="750" width="900" height="160" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="795" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Code Tiers</text><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="22">16020 &lt; 5% | 16025 5-10% | 16030 &gt; 10%</text><text x="550" y="880" text-anchor="middle" fill="#10b981" font-size="20">Once per day, initial local treatment</text><rect x="100" y="935" width="900" height="135" rx="14" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Debridement 11042-11047</text><text x="550" y="1025" text-anchor="middle" fill="#ffffff" font-size="20">First 20 sq cm + each additional 20</text></svg>`,
+          caption: "Rule of Nines body map with code tiers"
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Chest Burn with Escharotomy",
+        content: `A 45-year-old fire-rescue patient arrives with **deep circumferential third-degree burns to the anterior trunk (18% TBSA)**. He is hypoxic — chest expansion is restricted by rigid eschar.
+
+**Bedside emergency**: surgeon performs **two escharotomies** along the anterior axillary lines and one across the chest.
+- **16035** — Escharotomy, initial incision
+- **16036** × 2 — Each additional incision
+
+**OR follow-up next day**: excisional debridement of full-thickness eschar from anterior chest — 250 sq cm of subcutaneous tissue.
+- **11042** — Debridement subcutaneous, first 20 sq cm
+- **11045** × 12 — Each additional 20 sq cm (12 × 20 = 240, plus the first 20 = 260 sq cm covered)
+
+**Initial local burn treatment** of the remaining surface:
+- **16030** — Initial treatment, large (greater than 10% TBSA)
+
+**Final claim** (day 1 emergency): 16035 + 16036 × 2 + 16030.
+
+**Day 2** debridement: 11042 + 11045 × 12.
+
+Modifier 51 on multiple surgeries; add-on codes are 51-exempt. Documentation must support each unit count and TBSA estimate.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Chest Burn 18% TBSA</text><rect x="100" y="120" width="900" height="220" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="170" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Day 1: Emergency</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="22">16035 = first escharotomy</text><text x="550" y="255" text-anchor="middle" fill="#ffffff" font-size="22">16036 x 2 = two more incisions</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="22">16030 = large TBSA local tx</text><text x="550" y="330" text-anchor="middle" fill="#10b981" font-size="20">Three incisions release pressure</text><rect x="100" y="360" width="900" height="220" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="410" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Day 2: OR Debridement</text><text x="550" y="455" text-anchor="middle" fill="#ffffff" font-size="22">11042 = first 20 sq cm subq</text><text x="550" y="495" text-anchor="middle" fill="#ffffff" font-size="22">11045 x 12 = next 240 sq cm</text><text x="550" y="535" text-anchor="middle" fill="#10b981" font-size="20">Total 260 sq cm debrided</text><rect x="100" y="610" width="900" height="180" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">TBSA Calculation</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="22">Anterior trunk = 18%</text><text x="550" y="745" text-anchor="middle" fill="#10b981" font-size="20">Greater than 10% triggers 16030</text><rect x="200" y="820" width="700" height="250" rx="14" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="875" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Claims Summary</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="22">D1: 16035 + 16036x2 + 16030</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="22">D2: 11042 + 11045x12</text><text x="550" y="1020" text-anchor="middle" fill="#10b981" font-size="20">Add-ons 51-exempt</text><text x="550" y="1055" text-anchor="middle" fill="#0ea5e9" font-size="20">Doc supports every unit</text></svg>`,
+          caption: "Real burn case: escharotomy + debridement coding"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Burn Coding",
+        question: "An adult sustains burns to the entire right arm and anterior trunk. What is the total TBSA, and which initial treatment code applies?",
+        options: [
+          { text: "18% TBSA — 16030 (large, greater than 10%)", correct: false },
+          { text: "27% TBSA — 16030 (large, greater than 10%)", correct: true },
+          { text: "27% TBSA — 16025 (medium, 5-10%)", correct: false },
+          { text: "9% TBSA — 16025 (medium, 5-10%)", correct: false }
+        ],
+        explanation: "Right arm = **9%** + anterior trunk = **18%** = **27% TBSA total**. Because 27% is greater than 10%, the correct initial treatment code is **16030 (large, greater than 10% TBSA)**. 16025 is reserved for 5-10% TBSA burns; 18% alone would already exceed the 16025 cap.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Quiz: TBSA Math</text><rect x="150" y="160" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="22">18% TBSA + 16030</text><text x="550" y="250" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — forgot the arm</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Trunk alone is 18%</text><rect x="150" y="340" width="800" height="160" rx="14" fill="#10b981" opacity="0.35" stroke="#10b981" stroke-width="4"/><text x="550" y="390" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">27% TBSA + 16030</text><text x="550" y="435" text-anchor="middle" fill="#ffffff" font-size="22">CORRECT</text><text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="20">Arm 9% + ant trunk 18% = 27%</text><rect x="150" y="520" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="22">27% + 16025</text><text x="550" y="610" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — 16025 caps at 10%</text><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="20">Wrong tier</text><rect x="150" y="700" width="800" height="160" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="22">9% + 16025</text><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="22">WRONG — only counted arm</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="20">Missed the trunk</text><rect x="200" y="900" width="700" height="160" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="955" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Memory hook</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="22">Add EVERY burned region</text><text x="550" y="1035" text-anchor="middle" fill="#10b981" font-size="20">Total drives the tier</text></svg>`,
+          caption: "TBSA addition determines code tier"
+        }
+      },
+      {
+        type: "application",
+        title: "Burn Coder's Daily Workflow",
+        content: `**Step 1 — Read the burn assessment**. Find the TBSA in the chart (ED note, burn-unit flowsheet, or surgeon's diagram). Verify with Rule of Nines if numbers seem off.
+
+**Step 2 — Pick the treatment tier**. 16020 / 16025 / 16030 based on TBSA percentage. This code is **once per day** for ongoing local care.
+
+**Step 3 — Search for escharotomies**. Look for terms like "released," "decompression incision," or "anterior axillary line." Count incisions: 16035 + 16036 for each additional.
+
+**Step 4 — Identify excisional debridement**. Different from the local treatment codes — 11042-11047 reflects **scalpel removal of devitalized tissue by depth**. Calculate sq cm and apply first-20 + add-on math.
+
+**Step 5 — Look ahead to grafts**. Burn coverage often follows on subsequent days using Lesson 7 codes (15002-15005 prep, 15100+ autografts). These are **separate operative sessions**, separately billed.
+
+**Step 6 — Add modifiers**. 51 for multiple distinct procedures, 58 for staged/related procedures during the global period, 78 for unplanned returns to OR.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Daily Burn Workflow</text><rect x="80" y="120" width="940" height="120" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="120" y="170" fill="#ffd700" font-size="24" font-weight="bold">1</text><text x="160" y="170" fill="#ffffff" font-size="22">Confirm TBSA from chart</text><text x="160" y="210" fill="#10b981" font-size="20">Verify with Rule of Nines</text><rect x="80" y="260" width="940" height="120" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="120" y="310" fill="#ffd700" font-size="24" font-weight="bold">2</text><text x="160" y="310" fill="#ffffff" font-size="22">Pick tier 16020/16025/16030</text><text x="160" y="350" fill="#10b981" font-size="20">Once per day code</text><rect x="80" y="400" width="940" height="120" rx="12" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="120" y="450" fill="#ffd700" font-size="24" font-weight="bold">3</text><text x="160" y="450" fill="#ffffff" font-size="22">Hunt for escharotomies</text><text x="160" y="490" fill="#10b981" font-size="20">16035 + 16036 each addt'l</text><rect x="80" y="540" width="940" height="120" rx="12" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="120" y="590" fill="#ffd700" font-size="24" font-weight="bold">4</text><text x="160" y="590" fill="#ffffff" font-size="22">Excisional debridement 11042-11047</text><text x="160" y="630" fill="#10b981" font-size="20">First 20 + each addt'l 20 sq cm</text><rect x="80" y="680" width="940" height="120" rx="12" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="120" y="730" fill="#ffd700" font-size="24" font-weight="bold">5</text><text x="160" y="730" fill="#ffffff" font-size="22">Plan future graft sessions</text><text x="160" y="770" fill="#10b981" font-size="20">15002-15005, 15100+ separate</text><rect x="80" y="820" width="940" height="120" rx="12" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="870" fill="#ffd700" font-size="24" font-weight="bold">6</text><text x="160" y="870" fill="#ffffff" font-size="22">Modifiers: 51, 58, 78</text><text x="160" y="910" fill="#10b981" font-size="20">Multi-procedure, staged, unplanned</text><rect x="200" y="970" width="700" height="100" rx="12" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="1025" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Every unit must be documented</text></svg>`,
+          caption: "Six-step daily workflow for burn cases"
         }
       }
     ]
