@@ -7340,7 +7340,7 @@ This lesson assembles everything from Lessons 1–11 into a single playbook: **c
             title: 'Investing for Adults: Index Funds, Allocation, Time Horizon',
             author: 'Synthesis Learning',
             description: 'Why index funds beat 90% of active funds, how to think about allocation (stocks/bonds/cash) by horizon, the 4% rule, and target-date funds.',
-            lessons: 9, duration: 135, progress: 0, category: 'personal-finance-track',
+            lessons: 12, duration: 180, progress: 0, category: 'personal-finance-track',
             lessonList: [
 {
     id: "pf-investing-lesson-1",
@@ -8249,6 +8249,351 @@ That's the **entire plan**. Stay the course. Become a millionaire on autopilot.`
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Your One-Page Plan</text><rect x="100" y="110" width="900" height="900" rx="14" fill="#ffffff"/><text x="550" y="170" font-family="Arial" font-size="28" font-weight="bold" fill="#1a1a2e" text-anchor="middle">INVESTMENT POLICY STATEMENT</text><line x1="150" y1="200" x2="950" y2="200" stroke="#888" stroke-width="2"/><text x="160" y="240" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">1. Current Step:</text><text x="400" y="240" font-family="Arial" font-size="22" fill="#1a1a2e">______________</text><text x="160" y="290" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">2. Target Allocation:</text><text x="430" y="290" font-family="Arial" font-size="20" fill="#1a1a2e">___% US</text><text x="600" y="290" font-family="Arial" font-size="20" fill="#1a1a2e">___% Intl</text><text x="780" y="290" font-family="Arial" font-size="20" fill="#1a1a2e">___% Bonds</text><text x="160" y="340" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">3. Three Tickers:</text><text x="160" y="380" font-family="Arial" font-size="20" fill="#1a1a2e">US: VTI / VTSAX</text><text x="160" y="415" font-family="Arial" font-size="20" fill="#1a1a2e">Intl: VXUS / VTIAX</text><text x="160" y="450" font-family="Arial" font-size="20" fill="#1a1a2e">Bonds: BND / VBTLX</text><text x="160" y="500" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">4. Rebalance Date:</text><text x="430" y="500" font-family="Arial" font-size="22" fill="#1a1a2e">January 15</text><text x="160" y="550" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1">5. My Rules:</text><text x="160" y="590" font-family="Arial" font-size="18" fill="#1a1a2e">• Won't sell during downturns</text><text x="160" y="620" font-family="Arial" font-size="18" fill="#1a1a2e">• Won't chase trends</text><text x="160" y="650" font-family="Arial" font-size="18" fill="#1a1a2e">• Raise → raise contributions</text><text x="160" y="680" font-family="Arial" font-size="18" fill="#1a1a2e">• Check quarterly only</text><line x1="150" y1="730" x2="950" y2="730" stroke="#888" stroke-width="2"/><text x="160" y="770" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e">Signed: ____________________</text><text x="160" y="810" font-family="Arial" font-size="22" font-weight="bold" fill="#1a1a2e">Date: ____________________</text><rect x="200" y="860" width="700" height="120" rx="10" fill="#ffd700"/><text x="550" y="910" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">"Stay the course."</text><text x="550" y="950" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle">— John C. Bogle</text></svg>`,
           caption: "One page. Sign it. Follow it. Become a millionaire."
+        }
+      }
+    ]
+  },
+{
+    id: "pf-investing-lesson-10",
+    title: "Real Estate as an Investment",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Paths Into Real Estate",
+        content: `Real estate has built more millionaires than almost any other asset class — but **how** you own it changes everything.
+
+**Path 1: REITs (Real Estate Investment Trusts)** — buy a fund like **Vanguard VNQ** and instantly own slices of hundreds of warehouses, apartments, and cell towers. Liquid, diversified, zero plumbing calls.
+
+**Path 2: Direct rental property** — buy a $300,000 duplex with $60,000 down, rent it for $2,400/month, and deal with tenants, repairs, and vacancies yourself.
+
+Both can work. Both can build wealth. They demand wildly different time, capital, and temperament. This lesson teaches you to honestly assess which (if either) belongs in your plan — and the math rules that separate good deals from money pits.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Two Paths Into Real Estate</text><rect x="80" y="160" width="430" height="820" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="4"/><text x="295" y="230" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">REITs</text><text x="295" y="270" text-anchor="middle" fill="#ffffff" font-size="20">(buy a fund)</text><text x="120" y="340" fill="#10b981" font-size="22">Liquid (sell in seconds)</text><text x="120" y="390" fill="#10b981" font-size="22">$0 minimum (ETF share)</text><text x="120" y="440" fill="#10b981" font-size="22">No tenants, no repairs</text><text x="120" y="490" fill="#10b981" font-size="22">Diversified globally</text><text x="120" y="540" fill="#10b981" font-size="22">Fits in IRA/401(k)</text><text x="120" y="620" fill="#ef4444" font-size="22">No leverage benefit</text><text x="120" y="670" fill="#ef4444" font-size="22">Distributions = ord. inc.</text><text x="120" y="750" fill="#ffd700" font-size="20" font-weight="bold">Best for: hands-off</text><text x="120" y="780" fill="#ffd700" font-size="20" font-weight="bold">investors at any wealth</text><text x="120" y="810" fill="#ffd700" font-size="20" font-weight="bold">level</text><rect x="590" y="160" width="430" height="820" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="805" y="230" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Direct Rentals</text><text x="805" y="270" text-anchor="middle" fill="#ffffff" font-size="20">(buy the building)</text><text x="630" y="340" fill="#10b981" font-size="22">Leverage (5x with 20% dn)</text><text x="630" y="390" fill="#10b981" font-size="22">Depreciation tax shield</text><text x="630" y="440" fill="#10b981" font-size="22">Cash flow + appreciation</text><text x="630" y="490" fill="#10b981" font-size="22">1031 exchanges defer tax</text><text x="630" y="540" fill="#10b981" font-size="22">Control over the asset</text><text x="630" y="620" fill="#ef4444" font-size="22">$40-80k down payment</text><text x="630" y="670" fill="#ef4444" font-size="22">Tenants + repairs + risk</text><text x="630" y="750" fill="#ffd700" font-size="20" font-weight="bold">Best for: hands-on,</text><text x="630" y="780" fill="#ffd700" font-size="20" font-weight="bold">capitalized, local-market</text><text x="630" y="810" fill="#ffd700" font-size="20" font-weight="bold">investors</text><text x="550" y="1050" text-anchor="middle" fill="#888" font-size="22">Same asset class. Wildly different experience.</text></svg>`,
+          caption: "REITs vs direct rentals — same asset class, very different lives."
+        }
+      },
+      {
+        type: "concept",
+        title: "REITs — Real Estate Without the Toilet Calls",
+        content: `A **REIT** is a company that owns income-producing real estate and is legally required to pay out **90% of taxable income** as distributions.
+
+**The easy way in: a REIT ETF.**
+- **Vanguard VNQ** — ~165 US REITs, expense ratio **0.13%**, yields ~3.8%, buy a single share for ~$85.
+- **Schwab SCHH** — similar, **0.07% ER**.
+
+**Inside the basket** are giants like **Prologis** (the world's largest warehouse landlord, leases to Amazon and FedEx) and **American Tower** (owns 220,000+ cell tower sites globally).
+
+**Key tax rule**: REIT distributions are taxed as **ordinary income** (not qualified dividends). At a 24% marginal bracket, that's a real drag — so hold REITs **inside tax-advantaged accounts** (Roth IRA, traditional 401(k)) whenever possible.
+
+A reasonable allocation: **5-10% of your stock sleeve** in a REIT fund. Don't overdo it — your home is already real estate exposure.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">One ETF = Hundreds of Buildings</text><circle cx="550" cy="280" r="120" fill="#6366f1" stroke="#ffd700" stroke-width="5"/><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">VNQ</text><text x="550" y="305" text-anchor="middle" fill="#ffffff" font-size="20">0.13% ER</text><text x="550" y="335" text-anchor="middle" fill="#ffffff" font-size="18">~$85/share</text><line x1="450" y1="370" x2="200" y2="500" stroke="#888" stroke-width="2"/><line x1="500" y1="395" x2="380" y2="540" stroke="#888" stroke-width="2"/><line x1="550" y1="400" x2="550" y2="540" stroke="#888" stroke-width="2"/><line x1="600" y1="395" x2="720" y2="540" stroke="#888" stroke-width="2"/><line x1="650" y1="370" x2="900" y2="500" stroke="#888" stroke-width="2"/><rect x="100" y="500" width="200" height="160" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="200" y="540" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Prologis</text><text x="200" y="575" text-anchor="middle" fill="#ffffff" font-size="18">Warehouses</text><text x="200" y="605" text-anchor="middle" fill="#888" font-size="16">Amazon, FedEx</text><text x="200" y="635" text-anchor="middle" fill="#ffd700" font-size="16">12% of VNQ</text><rect x="320" y="540" width="180" height="140" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="410" y="580" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Equinix</text><text x="410" y="610" text-anchor="middle" fill="#ffffff" font-size="18">Data Centers</text><rect x="520" y="540" width="180" height="140" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="610" y="580" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Welltower</text><text x="610" y="610" text-anchor="middle" fill="#ffffff" font-size="18">Senior housing</text><rect x="720" y="540" width="180" height="140" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="810" y="580" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Am. Tower</text><text x="810" y="610" text-anchor="middle" fill="#ffffff" font-size="18">Cell sites</text><text x="810" y="640" text-anchor="middle" fill="#888" font-size="16">220k towers</text><rect x="920" y="500" width="160" height="160" rx="10" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="1000" y="540" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">+ 161</text><text x="1000" y="580" text-anchor="middle" fill="#ffffff" font-size="18">more REITs</text><rect x="120" y="760" width="860" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="810" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Tax Rule</text><text x="550" y="855" text-anchor="middle" fill="#ffffff" font-size="22">Distributions taxed as ORDINARY INCOME</text><text x="550" y="895" text-anchor="middle" fill="#888" font-size="20">(not qualified dividends)</text><text x="550" y="950" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Hold REITs in IRA / 401(k) when possible</text></svg>`,
+          caption: "VNQ holds 165+ REITs in a single low-cost ticker."
+        }
+      },
+      {
+        type: "example",
+        title: "The 1% Rule and the 50% Rule",
+        content: `If you're considering a direct rental, two back-of-envelope rules save you from bad deals.
+
+**The 1% rule**: monthly rent should be **≥ 1% of purchase price**.
+- $200,000 house → needs **$2,000/month rent** to clear the bar.
+- $400,000 house → needs **$4,000/month**.
+Most coastal cities fail the 1% rule today. Midwest and Sun Belt towns still pass.
+
+**The 50% rule**: assume **50% of gross rent** disappears into expenses (taxes, insurance, repairs, vacancy, property management, capital reserves) — **before** your mortgage payment.
+
+**Worked example — $250,000 duplex**:
+- Down payment (25%): **$62,500**
+- Gross rent: $2,600/month
+- 50% expenses: -$1,300
+- Net operating income: $1,300
+- Mortgage P&I (7%, 30-yr): -$1,165
+- **Cash flow: $135/month** ($1,620/year)
+
+Cash-on-cash return: $1,620 / $62,500 = **2.6%**. That's the floor; appreciation + principal paydown + depreciation lift the true return to 8-12%.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">$250k Duplex — The Math</text><rect x="80" y="120" width="940" height="100" rx="10" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="110" y="160" fill="#ffffff" font-size="22">Purchase price</text><text x="990" y="160" text-anchor="end" fill="#ffd700" font-size="24" font-weight="bold">$250,000</text><text x="110" y="195" fill="#888" font-size="18">Down payment 25%</text><text x="990" y="195" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">$62,500 cash in</text><rect x="80" y="240" width="940" height="60" rx="8" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/><text x="110" y="280" fill="#ffffff" font-size="22">Gross rent (both units)</text><text x="990" y="280" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">+ $2,600/mo</text><rect x="80" y="320" width="940" height="60" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="110" y="360" fill="#ffffff" font-size="20">50% rule expenses (tax, ins, repairs, vac, PM)</text><text x="990" y="360" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">− $1,300/mo</text><rect x="80" y="400" width="940" height="60" rx="8" fill="#1a1a2e" stroke="#ffd700" stroke-width="2"/><text x="110" y="440" fill="#ffd700" font-size="22" font-weight="bold">Net operating income</text><text x="990" y="440" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$1,300/mo</text><rect x="80" y="480" width="940" height="60" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="110" y="520" fill="#ffffff" font-size="20">Mortgage P&amp;I ($187,500 @ 7%, 30-yr)</text><text x="990" y="520" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">− $1,165/mo</text><rect x="80" y="570" width="940" height="80" rx="8" fill="#10b981" stroke="#ffd700" stroke-width="4"/><text x="110" y="620" fill="#ffd700" font-size="26" font-weight="bold">Monthly cash flow</text><text x="990" y="620" text-anchor="end" fill="#ffd700" font-size="30" font-weight="bold">$135</text><rect x="80" y="690" width="940" height="380" rx="15" fill="#1a1a2e" stroke="#6366f1" stroke-width="3"/><text x="550" y="740" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">True Return Stack</text><text x="120" y="790" fill="#10b981" font-size="22">Cash-on-cash</text><text x="980" y="790" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">2.6%</text><text x="120" y="840" fill="#10b981" font-size="22">+ Principal paydown</text><text x="980" y="840" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">~2.5%</text><text x="120" y="890" fill="#10b981" font-size="22">+ Appreciation (3%/yr avg)</text><text x="980" y="890" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">~3.0%</text><text x="120" y="940" fill="#10b981" font-size="22">+ Depreciation tax shield</text><text x="980" y="940" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">~1.5%</text><line x1="120" y1="970" x2="980" y2="970" stroke="#ffd700" stroke-width="2"/><text x="120" y="1020" fill="#ffd700" font-size="26" font-weight="bold">Total real return</text><text x="980" y="1020" text-anchor="end" fill="#ffd700" font-size="30" font-weight="bold">~9.6%</text></svg>`,
+          caption: "Cash flow is just the visible tip — leverage and tax shields do most of the work."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A friend wants to buy a $400,000 rental house. To pass the 1% rule, what's the minimum monthly rent it needs to collect?",
+        options: [
+          { text: "$1,000/month", correct: false },
+          { text: "$2,000/month", correct: false },
+          { text: "$4,000/month", correct: true },
+          { text: "$8,000/month", correct: false }
+        ],
+        explanation: "The 1% rule says monthly rent should be at least 1% of purchase price. 1% of $400,000 = $4,000/month. In most coastal cities, $400k houses rent for far less than that — which is why those markets are tough for cash-flow investors and why the math matters before you sign anything.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">The 1% Rule</text><text x="550" y="160" text-anchor="middle" fill="#ffffff" font-size="28">Monthly rent ≥ 1% of price</text><rect x="150" y="240" width="800" height="160" rx="15" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="4"/><text x="550" y="300" text-anchor="middle" fill="#ffffff" font-size="32">Price: $400,000</text><text x="550" y="360" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">× 1% = $4,000/mo</text><rect x="150" y="450" width="380" height="180" rx="15" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="4"/><text x="340" y="510" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">PASS</text><text x="340" y="555" text-anchor="middle" fill="#ffffff" font-size="22">rent ≥ $4,000</text><text x="340" y="595" text-anchor="middle" fill="#888" font-size="20">cash flow likely</text><rect x="570" y="450" width="380" height="180" rx="15" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="4"/><text x="760" y="510" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">FAIL</text><text x="760" y="555" text-anchor="middle" fill="#ffffff" font-size="22">rent &lt; $4,000</text><text x="760" y="595" text-anchor="middle" fill="#888" font-size="20">expect to bleed</text><rect x="100" y="700" width="900" height="320" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="760" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Quick Sanity Check by Market</text><text x="150" y="820" fill="#ffffff" font-size="22">Indianapolis $200k house, rents $1,800</text><text x="950" y="820" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">0.9% — close</text><text x="150" y="870" fill="#ffffff" font-size="22">Memphis $150k house, rents $1,550</text><text x="950" y="870" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">1.03% — pass</text><text x="150" y="920" fill="#ffffff" font-size="22">San Diego $900k house, rents $4,200</text><text x="950" y="920" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">0.47% — fail</text><text x="150" y="970" fill="#ffffff" font-size="22">Austin $500k house, rents $2,400</text><text x="950" y="970" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">0.48% — fail</text></svg>`,
+          caption: "Geography decides the math before you ever look at a property."
+        }
+      },
+      {
+        type: "application",
+        title: "Decide: REIT, Rental, or Neither?",
+        content: `Run this honest checklist before adding real estate beyond your home.
+
+**Pick REITs (5-10% of stock allocation) if:**
+- You want exposure without operations
+- You have IRA/401(k) space to hold it tax-efficiently
+- You value liquidity (life happens)
+
+**Consider a direct rental if ALL of these are true:**
+- You have **$50k+ cash** beyond a 6-month emergency fund
+- Your local market actually passes the 1% rule (or close)
+- You have 5+ hours/month for landlording — or budget **10% of rent** for a property manager
+- You can stomach a 4-month vacancy with a furnace replacement on top
+- You have a separate full emergency fund for the property
+
+**Skip direct real estate (for now) if:**
+- It would push you below 6 months of personal emergency reserves
+- You'd be buying out of FOMO in a 0.5% rule market
+- You haven't maxed your 401(k) match yet — that's a guaranteed higher return
+
+**Action this week**: open VNQ or SCHH in your Roth IRA with a $100 starter buy. Test-drive REIT exposure before committing six figures to drywall.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Decision Tree: Real Estate</text><rect x="350" y="120" width="400" height="90" rx="15" fill="#6366f1" stroke="#ffd700" stroke-width="3"/><text x="550" y="160" text-anchor="middle" fill="#ffffff" font-size="22">Want real estate exposure?</text><text x="550" y="190" text-anchor="middle" fill="#888" font-size="18">(beyond your home)</text><line x1="550" y1="210" x2="550" y2="260" stroke="#ffd700" stroke-width="3"/><rect x="100" y="280" width="380" height="110" rx="12" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="290" y="320" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">401(k) match maxed?</text><text x="290" y="355" text-anchor="middle" fill="#ffffff" font-size="20">If NO → do that first</text><line x1="290" y1="390" x2="290" y2="440" stroke="#ffd700" stroke-width="3"/><rect x="620" y="280" width="380" height="110" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="810" y="320" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Emergency fund full?</text><text x="810" y="355" text-anchor="middle" fill="#ffffff" font-size="20">If NO → top it up first</text><line x1="810" y1="390" x2="810" y2="440" stroke="#ffd700" stroke-width="3"/><rect x="100" y="460" width="900" height="100" rx="12" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="550" y="500" text-anchor="middle" fill="#ffffff" font-size="22">Both checks pass → continue</text><text x="550" y="535" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Hands-on or hands-off?</text><rect x="60" y="600" width="500" height="380" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="310" y="650" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">HANDS-OFF</text><text x="310" y="685" text-anchor="middle" fill="#ffffff" font-size="20">→ Buy VNQ or SCHH</text><text x="310" y="730" text-anchor="middle" fill="#ffffff" font-size="20">5-10% of stock sleeve</text><text x="310" y="775" text-anchor="middle" fill="#ffffff" font-size="20">Hold in Roth/401(k)</text><text x="310" y="830" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Time required:</text><text x="310" y="865" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">5 minutes</text><text x="310" y="930" text-anchor="middle" fill="#888" font-size="18">Right answer for 95% of</text><text x="310" y="955" text-anchor="middle" fill="#888" font-size="18">working adults</text><rect x="580" y="600" width="460" height="380" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="810" y="650" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">HANDS-ON</text><text x="810" y="690" text-anchor="middle" fill="#ffffff" font-size="20">Need: $50k+ extra cash</text><text x="810" y="725" text-anchor="middle" fill="#ffffff" font-size="20">Need: 1% rule market</text><text x="810" y="760" text-anchor="middle" fill="#ffffff" font-size="20">Need: 5+ hrs/mo</text><text x="810" y="795" text-anchor="middle" fill="#ffffff" font-size="20">Need: separate reserves</text><text x="810" y="850" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Real second job</text><text x="810" y="900" text-anchor="middle" fill="#888" font-size="18">Skip if any "need"</text><text x="810" y="925" text-anchor="middle" fill="#888" font-size="18">is missing — go REIT</text></svg>`,
+          caption: "Most adults should buy VNQ and stop there."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-investing-lesson-11",
+    title: "Alternative Investments — and What to Avoid",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Where the Losses Live",
+        content: `So far we've focused on what works. Now the other side: the products that vacuum money out of new investors fastest.
+
+**Cryptocurrency, options, day trading, single-stock concentration, gold timing** — Wall Street and crypto-Twitter both make these sound like sophisticated wealth-building. The data says otherwise.
+
+- An **IRS / academic study of Robinhood-era day traders** (2020-2022) found roughly **80% lost money** within a year.
+- **Bitcoin fell 75%** in 2022 — then rallied 120% in 2023. Most "investors" sold near the lows.
+- **Enron, Lehman, SVB** employees who held >50% of net worth in employer stock lost almost everything overnight.
+
+This lesson isn't anti-fun. A small **"play money" sleeve (1-5%)** is fine. The rule: **never let speculation become your foundation.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Loser's Hall of Fame</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="22">Common &quot;investments&quot; that destroy wealth</text><rect x="80" y="180" width="940" height="160" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="110" y="225" fill="#ffd700" font-size="26" font-weight="bold">Day trading (Robinhood era)</text><text x="990" y="225" text-anchor="end" fill="#ef4444" font-size="28" font-weight="bold">~80% lose money</text><text x="110" y="265" fill="#ffffff" font-size="20">IRS / academic data 2020-2022</text><text x="110" y="305" fill="#888" font-size="18">Commission-free ≠ cost-free. Spreads, slippage, taxes.</text><rect x="80" y="360" width="940" height="160" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="110" y="405" fill="#ffd700" font-size="26" font-weight="bold">Bitcoin volatility</text><text x="990" y="405" text-anchor="end" fill="#ef4444" font-size="28" font-weight="bold">−75% in 2022</text><text x="110" y="445" fill="#ffffff" font-size="20">Then +120% in 2023. Most retail bought high, sold low.</text><text x="110" y="485" fill="#888" font-size="18">Many altcoins went to literally zero.</text><rect x="80" y="540" width="940" height="160" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="110" y="585" fill="#ffd700" font-size="26" font-weight="bold">Employer stock concentration</text><text x="990" y="585" text-anchor="end" fill="#ef4444" font-size="28" font-weight="bold">100% loss possible</text><text x="110" y="625" fill="#ffffff" font-size="20">Enron, Lehman, SVB — paycheck AND retirement gone</text><text x="110" y="665" fill="#888" font-size="18">Never &gt; 10% of net worth in any single ticker.</text><rect x="80" y="720" width="940" height="160" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="110" y="765" fill="#ffd700" font-size="26" font-weight="bold">Options trading</text><text x="990" y="765" text-anchor="end" fill="#ef4444" font-size="28" font-weight="bold">Zero-sum game</text><text x="110" y="805" fill="#ffffff" font-size="20">Your gain = someone else's loss − fees + market makers</text><text x="110" y="845" fill="#888" font-size="18">Long shots expire worthless 70%+ of the time.</text><rect x="80" y="920" width="940" height="140" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="975" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">The rule</text><text x="550" y="1020" text-anchor="middle" fill="#ffffff" font-size="24">Speculation ≤ 5% of portfolio. Never the foundation.</text></svg>`,
+          caption: "The data is brutal — and remarkably consistent across decades."
+        }
+      },
+      {
+        type: "concept",
+        title: "Crypto, Gold, and the Concentration Trap",
+        content: `**Cryptocurrency** has **no cash flows** and **no underlying asset producing income**. A share of Apple represents a claim on real iPhone profits. A Bitcoin represents... what the next buyer will pay. That's not "wrong," but it's pure **speculation**, not investing.
+
+Reasonable take: if you find it interesting, **1-5% allocation, max** — money you can fully lose without changing your retirement date.
+
+**Gold and commodities** have produced a long-term return that roughly **matches inflation** — ~0-1% real over a century. No compounding because gold doesn't produce earnings. **GLD** is fine as a small sleeve (3-5%) if it helps you sleep, but it won't build wealth.
+
+**Single-stock concentration** is the silent killer. **Apple itself has had four drawdowns of 40%+ in the last 25 years.** Now imagine Apple was 60% of your net worth and you needed money during one of those. **Rule**: no single stock above **10% of net worth**, employer stock included. Tax loss? Often worth taking to diversify.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Three Traps, Three Ceilings</text><rect x="60" y="130" width="320" height="900" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="220" y="190" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">CRYPTO</text><text x="220" y="240" text-anchor="middle" fill="#ffffff" font-size="20">No cash flows</text><text x="220" y="275" text-anchor="middle" fill="#ffffff" font-size="20">No earnings</text><text x="220" y="310" text-anchor="middle" fill="#ffffff" font-size="20">Pure speculation</text><text x="220" y="380" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">-75% drawdowns</text><text x="220" y="415" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">common</text><rect x="100" y="500" width="240" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="220" y="555" text-anchor="middle" fill="#ffd700" font-size="22">Max allocation</text><text x="220" y="620" text-anchor="middle" fill="#ffd700" font-size="60" font-weight="bold">5%</text><text x="220" y="700" text-anchor="middle" fill="#888" font-size="18">Play money only</text><text x="220" y="800" text-anchor="middle" fill="#ffffff" font-size="18">Lose it all = OK</text><text x="220" y="840" text-anchor="middle" fill="#ffffff" font-size="18">Don't margin it</text><text x="220" y="880" text-anchor="middle" fill="#ffffff" font-size="18">Don't leverage it</text><text x="220" y="930" text-anchor="middle" fill="#888" font-size="18">Vehicle: IBIT, BTC</text><text x="220" y="965" text-anchor="middle" fill="#888" font-size="18">via brokerage</text><rect x="390" y="130" width="320" height="900" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="190" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">GOLD</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="20">Matches inflation</text><text x="550" y="275" text-anchor="middle" fill="#ffffff" font-size="20">No compounding</text><text x="550" y="310" text-anchor="middle" fill="#ffffff" font-size="20">Real return ~0-1%</text><text x="550" y="380" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Stocks have done</text><text x="550" y="415" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">~7% real instead</text><rect x="430" y="500" width="240" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="555" text-anchor="middle" fill="#ffd700" font-size="22">Max allocation</text><text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="60" font-weight="bold">5%</text><text x="550" y="700" text-anchor="middle" fill="#888" font-size="18">Sleep aid</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="18">If it helps you</text><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="18">stay invested,</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="18">fine. Otherwise</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="18">skip.</text><text x="550" y="975" text-anchor="middle" fill="#888" font-size="18">Vehicle: GLD, IAU</text><rect x="720" y="130" width="320" height="900" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="880" y="190" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">SINGLE STOCK</text><text x="880" y="240" text-anchor="middle" fill="#ffffff" font-size="20">(incl. employer)</text><text x="880" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Apple itself:</text><text x="880" y="325" text-anchor="middle" fill="#ffffff" font-size="20">4× drops of 40%+</text><text x="880" y="395" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Enron, SVB:</text><text x="880" y="430" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">100% loss</text><rect x="760" y="500" width="240" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="880" y="555" text-anchor="middle" fill="#ffd700" font-size="22">Max allocation</text><text x="880" y="620" text-anchor="middle" fill="#ffd700" font-size="60" font-weight="bold">10%</text><text x="880" y="700" text-anchor="middle" fill="#888" font-size="18">Of net worth</text><text x="880" y="800" text-anchor="middle" fill="#ffffff" font-size="18">RSU grants?</text><text x="880" y="840" text-anchor="middle" fill="#ffffff" font-size="18">Sell on vest</text><text x="880" y="880" text-anchor="middle" fill="#ffffff" font-size="18">Diversify into VTI</text><text x="880" y="940" text-anchor="middle" fill="#888" font-size="18">Pay the tax.</text><text x="880" y="975" text-anchor="middle" fill="#888" font-size="18">Sleep at night.</text></svg>`,
+          caption: "Each speculation has a ceiling — and the foundation is still index funds."
+        }
+      },
+      {
+        type: "example",
+        title: "The Robinhood Day Trader Reality",
+        content: `Multiple academic studies of brokerage data 2019-2022 found similar results. Let's walk through why.
+
+**Setup**: Alex hears about a stock pump on TikTok. Trades $5,000 in and out of a meme stock daily. "Commissions are free."
+
+**Hidden costs per round-trip**:
+- **Bid-ask spread** on a $20 small-cap: typically $0.05 = 0.25%
+- **Payment for order flow** (slight worse fills): ~0.05%
+- **Slippage** on bigger orders: 0.1-0.3%
+- **Short-term capital gains tax** (if profitable): up to **37% federal**
+
+If Alex trades **100 round-trips per year** at 0.5% friction each: that's **50% of capital** gone to costs before strategy even shows up. The market would need to give him a **52%+ raw return** just to match buy-and-hold.
+
+**Compare**: same $5,000 in VTI for 30 years at 7% real = **$38,000**. No effort. No taxes until withdrawal. No anxiety. The "boring" path quietly wins by 10× or more.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Why &quot;Free&quot; Trading Isn't</text><rect x="80" y="120" width="940" height="100" rx="12" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="550" y="165" text-anchor="middle" fill="#ffffff" font-size="22">Alex: $5,000 capital, 100 round-trips/yr</text><text x="550" y="200" text-anchor="middle" fill="#888" font-size="20">&quot;commission-free&quot; broker</text><text x="550" y="265" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Hidden cost per round trip</text><rect x="80" y="290" width="940" height="60" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="110" y="330" fill="#ffffff" font-size="22">Bid-ask spread</text><text x="990" y="330" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">0.25%</text><rect x="80" y="360" width="940" height="60" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="110" y="400" fill="#ffffff" font-size="22">Payment for order flow</text><text x="990" y="400" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">0.05%</text><rect x="80" y="430" width="940" height="60" rx="8" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="110" y="470" fill="#ffffff" font-size="22">Slippage on entry/exit</text><text x="990" y="470" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">0.20%</text><rect x="80" y="500" width="940" height="80" rx="8" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="110" y="550" fill="#ffd700" font-size="24" font-weight="bold">Per-trade friction</text><text x="990" y="550" text-anchor="end" fill="#ffd700" font-size="26" font-weight="bold">0.50%</text><rect x="80" y="610" width="940" height="100" rx="12" fill="#ef4444" opacity="0.4" stroke="#ef4444" stroke-width="3"/><text x="110" y="660" fill="#ffd700" font-size="24" font-weight="bold">× 100 trades/yr</text><text x="990" y="660" text-anchor="end" fill="#ef4444" font-size="32" font-weight="bold">= 50%/yr drag</text><text x="110" y="695" fill="#ffffff" font-size="20">Market must return 52% just to break even</text><line x1="80" y1="740" x2="1020" y2="740" stroke="#ffd700" stroke-width="2"/><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">30-year outcome on $5,000</text><rect x="80" y="820" width="450" height="220" rx="12" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="305" y="870" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Day trading</text><text x="305" y="930" text-anchor="middle" fill="#ef4444" font-size="36" font-weight="bold">~$0 - $2,000</text><text x="305" y="980" text-anchor="middle" fill="#ffffff" font-size="20">80% probability lose</text><text x="305" y="1015" text-anchor="middle" fill="#888" font-size="18">+ 1000 hrs of stress</text><rect x="570" y="820" width="450" height="220" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="795" y="870" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">VTI buy-and-hold</text><text x="795" y="930" text-anchor="middle" fill="#10b981" font-size="36" font-weight="bold">~$38,000</text><text x="795" y="980" text-anchor="middle" fill="#ffffff" font-size="20">7% real / 30 yrs</text><text x="795" y="1015" text-anchor="middle" fill="#888" font-size="18">+ 0 hrs of stress</text></svg>`,
+          caption: "Trading friction is a 50%/yr headwind. Index funds simply don't have one."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "Your company gave you RSUs that have vested and are now worth $180,000 — about 35% of your $510,000 net worth. What's the textbook move?",
+        options: [
+          { text: "Hold all of it — the company has been a great performer and you believe in management.", correct: false },
+          { text: "Sell enough to bring employer stock to ≤10% of net worth and reinvest in a diversified index fund.", correct: true },
+          { text: "Sell everything immediately regardless of taxes — concentration is always wrong.", correct: false },
+          { text: "Borrow against the shares with a margin loan to keep upside while &quot;diversifying&quot;.", correct: false }
+        ],
+        explanation: "The 10% rule says no single stock — especially employer stock, where your paycheck is already tied to the same company — should exceed 10% of net worth. 10% of $510k = $51k. You'd sell roughly $129,000 of RSUs (paying capital gains tax on the gain) and roll the proceeds into VTI/VXUS. Holding all of it (Enron-style) risks paycheck and portfolio together. Selling 100% may overpay tax with no benefit. Margin loans add risk on top of risk.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The 10% Concentration Rule</text><text x="550" y="160" text-anchor="middle" fill="#ffffff" font-size="26">Net worth: $510,000</text><rect x="100" y="220" width="900" height="100" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="130" y="265" fill="#ffffff" font-size="24">Employer stock: $180,000</text><text x="970" y="265" text-anchor="end" fill="#ef4444" font-size="24" font-weight="bold">35% — TOO HIGH</text><text x="130" y="300" fill="#888" font-size="20">If company tanks, paycheck + portfolio both hit</text><rect x="100" y="360" width="900" height="100" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="130" y="405" fill="#ffffff" font-size="24">Target: 10% × $510k =</text><text x="970" y="405" text-anchor="end" fill="#10b981" font-size="24" font-weight="bold">$51,000</text><text x="130" y="440" fill="#888" font-size="20">Sell ~$129,000 of RSUs, pay cap gains</text><rect x="100" y="500" width="900" height="100" rx="12" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="130" y="545" fill="#ffffff" font-size="24">Reinvest proceeds in</text><text x="970" y="545" text-anchor="end" fill="#6366f1" font-size="24" font-weight="bold">VTI + VXUS</text><text x="130" y="580" fill="#888" font-size="20">~12,000 companies instantly</text><rect x="100" y="660" width="900" height="380" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="720" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Why this rule exists</text><text x="150" y="780" fill="#ffffff" font-size="22">Enron 2001</text><text x="950" y="780" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">$60 → $0.26 in months</text><text x="150" y="830" fill="#ffffff" font-size="22">Lehman 2008</text><text x="950" y="830" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">100% loss in weeks</text><text x="150" y="880" fill="#ffffff" font-size="22">SVB 2023</text><text x="950" y="880" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">100% loss in 48 hours</text><text x="150" y="930" fill="#ffffff" font-size="22">Meta 2022 (single year)</text><text x="950" y="930" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">−65% drawdown</text><text x="550" y="1000" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">No company is too big to fall hard.</text></svg>`,
+          caption: "Concentration risk is the easiest to fix — and the most ignored."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Speculation Sleeve (or Skip It)",
+        content: `If you're going to dabble, do it on purpose with **explicit guardrails**.
+
+**The "Play Money" sleeve rules:**
+1. **Hard cap**: ≤ **5% of total investable assets**.
+2. **Walled off**: separate account at the same broker (Fidelity / Schwab let you nickname accounts). Out of sight from your real portfolio.
+3. **No margin, no options at first**. If you graduate to options, only **cash-secured puts** or **covered calls** on stocks you already want to own.
+4. **Tax-aware**: speculation belongs in a **taxable account**, not Roth — you want losses to be deductible.
+5. **Annual reset**: if it's grown beyond 5%, **trim back** to 5% and move the rest to VTI. Lock in gains.
+6. **Public scoreboard**: track your real annualized return vs. VTI for 3 years. Most people quit at year 2.
+
+**Action this week**:
+- If you don't have a speculation account → great, keep it that way.
+- If you do → calculate its **% of net worth right now** and trim anything above 5%. Today.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">The Play Money Sleeve</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Maximum 5% of investable assets</text><circle cx="550" cy="500" r="280" fill="none" stroke="#6366f1" stroke-width="6"/><path d="M 550 220 A 280 280 0 1 1 535 220" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="4"/><path d="M 550 220 A 280 280 0 0 1 565 220" fill="#ef4444" opacity="0.5" stroke="#ffd700" stroke-width="4"/><text x="550" y="490" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">95%</text><text x="550" y="530" text-anchor="middle" fill="#ffffff" font-size="22">Boring Foundation</text><text x="550" y="560" text-anchor="middle" fill="#888" font-size="20">VTI / VXUS / BND</text><text x="850" y="280" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">5% MAX</text><text x="850" y="310" text-anchor="middle" fill="#ffffff" font-size="20">Play money</text><line x1="700" y1="300" x2="760" y2="290" stroke="#ffd700" stroke-width="2"/><rect x="80" y="820" width="940" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Guardrails (non-negotiable)</text><text x="110" y="920" fill="#10b981" font-size="20">1. Separate account, nicknamed &quot;Play&quot;</text><text x="110" y="955" fill="#10b981" font-size="20">2. No margin, no naked options</text><text x="110" y="990" fill="#10b981" font-size="20">3. Taxable account (losses deductible)</text><text x="600" y="920" fill="#10b981" font-size="20">4. Annual trim back to 5%</text><text x="600" y="955" fill="#10b981" font-size="20">5. Track vs. VTI — be honest</text><text x="600" y="990" fill="#10b981" font-size="20">6. Quit if 3-yr return &lt; VTI</text><text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Best option: don't open the account at all.</text></svg>`,
+          caption: "Fence off speculation. Don't let it touch the foundation."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-investing-lesson-12",
+    title: "Capstone: Build Your Investment Plan from Scratch",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Meet Sarah, Age 28",
+        content: `Time to put every previous lesson to work. We'll build a complete plan for a realistic person — most of you will see yourself somewhere in her numbers.
+
+**The patient:**
+- **Sarah**, age 28, single, lives in Columbus
+- **Salary**: $85,000 (gets paid biweekly)
+- **Checking account**: $20,000 cash sitting idle
+- **Credit card debt**: $10,000 at **22% APR** (Visa)
+- **Retirement accounts**: $0
+- **Employer**: matches **100% of first 5%** of 401(k) contributions
+- **Monthly fixed expenses**: ~$4,200
+
+She has good income, no plan, and is **bleeding $2,200/year in credit card interest** while $20,000 sits in checking earning 0.01%.
+
+We'll walk through six steps — in **strict priority order**. The order matters more than any individual product choice.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Sarah's Starting Point</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Age 28 · Columbus · single</text><rect x="80" y="170" width="940" height="100" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="110" y="215" fill="#ffffff" font-size="24">Salary (biweekly)</text><text x="990" y="215" text-anchor="end" fill="#10b981" font-size="26" font-weight="bold">$85,000/yr</text><text x="110" y="250" fill="#888" font-size="20">After taxes: ~$5,200/mo take-home</text><rect x="80" y="290" width="940" height="100" rx="12" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="110" y="335" fill="#ffffff" font-size="24">Checking balance</text><text x="990" y="335" text-anchor="end" fill="#6366f1" font-size="26" font-weight="bold">$20,000</text><text x="110" y="370" fill="#888" font-size="20">Earning ~0.01% APY — wasted</text><rect x="80" y="410" width="940" height="100" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="110" y="455" fill="#ffffff" font-size="24">Credit card debt</text><text x="990" y="455" text-anchor="end" fill="#ef4444" font-size="26" font-weight="bold">$10,000 @ 22%</text><text x="110" y="490" fill="#888" font-size="20">Costs $2,200/year in interest alone</text><rect x="80" y="530" width="940" height="100" rx="12" fill="#888" opacity="0.25" stroke="#888" stroke-width="3"/><text x="110" y="575" fill="#ffffff" font-size="24">Retirement accounts</text><text x="990" y="575" text-anchor="end" fill="#ef4444" font-size="26" font-weight="bold">$0</text><text x="110" y="610" fill="#888" font-size="20">Not yet enrolled in 401(k)</text><rect x="80" y="650" width="940" height="100" rx="12" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="3"/><text x="110" y="695" fill="#ffffff" font-size="24">Employer 401(k) match</text><text x="990" y="695" text-anchor="end" fill="#ffd700" font-size="26" font-weight="bold">100% of first 5%</text><text x="110" y="730" fill="#888" font-size="20">Worth $4,250/yr — currently leaving on the table</text><rect x="80" y="790" width="940" height="240" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The Plan: 6 steps, in strict order</text><text x="550" y="905" text-anchor="middle" fill="#ffffff" font-size="22">Pay off cards → fund EF → grab match → Roth IRA →</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="22">3-fund portfolio → automate everything</text><text x="550" y="1000" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Order matters more than products.</text></svg>`,
+          caption: "Same numbers many of you have. Different outcome starts now."
+        }
+      },
+      {
+        type: "concept",
+        title: "The 6-Step Priority Stack",
+        content: `**Step 1 — Kill the credit card (this week).** 22% APR is a **guaranteed 22% return** by paying it off — better than any stock. Take **$10,000 of the $20k** checking → pay the card in full.
+
+**Step 2 — Starter emergency fund ($10k now, $25k goal).** Move the **remaining $10k to a HYSA** (Ally Bank, ~4.5% APY = $450/yr). Plan: save $1,250/month for 12 months to reach $25k (~5 months of expenses).
+
+**Step 3 — Capture the 401(k) match.** Contribute **5% of $85k = $4,250/yr (~$163/paycheck)**. Employer adds **another $4,250**. That's a **100% return** on every match dollar — instantly.
+
+**Step 4 — Open a Roth IRA at Fidelity/Vanguard.** Auto-contribute **$583/month = $7,000/yr** (the 2026 max).
+
+**Step 5 — Buy the 3-fund portfolio in both accounts.** Age 28, decades to retirement: **60% VTI / 25% VXUS / 15% BND**.
+
+**Step 6 — Automate everything** on payday so no decisions are required.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The Priority Stack</text><rect x="80" y="110" width="940" height="130" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="120" y="155" fill="#ffd700" font-size="26" font-weight="bold">1. Kill credit card</text><text x="120" y="195" fill="#ffffff" font-size="22">Use $10k of checking → pay 22% card to zero</text><text x="990" y="195" text-anchor="end" fill="#ef4444" font-size="22" font-weight="bold">+22%/yr return</text><text x="120" y="225" fill="#888" font-size="18">Beats any investment, guaranteed</text><rect x="80" y="255" width="940" height="130" rx="12" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="120" y="300" fill="#ffd700" font-size="26" font-weight="bold">2. Emergency fund</text><text x="120" y="340" fill="#ffffff" font-size="22">$10k to Ally HYSA now → build to $25k in 12 mo</text><text x="990" y="340" text-anchor="end" fill="#6366f1" font-size="22" font-weight="bold">4.5% APY</text><text x="120" y="370" fill="#888" font-size="18">~5 months of expenses cushion</text><rect x="80" y="400" width="940" height="130" rx="12" fill="#ffd700" opacity="0.3" stroke="#ffd700" stroke-width="3"/><text x="120" y="445" fill="#1a1a2e" font-size="26" font-weight="bold">3. Capture 401(k) match</text><text x="120" y="485" fill="#ffffff" font-size="22">Contribute 5% ($4,250) → employer adds $4,250</text><text x="990" y="485" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">+100% return</text><text x="120" y="515" fill="#888" font-size="18">Free money. Never skip.</text><rect x="80" y="545" width="940" height="130" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="120" y="590" fill="#ffd700" font-size="26" font-weight="bold">4. Open Roth IRA</text><text x="120" y="630" fill="#ffffff" font-size="22">Fidelity or Vanguard → $583/mo = $7k/yr (2026 max)</text><text x="990" y="630" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">Tax-free forever</text><text x="120" y="660" fill="#888" font-size="18">Decades of tax-free growth ahead</text><rect x="80" y="690" width="940" height="130" rx="12" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="735" fill="#ffd700" font-size="26" font-weight="bold">5. 3-fund portfolio</text><text x="120" y="775" fill="#ffffff" font-size="22">60% VTI · 25% VXUS · 15% BND</text><text x="990" y="775" text-anchor="end" fill="#8b5cf6" font-size="22" font-weight="bold">~12,000 cos</text><text x="120" y="805" fill="#888" font-size="18">Inside both 401(k) and Roth</text><rect x="80" y="835" width="940" height="130" rx="12" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="880" fill="#ffd700" font-size="26" font-weight="bold">6. Automate</text><text x="120" y="920" fill="#ffffff" font-size="22">Transfers on payday → 401(k), Roth, HYSA</text><text x="990" y="920" text-anchor="end" fill="#0ea5e9" font-size="22" font-weight="bold">0 decisions</text><text x="120" y="950" fill="#888" font-size="18">Removes willpower from the equation</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Order &gt; optimization. Run the stack top-to-bottom.</text></svg>`,
+          caption: "Same six steps. Same order. Decades of difference."
+        }
+      },
+      {
+        type: "example",
+        title: "Sarah's 40-Year Projection",
+        content: `Let's run the numbers assuming Sarah holds the plan and earns **7% real return** (historical US stock + bond blend, after inflation).
+
+**Annual contributions starting age 28:**
+- Sarah's 401(k): $4,250 (her 5%)
+- Employer match: $4,250
+- Roth IRA: $7,000
+- **Total invested per year: $15,500**
+
+**Compounding to age 65 (37 years):**
+
+| Year | Balance |
+|---|---|
+| 10 (age 38) | ~$220,000 |
+| 20 (age 48) | ~$655,000 |
+| 30 (age 58) | ~$1.55M |
+| 37 (age 65) | **~$2.7M** |
+
+If she **bumps contributions 3%/yr** with raises (which she should), she crosses **$3.5M**. The plan generates roughly **$140,000/yr in retirement income** at a 4% withdrawal rate.
+
+**Compare**: if Sarah delays 10 years (starts at 38), the same plan finishes at about **$1.3M** — less than half. The lesson of compounding from Lesson 1 isn't theoretical. It's the entire game.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Sarah's 37-Year Trajectory</text><text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">$15,500/yr · 7% real return</text><rect x="80" y="140" width="940" height="640" rx="15" fill="#1a1a2e" stroke="#888" stroke-width="2"/><line x1="120" y1="740" x2="980" y2="740" stroke="#888" stroke-width="2"/><line x1="120" y1="180" x2="120" y2="740" stroke="#888" stroke-width="2"/><text x="120" y="770" text-anchor="middle" fill="#888" font-size="18">28</text><text x="335" y="770" text-anchor="middle" fill="#888" font-size="18">38</text><text x="550" y="770" text-anchor="middle" fill="#888" font-size="18">48</text><text x="765" y="770" text-anchor="middle" fill="#888" font-size="18">58</text><text x="980" y="770" text-anchor="middle" fill="#888" font-size="18">65</text><text x="100" y="745" text-anchor="end" fill="#888" font-size="16">$0</text><text x="100" y="615" text-anchor="end" fill="#888" font-size="16">$500k</text><text x="100" y="485" text-anchor="end" fill="#888" font-size="16">$1M</text><text x="100" y="355" text-anchor="end" fill="#888" font-size="16">$2M</text><text x="100" y="225" text-anchor="end" fill="#888" font-size="16">$3M</text><path d="M 120 740 Q 250 735 335 690 Q 470 600 550 470 Q 690 280 765 200 L 980 165" fill="none" stroke="#10b981" stroke-width="5"/><circle cx="120" cy="740" r="8" fill="#ffd700"/><circle cx="335" cy="685" r="8" fill="#ffd700"/><circle cx="550" cy="555" r="8" fill="#ffd700"/><circle cx="765" cy="300" r="8" fill="#ffd700"/><circle cx="980" cy="165" r="10" fill="#ffd700"/><text x="335" y="665" text-anchor="middle" fill="#ffd700" font-size="18">$220k</text><text x="550" y="535" text-anchor="middle" fill="#ffd700" font-size="18">$655k</text><text x="765" y="280" text-anchor="middle" fill="#ffd700" font-size="18">$1.55M</text><text x="930" y="155" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">$2.7M</text><rect x="80" y="810" width="450" height="220" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="305" y="855" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Start at 28</text><text x="305" y="920" text-anchor="middle" fill="#10b981" font-size="42" font-weight="bold">~$2.7M</text><text x="305" y="975" text-anchor="middle" fill="#ffffff" font-size="20">$108k/yr retirement</text><text x="305" y="1005" text-anchor="middle" fill="#888" font-size="18">(4% withdrawal)</text><rect x="570" y="810" width="450" height="220" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="795" y="855" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Start at 38</text><text x="795" y="920" text-anchor="middle" fill="#ef4444" font-size="42" font-weight="bold">~$1.3M</text><text x="795" y="975" text-anchor="middle" fill="#ffffff" font-size="20">$52k/yr retirement</text><text x="795" y="1005" text-anchor="middle" fill="#888" font-size="18">Same monthly savings</text></svg>`,
+          caption: "Ten years' delay costs $1.4 million. Time is the active ingredient."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "Sarah's friend says, &quot;Skip the credit card payoff — invest the $10k in VTI instead, the market returns 10%.&quot; Why is this wrong?",
+        options: [
+          { text: "VTI doesn't actually return 10%.", correct: false },
+          { text: "The 22% guaranteed APR on the card beats any expected stock return, and stocks aren't guaranteed.", correct: true },
+          { text: "Credit card debt is technically tax-deductible.", correct: false },
+          { text: "Investing always wins, but only inside a Roth IRA.", correct: false }
+        ],
+        explanation: "Paying off a 22% APR card is a guaranteed 22% return — risk-free, tax-free, certain. Stocks historically return ~10% nominal (~7% after inflation) on average but with -30% downside years sprinkled in. No rational investor pays guaranteed 22% interest to chase an uncertain ~10%. Always clear high-rate debt before investing.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">22% Beats 10%, Always</text><rect x="80" y="160" width="450" height="500" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="4"/><text x="305" y="220" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Pay off card</text><text x="305" y="320" text-anchor="middle" fill="#10b981" font-size="64" font-weight="bold">+22%</text><text x="305" y="380" text-anchor="middle" fill="#ffffff" font-size="22">GUARANTEED</text><text x="305" y="430" text-anchor="middle" fill="#ffffff" font-size="20">Risk-free</text><text x="305" y="465" text-anchor="middle" fill="#ffffff" font-size="20">Tax-free</text><text x="305" y="500" text-anchor="middle" fill="#ffffff" font-size="20">Day 1 result</text><text x="305" y="580" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Saves $2,200/yr</text><text x="305" y="615" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">forever after</text><rect x="570" y="160" width="450" height="500" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="795" y="220" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Invest $10k instead</text><text x="795" y="320" text-anchor="middle" fill="#ef4444" font-size="64" font-weight="bold">~10%</text><text x="795" y="380" text-anchor="middle" fill="#ffffff" font-size="22">EXPECTED avg</text><text x="795" y="430" text-anchor="middle" fill="#ffffff" font-size="20">Can be −30%</text><text x="795" y="465" text-anchor="middle" fill="#ffffff" font-size="20">Taxable gains</text><text x="795" y="500" text-anchor="middle" fill="#ffffff" font-size="20">Card still bleeds 22%</text><text x="795" y="580" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Net: ~−12%/yr</text><text x="795" y="615" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">in expected return</text><rect x="80" y="720" width="940" height="320" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="3"/><text x="550" y="775" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The hierarchy of returns</text><text x="150" y="830" fill="#10b981" font-size="22">Pay 22% card</text><text x="950" y="830" text-anchor="end" fill="#10b981" font-size="22" font-weight="bold">+22% guaranteed</text><text x="150" y="870" fill="#ffd700" font-size="22">Get 100% 401(k) match</text><text x="950" y="870" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">+100% on match $</text><text x="150" y="910" fill="#6366f1" font-size="22">Roth IRA (tax-free growth)</text><text x="950" y="910" text-anchor="end" fill="#6366f1" font-size="22" font-weight="bold">~7% real</text><text x="150" y="950" fill="#888" font-size="22">Taxable VTI</text><text x="950" y="950" text-anchor="end" fill="#888" font-size="22" font-weight="bold">~7% real, taxed</text><text x="550" y="1010" text-anchor="middle" fill="#ffffff" font-size="22">Always take the higher rung first.</text></svg>`,
+          caption: "Sort returns by certainty. Pay the worst debts first."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Capstone Action Plan — This Week",
+        content: `Drop Sarah's name. **Substitute yourself.** Here's the exact 7-day plan.
+
+**Day 1 (today):**
+- Open your bank app. Pay any credit cards charging **>10% APR** down as far as cash above your 1-month buffer allows.
+
+**Day 2:**
+- Open a **HYSA at Ally or Marcus** (4.5% APY). Move your emergency fund target amount there. Name the account "Emergency — Do Not Touch."
+
+**Day 3:**
+- Log into your work benefits portal. Set 401(k) contribution to **at least the full employer match percentage**. Pick the **target-date fund closest to your retirement year** if you don't want to think (it's fine).
+
+**Day 4:**
+- Open a **Roth IRA at Fidelity or Vanguard**. 15 minutes online.
+
+**Day 5:**
+- Set up **automatic monthly transfers**: HYSA + Roth IRA on payday.
+
+**Day 6:**
+- Inside the Roth, **place buy orders**: 60% VTI, 25% VXUS, 15% BND (or pick a target-date Roth fund).
+
+**Day 7:**
+- Write your **Investment Policy Statement** (one paragraph). Tape it to the wall. Re-read every market crash. **You are now an investor.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Your 7-Day Launch</text><rect x="80" y="120" width="940" height="100" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="120" y="165" fill="#ffd700" font-size="24" font-weight="bold">Day 1 · Bank app</text><text x="120" y="200" fill="#ffffff" font-size="20">Pay down credit cards &gt; 10% APR — use cash above 1mo buffer</text><rect x="80" y="240" width="940" height="100" rx="12" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="120" y="285" fill="#ffd700" font-size="24" font-weight="bold">Day 2 · HYSA</text><text x="120" y="320" fill="#ffffff" font-size="20">Open Ally / Marcus · move EF · 4.5% APY · &quot;Do Not Touch&quot;</text><rect x="80" y="360" width="940" height="100" rx="12" fill="#ffd700" opacity="0.3" stroke="#ffd700" stroke-width="3"/><text x="120" y="405" fill="#ffd700" font-size="24" font-weight="bold">Day 3 · 401(k)</text><text x="120" y="440" fill="#ffffff" font-size="20">Bump to ≥ full match · pick target-date fund if unsure</text><rect x="80" y="480" width="940" height="100" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="120" y="525" fill="#ffd700" font-size="24" font-weight="bold">Day 4 · Roth IRA</text><text x="120" y="560" fill="#ffffff" font-size="20">Open at Fidelity / Vanguard · 15 minutes online</text><rect x="80" y="600" width="940" height="100" rx="12" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="645" fill="#ffd700" font-size="24" font-weight="bold">Day 5 · Automate</text><text x="120" y="680" fill="#ffffff" font-size="20">Auto-transfers on payday → HYSA + Roth IRA</text><rect x="80" y="720" width="940" height="100" rx="12" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="765" fill="#ffd700" font-size="24" font-weight="bold">Day 6 · Buy the funds</text><text x="120" y="800" fill="#ffffff" font-size="20">60% VTI · 25% VXUS · 15% BND in Roth</text><rect x="80" y="840" width="940" height="100" rx="12" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="3"/><text x="120" y="885" fill="#ffd700" font-size="24" font-weight="bold">Day 7 · Write your IPS</text><text x="120" y="920" fill="#ffffff" font-size="20">One paragraph. Tape to wall. Re-read every crash.</text><rect x="80" y="970" width="940" height="100" rx="15" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="550" y="1015" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">By Day 8: you are an investor</text><text x="550" y="1050" text-anchor="middle" fill="#10b981" font-size="22">Future you will be very grateful.</text></svg>`,
+          caption: "One week. Everything in place. Compounding does the rest."
         }
       }
     ]
