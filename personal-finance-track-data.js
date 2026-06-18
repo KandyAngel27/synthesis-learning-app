@@ -5136,8 +5136,386 @@ Bank any tax refund. Bank any bonus. Bank found money. Set **quarterly review** 
             title: 'Tax Basics: Filing, Brackets, and Common Deductions',
             author: 'Synthesis Learning',
             description: 'How marginal brackets actually work, the standard deduction vs. itemizing, the credits people miss, and when to hire a CPA.',
-            lessons: 1, duration: 5, progress: 0, category: 'personal-finance-track',
-            lessonList: comingSoonLessons('marginal vs effective tax rates, the standard deduction vs itemizing, commonly-missed credits, and when to hire a CPA'),
+            lessons: 3, duration: 45, progress: 0, category: 'personal-finance-track',
+            lessonList: [
+{
+    id: "pf-taxes-lesson-1",
+    title: "Marginal vs Effective Tax Rates",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Biggest Tax Myth",
+        content: `**"I got a raise and now I take home LESS!"** This is almost always **false** — and understanding why unlocks how the U.S. tax system actually works.
+
+The IRS uses a **progressive bracket system**: your income is sliced into chunks, and each chunk is taxed at its own rate. You do **NOT** pay your top bracket's rate on every dollar you earn.
+
+Two numbers matter:
+- **Marginal rate** — the tax on your *next* dollar earned. Drives decisions (Roth vs Traditional 401k, side hustle worth it?).
+- **Effective rate** — your *total* tax divided by *total* income. The percentage you actually paid.
+
+A single filer earning **$100,000** in 2026 sits in the **22% bracket** — but their effective rate is closer to **15%**. Same person, two very different numbers. Let's see why.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Two Rates, One Paycheck</text><rect x="100" y="180" width="400" height="280" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">MARGINAL</text><text x="300" y="290" text-anchor="middle" fill="#ffd700" font-size="56" font-weight="bold">22%</text><text x="300" y="340" text-anchor="middle" fill="#ffffff" font-size="20">Rate on your</text><text x="300" y="368" text-anchor="middle" fill="#ffffff" font-size="20">next dollar earned</text><text x="300" y="420" text-anchor="middle" fill="#888" font-size="18">Drives decisions</text><rect x="600" y="180" width="400" height="280" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="800" y="240" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">EFFECTIVE</text><text x="800" y="290" text-anchor="middle" fill="#10b981" font-size="56" font-weight="bold">~15%</text><text x="800" y="340" text-anchor="middle" fill="#ffffff" font-size="20">Total tax ÷</text><text x="800" y="368" text-anchor="middle" fill="#ffffff" font-size="20">total income</text><text x="800" y="420" text-anchor="middle" fill="#888" font-size="18">What you actually paid</text><text x="550" y="540" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Same filer, $100,000 income</text><rect x="200" y="600" width="700" height="380" rx="20" fill="#ffffff" opacity="0.08" stroke="#ffd700" stroke-width="2"/><text x="550" y="660" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">The Bracket Slicer</text><rect x="240" y="700" width="620" height="40" fill="#10b981"/><text x="550" y="727" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">10% on first $11,925</text><rect x="240" y="750" width="620" height="40" fill="#0ea5e9"/><text x="550" y="777" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">12% from $11,925 to $48,475</text><rect x="240" y="800" width="620" height="40" fill="#f59e0b"/><text x="550" y="827" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">22% from $48,475 to $100,000</text><text x="550" y="900" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">A raise NEVER reduces take-home pay.</text><text x="550" y="940" text-anchor="middle" fill="#888" font-size="18">Only the new dollars cross into the higher bracket.</text></svg>`,
+          caption: "Marginal rate applies to your next dollar; effective rate is your true average."
+        }
+      },
+      {
+        type: "concept",
+        title: "2026 Federal Brackets (Single)",
+        content: `Here are the **2026 federal income tax brackets** for a **single filer**:
+
+- **10%** on income up to **$11,925**
+- **12%** from $11,925 to **$48,475**
+- **22%** from $48,475 to **$103,350**
+- **24%** from $103,350 to **$197,300**
+- **32%** from $197,300 to **$250,525**
+- **35%** from $250,525 to **$626,350**
+- **37%** above $626,350
+
+**Marginal rate** = the rate on your *next* dollar. If you earn $80,000, your marginal rate is **22%** — a $1 raise costs **22¢** in federal tax, never more.
+
+**Effective rate** = total tax ÷ total income. Always *lower* than your marginal rate because the lower brackets fill up first.
+
+**State tax overlays on top**: California adds **9.3%+**, while Florida, Texas, Washington, and a few others charge **0%**. Where you live can swing your total bill by 10+ percentage points.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">2026 Federal Brackets — Single Filer</text><rect x="100" y="120" width="900" height="60" rx="8" fill="#10b981"/><text x="130" y="158" fill="#ffffff" font-size="22" font-weight="bold">10%</text><text x="230" y="158" fill="#ffffff" font-size="20">$0 — $11,925</text><rect x="100" y="200" width="900" height="60" rx="8" fill="#0ea5e9"/><text x="130" y="238" fill="#ffffff" font-size="22" font-weight="bold">12%</text><text x="230" y="238" fill="#ffffff" font-size="20">$11,925 — $48,475</text><rect x="100" y="280" width="900" height="60" rx="8" fill="#f59e0b"/><text x="130" y="318" fill="#ffffff" font-size="22" font-weight="bold">22%</text><text x="230" y="318" fill="#ffffff" font-size="20">$48,475 — $103,350</text><rect x="100" y="360" width="900" height="60" rx="8" fill="#ef4444"/><text x="130" y="398" fill="#ffffff" font-size="22" font-weight="bold">24%</text><text x="230" y="398" fill="#ffffff" font-size="20">$103,350 — $197,300</text><rect x="100" y="440" width="900" height="60" rx="8" fill="#8b5cf6"/><text x="130" y="478" fill="#ffffff" font-size="22" font-weight="bold">32%</text><text x="230" y="478" fill="#ffffff" font-size="20">$197,300 — $250,525</text><rect x="100" y="520" width="900" height="60" rx="8" fill="#ec4899"/><text x="130" y="558" fill="#ffffff" font-size="22" font-weight="bold">35%</text><text x="230" y="558" fill="#ffffff" font-size="20">$250,525 — $626,350</text><rect x="100" y="600" width="900" height="60" rx="8" fill="#6366f1"/><text x="130" y="638" fill="#ffffff" font-size="22" font-weight="bold">37%</text><text x="230" y="638" fill="#ffffff" font-size="20">$626,350+</text><text x="550" y="720" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">State Tax Overlay (Top Marginal)</text><rect x="100" y="760" width="280" height="120" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="240" y="800" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">California</text><text x="240" y="850" text-anchor="middle" fill="#ef4444" font-size="36" font-weight="bold">+13.3%</text><rect x="410" y="760" width="280" height="120" rx="12" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">New York</text><text x="550" y="850" text-anchor="middle" fill="#f59e0b" font-size="36" font-weight="bold">+10.9%</text><rect x="720" y="760" width="280" height="120" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/><text x="860" y="800" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">FL / TX / WA</text><text x="860" y="850" text-anchor="middle" fill="#10b981" font-size="36" font-weight="bold">0%</text><text x="550" y="980" text-anchor="middle" fill="#888" font-size="20">Same federal rate. Wildly different total bill.</text></svg>`,
+          caption: "Federal brackets stack; state income tax sits on top."
+        }
+      },
+      {
+        type: "example",
+        title: "Walking Through $100,000",
+        content: `Let's tax a **$100,000 single filer** dollar-by-dollar (ignoring deductions for clarity):
+
+**Bracket 1 — 10%**: First $11,925 → **$1,192.50** in tax
+**Bracket 2 — 12%**: Next $36,550 ($11,925 → $48,475) → **$4,386.00**
+**Bracket 3 — 22%**: Next $51,525 ($48,475 → $100,000) → **$11,335.50**
+
+**Total federal tax**: $1,192.50 + $4,386.00 + $11,335.50 = **$16,914.00**
+
+Now the magic:
+- **Marginal rate** = **22%** (the bracket the last dollar lived in)
+- **Effective rate** = $16,914 ÷ $100,000 = **16.9%**
+
+That **5.1 percentage point gap** is what trips people up. When someone says "I'm in the 22% bracket," they don't pay 22% on the whole $100k — they pay 22% on only the **$51,525 chunk** above $48,475. The first $48,475 was taxed at the cheaper 10% and 12% rates.
+
+A raise from $100k → $101k? You keep **78¢** of each new dollar.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Taxing $100,000 — Brick by Brick</text><rect x="100" y="130" width="900" height="120" rx="10" fill="#10b981" opacity="0.7"/><text x="140" y="180" fill="#ffffff" font-size="24" font-weight="bold">Slice 1: $0 — $11,925</text><text x="140" y="220" fill="#ffffff" font-size="20">$11,925 × 10% = $1,192.50</text><text x="960" y="200" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">$1,192.50</text><rect x="100" y="270" width="900" height="120" rx="10" fill="#0ea5e9" opacity="0.7"/><text x="140" y="320" fill="#ffffff" font-size="24" font-weight="bold">Slice 2: $11,925 — $48,475</text><text x="140" y="360" fill="#ffffff" font-size="20">$36,550 × 12% = $4,386.00</text><text x="960" y="340" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">$4,386.00</text><rect x="100" y="410" width="900" height="120" rx="10" fill="#f59e0b" opacity="0.7"/><text x="140" y="460" fill="#ffffff" font-size="24" font-weight="bold">Slice 3: $48,475 — $100,000</text><text x="140" y="500" fill="#ffffff" font-size="20">$51,525 × 22% = $11,335.50</text><text x="960" y="480" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">$11,335.50</text><line x1="100" y1="570" x2="1000" y2="570" stroke="#ffd700" stroke-width="3"/><text x="140" y="620" fill="#ffffff" font-size="26" font-weight="bold">TOTAL FEDERAL TAX</text><text x="960" y="620" text-anchor="end" fill="#ffd700" font-size="36" font-weight="bold">$16,914</text><rect x="150" y="680" width="380" height="220" rx="16" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="340" y="730" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">MARGINAL</text><text x="340" y="800" text-anchor="middle" fill="#ffd700" font-size="60" font-weight="bold">22%</text><text x="340" y="860" text-anchor="middle" fill="#888" font-size="18">on the next dollar</text><rect x="570" y="680" width="380" height="220" rx="16" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="760" y="730" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">EFFECTIVE</text><text x="760" y="800" text-anchor="middle" fill="#10b981" font-size="60" font-weight="bold">16.9%</text><text x="760" y="860" text-anchor="middle" fill="#888" font-size="18">$16,914 ÷ $100,000</text><text x="550" y="980" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">5.1 point gap = the bracket myth in one number</text></svg>`,
+          caption: "Effective rate is always below marginal — because lower brackets fill first."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "Maya earns $50,000 as a single filer in 2026 and gets a $5,000 raise to $55,000. How does the raise affect her federal taxes?",
+        options: [
+          { text: "Her entire income is now taxed at 22%, so she takes home less than before.", correct: false },
+          { text: "Only the dollars above $48,475 are taxed at 22%; she keeps 78¢ of every new dollar.", correct: true },
+          { text: "Her effective rate jumps to 22% instantly.", correct: false },
+          { text: "She drops to the 12% bracket because the raise crosses a threshold.", correct: false }
+        ],
+        explanation: "Brackets are progressive: only the slice ABOVE $48,475 hits the 22% rate. Her first $48,475 still enjoys the 10% and 12% rates. A raise can never reduce take-home pay under a progressive system.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Maya's $5,000 Raise</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">$50,000 → $55,000</text><rect x="150" y="200" width="800" height="100" rx="10" fill="#10b981" opacity="0.6"/><text x="180" y="245" fill="#ffffff" font-size="20" font-weight="bold">10% bracket — first $11,925</text><text x="180" y="280" fill="#ffffff" font-size="18">Untouched. Same as before.</text><rect x="150" y="320" width="800" height="100" rx="10" fill="#0ea5e9" opacity="0.6"/><text x="180" y="365" fill="#ffffff" font-size="20" font-weight="bold">12% bracket — $11,925 to $48,475</text><text x="180" y="400" fill="#ffffff" font-size="18">Untouched. Same as before.</text><rect x="150" y="440" width="280" height="100" rx="10" fill="#f59e0b" opacity="0.4"/><text x="290" y="485" text-anchor="middle" fill="#ffffff" font-size="18">22% bracket</text><text x="290" y="515" text-anchor="middle" fill="#ffffff" font-size="16">$48,475 — $50,000</text><text x="290" y="540" text-anchor="middle" fill="#888" font-size="14">$1,525 already there</text><rect x="430" y="440" width="520" height="100" rx="10" fill="#f59e0b" opacity="0.9" stroke="#ffd700" stroke-width="3"/><text x="690" y="480" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">NEW $5,000</text><text x="690" y="510" text-anchor="middle" fill="#ffffff" font-size="18">taxed at 22% = $1,100</text><text x="690" y="535" text-anchor="middle" fill="#ffd700" font-size="16">Maya keeps $3,900</text><rect x="200" y="600" width="700" height="280" rx="16" fill="#ffffff" opacity="0.08" stroke="#10b981" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">The Math</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="22">$5,000 raise × 22% = $1,100 extra tax</text><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="22">$5,000 - $1,100 = $3,900 take-home</text><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">She keeps 78% of every new dollar.</text><text x="550" y="950" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">A raise NEVER means less take-home.</text></svg>`,
+          caption: "Only the new dollars cross into the higher bracket."
+        }
+      },
+      {
+        type: "application",
+        title: "Use Your Marginal Rate to Decide",
+        content: `Your **marginal rate** is a decision-making compass:
+
+**Roth vs Traditional 401(k)?**
+- High marginal rate today (24%+) → **Traditional** likely wins (deduct now at 24%, withdraw later at maybe 15%).
+- Low marginal rate today (12%) → **Roth** likely wins (pay 12% now, withdraw tax-free).
+
+**Is the side hustle worth it?**
+- $5,000 of self-employment income at the 22% marginal rate also owes **~15.3% self-employment tax**. Net keep: ~$3,100 out of $5,000.
+
+**Should I donate appreciated stock?**
+- Donating $10,000 of stock at the 32% bracket saves $3,200 in federal tax — and you skip the capital gains too.
+
+**Quick effective-rate sanity check**: Pull last year's Form 1040. Divide **line 24 (total tax)** by **line 15 (taxable income)**. That's your real rate. Almost everyone is surprised at how low it is.
+
+**The takeaway**: marginal rate drives choices. Effective rate is the truth.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Marginal Rate = Decision Compass</text><rect x="80" y="140" width="940" height="200" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="190" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Roth vs Traditional 401(k)</text><text x="120" y="240" fill="#10b981" font-size="22" font-weight="bold">Low marginal (12%):</text><text x="120" y="275" fill="#ffffff" font-size="19">Choose ROTH — pay cheap tax now</text><text x="120" y="310" fill="#888" font-size="17">Future withdrawals are tax-free</text><text x="600" y="240" fill="#ef4444" font-size="22" font-weight="bold">High marginal (24%+):</text><text x="600" y="275" fill="#ffffff" font-size="19">Choose TRADITIONAL — deduct now</text><text x="600" y="310" fill="#888" font-size="17">Withdraw at lower future rate</text><rect x="80" y="370" width="940" height="200" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Is the Side Hustle Worth It?</text><text x="550" y="470" text-anchor="middle" fill="#ffd700" font-size="22">$5,000 gross at 22% bracket</text><text x="550" y="505" text-anchor="middle" fill="#ffffff" font-size="20">- $1,100 federal - $765 SE tax</text><text x="550" y="540" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Net: ~$3,135 in your pocket</text><rect x="80" y="600" width="940" height="200" rx="16" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Donate Appreciated Stock?</text><text x="550" y="700" text-anchor="middle" fill="#ffd700" font-size="22">$10,000 stock donated at 32% bracket</text><text x="550" y="735" text-anchor="middle" fill="#ffffff" font-size="20">Federal saving: $3,200</text><text x="550" y="770" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">+ skip capital gains tax entirely</text><rect x="80" y="830" width="940" height="200" rx="16" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Find Your Real Effective Rate</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="22">Last year's Form 1040:</text><text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="22">Line 24 (total tax) ÷ Line 15 (taxable income)</text><text x="550" y="1005" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">You'll be shocked how low it is.</text></svg>`,
+          caption: "Marginal rate guides choices; effective rate tells the truth."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-taxes-lesson-2",
+    title: "Standard Deduction vs Itemizing",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Most Important Tax Choice You Make",
+        content: `Every filer faces one fork in the road: take the **standard deduction** (a flat freebie) or **itemize** (list out specific deductions on **Schedule A**).
+
+You pick whichever is **larger**. That's it. The whole game.
+
+**2026 Standard Deductions**:
+- **Single**: $15,000
+- **Head of Household**: $22,500
+- **Married Filing Jointly**: $30,000
+
+The 2017 Tax Cuts and Jobs Act (TCJA) nearly **doubled** the standard deduction — which is why ~**90%** of filers now take the standard and only ~10% itemize. Before TCJA, that ratio was closer to 70/30.
+
+The math is brutal but simple: add up your **itemizable** expenses (state/local tax, mortgage interest, charity, big medical bills). If the sum beats $15,000 (single) or $30,000 (MFJ), you itemize. Otherwise, take the standard and call it a day.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Pick the Bigger Number — That's It</text><rect x="80" y="160" width="440" height="380" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="300" y="220" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">STANDARD</text><text x="300" y="260" text-anchor="middle" fill="#888" font-size="18">No paperwork required</text><text x="300" y="330" text-anchor="middle" fill="#10b981" font-size="22">Single</text><text x="300" y="365" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">$15,000</text><text x="300" y="410" text-anchor="middle" fill="#10b981" font-size="22">HoH</text><text x="300" y="445" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">$22,500</text><text x="300" y="490" text-anchor="middle" fill="#10b981" font-size="22">MFJ</text><text x="300" y="525" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">$30,000</text><rect x="580" y="160" width="440" height="380" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="800" y="220" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">ITEMIZE</text><text x="800" y="260" text-anchor="middle" fill="#888" font-size="18">Sum your deductions on Schedule A</text><text x="800" y="310" text-anchor="middle" fill="#0ea5e9" font-size="20">+ SALT (cap $10k)</text><text x="800" y="345" text-anchor="middle" fill="#0ea5e9" font-size="20">+ Mortgage interest</text><text x="800" y="380" text-anchor="middle" fill="#0ea5e9" font-size="20">+ Charitable gifts</text><text x="800" y="415" text-anchor="middle" fill="#0ea5e9" font-size="20">+ Medical (over 7.5% AGI)</text><text x="800" y="490" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">= Your total</text><text x="550" y="630" text-anchor="middle" fill="#ec4899" font-size="32" font-weight="bold">Take the LARGER one.</text><circle cx="550" cy="780" r="100" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="80" font-weight="bold">90%</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="22">of filers take the standard deduction</text><text x="550" y="960" text-anchor="middle" fill="#888" font-size="18">after TCJA nearly doubled it in 2018</text></svg>`,
+          caption: "Standard is the default; itemize only when your list beats it."
+        }
+      },
+      {
+        type: "concept",
+        title: "What Goes on Schedule A",
+        content: `If you itemize, you file **Schedule A** with these categories:
+
+**1. SALT — State And Local Taxes** *(capped at $10,000 total)*
+The big one and the controversial one. State income tax + property tax. A NY/CA couple with a house easily exceeds $10k — but anything above $10k is **wasted**.
+
+**2. Mortgage Interest** *(loans up to $750,000)*
+Interest on your primary + one secondary home, on debt up to $750k (post-2017 loans). Lender sends **Form 1098**.
+
+**3. Charitable Contributions**
+- **Cash** to qualified 501(c)(3)s — keep receipts
+- **Non-cash** (clothes, goods) at fair market value — Form 8283 if over $500
+- Appreciated assets (stock) — donate at full value, skip the capital gains
+
+**4. Medical Expenses** *(above 7.5% of AGI)*
+Only the portion **exceeding 7.5% of AGI** counts. At $80k AGI, the first $6,000 in medical bills don't count.
+
+Notable misses post-TCJA: unreimbursed work expenses, tax prep fees, and investment fees are no longer deductible for W-2 workers.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Schedule A — The Four Categories</text><rect x="80" y="120" width="940" height="200" rx="16" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="170" fill="#0ea5e9" font-size="28" font-weight="bold">1. SALT</text><text x="120" y="210" fill="#ffffff" font-size="20">State income + property tax</text><text x="120" y="245" fill="#ffffff" font-size="20">$10,000 hard cap</text><text x="120" y="285" fill="#ec4899" font-size="18" font-weight="bold">Anything above $10k is wasted.</text><rect x="700" y="155" width="280" height="140" rx="10" fill="#0ea5e9" opacity="0.4"/><text x="840" y="200" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">$10,000</text><text x="840" y="240" text-anchor="middle" fill="#ffffff" font-size="18">CAP</text><rect x="80" y="345" width="940" height="180" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="120" y="395" fill="#10b981" font-size="28" font-weight="bold">2. Mortgage Interest</text><text x="120" y="435" fill="#ffffff" font-size="20">Loans up to $750,000 (post-2017)</text><text x="120" y="470" fill="#ffffff" font-size="20">Primary + 1 secondary home</text><text x="120" y="505" fill="#888" font-size="18">Lender sends Form 1098 in January</text><rect x="80" y="550" width="940" height="200" rx="16" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="120" y="600" fill="#ec4899" font-size="28" font-weight="bold">3. Charitable Gifts</text><text x="120" y="640" fill="#ffffff" font-size="20">Cash → keep receipts</text><text x="120" y="675" fill="#ffffff" font-size="20">Goods → fair market value (Form 8283 over $500)</text><text x="120" y="715" fill="#ffd700" font-size="20" font-weight="bold">Appreciated stock → donate at full value</text><rect x="80" y="775" width="940" height="200" rx="16" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="120" y="825" fill="#f59e0b" font-size="28" font-weight="bold">4. Medical Expenses</text><text x="120" y="865" fill="#ffffff" font-size="20">Only the portion ABOVE 7.5% of AGI</text><text x="120" y="900" fill="#888" font-size="18">$80k AGI → first $6,000 doesn't count</text><text x="120" y="940" fill="#ffd700" font-size="18">Surgery, IVF, long-term care all qualify</text></svg>`,
+          caption: "SALT, mortgage interest, charity, big medical — the four categories on Schedule A."
+        }
+      },
+      {
+        type: "example",
+        title: "The Bunching Strategy",
+        content: `Meet **Priya and Sam** — married, MFJ, $30,000 standard deduction. Annual itemizable spend:
+
+- **SALT**: $10,000 (capped)
+- **Mortgage interest**: $9,000
+- **Charitable**: $8,000/yr
+
+**Total = $27,000.** That's *below* the $30,000 standard deduction. They take the standard every year and **never benefit** from their $8,000 in giving.
+
+**The bunching fix**: combine **two years** of charity into one tax year.
+
+**Year 1 (bunch year)**:
+- SALT $10k + Mortgage $9k + Charity **$16,000** = **$35,000** → **itemize**, beat the standard by $5,000
+
+**Year 2 (lean year)**:
+- SALT $10k + Mortgage $9k + Charity $0 = $19,000 → take the **$30,000 standard**
+
+Over 2 years, they deduct **$65,000** vs $60,000 if they hadn't bunched. At a 24% marginal rate, that's a real **$1,200 tax savings** — pure paperwork arbitrage.
+
+**Tool of choice**: a **Donor-Advised Fund (DAF)** lets you front-load the deduction in year 1, then dole out grants over years 2, 3, 4+.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">The Bunching Strategy</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="20">Priya &amp; Sam — MFJ, $30k standard deduction</text><rect x="80" y="160" width="440" height="380" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="300" y="210" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Status Quo (every year)</text><text x="120" y="270" fill="#ffffff" font-size="20">SALT</text><text x="480" y="270" text-anchor="end" fill="#ffffff" font-size="20">$10,000</text><text x="120" y="305" fill="#ffffff" font-size="20">Mortgage</text><text x="480" y="305" text-anchor="end" fill="#ffffff" font-size="20">$9,000</text><text x="120" y="340" fill="#ffffff" font-size="20">Charity</text><text x="480" y="340" text-anchor="end" fill="#ffffff" font-size="20">$8,000</text><line x1="120" y1="360" x2="480" y2="360" stroke="#ffffff" stroke-width="2"/><text x="120" y="395" fill="#ffd700" font-size="22" font-weight="bold">Total</text><text x="480" y="395" text-anchor="end" fill="#ffd700" font-size="22" font-weight="bold">$27,000</text><text x="300" y="445" text-anchor="middle" fill="#ef4444" font-size="20">Below $30k standard</text><text x="300" y="480" text-anchor="middle" fill="#ffffff" font-size="20">Charity gives them ZERO</text><text x="300" y="515" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">tax benefit</text><rect x="580" y="160" width="440" height="180" rx="16" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="800" y="200" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Year 1 — BUNCH</text><text x="620" y="240" fill="#ffffff" font-size="18">SALT $10k + Mortgage $9k</text><text x="620" y="270" fill="#ffd700" font-size="20" font-weight="bold">+ Charity $16k (2 yrs)</text><text x="800" y="310" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">$35,000 → ITEMIZE</text><rect x="580" y="360" width="440" height="180" rx="16" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="800" y="400" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Year 2 — LEAN</text><text x="620" y="440" fill="#ffffff" font-size="18">SALT $10k + Mortgage $9k</text><text x="620" y="470" fill="#888" font-size="18">+ Charity $0</text><text x="800" y="510" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">$30,000 STANDARD</text><rect x="150" y="600" width="800" height="280" rx="20" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">2-Year Total Deductions</text><text x="350" y="720" text-anchor="middle" fill="#ef4444" font-size="22">No bunch:</text><text x="350" y="760" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">$60,000</text><text x="750" y="720" text-anchor="middle" fill="#10b981" font-size="22">With bunch:</text><text x="750" y="760" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">$65,000</text><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Extra $5,000 deduction × 24% = $1,200 saved</text><text x="550" y="960" text-anchor="middle" fill="#8b5cf6" font-size="20" font-weight="bold">Donor-Advised Funds let you bunch and grant over years.</text></svg>`,
+          caption: "Bunching turns wasted charitable giving into real tax savings."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "A single filer has $9,500 in SALT, $4,000 mortgage interest, and $1,800 in charitable cash gifts. Should they itemize or take the standard deduction in 2026?",
+        options: [
+          { text: "Itemize — anything on Schedule A is automatically better than the standard.", correct: false },
+          { text: "Take the standard — $15,300 in itemizable expenses is just over the $15,000 standard.", correct: false },
+          { text: "Take the standard — itemizable total is $15,300 but the time and risk aren't worth $300 of deduction (~$66 of tax savings at 22%).", correct: true },
+          { text: "Itemize — SALT alone clears the $15,000 threshold.", correct: false }
+        ],
+        explanation: "The numerical answer favors itemizing by $300 of deduction, which at the 22% bracket saves about $66 — barely worth the audit risk and recordkeeping burden. Most pros say itemize only when you clear the standard by a meaningful margin. SALT alone is $9,500 (well under $15k), so option D is wrong.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Should They Itemize?</text><rect x="100" y="150" width="900" height="350" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">The Itemized Stack</text><rect x="200" y="240" width="700" height="60" fill="#0ea5e9" opacity="0.7"/><text x="220" y="278" fill="#ffffff" font-size="22">SALT</text><text x="880" y="278" text-anchor="end" fill="#ffffff" font-size="22" font-weight="bold">$9,500</text><rect x="200" y="310" width="700" height="60" fill="#10b981" opacity="0.7"/><text x="220" y="348" fill="#ffffff" font-size="22">Mortgage interest</text><text x="880" y="348" text-anchor="end" fill="#ffffff" font-size="22" font-weight="bold">$4,000</text><rect x="200" y="380" width="700" height="60" fill="#ec4899" opacity="0.7"/><text x="220" y="418" fill="#ffffff" font-size="22">Charity</text><text x="880" y="418" text-anchor="end" fill="#ffffff" font-size="22" font-weight="bold">$1,800</text><text x="220" y="480" fill="#ffd700" font-size="24" font-weight="bold">Total</text><text x="880" y="480" text-anchor="end" fill="#ffd700" font-size="24" font-weight="bold">$15,300</text><rect x="100" y="540" width="440" height="220" rx="16" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="320" y="590" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Standard</text><text x="320" y="660" text-anchor="middle" fill="#ffd700" font-size="48" font-weight="bold">$15,000</text><text x="320" y="720" text-anchor="middle" fill="#888" font-size="18">No paperwork</text><rect x="560" y="540" width="440" height="220" rx="16" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="780" y="590" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">Itemized</text><text x="780" y="660" text-anchor="middle" fill="#ffd700" font-size="48" font-weight="bold">$15,300</text><text x="780" y="720" text-anchor="middle" fill="#888" font-size="18">Records + Schedule A</text><rect x="100" y="800" width="900" height="220" rx="16" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Verdict: take the standard</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">Extra $300 deduction × 22% = $66 saved</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="22">Not worth the records + audit risk</text><text x="550" y="1000" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Rule of thumb: clear standard by a clean margin.</text></svg>`,
+          caption: "Barely beating the standard isn't worth the itemization burden."
+        }
+      },
+      {
+        type: "application",
+        title: "Decide in 5 Minutes",
+        content: `**Your 5-minute decision flow:**
+
+**Step 1 — Get your standard number:**
+Single $15,000 / HoH $22,500 / MFJ $30,000.
+
+**Step 2 — Sum the four categories** *(use last year's return as a guide):*
+- SALT: state tax withheld (W-2 box 17) + property tax bill → **cap at $10,000**
+- Mortgage interest: Form 1098 box 1
+- Charitable: receipts + Goodwill drop-offs + giving app history
+- Medical: only if you had a big year (surgery, IVF, long-term care)
+
+**Step 3 — Compare**. Larger number wins.
+
+**Step 4 — If you're close, consider bunching** *(charity, elective medical, property tax timing if state allows)* in alternating years.
+
+**Red flags people miss:**
+- Married couples often forget they share the $10k SALT cap (filing separately doesn't double it).
+- Mortgage interest only counts on **acquisition debt**, not HELOCs used for non-home spending.
+- Charitable contributions need contemporaneous receipts for gifts of **$250+** — pre-loaded into many giving apps.
+
+**Bottom line**: 9 out of 10 households take the standard. Don't waste hours itemizing for $40 of savings.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">The 5-Minute Decision Flow</text><rect x="80" y="130" width="940" height="140" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><circle cx="140" cy="200" r="40" fill="#10b981"/><text x="140" y="212" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">1</text><text x="210" y="180" fill="#ffffff" font-size="24" font-weight="bold">Get your standard number</text><text x="210" y="220" fill="#888" font-size="20">Single $15k / HoH $22.5k / MFJ $30k</text><text x="210" y="250" fill="#888" font-size="18">+ $1,600 each if 65+ or blind</text><rect x="80" y="290" width="940" height="200" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><circle cx="140" cy="390" r="40" fill="#0ea5e9"/><text x="140" y="402" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">2</text><text x="210" y="335" fill="#ffffff" font-size="24" font-weight="bold">Sum the four categories</text><text x="210" y="372" fill="#ffffff" font-size="18">SALT (W-2 box 17 + property tax) — cap $10k</text><text x="210" y="402" fill="#ffffff" font-size="18">Mortgage interest (Form 1098 box 1)</text><text x="210" y="432" fill="#ffffff" font-size="18">Charity (receipts &amp; giving app history)</text><text x="210" y="462" fill="#ffffff" font-size="18">Medical (only above 7.5% AGI)</text><rect x="80" y="510" width="940" height="140" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><circle cx="140" cy="580" r="40" fill="#f59e0b"/><text x="140" y="592" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">3</text><text x="210" y="560" fill="#ffffff" font-size="24" font-weight="bold">Compare. Bigger number wins.</text><text x="210" y="600" fill="#888" font-size="20">No paperwork = standard. Larger sum = itemize.</text><rect x="80" y="670" width="940" height="140" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><circle cx="140" cy="740" r="40" fill="#ec4899"/><text x="140" y="752" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">4</text><text x="210" y="720" fill="#ffffff" font-size="24" font-weight="bold">Close call? Bunch next year.</text><text x="210" y="760" fill="#888" font-size="20">Front-load charity via DAF + time property tax</text><rect x="80" y="840" width="940" height="200" rx="16" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="890" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">Watch out for:</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="20">Married = ONE $10k SALT cap (filing separately doesn't double it)</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="20">HELOC interest = NOT deductible if not used for home</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="20">Charity gifts $250+ need a written receipt</text></svg>`,
+          caption: "Four steps. Take the larger number. Don't overthink it."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-taxes-lesson-3",
+    title: "The Commonly Missed Credits",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Credits Beat Deductions — Dollar for Dollar",
+        content: `Here's the single most important sentence in tax planning:
+
+**A credit reduces tax owed dollar-for-dollar. A deduction reduces taxable income — and only saves you your marginal rate on each dollar.**
+
+Concrete math:
+- A **$1,000 deduction** at the 22% bracket → **$220 saved**
+- A **$1,000 credit** → **$1,000 saved**
+
+Credits are roughly **4–5x more powerful** than deductions in the middle brackets. And yet **billions of dollars** in credits go unclaimed every year because filers don't know they exist.
+
+The big four for most households:
+- **EITC** — Earned Income Tax Credit (low-to-moderate income)
+- **CTC** — Child Tax Credit (kids under 17)
+- **AOC** — American Opportunity Credit (first 4 years of college)
+- **Saver's Credit** — bonus for putting money in retirement accounts
+
+Some are **refundable** (you get money back even if you owe nothing). Some aren't. Knowing the difference matters.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Credits vs Deductions</text><rect x="80" y="160" width="440" height="320" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="300" y="220" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">DEDUCTION</text><text x="300" y="280" text-anchor="middle" fill="#ffffff" font-size="22">Reduces taxable income</text><text x="300" y="350" text-anchor="middle" fill="#888" font-size="20">$1,000 deduction</text><text x="300" y="385" text-anchor="middle" fill="#888" font-size="20">at 22% bracket</text><text x="300" y="445" text-anchor="middle" fill="#f59e0b" font-size="44" font-weight="bold">= $220</text><rect x="580" y="160" width="440" height="320" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="800" y="220" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">CREDIT</text><text x="800" y="280" text-anchor="middle" fill="#ffffff" font-size="22">Reduces tax owed</text><text x="800" y="350" text-anchor="middle" fill="#888" font-size="20">$1,000 credit</text><text x="800" y="385" text-anchor="middle" fill="#888" font-size="20">any bracket</text><text x="800" y="445" text-anchor="middle" fill="#10b981" font-size="44" font-weight="bold">= $1,000</text><text x="550" y="550" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Credits are 4–5x more powerful.</text><rect x="100" y="620" width="900" height="380" rx="16" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="670" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">The Big Four Most People Miss</text><rect x="150" y="700" width="380" height="120" rx="10" fill="#10b981" opacity="0.4"/><text x="340" y="745" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">EITC</text><text x="340" y="780" text-anchor="middle" fill="#ffffff" font-size="16">Up to $7,830</text><text x="340" y="805" text-anchor="middle" fill="#10b981" font-size="14">REFUNDABLE</text><rect x="570" y="700" width="380" height="120" rx="10" fill="#0ea5e9" opacity="0.4"/><text x="760" y="745" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Child Tax Credit</text><text x="760" y="780" text-anchor="middle" fill="#ffffff" font-size="16">$2,000 / child</text><text x="760" y="805" text-anchor="middle" fill="#10b981" font-size="14">Partially refundable</text><rect x="150" y="840" width="380" height="120" rx="10" fill="#ec4899" opacity="0.4"/><text x="340" y="885" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AOC</text><text x="340" y="920" text-anchor="middle" fill="#ffffff" font-size="16">$2,500 / student</text><text x="340" y="945" text-anchor="middle" fill="#10b981" font-size="14">40% refundable</text><rect x="570" y="840" width="380" height="120" rx="10" fill="#8b5cf6" opacity="0.4"/><text x="760" y="885" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Saver's Credit</text><text x="760" y="920" text-anchor="middle" fill="#ffffff" font-size="16">10/20/50% match</text><text x="760" y="945" text-anchor="middle" fill="#ef4444" font-size="14">Not refundable</text></svg>`,
+          caption: "Credits cut tax directly; deductions cut income. Credits win."
+        }
+      },
+      {
+        type: "concept",
+        title: "EITC, CTC, AOC, Saver's",
+        content: `**Earned Income Tax Credit (EITC)** — For low-to-moderate income workers.
+- 2026: up to **$7,830** with 3+ kids
+- Income cap: ~**$66,819 MFJ** with 3 kids; lower with fewer kids
+- **Fully refundable** — you get the money back even if you owe $0 in tax
+- ~20% of eligible filers never claim it
+
+**Child Tax Credit (CTC)** — Per qualifying child under 17.
+- 2026: **$2,000 per child**, of which up to **$1,700 is refundable** (the "Additional Child Tax Credit")
+- Phases out at $200k single / $400k MFJ — most families qualify in full
+
+**American Opportunity Credit (AOC)** — First 4 years of undergrad.
+- Up to **$2,500 per student** (100% of first $2,000 of tuition + 25% of next $2,000)
+- **40% refundable** (up to $1,000 cash back)
+- Income cap: $90k single / $180k MFJ
+
+**Saver's Credit** — Bonus for retirement contributions.
+- **10%, 20%, or 50%** of up to $2,000 contributed ($4,000 MFJ), based on income tier
+- Max credit: $1,000 single / $2,000 MFJ
+- 2026 income tiers (MFJ): 50% under $47,500; 20% under $51,750; 10% under $79,000`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">The Big Four — At a Glance</text><rect x="80" y="120" width="940" height="220" rx="16" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="120" y="170" fill="#10b981" font-size="28" font-weight="bold">EITC</text><text x="900" y="170" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">Up to $7,830</text><text x="120" y="220" fill="#ffffff" font-size="20">Earned Income Tax Credit</text><text x="120" y="255" fill="#ffffff" font-size="18">Low-to-moderate income workers</text><text x="120" y="290" fill="#ffffff" font-size="18">3 kids cap: $66,819 MFJ</text><text x="120" y="325" fill="#10b981" font-size="20" font-weight="bold">FULLY REFUNDABLE</text><rect x="80" y="360" width="940" height="200" rx="16" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="410" fill="#0ea5e9" font-size="28" font-weight="bold">CTC</text><text x="900" y="410" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">$2,000 / child</text><text x="120" y="460" fill="#ffffff" font-size="20">Child Tax Credit (under 17)</text><text x="120" y="495" fill="#ffffff" font-size="18">Phase-out: $200k single / $400k MFJ</text><text x="120" y="530" fill="#10b981" font-size="20" font-weight="bold">$1,700 REFUNDABLE per child</text><rect x="80" y="580" width="940" height="200" rx="16" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="120" y="630" fill="#ec4899" font-size="28" font-weight="bold">AOC</text><text x="900" y="630" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">$2,500 / student</text><text x="120" y="680" fill="#ffffff" font-size="20">American Opportunity Credit</text><text x="120" y="715" fill="#ffffff" font-size="18">First 4 years undergrad — $90k/$180k cap</text><text x="120" y="750" fill="#10b981" font-size="20" font-weight="bold">40% REFUNDABLE (up to $1,000)</text><rect x="80" y="800" width="940" height="220" rx="16" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="120" y="850" fill="#8b5cf6" font-size="28" font-weight="bold">Saver's Credit</text><text x="900" y="850" text-anchor="end" fill="#ffd700" font-size="32" font-weight="bold">Up to $2,000</text><text x="120" y="900" fill="#ffffff" font-size="20">Retirement contributions bonus</text><text x="120" y="935" fill="#ffffff" font-size="18">50% / 20% / 10% of up to $2k contributed</text><text x="120" y="970" fill="#ffffff" font-size="18">MFJ tiers: 50% under $47,500</text><text x="120" y="1005" fill="#ef4444" font-size="20" font-weight="bold">NOT REFUNDABLE</text></svg>`,
+          caption: "Each credit has its own cap, income limits, and refundability rule."
+        }
+      },
+      {
+        type: "example",
+        title: "The Martinez Family Files",
+        content: `Meet the **Martinez family**: married filing jointly, two kids (ages 5 and 9), oldest goes to community college. AGI **$58,000**. Both parents contribute **$2,000 each** to their Roth IRAs.
+
+**Before credits**: Federal tax owed ≈ **$3,150** (after standard deduction).
+
+**Now layer the credits:**
+
+**Child Tax Credit** — 2 qualifying kids × $2,000 = **$4,000**. That alone wipes out their $3,150 of tax owed. They're at **$0 federal tax**.
+
+**Additional Child Tax Credit (refundable portion)** — Since they have more credit than tax owed, up to **$1,700 per child** ($3,400 total) is refundable. They get a **$850 refund** from the leftover CTC.
+
+**Saver's Credit** — AGI $58k MFJ qualifies them for **20%** of $4,000 contributed = **$800**. But this credit is **non-refundable** — and they already owe $0. **Lost.** (Lesson: timing matters.)
+
+**EITC** — Phases out by their income with 2 kids. They don't qualify.
+
+**AOC** — Community college student, $1,800 tuition paid → 100% × $1,800 = **$1,800 credit**, 40% refundable = **+$720 refund**.
+
+**Final refund**: $850 + $720 = **$1,570 back from the IRS** on $0 tax owed. Without claiming credits, they'd have written a $3,150 check.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">The Martinez Family — Credit Stack</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="20">MFJ, AGI $58k, 2 kids, 1 in community college</text><rect x="80" y="160" width="940" height="100" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="120" y="210" fill="#ffffff" font-size="22" font-weight="bold">Tax before credits</text><text x="980" y="210" text-anchor="end" fill="#ef4444" font-size="32" font-weight="bold">$3,150</text><rect x="80" y="280" width="940" height="100" rx="12" fill="#0ea5e9" opacity="0.4"/><text x="120" y="320" fill="#ffffff" font-size="22" font-weight="bold">Child Tax Credit (2 × $2,000)</text><text x="120" y="350" fill="#888" font-size="16">Wipes out the $3,150 entirely</text><text x="980" y="335" text-anchor="end" fill="#10b981" font-size="28" font-weight="bold">-$4,000</text><rect x="80" y="400" width="940" height="80" rx="12" fill="#6366f1" opacity="0.3"/><text x="120" y="450" fill="#ffffff" font-size="20">Tax owed after CTC</text><text x="980" y="450" text-anchor="end" fill="#ffd700" font-size="28" font-weight="bold">$0</text><rect x="80" y="500" width="940" height="100" rx="12" fill="#10b981" opacity="0.4"/><text x="120" y="540" fill="#ffffff" font-size="22" font-weight="bold">Refundable CTC leftover</text><text x="120" y="570" fill="#888" font-size="16">$850 cashed back from unused portion</text><text x="980" y="555" text-anchor="end" fill="#10b981" font-size="28" font-weight="bold">+$850</text><rect x="80" y="620" width="940" height="100" rx="12" fill="#ec4899" opacity="0.4"/><text x="120" y="660" fill="#ffffff" font-size="22" font-weight="bold">AOC — $1,800 tuition</text><text x="120" y="690" fill="#888" font-size="16">40% refundable on $1,800 credit = $720 cash</text><text x="980" y="675" text-anchor="end" fill="#10b981" font-size="28" font-weight="bold">+$720</text><rect x="80" y="740" width="940" height="100" rx="12" fill="#888" opacity="0.3"/><text x="120" y="780" fill="#ffffff" font-size="22" font-weight="bold">Saver's Credit ($800)</text><text x="120" y="810" fill="#ef4444" font-size="16">LOST — non-refundable + already at $0 tax</text><text x="980" y="795" text-anchor="end" fill="#888" font-size="24" font-weight="bold">$0</text><rect x="80" y="870" width="940" height="160" rx="16" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Final Refund</text><text x="550" y="990" text-anchor="middle" fill="#10b981" font-size="44" font-weight="bold">+$1,570</text></svg>`,
+          caption: "Refundable credits turn tax bills into refund checks."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "Jordan is in the 22% federal bracket. They can either contribute another $1,000 to charity (boosting their itemized deductions by $1,000) OR claim a $1,000 American Opportunity Credit for their tuition. Which saves more tax?",
+        options: [
+          { text: "The $1,000 deduction saves more because it reduces income at the top.", correct: false },
+          { text: "The $1,000 credit saves $1,000 directly; the deduction only saves $220 at 22%.", correct: true },
+          { text: "They save the same amount because both are $1,000.", correct: false },
+          { text: "The deduction is better because it's larger after factoring AGI phase-outs.", correct: false }
+        ],
+        explanation: "A $1,000 credit cuts your tax bill by exactly $1,000. A $1,000 deduction reduces taxable income by $1,000 — at the 22% bracket, that's $220 saved. The credit is ~4.5x more valuable. Always claim every credit you qualify for before chasing extra deductions.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">$1,000 Credit vs $1,000 Deduction</text><text x="550" y="130" text-anchor="middle" fill="#888" font-size="20">Both cost Jordan $1,000 — which saves more tax?</text><rect x="80" y="200" width="440" height="500" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="300" y="260" text-anchor="middle" fill="#f59e0b" font-size="28" font-weight="bold">DEDUCTION</text><text x="300" y="310" text-anchor="middle" fill="#ffffff" font-size="22">+$1,000 charity</text><line x1="130" y1="350" x2="470" y2="350" stroke="#888" stroke-width="2"/><text x="300" y="400" text-anchor="middle" fill="#ffffff" font-size="20">Income drops $1,000</text><text x="300" y="450" text-anchor="middle" fill="#ffffff" font-size="20">× 22% bracket</text><text x="300" y="510" text-anchor="middle" fill="#ffd700" font-size="22">Tax saved:</text><text x="300" y="570" text-anchor="middle" fill="#f59e0b" font-size="56" font-weight="bold">$220</text><rect x="580" y="200" width="440" height="500" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="800" y="260" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">CREDIT</text><text x="800" y="310" text-anchor="middle" fill="#ffffff" font-size="22">$1,000 AOC</text><line x1="630" y1="350" x2="970" y2="350" stroke="#888" stroke-width="2"/><text x="800" y="400" text-anchor="middle" fill="#ffffff" font-size="20">Tax owed drops $1,000</text><text x="800" y="450" text-anchor="middle" fill="#ffffff" font-size="20">bracket irrelevant</text><text x="800" y="510" text-anchor="middle" fill="#ffd700" font-size="22">Tax saved:</text><text x="800" y="570" text-anchor="middle" fill="#10b981" font-size="56" font-weight="bold">$1,000</text><rect x="100" y="760" width="900" height="260" rx="20" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Credit wins by $780</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="22">≈ 4.5x more tax saved per dollar spent</text><text x="550" y="940" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Claim every credit FIRST.</text><text x="550" y="980" text-anchor="middle" fill="#888" font-size="20">Then chase extra deductions.</text></svg>`,
+          caption: "Dollar for dollar, credits crush deductions in any bracket."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Credit Checklist",
+        content: `**Before you file, run this checklist:**
+
+**Family credits**
+- Kids under 17? → **CTC** ($2,000/kid, $1,700 refundable)
+- Kids 17+ in college? → **AOC** ($2,500/student, first 4 years only) or **Lifetime Learning Credit** ($2,000/return, grad school + non-degree)
+- Daycare so you can work? → **Child & Dependent Care Credit** (20–35% of up to $3,000/$6,000)
+
+**Income-based**
+- AGI under ~$67k with kids (or ~$26k without kids)? → check **EITC**
+- AGI under $79k MFJ ($39.5k single) and contributed to a 401k/IRA? → **Saver's Credit**
+
+**Green & home**
+- Bought an EV in 2026? → up to **$7,500** clean vehicle credit
+- Installed solar/heat pump/insulation? → **Residential Clean Energy Credit** (30%)
+
+**Tools that catch these**:
+- **IRS Free File** (AGI under $84k) walks through every credit
+- **TurboTax / H&R Block / FreeTaxUSA** auto-prompt eligibility
+- The **Volunteer Income Tax Assistance (VITA)** program is **free** for AGI under $67k — IRS-certified preparers catch the EITC ~95% of the time
+
+**The cost of NOT checking**: the IRS estimates **$7+ billion** in EITC alone goes unclaimed annually. Don't be part of that statistic.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Your Pre-Filing Credit Checklist</text><rect x="80" y="130" width="940" height="240" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="175" fill="#0ea5e9" font-size="26" font-weight="bold">Family</text><text x="120" y="215" fill="#ffffff" font-size="20">Kids under 17 → Child Tax Credit ($2,000/kid)</text><text x="120" y="250" fill="#ffffff" font-size="20">College student → AOC ($2,500) or LLC ($2,000)</text><text x="120" y="285" fill="#ffffff" font-size="20">Daycare so you can work → Child &amp; Dep Care Credit</text><text x="120" y="335" fill="#888" font-size="18">Almost every parent qualifies for at least one of these</text><rect x="80" y="390" width="940" height="200" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="120" y="435" fill="#10b981" font-size="26" font-weight="bold">Income-Based</text><text x="120" y="475" fill="#ffffff" font-size="20">AGI under $67k + kids → check EITC (up to $7,830)</text><text x="120" y="510" fill="#ffffff" font-size="20">AGI under $79k MFJ + retirement contribution → Saver's</text><text x="120" y="555" fill="#888" font-size="18">~20% of eligible filers miss the EITC every year</text><rect x="80" y="610" width="940" height="200" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="120" y="655" fill="#ec4899" font-size="26" font-weight="bold">Green &amp; Home</text><text x="120" y="695" fill="#ffffff" font-size="20">Bought an EV in 2026 → Up to $7,500 credit</text><text x="120" y="730" fill="#ffffff" font-size="20">Solar / heat pump / insulation → 30% credit</text><text x="120" y="775" fill="#888" font-size="18">Save the receipts — Form 5695 / 8936 at tax time</text><rect x="80" y="830" width="940" height="200" rx="16" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Free Help</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="20">IRS Free File (under $84k AGI)</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="20">VITA — IRS-trained volunteers (under $67k AGI)</text><text x="550" y="1005" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">$7B+ in EITC goes unclaimed each year</text></svg>`,
+          caption: "Stack credits before deductions; free help exists for most filers."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'pf-retirement',
