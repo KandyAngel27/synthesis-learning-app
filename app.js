@@ -541,6 +541,109 @@ class SynthesisApp {
         alert('You can add books to your favorites from any book detail page! Look for the star icon.');
     }
 
+    // ---------------- Goals & Deadline pacing ----------------
+    // A goal is a per-category target end-date. Pace = lessonsRemaining /
+    // daysRemaining. Drives the "X lessons/day to finish by Y" tracker on
+    // each course hub.
+    ensureGoalsStore() {
+        if (!APP_DATA.user) APP_DATA.user = {};
+        if (!Array.isArray(APP_DATA.user.goals)) APP_DATA.user.goals = [];
+    }
+
+    getGoalForCategory(categoryId) {
+        this.ensureGoalsStore();
+        return APP_DATA.user.goals.find(g => g.categoryId === categoryId) || null;
+    }
+
+    setGoal(categoryId, targetDate, label) {
+        this.ensureGoalsStore();
+        const existing = APP_DATA.user.goals.findIndex(g => g.categoryId === categoryId);
+        const goal = {
+            id: 'goal-' + categoryId + '-' + Date.now(),
+            categoryId,
+            targetDate, // YYYY-MM-DD
+            createdDate: this.todayKey(),
+            label: label || null,
+        };
+        if (existing >= 0) APP_DATA.user.goals[existing] = goal;
+        else APP_DATA.user.goals.push(goal);
+        if (typeof saveProgress === 'function') saveProgress();
+        return goal;
+    }
+
+    removeGoal(categoryId) {
+        this.ensureGoalsStore();
+        APP_DATA.user.goals = APP_DATA.user.goals.filter(g => g.categoryId !== categoryId);
+        if (typeof saveProgress === 'function') saveProgress();
+    }
+
+    // Compute pace for a goal against current course stats.
+    // Returns { daysRemaining, lessonsRemaining, perDayNeeded, perDayCurrent,
+    //          paceStatus: 'ahead'|'on-track'|'behind'|'overdue'|'done', pctElapsed }
+    computeGoalPace(goal, stats) {
+        const today = new Date(this.todayKey() + 'T00:00:00');
+        const target = new Date(goal.targetDate + 'T00:00:00');
+        const started = new Date(goal.createdDate + 'T00:00:00');
+        const totalDays = Math.max(1, Math.round((target - started) / 86400000));
+        const daysElapsed = Math.max(0, Math.round((today - started) / 86400000));
+        const daysRemaining = Math.round((target - today) / 86400000);
+        const lessonsRemaining = Math.max(0, (stats.lessonsTotal || 0) - (stats.lessonsPassed || 0));
+        const perDayNeeded = daysRemaining > 0 ? lessonsRemaining / daysRemaining : lessonsRemaining;
+        const perDayCurrent = daysElapsed > 0 ? (stats.lessonsPassed / daysElapsed) : 0;
+
+        let paceStatus;
+        if (lessonsRemaining === 0) paceStatus = 'done';
+        else if (daysRemaining < 0) paceStatus = 'overdue';
+        else {
+            // Expected lessons by now = (daysElapsed / totalDays) * lessonsTotal
+            const expectedByNow = (daysElapsed / totalDays) * (stats.lessonsTotal || 0);
+            const gap = (stats.lessonsPassed || 0) - expectedByNow;
+            if (gap >= 1) paceStatus = 'ahead';
+            else if (gap <= -1) paceStatus = 'behind';
+            else paceStatus = 'on-track';
+        }
+        return {
+            daysRemaining, lessonsRemaining,
+            perDayNeeded, perDayCurrent,
+            paceStatus,
+            pctElapsed: Math.round((daysElapsed / totalDays) * 100),
+        };
+    }
+
+    promptSetGoal(categoryId) {
+        const cat = APP_DATA.categories.find(c => c.id === categoryId);
+        if (!cat) return;
+        // Default suggestion: 90 days out (or however many days × 1 lesson/day for the remaining lessons).
+        const stats = this.getCourseStats(cat);
+        const remaining = Math.max(1, (stats.lessonsTotal || 0) - (stats.lessonsPassed || 0));
+        const suggestedDays = Math.max(30, Math.min(365, remaining));
+        const suggested = new Date();
+        suggested.setDate(suggested.getDate() + suggestedDays);
+        const suggestedStr = suggested.toISOString().slice(0, 10);
+
+        const input = prompt(
+            `Set a finish-by date for ${cat.name}\n\n` +
+            `${remaining} lessons remaining. Format: YYYY-MM-DD (e.g. ${suggestedStr})`,
+            suggestedStr
+        );
+        if (!input) return;
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(input.trim())) {
+            alert('Please enter the date as YYYY-MM-DD.');
+            return;
+        }
+        const d = new Date(input.trim() + 'T00:00:00');
+        if (isNaN(d.getTime())) { alert('Invalid date.'); return; }
+        if (d <= new Date()) { alert('Target date must be in the future.'); return; }
+        this.setGoal(categoryId, input.trim(), null);
+        this.renderCourseHub(this.currentCategory);
+    }
+
+    confirmRemoveGoal(categoryId) {
+        if (!confirm('Remove your finish-by goal for this course?')) return;
+        this.removeGoal(categoryId);
+        this.renderCourseHub(this.currentCategory);
+    }
+
     toggleFavorite(bookId) {
         if (window.activeRecall) {
             window.activeRecall.toggleFavorite(bookId);
@@ -898,6 +1001,48 @@ class SynthesisApp {
         }).join('');
         const dueToday = (ecReady && window.examCenter.dailyQueueSize)
             ? window.examCenter.dailyQueueSize() : 0;
+        // Goal block — shows the finish-by-date tracker if a goal is set
+        // for this category; otherwise shows a "Set a goal" prompt.
+        const goal = this.getGoalForCategory(cat.id);
+        let goalHtml = '';
+        if (goal) {
+            const pace = this.computeGoalPace(goal, s);
+            const statusInfo = {
+                done:     { icon: '🎉', label: 'Course Complete',  color: '#10b981' },
+                ahead:    { icon: '🚀', label: 'Ahead of Pace',    color: '#10b981' },
+                'on-track':{icon: '✅', label: 'On Track',         color: '#0ea5e9' },
+                behind:   { icon: '⚠️', label: 'Behind Pace',      color: '#f59e0b' },
+                overdue:  { icon: '⏰', label: 'Past Target Date', color: '#ef4444' },
+            }[pace.paceStatus];
+            const niceTarget = new Date(goal.targetDate + 'T00:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+            const lessonsPerDay = pace.perDayNeeded.toFixed(pace.perDayNeeded >= 1 ? 1 : 2);
+            const daysLabel = pace.daysRemaining === 1 ? '1 day' : `${pace.daysRemaining} days`;
+            goalHtml = `
+                <div class="mbc-goal" style="border-left-color:${statusInfo.color};">
+                    <div class="mbc-goal-row">
+                        <span class="mbc-goal-icon">${statusInfo.icon}</span>
+                        <div class="mbc-goal-body">
+                            <div class="mbc-goal-headline">
+                                <strong style="color:${statusInfo.color}">${statusInfo.label}</strong>
+                                <span class="mbc-goal-target">Finish by ${niceTarget}</span>
+                            </div>
+                            <div class="mbc-goal-meta">
+                                ${pace.daysRemaining >= 0 ? `${daysLabel} left · ${pace.lessonsRemaining} lessons remaining` : `${Math.abs(pace.daysRemaining)} days overdue · ${pace.lessonsRemaining} lessons remaining`}
+                                ${pace.lessonsRemaining > 0 && pace.daysRemaining > 0 ? ` · ${lessonsPerDay} lesson${lessonsPerDay === '1.0' ? '' : 's'}/day needed` : ''}
+                            </div>
+                        </div>
+                        <button class="mbc-goal-edit" onclick="event.stopPropagation(); app.promptSetGoal('${cat.id}')" title="Change target date">✏️</button>
+                        <button class="mbc-goal-clear" onclick="event.stopPropagation(); app.confirmRemoveGoal('${cat.id}')" title="Remove goal">×</button>
+                    </div>
+                </div>`;
+        } else {
+            goalHtml = `
+                <div class="mbc-goal mbc-goal-empty">
+                    <button class="mbc-goal-set-btn" onclick="event.stopPropagation(); app.promptSetGoal('${cat.id}')">
+                        🎯 Set a finish-by date — get a daily pace tracker
+                    </button>
+                </div>`;
+        }
         const eyebrow = examGated
             ? 'Full Course · Exam-Gated Curriculum'
             : 'Full Course · Sequential Curriculum';
@@ -928,6 +1073,7 @@ class SynthesisApp {
                             ${s.lessonsPassed}/${s.lessonsTotal} lessons passed · ${s.booksCompleted}/${s.booksTotal} books completed${s.questionsTotal ? ` · ${s.questionsMastered}/${s.questionsTotal} questions mastered` : ''}
                         </div>
                     </div>
+                    ${goalHtml}
                     <div class="mbc-hero-actions">
                         <button class="mbc-cta mbc-cta-primary" onclick="${continueTarget}">
                             <span class="mbc-cta-icon">▶</span> ${continueLabel}

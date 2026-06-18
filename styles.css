@@ -9124,3 +9124,70 @@ body {
     margin-left: 0.4rem;
     letter-spacing: 0.02em;
 }
+
+/* ============================================
+   GOAL & DEADLINE PACE TRACKER (course hub hero)
+   ============================================ */
+.mbc-goal {
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 4px solid #0ea5e9;
+    border-radius: var(--radius-lg);
+    padding: 0.75rem var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    color: #fff;
+}
+.mbc-goal-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.mbc-goal-icon { font-size: 1.6rem; line-height: 1; }
+.mbc-goal-body { flex: 1; min-width: 0; }
+.mbc-goal-headline {
+    display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap;
+    font-size: 1rem; font-weight: 700;
+}
+.mbc-goal-target {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 500; font-size: 0.88rem;
+}
+.mbc-goal-meta {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.82rem;
+    margin-top: 0.2rem;
+}
+.mbc-goal-edit, .mbc-goal-clear {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    width: 30px; height: 30px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex: 0 0 auto;
+}
+.mbc-goal-edit:hover, .mbc-goal-clear:hover { background: rgba(255,255,255,0.2); }
+.mbc-goal-empty { background: rgba(255,255,255,0.05); padding: 0; border-left-color: rgba(255,255,255,0.2); }
+.mbc-goal-set-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.88);
+    padding: 0.85rem var(--spacing-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-sans);
+    transition: background var(--transition-fast);
+    border-radius: var(--radius-md);
+}
+.mbc-goal-set-btn:hover { background: rgba(255,255,255,0.08); }
+
+@media (max-width: 768px) {
+    .mbc-goal-headline { font-size: 0.92rem; }
+    .mbc-goal-meta { font-size: 0.76rem; }
+}
