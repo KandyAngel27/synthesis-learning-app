@@ -3826,8 +3826,339 @@ Now Jenna needs to move for work. Her four options:
             title: 'The Emergency Fund: Sizing, Where to Hold It, When to Use It',
             author: 'Synthesis Learning',
             description: 'How much you actually need (1/3/6/12 months by life stage), high-yield savings vs. money market vs. T-bills, and what counts as a real emergency.',
-            lessons: 1, duration: 5, progress: 0, category: 'personal-finance-track',
-            lessonList: comingSoonLessons('how to size your emergency fund by life stage, where to hold it (HYSA vs MMA vs T-bills), and what counts as a real emergency'),
+            lessons: 3, duration: 45, progress: 0, category: 'personal-finance-track',
+            lessonList: [
+{
+    id: "pf-emergency-fund-lesson-1",
+    title: "Why Emergency Funds Are Different from Savings",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Different Buckets",
+        content: `**Savings** and an **emergency fund** look identical in your bank app — both are cash sitting in an account. But they serve **opposite purposes**, and confusing them is one of the most expensive mistakes in personal finance.
+
+**Savings** funds **planned, known goals**: a $3,000 vacation in July, a $25,000 car in 18 months, a $60,000 house down payment in 3 years. You know the **amount** and the **date**.
+
+An **emergency fund** funds **unplanned shocks** — the things you cannot predict: a layoff, a $1,800 transmission, a hospital deductible, a flooded basement. You know **neither the amount nor the date**.
+
+A Federal Reserve survey found **37% of Americans** cannot cover a $400 unexpected expense with cash. That gap is what an emergency fund closes — turning a financial **catastrophe** into a financial **inconvenience**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Two Buckets, Two Purposes</text><rect x="80" y="160" width="440" height="780" rx="20" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="4"/><text x="300" y="230" text-anchor="middle" fill="#0ea5e9" font-size="38" font-weight="bold">SAVINGS</text><text x="300" y="280" text-anchor="middle" fill="#ffffff" font-size="22">Planned Goals</text><text x="300" y="360" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">You Know:</text><text x="300" y="400" text-anchor="middle" fill="#ffffff" font-size="20">• The amount</text><text x="300" y="435" text-anchor="middle" fill="#ffffff" font-size="20">• The date</text><text x="300" y="510" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Examples:</text><text x="300" y="555" text-anchor="middle" fill="#ffffff" font-size="19">Vacation $3,000</text><text x="300" y="595" text-anchor="middle" fill="#ffffff" font-size="19">New car $25,000</text><text x="300" y="635" text-anchor="middle" fill="#ffffff" font-size="19">Down payment $60k</text><text x="300" y="675" text-anchor="middle" fill="#ffffff" font-size="19">Wedding $15,000</text><text x="300" y="780" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Spend it on purpose</text><rect x="580" y="160" width="440" height="780" rx="20" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="4"/><text x="800" y="230" text-anchor="middle" fill="#ef4444" font-size="38" font-weight="bold">EMERGENCY FUND</text><text x="800" y="280" text-anchor="middle" fill="#ffffff" font-size="22">Unplanned Shocks</text><text x="800" y="360" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">You Don't Know:</text><text x="800" y="400" text-anchor="middle" fill="#ffffff" font-size="20">• The amount</text><text x="800" y="435" text-anchor="middle" fill="#ffffff" font-size="20">• The date</text><text x="800" y="510" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Examples:</text><text x="800" y="555" text-anchor="middle" fill="#ffffff" font-size="19">Layoff (3-month gap)</text><text x="800" y="595" text-anchor="middle" fill="#ffffff" font-size="19">Transmission $1,800</text><text x="800" y="635" text-anchor="middle" fill="#ffffff" font-size="19">ER + deductible $2k</text><text x="800" y="675" text-anchor="middle" fill="#ffffff" font-size="19">Roof leak $5,000</text><text x="800" y="780" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Hope you never spend it</text><text x="550" y="1000" text-anchor="middle" fill="#888" font-size="22" font-style="italic">Same dollars. Opposite jobs.</text><text x="550" y="1050" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">37% of Americans can't cover a $400 surprise</text></svg>`,
+          caption: "Savings funds known goals. Emergency funds cover unknowns."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Bridge Between Debt and Investing",
+        content: `An emergency fund sits in a specific **place in your financial order of operations** — it's the **bridge** between paying off high-interest debt and starting to invest meaningfully.
+
+**Standard order of operations:**
+1. **Starter fund** ($1,000 buffer)
+2. **Kill high-interest debt** (credit cards, 18%+ APR)
+3. **Build full emergency fund** (3-6 months expenses)
+4. **Invest** for retirement, growth, long-term goals
+
+Without the fund, an unexpected $2,000 car repair forces you back onto **credit cards at 24% APR**, undoing months of debt progress. Without the fund, a layoff forces you to **sell investments at the worst possible time** — typically during a recession when stocks are already down 30%.
+
+The emergency fund is **psychological insurance**: it lets you take **investment risk** confidently, because you know a single bad month won't blow up your plan.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Order of Operations</text><rect x="100" y="140" width="900" height="130" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="160" y="200" fill="#ef4444" font-size="50" font-weight="bold">1</text><text x="240" y="195" fill="#ffffff" font-size="28" font-weight="bold">Starter Fund</text><text x="240" y="235" fill="#888" font-size="22">$1,000 buffer — stop the bleeding</text><rect x="100" y="290" width="900" height="130" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="160" y="350" fill="#f59e0b" font-size="50" font-weight="bold">2</text><text x="240" y="345" fill="#ffffff" font-size="28" font-weight="bold">Kill High-Interest Debt</text><text x="240" y="385" fill="#888" font-size="22">Credit cards, payday loans (18%+ APR)</text><rect x="100" y="440" width="900" height="130" rx="15" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="5"/><text x="160" y="500" fill="#0ea5e9" font-size="50" font-weight="bold">3</text><text x="240" y="495" fill="#ffffff" font-size="28" font-weight="bold">Full Emergency Fund</text><text x="240" y="535" fill="#0ea5e9" font-size="22" font-weight="bold">3-6 months of expenses — THE BRIDGE</text><rect x="100" y="590" width="900" height="130" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="160" y="650" fill="#10b981" font-size="50" font-weight="bold">4</text><text x="240" y="645" fill="#ffffff" font-size="28" font-weight="bold">Invest for the Long Term</text><text x="240" y="685" fill="#888" font-size="22">401(k), IRA, brokerage — 7%+ real return</text><rect x="100" y="770" width="900" height="280" rx="20" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="820" text-anchor="middle" fill="#8b5cf6" font-size="26" font-weight="bold">Without the Fund:</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="22">$2,000 repair → back on 24% APR credit card</text><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="22">Layoff → sell stocks during a 30% crash</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">The fund makes every other step possible.</text></svg>`,
+          caption: "Emergency fund sits between debt payoff and investing — it protects both."
+        }
+      },
+      {
+        type: "example",
+        title: "Same Crisis, Two Outcomes",
+        content: `**Sarah** and **Marcus** both earn $5,000/month. Both are laid off in March. Both find new jobs by mid-June — a **3.5-month gap**.
+
+**Sarah** has **no emergency fund**. She charges rent ($1,400), groceries, and gas to a credit card for 3 months — racking up **$11,500 at 24% APR**. By the time she's employed again, the minimum payments eat $310/month for **4+ years**. Total interest paid: **$5,800**.
+
+**Marcus** has **4 months of expenses** ($14,000) in a high-yield savings account. He withdraws $3,500/month, lives normally, and even takes an extra week to find a **better-paying** job rather than grabbing the first offer. He returns to work with **$0 of debt** and refills the fund over 12 months from his higher salary.
+
+**Same crisis. Same paycheck. Different bank balance four years later: ~$30,000.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Same Layoff. Different Outcomes.</text><rect x="60" y="120" width="480" height="880" rx="20" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3"/><text x="300" y="180" text-anchor="middle" fill="#ef4444" font-size="32" font-weight="bold">SARAH</text><text x="300" y="215" text-anchor="middle" fill="#ffffff" font-size="20">No emergency fund</text><line x1="100" y1="245" x2="500" y2="245" stroke="#ef4444" stroke-width="2"/><text x="300" y="290" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">During 3.5-mo gap:</text><text x="300" y="330" text-anchor="middle" fill="#ffffff" font-size="19">Credit card balance climbs</text><text x="300" y="365" text-anchor="middle" fill="#ffffff" font-size="19">to $11,500 @ 24% APR</text><text x="300" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Job pressure:</text><text x="300" y="470" text-anchor="middle" fill="#ffffff" font-size="19">Takes first offer to stop</text><text x="300" y="505" text-anchor="middle" fill="#ffffff" font-size="19">the bleeding</text><text x="300" y="570" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">After 4 years:</text><text x="300" y="615" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">$5,800 in interest paid</text><text x="300" y="655" text-anchor="middle" fill="#ffffff" font-size="19">$310/mo gone for years</text><text x="300" y="780" text-anchor="middle" fill="#ef4444" font-size="42" font-weight="bold">- $17,300</text><text x="300" y="820" text-anchor="middle" fill="#ffffff" font-size="18">debt + lost opportunity</text><rect x="560" y="120" width="480" height="880" rx="20" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="800" y="180" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">MARCUS</text><text x="800" y="215" text-anchor="middle" fill="#ffffff" font-size="20">$14,000 in HYSA</text><line x1="600" y1="245" x2="1000" y2="245" stroke="#10b981" stroke-width="2"/><text x="800" y="290" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">During 3.5-mo gap:</text><text x="800" y="330" text-anchor="middle" fill="#ffffff" font-size="19">Withdraws $3,500/mo</text><text x="800" y="365" text-anchor="middle" fill="#ffffff" font-size="19">Lives normally</text><text x="800" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Job pressure:</text><text x="800" y="470" text-anchor="middle" fill="#ffffff" font-size="19">Takes extra week,</text><text x="800" y="505" text-anchor="middle" fill="#ffffff" font-size="19">lands higher salary</text><text x="800" y="570" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">After 4 years:</text><text x="800" y="615" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">$0 debt, fund refilled</text><text x="800" y="655" text-anchor="middle" fill="#ffffff" font-size="19">Compounding ahead</text><text x="800" y="780" text-anchor="middle" fill="#10b981" font-size="42" font-weight="bold">+ $12,000</text><text x="800" y="820" text-anchor="middle" fill="#ffffff" font-size="18">net of fund replenished</text><text x="550" y="1060" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Gap between them: ~$30,000</text></svg>`,
+          caption: "The fund changes the crisis from a catastrophe into an inconvenience."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Why is it a bad idea to keep an emergency fund invested in the stock market?",
+        options: [
+          { text: "Stocks have low long-term returns", correct: false },
+          { text: "Stocks can drop 30%+ exactly when emergencies cluster (recessions, layoffs), forcing you to sell at the worst time", correct: true },
+          { text: "Brokerages charge withdrawal fees", correct: false },
+          { text: "It's illegal to hold emergency funds in stocks", correct: false }
+        ],
+        explanation: "Emergencies and market crashes correlate: recessions trigger both layoffs AND stock drops. A fund that's down 35% when you also lose your job has failed at its one job — being there when you need it. Stocks have great long-term returns, but emergency funds need stable principal, not growth.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Emergencies Cluster with Crashes</text><rect x="100" y="140" width="900" height="500" rx="15" fill="#16213e" stroke="#888" stroke-width="2"/><line x1="150" y1="600" x2="950" y2="600" stroke="#888" stroke-width="2"/><line x1="150" y1="180" x2="150" y2="600" stroke="#888" stroke-width="2"/><polyline points="150,300 250,290 350,310 450,500 550,560 650,540 750,420 850,380 950,360" fill="none" stroke="#ef4444" stroke-width="5"/><text x="950" y="630" text-anchor="end" fill="#888" font-size="18">2008</text><text x="150" y="630" fill="#888" font-size="18">2006</text><text x="500" y="200" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">S&amp;P 500 fell 37%</text><circle cx="500" cy="510" r="12" fill="#ffd700"/><text x="520" y="495" fill="#ffd700" font-size="20">← You get laid off here</text><rect x="100" y="690" width="900" height="320" rx="15" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3"/><text x="550" y="740" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">The Trap</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="22">$15,000 in stocks → worth $9,450 during crash</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="22">Sell to cover rent → lock in $5,550 loss</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="22">Market recovers 2 years later → you missed it</text><text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">Emergency funds need stable principal,</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">not the highest return.</text></svg>`,
+          caption: "Stock losses and emergencies tend to happen at the same time."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Starter Fund This Month",
+        content: `Before you tackle anything else, get to a **$1,000 starter fund** — the minimum buffer that stops most small emergencies from cascading into credit card debt.
+
+**This week, do exactly this:**
+1. **Open a separate high-yield savings account** at Ally, Marcus, Wealthfront, or Capital One 360 — keep it **out of your checking app** so you don't see it daily.
+2. **Name the account** "Emergency Fund — Do Not Touch."
+3. **Calculate the gap**: $1,000 minus what's already there.
+4. **Set an automatic transfer** of $50-$200/week from checking until it hits $1,000.
+5. **Sell one thing** (an unused bike, an old gaming console) to jump-start it.
+
+Most people reach $1,000 in **6-10 weeks**. Once you're there, you've **broken the cycle** where every small surprise lands on a credit card. That is the first real moment of financial breathing room.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Your $1,000 Starter Plan</text><rect x="80" y="140" width="940" height="130" rx="15" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="3"/><text x="140" y="205" fill="#0ea5e9" font-size="44" font-weight="bold">1</text><text x="210" y="195" fill="#ffffff" font-size="24" font-weight="bold">Open a separate HYSA</text><text x="210" y="235" fill="#888" font-size="20">Ally, Marcus, Wealthfront, Capital One 360</text><rect x="80" y="290" width="940" height="130" rx="15" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3"/><text x="140" y="355" fill="#8b5cf6" font-size="44" font-weight="bold">2</text><text x="210" y="345" fill="#ffffff" font-size="24" font-weight="bold">Name it: "Do Not Touch"</text><text x="210" y="385" fill="#888" font-size="20">Hide it from your daily banking app</text><rect x="80" y="440" width="940" height="130" rx="15" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="3"/><text x="140" y="505" fill="#f59e0b" font-size="44" font-weight="bold">3</text><text x="210" y="495" fill="#ffffff" font-size="24" font-weight="bold">Auto-transfer $50-$200/week</text><text x="210" y="535" fill="#888" font-size="20">Day after payday — pay yourself first</text><rect x="80" y="590" width="940" height="130" rx="15" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="140" y="655" fill="#ec4899" font-size="44" font-weight="bold">4</text><text x="210" y="645" fill="#ffffff" font-size="24" font-weight="bold">Sell one thing to jump-start</text><text x="210" y="685" fill="#888" font-size="20">Bike, console, old phone — instant $200-$500</text><rect x="80" y="740" width="940" height="130" rx="15" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="140" y="805" fill="#10b981" font-size="44" font-weight="bold">5</text><text x="210" y="795" fill="#ffffff" font-size="24" font-weight="bold">Hit $1,000 in 6-10 weeks</text><text x="210" y="835" fill="#888" font-size="20">Then move on to debt + full fund</text><text x="550" y="940" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">$1,000 = the end of the credit card panic spiral</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="22" font-style="italic">This is the first real win in your finances.</text></svg>`,
+          caption: "Five steps. Six to ten weeks. The starter fund is reachable for almost everyone."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-emergency-fund-lesson-2",
+    title: "Sizing Your Fund by Life Stage",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "How Much Is Enough?",
+        content: `"Three to six months of expenses" is the famous rule — but **it's wrong for most people** because it doesn't account for **your specific risk profile**.
+
+The right size depends on three variables: **how stable your income is**, **how easy you'd be to replace at work**, and **how many people depend on your paycheck**.
+
+A married accountant whose spouse also earns $80k needs **far less** than a single, commission-only realtor supporting two kids. They're not in the same risk class.
+
+The tiered approach below scales to **your actual life**, not an average:
+- **$1,000 starter** — while paying down debt
+- **1 month** — renter, stable W-2, dual income
+- **3 months** — typical adult, the industry default
+- **6 months** — single income, homeowner, or family
+- **12 months** — self-employed, commissioned, freelance, seasonal
+
+The goal isn't maximum cushion. It's **calibrated cushion**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">The Sizing Tiers</text><text x="550" y="115" text-anchor="middle" fill="#888" font-size="22">Match the fund to your risk profile</text><rect x="80" y="160" width="940" height="120" rx="12" fill="#ef4444" opacity="0.22" stroke="#ef4444" stroke-width="3"/><text x="160" y="225" fill="#ef4444" font-size="36" font-weight="bold">$1,000</text><text x="450" y="210" fill="#ffffff" font-size="24" font-weight="bold">Starter (Step 1)</text><text x="450" y="245" fill="#888" font-size="20">Still paying off high-interest debt</text><rect x="80" y="300" width="940" height="120" rx="12" fill="#f59e0b" opacity="0.22" stroke="#f59e0b" stroke-width="3"/><text x="160" y="365" fill="#f59e0b" font-size="36" font-weight="bold">1 mo</text><text x="450" y="350" fill="#ffffff" font-size="24" font-weight="bold">Renter, stable W-2, dual income</text><text x="450" y="385" fill="#888" font-size="20">Low fixed costs, partner safety net</text><rect x="80" y="440" width="940" height="120" rx="12" fill="#0ea5e9" opacity="0.22" stroke="#0ea5e9" stroke-width="4"/><text x="160" y="505" fill="#0ea5e9" font-size="36" font-weight="bold">3 mo</text><text x="450" y="490" fill="#ffffff" font-size="24" font-weight="bold">Typical adult ← Industry default</text><text x="450" y="525" fill="#888" font-size="20">Covers typical 2-3 month job search</text><rect x="80" y="580" width="940" height="120" rx="12" fill="#8b5cf6" opacity="0.22" stroke="#8b5cf6" stroke-width="3"/><text x="160" y="645" fill="#8b5cf6" font-size="36" font-weight="bold">6 mo</text><text x="450" y="630" fill="#ffffff" font-size="24" font-weight="bold">Single income OR homeowner OR kids</text><text x="450" y="665" fill="#888" font-size="20">Mortgage + dependents = bigger floor</text><rect x="80" y="720" width="940" height="120" rx="12" fill="#10b981" opacity="0.22" stroke="#10b981" stroke-width="3"/><text x="160" y="785" fill="#10b981" font-size="36" font-weight="bold">12 mo</text><text x="450" y="770" fill="#ffffff" font-size="24" font-weight="bold">Self-employed / commission / seasonal</text><text x="450" y="805" fill="#888" font-size="20">Lumpy income = bigger buffer</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Pick the tier that matches your reality</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="20">Not your worst fear. Not "what feels safe."</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="20">Your actual risk profile.</text></svg>`,
+          caption: "Calibrated cushion: the right size depends on income stability and dependents."
+        }
+      },
+      {
+        type: "concept",
+        title: "Calculate Your Bare-Bones Monthly",
+        content: `Your emergency fund covers **bare-bones survival expenses**, NOT your current spending. This distinction matters: if you lose your job, you'd cancel streaming, stop dining out, and skip travel. The fund only has to cover what you **literally cannot stop paying**.
+
+**Include (essential):**
+- **Housing**: rent or mortgage + property tax + HOA
+- **Utilities**: electric, gas, water, internet
+- **Food**: groceries (not restaurants)
+- **Transportation**: gas, insurance, minimum auto loan
+- **Insurance**: health, auto, life premiums
+- **Minimum debt payments**: cards, student loans
+- **Childcare**: if you'd lose your spot by stopping
+
+**Exclude (discretionary):**
+- Restaurants, takeout, coffee out
+- Streaming, gym, subscriptions
+- Travel, entertainment, hobbies
+- Retirement contributions (pause in true emergency)
+
+**Example**: someone spending $5,000/month normally might only need **$3,200/month** bare-bones. Their 3-month fund = $9,600, not $15,000.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Bare-Bones, Not Normal Spending</text><rect x="60" y="130" width="500" height="800" rx="15" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="310" y="185" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">INCLUDE</text><text x="310" y="215" text-anchor="middle" fill="#888" font-size="18">Can't be cancelled</text><text x="90" y="280" fill="#ffffff" font-size="20">Housing (rent/mortgage)</text><text x="450" y="280" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$1,400</text><text x="90" y="325" fill="#ffffff" font-size="20">Utilities + internet</text><text x="450" y="325" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$220</text><text x="90" y="370" fill="#ffffff" font-size="20">Groceries</text><text x="450" y="370" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$500</text><text x="90" y="415" fill="#ffffff" font-size="20">Gas + auto insurance</text><text x="450" y="415" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$340</text><text x="90" y="460" fill="#ffffff" font-size="20">Health insurance</text><text x="450" y="460" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$280</text><text x="90" y="505" fill="#ffffff" font-size="20">Min. debt payments</text><text x="450" y="505" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$320</text><text x="90" y="550" fill="#ffffff" font-size="20">Phone</text><text x="450" y="550" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$60</text><text x="90" y="595" fill="#ffffff" font-size="20">Childcare (if applicable)</text><text x="450" y="595" text-anchor="end" fill="#ffd700" font-size="20" font-weight="bold">$80</text><line x1="80" y1="640" x2="540" y2="640" stroke="#10b981" stroke-width="2"/><text x="90" y="685" fill="#ffffff" font-size="22" font-weight="bold">Bare-bones total:</text><text x="450" y="685" text-anchor="end" fill="#10b981" font-size="28" font-weight="bold">$3,200</text><text x="310" y="780" text-anchor="middle" fill="#ffffff" font-size="20">3-month fund:</text><text x="310" y="820" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">$9,600</text><rect x="580" y="130" width="460" height="800" rx="15" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3"/><text x="810" y="185" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">EXCLUDE</text><text x="810" y="215" text-anchor="middle" fill="#888" font-size="18">Can be paused</text><text x="610" y="280" fill="#ffffff" font-size="20">Restaurants / coffee</text><text x="1020" y="280" text-anchor="end" fill="#888" font-size="20">$400</text><text x="610" y="325" fill="#ffffff" font-size="20">Streaming, gym</text><text x="1020" y="325" text-anchor="end" fill="#888" font-size="20">$80</text><text x="610" y="370" fill="#ffffff" font-size="20">Travel, hobbies</text><text x="1020" y="370" text-anchor="end" fill="#888" font-size="20">$300</text><text x="610" y="415" fill="#ffffff" font-size="20">Shopping</text><text x="1020" y="415" text-anchor="end" fill="#888" font-size="20">$250</text><text x="610" y="460" fill="#ffffff" font-size="20">401(k) (pause it)</text><text x="1020" y="460" text-anchor="end" fill="#888" font-size="20">$500</text><text x="610" y="505" fill="#ffffff" font-size="20">Extra debt payoff</text><text x="1020" y="505" text-anchor="end" fill="#888" font-size="20">$270</text><line x1="600" y1="550" x2="1030" y2="550" stroke="#ef4444" stroke-width="2"/><text x="610" y="600" fill="#ffffff" font-size="22" font-weight="bold">Skipped:</text><text x="1020" y="600" text-anchor="end" fill="#ef4444" font-size="26" font-weight="bold">$1,800</text><text x="810" y="700" text-anchor="middle" fill="#ffffff" font-size="20">Normal: $5,000</text><text x="810" y="740" text-anchor="middle" fill="#ffffff" font-size="20">Bare-bones: $3,200</text><text x="810" y="790" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">36% less to save</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Right number is smaller than you think</text></svg>`,
+          caption: "Cancel the cancellable. Fund the unstoppable. Save 30-40% on the target."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Real Sizing Decisions",
+        content: `**Case 1 — Jamie, 25, renter, software engineer.**
+W-2 income $95k, partner also W-2, no kids, $1,800/mo bare-bones. Job market hot.
+→ **Target: 1 month = $1,800.** Risk is low; building investments matters more than over-funding cash.
+
+**Case 2 — Priya & Raj, 38, homeowners, one income, 2 kids.**
+Priya is staff nurse ($82k), Raj stays home. Bare-bones $4,800/mo. Mortgage = no flexibility.
+→ **Target: 6 months = $28,800.** One paycheck supports four people; a layoff is a major event. Larger cushion buys patience to find the right next job.
+
+**Case 3 — Carlos, 41, commissioned sales.**
+Income swings $5k-$18k/month. Bare-bones $5,500. Average year $130k, but a bad quarter is real.
+→ **Target: 12 months = $66,000.** Income volatility is the risk. The fund smooths the lumps and prevents desperate deal-taking that hurts long-term earnings.
+
+**Same expenses, different fund sizes. Risk profile drives the answer.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Three Real Sizing Decisions</text><rect x="60" y="130" width="320" height="800" rx="15" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="220" y="180" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">JAMIE, 25</text><text x="220" y="215" text-anchor="middle" fill="#888" font-size="18">Renter • SWE • Dual income</text><text x="220" y="285" text-anchor="middle" fill="#ffffff" font-size="18">W-2: $95k</text><text x="220" y="320" text-anchor="middle" fill="#ffffff" font-size="18">No kids</text><text x="220" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Hot job market</text><text x="220" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Bare-bones</text><text x="220" y="465" text-anchor="middle" fill="#ffffff" font-size="20">$1,800/mo</text><text x="220" y="560" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Target: 1 mo</text><text x="220" y="630" text-anchor="middle" fill="#10b981" font-size="38" font-weight="bold">$1,800</text><text x="220" y="740" text-anchor="middle" fill="#888" font-size="16">Then invest the surplus</text><rect x="400" y="130" width="320" height="800" rx="15" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3"/><text x="560" y="180" text-anchor="middle" fill="#8b5cf6" font-size="26" font-weight="bold">PRIYA &amp; RAJ, 38</text><text x="560" y="215" text-anchor="middle" fill="#888" font-size="18">Homeowner • 1 income • 2 kids</text><text x="560" y="285" text-anchor="middle" fill="#ffffff" font-size="18">Priya: $82k nurse</text><text x="560" y="320" text-anchor="middle" fill="#ffffff" font-size="18">Raj: stay-at-home</text><text x="560" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Mortgage = fixed</text><text x="560" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Bare-bones</text><text x="560" y="465" text-anchor="middle" fill="#ffffff" font-size="20">$4,800/mo</text><text x="560" y="560" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Target: 6 mo</text><text x="560" y="630" text-anchor="middle" fill="#8b5cf6" font-size="38" font-weight="bold">$28,800</text><text x="560" y="740" text-anchor="middle" fill="#888" font-size="16">Time to find right job</text><rect x="740" y="130" width="320" height="800" rx="15" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3"/><text x="900" y="180" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">CARLOS, 41</text><text x="900" y="215" text-anchor="middle" fill="#888" font-size="18">Commission sales</text><text x="900" y="285" text-anchor="middle" fill="#ffffff" font-size="18">$5k-$18k/mo swings</text><text x="900" y="320" text-anchor="middle" fill="#ffffff" font-size="18">Avg year $130k</text><text x="900" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Lumpy income</text><text x="900" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Bare-bones</text><text x="900" y="465" text-anchor="middle" fill="#ffffff" font-size="20">$5,500/mo</text><text x="900" y="560" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Target: 12 mo</text><text x="900" y="630" text-anchor="middle" fill="#ef4444" font-size="38" font-weight="bold">$66,000</text><text x="900" y="740" text-anchor="middle" fill="#888" font-size="16">Smooths the lumps</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Risk profile drives the size — not income level</text></svg>`,
+          caption: "Three real households. Three different right answers."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "A freelance graphic designer with two kids and a mortgage has $4,500/month bare-bones expenses. Which fund target fits best?",
+        options: [
+          { text: "$1,000 starter — they have skills, they'll be fine", correct: false },
+          { text: "3 months = $13,500 — the industry standard works for everyone", correct: false },
+          { text: "12 months = $54,000 — self-employed with dependents and a mortgage is the highest-risk profile", correct: true },
+          { text: "24 months = $108,000 — better safe than sorry, hoard cash", correct: false }
+        ],
+        explanation: "This person hits three risk multipliers: (1) self-employed/freelance income is lumpy and lacks unemployment benefits, (2) dependents, (3) a mortgage with no flexibility. That's the 12-month tier. 24 months is over-funding — cash dragging at 4% when long-term investments earn 7-10% real means leaving real wealth on the table.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Stack the Risk Multipliers</text><rect x="100" y="160" width="900" height="120" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="150" y="225" fill="#ef4444" font-size="40" font-weight="bold">+</text><text x="210" y="215" fill="#ffffff" font-size="22" font-weight="bold">Self-employed / freelance</text><text x="210" y="250" fill="#888" font-size="19">Lumpy income, no unemployment insurance</text><rect x="100" y="300" width="900" height="120" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="150" y="365" fill="#ef4444" font-size="40" font-weight="bold">+</text><text x="210" y="355" fill="#ffffff" font-size="22" font-weight="bold">Two dependents</text><text x="210" y="390" fill="#888" font-size="19">Kids' costs are non-negotiable</text><rect x="100" y="440" width="900" height="120" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="150" y="505" fill="#ef4444" font-size="40" font-weight="bold">+</text><text x="210" y="495" fill="#ffffff" font-size="22" font-weight="bold">Homeowner with mortgage</text><text x="210" y="530" fill="#888" font-size="19">Can't move to cheaper place quickly</text><rect x="100" y="600" width="900" height="220" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="660" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Highest-risk tier: 12 months</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="24">$4,500 × 12 = $54,000</text><text x="550" y="780" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">Calibrated to actual exposure</text><text x="550" y="880" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">$1,000 leaves them exposed</text><text x="550" y="940" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">24 months over-funds → cash drag on wealth</text></svg>`,
+          caption: "Three risk multipliers stack into the highest-risk tier."
+        }
+      },
+      {
+        type: "application",
+        title: "Run the Math on Your Number",
+        content: `Pick up a piece of paper or open a spreadsheet right now and do this **15-minute exercise**:
+
+**Step 1 — Bare-bones monthly.** List only the **must-pay** lines: housing, utilities, food, transportation, insurance, minimum debt payments, childcare. Total it. Most people land **30-40% below normal spending**.
+
+**Step 2 — Pick your tier.** Score yourself:
+- W-2 job in stable industry? **3 months**
+- Dual income, low fixed costs? **1 month**
+- Single income OR homeowner OR kids? **6 months**
+- Self-employed/commissioned/freelance? **12 months**
+
+**Step 3 — Multiply.** Bare-bones × tier months = your **target fund**.
+
+**Step 4 — Subtract what you have.** Gap = what's left to save.
+
+**Step 5 — Set the timeline.** Divide gap by **comfortable monthly savings** ($300? $800?). Most people fund 3 months in **12-18 months**.
+
+Write the target on a sticky note and put it where you'll see it daily.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Your 15-Minute Worksheet</text><rect x="80" y="130" width="940" height="700" rx="15" fill="#16213e" stroke="#ffd700" stroke-width="2"/><text x="120" y="190" fill="#0ea5e9" font-size="22" font-weight="bold">Step 1: Bare-bones monthly</text><line x1="600" y1="195" x2="980" y2="195" stroke="#888" stroke-width="1"/><text x="980" y="190" text-anchor="end" fill="#ffd700" font-size="22">$ ____________</text><text x="120" y="285" fill="#0ea5e9" font-size="22" font-weight="bold">Step 2: Your tier (months)</text><text x="140" y="320" fill="#888" font-size="18">Dual W-2 = 1 | Typical = 3 | Single/owner/kids = 6 | Self-emp = 12</text><line x1="600" y1="335" x2="980" y2="335" stroke="#888" stroke-width="1"/><text x="980" y="330" text-anchor="end" fill="#ffd700" font-size="22">____ months</text><text x="120" y="425" fill="#0ea5e9" font-size="22" font-weight="bold">Step 3: Target = Step 1 × Step 2</text><line x1="600" y1="475" x2="980" y2="475" stroke="#ffd700" stroke-width="3"/><text x="980" y="470" text-anchor="end" fill="#10b981" font-size="28" font-weight="bold">$ ____________</text><text x="120" y="565" fill="#0ea5e9" font-size="22" font-weight="bold">Step 4: Already saved</text><line x1="600" y1="615" x2="980" y2="615" stroke="#888" stroke-width="1"/><text x="980" y="610" text-anchor="end" fill="#ffd700" font-size="22">- $ ____________</text><text x="120" y="700" fill="#0ea5e9" font-size="22" font-weight="bold">Step 5: Gap remaining</text><line x1="600" y1="750" x2="980" y2="750" stroke="#ef4444" stroke-width="3"/><text x="980" y="745" text-anchor="end" fill="#ef4444" font-size="28" font-weight="bold">$ ____________</text><text x="120" y="800" fill="#888" font-size="20">÷ monthly savings = months to target</text><rect x="80" y="870" width="940" height="180" rx="15" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="550" y="930" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Put the target on a sticky note</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="22">On your monitor. Mirror. Wallet.</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">A goal you see daily is a goal you hit.</text></svg>`,
+          caption: "Five lines on paper. Your exact target. Done in 15 minutes."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-emergency-fund-lesson-3",
+    title: "Where to Hold It: HYSA, Money Market, Treasury Bills",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Access vs Yield Tradeoff",
+        content: `Once you know **how much** to hold, the next question is **where**. The right place balances three properties:
+
+1. **Liquidity** — how fast you can get the cash (same-day? 1 week? 1 month?)
+2. **Yield** — what interest it earns
+3. **Safety** — is the principal guaranteed?
+
+The four real options in 2026:
+
+- **High-Yield Savings Account (HYSA)** — same-day access, ~4-5% APY, FDIC-insured
+- **Money Market Account (MMA)** — same-day, ~4-5%, sometimes check-writing
+- **Treasury Bills (T-bills)** — 4 to 52 weeks, ~5%, state-tax-free, U.S. government-backed
+- **I-Bonds** — inflation hedge, but **1-year lockup** (not a true emergency tool)
+
+For most people, a **plain HYSA** is the right answer. For larger funds, a **HYSA + laddered T-bill** combo squeezes out 30-50 extra basis points without losing access.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The Three Properties</text><circle cx="380" cy="450" r="200" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="3"/><circle cx="720" cy="450" r="200" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><circle cx="550" cy="700" r="200" fill="#ffd700" opacity="0.3" stroke="#ffd700" stroke-width="3"/><text x="280" y="370" text-anchor="middle" fill="#0ea5e9" font-size="28" font-weight="bold">Liquidity</text><text x="280" y="405" text-anchor="middle" fill="#ffffff" font-size="18">Same-day?</text><text x="820" y="370" text-anchor="middle" fill="#10b981" font-size="28" font-weight="bold">Yield</text><text x="820" y="405" text-anchor="middle" fill="#ffffff" font-size="18">~4-5%?</text><text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Safety</text><text x="550" y="835" text-anchor="middle" fill="#ffffff" font-size="18">FDIC / Treasury</text><text x="550" y="560" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">SWEET</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">SPOT</text><rect x="100" y="930" width="900" height="120" rx="15" fill="#16213e" stroke="#ffd700" stroke-width="2"/><text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Emergency funds prioritize Liquidity + Safety</text><text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="20">Yield is the bonus — never the goal</text></svg>`,
+          caption: "Liquidity and safety are the requirements. Yield is the bonus."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Four Vehicles Compared",
+        content: `**High-Yield Savings Account (HYSA)** — the default. Online banks (**Ally, Marcus by Goldman Sachs, Wealthfront Cash, Capital One 360, SoFi**) pay ~**4-5% APY** with **FDIC insurance up to $250k per depositor per bank**. Same-day transfers. Open in 10 minutes online.
+
+**Money Market Account (MMA)** — similar yield, sometimes adds **check-writing or a debit card**. Watch for **Regulation D** — the old 6-withdrawal/month cap was relaxed in 2020, but **some banks kept the limit**. Read the fine print.
+
+**Treasury Bills (T-bills)** — short-term U.S. government debt (**4, 8, 13, 17, 26, 52 weeks**). Buy at **TreasuryDirect.gov**, $100 minimum, ~5% yield. **No state income tax** — meaningful in CA, NY, OR. Backed by the U.S. Treasury (higher safety than FDIC banks). Locked until maturity.
+
+**I-Bonds** — inflation-linked, capped at $10k/year, **1-year minimum hold**, 3-month interest penalty if cashed before 5 years. **Great inflation hedge, not great for emergencies** because of the lockup.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Vehicle Comparison</text><rect x="60" y="100" width="1000" height="60" fill="#16213e" stroke="#888" stroke-width="1"/><text x="200" y="140" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Vehicle</text><text x="500" y="140" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Yield</text><text x="700" y="140" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Access</text><text x="900" y="140" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Insured by</text><rect x="60" y="160" width="1000" height="180" fill="#0ea5e9" opacity="0.15"/><text x="200" y="210" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">HYSA</text><text x="200" y="245" text-anchor="middle" fill="#888" font-size="16">Online banks</text><text x="500" y="225" text-anchor="middle" fill="#ffffff" font-size="22">~4-5%</text><text x="700" y="215" text-anchor="middle" fill="#10b981" font-size="20">Same-day</text><text x="700" y="245" text-anchor="middle" fill="#888" font-size="16">1-2 day transfer</text><text x="900" y="225" text-anchor="middle" fill="#ffffff" font-size="20">FDIC $250k</text><text x="200" y="295" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">Best default for most</text><rect x="60" y="340" width="1000" height="180" fill="#8b5cf6" opacity="0.15"/><text x="200" y="390" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Money Market</text><text x="200" y="425" text-anchor="middle" fill="#888" font-size="16">MMA</text><text x="500" y="405" text-anchor="middle" fill="#ffffff" font-size="22">~4-5%</text><text x="700" y="395" text-anchor="middle" fill="#10b981" font-size="20">Same-day</text><text x="700" y="425" text-anchor="middle" fill="#f59e0b" font-size="16">Check Reg D limits</text><text x="900" y="405" text-anchor="middle" fill="#ffffff" font-size="20">FDIC $250k</text><text x="200" y="475" text-anchor="middle" fill="#888" font-size="18">Adds check-writing</text><rect x="60" y="520" width="1000" height="180" fill="#10b981" opacity="0.15"/><text x="200" y="570" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">T-Bills</text><text x="200" y="605" text-anchor="middle" fill="#888" font-size="16">4-52 weeks</text><text x="500" y="585" text-anchor="middle" fill="#ffffff" font-size="22">~5%</text><text x="500" y="615" text-anchor="middle" fill="#10b981" font-size="14">+ no state tax</text><text x="700" y="575" text-anchor="middle" fill="#f59e0b" font-size="18">At maturity</text><text x="700" y="605" text-anchor="middle" fill="#888" font-size="16">4-52 wks lockup</text><text x="900" y="585" text-anchor="middle" fill="#ffffff" font-size="20">US Treasury</text><text x="900" y="615" text-anchor="middle" fill="#ffd700" font-size="14">(highest)</text><text x="200" y="655" text-anchor="middle" fill="#888" font-size="18">$100 min, TreasuryDirect</text><rect x="60" y="700" width="1000" height="180" fill="#ef4444" opacity="0.15"/><text x="200" y="750" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">I-Bonds</text><text x="200" y="785" text-anchor="middle" fill="#888" font-size="16">Inflation-linked</text><text x="500" y="765" text-anchor="middle" fill="#ffffff" font-size="22">Var.</text><text x="500" y="795" text-anchor="middle" fill="#888" font-size="14">= CPI + fixed</text><text x="700" y="755" text-anchor="middle" fill="#ef4444" font-size="18">1-year LOCK</text><text x="700" y="785" text-anchor="middle" fill="#888" font-size="16">3-mo penalty &lt;5yr</text><text x="900" y="765" text-anchor="middle" fill="#ffffff" font-size="20">US Treasury</text><text x="200" y="835" text-anchor="middle" fill="#ef4444" font-size="18">NOT for emergency fund</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Default = HYSA. Optimize later.</text></svg>`,
+          caption: "HYSA wins for simplicity. T-bills add yield. I-bonds don't belong here."
+        }
+      },
+      {
+        type: "example",
+        title: "The HYSA + T-Bill Ladder Strategy",
+        content: `**Aisha** has a $30,000 emergency fund. Here's how she structures it:
+
+**Bucket 1 — Liquid layer ($6,000 in Ally HYSA @ 4.5%)**
+Covers any sudden shock. Same-day access. About 1 month of expenses.
+
+**Bucket 2 — T-bill ladder ($24,000 across 4 rungs)**
+- $6,000 in **13-week T-bill** maturing in 4 weeks
+- $6,000 in **13-week T-bill** maturing in 7 weeks
+- $6,000 in **13-week T-bill** maturing in 10 weeks
+- $6,000 in **13-week T-bill** maturing in 13 weeks
+
+Every **3 weeks** something matures. She gets ~**5.1%** + **no state tax** (saves $290/year in California).
+
+**If a true emergency hits:** drain the $6,000 HYSA first → next T-bill matures within 21 days → repeat. **Worst-case wait: 3 weeks** for additional cash.
+
+**Annual yield gain vs all-HYSA: ~$180.** Small but real. Don't bother below ~$15k.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Aisha's $30k Ladder</text><rect x="80" y="130" width="940" height="180" rx="15" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="130" y="175" fill="#0ea5e9" font-size="24" font-weight="bold">Bucket 1: Liquid Layer</text><text x="130" y="215" fill="#ffffff" font-size="20">Ally HYSA @ 4.5% APY</text><text x="130" y="250" fill="#888" font-size="18">Same-day access — first dollar in any emergency</text><text x="980" y="220" text-anchor="end" fill="#0ea5e9" font-size="36" font-weight="bold">$6,000</text><text x="980" y="265" text-anchor="end" fill="#888" font-size="18">~1 month expenses</text><text x="130" y="365" fill="#10b981" font-size="24" font-weight="bold">Bucket 2: T-Bill Ladder @ 5.1%</text><text x="130" y="400" fill="#888" font-size="18">No state tax. Something matures every 3 weeks.</text><rect x="80" y="430" width="220" height="170" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="190" y="475" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Rung 1</text><text x="190" y="515" text-anchor="middle" fill="#ffffff" font-size="20">$6,000</text><text x="190" y="555" text-anchor="middle" fill="#ffd700" font-size="18">Matures</text><text x="190" y="580" text-anchor="middle" fill="#ffd700" font-size="18">in 4 wks</text><rect x="320" y="430" width="220" height="170" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="430" y="475" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Rung 2</text><text x="430" y="515" text-anchor="middle" fill="#ffffff" font-size="20">$6,000</text><text x="430" y="555" text-anchor="middle" fill="#ffd700" font-size="18">Matures</text><text x="430" y="580" text-anchor="middle" fill="#ffd700" font-size="18">in 7 wks</text><rect x="560" y="430" width="220" height="170" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="670" y="475" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Rung 3</text><text x="670" y="515" text-anchor="middle" fill="#ffffff" font-size="20">$6,000</text><text x="670" y="555" text-anchor="middle" fill="#ffd700" font-size="18">Matures</text><text x="670" y="580" text-anchor="middle" fill="#ffd700" font-size="18">in 10 wks</text><rect x="800" y="430" width="220" height="170" rx="12" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="910" y="475" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Rung 4</text><text x="910" y="515" text-anchor="middle" fill="#ffffff" font-size="20">$6,000</text><text x="910" y="555" text-anchor="middle" fill="#ffd700" font-size="18">Matures</text><text x="910" y="580" text-anchor="middle" fill="#ffd700" font-size="18">in 13 wks</text><rect x="80" y="640" width="940" height="170" rx="15" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="685" text-anchor="middle" fill="#8b5cf6" font-size="24" font-weight="bold">Emergency Hits — What Happens</text><text x="550" y="725" text-anchor="middle" fill="#ffffff" font-size="20">1. Drain $6,000 HYSA same day</text><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="20">2. Next rung matures within 21 days → another $6k</text><text x="550" y="795" text-anchor="middle" fill="#ffffff" font-size="20">3. Continue every 3 weeks if needed</text><rect x="80" y="840" width="940" height="200" rx="15" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="885" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Annual benefit vs all-HYSA</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="22">Extra yield: ~$120 • CA state tax savings: ~$290</text><text x="550" y="985" text-anchor="middle" fill="#ffffff" font-size="22">Worst-case wait for next $6k: 3 weeks</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="18">Skip the ladder under ~$15k — not worth the complexity</text></svg>`,
+          caption: "HYSA covers the first shock. T-bill ladder fuels the rest at higher yield."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check",
+        question: "Why are I-Bonds a poor choice for an emergency fund despite their inflation protection?",
+        options: [
+          { text: "I-Bonds aren't insured by the government", correct: false },
+          { text: "I-Bonds have a 1-year minimum holding period — you literally cannot access the money in year 1, defeating the purpose of an emergency fund", correct: true },
+          { text: "I-Bond yields are always under 1%", correct: false },
+          { text: "You can only buy I-Bonds through a financial advisor", correct: false }
+        ],
+        explanation: "I-Bonds have a hard 1-year lockup with no exceptions, plus a 3-month interest penalty if cashed before year 5. An emergency fund must be accessible TODAY when a crisis hits. I-Bonds are excellent for medium-term inflation-protected savings, but they fail the fundamental access requirement. Keep them for goals 1-5 years out instead.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The I-Bond Lockup Problem</text><rect x="100" y="150" width="900" height="100" rx="15" fill="#16213e" stroke="#888" stroke-width="2"/><text x="120" y="195" fill="#ffffff" font-size="22">Day 0: Buy I-Bond</text><text x="980" y="195" text-anchor="end" fill="#10b981" font-size="22">Money in</text><text x="550" y="230" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">↓ Locked for 12 months ↓</text><rect x="100" y="280" width="900" height="150" rx="15" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="335" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">Month 6: EMERGENCY</text><text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="22">Car transmission dies — $1,800 needed</text><text x="550" y="410" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">You CANNOT touch the I-Bond</text><rect x="100" y="460" width="900" height="100" rx="15" fill="#16213e" stroke="#888" stroke-width="2"/><text x="120" y="505" fill="#ffffff" font-size="22">Month 12: Lockup ends</text><text x="980" y="505" text-anchor="end" fill="#888" font-size="20">Cash with -3mo penalty</text><text x="550" y="545" text-anchor="middle" fill="#888" font-size="18">Still penalized for next 4 years</text><rect x="100" y="610" width="900" height="220" rx="15" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">I-Bonds belong in a 1-5 year bucket</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="22">Use for: house down payment in 3 years</text><text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="22">Inflation-protected medium-term savings</text><text x="550" y="795" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">Right tool. Wrong slot.</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">An emergency fund means "available NOW"</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="22">If you can't reach it today, it doesn't qualify</text></svg>`,
+          caption: "I-Bonds lock for 12 months. Emergencies don't wait."
+        }
+      },
+      {
+        type: "application",
+        title: "Open Your HYSA This Week",
+        content: `Pick **one** online bank from this list and open an account in the next **48 hours**. Decision fatigue is the enemy — all four are excellent and rates differ by 0.1-0.3% which is noise.
+
+**Top picks (2026):**
+- **Ally Bank** — clean app, no fees, sub-accounts ("buckets") for goals
+- **Marcus by Goldman Sachs** — slightly higher rate, simple
+- **Wealthfront Cash** — highest typical rate, swept across partner banks for **up to $8M FDIC coverage**
+- **Capital One 360** — works if you already use Capital One
+
+**Setup checklist:**
+1. Open account online (10 minutes)
+2. Link your existing checking account
+3. Transfer your starter amount in
+4. **Turn on automatic weekly transfer** (the magic step — automation beats willpower)
+5. **Disable the linked debit card** if one ships — friction is protective
+
+If your fund grows past **$15,000**, revisit and consider adding a **T-bill ladder** at TreasuryDirect for ~30 extra basis points and state-tax savings. Until then: **HYSA only**. Simplicity wins.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Pick One. Open It This Week.</text><rect x="60" y="130" width="240" height="240" rx="15" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="180" y="195" text-anchor="middle" fill="#0ea5e9" font-size="24" font-weight="bold">Ally</text><text x="180" y="245" text-anchor="middle" fill="#ffffff" font-size="18">Clean app</text><text x="180" y="275" text-anchor="middle" fill="#ffffff" font-size="18">"Buckets" feature</text><text x="180" y="305" text-anchor="middle" fill="#ffffff" font-size="18">No fees</text><text x="180" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">~4.5% APY</text><rect x="310" y="130" width="240" height="240" rx="15" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="430" y="195" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Marcus</text><text x="430" y="225" text-anchor="middle" fill="#888" font-size="16">Goldman Sachs</text><text x="430" y="265" text-anchor="middle" fill="#ffffff" font-size="18">Simple</text><text x="430" y="295" text-anchor="middle" fill="#ffffff" font-size="18">Higher rate</text><text x="430" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">~4.6% APY</text><rect x="560" y="130" width="240" height="240" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="680" y="195" text-anchor="middle" fill="#8b5cf6" font-size="24" font-weight="bold">Wealthfront</text><text x="680" y="245" text-anchor="middle" fill="#ffffff" font-size="18">Top rate</text><text x="680" y="275" text-anchor="middle" fill="#ffffff" font-size="18">$8M FDIC</text><text x="680" y="305" text-anchor="middle" fill="#ffffff" font-size="18">(via sweep)</text><text x="680" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">~4.8% APY</text><rect x="810" y="130" width="240" height="240" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="930" y="195" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Capital One</text><text x="930" y="225" text-anchor="middle" fill="#888" font-size="16">360 Performance</text><text x="930" y="265" text-anchor="middle" fill="#ffffff" font-size="18">Brick locations</text><text x="930" y="295" text-anchor="middle" fill="#ffffff" font-size="18">Easy if existing</text><text x="930" y="345" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">~4.3% APY</text><rect x="80" y="420" width="940" height="500" rx="15" fill="#16213e" stroke="#ffd700" stroke-width="2"/><text x="550" y="470" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">5-Step Setup Checklist</text><text x="120" y="535" fill="#10b981" font-size="22" font-weight="bold">1.</text><text x="170" y="535" fill="#ffffff" font-size="22">Open account online (10 min)</text><text x="120" y="590" fill="#10b981" font-size="22" font-weight="bold">2.</text><text x="170" y="590" fill="#ffffff" font-size="22">Link existing checking account</text><text x="120" y="645" fill="#10b981" font-size="22" font-weight="bold">3.</text><text x="170" y="645" fill="#ffffff" font-size="22">Transfer starter amount in</text><text x="120" y="700" fill="#ffd700" font-size="22" font-weight="bold">4.</text><text x="170" y="700" fill="#ffd700" font-size="22" font-weight="bold">Turn on automatic weekly transfer ←</text><text x="170" y="730" fill="#888" font-size="18">The magic step. Automation beats willpower.</text><text x="120" y="800" fill="#10b981" font-size="22" font-weight="bold">5.</text><text x="170" y="800" fill="#ffffff" font-size="22">Disable any debit card that ships</text><text x="170" y="830" fill="#888" font-size="18">Friction is protective — keep it hard to spend</text><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Past $15k? Layer in a T-bill ladder.</text><text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="20" font-style="italic">Until then: HYSA only. Simplicity wins.</text></svg>`,
+          caption: "Pick one bank. Open in 48 hours. Automate. Done."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'pf-taxes',

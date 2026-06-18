@@ -4793,8 +4793,343 @@ This is why Step 3 saves lives.`,
             title: 'Medical-Surgical Nursing Core',
             author: 'Synthesis Learning',
             description: 'The largest NCLEX content area — cardiac, respiratory, GI, GU, endocrine, neuro — focused on the priority assessments and interventions.',
-            lessons: 1, duration: 5, progress: 0, category: 'nclex-foundations',
-            lessonList: comingSoonLessons('cardiac, respiratory, GI, GU, endocrine, and neuro med-surg nursing care for the largest NCLEX content area'),
+            lessons: 3, duration: 45, progress: 0, category: 'nclex-foundations',
+            lessonList: [
+{
+    id: "nclex-med-surg-lesson-1",
+    title: "Cardiac Med-Surg: Chest Pain Workup, MI, and Acute Coronary Syndromes",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Time Is Muscle",
+        content: `**Chest pain** is the NCLEX's favorite emergency. Every minute a coronary artery stays blocked, **heart muscle dies** — and once it dies, it doesn't grow back. That's why the mantra is **"time is muscle."**
+
+This lesson teaches you the **chest pain workup** the way an ER nurse runs it:
+- **PQRST** — the structured pain assessment
+- **ACS spectrum** — Unstable Angina → NSTEMI → STEMI
+- **Troponin timeline** — the lab that confirms MI
+- **MONA-B** — the immediate medication bundle (Morphine, Oxygen, Nitro, Aspirin, Beta-blocker)
+- **Door-to-balloon** — the 90-minute rule that defines whether your patient walks out of the hospital
+
+Master this and you'll handle any cardiac question the NCLEX throws at you.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">TIME IS MUSCLE</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">Every minute of occlusion = dead myocardium</text><circle cx="550" cy="500" r="220" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="4"/><path d="M 450 480 Q 550 380 650 480 Q 650 580 550 640 Q 450 580 450 480 Z" fill="#ef4444" stroke="#ffd700" stroke-width="4"/><text x="550" y="510" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">MYOCARDIUM</text><rect x="200" y="800" width="200" height="120" rx="12" fill="#10b981"/><text x="300" y="845" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">0-90 min</text><text x="300" y="880" text-anchor="middle" fill="#ffffff" font-size="18">Salvageable</text><rect x="450" y="800" width="200" height="120" rx="12" fill="#f59e0b"/><text x="550" y="845" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">90 min - 6 h</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="18">Partial loss</text><rect x="700" y="800" width="200" height="120" rx="12" fill="#ef4444"/><text x="800" y="845" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">&gt;6 h</text><text x="800" y="880" text-anchor="middle" fill="#ffffff" font-size="18">Necrosis</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="20" font-style="italic">Door-to-balloon &le; 90 minutes</text></svg>`,
+          caption: "The longer a coronary artery stays blocked, the more heart muscle dies — irreversibly."
+        }
+      },
+      {
+        type: "concept",
+        title: "PQRST and the ACS Spectrum",
+        content: `**PQRST** is how nurses assess chest pain:
+- **P**rovocation/Palliation — what brings it on? what relieves it?
+- **Q**uality — crushing, sharp, burning, pressure?
+- **R**egion/Radiation — where? does it travel to jaw, arm, back?
+- **S**everity — 0–10 scale
+- **T**iming — onset, duration, constant or intermittent?
+
+The **Acute Coronary Syndrome (ACS) spectrum** is one disease at three severities:
+1. **Unstable Angina** — pain at rest, **no troponin rise**, no ST elevation. Plaque is unstable but artery not fully blocked.
+2. **NSTEMI** (Non-ST Elevation MI) — **troponin rises**, partial occlusion, **ST depression** or T-wave inversion.
+3. **STEMI** (ST Elevation MI) — **complete occlusion**, troponin rises, **ST elevation on ECG**. This is the emergency that triggers the 90-minute clock.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">THE ACS SPECTRUM</text><rect x="80" y="140" width="300" height="380" rx="14" fill="#10b981" opacity="0.85"/><text x="230" y="195" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">UNSTABLE</text><text x="230" y="225" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">ANGINA</text><text x="230" y="285" text-anchor="middle" fill="#ffffff" font-size="18">Troponin: NORMAL</text><text x="230" y="320" text-anchor="middle" fill="#ffffff" font-size="18">ECG: no change</text><text x="230" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Artery: partial</text><text x="230" y="420" text-anchor="middle" fill="#ffd700" font-size="18">Pain at rest</text><text x="230" y="455" text-anchor="middle" fill="#ffd700" font-size="18">Plaque unstable</text><rect x="400" y="140" width="300" height="380" rx="14" fill="#f59e0b" opacity="0.85"/><text x="550" y="195" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">NSTEMI</text><text x="550" y="285" text-anchor="middle" fill="#ffffff" font-size="18">Troponin: RISES</text><text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="18">ECG: ST depression</text><text x="550" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Artery: partial</text><text x="550" y="420" text-anchor="middle" fill="#ffd700" font-size="18">Subendocardial</text><text x="550" y="455" text-anchor="middle" fill="#ffd700" font-size="18">infarct</text><rect x="720" y="140" width="300" height="380" rx="14" fill="#ef4444" opacity="0.95"/><text x="870" y="195" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">STEMI</text><text x="870" y="285" text-anchor="middle" fill="#ffffff" font-size="18">Troponin: RISES</text><text x="870" y="320" text-anchor="middle" fill="#ffffff" font-size="18">ECG: ST ELEVATION</text><text x="870" y="355" text-anchor="middle" fill="#ffffff" font-size="18">Artery: 100% blocked</text><text x="870" y="420" text-anchor="middle" fill="#ffd700" font-size="18">Transmural infarct</text><text x="870" y="455" text-anchor="middle" fill="#ffd700" font-size="18">90-min clock!</text><text x="550" y="600" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PQRST — Pain Assessment</text><g font-size="20" fill="#ffffff"><text x="200" y="680">P — Provocation / Palliation</text><text x="200" y="730">Q — Quality (crushing, sharp)</text><text x="200" y="780">R — Region / Radiation (jaw, arm)</text><text x="200" y="830">S — Severity (0-10)</text><text x="200" y="880">T — Timing (onset, duration)</text></g><rect x="150" y="940" width="800" height="100" rx="10" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/><text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Radiation to LEFT arm or jaw = classic MI</text><text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="18">Women often present atypically: nausea, fatigue, back pain</text></svg>`,
+          caption: "ACS is one disease across three severities — troponin and ECG distinguish them."
+        }
+      },
+      {
+        type: "example",
+        title: "Mr. Reyes Arrives with Crushing Chest Pain",
+        content: `**Scenario:** Mr. Reyes, 58, arrives at 14:00 clutching his chest. He reports **crushing substernal pressure 9/10** that started 30 minutes ago while mowing the lawn, **radiating to his left jaw**. He's diaphoretic and pale.
+
+**Nurse's actions in order:**
+1. **Oxygen** if SpO₂ < 90% (not routine anymore)
+2. **12-lead ECG within 10 minutes** of arrival — shows **ST elevation in leads II, III, aVF** → **inferior STEMI**
+3. **Aspirin 325 mg chewed STAT** (faster absorption than swallowed)
+4. **Nitroglycerin SL** — 1 tab, recheck BP. May repeat q5min × 3 if SBP stays > 100
+5. **Troponin** drawn at 14:15 — pending
+6. **Cath lab activated** at 14:20 — goal balloon inflation by **15:30 (90 min from door)**
+
+**Hold beta-blocker** because HR is 56. **Morphine** for refractory pain.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">DOOR-TO-BALLOON: 90 MINUTES</text><line x1="100" y1="200" x2="1000" y2="200" stroke="#ffffff" stroke-width="4"/><circle cx="100" cy="200" r="14" fill="#ef4444"/><text x="100" y="170" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">14:00</text><text x="100" y="240" text-anchor="middle" fill="#ffd700" font-size="16">DOOR</text><circle cx="280" cy="200" r="14" fill="#f59e0b"/><text x="280" y="170" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">14:10</text><text x="280" y="240" text-anchor="middle" fill="#ffd700" font-size="16">ECG</text><circle cx="460" cy="200" r="14" fill="#f59e0b"/><text x="460" y="170" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">14:15</text><text x="460" y="240" text-anchor="middle" fill="#ffd700" font-size="16">ASA + NTG</text><circle cx="640" cy="200" r="14" fill="#6366f1"/><text x="640" y="170" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">14:20</text><text x="640" y="240" text-anchor="middle" fill="#ffd700" font-size="16">CATH ACTIVATED</text><circle cx="1000" cy="200" r="18" fill="#10b981"/><text x="1000" y="170" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">15:30</text><text x="1000" y="240" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">BALLOON!</text><rect x="80" y="320" width="940" height="60" rx="10" fill="#ef4444" opacity="0.5"/><text x="550" y="358" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">90-MINUTE WINDOW</text><text x="550" y="440" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">MONA-B PROTOCOL</text><g font-size="22" fill="#ffffff"><text x="200" y="510">M — Morphine (refractory pain)</text><text x="200" y="560">O — Oxygen (only if SpO2 &lt; 90%)</text><text x="200" y="610">N — Nitroglycerin (hold if SBP &lt; 100)</text><text x="200" y="660">A — Aspirin 325 mg CHEWED</text><text x="200" y="710">B — Beta-blocker (hold if HR &lt; 60)</text></g><rect x="150" y="790" width="800" height="240" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="835" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Nitroglycerin Rule of 3</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="19">1 SL tab q5min x 3 doses</text><text x="550" y="915" text-anchor="middle" fill="#ffffff" font-size="19">Call 911 if no relief after FIRST dose</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="19">Check SBP before each dose (hold &lt; 100)</text><text x="550" y="990" text-anchor="middle" fill="#ef4444" font-size="19" font-weight="bold">NEVER give if patient took sildenafil &lt; 24 h!</text></svg>`,
+          caption: "Door-to-balloon in 90 minutes is the single most important STEMI metric."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: ACS Priorities",
+        question: "A 62-year-old client arrives in the ED reporting crushing substernal chest pain 8/10 radiating to the left jaw, onset 45 minutes ago. Vital signs: BP 142/88, HR 58, SpO₂ 96% on room air. The 12-lead ECG shows ST elevation in leads V2–V4. Which intervention should the nurse implement FIRST?",
+        options: [
+          { text: "Administer metoprolol 5 mg IV push", correct: false },
+          { text: "Administer aspirin 325 mg chewed", correct: true },
+          { text: "Apply oxygen at 4 L/min via nasal cannula", correct: false },
+          { text: "Administer morphine 4 mg IV push", correct: false }
+        ],
+        explanation: "Aspirin 325 mg chewed is the immediate priority in suspected STEMI — it inhibits platelet aggregation within minutes and reduces mortality. Metoprolol is contraindicated because HR is already 58 (hold beta-blockers if HR < 60). Oxygen is no longer routine — only give if SpO₂ < 90% (this client is 96%). Morphine is reserved for pain refractory to nitroglycerin. ECG already confirms STEMI, so chewed aspirin is the time-critical first med.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">ASPIRIN FIRST</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">325 mg CHEWED — inhibits platelets in minutes</text><circle cx="550" cy="450" r="180" fill="#ffd700"/><text x="550" y="430" text-anchor="middle" fill="#1a1a2e" font-size="42" font-weight="bold">ASA</text><text x="550" y="490" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">325 mg</text><rect x="100" y="720" width="430" height="140" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="315" y="765" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">GIVE</text><text x="315" y="800" text-anchor="middle" fill="#ffffff" font-size="18">Aspirin 325 chewed</text><text x="315" y="830" text-anchor="middle" fill="#ffffff" font-size="18">Nitro SL (if SBP &gt; 100)</text><rect x="570" y="720" width="430" height="140" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="785" y="765" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">HOLD</text><text x="785" y="800" text-anchor="middle" fill="#ffffff" font-size="18">Beta-blocker (HR 58)</text><text x="785" y="830" text-anchor="middle" fill="#ffffff" font-size="18">O2 (SpO2 96% adequate)</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22" font-style="italic">Time-critical = aspirin before all else</text></svg>`,
+          caption: "Aspirin 325 mg chewed is the time-critical first medication in any suspected MI."
+        }
+      },
+      {
+        type: "application",
+        title: "Troponin Timeline and Discharge Teaching",
+        content: `**Troponin** is the gold-standard cardiac biomarker because it's **specific to myocardium**:
+- **Rises 3–4 hours** after injury
+- **Peaks at 24 hours**
+- **Normalizes in 10–14 days**
+
+Because of the lag, a single negative troponin **does not rule out MI**. Serial troponins (0, 3, 6 h) are standard. A patient with chest pain but normal initial troponin could still be evolving an MI.
+
+**Discharge teaching after MI:**
+- **Nitroglycerin at home:** carry SL tabs, keep in dark bottle (light degrades), replace every 6 months. Take 1 tab, wait 5 min — if no relief, **call 911 immediately**, then take 2 more doses 5 min apart while waiting.
+- **Aspirin 81 mg daily lifelong** unless contraindicated.
+- **Cardiac rehab** referral.
+- **Sexual activity** can resume when patient can climb 2 flights of stairs without chest pain.
+- Avoid heavy lifting > 10 lb for 6 weeks.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">TROPONIN TIMELINE</text><line x1="100" y1="500" x2="1050" y2="500" stroke="#ffffff" stroke-width="3"/><line x1="100" y1="200" x2="100" y2="520" stroke="#ffffff" stroke-width="3"/><text x="60" y="510" fill="#ffffff" font-size="16">0</text><text x="280" y="540" text-anchor="middle" fill="#ffffff" font-size="16">3-4 h</text><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="16">24 h (PEAK)</text><text x="820" y="540" text-anchor="middle" fill="#ffffff" font-size="16">3-7 d</text><text x="1020" y="540" text-anchor="middle" fill="#ffffff" font-size="16">14 d</text><path d="M 100 500 L 250 500 Q 350 480 400 380 Q 450 280 550 230 Q 650 270 750 350 Q 850 420 950 490 L 1050 500" fill="none" stroke="#ef4444" stroke-width="5"/><circle cx="550" cy="230" r="10" fill="#ffd700"/><text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PEAK 24h</text><text x="250" y="475" text-anchor="middle" fill="#f59e0b" font-size="16">Rises 3-4 h</text><text x="950" y="475" text-anchor="middle" fill="#10b981" font-size="16">Normalizes</text><text x="550" y="640" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">HOME NITRO RULE</text><rect x="120" y="680" width="860" height="320" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><g font-size="20" fill="#ffffff"><text x="160" y="730">1. Take 1 SL tab when chest pain starts — sit down</text><text x="160" y="775">2. Wait 5 minutes</text><text x="160" y="820">3. If no relief: CALL 911 immediately</text><text x="160" y="865">4. While waiting: 1 more tab, wait 5 min, 1 more tab</text><text x="160" y="910">5. Maximum 3 doses 5 minutes apart</text></g><text x="550" y="970" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Store in dark bottle. Replace q 6 months.</text></svg>`,
+          caption: "Troponin rises at 3–4h, peaks at 24h, normalizes by 14 days — always order serial troponins."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-med-surg-lesson-2",
+    title: "Respiratory Med-Surg: COPD vs Asthma, Oxygen Rules",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Diseases That Look Alike",
+        content: `**COPD** and **asthma** both cause **wheezing**, **shortness of breath**, and **prolonged expiration** — but they are fundamentally different diseases with different management.
+
+- **COPD** (Chronic Obstructive Pulmonary Disease) = **emphysema** (destroyed alveoli) + **chronic bronchitis** (mucus-clogged airways). It is **progressive and irreversible**, almost always tied to **smoking**.
+- **Asthma** is **reversible bronchoconstriction** triggered by allergens, cold air, or exercise. Between attacks, lungs are normal.
+
+This lesson teaches you the **differentiation table**, the critical **oxygen rule for COPD** (no more than **2 L/min** via nasal cannula — higher flows can suppress the hypoxic drive and stop breathing), the **peak flow zone system**, and **pursed-lip breathing** for COPD exacerbations.
+
+These distinctions are NCLEX gold.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">COPD vs ASTHMA</text><rect x="60" y="130" width="480" height="420" rx="14" fill="#f59e0b" opacity="0.85"/><text x="300" y="180" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">COPD</text><text x="300" y="220" text-anchor="middle" fill="#1a1a2e" font-size="16">Emphysema + Chronic Bronchitis</text><circle cx="300" cy="340" r="90" fill="#1a1a2e" opacity="0.4" stroke="#ffffff" stroke-width="3"/><circle cx="270" cy="330" r="28" fill="#888" opacity="0.6"/><circle cx="320" cy="350" r="35" fill="#888" opacity="0.6"/><circle cx="290" cy="370" r="22" fill="#888" opacity="0.6"/><text x="300" y="475" text-anchor="middle" fill="#ffffff" font-size="18">Destroyed alveoli</text><text x="300" y="505" text-anchor="middle" fill="#ffffff" font-size="18">IRREVERSIBLE</text><rect x="560" y="130" width="480" height="420" rx="14" fill="#0ea5e9" opacity="0.85"/><text x="800" y="180" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">ASTHMA</text><text x="800" y="220" text-anchor="middle" fill="#1a1a2e" font-size="16">Reversible bronchoconstriction</text><rect x="760" y="280" width="80" height="160" rx="8" fill="#1a1a2e" opacity="0.4" stroke="#ffffff" stroke-width="3"/><rect x="775" y="295" width="50" height="130" rx="4" fill="#ec4899" opacity="0.6"/><text x="800" y="475" text-anchor="middle" fill="#ffffff" font-size="18">Constricted airway</text><text x="800" y="505" text-anchor="middle" fill="#ffffff" font-size="18">REVERSIBLE</text><text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Key Differentiators</text><g font-size="20" fill="#ffffff"><text x="100" y="690">Onset age:    COPD &gt; 40    |    Asthma childhood</text><text x="100" y="740">Cause:        COPD smoking |    Asthma allergic</text><text x="100" y="790">Reversible:   COPD NO      |    Asthma YES</text><text x="100" y="840">Family hx:    COPD rare    |    Asthma common</text><text x="100" y="890">Sputum:       COPD copious |    Asthma minimal</text><text x="100" y="940">Sleep:        COPD daytime |    Asthma night cough</text></g><rect x="200" y="990" width="700" height="70" rx="10" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="2"/><text x="550" y="1035" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">COPD O2 rule: MAX 2 L/min via NC</text></svg>`,
+          caption: "COPD is irreversible structural damage; asthma is reversible airway constriction."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Hypoxic Drive and the 2 L/min Rule",
+        content: `Healthy people breathe in response to **rising CO₂**. But in **advanced COPD**, the body becomes tolerant of chronically high CO₂ — so the brain switches to using **low oxygen as the trigger to breathe**. This is called the **hypoxic drive**.
+
+If you give high-flow oxygen (e.g., 6 L/min) to a COPD patient, you **raise their PaO₂ above the threshold that triggers breathing** — and they can **stop breathing entirely**. This is called **CO₂ narcosis**.
+
+**The rule:** for COPD patients, start oxygen at **1–2 L/min via nasal cannula** and titrate to **SpO₂ goal of 88–92%** (not the 95–100% used in healthy people).
+
+**Peak flow meter zones** (used for asthma self-management):
+- **GREEN** zone: > 80% of personal best — doing well
+- **YELLOW** zone: 50–80% — caution, use rescue inhaler
+- **RED** zone: < 50% — emergency, call 911
+
+**Pursed-lip breathing** helps COPD: inhale through nose 2 sec, exhale through pursed lips 4 sec — keeps airways open.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">HYPOXIC DRIVE: WHY 2 L/min</text><rect x="60" y="100" width="480" height="280" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="300" y="140" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">HEALTHY</text><text x="300" y="180" text-anchor="middle" fill="#ffffff" font-size="18">Brain monitors CO2</text><text x="300" y="215" text-anchor="middle" fill="#ffffff" font-size="18">CO2 rises -&gt; BREATHE</text><text x="300" y="280" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">SpO2 goal: 95-100%</text><text x="300" y="320" text-anchor="middle" fill="#ffffff" font-size="16">O2 flow: as needed</text><rect x="560" y="100" width="480" height="280" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="800" y="140" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">COPD</text><text x="800" y="180" text-anchor="middle" fill="#ffffff" font-size="18">Brain monitors O2</text><text x="800" y="215" text-anchor="middle" fill="#ffffff" font-size="18">Low O2 -&gt; BREATHE</text><text x="800" y="280" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">SpO2 goal: 88-92%</text><text x="800" y="320" text-anchor="middle" fill="#ffffff" font-size="16">O2 flow: MAX 2 L/min NC</text><text x="550" y="450" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PEAK FLOW ZONES (Asthma)</text><rect x="120" y="490" width="280" height="160" rx="10" fill="#10b981"/><text x="260" y="540" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">GREEN</text><text x="260" y="585" text-anchor="middle" fill="#ffffff" font-size="20">&gt; 80% best</text><text x="260" y="620" text-anchor="middle" fill="#ffffff" font-size="18">All clear</text><rect x="410" y="490" width="280" height="160" rx="10" fill="#f59e0b"/><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">YELLOW</text><text x="550" y="585" text-anchor="middle" fill="#ffffff" font-size="20">50-80%</text><text x="550" y="620" text-anchor="middle" fill="#ffffff" font-size="18">Use rescue inhaler</text><rect x="700" y="490" width="280" height="160" rx="10" fill="#ef4444"/><text x="840" y="540" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">RED</text><text x="840" y="585" text-anchor="middle" fill="#ffffff" font-size="20">&lt; 50%</text><text x="840" y="620" text-anchor="middle" fill="#ffffff" font-size="18">Call 911</text><text x="550" y="740" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PURSED-LIP BREATHING</text><circle cx="380" cy="850" r="60" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="3"/><text x="380" y="845" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">IN</text><text x="380" y="880" text-anchor="middle" fill="#ffffff" font-size="16">nose 2s</text><path d="M 460 850 L 640 850" stroke="#ffd700" stroke-width="4" marker-end="url(#arrow)"/><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#ffd700"/></marker></defs><circle cx="720" cy="850" r="60" fill="#ec4899" opacity="0.4" stroke="#ec4899" stroke-width="3"/><text x="720" y="845" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">OUT</text><text x="720" y="880" text-anchor="middle" fill="#ffffff" font-size="16">pursed 4s</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="18">Keeps airways open longer on exhale</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="18">Inhale 2 sec : Exhale 4 sec (1:2 ratio)</text></svg>`,
+          caption: "COPD patients depend on low O₂ to breathe — never exceed 2 L/min nasal cannula without an order."
+        }
+      },
+      {
+        type: "example",
+        title: "Mrs. Park: COPD Exacerbation",
+        content: `**Scenario:** Mrs. Park, 71, 50-pack-year smoking history, arrives with **shortness of breath**, **productive cough with thick yellow sputum**, and audible wheezes. **SpO₂ 84% on room air**. Respirations 28, labored, using accessory muscles. An eager new aide turns oxygen to **6 L/min via nasal cannula**.
+
+**What's wrong?** Within 20 minutes Mrs. Park becomes **drowsy**, respirations drop to **8/min**, and SpO₂ rises to 99%. She is going into **CO₂ narcosis** — her hypoxic drive has been suppressed.
+
+**Nurse's actions:**
+1. **Turn oxygen down to 2 L/min immediately**
+2. Stay at bedside, monitor respirations
+3. Notify provider — likely needs ABG
+4. Target SpO₂ **88–92%**, not higher
+5. Albuterol nebulizer for bronchospasm
+6. Anticipate steroids (methylprednisolone) and antibiotics
+7. Coach pursed-lip breathing
+
+The takeaway: in COPD, **higher SpO₂ is not always better**. Stick to the 88–92% target.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">CO2 NARCOSIS: AVOIDABLE TRAGEDY</text><rect x="80" y="120" width="940" height="180" rx="14" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="550" y="160" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">WRONG: 6 L/min NC for COPD</text><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="18">SpO2 rises to 99%</text><text x="550" y="230" text-anchor="middle" fill="#ffffff" font-size="18">Hypoxic drive lost</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="18">RR drops to 8 -&gt; CO2 narcosis -&gt; arrest</text><rect x="80" y="340" width="940" height="180" rx="14" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="550" y="380" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">RIGHT: 2 L/min NC, target 88-92%</text><text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="18">SpO2 holds at 90%</text><text x="550" y="450" text-anchor="middle" fill="#ffffff" font-size="18">Hypoxic drive preserved</text><text x="550" y="480" text-anchor="middle" fill="#ffffff" font-size="18">RR steady at 24, patient stable</text><text x="550" y="580" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">COPD EXACERBATION BUNDLE</text><g font-size="20" fill="#ffffff"><text x="200" y="650">O — Oxygen 1-2 L/min NC, goal 88-92%</text><text x="200" y="700">B — Bronchodilator (albuterol neb)</text><text x="200" y="750">S — Steroids (methylprednisolone IV)</text><text x="200" y="800">A — Antibiotics (if purulent sputum)</text><text x="200" y="850">P — Position upright / tripod</text><text x="200" y="900">P — Pursed-lip breathing</text></g><rect x="150" y="950" width="800" height="80" rx="10" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">A drowsy COPD patient on high O2 = emergency</text></svg>`,
+          caption: "A drowsy, hypoventilating COPD patient with rising SpO₂ is going into CO₂ narcosis — turn O₂ down."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: Oxygen for COPD",
+        question: "A nurse is caring for a 68-year-old client with a history of COPD admitted for pneumonia. The client's SpO₂ is 85% on room air. Which oxygen delivery setting should the nurse initiate?",
+        options: [
+          { text: "Non-rebreather mask at 15 L/min", correct: false },
+          { text: "Simple face mask at 8 L/min", correct: false },
+          { text: "Nasal cannula at 2 L/min, titrate to SpO₂ 88–92%", correct: true },
+          { text: "Nasal cannula at 6 L/min, titrate to SpO₂ 98%", correct: false }
+        ],
+        explanation: "COPD patients depend on a hypoxic drive to breathe — high-flow oxygen can suppress respirations and cause CO₂ narcosis. Start low at 1–2 L/min via nasal cannula and target SpO₂ 88–92% (not 95%+). A non-rebreather or 6 L/min cannula could drop respirations to apnea within minutes. Only escalate beyond 2 L/min with a provider order and frequent ABG monitoring.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">2 L/min NC</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">Target SpO2 88-92% for COPD</text><circle cx="550" cy="430" r="180" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9" stroke-width="5"/><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="40" font-weight="bold">2</text><text x="550" y="460" text-anchor="middle" fill="#ffffff" font-size="22">L/min</text><text x="550" y="495" text-anchor="middle" fill="#ffffff" font-size="18">Nasal cannula</text><rect x="100" y="700" width="430" height="180" rx="12" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3"/><text x="315" y="745" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">SAFE</text><text x="315" y="785" text-anchor="middle" fill="#ffffff" font-size="18">88-92% SpO2</text><text x="315" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Preserves drive</text><text x="315" y="855" text-anchor="middle" fill="#ffffff" font-size="18">Patient alert</text><rect x="570" y="700" width="430" height="180" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="785" y="745" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">DANGER</text><text x="785" y="785" text-anchor="middle" fill="#ffffff" font-size="18">SpO2 &gt; 95% in COPD</text><text x="785" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Drive suppressed</text><text x="785" y="855" text-anchor="middle" fill="#ffffff" font-size="18">Drowsy, RR drops</text><text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="20" font-style="italic">Higher SpO2 is NOT always better in COPD</text></svg>`,
+          caption: "For COPD: 2 L/min nasal cannula, target SpO₂ 88–92%."
+        }
+      },
+      {
+        type: "application",
+        title: "Asthma Stepwise Action Plan",
+        content: `Every asthma patient should leave clinic with a **written Asthma Action Plan** organized by peak flow zone:
+
+**GREEN (> 80% personal best) — Doing Well**
+- No daytime symptoms, sleeping fine
+- Continue **controller** (inhaled corticosteroid e.g., fluticasone) **daily**
+- Rescue inhaler (albuterol) only before exercise if needed
+
+**YELLOW (50–80%) — Caution**
+- Cough, wheeze, chest tightness, or night waking
+- **Albuterol 2–4 puffs every 4 hours**
+- Continue daily controller, may double dose
+- Call provider if not back to green in 24 h
+
+**RED (< 50%) — Medical Alert**
+- Severe SOB, can't speak full sentences, lips blue
+- **Albuterol 4–6 puffs immediately**
+- **CALL 911**
+- Add oral prednisone if prescribed
+
+**Inhaler technique:** shake, exhale fully, inhale slowly while pressing canister, **hold breath 10 seconds**, wait 1 min between puffs. Use a **spacer** to improve delivery. Rinse mouth after **steroid** inhaler to prevent thrush.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">ASTHMA ACTION PLAN</text><rect x="80" y="120" width="940" height="220" rx="14" fill="#10b981" opacity="0.85"/><text x="180" y="170" fill="#ffffff" font-size="26" font-weight="bold">GREEN</text><text x="180" y="205" fill="#1a1a2e" font-size="18">&gt; 80%</text><line x1="340" y1="140" x2="340" y2="320" stroke="#ffffff" stroke-width="2"/><text x="380" y="170" fill="#ffffff" font-size="20" font-weight="bold">Doing well</text><text x="380" y="205" fill="#ffffff" font-size="16">No symptoms day or night</text><text x="380" y="240" fill="#ffffff" font-size="16">CONTROLLER: daily ICS</text><text x="380" y="275" fill="#ffffff" font-size="16">RESCUE: only pre-exercise</text><text x="380" y="310" fill="#ffd700" font-size="16">Continue routine</text><rect x="80" y="360" width="940" height="220" rx="14" fill="#f59e0b" opacity="0.85"/><text x="180" y="410" fill="#ffffff" font-size="26" font-weight="bold">YELLOW</text><text x="180" y="445" fill="#1a1a2e" font-size="18">50-80%</text><line x1="340" y1="380" x2="340" y2="560" stroke="#ffffff" stroke-width="2"/><text x="380" y="410" fill="#ffffff" font-size="20" font-weight="bold">Caution</text><text x="380" y="445" fill="#ffffff" font-size="16">Cough, wheeze, night cough</text><text x="380" y="480" fill="#ffffff" font-size="16">ALBUTEROL 2-4 puffs q4h</text><text x="380" y="515" fill="#ffffff" font-size="16">Continue / double ICS</text><text x="380" y="550" fill="#ffd700" font-size="16">Call provider if 24h no relief</text><rect x="80" y="600" width="940" height="220" rx="14" fill="#ef4444" opacity="0.9"/><text x="180" y="650" fill="#ffffff" font-size="26" font-weight="bold">RED</text><text x="180" y="685" fill="#ffffff" font-size="18">&lt; 50%</text><line x1="340" y1="620" x2="340" y2="800" stroke="#ffffff" stroke-width="2"/><text x="380" y="650" fill="#ffffff" font-size="20" font-weight="bold">EMERGENCY</text><text x="380" y="685" fill="#ffffff" font-size="16">Cant speak sentences, blue lips</text><text x="380" y="720" fill="#ffffff" font-size="16">ALBUTEROL 4-6 puffs NOW</text><text x="380" y="755" fill="#ffffff" font-size="16">CALL 911</text><text x="380" y="790" fill="#ffd700" font-size="16">Oral prednisone if rx</text><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Inhaler Tip:</text><text x="550" y="915" text-anchor="middle" fill="#ffffff" font-size="18">Shake, exhale, slow inhale + press, hold 10 sec</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="18">Use spacer for better delivery</text><text x="550" y="990" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Rinse mouth after steroid inhaler = no thrush</text></svg>`,
+          caption: "Every asthmatic should know their personal best peak flow and the action for each zone."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-med-surg-lesson-3",
+    title: "GI Med-Surg: Appendicitis, Cholecystitis, PUD",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Three Bellies, Three Patterns",
+        content: `Three of the most-tested GI emergencies on NCLEX are **appendicitis**, **cholecystitis**, and **peptic ulcer disease (PUD)**. Each has a **signature pain pattern** that's worth memorizing because location and timing alone often nail the diagnosis.
+
+- **Appendicitis** — **RLQ pain at McBurney's point**, fever, rebound tenderness. The classic "kid up at 3 AM clutching their side."
+- **Cholecystitis** — **RUQ pain 4–6 h after a fatty meal**, Murphy's sign positive. The "I had ribs for dinner and now I can't breathe in" patient.
+- **Peptic ulcer disease** — pain related to eating: **gastric ulcers hurt WITH food**, **duodenal ulcers hurt 2–3 h AFTER eating** and are **relieved by food**.
+
+This lesson gives you the assessment signs (Rovsing, Psoas, Murphy), the **no-laxative/no-enema rule** for appendicitis, and **H. pylori triple therapy**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">THREE ABDOMINAL EMERGENCIES</text><ellipse cx="550" cy="600" rx="400" ry="380" fill="#6366f1" opacity="0.15" stroke="#ffffff" stroke-width="3"/><line x1="550" y1="220" x2="550" y2="980" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,6"/><line x1="150" y1="600" x2="950" y2="600" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,6"/><circle cx="740" cy="450" r="50" fill="#f59e0b" opacity="0.8"/><text x="740" y="445" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">RUQ</text><text x="740" y="475" text-anchor="middle" fill="#ffffff" font-size="14">Gallbladder</text><text x="740" y="540" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Cholecystitis</text><circle cx="550" cy="380" r="50" fill="#ec4899" opacity="0.8"/><text x="550" y="375" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">EPIGASTRIC</text><text x="550" y="405" text-anchor="middle" fill="#ffffff" font-size="14">Stomach</text><text x="550" y="465" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">PUD</text><circle cx="710" cy="780" r="50" fill="#ef4444" opacity="0.9"/><text x="710" y="775" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">RLQ</text><text x="710" y="805" text-anchor="middle" fill="#ffffff" font-size="14">McBurney</text><text x="710" y="865" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Appendicitis</text><rect x="80" y="1010" width="940" height="60" rx="10" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="2"/><text x="550" y="1050" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Location + Timing of pain = the diagnosis</text></svg>`,
+          caption: "Appendicitis (RLQ), cholecystitis (RUQ), and PUD (epigastric) — three classic GI patterns."
+        }
+      },
+      {
+        type: "concept",
+        title: "Signature Signs and the No-Laxative Rule",
+        content: `**Appendicitis assessment signs:**
+- **McBurney's point** — halfway between umbilicus and right anterior superior iliac spine. Maximal tenderness here = classic appendicitis.
+- **Rovsing's sign** — pressing on LLQ causes pain in **RLQ** (referred pain from displaced gas).
+- **Psoas sign** — passive extension of right hip causes RLQ pain (inflamed appendix near psoas).
+- **Rebound tenderness** — pain when you **release** pressure (peritoneal irritation).
+
+**CRITICAL RULE:** in suspected appendicitis, **NEVER apply heat, give enemas, or give laxatives** — they can **rupture the inflamed appendix**, spilling bacteria into the peritoneum and causing **peritonitis**.
+
+**Cholecystitis:**
+- **Murphy's sign** — examiner pushes under right costal margin, patient takes a deep breath, pain causes them to **stop inhaling mid-breath**.
+- **HIDA scan** confirms diagnosis (gallbladder won't fill if cystic duct blocked).
+- **Charcot's triad** (RUQ pain + fever + jaundice) suggests **cholangitis** — surgical emergency.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">SIGNATURE SIGNS</text><rect x="60" y="100" width="500" height="450" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="310" y="150" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">APPENDICITIS</text><g font-size="18" fill="#ffffff"><text x="90" y="200">McBurney point — RLQ between</text><text x="90" y="230">  umbilicus &amp; right ASIS</text><text x="90" y="280">Rovsing — press LLQ -&gt; RLQ pain</text><text x="90" y="330">Psoas — extend R hip -&gt; RLQ pain</text><text x="90" y="380">Rebound tenderness — release pain</text><text x="90" y="430">Low-grade fever, anorexia, N/V</text></g><rect x="90" y="470" width="440" height="60" rx="8" fill="#ef4444"/><text x="310" y="510" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">NO heat / NO enema / NO laxative</text><rect x="580" y="100" width="460" height="450" rx="14" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="810" y="150" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">CHOLECYSTITIS</text><g font-size="18" fill="#ffffff"><text x="610" y="200">RUQ pain 4-6 h after fatty meal</text><text x="610" y="250">Murphy sign — pain stops</text><text x="610" y="280">  inspiration during RUQ palpation</text><text x="610" y="330">May radiate to right shoulder</text><text x="610" y="380">Diagnosis: HIDA scan / U/S</text><text x="610" y="430">Treatment: cholecystectomy</text></g><rect x="610" y="470" width="400" height="60" rx="8" fill="#f59e0b"/><text x="810" y="510" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">Charcot triad = cholangitis (911)</text><text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PUD — GASTRIC vs DUODENAL</text><rect x="100" y="660" width="430" height="380" rx="14" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="315" y="700" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">GASTRIC ULCER</text><g font-size="18" fill="#ffffff"><text x="130" y="750">Pain WITH eating</text><text x="130" y="790">Worse with food</text><text x="130" y="830">Weight LOSS</text><text x="130" y="870">Higher cancer risk</text><text x="130" y="920">In stomach lining</text><text x="130" y="970">NSAID-related often</text></g><rect x="570" y="660" width="430" height="380" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="785" y="700" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">DUODENAL ULCER</text><g font-size="18" fill="#ffffff"><text x="600" y="750">Pain 2-3 h AFTER eating</text><text x="600" y="790">Relieved BY food / antacid</text><text x="600" y="830">Weight stable or gain</text><text x="600" y="870">Wakes patient at 1-2 AM</text><text x="600" y="920">In duodenum (first 1-2 cm)</text><text x="600" y="970">H. pylori related often</text></g></svg>`,
+          caption: "Gastric = pain with food (lose weight). Duodenal = pain 2–3h after, relieved by food (wakes at night)."
+        }
+      },
+      {
+        type: "example",
+        title: "Sam, Age 14: Classic Appendicitis",
+        content: `**Scenario:** Sam, 14, comes to the ED at 02:30 with **periumbilical pain that migrated to the RLQ** over the past 8 hours. He's anorexic, vomited twice, walks bent forward, and **guards his abdomen**. Temp 100.8°F, WBC 14,500. McBurney's point exquisitely tender, **positive Rovsing's**.
+
+His mother says she gave him **a glycerin suppository** because she thought he was constipated. The nurse's heart sinks.
+
+**Why the alarm?** A laxative or enema in inflamed appendicitis can **rupture the appendix**, spilling bacteria into the peritoneum — **peritonitis** and possible sepsis.
+
+**Nurse's priorities:**
+1. **NPO** (anticipate surgery)
+2. **IV fluids** (NS or LR)
+3. **No heat** to abdomen
+4. Pre-op labs, consent
+5. Monitor for **sudden pain relief followed by rigid board-like abdomen** — signs of **rupture**
+6. **Cefoxitin** preop antibiotics
+7. Appendectomy
+
+Post-op: ambulate early, splint incision when coughing.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">APPENDICITIS: TIMELINE OF PAIN</text><line x1="100" y1="220" x2="1000" y2="220" stroke="#ffffff" stroke-width="4"/><circle cx="180" cy="220" r="16" fill="#10b981"/><text x="180" y="190" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Hour 0</text><text x="180" y="260" text-anchor="middle" fill="#ffd700" font-size="14">Vague periumbilical</text><circle cx="430" cy="220" r="16" fill="#f59e0b"/><text x="430" y="190" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Hour 4-6</text><text x="430" y="260" text-anchor="middle" fill="#ffd700" font-size="14">Anorexia, N/V</text><circle cx="680" cy="220" r="16" fill="#ef4444"/><text x="680" y="190" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Hour 8-12</text><text x="680" y="260" text-anchor="middle" fill="#ffd700" font-size="14">RLQ McBurney</text><circle cx="920" cy="220" r="20" fill="#8b5cf6"/><text x="920" y="190" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Hour 24-48</text><text x="920" y="260" text-anchor="middle" fill="#ec4899" font-size="14" font-weight="bold">RUPTURE risk</text><text x="550" y="360" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">RED FLAG: SUDDEN PAIN RELIEF</text><rect x="100" y="400" width="900" height="140" rx="12" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3"/><text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="20">Patient suddenly says: "I feel better!"</text><text x="550" y="480" text-anchor="middle" fill="#ffffff" font-size="20">Then: rigid, board-like abdomen develops</text><text x="550" y="515" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">= APPENDIX RUPTURED = PERITONITIS</text><text x="550" y="610" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PRE-OP NURSING</text><g font-size="20" fill="#ffffff"><text x="200" y="680">NPO — anticipate surgery</text><text x="200" y="730">IV fluids (NS or LR)</text><text x="200" y="780">Position semi-Fowler / knees flexed</text><text x="200" y="830">NO heat, NO enema, NO laxative</text><text x="200" y="880">Pre-op antibiotics (cefoxitin)</text><text x="200" y="930">Monitor for rupture signs</text></g><text x="550" y="1020" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Heat increases blood flow -&gt; faster rupture</text></svg>`,
+          caption: "Pain that migrates from umbilicus to RLQ is appendicitis until proven otherwise. Sudden relief = rupture."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: Gastric vs Duodenal Ulcer",
+        question: "A client with peptic ulcer disease tells the nurse, \"My stomach pain wakes me up at 2 AM, and eating a few crackers helps it go away.\" The nurse recognizes this pattern as most consistent with which condition?",
+        options: [
+          { text: "Gastric ulcer", correct: false },
+          { text: "Duodenal ulcer", correct: true },
+          { text: "Acute cholecystitis", correct: false },
+          { text: "Acute appendicitis", correct: false }
+        ],
+        explanation: "Duodenal ulcers cause pain 2–3 hours after eating and at night (often 1–2 AM) when the stomach is empty, and pain is RELIEVED BY FOOD or antacids — exactly this client's pattern. Gastric ulcers, by contrast, cause pain WITH eating and lead to weight loss because patients fear food. Cholecystitis pain is RUQ 4–6 h after a fatty meal, and appendicitis localizes to RLQ at McBurney's point with rebound tenderness.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">DUODENAL ULCER</text><text x="550" y="130" text-anchor="middle" fill="#ffffff" font-size="22">Pain 2-3h after eating. Food helps.</text><circle cx="550" cy="430" r="180" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="5"/><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">2 AM</text><text x="550" y="460" text-anchor="middle" fill="#ffffff" font-size="22">wakes</text><text x="550" y="495" text-anchor="middle" fill="#ffffff" font-size="22">patient</text><rect x="100" y="700" width="430" height="180" rx="12" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="3"/><text x="315" y="745" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">GASTRIC</text><text x="315" y="785" text-anchor="middle" fill="#ffffff" font-size="18">Pain WITH food</text><text x="315" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Weight LOSS</text><text x="315" y="855" text-anchor="middle" fill="#ffffff" font-size="18">In stomach</text><rect x="570" y="700" width="430" height="180" rx="12" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3"/><text x="785" y="745" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">DUODENAL</text><text x="785" y="785" text-anchor="middle" fill="#ffffff" font-size="18">Pain 2-3h AFTER</text><text x="785" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Food RELIEVES</text><text x="785" y="855" text-anchor="middle" fill="#ffffff" font-size="18">In duodenum</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="20" font-style="italic">Night pain + food relief = duodenal</text></svg>`,
+          caption: "Duodenal ulcers: pain 2–3 h after eating, wakes patient at night, relieved by food."
+        }
+      },
+      {
+        type: "application",
+        title: "H. pylori Triple Therapy and Patient Teaching",
+        content: `**H. pylori** is the bacterial cause of most peptic ulcers. Diagnosis: **urea breath test**, **stool antigen**, or biopsy during endoscopy.
+
+**Triple therapy (14 days):**
+- **PPI** (omeprazole, pantoprazole) — suppresses acid so the lining can heal
+- **Clarithromycin** — antibiotic
+- **Amoxicillin** (or metronidazole if PCN-allergic) — antibiotic
+
+Test for eradication 4 weeks after completing therapy.
+
+**Lifestyle teaching for PUD:**
+- **Stop NSAIDs** (ibuprofen, naproxen) — switch to acetaminophen
+- **No smoking** — nicotine impairs healing
+- **Limit alcohol and caffeine** — irritate gastric lining
+- Small frequent meals; avoid spicy/acidic triggers
+- **Avoid bedtime snacks** — stimulates acid overnight
+
+**Warning signs to report immediately:**
+- **Hematemesis** (vomiting blood, "coffee-ground")
+- **Melena** (black tarry stool — upper GI bleed)
+- **Sudden severe abdominal pain** + rigid abdomen — possible **perforation** (medical emergency, anticipate surgery, NPO, IV fluids).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">H. PYLORI TRIPLE THERAPY</text><text x="550" y="115" text-anchor="middle" fill="#ffffff" font-size="20">14-day regimen</text><circle cx="280" cy="320" r="120" fill="#6366f1" opacity="0.4" stroke="#6366f1" stroke-width="4"/><text x="280" y="305" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">PPI</text><text x="280" y="340" text-anchor="middle" fill="#ffffff" font-size="16">Omeprazole</text><text x="280" y="365" text-anchor="middle" fill="#ffd700" font-size="14">Suppresses acid</text><circle cx="550" cy="320" r="120" fill="#10b981" opacity="0.4" stroke="#10b981" stroke-width="4"/><text x="550" y="305" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">ABX 1</text><text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="16">Clarithromycin</text><text x="550" y="365" text-anchor="middle" fill="#ffd700" font-size="14">Kills bacteria</text><circle cx="820" cy="320" r="120" fill="#f59e0b" opacity="0.4" stroke="#f59e0b" stroke-width="4"/><text x="820" y="305" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">ABX 2</text><text x="820" y="340" text-anchor="middle" fill="#ffffff" font-size="16">Amoxicillin</text><text x="820" y="365" text-anchor="middle" fill="#ffd700" font-size="14">Kills bacteria</text><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">LIFESTYLE TEACHING</text><g font-size="18" fill="#ffffff"><text x="200" y="560">Stop NSAIDs -&gt; switch to acetaminophen</text><text x="200" y="600">No smoking (impairs mucosal healing)</text><text x="200" y="640">Limit alcohol &amp; caffeine</text><text x="200" y="680">Small frequent meals, no bedtime snack</text></g><text x="550" y="760" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">REPORT IMMEDIATELY</text><rect x="100" y="790" width="900" height="240" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><g font-size="20" fill="#ffffff"><text x="150" y="840">Hematemesis — vomiting blood or coffee-ground</text><text x="150" y="880">Melena — black tarry stool (upper GI bleed)</text><text x="150" y="920">Sudden severe pain + rigid abdomen</text><text x="200" y="950" font-size="18" fill="#ffd700">= PERFORATION -&gt; NPO, IV fluids, surgery</text><text x="150" y="990">Dizziness, tachycardia (shock from bleed)</text></g></svg>`,
+          caption: "Triple therapy = PPI + 2 antibiotics for 14 days. Black tarry stool = upper GI bleed — report STAT."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'nclex-pediatrics',
