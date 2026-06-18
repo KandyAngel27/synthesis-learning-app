@@ -8605,7 +8605,7 @@ If she **bumps contributions 3%/yr** with raises (which she should), she crosses
             title: 'Real Estate Basics: Renting vs. Buying, Mortgages, Equity',
             author: 'Synthesis Learning',
             description: 'The rent vs. buy math that\'s not just "rent is throwing money away," mortgage types, PMI, closing costs, and the equity build that\'s hidden in the amortization table.',
-            lessons: 9, duration: 135, progress: 0, category: 'personal-finance-track',
+            lessons: 12, duration: 180, progress: 0, category: 'personal-finance-track',
             lessonList: [
 {
     id: "pf-real-estate-lesson-1",
@@ -9443,6 +9443,341 @@ Boring, sequential, and **wealth-building**. No FOMO, no over-leverage.`,
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" font-size="38" font-weight="bold" fill="#ffd700">5 Beginner Mistakes</text><rect x="80" y="120" width="940" height="160" rx="15" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="165" text-anchor="middle" font-size="24" font-weight="bold" fill="#ef4444">1. Skipping Inspection</text><text x="110" y="210" font-size="20" fill="#ffffff">Saves $400, costs $40,000 in surprises</text><text x="110" y="250" font-size="20" fill="#ffd700">NEVER waive on first investment</text><rect x="80" y="300" width="940" height="160" rx="15" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="345" text-anchor="middle" font-size="24" font-weight="bold" fill="#f59e0b">2. Over-Leveraging</text><text x="110" y="390" font-size="20" fill="#ffffff">3% rates of 2021 tempted max leverage</text><text x="110" y="430" font-size="20" fill="#ffd700">Buy affordable at current rates</text><rect x="80" y="480" width="940" height="160" rx="15" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="525" text-anchor="middle" font-size="24" font-weight="bold" fill="#ec4899">3. Hot Market FOMO</text><text x="110" y="570" font-size="20" fill="#ffffff">Austin/Boise/Phoenix dropped 15-20%</text><text x="110" y="610" font-size="20" fill="#ffd700">Buy boring markets, not hot ones</text><rect x="80" y="660" width="940" height="160" rx="15" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="705" text-anchor="middle" font-size="24" font-weight="bold" fill="#8b5cf6">4. Ignoring Local Data</text><text x="110" y="750" font-size="20" fill="#ffffff">Jobs, population, schools, crime trends</text><text x="110" y="790" font-size="20" fill="#ffd700">Cheap usually means broken</text><rect x="80" y="840" width="940" height="180" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="890" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffd700">5. Underestimating Maintenance</text><text x="110" y="935" font-size="20" fill="#ffffff">Budget 1-2% of property value annually</text><text x="110" y="975" font-size="20" fill="#ffffff">Roof $15k, HVAC $8k, water heater $2k</text><text x="110" y="1010" font-size="20" fill="#10b981">Boring investor wins long term</text></svg>`,
           caption: "Avoiding mistakes matters more than chasing winners"
+        }
+      }
+    ]
+  },
+{
+    id: "pf-real-estate-lesson-10",
+    title: "Selling a Home: Process and Costs",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Selling a Home",
+        content: `Selling a home is a **multi-step process** stretching **2-4 months** from prep to closing. In a **normal market**, homes sit **30-60 days** before an accepted offer; in a **hot market**, just **7-14 days**. After acceptance, expect another **30-45 days** for buyer **due diligence**, **appraisal**, and **closing**.
+
+The biggest seller decisions: **list with an agent** or go **FSBO** (For Sale By Owner), **price strategy**, and **staging**. Total **seller closing costs** typically run **7-10%** of the sale price — a $400k home means **$28k-$40k** off the top before you see a dime of equity.
+
+This lesson covers the **timeline**, **agent vs. FSBO**, **staging**, **pricing**, and the **full cost breakdown** so you can net the most from your sale.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">Home Selling Timeline</text><rect x="80" y="160" width="940" height="120" fill="#6366f1" rx="10"/><text x="550" y="210" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Phase 1: Prep + List</text><text x="550" y="250" font-size="22" fill="#fff" text-anchor="middle">1-4 weeks</text><rect x="80" y="320" width="940" height="120" fill="#10b981" rx="10"/><text x="550" y="370" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Phase 2: On Market</text><text x="550" y="410" font-size="22" fill="#fff" text-anchor="middle">7-14 days hot / 30-60 days normal</text><rect x="80" y="480" width="940" height="120" fill="#f59e0b" rx="10"/><text x="550" y="530" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Phase 3: Due Diligence + Closing</text><text x="550" y="570" font-size="22" fill="#fff" text-anchor="middle">30-45 days after accepted offer</text><rect x="80" y="660" width="940" height="380" fill="#ffffff" rx="10"/><text x="550" y="710" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Seller Closing Costs (7-10%)</text><text x="120" y="760" font-size="22" fill="#1a1a2e">Agent Commission</text><text x="980" y="760" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">5-6%</text><text x="120" y="800" font-size="22" fill="#1a1a2e">Transfer Taxes</text><text x="980" y="800" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">0.1-2%</text><text x="120" y="840" font-size="22" fill="#1a1a2e">Title Insurance</text><text x="980" y="840" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">~0.5%</text><text x="120" y="880" font-size="22" fill="#1a1a2e">Escrow Fees</text><text x="980" y="880" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">~0.5%</text><text x="120" y="920" font-size="22" fill="#1a1a2e">Prorated Taxes + HOA</text><text x="980" y="920" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">Varies</text><line x1="100" y1="950" x2="1000" y2="950" stroke="#1a1a2e" stroke-width="2"/><text x="120" y="990" font-size="24" fill="#1a1a2e" font-weight="bold">TOTAL</text><text x="980" y="990" font-size="24" fill="#ef4444" text-anchor="end" font-weight="bold">7-10% of sale</text></rect></svg>`,
+          caption: "Three phases plus 7-10% in seller closing costs."
+        }
+      },
+      {
+        type: "concept",
+        title: "Agent vs. FSBO + Pricing Strategy",
+        content: `**Choosing an agent**: Interview **3+ candidates**. Ask for their **recent sales in your area**, average days on market, and list-to-sale ratio. **Commission is negotiable** — typically **5-6%**, traditionally split between listing and buyer agents. The **NAR settlement (2024)** changed the rules: seller commission is now explicitly negotiable and **may not include the buyer-agent commission** — buyers may pay their own agent directly.
+
+**FSBO (For Sale By Owner)**: Saves the **5-6% commission**, but only **~10% of FSBOs successfully sell** vs. **~90% via agent**, and FSBO homes typically **sell for less**.
+
+**Staging**: Declutter, depersonalize, neutralize, add professional photos. NAR studies show staged homes sell **faster** and at a **5-10% premium**.
+
+**Pricing strategy**: Price **at or slightly below comparable recent sales**. Overpriced listings go **stale**; underpricing in a hot market triggers **multiple offers** and a **bidding war above ask**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Agent vs. FSBO</text><rect x="60" y="120" width="490" height="380" fill="#10b981" rx="10"/><text x="305" y="170" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">Agent (~90% sell)</text><text x="90" y="220" font-size="20" fill="#fff">+ Pro pricing + marketing</text><text x="90" y="260" font-size="20" fill="#fff">+ MLS + buyer network</text><text x="90" y="300" font-size="20" fill="#fff">+ Negotiation expertise</text><text x="90" y="340" font-size="20" fill="#fff">+ Higher sale price</text><text x="90" y="380" font-size="20" fill="#fff">- Costs 5-6% commission</text><text x="90" y="440" font-size="24" fill="#ffd700" font-weight="bold">$400k: -$24k fee</text><rect x="570" y="120" width="470" height="380" fill="#ef4444" rx="10"/><text x="805" y="170" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">FSBO (~10% sell)</text><text x="600" y="220" font-size="20" fill="#fff">+ Save 5-6% commission</text><text x="600" y="260" font-size="20" fill="#fff">- DIY pricing risk</text><text x="600" y="300" font-size="20" fill="#fff">- Limited buyer reach</text><text x="600" y="340" font-size="20" fill="#fff">- Typically sells for less</text><text x="600" y="380" font-size="20" fill="#fff">- Legal + paperwork risk</text><text x="600" y="440" font-size="24" fill="#ffd700" font-weight="bold">Low success rate</text><text x="550" y="560" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Pricing Strategy</text><rect x="60" y="600" width="320" height="440" fill="#6366f1" rx="10"/><text x="220" y="650" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">UNDERPRICE</text><text x="220" y="700" font-size="18" fill="#fff" text-anchor="middle">Hot market only</text><text x="220" y="740" font-size="18" fill="#fff" text-anchor="middle">Multiple offers</text><text x="220" y="780" font-size="18" fill="#fff" text-anchor="middle">Bidding war</text><text x="220" y="820" font-size="18" fill="#fff" text-anchor="middle">Sells ABOVE ask</text><rect x="390" y="600" width="320" height="440" fill="#10b981" rx="10"/><text x="550" y="650" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">AT/SLIGHTLY BELOW</text><text x="550" y="700" font-size="18" fill="#fff" text-anchor="middle">Comparable sales</text><text x="550" y="740" font-size="18" fill="#fff" text-anchor="middle">Strong activity</text><text x="550" y="780" font-size="18" fill="#fff" text-anchor="middle">Fair offers</text><text x="550" y="820" font-size="18" fill="#fff" text-anchor="middle">SWEET SPOT</text><rect x="720" y="600" width="320" height="440" fill="#ef4444" rx="10"/><text x="880" y="650" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">OVERPRICE</text><text x="880" y="700" font-size="18" fill="#fff" text-anchor="middle">No showings</text><text x="880" y="740" font-size="18" fill="#fff" text-anchor="middle">Listing goes STALE</text><text x="880" y="780" font-size="18" fill="#fff" text-anchor="middle">Price cuts needed</text><text x="880" y="820" font-size="18" fill="#fff" text-anchor="middle">Sells for LESS</text></svg>`,
+          caption: "Agent path wins most of the time; price at comps."
+        }
+      },
+      {
+        type: "example",
+        title: "Selling a $400k Home: The Math",
+        content: `**Maya's home**: bought 5 years ago for **$320,000**, current value **$400,000**, mortgage balance **$240,000**.
+
+**She lists with an agent** at $400k, accepts an offer at **$395,000** after 18 days on market.
+
+**Closing cost breakdown**:
+- Agent commission **5%** of $395k = **$19,750**
+- Transfer tax (state, 0.5%) = **$1,975**
+- Title insurance for buyer = **$1,975**
+- Escrow + attorney fees = **$2,000**
+- Prorated property taxes + HOA = **$1,800**
+
+**Total seller costs**: **$27,500** (~7%)
+
+**Net proceeds calculation**:
+- Sale price: **$395,000**
+- Minus closing costs: **-$27,500**
+- Minus mortgage payoff: **-$240,000**
+- **Net to Maya**: **$127,500**
+
+Since this was her **primary residence** for 5 years, her **$75k gain** ($395k - $320k) is fully excluded under the **$250k single-filer capital gains exclusion** — she pays **zero federal tax**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Maya's Sale: $395k Net Walk</text><rect x="80" y="120" width="940" height="100" fill="#10b981" rx="10"/><text x="550" y="170" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">Sale Price</text><text x="550" y="205" font-size="26" fill="#fff" text-anchor="middle">$395,000</text><text x="550" y="265" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="bold">MINUS Closing Costs</text><rect x="80" y="290" width="940" height="380" fill="#ffffff" rx="10"/><text x="110" y="335" font-size="22" fill="#1a1a2e">Agent commission (5%)</text><text x="990" y="335" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">-$19,750</text><text x="110" y="380" font-size="22" fill="#1a1a2e">Transfer tax (0.5%)</text><text x="990" y="380" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">-$1,975</text><text x="110" y="425" font-size="22" fill="#1a1a2e">Title insurance</text><text x="990" y="425" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">-$1,975</text><text x="110" y="470" font-size="22" fill="#1a1a2e">Escrow + attorney</text><text x="990" y="470" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">-$2,000</text><text x="110" y="515" font-size="22" fill="#1a1a2e">Prorated taxes + HOA</text><text x="990" y="515" font-size="22" fill="#ef4444" text-anchor="end" font-weight="bold">-$1,800</text><line x1="100" y1="545" x2="1000" y2="545" stroke="#1a1a2e" stroke-width="2"/><text x="110" y="590" font-size="24" fill="#1a1a2e" font-weight="bold">Total Closing Costs</text><text x="990" y="590" font-size="24" fill="#ef4444" text-anchor="end" font-weight="bold">-$27,500</text><text x="110" y="640" font-size="24" fill="#1a1a2e" font-weight="bold">Mortgage Payoff</text><text x="990" y="640" font-size="24" fill="#ef4444" text-anchor="end" font-weight="bold">-$240,000</text><rect x="80" y="710" width="940" height="120" fill="#ffd700" rx="10"/><text x="550" y="760" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">NET TO MAYA</text><text x="550" y="805" font-size="38" fill="#1a1a2e" text-anchor="middle" font-weight="bold">$127,500</text><rect x="80" y="870" width="940" height="170" fill="#6366f1" rx="10"/><text x="550" y="920" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">Capital Gains Tax</text><text x="550" y="960" font-size="20" fill="#fff" text-anchor="middle">Gain: $395k - $320k = $75k</text><text x="550" y="995" font-size="20" fill="#fff" text-anchor="middle">Under $250k single exclusion</text><text x="550" y="1025" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">FEDERAL TAX: $0</text></svg>`,
+          caption: "Net $127,500 walked; primary-residence exclusion = $0 tax."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Selling Quiz",
+        question: "Maya sells her home for $395,000. Her agent commission is 5%, other closing costs total $7,750, and her mortgage payoff is $240,000. What are her approximate net proceeds?",
+        options: [
+          { text: "$395,000 (full sale price)", correct: false },
+          { text: "$155,000", correct: false },
+          { text: "$127,500", correct: true },
+          { text: "$100,000", correct: false }
+        ],
+        explanation: "Sale $395,000 - commission $19,750 (5%) - other closing $7,750 - mortgage payoff $240,000 = **$127,500 net**. Sellers should always project net proceeds, not gross sale price, when planning.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">Net Proceeds Math</text><rect x="100" y="160" width="900" height="100" fill="#10b981" rx="10"/><text x="550" y="220" font-size="32" fill="#fff" text-anchor="middle" font-weight="bold">Sale Price: $395,000</text><rect x="100" y="290" width="900" height="100" fill="#ef4444" rx="10"/><text x="550" y="350" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">- Commission (5%): $19,750</text><rect x="100" y="420" width="900" height="100" fill="#ef4444" rx="10"/><text x="550" y="480" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">- Other closing: $7,750</text><rect x="100" y="550" width="900" height="100" fill="#ef4444" rx="10"/><text x="550" y="610" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">- Mortgage payoff: $240,000</text><rect x="100" y="700" width="900" height="180" fill="#ffd700" rx="10"/><text x="550" y="770" font-size="36" fill="#1a1a2e" text-anchor="middle" font-weight="bold">NET PROCEEDS</text><text x="550" y="830" font-size="48" fill="#1a1a2e" text-anchor="middle" font-weight="bold">$127,500</text><text x="550" y="960" font-size="22" fill="#fff" text-anchor="middle">Plan net, not gross</text></svg>`,
+          caption: "Subtract commission + closing + mortgage from sale."
+        }
+      },
+      {
+        type: "application",
+        title: "Selling Action Plan",
+        content: `**Before listing**:
+1. Get a **Comparative Market Analysis (CMA)** from **3 agents** — interview each on **recent sales in your zip**, average days on market, list-to-sale ratio
+2. **Negotiate commission** — post-NAR settlement, **5-6% is negotiable**, and decide whether you'll offer a buyer-agent commission
+3. Get a **pre-listing inspection** to fix problems before buyers find them
+4. **Declutter, depersonalize, neutralize** — pack 30% of your stuff, remove family photos
+5. Hire a **professional photographer** (~$200-$500) — listing photos drive showings
+
+**Pricing**:
+6. Price **at or 1-2% below comps** to attract activity; avoid the **overprice trap**
+
+**Cost-to-net checklist**:
+7. Calculate net = **sale price − commission − closing costs (~2%) − mortgage payoff**
+8. Budget for **prorated taxes**, **HOA dues**, and any **buyer-requested credits**
+9. Confirm **primary-residence capital gains exclusion** ($250k single / $500k MFJ) applies
+10. Plan **move-out timeline** — typically 30-45 days from accepted offer`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Selling Action Plan</text><rect x="60" y="120" width="980" height="280" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">PREP (1-4 weeks)</text><text x="90" y="220" font-size="20" fill="#fff">1. Interview 3 agents, get CMAs</text><text x="90" y="260" font-size="20" fill="#fff">2. Negotiate commission</text><text x="90" y="300" font-size="20" fill="#fff">3. Pre-listing inspection</text><text x="90" y="340" font-size="20" fill="#fff">4. Declutter + depersonalize</text><text x="90" y="380" font-size="20" fill="#fff">5. Pro photos ($200-500)</text><rect x="60" y="430" width="980" height="180" fill="#10b981" rx="10"/><text x="550" y="480" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">PRICE + LIST</text><text x="90" y="530" font-size="20" fill="#fff">6. Price AT or 1-2% below comps</text><text x="90" y="570" font-size="20" fill="#fff">- Avoid the overprice trap</text><rect x="60" y="640" width="980" height="380" fill="#f59e0b" rx="10"/><text x="550" y="690" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">CLOSE + NET</text><text x="90" y="740" font-size="20" fill="#fff">7. Net = sale - 5-6% commission</text><text x="90" y="780" font-size="20" fill="#fff">   - ~2% closing - mortgage payoff</text><text x="90" y="820" font-size="20" fill="#fff">8. Budget prorated taxes + HOA</text><text x="90" y="860" font-size="20" fill="#fff">9. Confirm $250k/$500k exclusion</text><text x="90" y="900" font-size="20" fill="#fff">10. Plan 30-45 day move-out</text><text x="550" y="970" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Gross - All Costs = Real Money</text></svg>`,
+          caption: "Prep, price, close — calculate net before listing."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-real-estate-lesson-11",
+    title: "Real Estate Tax Rules",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Real Estate Tax Rules",
+        content: `Real estate is one of the **most tax-advantaged investments** in America — but the rules are **complex and change often**. The **Tax Cuts and Jobs Act of 2017 (TCJA)** rewrote the playbook: it **capped property tax deductions**, **lowered the mortgage interest deduction ceiling**, and many of its provisions **sunset after 2025** unless Congress acts.
+
+This lesson covers the **six core rules** every homeowner and investor needs:
+1. **Mortgage Interest Deduction**
+2. **Home Equity Loan/HELOC** interest rules
+3. **SALT (State And Local Tax) cap** — $10,000
+4. **Capital Gains Exclusion** for primary residence
+5. **1031 Like-Kind Exchange** for investment property
+6. **Stepped-Up Basis** at death
+
+Use these well and you can **legally avoid hundreds of thousands** in taxes over a lifetime. Miss them and you'll **overpay every April**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">6 Tax Rules for Real Estate</text><rect x="60" y="120" width="480" height="200" fill="#6366f1" rx="10"/><text x="300" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">1. Mortgage Interest</text><text x="300" y="220" font-size="20" fill="#fff" text-anchor="middle">Up to $750k debt</text><text x="300" y="260" font-size="20" fill="#fff" text-anchor="middle">(reverts to $1M post-2025)</text><text x="300" y="300" font-size="20" fill="#fff" text-anchor="middle">Schedule A itemized</text><rect x="560" y="120" width="480" height="200" fill="#10b981" rx="10"/><text x="800" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">2. HELOC Interest</text><text x="800" y="220" font-size="20" fill="#fff" text-anchor="middle">Deductible ONLY if used</text><text x="800" y="260" font-size="20" fill="#fff" text-anchor="middle">to buy/build/improve</text><text x="800" y="300" font-size="20" fill="#fff" text-anchor="middle">the property</text><rect x="60" y="350" width="480" height="200" fill="#f59e0b" rx="10"/><text x="300" y="400" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">3. SALT Cap</text><text x="300" y="450" font-size="20" fill="#fff" text-anchor="middle">$10,000 max</text><text x="300" y="490" font-size="20" fill="#fff" text-anchor="middle">Property + state + sales</text><text x="300" y="530" font-size="20" fill="#fff" text-anchor="middle">Hurts CA/NY/NJ</text><rect x="560" y="350" width="480" height="200" fill="#ec4899" rx="10"/><text x="800" y="400" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">4. Cap Gains Exclusion</text><text x="800" y="450" font-size="20" fill="#fff" text-anchor="middle">$250k single</text><text x="800" y="490" font-size="20" fill="#fff" text-anchor="middle">$500k MFJ</text><text x="800" y="530" font-size="20" fill="#fff" text-anchor="middle">2 of 5 year rule</text><rect x="60" y="580" width="480" height="200" fill="#8b5cf6" rx="10"/><text x="300" y="630" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">5. 1031 Exchange</text><text x="300" y="680" font-size="20" fill="#fff" text-anchor="middle">Defer gains - investment</text><text x="300" y="720" font-size="20" fill="#fff" text-anchor="middle">45 days ID / 180 close</text><text x="300" y="760" font-size="20" fill="#fff" text-anchor="middle">NOT primary residence</text><rect x="560" y="580" width="480" height="200" fill="#0ea5e9" rx="10"/><text x="800" y="630" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">6. Stepped-Up Basis</text><text x="800" y="680" font-size="20" fill="#fff" text-anchor="middle">Heirs get market value</text><text x="800" y="720" font-size="20" fill="#fff" text-anchor="middle">Wipes out cap gains</text><text x="800" y="760" font-size="20" fill="#fff" text-anchor="middle">Estate planning gold</text><rect x="60" y="820" width="980" height="220" fill="#ffd700" rx="10"/><text x="550" y="880" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">TCJA SUNSET WARNING</text><text x="550" y="930" font-size="22" fill="#1a1a2e" text-anchor="middle">$750k mortgage cap and $10k SALT cap</text><text x="550" y="970" font-size="22" fill="#1a1a2e" text-anchor="middle">expire after 2025 unless Congress extends</text><text x="550" y="1010" font-size="22" fill="#1a1a2e" text-anchor="middle">Plan for change</text></svg>`,
+          caption: "Six pillars of real estate tax — know them all."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Deductions: Mortgage, HELOC, SALT",
+        content: `**Mortgage Interest Deduction** (Schedule A, itemized): Deduct interest on up to **$750,000 of acquisition debt** for your **primary + second home combined**. **TCJA capped it at $750k from $1M in 2017**; reverts to **$1M after 2025** unless extended.
+
+**Home Equity Loan / HELOC Interest**: Deductible **ONLY if used to buy, build, or substantially improve** the property securing the loan. Used a HELOC for **vacation, car, debt consolidation**? **NOT deductible** — a major TCJA change.
+
+**SALT Cap (State And Local Tax)**: Property tax + state income tax (or sales tax) deductions are **capped at $10,000 combined**. A New Jersey homeowner paying **$15k property + $8k state income** can only deduct **$10k of the $23k paid**. Devastating in **CA, NY, NJ, IL, MA**. SALT cap also expires after 2025.
+
+**Practical impact**: Many homeowners now take the **standard deduction** ($14,600 single / $29,200 MFJ in 2024) because their itemized deductions don't exceed it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Three Deduction Rules</text><rect x="60" y="120" width="980" height="280" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Mortgage Interest Deduction</text><text x="90" y="220" font-size="20" fill="#fff">Deduct interest on up to $750,000 acquisition debt</text><text x="90" y="260" font-size="20" fill="#fff">Primary + second home combined</text><text x="90" y="300" font-size="20" fill="#fff">$800k loan at 7% = $56k interest/yr</text><text x="90" y="340" font-size="20" fill="#fff">Deductible: $56k x ($750k/$800k) = $52,500</text><text x="90" y="380" font-size="20" fill="#ffd700" font-weight="bold">Reverts to $1M cap after 2025</text><rect x="60" y="430" width="980" height="250" fill="#10b981" rx="10"/><text x="550" y="480" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">HELOC Interest</text><text x="90" y="530" font-size="20" fill="#fff">- Kitchen remodel: DEDUCTIBLE (improves home)</text><text x="90" y="570" font-size="20" fill="#fff">- New roof: DEDUCTIBLE (improves home)</text><text x="90" y="610" font-size="20" fill="#fff">- Boat / vacation: NOT deductible</text><text x="90" y="650" font-size="20" fill="#fff">- Credit card payoff: NOT deductible</text><rect x="60" y="710" width="980" height="320" fill="#ef4444" rx="10"/><text x="550" y="760" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">SALT Cap: $10,000</text><text x="90" y="810" font-size="20" fill="#fff">NJ example: $15k property tax + $8k state income</text><text x="90" y="850" font-size="20" fill="#fff">Total paid: $23,000</text><text x="90" y="890" font-size="20" fill="#fff">Deductible: ONLY $10,000</text><text x="90" y="930" font-size="20" fill="#fff">Lost deduction: $13,000</text><text x="90" y="980" font-size="22" fill="#ffd700" font-weight="bold">Worst in CA, NY, NJ, IL, MA</text><text x="90" y="1015" font-size="20" fill="#fff">Cap expires after 2025</text></svg>`,
+          caption: "Mortgage, HELOC, SALT — limits matter."
+        }
+      },
+      {
+        type: "example",
+        title: "$500k Gain, $0 Tax: The Power of Exclusion",
+        content: `**Tom and Lisa** bought a primary residence in 2015 for **$400,000**. They lived in it 9 years. In 2024, they sell for **$900,000** — a **$500,000 capital gain**.
+
+**Tax outcome**: They qualify for the **$500,000 MFJ Section 121 exclusion** because they **owned AND used** the home as their primary residence for **2 of the last 5 years**. **Federal tax on $500k gain: $0**.
+
+**Contrast — Investment property**: Tom and Lisa's neighbor, Carlos, bought a **rental property** for **$400k**, sells for **$900k**. The $500k gain is **fully taxable** at **15-20% long-term capital gains** + **depreciation recapture (25%)** on depreciation taken. Tax bill: **~$100,000+**.
+
+**Carlos's escape — 1031 Exchange**: Carlos uses a **Section 1031 Like-Kind Exchange**: identifies a replacement investment property within **45 days**, closes within **180 days**, reinvests **all proceeds**. **Capital gains are DEFERRED** — not eliminated, but pushed forward. He can keep 1031-ing for life; heirs then get **stepped-up basis** wiping out gains entirely.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">$500k Gain: Three Outcomes</text><rect x="60" y="120" width="980" height="100" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Bought $400k - Sold $900k = $500k gain</text><text x="550" y="205" font-size="20" fill="#fff" text-anchor="middle">Same numbers, very different taxes</text><rect x="60" y="250" width="980" height="220" fill="#10b981" rx="10"/><text x="550" y="300" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Tom + Lisa: PRIMARY residence</text><text x="90" y="350" font-size="20" fill="#fff">Owned + used 2 of last 5 years - YES</text><text x="90" y="390" font-size="20" fill="#fff">Section 121 exclusion: $500k MFJ</text><text x="90" y="430" font-size="22" fill="#ffd700" font-weight="bold">FEDERAL TAX: $0</text><rect x="60" y="500" width="980" height="220" fill="#ef4444" rx="10"/><text x="550" y="550" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Carlos: INVESTMENT property, sells</text><text x="90" y="600" font-size="20" fill="#fff">$500k gain x 20% LTCG = $100,000</text><text x="90" y="640" font-size="20" fill="#fff">+ Depreciation recapture 25%</text><text x="90" y="680" font-size="22" fill="#ffd700" font-weight="bold">FEDERAL TAX: ~$100,000+</text><rect x="60" y="750" width="980" height="290" fill="#8b5cf6" rx="10"/><text x="550" y="800" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Carlos: 1031 Exchange instead</text><text x="90" y="850" font-size="20" fill="#fff">Identify new property: 45 days</text><text x="90" y="890" font-size="20" fill="#fff">Close on new property: 180 days</text><text x="90" y="930" font-size="20" fill="#fff">Reinvest ALL proceeds</text><text x="90" y="970" font-size="22" fill="#ffd700" font-weight="bold">FEDERAL TAX: $0 deferred</text><text x="90" y="1010" font-size="20" fill="#fff">Heirs get stepped-up basis = gains erased</text></svg>`,
+          caption: "Primary = exclude; investment = pay or 1031; death = wipe."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Tax Rules Quiz",
+        question: "Marcus sells his investment rental property (NOT his primary residence) for a $300,000 gain. He wants to defer the capital gains tax. Which rule should he use, and what is the key deadline?",
+        options: [
+          { text: "Section 121 exclusion — he excludes the first $250,000", correct: false },
+          { text: "Section 1031 Like-Kind Exchange — identify a replacement property within 45 days and close within 180 days", correct: true },
+          { text: "SALT deduction — claim it on Schedule A", correct: false },
+          { text: "Stepped-up basis — apply for it at the IRS", correct: false }
+        ],
+        explanation: "**Section 1031 Like-Kind Exchange** lets investors **defer capital gains** by reinvesting in like-kind investment property. The deadlines are **45 days to IDENTIFY** the replacement property and **180 days to CLOSE**. Section 121 is for primary residences only; SALT is unrelated; stepped-up basis only applies at death.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">1031 Exchange Timeline</text><rect x="100" y="160" width="900" height="120" fill="#10b981" rx="10"/><text x="550" y="220" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">Day 0: Sell rental property</text><text x="550" y="260" font-size="22" fill="#fff" text-anchor="middle">Proceeds to qualified intermediary</text><rect x="100" y="320" width="900" height="120" fill="#f59e0b" rx="10"/><text x="550" y="380" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">Day 45: IDENTIFY replacement</text><text x="550" y="420" font-size="22" fill="#fff" text-anchor="middle">Up to 3 candidate properties in writing</text><rect x="100" y="480" width="900" height="120" fill="#ef4444" rx="10"/><text x="550" y="540" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">Day 180: CLOSE on new property</text><text x="550" y="580" font-size="22" fill="#fff" text-anchor="middle">All cash reinvested - or pay tax</text><rect x="100" y="640" width="900" height="180" fill="#ffd700" rx="10"/><text x="550" y="710" font-size="32" fill="#1a1a2e" text-anchor="middle" font-weight="bold">RESULT</text><text x="550" y="760" font-size="24" fill="#1a1a2e" text-anchor="middle">$300k gain DEFERRED</text><text x="550" y="795" font-size="22" fill="#1a1a2e" text-anchor="middle">Pay later or wipe via stepped-up basis</text><text x="550" y="900" font-size="22" fill="#fff" text-anchor="middle">Investment ONLY - not primary home</text><text x="550" y="940" font-size="22" fill="#fff" text-anchor="middle">Use a qualified intermediary</text></svg>`,
+          caption: "1031: 45 days ID, 180 days close — for investment only."
+        }
+      },
+      {
+        type: "application",
+        title: "Real Estate Tax Checklist",
+        content: `**Buying / financing**:
+1. **Mortgage under $750k**? All your interest is deductible — keep **Form 1098** from lender
+2. **HELOC**? Earmark the money — **track use** for buy/build/improve, save invoices
+3. **Run the math**: Itemize ONLY if mortgage interest + SALT + charity > standard deduction
+
+**Selling primary residence**:
+4. **2-of-5 rule**: confirm you owned **AND** used the home for **2 of the last 5 years**
+5. **Single = $250k** exclusion, **MFJ = $500k** — confirm filing status
+6. **Track basis**: keep records of all **capital improvements** (kitchen, roof, addition) — they raise basis and reduce gain
+
+**Investment property**:
+7. **Depreciate** over **27.5 years** (residential rental) on Schedule E
+8. **1031 Exchange**? Engage a **qualified intermediary BEFORE closing** — 45-day / 180-day clock starts on close
+9. **Cost segregation study** for properties >$500k can accelerate depreciation
+
+**Estate planning**:
+10. **Hold property until death** → heirs get **stepped-up basis** → gains wiped out
+11. Consult a **CPA** every year — tax law changes constantly`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Tax Checklist by Phase</text><rect x="60" y="120" width="980" height="220" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">BUY / FINANCE</text><text x="90" y="220" font-size="20" fill="#fff">1. Mortgage under $750k - track Form 1098</text><text x="90" y="260" font-size="20" fill="#fff">2. HELOC - track use for buy/build/improve</text><text x="90" y="300" font-size="20" fill="#fff">3. Itemize vs. standard - run the math</text><rect x="60" y="360" width="980" height="220" fill="#10b981" rx="10"/><text x="550" y="410" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">SELL PRIMARY</text><text x="90" y="460" font-size="20" fill="#fff">4. Confirm 2-of-5 ownership + use rule</text><text x="90" y="500" font-size="20" fill="#fff">5. $250k single / $500k MFJ exclusion</text><text x="90" y="540" font-size="20" fill="#fff">6. Track capital improvements - raises basis</text><rect x="60" y="600" width="980" height="220" fill="#8b5cf6" rx="10"/><text x="550" y="650" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">INVESTMENT PROPERTY</text><text x="90" y="700" font-size="20" fill="#fff">7. Depreciate 27.5 yrs on Schedule E</text><text x="90" y="740" font-size="20" fill="#fff">8. 1031 - engage QI before closing</text><text x="90" y="780" font-size="20" fill="#fff">9. Cost segregation if greater than $500k</text><rect x="60" y="840" width="980" height="200" fill="#ffd700" rx="10"/><text x="550" y="890" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ESTATE</text><text x="90" y="940" font-size="20" fill="#1a1a2e">10. Hold until death - stepped-up basis</text><text x="90" y="980" font-size="20" fill="#1a1a2e">11. Annual CPA check - laws change yearly</text><text x="550" y="1020" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Save thousands per year</text></svg>`,
+          caption: "Phase-by-phase tax wins for every real estate stage."
+        }
+      }
+    ]
+  },
+  {
+    id: "pf-real-estate-lesson-12",
+    title: "Capstone: Sarah's Decision — Buy, Rent, House Hack, or Invest",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Sarah's Four Paths",
+        content: `Meet **Sarah**, age 30. She just accepted a new job in **Atlanta** at **$95,000/yr**. She has **$40,000 in savings**, **$5,000 in credit card debt**, and **no existing home**. She's never lived in Atlanta — this could be a 2-year stop or a 30-year career.
+
+She has **four real estate paths** to choose from:
+1. **RENT** a $1,800/mo apartment — low friction, maximum flexibility
+2. **BUY** a $400k single-family home — build equity but tie up most savings
+3. **HOUSE HACK** a $450k duplex — live in one unit, rent the other
+4. **RENT + INVEST** the cash in REITs / index funds
+
+This capstone applies **everything** from the previous 11 lessons: rent vs. buy math, mortgages, down payments, equity, costs, taxes, and selling. Let's walk her through the **decision framework** and find the right answer.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="38" fill="#ffd700" text-anchor="middle" font-weight="bold">Sarah's Situation</text><rect x="80" y="120" width="940" height="180" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">Age 30 - New Atlanta Job</text><text x="120" y="220" font-size="22" fill="#fff">Salary: $95,000/yr</text><text x="120" y="260" font-size="22" fill="#fff">Savings: $40,000</text><text x="700" y="220" font-size="22" fill="#fff">CC Debt: $5,000</text><text x="700" y="260" font-size="22" fill="#fff">No existing home</text><text x="550" y="350" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Four Paths</text><rect x="80" y="380" width="450" height="200" fill="#10b981" rx="10"/><text x="305" y="430" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">1. RENT</text><text x="305" y="475" font-size="20" fill="#fff" text-anchor="middle">$1,800/mo apt</text><text x="305" y="510" font-size="20" fill="#fff" text-anchor="middle">Max flexibility</text><text x="305" y="550" font-size="20" fill="#fff" text-anchor="middle">No equity build</text><rect x="570" y="380" width="450" height="200" fill="#f59e0b" rx="10"/><text x="795" y="430" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">2. BUY</text><text x="795" y="475" font-size="20" fill="#fff" text-anchor="middle">$400k home</text><text x="795" y="510" font-size="20" fill="#fff" text-anchor="middle">$45k all-in upfront</text><text x="795" y="550" font-size="20" fill="#fff" text-anchor="middle">Builds equity</text><rect x="80" y="610" width="450" height="200" fill="#8b5cf6" rx="10"/><text x="305" y="660" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">3. HOUSE HACK</text><text x="305" y="705" font-size="20" fill="#fff" text-anchor="middle">$450k duplex FHA</text><text x="305" y="740" font-size="20" fill="#fff" text-anchor="middle">$36k all-in upfront</text><text x="305" y="780" font-size="20" fill="#fff" text-anchor="middle">Tenant pays mortgage</text><rect x="570" y="610" width="450" height="200" fill="#0ea5e9" rx="10"/><text x="795" y="660" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">4. RENT + INVEST</text><text x="795" y="705" font-size="20" fill="#fff" text-anchor="middle">$1,800/mo apt</text><text x="795" y="740" font-size="20" fill="#fff" text-anchor="middle">$40k in stocks/REITs</text><text x="795" y="780" font-size="20" fill="#fff" text-anchor="middle">Liquid + diversified</text><rect x="80" y="840" width="940" height="200" fill="#ffd700" rx="10"/><text x="550" y="890" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Decision Framework</text><text x="550" y="935" font-size="22" fill="#1a1a2e" text-anchor="middle">Timeline | Risk Tolerance | Goals</text><text x="550" y="975" font-size="22" fill="#1a1a2e" text-anchor="middle">Lifestyle | Market Timing</text><text x="550" y="1020" font-size="22" fill="#1a1a2e" text-anchor="middle">No universal best - context wins</text></svg>`,
+          caption: "Four paths, one Sarah — context decides."
+        }
+      },
+      {
+        type: "concept",
+        title: "The 5-Factor Framework",
+        content: `Every buy/rent/hack decision runs through **5 factors**:
+
+**1. Timeline**: Will you stay **5+ years**? Buying transaction costs (**~10% of price** round-trip) take **5-7 years** to amortize. Less than 5? Rent.
+
+**2. Risk Tolerance**: New job + new city = **high uncertainty**. Buying ties up capital, fixed costs continue regardless of layoffs. Renting = **flexible exit in 30-60 days**.
+
+**3. Goals**: Wealth-building? **House hacking** beats both renting and traditional buying. Lifestyle? Renting in a hot urban area may beat suburbia. Family stability? Buying wins.
+
+**4. Lifestyle**: Want zero landlord duties? **Rent**. Tolerate **management** for wealth? **House hack**. Want privacy + customization? **Buy single-family**.
+
+**5. Market Timing**: Is the local market **overheated** (high prices, high rates)? Rent + wait. **Distressed** market? Buy.
+
+**Sarah's read**: Short timeline + new job + new city = **high uncertainty**. Verdict: **RENT first (1-2 years)**, then pivot.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">5-Factor Decision Matrix</text><rect x="60" y="120" width="980" height="160" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">1. TIMELINE</text><text x="90" y="215" font-size="20" fill="#fff">- Less than 5 years: RENT (closing costs not amortized)</text><text x="90" y="255" font-size="20" fill="#fff">- 5+ years: BUY worth considering</text><rect x="60" y="300" width="980" height="160" fill="#10b981" rx="10"/><text x="550" y="350" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">2. RISK TOLERANCE</text><text x="90" y="395" font-size="20" fill="#fff">- High uncertainty: RENT (30-60 day exit)</text><text x="90" y="435" font-size="20" fill="#fff">- Stable job + reserves: BUY OK</text><rect x="60" y="480" width="980" height="160" fill="#f59e0b" rx="10"/><text x="550" y="530" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">3. GOALS</text><text x="90" y="575" font-size="20" fill="#fff">- Max wealth: HOUSE HACK</text><text x="90" y="615" font-size="20" fill="#fff">- Family stability: BUY single-family</text><rect x="60" y="660" width="980" height="160" fill="#8b5cf6" rx="10"/><text x="550" y="710" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">4. LIFESTYLE</text><text x="90" y="755" font-size="20" fill="#fff">- Zero maintenance: RENT</text><text x="90" y="795" font-size="20" fill="#fff">- Customize + privacy: BUY</text><rect x="60" y="840" width="980" height="160" fill="#0ea5e9" rx="10"/><text x="550" y="890" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">5. MARKET TIMING</text><text x="90" y="935" font-size="20" fill="#fff">- Overheated: RENT + wait</text><text x="90" y="975" font-size="20" fill="#fff">- Distressed: BUY</text><text x="550" y="1050" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">Sarah scores high on uncertainty - RENT</text></svg>`,
+          caption: "Score all 5 factors; uncertainty tips Sarah to rent."
+        }
+      },
+      {
+        type: "example",
+        title: "10-Year Wealth Projection",
+        content: `Let's project **Sarah's net worth in 10 years** under each path. Assumptions: 4% home appreciation, 7% stock returns, $1,800/mo rent rising 3%/yr.
+
+**Path 1 — RENT** ($1,800/mo, save the rest):
+- Save **$500/mo** + $40k starting → invested at 7%
+- 10-year stash: **~$120,000** + emergency fund intact
+
+**Path 2 — BUY $400k home** ($20k down, 5%, $25k closing):
+- Mortgage payment + tax + insurance: **~$2,800/mo**
+- 10-year equity (after appreciation + paydown): **~$220,000**
+- Drained savings in year 1, slow investment recovery
+
+**Path 3 — HOUSE HACK $450k duplex** (FHA 3.5%, $16k down, tenant covers $1,500/mo):
+- Net housing cost: **~$1,300/mo** (less than renting)
+- Saves **$500-$1,000/mo extra** invested
+- 10-year equity: **~$250,000** + side investments **~$100,000**
+- **TOTAL: ~$350,000**
+
+**Path 4 — RENT + INVEST $40k**:
+- $40k + $500/mo at 7% over 10 years
+- **~$160,000** liquid
+
+**Winner**: **House hacking** — by a wide margin, IF Sarah can commit 2+ years and handle management.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">10-Year Wealth Projection</text><line x1="120" y1="900" x2="1050" y2="900" stroke="#888" stroke-width="2"/><line x1="120" y1="200" x2="120" y2="900" stroke="#888" stroke-width="2"/><text x="80" y="250" font-size="18" fill="#888" text-anchor="end">$350k</text><text x="80" y="400" font-size="18" fill="#888" text-anchor="end">$250k</text><text x="80" y="550" font-size="18" fill="#888" text-anchor="end">$150k</text><text x="80" y="700" font-size="18" fill="#888" text-anchor="end">$50k</text><text x="80" y="850" font-size="18" fill="#888" text-anchor="end">$0</text><rect x="180" y="700" width="160" height="200" fill="#10b981"/><text x="260" y="930" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">RENT</text><text x="260" y="960" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">$120k</text><rect x="380" y="430" width="160" height="470" fill="#f59e0b"/><text x="460" y="930" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">BUY</text><text x="460" y="960" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">$220k</text><rect x="580" y="250" width="160" height="650" fill="#8b5cf6"/><text x="660" y="930" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">HACK</text><text x="660" y="960" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">$350k</text><rect x="780" y="640" width="160" height="260" fill="#0ea5e9"/><text x="860" y="930" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">R+INV</text><text x="860" y="960" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">$160k</text><text x="550" y="130" font-size="22" fill="#fff" text-anchor="middle">Net worth after 10 years</text><rect x="180" y="1010" width="760" height="70" fill="#ffd700" rx="10"/><text x="560" y="1055" font-size="24" fill="#1a1a2e" text-anchor="middle" font-weight="bold">House Hack wins - if she can manage</text></svg>`,
+          caption: "House hack: ~$350k vs ~$120k for renting."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Capstone Quiz",
+        question: "Given Sarah's situation (age 30, new job in a new city, $40k savings, $5k credit card debt, uncertain timeline), what is the best FIRST move?",
+        options: [
+          { text: "Buy the $400k single-family home immediately to start building equity", correct: false },
+          { text: "RENT for 1-2 years to preserve flexibility, pay off the credit card, then pivot to house hacking if Atlanta proves to be permanent", correct: true },
+          { text: "Take out a 1031 exchange on the duplex", correct: false },
+          { text: "Spend all $40k on a luxury condo down payment", correct: false }
+        ],
+        explanation: "Sarah faces **high uncertainty** (new job, new city, no homeownership history). **Renting first** preserves a **30-60 day exit option**, gives her time to **pay off the credit card** and **build credit**, and lets her **learn the local market**. After 1-2 years, if Atlanta is permanent, she can pivot to **house hacking** with stronger savings + credit + market knowledge. 1031 exchanges are for investment-property gains (she has none) and buying a $400k home in year 1 risks tying up all liquidity.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Sarah's Best Path</text><rect x="80" y="160" width="940" height="200" fill="#10b981" rx="10"/><text x="550" y="220" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">YEAR 1-2: RENT</text><text x="120" y="270" font-size="22" fill="#fff">- $1,800/mo apartment</text><text x="120" y="305" font-size="22" fill="#fff">- Pay off $5k credit card debt</text><text x="120" y="340" font-size="22" fill="#fff">- Build emergency fund</text><rect x="80" y="390" width="940" height="180" fill="#f59e0b" rx="10"/><text x="550" y="445" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">DECISION POINT</text><text x="550" y="490" font-size="22" fill="#fff" text-anchor="middle">After 2 years - is Atlanta permanent?</text><text x="550" y="530" font-size="22" fill="#fff" text-anchor="middle">Job stable? Credit improved?</text><rect x="80" y="600" width="940" height="200" fill="#8b5cf6" rx="10"/><text x="550" y="660" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">YEAR 3+: HOUSE HACK</text><text x="120" y="710" font-size="22" fill="#fff">- $450k duplex, FHA 3.5% down</text><text x="120" y="745" font-size="22" fill="#fff">- Tenant covers ~$1,500/mo</text><text x="120" y="780" font-size="22" fill="#fff">- Net cost less than renting</text><rect x="80" y="830" width="940" height="210" fill="#ffd700" rx="10"/><text x="550" y="890" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">WIN-WIN-WIN</text><text x="550" y="940" font-size="22" fill="#1a1a2e" text-anchor="middle">Flexibility year 1 + wealth year 3+</text><text x="550" y="980" font-size="22" fill="#1a1a2e" text-anchor="middle">Reduced risk + best 10-yr outcome</text><text x="550" y="1020" font-size="22" fill="#1a1a2e" text-anchor="middle">Patience pays</text></svg>`,
+          caption: "Rent first, then pivot to house hacking."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Own Sarah Plan",
+        content: `Run this **5-step decision protocol** the next time YOU face a real estate decision:
+
+**Step 1 — Score your 5 factors** (1-5 each):
+- **Timeline certainty**, **risk tolerance**, **wealth-build urgency**, **lifestyle fit**, **market timing**
+- Score 18+ = lean buy/hack; under 12 = lean rent
+
+**Step 2 — Run the 10-year math**:
+- For each option, project net worth using realistic assumptions (4% home appreciation, 7% stock returns, 3% rent inflation)
+- Use Bankrate's Rent vs. Buy calculator as a sanity check
+
+**Step 3 — Stress-test downside**:
+- Job loss in year 1? Can you cover **6 months** of payments?
+- Home value drops 20%? Can you wait it out?
+- Tenant leaves (if house hacking)? Can you cover the full mortgage 3 months?
+
+**Step 4 — Pick a stepped plan**:
+- Like Sarah — **rent first**, then **pivot** to ownership/hacking once stable
+- Don't try to optimize year 1; optimize **year 10**
+
+**Step 5 — Revisit annually**:
+- Re-score the 5 factors each year. Pivot when scores cross thresholds.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" font-size="36" fill="#ffd700" text-anchor="middle" font-weight="bold">Your 5-Step Protocol</text><rect x="60" y="120" width="980" height="170" fill="#6366f1" rx="10"/><text x="550" y="170" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">STEP 1: Score 5 Factors</text><text x="90" y="220" font-size="20" fill="#fff">Timeline / Risk / Goals / Lifestyle / Market</text><text x="90" y="260" font-size="20" fill="#fff">18+ lean buy/hack | under 12 lean rent</text><rect x="60" y="310" width="980" height="170" fill="#10b981" rx="10"/><text x="550" y="360" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">STEP 2: 10-Year Math</text><text x="90" y="410" font-size="20" fill="#fff">4% home / 7% stock / 3% rent inflation</text><text x="90" y="450" font-size="20" fill="#fff">Project net worth each option</text><rect x="60" y="500" width="980" height="170" fill="#f59e0b" rx="10"/><text x="550" y="550" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">STEP 3: Stress-Test Downside</text><text x="90" y="600" font-size="20" fill="#fff">Job loss? 6 mo reserve?</text><text x="90" y="640" font-size="20" fill="#fff">20% price drop? Tenant gone 3 mo?</text><rect x="60" y="690" width="980" height="170" fill="#8b5cf6" rx="10"/><text x="550" y="740" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">STEP 4: Pick Stepped Plan</text><text x="90" y="790" font-size="20" fill="#fff">Rent first - then pivot</text><text x="90" y="830" font-size="20" fill="#fff">Optimize year 10, not year 1</text><rect x="60" y="880" width="980" height="170" fill="#ffd700" rx="10"/><text x="550" y="930" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">STEP 5: Revisit Annually</text><text x="90" y="980" font-size="20" fill="#1a1a2e">Re-score each year</text><text x="90" y="1020" font-size="20" fill="#1a1a2e">Pivot when thresholds shift</text></svg>`,
+          caption: "Score, math, stress-test, step, revisit."
         }
       }
     ]
