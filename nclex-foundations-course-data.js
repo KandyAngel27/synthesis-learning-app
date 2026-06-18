@@ -8846,8 +8846,306 @@ Miss the diagnosis and you miss the cure: a delirious elder with a UTI gets anti
             title: 'Critical Care & Emergency Nursing',
             author: 'Synthesis Learning',
             description: 'Shock states, ABG interpretation, triage, the cardiac rhythms you have to recognize on sight, and disaster response.',
-            lessons: 1, duration: 5, progress: 0, category: 'nclex-foundations',
-            lessonList: comingSoonLessons('shock states, ABG interpretation, ED triage, key cardiac rhythms, and disaster response'),
+            lessons: 3, duration: 45, progress: 0, category: 'nclex-foundations',
+            lessonList: [
+{
+    id: "nclex-critical-care-lesson-1",
+    title: "ABG Interpretation: pH, PCO2, HCO3, Compensation",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Reading the Body's Chemistry",
+        content: `**Arterial blood gases (ABGs)** reveal whether a patient is in **acidosis** or **alkalosis** and whether the cause is **respiratory** or **metabolic**. In the ICU, ABG interpretation guides ventilator settings, fluid choices, and drug dosing.
+
+Normal ranges to memorize cold:
+- **pH 7.35–7.45**
+- **PaCO2 35–45 mmHg** (respiratory)
+- **HCO3 22–26 mEq/L** (metabolic)
+- **PaO2 80–100 mmHg**
+- **SaO2 95–100%**
+
+Use the **ROME** mnemonic: **R**espiratory **O**pposite, **M**etabolic **E**qual. If pH and CO2 move in opposite directions, it's respiratory. If pH and HCO3 move the same direction, it's metabolic. Then check **compensation**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">ABG Normal Values</text><rect x="100" y="140" width="900" height="120" rx="14" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="195" text-anchor="middle" fill="#ffffff" font-size="36" font-weight="bold">pH 7.35 – 7.45</text><text x="550" y="240" text-anchor="middle" fill="#888" font-size="24">acidosis &lt; 7.35  •  alkalosis &gt; 7.45</text><rect x="100" y="290" width="430" height="120" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="315" y="340" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">PaCO2</text><text x="315" y="380" text-anchor="middle" fill="#ffd700" font-size="28">35 – 45 mmHg</text><rect x="570" y="290" width="430" height="120" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="785" y="340" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">HCO3</text><text x="785" y="380" text-anchor="middle" fill="#ffd700" font-size="28">22 – 26 mEq/L</text><rect x="100" y="440" width="430" height="120" rx="14" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="315" y="490" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">PaO2</text><text x="315" y="530" text-anchor="middle" fill="#ffd700" font-size="28">80 – 100 mmHg</text><rect x="570" y="440" width="430" height="120" rx="14" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="785" y="490" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">SaO2</text><text x="785" y="530" text-anchor="middle" fill="#ffd700" font-size="28">95 – 100%</text><rect x="100" y="600" width="900" height="380" rx="14" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="3"/><text x="550" y="660" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">ROME Mnemonic</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="30">R espiratory  O pposite</text><text x="550" y="780" text-anchor="middle" fill="#888" font-size="22">pH and CO2 move opposite directions</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="30">M etabolic  E qual</text><text x="550" y="900" text-anchor="middle" fill="#888" font-size="22">pH and HCO3 move the same direction</text><text x="550" y="950" text-anchor="middle" fill="#10b981" font-size="22">Step 3: assess compensation</text></svg>`,
+          caption: "Master these five numbers and ROME — every ABG question hinges on them."
+        }
+      },
+      {
+        type: "concept",
+        title: "Four Primary Disorders and Their Causes",
+        content: `Each disorder is defined by what's **abnormal** and **why**.
+
+**Respiratory acidosis** — pH low, PaCO2 high. Cause: **hypoventilation** retains CO2. Triggers: **COPD exacerbation**, **opioid overdose**, neuromuscular weakness, sedation.
+
+**Respiratory alkalosis** — pH high, PaCO2 low. Cause: **hyperventilation** blows off CO2. Triggers: **anxiety**, pain, fever, early sepsis, pulmonary embolism.
+
+**Metabolic acidosis** — pH low, HCO3 low. Cause: acid gain or bicarb loss. Triggers: **DKA**, **lactic acidosis** (shock), **renal failure**, severe diarrhea.
+
+**Metabolic alkalosis** — pH high, HCO3 high. Cause: acid loss or bicarb gain. Triggers: **prolonged vomiting**, **NG suction**, **loop/thiazide diuretics**, antacid overuse.
+
+**Compensation** restores pH toward 7.40: lungs adjust CO2 in minutes; kidneys adjust HCO3 over hours to days.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Four Primary Acid-Base Disorders</text><rect x="60" y="120" width="490" height="430" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="305" y="170" text-anchor="middle" fill="#ef4444" font-size="30" font-weight="bold">RESPIRATORY ACIDOSIS</text><text x="305" y="215" text-anchor="middle" fill="#ffffff" font-size="24">pH ↓   PaCO2 ↑</text><text x="305" y="265" text-anchor="middle" fill="#ffd700" font-size="22">cause: hypoventilation</text><text x="305" y="320" text-anchor="middle" fill="#ffffff" font-size="20">• COPD exacerbation</text><text x="305" y="360" text-anchor="middle" fill="#ffffff" font-size="20">• Opioid overdose</text><text x="305" y="400" text-anchor="middle" fill="#ffffff" font-size="20">• Neuromuscular weakness</text><text x="305" y="440" text-anchor="middle" fill="#ffffff" font-size="20">• Oversedation</text><text x="305" y="510" text-anchor="middle" fill="#888" font-size="20">treat: ventilate, reverse cause</text><rect x="560" y="120" width="490" height="430" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="805" y="170" text-anchor="middle" fill="#0ea5e9" font-size="30" font-weight="bold">RESPIRATORY ALKALOSIS</text><text x="805" y="215" text-anchor="middle" fill="#ffffff" font-size="24">pH ↑   PaCO2 ↓</text><text x="805" y="265" text-anchor="middle" fill="#ffd700" font-size="22">cause: hyperventilation</text><text x="805" y="320" text-anchor="middle" fill="#ffffff" font-size="20">• Anxiety / pain</text><text x="805" y="360" text-anchor="middle" fill="#ffffff" font-size="20">• Fever, early sepsis</text><text x="805" y="400" text-anchor="middle" fill="#ffffff" font-size="20">• Pulmonary embolism</text><text x="805" y="440" text-anchor="middle" fill="#ffffff" font-size="20">• High-altitude</text><text x="805" y="510" text-anchor="middle" fill="#888" font-size="20">treat: calm, slow breathing</text><rect x="60" y="580" width="490" height="430" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="305" y="630" text-anchor="middle" fill="#f59e0b" font-size="30" font-weight="bold">METABOLIC ACIDOSIS</text><text x="305" y="675" text-anchor="middle" fill="#ffffff" font-size="24">pH ↓   HCO3 ↓</text><text x="305" y="725" text-anchor="middle" fill="#ffd700" font-size="22">cause: acid gain / bicarb loss</text><text x="305" y="780" text-anchor="middle" fill="#ffffff" font-size="20">• DKA</text><text x="305" y="820" text-anchor="middle" fill="#ffffff" font-size="20">• Lactic acidosis (shock)</text><text x="305" y="860" text-anchor="middle" fill="#ffffff" font-size="20">• Renal failure</text><text x="305" y="900" text-anchor="middle" fill="#ffffff" font-size="20">• Severe diarrhea</text><text x="305" y="970" text-anchor="middle" fill="#888" font-size="20">treat: fix cause, ± bicarb</text><rect x="560" y="580" width="490" height="430" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="805" y="630" text-anchor="middle" fill="#10b981" font-size="30" font-weight="bold">METABOLIC ALKALOSIS</text><text x="805" y="675" text-anchor="middle" fill="#ffffff" font-size="24">pH ↑   HCO3 ↑</text><text x="805" y="725" text-anchor="middle" fill="#ffd700" font-size="22">cause: acid loss / bicarb gain</text><text x="805" y="780" text-anchor="middle" fill="#ffffff" font-size="20">• Prolonged vomiting</text><text x="805" y="820" text-anchor="middle" fill="#ffffff" font-size="20">• NG suction</text><text x="805" y="860" text-anchor="middle" fill="#ffffff" font-size="20">• Loop / thiazide diuretics</text><text x="805" y="900" text-anchor="middle" fill="#ffffff" font-size="20">• Antacid overuse</text><text x="805" y="970" text-anchor="middle" fill="#888" font-size="20">treat: replace K+, Cl−, fluid</text></svg>`,
+          caption: "Memorize which lab value defines each disorder, then attach two or three classic triggers."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Worked ABGs",
+        content: `**Case 1.** pH 7.20, PaCO2 60, HCO3 24. pH is **low** (acidosis). CO2 is **high** — pH and CO2 moved **opposite** → **R**espiratory. HCO3 normal → **uncompensated respiratory acidosis**. Likely cause: opioid overdose or COPD exacerbation.
+
+**Case 2.** pH 7.20, PaCO2 32, HCO3 14. pH **low**. HCO3 **low** — moved **same** direction as pH → **M**etabolic acidosis. PaCO2 is **low**, attempting to compensate → **partially compensated metabolic acidosis**. Think **DKA** or **lactic acidosis**.
+
+**Case 3.** pH 7.40, PaCO2 50, HCO3 30. pH **normal**, but both CO2 and HCO3 are abnormal. Because pH is fully back in range, this is **fully compensated** — look at which side pH leans (7.40 is neutral, but if 7.38 → metabolic alkalosis with respiratory compensation).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Three ABG Cases Walked Through</text><rect x="80" y="120" width="940" height="270" rx="14" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3"/><text x="120" y="170" fill="#ef4444" font-size="28" font-weight="bold">Case 1:  pH 7.20  |  PaCO2 60  |  HCO3 24</text><text x="120" y="215" fill="#ffffff" font-size="22">pH ↓   CO2 ↑   →   opposite → RESPIRATORY</text><text x="120" y="255" fill="#ffffff" font-size="22">HCO3 normal → no compensation</text><text x="120" y="305" fill="#ffd700" font-size="26" font-weight="bold">Uncompensated respiratory acidosis</text><text x="120" y="355" fill="#888" font-size="20">Think: opioid overdose, COPD exacerbation</text><rect x="80" y="410" width="940" height="270" rx="14" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="3"/><text x="120" y="460" fill="#f59e0b" font-size="28" font-weight="bold">Case 2:  pH 7.20  |  PaCO2 32  |  HCO3 14</text><text x="120" y="505" fill="#ffffff" font-size="22">pH ↓   HCO3 ↓   →   same → METABOLIC</text><text x="120" y="545" fill="#ffffff" font-size="22">PaCO2 ↓ attempting compensation</text><text x="120" y="595" fill="#ffd700" font-size="26" font-weight="bold">Partially compensated metabolic acidosis</text><text x="120" y="645" fill="#888" font-size="20">Think: DKA, lactic acidosis, renal failure</text><rect x="80" y="700" width="940" height="320" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="120" y="750" fill="#10b981" font-size="28" font-weight="bold">Case 3:  pH 7.40  |  PaCO2 50  |  HCO3 30</text><text x="120" y="795" fill="#ffffff" font-size="22">pH normal — both CO2 and HCO3 abnormal</text><text x="120" y="835" fill="#ffffff" font-size="22">Lean side of 7.40 reveals primary disorder</text><text x="120" y="885" fill="#ffd700" font-size="26" font-weight="bold">Fully compensated mixed pattern</text><text x="120" y="935" fill="#888" font-size="20">If 7.38: primary metabolic alkalosis</text><text x="120" y="975" fill="#888" font-size="20">with respiratory compensation</text></svg>`,
+          caption: "Always: pH first, then ROME for cause, then compensation status."
+        }
+      },
+      {
+        type: "quiz",
+        title: "ABG Check",
+        question: "A client has ABGs: pH 7.50, PaCO2 28 mmHg, HCO3 24 mEq/L. The client reports anxiety and tingling in the fingers. Which interpretation is correct?",
+        options: [
+          { text: "Uncompensated respiratory alkalosis", correct: true },
+          { text: "Uncompensated metabolic alkalosis", correct: false },
+          { text: "Partially compensated respiratory acidosis", correct: false },
+          { text: "Fully compensated metabolic acidosis", correct: false }
+        ],
+        explanation: "pH 7.50 is alkalosis. PaCO2 28 is low. Using ROME, pH and CO2 moved opposite directions → respiratory. HCO3 is normal, so no compensation has occurred. The anxiety and finger tingling fit hyperventilation, the classic cause of uncompensated respiratory alkalosis.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Decode the ABG</text><rect x="100" y="160" width="900" height="180" rx="14" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">pH 7.50  |  PaCO2 28  |  HCO3 24</text><text x="550" y="280" text-anchor="middle" fill="#ffd700" font-size="28">anxiety  •  finger tingling</text><rect x="100" y="380" width="900" height="120" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="430" text-anchor="middle" fill="#ffffff" font-size="28">Step 1: pH 7.50  → ALKALOSIS</text><text x="550" y="475" text-anchor="middle" fill="#888" font-size="22">above 7.45 = alkalosis</text><rect x="100" y="530" width="900" height="120" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="580" text-anchor="middle" fill="#ffffff" font-size="28">Step 2: pH ↑ and CO2 ↓ — opposite</text><text x="550" y="625" text-anchor="middle" fill="#ffd700" font-size="24">ROME → RESPIRATORY</text><rect x="100" y="680" width="900" height="120" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="28">Step 3: HCO3 normal — no compensation</text><text x="550" y="775" text-anchor="middle" fill="#888" font-size="22">uncompensated</text><rect x="100" y="840" width="900" height="180" rx="14" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="3"/><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="34" font-weight="bold">Uncompensated</text><text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">respiratory alkalosis</text></svg>`,
+          caption: "Three steps: pH, then ROME, then compensation."
+        }
+      },
+      {
+        type: "application",
+        title: "ABGs at the Bedside",
+        content: `Use ABG findings to drive **action**, not just label disorders.
+
+**Respiratory acidosis** in a postoperative patient: assess **respiratory rate**, depth, and **LOC**. Reverse opioid with **naloxone** if indicated; prepare for **BiPAP** or intubation if CO2 keeps climbing.
+
+**Metabolic acidosis** in a septic patient: lactic acidosis means **inadequate perfusion**. Start **fluid resuscitation**, draw **lactate**, and escalate to vasopressors if MAP stays <65.
+
+**Metabolic alkalosis** from vomiting: replace **fluid (NS)**, **potassium**, and **chloride**. Stop offending diuretics.
+
+**Respiratory alkalosis** from anxiety: coach **slow breathing**; rule out **PE** before assuming anxiety in a hospitalized patient.
+
+Always pair ABG with **clinical picture** — never treat the number alone. Repeat ABG **20–30 min** after major interventions to track response.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Acting on the ABG</text><rect x="60" y="130" width="490" height="400" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="305" y="180" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Respiratory Acidosis</text><text x="305" y="230" text-anchor="middle" fill="#ffffff" font-size="22">post-op patient</text><text x="305" y="290" text-anchor="middle" fill="#ffd700" font-size="20">• Assess RR, depth, LOC</text><text x="305" y="335" text-anchor="middle" fill="#ffd700" font-size="20">• Naloxone if opioids</text><text x="305" y="380" text-anchor="middle" fill="#ffd700" font-size="20">• BiPAP / intubate</text><text x="305" y="445" text-anchor="middle" fill="#888" font-size="20">Target: lower CO2</text><rect x="560" y="130" width="490" height="400" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="805" y="180" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">Metabolic Acidosis</text><text x="805" y="230" text-anchor="middle" fill="#ffffff" font-size="22">septic patient, lactate ↑</text><text x="805" y="290" text-anchor="middle" fill="#ffd700" font-size="20">• Fluid resuscitation</text><text x="805" y="335" text-anchor="middle" fill="#ffd700" font-size="20">• Vasopressors for MAP</text><text x="805" y="380" text-anchor="middle" fill="#ffd700" font-size="20">• Source control</text><text x="805" y="445" text-anchor="middle" fill="#888" font-size="20">Target: restore perfusion</text><rect x="60" y="560" width="490" height="400" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="305" y="610" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Metabolic Alkalosis</text><text x="305" y="660" text-anchor="middle" fill="#ffffff" font-size="22">vomiting / NG suction</text><text x="305" y="720" text-anchor="middle" fill="#ffd700" font-size="20">• NS fluid replacement</text><text x="305" y="765" text-anchor="middle" fill="#ffd700" font-size="20">• Replace K+ and Cl−</text><text x="305" y="810" text-anchor="middle" fill="#ffd700" font-size="20">• Stop loop diuretic</text><text x="305" y="875" text-anchor="middle" fill="#888" font-size="20">Target: shift HCO3 down</text><rect x="560" y="560" width="490" height="400" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="805" y="610" text-anchor="middle" fill="#0ea5e9" font-size="26" font-weight="bold">Respiratory Alkalosis</text><text x="805" y="660" text-anchor="middle" fill="#ffffff" font-size="22">anxiety vs PE</text><text x="805" y="720" text-anchor="middle" fill="#ffd700" font-size="20">• Coach slow breathing</text><text x="805" y="765" text-anchor="middle" fill="#ffd700" font-size="20">• Rule out PE first</text><text x="805" y="810" text-anchor="middle" fill="#ffd700" font-size="20">• Treat underlying cause</text><text x="805" y="875" text-anchor="middle" fill="#888" font-size="20">Target: normalize CO2</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Repeat ABG 20–30 min after intervention</text></svg>`,
+          caption: "Action follows interpretation — always pair the number with the patient."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-critical-care-lesson-2",
+    title: "Shock States: Hypovolemic / Cardiogenic / Distributive / Obstructive",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Shock = Inadequate Perfusion",
+        content: `**Shock** is the failure of the circulatory system to deliver enough oxygen to tissues, leading to **cellular hypoxia** and eventually organ failure. Hallmark: **MAP <65 mmHg** in most adults — that's the threshold for inadequate perfusion of brain and kidneys.
+
+Four physiologic categories every NCLEX question hinges on:
+- **Hypovolemic** — not enough volume
+- **Cardiogenic** — pump failure
+- **Distributive** — vessels too dilated
+- **Obstructive** — physical block to circulation
+
+Each has a **different mechanism**, so each has a **different treatment**. Confusing volume loss with vasodilation will harm the patient. Early signs of any shock: **tachycardia**, **tachypnea**, **narrowed pulse pressure**, **cool/clammy skin**, **decreased urine output**, **altered mental status**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">Four Categories of Shock</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="24">MAP &lt; 65 mmHg = inadequate perfusion</text><rect x="80" y="170" width="450" height="380" rx="14" fill="#ef4444" opacity="0.22" stroke="#ef4444" stroke-width="3"/><text x="305" y="225" text-anchor="middle" fill="#ef4444" font-size="30" font-weight="bold">HYPOVOLEMIC</text><text x="305" y="290" text-anchor="middle" fill="#ffffff" font-size="24">"not enough volume"</text><text x="305" y="350" text-anchor="middle" fill="#ffd700" font-size="22">• Hemorrhage</text><text x="305" y="395" text-anchor="middle" fill="#ffd700" font-size="22">• Severe dehydration</text><text x="305" y="440" text-anchor="middle" fill="#ffd700" font-size="22">• Major burns</text><text x="305" y="510" text-anchor="middle" fill="#ffffff" font-size="22">Treat: VOLUME</text><rect x="570" y="170" width="450" height="380" rx="14" fill="#f59e0b" opacity="0.22" stroke="#f59e0b" stroke-width="3"/><text x="795" y="225" text-anchor="middle" fill="#f59e0b" font-size="30" font-weight="bold">CARDIOGENIC</text><text x="795" y="290" text-anchor="middle" fill="#ffffff" font-size="24">"pump failure"</text><text x="795" y="350" text-anchor="middle" fill="#ffd700" font-size="22">• Massive MI</text><text x="795" y="395" text-anchor="middle" fill="#ffd700" font-size="22">• Severe heart failure</text><text x="795" y="440" text-anchor="middle" fill="#ffd700" font-size="22">• Cardiomyopathy</text><text x="795" y="510" text-anchor="middle" fill="#ffffff" font-size="22">Treat: SUPPORT PUMP</text><rect x="80" y="580" width="450" height="380" rx="14" fill="#10b981" opacity="0.22" stroke="#10b981" stroke-width="3"/><text x="305" y="635" text-anchor="middle" fill="#10b981" font-size="30" font-weight="bold">DISTRIBUTIVE</text><text x="305" y="700" text-anchor="middle" fill="#ffffff" font-size="24">"vessels too dilated"</text><text x="305" y="760" text-anchor="middle" fill="#ffd700" font-size="22">• Septic</text><text x="305" y="805" text-anchor="middle" fill="#ffd700" font-size="22">• Anaphylactic</text><text x="305" y="850" text-anchor="middle" fill="#ffd700" font-size="22">• Neurogenic</text><text x="305" y="920" text-anchor="middle" fill="#ffffff" font-size="22">Treat: VASOPRESSORS</text><rect x="570" y="580" width="450" height="380" rx="14" fill="#8b5cf6" opacity="0.22" stroke="#8b5cf6" stroke-width="3"/><text x="795" y="635" text-anchor="middle" fill="#8b5cf6" font-size="30" font-weight="bold">OBSTRUCTIVE</text><text x="795" y="700" text-anchor="middle" fill="#ffffff" font-size="24">"mechanical block"</text><text x="795" y="760" text-anchor="middle" fill="#ffd700" font-size="22">• Massive PE</text><text x="795" y="805" text-anchor="middle" fill="#ffd700" font-size="22">• Cardiac tamponade</text><text x="795" y="850" text-anchor="middle" fill="#ffd700" font-size="22">• Tension pneumothorax</text><text x="795" y="920" text-anchor="middle" fill="#ffffff" font-size="22">Treat: REMOVE BLOCK</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22">Shared signs: HR ↑, RR ↑, UOP ↓, cool skin, AMS</text></svg>`,
+          caption: "Mechanism dictates treatment — match the category to the intervention."
+        }
+      },
+      {
+        type: "concept",
+        title: "Mechanism-Matched Treatment",
+        content: `**Hypovolemic** → volume replacement. Start **crystalloid** (LR or NS) wide-open via two large-bore IVs. Switch to **blood products** for hemorrhage. Watch lactate, urine output, MAP.
+
+**Cardiogenic** → support the failing pump. **Inotropes** like **dobutamine** raise contractility. Add **intra-aortic balloon pump (IABP)** for severe cases. Definitive: **revascularization** (PCI). Avoid excessive fluid — already overloaded.
+
+**Distributive** — three flavors, different agents:
+- **Septic** → **norepinephrine** first-line + **broad-spectrum antibiotics** within 1 hour + **source control**.
+- **Anaphylactic** → **IM epinephrine 0.3–0.5 mg** first; then **antihistamines** (H1 + H2) and **steroids**.
+- **Neurogenic** (spinal cord injury **C7 or above**) → **atropine** for bradycardia + **vasopressors** for hypotension. Warm and dry skin distinguishes from hemorrhagic shock.
+
+**Obstructive** → remove the obstruction. **Thrombolysis** for massive PE; **pericardiocentesis** for tamponade; **needle decompression** for tension PTX.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Treatment by Mechanism</text><rect x="60" y="120" width="980" height="180" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="100" y="170" fill="#ef4444" font-size="28" font-weight="bold">Hypovolemic</text><text x="100" y="215" fill="#ffffff" font-size="22">2 large-bore IVs → crystalloid (LR/NS) wide open</text><text x="100" y="255" fill="#ffd700" font-size="22">Hemorrhage → blood products (PRBCs, FFP, platelets)</text><text x="100" y="290" fill="#888" font-size="20">Endpoints: MAP &gt; 65, UOP &gt; 30 mL/hr, lactate trending down</text><rect x="60" y="320" width="980" height="180" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="100" y="370" fill="#f59e0b" font-size="28" font-weight="bold">Cardiogenic</text><text x="100" y="415" fill="#ffffff" font-size="22">Inotropes (dobutamine) ↑ contractility</text><text x="100" y="455" fill="#ffd700" font-size="22">IABP support  •  PCI for revascularization</text><text x="100" y="490" fill="#888" font-size="20">Avoid fluid overload — pump can't handle it</text><rect x="60" y="520" width="980" height="280" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="100" y="570" fill="#10b981" font-size="28" font-weight="bold">Distributive</text><text x="100" y="615" fill="#ffffff" font-size="22">SEPTIC → norepinephrine + antibiotics (1 hr) + source control</text><text x="100" y="655" fill="#ffffff" font-size="22">ANAPHYLACTIC → IM epi 0.3–0.5 mg + antihistamines + steroids</text><text x="100" y="695" fill="#ffffff" font-size="22">NEUROGENIC (C7 or above) → atropine + vasopressors</text><text x="100" y="745" fill="#ffd700" font-size="22">Warm/dry skin distinguishes from hemorrhagic shock</text><text x="100" y="785" fill="#888" font-size="20">All three: severe vasodilation drops MAP</text><rect x="60" y="820" width="980" height="200" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="100" y="870" fill="#8b5cf6" font-size="28" font-weight="bold">Obstructive</text><text x="100" y="915" fill="#ffffff" font-size="22">Massive PE → thrombolysis (alteplase) or embolectomy</text><text x="100" y="955" fill="#ffffff" font-size="22">Tamponade → pericardiocentesis</text><text x="100" y="995" fill="#ffffff" font-size="22">Tension PTX → needle decompression (2nd ICS, midclavicular)</text></svg>`,
+          caption: "Each box pairs a mechanism with the intervention that targets it."
+        }
+      },
+      {
+        type: "example",
+        title: "Recognizing Shock at the Bedside",
+        content: `**Case A — Trauma.** 28 y/o male, MVC, BP 78/40, HR 132, cool clammy skin, hemoglobin 6.2. Type of shock? **Hypovolemic (hemorrhagic)**. Action: 2 large-bore IVs, transfuse **PRBCs** + FFP + platelets, control bleeding source.
+
+**Case B — Septic.** 72 y/o with UTI, BP 80/52, HR 118, temp 102.4°F, lactate 4.5, warm flushed skin. Type? **Distributive (septic)**. Action: blood cultures, **broad-spectrum antibiotics within 1 hour**, 30 mL/kg crystalloid bolus, then **norepinephrine** to MAP >65.
+
+**Case C — Anaphylaxis.** Patient receives IV penicillin, develops stridor, hives, BP 70/30. Action: **stop drug**, give **IM epinephrine 0.3 mg** in the lateral thigh, secure airway, antihistamines and steroids follow.
+
+**Case D — Tamponade.** Post-cardiac surgery, BP dropping, **muffled heart sounds, JVD, narrowed pulse pressure** (Beck's triad). Action: emergent **pericardiocentesis**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Four Bedside Scenarios</text><rect x="60" y="120" width="980" height="220" rx="14" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3"/><text x="100" y="170" fill="#ef4444" font-size="26" font-weight="bold">A — Trauma, MVC</text><text x="100" y="210" fill="#ffffff" font-size="22">BP 78/40, HR 132, cool clammy, Hgb 6.2</text><text x="100" y="255" fill="#ffd700" font-size="24">→ Hypovolemic (hemorrhagic)</text><text x="100" y="305" fill="#888" font-size="22">Action: PRBCs + FFP + platelets, source control</text><rect x="60" y="360" width="980" height="220" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="100" y="410" fill="#10b981" font-size="26" font-weight="bold">B — UTI, elderly</text><text x="100" y="450" fill="#ffffff" font-size="22">BP 80/52, HR 118, temp 102.4, lactate 4.5</text><text x="100" y="495" fill="#ffd700" font-size="24">→ Distributive (septic)</text><text x="100" y="545" fill="#888" font-size="22">Action: antibiotics in 1 hr, fluids, norepinephrine</text><rect x="60" y="600" width="980" height="220" rx="14" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="100" y="650" fill="#ec4899" font-size="26" font-weight="bold">C — IV penicillin reaction</text><text x="100" y="690" fill="#ffffff" font-size="22">Stridor, hives, BP 70/30</text><text x="100" y="735" fill="#ffd700" font-size="24">→ Distributive (anaphylactic)</text><text x="100" y="785" fill="#888" font-size="22">Action: stop drug, IM epi 0.3 mg lateral thigh</text><rect x="60" y="840" width="980" height="220" rx="14" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3"/><text x="100" y="890" fill="#8b5cf6" font-size="26" font-weight="bold">D — Post-cardiac surgery</text><text x="100" y="930" fill="#ffffff" font-size="22">Muffled sounds, JVD, narrow pulse pressure (Beck's triad)</text><text x="100" y="975" fill="#ffd700" font-size="24">→ Obstructive (tamponade)</text><text x="100" y="1025" fill="#888" font-size="22">Action: emergent pericardiocentesis</text></svg>`,
+          caption: "Identify category from clues, then match the targeted intervention."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Shock Recognition",
+        question: "A client with a T4 spinal cord injury becomes hypotensive (BP 78/40) with HR 52 and warm, dry skin. Which intervention should the nurse anticipate FIRST?",
+        options: [
+          { text: "Administer atropine for bradycardia and prepare a vasopressor", correct: true },
+          { text: "Begin a rapid 2 L crystalloid bolus and recheck hemoglobin", correct: false },
+          { text: "Start IM epinephrine 0.3 mg in the lateral thigh", correct: false },
+          { text: "Prepare for emergent pericardiocentesis", correct: false }
+        ],
+        explanation: "T4 spinal cord injury (above T6) causes neurogenic shock from loss of sympathetic tone. The hallmark is hypotension with bradycardia and warm, dry skin — distinguishing it from hemorrhagic shock. Atropine treats the bradycardia, and a vasopressor (commonly norepinephrine or phenylephrine) restores vascular tone. Fluid alone won't correct profound vasodilation; epinephrine is for anaphylaxis; pericardiocentesis treats tamponade.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Spot the Shock Type</text><rect x="100" y="160" width="900" height="220" rx="14" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">T4 spinal cord injury</text><text x="550" y="275" text-anchor="middle" fill="#ffd700" font-size="28">BP 78/40   HR 52</text><text x="550" y="325" text-anchor="middle" fill="#ffffff" font-size="26">warm, dry skin</text><rect x="100" y="420" width="900" height="180" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="28">Triad clue → NEUROGENIC SHOCK</text><text x="550" y="520" text-anchor="middle" fill="#888" font-size="22">loss of sympathetic tone above T6</text><text x="550" y="565" text-anchor="middle" fill="#888" font-size="22">distinguishes from hemorrhage</text><rect x="100" y="640" width="900" height="320" rx="14" fill="#ffd700" opacity="0.22" stroke="#ffd700" stroke-width="3"/><text x="550" y="700" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">First-line interventions</text><text x="550" y="770" text-anchor="middle" fill="#ffd700" font-size="26">1. Atropine for bradycardia</text><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="26">2. Vasopressor for MAP &gt; 65</text><text x="550" y="880" text-anchor="middle" fill="#888" font-size="22">fluids alone won't fix vasodilation</text><text x="550" y="920" text-anchor="middle" fill="#888" font-size="22">epi = anaphylaxis, not neurogenic</text></svg>`,
+          caption: "Bradycardia + hypotension + warm dry skin = neurogenic. Atropine first."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Monitoring and Endpoints",
+        content: `Resuscitation requires **continuous monitoring** to know it's working.
+
+**Minimum monitoring** for any shock patient:
+- **Continuous ECG, SpO2, NIBP**
+- **Arterial line** for beat-to-beat BP
+- **Central venous catheter** for vasopressors and CVP
+- **Urinary catheter** — target **>0.5 mL/kg/hr** (typically >30 mL/hr adult)
+- **Serial lactate** every 2–4 hours
+
+**Targets**:
+- **MAP ≥65 mmHg** (higher in chronic hypertension)
+- **Lactate clearance >10%** per hour
+- **Capillary refill <3 sec**, **mental status improving**, **skin warming**
+
+**Reassess every 5–10 minutes** during active resuscitation. Document fluid totals — overhydration causes ARDS and worsens cardiogenic patients. If shock is **refractory** (vasopressor needs rising despite fluid), search for **missed source**: occult bleed, untreated infection, ongoing PE, adrenal insufficiency. Always escalate early — late recognition kills.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Monitor and Reassess</text><rect x="60" y="120" width="980" height="380" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="175" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">Minimum Monitoring</text><text x="100" y="240" fill="#ffd700" font-size="22">• Continuous ECG, SpO2, NIBP</text><text x="100" y="285" fill="#ffd700" font-size="22">• Arterial line — beat-to-beat BP</text><text x="100" y="330" fill="#ffd700" font-size="22">• Central venous catheter for pressors / CVP</text><text x="100" y="375" fill="#ffd700" font-size="22">• Urinary catheter (UOP &gt; 0.5 mL/kg/hr)</text><text x="100" y="420" fill="#ffd700" font-size="22">• Serial lactate q2–4 hours</text><text x="100" y="465" fill="#888" font-size="20">Reassess every 5–10 min during active resuscitation</text><rect x="60" y="520" width="980" height="280" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="575" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">Endpoints to Hit</text><text x="100" y="640" fill="#ffd700" font-size="22">MAP ≥ 65 mmHg  (higher in chronic HTN)</text><text x="100" y="685" fill="#ffd700" font-size="22">Lactate clearance &gt; 10% per hour</text><text x="100" y="730" fill="#ffd700" font-size="22">Cap refill &lt; 3 sec, mental status improving</text><text x="100" y="775" fill="#ffd700" font-size="22">Skin warming, peripheral pulses return</text><rect x="60" y="820" width="980" height="220" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="550" y="875" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">If refractory — find missed source</text><text x="100" y="935" fill="#ffd700" font-size="22">• Occult bleed  • untreated infection</text><text x="100" y="985" fill="#ffd700" font-size="22">• Ongoing PE  • adrenal insufficiency</text><text x="100" y="1025" fill="#888" font-size="20">Late recognition kills — escalate early</text></svg>`,
+          caption: "Monitor relentlessly, hunt for missed sources when shock persists."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-critical-care-lesson-3",
+    title: "Vasopressors and Inotropes",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Pressing the Vessels, Pushing the Pump",
+        content: `When fluid alone can't restore **MAP ≥65 mmHg**, the ICU reaches for **vasopressors** (raise vascular tone) and **inotropes** (raise contractility). Each agent acts on specific adrenergic receptors:
+
+- **α1** → **vasoconstriction** (raises SVR and BP)
+- **β1** → **inotropy and chronotropy** (raises CO and HR)
+- **β2** → vasodilation in vessels, bronchodilation
+- **V1** (vasopressin) → vasoconstriction via a separate pathway
+- **Dopaminergic (D1)** → renal/mesenteric vasodilation
+
+Match drug to **shock physiology**: distributive needs vasoconstriction; cardiogenic needs contractility; mixed pictures need combinations. All require **central line access** when possible, **continuous BP/HR monitoring**, and **pump-controlled infusion**. **Titrate slowly** to target — wide swings cause harm.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Receptor Map</text><text x="550" y="125" text-anchor="middle" fill="#888" font-size="24">match drug to physiology</text><rect x="80" y="170" width="450" height="190" rx="14" fill="#ef4444" opacity="0.22" stroke="#ef4444" stroke-width="3"/><text x="305" y="225" text-anchor="middle" fill="#ef4444" font-size="32" font-weight="bold">α1</text><text x="305" y="275" text-anchor="middle" fill="#ffffff" font-size="24">vasoconstriction</text><text x="305" y="320" text-anchor="middle" fill="#ffd700" font-size="22">↑ SVR  ↑ MAP</text><rect x="570" y="170" width="450" height="190" rx="14" fill="#f59e0b" opacity="0.22" stroke="#f59e0b" stroke-width="3"/><text x="795" y="225" text-anchor="middle" fill="#f59e0b" font-size="32" font-weight="bold">β1</text><text x="795" y="275" text-anchor="middle" fill="#ffffff" font-size="24">inotropy / chronotropy</text><text x="795" y="320" text-anchor="middle" fill="#ffd700" font-size="22">↑ CO  ↑ HR</text><rect x="80" y="380" width="450" height="190" rx="14" fill="#10b981" opacity="0.22" stroke="#10b981" stroke-width="3"/><text x="305" y="435" text-anchor="middle" fill="#10b981" font-size="32" font-weight="bold">β2</text><text x="305" y="485" text-anchor="middle" fill="#ffffff" font-size="24">vasodilation</text><text x="305" y="530" text-anchor="middle" fill="#ffd700" font-size="22">bronchodilation</text><rect x="570" y="380" width="450" height="190" rx="14" fill="#8b5cf6" opacity="0.22" stroke="#8b5cf6" stroke-width="3"/><text x="795" y="435" text-anchor="middle" fill="#8b5cf6" font-size="32" font-weight="bold">V1</text><text x="795" y="485" text-anchor="middle" fill="#ffffff" font-size="24">vasoconstriction</text><text x="795" y="530" text-anchor="middle" fill="#ffd700" font-size="22">separate pathway</text><rect x="200" y="590" width="700" height="170" rx="14" fill="#0ea5e9" opacity="0.22" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="650" text-anchor="middle" fill="#0ea5e9" font-size="32" font-weight="bold">Dopaminergic (D1)</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="22">renal / mesenteric vasodilation</text><rect x="80" y="800" width="940" height="240" rx="14" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="855" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Universal Rules</text><text x="550" y="905" text-anchor="middle" fill="#ffd700" font-size="22">Central line  •  pump-controlled infusion</text><text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="22">Continuous BP/HR  •  art line preferred</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22">Titrate slowly to MAP target</text></svg>`,
+          caption: "Receptor activity is the language — read each drug by what it binds."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Big Five Agents",
+        content: `**Norepinephrine (Levophed)** — **FIRST-LINE for septic shock**. Strong **α1** (vasoconstriction) + mild **β1** (inotropy). Titrate to MAP **>65**.
+
+**Epinephrine** — **anaphylaxis IM 0.3–0.5 mg** first-line. **IV** for **cardiac arrest** and as add-on for septic shock. Strong α1 + β1 + β2.
+
+**Dopamine** — **dose-dependent**:
+- **1–3 mcg/kg/min** → dopaminergic (renal)
+- **5–10 mcg/kg/min** → β1 (inotropy)
+- **>10 mcg/kg/min** → α1 (vasoconstriction)
+
+**Vasopressin** — V1 vasoconstriction at fixed **0.03 units/min**. **Add-on** to norepinephrine for refractory septic shock.
+
+**Dobutamine** — **pure inotrope (β1)** for **cardiogenic shock**. Raises CO without significant vasoconstriction — can **drop SVR** and BP.
+
+**Phenylephrine** — **pure α1**, often used during **anesthesia** for hypotension from vasodilation; no β effects, can cause **reflex bradycardia**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="65" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Big Five Vasoactive Agents</text><rect x="60" y="105" width="980" height="155" rx="14" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3"/><text x="100" y="145" fill="#ef4444" font-size="26" font-weight="bold">Norepinephrine (Levophed)</text><text x="100" y="180" fill="#ffffff" font-size="20">α1 strong + β1 mild  •  FIRST-LINE septic shock</text><text x="100" y="215" fill="#ffd700" font-size="20">Titrate to MAP &gt; 65 mmHg</text><text x="100" y="248" fill="#888" font-size="18">central line preferred — extravasation = necrosis</text><rect x="60" y="270" width="980" height="155" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="100" y="310" fill="#f59e0b" font-size="26" font-weight="bold">Epinephrine</text><text x="100" y="345" fill="#ffffff" font-size="20">α1 + β1 + β2</text><text x="100" y="380" fill="#ffd700" font-size="20">Anaphylaxis: IM 0.3–0.5 mg lateral thigh</text><text x="100" y="413" fill="#888" font-size="18">IV for cardiac arrest, septic shock add-on</text><rect x="60" y="435" width="980" height="190" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="100" y="475" fill="#10b981" font-size="26" font-weight="bold">Dopamine (dose-dependent)</text><text x="100" y="510" fill="#ffffff" font-size="20">1–3 mcg/kg/min  → dopaminergic (renal)</text><text x="100" y="545" fill="#ffffff" font-size="20">5–10 mcg/kg/min  → β1 inotropy</text><text x="100" y="580" fill="#ffffff" font-size="20">&gt; 10 mcg/kg/min  → α1 vasoconstriction</text><text x="100" y="613" fill="#888" font-size="18">arrhythmia risk at higher doses</text><rect x="60" y="635" width="980" height="155" rx="14" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3"/><text x="100" y="675" fill="#8b5cf6" font-size="26" font-weight="bold">Vasopressin</text><text x="100" y="710" fill="#ffffff" font-size="20">V1 vasoconstriction  •  fixed 0.03 units/min</text><text x="100" y="745" fill="#ffd700" font-size="20">Add-on for refractory septic shock</text><text x="100" y="778" fill="#888" font-size="18">no titration — fixed dose</text><rect x="60" y="800" width="980" height="155" rx="14" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="100" y="840" fill="#0ea5e9" font-size="26" font-weight="bold">Dobutamine</text><text x="100" y="875" fill="#ffffff" font-size="20">Pure β1 inotrope  •  CARDIOGENIC shock</text><text x="100" y="910" fill="#ffd700" font-size="20">Raises CO without vasoconstriction</text><text x="100" y="943" fill="#888" font-size="18">may DROP SVR — combine with pressor if BP falls</text><rect x="60" y="965" width="980" height="105" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="100" y="1005" fill="#ec4899" font-size="24" font-weight="bold">Phenylephrine — pure α1, anesthesia hypotension</text><text x="100" y="1043" fill="#888" font-size="18">no β effects — reflex bradycardia possible</text></svg>`,
+          caption: "Match drug to shock category by receptor profile."
+        }
+      },
+      {
+        type: "example",
+        title: "Picking the Right Pressor",
+        content: `**Septic patient**, MAP 55 despite 30 mL/kg fluid. **Start norepinephrine**, titrate to MAP >65. Still refractory at 0.25 mcg/kg/min? **Add vasopressin 0.03 units/min**. Still struggling? **Add hydrocortisone** and consider epinephrine.
+
+**Cardiogenic shock from MI**, BP 84/50, cool extremities, low cardiac output, **lungs wet**. **Dobutamine** raises contractility and CO. If MAP still drops because dobutamine lowered SVR, **add norepinephrine**. Definitive: PCI.
+
+**Anaphylactic shock** to peanut exposure, wheeze, hives, BP 70/40. **IM epinephrine 0.3 mg lateral thigh** immediately, repeat every 5–15 min as needed. Establish airway, give IV fluids, antihistamines, steroids.
+
+**OR hypotension** from spinal anesthesia (vasodilation alone, pump fine). **Phenylephrine** boluses or infusion restore SVR without raising HR — ideal for this setting.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Drug ↔ Scenario Matching</text><rect x="60" y="120" width="980" height="220" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3"/><text x="100" y="165" fill="#10b981" font-size="26" font-weight="bold">Septic shock, refractory after fluids</text><text x="100" y="210" fill="#ffd700" font-size="22">1. Norepinephrine → MAP &gt; 65</text><text x="100" y="250" fill="#ffd700" font-size="22">2. Add vasopressin 0.03 u/min</text><text x="100" y="290" fill="#ffd700" font-size="22">3. Add hydrocortisone ± epinephrine</text><text x="100" y="325" fill="#888" font-size="20">also: antibiotics + source control</text><rect x="60" y="360" width="980" height="220" rx="14" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="3"/><text x="100" y="405" fill="#f59e0b" font-size="26" font-weight="bold">Cardiogenic — MI, wet lungs, low CO</text><text x="100" y="450" fill="#ffd700" font-size="22">1. Dobutamine for contractility</text><text x="100" y="490" fill="#ffd700" font-size="22">2. Add norepinephrine if SVR drops</text><text x="100" y="530" fill="#ffd700" font-size="22">3. PCI for definitive revascularization</text><text x="100" y="565" fill="#888" font-size="20">avoid fluid overload</text><rect x="60" y="600" width="980" height="220" rx="14" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="3"/><text x="100" y="645" fill="#ec4899" font-size="26" font-weight="bold">Anaphylaxis — peanut, wheeze, hives</text><text x="100" y="690" fill="#ffd700" font-size="22">IM epinephrine 0.3 mg lateral thigh</text><text x="100" y="730" fill="#ffd700" font-size="22">Repeat every 5–15 min as needed</text><text x="100" y="770" fill="#ffd700" font-size="22">Then: airway, fluids, antihist., steroids</text><text x="100" y="805" fill="#888" font-size="20">no IV epi outside arrest unless guided</text><rect x="60" y="840" width="980" height="220" rx="14" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="3"/><text x="100" y="885" fill="#0ea5e9" font-size="26" font-weight="bold">OR — spinal anesthesia vasodilation</text><text x="100" y="930" fill="#ffd700" font-size="22">Phenylephrine bolus or infusion</text><text x="100" y="970" fill="#ffd700" font-size="22">Pure α1 restores SVR</text><text x="100" y="1010" fill="#888" font-size="20">reflex bradycardia possible — watch HR</text></svg>`,
+          caption: "Choose by shock category, then escalate stepwise."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Vasoactive Drug Check",
+        question: "A nurse is starting a norepinephrine infusion on a client in septic shock. Which action by the nurse requires intervention?",
+        options: [
+          { text: "Starting the infusion through a 20-gauge peripheral IV in the forearm", correct: true },
+          { text: "Titrating the infusion every 5 minutes to maintain MAP greater than 65 mmHg", correct: false },
+          { text: "Placing the client on continuous ECG and arterial line monitoring", correct: false },
+          { text: "Verifying patency of the central venous catheter before initiating", correct: false }
+        ],
+        explanation: "Norepinephrine is a potent vasoconstrictor that causes severe tissue necrosis if it extravasates from a peripheral vein. It should be infused through a CENTRAL line whenever possible. The other actions are appropriate: titrating to MAP >65, continuous monitoring, and verifying central access patency are all standard for vasopressor administration.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Vasopressor Safety</text><rect x="100" y="160" width="900" height="220" rx="14" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="bold">Action requiring intervention</text><text x="550" y="280" text-anchor="middle" fill="#ffd700" font-size="26">Peripheral 20-gauge IV</text><text x="550" y="335" text-anchor="middle" fill="#888" font-size="22">extravasation → tissue necrosis</text><rect x="100" y="410" width="900" height="120" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="465" text-anchor="middle" fill="#ffffff" font-size="26">CORRECT: Titrate q5 min to MAP &gt; 65</text><text x="550" y="505" text-anchor="middle" fill="#888" font-size="20">standard for vasopressor infusion</text><rect x="100" y="555" width="900" height="120" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="26">CORRECT: Continuous ECG + art line</text><text x="550" y="650" text-anchor="middle" fill="#888" font-size="20">beat-to-beat BP, dysrhythmia surveillance</text><rect x="100" y="700" width="900" height="120" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="755" text-anchor="middle" fill="#ffffff" font-size="26">CORRECT: Verify central line patency</text><text x="550" y="795" text-anchor="middle" fill="#888" font-size="20">central route is the SAFE delivery</text><rect x="100" y="850" width="900" height="190" rx="14" fill="#ffd700" opacity="0.22" stroke="#ffd700" stroke-width="3"/><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Rule: pressors via CENTRAL line</text><text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="22">if peripheral must be used short-term →</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22">large vein, frequent site checks, phentolamine ready</text></svg>`,
+          caption: "Central line is the standard; peripheral risks limb-threatening extravasation."
+        }
+      },
+      {
+        type: "application",
+        title: "Safe Titration at the Bedside",
+        content: `Safe vasoactive therapy hinges on **access, monitoring, and titration discipline**.
+
+**Access** — **central venous catheter** (subclavian, IJ, or femoral) is the standard. If a peripheral route is the only option temporarily, use a **large proximal vein**, document **q1 hr site checks**, and have **phentolamine** available for extravasation.
+
+**Monitoring** — **arterial line** for beat-to-beat MAP, **continuous ECG**, **hourly urine output**, **lactate trending**. Document **MAP, HR, dose, and date** every titration.
+
+**Titration** — change one drug at a time. Adjust **every 5–10 minutes** by small steps. Do **not bolus** vasoactive infusions. Always have a **backup pump/line** ready — sudden interruption can crash the patient.
+
+**Weaning** — once MAP stable on lowest effective dose for hours, **reduce in small increments**. Watch for **rebound hypotension**. Reassess source: shock that won't wean signals **untreated cause**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Safe Titration Checklist</text><rect x="60" y="120" width="980" height="220" rx="14" fill="#6366f1" opacity="0.22" stroke="#6366f1" stroke-width="3"/><text x="100" y="170" fill="#6366f1" font-size="26" font-weight="bold">Access</text><text x="100" y="215" fill="#ffffff" font-size="22">Central line: subclavian, IJ, or femoral</text><text x="100" y="255" fill="#ffd700" font-size="22">Peripheral only temporarily — large vein, q1 hr checks</text><text x="100" y="295" fill="#ffd700" font-size="22">Phentolamine ready for extravasation</text><rect x="60" y="360" width="980" height="220" rx="14" fill="#10b981" opacity="0.22" stroke="#10b981" stroke-width="3"/><text x="100" y="410" fill="#10b981" font-size="26" font-weight="bold">Monitoring</text><text x="100" y="455" fill="#ffffff" font-size="22">Arterial line — beat-to-beat MAP</text><text x="100" y="495" fill="#ffffff" font-size="22">Continuous ECG + hourly UOP</text><text x="100" y="535" fill="#ffd700" font-size="22">Document MAP, HR, dose at each titration</text><rect x="60" y="600" width="980" height="220" rx="14" fill="#f59e0b" opacity="0.22" stroke="#f59e0b" stroke-width="3"/><text x="100" y="650" fill="#f59e0b" font-size="26" font-weight="bold">Titration</text><text x="100" y="695" fill="#ffffff" font-size="22">Adjust q5–10 min in small steps</text><text x="100" y="735" fill="#ffffff" font-size="22">One drug at a time</text><text x="100" y="775" fill="#ffd700" font-size="22">NEVER bolus a vasoactive infusion</text><rect x="60" y="840" width="980" height="200" rx="14" fill="#8b5cf6" opacity="0.22" stroke="#8b5cf6" stroke-width="3"/><text x="100" y="890" fill="#8b5cf6" font-size="26" font-weight="bold">Weaning</text><text x="100" y="935" fill="#ffffff" font-size="22">Lowest effective dose → wean in increments</text><text x="100" y="975" fill="#ffffff" font-size="22">Watch for rebound hypotension</text><text x="100" y="1015" fill="#ffd700" font-size="22">Won't wean? Hunt for missed source</text></svg>`,
+          caption: "Discipline at the pump prevents both extravasation and crash hypotension."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'nclex-pathophys',
