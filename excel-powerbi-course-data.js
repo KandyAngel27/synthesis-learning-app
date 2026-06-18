@@ -2586,7 +2586,7 @@ The **#** turns B2 into a spilled range reference — the cleanup applies to eve
             title: 'Pivot Tables and the Data Model',
             author: 'Synthesis Learning',
             description: 'From flat tables to pivot summaries, slicers, timelines, calculated fields, and the leap into the in-memory Data Model with Power Pivot.',
-            lessons: 3, duration: 45, progress: 0, category: 'excel-powerbi',
+            lessons: 6, duration: 90, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-pivot-lesson-1",
@@ -2776,6 +2776,282 @@ The **#** turns B2 into a spilled range reference — the cleanup applies to eve
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Promote Your Workbook</text><circle cx="120" cy="180" r="40" fill="#6366f1"/><text x="120" y="192" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">1</text><text x="190" y="175" fill="#ffffff" font-size="18" font-weight="bold">Split the master back into focused tables</text><text x="190" y="205" fill="#888" font-size="14">Orders · Customers · Products — each with one purpose</text><circle cx="120" cy="280" r="40" fill="#6366f1"/><text x="120" y="292" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">2</text><text x="190" y="275" fill="#ffffff" font-size="18" font-weight="bold">Ctrl+T on each</text><text x="190" y="305" fill="#888" font-size="14">Give each Table a real name in Table Design</text><circle cx="120" cy="380" r="40" fill="#10b981"/><text x="120" y="392" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">3</text><text x="190" y="375" fill="#ffffff" font-size="18" font-weight="bold">Tick "Add to Data Model" when inserting pivots</text><text x="190" y="405" fill="#888" font-size="14">Now the workbook has a real model behind it</text><circle cx="120" cy="480" r="40" fill="#10b981"/><text x="120" y="492" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">4</text><text x="190" y="475" fill="#ffffff" font-size="18" font-weight="bold">Power Pivot → Diagram View — drag keys</text><text x="190" y="505" fill="#888" font-size="14">Define relationships, one-to-many lines appear</text><circle cx="120" cy="580" r="40" fill="#f59e0b"/><text x="120" y="592" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">5</text><text x="190" y="575" fill="#ffffff" font-size="18" font-weight="bold">Build pivots with fields from many tables</text><text x="190" y="605" fill="#888" font-size="14">Relationships do the VLOOKUP for you, automatically</text><circle cx="120" cy="680" r="40" fill="#ec4899"/><text x="120" y="692" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">6</text><text x="190" y="675" fill="#ffffff" font-size="18" font-weight="bold">Write DAX measures where pivots fall short</text><text x="190" y="705" fill="#888" font-size="14">Total Revenue := SUM(Orders[Revenue])</text><rect x="60" y="760" width="980" height="300" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="805" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">What you just built</text><rect x="120" y="840" width="220" height="180" fill="#0ea5e9" rx="8"/><text x="230" y="880" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Orders</text><text x="230" y="920" text-anchor="middle" fill="#ffffff" font-size="14">Order ID (PK)</text><text x="230" y="950" text-anchor="middle" fill="#ffffff" font-size="14">Customer ID (FK)</text><text x="230" y="980" text-anchor="middle" fill="#ffffff" font-size="14">Product ID (FK)</text><text x="230" y="1010" text-anchor="middle" fill="#ffffff" font-size="14">Revenue</text><rect x="440" y="840" width="220" height="180" fill="#ec4899" rx="8"/><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Customers</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="14">Customer ID (PK)</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="14">Name</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="14">Region</text><rect x="760" y="840" width="220" height="180" fill="#8b5cf6" rx="8"/><text x="870" y="880" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Products</text><text x="870" y="920" text-anchor="middle" fill="#ffffff" font-size="14">Product ID (PK)</text><text x="870" y="950" text-anchor="middle" fill="#ffffff" font-size="14">Name</text><text x="870" y="980" text-anchor="middle" fill="#ffffff" font-size="14">Category</text><path d="M 340 925 L 440 925" stroke="#ffd700" stroke-width="3"/><path d="M 340 960 L 760 960" stroke="#ffd700" stroke-width="3"/></svg>`,
           caption: "Six steps turn a flat sheet into a relational model."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-pivot-lesson-4",
+    title: "GETPIVOTDATA and Pivot Charts",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When Formulas Meet Pivots",
+        content: `You build a clean pivot, then try to reference a cell next to it with **=B5**. Excel rewrites your formula into a monstrous **GETPIVOTDATA** call. Helpful? Sometimes. Annoying? Almost always. This lesson untangles two pivot companions: the **GETPIVOTDATA function** that auto-generates when you click pivot cells in formulas, and **Pivot Charts** that visualize pivot data with live slicer connections. You'll learn when GETPIVOTDATA actually helps (stable references that survive pivot reshaping), how to switch it OFF when it doesn't, and why Pivot Charts behave differently from regular charts — they refuse external data and auto-update on every refresh.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Pivot Companions</text><rect x="100" y="180" width="400" height="320" fill="#6366f1" rx="12"/><text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">GETPIVOTDATA</text><text x="300" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Auto-generated formula</text><text x="300" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Survives pivot reshape</text><text x="300" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Verbose syntax</text><text x="300" y="430" text-anchor="middle" fill="#ffd700" font-size="22">Click pivot cell in formula</text><rect x="600" y="180" width="400" height="320" fill="#10b981" rx="12"/><text x="800" y="240" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Pivot Charts</text><text x="800" y="290" text-anchor="middle" fill="#ffffff" font-size="20">Linked to pivot data</text><text x="800" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Auto-refresh on update</text><text x="800" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Slicer-connected</text><text x="800" y="430" text-anchor="middle" fill="#ffd700" font-size="22">Insert &gt; PivotChart</text><rect x="200" y="600" width="700" height="200" fill="#ffd700" rx="12"/><text x="550" y="660" text-anchor="middle" fill="#1a1a2e" font-size="28" font-weight="bold">Both live or die with the pivot</text><text x="550" y="710" text-anchor="middle" fill="#1a1a2e" font-size="22">Refresh source &#8594; pivot updates</text><text x="550" y="750" text-anchor="middle" fill="#1a1a2e" font-size="22">Pivot updates &#8594; formulas + charts follow</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="24">Master both, or fight Excel forever</text></svg>`,
+          caption: "GETPIVOTDATA and Pivot Charts are bound to the pivot — they update when it does."
+        }
+      },
+      {
+        type: "concept",
+        title: "GETPIVOTDATA Mechanics",
+        content: `When you type **=** and click a pivot cell, Excel doesn't write **=B5**. It writes **=GETPIVOTDATA("Sales", $A$3, "Region", "West", "Quarter", "Q1")**. The function looks up data by **field name and item value**, not cell coordinates — so if you drag Region above Quarter, the formula still finds West/Q1.
+
+That's the upside: **structural stability**. The downside: ugly syntax and total failure if you rename a field or hide an item.
+
+To **disable auto-GETPIVOTDATA**: PivotTable Analyze tab → Options dropdown → uncheck **Generate GetPivotData**. Now clicking a cell gives you plain **=B5**. Many analysts disable this globally via File → Options → Formulas. The function still works if typed manually — you just stop being ambushed by it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Click Cell B5 in a Formula</text><rect x="100" y="140" width="900" height="120" fill="#6366f1" rx="10"/><text x="550" y="185" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Default Behavior (Generate GetPivotData ON)</text><text x="550" y="230" text-anchor="middle" fill="#ffd700" font-size="20" font-family="monospace">=GETPIVOTDATA("Sales",$A$3,"Region","West","Quarter","Q1")</text><text x="550" y="310" text-anchor="middle" fill="#ffffff" font-size="22">vs</text><rect x="100" y="350" width="900" height="120" fill="#10b981" rx="10"/><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Toggle OFF</text><text x="550" y="440" text-anchor="middle" fill="#ffd700" font-size="28" font-family="monospace">=B5</text><rect x="100" y="540" width="900" height="380" fill="#888" rx="10"/><text x="550" y="590" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Trade-Offs</text><text x="130" y="640" fill="#1a1a2e" font-size="20">GETPIVOTDATA: survives row/column drags</text><text x="130" y="680" fill="#1a1a2e" font-size="20">GETPIVOTDATA: breaks if field renamed or item hidden</text><text x="130" y="720" fill="#1a1a2e" font-size="20">=B5: simple, but breaks if pivot reshapes</text><text x="130" y="760" fill="#1a1a2e" font-size="20">=B5: copy-fills predictably across rows</text><text x="130" y="820" fill="#1a1a2e" font-size="20" font-weight="bold">Disable: PivotTable Analyze &#8594; Options &#8594; uncheck</text><text x="130" y="870" fill="#1a1a2e" font-size="20" font-weight="bold">Global: File &#8594; Options &#8594; Formulas</text></svg>`,
+          caption: "Toggle Generate GetPivotData OFF to get plain cell references back."
+        }
+      },
+      {
+        type: "example",
+        title: "Pivot Chart in Action",
+        content: `**Scenario**: A regional sales pivot with Region in Rows, Quarter in Columns, Sum of Sales in Values, and a Product slicer.
+
+**Step 1**: Click the pivot → Insert tab → **PivotChart** → choose Clustered Column. The chart appears, already wired to the pivot. Field buttons on the chart let you filter directly from it.
+
+**Step 2**: Click the Product slicer → choose "Laptops". The pivot filters AND the chart redraws — same slicer drives both.
+
+**Step 3**: Try to add a new series from a non-pivot range. Excel refuses: pivot charts only consume **pivot-sourced data**. Want a target line? Add a target column inside the pivot's source data, or use a regular chart fed by GETPIVOTDATA formulas.
+
+**Step 4**: Refresh the source — sales numbers update, pivot recalculates, chart bars **redraw automatically**. No manual chart rebuild ever.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Pivot + Chart + Slicer</text><rect x="60" y="130" width="500" height="380" fill="#ffffff" rx="8"/><text x="310" y="170" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">PivotTable</text><line x1="80" y1="190" x2="540" y2="190" stroke="#888"/><text x="100" y="230" fill="#1a1a2e" font-size="18">Region</text><text x="280" y="230" fill="#1a1a2e" font-size="18">Q1</text><text x="380" y="230" fill="#1a1a2e" font-size="18">Q2</text><text x="480" y="230" fill="#1a1a2e" font-size="18">Q3</text><text x="100" y="280" fill="#1a1a2e" font-size="18">West</text><text x="280" y="280" fill="#10b981" font-size="18">$12k</text><text x="380" y="280" fill="#10b981" font-size="18">$15k</text><text x="480" y="280" fill="#10b981" font-size="18">$18k</text><text x="100" y="320" fill="#1a1a2e" font-size="18">East</text><text x="280" y="320" fill="#10b981" font-size="18">$9k</text><text x="380" y="320" fill="#10b981" font-size="18">$11k</text><text x="480" y="320" fill="#10b981" font-size="18">$14k</text><text x="100" y="360" fill="#1a1a2e" font-size="18">North</text><text x="280" y="360" fill="#10b981" font-size="18">$7k</text><text x="380" y="360" fill="#10b981" font-size="18">$8k</text><text x="480" y="360" fill="#10b981" font-size="18">$10k</text><rect x="600" y="130" width="440" height="380" fill="#ffffff" rx="8"/><text x="820" y="170" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">PivotChart</text><rect x="640" y="350" width="50" height="120" fill="#6366f1"/><rect x="700" y="320" width="50" height="150" fill="#6366f1"/><rect x="760" y="290" width="50" height="180" fill="#6366f1"/><rect x="830" y="380" width="50" height="90" fill="#10b981"/><rect x="890" y="360" width="50" height="110" fill="#10b981"/><rect x="950" y="330" width="50" height="140" fill="#10b981"/><line x1="630" y1="475" x2="1020" y2="475" stroke="#888" stroke-width="2"/><rect x="200" y="550" width="700" height="160" fill="#ffd700" rx="10"/><text x="550" y="600" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Product Slicer: [Laptops]</text><text x="550" y="650" text-anchor="middle" fill="#1a1a2e" font-size="20">One click filters BOTH</text><text x="550" y="690" text-anchor="middle" fill="#1a1a2e" font-size="20">pivot table AND pivot chart</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="22">Refresh source &#8594; chart auto-redraws</text><text x="550" y="840" text-anchor="middle" fill="#ef4444" font-size="20">External data series? Rejected.</text></svg>`,
+          caption: "Pivot chart and pivot table share data, slicers, and refresh cycle."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "You want a pivot chart to also show a budget line from a separate range outside the pivot source. What happens when you try to add that series?",
+        options: [
+          { text: "Excel adds it as a secondary axis automatically", correct: false },
+          { text: "Pivot charts only accept pivot-sourced data; the series is rejected", correct: true },
+          { text: "It works but disconnects the chart from the pivot", correct: false },
+          { text: "GETPIVOTDATA converts the external range automatically", correct: false }
+        ],
+        explanation: `Pivot charts are tightly bound to their pivot — they only display **pivot-sourced data**. To overlay a budget or target, either add a target column inside the pivot source data (so it becomes a pivot field), or build a regular chart and use **GETPIVOTDATA** formulas to feed pivot values alongside the external range.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Pivot Charts Are Walled Gardens</text><rect x="150" y="200" width="800" height="500" fill="#6366f1" rx="20"/><text x="550" y="280" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Inside the Wall</text><text x="550" y="340" text-anchor="middle" fill="#ffd700" font-size="24">Pivot fields only</text><text x="550" y="380" text-anchor="middle" fill="#ffd700" font-size="24">Auto-refreshes with pivot</text><text x="550" y="420" text-anchor="middle" fill="#ffd700" font-size="24">Slicer-connected</text><line x1="200" y1="500" x2="900" y2="500" stroke="#ef4444" stroke-width="4"/><text x="550" y="560" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Outside the Wall</text><text x="550" y="620" text-anchor="middle" fill="#ef4444" font-size="24">External ranges rejected</text><text x="550" y="660" text-anchor="middle" fill="#ef4444" font-size="24">Add to source instead</text><rect x="200" y="780" width="700" height="200" fill="#10b981" rx="15"/><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Workaround</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="22">Add target column to source data</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="22">Or use regular chart + GETPIVOTDATA</text></svg>`,
+          caption: "Pivot charts refuse external data — extend the source instead."
+        }
+      },
+      {
+        type: "application",
+        title: "Build a Hybrid Dashboard",
+        content: `Try this end-to-end exercise on your own sales data:
+
+**1. Pivot setup** — Region in Rows, Month in Columns, Sum of Revenue in Values. Add a Product slicer.
+
+**2. KPI cells** — Above the pivot, write **=GETPIVOTDATA("Revenue", $A$5, "Region", "West")** in cell H1. As you change the slicer, this cell updates. Use it as a KPI display.
+
+**3. Disable for the rest** — Now turn OFF Generate GetPivotData (Analyze → Options). For your sparkline source rows, use plain **=B6** style references that copy-fill cleanly.
+
+**4. Pivot chart** — Insert → PivotChart, choose a column chart. Drag the chart next to the pivot. Click slicer items — both move together.
+
+**5. Stress test** — Add a new month to the source, refresh. KPI cell stays correct (field-based lookup), sparkline cells stay correct (B6 still B6), chart redraws. Hybrid dashboard, refresh-safe.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Hybrid Dashboard Blueprint</text><rect x="60" y="130" width="320" height="160" fill="#10b981" rx="10"/><text x="220" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">KPI Tile</text><text x="220" y="220" text-anchor="middle" fill="#ffd700" font-size="16" font-family="monospace">=GETPIVOTDATA(...)</text><text x="220" y="260" text-anchor="middle" fill="#ffffff" font-size="18">Field-based, reshape-proof</text><rect x="400" y="130" width="320" height="160" fill="#6366f1" rx="10"/><text x="560" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Sparklines</text><text x="560" y="220" text-anchor="middle" fill="#ffd700" font-size="20" font-family="monospace">=B6</text><text x="560" y="260" text-anchor="middle" fill="#ffffff" font-size="18">Copy-fill friendly</text><rect x="740" y="130" width="300" height="160" fill="#f59e0b" rx="10"/><text x="890" y="180" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Pivot Chart</text><text x="890" y="220" text-anchor="middle" fill="#1a1a2e" font-size="18">Bound to pivot</text><text x="890" y="260" text-anchor="middle" fill="#1a1a2e" font-size="18">Slicer-connected</text><rect x="200" y="340" width="700" height="120" fill="#ec4899" rx="10"/><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Product Slicer</text><text x="550" y="435" text-anchor="middle" fill="#ffffff" font-size="20">Drives all three above</text><rect x="100" y="510" width="900" height="80" fill="#8b5cf6" rx="10"/><text x="550" y="560" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">PivotTable (source for all)</text><rect x="100" y="640" width="900" height="280" fill="#888" rx="10"/><text x="550" y="690" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Refresh Test</text><text x="130" y="740" fill="#1a1a2e" font-size="20">1. Add new month to source data</text><text x="130" y="780" fill="#1a1a2e" font-size="20">2. Right-click pivot &#8594; Refresh</text><text x="130" y="820" fill="#1a1a2e" font-size="20">3. KPI updates (field lookup)</text><text x="130" y="860" fill="#1a1a2e" font-size="20">4. Sparklines update (=B6 still valid)</text><text x="130" y="900" fill="#1a1a2e" font-size="20">5. Chart redraws automatically</text></svg>`,
+          caption: "Mix GETPIVOTDATA, plain refs, and pivot charts for a refresh-safe dashboard."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-pivot-lesson-5",
+    title: "Pivot Table Design and Formatting",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Making Pivots Presentable",
+        content: `A raw pivot looks like a spreadsheet barfed: indented field names, subtotals everywhere, weird gaps, and "Sum of Sales" labels nobody asked for. Worse, when you refresh, any manual formatting you applied vanishes. This lesson covers the **Design tab** — the home of everything that turns ugly pivots into polished reports. You'll learn the three **Report Layouts** (Compact, Outline, Tabular) and when each one wins, how to toggle **Subtotals and Grand Totals**, why **Repeat All Item Labels** is mandatory before exporting, and the critical **Preserve Cell Formatting on Update** setting that protects your bold borders from refresh oblivion.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Design Tab</text><rect x="100" y="160" width="900" height="100" fill="#6366f1" rx="10"/><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Pivot Tools &#8594; Design</text><rect x="80" y="300" width="200" height="220" fill="#10b981" rx="10"/><text x="180" y="350" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Subtotals</text><text x="180" y="400" text-anchor="middle" fill="#ffffff" font-size="16">On/Off/Top/Bottom</text><rect x="300" y="300" width="200" height="220" fill="#f59e0b" rx="10"/><text x="400" y="350" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Grand Totals</text><text x="400" y="400" text-anchor="middle" fill="#1a1a2e" font-size="16">Rows/Cols/Both/Off</text><rect x="520" y="300" width="200" height="220" fill="#ec4899" rx="10"/><text x="620" y="350" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Report Layout</text><text x="620" y="400" text-anchor="middle" fill="#ffffff" font-size="16">3 styles</text><rect x="740" y="300" width="200" height="220" fill="#8b5cf6" rx="10"/><text x="840" y="350" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Blank Rows</text><text x="840" y="400" text-anchor="middle" fill="#ffffff" font-size="16">Spacing</text><rect x="200" y="580" width="700" height="120" fill="#ffd700" rx="10"/><text x="550" y="640" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Banded Rows + Banded Cols</text><text x="550" y="680" text-anchor="middle" fill="#1a1a2e" font-size="20">Alternating stripes for readability</text><rect x="100" y="750" width="900" height="200" fill="#ef4444" rx="10"/><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">The Refresh Killer</text><text x="550" y="860" text-anchor="middle" fill="#ffffff" font-size="22">Preserve Cell Formatting on Update</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="20">Default ON. Lose it = formatting evaporates.</text></svg>`,
+          caption: "The Design tab controls everything from layout to refresh formatting survival."
+        }
+      },
+      {
+        type: "concept",
+        title: "Layouts, Totals, and the Hidden Setting",
+        content: `**Report Layout** has three modes:
+• **Compact** — default; nested fields share Column A as a collapsible tree. Pretty, but hard to use the output as data.
+• **Outline** — each field gets its own column; subtotals sit above each group. Mid-density, readable.
+• **Tabular** — each field its own column AND subtotals sit at the bottom of each group. Looks like a real table — ideal for **re-pivoting** the output elsewhere.
+
+**Subtotals**: Design → Subtotals → Do Not Show / Show at Bottom / Show at Top. **Grand Totals**: On for Rows / Cols / Both / Off.
+
+**Repeat All Item Labels** (Design → Report Layout): fills down repeated row labels — essential before exporting to a flat data source.
+
+**Preserve Cell Formatting on Update**: PivotTable Options → Layout & Format tab. **Default is ON** — but if it ever flips off, manual formatting dies on every refresh.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Three Report Layouts</text><rect x="50" y="130" width="330" height="380" fill="#6366f1" rx="10"/><text x="215" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Compact</text><text x="80" y="230" fill="#ffd700" font-size="16">- West</text><text x="100" y="260" fill="#ffffff" font-size="16">- Laptops $12k</text><text x="100" y="290" fill="#ffffff" font-size="16">- Phones $8k</text><text x="80" y="320" fill="#ffd700" font-size="16">- East</text><text x="100" y="350" fill="#ffffff" font-size="16">- Laptops $9k</text><text x="215" y="430" text-anchor="middle" fill="#ffd700" font-size="18">One column</text><text x="215" y="460" text-anchor="middle" fill="#ffd700" font-size="18">Collapsible</text><text x="215" y="490" text-anchor="middle" fill="#ef4444" font-size="16">Not data-friendly</text><rect x="390" y="130" width="320" height="380" fill="#10b981" rx="10"/><text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Outline</text><text x="410" y="220" fill="#ffd700" font-size="14">Region</text><text x="510" y="220" fill="#ffd700" font-size="14">Product</text><text x="630" y="220" fill="#ffd700" font-size="14">Sales</text><text x="410" y="250" fill="#ffffff" font-size="14">West</text><text x="630" y="250" fill="#ffd700" font-size="14">$20k</text><text x="510" y="280" fill="#ffffff" font-size="14">Laptops</text><text x="630" y="280" fill="#ffffff" font-size="14">$12k</text><text x="510" y="310" fill="#ffffff" font-size="14">Phones</text><text x="630" y="310" fill="#ffffff" font-size="14">$8k</text><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="18">Separate columns</text><text x="550" y="460" text-anchor="middle" fill="#ffd700" font-size="18">Subtotals on top</text><rect x="720" y="130" width="330" height="380" fill="#f59e0b" rx="10"/><text x="885" y="180" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Tabular</text><text x="740" y="220" fill="#1a1a2e" font-size="14">Region</text><text x="840" y="220" fill="#1a1a2e" font-size="14">Product</text><text x="960" y="220" fill="#1a1a2e" font-size="14">Sales</text><text x="740" y="250" fill="#1a1a2e" font-size="14">West</text><text x="840" y="250" fill="#1a1a2e" font-size="14">Laptops</text><text x="960" y="250" fill="#1a1a2e" font-size="14">$12k</text><text x="740" y="280" fill="#1a1a2e" font-size="14">West</text><text x="840" y="280" fill="#1a1a2e" font-size="14">Phones</text><text x="960" y="280" fill="#1a1a2e" font-size="14">$8k</text><text x="740" y="310" fill="#1a1a2e" font-size="14">West Total</text><text x="960" y="310" fill="#1a1a2e" font-size="14">$20k</text><text x="885" y="430" text-anchor="middle" fill="#1a1a2e" font-size="18">Re-pivot ready</text><text x="885" y="460" text-anchor="middle" fill="#1a1a2e" font-size="18">Subtotals on bottom</text><rect x="100" y="560" width="900" height="160" fill="#8b5cf6" rx="10"/><text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Repeat All Item Labels</text><text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="20">Fills empty cells under merged labels</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="20">Must do before exporting as flat data</text><rect x="100" y="760" width="900" height="190" fill="#ef4444" rx="10"/><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Preserve Cell Formatting on Update</text><text x="550" y="855" text-anchor="middle" fill="#ffd700" font-size="20">PivotTable Options &#8594; Layout &amp; Format</text><text x="550" y="895" text-anchor="middle" fill="#ffffff" font-size="20">Verify checked: bold/borders survive refresh</text></svg>`,
+          caption: "Pick Tabular for data exports, watch the Preserve checkbox closely."
+        }
+      },
+      {
+        type: "example",
+        title: "Polish a Pivot for Stakeholder Review",
+        content: `**Starting state**: A messy compact-layout pivot with Region and Product nested, subtotals at top, no banding, weird "Sum of Revenue" header.
+
+**Step 1 — Layout**: Design tab → Report Layout → **Show in Tabular Form**. Region and Product split into their own columns.
+
+**Step 2 — Repeat labels**: Design → Report Layout → **Repeat All Item Labels**. Now every row shows its region (West/West/West, not blanks below West).
+
+**Step 3 — Subtotals**: Design → Subtotals → **Do Not Show Subtotals**. Cleaner output for stakeholder summary.
+
+**Step 4 — Grand Totals**: Design → Grand Totals → **On for Rows and Columns Only** (keep the bottom row, drop the right column).
+
+**Step 5 — Banding**: Check **Banded Rows** in the PivotTable Style Options group. Pick a style from the gallery — gold-on-navy if branding allows.
+
+**Step 6 — Rename header**: Click the "Sum of Revenue" cell, type "Revenue". Excel refuses "Revenue" if it conflicts — use "Revenue " with a trailing space.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Six Steps to Polished</text><rect x="80" y="120" width="940" height="120" fill="#ef4444" rx="10"/><text x="550" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">BEFORE</text><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="18">Compact, subtotals everywhere, "Sum of Revenue" header, blanks under labels</text><rect x="80" y="280" width="940" height="540" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="120" y="320" fill="#10b981" font-size="20" font-weight="bold">1. Tabular Layout</text><text x="500" y="320" fill="#ffffff" font-size="18">Design &#8594; Report Layout</text><text x="120" y="360" fill="#10b981" font-size="20" font-weight="bold">2. Repeat All Item Labels</text><text x="500" y="360" fill="#ffffff" font-size="18">Fills repeated rows</text><text x="120" y="400" fill="#10b981" font-size="20" font-weight="bold">3. Subtotals Off</text><text x="500" y="400" fill="#ffffff" font-size="18">Do Not Show Subtotals</text><text x="120" y="440" fill="#10b981" font-size="20" font-weight="bold">4. Grand Totals - Rows Only</text><text x="500" y="440" fill="#ffffff" font-size="18">Drop right column total</text><text x="120" y="480" fill="#10b981" font-size="20" font-weight="bold">5. Banded Rows + Style</text><text x="500" y="480" fill="#ffffff" font-size="18">Stripes for readability</text><text x="120" y="520" fill="#10b981" font-size="20" font-weight="bold">6. Rename "Sum of Revenue"</text><text x="500" y="520" fill="#ffffff" font-size="18">Click cell, type "Revenue "</text><line x1="120" y1="560" x2="980" y2="560" stroke="#888" stroke-width="2"/><text x="550" y="610" text-anchor="middle" fill="#ffd700" font-size="22">Confirm Preserve Cell Formatting ON</text><text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="22">in PivotTable Options &#8594; Layout &amp; Format</text><rect x="200" y="700" width="700" height="100" fill="#10b981" rx="8"/><text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Right-click Refresh &#8594; format survives</text><text x="550" y="785" text-anchor="middle" fill="#ffffff" font-size="18">If it dies, re-check the setting</text></svg>`,
+          caption: "Tabular + repeated labels + clean totals = stakeholder-ready output."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "You apply bold formatting and a yellow fill to a key row in your pivot. After right-clicking Refresh, the formatting vanishes. What's the most likely cause?",
+        options: [
+          { text: "Excel never preserves manual formatting on pivot refresh", correct: false },
+          { text: "Preserve Cell Formatting on Update is unchecked in PivotTable Options", correct: true },
+          { text: "You need to convert the pivot to a regular range first", correct: false },
+          { text: "The Design tab style overrides all manual formatting", correct: false }
+        ],
+        explanation: `In **PivotTable Options → Layout & Format tab**, the **Preserve Cell Formatting on Update** checkbox controls this exact behavior. It's ON by default, but a colleague, macro, or accidental click can flip it off — at which point every refresh wipes your manual bold, fills, and borders. Re-check it, redo the formatting once, and it sticks for future refreshes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">The Formatting Killer</text><rect x="100" y="200" width="900" height="280" fill="#ffffff" stroke="#888" stroke-width="2" rx="10"/><text x="550" y="250" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">PivotTable Options</text><line x1="120" y1="270" x2="980" y2="270" stroke="#888"/><text x="140" y="310" fill="#1a1a2e" font-size="20">Layout &amp; Format tab</text><rect x="140" y="340" width="40" height="40" fill="#10b981" stroke="#1a1a2e" stroke-width="2"/><text x="170" y="370" fill="#ffffff" font-size="28" font-weight="bold">&#10003;</text><text x="200" y="370" fill="#1a1a2e" font-size="20" font-weight="bold">Preserve cell formatting on update</text><text x="200" y="410" fill="#888" font-size="16">If unchecked: every refresh wipes manual formatting</text><text x="200" y="440" fill="#888" font-size="16">Default ON; macros can disable it silently</text><rect x="150" y="540" width="380" height="280" fill="#ef4444" rx="10"/><text x="340" y="600" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">UNCHECKED</text><text x="340" y="650" text-anchor="middle" fill="#ffffff" font-size="18">Bold disappears</text><text x="340" y="690" text-anchor="middle" fill="#ffffff" font-size="18">Fills disappear</text><text x="340" y="730" text-anchor="middle" fill="#ffffff" font-size="18">Borders disappear</text><text x="340" y="780" text-anchor="middle" fill="#ffd700" font-size="18">All on refresh</text><rect x="570" y="540" width="380" height="280" fill="#10b981" rx="10"/><text x="760" y="600" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">CHECKED</text><text x="760" y="650" text-anchor="middle" fill="#ffffff" font-size="18">Bold survives</text><text x="760" y="690" text-anchor="middle" fill="#ffffff" font-size="18">Fills survive</text><text x="760" y="730" text-anchor="middle" fill="#ffffff" font-size="18">Borders survive</text><text x="760" y="780" text-anchor="middle" fill="#ffd700" font-size="18">Refresh-safe</text></svg>`,
+          caption: "The Preserve Cell Formatting checkbox is the silent guardian of manual styling."
+        }
+      },
+      {
+        type: "application",
+        title: "Build a Refresh-Safe Report Template",
+        content: `Create a standard template you can reuse for monthly reports:
+
+**1. Start clean** — New pivot from your data. In PivotTable Options → Layout & Format, verify **Preserve Cell Formatting on Update** is ON. Also check **Autofit column widths on update** OFF if you've set custom widths.
+
+**2. Layout** — Design → Tabular form, Repeat All Item Labels, Subtotals at bottom of each group (keeps high-level summary visible).
+
+**3. Grand Totals** — On for rows only if your value columns are too wide to scan a totals column.
+
+**4. Style** — Pick a built-in PivotTable Style with banded rows. Modify it (right-click → Duplicate) to use your brand colors.
+
+**5. Number formats** — Right-click any value field → Number Format → Currency or Accounting. Setting it through the field (not the cell) means it survives field changes.
+
+**6. Save** — File → Save As → keep as .xlsx. Next month: replace source data, refresh, done.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Refresh-Safe Template</text><rect x="80" y="120" width="940" height="140" fill="#6366f1" rx="10"/><text x="550" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Step 1: PivotTable Options Audit</text><text x="550" y="210" text-anchor="middle" fill="#ffd700" font-size="18">Preserve Cell Formatting: ON</text><text x="550" y="240" text-anchor="middle" fill="#ffd700" font-size="18">Autofit on Update: OFF</text><rect x="80" y="290" width="940" height="120" fill="#10b981" rx="10"/><text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Step 2-3: Layout + Totals</text><text x="550" y="380" text-anchor="middle" fill="#ffd700" font-size="18">Tabular, Repeat Labels, Subtotals bottom, Grand Totals rows</text><rect x="80" y="440" width="940" height="120" fill="#f59e0b" rx="10"/><text x="550" y="490" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Step 4: Brand Style</text><text x="550" y="530" text-anchor="middle" fill="#1a1a2e" font-size="18">Duplicate built-in style, customize colors</text><rect x="80" y="590" width="940" height="120" fill="#ec4899" rx="10"/><text x="550" y="640" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Step 5: Field-Level Number Formats</text><text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="18">Right-click value field &#8594; survives field swaps</text><rect x="80" y="740" width="940" height="200" fill="#ffd700" rx="10"/><text x="550" y="790" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Monthly Workflow</text><text x="550" y="840" text-anchor="middle" fill="#1a1a2e" font-size="20">1. Replace source data</text><text x="550" y="880" text-anchor="middle" fill="#1a1a2e" font-size="20">2. Refresh All</text><text x="550" y="920" text-anchor="middle" fill="#1a1a2e" font-size="20">3. Send report - layout + format intact</text></svg>`,
+          caption: "Build it once with the right settings, refresh forever."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-pivot-lesson-6",
+    title: "Pivot Cache and Performance",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Your Pivot Workbook Is 80MB",
+        content: `You import 50,000 rows of sales data, build three pivots, and save. The file is 80MB. The source CSV was 12MB. Where did the rest come from? The answer is the **pivot cache** — an invisible in-memory copy of your source data, embedded inside the workbook. Every pivot reads from this cache, not from the original cells. That's why pivots are blazing fast even on huge datasets, and also why .xlsx files balloon. This lesson explains what the cache is, how multiple pivots can share it (with side effects), how to force separate caches when sharing causes problems, and the **.xlsb format** trick that shrinks bloated pivot workbooks 10-30%.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">The Invisible Cache</text><rect x="80" y="160" width="940" height="160" fill="#6366f1" rx="10"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Source Data (visible)</text><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="20">50,000 rows in a sheet or table</text><line x1="550" y1="330" x2="550" y2="380" stroke="#ffd700" stroke-width="3"/><polygon points="540,375 550,395 560,375" fill="#ffd700"/><rect x="80" y="400" width="940" height="220" fill="#ef4444" rx="10"/><text x="550" y="460" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Pivot Cache (hidden)</text><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="22">In-memory compressed copy</text><text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="20">Lives inside the .xlsx</text><text x="550" y="590" text-anchor="middle" fill="#ffffff" font-size="20">Why files balloon</text><line x1="550" y1="640" x2="550" y2="690" stroke="#ffd700" stroke-width="3"/><polygon points="540,685 550,705 560,685" fill="#ffd700"/><rect x="180" y="710" width="220" height="160" fill="#10b981" rx="10"/><text x="290" y="770" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pivot 1</text><text x="290" y="810" text-anchor="middle" fill="#ffd700" font-size="18">Reads cache</text><rect x="440" y="710" width="220" height="160" fill="#10b981" rx="10"/><text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pivot 2</text><text x="550" y="810" text-anchor="middle" fill="#ffd700" font-size="18">Reads cache</text><rect x="700" y="710" width="220" height="160" fill="#10b981" rx="10"/><text x="810" y="770" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pivot 3</text><text x="810" y="810" text-anchor="middle" fill="#ffd700" font-size="18">Reads cache</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="22">Pivots are fast because they query the cache, not the cells</text></svg>`,
+          caption: "The pivot cache is a hidden in-memory data copy — fast, but disk-hungry."
+        }
+      },
+      {
+        type: "concept",
+        title: "Shared Caches and the Refresh Hierarchy",
+        content: `When you create a second pivot from the same source range, Excel asks: "Do you want to base the new pivot on the same data?" — say yes, and the new pivot **shares the cache** with the first one. Benefits: smaller file, faster refresh, slicers can be connected across both. The catch: **changes propagate**. Rename a column in one pivot's field list, and the other pivot's column renames too. Group dates into months on one, the other groups too.
+
+**Refresh Pivot** updates one pivot (or all pivots sharing its cache). **Refresh All** (Data tab) updates **every** cache and every data connection in the workbook.
+
+To **force separate caches**: use the legacy wizard via **Alt + D + P** → choose Multiple Consolidation Ranges or re-specify the source. Each launch creates a fresh cache.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Shared vs Separate Caches</text><rect x="60" y="120" width="500" height="420" fill="#10b981" rx="12"/><text x="310" y="170" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Shared Cache (default)</text><rect x="100" y="200" width="420" height="80" fill="#1a1a2e" rx="8"/><text x="310" y="250" text-anchor="middle" fill="#ffd700" font-size="20">One cache</text><rect x="80" y="310" width="200" height="100" fill="#6366f1" rx="6"/><text x="180" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Pivot A</text><rect x="340" y="310" width="200" height="100" fill="#6366f1" rx="6"/><text x="440" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Pivot B</text><text x="310" y="450" text-anchor="middle" fill="#ffd700" font-size="18">Smaller file</text><text x="310" y="480" text-anchor="middle" fill="#ffd700" font-size="18">Slicers cross-connect</text><text x="310" y="510" text-anchor="middle" fill="#ef4444" font-size="18">Renames propagate</text><rect x="580" y="120" width="460" height="420" fill="#f59e0b" rx="12"/><text x="810" y="170" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">Separate Caches</text><rect x="610" y="200" width="180" height="80" fill="#1a1a2e" rx="8"/><text x="700" y="250" text-anchor="middle" fill="#ffd700" font-size="18">Cache 1</text><rect x="830" y="200" width="180" height="80" fill="#1a1a2e" rx="8"/><text x="920" y="250" text-anchor="middle" fill="#ffd700" font-size="18">Cache 2</text><rect x="610" y="310" width="180" height="100" fill="#ec4899" rx="6"/><text x="700" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Pivot A</text><rect x="830" y="310" width="180" height="100" fill="#ec4899" rx="6"/><text x="920" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Pivot B</text><text x="810" y="450" text-anchor="middle" fill="#1a1a2e" font-size="18">Independent grouping</text><text x="810" y="480" text-anchor="middle" fill="#1a1a2e" font-size="18">Larger file</text><text x="810" y="510" text-anchor="middle" fill="#1a1a2e" font-size="18">Force via Alt+D+P</text><rect x="80" y="600" width="940" height="220" fill="#8b5cf6" rx="10"/><text x="550" y="660" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Refresh Hierarchy</text><text x="550" y="710" text-anchor="middle" fill="#ffd700" font-size="20">Right-click Refresh: this pivot + cache-mates</text><text x="550" y="750" text-anchor="middle" fill="#ffd700" font-size="20">Data tab &#8594; Refresh All: every cache + connection</text><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="20">Refresh All is what schedulers and macros should call</text></svg>`,
+          caption: "Shared caches save space but link behavior — force separate via Alt+D+P."
+        }
+      },
+      {
+        type: "example",
+        title: "Diagnosing a Bloated Workbook",
+        content: `**Scenario**: A monthly report file has grown from 4MB to 78MB. Six pivots, one source table of 200,000 rows.
+
+**Investigate**:
+1. Open PivotTable Analyze → Options → Data tab. Check **Save source data with file** — it's ON (default). That's the cache.
+2. Save As → .xlsb (Excel Binary Workbook). File drops from 78MB to **52MB** — same data, binary format compresses ~30%.
+
+**Optimize further**:
+3. Confirm all 6 pivots share a single cache (Analyze → Options → Data → uncheck "Save source data" temporarily and refresh — if all pivots break, they share). Keep it ON for performance.
+4. Check the source table for unused columns. Five extra columns the pivots never use are still in the cache. Delete them from source, refresh, save.
+5. If a pivot needed independent date grouping, you'd have used **Alt + D + P** during creation to give it a separate cache.
+
+**Result**: 78MB → 52MB → 38MB after column trim. Same analysis power.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">From 78MB to 38MB</text><rect x="100" y="130" width="900" height="150" fill="#ef4444" rx="10"/><text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Starting: 78MB .xlsx</text><text x="550" y="220" text-anchor="middle" fill="#ffd700" font-size="20">6 pivots, 200k rows, 5 unused columns</text><text x="550" y="250" text-anchor="middle" fill="#ffffff" font-size="18">Pivot cache stored in workbook = bloat</text><text x="550" y="310" text-anchor="middle" fill="#ffd700" font-size="24">&#8595; Step 1: Save As .xlsb</text><rect x="100" y="340" width="900" height="150" fill="#f59e0b" rx="10"/><text x="550" y="390" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">52MB .xlsb</text><text x="550" y="430" text-anchor="middle" fill="#1a1a2e" font-size="20">Binary format, 33% smaller</text><text x="550" y="460" text-anchor="middle" fill="#1a1a2e" font-size="18">Opens faster, refreshes faster</text><text x="550" y="520" text-anchor="middle" fill="#ffd700" font-size="24">&#8595; Step 2: Trim unused columns</text><rect x="100" y="550" width="900" height="150" fill="#10b981" rx="10"/><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">38MB .xlsb</text><text x="550" y="640" text-anchor="middle" fill="#ffffff" font-size="20">Smaller cache: only what pivots use</text><text x="550" y="670" text-anchor="middle" fill="#ffd700" font-size="18">51% reduction total</text><rect x="100" y="740" width="900" height="220" fill="#888" rx="10"/><text x="550" y="800" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Diagnostic Toolkit</text><text x="130" y="850" fill="#1a1a2e" font-size="18">- Analyze &#8594; Options &#8594; Data tab: Save source data setting</text><text x="130" y="890" fill="#1a1a2e" font-size="18">- Save As &#8594; .xlsb: 10-30% size drop, no feature loss</text><text x="130" y="930" fill="#1a1a2e" font-size="18">- Trim source columns the pivots never use</text></svg>`,
+          caption: "Binary format and trimmed sources can cut workbook size by half."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: `You rename the field "Order Date" to "Date" in Pivot A. Pivot B (built from the same source range) suddenly shows the rename too. Why?`,
+        options: [
+          { text: "Excel renames all instances of a field globally", correct: false },
+          { text: "Pivots A and B share a pivot cache; field renames live in the cache", correct: true },
+          { text: "The source table column was renamed automatically", correct: false },
+          { text: "Refresh All synced the field name from the most recent pivot", correct: false }
+        ],
+        explanation: `Pivots created from the same source typically **share a pivot cache** to save space. Field renames, calculated fields, and date groupings all live in the shared cache — change one, and every pivot using that cache reflects it. To get truly independent pivots, force a separate cache by recreating Pivot B through the legacy wizard (**Alt + D + P**) or by pointing it at a renamed copy of the source range.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Shared Cache = Shared Fate</text><rect x="200" y="160" width="700" height="180" fill="#ef4444" rx="12"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Pivot Cache (shared)</text><text x="550" y="270" text-anchor="middle" fill="#ffd700" font-size="22">Stores: data, field names,</text><text x="550" y="310" text-anchor="middle" fill="#ffd700" font-size="22">calc fields, date groupings</text><line x1="350" y1="360" x2="350" y2="420" stroke="#ffd700" stroke-width="3"/><line x1="750" y1="360" x2="750" y2="420" stroke="#ffd700" stroke-width="3"/><rect x="150" y="440" width="400" height="200" fill="#6366f1" rx="10"/><text x="350" y="500" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Pivot A</text><text x="350" y="550" text-anchor="middle" fill="#ffd700" font-size="20">Rename "Order Date"</text><text x="350" y="590" text-anchor="middle" fill="#ffd700" font-size="20">to "Date"</text><rect x="600" y="440" width="350" height="200" fill="#ec4899" rx="10"/><text x="775" y="500" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Pivot B</text><text x="775" y="550" text-anchor="middle" fill="#ffd700" font-size="20">Also shows "Date"</text><text x="775" y="590" text-anchor="middle" fill="#ffffff" font-size="18">automatically</text><rect x="100" y="700" width="900" height="240" fill="#10b981" rx="12"/><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Force Independence</text><text x="550" y="810" text-anchor="middle" fill="#ffd700" font-size="22">Alt + D + P &#8594; legacy wizard</text><text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="22">Each invocation creates fresh cache</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="20">Trade-off: bigger file, isolated renames</text></svg>`,
+          caption: "Shared cache means shared field names, groupings, and calculations."
+        }
+      },
+      {
+        type: "application",
+        title: "Performance Playbook",
+        content: `Apply these in order whenever a pivot workbook gets slow or huge:
+
+**1. Audit the source** — Open the source table. Are there columns no pivot uses? Delete them. Every column lives in the cache.
+
+**2. Trim row count** — Filter out historical data older than the report needs. If you analyze the last 24 months, don't cache 10 years.
+
+**3. Confirm shared cache** — When building related pivots, copy/paste an existing pivot rather than creating from scratch. Pasted pivots share the cache.
+
+**4. Save as .xlsb** — For files over 20MB, the binary format usually shrinks 10-30% and opens noticeably faster. Lose nothing except plain-text XML parseability.
+
+**5. Refresh hygiene** — Use **Refresh All** (Ctrl+Alt+F5) when you change source data, not just individual pivots. Scheduled tasks and macros should call RefreshAll.
+
+**6. Separate caches when needed** — If two pivots truly need independent groupings or calculated fields, recreate one via **Alt + D + P** to give it its own cache. Accept the file size cost.
+
+**7. Move to the Data Model** — At 1M+ rows, abandon classic pivots. Load to Data Model (Power Pivot) for columnar compression — often 90% smaller than a regular cache.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Performance Playbook</text><rect x="80" y="120" width="940" height="80" fill="#6366f1" rx="8"/><text x="100" y="170" fill="#ffffff" font-size="20" font-weight="bold">1.</text><text x="140" y="170" fill="#ffd700" font-size="20">Audit source &#8594; delete unused columns</text><rect x="80" y="210" width="940" height="80" fill="#10b981" rx="8"/><text x="100" y="260" fill="#ffffff" font-size="20" font-weight="bold">2.</text><text x="140" y="260" fill="#ffd700" font-size="20">Trim historical rows the report doesn't need</text><rect x="80" y="300" width="940" height="80" fill="#f59e0b" rx="8"/><text x="100" y="350" fill="#1a1a2e" font-size="20" font-weight="bold">3.</text><text x="140" y="350" fill="#1a1a2e" font-size="20">Copy/paste pivots to keep them on the shared cache</text><rect x="80" y="390" width="940" height="80" fill="#ec4899" rx="8"/><text x="100" y="440" fill="#ffffff" font-size="20" font-weight="bold">4.</text><text x="140" y="440" fill="#ffd700" font-size="20">Save As .xlsb if file is over 20MB</text><rect x="80" y="480" width="940" height="80" fill="#8b5cf6" rx="8"/><text x="100" y="530" fill="#ffffff" font-size="20" font-weight="bold">5.</text><text x="140" y="530" fill="#ffd700" font-size="20">Ctrl+Alt+F5 (Refresh All) on data changes</text><rect x="80" y="570" width="940" height="80" fill="#0ea5e9" rx="8"/><text x="100" y="620" fill="#ffffff" font-size="20" font-weight="bold">6.</text><text x="140" y="620" fill="#ffd700" font-size="20">Alt+D+P for forced separate caches</text><rect x="80" y="660" width="940" height="80" fill="#ef4444" rx="8"/><text x="100" y="710" fill="#ffffff" font-size="20" font-weight="bold">7.</text><text x="140" y="710" fill="#ffd700" font-size="20">1M+ rows &#8594; Data Model (Power Pivot)</text><rect x="100" y="780" width="900" height="180" fill="#ffd700" rx="12"/><text x="550" y="840" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">Result Targets</text><text x="550" y="890" text-anchor="middle" fill="#1a1a2e" font-size="20">- 30-50% file size reduction</text><text x="550" y="930" text-anchor="middle" fill="#1a1a2e" font-size="20">- 2-5x faster open and refresh</text></svg>`,
+          caption: "Seven moves to shrink and speed up any pivot-heavy workbook."
         }
       }
     ]
