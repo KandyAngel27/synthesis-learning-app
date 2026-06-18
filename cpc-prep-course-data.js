@@ -2063,6 +2063,1041 @@ Pick the correctly constructed medical term.`,
         }
       }
     ]
+  },
+{
+    id: "cpc-foundation-lesson-7",
+    title: "Respiratory System for Coders: Endoscopy Codes, Pulmonary Function, and the Bronchoscopy Family",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Respiratory Coding Trips Up New Coders",
+        content: `The **respiratory system** is one of the highest-volume coding areas in outpatient and surgical settings — and one of the most error-prone. A single **bronchoscopy** procedure can be coded a dozen different ways depending on whether the physician took a **biopsy**, performed a **bronchoalveolar lavage (BAL)**, placed a **stent**, or used **fluoroscopic guidance**. Miss one detail and you lose hundreds of dollars in reimbursement or trigger an audit.
+
+The anatomy split that drives code selection is **upper vs lower respiratory**. The **upper tract** (nose, pharynx, larynx) lives in CPT range **30000-31599**. The **lower tract** (trachea, bronchi, lungs, pleura) lives in **31600-32999**. Knowing where the **carina** sits — that ridge where the trachea bifurcates — matters because **bronchoscopy** codes require the scope to pass **beyond** it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Upper vs Lower Respiratory Tract</text>
+            <text x="550" y="90" fill="#888" font-size="18" text-anchor="middle">Code range boundary at the cricoid cartilage</text>
+            <rect x="80" y="130" width="460" height="900" fill="#0ea5e9" opacity="0.12" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="310" y="170" fill="#0ea5e9" font-size="24" font-weight="bold" text-anchor="middle">UPPER (30000-31599)</text>
+            <text x="310" y="220" fill="#ffffff" font-size="20">Nose / Nasal cavity</text>
+            <text x="310" y="250" fill="#888" font-size="15">30000-30999</text>
+            <text x="310" y="290" fill="#ffffff" font-size="20">Sinuses (FESS)</text>
+            <text x="310" y="320" fill="#888" font-size="15">31231-31298</text>
+            <text x="310" y="360" fill="#ffffff" font-size="20">Pharynx</text>
+            <text x="310" y="390" fill="#888" font-size="15">42700-42999</text>
+            <text x="310" y="430" fill="#ffffff" font-size="20">Larynx + vocal cords</text>
+            <text x="310" y="460" fill="#888" font-size="15">31505-31579</text>
+            <text x="310" y="510" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Stop at cricoid</text>
+            <line x1="80" y1="540" x2="540" y2="540" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,4"/>
+            <text x="310" y="570" fill="#ef4444" font-size="16" text-anchor="middle">CRICOID = boundary</text>
+            <rect x="560" y="130" width="460" height="900" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="790" y="170" fill="#10b981" font-size="24" font-weight="bold" text-anchor="middle">LOWER (31600-32999)</text>
+            <text x="790" y="220" fill="#ffffff" font-size="20">Trachea</text>
+            <text x="790" y="250" fill="#888" font-size="15">31600-31899</text>
+            <text x="790" y="290" fill="#ffffff" font-size="20">Bronchi (scope past carina)</text>
+            <text x="790" y="320" fill="#888" font-size="15">31622-31647</text>
+            <text x="790" y="360" fill="#ffffff" font-size="20">Lungs / Pleura</text>
+            <text x="790" y="390" fill="#888" font-size="15">32035-32562</text>
+            <text x="790" y="430" fill="#ffffff" font-size="20">Thoracentesis</text>
+            <text x="790" y="460" fill="#888" font-size="15">32554-32557</text>
+            <text x="790" y="500" fill="#ffffff" font-size="20">Lobectomy / Pneumonectomy</text>
+            <text x="790" y="530" fill="#888" font-size="15">32480-32540</text>
+            <circle cx="790" cy="610" r="8" fill="#ffd700"/>
+            <text x="790" y="660" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">CARINA</text>
+            <text x="790" y="685" fill="#ffffff" font-size="14" text-anchor="middle">scope must pass</text>
+            <text x="790" y="705" fill="#ffffff" font-size="14" text-anchor="middle">beyond for bronch code</text>
+            <text x="550" y="1070" fill="#888" font-size="16" text-anchor="middle">Code-range boundaries align with anatomical landmarks — memorize them.</text>
+          </svg>`,
+          caption: "Upper vs lower respiratory code ranges split at the cricoid cartilage."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Bronchoscopy Code Family (31622-31647)",
+        content: `The **bronchoscopy** family is built on a **parent-child** structure. **CPT 31622** is the parent: **diagnostic flexible bronchoscopy with or without cell washing**. Every other code in the family **includes 31622** — you never code 31622 with another bronch code from the same family.
+
+The add-on logic works like this:
+- **31623** = bronch + **brushing/protected brushings**
+- **31624** = bronch + **bronchoalveolar lavage (BAL)**
+- **31625** = bronch + **biopsy of bronchus** (single or multiple sites, same code)
+- **31628** = bronch + **transbronchial lung biopsy**, single lobe
+- **+31632** = each additional lobe (add-on to 31628)
+- **31636** = bronch + **bronchial stent placement**
+- **31645** = bronch + **therapeutic aspiration** (initial)
+- **31647** = bronch + **balloon occlusion** of bronchus
+
+When the physician does **multiple procedures** at one session, code each separately — the bundling is already built in.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">Bronchoscopy Code Family Tree</text>
+            <text x="550" y="90" fill="#888" font-size="17" text-anchor="middle">31622 is the parent — everything else builds on it</text>
+            <rect x="350" y="130" width="400" height="100" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="170" fill="#ffd700" font-size="26" font-weight="bold" text-anchor="middle">CPT 31622</text>
+            <text x="550" y="200" fill="#ffffff" font-size="16" text-anchor="middle">Diagnostic bronchoscopy</text>
+            <text x="550" y="220" fill="#ffffff" font-size="16" text-anchor="middle">+/- cell washing (PARENT)</text>
+            <line x1="550" y1="230" x2="200" y2="290" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="230" x2="425" y2="290" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="230" x2="675" y2="290" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="230" x2="900" y2="290" stroke="#888" stroke-width="2"/>
+            <rect x="80" y="290" width="240" height="120" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="200" y="325" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">31623</text>
+            <text x="200" y="355" fill="#ffffff" font-size="15" text-anchor="middle">Brushing /</text>
+            <text x="200" y="375" fill="#ffffff" font-size="15" text-anchor="middle">protected brushings</text>
+            <text x="200" y="398" fill="#888" font-size="13" text-anchor="middle">cytology sample</text>
+            <rect x="335" y="290" width="220" height="120" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="445" y="325" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">31624</text>
+            <text x="445" y="355" fill="#ffffff" font-size="15" text-anchor="middle">Bronchoalveolar</text>
+            <text x="445" y="375" fill="#ffffff" font-size="15" text-anchor="middle">lavage (BAL)</text>
+            <text x="445" y="398" fill="#888" font-size="13" text-anchor="middle">saline wash</text>
+            <rect x="570" y="290" width="220" height="120" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="680" y="325" fill="#8b5cf6" font-size="22" font-weight="bold" text-anchor="middle">31625</text>
+            <text x="680" y="355" fill="#ffffff" font-size="15" text-anchor="middle">Bronchial biopsy</text>
+            <text x="680" y="375" fill="#ffffff" font-size="15" text-anchor="middle">single OR multi-site</text>
+            <text x="680" y="398" fill="#888" font-size="13" text-anchor="middle">one code only</text>
+            <rect x="805" y="290" width="215" height="120" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="912" y="325" fill="#ec4899" font-size="22" font-weight="bold" text-anchor="middle">31628</text>
+            <text x="912" y="355" fill="#ffffff" font-size="15" text-anchor="middle">Transbronchial</text>
+            <text x="912" y="375" fill="#ffffff" font-size="15" text-anchor="middle">lung biopsy</text>
+            <text x="912" y="398" fill="#888" font-size="13" text-anchor="middle">single lobe</text>
+            <line x1="912" y1="410" x2="912" y2="450" stroke="#ffd700" stroke-width="2" stroke-dasharray="4,4"/>
+            <rect x="805" y="450" width="215" height="80" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="912" y="480" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">+31632</text>
+            <text x="912" y="510" fill="#ffffff" font-size="14" text-anchor="middle">add-on each lobe</text>
+            <line x1="550" y1="560" x2="200" y2="620" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="560" x2="445" y2="620" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="560" x2="680" y2="620" stroke="#888" stroke-width="2"/>
+            <rect x="80" y="620" width="240" height="120" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="200" y="655" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">31636</text>
+            <text x="200" y="685" fill="#ffffff" font-size="15" text-anchor="middle">Bronchial stent</text>
+            <text x="200" y="705" fill="#ffffff" font-size="15" text-anchor="middle">placement</text>
+            <rect x="335" y="620" width="220" height="120" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="445" y="655" fill="#6366f1" font-size="22" font-weight="bold" text-anchor="middle">31645</text>
+            <text x="445" y="685" fill="#ffffff" font-size="15" text-anchor="middle">Therapeutic</text>
+            <text x="445" y="705" fill="#ffffff" font-size="15" text-anchor="middle">aspiration (initial)</text>
+            <rect x="570" y="620" width="220" height="120" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="680" y="655" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">31647</text>
+            <text x="680" y="685" fill="#ffffff" font-size="15" text-anchor="middle">Balloon occlusion</text>
+            <text x="680" y="705" fill="#ffffff" font-size="15" text-anchor="middle">of bronchus</text>
+            <rect x="80" y="800" width="940" height="220" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="840" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">CODING RULE</text>
+            <text x="550" y="880" fill="#ffffff" font-size="17" text-anchor="middle">Never code 31622 with another code from this family.</text>
+            <text x="550" y="910" fill="#ffffff" font-size="17" text-anchor="middle">The diagnostic component is already bundled into each child code.</text>
+            <text x="550" y="950" fill="#ffd700" font-size="17" text-anchor="middle">Multiple procedures in one session? Code each separately.</text>
+            <text x="550" y="985" fill="#ffd700" font-size="17" text-anchor="middle">Example: BAL + biopsy = 31624 + 31625 (no 31622)</text>
+          </svg>`,
+          caption: "Bronchoscopy code family — parent 31622 with children for each added procedure."
+        }
+      },
+      {
+        type: "example",
+        title: "Thoracentesis (32555) and Bilateral Modifier -50",
+        content: `**Thoracentesis** is the percutaneous removal of fluid from the **pleural space** — the cavity between the **visceral pleura** (lung surface) and **parietal pleura** (chest wall). The four codes split by **imaging guidance** and **purpose**:
+
+- **32554** — Thoracentesis, **without** imaging guidance
+- **32555** — Thoracentesis, **with** imaging guidance (most common in 2026)
+- **32556** — Pleural drainage catheter placement, **without** imaging
+- **32557** — Pleural drainage catheter placement, **with** imaging
+
+**Case**: 68-year-old with bilateral pleural effusions secondary to CHF. Physician performs **ultrasound-guided thoracentesis** on **both** the right and left chest, removing 800 mL on each side. The correct code is **32555-50**. **Modifier -50** indicates **bilateral procedure** and typically reimburses at **150%** of the unilateral fee. Do **not** report 32555 twice or use **-RT** and **-LT** separately for this code — payers reject that.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">Thoracentesis Decision Tree + Bilateral Modifier</text>
+            <text x="550" y="90" fill="#888" font-size="17" text-anchor="middle">CPT 32554-32557 selection logic</text>
+            <rect x="350" y="130" width="400" height="80" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="180" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Fluid removed from pleural space?</text>
+            <line x1="450" y1="210" x2="280" y2="270" stroke="#888" stroke-width="2"/>
+            <line x1="650" y1="210" x2="820" y2="270" stroke="#888" stroke-width="2"/>
+            <text x="350" y="245" fill="#10b981" font-size="18" font-weight="bold">DIAGNOSTIC ASPIRATION</text>
+            <text x="750" y="245" fill="#ef4444" font-size="18" font-weight="bold">INDWELLING CATHETER</text>
+            <rect x="100" y="290" width="380" height="220" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="290" y="325" fill="#10b981" font-size="20" font-weight="bold" text-anchor="middle">Thoracentesis</text>
+            <line x1="120" y1="345" x2="460" y2="345" stroke="#888" stroke-width="1"/>
+            <text x="140" y="375" fill="#ffffff" font-size="18">No imaging:</text>
+            <text x="380" y="375" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="end">32554</text>
+            <text x="140" y="425" fill="#ffffff" font-size="18">With imaging:</text>
+            <text x="380" y="425" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="end">32555</text>
+            <text x="290" y="475" fill="#888" font-size="14" text-anchor="middle">US or fluoro guidance</text>
+            <text x="290" y="495" fill="#888" font-size="14" text-anchor="middle">included in code</text>
+            <rect x="620" y="290" width="380" height="220" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="810" y="325" fill="#ef4444" font-size="20" font-weight="bold" text-anchor="middle">Pleural drain</text>
+            <line x1="640" y1="345" x2="980" y2="345" stroke="#888" stroke-width="1"/>
+            <text x="660" y="375" fill="#ffffff" font-size="18">No imaging:</text>
+            <text x="900" y="375" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="end">32556</text>
+            <text x="660" y="425" fill="#ffffff" font-size="18">With imaging:</text>
+            <text x="900" y="425" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="end">32557</text>
+            <text x="810" y="475" fill="#888" font-size="14" text-anchor="middle">catheter stays in</text>
+            <text x="810" y="495" fill="#888" font-size="14" text-anchor="middle">for ongoing drainage</text>
+            <rect x="80" y="560" width="940" height="200" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="12"/>
+            <text x="550" y="600" fill="#8b5cf6" font-size="24" font-weight="bold" text-anchor="middle">BILATERAL MODIFIER -50</text>
+            <text x="550" y="635" fill="#ffffff" font-size="17" text-anchor="middle">Right side + Left side same session, same procedure</text>
+            <text x="550" y="670" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">32555-50  =  150% of allowed</text>
+            <text x="550" y="710" fill="#ef4444" font-size="16" text-anchor="middle">WRONG: 32555-RT + 32555-LT  (most payers deny)</text>
+            <text x="550" y="735" fill="#ef4444" font-size="16" text-anchor="middle">WRONG: 32555 x 2  (counts as duplicate)</text>
+            <rect x="80" y="790" width="940" height="240" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="830" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">CASE STUDY</text>
+            <text x="100" y="870" fill="#ffffff" font-size="16">68 y/o male, bilateral pleural effusions, CHF</text>
+            <text x="100" y="900" fill="#ffffff" font-size="16">US-guided thoracentesis — 800 mL right, 800 mL left</text>
+            <text x="100" y="950" fill="#10b981" font-size="20" font-weight="bold">CODE: 32555-50</text>
+            <text x="100" y="985" fill="#ffd700" font-size="16">Dx: J90 (pleural effusion) + I50.9 (CHF)</text>
+            <text x="100" y="1015" fill="#888" font-size="14">Modifier order: pricing modifier (-50) first, then informational</text>
+          </svg>`,
+          caption: "Thoracentesis code selection by guidance and purpose, with bilateral -50 application."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Bronchoscopy Coding",
+        content: `Test your bronchoscopy family knowledge.`,
+        question: "A pulmonologist performs flexible bronchoscopy with bronchoalveolar lavage AND transbronchial biopsy of the right upper lobe AND right middle lobe. What is the correct code combination?",
+        options: [
+          { text: "31622 + 31624 + 31628", correct: false },
+          { text: "31624 + 31628 + 31632", correct: true },
+          { text: "31622 + 31628 x 2", correct: false },
+          { text: "31625 + 31628-50", correct: false }
+        ],
+        explanation: "**31624** covers the bronchoscopy + BAL (diagnostic bronch is bundled — never add 31622). **31628** covers transbronchial biopsy of the first lobe (RUL). **+31632** is the add-on for each additional lobe (RML). You never report 31622 alongside another code in the same family, and -50 doesn't apply because the lobes are on the same side.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">Multi-Procedure Bronch Coding</text>
+            <text x="550" y="95" fill="#888" font-size="17" text-anchor="middle">Three procedures, one session — build the code stack</text>
+            <rect x="80" y="140" width="940" height="100" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="100" y="175" fill="#0ea5e9" font-size="18" font-weight="bold">PROCEDURE 1</text>
+            <text x="100" y="210" fill="#ffffff" font-size="17">Bronchoscopy + bronchoalveolar lavage (saline wash, fluid sent to lab)</text>
+            <text x="950" y="210" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="end">31624</text>
+            <rect x="80" y="260" width="940" height="100" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="100" y="295" fill="#10b981" font-size="18" font-weight="bold">PROCEDURE 2</text>
+            <text x="100" y="330" fill="#ffffff" font-size="17">Transbronchial biopsy — Right Upper Lobe (first lobe)</text>
+            <text x="950" y="330" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="end">31628</text>
+            <rect x="80" y="380" width="940" height="100" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="100" y="415" fill="#8b5cf6" font-size="18" font-weight="bold">PROCEDURE 3</text>
+            <text x="100" y="450" fill="#ffffff" font-size="17">Transbronchial biopsy — Right Middle Lobe (additional lobe)</text>
+            <text x="950" y="450" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="end">+31632</text>
+            <line x1="80" y1="510" x2="1020" y2="510" stroke="#888" stroke-width="2"/>
+            <text x="550" y="560" fill="#ffd700" font-size="26" font-weight="bold" text-anchor="middle">FINAL CODE STACK</text>
+            <rect x="200" y="600" width="700" height="120" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="650" fill="#10b981" font-size="32" font-weight="bold" text-anchor="middle">31624 + 31628 + 31632</text>
+            <text x="550" y="690" fill="#ffffff" font-size="16" text-anchor="middle">No 31622 — diagnostic bronch is bundled</text>
+            <rect x="80" y="760" width="940" height="260" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="800" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">COMMON MISTAKES</text>
+            <text x="100" y="840" fill="#ffffff" font-size="16">X  Adding 31622 to the stack (double-billing diagnostic component)</text>
+            <text x="100" y="875" fill="#ffffff" font-size="16">X  Reporting 31628 twice instead of using +31632 add-on</text>
+            <text x="100" y="910" fill="#ffffff" font-size="16">X  Applying -50 modifier (both biopsies are on the right side)</text>
+            <text x="100" y="945" fill="#ffffff" font-size="16">X  Using 31625 for transbronchial biopsy (31625 is endobronchial only)</text>
+            <text x="100" y="985" fill="#ffd700" font-size="16">Remember: add-on codes (+31632) never need -51 modifier</text>
+          </svg>`,
+          caption: "Multi-procedure bronchoscopy code stack with common error patterns."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Workflow: Pulmonary Function + Endoscopy Day",
+        content: `**Setting**: Pulmonology clinic, busy Tuesday. Three patients in your queue.
+
+**Patient 1**: COPD f/u, **spirometry pre and post bronchodilator**. Code **94060** (the bundled pre/post code). Do NOT code 94010 + 94640 separately.
+
+**Patient 2**: Hemoptysis, urgent **flexible bronchoscopy with brushings and biopsy of left main bronchus mass**. Code stack: **31623** (brushings) + **31625** (biopsy). Path comes back as **adenocarcinoma** — link to **ICD-10 C34.32** (malignant neoplasm, left lower lobe) on the claim.
+
+**Patient 3**: Recurrent right-sided malignant pleural effusion. Physician places a **tunneled indwelling pleural catheter (PleurX) under US guidance**. Code **32550** (insertion of indwelling tunneled pleural catheter — note this is its own code, NOT 32557 which is for non-tunneled drainage catheter).
+
+**Audit-proofing tips**: Always check the operative note for **fluoroscopy** vs **ultrasound** — both count as imaging guidance for 32555. Document **lateralty** for every procedure. Link diagnosis codes specifically to each procedure line on the claim form.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">Pulmonology Clinic Day — Code Audit Worksheet</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Three patients, three workflows, three audit checkpoints</text>
+            <rect x="60" y="130" width="320" height="290" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="220" y="165" fill="#0ea5e9" font-size="20" font-weight="bold" text-anchor="middle">PATIENT 1</text>
+            <text x="220" y="190" fill="#888" font-size="14" text-anchor="middle">COPD follow-up</text>
+            <line x1="80" y1="205" x2="360" y2="205" stroke="#888" stroke-width="1"/>
+            <text x="80" y="235" fill="#ffffff" font-size="15">Spirometry pre/post</text>
+            <text x="80" y="258" fill="#ffffff" font-size="15">bronchodilator</text>
+            <text x="220" y="305" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">94060</text>
+            <text x="220" y="340" fill="#ef4444" font-size="13" text-anchor="middle">NOT 94010 + 94640</text>
+            <text x="220" y="375" fill="#888" font-size="13" text-anchor="middle">Dx: J44.9</text>
+            <text x="220" y="400" fill="#888" font-size="13" text-anchor="middle">(COPD unspecified)</text>
+            <rect x="390" y="130" width="320" height="290" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="165" fill="#10b981" font-size="20" font-weight="bold" text-anchor="middle">PATIENT 2</text>
+            <text x="550" y="190" fill="#888" font-size="14" text-anchor="middle">Hemoptysis, mass</text>
+            <line x1="410" y1="205" x2="690" y2="205" stroke="#888" stroke-width="1"/>
+            <text x="410" y="235" fill="#ffffff" font-size="15">Bronch + brushings</text>
+            <text x="410" y="258" fill="#ffffff" font-size="15">+ biopsy LL main</text>
+            <text x="550" y="305" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="middle">31623 + 31625</text>
+            <text x="550" y="340" fill="#888" font-size="13" text-anchor="middle">Path: adenocarcinoma</text>
+            <text x="550" y="375" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">Dx: C34.32</text>
+            <text x="550" y="400" fill="#888" font-size="13" text-anchor="middle">(malig neoplasm LLL)</text>
+            <rect x="720" y="130" width="320" height="290" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="880" y="165" fill="#8b5cf6" font-size="20" font-weight="bold" text-anchor="middle">PATIENT 3</text>
+            <text x="880" y="190" fill="#888" font-size="14" text-anchor="middle">Malig effusion</text>
+            <line x1="740" y1="205" x2="1020" y2="205" stroke="#888" stroke-width="1"/>
+            <text x="740" y="235" fill="#ffffff" font-size="15">Tunneled pleural</text>
+            <text x="740" y="258" fill="#ffffff" font-size="15">catheter (PleurX)</text>
+            <text x="880" y="305" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">32550</text>
+            <text x="880" y="340" fill="#ef4444" font-size="13" text-anchor="middle">NOT 32557</text>
+            <text x="880" y="375" fill="#888" font-size="13" text-anchor="middle">Dx: J91.0 + C78.2</text>
+            <text x="880" y="400" fill="#888" font-size="13" text-anchor="middle">(malig effusion + 2ndary)</text>
+            <rect x="60" y="450" width="980" height="280" fill="#ffd700" opacity="0.1" stroke="#ffd700" stroke-width="3" rx="12"/>
+            <text x="550" y="490" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">AUDIT-PROOFING CHECKLIST</text>
+            <text x="100" y="535" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="535" fill="#ffffff" font-size="17">Document imaging type (US vs fluoro vs CT)</text>
+            <text x="100" y="570" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="570" fill="#ffffff" font-size="17">Specify laterality on every procedure (right/left/bilateral)</text>
+            <text x="100" y="605" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="605" fill="#ffffff" font-size="17">Link each ICD-10 code to its specific CPT line on CMS-1500</text>
+            <text x="100" y="640" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="640" fill="#ffffff" font-size="17">Verify bronch family bundling — never report 31622 + child code</text>
+            <text x="100" y="675" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="675" fill="#ffffff" font-size="17">For bilateral procedures, use -50 modifier (not -RT + -LT)</text>
+            <text x="100" y="710" fill="#10b981" font-size="18" font-weight="bold">[#]</text>
+            <text x="140" y="710" fill="#ffffff" font-size="17">Match path report findings to dx codes within 48 hours of receipt</text>
+            <rect x="60" y="760" width="980" height="280" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="550" y="800" fill="#6366f1" font-size="22" font-weight="bold" text-anchor="middle">REIMBURSEMENT IMPACT</text>
+            <text x="100" y="840" fill="#ffffff" font-size="16">Patient 1: 94060 = ~$72 (vs. 94010+94640 unbundled denial)</text>
+            <text x="100" y="875" fill="#ffffff" font-size="16">Patient 2: 31623+31625 = ~$485 (correctly stacked, no bundling)</text>
+            <text x="100" y="910" fill="#ffffff" font-size="16">Patient 3: 32550 = ~$680 (vs. 32557 ~$310 if miscoded — $370 loss)</text>
+            <text x="550" y="970" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">One miscoded patient = full clinic visit revenue lost</text>
+            <text x="550" y="1005" fill="#888" font-size="15" text-anchor="middle">Compliance is reimbursement.</text>
+          </svg>`,
+          caption: "Clinic-day workflow showing code selection, documentation checks, and revenue impact."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-foundation-lesson-8",
+    title: "Digestive System for Coders: EGD, Colonoscopy, and the Polypectomy Code Chain",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "GI Coding: Where Volume Meets Complexity",
+        content: `Gastroenterology is the **highest-volume endoscopy specialty** in the U.S. — more than **15 million colonoscopies** are performed annually, and each one can be coded a dozen ways depending on **technique**, **screening vs diagnostic** intent, and **modifier** application. Get screening modifiers wrong and you cost the patient their **$0 preventive benefit**. Get the polyp removal **technique** wrong and you lose hundreds in reimbursement.
+
+This lesson walks the digestive tract from **mouth to anus**, mapping the **CPT code ranges** to each anatomical zone, and then drills into two procedure families that dominate outpatient GI:
+
+1. **EGD** (esophagogastroduodenoscopy) — codes **43235-43259**
+2. **Colonoscopy** — codes **45378-45398**
+
+The killer concept is **technique-specific polypectomy codes**. Removing the same polyp with a **cold biopsy forceps** vs **hot snare** vs **EMR (endoscopic mucosal resection)** changes the CPT code AND the payment by 2-3x.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">GI Tract Anatomy + CPT Code Map</text>
+            <text x="550" y="90" fill="#888" font-size="17" text-anchor="middle">Mouth to anus — every zone has its own code range</text>
+            <rect x="80" y="130" width="940" height="55" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="100" y="167" fill="#ec4899" font-size="20" font-weight="bold">MOUTH / LIPS / TONGUE</text>
+            <text x="1000" y="167" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">40490-41599</text>
+            <rect x="80" y="195" width="940" height="55" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="100" y="232" fill="#8b5cf6" font-size="20" font-weight="bold">PHARYNX / SALIVARY GLANDS</text>
+            <text x="1000" y="232" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">42000-42999</text>
+            <rect x="80" y="260" width="940" height="55" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="100" y="297" fill="#6366f1" font-size="20" font-weight="bold">ESOPHAGUS (incl EGD start)</text>
+            <text x="1000" y="297" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">43020-43289</text>
+            <rect x="80" y="325" width="940" height="55" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="100" y="362" fill="#0ea5e9" font-size="20" font-weight="bold">STOMACH</text>
+            <text x="1000" y="362" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">43500-43999</text>
+            <rect x="80" y="390" width="940" height="55" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="100" y="427" fill="#10b981" font-size="20" font-weight="bold">SMALL INTESTINE (duodenum, jejunum, ileum)</text>
+            <text x="1000" y="427" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">44005-44799</text>
+            <rect x="80" y="455" width="940" height="55" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="100" y="492" fill="#f59e0b" font-size="20" font-weight="bold">APPENDIX</text>
+            <text x="1000" y="492" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">44900-44979</text>
+            <rect x="80" y="520" width="940" height="55" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="100" y="557" fill="#ef4444" font-size="20" font-weight="bold">COLON (cecum to sigmoid)</text>
+            <text x="1000" y="557" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">44950-45399</text>
+            <rect x="80" y="585" width="940" height="55" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="100" y="622" fill="#ec4899" font-size="20" font-weight="bold">RECTUM</text>
+            <text x="1000" y="622" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">45500-45999</text>
+            <rect x="80" y="650" width="940" height="55" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="100" y="687" fill="#8b5cf6" font-size="20" font-weight="bold">ANUS</text>
+            <text x="1000" y="687" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">46020-46999</text>
+            <rect x="80" y="715" width="940" height="55" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="100" y="752" fill="#10b981" font-size="20" font-weight="bold">LIVER / BILIARY / PANCREAS</text>
+            <text x="1000" y="752" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="end">47000-48999</text>
+            <rect x="80" y="800" width="940" height="240" fill="#ffd700" opacity="0.1" stroke="#ffd700" stroke-width="3" rx="12"/>
+            <text x="550" y="840" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">TWO ENDOSCOPY FAMILIES OWN 80% OF GI CLAIMS</text>
+            <text x="280" y="890" fill="#0ea5e9" font-size="20" font-weight="bold" text-anchor="middle">EGD 43235-43259</text>
+            <text x="280" y="920" fill="#ffffff" font-size="15" text-anchor="middle">scope: mouth -> duodenum</text>
+            <text x="280" y="945" fill="#ffffff" font-size="15" text-anchor="middle">Dx: GERD, ulcers, dysphagia</text>
+            <text x="280" y="975" fill="#888" font-size="14" text-anchor="middle">avg payment ~$300-600</text>
+            <text x="820" y="890" fill="#ef4444" font-size="20" font-weight="bold" text-anchor="middle">Colonoscopy 45378-45398</text>
+            <text x="820" y="920" fill="#ffffff" font-size="15" text-anchor="middle">scope: anus -> cecum</text>
+            <text x="820" y="945" fill="#ffffff" font-size="15" text-anchor="middle">Dx: screening, polyps, IBD</text>
+            <text x="820" y="975" fill="#888" font-size="14" text-anchor="middle">avg payment ~$400-900</text>
+          </svg>`,
+          caption: "Digestive tract CPT code ranges by anatomical zone — EGD and colonoscopy dominate volume."
+        }
+      },
+      {
+        type: "concept",
+        title: "Colonoscopy Code Family + Technique-Driven Polypectomy",
+        content: `The **colonoscopy** family is built around what you **do** during the scope. The parent code is **45378** (diagnostic colonoscopy with or without specimen collection by brushing/washing). Every additional **maneuver** has its own child code — and they're **technique-specific**.
+
+**The core family**:
+- **45378** — Diagnostic colonoscopy (parent)
+- **45380** — Colonoscopy with **biopsy** (cold forceps, single or multiple)
+- **45381** — Colonoscopy with **submucosal injection** (e.g., for tattoo or lifting)
+- **45382** — Colonoscopy with **control of bleeding** (any method)
+- **45384** — Colonoscopy with **hot biopsy forceps** removal of polyp
+- **45385** — Colonoscopy with **snare** technique polypectomy
+- **45388** — Colonoscopy with **ablation** of tumor/polyp/lesion
+- **45390** — Colonoscopy with **endoscopic mucosal resection (EMR)**
+
+**Key rule**: When **different polyps** are removed by **different techniques** in the same session, **report each technique code separately** with modifier **-59** on subsequent codes. Same technique on multiple polyps = **one code only**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Colonoscopy Polypectomy: Technique = Code = Payment</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Same polyp, different tool — different CPT</text>
+            <rect x="350" y="120" width="400" height="80" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="155" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">CPT 45378</text>
+            <text x="550" y="185" fill="#ffffff" font-size="15" text-anchor="middle">Diagnostic colonoscopy (PARENT)</text>
+            <line x1="200" y1="240" x2="200" y2="275" stroke="#888" stroke-width="2"/>
+            <line x1="425" y1="240" x2="425" y2="275" stroke="#888" stroke-width="2"/>
+            <line x1="675" y1="240" x2="675" y2="275" stroke="#888" stroke-width="2"/>
+            <line x1="900" y1="240" x2="900" y2="275" stroke="#888" stroke-width="2"/>
+            <line x1="200" y1="240" x2="900" y2="240" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="200" x2="550" y2="240" stroke="#888" stroke-width="2"/>
+            <rect x="80" y="275" width="240" height="220" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="200" y="310" fill="#0ea5e9" font-size="24" font-weight="bold" text-anchor="middle">45380</text>
+            <text x="200" y="345" fill="#ffffff" font-size="17" font-weight="bold" text-anchor="middle">COLD BIOPSY</text>
+            <text x="200" y="375" fill="#ffffff" font-size="14" text-anchor="middle">forceps grab tissue</text>
+            <text x="200" y="395" fill="#ffffff" font-size="14" text-anchor="middle">no cautery</text>
+            <text x="200" y="430" fill="#888" font-size="13" text-anchor="middle">smallest polyps</text>
+            <text x="200" y="450" fill="#888" font-size="13" text-anchor="middle">(less than 5 mm)</text>
+            <text x="200" y="480" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">~$430</text>
+            <rect x="335" y="275" width="220" height="220" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="445" y="310" fill="#10b981" font-size="24" font-weight="bold" text-anchor="middle">45384</text>
+            <text x="445" y="345" fill="#ffffff" font-size="17" font-weight="bold" text-anchor="middle">HOT BIOPSY</text>
+            <text x="445" y="375" fill="#ffffff" font-size="14" text-anchor="middle">forceps + cautery</text>
+            <text x="445" y="395" fill="#ffffff" font-size="14" text-anchor="middle">burn the base</text>
+            <text x="445" y="430" fill="#888" font-size="13" text-anchor="middle">5-8 mm polyps</text>
+            <text x="445" y="450" fill="#888" font-size="13" text-anchor="middle">cauterizes bleed</text>
+            <text x="445" y="480" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">~$510</text>
+            <rect x="570" y="275" width="220" height="220" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="680" y="310" fill="#8b5cf6" font-size="24" font-weight="bold" text-anchor="middle">45385</text>
+            <text x="680" y="345" fill="#ffffff" font-size="17" font-weight="bold" text-anchor="middle">SNARE</text>
+            <text x="680" y="375" fill="#ffffff" font-size="14" text-anchor="middle">wire loop lassos</text>
+            <text x="680" y="395" fill="#ffffff" font-size="14" text-anchor="middle">polyp + cuts</text>
+            <text x="680" y="430" fill="#888" font-size="13" text-anchor="middle">large pedunculated</text>
+            <text x="680" y="450" fill="#888" font-size="13" text-anchor="middle">8mm+ polyps</text>
+            <text x="680" y="480" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">~$595</text>
+            <rect x="805" y="275" width="215" height="220" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="912" y="310" fill="#ec4899" font-size="24" font-weight="bold" text-anchor="middle">45390</text>
+            <text x="912" y="345" fill="#ffffff" font-size="17" font-weight="bold" text-anchor="middle">EMR</text>
+            <text x="912" y="375" fill="#ffffff" font-size="14" text-anchor="middle">inject + lift +</text>
+            <text x="912" y="395" fill="#ffffff" font-size="14" text-anchor="middle">resect mucosa</text>
+            <text x="912" y="430" fill="#888" font-size="13" text-anchor="middle">flat/sessile lesions</text>
+            <text x="912" y="450" fill="#888" font-size="13" text-anchor="middle">20mm+</text>
+            <text x="912" y="480" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">~$895</text>
+            <rect x="80" y="540" width="940" height="180" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="550" y="580" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">DIFFERENT TECHNIQUES, SAME SESSION</text>
+            <text x="100" y="620" fill="#ffffff" font-size="16">Snare polyp in cecum + cold biopsy in sigmoid =</text>
+            <text x="100" y="655" fill="#ffd700" font-size="20" font-weight="bold">45385 + 45380-59</text>
+            <text x="100" y="690" fill="#888" font-size="15">Modifier -59 = distinct procedural service (different lesion)</text>
+            <rect x="80" y="740" width="940" height="300" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="780" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">SAME TECHNIQUE, MULTIPLE POLYPS</text>
+            <text x="100" y="820" fill="#ffffff" font-size="16">Three snare polypectomies in same colonoscopy =</text>
+            <text x="100" y="855" fill="#ffd700" font-size="20" font-weight="bold">45385 (ONE code, NOT x3)</text>
+            <text x="100" y="900" fill="#ffffff" font-size="16">CPT defines technique-based codes per session, not per lesion.</text>
+            <text x="100" y="935" fill="#ffffff" font-size="16">Reporting 45385 x 3 triggers automatic denial.</text>
+            <text x="100" y="985" fill="#ffd700" font-size="16">Exception: EMR (45390) can be reported once per lesion area</text>
+            <text x="100" y="1015" fill="#888" font-size="14">if separately documented and anatomically distinct.</text>
+          </svg>`,
+          caption: "Polypectomy technique determines CPT code and reimbursement — not the number of polyps."
+        }
+      },
+      {
+        type: "example",
+        title: "Screening vs Diagnostic + The Modifier -33 / -PT Decision",
+        content: `**Screening colonoscopy** under the **ACA** is a **$0 patient cost** preventive service — but only when properly coded. The patient brings **NO symptoms** and is **average risk** (age 45-75, no prior polyps, no family history).
+
+**Screening codes**:
+- **G0121** — Screening colonoscopy, **average risk** (Medicare)
+- **G0105** — Screening colonoscopy, **high risk** (Medicare; family hx, IBD)
+- **45378** — Commercial payers use 45378 + screening dx **Z12.11**
+
+**The modifier flip when a polyp is found**:
+1. Patient comes in for screening (G0121 planned)
+2. Polyp found and removed via snare
+3. Code becomes **45385** with modifier **-PT** (Medicare) or **-33** (commercial)
+4. Modifier **-PT** = "colorectal cancer screening test converted to diagnostic"
+5. Modifier **-33** = "preventive service" (ACA-protected, patient still owes $0)
+
+Without these modifiers, the patient gets a **surprise bill** for the polypectomy. With them, the **preventive benefit is preserved**. The dx code is **Z12.11** **first**, then the polyp finding (e.g., **K63.5** for colon polyp).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Screening vs Diagnostic Colonoscopy</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">The -PT / -33 modifier preserves the $0 patient benefit</text>
+            <rect x="60" y="120" width="450" height="380" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="285" y="160" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">SCREENING (no symptoms)</text>
+            <line x1="80" y1="180" x2="490" y2="180" stroke="#888" stroke-width="1"/>
+            <text x="80" y="215" fill="#ffffff" font-size="16" font-weight="bold">Patient profile:</text>
+            <text x="80" y="245" fill="#ffffff" font-size="15">- Age 45-75 (USPSTF 2021)</text>
+            <text x="80" y="270" fill="#ffffff" font-size="15">- No GI symptoms</text>
+            <text x="80" y="295" fill="#ffffff" font-size="15">- No prior polyps</text>
+            <text x="80" y="320" fill="#ffffff" font-size="15">- No family history</text>
+            <text x="80" y="365" fill="#ffd700" font-size="16" font-weight="bold">Codes:</text>
+            <text x="80" y="395" fill="#ffd700" font-size="18" font-weight="bold">G0121</text>
+            <text x="160" y="395" fill="#ffffff" font-size="14">Medicare avg risk</text>
+            <text x="80" y="425" fill="#ffd700" font-size="18" font-weight="bold">G0105</text>
+            <text x="160" y="425" fill="#ffffff" font-size="14">Medicare high risk</text>
+            <text x="80" y="455" fill="#ffd700" font-size="18" font-weight="bold">45378 + Z12.11</text>
+            <text x="80" y="480" fill="#ffffff" font-size="14">Commercial payers</text>
+            <rect x="540" y="120" width="500" height="380" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="790" y="160" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">DIAGNOSTIC (has symptoms)</text>
+            <line x1="560" y1="180" x2="1020" y2="180" stroke="#888" stroke-width="1"/>
+            <text x="560" y="215" fill="#ffffff" font-size="16" font-weight="bold">Patient profile:</text>
+            <text x="560" y="245" fill="#ffffff" font-size="15">- Rectal bleeding, anemia</text>
+            <text x="560" y="270" fill="#ffffff" font-size="15">- Change in bowel habits</text>
+            <text x="560" y="295" fill="#ffffff" font-size="15">- Abdominal pain</text>
+            <text x="560" y="320" fill="#ffffff" font-size="15">- Surveillance after polyps</text>
+            <text x="560" y="365" fill="#ffd700" font-size="16" font-weight="bold">Codes:</text>
+            <text x="560" y="395" fill="#ffd700" font-size="18" font-weight="bold">45378</text>
+            <text x="640" y="395" fill="#ffffff" font-size="14">+ symptom dx code</text>
+            <text x="560" y="425" fill="#ffffff" font-size="14">Patient owes deductible/coinsurance</text>
+            <text x="560" y="455" fill="#ffffff" font-size="14">No -PT or -33 modifier needed</text>
+            <text x="560" y="480" fill="#888" font-size="13">Surveillance: Z86.010 (hx polyps)</text>
+            <rect x="60" y="530" width="980" height="240" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="12"/>
+            <text x="550" y="570" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">THE FLIP: Screening converts to Therapeutic</text>
+            <text x="100" y="610" fill="#ffffff" font-size="16">Started as screening. Found a polyp. Removed it via snare.</text>
+            <text x="100" y="650" fill="#10b981" font-size="20" font-weight="bold">Medicare:  45385-PT</text>
+            <text x="100" y="685" fill="#10b981" font-size="20" font-weight="bold">Commercial:  45385-33</text>
+            <text x="100" y="720" fill="#ffffff" font-size="15">Both modifiers say: "this WAS preventive — preserve $0 benefit"</text>
+            <text x="100" y="750" fill="#ef4444" font-size="15">Forget the modifier = patient gets surprise bill = compliance issue</text>
+            <rect x="60" y="800" width="980" height="240" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="840" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">DIAGNOSIS CODE ORDER</text>
+            <text x="100" y="880" fill="#ffd700" font-size="18" font-weight="bold">1st:  Z12.11</text>
+            <text x="280" y="880" fill="#ffffff" font-size="16">Encounter for screening for malignant neoplasm of colon</text>
+            <text x="100" y="915" fill="#ffd700" font-size="18" font-weight="bold">2nd:  K63.5</text>
+            <text x="280" y="915" fill="#ffffff" font-size="16">Polyp of colon  (or specific finding)</text>
+            <text x="100" y="950" fill="#ffd700" font-size="18" font-weight="bold">3rd:  K57.30</text>
+            <text x="280" y="950" fill="#ffffff" font-size="16">Diverticulosis (if also found)</text>
+            <text x="550" y="1010" fill="#888" font-size="15" text-anchor="middle">Screening dx code Z12.11 ALWAYS comes first to preserve preventive billing.</text>
+          </svg>`,
+          caption: "Screening vs diagnostic decision tree with -PT / -33 modifier rules and dx code ordering."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Colonoscopy + Polypectomy",
+        content: `Test your polypectomy coding logic.`,
+        question: "A commercially insured 52-year-old patient presents for screening colonoscopy (no symptoms, no family history). The physician finds and removes TWO polyps: one in the cecum using SNARE technique and one in the sigmoid using COLD BIOPSY FORCEPS. What is the correct code set?",
+        options: [
+          { text: "G0121 only", correct: false },
+          { text: "45385-33 + 45380-59", correct: true },
+          { text: "45378-33 + 45385 + 45380", correct: false },
+          { text: "45385 x 2 + 45380-PT", correct: false }
+        ],
+        explanation: "When a screening colonoscopy converts to therapeutic, you code the **highest-level intervention** with modifier **-33** (commercial payer preserves the preventive benefit). **45385** for the snare polypectomy gets the **-33**. The cold biopsy forceps polypectomy in a different location requires **45380** with modifier **-59** (distinct procedural service). G0121 is Medicare-only. You never bill 45378 alongside child codes from the same family. The patient's $0 ACA preventive benefit is preserved.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Multi-Technique Screening Colonoscopy</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Build the code stack step-by-step</text>
+            <rect x="80" y="130" width="940" height="120" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="100" y="170" fill="#0ea5e9" font-size="20" font-weight="bold">PATIENT</text>
+            <text x="100" y="205" fill="#ffffff" font-size="16">52 y/o, commercial insurance, screening exam</text>
+            <text x="100" y="232" fill="#ffffff" font-size="16">No symptoms, no family hx — START as G0121-equivalent (commercial = 45378)</text>
+            <rect x="80" y="270" width="450" height="180" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="305" y="310" fill="#8b5cf6" font-size="20" font-weight="bold" text-anchor="middle">FINDING 1 — Cecum</text>
+            <text x="305" y="345" fill="#ffffff" font-size="16" text-anchor="middle">Sessile polyp, snare removal</text>
+            <text x="305" y="395" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">45385-33</text>
+            <text x="305" y="425" fill="#888" font-size="14" text-anchor="middle">snare + preventive modifier</text>
+            <rect x="570" y="270" width="450" height="180" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="795" y="310" fill="#10b981" font-size="20" font-weight="bold" text-anchor="middle">FINDING 2 — Sigmoid</text>
+            <text x="795" y="345" fill="#ffffff" font-size="16" text-anchor="middle">3mm polyp, cold biopsy forceps</text>
+            <text x="795" y="395" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">45380-59</text>
+            <text x="795" y="425" fill="#888" font-size="14" text-anchor="middle">distinct lesion, diff technique</text>
+            <line x1="80" y1="490" x2="1020" y2="490" stroke="#888" stroke-width="2"/>
+            <text x="550" y="540" fill="#ffd700" font-size="26" font-weight="bold" text-anchor="middle">FINAL CODE STACK</text>
+            <rect x="200" y="580" width="700" height="130" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="635" fill="#10b981" font-size="32" font-weight="bold" text-anchor="middle">45385-33 + 45380-59</text>
+            <text x="550" y="680" fill="#ffffff" font-size="16" text-anchor="middle">Dx: Z12.11 + K63.5</text>
+            <rect x="80" y="740" width="940" height="280" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="780" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">WHY THE OTHER OPTIONS FAIL</text>
+            <text x="100" y="820" fill="#ffffff" font-size="15">X  G0121 only: misses both polypectomies AND G0121 is Medicare-only</text>
+            <text x="100" y="855" fill="#ffffff" font-size="15">X  45378-33 + 45385 + 45380: 45378 is bundled into child codes</text>
+            <text x="100" y="890" fill="#ffffff" font-size="15">X  45385 x 2 + 45380-PT: -PT is Medicare; one snare code covers all snares</text>
+            <text x="100" y="935" fill="#ffd700" font-size="16">RULE: Highest-level code gets the preventive modifier (-33 or -PT)</text>
+            <text x="100" y="970" fill="#ffd700" font-size="16">Subsequent distinct-technique codes get -59</text>
+            <text x="100" y="1005" fill="#ffd700" font-size="16">Same technique on multiple polyps = ONE code only</text>
+          </svg>`,
+          caption: "Building the multi-technique screening colonoscopy code stack with correct modifiers."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Workflow: GI Clinic Code Validation Sheet",
+        content: `**Your role**: Coder at a 4-physician GI practice. You review 30+ endoscopy reports daily. Build a **mental validation checklist** for every case.
+
+**Step 1 — Read the indication line first**. "Screening" alone means **Z12.11** lead dx. Any symptom word (bleeding, pain, anemia) flips it to diagnostic — no -33 / -PT modifier.
+
+**Step 2 — Scan the findings section for technique words**. Look for: forceps, snare, cautery, EMR, injection, clip. Each maps to a specific CPT.
+
+**Step 3 — Count distinct lesions vs distinct techniques**. Three polyps removed by snare = **45385 once**. Two polyps with snare + one with cold forceps = **45385 + 45380-59**.
+
+**Step 4 — Check moderate sedation**. If the GI doc administered sedation with an independent observer, you may report **99152 + 99153** add-ons (rarely — most GI sedation is by anesthesia separately).
+
+**Step 5 — Match path report to claim within 48 hours**. If pathology shows **adenoma with high-grade dysplasia**, update dx from K63.5 to **D12.x** (carcinoma in situ) — major reimbursement and surveillance interval impact.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">GI Coder Validation Workflow</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">5-step checklist for every endoscopy report</text>
+            <rect x="60" y="120" width="980" height="120" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="80" y="155" fill="#0ea5e9" font-size="22" font-weight="bold">STEP 1 — INDICATION LINE</text>
+            <text x="80" y="190" fill="#ffffff" font-size="16">Read "Indication for procedure" FIRST. Screening = Z12.11.</text>
+            <text x="80" y="215" fill="#ffffff" font-size="16">Symptom words (bleed, anemia, pain) = diagnostic, NO -33/-PT.</text>
+            <rect x="60" y="260" width="980" height="120" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="80" y="295" fill="#10b981" font-size="22" font-weight="bold">STEP 2 — TECHNIQUE SCAN</text>
+            <text x="80" y="330" fill="#ffffff" font-size="16">Findings section: forceps (45380), hot forceps (45384),</text>
+            <text x="80" y="355" fill="#ffffff" font-size="16">snare (45385), EMR (45390), injection (45381), clip (45382)</text>
+            <rect x="60" y="400" width="980" height="120" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="80" y="435" fill="#8b5cf6" font-size="22" font-weight="bold">STEP 3 — COUNT LESIONS vs TECHNIQUES</text>
+            <text x="80" y="470" fill="#ffffff" font-size="16">Same technique on N polyps = ONE code. Different techniques = -59.</text>
+            <text x="80" y="495" fill="#ef4444" font-size="15">Trap: don't list 45385 x 3 — automatic denial.</text>
+            <rect x="60" y="540" width="980" height="120" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="80" y="575" fill="#f59e0b" font-size="22" font-weight="bold">STEP 4 — MODERATE SEDATION</text>
+            <text x="80" y="610" fill="#ffffff" font-size="16">99152 + 99153 only if GI doc gave sedation with independent observer.</text>
+            <text x="80" y="635" fill="#ffffff" font-size="16">Most cases: anesthesia bills separately — don't double-bill.</text>
+            <rect x="60" y="680" width="980" height="160" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="80" y="715" fill="#ec4899" font-size="22" font-weight="bold">STEP 5 — PATH RECONCILIATION (48 hrs)</text>
+            <text x="80" y="750" fill="#ffffff" font-size="16">Path: hyperplastic polyp -> stay K63.5</text>
+            <text x="80" y="775" fill="#ffffff" font-size="16">Path: tubular adenoma -> stay K63.5</text>
+            <text x="80" y="800" fill="#ffffff" font-size="16">Path: high-grade dysplasia -> change to D12.x</text>
+            <text x="80" y="825" fill="#ffd700" font-size="15">Surveillance interval (3 vs 10 yrs) depends on this dx</text>
+            <rect x="60" y="860" width="980" height="180" fill="#ffd700" opacity="0.1" stroke="#ffd700" stroke-width="3" rx="12"/>
+            <text x="550" y="900" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">REVENUE + COMPLIANCE IMPACT</text>
+            <text x="100" y="940" fill="#ffffff" font-size="16">- Missed -33 modifier = patient gets ~$1,200 surprise bill = complaint</text>
+            <text x="100" y="970" fill="#ffffff" font-size="16">- Unbundling 45378 with 45385 = automatic denial = rework $$</text>
+            <text x="100" y="1000" fill="#ffffff" font-size="16">- Snare miscoded as cold biopsy = ~$165 lost per case</text>
+            <text x="100" y="1030" fill="#ffd700" font-size="15">30 cases/day x $165 = $4,950 lost daily on a single error type</text>
+          </svg>`,
+          caption: "Five-step GI coder validation workflow with revenue and compliance impact."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-foundation-lesson-9",
+    title: "Endocrine System Quick Reference: Glands, Hormones, and the Diabetes Coding Maze",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Endocrine Coding Lives or Dies on Specificity",
+        content: `The **endocrine system** is small in code volume but **massive in complexity**. Why? Because **diabetes mellitus** alone has **six families of codes (E08-E13)** with dozens of fourth, fifth, and sixth character extensions for **complications**. A single charted phrase — "diabetic with neuropathy and stage 3 CKD" — turns into **three linked dx codes** if you do it right.
+
+The endocrine system is built around **eight major glands** that release **hormones** into the bloodstream:
+
+- **Pituitary** (master gland) — GH, TSH, ACTH, FSH, LH, prolactin, ADH, oxytocin
+- **Thyroid** — T3, T4, calcitonin
+- **Parathyroid** — PTH
+- **Adrenal** — cortisol, aldosterone, epinephrine
+- **Pancreas (islets)** — insulin, glucagon
+- **Gonads** — estrogen, progesterone, testosterone
+- **Pineal** — melatonin
+- **Thymus** — thymosin
+
+For coders, the high-value targets are **thyroid procedures (60000-60699)**, **adrenalectomy (60540-60545)**, and the **E08-E13 diabetes code families** with their **rich complication trees**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Endocrine Glands + Primary Hormones</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Eight glands, dozens of hormones, billions in healthcare cost</text>
+            <rect x="60" y="130" width="320" height="200" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="220" y="170" fill="#8b5cf6" font-size="22" font-weight="bold" text-anchor="middle">PITUITARY</text>
+            <text x="220" y="195" fill="#888" font-size="14" text-anchor="middle">"master gland" — base of brain</text>
+            <line x1="80" y1="210" x2="360" y2="210" stroke="#888" stroke-width="1"/>
+            <text x="80" y="240" fill="#ffffff" font-size="14">GH, TSH, ACTH, FSH</text>
+            <text x="80" y="265" fill="#ffffff" font-size="14">LH, prolactin</text>
+            <text x="80" y="290" fill="#ffffff" font-size="14">ADH, oxytocin (post)</text>
+            <text x="80" y="320" fill="#ffd700" font-size="13">Dx: E22-E23</text>
+            <rect x="390" y="130" width="320" height="200" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="170" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">THYROID</text>
+            <text x="550" y="195" fill="#888" font-size="14" text-anchor="middle">butterfly, anterior neck</text>
+            <line x1="410" y1="210" x2="690" y2="210" stroke="#888" stroke-width="1"/>
+            <text x="410" y="240" fill="#ffffff" font-size="14">T3 (triiodothyronine)</text>
+            <text x="410" y="265" fill="#ffffff" font-size="14">T4 (thyroxine) — metabolism</text>
+            <text x="410" y="290" fill="#ffffff" font-size="14">Calcitonin — Ca regulation</text>
+            <text x="410" y="320" fill="#ffd700" font-size="13">Dx: E00-E07  CPT: 60100-60281</text>
+            <rect x="720" y="130" width="320" height="200" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="880" y="170" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">PARATHYROID</text>
+            <text x="880" y="195" fill="#888" font-size="14" text-anchor="middle">4 small glands behind thyroid</text>
+            <line x1="740" y1="210" x2="1020" y2="210" stroke="#888" stroke-width="1"/>
+            <text x="740" y="240" fill="#ffffff" font-size="14">PTH (parathyroid hormone)</text>
+            <text x="740" y="265" fill="#ffffff" font-size="14">Raises blood calcium</text>
+            <text x="740" y="290" fill="#ffffff" font-size="14">Antagonist to calcitonin</text>
+            <text x="740" y="320" fill="#ffd700" font-size="13">Dx: E20-E21  CPT: 60500-60505</text>
+            <rect x="60" y="350" width="320" height="200" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="220" y="390" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">ADRENAL</text>
+            <text x="220" y="415" fill="#888" font-size="14" text-anchor="middle">caps on top of kidneys</text>
+            <line x1="80" y1="430" x2="360" y2="430" stroke="#888" stroke-width="1"/>
+            <text x="80" y="460" fill="#ffffff" font-size="14">Cortisol (stress, glucose)</text>
+            <text x="80" y="485" fill="#ffffff" font-size="14">Aldosterone (Na/K)</text>
+            <text x="80" y="510" fill="#ffffff" font-size="14">Epi/norepi (medulla)</text>
+            <text x="80" y="540" fill="#ffd700" font-size="13">Dx: E24-E27  CPT: 60540-60545</text>
+            <rect x="390" y="350" width="320" height="200" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="390" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">PANCREAS (islets)</text>
+            <text x="550" y="415" fill="#888" font-size="14" text-anchor="middle">behind stomach</text>
+            <line x1="410" y1="430" x2="690" y2="430" stroke="#888" stroke-width="1"/>
+            <text x="410" y="460" fill="#ffffff" font-size="14">Insulin (beta cells)</text>
+            <text x="410" y="485" fill="#ffffff" font-size="14">Glucagon (alpha cells)</text>
+            <text x="410" y="510" fill="#ffffff" font-size="14">Somatostatin (delta)</text>
+            <text x="410" y="540" fill="#ffd700" font-size="13">Dx: E08-E13 (diabetes)</text>
+            <rect x="720" y="350" width="320" height="200" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="880" y="390" fill="#ec4899" font-size="22" font-weight="bold" text-anchor="middle">GONADS</text>
+            <text x="880" y="415" fill="#888" font-size="14" text-anchor="middle">ovaries / testes</text>
+            <line x1="740" y1="430" x2="1020" y2="430" stroke="#888" stroke-width="1"/>
+            <text x="740" y="460" fill="#ffffff" font-size="14">Estrogen, progesterone</text>
+            <text x="740" y="485" fill="#ffffff" font-size="14">Testosterone</text>
+            <text x="740" y="510" fill="#ffffff" font-size="14">Inhibin</text>
+            <text x="740" y="540" fill="#ffd700" font-size="13">Dx: E28-E30</text>
+            <rect x="60" y="570" width="490" height="180" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="305" y="610" fill="#6366f1" font-size="22" font-weight="bold" text-anchor="middle">PINEAL</text>
+            <text x="305" y="635" fill="#888" font-size="14" text-anchor="middle">pinecone in brain</text>
+            <line x1="80" y1="650" x2="530" y2="650" stroke="#888" stroke-width="1"/>
+            <text x="80" y="680" fill="#ffffff" font-size="14">Melatonin — circadian rhythm</text>
+            <text x="80" y="710" fill="#ffffff" font-size="14">Responds to light/dark cycles</text>
+            <text x="80" y="735" fill="#ffd700" font-size="13">Rarely coded — research/sleep</text>
+            <rect x="560" y="570" width="480" height="180" fill="#ffd700" opacity="0.18" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="800" y="610" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">THYMUS</text>
+            <text x="800" y="635" fill="#888" font-size="14" text-anchor="middle">chest, above heart</text>
+            <line x1="580" y1="650" x2="1020" y2="650" stroke="#888" stroke-width="1"/>
+            <text x="580" y="680" fill="#ffffff" font-size="14">Thymosin — T-cell maturation</text>
+            <text x="580" y="710" fill="#ffffff" font-size="14">Atrophies after puberty</text>
+            <text x="580" y="735" fill="#ffd700" font-size="13">CPT 60520-60522 (thymectomy)</text>
+            <rect x="60" y="780" width="980" height="260" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="550" y="820" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">HIGH-VALUE CODING TARGETS</text>
+            <text x="100" y="860" fill="#ffffff" font-size="16">- Thyroid procedures (60000-60699) — high volume, biopsy + thyroidectomy</text>
+            <text x="100" y="895" fill="#ffffff" font-size="16">- Diabetes (E08-E13) — every primary care + endocrine encounter</text>
+            <text x="100" y="930" fill="#ffffff" font-size="16">- Lab panels — TSH, free T4, HbA1c (most-ordered endocrine labs)</text>
+            <text x="100" y="965" fill="#ffffff" font-size="16">- Adrenalectomy (60540-60545) — open vs laparoscopic split</text>
+            <text x="100" y="1000" fill="#ffd700" font-size="16">Diabetes alone drives ~25% of all ICD-10 lookups in coder workflows.</text>
+          </svg>`,
+          caption: "Eight major endocrine glands mapped to their hormones, dx ranges, and CPT codes."
+        }
+      },
+      {
+        type: "concept",
+        title: "Thyroidectomy Code Family (60210-60271) + Lateralty",
+        content: `Thyroid procedures split by **extent of removal**, **approach** (open vs transcervical), and whether **lymph nodes** are taken along with the gland.
+
+**The core thyroid CPT family**:
+- **60100** — **Biopsy** of thyroid, percutaneous core needle
+- **60200** — **Excision** of cyst or adenoma, or transection of isthmus
+- **60210** — **Partial thyroid lobectomy**, unilateral, with or without isthmusectomy
+- **60212** — Partial lobectomy + **contralateral subtotal lobectomy**
+- **60220** — **Total thyroid lobectomy**, unilateral
+- **60225** — Total lobectomy + contralateral subtotal
+- **60240** — **Total thyroidectomy**
+- **60252** — Total thyroidectomy + **limited neck dissection** (cancer)
+- **60254** — Total thyroidectomy + **radical neck dissection**
+- **60260** — **Completion thyroidectomy** (second-stage removal after prior partial)
+- **60270/60271** — Thyroidectomy via **substernal** approach (cervical / transthoracic)
+
+**Coding traps**:
+1. **Hemithyroidectomy** = total lobectomy of one lobe = **60220**, NOT 60240
+2. **Total thyroidectomy** = remove **both** lobes + isthmus = **60240**
+3. Lobectomy is **inherently unilateral** — modifier **-50** does NOT apply because 60240 already covers bilateral`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Thyroidectomy Code Selection Map</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Extent of removal drives the code — not the approach</text>
+            <rect x="60" y="120" width="980" height="100" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="80" y="155" fill="#0ea5e9" font-size="20" font-weight="bold">DIAGNOSTIC</text>
+            <text x="80" y="190" fill="#ffffff" font-size="16">60100</text>
+            <text x="170" y="190" fill="#ffffff" font-size="15">Percutaneous core needle biopsy (FNA is 10005-10012)</text>
+            <text x="980" y="190" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$130</text>
+            <rect x="60" y="240" width="980" height="100" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="80" y="275" fill="#10b981" font-size="20" font-weight="bold">PARTIAL</text>
+            <text x="80" y="310" fill="#ffffff" font-size="16">60210</text>
+            <text x="170" y="310" fill="#ffffff" font-size="15">Partial lobectomy, unilateral (cyst/nodule removal, gland preserved)</text>
+            <text x="980" y="310" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$680</text>
+            <rect x="60" y="360" width="980" height="100" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="80" y="395" fill="#8b5cf6" font-size="20" font-weight="bold">HEMI / TOTAL LOBE</text>
+            <text x="80" y="430" fill="#ffffff" font-size="16">60220</text>
+            <text x="170" y="430" fill="#ffffff" font-size="15">Total lobectomy, unilateral = "hemithyroidectomy" (one whole lobe)</text>
+            <text x="980" y="430" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$890</text>
+            <rect x="60" y="480" width="980" height="100" fill="#ffd700" opacity="0.18" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="80" y="515" fill="#ffd700" font-size="20" font-weight="bold">TOTAL THYROIDECTOMY</text>
+            <text x="80" y="550" fill="#ffffff" font-size="16">60240</text>
+            <text x="170" y="550" fill="#ffffff" font-size="15">Remove BOTH lobes + isthmus — no -50 modifier (bilateral built in)</text>
+            <text x="980" y="550" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$1,160</text>
+            <rect x="60" y="600" width="980" height="100" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="80" y="635" fill="#ef4444" font-size="20" font-weight="bold">TOTAL + LIMITED NECK</text>
+            <text x="80" y="670" fill="#ffffff" font-size="16">60252</text>
+            <text x="170" y="670" fill="#ffffff" font-size="15">Total thyroidectomy + limited LN dissection (cancer extension)</text>
+            <text x="980" y="670" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$1,440</text>
+            <rect x="60" y="720" width="980" height="100" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="80" y="755" fill="#ec4899" font-size="20" font-weight="bold">TOTAL + RADICAL NECK</text>
+            <text x="80" y="790" fill="#ffffff" font-size="16">60254</text>
+            <text x="170" y="790" fill="#ffffff" font-size="15">Total + radical neck dissection (advanced thyroid CA, en bloc)</text>
+            <text x="980" y="790" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="end">$1,820</text>
+            <rect x="60" y="840" width="980" height="200" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="550" y="880" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">COMMON CODING TRAPS</text>
+            <text x="100" y="920" fill="#ffffff" font-size="16">- "Hemithyroidectomy" = 60220 (NOT 60240). Patient keeps one lobe.</text>
+            <text x="100" y="955" fill="#ffffff" font-size="16">- 60240 already bilateral — DO NOT add -50 modifier.</text>
+            <text x="100" y="990" fill="#ffffff" font-size="16">- Completion thyroidectomy after prior partial = 60260 (NOT 60240).</text>
+            <text x="100" y="1025" fill="#ffd700" font-size="15">- Cancer dx (C73) often requires linking 60252 or 60254 to specific path findings.</text>
+          </svg>`,
+          caption: "Thyroidectomy code family from biopsy to radical neck dissection with payment scale."
+        }
+      },
+      {
+        type: "example",
+        title: "The Diabetes Code Maze: E08-E13 Decoded",
+        content: `**Diabetes coding** is the most-tested topic on the CPC exam — because it's the most-encountered chronic disease in U.S. healthcare. ICD-10-CM provides **six families**:
+
+- **E08** — Diabetes due to **underlying condition** (e.g., cystic fibrosis, pancreatitis)
+- **E09** — **Drug or chemical-induced** diabetes (e.g., steroid-induced)
+- **E10** — **Type 1 diabetes** (autoimmune, insulin-dependent from onset)
+- **E11** — **Type 2 diabetes** (most common; insulin resistance)
+- **E13** — **Other specified** diabetes (MODY, pancreatogenic, post-transplant)
+- **O24** — Diabetes in **pregnancy** (gestational + pre-existing)
+
+**Fourth character = complication body system**:
+- **.0** ketoacidosis  |  **.1** hyperosmolarity  |  **.2** kidney  |  **.3** ophthalmic  |  **.4** neurologic  |  **.5** circulatory  |  **.6** other specified  |  **.8** unspecified complications  |  **.9** without complications
+
+**Fifth/sixth characters** add specificity. Example: **E11.42** = Type 2 DM with **diabetic polyneuropathy**.
+
+**Code-first rule**: For E08 and E09, code the **underlying condition FIRST** (e.g., K86.81 chronic pancreatitis, then E08.9). For E10/E11/E13, the diabetes code comes first. Always code **all manifestations** present — never just **.9** if complications exist.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Diabetes ICD-10-CM Code Tree (E08-E13)</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Pick the family, add the complication character</text>
+            <rect x="60" y="120" width="155" height="200" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="137" y="155" fill="#8b5cf6" font-size="22" font-weight="bold" text-anchor="middle">E08</text>
+            <text x="137" y="180" fill="#ffffff" font-size="13" text-anchor="middle">due to</text>
+            <text x="137" y="200" fill="#ffffff" font-size="13" text-anchor="middle">underlying</text>
+            <text x="137" y="220" fill="#ffffff" font-size="13" text-anchor="middle">condition</text>
+            <text x="137" y="260" fill="#888" font-size="12" text-anchor="middle">CF, pancreatitis</text>
+            <text x="137" y="295" fill="#ffd700" font-size="12" text-anchor="middle">Code underlying 1st</text>
+            <rect x="225" y="120" width="155" height="200" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+            <text x="302" y="155" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">E09</text>
+            <text x="302" y="180" fill="#ffffff" font-size="13" text-anchor="middle">drug or</text>
+            <text x="302" y="200" fill="#ffffff" font-size="13" text-anchor="middle">chemical</text>
+            <text x="302" y="220" fill="#ffffff" font-size="13" text-anchor="middle">induced</text>
+            <text x="302" y="260" fill="#888" font-size="12" text-anchor="middle">steroid-induced</text>
+            <text x="302" y="295" fill="#ffd700" font-size="12" text-anchor="middle">+ T36-T50 drug code</text>
+            <rect x="390" y="120" width="155" height="200" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="467" y="155" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">E10</text>
+            <text x="467" y="180" fill="#ffffff" font-size="13" text-anchor="middle">TYPE 1</text>
+            <text x="467" y="200" fill="#ffffff" font-size="13" text-anchor="middle">autoimmune</text>
+            <text x="467" y="220" fill="#ffffff" font-size="13" text-anchor="middle">DM</text>
+            <text x="467" y="260" fill="#888" font-size="12" text-anchor="middle">insulin required</text>
+            <text x="467" y="295" fill="#ffd700" font-size="12" text-anchor="middle">since onset</text>
+            <rect x="555" y="120" width="155" height="200" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="8"/>
+            <text x="632" y="155" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">E11</text>
+            <text x="632" y="180" fill="#ffffff" font-size="13" text-anchor="middle">TYPE 2</text>
+            <text x="632" y="200" fill="#ffffff" font-size="13" text-anchor="middle">most common</text>
+            <text x="632" y="220" fill="#ffffff" font-size="13" text-anchor="middle">DM</text>
+            <text x="632" y="260" fill="#888" font-size="12" text-anchor="middle">~95% of cases</text>
+            <text x="632" y="295" fill="#ffd700" font-size="12" text-anchor="middle">+ Z79.4 if on insulin</text>
+            <rect x="720" y="120" width="155" height="200" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="797" y="155" fill="#ec4899" font-size="22" font-weight="bold" text-anchor="middle">E13</text>
+            <text x="797" y="180" fill="#ffffff" font-size="13" text-anchor="middle">other</text>
+            <text x="797" y="200" fill="#ffffff" font-size="13" text-anchor="middle">specified</text>
+            <text x="797" y="220" fill="#ffffff" font-size="13" text-anchor="middle">DM</text>
+            <text x="797" y="260" fill="#888" font-size="12" text-anchor="middle">MODY, post-transplant</text>
+            <text x="797" y="295" fill="#ffd700" font-size="12" text-anchor="middle">pancreatogenic</text>
+            <rect x="885" y="120" width="155" height="200" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="962" y="155" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">O24</text>
+            <text x="962" y="180" fill="#ffffff" font-size="13" text-anchor="middle">DM in</text>
+            <text x="962" y="200" fill="#ffffff" font-size="13" text-anchor="middle">pregnancy</text>
+            <text x="962" y="240" fill="#888" font-size="12" text-anchor="middle">gestational</text>
+            <text x="962" y="260" fill="#888" font-size="12" text-anchor="middle">pre-existing</text>
+            <text x="962" y="295" fill="#ffd700" font-size="12" text-anchor="middle">trimester required</text>
+            <rect x="60" y="350" width="980" height="380" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="550" y="390" fill="#6366f1" font-size="22" font-weight="bold" text-anchor="middle">4TH CHARACTER = COMPLICATION BODY SYSTEM</text>
+            <text x="100" y="430" fill="#ffd700" font-size="18" font-weight="bold">.0</text>
+            <text x="160" y="430" fill="#ffffff" font-size="15">Ketoacidosis (DKA)</text>
+            <text x="600" y="430" fill="#ffd700" font-size="18" font-weight="bold">.5</text>
+            <text x="660" y="430" fill="#ffffff" font-size="15">Circulatory (PVD, foot ulcer)</text>
+            <text x="100" y="465" fill="#ffd700" font-size="18" font-weight="bold">.1</text>
+            <text x="160" y="465" fill="#ffffff" font-size="15">Hyperosmolarity (HHS)</text>
+            <text x="600" y="465" fill="#ffd700" font-size="18" font-weight="bold">.6</text>
+            <text x="660" y="465" fill="#ffffff" font-size="15">Other specified complications</text>
+            <text x="100" y="500" fill="#ffd700" font-size="18" font-weight="bold">.2</text>
+            <text x="160" y="500" fill="#ffffff" font-size="15">Kidney (CKD)</text>
+            <text x="600" y="500" fill="#ffd700" font-size="18" font-weight="bold">.7</text>
+            <text x="660" y="500" fill="#ffffff" font-size="15">Multiple complications (E10/11)</text>
+            <text x="100" y="535" fill="#ffd700" font-size="18" font-weight="bold">.3</text>
+            <text x="160" y="535" fill="#ffffff" font-size="15">Ophthalmic (retinopathy)</text>
+            <text x="600" y="535" fill="#ffd700" font-size="18" font-weight="bold">.8</text>
+            <text x="660" y="535" fill="#ffffff" font-size="15">Unspecified complications</text>
+            <text x="100" y="570" fill="#ffd700" font-size="18" font-weight="bold">.4</text>
+            <text x="160" y="570" fill="#ffffff" font-size="15">Neurologic (neuropathy)</text>
+            <text x="600" y="570" fill="#ffd700" font-size="18" font-weight="bold">.9</text>
+            <text x="660" y="570" fill="#ffffff" font-size="15">Without complications</text>
+            <line x1="100" y1="610" x2="1000" y2="610" stroke="#888" stroke-width="1"/>
+            <text x="550" y="645" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Example builds:</text>
+            <text x="100" y="680" fill="#10b981" font-size="17" font-weight="bold">E11.22</text>
+            <text x="220" y="680" fill="#ffffff" font-size="16">T2DM with diabetic CKD</text>
+            <text x="100" y="710" fill="#10b981" font-size="17" font-weight="bold">E11.42</text>
+            <text x="220" y="710" fill="#ffffff" font-size="16">T2DM with diabetic polyneuropathy</text>
+            <rect x="60" y="750" width="980" height="290" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="790" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">CODING RULES</text>
+            <text x="100" y="830" fill="#ffffff" font-size="16">1. Code ALL manifestations — patient with neuropathy + CKD + retinopathy</text>
+            <text x="130" y="855" fill="#888" font-size="15">gets three codes: E11.42 + E11.22 + E11.319 (don't lump under .9)</text>
+            <text x="100" y="890" fill="#ffffff" font-size="16">2. Add Z79.4 if on long-term insulin (Type 2 patients)</text>
+            <text x="100" y="925" fill="#ffffff" font-size="16">3. For E08/E09, sequence underlying condition or drug FIRST</text>
+            <text x="100" y="960" fill="#ffffff" font-size="16">4. Never code "diabetes with HTN" assuming a link — only code linked</text>
+            <text x="130" y="985" fill="#888" font-size="15">conditions when MD documents the causal relationship explicitly</text>
+            <text x="100" y="1020" fill="#ffd700" font-size="16">5. Gestational diabetes = O24.4 — never E11 in pregnancy</text>
+          </svg>`,
+          caption: "Diabetes ICD-10 code structure: family + 4th character complication + sequencing rules."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Diabetes Coding",
+        content: `Test your diabetes code-building skills.`,
+        question: "A 64-year-old patient with Type 2 diabetes mellitus presents for follow-up. Documentation states: diabetic peripheral neuropathy, stage 3 chronic kidney disease secondary to diabetes, and the patient is on long-term insulin therapy. What is the correct code stack?",
+        options: [
+          { text: "E11.9 + N18.3 + Z79.4", correct: false },
+          { text: "E10.42 + E10.22 + N18.3", correct: false },
+          { text: "E11.42 + E11.22 + N18.3 + Z79.4", correct: true },
+          { text: "E11.65 + N18.3 + Z79.4", correct: false }
+        ],
+        explanation: "Type 2 DM = **E11** family. **E11.42** captures diabetic **polyneuropathy**. **E11.22** captures diabetic **CKD**. Per ICD-10 guidelines, you ALSO code the **stage of CKD** separately (**N18.3** = stage 3). Finally, **Z79.4** flags long-term insulin use (required for T2DM patients on insulin to support medical necessity for insulin prescriptions). E11.9 is wrong because it means 'without complications' — never use when complications exist. E10 is Type 1. E11.65 would be hyperglycemia, which isn't documented.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Building the T2DM Multi-Complication Stack</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">Every documented complication = its own code</text>
+            <rect x="60" y="120" width="980" height="110" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="80" y="155" fill="#0ea5e9" font-size="20" font-weight="bold">CLINICAL DOCUMENTATION</text>
+            <text x="80" y="185" fill="#ffffff" font-size="15">64 y/o, T2DM, diabetic peripheral neuropathy, stage 3 CKD secondary to DM,</text>
+            <text x="80" y="210" fill="#ffffff" font-size="15">on long-term insulin therapy</text>
+            <rect x="60" y="260" width="465" height="160" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="290" y="295" fill="#10b981" font-size="18" font-weight="bold" text-anchor="middle">DIABETIC NEUROPATHY</text>
+            <text x="290" y="350" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">E11.42</text>
+            <text x="290" y="390" fill="#888" font-size="14" text-anchor="middle">T2DM with polyneuropathy</text>
+            <rect x="555" y="260" width="465" height="160" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="787" y="295" fill="#8b5cf6" font-size="18" font-weight="bold" text-anchor="middle">DIABETIC CKD</text>
+            <text x="787" y="350" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">E11.22</text>
+            <text x="787" y="390" fill="#888" font-size="14" text-anchor="middle">T2DM with diabetic CKD</text>
+            <rect x="60" y="440" width="465" height="160" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="290" y="475" fill="#ec4899" font-size="18" font-weight="bold" text-anchor="middle">CKD STAGE</text>
+            <text x="290" y="530" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">N18.3</text>
+            <text x="290" y="570" fill="#888" font-size="14" text-anchor="middle">CKD stage 3 (specify GFR)</text>
+            <rect x="555" y="440" width="465" height="160" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="787" y="475" fill="#f59e0b" font-size="18" font-weight="bold" text-anchor="middle">LONG-TERM INSULIN</text>
+            <text x="787" y="530" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Z79.4</text>
+            <text x="787" y="570" fill="#888" font-size="14" text-anchor="middle">long-term insulin use</text>
+            <line x1="80" y1="620" x2="1020" y2="620" stroke="#888" stroke-width="2"/>
+            <text x="550" y="670" fill="#ffd700" font-size="26" font-weight="bold" text-anchor="middle">FINAL CODE STACK</text>
+            <rect x="80" y="700" width="940" height="120" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="755" fill="#10b981" font-size="28" font-weight="bold" text-anchor="middle">E11.42 + E11.22 + N18.3 + Z79.4</text>
+            <text x="550" y="795" fill="#ffffff" font-size="16" text-anchor="middle">Sequencing: any of E11.x codes can lead — order by reason for visit</text>
+            <rect x="60" y="840" width="980" height="200" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="880" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">WHY OTHERS FAIL</text>
+            <text x="100" y="920" fill="#ffffff" font-size="15">X  E11.9: means "without complications" — neuropathy + CKD documented</text>
+            <text x="100" y="955" fill="#ffffff" font-size="15">X  E10.xx: Type 1 family — this is T2DM</text>
+            <text x="100" y="990" fill="#ffffff" font-size="15">X  E11.65: hyperglycemia — not documented in this case</text>
+            <text x="100" y="1025" fill="#ffd700" font-size="15">Missing Z79.4 on T2DM-on-insulin = pharmacy auth denial risk</text>
+          </svg>`,
+          caption: "Building the four-code diabetes stack from documentation, with sequencing rules."
+        }
+      },
+      {
+        type: "application",
+        title: "Real-World Workflow: Endocrine Clinic Audit Sheet",
+        content: `**Your role**: Coder at a multi-specialty practice. The endocrine team books 40+ visits daily — thyroid follow-ups, diabetes management, adrenal workups. Build this **audit sheet** for every encounter.
+
+**Diabetes encounter — 6-point check**:
+1. **Type confirmed** (E10 vs E11 vs E13) — never assume
+2. **All complications coded** — neuropathy + CKD + retinopathy each get a code
+3. **CKD stage** added separately (N18.1-N18.6) when DM-CKD present
+4. **Z79.4** for long-term insulin (or **Z79.84** for oral agents)
+5. **HbA1c result** linked to E11 — supports medical necessity for follow-up frequency
+6. **Foot exam, eye exam** documented — supports preventive Z code (Z79.4 + Z00.00)
+
+**Thyroid encounter — 4-point check**:
+1. **Hyper vs hypo vs euthyroid** (E03 hypothyroid, E05 hyperthyroid, E04 goiter)
+2. **Cause specified** (Hashimoto E06.3, Graves E05.0)
+3. **Nodule documented** with size? Link to **E04.1** (nontoxic single nodule)
+4. **TSH + free T4 + thyroid US** linked appropriately
+
+**Adrenal encounter — workup queries**:
+- **Cushing's syndrome** E24.x — specify type (pituitary, ectopic, drug-induced)
+- **Pheochromocytoma** E27.5 — link to plasma metanephrines lab order
+- **Adrenal incidentaloma** D35.0 — common CT finding, needs workup chain
+
+Send compliance queries to MDs **within 24 hours** for any vague documentation. Specificity = reimbursement = audit defense.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">Endocrine Coder Audit Sheet</text>
+            <text x="550" y="90" fill="#888" font-size="16" text-anchor="middle">40 visits/day — build the checklist, defend the claim</text>
+            <rect x="60" y="120" width="980" height="320" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="160" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">DIABETES ENCOUNTER (6-point check)</text>
+            <text x="100" y="200" fill="#10b981" font-size="18" font-weight="bold">[1]</text>
+            <text x="150" y="200" fill="#ffffff" font-size="16">Type confirmed (E10 / E11 / E13) — never assume</text>
+            <text x="100" y="235" fill="#10b981" font-size="18" font-weight="bold">[2]</text>
+            <text x="150" y="235" fill="#ffffff" font-size="16">ALL complications coded — neuropathy, CKD, retinopathy each</text>
+            <text x="100" y="270" fill="#10b981" font-size="18" font-weight="bold">[3]</text>
+            <text x="150" y="270" fill="#ffffff" font-size="16">CKD stage added (N18.1-N18.6) when DM-CKD present</text>
+            <text x="100" y="305" fill="#10b981" font-size="18" font-weight="bold">[4]</text>
+            <text x="150" y="305" fill="#ffffff" font-size="16">Z79.4 (insulin) or Z79.84 (oral) for long-term therapy</text>
+            <text x="100" y="340" fill="#10b981" font-size="18" font-weight="bold">[5]</text>
+            <text x="150" y="340" fill="#ffffff" font-size="16">HbA1c result linked — supports follow-up frequency</text>
+            <text x="100" y="375" fill="#10b981" font-size="18" font-weight="bold">[6]</text>
+            <text x="150" y="375" fill="#ffffff" font-size="16">Foot/eye exam documented — preventive Z code stack</text>
+            <text x="100" y="415" fill="#888" font-size="14">Tip: vague "diabetic complications" = query MD for specifics</text>
+            <rect x="60" y="460" width="980" height="280" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="10"/>
+            <text x="550" y="500" fill="#0ea5e9" font-size="22" font-weight="bold" text-anchor="middle">THYROID ENCOUNTER (4-point check)</text>
+            <text x="100" y="540" fill="#10b981" font-size="18" font-weight="bold">[1]</text>
+            <text x="150" y="540" fill="#ffffff" font-size="16">Hyper / hypo / euthyroid (E03 / E05 / E04)</text>
+            <text x="100" y="575" fill="#10b981" font-size="18" font-weight="bold">[2]</text>
+            <text x="150" y="575" fill="#ffffff" font-size="16">Cause specified (Hashimoto E06.3, Graves E05.0)</text>
+            <text x="100" y="610" fill="#10b981" font-size="18" font-weight="bold">[3]</text>
+            <text x="150" y="610" fill="#ffffff" font-size="16">Nodule with size? E04.1 (nontoxic single) or D34 (benign neoplasm)</text>
+            <text x="100" y="645" fill="#10b981" font-size="18" font-weight="bold">[4]</text>
+            <text x="150" y="645" fill="#ffffff" font-size="16">TSH + free T4 + thyroid US linked to dx codes</text>
+            <text x="100" y="690" fill="#888" font-size="14">Trap: "thyroid disorder NOS" (E07.9) signals insufficient documentation</text>
+            <text x="100" y="715" fill="#888" font-size="14">— always query for specificity before submitting</text>
+            <rect x="60" y="760" width="980" height="280" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+            <text x="550" y="800" fill="#8b5cf6" font-size="22" font-weight="bold" text-anchor="middle">ADRENAL WORKUP QUERIES</text>
+            <text x="100" y="840" fill="#ffd700" font-size="18" font-weight="bold">E24.x</text>
+            <text x="200" y="840" fill="#ffffff" font-size="16">Cushing's — specify pituitary, ectopic, or drug-induced</text>
+            <text x="100" y="875" fill="#ffd700" font-size="18" font-weight="bold">E27.5</text>
+            <text x="200" y="875" fill="#ffffff" font-size="16">Pheochromocytoma — link to plasma metanephrines</text>
+            <text x="100" y="910" fill="#ffd700" font-size="18" font-weight="bold">D35.0</text>
+            <text x="200" y="910" fill="#ffffff" font-size="16">Adrenal incidentaloma — common CT finding, needs follow-up chain</text>
+            <text x="100" y="945" fill="#ffd700" font-size="18" font-weight="bold">E26.0</text>
+            <text x="200" y="945" fill="#ffffff" font-size="16">Conn's syndrome (primary aldosteronism) — refractory HTN clue</text>
+            <text x="550" y="1000" fill="#ef4444" font-size="18" font-weight="bold" text-anchor="middle">Compliance queries to MDs within 24 hours — defend the claim.</text>
+          </svg>`,
+          caption: "Three-system endocrine audit sheet — diabetes, thyroid, adrenal — with query triggers."
+        }
+      }
+    ]
   }
 ];
 
@@ -2072,7 +3107,7 @@ Pick the correctly constructed medical term.`,
             title: 'CPC Foundation: Med Term & A&P Review for Coders',
             author: 'Synthesis Learning',
             description: 'The anatomy, body planes, and medical-term decoding system that every CPC exam question assumes you already know. The base layer for everything else in the track.',
-            lessons: 6, duration: 90, progress: 0,
+            lessons: 9, duration: 135, progress: 0,
             category: 'cpc-prep',
             lessonList: FOUNDATION_PLACEHOLDER_LESSONS, // replaced by seed content when available
         },

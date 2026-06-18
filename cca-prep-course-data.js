@@ -1198,6 +1198,1206 @@ The HIM director owns the documentation CAP. Coders contribute through DNFB repo
         }
       }
     ]
+  },
+{
+    id: "cca-domain-1-lesson-7",
+    title: "The Master Patient Index (MPI): Patient Identification, Duplicates, and Overlay Errors",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The MPI: Your Hospital's Single Source of Truth",
+        content: `The **Master Patient Index (MPI)** is the authoritative database that links every patient to a **single, unique enterprise identifier**, called the **Enterprise Master Patient Index (EMPI)** when it spans multiple facilities. Without a clean MPI, the same patient may exist as **three or four different records**, each with partial history — a recipe for **medication errors, duplicate billing denials, and HIPAA breaches**.
+
+AHIMA mandates a minimum of **5 identifiers** to confidently match a patient: **legal name, date of birth, gender, Social Security number (last 4), and address**. Best-practice MPIs use **10+ identifiers** including mother's maiden name, phone, and biometric data.
+
+The two catastrophic MPI errors are **duplicates** (one patient, two records) and **overlays** (two patients sharing one record — far more dangerous because clinical data from Patient A appears in Patient B's chart). CCA candidates must know that **MPI cleanup is the foundational HIM task** — every downstream system (EHR, billing, HIE) depends on it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">The MPI: One Patient, One Number, One Truth</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="17">Every encounter ties back to a single Enterprise ID</text>
+            <circle cx="550" cy="280" r="130" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/>
+            <text x="550" y="265" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">EMPI</text>
+            <text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="18">Patient #</text>
+            <text x="550" y="320" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">M-104772</text>
+            <rect x="80" y="450" width="220" height="130" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="6"/>
+            <text x="190" y="478" text-anchor="middle" fill="#6366f1" font-size="15" font-weight="bold">EHR (Epic)</text>
+            <text x="190" y="505" text-anchor="middle" fill="#ffffff" font-size="13">Clinical notes</text>
+            <text x="190" y="525" text-anchor="middle" fill="#ffffff" font-size="13">Lab results</text>
+            <text x="190" y="545" text-anchor="middle" fill="#ffffff" font-size="13">Med history</text>
+            <text x="190" y="568" text-anchor="middle" fill="#ffd700" font-size="13">→ M-104772</text>
+            <rect x="320" y="450" width="220" height="130" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="430" y="478" text-anchor="middle" fill="#10b981" font-size="15" font-weight="bold">Billing System</text>
+            <text x="430" y="505" text-anchor="middle" fill="#ffffff" font-size="13">Claims</text>
+            <text x="430" y="525" text-anchor="middle" fill="#ffffff" font-size="13">Insurance</text>
+            <text x="430" y="545" text-anchor="middle" fill="#ffffff" font-size="13">Payments</text>
+            <text x="430" y="568" text-anchor="middle" fill="#ffd700" font-size="13">→ M-104772</text>
+            <rect x="560" y="450" width="220" height="130" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <text x="670" y="478" text-anchor="middle" fill="#f59e0b" font-size="15" font-weight="bold">Lab/Radiology</text>
+            <text x="670" y="505" text-anchor="middle" fill="#ffffff" font-size="13">Imaging</text>
+            <text x="670" y="525" text-anchor="middle" fill="#ffffff" font-size="13">Pathology</text>
+            <text x="670" y="545" text-anchor="middle" fill="#ffffff" font-size="13">Specimens</text>
+            <text x="670" y="568" text-anchor="middle" fill="#ffd700" font-size="13">→ M-104772</text>
+            <rect x="800" y="450" width="220" height="130" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="910" y="478" text-anchor="middle" fill="#ec4899" font-size="15" font-weight="bold">HIE Exchange</text>
+            <text x="910" y="505" text-anchor="middle" fill="#ffffff" font-size="13">External docs</text>
+            <text x="910" y="525" text-anchor="middle" fill="#ffffff" font-size="13">Other hospitals</text>
+            <text x="910" y="545" text-anchor="middle" fill="#ffffff" font-size="13">Pharmacy</text>
+            <text x="910" y="568" text-anchor="middle" fill="#ffd700" font-size="13">→ M-104772</text>
+            <line x1="450" y1="380" x2="190" y2="450" stroke="#6366f1" stroke-width="2"/>
+            <line x1="500" y1="395" x2="430" y2="450" stroke="#10b981" stroke-width="2"/>
+            <line x1="600" y1="395" x2="670" y2="450" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="650" y1="380" x2="910" y2="450" stroke="#ec4899" stroke-width="2"/>
+            <rect x="200" y="680" width="700" height="220" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="710" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">AHIMA Minimum 5 Identifiers</text>
+            <text x="240" y="745" fill="#ffffff" font-size="16">1. Legal Name (last, first, middle initial)</text>
+            <text x="240" y="775" fill="#ffffff" font-size="16">2. Date of Birth (MM/DD/YYYY)</text>
+            <text x="240" y="805" fill="#ffffff" font-size="16">3. Gender (M/F/U)</text>
+            <text x="240" y="835" fill="#ffffff" font-size="16">4. SSN (last 4 digits)</text>
+            <text x="240" y="865" fill="#ffffff" font-size="16">5. Current Address (with ZIP)</text>
+            <text x="550" y="940" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">Best practice: 10+ identifiers (add mother's maiden name, phone, biometrics)</text>
+            <text x="550" y="980" text-anchor="middle" fill="#10b981" font-size="16">Match probability rises from 92% (5 IDs) → 99.6% (10+ IDs)</text>
+            <text x="550" y="1040" text-anchor="middle" fill="#888" font-size="14">CCA Exam Tip: The MPI is the foundation of every other HIM data system</text>
+          </svg>`,
+          caption: "The MPI links every clinical, billing, and lab system to one enterprise identifier — and AHIMA requires a 5-identifier minimum for safe matching."
+        }
+      },
+      {
+        type: "concept",
+        title: "Duplicates vs Overlays: Two Errors, Two Disasters",
+        content: `**Duplicate records** occur when one patient is registered **two or more times** under slightly different demographics — "Robert Smith" on Monday, "Bob Smith" on Tuesday. The patient now has **fragmented history** across two MRNs. The cost: **$1,000+ per duplicate per audit cycle** in rework, denied claims, and re-keyed data. Industry duplicate rate averages **8–12%** of MPI volume; AHIMA targets **<2%**.
+
+**Overlays** are the catastrophic inverse: **two different patients share the same MRN**. Patient A's allergy list, surgical history, and HIV status get assigned to Patient B. Overlays cause **wrong-patient surgery, fatal medication errors, and HIPAA breaches** when one patient's data is disclosed to the other. The Joint Commission classifies overlays as **sentinel events**.
+
+Detection methods: **deterministic matching** (exact match on key fields) and **probabilistic matching** (weighted score across many fields, used by IBM Initiate, NextGate, Verato). Resolution requires **merge** (combine duplicates) or **unmerge/split** (separate an overlay) — both must be **logged in an audit trail** and reviewed by an **HIM data integrity analyst**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Duplicate vs Overlay: Side-by-Side Anatomy</text>
+            <rect x="40" y="90" width="500" height="450" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="8"/>
+            <text x="290" y="125" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">DUPLICATE</text>
+            <text x="290" y="150" text-anchor="middle" fill="#888" font-size="14">One patient → two MRNs</text>
+            <rect x="65" y="175" width="210" height="130" fill="#1a1a2e" stroke="#6366f1" stroke-width="2"/>
+            <text x="170" y="200" text-anchor="middle" fill="#6366f1" font-size="14" font-weight="bold">MRN 88421</text>
+            <text x="75" y="225" fill="#ffffff" font-size="13">Robert J. Smith</text>
+            <text x="75" y="245" fill="#ffffff" font-size="13">DOB: 03/14/1962</text>
+            <text x="75" y="265" fill="#ffffff" font-size="13">SSN: ***-**-4421</text>
+            <text x="75" y="285" fill="#ffffff" font-size="13">123 Oak St</text>
+            <rect x="305" y="175" width="210" height="130" fill="#1a1a2e" stroke="#6366f1" stroke-width="2"/>
+            <text x="410" y="200" text-anchor="middle" fill="#6366f1" font-size="14" font-weight="bold">MRN 91103</text>
+            <text x="315" y="225" fill="#ffffff" font-size="13">Bob Smith</text>
+            <text x="315" y="245" fill="#ffffff" font-size="13">DOB: 03/14/62</text>
+            <text x="315" y="265" fill="#ffffff" font-size="13">SSN: ***-**-4421</text>
+            <text x="315" y="285" fill="#ffffff" font-size="13">123 Oak Street</text>
+            <text x="290" y="345" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Result:</text>
+            <text x="290" y="370" text-anchor="middle" fill="#ffffff" font-size="14">• History fragmented</text>
+            <text x="290" y="392" text-anchor="middle" fill="#ffffff" font-size="14">• Duplicate labs ordered</text>
+            <text x="290" y="414" text-anchor="middle" fill="#ffffff" font-size="14">• Insurance double-billed</text>
+            <text x="290" y="436" text-anchor="middle" fill="#ffffff" font-size="14">• Claim denials rise</text>
+            <text x="290" y="480" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="bold">Fix: MERGE</text>
+            <text x="290" y="510" text-anchor="middle" fill="#888" font-size="13">Cost: ~$1,000+ per duplicate</text>
+            <rect x="560" y="90" width="500" height="450" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="8"/>
+            <text x="810" y="125" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">OVERLAY</text>
+            <text x="810" y="150" text-anchor="middle" fill="#888" font-size="14">Two patients → one MRN</text>
+            <rect x="585" y="175" width="450" height="130" fill="#1a1a2e" stroke="#ef4444" stroke-width="2"/>
+            <text x="810" y="200" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">MRN 44218 (shared)</text>
+            <text x="595" y="225" fill="#ffffff" font-size="13">Patient A: Maria Lopez — allergic to penicillin</text>
+            <text x="595" y="248" fill="#ffffff" font-size="13">Patient B: Maria Lopez — diabetic, on metformin</text>
+            <text x="595" y="271" fill="#ffd700" font-size="13">Same name, different people, ONE chart!</text>
+            <text x="595" y="294" fill="#ef4444" font-size="13">→ Allergy + meds now cross-contaminated</text>
+            <text x="810" y="345" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Result:</text>
+            <text x="810" y="370" text-anchor="middle" fill="#ffffff" font-size="14">• Wrong-patient surgery risk</text>
+            <text x="810" y="392" text-anchor="middle" fill="#ffffff" font-size="14">• Fatal medication errors</text>
+            <text x="810" y="414" text-anchor="middle" fill="#ffffff" font-size="14">• HIPAA disclosure breach</text>
+            <text x="810" y="436" text-anchor="middle" fill="#ffffff" font-size="14">• Joint Commission sentinel event</text>
+            <text x="810" y="480" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Fix: UNMERGE / SPLIT</text>
+            <text x="810" y="510" text-anchor="middle" fill="#888" font-size="13">Cost: legal liability + harm</text>
+            <rect x="100" y="580" width="900" height="380" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="615" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Matching Methods Comparison</text>
+            <line x1="120" y1="640" x2="980" y2="640" stroke="#888" stroke-width="1"/>
+            <text x="200" y="670" fill="#ffd700" font-size="15" font-weight="bold">Method</text>
+            <text x="430" y="670" fill="#ffd700" font-size="15" font-weight="bold">How it works</text>
+            <text x="720" y="670" fill="#ffd700" font-size="15" font-weight="bold">Accuracy</text>
+            <text x="900" y="670" fill="#ffd700" font-size="15" font-weight="bold">Use</text>
+            <line x1="120" y1="685" x2="980" y2="685" stroke="#888" stroke-width="1"/>
+            <text x="200" y="715" fill="#6366f1" font-size="14" font-weight="bold">Deterministic</text>
+            <text x="430" y="715" fill="#ffffff" font-size="14">Exact char-for-char match</text>
+            <text x="720" y="715" fill="#ffffff" font-size="14">High precision</text>
+            <text x="900" y="715" fill="#ffffff" font-size="14">Small MPI</text>
+            <text x="200" y="755" fill="#10b981" font-size="14" font-weight="bold">Probabilistic</text>
+            <text x="430" y="755" fill="#ffffff" font-size="14">Weighted score across fields</text>
+            <text x="720" y="755" fill="#ffffff" font-size="14">High recall</text>
+            <text x="900" y="755" fill="#ffffff" font-size="14">Enterprise</text>
+            <text x="200" y="795" fill="#ec4899" font-size="14" font-weight="bold">Referential</text>
+            <text x="430" y="795" fill="#ffffff" font-size="14">Compares to external IDs (Verato)</text>
+            <text x="720" y="795" fill="#ffffff" font-size="14">Highest</text>
+            <text x="900" y="795" fill="#ffffff" font-size="14">HIE/EMPI</text>
+            <text x="200" y="835" fill="#f59e0b" font-size="14" font-weight="bold">Biometric</text>
+            <text x="430" y="835" fill="#ffffff" font-size="14">Palm-vein, iris, fingerprint</text>
+            <text x="720" y="835" fill="#ffffff" font-size="14">99.99%</text>
+            <text x="900" y="835" fill="#ffffff" font-size="14">Adv ER</text>
+            <text x="550" y="895" text-anchor="middle" fill="#10b981" font-size="16">AHIMA Target Duplicate Rate: &lt;2% | Industry Average: 8-12%</text>
+            <text x="550" y="930" text-anchor="middle" fill="#888" font-size="14">Joint Commission classifies overlays as SENTINEL EVENTS — root cause analysis required</text>
+          </svg>`,
+          caption: "Duplicates fragment one patient across multiple MRNs (merge to fix); overlays merge two patients into one chart (split to fix — and report as a sentinel event)."
+        }
+      },
+      {
+        type: "example",
+        title: "Real-World MPI Cleanup: A 1,200-Bed Health System",
+        content: `**Case study**: A Texas health system audited its EMPI in 2022 and found **47,000 suspected duplicates** in a 1.2M-record database — a **3.9% duplicate rate**, double the AHIMA target. Estimated rework cost: **$47 million** annually in denied claims, duplicate testing, and registration labor.
+
+**Step 1 — Identify**: ran probabilistic matching software (NextGate) with a confidence threshold of **95%**, flagging 47,000 record pairs.
+
+**Step 2 — Triage**: an HIM data integrity team reviewed each pair, sorting into **auto-merge (>99% confidence, 12,000 pairs)**, **manual review (95–99%, 33,000 pairs)**, and **investigate (twin/family members, 2,000 pairs)**.
+
+**Step 3 — Merge**: each merge documented patient name, both MRNs, surviving MRN, reviewer initials, and timestamp — kept in an **audit log retained 7 years** per state law.
+
+**Step 4 — Prevent**: registration retrained to require **8 identifiers minimum**, biometric palm-vein scanning added at ER intake, and a **real-time duplicate alert** fires if a new registration matches an existing patient with >85% confidence. New duplicate rate after 18 months: **1.4%**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Texas Health System: 47,000 Duplicates Cleanup</text>
+            <text x="550" y="80" text-anchor="middle" fill="#888" font-size="16">1.2M record MPI | 3.9% duplicate rate | $47M annual cost</text>
+            <rect x="60" y="120" width="220" height="200" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="170" y="155" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">STEP 1</text>
+            <text x="170" y="180" text-anchor="middle" fill="#ffd700" font-size="15">IDENTIFY</text>
+            <text x="170" y="215" text-anchor="middle" fill="#ffffff" font-size="13">Probabilistic scan</text>
+            <text x="170" y="240" text-anchor="middle" fill="#ffffff" font-size="13">NextGate engine</text>
+            <text x="170" y="265" text-anchor="middle" fill="#ffffff" font-size="13">95% threshold</text>
+            <text x="170" y="295" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">→ 47,000 flagged</text>
+            <rect x="290" y="120" width="220" height="200" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <text x="400" y="155" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">STEP 2</text>
+            <text x="400" y="180" text-anchor="middle" fill="#ffd700" font-size="15">TRIAGE</text>
+            <text x="400" y="215" text-anchor="middle" fill="#ffffff" font-size="13">Auto-merge: 12K</text>
+            <text x="400" y="240" text-anchor="middle" fill="#ffffff" font-size="13">Manual: 33K</text>
+            <text x="400" y="265" text-anchor="middle" fill="#ffffff" font-size="13">Investigate: 2K</text>
+            <text x="400" y="295" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">Team of 8 analysts</text>
+            <rect x="520" y="120" width="220" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="630" y="155" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">STEP 3</text>
+            <text x="630" y="180" text-anchor="middle" fill="#ffd700" font-size="15">MERGE</text>
+            <text x="630" y="215" text-anchor="middle" fill="#ffffff" font-size="13">Document both MRNs</text>
+            <text x="630" y="240" text-anchor="middle" fill="#ffffff" font-size="13">Surviving MRN noted</text>
+            <text x="630" y="265" text-anchor="middle" fill="#ffffff" font-size="13">Reviewer + time stamp</text>
+            <text x="630" y="295" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">7-year audit log</text>
+            <rect x="750" y="120" width="220" height="200" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="860" y="155" text-anchor="middle" fill="#ec4899" font-size="18" font-weight="bold">STEP 4</text>
+            <text x="860" y="180" text-anchor="middle" fill="#ffd700" font-size="15">PREVENT</text>
+            <text x="860" y="215" text-anchor="middle" fill="#ffffff" font-size="13">8 IDs required</text>
+            <text x="860" y="240" text-anchor="middle" fill="#ffffff" font-size="13">Palm-vein biometrics</text>
+            <text x="860" y="265" text-anchor="middle" fill="#ffffff" font-size="13">Real-time alerts</text>
+            <text x="860" y="295" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">Rate: 3.9 → 1.4%</text>
+            <line x1="280" y1="220" x2="290" y2="220" stroke="#ffd700" stroke-width="3" marker-end="url(#arr7)"/>
+            <line x1="510" y1="220" x2="520" y2="220" stroke="#ffd700" stroke-width="3" marker-end="url(#arr7)"/>
+            <line x1="740" y1="220" x2="750" y2="220" stroke="#ffd700" stroke-width="3" marker-end="url(#arr7)"/>
+            <defs><marker id="arr7" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#ffd700"/></marker></defs>
+            <rect x="100" y="370" width="900" height="320" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="405" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Merge Audit Log Sample Entry</text>
+            <line x1="130" y1="425" x2="970" y2="425" stroke="#888"/>
+            <text x="150" y="455" fill="#ffd700" font-size="14" font-weight="bold">Field</text>
+            <text x="500" y="455" fill="#ffd700" font-size="14" font-weight="bold">Value</text>
+            <line x1="130" y1="465" x2="970" y2="465" stroke="#888"/>
+            <text x="150" y="495" fill="#ffffff" font-size="14">Merge ID</text>
+            <text x="500" y="495" fill="#10b981" font-size="14">MRG-2022-014772</text>
+            <text x="150" y="525" fill="#ffffff" font-size="14">Patient Name</text>
+            <text x="500" y="525" fill="#10b981" font-size="14">Smith, Robert J.</text>
+            <text x="150" y="555" fill="#ffffff" font-size="14">Source MRN (retired)</text>
+            <text x="500" y="555" fill="#10b981" font-size="14">91103</text>
+            <text x="150" y="585" fill="#ffffff" font-size="14">Surviving MRN</text>
+            <text x="500" y="585" fill="#10b981" font-size="14">88421</text>
+            <text x="150" y="615" fill="#ffffff" font-size="14">Match Confidence</text>
+            <text x="500" y="615" fill="#10b981" font-size="14">99.2% (probabilistic)</text>
+            <text x="150" y="645" fill="#ffffff" font-size="14">Reviewer</text>
+            <text x="500" y="645" fill="#10b981" font-size="14">J. Martinez, RHIA</text>
+            <text x="150" y="675" fill="#ffffff" font-size="14">Timestamp</text>
+            <text x="500" y="675" fill="#10b981" font-size="14">2022-08-14 14:32 CDT</text>
+            <rect x="100" y="730" width="900" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="550" y="765" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Outcomes After 18 Months</text>
+            <text x="220" y="810" fill="#ffd700" font-size="16">Duplicate rate:</text>
+            <text x="550" y="810" fill="#ffffff" font-size="16">3.9% → 1.4%</text>
+            <text x="850" y="810" fill="#10b981" font-size="16">-64%</text>
+            <text x="220" y="845" fill="#ffd700" font-size="16">Claim denials:</text>
+            <text x="550" y="845" fill="#ffffff" font-size="16">11.2% → 4.8%</text>
+            <text x="850" y="845" fill="#10b981" font-size="16">-57%</text>
+            <text x="220" y="880" fill="#ffd700" font-size="16">Duplicate labs:</text>
+            <text x="550" y="880" fill="#ffffff" font-size="16">$2.1M → $640K</text>
+            <text x="850" y="880" fill="#10b981" font-size="16">-70%</text>
+            <text x="220" y="915" fill="#ffd700" font-size="16">Net savings:</text>
+            <text x="550" y="915" fill="#10b981" font-size="16" font-weight="bold">~$31M / year</text>
+            <text x="850" y="915" fill="#10b981" font-size="16">+</text>
+            <text x="550" y="1020" text-anchor="middle" fill="#888" font-size="15">ROI on $4.2M cleanup project: 738% in year 1</text>
+          </svg>`,
+          caption: "Texas case study: probabilistic matching, triaged review, full audit logging, and biometric prevention — duplicate rate dropped 64%, saving $31M/year."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: MPI Errors",
+        content: `Test your understanding of the most dangerous MPI error scenario.`,
+        question: "A registration clerk pulls up MRN 44218 for a patient named Maria Lopez. The chart shows a penicillin allergy and a recent appendectomy. The patient in front of the clerk says she has no allergies and has never had surgery. What MPI error is most likely, and what is the correct immediate action?",
+        options: [
+          {
+            text: "It's a duplicate — merge both records into MRN 44218 to consolidate Maria's history.",
+            correct: false
+          },
+          {
+            text: "It's an overlay — STOP, do not document under this MRN, alert HIM data integrity for an unmerge/split investigation.",
+            correct: true
+          },
+          {
+            text: "It's a typo — re-enter the patient's name and the system will auto-correct.",
+            correct: false
+          },
+          {
+            text: "It's a data entry lag — wait 24 hours for the chart to refresh and try again.",
+            correct: false
+          }
+        ],
+        explanation: `This is a classic **overlay**: two different patients share one MRN. Merging would compound the disaster by adding more data to the contaminated chart. The correct action is to **halt all documentation under MRN 44218**, register the current patient under a **new MRN**, and immediately notify the **HIM data integrity team** so they can split the chart, separate the records, and report it as a **Joint Commission sentinel event**. Overlays carry HIPAA breach exposure (Patient A's data was disclosed inside Patient B's chart) and patient-safety risk (wrong meds, wrong surgery). Never resolve an overlay at the registration desk — escalate every time.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Overlay Response Protocol</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">If a patient denies data in their chart → assume overlay until proven otherwise</text>
+            <rect x="150" y="130" width="800" height="120" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="6"/>
+            <text x="550" y="170" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">RED FLAG TRIGGERS</text>
+            <text x="180" y="205" fill="#ffffff" font-size="15">• Patient denies allergies/surgeries the chart shows</text>
+            <text x="180" y="230" fill="#ffffff" font-size="15">• DOB or sex on chart doesn't match the patient in front of you</text>
+            <text x="600" y="205" fill="#ffffff" font-size="15">• Unexpected race/ethnicity mismatch</text>
+            <text x="600" y="230" fill="#ffffff" font-size="15">• Clinical notes name a different person</text>
+            <rect x="80" y="290" width="200" height="180" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <text x="180" y="325" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">1. STOP</text>
+            <text x="180" y="365" text-anchor="middle" fill="#ffffff" font-size="13">Do NOT chart</text>
+            <text x="180" y="390" text-anchor="middle" fill="#ffffff" font-size="13">under this MRN</text>
+            <text x="180" y="425" text-anchor="middle" fill="#ef4444" font-size="13">Freeze the record</text>
+            <rect x="300" y="290" width="200" height="180" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="6"/>
+            <text x="400" y="325" text-anchor="middle" fill="#6366f1" font-size="18" font-weight="bold">2. NEW MRN</text>
+            <text x="400" y="365" text-anchor="middle" fill="#ffffff" font-size="13">Register current</text>
+            <text x="400" y="390" text-anchor="middle" fill="#ffffff" font-size="13">patient with new ID</text>
+            <text x="400" y="425" text-anchor="middle" fill="#10b981" font-size="13">8+ identifiers</text>
+            <rect x="520" y="290" width="200" height="180" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="620" y="325" text-anchor="middle" fill="#ec4899" font-size="18" font-weight="bold">3. ESCALATE</text>
+            <text x="620" y="365" text-anchor="middle" fill="#ffffff" font-size="13">HIM data integrity</text>
+            <text x="620" y="390" text-anchor="middle" fill="#ffffff" font-size="13">+ Privacy Officer</text>
+            <text x="620" y="425" text-anchor="middle" fill="#ef4444" font-size="13">Immediate page</text>
+            <rect x="740" y="290" width="200" height="180" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="840" y="325" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">4. REPORT</text>
+            <text x="840" y="365" text-anchor="middle" fill="#ffffff" font-size="13">Joint Commission</text>
+            <text x="840" y="390" text-anchor="middle" fill="#ffffff" font-size="13">Sentinel event</text>
+            <text x="840" y="425" text-anchor="middle" fill="#ffd700" font-size="13">Root cause analysis</text>
+            <rect x="100" y="510" width="900" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="545" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Why Merging Would Be Catastrophic</text>
+            <text x="130" y="585" fill="#ffffff" font-size="15">Merge action assumes: same patient, multiple charts → combine into one</text>
+            <text x="130" y="615" fill="#ef4444" font-size="15">Overlay reality: different patients in one chart → combining ADDS more contamination</text>
+            <text x="130" y="655" fill="#ffffff" font-size="15">Result: Patient A's allergies merge with Patient B's meds; the wrong-patient prescription</text>
+            <text x="130" y="680" fill="#ffffff" font-size="15">becomes "verified" because two charts now agree on the wrong data.</text>
+            <text x="130" y="720" fill="#10b981" font-size="15">SPLIT action: identifies which encounters belong to Patient A vs B, reassigns each to</text>
+            <text x="130" y="745" fill="#10b981" font-size="15">a correct MRN, and logs every move for the 7-year audit trail.</text>
+            <text x="550" y="850" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">CCA EXAM TIP</text>
+            <text x="550" y="895" text-anchor="middle" fill="#ffffff" font-size="17">Mismatched demographics + denied history = OVERLAY</text>
+            <text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="17">Matching demographics + history both fit = DUPLICATE</text>
+            <text x="550" y="985" text-anchor="middle" fill="#888" font-size="14">Never resolve an overlay at the registration desk — escalate every time</text>
+          </svg>`,
+          caption: "Overlay response: stop, register the live patient with a new MRN, escalate to HIM data integrity, and file a sentinel event report — never merge."
+        }
+      },
+      {
+        type: "application",
+        title: "On the Job: MPI Quality as a CCA",
+        content: `As a CCA in a clinic, hospital, or coding company, you will not run the MPI software — but you **will be the front line of MPI integrity** because every code you assign depends on the chart pulling correctly.
+
+**Daily habits**: when a chart looks oddly thin (a 78-year-old with no past medical history) or oddly thick (a healthy 18-year-old with three cardiac surgeries), **stop and verify** the MRN. Cross-check **at least 3 identifiers** before coding: name, DOB, and one of (SSN, address, encounter date). If something is off, **flag the chart in the work queue** with a note like *"Suspect overlay — see allergy mismatch vs nursing note"* and escalate to your HIM lead.
+
+**Productivity metric**: AHIMA's Coder Quality Standards expect you to **catch 1 MPI error per 500 charts coded**. Catching them is **billable productivity** (most coding companies pay a flag bonus) and **protects your CCA credential** — coding to the wrong patient is grounds for credential revocation under the AHIMA Code of Ethics.
+
+**Documentation rule**: never resolve, never merge — only flag and escalate. Touching the MPI without authorization is a fireable HIPAA violation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The CCA's MPI Vigilance Checklist</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">You are the front-line MPI integrity defender</text>
+            <rect x="80" y="130" width="940" height="260" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="165" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Before You Code Any Chart — 3-ID Verification</text>
+            <line x1="110" y1="185" x2="990" y2="185" stroke="#888"/>
+            <text x="200" y="225" text-anchor="middle" fill="#6366f1" font-size="40">1</text>
+            <text x="200" y="255" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Name</text>
+            <text x="200" y="280" text-anchor="middle" fill="#ffffff" font-size="13">Match the chart's</text>
+            <text x="200" y="300" text-anchor="middle" fill="#ffffff" font-size="13">legal name to the</text>
+            <text x="200" y="320" text-anchor="middle" fill="#ffffff" font-size="13">face sheet exactly</text>
+            <text x="550" y="225" text-anchor="middle" fill="#10b981" font-size="40">2</text>
+            <text x="550" y="255" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">DOB</text>
+            <text x="550" y="280" text-anchor="middle" fill="#ffffff" font-size="13">Year of birth</text>
+            <text x="550" y="300" text-anchor="middle" fill="#ffffff" font-size="13">should fit the</text>
+            <text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="13">clinical picture</text>
+            <text x="900" y="225" text-anchor="middle" fill="#ec4899" font-size="40">3</text>
+            <text x="900" y="255" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">One More</text>
+            <text x="900" y="280" text-anchor="middle" fill="#ffffff" font-size="13">SSN last 4, address,</text>
+            <text x="900" y="300" text-anchor="middle" fill="#ffffff" font-size="13">or encounter date</text>
+            <text x="900" y="320" text-anchor="middle" fill="#ffffff" font-size="13">must match too</text>
+            <text x="550" y="365" text-anchor="middle" fill="#ef4444" font-size="15">If ANY of 3 fails → STOP coding, flag the chart, escalate</text>
+            <rect x="80" y="410" width="940" height="300" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="550" y="445" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Red Flags in Your Work Queue</text>
+            <text x="110" y="485" fill="#ffd700" font-size="15" font-weight="bold">Demographic mismatch</text>
+            <text x="110" y="510" fill="#ffffff" font-size="14">Face sheet says 78 y/o female; H&amp;P references "young male athlete"</text>
+            <text x="110" y="545" fill="#ffd700" font-size="15" font-weight="bold">Clinical impossibility</text>
+            <text x="110" y="570" fill="#ffffff" font-size="14">3-year-old with prior CABG; pregnant male encounter; deceased patient ER visit</text>
+            <text x="110" y="605" fill="#ffd700" font-size="15" font-weight="bold">History gaps or excess</text>
+            <text x="110" y="630" fill="#ffffff" font-size="14">Healthy 18-year-old with 3 cardiac surgeries — likely overlay from another patient</text>
+            <text x="110" y="665" fill="#ffd700" font-size="15" font-weight="bold">Allergy contradiction</text>
+            <text x="110" y="690" fill="#ffffff" font-size="14">Penicillin allergy on face sheet; recent IV penicillin admin with no reaction noted</text>
+            <rect x="80" y="730" width="940" height="280" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="765" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">What to Do — and What NOT to Do</text>
+            <rect x="110" y="790" width="430" height="200" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="4"/>
+            <text x="325" y="820" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">DO</text>
+            <text x="130" y="850" fill="#ffffff" font-size="13">+ Flag chart in work queue</text>
+            <text x="130" y="875" fill="#ffffff" font-size="13">+ Note specific mismatch detail</text>
+            <text x="130" y="900" fill="#ffffff" font-size="13">+ Page HIM data integrity lead</text>
+            <text x="130" y="925" fill="#ffffff" font-size="13">+ Hold coding until resolved</text>
+            <text x="130" y="950" fill="#ffffff" font-size="13">+ Log every escalation (productivity)</text>
+            <text x="130" y="975" fill="#ffffff" font-size="13">+ Earn flag bonus + protect cred</text>
+            <rect x="560" y="790" width="430" height="200" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="4"/>
+            <text x="775" y="820" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">DON'T</text>
+            <text x="580" y="850" fill="#ffffff" font-size="13">- Edit demographics yourself</text>
+            <text x="580" y="875" fill="#ffffff" font-size="13">- Merge or split records</text>
+            <text x="580" y="900" fill="#ffffff" font-size="13">- Code "around" the mismatch</text>
+            <text x="580" y="925" fill="#ffffff" font-size="13">- Assume it's a typo</text>
+            <text x="580" y="950" fill="#ffffff" font-size="13">- Skip flagging "just this once"</text>
+            <text x="580" y="975" fill="#ffffff" font-size="13">- Touch MPI = HIPAA violation</text>
+            <text x="550" y="1050" text-anchor="middle" fill="#888" font-size="14">AHIMA Code of Ethics: coding to the wrong patient is grounds for CCA revocation</text>
+          </svg>`,
+          caption: "Your CCA value rises every time you catch and escalate an MPI mismatch — but never resolve it yourself; that's a HIPAA-violation firing offense."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-1-lesson-8",
+    title: "Release of Information (ROI): Authorizations, Verifications, and Disclosure Tracking",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "ROI: The Highest-Risk Operation in HIM",
+        content: `**Release of Information (ROI)** is the formal process of disclosing **Protected Health Information (PHI)** to a requester — patient, attorney, insurer, court, or another provider. It is the **single highest-liability operation in HIM** because every disclosure either complies with HIPAA, state law, and the **Privacy Rule (45 CFR Part 164)** — or it triggers a **breach notification**, civil penalty, and patient lawsuit.
+
+A valid **HIPAA authorization** under 45 CFR 164.508 must contain **six core elements** and three required statements; one missing element makes the authorization void and the disclosure illegal.
+
+Beyond authorization, ROI requires **verification of identity** (driver's license, notarization for legal requests), **tracking of every disclosure** for the **6-year accounting-of-disclosures** rule under §164.528, and adherence to **15-day turnaround** for patient access requests under the 2024 final rule.
+
+Special PHI categories — **psychotherapy notes, HIV/AIDS results, substance abuse (42 CFR Part 2), and genetic information (GINA)** — require **separate, specific authorizations**. A general authorization does NOT cover them; releasing them anyway is a per-record federal violation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The ROI Risk Stack</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Six elements must all pass before any PHI leaves the building</text>
+            <rect x="80" y="130" width="940" height="60" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="4"/>
+            <text x="550" y="170" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Penalty for incorrect release: $100–$50,000 per record + civil suit + state law</text>
+            <rect x="60" y="220" width="320" height="380" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="220" y="255" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">6 Core Elements</text>
+            <text x="220" y="278" text-anchor="middle" fill="#888" font-size="13">45 CFR 164.508(c)(1)</text>
+            <text x="80" y="315" fill="#ffffff" font-size="14">1. Specific description of PHI</text>
+            <text x="80" y="350" fill="#ffffff" font-size="14">2. Who may disclose (provider)</text>
+            <text x="80" y="385" fill="#ffffff" font-size="14">3. Who may receive (recipient)</text>
+            <text x="80" y="420" fill="#ffffff" font-size="14">4. Purpose of disclosure</text>
+            <text x="80" y="455" fill="#ffffff" font-size="14">5. Expiration date or event</text>
+            <text x="80" y="490" fill="#ffffff" font-size="14">6. Signature + date</text>
+            <text x="220" y="540" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">Missing 1 = VOID</text>
+            <text x="220" y="565" text-anchor="middle" fill="#888" font-size="13">No partial credit</text>
+            <rect x="400" y="220" width="320" height="380" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="560" y="255" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">3 Required Statements</text>
+            <text x="560" y="278" text-anchor="middle" fill="#888" font-size="13">45 CFR 164.508(c)(2)</text>
+            <text x="420" y="315" fill="#ffffff" font-size="14">A. Right to revoke in writing</text>
+            <text x="420" y="350" fill="#ffffff" font-size="14">B. Treatment not conditioned</text>
+            <text x="420" y="385" fill="#ffffff" font-size="14">    on signing</text>
+            <text x="420" y="420" fill="#ffffff" font-size="14">C. Re-disclosure risk warning</text>
+            <text x="420" y="455" fill="#ffffff" font-size="14">    (recipient may pass it on</text>
+            <text x="420" y="480" fill="#ffffff" font-size="14">    outside HIPAA protection)</text>
+            <text x="560" y="540" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">All 3 verbatim</text>
+            <text x="560" y="565" text-anchor="middle" fill="#888" font-size="13">on the form</text>
+            <rect x="740" y="220" width="320" height="380" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="900" y="255" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Special PHI</text>
+            <text x="900" y="278" text-anchor="middle" fill="#888" font-size="13">Need separate authorization</text>
+            <text x="760" y="315" fill="#ffffff" font-size="14">• Psychotherapy notes</text>
+            <text x="760" y="350" fill="#ffffff" font-size="14">• HIV/AIDS test results</text>
+            <text x="760" y="385" fill="#ffffff" font-size="14">• Substance abuse</text>
+            <text x="760" y="410" fill="#ffffff" font-size="14">    (42 CFR Part 2)</text>
+            <text x="760" y="445" fill="#ffffff" font-size="14">• Genetic info (GINA)</text>
+            <text x="760" y="480" fill="#ffffff" font-size="14">• Mental health (state-level)</text>
+            <text x="900" y="540" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">General auth ≠ enough</text>
+            <text x="900" y="565" text-anchor="middle" fill="#888" font-size="13">Must check box specifically</text>
+            <rect x="80" y="640" width="940" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="675" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">ROI Turnaround Standards</text>
+            <line x1="110" y1="695" x2="990" y2="695" stroke="#888"/>
+            <text x="250" y="725" fill="#ffd700" font-size="15" font-weight="bold">Request Type</text>
+            <text x="600" y="725" fill="#ffd700" font-size="15" font-weight="bold">Standard</text>
+            <text x="850" y="725" fill="#ffd700" font-size="15" font-weight="bold">Authority</text>
+            <line x1="110" y1="740" x2="990" y2="740" stroke="#888"/>
+            <text x="130" y="770" fill="#ffffff" font-size="14">Patient access (own records)</text>
+            <text x="600" y="770" fill="#10b981" font-size="14">15 days</text>
+            <text x="850" y="770" fill="#888" font-size="14">HIPAA 2024</text>
+            <text x="130" y="805" fill="#ffffff" font-size="14">Continuity of care (treatment)</text>
+            <text x="600" y="805" fill="#10b981" font-size="14">Immediate</text>
+            <text x="850" y="805" fill="#888" font-size="14">TPO exception</text>
+            <text x="130" y="840" fill="#ffffff" font-size="14">Subpoena (civil)</text>
+            <text x="600" y="840" fill="#10b981" font-size="14">By return date</text>
+            <text x="850" y="840" fill="#888" font-size="14">State court</text>
+            <text x="130" y="875" fill="#ffffff" font-size="14">Court order</text>
+            <text x="600" y="875" fill="#ef4444" font-size="14">Immediate / by date</text>
+            <text x="850" y="875" fill="#888" font-size="14">Judicial</text>
+            <text x="130" y="905" fill="#ffffff" font-size="14">Attorney request (civil)</text>
+            <text x="600" y="905" fill="#10b981" font-size="14">30 days</text>
+            <text x="850" y="905" fill="#888" font-size="14">State law</text>
+            <text x="550" y="970" text-anchor="middle" fill="#10b981" font-size="16">2024 HIPAA rule: $25 max fee + electronic delivery for patient access</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#888" font-size="14">Late = OCR civil penalty up to $50K per record</text>
+          </svg>`,
+          caption: "Every ROI request hits a 6-element + 3-statement check, special-PHI verification, and a turnaround clock — miss any and OCR fines start at $100/record."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Accounting of Disclosures: 6-Year Tracking",
+        content: `Under **45 CFR §164.528**, patients have the right to receive an **Accounting of Disclosures** showing every PHI disclosure made **without their authorization** during the **past 6 years**. The HIM department must produce this list within **60 days** of request (one 30-day extension allowed). Failure to track makes compliance impossible.
+
+**What must be logged**: date of disclosure, recipient name and address, brief description of PHI disclosed, and the purpose. For routine recurring disclosures (e.g., monthly reporting to a state cancer registry), only the **first and last date and frequency** need be logged.
+
+**What is excluded**: disclosures for **TPO (Treatment, Payment, Operations)**, disclosures **authorized by the patient**, disclosures to **the patient themselves**, **incidental** disclosures, and disclosures for a **facility directory or to family** (when patient was given opportunity to object).
+
+**What must be logged anyway**: disclosures to **public health, law enforcement, OCR investigations, abuse/neglect reports, workers' comp, judicial subpoenas, and research without authorization**. Most ROI systems (Verisma, MRO, Ciox) auto-log these; manual systems are still common in small practices and are the leading source of audit-failure penalties.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Accounting of Disclosures: What to Log</text>
+            <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">6-year lookback | 60-day response | 45 CFR 164.528</text>
+            <rect x="60" y="120" width="490" height="430" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="305" y="160" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">MUST LOG</text>
+            <text x="305" y="185" text-anchor="middle" fill="#888" font-size="14">Disclosures requiring accounting entry</text>
+            <text x="80" y="225" fill="#ffd700" font-size="15">+ Public health reporting</text>
+            <text x="100" y="247" fill="#ffffff" font-size="13">(communicable disease, immunization registry)</text>
+            <text x="80" y="278" fill="#ffd700" font-size="15">+ Law enforcement requests</text>
+            <text x="100" y="300" fill="#ffffff" font-size="13">(crime victim, suspect identification)</text>
+            <text x="80" y="331" fill="#ffd700" font-size="15">+ OCR / HHS investigation</text>
+            <text x="100" y="353" fill="#ffffff" font-size="13">(HIPAA audit, complaint investigation)</text>
+            <text x="80" y="384" fill="#ffd700" font-size="15">+ Abuse/neglect reports</text>
+            <text x="100" y="406" fill="#ffffff" font-size="13">(child, elder, dependent adult)</text>
+            <text x="80" y="437" fill="#ffd700" font-size="15">+ Workers' compensation</text>
+            <text x="100" y="459" fill="#ffffff" font-size="13">(claim adjudication)</text>
+            <text x="80" y="490" fill="#ffd700" font-size="15">+ Subpoena / court order</text>
+            <text x="100" y="512" fill="#ffffff" font-size="13">(judicial proceeding)</text>
+            <text x="80" y="540" fill="#ffd700" font-size="15">+ Research without authorization</text>
+            <rect x="560" y="120" width="490" height="430" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="8"/>
+            <text x="805" y="160" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">DO NOT LOG</text>
+            <text x="805" y="185" text-anchor="middle" fill="#888" font-size="14">Disclosures excluded by §164.528(a)(1)</text>
+            <text x="580" y="225" fill="#ffd700" font-size="15">– Treatment / Payment / Operations (TPO)</text>
+            <text x="600" y="247" fill="#ffffff" font-size="13">99% of routine clinical work</text>
+            <text x="580" y="278" fill="#ffd700" font-size="15">– Disclosures the patient authorized</text>
+            <text x="600" y="300" fill="#ffffff" font-size="13">(they signed a release)</text>
+            <text x="580" y="331" fill="#ffd700" font-size="15">– Disclosures TO the patient</text>
+            <text x="600" y="353" fill="#ffffff" font-size="13">(self-access, my-chart download)</text>
+            <text x="580" y="384" fill="#ffd700" font-size="15">– Incidental disclosures</text>
+            <text x="600" y="406" fill="#ffffff" font-size="13">(overheard in hallway, sign-in sheet)</text>
+            <text x="580" y="437" fill="#ffd700" font-size="15">– Facility directory / family</text>
+            <text x="600" y="459" fill="#ffffff" font-size="13">(if patient had chance to object)</text>
+            <text x="580" y="490" fill="#ffd700" font-size="15">– Limited data sets (research)</text>
+            <text x="600" y="512" fill="#ffffff" font-size="13">(de-identified with DUA)</text>
+            <text x="580" y="540" fill="#ffd700" font-size="15">– National security / intelligence</text>
+            <rect x="80" y="585" width="940" height="320" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Required Accounting Log Fields</text>
+            <line x1="110" y1="640" x2="990" y2="640" stroke="#888"/>
+            <text x="160" y="670" fill="#ffd700" font-size="14" font-weight="bold">Date</text>
+            <text x="320" y="670" fill="#ffd700" font-size="14" font-weight="bold">Recipient</text>
+            <text x="560" y="670" fill="#ffd700" font-size="14" font-weight="bold">PHI Disclosed</text>
+            <text x="830" y="670" fill="#ffd700" font-size="14" font-weight="bold">Purpose</text>
+            <line x1="110" y1="685" x2="990" y2="685" stroke="#888"/>
+            <text x="120" y="715" fill="#ffffff" font-size="13">2024-03-14</text>
+            <text x="320" y="715" fill="#ffffff" font-size="13">CA Cancer Registry</text>
+            <text x="560" y="715" fill="#ffffff" font-size="13">Dx + stage + treatment</text>
+            <text x="830" y="715" fill="#ffffff" font-size="13">Public health</text>
+            <text x="120" y="750" fill="#ffffff" font-size="13">2024-04-22</text>
+            <text x="320" y="750" fill="#ffffff" font-size="13">LAPD Det. Ruiz</text>
+            <text x="560" y="750" fill="#ffffff" font-size="13">GSW location + admit</text>
+            <text x="830" y="750" fill="#ffffff" font-size="13">Law enforcement</text>
+            <text x="120" y="785" fill="#ffffff" font-size="13">2024-05-08</text>
+            <text x="320" y="785" fill="#ffffff" font-size="13">Adult Protective Svcs</text>
+            <text x="560" y="785" fill="#ffffff" font-size="13">Bruising note + dx</text>
+            <text x="830" y="785" fill="#ffffff" font-size="13">Suspected abuse</text>
+            <text x="120" y="820" fill="#ffffff" font-size="13">2024-06-30</text>
+            <text x="320" y="820" fill="#ffffff" font-size="13">OCR Investigator</text>
+            <text x="560" y="820" fill="#ffffff" font-size="13">Audit log + 5 charts</text>
+            <text x="830" y="820" fill="#ffffff" font-size="13">HIPAA inv.</text>
+            <text x="120" y="855" fill="#ffffff" font-size="13">2024-07-14</text>
+            <text x="320" y="855" fill="#ffffff" font-size="13">Sup. Court (subpoena)</text>
+            <text x="560" y="855" fill="#ffffff" font-size="13">Chart 1/1/22–7/14/24</text>
+            <text x="830" y="855" fill="#ffffff" font-size="13">Civil litigation</text>
+            <text x="550" y="965" text-anchor="middle" fill="#ec4899" font-size="16">Patient request → Hospital must produce list within 60 days (one 30-day extension)</text>
+            <text x="550" y="995" text-anchor="middle" fill="#888" font-size="14">Recurring disclosures: log first &amp; last date + frequency only</text>
+          </svg>`,
+          caption: "Accounting of disclosures: TPO and patient-authorized releases are EXCLUDED; public health, law enforcement, subpoenas, and abuse reports are INCLUDED."
+        }
+      },
+      {
+        type: "example",
+        title: "Catastrophic ROI Failure: The Psychotherapy Notes Breach",
+        content: `**Case study**: A 2019 Massachusetts hospital received an ROI request from a divorcing spouse's attorney. The authorization, signed by the patient, requested *"my complete medical record from 2015–2019"*. The ROI clerk released **2,400 pages** including the patient's **psychotherapy notes**, **substance abuse treatment** (42 CFR Part 2), and **HIV status**.
+
+The patient sued. OCR investigated. The findings:
+
+1. **Psychotherapy notes** require a **specific separate authorization** explicitly identifying them (§164.508(a)(2)) — a general "complete record" request does **not** suffice.
+2. **42 CFR Part 2** substance abuse records require an additional **federal-format authorization** with specific re-disclosure prohibition language.
+3. The hospital had no policy to **flag charts** containing these special categories; the clerk processed the request as routine.
+
+**Outcome**: $1.55M OCR settlement, mandatory 3-year **Corrective Action Plan**, 18 employees retrained, ROI software upgraded to **auto-block** special-PHI categories without specific authorization, and a public **breach notification** to **all 2.1M** patients in the system (because OCR designated the failure a "systemic risk").
+
+The clerk was terminated; the HIM director resigned. Total cost when including the civil settlement: **$8.4M**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">$8.4M Lesson: The Psychotherapy Notes Breach</text>
+            <text x="550" y="80" text-anchor="middle" fill="#888" font-size="16">Massachusetts hospital, 2019 — 2,400 pages, 1 missing checkbox</text>
+            <rect x="80" y="115" width="940" height="180" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="150" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">The Mistake</text>
+            <text x="110" y="185" fill="#ffffff" font-size="15">• Attorney requested "complete medical record 2015–2019"</text>
+            <text x="110" y="215" fill="#ffffff" font-size="15">• Patient signed standard HIPAA authorization (general)</text>
+            <text x="110" y="245" fill="#ffffff" font-size="15">• Clerk released ALL 2,400 pages including psychotherapy + Part 2 + HIV</text>
+            <text x="110" y="275" fill="#ef4444" font-size="15" font-weight="bold">• No specific authorization for psychotherapy notes or substance abuse — VIOLATION</text>
+            <rect x="80" y="320" width="940" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="355" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Three Layers of Violation</text>
+            <rect x="110" y="380" width="290" height="200" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="4"/>
+            <text x="255" y="410" text-anchor="middle" fill="#ec4899" font-size="16" font-weight="bold">Psychotherapy</text>
+            <text x="255" y="430" text-anchor="middle" fill="#ec4899" font-size="14">45 CFR 164.508(a)(2)</text>
+            <text x="125" y="465" fill="#ffffff" font-size="13">Must be its own auth</text>
+            <text x="125" y="490" fill="#ffffff" font-size="13">"Authorization for</text>
+            <text x="125" y="510" fill="#ffffff" font-size="13">disclosure of psycho-</text>
+            <text x="125" y="530" fill="#ffffff" font-size="13">therapy notes"</text>
+            <text x="255" y="565" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">General auth = VOID</text>
+            <rect x="410" y="380" width="290" height="200" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="4"/>
+            <text x="555" y="410" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="bold">Substance Abuse</text>
+            <text x="555" y="430" text-anchor="middle" fill="#f59e0b" font-size="14">42 CFR Part 2</text>
+            <text x="425" y="465" fill="#ffffff" font-size="13">Federal-format auth</text>
+            <text x="425" y="490" fill="#ffffff" font-size="13">Must include re-</text>
+            <text x="425" y="510" fill="#ffffff" font-size="13">disclosure prohibition</text>
+            <text x="425" y="530" fill="#ffffff" font-size="13">language verbatim</text>
+            <text x="555" y="565" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">Stricter than HIPAA</text>
+            <rect x="710" y="380" width="290" height="200" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="4"/>
+            <text x="855" y="410" text-anchor="middle" fill="#0ea5e9" font-size="16" font-weight="bold">HIV / STI</text>
+            <text x="855" y="430" text-anchor="middle" fill="#0ea5e9" font-size="14">State + federal</text>
+            <text x="725" y="465" fill="#ffffff" font-size="13">Most states require</text>
+            <text x="725" y="490" fill="#ffffff" font-size="13">explicit HIV release</text>
+            <text x="725" y="510" fill="#ffffff" font-size="13">MA has strict</text>
+            <text x="725" y="530" fill="#ffffff" font-size="13">consent law</text>
+            <text x="855" y="565" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">No checkbox = void</text>
+            <rect x="80" y="620" width="940" height="280" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="655" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">The Damage</text>
+            <line x1="110" y1="675" x2="990" y2="675" stroke="#888"/>
+            <text x="150" y="705" fill="#ffd700" font-size="15" font-weight="bold">Item</text>
+            <text x="700" y="705" fill="#ffd700" font-size="15" font-weight="bold">Cost</text>
+            <line x1="110" y1="720" x2="990" y2="720" stroke="#888"/>
+            <text x="130" y="750" fill="#ffffff" font-size="14">OCR civil monetary penalty (settlement)</text>
+            <text x="700" y="750" fill="#ef4444" font-size="14">$1,550,000</text>
+            <text x="130" y="780" fill="#ffffff" font-size="14">3-year Corrective Action Plan (consultants)</text>
+            <text x="700" y="780" fill="#ef4444" font-size="14">$1,200,000</text>
+            <text x="130" y="810" fill="#ffffff" font-size="14">Patient civil lawsuit settlement</text>
+            <text x="700" y="810" fill="#ef4444" font-size="14">$3,500,000</text>
+            <text x="130" y="840" fill="#ffffff" font-size="14">2.1M breach notifications + credit monitoring</text>
+            <text x="700" y="840" fill="#ef4444" font-size="14">$1,800,000</text>
+            <text x="130" y="870" fill="#ffffff" font-size="14">ROI software upgrade + retraining</text>
+            <text x="700" y="870" fill="#ef4444" font-size="14">$350,000</text>
+            <line x1="110" y1="880" x2="990" y2="880" stroke="#888"/>
+            <text x="130" y="900" fill="#ffd700" font-size="15" font-weight="bold">TOTAL</text>
+            <text x="700" y="900" fill="#ef4444" font-size="16" font-weight="bold">$8,400,000</text>
+            <text x="550" y="970" text-anchor="middle" fill="#ec4899" font-size="16">Clerk terminated. HIM director resigned. Patient lifelong harm.</text>
+            <text x="550" y="1000" text-anchor="middle" fill="#888" font-size="14">All from one missing checkbox on a one-page authorization form</text>
+          </svg>`,
+          caption: "One missing checkbox cost $8.4M — psychotherapy, Part 2 substance abuse, and HIV each require their own explicit authorization."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Authorization Validity",
+        content: `Test your ability to spot an invalid authorization before disclosing PHI.`,
+        question: "An ROI request arrives with this authorization: signed by patient, dated 6 months ago, identifies the requesting attorney by name, asks for 'all records relating to my back injury from 1/1/2023 to 12/31/2023,' purpose stated as 'workers' compensation claim,' includes the revocation statement and re-disclosure warning, BUT has no expiration date or expiration event listed. The chart contains routine ortho notes plus one psychotherapy session related to chronic pain. What do you release?",
+        options: [
+          {
+            text: "Release everything in scope (ortho + psychotherapy) — the missing expiration date is a minor issue you can fix by adding 'one year from signing.'",
+            correct: false
+          },
+          {
+            text: "Release nothing — the missing expiration date voids the authorization under §164.508(c)(1); return it to the attorney for correction.",
+            correct: true
+          },
+          {
+            text: "Release only the ortho notes — psychotherapy is excluded, and the expiration date isn't a required element.",
+            correct: false
+          },
+          {
+            text: "Release the ortho notes and call the patient to verbally authorize the psychotherapy notes too.",
+            correct: false
+          }
+        ],
+        explanation: `**Expiration date or expiration event is one of the 6 core elements** under 45 CFR §164.508(c)(1). Without it, the authorization is **invalid in its entirety** — you cannot release **anything**, including the ortho notes. You may NOT "fix" the authorization yourself; that would be document forgery. Return it to the attorney with a written explanation noting the missing required element, and start the clock fresh once a corrected, fully-signed authorization arrives. Note that even if the expiration date were present, the psychotherapy session would STILL require a separate specific authorization (§164.508(a)(2)). Calling the patient for verbal authorization does NOT meet HIPAA's written-authorization standard for psychotherapy notes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The 6-Element Validity Checklist</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Pass ALL six or release NOTHING — there is no partial credit</text>
+            <rect x="80" y="130" width="940" height="600" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="165" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Authorization Audit — Current Request</text>
+            <line x1="110" y1="185" x2="990" y2="185" stroke="#888"/>
+            <text x="150" y="215" fill="#ffd700" font-size="15" font-weight="bold">Required Element</text>
+            <text x="650" y="215" fill="#ffd700" font-size="15" font-weight="bold">This Auth</text>
+            <text x="850" y="215" fill="#ffd700" font-size="15" font-weight="bold">Status</text>
+            <line x1="110" y1="230" x2="990" y2="230" stroke="#888"/>
+            <text x="130" y="265" fill="#ffffff" font-size="14">1. Specific PHI description</text>
+            <text x="650" y="265" fill="#ffffff" font-size="14">"back injury 2023"</text>
+            <text x="850" y="265" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <text x="130" y="300" fill="#ffffff" font-size="14">2. Who discloses</text>
+            <text x="650" y="300" fill="#ffffff" font-size="14">(implied hospital)</text>
+            <text x="850" y="300" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <text x="130" y="335" fill="#ffffff" font-size="14">3. Who receives</text>
+            <text x="650" y="335" fill="#ffffff" font-size="14">Attorney named</text>
+            <text x="850" y="335" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <text x="130" y="370" fill="#ffffff" font-size="14">4. Purpose</text>
+            <text x="650" y="370" fill="#ffffff" font-size="14">"Workers' comp claim"</text>
+            <text x="850" y="370" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <text x="130" y="405" fill="#ef4444" font-size="14" font-weight="bold">5. Expiration date / event</text>
+            <text x="650" y="405" fill="#ef4444" font-size="14">— MISSING —</text>
+            <text x="850" y="405" fill="#ef4444" font-size="14" font-weight="bold">FAIL</text>
+            <text x="130" y="440" fill="#ffffff" font-size="14">6. Signature + date</text>
+            <text x="650" y="440" fill="#ffffff" font-size="14">Yes (6 months ago)</text>
+            <text x="850" y="440" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <line x1="110" y1="465" x2="990" y2="465" stroke="#888"/>
+            <text x="130" y="500" fill="#ffd700" font-size="15" font-weight="bold">Required Statements</text>
+            <line x1="110" y1="515" x2="990" y2="515" stroke="#888"/>
+            <text x="130" y="545" fill="#ffffff" font-size="14">A. Right to revoke</text>
+            <text x="850" y="545" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <text x="130" y="580" fill="#ffffff" font-size="14">B. Treatment not conditioned</text>
+            <text x="850" y="580" fill="#888" font-size="14">(assumed)</text>
+            <text x="130" y="615" fill="#ffffff" font-size="14">C. Re-disclosure warning</text>
+            <text x="850" y="615" fill="#10b981" font-size="14" font-weight="bold">PASS</text>
+            <line x1="110" y1="640" x2="990" y2="640" stroke="#888"/>
+            <text x="130" y="675" fill="#ec4899" font-size="15" font-weight="bold">Special PHI in chart?</text>
+            <text x="130" y="700" fill="#ffffff" font-size="14">Psychotherapy session present → needs SEPARATE auth</text>
+            <text x="850" y="700" fill="#ef4444" font-size="14" font-weight="bold">SPECIAL</text>
+            <rect x="80" y="750" width="940" height="240" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="785" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Verdict: RELEASE NOTHING</text>
+            <text x="110" y="825" fill="#ffffff" font-size="15">• Missing expiration = VOID authorization (entire form fails)</text>
+            <text x="110" y="855" fill="#ffffff" font-size="15">• Even if fixed, psychotherapy still requires its own separate authorization</text>
+            <text x="110" y="885" fill="#ffffff" font-size="15">• Return to attorney in writing — note exactly which element is missing</text>
+            <text x="110" y="915" fill="#ffffff" font-size="15">• Never "fix" the form yourself (forgery + breach of trust)</text>
+            <text x="110" y="945" fill="#10b981" font-size="15">• Reset turnaround clock when corrected, signed authorization arrives</text>
+            <text x="550" y="1050" text-anchor="middle" fill="#888" font-size="14">CCA exam: every "missing required element" question is the SAME answer — RELEASE NOTHING</text>
+          </svg>`,
+          caption: "Authorization audit: 5 of 6 elements pass but expiration is missing — the entire form is void, and psychotherapy notes would have needed a separate auth anyway."
+        }
+      },
+      {
+        type: "application",
+        title: "On the Job: The 7-Step ROI Workflow",
+        content: `Every ROI request you process should follow the same **7-step workflow**. Memorize it; deviation is how breaches happen.
+
+**Step 1 — Receive**: log the request in the ROI system the day it arrives (turnaround clock starts).
+
+**Step 2 — Verify requester identity**: government-issued photo ID for in-person, notarization for legal, BAA on file for business associates.
+
+**Step 3 — Validate authorization**: check all **6 core elements + 3 statements** (lesson 8). If invalid, return same-day with specific deficiency.
+
+**Step 4 — Check for special PHI**: open the chart and look for psychotherapy notes, Part 2 substance abuse, HIV/AIDS, genetic info. If found, **require separate specific authorization** for each before releasing.
+
+**Step 5 — Compile only what was requested**: never release "extra" — scope creep is a breach.
+
+**Step 6 — Log the disclosure**: date, recipient, PHI disclosed, purpose — for the 6-year accounting (unless TPO or patient-authorized).
+
+**Step 7 — Send via secure channel**: encrypted email, secure portal, or certified mail. Never fax to a number not verified within 30 days.
+
+A productivity benchmark: **a trained ROI specialist processes 30–50 requests/day** at >99.5% compliance.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The 7-Step ROI Workflow</text>
+            <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">Memorize this sequence — every breach skips one of these steps</text>
+            <rect x="80" y="115" width="940" height="100" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="165" r="28" fill="#6366f1"/>
+            <text x="125" y="173" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">1</text>
+            <text x="175" y="155" fill="#ffd700" font-size="17" font-weight="bold">RECEIVE</text>
+            <text x="175" y="182" fill="#ffffff" font-size="14">Log request in ROI system same day arrived → turnaround clock starts</text>
+            <text x="175" y="205" fill="#888" font-size="13">15 days for patient access | 30 days for attorneys | per court date for subpoena</text>
+            <rect x="80" y="225" width="940" height="100" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="275" r="28" fill="#10b981"/>
+            <text x="125" y="283" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">2</text>
+            <text x="175" y="265" fill="#ffd700" font-size="17" font-weight="bold">VERIFY REQUESTER</text>
+            <text x="175" y="292" fill="#ffffff" font-size="14">Photo ID (in-person) | Notarization (legal) | BAA on file (business associate)</text>
+            <text x="175" y="315" fill="#888" font-size="13">Phone callback to known number for unfamiliar requesters</text>
+            <rect x="80" y="335" width="940" height="100" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="385" r="28" fill="#f59e0b"/>
+            <text x="125" y="393" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">3</text>
+            <text x="175" y="375" fill="#ffd700" font-size="17" font-weight="bold">VALIDATE AUTHORIZATION</text>
+            <text x="175" y="402" fill="#ffffff" font-size="14">Check 6 core elements + 3 statements — missing 1 = VOID, return same-day</text>
+            <text x="175" y="425" fill="#888" font-size="13">Document the deficiency in writing to the requester</text>
+            <rect x="80" y="445" width="940" height="100" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="495" r="28" fill="#ec4899"/>
+            <text x="125" y="503" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">4</text>
+            <text x="175" y="485" fill="#ffd700" font-size="17" font-weight="bold">CHECK SPECIAL PHI</text>
+            <text x="175" y="512" fill="#ffffff" font-size="14">Psychotherapy | Part 2 substance | HIV/AIDS | Genetic (GINA) | Mental health</text>
+            <text x="175" y="535" fill="#ef4444" font-size="13">Each requires its OWN separate, specific authorization — general auth = NO</text>
+            <rect x="80" y="555" width="940" height="100" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="605" r="28" fill="#8b5cf6"/>
+            <text x="125" y="613" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">5</text>
+            <text x="175" y="595" fill="#ffd700" font-size="17" font-weight="bold">COMPILE ONLY WHAT'S REQUESTED</text>
+            <text x="175" y="622" fill="#ffffff" font-size="14">Minimum Necessary Standard — release scoped records only, never extras</text>
+            <text x="175" y="645" fill="#888" font-size="13">Scope creep is a breach: extra page = OCR penalty per page</text>
+            <rect x="80" y="665" width="940" height="100" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="715" r="28" fill="#0ea5e9"/>
+            <text x="125" y="723" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">6</text>
+            <text x="175" y="705" fill="#ffd700" font-size="17" font-weight="bold">LOG DISCLOSURE (if accountable)</text>
+            <text x="175" y="732" fill="#ffffff" font-size="14">Date | Recipient | PHI | Purpose → 6-year accounting (§164.528)</text>
+            <text x="175" y="755" fill="#888" font-size="13">Skip log only if TPO, patient-authorized, or to patient themselves</text>
+            <rect x="80" y="775" width="940" height="100" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <circle cx="125" cy="825" r="28" fill="#ef4444"/>
+            <text x="125" y="833" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">7</text>
+            <text x="175" y="815" fill="#ffd700" font-size="17" font-weight="bold">SEND SECURELY</text>
+            <text x="175" y="842" fill="#ffffff" font-size="14">Encrypted email | Secure portal | Certified mail | Verified fax</text>
+            <text x="175" y="865" fill="#ef4444" font-size="13">NEVER fax to a number not verified within last 30 days</text>
+            <rect x="80" y="895" width="940" height="170" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">CCA Productivity Benchmarks</text>
+            <text x="200" y="970" fill="#ffd700" font-size="15">Throughput:</text>
+            <text x="500" y="970" fill="#ffffff" font-size="15">30–50 requests / day</text>
+            <text x="200" y="1000" fill="#ffd700" font-size="15">Compliance rate:</text>
+            <text x="500" y="1000" fill="#ffffff" font-size="15">&gt;99.5% (less than 1 error per 200)</text>
+            <text x="200" y="1030" fill="#ffd700" font-size="15">Turnaround:</text>
+            <text x="500" y="1030" fill="#ffffff" font-size="15">15 days patient | 30 days attorney</text>
+          </svg>`,
+          caption: "Seven non-negotiable steps for every ROI request — every documented HIPAA breach in the last decade traces back to skipping one."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-1-lesson-9",
+    title: "Health Record Storage and Format: Paper, Hybrid, EHR, and Migration Pitfalls",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Three Record Formats — Each with Its Own Hazards",
+        content: `Even in 2026, US healthcare records exist in **three formats simultaneously**:
+
+**Paper records** remain in archives, off-site warehouses, and small specialty practices. They require **fire-rated cabinets (1-hour minimum)**, **climate control (60–75°F, 30–50% humidity)**, **pest control**, and **physical access logs**. Average annual cost: **$3–5 per chart per year** in storage alone.
+
+**Hybrid records** exist in **70%+ of US hospitals** — part paper, part scanned, part EHR-native. The danger: clinicians document in EHR while older labs sit in paper, creating **clinically incomplete views** unless careful indexing is maintained.
+
+**Fully electronic (EHR) records** under the **HITECH Act** and **CMS Promoting Interoperability** (formerly Meaningful Use) program must support **CPOE, e-prescribing, structured problem lists, patient portals, and certified interoperability (USCDI v3)**. Penalty for non-certified EHR: **up to 9% Medicare reimbursement cut**.
+
+Every migration **between** formats introduces **orphan records, format incompatibility, and document-loss risk** — and the dangerous **"scan and toss"** policy where paper originals are destroyed before the scan is verified.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Three Record Formats Side-by-Side</text>
+            <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">Coexisting in 2026 — each with distinct compliance demands</text>
+            <rect x="40" y="120" width="340" height="780" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="8"/>
+            <text x="210" y="160" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">PAPER</text>
+            <text x="210" y="185" text-anchor="middle" fill="#888" font-size="13">Still 12% of US records</text>
+            <text x="60" y="220" fill="#ffd700" font-size="15" font-weight="bold">Storage Requirements</text>
+            <text x="60" y="248" fill="#ffffff" font-size="13">• Fire-rated cabinet (1-hr min)</text>
+            <text x="60" y="273" fill="#ffffff" font-size="13">• Climate: 60–75°F</text>
+            <text x="60" y="298" fill="#ffffff" font-size="13">• Humidity: 30–50% RH</text>
+            <text x="60" y="323" fill="#ffffff" font-size="13">• Pest control program</text>
+            <text x="60" y="348" fill="#ffffff" font-size="13">• Physical access log</text>
+            <text x="60" y="373" fill="#ffffff" font-size="13">• Locked at all times</text>
+            <text x="60" y="408" fill="#ffd700" font-size="15" font-weight="bold">Cost</text>
+            <text x="60" y="436" fill="#ffffff" font-size="13">$3–5 / chart / year</text>
+            <text x="60" y="460" fill="#ffffff" font-size="13">$10K–50K / 1000 charts</text>
+            <text x="60" y="495" fill="#ffd700" font-size="15" font-weight="bold">Pros</text>
+            <text x="60" y="523" fill="#10b981" font-size="13">+ No cyber risk</text>
+            <text x="60" y="548" fill="#10b981" font-size="13">+ No system downtime</text>
+            <text x="60" y="573" fill="#10b981" font-size="13">+ Legible signatures</text>
+            <text x="60" y="608" fill="#ffd700" font-size="15" font-weight="bold">Cons</text>
+            <text x="60" y="636" fill="#ef4444" font-size="13">– Fire/flood loss</text>
+            <text x="60" y="661" fill="#ef4444" font-size="13">– No remote access</text>
+            <text x="60" y="686" fill="#ef4444" font-size="13">– No analytics</text>
+            <text x="60" y="711" fill="#ef4444" font-size="13">– Slow ROI turnaround</text>
+            <text x="60" y="746" fill="#ffd700" font-size="15" font-weight="bold">Where used</text>
+            <text x="60" y="774" fill="#ffffff" font-size="13">Solo specialty, rural</text>
+            <text x="60" y="799" fill="#ffffff" font-size="13">Behavioral health</text>
+            <text x="60" y="824" fill="#ffffff" font-size="13">Archive shelves</text>
+            <text x="210" y="870" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">Retention same as EHR</text>
+            <rect x="385" y="120" width="340" height="780" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="3" rx="8"/>
+            <text x="555" y="160" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">HYBRID</text>
+            <text x="555" y="185" text-anchor="middle" fill="#888" font-size="13">70%+ of US hospitals today</text>
+            <text x="405" y="220" fill="#ffd700" font-size="15" font-weight="bold">What's in each format?</text>
+            <text x="405" y="248" fill="#ffffff" font-size="13">Paper: pre-2010 charts</text>
+            <text x="405" y="273" fill="#ffffff" font-size="13">Scanned: 2010–2018 docs</text>
+            <text x="405" y="298" fill="#ffffff" font-size="13">EHR-native: 2018+</text>
+            <text x="405" y="323" fill="#ffffff" font-size="13">External: HIE feeds</text>
+            <text x="405" y="358" fill="#ffd700" font-size="15" font-weight="bold">Risk Surface</text>
+            <text x="405" y="386" fill="#ef4444" font-size="13">– Clinically incomplete view</text>
+            <text x="405" y="411" fill="#ef4444" font-size="13">– Indexing errors</text>
+            <text x="405" y="436" fill="#ef4444" font-size="13">– Multiple ROI workflows</text>
+            <text x="405" y="461" fill="#ef4444" font-size="13">– "Phantom" labs in paper</text>
+            <text x="405" y="486" fill="#ef4444" font-size="13">– Auditor confusion</text>
+            <text x="405" y="521" fill="#ffd700" font-size="15" font-weight="bold">Required Controls</text>
+            <text x="405" y="549" fill="#ffffff" font-size="13">• Master Index of Sources</text>
+            <text x="405" y="574" fill="#ffffff" font-size="13">  (MIS) flagged in EHR</text>
+            <text x="405" y="599" fill="#ffffff" font-size="13">• Scanned document quality</text>
+            <text x="405" y="624" fill="#ffffff" font-size="13">  audits (≥300 DPI)</text>
+            <text x="405" y="649" fill="#ffffff" font-size="13">• Cross-format ROI policy</text>
+            <text x="405" y="674" fill="#ffffff" font-size="13">• Designated record set</text>
+            <text x="405" y="699" fill="#ffffff" font-size="13">  inventory updated</text>
+            <text x="405" y="734" fill="#ffd700" font-size="15" font-weight="bold">Common Pitfall</text>
+            <text x="405" y="762" fill="#ef4444" font-size="13">Clinician sees clean EHR,</text>
+            <text x="405" y="787" fill="#ef4444" font-size="13">missing old paper labs</text>
+            <text x="405" y="812" fill="#ef4444" font-size="13">→ orders duplicate tests or</text>
+            <text x="405" y="837" fill="#ef4444" font-size="13">misses critical history</text>
+            <text x="555" y="880" text-anchor="middle" fill="#8b5cf6" font-size="14" font-weight="bold">Transitional — highest risk</text>
+            <rect x="730" y="120" width="340" height="780" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="900" y="160" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">EHR (full)</text>
+            <text x="900" y="185" text-anchor="middle" fill="#888" font-size="13">Modern certified standard</text>
+            <text x="750" y="220" fill="#ffd700" font-size="15" font-weight="bold">Certification Required</text>
+            <text x="750" y="248" fill="#ffffff" font-size="13">• ONC certified (2015 Cures)</text>
+            <text x="750" y="273" fill="#ffffff" font-size="13">• USCDI v3 data classes</text>
+            <text x="750" y="298" fill="#ffffff" font-size="13">• FHIR R4 APIs</text>
+            <text x="750" y="323" fill="#ffffff" font-size="13">• Patient access &lt;1 day</text>
+            <text x="750" y="358" fill="#ffd700" font-size="15" font-weight="bold">CMS Promoting Interop</text>
+            <text x="750" y="386" fill="#ffffff" font-size="13">• CPOE for med/lab/rad</text>
+            <text x="750" y="411" fill="#ffffff" font-size="13">• E-prescribing</text>
+            <text x="750" y="436" fill="#ffffff" font-size="13">• Patient portal</text>
+            <text x="750" y="461" fill="#ffffff" font-size="13">• Health info exchange</text>
+            <text x="750" y="486" fill="#ffffff" font-size="13">• Public health reporting</text>
+            <text x="750" y="521" fill="#ffd700" font-size="15" font-weight="bold">Penalties</text>
+            <text x="750" y="549" fill="#ef4444" font-size="13">Non-certified EHR =</text>
+            <text x="750" y="574" fill="#ef4444" font-size="13">up to 9% Medicare cut</text>
+            <text x="750" y="599" fill="#ef4444" font-size="13">Information blocking =</text>
+            <text x="750" y="624" fill="#ef4444" font-size="13">$1M / violation</text>
+            <text x="750" y="659" fill="#ffd700" font-size="15" font-weight="bold">Pros</text>
+            <text x="750" y="687" fill="#10b981" font-size="13">+ Instant remote access</text>
+            <text x="750" y="712" fill="#10b981" font-size="13">+ Decision support</text>
+            <text x="750" y="737" fill="#10b981" font-size="13">+ Analytics + quality</text>
+            <text x="750" y="762" fill="#10b981" font-size="13">+ Interoperability</text>
+            <text x="750" y="787" fill="#ffd700" font-size="15" font-weight="bold">Cons</text>
+            <text x="750" y="815" fill="#ef4444" font-size="13">– Cyber + ransomware</text>
+            <text x="750" y="840" fill="#ef4444" font-size="13">– Downtime procedures</text>
+            <text x="900" y="880" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">Future state — but pricey</text>
+            <text x="550" y="950" text-anchor="middle" fill="#ec4899" font-size="16">Retention requirements apply identically across all 3 formats</text>
+            <text x="550" y="985" text-anchor="middle" fill="#888" font-size="14">5 yr Medicare | 7 yr most states | 10 yr Joint Commission | adult age 21+ for minors</text>
+          </svg>`,
+          caption: "Paper, hybrid, and EHR each demand different controls — hybrid carries the highest risk because clinicians see only one source at a time."
+        }
+      },
+      {
+        type: "concept",
+        title: "EHR Certification & Meaningful Use Criteria",
+        content: `Under the **HITECH Act of 2009** and now the **21st Century Cures Act of 2016**, only **ONC-Certified Health IT** can be used to qualify for Medicare/Medicaid bonuses (originally Meaningful Use, now **Promoting Interoperability**). The latest standard requires:
+
+**Stage 1 — Capture**: e-prescribing, demographics, vitals, smoking status, clinical decision support, and electronic copy of records for patients.
+
+**Stage 2 — Exchange**: structured data export, **patient portal access within 1 business day**, secure messaging, **CPOE for medications/labs/radiology**, summary of care document at transitions.
+
+**Stage 3 — Outcomes**: USCDI v3 data classes, FHIR R4 APIs, **information-blocking rules (no withholding data without legal cause)**, public health reporting in 4+ areas, quality measure reporting (eCQMs).
+
+**The Information Blocking Rule** (April 2021) prohibits providers, IT vendors, and HIEs from **interfering with electronic health information access**. Penalties: up to **$1M per violation** for vendors, **CMS payment reductions** for providers.
+
+**USCDI v3 (United States Core Data for Interoperability)** is the mandatory **minimum data set** for exchange — patient demographics, problems, meds, allergies, vitals, lab results, procedures, immunizations, advance directives, encounter info, clinical notes, goals, **and care team members**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">EHR Certification: ONC + Promoting Interop</text>
+            <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">HITECH 2009 → Cures 2016 → Information Blocking Rule 2021</text>
+            <rect x="60" y="115" width="320" height="280" fill="#1a1a2e" stroke="#6366f1" stroke-width="3" rx="8"/>
+            <text x="220" y="148" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">STAGE 1: CAPTURE</text>
+            <text x="220" y="172" text-anchor="middle" fill="#888" font-size="13">Data into EHR</text>
+            <text x="80" y="210" fill="#ffffff" font-size="14">• E-prescribing (eRx)</text>
+            <text x="80" y="240" fill="#ffffff" font-size="14">• Demographics structured</text>
+            <text x="80" y="270" fill="#ffffff" font-size="14">• Vital signs entered</text>
+            <text x="80" y="300" fill="#ffffff" font-size="14">• Smoking status</text>
+            <text x="80" y="330" fill="#ffffff" font-size="14">• Clinical decision support</text>
+            <text x="80" y="360" fill="#ffffff" font-size="14">• Electronic copy for pt</text>
+            <text x="220" y="385" text-anchor="middle" fill="#10b981" font-size="13" font-weight="bold">Achieved by ~2014</text>
+            <rect x="390" y="115" width="320" height="280" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="550" y="148" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">STAGE 2: EXCHANGE</text>
+            <text x="550" y="172" text-anchor="middle" fill="#888" font-size="13">Data sharing</text>
+            <text x="410" y="210" fill="#ffffff" font-size="14">• Structured data export</text>
+            <text x="410" y="240" fill="#ffffff" font-size="14">• Portal access in 1 day</text>
+            <text x="410" y="270" fill="#ffffff" font-size="14">• Secure messaging</text>
+            <text x="410" y="300" fill="#ffffff" font-size="14">• CPOE: meds/lab/rad</text>
+            <text x="410" y="330" fill="#ffffff" font-size="14">• Summary at transitions</text>
+            <text x="410" y="360" fill="#ffffff" font-size="14">• Lab to public health</text>
+            <text x="550" y="385" text-anchor="middle" fill="#10b981" font-size="13" font-weight="bold">Achieved by ~2018</text>
+            <rect x="720" y="115" width="320" height="280" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="8"/>
+            <text x="880" y="148" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">STAGE 3: OUTCOMES</text>
+            <text x="880" y="172" text-anchor="middle" fill="#888" font-size="13">Quality + interop</text>
+            <text x="740" y="210" fill="#ffffff" font-size="14">• USCDI v3 data classes</text>
+            <text x="740" y="240" fill="#ffffff" font-size="14">• FHIR R4 APIs open</text>
+            <text x="740" y="270" fill="#ffffff" font-size="14">• Info blocking ban</text>
+            <text x="740" y="300" fill="#ffffff" font-size="14">• Public health (4+ areas)</text>
+            <text x="740" y="330" fill="#ffffff" font-size="14">• eCQM quality measures</text>
+            <text x="740" y="360" fill="#ffffff" font-size="14">• Patient API access</text>
+            <text x="880" y="385" text-anchor="middle" fill="#ec4899" font-size="13" font-weight="bold">Current state 2024+</text>
+            <rect x="80" y="430" width="940" height="320" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="465" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">USCDI v3 Data Classes (Mandatory for Exchange)</text>
+            <line x1="110" y1="485" x2="990" y2="485" stroke="#888"/>
+            <text x="130" y="520" fill="#10b981" font-size="14">+ Patient demographics</text>
+            <text x="500" y="520" fill="#10b981" font-size="14">+ Problems (active dx)</text>
+            <text x="800" y="520" fill="#10b981" font-size="14">+ Medications</text>
+            <text x="130" y="555" fill="#10b981" font-size="14">+ Allergies + intolerances</text>
+            <text x="500" y="555" fill="#10b981" font-size="14">+ Vital signs</text>
+            <text x="800" y="555" fill="#10b981" font-size="14">+ Lab results</text>
+            <text x="130" y="590" fill="#10b981" font-size="14">+ Procedures</text>
+            <text x="500" y="590" fill="#10b981" font-size="14">+ Immunizations</text>
+            <text x="800" y="590" fill="#10b981" font-size="14">+ Advance directives</text>
+            <text x="130" y="625" fill="#10b981" font-size="14">+ Encounter info</text>
+            <text x="500" y="625" fill="#10b981" font-size="14">+ Clinical notes (8 types)</text>
+            <text x="800" y="625" fill="#10b981" font-size="14">+ Goals</text>
+            <text x="130" y="660" fill="#10b981" font-size="14">+ Health concerns</text>
+            <text x="500" y="660" fill="#10b981" font-size="14">+ Smoking status</text>
+            <text x="800" y="660" fill="#10b981" font-size="14">+ Assessment/plan</text>
+            <text x="130" y="695" fill="#10b981" font-size="14">+ Provenance</text>
+            <text x="500" y="695" fill="#10b981" font-size="14">+ Care team members</text>
+            <text x="800" y="695" fill="#10b981" font-size="14">+ Pt demographics+SOGI</text>
+            <text x="550" y="735" text-anchor="middle" fill="#888" font-size="13">v3 added care-team, SOGI, and SDOH (social determinants of health)</text>
+            <rect x="80" y="780" width="940" height="240" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="815" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">The Information Blocking Rule (Effective 2021)</text>
+            <text x="110" y="855" fill="#ffd700" font-size="15">Prohibited:</text>
+            <text x="110" y="885" fill="#ffffff" font-size="14">• Withholding records from patient without legal cause</text>
+            <text x="110" y="915" fill="#ffffff" font-size="14">• Charging excessive fees to access EHI</text>
+            <text x="110" y="945" fill="#ffffff" font-size="14">• Vendor contracts banning data export</text>
+            <text x="110" y="975" fill="#ffffff" font-size="14">• Delaying API access beyond 1 day</text>
+            <text x="700" y="855" fill="#ef4444" font-size="15">Penalties:</text>
+            <text x="700" y="885" fill="#ffffff" font-size="14">Vendor: up to $1M / violation</text>
+            <text x="700" y="915" fill="#ffffff" font-size="14">Provider: CMS reductions</text>
+            <text x="700" y="945" fill="#ffffff" font-size="14">Reported to OIG</text>
+          </svg>`,
+          caption: "ONC certification + Stages 1–3 of Promoting Interop + USCDI v3 = the modern EHR standard; information blocking carries $1M-per-violation teeth."
+        }
+      },
+      {
+        type: "example",
+        title: "The 'Scan and Toss' Disaster: Why Originals Matter",
+        content: `**Case study**: A 2018 Florida community hospital began converting its **paper archive (180,000 charts)** to a hybrid EHR via a third-party scanning vendor. To save warehouse rent (**$48K/month**), the hospital adopted a **"scan and toss"** policy: as soon as a chart was scanned, the paper original was **shredded the next day** — before any **quality assurance review** of the scan.
+
+The catastrophic problems found 14 months later:
+
+1. **6,200 charts had unreadable pages** (faded carbon copies, double-fed pages, blank scans). The originals had already been shredded — the data was **gone forever**.
+2. **400 charts were misindexed** — Patient A's lab results filed under Patient B's MRN. Without paper originals, **forensic reconstruction was impossible**.
+3. **The state board of medicine subpoenaed 12 charts** in a malpractice case from 2015. Three were among the unreadable batch. The hospital had to **declare spoliation of evidence**, automatically losing the case. **Settlement: $9.2M**.
+
+**The fix**: AHIMA recommends **scan + QA + retain original for 30–90 days** before destruction. Higher-stakes documents (signed consents, advance directives, legal forms) should be **scanned AND retained in paper indefinitely** if the original signature is legally required by state law.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">"Scan and Toss": A $9.2M Lesson</text>
+            <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">Florida hospital, 180,000 charts, 1 catastrophic policy</text>
+            <rect x="80" y="120" width="940" height="160" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="550" y="155" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">The Faulty Policy</text>
+            <text x="110" y="195" fill="#ffffff" font-size="15">Day 1: chart scanned by vendor → uploaded to EHR document repository</text>
+            <text x="110" y="225" fill="#ffffff" font-size="15">Day 2: paper original shredded — NO quality review yet</text>
+            <text x="110" y="255" fill="#ef4444" font-size="15" font-weight="bold">Motive: save $48K/month warehouse rent. Outcome: $9.2M settlement.</text>
+            <rect x="80" y="300" width="940" height="320" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="335" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">What Went Wrong</text>
+            <rect x="110" y="360" width="290" height="220" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="4"/>
+            <text x="255" y="390" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="bold">Unreadable Scans</text>
+            <text x="125" y="425" fill="#ffffff" font-size="13">6,200 charts had pages</text>
+            <text x="125" y="450" fill="#ffffff" font-size="13">that were faded carbon,</text>
+            <text x="125" y="475" fill="#ffffff" font-size="13">double-fed, or blank</text>
+            <text x="125" y="510" fill="#ef4444" font-size="13">Originals shredded =</text>
+            <text x="125" y="535" fill="#ef4444" font-size="13">data lost forever</text>
+            <text x="255" y="570" text-anchor="middle" fill="#888" font-size="12">3.4% loss rate</text>
+            <rect x="410" y="360" width="290" height="220" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="4"/>
+            <text x="555" y="390" text-anchor="middle" fill="#ec4899" font-size="16" font-weight="bold">Misindexed Charts</text>
+            <text x="425" y="425" fill="#ffffff" font-size="13">400 charts filed under</text>
+            <text x="425" y="450" fill="#ffffff" font-size="13">wrong MRN — patient A</text>
+            <text x="425" y="475" fill="#ffffff" font-size="13">labs in patient B chart</text>
+            <text x="425" y="510" fill="#ef4444" font-size="13">No paper = no forensic</text>
+            <text x="425" y="535" fill="#ef4444" font-size="13">reconstruction possible</text>
+            <text x="555" y="570" text-anchor="middle" fill="#888" font-size="12">Overlay errors at scale</text>
+            <rect x="710" y="360" width="290" height="220" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="4"/>
+            <text x="855" y="390" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Subpoena Failure</text>
+            <text x="725" y="425" fill="#ffffff" font-size="13">12 charts subpoenaed</text>
+            <text x="725" y="450" fill="#ffffff" font-size="13">in 2018 malpractice;</text>
+            <text x="725" y="475" fill="#ffffff" font-size="13">3 were unreadable</text>
+            <text x="725" y="510" fill="#ef4444" font-size="13">Spoliation of evidence</text>
+            <text x="725" y="535" fill="#ef4444" font-size="13">→ auto loss of case</text>
+            <text x="855" y="570" text-anchor="middle" fill="#888" font-size="12">$9.2M settlement</text>
+            <rect x="80" y="640" width="940" height="330" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="550" y="675" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">The AHIMA-Recommended Scanning Workflow</text>
+            <circle cx="170" cy="745" r="35" fill="#10b981"/>
+            <text x="170" y="755" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">1</text>
+            <text x="170" y="800" text-anchor="middle" fill="#ffd700" font-size="15" font-weight="bold">SCAN</text>
+            <text x="170" y="825" text-anchor="middle" fill="#ffffff" font-size="13">300 DPI min</text>
+            <text x="170" y="845" text-anchor="middle" fill="#ffffff" font-size="13">Color if signed</text>
+            <circle cx="360" cy="745" r="35" fill="#6366f1"/>
+            <text x="360" y="755" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">2</text>
+            <text x="360" y="800" text-anchor="middle" fill="#ffd700" font-size="15" font-weight="bold">INDEX</text>
+            <text x="360" y="825" text-anchor="middle" fill="#ffffff" font-size="13">MRN verified</text>
+            <text x="360" y="845" text-anchor="middle" fill="#ffffff" font-size="13">Doc type tagged</text>
+            <circle cx="550" cy="745" r="35" fill="#f59e0b"/>
+            <text x="550" y="755" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">3</text>
+            <text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="15" font-weight="bold">QA REVIEW</text>
+            <text x="550" y="825" text-anchor="middle" fill="#ffffff" font-size="13">Page by page</text>
+            <text x="550" y="845" text-anchor="middle" fill="#ffffff" font-size="13">2nd reviewer</text>
+            <circle cx="740" cy="745" r="35" fill="#ec4899"/>
+            <text x="740" y="755" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">4</text>
+            <text x="740" y="800" text-anchor="middle" fill="#ffd700" font-size="15" font-weight="bold">RETAIN 30–90d</text>
+            <text x="740" y="825" text-anchor="middle" fill="#ffffff" font-size="13">Paper kept</text>
+            <text x="740" y="845" text-anchor="middle" fill="#ffffff" font-size="13">in fire cabinet</text>
+            <circle cx="930" cy="745" r="35" fill="#ef4444"/>
+            <text x="930" y="755" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">5</text>
+            <text x="930" y="800" text-anchor="middle" fill="#ffd700" font-size="15" font-weight="bold">DESTROY</text>
+            <text x="930" y="825" text-anchor="middle" fill="#ffffff" font-size="13">Shred + log</text>
+            <text x="930" y="845" text-anchor="middle" fill="#ffffff" font-size="13">COD issued</text>
+            <line x1="205" y1="745" x2="325" y2="745" stroke="#ffd700" stroke-width="2"/>
+            <line x1="395" y1="745" x2="515" y2="745" stroke="#ffd700" stroke-width="2"/>
+            <line x1="585" y1="745" x2="705" y2="745" stroke="#ffd700" stroke-width="2"/>
+            <line x1="775" y1="745" x2="895" y2="745" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="920" text-anchor="middle" fill="#ec4899" font-size="15">Signed consents + advance directives: retain paper INDEFINITELY (state-specific)</text>
+            <text x="550" y="950" text-anchor="middle" fill="#888" font-size="14">Certificate of Destruction (COD) required by HIPAA — vendor must provide</text>
+          </svg>`,
+          caption: "Scan-and-toss costs $9.2M; scan-QA-retain-then-destroy with a Certificate of Destruction is the AHIMA standard."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Knowledge Check: Hybrid Record Pitfalls",
+        content: `Test your ability to spot a dangerous hybrid-record situation.`,
+        question: "A new hospitalist sees a patient in the EHR who shows 'no past medical history' on the problem list. She orders a cardiac stress test. The lab tech later finds three earlier stress tests on paper in the off-site archive — all positive, leading to a prior CABG documented in pre-2015 paper notes that were NEVER scanned. What is the root cause of this hybrid-record failure, and what must HIM do?",
+        options: [
+          {
+            text: "Root cause: clinician didn't search hard enough. Fix: send a memo reminding doctors to check off-site archives.",
+            correct: false
+          },
+          {
+            text: "Root cause: missing Master Index of Sources flag in the EHR. Fix: add an MIS alert to every chart that has pre-2015 paper records, perform a back-scanning project, and update the Designated Record Set inventory.",
+            correct: true
+          },
+          {
+            text: "Root cause: the paper records should have been shredded years ago. Fix: destroy all pre-2015 paper as a 'scan and toss' policy.",
+            correct: false
+          },
+          {
+            text: "Root cause: the off-site archive was poorly organized. Fix: re-organize the warehouse alphabetically.",
+            correct: false
+          }
+        ],
+        explanation: `Hybrid records are dangerous because clinicians **only see what's in front of them**. If pre-2015 paper records exist but the EHR shows no flag, the clinician assumes the chart is complete — and orders **duplicate, unnecessary, or contradictory care**. The structural fix is a **Master Index of Sources (MIS)**: every chart with content outside the EHR must carry a **persistent on-screen banner** ("Additional paper records 2008–2015 in off-site archive — request via ROI"). This is an AHIMA best practice and is auditable by Joint Commission. The long-term fix is a **back-scanning project** to bring legacy paper into the EHR (with proper QA). The **Designated Record Set inventory** under HIPAA must list every location where PHI lives — including off-site warehouses, microfilm, and scanned archives. **Never** destroy paper to "force" data into the EHR — that's the scan-and-toss disaster from the previous card.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">The Master Index of Sources (MIS) Solution</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Make hidden records VISIBLE to clinicians before they decide</text>
+            <rect x="80" y="125" width="940" height="220" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="8"/>
+            <text x="550" y="160" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Before MIS: The Hidden Record Trap</text>
+            <text x="110" y="195" fill="#ffffff" font-size="15">EHR view (what clinician sees):</text>
+            <text x="130" y="222" fill="#10b981" font-size="14">Problem list: (empty)</text>
+            <text x="130" y="248" fill="#10b981" font-size="14">Surgical history: none</text>
+            <text x="130" y="274" fill="#10b981" font-size="14">Allergies: NKDA</text>
+            <text x="130" y="305" fill="#ef4444" font-size="14" font-weight="bold">REALITY: 3 stress tests + CABG documented in paper archive</text>
+            <text x="130" y="330" fill="#ef4444" font-size="14" font-weight="bold">Clinician orders DUPLICATE stress test, missing CABG context</text>
+            <rect x="80" y="365" width="940" height="260" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="550" y="400" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">After MIS: Visible Source Flag</text>
+            <rect x="120" y="430" width="860" height="80" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="4"/>
+            <text x="140" y="460" fill="#ffd700" font-size="15" font-weight="bold">[!] ADDITIONAL RECORDS EXIST</text>
+            <text x="140" y="485" fill="#ffffff" font-size="14">Pre-2015 paper records held off-site (Archive Bldg B, Aisle 14)</text>
+            <text x="140" y="503" fill="#ffffff" font-size="13">Request via ROI form #4421-A | Turnaround 48 hours | Contact HIM x5500</text>
+            <text x="110" y="545" fill="#10b981" font-size="15">Mandatory banner appears on chart open</text>
+            <text x="110" y="572" fill="#10b981" font-size="15">Persists until clinician acknowledges with click</text>
+            <text x="110" y="599" fill="#10b981" font-size="15">Logged in audit trail for Joint Commission review</text>
+            <rect x="80" y="645" width="940" height="380" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">HIM 4-Part Remediation Plan</text>
+            <line x1="110" y1="700" x2="990" y2="700" stroke="#888"/>
+            <text x="130" y="735" fill="#6366f1" font-size="17" font-weight="bold">1. IMMEDIATE: Add MIS flag</text>
+            <text x="150" y="760" fill="#ffffff" font-size="14">Identify all charts with pre-2015 paper. Set EHR alert banner.</text>
+            <text x="150" y="785" fill="#ffffff" font-size="14">Target: within 30 days for known charts; 90 days for full archive index.</text>
+            <text x="130" y="822" fill="#10b981" font-size="17" font-weight="bold">2. SHORT-TERM: Back-scan high-risk charts</text>
+            <text x="150" y="847" fill="#ffffff" font-size="14">Prioritize: active patients, cardiology, oncology, surgical histories.</text>
+            <text x="150" y="872" fill="#ffffff" font-size="14">Use AHIMA workflow: scan + QA + 30-day retention + COD destruction.</text>
+            <text x="130" y="909" fill="#f59e0b" font-size="17" font-weight="bold">3. UPDATE: Designated Record Set inventory</text>
+            <text x="150" y="934" fill="#ffffff" font-size="14">Every PHI location logged: archives, microfilm, off-site, vendor servers.</text>
+            <text x="150" y="959" fill="#ffffff" font-size="14">Required under HIPAA §164.524 — auditable by OCR.</text>
+            <text x="130" y="996" fill="#ec4899" font-size="17" font-weight="bold">4. POLICY: Joint Commission "complete record" std</text>
+            <text x="150" y="1021" fill="#ffffff" font-size="14">Define what "complete" means for hybrid charts. Mandatory clinician training.</text>
+            <text x="150" y="1046" fill="#ffffff" font-size="14">Pre-op checklist: confirm review of all sources before procedure.</text>
+          </svg>`,
+          caption: "Master Index of Sources alerts clinicians to records outside the EHR — without it, hybrid records cause duplicate or contradictory care."
+        }
+      },
+      {
+        type: "application",
+        title: "On the Job: The HIM Migration Survival Kit",
+        content: `When you join a hospital mid-migration (and most are in some kind of migration), use this checklist on day one:
+
+**1. Designated Record Set Inventory**: pull the current list of every place PHI lives. If it's older than **12 months**, that's a HIPAA finding — flag it. The DRS must list **EHR system, scanned repository, paper archives, microfilm, billing system, lab system, imaging PACS, off-site warehouses, BAA vendors**.
+
+**2. Hybrid record policy**: confirm a written policy exists naming exactly **what is "the legal medical record"** when paper and EHR conflict. Without it, your hospital cannot defend itself in court.
+
+**3. Scanning QA logs**: review the past 90 days of scan QA. **Reject rate <2% = good; >5% = scanner or process problem**. Demand a re-scan policy for rejects.
+
+**4. MIS (Master Index of Sources) banners**: spot-check 20 random charts with pre-EHR history. If no banner alerts the clinician, file an HIM quality variance.
+
+**5. Downtime procedures**: know the **paper backup forms (5010, 5011, downtime H&P)** and where they live; CMS requires **5 minutes max from EHR down to paper available**.
+
+A CCA who knows these five items is **immediately valuable** to any HIM director.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">HIM Migration Survival Kit — Day-One Checklist</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Five audits that make you immediately valuable to your director</text>
+            <rect x="80" y="125" width="940" height="160" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="6"/>
+            <text x="115" y="160" fill="#6366f1" font-size="20" font-weight="bold">1. DESIGNATED RECORD SET INVENTORY</text>
+            <text x="115" y="190" fill="#ffffff" font-size="14">Every place PHI lives — must include all 9 categories below:</text>
+            <text x="135" y="215" fill="#10b981" font-size="13">+ EHR (Epic/Cerner)</text>
+            <text x="335" y="215" fill="#10b981" font-size="13">+ Scanned repo</text>
+            <text x="535" y="215" fill="#10b981" font-size="13">+ Paper archives</text>
+            <text x="135" y="240" fill="#10b981" font-size="13">+ Microfilm</text>
+            <text x="335" y="240" fill="#10b981" font-size="13">+ Billing system</text>
+            <text x="535" y="240" fill="#10b981" font-size="13">+ Lab/Pathology</text>
+            <text x="135" y="265" fill="#10b981" font-size="13">+ Imaging PACS</text>
+            <text x="335" y="265" fill="#10b981" font-size="13">+ Off-site warehouse</text>
+            <text x="535" y="265" fill="#10b981" font-size="13">+ BAA vendors</text>
+            <text x="850" y="240" fill="#ef4444" font-size="14" font-weight="bold">RED FLAG: list older than 12 months = HIPAA finding</text>
+            <rect x="80" y="305" width="940" height="140" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="115" y="340" fill="#10b981" font-size="20" font-weight="bold">2. LEGAL MEDICAL RECORD POLICY</text>
+            <text x="115" y="370" fill="#ffffff" font-size="14">When paper and EHR conflict, which wins? Hospital must define this in writing.</text>
+            <text x="115" y="395" fill="#ffffff" font-size="14">Typical answer: "The EHR is the legal record; paper is reference until QA'd in."</text>
+            <text x="115" y="420" fill="#ef4444" font-size="14" font-weight="bold">Without policy = indefensible in court; auto-loss on spoliation claims</text>
+            <rect x="80" y="465" width="940" height="140" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <text x="115" y="500" fill="#f59e0b" font-size="20" font-weight="bold">3. SCANNING QA LOG REVIEW</text>
+            <text x="115" y="530" fill="#ffffff" font-size="14">Pull past 90 days of scan rejects. Math the rejection rate.</text>
+            <text x="135" y="558" fill="#10b981" font-size="14">&lt;2% rejection: healthy process</text>
+            <text x="135" y="582" fill="#f59e0b" font-size="14">2–5%: train scanning staff</text>
+            <text x="600" y="558" fill="#ef4444" font-size="14">&gt;5%: scanner hardware or process broken — escalate</text>
+            <text x="600" y="582" fill="#ef4444" font-size="14">No re-scan policy = audit finding</text>
+            <rect x="80" y="625" width="940" height="140" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="115" y="660" fill="#ec4899" font-size="20" font-weight="bold">4. MIS BANNERS — SPOT CHECK 20 CHARTS</text>
+            <text x="115" y="690" fill="#ffffff" font-size="14">Open 20 random charts with pre-EHR history. Confirm banner alerts on each.</text>
+            <text x="115" y="715" fill="#ffffff" font-size="14">If &gt;1 of 20 lacks banner, file HIM quality variance.</text>
+            <text x="115" y="745" fill="#ef4444" font-size="14" font-weight="bold">Missing MIS = the hidden-record trap from the quiz scenario</text>
+            <rect x="80" y="785" width="940" height="140" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="6"/>
+            <text x="115" y="820" fill="#ef4444" font-size="20" font-weight="bold">5. DOWNTIME PROCEDURES</text>
+            <text x="115" y="850" fill="#ffffff" font-size="14">When EHR is down (ransomware, network failure), where are paper forms?</text>
+            <text x="115" y="875" fill="#ffffff" font-size="14">CMS requires 5-min max from EHR-down to paper-available.</text>
+            <text x="115" y="905" fill="#ffffff" font-size="14">Forms: downtime H&amp;P, downtime med admin record (MAR), downtime orders.</text>
+            <rect x="80" y="945" width="940" height="110" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="550" y="980" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Why It Matters</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#ffffff" font-size="15">A CCA who walks in and audits these 5 items in week 1 becomes the</text>
+            <text x="550" y="1035" text-anchor="middle" fill="#10b981" font-size="15">go-to person for the HIM director's Joint Commission prep — and gets promoted first</text>
+          </svg>`,
+          caption: "Five-item audit (DRS inventory, legal record policy, scan QA, MIS banners, downtime forms) — your fastest path from new CCA to indispensable team member."
+        }
+      }
+    ]
   }
 ];
 
@@ -1206,7 +2406,7 @@ The HIM director owns the documentation CAP. Coders contribute through DNFB repo
             id: 'cca-domain-1', title: 'CCA Domain 1: Health Information Concepts',
             author: 'Synthesis Learning',
             description: 'The legal/clinical/financial roles of the health record, the standard data sets that drive coding, and HIPAA\'s rules around protected health information.',
-            lessons: 6, duration: 90, progress: 0, category: 'cca-prep',
+            lessons: 9, duration: 135, progress: 0, category: 'cca-prep',
             lessonList: DOMAIN1_PLACEHOLDER_LESSONS,
         },
         {
