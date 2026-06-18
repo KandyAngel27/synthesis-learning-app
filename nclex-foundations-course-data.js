@@ -4793,7 +4793,7 @@ This is why Step 3 saves lives.`,
             title: 'Medical-Surgical Nursing Core',
             author: 'Synthesis Learning',
             description: 'The largest NCLEX content area — cardiac, respiratory, GI, GU, endocrine, neuro — focused on the priority assessments and interventions.',
-            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
+            lessons: 12, duration: 180, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-med-surg-lesson-1",
@@ -5562,6 +5562,339 @@ Vital signs every 4 hours. **A temperature of 100.4°F (38°C) or higher is a me
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">Chemo Care Continuum</text><rect x="60" y="120" width="980" height="200" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="165" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">PRE-Infusion</text><text x="100" y="205" fill="#fff" font-size="20">· Two-nurse verification (high-alert drug)</text><text x="100" y="235" fill="#fff" font-size="20">· CBC, CMP, central line patency</text><text x="100" y="265" fill="#fff" font-size="20">· Premedicate: ondansetron + dexamethasone</text><text x="100" y="295" fill="#fff" font-size="20">· PPE · closed-system transfer device</text><rect x="60" y="340" width="980" height="200" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="550" y="385" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">DURING Infusion</text><text x="100" y="425" fill="#fff" font-size="20">· Watch for hypersensitivity (esp. first dose)</text><text x="100" y="455" fill="#fff" font-size="20">· Frequent VS · IV site q15 min</text><text x="100" y="485" fill="#fff" font-size="20">· VESICANT extravasation = STOP, protocol</text><text x="100" y="515" fill="#fff" font-size="20">· Assess for dyspnea, chest pain, urticaria</text><rect x="60" y="560" width="980" height="200" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="550" y="605" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">POST-Infusion (Hospital)</text><text x="100" y="645" fill="#fff" font-size="20">· Body fluids hazardous × 48h — gloves</text><text x="100" y="675" fill="#fff" font-size="20">· Flush toilet 2× with lid down</text><text x="100" y="705" fill="#fff" font-size="20">· Separate laundry for soiled linens</text><text x="100" y="735" fill="#fff" font-size="20">· Monitor for tumor lysis syndrome</text><rect x="60" y="780" width="980" height="260" rx="15" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="825" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">DISCHARGE Teaching — Report</text><text x="100" y="865" fill="#fff" font-size="20">· Fever ≥ 100.4°F (38°C) — call right away</text><text x="100" y="895" fill="#fff" font-size="20">· New bleeding, bruising, petechiae</text><text x="100" y="925" fill="#fff" font-size="20">· Mouth pain preventing eating/drinking</text><text x="100" y="955" fill="#fff" font-size="20">· Persistent vomiting · signs of dehydration</text><text x="100" y="985" fill="#fff" font-size="20">· Shortness of breath · chest pain</text><text x="100" y="1015" fill="#fff" font-size="20">· Continue routine screening · CBC each cycle</text></svg>`,
           caption: "Pre-during-post-discharge: a structured frame for every chemo patient."
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-med-surg-lesson-10",
+    title: "Genitourinary: UTI, BPH, Catheter Care, and CAUTI Prevention",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Urinary System Under Siege",
+        content: `**Urinary tract infections (UTIs)** are the most common healthcare-associated infection, and the **indwelling urinary catheter** is the #1 culprit. This lesson covers three intertwined GU topics: uncomplicated and complicated **UTI** management, **benign prostatic hyperplasia (BPH)** pharmacology, and **catheter-associated UTI (CAUTI) prevention**.
+
+Key risk factors for UTI include **female anatomy** (short urethra), **postmenopausal estrogen loss** (thins urogenital tissue), **diabetes**, and **indwelling catheters**. Classic symptoms — **dysuria, urgency, frequency, suprapubic pain** — are reliable in younger adults but **often absent in the elderly**, where **new-onset confusion** may be the only sign.
+
+You'll learn first-line antibiotics, BPH drug classes (**alpha-blockers** vs **5-alpha-reductase inhibitors**), and the **CAUTI prevention bundle** that NCLEX loves to test.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="38" font-weight="bold">GU Triad: UTI, BPH, CAUTI</text><circle cx="280" cy="400" r="170" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="280" y="380" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">UTI</text><text x="280" y="420" text-anchor="middle" fill="#ffffff" font-size="20">Dysuria</text><text x="280" y="450" text-anchor="middle" fill="#ffffff" font-size="20">Frequency</text><circle cx="820" cy="400" r="170" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="820" y="380" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">BPH</text><text x="820" y="420" text-anchor="middle" fill="#ffffff" font-size="20">Hesitancy</text><text x="820" y="450" text-anchor="middle" fill="#ffffff" font-size="20">Weak stream</text><circle cx="550" cy="780" r="180" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="4"/><text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">CAUTI</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="20">Preventable</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="20">Remove catheter ASAP</text><text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-size="22">Elderly UTI sign: NEW CONFUSION</text></svg>`,
+          caption: "Three GU conditions every nurse must master."
+        }
+      },
+      {
+        type: "concept",
+        title: "UTI & BPH Pharmacology",
+        content: `**UTI treatment:**
+- **Trimethoprim-sulfamethoxazole (Bactrim)** — first-line for **3 days** uncomplicated cystitis. Avoid in **sulfa allergy** and late pregnancy.
+- **Nitrofurantoin (Macrobid)** — 5-day course; safe in pregnancy except at term. Avoid if **CrCl < 30**.
+- Encourage **fluids 2-3 L/day** and **cranberry** (preventive only).
+
+**BPH treatment:**
+- **Alpha-1 blockers** — **tamsulosin (Flomax)**, doxazosin. Relax prostatic smooth muscle for **rapid symptom relief** (days). **Major side effect: orthostatic hypotension** → take at bedtime, rise slowly.
+- **5-alpha-reductase inhibitors** — **finasteride (Proscar)**, dutasteride. **Shrink** the prostate over **3-6 months**. **Pregnancy Category X** — women of childbearing age must not handle crushed tablets.
+
+Combo therapy (tamsulosin + finasteride) is common for moderate-to-severe BPH.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">UTI & BPH Drug Map</text><rect x="60" y="110" width="480" height="420" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="3" rx="14"/><text x="300" y="155" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">UTI</text><text x="80" y="210" fill="#ffffff" font-size="20" font-weight="bold">Bactrim (TMP-SMX)</text><text x="80" y="240" fill="#ffffff" font-size="17">- 3 days uncomplicated</text><text x="80" y="265" fill="#ffffff" font-size="17">- AVOID: sulfa allergy</text><text x="80" y="320" fill="#ffffff" font-size="20" font-weight="bold">Nitrofurantoin (Macrobid)</text><text x="80" y="350" fill="#ffffff" font-size="17">- 5 days</text><text x="80" y="375" fill="#ffffff" font-size="17">- AVOID CrCl &lt; 30</text><text x="80" y="430" fill="#ffd700" font-size="19" font-weight="bold">Patient Teaching:</text><text x="80" y="460" fill="#ffffff" font-size="17">- Push fluids 2-3 L/day</text><text x="80" y="485" fill="#ffffff" font-size="17">- Finish full antibiotic course</text><rect x="560" y="110" width="480" height="420" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="800" y="155" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">BPH</text><text x="580" y="210" fill="#ffffff" font-size="20" font-weight="bold">Tamsulosin (alpha-blocker)</text><text x="580" y="240" fill="#ffffff" font-size="17">- Relaxes prostate muscle</text><text x="580" y="265" fill="#ffffff" font-size="17">- Fast: days</text><text x="580" y="290" fill="#ef4444" font-size="17">- Orthostatic hypotension!</text><text x="580" y="350" fill="#ffffff" font-size="20" font-weight="bold">Finasteride (5-ARI)</text><text x="580" y="380" fill="#ffffff" font-size="17">- Shrinks prostate</text><text x="580" y="405" fill="#ffffff" font-size="17">- Slow: 3-6 months</text><text x="580" y="430" fill="#ef4444" font-size="17">- Pregnancy Cat X</text><rect x="180" y="580" width="740" height="280" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3" rx="14"/><text x="550" y="625" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Elderly Atypical UTI</text><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="20">No dysuria. No fever.</text><text x="550" y="720" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">NEW CONFUSION = UTI workup</text><text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="18">Get urinalysis + culture</text><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="18">Before assuming dementia progression</text></svg>`,
+          caption: "Treatment frameworks for UTI and BPH."
+        }
+      },
+      {
+        type: "example",
+        title: "Catheter Care & CAUTI Prevention Bundle",
+        content: `**Indwelling catheter** = direct pipeline for bacteria. Every day a catheter stays in, CAUTI risk rises **3-7%**.
+
+**Insertion (sterile):**
+- **Sterile gloves, sterile field, sterile lubricant**
+- Cleanse meatus with antiseptic in **one direction** (front to back for females)
+- If contaminated, **discard and restart**
+
+**Maintenance:**
+- **Perineal care every shift** with soap and water (NOT antiseptic — irritates)
+- Keep bag **below bladder level** to prevent backflow
+- Keep tubing **kink-free** and **secured to thigh**
+- **Closed drainage system** — never disconnect
+
+**The CAUTI Prevention Bundle:**
+1. Insert **only if necessary** (urinary retention, sacral wounds, strict I&O in critically ill)
+2. **Remove ASAP** — daily review of necessity
+3. **Hand hygiene** before and after handling
+4. Maintain **closed system** and **gravity drainage**
+
+NEVER use a catheter for incontinence convenience alone.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">CAUTI Prevention Bundle</text><ellipse cx="550" cy="220" rx="220" ry="60" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3"/><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Bladder</text><text x="550" y="245" text-anchor="middle" fill="#ffffff" font-size="16">(above bag level)</text><line x1="550" y1="280" x2="550" y2="600" stroke="#ffd700" stroke-width="6"/><text x="600" y="450" fill="#ffd700" font-size="17">Tubing: kink-free</text><rect x="450" y="600" width="200" height="180" fill="#f59e0b" opacity="0.4" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="550" y="685" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Drainage Bag</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="16">BELOW bladder</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="16">Closed system</text><rect x="60" y="850" width="500" height="220" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/><text x="310" y="890" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">DO</text><text x="80" y="930" fill="#ffffff" font-size="17">- Sterile insertion technique</text><text x="80" y="960" fill="#ffffff" font-size="17">- Perineal care every shift</text><text x="80" y="990" fill="#ffffff" font-size="17">- Hand hygiene</text><text x="80" y="1020" fill="#ffffff" font-size="17">- Remove ASAP</text><text x="80" y="1050" fill="#ffffff" font-size="17">- Daily necessity review</text><rect x="580" y="850" width="460" height="220" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="10"/><text x="810" y="890" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">DON'T</text><text x="600" y="930" fill="#ffffff" font-size="17">- Insert for incontinence alone</text><text x="600" y="960" fill="#ffffff" font-size="17">- Disconnect tubing</text><text x="600" y="990" fill="#ffffff" font-size="17">- Place bag above bladder</text><text x="600" y="1020" fill="#ffffff" font-size="17">- Use antiseptic for peri-care</text><text x="600" y="1050" fill="#ffffff" font-size="17">- Routinely irrigate</text></svg>`,
+          caption: "Catheter setup and bundle elements."
+        }
+      },
+      {
+        type: "quiz",
+        title: "GU Quiz",
+        question: "An 82-year-old nursing home resident is admitted for new-onset confusion and a low-grade fever. She denies dysuria. Vital signs: T 100.4°F, HR 96, BP 128/76. Which action should the nurse anticipate FIRST?",
+        options: [
+          { text: "Obtain a urinalysis and urine culture", correct: true },
+          { text: "Start IV fluids for sepsis", correct: false },
+          { text: "Order a head CT to rule out stroke", correct: false },
+          { text: "Begin empiric antibiotics for meningitis", correct: false }
+        ],
+        explanation: "In elderly patients, **new-onset confusion** is often the ONLY sign of UTI — classic dysuria/frequency may be absent. A urinalysis and culture are the fastest, lowest-risk first step. CT and meningitis workup come only if urinary cause is excluded.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Elderly + Confusion = UTI?</text><circle cx="550" cy="500" r="280" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="5"/><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">First Step:</text><text x="550" y="490" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Urinalysis</text><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">+ Culture</text><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="20">Fast, cheap, high yield</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="22">Confusion may be the ONLY symptom</text><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="18">Don't anchor on dementia worsening</text></svg>`,
+          caption: "Atypical UTI presentation in elders."
+        }
+      },
+      {
+        type: "application",
+        title: "Putting It Together",
+        content: `**Scenario:** 72-year-old man on **tamsulosin** and **finasteride** for BPH is admitted with urinary retention. The provider orders an indwelling catheter.
+
+**Your nursing actions:**
+1. **Hand hygiene** + **sterile insertion** technique. Gather sterile kit, position supine, cleanse meatus.
+2. After insertion, document **residual urine volume** (often >300 mL in retention).
+3. Secure tubing to **thigh**, bag **below bladder**, closed system intact.
+4. **Hold tamsulosin** if BP < 100/60 due to orthostatic risk; reassess.
+5. **Daily necessity review** — push for **removal within 24-48 hours** once retention resolves.
+6. **Perineal care every shift**, hand hygiene before any catheter manipulation.
+7. Educate: **finasteride** lowers PSA by ~50% — inform provider before prostate cancer screening.
+
+**Red flags to escalate:** cloudy/foul urine, fever, suprapubic tenderness, new confusion — all suggest CAUTI.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">BPH Patient Care Plan</text><rect x="80" y="130" width="940" height="120" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3" rx="10"/><text x="550" y="175" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">72M, BPH, urinary retention</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="18">On tamsulosin + finasteride. Cath ordered.</text><rect x="80" y="290" width="450" height="350" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/><text x="305" y="330" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Nursing Actions</text><text x="100" y="375" fill="#ffffff" font-size="17">1. Sterile insertion</text><text x="100" y="405" fill="#ffffff" font-size="17">2. Document residual</text><text x="100" y="435" fill="#ffffff" font-size="17">3. Secure tubing, bag low</text><text x="100" y="465" fill="#ffffff" font-size="17">4. Hold tamsulosin if BP low</text><text x="100" y="495" fill="#ffffff" font-size="17">5. Remove ASAP (24-48h)</text><text x="100" y="525" fill="#ffffff" font-size="17">6. Peri-care every shift</text><text x="100" y="555" fill="#ffffff" font-size="17">7. PSA caveat w/ finasteride</text><rect x="570" y="290" width="450" height="350" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="10"/><text x="795" y="330" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Red Flags</text><text x="590" y="380" fill="#ffffff" font-size="17">- Cloudy/foul urine</text><text x="590" y="415" fill="#ffffff" font-size="17">- Fever &gt; 100.4°F</text><text x="590" y="450" fill="#ffffff" font-size="17">- Suprapubic pain</text><text x="590" y="485" fill="#ffffff" font-size="17">- New confusion</text><text x="590" y="520" fill="#ffffff" font-size="17">- Hematuria</text><text x="590" y="555" fill="#ffd700" font-size="18" font-weight="bold">All suggest CAUTI</text><rect x="180" y="700" width="740" height="180" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="10"/><text x="550" y="745" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Discharge Teaching</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="18">Take tamsulosin at bedtime</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Rise slowly to prevent falls</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="18">Women: don't handle crushed finasteride</text></svg>`,
+          caption: "Integrating BPH meds, catheter care, and CAUTI prevention."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-med-surg-lesson-11",
+    title: "Integumentary: Pressure Injuries, Wound Care, Burns",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Skin: The Largest Organ",
+        content: `Skin breakdown is largely **preventable**, which is why pressure injuries, falls, and CAUTIs are tracked as **nursing-sensitive quality indicators**. This lesson covers three big integumentary topics: **pressure injury staging**, **wound care principles**, and **burn classification**.
+
+You'll master the **NPIAP stages** (Stage 1 through 4, plus **Unstageable** and **Deep Tissue Injury**), learn how the **Braden Scale** (≤18 = high risk) drives prevention bundles, and unlearn old habits — **no peroxide on healthy granulation tissue**, **no routine wet-to-dry** dressings (use only for selective debridement).
+
+Burns are classified by **depth**: **1st degree** (epidermis only), **2nd degree** (epidermis + partial dermis, blisters), **3rd degree** (full thickness, may need grafting). Depth determines fluid resuscitation, pain control, and surgical planning.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Skin: 3 Big Topics</text><rect x="80" y="160" width="940" height="120" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="14"/><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Epidermis</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Outermost barrier</text><rect x="80" y="300" width="940" height="180" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="550" y="350" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Dermis</text><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="18">Nerves, vessels, hair follicles</text><text x="550" y="435" text-anchor="middle" fill="#ffffff" font-size="18">Sweat glands</text><rect x="80" y="500" width="940" height="170" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3" rx="14"/><text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Subcutaneous Fat</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="18">Insulation, energy</text><rect x="80" y="690" width="940" height="120" fill="#888" opacity="0.4" stroke="#888" stroke-width="3" rx="14"/><text x="550" y="740" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Muscle / Tendon / Bone</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="16">Stage 4 reaches here</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="22">Deeper injury = longer healing</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="18">Prevention is everything</text></svg>`,
+          caption: "Skin anatomy layers."
+        }
+      },
+      {
+        type: "concept",
+        title: "NPIAP Pressure Injury Staging",
+        content: `**Stage 1** — **Non-blanchable erythema** with **intact skin**. Red, warm. Reposition q2h immediately.
+
+**Stage 2** — **Partial thickness** loss of dermis. Looks like a **shallow open ulcer** with **red-pink wound bed**, or an **intact/ruptured blister**. NO slough.
+
+**Stage 3** — **Full thickness** skin loss. **Subcutaneous fat visible**. No bone, tendon, or muscle exposed. May have slough but doesn't obscure depth.
+
+**Stage 4** — **Full thickness** with **exposed bone, tendon, or muscle**. Often with **undermining** and **tunneling**.
+
+**Unstageable** — depth obscured by **slough (yellow)** or **eschar (black)**. Must remove eschar to stage.
+
+**Deep Tissue Injury (DTI)** — **persistent non-blanchable purple/maroon** discoloration of intact skin, or a blood-filled blister. Damage starts deep and works outward.
+
+**Braden Scale:** scores sensory perception, moisture, activity, mobility, nutrition, friction. **≤18 = high risk** → prevention bundle.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Pressure Injury Stages</text><rect x="60" y="100" width="490" height="180" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3" rx="10"/><text x="305" y="140" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Stage 1</text><text x="305" y="180" text-anchor="middle" fill="#ffffff" font-size="18">Non-blanchable erythema</text><text x="305" y="215" text-anchor="middle" fill="#ffffff" font-size="18">Intact skin, warm</text><text x="305" y="250" text-anchor="middle" fill="#ffd700" font-size="17">Reposition q2h NOW</text><rect x="560" y="100" width="480" height="180" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="800" y="140" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Stage 2</text><text x="800" y="180" text-anchor="middle" fill="#ffffff" font-size="18">Partial thickness</text><text x="800" y="215" text-anchor="middle" fill="#ffffff" font-size="18">Blister or shallow ulcer</text><text x="800" y="250" text-anchor="middle" fill="#ffffff" font-size="17">Red-pink wound bed</text><rect x="60" y="310" width="490" height="180" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="3" rx="10"/><text x="305" y="350" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Stage 3</text><text x="305" y="390" text-anchor="middle" fill="#ffffff" font-size="18">Full thickness</text><text x="305" y="425" text-anchor="middle" fill="#ffffff" font-size="18">Fat visible</text><text x="305" y="460" text-anchor="middle" fill="#ffffff" font-size="17">No bone/tendon/muscle</text><rect x="560" y="310" width="480" height="180" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="3" rx="10"/><text x="800" y="350" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Stage 4</text><text x="800" y="390" text-anchor="middle" fill="#ffffff" font-size="18">Full thickness</text><text x="800" y="425" text-anchor="middle" fill="#ffffff" font-size="18">Bone/tendon/muscle</text><text x="800" y="460" text-anchor="middle" fill="#ffffff" font-size="17">Tunneling common</text><rect x="60" y="520" width="490" height="180" fill="#888" opacity="0.35" stroke="#888" stroke-width="3" rx="10"/><text x="305" y="560" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Unstageable</text><text x="305" y="600" text-anchor="middle" fill="#ffffff" font-size="18">Slough (yellow) or</text><text x="305" y="635" text-anchor="middle" fill="#ffffff" font-size="18">eschar (black)</text><text x="305" y="670" text-anchor="middle" fill="#ffd700" font-size="17">Must debride to stage</text><rect x="560" y="520" width="480" height="180" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="3" rx="10"/><text x="800" y="560" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Deep Tissue Injury</text><text x="800" y="600" text-anchor="middle" fill="#ffffff" font-size="18">Persistent purple/maroon</text><text x="800" y="635" text-anchor="middle" fill="#ffffff" font-size="18">Intact skin or blood blister</text><text x="800" y="670" text-anchor="middle" fill="#ffffff" font-size="17">Damage from below</text><rect x="200" y="740" width="700" height="180" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/><text x="550" y="780" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Braden Scale</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Sensory, moisture, activity, mobility,</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="18">nutrition, friction</text><text x="550" y="895" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Score ≤ 18 = HIGH RISK</text></svg>`,
+          caption: "All six pressure injury categories at a glance."
+        }
+      },
+      {
+        type: "example",
+        title: "Wound Care & Burn Classification",
+        content: `**Wound care principles:**
+- **Moist wound healing** beats dry healing — supports epithelial migration.
+- **NO peroxide** on healthy granulation — cytotoxic to fibroblasts. OK only for one-time debris removal.
+- **NO routine wet-to-dry dressings** — non-selective, damages healing tissue. Use only for **mechanical debridement of necrotic wounds**.
+- Choose dressing by wound type: **hydrocolloid** for Stage 2; **alginate** for heavy exudate; **hydrogel** for dry wounds; **foam** for moderate drainage.
+
+**Burns by depth:**
+- **1st degree (superficial)** — **epidermis only**. Red, painful, dry. Sunburn. Heals 3-7 days.
+- **2nd degree (partial thickness)** — **epidermis + part of dermis**. **Blisters**, very painful, moist. Heals 2-3 weeks.
+- **3rd degree (full thickness)** — **all layers**. White/charred/leathery. **Painless** (nerves destroyed). **Requires skin grafting**.
+
+**Parkland formula** (only for major burns): **4 mL × kg × %TBSA** — half in first 8 h.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Burns by Depth</text><rect x="60" y="120" width="320" height="500" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3" rx="10"/><text x="220" y="170" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">1st Degree</text><text x="220" y="210" text-anchor="middle" fill="#ffffff" font-size="17">Superficial</text><text x="220" y="245" text-anchor="middle" fill="#ffffff" font-size="17">Epidermis only</text><circle cx="220" cy="330" r="60" fill="#ef4444" opacity="0.5"/><text x="220" y="425" text-anchor="middle" fill="#ffffff" font-size="17">Red, dry</text><text x="220" y="460" text-anchor="middle" fill="#ffffff" font-size="17">Painful</text><text x="220" y="510" text-anchor="middle" fill="#ffffff" font-size="17">No blisters</text><text x="220" y="565" text-anchor="middle" fill="#10b981" font-size="17" font-weight="bold">Heals 3-7 days</text><text x="220" y="595" text-anchor="middle" fill="#ffffff" font-size="15">Sunburn</text><rect x="390" y="120" width="320" height="500" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="550" y="170" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">2nd Degree</text><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="17">Partial thickness</text><text x="550" y="245" text-anchor="middle" fill="#ffffff" font-size="17">Epi + part of dermis</text><ellipse cx="550" cy="330" rx="70" ry="50" fill="#ec4899" opacity="0.5"/><circle cx="525" cy="320" r="12" fill="#ffffff" opacity="0.7"/><circle cx="565" cy="335" r="14" fill="#ffffff" opacity="0.7"/><text x="550" y="425" text-anchor="middle" fill="#ffffff" font-size="17">BLISTERS</text><text x="550" y="460" text-anchor="middle" fill="#ffffff" font-size="17">Moist, red</text><text x="550" y="510" text-anchor="middle" fill="#ef4444" font-size="17">Severe pain</text><text x="550" y="565" text-anchor="middle" fill="#10b981" font-size="17" font-weight="bold">Heals 2-3 weeks</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="15">Scald burn</text><rect x="720" y="120" width="320" height="500" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="3" rx="10"/><text x="880" y="170" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">3rd Degree</text><text x="880" y="210" text-anchor="middle" fill="#ffffff" font-size="17">Full thickness</text><text x="880" y="245" text-anchor="middle" fill="#ffffff" font-size="17">ALL layers</text><rect x="820" y="290" width="120" height="80" fill="#1a1a2e" stroke="#888" stroke-width="2"/><text x="880" y="425" text-anchor="middle" fill="#ffffff" font-size="17">White/charred</text><text x="880" y="460" text-anchor="middle" fill="#ffffff" font-size="17">Leathery, dry</text><text x="880" y="510" text-anchor="middle" fill="#ffd700" font-size="17">PAINLESS!</text><text x="880" y="565" text-anchor="middle" fill="#ef4444" font-size="17" font-weight="bold">Needs grafting</text><text x="880" y="595" text-anchor="middle" fill="#ffffff" font-size="15">Flame, electrical</text><rect x="80" y="680" width="940" height="220" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="10"/><text x="550" y="725" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Parkland Formula</text><text x="550" y="775" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">4 mL × kg × %TBSA</text><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="18">Half in first 8 hours from burn time</text><text x="550" y="855" text-anchor="middle" fill="#ffffff" font-size="17">Lactated Ringer's IV</text><text x="550" y="885" text-anchor="middle" fill="#ffffff" font-size="17">Titrate to urine output 0.5 mL/kg/hr</text></svg>`,
+          caption: "Burn depth, appearance, and fluid resuscitation."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Integumentary Quiz",
+        question: "The nurse is assessing a bedbound patient and finds a 4 cm sacral wound. The wound bed shows yellow slough that obscures the depth, with surrounding warmth and redness. How should the nurse document this?",
+        options: [
+          { text: "Unstageable pressure injury", correct: true },
+          { text: "Stage 2 pressure injury", correct: false },
+          { text: "Stage 3 pressure injury", correct: false },
+          { text: "Deep tissue injury", correct: false }
+        ],
+        explanation: "When **slough or eschar obscures the wound base**, the injury is **Unstageable** — depth cannot be determined until the necrotic tissue is removed (debrided). Stages 2-4 require visualization of the wound bed. DTI is intact purple/maroon skin, not an open wound with slough.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Slough Obscures Depth?</text><circle cx="550" cy="500" r="240" fill="#888" opacity="0.4" stroke="#888" stroke-width="5"/><ellipse cx="550" cy="500" rx="170" ry="120" fill="#f59e0b" opacity="0.6"/><text x="550" y="490" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">Yellow Slough</text><text x="550" y="530" text-anchor="middle" fill="#ffffff" font-size="20">Depth: ???</text><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">UNSTAGEABLE</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="20">Cannot stage until debrided</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="17">Slough = yellow soft tissue</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="17">Eschar = black hard tissue</text></svg>`,
+          caption: "When you can't see the bottom, you can't stage."
+        }
+      },
+      {
+        type: "application",
+        title: "Prevention Bundle in Action",
+        content: `**Scenario:** 78 yo woman, hip fracture surgery, Braden score **15** (moderate-high risk). She's NPO, on a fentanyl PCA, somewhat lethargic.
+
+**Your bundle interventions:**
+1. **Reposition every 2 hours** — alternate side-lying with 30-degree tilt. Off-load **heels** with pillows.
+2. Place on a **pressure-redistribution surface** (low-air-loss mattress).
+3. **Keep skin clean and dry** — incontinence pad changes promptly; **barrier cream** on perineum.
+4. **Nutrition consult** — protein, vitamin C, zinc support tissue repair.
+5. **HOB ≤ 30°** when possible to reduce **shear** on sacrum.
+6. Skin assessment **every shift** — document Braden, photograph any redness.
+7. Mobilize as soon as cleared — even chair sitting helps.
+
+If a Stage 1 develops on sacrum: reposition immediately, transparent film dressing, escalate to wound care nurse. Document **location, size, stage, peri-wound skin, drainage**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Pressure Injury Prevention</text><circle cx="550" cy="380" r="200" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="350" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Braden 15</text><text x="550" y="385" text-anchor="middle" fill="#ffffff" font-size="20">Moderate-High</text><text x="550" y="420" text-anchor="middle" fill="#ffffff" font-size="20">Risk</text><text x="160" y="200" fill="#ffd700" font-size="20" font-weight="bold">1. Turn q2h</text><text x="160" y="232" fill="#ffffff" font-size="16">30° tilt, off heels</text><text x="780" y="200" fill="#ffd700" font-size="20" font-weight="bold">2. Special mattress</text><text x="780" y="232" fill="#ffffff" font-size="16">Low-air-loss</text><text x="80" y="380" fill="#ffd700" font-size="20" font-weight="bold">3. Clean & dry</text><text x="80" y="412" fill="#ffffff" font-size="16">Barrier cream</text><text x="820" y="380" fill="#ffd700" font-size="20" font-weight="bold">4. Nutrition</text><text x="820" y="412" fill="#ffffff" font-size="16">Protein, C, zinc</text><text x="160" y="560" fill="#ffd700" font-size="20" font-weight="bold">5. HOB ≤ 30°</text><text x="160" y="592" fill="#ffffff" font-size="16">Reduces shear</text><text x="780" y="560" fill="#ffd700" font-size="20" font-weight="bold">6. Skin check</text><text x="780" y="592" fill="#ffffff" font-size="16">Every shift</text><rect x="180" y="720" width="740" height="280" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="10"/><text x="550" y="765" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Documentation Checklist</text><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="18">Location: sacrum, heel, trochanter</text><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="18">Size: length × width × depth</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="18">Stage (1-4, U, DTI)</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="18">Peri-wound skin condition</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="18">Drainage: serous, sanguineous, purulent</text><text x="550" y="965" text-anchor="middle" fill="#ffd700" font-size="18">Pain, odor, undermining</text></svg>`,
+          caption: "Bundle elements driven by Braden risk."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-med-surg-lesson-12",
+    title: "Capstone: Multisystem Patient Synthesis with SBAR",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When Systems Collide",
+        content: `Real patients don't read textbook chapters. They arrive with **multiple comorbidities** firing simultaneously, and the nurse's job is to **prioritize correctly** and **communicate clearly**.
+
+This capstone integrates everything from Med-Surg into a single complex patient: **75-year-old man** admitted with **community-acquired pneumonia (CAP)**, who developed **acute kidney injury (AKI)** after a contrast CT, and is now in **new-onset atrial fibrillation** with rapid ventricular response.
+
+You'll apply three prioritization frameworks in sequence:
+1. **ABCs** — Airway, Breathing, Circulation. Respiratory > cardiac > renal.
+2. **Maslow** — physiological before safety before teaching.
+3. **ADPIE** — Assess vitals first, then plan/implement/evaluate.
+
+Then you'll deliver a polished **SBAR handoff** — **S**ituation, **B**ackground, **A**ssessment, **R**ecommendation — that an off-going nurse, oncoming nurse, or rapid response team can act on immediately.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Multisystem Patient</text><rect x="200" y="130" width="700" height="120" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3" rx="14"/><text x="550" y="175" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">75M, hospital day 3</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="18">CAP + AKI + new AFib RVR</text><circle cx="280" cy="500" r="130" fill="#ef4444" opacity="0.3" stroke="#ef4444" stroke-width="4"/><text x="280" y="490" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Pneumonia</text><text x="280" y="520" text-anchor="middle" fill="#ffffff" font-size="16">O2 sat 88%</text><circle cx="820" cy="500" r="130" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="4"/><text x="820" y="490" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AFib RVR</text><text x="820" y="520" text-anchor="middle" fill="#ffffff" font-size="16">HR 142</text><circle cx="550" cy="700" r="130" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="4"/><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AKI</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="16">Cr 2.4 (was 1.0)</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Priority: ABCs → Maslow → ADPIE</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="18">Breathing first. Always.</text></svg>`,
+          caption: "Three systems failing simultaneously."
+        }
+      },
+      {
+        type: "concept",
+        title: "Three Prioritization Frameworks",
+        content: `**1. ABCs** — when in doubt, save what kills fastest.
+- **Airway** problems kill in 4 minutes.
+- **Breathing** problems kill in minutes (our patient: SpO2 88%).
+- **Circulation** kills in minutes (AFib RVR risks stroke/HF).
+- Renal failure kills in **hours-to-days**.
+- So: oxygenate first → rate-control AFib → manage AKI.
+
+**2. Maslow** — physiological before psychological.
+- **Physiological** (O2, food, water, elimination) — top priority.
+- **Safety** (falls, infection) — next.
+- **Love/belonging** — once stable.
+- **Esteem & self-actualization** — late hospitalization.
+- Don't teach dietary restrictions while the patient is hypoxic.
+
+**3. ADPIE** — the nursing process.
+- **Assess** — get current vitals, lung sounds, EKG, labs. ALWAYS first.
+- **Diagnose** — impaired gas exchange, decreased CO, risk for bleeding.
+- **Plan** — measurable goals (SpO2 > 92%, HR < 110).
+- **Implement** — O2, IV diltiazem, anticoagulation discussion.
+- **Evaluate** — reassess after every intervention.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">3 Frameworks Stacked</text><rect x="60" y="120" width="320" height="500" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="14"/><text x="220" y="170" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">ABCs</text><text x="220" y="230" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">A</text><text x="220" y="265" text-anchor="middle" fill="#ffffff" font-size="16">Airway</text><text x="220" y="320" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">B</text><text x="220" y="355" text-anchor="middle" fill="#ffffff" font-size="16">Breathing</text><text x="220" y="410" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">C</text><text x="220" y="445" text-anchor="middle" fill="#ffffff" font-size="16">Circulation</text><text x="220" y="530" text-anchor="middle" fill="#ffffff" font-size="14">Fastest killers</text><text x="220" y="560" text-anchor="middle" fill="#ffffff" font-size="14">go first</text><rect x="390" y="120" width="320" height="500" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="14"/><text x="550" y="170" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Maslow</text><rect x="430" y="200" width="240" height="50" fill="#ffd700" opacity="0.4"/><text x="550" y="232" text-anchor="middle" fill="#1a1a2e" font-size="16" font-weight="bold">Physiological</text><rect x="450" y="260" width="200" height="50" fill="#f59e0b" opacity="0.4"/><text x="550" y="292" text-anchor="middle" fill="#ffffff" font-size="16">Safety</text><rect x="470" y="320" width="160" height="50" fill="#ef4444" opacity="0.4"/><text x="550" y="352" text-anchor="middle" fill="#ffffff" font-size="16">Love</text><rect x="490" y="380" width="120" height="50" fill="#8b5cf6" opacity="0.4"/><text x="550" y="412" text-anchor="middle" fill="#ffffff" font-size="16">Esteem</text><rect x="510" y="440" width="80" height="50" fill="#6366f1" opacity="0.4"/><text x="550" y="472" text-anchor="middle" fill="#ffffff" font-size="14">SA</text><text x="550" y="555" text-anchor="middle" fill="#ffffff" font-size="14">Base before top</text><rect x="720" y="120" width="320" height="500" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="14"/><text x="880" y="170" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">ADPIE</text><text x="880" y="220" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">A</text><text x="880" y="248" text-anchor="middle" fill="#ffffff" font-size="14">Assess</text><text x="880" y="295" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">D</text><text x="880" y="323" text-anchor="middle" fill="#ffffff" font-size="14">Diagnose</text><text x="880" y="370" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">P</text><text x="880" y="398" text-anchor="middle" fill="#ffffff" font-size="14">Plan</text><text x="880" y="445" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">I</text><text x="880" y="473" text-anchor="middle" fill="#ffffff" font-size="14">Implement</text><text x="880" y="520" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">E</text><text x="880" y="548" text-anchor="middle" fill="#ffffff" font-size="14">Evaluate</text><rect x="80" y="680" width="940" height="320" fill="#888" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="14"/><text x="550" y="730" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Applied to Our Patient</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="18">ABCs: O2 88% → oxygen FIRST</text><text x="550" y="815" text-anchor="middle" fill="#ffffff" font-size="18">Then: HR 142 → rate control</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="18">Then: Cr 2.4 → hold nephrotoxins</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="18">Maslow: stabilize before discharge teaching</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="18">ADPIE: assess → call provider → reassess</text></svg>`,
+          caption: "Layered prioritization in real time."
+        }
+      },
+      {
+        type: "example",
+        title: "Full SBAR Handoff",
+        content: `**S — Situation**
+"This is the nurse from Room 412. I'm calling about **Mr. Garcia, 75 years old**, admitted three days ago for **community-acquired pneumonia**. He's now in **new-onset atrial fibrillation with rapid ventricular response** and his oxygen sat just dropped."
+
+**B — Background**
+"He has a history of **COPD, hypertension, and type 2 diabetes**. He received **IV contrast for a CT** on day 1 and developed **AKI** — creatinine rose from 1.0 to **2.4 today**. He's on **ceftriaxone and azithromycin** for the pneumonia and **2 L nasal cannula**. No prior cardiac history."
+
+**A — Assessment**
+"Right now: **HR 142 and irregular**, BP **98/60** (down from 130/72 this morning), **SpO2 88% on 2 L**, RR 28, T 100.8°F. He's **anxious and short of breath**. Lungs: crackles in right base, no new wheezing. **EKG strip confirms AFib with RVR**. UOP only 20 mL last hour."
+
+**R — Recommendation**
+"I'd like you to **come evaluate him now**. I've already **bumped O2 to 4 L** and rechecked vitals. Can we consider **IV diltiazem** for rate control, a **fluid bolus** carefully given his AKI, **trending troponin and BNP**, and **holding metformin** until renal recovery?"`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">SBAR Handoff</text><rect x="80" y="120" width="940" height="200" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="14"/><text x="120" y="165" fill="#ef4444" font-size="28" font-weight="bold">S</text><text x="170" y="165" fill="#ffd700" font-size="22" font-weight="bold">Situation</text><text x="100" y="210" fill="#ffffff" font-size="17">Room 412, Mr. Garcia, 75M</text><text x="100" y="245" fill="#ffffff" font-size="17">Admitted 3 days ago: CAP</text><text x="100" y="280" fill="#ffffff" font-size="17">Now: new AFib RVR, sat dropped</text><rect x="80" y="340" width="940" height="200" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3" rx="14"/><text x="120" y="385" fill="#f59e0b" font-size="28" font-weight="bold">B</text><text x="170" y="385" fill="#ffd700" font-size="22" font-weight="bold">Background</text><text x="100" y="430" fill="#ffffff" font-size="17">PMHx: COPD, HTN, T2DM</text><text x="100" y="465" fill="#ffffff" font-size="17">Contrast CT day 1 → AKI (Cr 1.0→2.4)</text><text x="100" y="500" fill="#ffffff" font-size="17">Ceftriaxone + azithro, 2 L NC</text><rect x="80" y="560" width="940" height="240" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="14"/><text x="120" y="605" fill="#10b981" font-size="28" font-weight="bold">A</text><text x="170" y="605" fill="#ffd700" font-size="22" font-weight="bold">Assessment</text><text x="100" y="650" fill="#ffffff" font-size="17">HR 142 irreg, BP 98/60, SpO2 88%</text><text x="100" y="685" fill="#ffffff" font-size="17">RR 28, T 100.8°F, anxious</text><text x="100" y="720" fill="#ffffff" font-size="17">EKG: AFib RVR. RLL crackles.</text><text x="100" y="755" fill="#ffffff" font-size="17">UOP 20 mL last hour</text><rect x="80" y="820" width="940" height="240" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="14"/><text x="120" y="865" fill="#6366f1" font-size="28" font-weight="bold">R</text><text x="170" y="865" fill="#ffd700" font-size="22" font-weight="bold">Recommendation</text><text x="100" y="910" fill="#ffffff" font-size="17">Please come evaluate now</text><text x="100" y="945" fill="#ffffff" font-size="17">Up to 4 L O2 already</text><text x="100" y="980" fill="#ffffff" font-size="17">Consider IV diltiazem, careful bolus</text><text x="100" y="1015" fill="#ffffff" font-size="17">Trop, BNP. Hold metformin.</text></svg>`,
+          caption: "A complete SBAR call."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Capstone Quiz",
+        question: "Mr. Garcia (75M, CAP + AKI + new AFib RVR) has just been found with HR 142, BP 98/60, SpO2 88%, RR 28. Which intervention should the nurse perform FIRST?",
+        options: [
+          { text: "Increase supplemental oxygen and reassess SpO2", correct: true },
+          { text: "Administer IV diltiazem for rate control", correct: false },
+          { text: "Give a 500 mL normal saline bolus", correct: false },
+          { text: "Call the family to update them on his condition", correct: false }
+        ],
+        explanation: "**ABCs** rule: **breathing comes before circulation**. SpO2 88% is the most immediately life-threatening problem and is also the easiest, lowest-risk intervention to perform first. Diltiazem can drop BP further; a fluid bolus requires careful titration in AKI; family communication is important but not time-critical. Always treat hypoxia first.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Priority: Always ABCs</text><circle cx="550" cy="500" r="280" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="6"/><text x="550" y="430" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">FIRST:</text><text x="550" y="490" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">Increase O2</text><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="22">Reassess SpO2</text><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="20">Sat 88% → 92%+</text><text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="20">Breathing &gt; Circulation</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="18">Fastest, safest, biggest impact</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">Diltiazem could drop BP further</text></svg>`,
+          caption: "Oxygenate first, every time."
+        }
+      },
+      {
+        type: "application",
+        title: "Capstone Synthesis",
+        content: `**Your 30-minute action plan for Mr. Garcia:**
+
+**Minute 0-2 (Airway/Breathing):**
+- Increase **O2 to non-rebreather** if SpO2 stays < 92% on 4 L.
+- Sit patient up (high Fowler's). Lung sounds, accessory muscle use.
+- Call **rapid response** if continued decompensation.
+
+**Minute 2-10 (Circulation):**
+- 12-lead **EKG**, continuous telemetry.
+- Two **18-gauge IVs**. Draw **troponin, BNP, lactate, CBC, BMP**.
+- Notify provider — SBAR ready.
+
+**Minute 10-20 (Renal/Meds):**
+- **Hold metformin** (AKI + contrast risk for lactic acidosis).
+- **Hold all NSAIDs and ACEis** until renal recovery.
+- Cautious **250 mL NS** bolus if hypotensive and lungs allow.
+- Strict **I&O**, daily weights, monitor potassium.
+
+**Minute 20-30 (Reassess + Document):**
+- Repeat full vitals + lung exam.
+- Document interventions, response, and the SBAR call.
+- Update family per patient consent.
+- Anticipate **anticoagulation discussion** (CHA2DS2-VASc) once stable — but **assess fall risk and bleeding** in this 75 yo with AKI.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">30-Minute Action Plan</text><rect x="60" y="120" width="480" height="200" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="10"/><text x="300" y="160" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Min 0-2: A/B</text><text x="80" y="200" fill="#ffffff" font-size="16">- O2 up, NRB if needed</text><text x="80" y="230" fill="#ffffff" font-size="16">- High Fowler's</text><text x="80" y="260" fill="#ffffff" font-size="16">- Lung sounds, WOB</text><text x="80" y="290" fill="#ffd700" font-size="16">- Rapid response if worse</text><rect x="560" y="120" width="480" height="200" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="800" y="160" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Min 2-10: C</text><text x="580" y="200" fill="#ffffff" font-size="16">- 12-lead EKG, telemetry</text><text x="580" y="230" fill="#ffffff" font-size="16">- Two 18g IVs</text><text x="580" y="260" fill="#ffffff" font-size="16">- Trop, BNP, lactate, CBC</text><text x="580" y="290" fill="#ffd700" font-size="16">- SBAR to provider</text><rect x="60" y="340" width="480" height="220" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/><text x="300" y="380" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Min 10-20: Renal/Meds</text><text x="80" y="420" fill="#ef4444" font-size="16">- HOLD metformin</text><text x="80" y="450" fill="#ef4444" font-size="16">- HOLD NSAIDs, ACEi</text><text x="80" y="480" fill="#ffffff" font-size="16">- Careful 250 mL NS</text><text x="80" y="510" fill="#ffffff" font-size="16">- Strict I&O, daily weight</text><text x="80" y="540" fill="#ffd700" font-size="16">- Watch K+</text><rect x="560" y="340" width="480" height="220" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="10"/><text x="800" y="380" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Min 20-30: Reassess</text><text x="580" y="420" fill="#ffffff" font-size="16">- Repeat vitals + exam</text><text x="580" y="450" fill="#ffffff" font-size="16">- Document everything</text><text x="580" y="480" fill="#ffffff" font-size="16">- Update family</text><text x="580" y="510" fill="#ffffff" font-size="16">- Plan anticoagulation</text><text x="580" y="540" fill="#ffd700" font-size="16">- CHA2DS2-VASc later</text><rect x="180" y="600" width="740" height="400" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="3" rx="14"/><text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Capstone Takeaways</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="20">1. ABCs &gt; Maslow &gt; ADPIE</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="20">2. Treat hypoxia FIRST</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="20">3. Hold nephrotoxins in AKI</text><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="20">4. Reassess after every action</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="20">5. SBAR = clarity under pressure</text><text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">You are ready. NCLEX, here you come.</text></svg>`,
+          caption: "Multisystem care, minute by minute."
         }
       }
     ]
