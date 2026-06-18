@@ -1361,6 +1361,1460 @@ Option 4 names a **positive-pressure** room, which would push contaminated air *
         }
       }
     ]
+  },
+{
+    id: "nclex-fundamentals-lesson-7",
+    title: "Pain Assessment: 0-10 Numeric, Wong-Baker, FLACC, and the Right Tool for the Patient",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Pain Is What the Patient Says It Is",
+        content: `Pain is the **fifth vital sign** — and on the NCLEX, the single most tested principle is this: **the patient's report of pain is the gold standard**. You do not override it with your judgment. You do not document "patient appears comfortable" instead of their rating. If a post-op patient is laughing on the phone and rates their pain a 9/10, you document **9/10** and treat it.
+
+The trick on the exam is **picking the right tool for the right patient**:
+
+- **Verbal adult, oriented** → **0-10 Numeric Rating Scale**
+- **Child age 3-7** (or non-English speaker) → **Wong-Baker FACES**
+- **Preverbal infant, intubated, or cognitively impaired** → **FLACC** (Face, Legs, Activity, Cry, Consolability)
+- **Critically ill, non-communicative adult** → **CPOT** or **BPS**
+
+Pick the wrong tool, and your assessment is invalid. The NCLEX rewards nurses who match the **developmental and cognitive level** of the patient.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Pick the Right Pain Scale</text>
+            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">Decision flow by patient profile</text>
+            <rect x="400" y="140" width="300" height="60" fill="#6366f1" rx="8"/>
+            <text x="550" y="178" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Can patient verbalize?</text>
+            <line x1="475" y1="200" x2="280" y2="260" stroke="#ffd700" stroke-width="3"/>
+            <line x1="625" y1="200" x2="820" y2="260" stroke="#ffd700" stroke-width="3"/>
+            <text x="370" y="240" fill="#10b981" font-size="18" font-weight="bold">YES</text>
+            <text x="720" y="240" fill="#ef4444" font-size="18" font-weight="bold">NO</text>
+            <rect x="130" y="260" width="300" height="60" fill="#0ea5e9" rx="8"/>
+            <text x="280" y="298" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Age 8+ &amp; oriented?</text>
+            <rect x="670" y="260" width="300" height="60" fill="#0ea5e9" rx="8"/>
+            <text x="820" y="298" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Preverbal / impaired?</text>
+            <line x1="205" y1="320" x2="120" y2="400" stroke="#ffd700" stroke-width="3"/>
+            <line x1="355" y1="320" x2="440" y2="400" stroke="#ffd700" stroke-width="3"/>
+            <line x1="745" y1="320" x2="660" y2="400" stroke="#ffd700" stroke-width="3"/>
+            <line x1="895" y1="320" x2="980" y2="400" stroke="#ffd700" stroke-width="3"/>
+            <rect x="40" y="400" width="220" height="100" fill="#10b981" rx="8"/>
+            <text x="150" y="438" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">0-10 NUMERIC</text>
+            <text x="150" y="465" text-anchor="middle" fill="#ffffff" font-size="14">Rate pain 0 (none)</text>
+            <text x="150" y="485" text-anchor="middle" fill="#ffffff" font-size="14">to 10 (worst ever)</text>
+            <rect x="290" y="400" width="220" height="100" fill="#f59e0b" rx="8"/>
+            <text x="400" y="438" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">WONG-BAKER</text>
+            <text x="400" y="465" text-anchor="middle" fill="#ffffff" font-size="14">Faces 0-10</text>
+            <text x="400" y="485" text-anchor="middle" fill="#ffffff" font-size="14">Age 3-7, non-English</text>
+            <rect x="540" y="400" width="220" height="100" fill="#ec4899" rx="8"/>
+            <text x="650" y="438" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">FLACC</text>
+            <text x="650" y="465" text-anchor="middle" fill="#ffffff" font-size="14">Behavioral scale</text>
+            <text x="650" y="485" text-anchor="middle" fill="#ffffff" font-size="14">Infants, impaired</text>
+            <rect x="790" y="400" width="220" height="100" fill="#8b5cf6" rx="8"/>
+            <text x="900" y="438" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">CPOT / BPS</text>
+            <text x="900" y="465" text-anchor="middle" fill="#ffffff" font-size="14">ICU / intubated</text>
+            <text x="900" y="485" text-anchor="middle" fill="#ffffff" font-size="14">Vent, sedated adults</text>
+            <rect x="100" y="560" width="900" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="595" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">THE GOLDEN RULE</text>
+            <text x="550" y="630" text-anchor="middle" fill="#ffffff" font-size="18">Pain is whatever the patient says it is,</text>
+            <text x="550" y="658" text-anchor="middle" fill="#ffffff" font-size="18">existing whenever the patient says it does.</text>
+            <text x="550" y="695" text-anchor="middle" fill="#10b981" font-size="16">— Margo McCaffery, RN (the foundational nursing definition)</text>
+            <text x="550" y="720" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Never override the patient's self-report with your observation.</text>
+            <rect x="100" y="780" width="900" height="280" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="550" y="815" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Quick Reference: Pain Scale Selection</text>
+            <line x1="120" y1="835" x2="980" y2="835" stroke="#6366f1" stroke-width="1"/>
+            <text x="140" y="870" fill="#10b981" font-size="16" font-weight="bold">Adult, oriented:</text>
+            <text x="400" y="870" fill="#ffffff" font-size="16">0-10 Numeric Rating Scale</text>
+            <text x="140" y="905" fill="#10b981" font-size="16" font-weight="bold">Child 3-7 yrs:</text>
+            <text x="400" y="905" fill="#ffffff" font-size="16">Wong-Baker FACES (smiley to crying)</text>
+            <text x="140" y="940" fill="#10b981" font-size="16" font-weight="bold">Infant / preverbal:</text>
+            <text x="400" y="940" fill="#ffffff" font-size="16">FLACC (0-10 from behaviors)</text>
+            <text x="140" y="975" fill="#10b981" font-size="16" font-weight="bold">Dementia / nonverbal:</text>
+            <text x="400" y="975" fill="#ffffff" font-size="16">PAINAD or FLACC</text>
+            <text x="140" y="1010" fill="#10b981" font-size="16" font-weight="bold">Intubated ICU adult:</text>
+            <text x="400" y="1010" fill="#ffffff" font-size="16">CPOT (Critical-Care Pain Observation)</text>
+            <text x="140" y="1045" fill="#ef4444" font-size="16" font-weight="bold">NEVER:</text>
+            <text x="400" y="1045" fill="#ffffff" font-size="16">Use vital signs alone to rate pain</text>
+          </svg>`,
+          caption: "Decision tree for pain scale selection — match the tool to the patient's developmental and cognitive level."
+        }
+      },
+      {
+        type: "concept",
+        title: "PQRST: The Universal Pain Assessment Framework",
+        content: `Every pain assessment — regardless of which **scale** you use to rate intensity — must include the **PQRST framework**. NCLEX questions love to ask "what does the nurse assess next?" and the right answer is almost always one of these letters.
+
+- **P — Provocation/Palliation**: What makes it worse? What makes it better? ("Walking makes it worse, ice helps")
+- **Q — Quality**: Describe the pain in your own words. ("Sharp, stabbing, dull, burning, crushing, throbbing")
+- **R — Region/Radiation**: Where is it? Does it travel? (Crushing chest pain radiating to the **left jaw** = classic MI)
+- **S — Severity**: 0-10 rating using the right scale
+- **T — Timing**: When did it start? Constant or intermittent? Duration?
+
+**Acute pain** (<6 months) often has **sympathetic responses**: tachycardia, hypertension, diaphoresis, dilated pupils. **Chronic pain** (>6 months) usually has **NO** vital sign changes — the body adapts. This is why NCLEX traps students: a chronic pain patient with normal vitals is **still in real pain**. Do not under-treat them because they "look fine."`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">PQRST Pain Framework</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">The 5 questions every pain assessment must answer</text>
+            <rect x="80" y="130" width="180" height="160" fill="#ef4444" rx="12"/>
+            <text x="170" y="180" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="bold">P</text>
+            <text x="170" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Provocation</text>
+            <text x="170" y="245" text-anchor="middle" fill="#ffffff" font-size="14">What makes</text>
+            <text x="170" y="265" text-anchor="middle" fill="#ffffff" font-size="14">it better/worse?</text>
+            <rect x="280" y="130" width="180" height="160" fill="#f59e0b" rx="12"/>
+            <text x="370" y="180" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="bold">Q</text>
+            <text x="370" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Quality</text>
+            <text x="370" y="245" text-anchor="middle" fill="#ffffff" font-size="14">Sharp? Dull?</text>
+            <text x="370" y="265" text-anchor="middle" fill="#ffffff" font-size="14">Burning? Crushing?</text>
+            <rect x="480" y="130" width="180" height="160" fill="#10b981" rx="12"/>
+            <text x="570" y="180" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="bold">R</text>
+            <text x="570" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Region</text>
+            <text x="570" y="245" text-anchor="middle" fill="#ffffff" font-size="14">Where? Does it</text>
+            <text x="570" y="265" text-anchor="middle" fill="#ffffff" font-size="14">radiate?</text>
+            <rect x="680" y="130" width="180" height="160" fill="#6366f1" rx="12"/>
+            <text x="770" y="180" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="bold">S</text>
+            <text x="770" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Severity</text>
+            <text x="770" y="245" text-anchor="middle" fill="#ffffff" font-size="14">0-10 using</text>
+            <text x="770" y="265" text-anchor="middle" fill="#ffffff" font-size="14">correct scale</text>
+            <rect x="880" y="130" width="140" height="160" fill="#8b5cf6" rx="12"/>
+            <text x="950" y="180" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="bold">T</text>
+            <text x="950" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Timing</text>
+            <text x="950" y="245" text-anchor="middle" fill="#ffffff" font-size="14">When? Constant</text>
+            <text x="950" y="265" text-anchor="middle" fill="#ffffff" font-size="14">or intermittent?</text>
+            <rect x="80" y="330" width="940" height="350" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="365" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">ACUTE vs CHRONIC PAIN — VITAL SIGN RESPONSE</text>
+            <line x1="550" y1="385" x2="550" y2="660" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="415" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">ACUTE PAIN (&lt;6 mo)</text>
+            <text x="800" y="415" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">CHRONIC PAIN (&gt;6 mo)</text>
+            <text x="100" y="455" fill="#10b981" font-size="16">HR:</text>
+            <text x="160" y="455" fill="#ffffff" font-size="16">elevated (tachycardia)</text>
+            <text x="600" y="455" fill="#10b981" font-size="16">HR:</text>
+            <text x="660" y="455" fill="#ffffff" font-size="16">NORMAL (adapted)</text>
+            <text x="100" y="490" fill="#10b981" font-size="16">BP:</text>
+            <text x="160" y="490" fill="#ffffff" font-size="16">elevated (hypertension)</text>
+            <text x="600" y="490" fill="#10b981" font-size="16">BP:</text>
+            <text x="660" y="490" fill="#ffffff" font-size="16">NORMAL</text>
+            <text x="100" y="525" fill="#10b981" font-size="16">RR:</text>
+            <text x="160" y="525" fill="#ffffff" font-size="16">elevated, shallow</text>
+            <text x="600" y="525" fill="#10b981" font-size="16">RR:</text>
+            <text x="660" y="525" fill="#ffffff" font-size="16">NORMAL</text>
+            <text x="100" y="560" fill="#10b981" font-size="16">Skin:</text>
+            <text x="160" y="560" fill="#ffffff" font-size="16">diaphoretic, pale</text>
+            <text x="600" y="560" fill="#10b981" font-size="16">Skin:</text>
+            <text x="660" y="560" fill="#ffffff" font-size="16">NORMAL</text>
+            <text x="100" y="595" fill="#10b981" font-size="16">Behavior:</text>
+            <text x="200" y="595" fill="#ffffff" font-size="16">grimace, guard</text>
+            <text x="600" y="595" fill="#10b981" font-size="16">Behavior:</text>
+            <text x="700" y="595" fill="#ffffff" font-size="16">depression, fatigue</text>
+            <text x="300" y="640" text-anchor="middle" fill="#ffd700" font-size="14">Body in crisis mode</text>
+            <text x="800" y="640" text-anchor="middle" fill="#ffd700" font-size="14">Body has adapted — pain still real!</text>
+            <rect x="80" y="710" width="940" height="360" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="550" y="745" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">NCLEX RED FLAG RADIATION PATTERNS</text>
+            <line x1="100" y1="760" x2="1000" y2="760" stroke="#ef4444" stroke-width="1"/>
+            <text x="120" y="795" fill="#ffd700" font-size="16" font-weight="bold">Chest pain → left jaw/arm:</text>
+            <text x="500" y="795" fill="#ffffff" font-size="16">Myocardial infarction (MI)</text>
+            <text x="120" y="830" fill="#ffd700" font-size="16" font-weight="bold">Epigastric → back (boring):</text>
+            <text x="500" y="830" fill="#ffffff" font-size="16">Pancreatitis / AAA dissection</text>
+            <text x="120" y="865" fill="#ffd700" font-size="16" font-weight="bold">RUQ → right shoulder (Kehr):</text>
+            <text x="500" y="865" fill="#ffffff" font-size="16">Gallbladder / diaphragm irritation</text>
+            <text x="120" y="900" fill="#ffd700" font-size="16" font-weight="bold">Flank → groin (colicky):</text>
+            <text x="500" y="900" fill="#ffffff" font-size="16">Kidney stone (renal calculi)</text>
+            <text x="120" y="935" fill="#ffd700" font-size="16" font-weight="bold">Low back → leg below knee:</text>
+            <text x="500" y="935" fill="#ffffff" font-size="16">Sciatica / herniated disc</text>
+            <text x="120" y="970" fill="#ffd700" font-size="16" font-weight="bold">RLQ (McBurney's point):</text>
+            <text x="500" y="970" fill="#ffffff" font-size="16">Appendicitis</text>
+            <text x="120" y="1005" fill="#ffd700" font-size="16" font-weight="bold">Calf pain on dorsiflexion:</text>
+            <text x="500" y="1005" fill="#ffffff" font-size="16">DVT (Homan's sign — outdated but tested)</text>
+            <text x="120" y="1040" fill="#ffd700" font-size="16" font-weight="bold">Sudden "worst headache ever":</text>
+            <text x="500" y="1040" fill="#ffffff" font-size="16">Subarachnoid hemorrhage</text>
+          </svg>`,
+          caption: "PQRST framework with acute vs chronic vital sign patterns and high-yield radiation red flags."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Patients, Three Scales — Picking Correctly",
+        content: `Walk through three back-to-back assessments on a busy med-surg shift.
+
+**Patient A — Mr. Johnson, 58, post-op day 1 lap chole, alert and oriented.**
+You ask: "On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your pain right now?" He says **"7."** That's your number. You document **7/10 sharp RUQ pain, radiating to right shoulder, worse with deep breath.** Correct tool: **Numeric Rating Scale**.
+
+**Patient B — Lily, 4 years old, post-tonsillectomy.**
+A 4-year-old cannot reliably rate 0-10. You show her the **Wong-Baker FACES** chart: "Point to the face that shows how you feel inside." She points to the 4th face (rated **6**). You document **Wong-Baker 6/10**. NOT 0-10 numeric.
+
+**Patient C — Mrs. Chen, 82, advanced dementia, post-hip ORIF.**
+She cannot answer questions. You use **FLACC**: Face (grimacing = 2), Legs (kicking = 2), Activity (squirming = 2), Cry (whimpering = 1), Consolability (difficult = 2). **Total = 9/10**. You medicate based on the FLACC score — her inability to verbalize does not mean she isn't in severe pain.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Three Patients, Three Scales</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Real-time bedside decisions on a med-surg shift</text>
+            <rect x="40" y="120" width="340" height="940" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="10"/>
+            <rect x="40" y="120" width="340" height="60" fill="#10b981" rx="10"/>
+            <text x="210" y="158" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">PATIENT A</text>
+            <text x="210" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Mr. Johnson, 58</text>
+            <text x="210" y="235" text-anchor="middle" fill="#ffffff" font-size="14">Post-op day 1</text>
+            <text x="210" y="255" text-anchor="middle" fill="#ffffff" font-size="14">Lap chole</text>
+            <text x="210" y="275" text-anchor="middle" fill="#ffffff" font-size="14">Alert &amp; Oriented x4</text>
+            <line x1="60" y1="300" x2="360" y2="300" stroke="#10b981" stroke-width="1"/>
+            <text x="210" y="335" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">SCALE CHOSEN</text>
+            <text x="210" y="365" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">0-10 NUMERIC</text>
+            <text x="210" y="400" text-anchor="middle" fill="#10b981" font-size="14">Why: verbal adult,</text>
+            <text x="210" y="420" text-anchor="middle" fill="#10b981" font-size="14">oriented, English-speaking</text>
+            <rect x="80" y="450" width="260" height="80" fill="#1a1a2e" stroke="#ffd700" rx="6"/>
+            <text x="210" y="480" text-anchor="middle" fill="#ffd700" font-size="14">Patient response:</text>
+            <text x="210" y="510" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">"7 out of 10"</text>
+            <text x="210" y="565" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">DOCUMENT:</text>
+            <text x="210" y="590" text-anchor="middle" fill="#ffffff" font-size="13">7/10 sharp RUQ pain,</text>
+            <text x="210" y="610" text-anchor="middle" fill="#ffffff" font-size="13">radiating to R shoulder,</text>
+            <text x="210" y="630" text-anchor="middle" fill="#ffffff" font-size="13">worse w/ deep breath</text>
+            <text x="210" y="680" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">PQRST:</text>
+            <text x="60" y="710" fill="#10b981" font-size="13">P:</text>
+            <text x="90" y="710" fill="#ffffff" font-size="13">worse w/ breath, ice helps</text>
+            <text x="60" y="735" fill="#10b981" font-size="13">Q:</text>
+            <text x="90" y="735" fill="#ffffff" font-size="13">sharp, stabbing</text>
+            <text x="60" y="760" fill="#10b981" font-size="13">R:</text>
+            <text x="90" y="760" fill="#ffffff" font-size="13">RUQ → R shoulder</text>
+            <text x="60" y="785" fill="#10b981" font-size="13">S:</text>
+            <text x="90" y="785" fill="#ffffff" font-size="13">7/10</text>
+            <text x="60" y="810" fill="#10b981" font-size="13">T:</text>
+            <text x="90" y="810" fill="#ffffff" font-size="13">since 0600, constant</text>
+            <rect x="80" y="840" width="260" height="60" fill="#10b981" rx="6"/>
+            <text x="210" y="875" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Action: PRN morphine 4mg IV</text>
+            <text x="210" y="950" text-anchor="middle" fill="#888" font-size="12">VS: HR 102, BP 148/88</text>
+            <text x="210" y="975" text-anchor="middle" fill="#888" font-size="12">→ classic acute sympathetic</text>
+            <text x="210" y="1000" text-anchor="middle" fill="#888" font-size="12">response confirms pain</text>
+            <rect x="385" y="120" width="340" height="940" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <rect x="385" y="120" width="340" height="60" fill="#f59e0b" rx="10"/>
+            <text x="555" y="158" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">PATIENT B</text>
+            <text x="555" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Lily, 4 years</text>
+            <text x="555" y="235" text-anchor="middle" fill="#ffffff" font-size="14">Post-tonsillectomy</text>
+            <text x="555" y="255" text-anchor="middle" fill="#ffffff" font-size="14">Verbal, but young</text>
+            <text x="555" y="275" text-anchor="middle" fill="#ffffff" font-size="14">Cannot abstract 0-10</text>
+            <line x1="405" y1="300" x2="705" y2="300" stroke="#f59e0b" stroke-width="1"/>
+            <text x="555" y="335" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">SCALE CHOSEN</text>
+            <text x="555" y="365" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">WONG-BAKER FACES</text>
+            <text x="555" y="400" text-anchor="middle" fill="#f59e0b" font-size="14">Why: age 3-7, can</text>
+            <text x="555" y="420" text-anchor="middle" fill="#f59e0b" font-size="14">match feelings to faces</text>
+            <circle cx="430" cy="475" r="18" fill="#10b981"/>
+            <text x="430" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">0</text>
+            <circle cx="475" cy="475" r="18" fill="#10b981"/>
+            <text x="475" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">2</text>
+            <circle cx="520" cy="475" r="18" fill="#ffd700"/>
+            <text x="520" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">4</text>
+            <circle cx="565" cy="475" r="22" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+            <text x="565" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">6</text>
+            <circle cx="615" cy="475" r="18" fill="#ef4444"/>
+            <text x="615" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">8</text>
+            <circle cx="660" cy="475" r="18" fill="#ef4444"/>
+            <text x="660" y="481" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">10</text>
+            <text x="555" y="525" text-anchor="middle" fill="#f59e0b" font-size="14">Lily points to 4th face</text>
+            <text x="555" y="565" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">DOCUMENT:</text>
+            <text x="555" y="590" text-anchor="middle" fill="#ffffff" font-size="13">Wong-Baker 6/10</text>
+            <text x="555" y="610" text-anchor="middle" fill="#ffffff" font-size="13">throat pain</text>
+            <text x="555" y="630" text-anchor="middle" fill="#ffffff" font-size="13">(NOT "numeric 6")</text>
+            <text x="555" y="680" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">DO:</text>
+            <text x="405" y="710" fill="#10b981" font-size="13">•</text>
+            <text x="420" y="710" fill="#ffffff" font-size="13">offer popsicle (cool)</text>
+            <text x="405" y="735" fill="#10b981" font-size="13">•</text>
+            <text x="420" y="735" fill="#ffffff" font-size="13">distraction (cartoon)</text>
+            <text x="405" y="760" fill="#10b981" font-size="13">•</text>
+            <text x="420" y="760" fill="#ffffff" font-size="13">parent at bedside</text>
+            <text x="405" y="785" fill="#10b981" font-size="13">•</text>
+            <text x="420" y="785" fill="#ffffff" font-size="13">acetaminophen PO</text>
+            <text x="555" y="830" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">DO NOT:</text>
+            <text x="405" y="860" fill="#ef4444" font-size="13">•</text>
+            <text x="420" y="860" fill="#ffffff" font-size="13">ASA (Reye's risk)</text>
+            <text x="405" y="885" fill="#ef4444" font-size="13">•</text>
+            <text x="420" y="885" fill="#ffffff" font-size="13">red/brown popsicles</text>
+            <text x="405" y="910" fill="#ef4444" font-size="13">•</text>
+            <text x="420" y="910" fill="#ffffff" font-size="13">straw (suction risk)</text>
+            <text x="555" y="975" text-anchor="middle" fill="#888" font-size="12">Pediatric pain is often</text>
+            <text x="555" y="1000" text-anchor="middle" fill="#888" font-size="12">UNDER-treated — believe</text>
+            <text x="555" y="1025" text-anchor="middle" fill="#888" font-size="12">the face she points to</text>
+            <rect x="730" y="120" width="340" height="940" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <rect x="730" y="120" width="340" height="60" fill="#ec4899" rx="10"/>
+            <text x="900" y="158" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">PATIENT C</text>
+            <text x="900" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Mrs. Chen, 82</text>
+            <text x="900" y="235" text-anchor="middle" fill="#ffffff" font-size="14">Post-hip ORIF</text>
+            <text x="900" y="255" text-anchor="middle" fill="#ffffff" font-size="14">Advanced dementia</text>
+            <text x="900" y="275" text-anchor="middle" fill="#ffffff" font-size="14">Cannot self-report</text>
+            <line x1="750" y1="300" x2="1050" y2="300" stroke="#ec4899" stroke-width="1"/>
+            <text x="900" y="335" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">SCALE CHOSEN</text>
+            <text x="900" y="365" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">FLACC</text>
+            <text x="900" y="400" text-anchor="middle" fill="#ec4899" font-size="14">Why: behavioral scale</text>
+            <text x="900" y="420" text-anchor="middle" fill="#ec4899" font-size="14">for nonverbal patients</text>
+            <rect x="750" y="450" width="300" height="240" fill="#1a1a2e" stroke="#ffd700" rx="6"/>
+            <text x="900" y="478" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">FLACC ASSESSMENT</text>
+            <text x="770" y="510" fill="#10b981" font-size="13">Face (grimace):</text>
+            <text x="1010" y="510" text-anchor="end" fill="#ffffff" font-size="13" font-weight="bold">2</text>
+            <text x="770" y="540" fill="#10b981" font-size="13">Legs (kicking):</text>
+            <text x="1010" y="540" text-anchor="end" fill="#ffffff" font-size="13" font-weight="bold">2</text>
+            <text x="770" y="570" fill="#10b981" font-size="13">Activity (squirming):</text>
+            <text x="1010" y="570" text-anchor="end" fill="#ffffff" font-size="13" font-weight="bold">2</text>
+            <text x="770" y="600" fill="#10b981" font-size="13">Cry (whimper):</text>
+            <text x="1010" y="600" text-anchor="end" fill="#ffffff" font-size="13" font-weight="bold">1</text>
+            <text x="770" y="630" fill="#10b981" font-size="13">Consol. (difficult):</text>
+            <text x="1010" y="630" text-anchor="end" fill="#ffffff" font-size="13" font-weight="bold">2</text>
+            <line x1="770" y1="645" x2="1030" y2="645" stroke="#ffd700"/>
+            <text x="770" y="675" fill="#ffd700" font-size="16" font-weight="bold">TOTAL:</text>
+            <text x="1010" y="675" text-anchor="end" fill="#ef4444" font-size="20" font-weight="bold">9/10</text>
+            <text x="900" y="725" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">DOCUMENT:</text>
+            <text x="900" y="750" text-anchor="middle" fill="#ffffff" font-size="13">FLACC 9/10 — SEVERE</text>
+            <rect x="750" y="780" width="300" height="60" fill="#ef4444" rx="6"/>
+            <text x="900" y="815" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Action: Treat as severe</text>
+            <text x="900" y="870" text-anchor="middle" fill="#ec4899" font-size="14" font-weight="bold">NCLEX TRAP:</text>
+            <text x="900" y="895" text-anchor="middle" fill="#ffffff" font-size="12">Do not skip pain meds</text>
+            <text x="900" y="915" text-anchor="middle" fill="#ffffff" font-size="12">because she "can't ask"</text>
+            <text x="900" y="935" text-anchor="middle" fill="#ffffff" font-size="12">Untreated pain → delirium,</text>
+            <text x="900" y="955" text-anchor="middle" fill="#ffffff" font-size="12">poor healing, agitation</text>
+            <text x="900" y="1005" text-anchor="middle" fill="#888" font-size="12">Reassess FLACC q1h after</text>
+            <text x="900" y="1030" text-anchor="middle" fill="#888" font-size="12">medication for effectiveness</text>
+          </svg>`,
+          caption: "Three patients on the same shift — the scale changes but the obligation to treat does not."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Pick the Right Tool",
+        content: `Test the principle: **the tool must match the patient**, and **the patient's report is gold**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quiz Strategy</text>
+            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">When a pain question feels tricky, walk through this checklist</text>
+            <rect x="80" y="140" width="940" height="80" fill="#6366f1" rx="10"/>
+            <text x="550" y="175" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 1: Identify the patient's developmental/cognitive level</text>
+            <text x="550" y="205" text-anchor="middle" fill="#ffd700" font-size="16">Adult oriented? Child? Preverbal? Dementia? Intubated?</text>
+            <rect x="80" y="240" width="940" height="80" fill="#0ea5e9" rx="10"/>
+            <text x="550" y="275" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 2: Match level to tool</text>
+            <text x="550" y="305" text-anchor="middle" fill="#ffd700" font-size="16">Adult→Numeric • Child 3-7→Wong-Baker • Preverbal→FLACC • ICU→CPOT</text>
+            <rect x="80" y="340" width="940" height="80" fill="#10b981" rx="10"/>
+            <text x="550" y="375" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 3: Believe the patient's number</text>
+            <text x="550" y="405" text-anchor="middle" fill="#ffd700" font-size="16">Do not override based on appearance or vitals</text>
+            <rect x="80" y="440" width="940" height="80" fill="#f59e0b" rx="10"/>
+            <text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 4: Use PQRST to characterize</text>
+            <text x="550" y="505" text-anchor="middle" fill="#ffd700" font-size="16">Provocation, Quality, Region, Severity, Timing</text>
+            <rect x="80" y="540" width="940" height="80" fill="#ef4444" rx="10"/>
+            <text x="550" y="575" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 5: Reassess after intervention</text>
+            <text x="550" y="605" text-anchor="middle" fill="#ffd700" font-size="16">IV meds: 15-30 min • PO meds: 60 min • Document effect</text>
+            <rect x="80" y="650" width="940" height="420" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="690" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">COMMON NCLEX DISTRACTORS — DO NOT FALL FOR THESE</text>
+            <line x1="100" y1="705" x2="1000" y2="705" stroke="#ffd700"/>
+            <text x="120" y="740" fill="#ef4444" font-size="16" font-weight="bold">WRONG:</text>
+            <text x="240" y="740" fill="#ffffff" font-size="15">"Patient appears comfortable, so document 0/10"</text>
+            <text x="120" y="765" fill="#10b981" font-size="15">RIGHT:</text>
+            <text x="240" y="765" fill="#ffffff" font-size="15">Document the rating the patient gives, even if they "look fine"</text>
+            <text x="120" y="810" fill="#ef4444" font-size="16" font-weight="bold">WRONG:</text>
+            <text x="240" y="810" fill="#ffffff" font-size="15">"Vitals normal, so chronic pain patient isn't really in pain"</text>
+            <text x="120" y="835" fill="#10b981" font-size="15">RIGHT:</text>
+            <text x="240" y="835" fill="#ffffff" font-size="15">Chronic pain rarely shows VS changes — body adapts</text>
+            <text x="120" y="880" fill="#ef4444" font-size="16" font-weight="bold">WRONG:</text>
+            <text x="240" y="880" fill="#ffffff" font-size="15">Use 0-10 numeric on a 4-year-old</text>
+            <text x="120" y="905" fill="#10b981" font-size="15">RIGHT:</text>
+            <text x="240" y="905" fill="#ffffff" font-size="15">Use Wong-Baker FACES — children can't abstract numbers</text>
+            <text x="120" y="950" fill="#ef4444" font-size="16" font-weight="bold">WRONG:</text>
+            <text x="240" y="950" fill="#ffffff" font-size="15">Skip pain meds on demented patient because "she can't ask"</text>
+            <text x="120" y="975" fill="#10b981" font-size="15">RIGHT:</text>
+            <text x="240" y="975" fill="#ffffff" font-size="15">Use FLACC — high score = treat aggressively</text>
+            <text x="120" y="1020" fill="#ef4444" font-size="16" font-weight="bold">WRONG:</text>
+            <text x="240" y="1020" fill="#ffffff" font-size="15">Pain medication concern: "they might be drug-seeking"</text>
+            <text x="120" y="1045" fill="#10b981" font-size="15">RIGHT:</text>
+            <text x="240" y="1045" fill="#ffffff" font-size="15">Treat the reported pain. Addiction risk does not justify under-treatment.</text>
+          </svg>`,
+          caption: "Quiz strategy and the most common NCLEX pain-assessment distractors."
+        },
+        question: "A nurse is admitting a 4-year-old child for a tonsillectomy. The child is alert and cooperative but cannot reliably rate numbers from 0-10. Which pain assessment tool is MOST appropriate for this patient?",
+        options: [
+          { text: "0-10 Numeric Rating Scale, because the child is verbal and cooperative", correct: false },
+          { text: "Wong-Baker FACES scale, because it uses faces the child can match to feelings", correct: true },
+          { text: "FLACC scale, because the child is too young to participate in assessment", correct: false },
+          { text: "CPOT scale, because pediatric patients require a behavioral tool", correct: false }
+        ],
+        explanation: "The Wong-Baker FACES scale is designed for children ages 3-7 who can identify emotions but cannot abstract numbers. The child points to the face that matches how they feel. A 4-year-old is too young for the 0-10 numeric scale (requires abstract thinking) but is not preverbal — so FLACC (which is for infants and nonverbal/cognitively impaired patients) is not the best fit. CPOT is for critically ill, intubated adults. Always match the tool to the patient's developmental level."
+      },
+      {
+        type: "application",
+        title: "Applying It: Chronic Pain Patient with Normal Vitals",
+        content: `**Scenario:** Mrs. Patel, 67, was admitted for management of **chronic low back pain** related to spinal stenosis. She has had this pain for 8 years. Her vital signs on admission: **BP 122/78, HR 76, RR 16, SpO2 98%, T 98.4°F**. She rates her pain **8/10**, describes it as "constant aching, burning down my left leg." The night nurse documented "patient denies acute distress, vitals stable, pain reported 8/10."
+
+The oncoming nurse questions if the pain is really an 8 — "she's just sitting there reading."
+
+**Your job:**
+
+1. **Believe the rating.** Chronic pain patients do not show acute sympathetic signs. Normal vitals do NOT disprove pain. The body has **physiologically adapted** to chronic pain — this is the most-tested NCLEX concept in this area.
+
+2. **Use PQRST.** Document the burning, radiating-down-leg quality (neuropathic pattern), constant timing, 8-year history.
+
+3. **Treat.** Administer the ordered scheduled analgesic + adjuvant (gabapentin for neuropathic pain). Reassess in **60 minutes** (PO).
+
+4. **Educate the team.** Doubt expressed about the pain rating is **bias**. Document the rating she gives, not the rating you think she should give.
+
+This single principle — "believe the patient" — appears on every NCLEX pain question.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Application: Chronic Pain, Normal Vitals</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Mrs. Patel — 67yo, chronic low back pain x 8 years</text>
+            <rect x="80" y="120" width="940" height="200" fill="#1a1a2e" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="550" y="155" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">VITAL SIGNS ON ADMISSION</text>
+            <line x1="100" y1="170" x2="1000" y2="170" stroke="#6366f1"/>
+            <text x="200" y="210" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">BP</text>
+            <text x="200" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">122/78</text>
+            <text x="200" y="265" text-anchor="middle" fill="#888" font-size="13">Normal</text>
+            <text x="380" y="210" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">HR</text>
+            <text x="380" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">76</text>
+            <text x="380" y="265" text-anchor="middle" fill="#888" font-size="13">Normal</text>
+            <text x="560" y="210" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">RR</text>
+            <text x="560" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">16</text>
+            <text x="560" y="265" text-anchor="middle" fill="#888" font-size="13">Normal</text>
+            <text x="740" y="210" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">SpO2</text>
+            <text x="740" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">98%</text>
+            <text x="740" y="265" text-anchor="middle" fill="#888" font-size="13">Normal</text>
+            <text x="920" y="210" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">T</text>
+            <text x="920" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">98.4F</text>
+            <text x="920" y="265" text-anchor="middle" fill="#888" font-size="13">Normal</text>
+            <text x="550" y="305" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">PAIN: 8/10 — burning, constant, radiating down L leg</text>
+            <rect x="80" y="340" width="940" height="160" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="550" y="375" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">THE NCLEX TRAP</text>
+            <text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="16">"Vitals are normal, so the 8/10 pain rating must be exaggerated."</text>
+            <text x="550" y="445" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">WRONG. This is a chronic pain patient.</text>
+            <text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="15">After 8 years, the body has physiologically adapted — normal VS prove nothing.</text>
+            <rect x="80" y="520" width="940" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="555" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">CORRECT NURSING ACTIONS</text>
+            <line x1="100" y1="570" x2="1000" y2="570" stroke="#10b981"/>
+            <text x="120" y="605" fill="#ffd700" font-size="16" font-weight="bold">1.</text>
+            <text x="160" y="605" fill="#ffffff" font-size="16">Believe the patient — document 8/10, not your guess</text>
+            <text x="120" y="640" fill="#ffd700" font-size="16" font-weight="bold">2.</text>
+            <text x="160" y="640" fill="#ffffff" font-size="16">PQRST: burning quality + radiation = NEUROPATHIC pain</text>
+            <text x="120" y="675" fill="#ffd700" font-size="16" font-weight="bold">3.</text>
+            <text x="160" y="675" fill="#ffffff" font-size="16">Administer scheduled analgesic + adjuvant (gabapentin)</text>
+            <text x="120" y="710" fill="#ffd700" font-size="16" font-weight="bold">4.</text>
+            <text x="160" y="710" fill="#ffffff" font-size="16">Reassess in 60 min (PO meds) — document effectiveness</text>
+            <text x="120" y="745" fill="#ffd700" font-size="16" font-weight="bold">5.</text>
+            <text x="160" y="745" fill="#ffffff" font-size="16">Non-pharm: heat, repositioning, PT consult</text>
+            <rect x="80" y="780" width="940" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="815" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">ACUTE vs CHRONIC PAIN MEDICATION DIFFERENCES</text>
+            <line x1="100" y1="830" x2="1000" y2="830" stroke="#ffd700"/>
+            <text x="300" y="865" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">ACUTE PAIN</text>
+            <text x="800" y="865" text-anchor="middle" fill="#0ea5e9" font-size="18" font-weight="bold">CHRONIC PAIN</text>
+            <text x="120" y="900" fill="#10b981" font-size="14">Schedule:</text>
+            <text x="220" y="900" fill="#ffffff" font-size="14">PRN, short course</text>
+            <text x="620" y="900" fill="#10b981" font-size="14">Schedule:</text>
+            <text x="720" y="900" fill="#ffffff" font-size="14">ATC (around the clock)</text>
+            <text x="120" y="930" fill="#10b981" font-size="14">First-line:</text>
+            <text x="220" y="930" fill="#ffffff" font-size="14">Opioid for severe</text>
+            <text x="620" y="930" fill="#10b981" font-size="14">First-line:</text>
+            <text x="720" y="930" fill="#ffffff" font-size="14">Multimodal + adjuvants</text>
+            <text x="120" y="960" fill="#10b981" font-size="14">Adjuvants:</text>
+            <text x="220" y="960" fill="#ffffff" font-size="14">Acetaminophen, NSAID</text>
+            <text x="620" y="960" fill="#10b981" font-size="14">Adjuvants:</text>
+            <text x="720" y="960" fill="#ffffff" font-size="14">Gabapentin, SNRIs, TCAs</text>
+            <text x="120" y="990" fill="#10b981" font-size="14">Goal:</text>
+            <text x="220" y="990" fill="#ffffff" font-size="14">Eliminate pain</text>
+            <text x="620" y="990" fill="#10b981" font-size="14">Goal:</text>
+            <text x="720" y="990" fill="#ffffff" font-size="14">Improve function</text>
+            <text x="120" y="1020" fill="#10b981" font-size="14">Duration:</text>
+            <text x="220" y="1020" fill="#ffffff" font-size="14">Days to weeks</text>
+            <text x="620" y="1020" fill="#10b981" font-size="14">Duration:</text>
+            <text x="720" y="1020" fill="#ffffff" font-size="14">Months to years</text>
+            <text x="550" y="1055" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Both deserve treatment. Both deserve to be believed.</text>
+          </svg>`,
+          caption: "Application breakdown — chronic pain demands belief and scheduled treatment, not skepticism."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-fundamentals-lesson-8",
+    title: "Vital Signs Normals, Abnormals, and the Action Triggers",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Numbers That Save Lives",
+        content: `Vital signs are the **first quantitative window** into your patient's status. On the NCLEX, you will be given a set of vitals and asked: **act, monitor, or notify the provider?** Memorize the **adult normal ranges**:
+
+- **BP**: 90/60 — 120/80 mmHg
+- **HR**: 60 — 100 bpm
+- **RR**: 12 — 20 breaths/min
+- **SpO2**: ≥ 95% on room air
+- **Temp**: 97 — 99°F (36.1 — 37.2°C)
+
+Then memorize the **action triggers** — values that demand IMMEDIATE provider notification:
+
+- **Sustained systolic BP < 90** (shock state)
+- **HR < 50 or > 120** (sustained)
+- **SpO2 < 90%** (severe hypoxia)
+- **RR < 10 or > 24** (respiratory failure brewing)
+- **Temp > 101.5°F or < 96°F**
+
+These trigger thresholds appear in **rapid-response criteria** at virtually every hospital. The NCLEX wants you to recognize them on sight. Pediatric ranges shift dramatically with age — younger = faster heart and respiratory rates, lower blood pressure.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Adult Vital Signs Cheat Sheet</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">Normal ranges + the action triggers that demand notification</text>
+            <rect x="60" y="130" width="1000" height="60" fill="#6366f1" rx="8"/>
+            <text x="120" y="170" fill="#ffffff" font-size="18" font-weight="bold">PARAMETER</text>
+            <text x="380" y="170" fill="#ffffff" font-size="18" font-weight="bold">NORMAL</text>
+            <text x="620" y="170" fill="#ffffff" font-size="18" font-weight="bold">CONCERNING</text>
+            <text x="870" y="170" fill="#ffffff" font-size="18" font-weight="bold">CALL PROVIDER</text>
+            <rect x="60" y="195" width="1000" height="65" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="225" fill="#ffd700" font-size="16" font-weight="bold">Blood Pressure</text>
+            <text x="80" y="248" fill="#888" font-size="12">(systolic/diastolic mmHg)</text>
+            <text x="380" y="232" fill="#10b981" font-size="16" font-weight="bold">90/60 — 120/80</text>
+            <text x="620" y="225" fill="#f59e0b" font-size="14">SBP 80-89 or</text>
+            <text x="620" y="248" fill="#f59e0b" font-size="14">SBP 140-180</text>
+            <text x="870" y="225" fill="#ef4444" font-size="14" font-weight="bold">SBP &lt; 90 sustained</text>
+            <text x="870" y="248" fill="#ef4444" font-size="14" font-weight="bold">SBP &gt; 180</text>
+            <rect x="60" y="265" width="1000" height="65" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="295" fill="#ffd700" font-size="16" font-weight="bold">Heart Rate</text>
+            <text x="80" y="318" fill="#888" font-size="12">(bpm)</text>
+            <text x="380" y="302" fill="#10b981" font-size="16" font-weight="bold">60 — 100</text>
+            <text x="620" y="295" fill="#f59e0b" font-size="14">50-59 or</text>
+            <text x="620" y="318" fill="#f59e0b" font-size="14">101-119</text>
+            <text x="870" y="295" fill="#ef4444" font-size="14" font-weight="bold">&lt; 50 or &gt; 120</text>
+            <text x="870" y="318" fill="#ef4444" font-size="14" font-weight="bold">(sustained)</text>
+            <rect x="60" y="335" width="1000" height="65" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="365" fill="#ffd700" font-size="16" font-weight="bold">Respiratory Rate</text>
+            <text x="80" y="388" fill="#888" font-size="12">(breaths/min)</text>
+            <text x="380" y="372" fill="#10b981" font-size="16" font-weight="bold">12 — 20</text>
+            <text x="620" y="365" fill="#f59e0b" font-size="14">10-11 or</text>
+            <text x="620" y="388" fill="#f59e0b" font-size="14">21-24</text>
+            <text x="870" y="365" fill="#ef4444" font-size="14" font-weight="bold">&lt; 10 or &gt; 24</text>
+            <text x="870" y="388" fill="#ef4444" font-size="14" font-weight="bold">(resp failure risk)</text>
+            <rect x="60" y="405" width="1000" height="65" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="435" fill="#ffd700" font-size="16" font-weight="bold">SpO2</text>
+            <text x="80" y="458" fill="#888" font-size="12">(% on RA)</text>
+            <text x="380" y="442" fill="#10b981" font-size="16" font-weight="bold">95 — 100%</text>
+            <text x="620" y="442" fill="#f59e0b" font-size="14">90 — 94%</text>
+            <text x="870" y="442" fill="#ef4444" font-size="14" font-weight="bold">&lt; 90% (severe hypoxia)</text>
+            <rect x="60" y="475" width="1000" height="65" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="505" fill="#ffd700" font-size="16" font-weight="bold">Temperature</text>
+            <text x="80" y="528" fill="#888" font-size="12">(F / C)</text>
+            <text x="380" y="505" fill="#10b981" font-size="16" font-weight="bold">97 — 99 F</text>
+            <text x="380" y="528" fill="#10b981" font-size="14">(36.1 — 37.2 C)</text>
+            <text x="620" y="505" fill="#f59e0b" font-size="14">99.1 — 101.5 F</text>
+            <text x="620" y="528" fill="#f59e0b" font-size="14">or 96.0 — 96.9 F</text>
+            <text x="870" y="505" fill="#ef4444" font-size="14" font-weight="bold">&gt; 101.5 F</text>
+            <text x="870" y="528" fill="#ef4444" font-size="14" font-weight="bold">or &lt; 96 F (sepsis)</text>
+            <rect x="60" y="570" width="1000" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="605" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PAIN — THE 5TH VITAL SIGN</text>
+            <text x="560" y="640" text-anchor="middle" fill="#ffffff" font-size="16">Always document pain alongside the other 4 numerical vitals.</text>
+            <text x="560" y="670" text-anchor="middle" fill="#ffffff" font-size="16">Use the appropriate scale (Numeric / Wong-Baker / FLACC).</text>
+            <text x="560" y="710" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">SOME HOSPITALS NOW USE A 6TH: LEVEL OF CONSCIOUSNESS</text>
+            <text x="560" y="735" text-anchor="middle" fill="#888" font-size="14">AVPU: Alert, Verbal, Pain, Unresponsive — change = trigger</text>
+            <rect x="60" y="775" width="1000" height="295" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="560" y="810" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">RAPID RESPONSE TEAM (RRT) TRIGGERS</text>
+            <text x="560" y="840" text-anchor="middle" fill="#888" font-size="14">Any ONE of these triggers a rapid response — escalate immediately</text>
+            <line x1="80" y1="855" x2="1040" y2="855" stroke="#ef4444"/>
+            <text x="100" y="890" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="890" fill="#ffffff" font-size="16">Sustained SBP &lt; 90 mmHg (shock)</text>
+            <text x="100" y="920" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="920" fill="#ffffff" font-size="16">HR &lt; 40 or &gt; 130 (sustained)</text>
+            <text x="100" y="950" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="950" fill="#ffffff" font-size="16">RR &lt; 8 or &gt; 28</text>
+            <text x="100" y="980" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="980" fill="#ffffff" font-size="16">SpO2 &lt; 90% despite supplemental oxygen</text>
+            <text x="100" y="1010" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="1010" fill="#ffffff" font-size="16">Acute change in mental status (new confusion)</text>
+            <text x="100" y="1040" fill="#ef4444" font-size="20" font-weight="bold">•</text>
+            <text x="130" y="1040" fill="#ffffff" font-size="16">Seizure, stridor, hemoptysis, severe uncontrolled pain</text>
+          </svg>`,
+          caption: "Adult vital sign normals, concerning ranges, and the absolute triggers for provider notification or RRT activation."
+        }
+      },
+      {
+        type: "concept",
+        title: "Pediatric Vital Signs — Younger Means Faster",
+        content: `Pediatric vital signs are the **#1 most-confused** content on the NCLEX. The rule is simple: **younger = faster heart rate, faster respiratory rate, lower blood pressure**. Memorize the ranges by age group:
+
+**Heart Rate (awake, resting)**:
+- **Newborn (0-1 mo)**: 100-205
+- **Infant (1-12 mo)**: 100-180
+- **Toddler (1-3 yr)**: 98-140
+- **Preschool (3-5 yr)**: 80-120
+- **School age (6-11 yr)**: 75-118
+- **Adolescent (12+)**: 60-100 (adult)
+
+**Respiratory Rate**:
+- **Newborn**: 30-60
+- **Infant**: 30-53
+- **Toddler**: 22-37
+- **Preschool**: 20-28
+- **School age**: 18-25
+- **Adolescent**: 12-20
+
+**Systolic BP (rough rule)**: minimum acceptable = **70 + (2 × age in years)** for ages 1-10. Below this = **hypotension**.
+
+Two pediatric pearls: **hypotension is a LATE sign of shock** in kids — they compensate with tachycardia for a long time, then crash suddenly. And **respiratory failure** is the most common cause of arrest in pediatrics — watch the RR closely.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Pediatric Vital Signs by Age</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Younger = faster HR and RR, lower BP</text>
+            <rect x="40" y="120" width="1020" height="50" fill="#6366f1" rx="8"/>
+            <text x="170" y="153" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">AGE GROUP</text>
+            <text x="420" y="153" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">HEART RATE</text>
+            <text x="670" y="153" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">RESP RATE</text>
+            <text x="920" y="153" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">SBP (min)</text>
+            <rect x="40" y="175" width="1020" height="55" fill="#1a1a2e" stroke="#ec4899" rx="6"/>
+            <text x="170" y="200" text-anchor="middle" fill="#ec4899" font-size="15" font-weight="bold">Newborn</text>
+            <text x="170" y="220" text-anchor="middle" fill="#888" font-size="12">0-1 month</text>
+            <text x="420" y="208" text-anchor="middle" fill="#ffffff" font-size="16">100 — 205</text>
+            <text x="670" y="208" text-anchor="middle" fill="#ffffff" font-size="16">30 — 60</text>
+            <text x="920" y="208" text-anchor="middle" fill="#ffffff" font-size="16">60</text>
+            <rect x="40" y="235" width="1020" height="55" fill="#1a1a2e" stroke="#f59e0b" rx="6"/>
+            <text x="170" y="260" text-anchor="middle" fill="#f59e0b" font-size="15" font-weight="bold">Infant</text>
+            <text x="170" y="280" text-anchor="middle" fill="#888" font-size="12">1-12 months</text>
+            <text x="420" y="268" text-anchor="middle" fill="#ffffff" font-size="16">100 — 180</text>
+            <text x="670" y="268" text-anchor="middle" fill="#ffffff" font-size="16">30 — 53</text>
+            <text x="920" y="268" text-anchor="middle" fill="#ffffff" font-size="16">70</text>
+            <rect x="40" y="295" width="1020" height="55" fill="#1a1a2e" stroke="#10b981" rx="6"/>
+            <text x="170" y="320" text-anchor="middle" fill="#10b981" font-size="15" font-weight="bold">Toddler</text>
+            <text x="170" y="340" text-anchor="middle" fill="#888" font-size="12">1-3 years</text>
+            <text x="420" y="328" text-anchor="middle" fill="#ffffff" font-size="16">98 — 140</text>
+            <text x="670" y="328" text-anchor="middle" fill="#ffffff" font-size="16">22 — 37</text>
+            <text x="920" y="328" text-anchor="middle" fill="#ffffff" font-size="16">72 — 76</text>
+            <rect x="40" y="355" width="1020" height="55" fill="#1a1a2e" stroke="#0ea5e9" rx="6"/>
+            <text x="170" y="380" text-anchor="middle" fill="#0ea5e9" font-size="15" font-weight="bold">Preschool</text>
+            <text x="170" y="400" text-anchor="middle" fill="#888" font-size="12">3-5 years</text>
+            <text x="420" y="388" text-anchor="middle" fill="#ffffff" font-size="16">80 — 120</text>
+            <text x="670" y="388" text-anchor="middle" fill="#ffffff" font-size="16">20 — 28</text>
+            <text x="920" y="388" text-anchor="middle" fill="#ffffff" font-size="16">76 — 80</text>
+            <rect x="40" y="415" width="1020" height="55" fill="#1a1a2e" stroke="#8b5cf6" rx="6"/>
+            <text x="170" y="440" text-anchor="middle" fill="#8b5cf6" font-size="15" font-weight="bold">School Age</text>
+            <text x="170" y="460" text-anchor="middle" fill="#888" font-size="12">6-11 years</text>
+            <text x="420" y="448" text-anchor="middle" fill="#ffffff" font-size="16">75 — 118</text>
+            <text x="670" y="448" text-anchor="middle" fill="#ffffff" font-size="16">18 — 25</text>
+            <text x="920" y="448" text-anchor="middle" fill="#ffffff" font-size="16">82 — 92</text>
+            <rect x="40" y="475" width="1020" height="55" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="170" y="500" text-anchor="middle" fill="#6366f1" font-size="15" font-weight="bold">Adolescent</text>
+            <text x="170" y="520" text-anchor="middle" fill="#888" font-size="12">12+ years</text>
+            <text x="420" y="508" text-anchor="middle" fill="#ffffff" font-size="16">60 — 100</text>
+            <text x="670" y="508" text-anchor="middle" fill="#ffffff" font-size="16">12 — 20</text>
+            <text x="920" y="508" text-anchor="middle" fill="#ffffff" font-size="16">92 — 110</text>
+            <rect x="40" y="555" width="1020" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="590" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PEDIATRIC SBP MINIMUM FORMULA</text>
+            <text x="550" y="625" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Minimum SBP = 70 + (2 × age in years)</text>
+            <text x="550" y="655" text-anchor="middle" fill="#888" font-size="14">Use ages 1-10. Example: 5yo minimum SBP = 70 + 10 = 80 mmHg. Below = hypotension.</text>
+            <rect x="40" y="695" width="500" height="375" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="290" y="730" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">SHOCK IN PEDS</text>
+            <text x="290" y="755" text-anchor="middle" fill="#888" font-size="13">— is dangerously deceptive —</text>
+            <text x="60" y="790" fill="#ffd700" font-size="14" font-weight="bold">EARLY (compensated):</text>
+            <text x="60" y="815" fill="#ffffff" font-size="14">• Tachycardia (FIRST sign)</text>
+            <text x="60" y="838" fill="#ffffff" font-size="14">• Cool, mottled extremities</text>
+            <text x="60" y="861" fill="#ffffff" font-size="14">• Delayed cap refill (&gt;2 sec)</text>
+            <text x="60" y="884" fill="#ffffff" font-size="14">• Decreased urine output</text>
+            <text x="60" y="907" fill="#ffffff" font-size="14">• Normal BP (compensated!)</text>
+            <text x="60" y="935" fill="#ef4444" font-size="14" font-weight="bold">LATE (decompensated):</text>
+            <text x="60" y="960" fill="#ffffff" font-size="14">• Hypotension (LATE sign)</text>
+            <text x="60" y="983" fill="#ffffff" font-size="14">• Bradycardia (terminal)</text>
+            <text x="60" y="1006" fill="#ffffff" font-size="14">• Altered mental status</text>
+            <text x="60" y="1029" fill="#ffffff" font-size="14">• Imminent cardiac arrest</text>
+            <text x="290" y="1058" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="bold">DO NOT wait for hypotension</text>
+            <rect x="560" y="695" width="500" height="375" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="3" rx="10"/>
+            <text x="810" y="730" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">RESPIRATORY FAILURE</text>
+            <text x="810" y="755" text-anchor="middle" fill="#888" font-size="13">#1 cause of pediatric arrest</text>
+            <text x="580" y="790" fill="#ffd700" font-size="14" font-weight="bold">EARLY (compensating):</text>
+            <text x="580" y="815" fill="#ffffff" font-size="14">• Tachypnea</text>
+            <text x="580" y="838" fill="#ffffff" font-size="14">• Nasal flaring</text>
+            <text x="580" y="861" fill="#ffffff" font-size="14">• Retractions (subcostal)</text>
+            <text x="580" y="884" fill="#ffffff" font-size="14">• Grunting</text>
+            <text x="580" y="907" fill="#ffffff" font-size="14">• Head bobbing (infant)</text>
+            <text x="580" y="935" fill="#ef4444" font-size="14" font-weight="bold">LATE (failing):</text>
+            <text x="580" y="960" fill="#ffffff" font-size="14">• Bradypnea (&lt; expected)</text>
+            <text x="580" y="983" fill="#ffffff" font-size="14">• Cyanosis (late)</text>
+            <text x="580" y="1006" fill="#ffffff" font-size="14">• Decreased breath sounds</text>
+            <text x="580" y="1029" fill="#ffffff" font-size="14">• Apnea — IMMINENT ARREST</text>
+            <text x="810" y="1058" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="bold">Act on RR before SpO2 drops</text>
+          </svg>`,
+          caption: "Pediatric vital sign ranges by age, the SBP formula, and the deceptive timelines of pediatric shock and respiratory failure."
+        }
+      },
+      {
+        type: "example",
+        title: "Walking Through an Abnormal Vital Sign Set",
+        content: `**Scenario:** You walk into Room 412 to take morning vitals on Mr. Alvarez, **72 years old, post-op day 2 hip ORIF**. He says "I just feel a little tired today." You obtain:
+
+- **BP**: **84/52** mmHg (his baseline was 132/78)
+- **HR**: **118** bpm (baseline 76)
+- **RR**: **26** /min
+- **SpO2**: **88%** on room air
+- **Temp**: **101.8°F**
+- **Pain**: 6/10 hip incision
+
+**Step 1: Recognize the pattern.** Hypotension + tachycardia + tachypnea + hypoxia + fever in a post-op patient = think **sepsis** OR **pulmonary embolism** (post-op DVT). Both are life-threatening.
+
+**Step 2: Trigger the action.** Multiple values cross RRT thresholds:
+- SBP < 90 (shock)
+- HR > 120 (approaching)
+- RR > 24 (resp distress)
+- SpO2 < 90 (hypoxia)
+- Temp > 101.5 (sepsis criterion)
+
+**Step 3: Act FAST.** Apply **oxygen** (titrate to SpO2 ≥ 94%), stay at bedside, call **Rapid Response**, get a recheck in **5 minutes**, prepare to draw **lactate, blood cultures, CBC**, and to **start IV fluids** per sepsis protocol.
+
+**Step 4: Communicate using SBAR** (next card).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Mr. Alvarez — Reading the Vitals</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">72yo, post-op day 2 hip ORIF — "just feel tired today"</text>
+            <rect x="60" y="120" width="1000" height="240" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="560" y="155" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">CURRENT VITALS vs BASELINE</text>
+            <line x1="80" y1="170" x2="1040" y2="170" stroke="#ef4444"/>
+            <text x="200" y="200" text-anchor="middle" fill="#ffd700" font-size="14">BASELINE</text>
+            <text x="500" y="200" text-anchor="middle" fill="#ffffff" font-size="14">→ NOW</text>
+            <text x="850" y="200" text-anchor="middle" fill="#ef4444" font-size="14">CHANGE</text>
+            <text x="100" y="235" fill="#10b981" font-size="14" font-weight="bold">BP</text>
+            <text x="200" y="235" text-anchor="middle" fill="#ffffff" font-size="16">132/78</text>
+            <text x="500" y="235" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">84/52</text>
+            <text x="850" y="235" text-anchor="middle" fill="#ef4444" font-size="14">SHOCK</text>
+            <text x="100" y="265" fill="#10b981" font-size="14" font-weight="bold">HR</text>
+            <text x="200" y="265" text-anchor="middle" fill="#ffffff" font-size="16">76</text>
+            <text x="500" y="265" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">118</text>
+            <text x="850" y="265" text-anchor="middle" fill="#ef4444" font-size="14">TACHYCARDIC</text>
+            <text x="100" y="295" fill="#10b981" font-size="14" font-weight="bold">RR</text>
+            <text x="200" y="295" text-anchor="middle" fill="#ffffff" font-size="16">16</text>
+            <text x="500" y="295" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">26</text>
+            <text x="850" y="295" text-anchor="middle" fill="#ef4444" font-size="14">RESP DISTRESS</text>
+            <text x="100" y="325" fill="#10b981" font-size="14" font-weight="bold">SpO2</text>
+            <text x="200" y="325" text-anchor="middle" fill="#ffffff" font-size="16">97%</text>
+            <text x="500" y="325" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">88%</text>
+            <text x="850" y="325" text-anchor="middle" fill="#ef4444" font-size="14">SEVERE HYPOXIA</text>
+            <text x="100" y="355" fill="#10b981" font-size="14" font-weight="bold">Temp</text>
+            <text x="200" y="355" text-anchor="middle" fill="#ffffff" font-size="16">98.6F</text>
+            <text x="500" y="355" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">101.8F</text>
+            <text x="850" y="355" text-anchor="middle" fill="#ef4444" font-size="14">FEBRILE</text>
+            <rect x="60" y="380" width="1000" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="415" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">DIFFERENTIAL — POST-OP DAY 2</text>
+            <text x="160" y="450" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">SEPSIS</text>
+            <text x="160" y="475" text-anchor="middle" fill="#ffffff" font-size="13">fever + tachy + ↓BP</text>
+            <text x="380" y="450" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">PULMONARY EMBOLISM</text>
+            <text x="380" y="475" text-anchor="middle" fill="#ffffff" font-size="13">post-op DVT risk + hypoxia</text>
+            <text x="640" y="450" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">HEMORRHAGE</text>
+            <text x="640" y="475" text-anchor="middle" fill="#ffffff" font-size="13">surgical bleed → ↓BP, ↑HR</text>
+            <text x="900" y="450" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">MI</text>
+            <text x="900" y="475" text-anchor="middle" fill="#ffffff" font-size="13">post-op cardiac event</text>
+            <rect x="60" y="520" width="1000" height="540" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="560" y="555" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">ACTION SEQUENCE (in order)</text>
+            <line x1="80" y1="570" x2="1040" y2="570" stroke="#10b981"/>
+            <circle cx="100" cy="610" r="20" fill="#ffd700"/>
+            <text x="100" y="617" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">1</text>
+            <text x="140" y="605" fill="#ffd700" font-size="16" font-weight="bold">STAY AT BEDSIDE</text>
+            <text x="140" y="625" fill="#ffffff" font-size="14">— do not leave. Use call light or phone for help.</text>
+            <circle cx="100" cy="660" r="20" fill="#ffd700"/>
+            <text x="100" y="667" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">2</text>
+            <text x="140" y="655" fill="#ffd700" font-size="16" font-weight="bold">APPLY OXYGEN</text>
+            <text x="140" y="675" fill="#ffffff" font-size="14">— NC 2-6 L/min, titrate to SpO2 ≥ 94% (ABCs)</text>
+            <circle cx="100" cy="710" r="20" fill="#ffd700"/>
+            <text x="100" y="717" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">3</text>
+            <text x="140" y="705" fill="#ffd700" font-size="16" font-weight="bold">CALL RAPID RESPONSE</text>
+            <text x="140" y="725" fill="#ffffff" font-size="14">— multiple RRT triggers met</text>
+            <circle cx="100" cy="760" r="20" fill="#ffd700"/>
+            <text x="100" y="767" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">4</text>
+            <text x="140" y="755" fill="#ffd700" font-size="16" font-weight="bold">RAISE HEAD OF BED</text>
+            <text x="140" y="775" fill="#ffffff" font-size="14">— semi-Fowler's eases breathing</text>
+            <circle cx="100" cy="810" r="20" fill="#ffd700"/>
+            <text x="100" y="817" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">5</text>
+            <text x="140" y="805" fill="#ffd700" font-size="16" font-weight="bold">ESTABLISH 2 LARGE-BORE IVs</text>
+            <text x="140" y="825" fill="#ffffff" font-size="14">— 18g preferred for fluid resuscitation</text>
+            <circle cx="100" cy="860" r="20" fill="#ffd700"/>
+            <text x="100" y="867" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">6</text>
+            <text x="140" y="855" fill="#ffd700" font-size="16" font-weight="bold">DRAW LABS</text>
+            <text x="140" y="875" fill="#ffffff" font-size="14">— lactate, blood cultures x 2, CBC, BMP, ABG</text>
+            <circle cx="100" cy="910" r="20" fill="#ffd700"/>
+            <text x="100" y="917" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">7</text>
+            <text x="140" y="905" fill="#ffd700" font-size="16" font-weight="bold">START IV FLUIDS</text>
+            <text x="140" y="925" fill="#ffffff" font-size="14">— 30 mL/kg LR or NS bolus for sepsis protocol</text>
+            <circle cx="100" cy="960" r="20" fill="#ffd700"/>
+            <text x="100" y="967" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">8</text>
+            <text x="140" y="955" fill="#ffd700" font-size="16" font-weight="bold">RECHECK VITALS Q5 MIN</text>
+            <text x="140" y="975" fill="#ffffff" font-size="14">— and continuously monitor</text>
+            <circle cx="100" cy="1010" r="20" fill="#ffd700"/>
+            <text x="100" y="1017" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">9</text>
+            <text x="140" y="1005" fill="#ffd700" font-size="16" font-weight="bold">DOCUMENT &amp; COMMUNICATE</text>
+            <text x="140" y="1025" fill="#ffffff" font-size="14">— SBAR to provider, accurate timeline</text>
+            <text x="560" y="1055" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Remember: oxygen + IV access + fluids + call for help — first 5 minutes save lives</text>
+          </svg>`,
+          caption: "Pattern recognition for a deteriorating post-op patient and the 9-step action sequence."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: SBAR Communication",
+        content: `When you call the provider about Mr. Alvarez, you need to communicate efficiently using **SBAR** (Situation, Background, Assessment, Recommendation).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">SBAR Framework</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">The hand-off and escalation gold standard</text>
+            <rect x="60" y="130" width="1000" height="200" fill="#ef4444" rx="10"/>
+            <text x="100" y="180" fill="#ffffff" font-size="42" font-weight="bold">S</text>
+            <text x="170" y="170" fill="#ffffff" font-size="22" font-weight="bold">SITUATION</text>
+            <text x="170" y="200" fill="#ffd700" font-size="14">"This is Maria, RN, on 4 East. I'm calling about Mr. Alvarez,</text>
+            <text x="170" y="225" fill="#ffd700" font-size="14">room 412, who is acutely decompensating."</text>
+            <text x="170" y="265" fill="#ffffff" font-size="16">• Identify yourself + unit</text>
+            <text x="170" y="290" fill="#ffffff" font-size="16">• Patient name + location</text>
+            <text x="170" y="315" fill="#ffffff" font-size="16">• One-line summary of WHY you are calling</text>
+            <rect x="60" y="340" width="1000" height="200" fill="#f59e0b" rx="10"/>
+            <text x="100" y="390" fill="#ffffff" font-size="42" font-weight="bold">B</text>
+            <text x="170" y="380" fill="#ffffff" font-size="22" font-weight="bold">BACKGROUND</text>
+            <text x="170" y="410" fill="#ffd700" font-size="14">"72-year-old male, post-op day 2 from a right hip ORIF.</text>
+            <text x="170" y="435" fill="#ffd700" font-size="14">PMH: HTN, type 2 DM. No anticoagulant ordered post-op."</text>
+            <text x="170" y="475" fill="#ffffff" font-size="16">• Age, sex, diagnosis</text>
+            <text x="170" y="500" fill="#ffffff" font-size="16">• Relevant PMH, current meds</text>
+            <text x="170" y="525" fill="#ffffff" font-size="16">• Brief timeline of admission</text>
+            <rect x="60" y="550" width="1000" height="240" fill="#10b981" rx="10"/>
+            <text x="100" y="600" fill="#ffffff" font-size="42" font-weight="bold">A</text>
+            <text x="170" y="590" fill="#ffffff" font-size="22" font-weight="bold">ASSESSMENT</text>
+            <text x="170" y="620" fill="#ffd700" font-size="13">"Vitals now: BP 84/52 (from 132/78), HR 118, RR 26,</text>
+            <text x="170" y="643" fill="#ffd700" font-size="13">SpO2 88% on room air, temp 101.8F. Lung sounds with</text>
+            <text x="170" y="666" fill="#ffd700" font-size="13">crackles bilaterally. Surgical site clean, no obvious bleeding.</text>
+            <text x="170" y="689" fill="#ffd700" font-size="13">Mental status slightly confused — new from baseline."</text>
+            <text x="170" y="725" fill="#ffffff" font-size="16">• Current vitals with comparisons</text>
+            <text x="170" y="750" fill="#ffffff" font-size="16">• Focused assessment findings</text>
+            <text x="170" y="775" fill="#ffffff" font-size="16">• Your clinical impression (sepsis? PE?)</text>
+            <rect x="60" y="800" width="1000" height="240" fill="#6366f1" rx="10"/>
+            <text x="100" y="850" fill="#ffffff" font-size="42" font-weight="bold">R</text>
+            <text x="170" y="840" fill="#ffffff" font-size="22" font-weight="bold">RECOMMENDATION / REQUEST</text>
+            <text x="170" y="870" fill="#ffd700" font-size="13">"I'm concerned for sepsis or pulmonary embolism. I have</text>
+            <text x="170" y="893" fill="#ffd700" font-size="13">started O2, RRT is here, I have 2 large-bore IVs. I need:</text>
+            <text x="170" y="916" fill="#ffd700" font-size="13">orders for cultures, lactate, fluid bolus, and a STAT CT-PE.</text>
+            <text x="170" y="939" fill="#ffd700" font-size="13">Can you come to the bedside, please?"</text>
+            <text x="170" y="975" fill="#ffffff" font-size="16">• What YOU think is needed (be specific)</text>
+            <text x="170" y="1000" fill="#ffffff" font-size="16">• Ask for orders, bedside evaluation, or transfer</text>
+            <text x="170" y="1025" fill="#ffffff" font-size="16">• Read back any orders received</text>
+          </svg>`,
+          caption: "SBAR — Situation, Background, Assessment, Recommendation — the universal escalation language."
+        },
+        question: "A nurse is preparing to call the physician about a patient whose blood pressure has dropped from 130/80 to 86/52 in the past 30 minutes. Which statement BEST represents the ASSESSMENT portion of an SBAR communication?",
+        options: [
+          { text: "\"This is Sarah, the nurse caring for Mr. Lee in Room 308.\"", correct: false },
+          { text: "\"Mr. Lee is a 65-year-old admitted yesterday for pneumonia, with a history of diabetes.\"", correct: false },
+          { text: "\"His BP is 86/52 down from 130/80, HR is 122, RR is 24, SpO2 is 91%; he is diaphoretic and confused — I am concerned for septic shock.\"", correct: true },
+          { text: "\"I need you to come to the bedside and order a fluid bolus and broad-spectrum antibiotics now.\"", correct: false }
+        ],
+        explanation: "The Assessment portion of SBAR conveys current clinical findings AND the nurse's interpretation/concern. Option 1 is Situation (who is calling and about whom). Option 2 is Background (history). Option 4 is Recommendation (what you want done). Option 3 lays out objective findings plus the nurse's clinical impression ('I am concerned for septic shock') — that interpretation is the heart of a strong nursing Assessment and helps the provider prioritize."
+      },
+      {
+        type: "application",
+        title: "Trending Matters More Than Single Numbers",
+        content: `**Scenario:** You are caring for Mrs. Tran, **78 years old, admitted with pneumonia**. Her vitals over the last 4 hours:
+
+| Time | BP | HR | RR | SpO2 | Temp |
+|------|-----|-----|-----|------|------|
+| 0800 | 128/76 | 88 | 18 | 96% | 100.4 |
+| 1000 | 118/68 | 96 | 20 | 94% | 100.8 |
+| 1200 | 108/62 | 108 | 22 | 92% | 101.2 |
+| 1400 | 96/58 | 116 | 24 | 90% | 101.6 |
+
+**Each individual set is not yet at RRT criteria** — but the **trend is unmistakable**. BP dropping, HR climbing, RR climbing, SpO2 dropping, temp climbing. This is **early sepsis**.
+
+The NCLEX (and real-life nursing) reward nurses who **escalate on the trend**, not just on the absolute number. By 1400 you should already have:
+
+1. **Notified the provider** at 1200, when the trend became clear
+2. **Started oxygen** when SpO2 hit 92%
+3. **Increased frequency of vitals** (q15 min)
+4. **Drawn lactate / cultures** per sepsis protocol
+5. **Anticipated a fluid bolus order**
+
+Waiting until SBP < 90 to act would be **too late**. **Trends predict crashes.** Every shift report you give should include the **direction of change**, not just the last set of numbers.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Trending: Mrs. Tran Over 6 Hours</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Each set looks "okay" — but the trend screams sepsis</text>
+            <rect x="60" y="120" width="1000" height="50" fill="#6366f1" rx="6"/>
+            <text x="120" y="153" fill="#ffffff" font-size="16" font-weight="bold">TIME</text>
+            <text x="280" y="153" fill="#ffffff" font-size="16" font-weight="bold">BP</text>
+            <text x="430" y="153" fill="#ffffff" font-size="16" font-weight="bold">HR</text>
+            <text x="560" y="153" fill="#ffffff" font-size="16" font-weight="bold">RR</text>
+            <text x="690" y="153" fill="#ffffff" font-size="16" font-weight="bold">SpO2</text>
+            <text x="830" y="153" fill="#ffffff" font-size="16" font-weight="bold">TEMP</text>
+            <text x="960" y="153" fill="#ffffff" font-size="16" font-weight="bold">STATUS</text>
+            <rect x="60" y="175" width="1000" height="45" fill="#1a1a2e" stroke="#10b981" rx="4"/>
+            <text x="120" y="203" fill="#ffd700" font-size="15" font-weight="bold">0800</text>
+            <text x="280" y="203" fill="#ffffff" font-size="15">128/76</text>
+            <text x="430" y="203" fill="#ffffff" font-size="15">88</text>
+            <text x="560" y="203" fill="#ffffff" font-size="15">18</text>
+            <text x="690" y="203" fill="#ffffff" font-size="15">96%</text>
+            <text x="830" y="203" fill="#ffffff" font-size="15">100.4</text>
+            <text x="960" y="203" fill="#10b981" font-size="14" font-weight="bold">OK</text>
+            <rect x="60" y="225" width="1000" height="45" fill="#1a1a2e" stroke="#f59e0b" rx="4"/>
+            <text x="120" y="253" fill="#ffd700" font-size="15" font-weight="bold">1000</text>
+            <text x="280" y="253" fill="#ffffff" font-size="15">118/68</text>
+            <text x="430" y="253" fill="#ffffff" font-size="15">96</text>
+            <text x="560" y="253" fill="#ffffff" font-size="15">20</text>
+            <text x="690" y="253" fill="#ffffff" font-size="15">94%</text>
+            <text x="830" y="253" fill="#ffffff" font-size="15">100.8</text>
+            <text x="960" y="253" fill="#f59e0b" font-size="14" font-weight="bold">WATCH</text>
+            <rect x="60" y="275" width="1000" height="45" fill="#1a1a2e" stroke="#f59e0b" rx="4"/>
+            <text x="120" y="303" fill="#ffd700" font-size="15" font-weight="bold">1200</text>
+            <text x="280" y="303" fill="#ffffff" font-size="15">108/62</text>
+            <text x="430" y="303" fill="#ffffff" font-size="15">108</text>
+            <text x="560" y="303" fill="#ffffff" font-size="15">22</text>
+            <text x="690" y="303" fill="#ffffff" font-size="15">92%</text>
+            <text x="830" y="303" fill="#ffffff" font-size="15">101.2</text>
+            <text x="960" y="303" fill="#f59e0b" font-size="14" font-weight="bold">NOTIFY</text>
+            <rect x="60" y="325" width="1000" height="45" fill="#1a1a2e" stroke="#ef4444" stroke-width="2" rx="4"/>
+            <text x="120" y="353" fill="#ffd700" font-size="15" font-weight="bold">1400</text>
+            <text x="280" y="353" fill="#ef4444" font-size="15" font-weight="bold">96/58</text>
+            <text x="430" y="353" fill="#ef4444" font-size="15" font-weight="bold">116</text>
+            <text x="560" y="353" fill="#ef4444" font-size="15" font-weight="bold">24</text>
+            <text x="690" y="353" fill="#ef4444" font-size="15" font-weight="bold">90%</text>
+            <text x="830" y="353" fill="#ef4444" font-size="15" font-weight="bold">101.6</text>
+            <text x="960" y="353" fill="#ef4444" font-size="14" font-weight="bold">ACT NOW</text>
+            <rect x="60" y="390" width="1000" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="425" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">TREND VISUALIZATION</text>
+            <line x1="100" y1="640" x2="100" y2="460" stroke="#888" stroke-width="2"/>
+            <line x1="100" y1="640" x2="1020" y2="640" stroke="#888" stroke-width="2"/>
+            <text x="80" y="466" text-anchor="end" fill="#888" font-size="11">High</text>
+            <text x="80" y="645" text-anchor="end" fill="#888" font-size="11">Low</text>
+            <text x="200" y="660" text-anchor="middle" fill="#888" font-size="12">0800</text>
+            <text x="450" y="660" text-anchor="middle" fill="#888" font-size="12">1000</text>
+            <text x="700" y="660" text-anchor="middle" fill="#888" font-size="12">1200</text>
+            <text x="950" y="660" text-anchor="middle" fill="#888" font-size="12">1400</text>
+            <polyline points="200,500 450,520 700,545 950,575" stroke="#10b981" stroke-width="3" fill="none"/>
+            <circle cx="200" cy="500" r="5" fill="#10b981"/>
+            <circle cx="450" cy="520" r="5" fill="#10b981"/>
+            <circle cx="700" cy="545" r="5" fill="#10b981"/>
+            <circle cx="950" cy="575" r="5" fill="#10b981"/>
+            <text x="970" y="580" fill="#10b981" font-size="12">BP↓</text>
+            <polyline points="200,580 450,555 700,520 950,495" stroke="#ef4444" stroke-width="3" fill="none"/>
+            <circle cx="200" cy="580" r="5" fill="#ef4444"/>
+            <circle cx="450" cy="555" r="5" fill="#ef4444"/>
+            <circle cx="700" cy="520" r="5" fill="#ef4444"/>
+            <circle cx="950" cy="495" r="5" fill="#ef4444"/>
+            <text x="970" y="500" fill="#ef4444" font-size="12">HR↑</text>
+            <polyline points="200,610 450,600 700,585 950,560" stroke="#f59e0b" stroke-width="3" fill="none"/>
+            <circle cx="200" cy="610" r="5" fill="#f59e0b"/>
+            <circle cx="450" cy="600" r="5" fill="#f59e0b"/>
+            <circle cx="700" cy="585" r="5" fill="#f59e0b"/>
+            <circle cx="950" cy="560" r="5" fill="#f59e0b"/>
+            <text x="970" y="565" fill="#f59e0b" font-size="12">Temp↑</text>
+            <rect x="60" y="690" width="1000" height="370" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="560" y="725" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">LESSON: ACT ON TRENDS, NOT ABSOLUTES</text>
+            <line x1="80" y1="740" x2="1040" y2="740" stroke="#ef4444"/>
+            <text x="100" y="775" fill="#10b981" font-size="16" font-weight="bold">By 1000:</text>
+            <text x="200" y="775" fill="#ffffff" font-size="15">Notice the trend. Increase vitals frequency.</text>
+            <text x="100" y="810" fill="#10b981" font-size="16" font-weight="bold">By 1200:</text>
+            <text x="200" y="810" fill="#ffffff" font-size="15">NOTIFY provider. Start oxygen. Re-vital q15min.</text>
+            <text x="100" y="845" fill="#10b981" font-size="16" font-weight="bold">By 1400:</text>
+            <text x="200" y="845" fill="#ffffff" font-size="15">Draw lactate, cultures. Anticipate fluid bolus. Consider RRT.</text>
+            <text x="100" y="895" fill="#ffd700" font-size="16" font-weight="bold">qSOFA SEPSIS SCREEN — 2 of 3 = high risk</text>
+            <text x="100" y="925" fill="#ef4444" font-size="14">• Altered mental status (GCS &lt; 15)</text>
+            <text x="100" y="950" fill="#ef4444" font-size="14">• Respiratory rate ≥ 22</text>
+            <text x="100" y="975" fill="#ef4444" font-size="14">• Systolic BP ≤ 100 mmHg</text>
+            <text x="560" y="1020" text-anchor="middle" fill="#ffd700" font-size="16" font-style="italic">"Trends predict crashes. Waiting for crisis numbers is waiting too long."</text>
+          </svg>`,
+          caption: "Trending vital signs predict deterioration hours before single-number criteria are met."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-fundamentals-lesson-9",
+    title: "Patient Safety: Fall Risk Assessment, Restraint Rules, and Never Events",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Safety Is Always the Highest Priority",
+        content: `On the NCLEX, **patient safety beats almost every other consideration** — including comfort, convenience, and even patient preference (when the patient is unable to make safe choices). The exam tests three interconnected safety domains:
+
+1. **Fall Prevention** — the **Morse Fall Scale** is the most-tested screening tool. Score components: history of falls, secondary diagnosis, ambulatory aid, IV/heparin lock, gait, mental status. Score **≥ 45 = high risk** → activate the fall prevention bundle.
+
+2. **Restraint Rules** — restraints are a **last resort**. Try every alternative first. When unavoidable, you must follow strict rules: **least restrictive type**, **MD order within 1 hour** of application, **face-to-face evaluation within 1 hour** (24 hr for non-violent), reassess **every 2 hours**, document **release** every 2 hours.
+
+3. **Never Events** — the **14 CMS Never Events** are errors so preventable Medicare will not pay if they occur: wrong-site surgery, retained foreign object, air embolism, blood incompatibility, Stage 3/4 pressure injury, falls with serious injury, and more.
+
+These topics together represent **15-20% of NCLEX safety questions**. Master the bundles and the timelines.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The 3 Pillars of Patient Safety</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">Falls • Restraints • Never Events</text>
+            <rect x="40" y="120" width="340" height="320" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="3" rx="10"/>
+            <rect x="40" y="120" width="340" height="60" fill="#0ea5e9" rx="10"/>
+            <text x="210" y="158" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">FALL PREVENTION</text>
+            <text x="210" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Morse Fall Scale</text>
+            <text x="60" y="245" fill="#10b981" font-size="14">• Hx of falling (25)</text>
+            <text x="60" y="270" fill="#10b981" font-size="14">• Secondary dx (15)</text>
+            <text x="60" y="295" fill="#10b981" font-size="14">• Ambulatory aid (0-30)</text>
+            <text x="60" y="320" fill="#10b981" font-size="14">• IV/saline lock (20)</text>
+            <text x="60" y="345" fill="#10b981" font-size="14">• Gait (0-20)</text>
+            <text x="60" y="370" fill="#10b981" font-size="14">• Mental status (0-15)</text>
+            <rect x="60" y="385" width="300" height="40" fill="#ef4444" rx="6"/>
+            <text x="210" y="412" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Score ≥ 45 = HIGH RISK</text>
+            <rect x="390" y="120" width="320" height="320" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="10"/>
+            <rect x="390" y="120" width="320" height="60" fill="#f59e0b" rx="10"/>
+            <text x="550" y="158" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">RESTRAINTS</text>
+            <text x="550" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Last Resort — Strict Rules</text>
+            <text x="410" y="245" fill="#10b981" font-size="14">• Try alternatives FIRST</text>
+            <text x="410" y="270" fill="#10b981" font-size="14">• Least restrictive type</text>
+            <text x="410" y="295" fill="#10b981" font-size="14">• MD order within 1 hr</text>
+            <text x="410" y="320" fill="#10b981" font-size="14">• Q2H assessment</text>
+            <text x="410" y="345" fill="#10b981" font-size="14">• Q2H release</text>
+            <text x="410" y="370" fill="#10b981" font-size="14">• Quick-release knot</text>
+            <rect x="410" y="385" width="280" height="40" fill="#ef4444" rx="6"/>
+            <text x="550" y="412" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">NEVER PRN — never as needed</text>
+            <rect x="720" y="120" width="340" height="320" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <rect x="720" y="120" width="340" height="60" fill="#ef4444" rx="10"/>
+            <text x="890" y="158" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">NEVER EVENTS</text>
+            <text x="890" y="210" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">14 CMS Categories</text>
+            <text x="740" y="245" fill="#10b981" font-size="14">• Wrong-site surgery</text>
+            <text x="740" y="270" fill="#10b981" font-size="14">• Retained object</text>
+            <text x="740" y="295" fill="#10b981" font-size="14">• Air embolism</text>
+            <text x="740" y="320" fill="#10b981" font-size="14">• Blood incompatibility</text>
+            <text x="740" y="345" fill="#10b981" font-size="14">• Stage 3/4 pressure inj.</text>
+            <text x="740" y="370" fill="#10b981" font-size="14">• Falls w/ serious injury</text>
+            <rect x="740" y="385" width="300" height="40" fill="#ef4444" rx="6"/>
+            <text x="890" y="412" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Medicare WILL NOT pay</text>
+            <rect x="40" y="460" width="1020" height="320" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="495" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">FALL PREVENTION BUNDLE</text>
+            <text x="550" y="525" text-anchor="middle" fill="#888" font-size="14">Apply ALL of these to Morse score ≥ 45</text>
+            <line x1="60" y1="540" x2="1040" y2="540" stroke="#ffd700"/>
+            <circle cx="100" cy="580" r="18" fill="#ffd700"/>
+            <text x="100" y="586" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">1</text>
+            <text x="140" y="586" fill="#ffffff" font-size="15">Yellow non-skid socks AND yellow armband</text>
+            <circle cx="100" cy="620" r="18" fill="#ffd700"/>
+            <text x="100" y="626" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">2</text>
+            <text x="140" y="626" fill="#ffffff" font-size="15">Bed in LOWEST position, brakes locked</text>
+            <circle cx="100" cy="660" r="18" fill="#ffd700"/>
+            <text x="100" y="666" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">3</text>
+            <text x="140" y="666" fill="#ffffff" font-size="15">Bed alarm ON, chair alarm if up to chair</text>
+            <circle cx="100" cy="700" r="18" fill="#ffd700"/>
+            <text x="100" y="706" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">4</text>
+            <text x="140" y="706" fill="#ffffff" font-size="15">Call light within reach + items reachable</text>
+            <circle cx="100" cy="740" r="18" fill="#ffd700"/>
+            <text x="100" y="746" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">5</text>
+            <text x="140" y="746" fill="#ffffff" font-size="15">Hourly rounding ("4Ps": Pain, Position, Potty, Possessions)</text>
+            <circle cx="600" cy="580" r="18" fill="#ffd700"/>
+            <text x="600" y="586" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">6</text>
+            <text x="640" y="586" fill="#ffffff" font-size="15">Room close to nurse's station</text>
+            <circle cx="600" cy="620" r="18" fill="#ffd700"/>
+            <text x="600" y="626" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">7</text>
+            <text x="640" y="626" fill="#ffffff" font-size="15">Toileting schedule (q2h or w/ rounding)</text>
+            <circle cx="600" cy="660" r="18" fill="#ffd700"/>
+            <text x="600" y="666" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">8</text>
+            <text x="640" y="666" fill="#ffffff" font-size="15">Educate patient AND family on plan</text>
+            <circle cx="600" cy="700" r="18" fill="#ffd700"/>
+            <text x="600" y="706" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">9</text>
+            <text x="640" y="706" fill="#ffffff" font-size="15">Med review (sedatives, diuretics, antihypertensives)</text>
+            <circle cx="600" cy="740" r="18" fill="#ffd700"/>
+            <text x="600" y="746" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">10</text>
+            <text x="640" y="746" fill="#ffffff" font-size="15">PT/OT consult for gait/strength</text>
+            <rect x="40" y="800" width="1020" height="260" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="550" y="835" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">RESTRAINT TIMELINE — MEMORIZE THESE NUMBERS</text>
+            <line x1="60" y1="850" x2="1040" y2="850" stroke="#ec4899"/>
+            <text x="120" y="890" fill="#ffd700" font-size="16" font-weight="bold">VIOLENT / SELF-DESTRUCTIVE</text>
+            <text x="120" y="920" fill="#ffffff" font-size="14">• Initial order: max 4 hours (adult)</text>
+            <text x="120" y="945" fill="#ffffff" font-size="14">• Pediatric 9-17: max 2 hours</text>
+            <text x="120" y="970" fill="#ffffff" font-size="14">• Pediatric &lt; 9: max 1 hour</text>
+            <text x="120" y="995" fill="#ffffff" font-size="14">• In-person eval: within 1 hour</text>
+            <text x="120" y="1020" fill="#ffffff" font-size="14">• Assess Q15 min (cont. visual)</text>
+            <text x="120" y="1045" fill="#ffffff" font-size="14">• Order re-write: q4h (adult)</text>
+            <text x="600" y="890" fill="#ffd700" font-size="16" font-weight="bold">NON-VIOLENT (MEDICAL)</text>
+            <text x="600" y="920" fill="#ffffff" font-size="14">• Initial order: max 24 hours</text>
+            <text x="600" y="945" fill="#ffffff" font-size="14">• In-person eval: within 24 hours</text>
+            <text x="600" y="970" fill="#ffffff" font-size="14">• Assess Q2H (circulation, skin)</text>
+            <text x="600" y="995" fill="#ffffff" font-size="14">• Release Q2H, offer toileting</text>
+            <text x="600" y="1020" fill="#ffffff" font-size="14">• Order re-write: q24h</text>
+            <text x="600" y="1045" fill="#ef4444" font-size="14" font-weight="bold">• NEVER PRN — always specific event</text>
+          </svg>`,
+          caption: "The three patient safety pillars, the fall prevention bundle, and the strict restraint timeline."
+        }
+      },
+      {
+        type: "concept",
+        title: "Morse Fall Scale — Scoring and the Bundle",
+        content: `The **Morse Fall Scale** is the gold-standard tool you must know cold. Total score range is **0-125**:
+
+| Item | Scoring |
+|------|---------|
+| **History of falling** (within 3 months) | No 0 / Yes 25 |
+| **Secondary diagnosis** (>1 medical dx) | No 0 / Yes 15 |
+| **Ambulatory aid** | None/bedrest/wheelchair/nurse 0 / Crutches/cane/walker 15 / Furniture 30 |
+| **IV / saline lock** | No 0 / Yes 20 |
+| **Gait** | Normal/bedrest 0 / Weak 10 / Impaired 20 |
+| **Mental status** | Oriented to ability 0 / Forgets limitations 15 |
+
+**Risk levels:**
+- **0-24**: No / low risk → standard precautions
+- **25-44**: Moderate risk → low-risk fall interventions
+- **≥ 45**: HIGH risk → full bundle, including 1:1 monitoring consideration
+
+**Key NCLEX traps**: An IV line **automatically adds 20 points** — a "well" patient with just an IV starts at 20 before anything else. The patient who **forgets their limitations** (tries to walk despite being told not to) scores 15 in mental status — this is the **demented or delirious patient who is most dangerous**. Score on admission, after a fall, after status change, and at minimum q shift.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Morse Fall Scale Scoring</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">6 components — total 0 to 125</text>
+            <rect x="60" y="130" width="1000" height="50" fill="#6366f1" rx="6"/>
+            <text x="100" y="163" fill="#ffffff" font-size="16" font-weight="bold">ITEM</text>
+            <text x="500" y="163" fill="#ffffff" font-size="16" font-weight="bold">SCORING</text>
+            <text x="920" y="163" fill="#ffffff" font-size="16" font-weight="bold">MAX</text>
+            <rect x="60" y="185" width="1000" height="60" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="215" fill="#ffd700" font-size="15" font-weight="bold">1. History of falling</text>
+            <text x="80" y="235" fill="#888" font-size="12">(within 3 months)</text>
+            <text x="500" y="222" fill="#ffffff" font-size="14">No = 0</text>
+            <text x="700" y="222" fill="#ef4444" font-size="14">Yes = 25</text>
+            <text x="930" y="225" fill="#ef4444" font-size="20" font-weight="bold">25</text>
+            <rect x="60" y="250" width="1000" height="60" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="280" fill="#ffd700" font-size="15" font-weight="bold">2. Secondary diagnosis</text>
+            <text x="80" y="300" fill="#888" font-size="12">(more than 1 medical dx)</text>
+            <text x="500" y="287" fill="#ffffff" font-size="14">No = 0</text>
+            <text x="700" y="287" fill="#f59e0b" font-size="14">Yes = 15</text>
+            <text x="930" y="290" fill="#f59e0b" font-size="20" font-weight="bold">15</text>
+            <rect x="60" y="315" width="1000" height="80" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="345" fill="#ffd700" font-size="15" font-weight="bold">3. Ambulatory aid</text>
+            <text x="500" y="335" fill="#10b981" font-size="13">None / bedrest / wheelchair = 0</text>
+            <text x="500" y="358" fill="#f59e0b" font-size="13">Crutches / cane / walker = 15</text>
+            <text x="500" y="381" fill="#ef4444" font-size="13">Furniture (using to support) = 30</text>
+            <text x="930" y="365" fill="#ef4444" font-size="20" font-weight="bold">30</text>
+            <rect x="60" y="400" width="1000" height="60" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="430" fill="#ffd700" font-size="15" font-weight="bold">4. IV or saline lock</text>
+            <text x="80" y="450" fill="#888" font-size="12">(any IV access)</text>
+            <text x="500" y="437" fill="#ffffff" font-size="14">No = 0</text>
+            <text x="700" y="437" fill="#ef4444" font-size="14">Yes = 20</text>
+            <text x="930" y="440" fill="#ef4444" font-size="20" font-weight="bold">20</text>
+            <rect x="60" y="465" width="1000" height="80" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="495" fill="#ffd700" font-size="15" font-weight="bold">5. Gait</text>
+            <text x="500" y="485" fill="#10b981" font-size="13">Normal / bedrest / wheelchair = 0</text>
+            <text x="500" y="508" fill="#f59e0b" font-size="13">Weak (stooped, short steps) = 10</text>
+            <text x="500" y="531" fill="#ef4444" font-size="13">Impaired (cannot walk w/o assist) = 20</text>
+            <text x="930" y="515" fill="#ef4444" font-size="20" font-weight="bold">20</text>
+            <rect x="60" y="550" width="1000" height="60" fill="#1a1a2e" stroke="#6366f1" rx="6"/>
+            <text x="80" y="580" fill="#ffd700" font-size="15" font-weight="bold">6. Mental status</text>
+            <text x="80" y="600" fill="#888" font-size="12">(self-awareness)</text>
+            <text x="500" y="575" fill="#10b981" font-size="13">Oriented to own ability = 0</text>
+            <text x="500" y="598" fill="#ef4444" font-size="13">FORGETS LIMITATIONS = 15</text>
+            <text x="930" y="590" fill="#ef4444" font-size="20" font-weight="bold">15</text>
+            <rect x="60" y="630" width="1000" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="665" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">RISK CATEGORIES &amp; ACTION</text>
+            <line x1="80" y1="680" x2="1040" y2="680" stroke="#ffd700"/>
+            <rect x="100" y="700" width="280" height="90" fill="#10b981" rx="8"/>
+            <text x="240" y="730" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">0 — 24</text>
+            <text x="240" y="755" text-anchor="middle" fill="#ffffff" font-size="14">NO / LOW RISK</text>
+            <text x="240" y="775" text-anchor="middle" fill="#ffffff" font-size="13">Standard precautions</text>
+            <rect x="410" y="700" width="280" height="90" fill="#f59e0b" rx="8"/>
+            <text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">25 — 44</text>
+            <text x="550" y="755" text-anchor="middle" fill="#ffffff" font-size="14">MODERATE RISK</text>
+            <text x="550" y="775" text-anchor="middle" fill="#ffffff" font-size="13">Low-fall interventions</text>
+            <rect x="720" y="700" width="280" height="90" fill="#ef4444" rx="8"/>
+            <text x="860" y="730" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">≥ 45</text>
+            <text x="860" y="755" text-anchor="middle" fill="#ffffff" font-size="14">HIGH RISK</text>
+            <text x="860" y="775" text-anchor="middle" fill="#ffffff" font-size="13">FULL bundle activated</text>
+            <rect x="60" y="830" width="1000" height="230" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="560" y="865" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">WORKED EXAMPLE — MS. RIVERA, 78</text>
+            <line x1="80" y1="880" x2="1040" y2="880" stroke="#ec4899"/>
+            <text x="100" y="915" fill="#ffd700" font-size="14" font-weight="bold">Fell at home last week:</text>
+            <text x="900" y="915" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+25</text>
+            <text x="100" y="945" fill="#ffd700" font-size="14" font-weight="bold">HTN, DM, CHF (multiple dx):</text>
+            <text x="900" y="945" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+15</text>
+            <text x="100" y="975" fill="#ffd700" font-size="14" font-weight="bold">Uses a walker:</text>
+            <text x="900" y="975" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+15</text>
+            <text x="100" y="1005" fill="#ffd700" font-size="14" font-weight="bold">IV antibiotics running:</text>
+            <text x="900" y="1005" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+20</text>
+            <text x="100" y="1035" fill="#ffd700" font-size="14" font-weight="bold">Gait weak post-illness:</text>
+            <text x="900" y="1035" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+10</text>
+            <text x="100" y="1055" fill="#ffd700" font-size="14" font-weight="bold">Oriented to limitations:                                            TOTAL = 85 — HIGH RISK</text>
+            <text x="900" y="1055" text-anchor="end" fill="#ef4444" font-size="16" font-weight="bold">+0</text>
+          </svg>`,
+          caption: "Morse Fall Scale items, scoring, and a worked example (85 = high risk → full bundle)."
+        }
+      },
+      {
+        type: "example",
+        title: "Restraint Rules — A Walk-Through",
+        content: `**Scenario:** Mr. Davis is post-op day 1 from abdominal surgery. He becomes **confused at night** (sundowning) and **repeatedly tries to pull out his NG tube and IV**. He has already pulled the NG once.
+
+**Step 1 — Alternatives FIRST.** Before any restraint:
+- Reorient frequently, soft lighting
+- Family at bedside if possible
+- Move closer to nurse's station
+- Distract (familiar music, TV)
+- Camouflage IV with long sleeves
+- Treat underlying cause (pain, hypoxia, full bladder)
+- **1:1 sitter** if available
+
+**Step 2 — Choose least restrictive.** If alternatives fail and the patient remains at risk for **medical injury** (NG tube dislodgement is a medical concern, not a violent behavior), this is a **non-violent / medical restraint**. Options: mittens, soft wrist restraints.
+
+**Step 3 — Get the order.** Provider order required **within 1 hour** of application (non-violent). The order must specify: **type of restraint, reason, duration (max 24 hr for non-violent), and behavior criteria for release**. **Never PRN** — every application is a specific clinical event.
+
+**Step 4 — Maintenance.** Q2H: check **skin, circulation, range of motion**, offer **toileting, fluids, repositioning**. Document. **Release one limb at a time**. Use a **quick-release knot** tied to the bed frame (**not the side rail**) so the restraint moves with the bed.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Restraint Decision Flow</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Mr. Davis — sundowning, repeated NG tube self-extubation</text>
+            <rect x="350" y="120" width="400" height="60" fill="#6366f1" rx="10"/>
+            <text x="550" y="158" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Patient at risk for self-harm</text>
+            <line x1="550" y1="180" x2="550" y2="210" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="550,215 540,200 560,200" fill="#ffd700"/>
+            <rect x="200" y="220" width="700" height="100" fill="#10b981" rx="10"/>
+            <text x="550" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">STEP 1: TRY ALTERNATIVES FIRST</text>
+            <text x="550" y="285" text-anchor="middle" fill="#ffffff" font-size="14">Reorient • Family present • Move closer • Distract • Treat cause • 1:1 sitter</text>
+            <text x="550" y="310" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Document attempts and effectiveness</text>
+            <line x1="550" y1="320" x2="550" y2="350" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="550,355 540,340 560,340" fill="#ffd700"/>
+            <rect x="200" y="360" width="700" height="80" fill="#f59e0b" rx="10"/>
+            <text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">STEP 2: STILL AT RISK?</text>
+            <text x="550" y="425" text-anchor="middle" fill="#ffffff" font-size="14">Choose the LEAST RESTRICTIVE that works</text>
+            <line x1="200" y1="440" x2="200" y2="475" stroke="#ffd700" stroke-width="3"/>
+            <line x1="550" y1="440" x2="550" y2="475" stroke="#ffd700" stroke-width="3"/>
+            <line x1="900" y1="440" x2="900" y2="475" stroke="#ffd700" stroke-width="3"/>
+            <rect x="80" y="480" width="240" height="120" fill="#0ea5e9" rx="10"/>
+            <text x="200" y="510" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">MITTENS</text>
+            <text x="200" y="535" text-anchor="middle" fill="#ffffff" font-size="13">Least restrictive</text>
+            <text x="200" y="555" text-anchor="middle" fill="#ffffff" font-size="13">Prevent grasping</text>
+            <text x="200" y="575" text-anchor="middle" fill="#ffffff" font-size="13">Hands stay free</text>
+            <text x="200" y="595" text-anchor="middle" fill="#ffd700" font-size="13">First choice</text>
+            <rect x="430" y="480" width="240" height="120" fill="#f59e0b" rx="10"/>
+            <text x="550" y="510" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">SOFT WRIST</text>
+            <text x="550" y="535" text-anchor="middle" fill="#ffffff" font-size="13">Moderate restrictive</text>
+            <text x="550" y="555" text-anchor="middle" fill="#ffffff" font-size="13">Limits arm motion</text>
+            <text x="550" y="575" text-anchor="middle" fill="#ffffff" font-size="13">Quick-release knot</text>
+            <text x="550" y="595" text-anchor="middle" fill="#ffd700" font-size="13">Tie to bed FRAME</text>
+            <rect x="780" y="480" width="240" height="120" fill="#ef4444" rx="10"/>
+            <text x="900" y="510" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">4-POINT / VEST</text>
+            <text x="900" y="535" text-anchor="middle" fill="#ffffff" font-size="13">Most restrictive</text>
+            <text x="900" y="555" text-anchor="middle" fill="#ffffff" font-size="13">Violent restraint</text>
+            <text x="900" y="575" text-anchor="middle" fill="#ffffff" font-size="13">Q15min monitoring</text>
+            <text x="900" y="595" text-anchor="middle" fill="#ffd700" font-size="13">Last resort</text>
+            <rect x="60" y="630" width="1000" height="220" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="560" y="665" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">STEP 3 — ORDER &amp; STEP 4 — MAINTENANCE</text>
+            <line x1="80" y1="680" x2="1040" y2="680" stroke="#ec4899"/>
+            <text x="100" y="715" fill="#ffd700" font-size="16" font-weight="bold">ORDER MUST INCLUDE:</text>
+            <text x="100" y="745" fill="#ffffff" font-size="14">• Type (mittens / wrist / ankle / vest)</text>
+            <text x="100" y="770" fill="#ffffff" font-size="14">• Specific reason (pulling at NG, etc.)</text>
+            <text x="100" y="795" fill="#ffffff" font-size="14">• Duration (24 hr max non-violent)</text>
+            <text x="100" y="820" fill="#ffffff" font-size="14">• Release criteria</text>
+            <text x="100" y="845" fill="#ef4444" font-size="14" font-weight="bold">• NEVER a PRN order</text>
+            <text x="580" y="715" fill="#ffd700" font-size="16" font-weight="bold">EVERY 2 HOURS:</text>
+            <text x="580" y="745" fill="#ffffff" font-size="14">• Check skin, circulation (CSM)</text>
+            <text x="580" y="770" fill="#ffffff" font-size="14">• Range of motion</text>
+            <text x="580" y="795" fill="#ffffff" font-size="14">• Offer toileting, fluids</text>
+            <text x="580" y="820" fill="#ffffff" font-size="14">• Reposition, reassess need</text>
+            <text x="580" y="845" fill="#ffffff" font-size="14">• Release ONE LIMB at a time</text>
+            <rect x="60" y="870" width="1000" height="190" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="560" y="905" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">CRITICAL SAFETY RULES — NEVER FORGET</text>
+            <text x="100" y="940" fill="#ef4444" font-size="20">•</text>
+            <text x="130" y="940" fill="#ffffff" font-size="15">Tie restraint to the BED FRAME, never to the side rail</text>
+            <text x="100" y="970" fill="#ef4444" font-size="20">•</text>
+            <text x="130" y="970" fill="#ffffff" font-size="15">Use a QUICK-RELEASE (slip) knot — code situations need fast removal</text>
+            <text x="100" y="1000" fill="#ef4444" font-size="20">•</text>
+            <text x="130" y="1000" fill="#ffffff" font-size="15">2-finger fit — should be snug but allow 2 fingers underneath</text>
+            <text x="100" y="1030" fill="#ef4444" font-size="20">•</text>
+            <text x="130" y="1030" fill="#ffffff" font-size="15">D/C as soon as criteria are met. Document attempts to release.</text>
+            <text x="100" y="1055" fill="#ef4444" font-size="20">•</text>
+            <text x="130" y="1055" fill="#ffffff" font-size="15">RESTRAINTS ARE NEVER FOR STAFF CONVENIENCE or as punishment</text>
+          </svg>`,
+          caption: "Restraint decision flow — alternatives first, least restrictive next, strict order requirements always."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Never Events and CMS",
+        content: `The Centers for Medicare and Medicaid Services (**CMS**) identifies events that should never happen in a hospital. Medicare will not reimburse hospitals for the cost of treating these events.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">14 CMS Never Events</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Hospital-acquired conditions Medicare will NOT pay to treat</text>
+            <rect x="60" y="120" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="158" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">1. Foreign object retained after surgery</text>
+            <rect x="560" y="120" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="158" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">2. Air embolism</text>
+            <rect x="60" y="190" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="228" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">3. Blood incompatibility (wrong blood)</text>
+            <rect x="560" y="190" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="228" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">4. Stage 3 / 4 pressure injuries</text>
+            <rect x="60" y="260" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="298" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">5. Falls and trauma (with serious injury)</text>
+            <rect x="560" y="260" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="298" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">6. Manifestations of poor glycemic control</text>
+            <rect x="60" y="330" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="368" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">7. Catheter-associated UTI (CAUTI)</text>
+            <rect x="560" y="330" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="368" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">8. Central line-associated BSI (CLABSI)</text>
+            <rect x="60" y="400" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="438" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">9. Surgical site infection (specific procedures)</text>
+            <rect x="560" y="400" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="438" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">10. DVT/PE after total knee/hip replacement</text>
+            <rect x="60" y="470" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="508" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">11. Iatrogenic pneumothorax w/ central line</text>
+            <rect x="560" y="470" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="508" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">12. Surgical wrong site / wrong patient / wrong procedure</text>
+            <rect x="60" y="540" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="305" y="578" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">13. Medication errors causing serious harm</text>
+            <rect x="560" y="540" width="490" height="60" fill="#ef4444" rx="8"/>
+            <text x="805" y="578" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">14. Patient death/disability from misadministration</text>
+            <rect x="60" y="630" width="1000" height="170" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="665" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">THE UNIVERSAL PROTOCOL (3 STEPS)</text>
+            <text x="560" y="695" text-anchor="middle" fill="#888" font-size="14">Joint Commission requirement to prevent wrong-site / wrong-patient surgery</text>
+            <line x1="80" y1="710" x2="1040" y2="710" stroke="#ffd700"/>
+            <text x="160" y="745" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">1. PRE-PROCEDURE</text>
+            <text x="160" y="770" text-anchor="middle" fill="#ffffff" font-size="14">VERIFICATION</text>
+            <text x="160" y="788" text-anchor="middle" fill="#ffffff" font-size="12">Patient + procedure + site</text>
+            <text x="550" y="745" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">2. SITE MARKING</text>
+            <text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="14">Surgeon marks the site</text>
+            <text x="550" y="788" text-anchor="middle" fill="#ffffff" font-size="12">With patient awake</text>
+            <text x="930" y="745" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">3. TIME-OUT</text>
+            <text x="930" y="770" text-anchor="middle" fill="#ffffff" font-size="14">Immediately before incision</text>
+            <text x="930" y="788" text-anchor="middle" fill="#ffffff" font-size="12">Entire team participates</text>
+            <rect x="60" y="820" width="1000" height="240" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="560" y="855" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">PREVENTION BUNDLES YOU MUST KNOW</text>
+            <line x1="80" y1="870" x2="1040" y2="870" stroke="#0ea5e9"/>
+            <text x="100" y="905" fill="#ffd700" font-size="15" font-weight="bold">CAUTI:</text>
+            <text x="220" y="905" fill="#ffffff" font-size="14">Insert ONLY when needed • Aseptic insertion • Daily necessity review • Remove ASAP</text>
+            <text x="100" y="935" fill="#ffd700" font-size="15" font-weight="bold">CLABSI:</text>
+            <text x="220" y="935" fill="#ffffff" font-size="14">Hand hygiene • Max barriers • CHG prep • Avoid femoral • Daily line review</text>
+            <text x="100" y="965" fill="#ffd700" font-size="15" font-weight="bold">VAP:</text>
+            <text x="220" y="965" fill="#ffffff" font-size="14">HOB 30-45° • Sedation vacation • CHG oral care • DVT/PUD prophylaxis</text>
+            <text x="100" y="995" fill="#ffd700" font-size="15" font-weight="bold">Pressure inj.:</text>
+            <text x="220" y="995" fill="#ffffff" font-size="14">Reposition Q2H • Braden scale • Skin assessment shift • Moisture management</text>
+            <text x="100" y="1025" fill="#ffd700" font-size="15" font-weight="bold">Falls:</text>
+            <text x="220" y="1025" fill="#ffffff" font-size="14">Morse scale on admission and shift • Bundle for ≥45 • Hourly rounding</text>
+            <text x="100" y="1055" fill="#ffd700" font-size="15" font-weight="bold">Med errors:</text>
+            <text x="220" y="1055" fill="#ffffff" font-size="14">5 (or 10) Rights • 2 patient identifiers • Read-back • Independent double-check on high-alert</text>
+          </svg>`,
+          caption: "The 14 CMS Never Events, the Universal Protocol, and the prevention bundles every nurse owns."
+        },
+        question: "A nurse is caring for a confused post-operative client who has been attempting to pull out his nasogastric tube. The nurse has tried reorientation, family presence, and a sitter at bedside without success. The provider orders soft wrist restraints. Which action by the nurse demonstrates correct restraint application?",
+        options: [
+          { text: "Tie the restraints to the side rails with a square knot to keep them secure", correct: false },
+          { text: "Tie the restraints to the bed frame with a quick-release knot and assess the limbs every 2 hours", correct: true },
+          { text: "Apply the restraints tightly enough that no fingers can fit underneath, to prevent the patient from pulling free", correct: false },
+          { text: "Document a PRN order so the night nurse can reapply the restraints as needed if the patient becomes agitated again", correct: false }
+        ],
+        explanation: "Restraints must be tied to a NON-MOVING part of the bed (the bed FRAME), NOT the side rails — if rails are lowered, a side-rail-tied restraint can cause injury or strangulation. A QUICK-RELEASE (slip) knot allows rapid removal in an emergency such as a code or fire. Q2H assessment for non-violent restraints checks circulation, skin integrity, range of motion, and the need to continue. A snug 2-finger fit is correct (not too tight). Restraint orders are NEVER written PRN — every application requires a specific event-based order."
+      },
+      {
+        type: "application",
+        title: "Putting It Together — A Safe Shift",
+        content: `**Scenario:** You start your shift with 4 patients. Apply everything you've learned about safety.
+
+**Room 1 — Mrs. Lee, 84, admitted with UTI, mild dementia, walks with walker.**
+- Morse: hx fall (25) + 2° dx (15) + walker (15) + IV (20) + weak gait (10) + forgets limits (15) = **100**. HIGH RISK.
+- Action: Full bundle — yellow socks, bed alarm, hourly rounding, family at bedside, room near station, **no restraints needed yet** (sitter or family preferred).
+
+**Room 2 — Mr. Patel, post-CABG day 2, central line in place.**
+- Risk: CLABSI Never Event. CHG bathing, hand hygiene, daily line necessity review, sterile dressing changes.
+- Risk: DVT (post-op, immobile). SCDs, early ambulation, anticoagulant per protocol.
+
+**Room 3 — Ms. Chen, ICU on ventilator, sedated.**
+- Risk: VAP (Never Event consideration). **HOB 30-45°**, daily sedation vacation, CHG oral care q2h, PUD/DVT prophylaxis.
+- Risk: Pressure injury. Reposition Q2H, Braden q shift, specialty mattress.
+
+**Room 4 — Mr. Adams, going to OR for L knee replacement.**
+- Risk: Wrong-site surgery. Confirm consent matches, surgeon marks "YES" on LEFT knee, full TIME-OUT before incision.
+- Risk: DVT (TKA). Compression devices, anticoagulant, ambulate POD #1.
+
+A safe shift = every patient screened, every bundle applied, every documentation complete. **Safety is never a "later" task.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">A Safe Shift — 4 Patients, 4 Risk Profiles</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Apply Morse, restraint rules, and never-event bundles</text>
+            <rect x="40" y="120" width="510" height="450" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <rect x="40" y="120" width="510" height="50" fill="#ec4899" rx="10"/>
+            <text x="295" y="153" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">ROOM 1 — Mrs. Lee, 84</text>
+            <text x="60" y="195" fill="#ffd700" font-size="14" font-weight="bold">Background:</text>
+            <text x="60" y="218" fill="#ffffff" font-size="13">UTI, mild dementia, walks with walker</text>
+            <text x="60" y="248" fill="#ffd700" font-size="14" font-weight="bold">MORSE SCORE:</text>
+            <text x="60" y="275" fill="#ffffff" font-size="13">Fall hx (25) + 2° dx (15) + walker (15)</text>
+            <text x="60" y="295" fill="#ffffff" font-size="13">+ IV (20) + weak gait (10) + forgets (15)</text>
+            <rect x="60" y="305" width="470" height="35" fill="#ef4444" rx="6"/>
+            <text x="295" y="328" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">TOTAL = 100 (HIGH RISK)</text>
+            <text x="60" y="365" fill="#ffd700" font-size="14" font-weight="bold">INTERVENTIONS:</text>
+            <text x="60" y="392" fill="#ffffff" font-size="13">• Yellow socks + armband</text>
+            <text x="60" y="415" fill="#ffffff" font-size="13">• Bed alarm + lowest bed position</text>
+            <text x="60" y="438" fill="#ffffff" font-size="13">• Hourly rounding (4P's)</text>
+            <text x="60" y="461" fill="#ffffff" font-size="13">• Family at bedside / sitter</text>
+            <text x="60" y="484" fill="#ffffff" font-size="13">• Toileting schedule q2h</text>
+            <text x="60" y="507" fill="#ffffff" font-size="13">• Room near nursing station</text>
+            <text x="60" y="530" fill="#ffffff" font-size="13">• Review meds (diuretics, sedatives)</text>
+            <text x="60" y="555" fill="#10b981" font-size="13" font-weight="bold">NO restraints — sitter / family first</text>
+            <rect x="560" y="120" width="510" height="450" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <rect x="560" y="120" width="510" height="50" fill="#0ea5e9" rx="10"/>
+            <text x="815" y="153" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">ROOM 2 — Mr. Patel</text>
+            <text x="580" y="195" fill="#ffd700" font-size="14" font-weight="bold">Background:</text>
+            <text x="580" y="218" fill="#ffffff" font-size="13">CABG POD 2 with central line</text>
+            <text x="580" y="248" fill="#ffd700" font-size="14" font-weight="bold">PRIMARY RISKS:</text>
+            <text x="580" y="275" fill="#ef4444" font-size="13">• CLABSI (Never Event)</text>
+            <text x="580" y="295" fill="#ef4444" font-size="13">• DVT/PE (Never Event for some)</text>
+            <text x="580" y="315" fill="#ef4444" font-size="13">• Pressure injury (post-op immobility)</text>
+            <text x="580" y="335" fill="#ef4444" font-size="13">• Pneumonia</text>
+            <text x="580" y="365" fill="#ffd700" font-size="14" font-weight="bold">CLABSI BUNDLE:</text>
+            <text x="580" y="392" fill="#ffffff" font-size="13">• Hand hygiene every contact</text>
+            <text x="580" y="415" fill="#ffffff" font-size="13">• CHG bath daily</text>
+            <text x="580" y="438" fill="#ffffff" font-size="13">• Daily line necessity review (D/C ASAP)</text>
+            <text x="580" y="461" fill="#ffffff" font-size="13">• Sterile dressing change per protocol</text>
+            <text x="580" y="491" fill="#ffd700" font-size="14" font-weight="bold">DVT BUNDLE:</text>
+            <text x="580" y="518" fill="#ffffff" font-size="13">• SCDs continuous</text>
+            <text x="580" y="541" fill="#ffffff" font-size="13">• Early ambulation</text>
+            <text x="580" y="564" fill="#ffffff" font-size="13">• Anticoagulant per protocol</text>
+            <rect x="40" y="585" width="510" height="455" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <rect x="40" y="585" width="510" height="50" fill="#8b5cf6" rx="10"/>
+            <text x="295" y="618" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">ROOM 3 — Ms. Chen (ICU)</text>
+            <text x="60" y="660" fill="#ffd700" font-size="14" font-weight="bold">Background:</text>
+            <text x="60" y="683" fill="#ffffff" font-size="13">ICU, ventilated, sedated</text>
+            <text x="60" y="713" fill="#ffd700" font-size="14" font-weight="bold">VAP BUNDLE:</text>
+            <text x="60" y="740" fill="#ffffff" font-size="13">• HOB 30-45 degrees</text>
+            <text x="60" y="763" fill="#ffffff" font-size="13">• Daily sedation vacation (SAT)</text>
+            <text x="60" y="786" fill="#ffffff" font-size="13">• Daily spontaneous breathing trial (SBT)</text>
+            <text x="60" y="809" fill="#ffffff" font-size="13">• CHG oral care q2-4h</text>
+            <text x="60" y="832" fill="#ffffff" font-size="13">• PUD prophylaxis (PPI)</text>
+            <text x="60" y="855" fill="#ffffff" font-size="13">• DVT prophylaxis</text>
+            <text x="60" y="885" fill="#ffd700" font-size="14" font-weight="bold">PRESSURE INJURY:</text>
+            <text x="60" y="912" fill="#ffffff" font-size="13">• Reposition Q2H, document time</text>
+            <text x="60" y="935" fill="#ffffff" font-size="13">• Braden scale each shift</text>
+            <text x="60" y="958" fill="#ffffff" font-size="13">• Heel offloading, specialty mattress</text>
+            <text x="60" y="981" fill="#ffffff" font-size="13">• Moisture management (incontinence)</text>
+            <text x="60" y="1015" fill="#ef4444" font-size="13" font-weight="bold">Stage 3/4 = NEVER EVENT</text>
+            <rect x="560" y="585" width="510" height="455" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <rect x="560" y="585" width="510" height="50" fill="#f59e0b" rx="10"/>
+            <text x="815" y="618" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">ROOM 4 — Mr. Adams (Pre-OR)</text>
+            <text x="580" y="660" fill="#ffd700" font-size="14" font-weight="bold">Background:</text>
+            <text x="580" y="683" fill="#ffffff" font-size="13">Going to OR for L knee replacement</text>
+            <text x="580" y="713" fill="#ffd700" font-size="14" font-weight="bold">UNIVERSAL PROTOCOL:</text>
+            <text x="580" y="740" fill="#ffffff" font-size="13">1. Pre-op verification:</text>
+            <text x="600" y="760" fill="#ffffff" font-size="13">consent + procedure + site</text>
+            <text x="580" y="785" fill="#ffffff" font-size="13">2. Surgeon marks the site:</text>
+            <text x="600" y="805" fill="#ffffff" font-size="13">"YES" on LEFT knee, awake patient</text>
+            <text x="580" y="830" fill="#ffffff" font-size="13">3. TIME-OUT before incision:</text>
+            <text x="600" y="850" fill="#ffffff" font-size="13">entire team participates, all stop</text>
+            <text x="580" y="885" fill="#ffd700" font-size="14" font-weight="bold">POST-OP DVT BUNDLE:</text>
+            <text x="580" y="912" fill="#ffffff" font-size="13">• SCDs immediately post-op</text>
+            <text x="580" y="935" fill="#ffffff" font-size="13">• Anticoagulant (heparin/enoxaparin)</text>
+            <text x="580" y="958" fill="#ffffff" font-size="13">• Ambulate POD #1</text>
+            <text x="580" y="981" fill="#ffffff" font-size="13">• Ankle pumps in bed</text>
+            <text x="580" y="1015" fill="#ef4444" font-size="13" font-weight="bold">DVT/PE after TKA = NEVER EVENT</text>
+          </svg>`,
+          caption: "Four patients, four bundles — Morse fall risk, CLABSI, VAP/pressure injury, and the Universal Protocol all in one shift."
+        }
+      }
+    ]
   }
 ];
 
@@ -1370,7 +2824,7 @@ Option 4 names a **positive-pressure** room, which would push contaminated air *
             title: 'NCLEX Fundamentals: The ABCs, Maslow, and Nursing Process',
             author: 'Synthesis Learning',
             description: 'The three priority frameworks every NCLEX question hides behind its wording — the ABCs (airway/breathing/circulation), Maslow\'s hierarchy as a triage tool, and the nursing process (ADPIE).',
-            lessons: 6, duration: 90, progress: 0, category: 'nclex-foundations',
+            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
             lessonList: FUND_PLACEHOLDER_LESSONS,
         },
         {
