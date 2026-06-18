@@ -6754,7 +6754,7 @@ In hematology, **sickle cell crisis** demands **HOP**: **H**ydration, **O**xygen
             title: 'Maternal-Newborn Nursing',
             author: 'Synthesis Learning',
             description: 'Prenatal, labor stages, postpartum complications, and newborn assessment — with the lab values and red flags NCLEX expects you to catch.',
-            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
+            lessons: 12, duration: 180, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-maternal-lesson-1",
@@ -7448,6 +7448,334 @@ A complete newborn nurse synthesizes scores, vitals, and bundle adherence into a
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Contraception Counseling</text><rect x="60" y="100" width="980" height="220" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="3" rx="10"/><text x="550" y="140" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">Counseling Framework</text><text x="80" y="180" fill="#ffd700" font-size="20" font-weight="bold">1.</text><text x="120" y="180" fill="#ffffff" font-size="18">Reproductive goals — children when?</text><text x="80" y="215" fill="#ffd700" font-size="20" font-weight="bold">2.</text><text x="120" y="215" fill="#ffffff" font-size="18">Medical history — MEC categories</text><text x="80" y="250" fill="#ffd700" font-size="20" font-weight="bold">3.</text><text x="120" y="250" fill="#ffffff" font-size="18">Lifestyle — daily pill, injection, sex partners</text><text x="80" y="285" fill="#ffd700" font-size="20" font-weight="bold">4.</text><text x="120" y="285" fill="#ffffff" font-size="18">Patient preference + shared decision</text><rect x="60" y="340" width="980" height="240" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/><text x="550" y="380" text-anchor="middle" fill="#ec4899" font-size="24" font-weight="bold">Emergency Contraception</text><rect x="100" y="410" width="285" height="150" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2" rx="8"/><text x="242" y="445" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Plan B</text><text x="242" y="475" text-anchor="middle" fill="#ffffff" font-size="17">Levonorgestrel</text><text x="242" y="505" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">≤ 72 hours</text><text x="242" y="540" text-anchor="middle" fill="#ffffff" font-size="16">OTC, all ages</text><rect x="405" y="410" width="285" height="150" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="2" rx="8"/><text x="547" y="445" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Ella</text><text x="547" y="475" text-anchor="middle" fill="#ffffff" font-size="17">Ulipristal</text><text x="547" y="505" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">≤ 120 hours</text><text x="547" y="540" text-anchor="middle" fill="#ffffff" font-size="16">Rx, more effective</text><rect x="710" y="410" width="285" height="150" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="2" rx="8"/><text x="852" y="445" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Copper IUD</text><text x="852" y="475" text-anchor="middle" fill="#ffffff" font-size="17">ParaGard</text><text x="852" y="505" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">≤ 5 days</text><text x="852" y="540" text-anchor="middle" fill="#ffffff" font-size="16">Most effective EC</text><rect x="60" y="600" width="980" height="200" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="3" rx="10"/><text x="550" y="640" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Postpartum &amp; Breastfeeding</text><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="20">Progestin-only methods preferred &lt;6 wk</text><text x="550" y="713" text-anchor="middle" fill="#ffffff" font-size="20">Avoid combined estrogen if breastfeeding</text><text x="550" y="746" text-anchor="middle" fill="#ffffff" font-size="20">IUD can be placed immediately postpartum</text><text x="550" y="780" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">LAM only effective if exclusive BF + amenorrhea</text><rect x="60" y="820" width="980" height="230" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3" rx="10"/><text x="550" y="860" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Key Teaching Points</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="18">Backup method × 7 days when starting</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="18">Irregular bleeding x 3 months is normal</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">Only condoms prevent STIs — pair with method</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="18">Follow-up at 3 months to assess satisfaction</text><text x="550" y="1025" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Respect autonomy — patient's choice</text></svg>`,
           caption: "Counseling framework, emergency contraception, and follow-up"
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-maternal-lesson-10",
+    title: "Gynecological Conditions and STIs",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Common Gynecologic Issues",
+        content: `Women's health nursing extends far beyond pregnancy. **Endometriosis**, **PCOS** (polycystic ovary syndrome), and **sexually transmitted infections** affect millions of reproductive-age women and frequently appear on the NCLEX.
+
+**Endometriosis** is endometrial tissue growing **outside the uterus** — on ovaries, peritoneum, or bowel. Cyclic bleeding into the abdomen causes **chronic pelvic pain**, **dysmenorrhea**, **dyspareunia** (painful intercourse), and **infertility**.
+
+**PCOS** is the most common endocrine disorder in women — irregular cycles, **hyperandrogenism** (hirsutism, acne), and **insulin resistance** driving weight gain and type 2 diabetes risk.
+
+**STIs** — chlamydia, gonorrhea, syphilis, and HSV — require prompt recognition, partner notification, and pregnancy-specific considerations. The nurse's role spans screening, education, treatment adherence, and reducing stigma.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">Three Pillars of Gyn Care</text><rect x="80" y="170" width="300" height="380" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="4"/><text x="230" y="230" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Endometriosis</text><text x="230" y="290" text-anchor="middle" fill="#ffffff" font-size="22">Pelvic pain</text><text x="230" y="330" text-anchor="middle" fill="#ffffff" font-size="22">Dysmenorrhea</text><text x="230" y="370" text-anchor="middle" fill="#ffffff" font-size="22">Dyspareunia</text><text x="230" y="410" text-anchor="middle" fill="#ffffff" font-size="22">Infertility</text><text x="230" y="470" text-anchor="middle" fill="#10b981" font-size="20">NSAIDs, OCPs,</text><text x="230" y="500" text-anchor="middle" fill="#10b981" font-size="20">leuprolide, laparoscopy</text><rect x="400" y="170" width="300" height="380" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="550" y="230" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">PCOS</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="22">Irregular cycles</text><text x="550" y="330" text-anchor="middle" fill="#ffffff" font-size="22">Hirsutism/acne</text><text x="550" y="370" text-anchor="middle" fill="#ffffff" font-size="22">Insulin resistance</text><text x="550" y="410" text-anchor="middle" fill="#ffffff" font-size="22">Weight gain</text><text x="550" y="470" text-anchor="middle" fill="#10b981" font-size="20">Lifestyle, metformin,</text><text x="550" y="500" text-anchor="middle" fill="#10b981" font-size="20">OCPs, spironolactone</text><rect x="720" y="170" width="300" height="380" rx="20" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="870" y="230" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">STIs</text><text x="870" y="290" text-anchor="middle" fill="#ffffff" font-size="22">Chlamydia</text><text x="870" y="330" text-anchor="middle" fill="#ffffff" font-size="22">Gonorrhea</text><text x="870" y="370" text-anchor="middle" fill="#ffffff" font-size="22">Syphilis</text><text x="870" y="410" text-anchor="middle" fill="#ffffff" font-size="22">HSV</text><text x="870" y="470" text-anchor="middle" fill="#10b981" font-size="20">Antibiotics or</text><text x="870" y="500" text-anchor="middle" fill="#10b981" font-size="20">antivirals + partners</text><rect x="80" y="620" width="940" height="380" rx="20" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="4"/><text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Nursing Role Across All Three</text><text x="550" y="740" text-anchor="middle" fill="#ffffff" font-size="24">Screen, educate, support, refer</text><text x="550" y="790" text-anchor="middle" fill="#ffffff" font-size="22">Reduce stigma — STI testing is routine health care</text><text x="550" y="840" text-anchor="middle" fill="#ffffff" font-size="22">Partner notification and dual treatment</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="22">Pregnancy considerations — penicillin for syphilis</text><text x="550" y="940" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Long-term consequences: infertility, cancer, neonatal harm</text></svg>`,
+          caption: "Three big domains of gyn nursing: endometriosis, PCOS, and STIs."
+        }
+      },
+      {
+        type: "concept",
+        title: "Treatment Specifics by Condition",
+        content: `**Endometriosis treatment** is a stepladder: **NSAIDs** for pain → **combined OCPs** to suppress cyclic bleeding → **GnRH agonist leuprolide** (Lupron) to induce temporary menopause and shrink lesions → **laparoscopic excision** for definitive lesion removal. Teach patients leuprolide causes hot flashes and bone loss.
+
+**PCOS treatment** centers on **lifestyle** — even **5–10% weight loss** can restore ovulation. **Metformin** improves insulin sensitivity. **OCPs** regularize cycles and protect the endometrium from unopposed estrogen. **Spironolactone** blocks androgens to treat hirsutism (warn: teratogenic).
+
+**STI treatment**:
+- **Chlamydia**: **doxycycline 100mg BID × 7 days** or azithromycin 1g once. Screen all sexually active women <25 annually.
+- **Gonorrhea**: **ceftriaxone 500mg IM × 1** plus doxycycline (treat for co-infection).
+- **Syphilis**: **penicillin G IM** — preferred even in pregnancy (desensitize if allergic).
+- **HSV**: lifelong — **acyclovir, valacyclovir, famciclovir**. Active primary lesions at delivery = **C-section**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">STI Treatment Cheat Sheet</text><rect x="60" y="120" width="980" height="200" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="100" y="170" fill="#ffd700" font-size="28" font-weight="bold">Chlamydia</text><text x="100" y="210" fill="#ffffff" font-size="22">Often asymptomatic — screen annually if &lt;25</text><text x="100" y="245" fill="#10b981" font-size="22">Doxycycline 100mg PO BID x 7d OR azithromycin 1g x 1</text><text x="100" y="280" fill="#f59e0b" font-size="20">Treat all partners. Re-test in 3 months.</text><rect x="60" y="340" width="980" height="200" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="100" y="390" fill="#ffd700" font-size="28" font-weight="bold">Gonorrhea</text><text x="100" y="430" fill="#ffffff" font-size="22">Often co-infected with chlamydia</text><text x="100" y="465" fill="#10b981" font-size="22">Ceftriaxone 500mg IM x 1 + doxycycline x 7d</text><text x="100" y="500" fill="#f59e0b" font-size="20">Untreated = PID, infertility, ectopic pregnancy</text><rect x="60" y="560" width="980" height="200" rx="15" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="100" y="610" fill="#ffd700" font-size="28" font-weight="bold">Syphilis</text><text x="100" y="650" fill="#ffffff" font-size="22">Stages: primary chancre, secondary rash, latent, tertiary</text><text x="100" y="685" fill="#10b981" font-size="22">Penicillin G benzathine IM — even in pregnancy</text><text x="100" y="720" fill="#f59e0b" font-size="20">PCN allergic + pregnant = DESENSITIZE</text><rect x="60" y="780" width="980" height="280" rx="15" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="3"/><text x="100" y="830" fill="#ffd700" font-size="28" font-weight="bold">HSV (Herpes Simplex)</text><text x="100" y="870" fill="#ffffff" font-size="22">Lifelong — no cure. Recurrent vesicular outbreaks.</text><text x="100" y="905" fill="#10b981" font-size="22">Acyclovir, valacyclovir, or famciclovir — suppress or episodic</text><text x="100" y="945" fill="#ef4444" font-size="22" font-weight="bold">Active primary lesion at delivery = C-section</text><text x="100" y="985" fill="#ffffff" font-size="20">Neonatal HSV is devastating — meningoencephalitis</text><text x="100" y="1025" fill="#0ea5e9" font-size="20">Suppressive valacyclovir from 36 wk if history of HSV</text></svg>`,
+          caption: "First-line antibiotics by STI — high-yield NCLEX."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: A 24-Year-Old With Pelvic Pain",
+        content: `Maya, 24, presents to her clinic with **5 years of worsening pelvic pain** that intensifies during menstruation and during intercourse. She has been trying to conceive for **18 months without success**. Pelvic exam reveals **tender nodules along the uterosacral ligaments**.
+
+**Assessment**: The triad of **dysmenorrhea + dyspareunia + infertility** strongly suggests **endometriosis**. Confirmation requires **laparoscopy with biopsy**.
+
+**Plan**:
+1. **NSAIDs** (ibuprofen 600mg q6h) for pain.
+2. Trial of **combined OCPs** to suppress menstruation.
+3. Refer to **reproductive endocrinology** given infertility concern.
+4. Discuss **laparoscopic excision** — both diagnostic and therapeutic.
+
+**Education**: Endometriosis is **estrogen-dependent** — pregnancy and menopause often improve symptoms. Track pain with a diary. Pelvic floor PT and heat help. Validate Maya's pain — endometriosis is underdiagnosed by an average of **7–10 years**. Address infertility fears with empathy and offer support resources.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Endometriosis: Classic Triad</text><circle cx="350" cy="350" r="180" fill="#ef4444" opacity="0.35" stroke="#ef4444" stroke-width="4"/><circle cx="750" cy="350" r="180" fill="#f59e0b" opacity="0.35" stroke="#f59e0b" stroke-width="4"/><circle cx="550" cy="600" r="180" fill="#ec4899" opacity="0.35" stroke="#ec4899" stroke-width="4"/><text x="250" y="300" fill="#ffffff" font-size="26" font-weight="bold">Dysmenorrhea</text><text x="250" y="340" fill="#ffffff" font-size="20">Painful menses</text><text x="700" y="300" fill="#ffffff" font-size="26" font-weight="bold">Dyspareunia</text><text x="720" y="340" fill="#ffffff" font-size="20">Pain w/ sex</text><text x="470" y="650" fill="#ffffff" font-size="26" font-weight="bold">Infertility</text><text x="475" y="690" fill="#ffffff" font-size="20">Trouble conceiving</text><text x="550" y="450" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">ENDOMETRIOSIS</text><rect x="100" y="820" width="900" height="220" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Treatment Ladder</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="22">1. NSAIDs for pain control</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="22">2. Combined OCPs to suppress cyclic bleeding</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="22">3. GnRH agonist leuprolide — temporary menopause</text></svg>`,
+          caption: "Maya's symptoms map onto the classic endometriosis triad."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: STI Treatment",
+        content: `Test recognition of first-line therapy for syphilis in pregnancy.`,
+        question: "A 28-year-old pregnant patient at 22 weeks' gestation tests positive for syphilis. She reports a documented penicillin allergy with prior anaphylaxis. What is the nurse's BEST action?",
+        options: [
+          { text: "Substitute doxycycline 100mg BID for 14 days", correct: false },
+          { text: "Administer azithromycin 1g orally instead", correct: false },
+          { text: "Coordinate penicillin desensitization, then administer penicillin G IM", correct: true },
+          { text: "Defer treatment until after delivery to avoid allergic reaction", correct: false }
+        ],
+        explanation: "Penicillin G is the ONLY proven effective treatment for congenital syphilis prevention. Doxycycline is teratogenic and contraindicated in pregnancy. Azithromycin has high treatment failure rates. Penicillin desensitization is the standard of care — the patient is desensitized in a monitored setting and then receives the necessary penicillin therapy.",
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Syphilis in Pregnancy</text><rect x="100" y="150" width="900" height="200" rx="20" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="550" y="210" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Untreated Risk</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="22">Stillbirth, neonatal death</text><text x="550" y="300" text-anchor="middle" fill="#ffffff" font-size="22">Congenital syphilis: bone, brain, organ damage</text><rect x="100" y="400" width="900" height="320" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="4"/><text x="550" y="460" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Treatment Algorithm</text><text x="550" y="520" text-anchor="middle" fill="#ffffff" font-size="24">Penicillin G IM — only proven effective</text><text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="24">PCN allergic? → DESENSITIZE</text><text x="550" y="620" text-anchor="middle" fill="#ffffff" font-size="22">Doxycycline = TERATOGENIC (contraindicated)</text><text x="550" y="670" text-anchor="middle" fill="#ffffff" font-size="22">Azithromycin = high failure rates</text><rect x="100" y="770" width="900" height="240" rx="20" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="3"/><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Nursing Pearls</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="22">Watch for Jarisch-Herxheimer reaction</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="22">(fever, chills, hypotension after first dose)</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="22">Retest at 28-32 weeks &amp; delivery</text></svg>`,
+          caption: "Penicillin is non-negotiable for syphilis in pregnancy."
+        }
+      },
+      {
+        type: "application",
+        title: "Clinical Application",
+        content: `On the floor, apply gyn knowledge with **clinical judgment**:
+
+**Screening**: Annually screen sexually active women **under 25** for chlamydia and gonorrhea. Screen all pregnant women at first prenatal visit. Add HIV, syphilis, and HepB to the panel.
+
+**PCOS counseling**: A teen newly diagnosed with PCOS is at risk for **type 2 diabetes, endometrial cancer (from unopposed estrogen), and depression**. Frame care around **long-term metabolic health**, not just acne. Encourage realistic weight goals — **5–10% loss restores ovulation in 50%**.
+
+**STI conversations**: Use **nonjudgmental, normalized language**. "We test everyone routinely — it doesn't mean anything about you." Educate on **partner notification** — many states allow **expedited partner therapy** (prescribing for the partner without examining them).
+
+**Endometriosis advocacy**: Believe patients' pain. The average diagnostic delay is **a decade**. Don't dismiss severe menstrual pain as normal — it isn't.
+
+**Pregnancy + HSV**: Suppressive **valacyclovir from 36 weeks** prevents outbreaks at delivery and reduces C-section need.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Bedside Nursing Pearls</text><rect x="80" y="130" width="940" height="190" rx="20" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3"/><text x="120" y="180" fill="#ffd700" font-size="26" font-weight="bold">Screening</text><text x="120" y="220" fill="#ffffff" font-size="22">Annual chlamydia/gonorrhea if &lt;25 &amp; sexually active</text><text x="120" y="255" fill="#ffffff" font-size="22">First prenatal visit: HIV, syphilis, HepB, GC, chlamydia</text><text x="120" y="290" fill="#ffffff" font-size="22">Cervical cancer: Pap starting age 21</text><rect x="80" y="340" width="940" height="190" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="120" y="390" fill="#ffd700" font-size="26" font-weight="bold">PCOS Long-Term</text><text x="120" y="430" fill="#ffffff" font-size="22">T2DM risk — annual A1C or fasting glucose</text><text x="120" y="465" fill="#ffffff" font-size="22">Endometrial cancer from unopposed estrogen</text><text x="120" y="500" fill="#ffffff" font-size="22">Depression screening</text><rect x="80" y="550" width="940" height="240" rx="20" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="120" y="600" fill="#ffd700" font-size="26" font-weight="bold">STI Conversations</text><text x="120" y="640" fill="#ffffff" font-size="22">Normalize routine testing</text><text x="120" y="675" fill="#ffffff" font-size="22">Expedited partner therapy where legal</text><text x="120" y="710" fill="#ffffff" font-size="22">Re-test in 3 months after treatment</text><text x="120" y="745" fill="#ffffff" font-size="22">Confidentiality — especially with teens</text><rect x="80" y="810" width="940" height="220" rx="20" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="120" y="860" fill="#ffd700" font-size="26" font-weight="bold">Believe Pain</text><text x="120" y="900" fill="#ffffff" font-size="22">Endometriosis is underdiagnosed by ~10 years</text><text x="120" y="935" fill="#ffffff" font-size="22">Severe period pain is NOT normal</text><text x="120" y="970" fill="#ffffff" font-size="22">Advocate for laparoscopy if symptoms persist</text><text x="120" y="1005" fill="#ffffff" font-size="22">Pain validated = trust built</text></svg>`,
+          caption: "Bringing it together: screen, treat, educate, advocate."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-maternal-lesson-11",
+    title: "Menopause",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Menopause Transition",
+        content: `**Menopause** is defined as **12 consecutive months without menstruation**, with an average age of **51 in the U.S.** It is preceded by **perimenopause** — a multi-year transition (often starting in the mid-40s) marked by **irregular cycles, hot flashes, sleep disruption, and mood changes** as ovarian function declines.
+
+**Three big symptom clusters** drive nursing care:
+1. **Vasomotor symptoms** — hot flashes and night sweats, the most common complaint.
+2. **Genitourinary syndrome of menopause (GSM)** — vaginal dryness, dyspareunia, recurrent UTIs.
+3. **Bone loss** — accelerated for 5–7 years post-menopause; osteoporosis risk rises sharply.
+
+Menopause isn't a disease, but symptoms can be debilitating and the long-term shift affects **cardiovascular, skeletal, and cognitive health**. Nursing care emphasizes **education, symptom relief, and prevention**, normalizing the experience while taking suffering seriously.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">The Menopause Timeline</text><line x1="100" y1="300" x2="1000" y2="300" stroke="#888" stroke-width="6"/><circle cx="250" cy="300" r="25" fill="#10b981"/><text x="250" y="240" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Reproductive</text><text x="250" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Regular cycles</text><circle cx="500" cy="300" r="25" fill="#f59e0b"/><text x="500" y="240" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Perimenopause</text><text x="500" y="370" text-anchor="middle" fill="#ffffff" font-size="20">~age 45-50</text><text x="500" y="400" text-anchor="middle" fill="#ffffff" font-size="20">Irregular cycles</text><circle cx="750" cy="300" r="30" fill="#ec4899"/><text x="750" y="240" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Menopause</text><text x="750" y="370" text-anchor="middle" fill="#ffffff" font-size="20">avg age 51</text><text x="750" y="400" text-anchor="middle" fill="#ffffff" font-size="20">12 mo amenorrhea</text><circle cx="950" cy="300" r="25" fill="#6366f1"/><text x="950" y="240" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Postmenopause</text><text x="950" y="370" text-anchor="middle" fill="#ffffff" font-size="20">Lifelong</text><rect x="80" y="500" width="940" height="500" rx="20" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="4"/><text x="550" y="560" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Three Symptom Clusters</text><text x="550" y="640" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">1. Vasomotor — hot flashes, night sweats</text><text x="550" y="720" text-anchor="middle" fill="#ec4899" font-size="26" font-weight="bold">2. GSM — vaginal dryness, dyspareunia, UTIs</text><text x="550" y="800" text-anchor="middle" fill="#0ea5e9" font-size="26" font-weight="bold">3. Skeletal — accelerated bone loss</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">Plus: mood changes, sleep disruption,</text><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="22">cognitive fog, weight redistribution</text></svg>`,
+          caption: "Menopause is a transition — not a single moment — with predictable symptom clusters."
+        }
+      },
+      {
+        type: "concept",
+        title: "Symptom Management",
+        content: `**Hot flashes (vasomotor symptoms)** — first-line **lifestyle**: cool environment, **layered clothing**, avoid triggers (alcohol, caffeine, spicy food). If severe and HRT acceptable, **systemic estrogen** (with progestin if uterus intact) is most effective. If HRT contraindicated (history of breast cancer, DVT, stroke):
+- **Paroxetine 7.5mg** — only non-hormonal FDA-approved option for vasomotor symptoms
+- **Gabapentin** — especially helpful for night sweats
+- **Clonidine** — patch or oral
+
+**Vaginal atrophy / GSM** — **vaginal estrogen** (cream, ring, or tablet) — **minimal systemic absorption**, making it acceptable even for many breast cancer survivors with **shared decision-making**. Non-hormonal: vaginal moisturizers, lubricants for intercourse.
+
+**Bone health** — **calcium 1200 mg + vitamin D 800–1000 IU daily**. **Weight-bearing exercise** (walking, resistance training). **Baseline DEXA scan at 65** (earlier with risk factors). If **T-score < -2.5** → osteoporosis → start **bisphosphonate** (alendronate). Teach: take on empty stomach with water, **stay upright 30 minutes** to prevent esophagitis.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Symptom-by-Symptom Treatment</text><rect x="60" y="130" width="980" height="280" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="100" y="180" fill="#ffd700" font-size="28" font-weight="bold">Hot Flashes</text><text x="100" y="220" fill="#ffffff" font-size="22">1st: lifestyle — cool room, layers, avoid triggers</text><text x="100" y="255" fill="#ffffff" font-size="22">HRT — most effective if no contraindications</text><text x="100" y="290" fill="#ffffff" font-size="22">Non-hormonal alternatives:</text><text x="140" y="325" fill="#10b981" font-size="22">• Paroxetine 7.5mg (only FDA-approved non-HRT)</text><text x="140" y="360" fill="#10b981" font-size="22">• Gabapentin — great for night sweats</text><text x="140" y="395" fill="#10b981" font-size="22">• Clonidine patch</text><rect x="60" y="430" width="980" height="240" rx="15" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="100" y="480" fill="#ffd700" font-size="28" font-weight="bold">Vaginal Atrophy (GSM)</text><text x="100" y="520" fill="#ffffff" font-size="22">Vaginal estrogen — cream / ring / tablet</text><text x="100" y="555" fill="#10b981" font-size="22">Minimal systemic absorption</text><text x="100" y="590" fill="#10b981" font-size="22">Often OK with breast cancer history (SDM)</text><text x="100" y="625" fill="#ffffff" font-size="22">Non-hormonal: moisturizers, lubricants</text><text x="100" y="660" fill="#ffffff" font-size="22">Treats dryness, dyspareunia, urinary urgency</text><rect x="60" y="690" width="980" height="370" rx="15" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3"/><text x="100" y="740" fill="#ffd700" font-size="28" font-weight="bold">Bone Health</text><text x="100" y="780" fill="#ffffff" font-size="22">Calcium 1200 mg + Vit D 800-1000 IU daily</text><text x="100" y="815" fill="#ffffff" font-size="22">Weight-bearing exercise — walking, resistance</text><text x="100" y="850" fill="#ffffff" font-size="22">DEXA baseline at 65 (earlier w/ risk factors)</text><text x="100" y="885" fill="#ef4444" font-size="22" font-weight="bold">T-score &lt; -2.5 = osteoporosis</text><text x="100" y="920" fill="#10b981" font-size="22">Bisphosphonate (alendronate)</text><text x="100" y="955" fill="#ffd700" font-size="22" font-weight="bold">Teaching:</text><text x="140" y="990" fill="#ffffff" font-size="22">• Empty stomach with full glass of water</text><text x="140" y="1025" fill="#ffffff" font-size="22">• Stay upright 30 min to prevent esophagitis</text></svg>`,
+          caption: "Three symptom domains, three treatment toolkits."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: HRT Decision-Making",
+        content: `Linda, 52, presents with **disabling hot flashes** — 15 per day, drenching night sweats waking her 4 times nightly. She's lost focus at work and her marriage is strained. She had her **last menstrual period 14 months ago**. Her history: no breast cancer, no DVT/stroke, no smoking. She asks: "**Is hormone therapy safe?**"
+
+**The WHI history** (Women's Health Initiative, 2002): the combined estrogen + progestin arm showed **increased breast cancer, stroke, and DVT** — but also **decreased colon cancer and fracture**. The **estrogen-only** arm (women without a uterus) showed **fewer risks**. Initial media coverage caused widespread HRT discontinuation.
+
+**Modern consensus**: **Short-term HRT for symptomatic women under 60 (or within 10 years of menopause) is reasonable** when symptoms significantly impair quality of life and contraindications are absent.
+
+**For Linda**: She fits the safer window. Discuss benefits (symptom relief, bone protection) vs. risks (small absolute increase in breast cancer with combination therapy after 5 years). Document **shared decision-making**. Plan to reassess annually and **taper when symptoms improve**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">HRT: Risk vs Benefit</text><rect x="60" y="140" width="460" height="380" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="4"/><text x="290" y="200" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Benefits</text><text x="290" y="260" text-anchor="middle" fill="#ffffff" font-size="22">Excellent hot flash relief</text><text x="290" y="305" text-anchor="middle" fill="#ffffff" font-size="22">Improves sleep, mood</text><text x="290" y="350" text-anchor="middle" fill="#ffffff" font-size="22">Treats vaginal atrophy</text><text x="290" y="395" text-anchor="middle" fill="#ffffff" font-size="22">Reduces fracture risk</text><text x="290" y="440" text-anchor="middle" fill="#ffffff" font-size="22">Reduces colon cancer</text><text x="290" y="490" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Quality of life</text><rect x="580" y="140" width="460" height="380" rx="20" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="810" y="200" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Risks</text><text x="810" y="260" text-anchor="middle" fill="#ffffff" font-size="22">Breast cancer (combo)</text><text x="810" y="305" text-anchor="middle" fill="#ffffff" font-size="22">DVT, PE</text><text x="810" y="350" text-anchor="middle" fill="#ffffff" font-size="22">Stroke</text><text x="810" y="395" text-anchor="middle" fill="#ffffff" font-size="22">Gallbladder disease</text><text x="810" y="440" text-anchor="middle" fill="#ffffff" font-size="22">Endometrial CA (E-only</text><text x="810" y="475" text-anchor="middle" fill="#ffffff" font-size="22">with uterus intact)</text><rect x="80" y="560" width="940" height="460" rx="20" fill="#ffd700" opacity="0.18" stroke="#ffd700" stroke-width="4"/><text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Modern HRT Sweet Spot</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="24">Age &lt; 60</text><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="24">OR within 10 yr of menopause</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="24">+ significant symptoms</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="24">+ no contraindications</text><text x="550" y="880" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">= Reasonable to use HRT</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="22">Reassess annually, taper when symptoms improve</text><text x="550" y="975" text-anchor="middle" fill="#ec4899" font-size="22">Shared decision-making is essential</text></svg>`,
+          caption: "HRT decisions are personalized — Linda fits the safer prescribing window."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Osteoporosis Teaching",
+        content: `Test bisphosphonate teaching.`,
+        question: "A 67-year-old postmenopausal woman with a DEXA T-score of -2.8 has been newly prescribed alendronate (Fosamax) weekly. Which patient statement indicates a need for further teaching?",
+        options: [
+          { text: "I will take this pill with a full glass of water first thing in the morning.", correct: false },
+          { text: "I will continue calcium 1200 mg and vitamin D daily.", correct: false },
+          { text: "I can lie back down for an hour after taking it since I take it so early.", correct: true },
+          { text: "I will tell my dentist I am on this medication before any dental procedures.", correct: false }
+        ],
+        explanation: "Bisphosphonates can cause severe esophagitis or esophageal ulceration if they reflux. Patients MUST remain upright (sitting or standing) for at least 30 minutes after taking the dose — lying down is contraindicated. The other statements are correct: take on empty stomach with full water, continue Ca/Vit D, and inform dental providers due to rare risk of osteonecrosis of the jaw.",
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Bisphosphonate Teaching</text><rect x="80" y="140" width="940" height="280" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="4"/><text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">DO</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="24">Take on EMPTY stomach, first thing AM</text><text x="550" y="305" text-anchor="middle" fill="#ffffff" font-size="24">Full glass of plain water (8 oz)</text><text x="550" y="350" text-anchor="middle" fill="#ffffff" font-size="24">Stay UPRIGHT 30+ minutes</text><text x="550" y="395" text-anchor="middle" fill="#ffffff" font-size="24">Continue calcium + vitamin D</text><rect x="80" y="450" width="940" height="280" rx="20" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">DON'T</text><text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="24">Lie down (esophagitis risk!)</text><text x="550" y="615" text-anchor="middle" fill="#ffffff" font-size="24">Take with food, coffee, juice</text><text x="550" y="660" text-anchor="middle" fill="#ffffff" font-size="24">Take with other meds for 30+ min</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="24">Skip dental disclosure (ONJ risk)</text><rect x="80" y="760" width="940" height="260" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Report Immediately</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="22">New heartburn, painful swallowing</text><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="22">Thigh or groin pain (atypical femur fx)</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="22">Jaw pain or non-healing tooth socket</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="22">Vision changes (rare uveitis)</text></svg>`,
+          caption: "Stay upright — the #1 bisphosphonate teaching point."
+        }
+      },
+      {
+        type: "application",
+        title: "Clinical Application",
+        content: `**Take menopause seriously.** Vasomotor symptoms can last **7–10 years** on average and significantly affect productivity, sleep, mood, and relationships. Dismissing this transition as "just menopause" fails patients.
+
+**Holistic assessment**: Ask about hot flashes, sleep, sexual function (often unaddressed), mood, cognitive concerns, and **cardiovascular risk** — which rises post-menopause. Check blood pressure, lipids, A1C; reinforce cancer screenings (mammogram, colonoscopy, cervical).
+
+**Cultural humility**: Menopause is experienced very differently across cultures. Some societies view it as a positive transition to elder status; others medicalize it heavily. **Ask what menopause means to the patient.**
+
+**Lifestyle layering** works powerfully alongside any medication: **regular exercise** improves mood, sleep, bone, and cardiovascular health; **Mediterranean-style diet** supports cognition and CV health; **mindfulness/CBT** reduces hot-flash distress.
+
+**Sexual health**: Don't skip this conversation. Vaginal estrogen safely transforms quality of life for many women. **Normalize asking** — "Are you having any vaginal dryness or discomfort with intimacy?"
+
+**Follow-up**: Annual review of HRT need, DEXA every 1–2 years if on therapy, ongoing mammograms.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Holistic Menopause Care</text><rect x="80" y="130" width="440" height="220" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Assess Broadly</text><text x="300" y="225" text-anchor="middle" fill="#ffffff" font-size="20">Hot flashes, sleep, mood</text><text x="300" y="260" text-anchor="middle" fill="#ffffff" font-size="20">Sexual function (ASK!)</text><text x="300" y="295" text-anchor="middle" fill="#ffffff" font-size="20">CV risk: BP, lipids, A1C</text><text x="300" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Cognition concerns</text><rect x="580" y="130" width="440" height="220" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Lifestyle Layer</text><text x="800" y="225" text-anchor="middle" fill="#ffffff" font-size="20">Regular exercise</text><text x="800" y="260" text-anchor="middle" fill="#ffffff" font-size="20">Mediterranean diet</text><text x="800" y="295" text-anchor="middle" fill="#ffffff" font-size="20">Sleep hygiene</text><text x="800" y="330" text-anchor="middle" fill="#ffffff" font-size="20">Mindfulness, CBT</text><rect x="80" y="380" width="440" height="220" rx="20" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="300" y="430" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Sexual Health</text><text x="300" y="475" text-anchor="middle" fill="#ffffff" font-size="20">Normalize the conversation</text><text x="300" y="510" text-anchor="middle" fill="#ffffff" font-size="20">Vaginal estrogen safe</text><text x="300" y="545" text-anchor="middle" fill="#ffffff" font-size="20">Lubricants, moisturizers</text><text x="300" y="580" text-anchor="middle" fill="#ffffff" font-size="20">Address dyspareunia</text><rect x="580" y="380" width="440" height="220" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="800" y="430" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Cultural Humility</text><text x="800" y="475" text-anchor="middle" fill="#ffffff" font-size="20">Menopause means</text><text x="800" y="510" text-anchor="middle" fill="#ffffff" font-size="20">different things across</text><text x="800" y="545" text-anchor="middle" fill="#ffffff" font-size="20">cultures. ASK.</text><text x="800" y="580" text-anchor="middle" fill="#ffffff" font-size="20">Honor patient meaning.</text><rect x="80" y="630" width="940" height="380" rx="20" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="4"/><text x="550" y="690" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Ongoing Surveillance</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="22">Annual review of HRT need &amp; tolerance</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="22">DEXA every 1-2 years if on therapy</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="22">Annual mammogram, cervical screening</text><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22">Colonoscopy per guidelines</text><text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="22">Cardiovascular risk assessment</text></svg>`,
+          caption: "Menopause care is whole-person — symptoms, prevention, and meaning."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-maternal-lesson-12",
+    title: "Capstone: Multi-Stage Maternal-Newborn Case",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Meet Sarah: The Full Journey",
+        content: `**Sarah, 32, G2P1**, presents to L&D at **39 weeks** with contractions every 3–4 minutes, lasting 60 seconds, in active labor. Her cervix is **5 cm / 90% / 0 station**.
+
+**Prenatal history**:
+- Blood type **O positive**, **antibody negative**
+- **GBS positive** at 36-week screen — needs **IV penicillin during labor**
+- **Gestational diabetes — diet-controlled**, **A1C 5.8%** (well managed)
+- Prior delivery: spontaneous vaginal at 39 weeks, healthy 7 lb 4 oz baby
+- No allergies, no medications other than prenatal vitamin
+
+**Today's vitals**: BP 122/74, HR 88, RR 16, T 98.6, FHR baseline 140s with moderate variability and accelerations.
+
+This case threads together **everything from this book**: prenatal management, intrapartum monitoring, postpartum recovery, and newborn assessment — with **GBS** and **GDM** as the two flags driving priorities. Let's walk it through stage by stage.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="42" font-weight="bold">Sarah's Story</text><rect x="100" y="140" width="900" height="200" rx="20" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="550" y="190" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Patient Snapshot</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="24">Sarah, 32, G2P1 at 39 weeks</text><text x="550" y="280" text-anchor="middle" fill="#ffffff" font-size="22">Active labor: 5cm / 90% / 0 station</text><text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="22">Ctx q3-4min x 60 sec</text><rect x="100" y="370" width="430" height="280" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="315" y="420" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Flag #1: GBS+</text><text x="315" y="470" text-anchor="middle" fill="#ffffff" font-size="22">IV penicillin q4h</text><text x="315" y="510" text-anchor="middle" fill="#ffffff" font-size="22">during labor</text><text x="315" y="560" text-anchor="middle" fill="#ffffff" font-size="22">Watch newborn for</text><text x="315" y="600" text-anchor="middle" fill="#ffffff" font-size="22">early-onset sepsis</text><rect x="570" y="370" width="430" height="280" rx="20" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="785" y="420" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">Flag #2: GDM</text><text x="785" y="470" text-anchor="middle" fill="#ffffff" font-size="22">Macrosomia risk</text><text x="785" y="510" text-anchor="middle" fill="#ffffff" font-size="22">Shoulder dystocia</text><text x="785" y="560" text-anchor="middle" fill="#ffffff" font-size="22">Newborn hypoglycemia</text><text x="785" y="600" text-anchor="middle" fill="#ffffff" font-size="22">at 30 min &amp; 2 hr</text><rect x="100" y="680" width="900" height="320" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="740" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Four Stages of Care</text><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="22">1. Prenatal review — labs, risks, education</text><text x="550" y="845" text-anchor="middle" fill="#ffffff" font-size="22">2. Intrapartum — monitoring, ABX, delivery</text><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="22">3. Postpartum — fundus, lochia, glucose, bonding</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="22">4. Newborn — APGAR, glucose, prophylaxis</text><text x="550" y="975" text-anchor="middle" fill="#ec4899" font-size="22">Then full SBAR to mother-baby unit</text></svg>`,
+          caption: "Sarah's case ties together every chapter of maternal-newborn nursing."
+        }
+      },
+      {
+        type: "concept",
+        title: "Stage-by-Stage Priorities",
+        content: `**PRENATAL (chart review on admission)**:
+- Confirm blood type **O+**, antibody negative → no Rhogam needed
+- **GBS positive** → start **IV penicillin G** ASAP and continue **q4h** until delivery
+- **GDM diet-controlled, A1C 5.8%** → glucose check on admission; anticipate macrosomia
+
+**INTRAPARTUM**:
+- **Continuous EFM** (GBS+ and GDM = high-risk)
+- Place **epidural** as requested; bolus IV fluids first
+- **IV penicillin q4h** — first dose must be ≥4 hours before delivery for full protection
+- **Anticipate shoulder dystocia** (GDM macrosomia) — McRoberts position, suprapubic pressure ready
+
+**POSTPARTUM (first 24h)**:
+- **Fundal massage** to firm, midline, at umbilicus
+- **Lochia** progression: **rubra (red, days 1–3) → serosa (pink, 4–10) → alba (white, 10–14)**
+- **I&O**, bladder voiding within 4–6 hours
+- **Glucose check** — GDM often resolves immediately postpartum
+- Rh negative would need **Rhogam** — Sarah is **O+, skip**
+- Initiate **breastfeeding** within first hour — boosts oxytocin, reduces hemorrhage
+
+**NEWBORN**:
+- **APGAR at 1 and 5 minutes**
+- **Blood glucose** — GDM mom → newborn hypoglycemia risk → **first feeding within 1 hour**, glucose at **30 min and 2 hr**
+- **Vitamin K IM**, **erythromycin eye ointment**, **Hep B vaccine**
+- Watch for **jaundice** (especially with bruising or large size)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Stage-by-Stage Priorities</text><rect x="60" y="100" width="980" height="220" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="100" y="150" fill="#ffd700" font-size="26" font-weight="bold">PRENATAL Review</text><text x="100" y="190" fill="#ffffff" font-size="22">O+ antibody negative — no Rhogam</text><text x="100" y="225" fill="#ffffff" font-size="22">GBS+ → penicillin q4h x labor</text><text x="100" y="260" fill="#ffffff" font-size="22">GDM A1C 5.8 — good control</text><text x="100" y="295" fill="#10b981" font-size="22">Admission glucose check</text><rect x="60" y="340" width="980" height="220" rx="15" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="100" y="390" fill="#ffd700" font-size="26" font-weight="bold">INTRAPARTUM</text><text x="100" y="430" fill="#ffffff" font-size="22">Continuous EFM — high-risk</text><text x="100" y="465" fill="#ffffff" font-size="22">IV bolus then epidural</text><text x="100" y="500" fill="#ffffff" font-size="22">Pen G IV q4h — ≥4 hr before birth</text><text x="100" y="535" fill="#ef4444" font-size="22" font-weight="bold">Ready for shoulder dystocia</text><rect x="60" y="580" width="980" height="220" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="100" y="630" fill="#ffd700" font-size="26" font-weight="bold">POSTPARTUM</text><text x="100" y="670" fill="#ffffff" font-size="22">Fundus firm, midline, at umbilicus</text><text x="100" y="705" fill="#ffffff" font-size="22">Lochia: rubra → serosa → alba</text><text x="100" y="740" fill="#ffffff" font-size="22">Glucose recheck — GDM often resolves</text><text x="100" y="775" fill="#ffffff" font-size="22">Breastfeed within 1st hour</text><rect x="60" y="820" width="980" height="220" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="100" y="870" fill="#ffd700" font-size="26" font-weight="bold">NEWBORN</text><text x="100" y="910" fill="#ffffff" font-size="22">APGAR 1 &amp; 5 min</text><text x="100" y="945" fill="#ef4444" font-size="22" font-weight="bold">Glucose at 30 min &amp; 2 hr (GDM)</text><text x="100" y="980" fill="#ffffff" font-size="22">Vit K IM, erythromycin, Hep B</text><text x="100" y="1015" fill="#ffffff" font-size="22">Monitor for jaundice</text></svg>`,
+          caption: "Four stages, four priority lists — anchored by the GBS and GDM flags."
+        }
+      },
+      {
+        type: "example",
+        title: "Delivery and the First Hour",
+        content: `Five hours after admission, Sarah delivers a **vigorous 8 lb 6 oz baby boy** spontaneously over an intact perineum (no laceration). **APGAR 8 at 1 minute, 9 at 5 minutes** (minus one for color both times). Placenta delivered intact at 5 minutes after birth. **EBL 350 mL**.
+
+**Immediate postpartum (first hour — the "golden hour")**:
+
+**MOM**:
+- Fundus **firm at umbilicus, midline** → ✓
+- Lochia **moderate rubra**, no clots → ✓
+- BP 118/72, HR 78 → stable
+- Skin-to-skin with baby, latching well at left breast
+- Glucose: **94 mg/dL** → GDM resolved (recheck postpartum day 1)
+- **No Rhogam** needed (mom O+)
+
+**BABY**:
+- Vitals: HR 148, RR 42, T 36.9, color pink with acrocyanosis
+- **Blood glucose at 30 minutes: 52 mg/dL** → acceptable (>45 mg/dL with feeding)
+- **Breastfeeding** at 25 minutes of life ✓
+- **Vitamin K 1 mg IM** to left vastus lateralis ✓
+- **Erythromycin 0.5% ophthalmic** to both eyes ✓
+- **Hep B vaccine** with parental consent ✓
+- Glucose recheck planned at 2 hours
+
+This is the textbook good outcome. The work isn't done — vigilance continues.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">The Golden Hour</text><rect x="60" y="140" width="470" height="440" rx="20" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="4"/><text x="295" y="200" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">MOM — Sarah</text><text x="295" y="260" text-anchor="middle" fill="#ffffff" font-size="22">Fundus: firm, midline, U</text><text x="295" y="300" text-anchor="middle" fill="#ffffff" font-size="22">Lochia: moderate rubra</text><text x="295" y="340" text-anchor="middle" fill="#ffffff" font-size="22">BP 118/72, HR 78</text><text x="295" y="380" text-anchor="middle" fill="#ffffff" font-size="22">EBL 350 mL — normal</text><text x="295" y="420" text-anchor="middle" fill="#ffffff" font-size="22">Glucose 94 — resolved</text><text x="295" y="465" text-anchor="middle" fill="#10b981" font-size="22">Skin-to-skin, latching</text><text x="295" y="510" text-anchor="middle" fill="#ffffff" font-size="22">No Rhogam (O+)</text><text x="295" y="555" text-anchor="middle" fill="#0ea5e9" font-size="22">Encourage voiding 4-6 hr</text><rect x="570" y="140" width="470" height="440" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="805" y="200" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">BABY</text><text x="805" y="260" text-anchor="middle" fill="#ffffff" font-size="22">APGAR 8 → 9</text><text x="805" y="300" text-anchor="middle" fill="#ffffff" font-size="22">8 lb 6 oz vigorous</text><text x="805" y="340" text-anchor="middle" fill="#ffffff" font-size="22">HR 148 RR 42 T 36.9</text><text x="805" y="380" text-anchor="middle" fill="#ffffff" font-size="22">Pink + acrocyanosis</text><text x="805" y="420" text-anchor="middle" fill="#10b981" font-size="22">Glucose 52 at 30 min ✓</text><text x="805" y="465" text-anchor="middle" fill="#10b981" font-size="22">Breastfeeding x 25 min</text><text x="805" y="510" text-anchor="middle" fill="#ffffff" font-size="22">Vit K IM, erythromycin</text><text x="805" y="555" text-anchor="middle" fill="#ffffff" font-size="22">Hep B vaccine</text><rect x="80" y="620" width="940" height="400" rx="20" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="4"/><text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Why the Golden Hour Matters</text><text x="550" y="740" text-anchor="middle" fill="#ffffff" font-size="24">Skin-to-skin → thermoregulation</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="24">Early breastfeeding → glucose stability</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="24">Oxytocin release → uterine contraction</text><text x="550" y="860" text-anchor="middle" fill="#ffffff" font-size="24">Bonding window</text><text x="550" y="920" text-anchor="middle" fill="#ec4899" font-size="24" font-weight="bold">Vigilance continues:</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="22">2hr glucose, fundus q15min x 1hr, lochia, jaundice</text></svg>`,
+          caption: "Both mom and baby pass the golden hour — but monitoring continues."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quiz: Priority Action",
+        content: `Test prioritization across competing post-delivery tasks.`,
+        question: "Two hours after delivery, the nurse is caring for Sarah and her newborn. Which finding requires the MOST immediate intervention?",
+        options: [
+          { text: "Newborn blood glucose 38 mg/dL with mild jitteriness", correct: true },
+          { text: "Sarah's lochia is moderate rubra without clots", correct: false },
+          { text: "Sarah's blood pressure is 124/76, pulse 80", correct: false },
+          { text: "Newborn axillary temperature is 36.7°C (98.1°F)", correct: false }
+        ],
+        explanation: "Newborn hypoglycemia (<40 mg/dL with symptoms like jitteriness) in an infant of a diabetic mother is a true emergency requiring immediate intervention — feed immediately and recheck glucose, with possible IV dextrose if it doesn't correct. Untreated hypoglycemia causes neurologic injury. The other findings are all normal: lochia rubra is expected days 1-3, BP/HR are stable, and 36.7°C is within the normal newborn range (36.5-37.5°C).",
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">Newborn Hypoglycemia</text><rect x="80" y="140" width="940" height="280" rx="20" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="4"/><text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Why It's Urgent</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="24">Glucose &lt; 40 mg/dL + symptoms = emergency</text><text x="550" y="310" text-anchor="middle" fill="#ffffff" font-size="24">Untreated → neurologic injury</text><text x="550" y="360" text-anchor="middle" fill="#ffffff" font-size="24">IDM (infant of diabetic mom) at high risk</text><text x="550" y="400" text-anchor="middle" fill="#ffffff" font-size="22">— from in-utero hyperinsulinemia</text><rect x="80" y="450" width="940" height="280" rx="20" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="4"/><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Signs to Catch</text><text x="550" y="570" text-anchor="middle" fill="#ffffff" font-size="22">Jitteriness, tremors</text><text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="22">Poor feeding, lethargy</text><text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="22">Temperature instability</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="22">Apnea, cyanosis, seizures (late)</text><rect x="80" y="760" width="940" height="280" rx="20" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="4"/><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Action</text><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="24">Feed immediately (breast or formula)</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="24">Recheck glucose in 30 min</text><text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="24">No improvement → IV dextrose</text><text x="550" y="1020" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Don't delay — feed first, document next</text></svg>`,
+          caption: "Infants of diabetic moms are the textbook hypoglycemia risk."
+        }
+      },
+      {
+        type: "application",
+        title: "SBAR Handoff to Mother-Baby Unit",
+        content: `Sarah and baby are now ready to transfer to the **mother-baby unit**. The nurse gives this **SBAR** to the receiving nurse:
+
+**S — Situation**:
+"This is Sarah, 32, G2P2 now, day 0 postpartum from a spontaneous vaginal delivery 2 hours ago. Baby boy, 8 lb 6 oz, APGAR 8/9. Both stable."
+
+**B — Background**:
+"Prenatal: O+, antibody negative, GBS positive, GDM diet-controlled with A1C 5.8%. She received **two doses of IV penicillin** before delivery — first dose was 5.5 hours before birth, so baby is **low-risk for early-onset sepsis**. GDM glucose normalized to 94. No Rhogam needed."
+
+**A — Assessment**:
+"Mom: fundus firm midline at umbilicus, lochia moderate rubra without clots, EBL 350, vitals stable, ambulating with assistance, voided 250 mL, breastfeeding well. Baby: vitals stable, glucose 52 at 30 min and 58 at 2 hours, has had two good feeds, voided once, no stool yet, vitamin K, erythromycin, and Hep B given."
+
+**R — Recommendation**:
+"Continue fundal and lochia checks per protocol, repeat newborn glucose before next feed times two, watch for jaundice given size, monitor mom's glucose tomorrow morning fasting, support breastfeeding, plan postpartum education on warning signs before discharge. Pediatrics and lactation are aware."
+
+**You did it.** That's a complete maternal-newborn case — and the foundation of the rest of your nursing practice.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="44" font-weight="bold">SBAR Handoff</text><rect x="60" y="130" width="980" height="200" rx="15" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="120" y="180" fill="#ffd700" font-size="32" font-weight="bold">S — Situation</text><text x="120" y="225" fill="#ffffff" font-size="22">Sarah, 32, G2P2, 2 hr post SVD</text><text x="120" y="260" fill="#ffffff" font-size="22">Baby boy 8 lb 6 oz, APGAR 8/9</text><text x="120" y="295" fill="#10b981" font-size="22">Both stable</text><rect x="60" y="350" width="980" height="200" rx="15" fill="#ec4899" opacity="0.25" stroke="#ec4899" stroke-width="3"/><text x="120" y="400" fill="#ffd700" font-size="32" font-weight="bold">B — Background</text><text x="120" y="445" fill="#ffffff" font-size="22">O+, GBS+, GDM A1C 5.8</text><text x="120" y="480" fill="#ffffff" font-size="22">2 doses pen G — 1st 5.5 hr pre-delivery</text><text x="120" y="515" fill="#10b981" font-size="22">Low EOS risk; no Rhogam needed</text><rect x="60" y="570" width="980" height="240" rx="15" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="120" y="620" fill="#ffd700" font-size="32" font-weight="bold">A — Assessment</text><text x="120" y="660" fill="#ffffff" font-size="22">Mom: fundus firm @ U, lochia mod rubra</text><text x="120" y="695" fill="#ffffff" font-size="22">EBL 350, voided 250, breastfeeding</text><text x="120" y="730" fill="#ffffff" font-size="22">Baby: glucose 52→58, vit K/erm/HBV given</text><text x="120" y="765" fill="#ffffff" font-size="22">2 good feeds, voided x1</text><rect x="60" y="830" width="980" height="210" rx="15" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="120" y="880" fill="#ffd700" font-size="32" font-weight="bold">R — Recommendation</text><text x="120" y="920" fill="#ffffff" font-size="22">Continue fundus / lochia per protocol</text><text x="120" y="955" fill="#ffffff" font-size="22">Pre-feed glucose checks x 2; watch jaundice</text><text x="120" y="990" fill="#ffffff" font-size="22">AM fasting glucose for mom</text><text x="120" y="1025" fill="#0ea5e9" font-size="22">Peds &amp; lactation aware</text></svg>`,
+          caption: "Clean SBAR — Situation, Background, Assessment, Recommendation."
         }
       }
     ]
