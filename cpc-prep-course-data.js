@@ -4040,8 +4040,1193 @@ Because the **operating surgeon** interpreted the images (not a radiologist), ap
             title: 'ICD-10-CM Coding Conventions and Guidelines',
             author: 'Synthesis Learning',
             description: 'The Official Guidelines for Coding and Reporting, alphabetic vs. tabular index, code-first/use-additional, laterality, combination codes.',
-            lessons: 1, duration: 5, progress: 0, category: 'cpc-prep',
-            lessonList: comingSoonLessons('ICD-10-CM conventions, the Official Guidelines for Coding and Reporting, and the alphabetic/tabular index workflow'),
+            lessons: 3, duration: 45, progress: 0, category: 'cpc-prep',
+            lessonList: [
+{
+    id: "cpc-icd10cm-lesson-1",
+    title: "The ICD-10-CM Code Book Layout: Alphabetic Index, Tabular List, Neoplasm Table, Drugs Table",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Four Parts, One Code — Never Skip a Step",
+        content: `Open any ICD-10-CM code book and you'll find **four major parts**, not one. Coders who try to short-cut the process by jumping straight to a code they remember get **denials, audits, and rework**. The book is designed as a two-step lookup, and the rules require it.
+
+The four parts are: the **Alphabetic Index** (where every lookup begins), the **Tabular List** (where every code is verified), the **Table of Neoplasms** (a specialized matrix for cancer diagnoses), and the **Table of Drugs and Chemicals** (a specialized matrix for poisonings, adverse effects, and underdosing).
+
+The cardinal rule, written into the **Official Guidelines for Coding and Reporting (OGCR) Section I.B.1**, is that you must **never code from the Alphabetic Index alone**. The Index points you to a candidate code; the **Tabular List confirms** it by exposing includes notes, excludes notes, 7th-character requirements, and laterality demands the Index hides.
+
+Skipping the Tabular is the **single most common rookie error** — and the easiest one for an auditor to spot.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">ICD-10-CM Code Book: The Four Parts</text>
+  <text x="550" y="100" text-anchor="middle" fill="#888" font-size="20">Every code requires at least two of these. Index alone = never.</text>
+
+  <rect x="60" y="140" width="490" height="200" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <text x="305" y="180" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">1. Alphabetic Index</text>
+  <text x="305" y="215" text-anchor="middle" fill="#ffffff" font-size="16">Look up the MAIN TERM</text>
+  <text x="305" y="245" text-anchor="middle" fill="#ffffff" font-size="14">(condition, not anatomy)</text>
+  <text x="305" y="280" text-anchor="middle" fill="#ffd700" font-size="14">"Diabetes" not "pancreas"</text>
+  <text x="305" y="315" text-anchor="middle" fill="#888" font-size="14">Points to a candidate code</text>
+
+  <rect x="560" y="140" width="490" height="200" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="805" y="180" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">2. Tabular List</text>
+  <text x="805" y="215" text-anchor="middle" fill="#ffffff" font-size="16">VERIFY the code in numeric order</text>
+  <text x="805" y="245" text-anchor="middle" fill="#ffffff" font-size="14">Read includes / excludes / 7th char</text>
+  <text x="805" y="280" text-anchor="middle" fill="#ffd700" font-size="14">Chapters 1-22 (A00-Z99)</text>
+  <text x="805" y="315" text-anchor="middle" fill="#888" font-size="14">Final code is assigned here</text>
+
+  <rect x="60" y="360" width="490" height="200" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <text x="305" y="400" text-anchor="middle" fill="#ec4899" font-size="24" font-weight="bold">3. Neoplasm Table</text>
+  <text x="305" y="435" text-anchor="middle" fill="#ffffff" font-size="16">Matrix for cancer by SITE</text>
+  <text x="305" y="465" text-anchor="middle" fill="#ffffff" font-size="14">6 columns: Primary, Secondary,</text>
+  <text x="305" y="490" text-anchor="middle" fill="#ffffff" font-size="14">Ca in situ, Benign, Uncertain, Unsp</text>
+  <text x="305" y="525" text-anchor="middle" fill="#ffd700" font-size="14">Still must verify in Tabular!</text>
+
+  <rect x="560" y="360" width="490" height="200" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <text x="805" y="400" text-anchor="middle" fill="#f59e0b" font-size="24" font-weight="bold">4. Drugs &amp; Chemicals Table</text>
+  <text x="805" y="435" text-anchor="middle" fill="#ffffff" font-size="16">Matrix by SUBSTANCE</text>
+  <text x="805" y="465" text-anchor="middle" fill="#ffffff" font-size="14">5 columns: Poisoning-Accidental,</text>
+  <text x="805" y="490" text-anchor="middle" fill="#ffffff" font-size="14">Intent SH, Assault, Undet, Adverse, Underdose</text>
+  <text x="805" y="525" text-anchor="middle" fill="#ffd700" font-size="14">Still must verify in Tabular!</text>
+
+  <text x="550" y="620" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">The Two-Step Lookup Workflow</text>
+  <rect x="120" y="650" width="200" height="80" fill="#6366f1" rx="8"/>
+  <text x="220" y="690" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Index</text>
+  <text x="220" y="715" text-anchor="middle" fill="#ffffff" font-size="13">Find main term</text>
+  <text x="360" y="700" text-anchor="middle" fill="#ffd700" font-size="32">→</text>
+  <rect x="400" y="650" width="200" height="80" fill="#0ea5e9" rx="8"/>
+  <text x="500" y="690" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Subterms</text>
+  <text x="500" y="715" text-anchor="middle" fill="#ffffff" font-size="13">Narrow specificity</text>
+  <text x="640" y="700" text-anchor="middle" fill="#ffd700" font-size="32">→</text>
+  <rect x="680" y="650" width="280" height="80" fill="#10b981" rx="8"/>
+  <text x="820" y="690" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Tabular Verification</text>
+  <text x="820" y="715" text-anchor="middle" fill="#ffffff" font-size="13">Read every note, assign final code</text>
+
+  <rect x="80" y="780" width="940" height="240" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+  <text x="550" y="820" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">What Coders Miss When They Skip the Tabular</text>
+  <text x="550" y="860" text-anchor="middle" fill="#ffffff" font-size="16">• Excludes1 notes that forbid pairing two codes (instant denial)</text>
+  <text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="16">• Mandatory 7th character (A, D, S for injuries — Index doesn't show it)</text>
+  <text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="16">• Placeholder X required to reach the 7th position</text>
+  <text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="16">• Laterality digits (right/left/bilateral/unspecified)</text>
+  <text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="16">• Code First / Use Additional sequencing instructions</text>
+  <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Index alone = guaranteed audit finding</text>
+</svg>`,
+          caption: "The Index points; the Tabular verifies. Specialized tables exist for cancer and drugs."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Neoplasm Table and the Drugs Table — Why Cancer and Poisoning Get Their Own Matrix",
+        content: `Two diagnostic areas — **neoplasms** and **drug events** — are coded so often, and with so many possible combinations, that ICD-10-CM gives each its own dedicated **lookup matrix**. Both sit between the Alphabetic Index and the Tabular List in your code book.
+
+The **Table of Neoplasms** is organized **alphabetically by anatomic site** (one row per site) and has **six columns**: **Malignant Primary**, **Malignant Secondary**, **Ca in situ**, **Benign**, **Uncertain behavior**, and **Unspecified behavior**. The pathology report tells you which column to use — never the clinician's verbal impression. "Cancer of the lung, metastatic to bone" means **C34.9X** (primary lung) **plus** **C79.51** (secondary bone) — two codes from two different columns.
+
+The **Table of Drugs and Chemicals** is organized **alphabetically by substance** with **six columns**: **Poisoning–Accidental**, **Poisoning–Intentional Self-Harm**, **Poisoning–Assault**, **Poisoning–Undetermined**, **Adverse Effect**, and **Underdosing**. The distinction is critical: a **poisoning** is the wrong drug or wrong dose; an **adverse effect** is the **correct drug, correctly taken, that produced a reaction**; **underdosing** is taking **less than prescribed** (often a non-compliance code).
+
+Both tables still require you to **verify the chosen code in the Tabular List**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Specialized Lookup Tables: Neoplasm &amp; Drugs</text>
+
+  <text x="550" y="105" text-anchor="middle" fill="#ec4899" font-size="24" font-weight="bold">Table of Neoplasms — Cancer Behavior Matrix</text>
+  <rect x="60" y="125" width="1000" height="35" fill="#ec4899" opacity="0.4"/>
+  <text x="150" y="148" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Site</text>
+  <text x="285" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Malig Primary</text>
+  <text x="420" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Malig Secondary</text>
+  <text x="555" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Ca in situ</text>
+  <text x="685" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Benign</text>
+  <text x="820" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Uncertain</text>
+  <text x="955" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Unspecified</text>
+
+  <rect x="60" y="160" width="1000" height="32" fill="#ec4899" opacity="0.1"/>
+  <text x="150" y="181" text-anchor="middle" fill="#ffffff" font-size="13">Breast</text>
+  <text x="285" y="181" text-anchor="middle" fill="#10b981" font-size="13">C50.91-</text>
+  <text x="420" y="181" text-anchor="middle" fill="#ffffff" font-size="13">C79.81</text>
+  <text x="555" y="181" text-anchor="middle" fill="#ffffff" font-size="13">D05.9-</text>
+  <text x="685" y="181" text-anchor="middle" fill="#ffffff" font-size="13">D24.9</text>
+  <text x="820" y="181" text-anchor="middle" fill="#ffffff" font-size="13">D48.6-</text>
+  <text x="955" y="181" text-anchor="middle" fill="#ffffff" font-size="13">D49.3</text>
+
+  <rect x="60" y="194" width="1000" height="32" fill="#ec4899" opacity="0.05"/>
+  <text x="150" y="215" text-anchor="middle" fill="#ffffff" font-size="13">Lung</text>
+  <text x="285" y="215" text-anchor="middle" fill="#ffffff" font-size="13">C34.9-</text>
+  <text x="420" y="215" text-anchor="middle" fill="#10b981" font-size="13">C78.0-</text>
+  <text x="555" y="215" text-anchor="middle" fill="#ffffff" font-size="13">D02.2-</text>
+  <text x="685" y="215" text-anchor="middle" fill="#ffffff" font-size="13">D14.3-</text>
+  <text x="820" y="215" text-anchor="middle" fill="#ffffff" font-size="13">D38.1</text>
+  <text x="955" y="215" text-anchor="middle" fill="#ffffff" font-size="13">D49.1</text>
+
+  <rect x="60" y="228" width="1000" height="32" fill="#ec4899" opacity="0.1"/>
+  <text x="150" y="249" text-anchor="middle" fill="#ffffff" font-size="13">Skin, back</text>
+  <text x="285" y="249" text-anchor="middle" fill="#ffffff" font-size="13">C44.59-</text>
+  <text x="420" y="249" text-anchor="middle" fill="#ffffff" font-size="13">C79.2-</text>
+  <text x="555" y="249" text-anchor="middle" fill="#ffffff" font-size="13">D04.5</text>
+  <text x="685" y="249" text-anchor="middle" fill="#ffffff" font-size="13">D23.5</text>
+  <text x="820" y="249" text-anchor="middle" fill="#ffffff" font-size="13">D48.5</text>
+  <text x="955" y="249" text-anchor="middle" fill="#ffffff" font-size="13">D49.2</text>
+
+  <text x="550" y="295" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Pathology dictates the column — never the clinician's verbal impression.</text>
+
+  <text x="550" y="350" text-anchor="middle" fill="#f59e0b" font-size="24" font-weight="bold">Table of Drugs &amp; Chemicals — Intent Matrix</text>
+  <rect x="60" y="370" width="1000" height="35" fill="#f59e0b" opacity="0.4"/>
+  <text x="135" y="393" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">Substance</text>
+  <text x="270" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Poison</text>
+  <text x="270" y="400" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Accidental</text>
+  <text x="400" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Poison</text>
+  <text x="400" y="400" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Self-Harm</text>
+  <text x="530" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Poison</text>
+  <text x="530" y="400" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Assault</text>
+  <text x="660" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Poison</text>
+  <text x="660" y="400" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Undet</text>
+  <text x="790" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Adverse</text>
+  <text x="790" y="400" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Effect</text>
+  <text x="920" y="385" text-anchor="middle" fill="#1a1a2e" font-size="12" font-weight="bold">Underdosing</text>
+
+  <rect x="60" y="405" width="1000" height="32" fill="#f59e0b" opacity="0.1"/>
+  <text x="135" y="426" text-anchor="middle" fill="#ffffff" font-size="13">Acetaminophen</text>
+  <text x="270" y="426" text-anchor="middle" fill="#ffffff" font-size="13">T39.1X1</text>
+  <text x="400" y="426" text-anchor="middle" fill="#ffffff" font-size="13">T39.1X2</text>
+  <text x="530" y="426" text-anchor="middle" fill="#ffffff" font-size="13">T39.1X3</text>
+  <text x="660" y="426" text-anchor="middle" fill="#ffffff" font-size="13">T39.1X4</text>
+  <text x="790" y="426" text-anchor="middle" fill="#10b981" font-size="13">T39.1X5</text>
+  <text x="920" y="426" text-anchor="middle" fill="#ffffff" font-size="13">T39.1X6</text>
+
+  <rect x="60" y="439" width="1000" height="32" fill="#f59e0b" opacity="0.05"/>
+  <text x="135" y="460" text-anchor="middle" fill="#ffffff" font-size="13">Insulin</text>
+  <text x="270" y="460" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X1</text>
+  <text x="400" y="460" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X2</text>
+  <text x="530" y="460" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X3</text>
+  <text x="660" y="460" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X4</text>
+  <text x="790" y="460" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X5</text>
+  <text x="920" y="460" text-anchor="middle" fill="#10b981" font-size="13">T38.3X6</text>
+
+  <rect x="60" y="473" width="1000" height="32" fill="#f59e0b" opacity="0.1"/>
+  <text x="135" y="494" text-anchor="middle" fill="#ffffff" font-size="13">Warfarin</text>
+  <text x="270" y="494" text-anchor="middle" fill="#ffffff" font-size="13">T45.511</text>
+  <text x="400" y="494" text-anchor="middle" fill="#ffffff" font-size="13">T45.512</text>
+  <text x="530" y="494" text-anchor="middle" fill="#ffffff" font-size="13">T45.513</text>
+  <text x="660" y="494" text-anchor="middle" fill="#ffffff" font-size="13">T45.514</text>
+  <text x="790" y="494" text-anchor="middle" fill="#10b981" font-size="13">T45.515</text>
+  <text x="920" y="494" text-anchor="middle" fill="#ffffff" font-size="13">T45.516</text>
+
+  <text x="550" y="545" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Right drug, right dose, bad reaction = Adverse Effect column.</text>
+
+  <rect x="60" y="580" width="1000" height="420" fill="#0ea5e9" opacity="0.08" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="615" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Distinguishing the Three Drug-Event Categories</text>
+
+  <rect x="100" y="640" width="280" height="340" fill="#ef4444" opacity="0.15" rx="8"/>
+  <text x="240" y="675" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">POISONING</text>
+  <text x="240" y="710" text-anchor="middle" fill="#ffffff" font-size="14">Wrong drug, OR</text>
+  <text x="240" y="735" text-anchor="middle" fill="#ffffff" font-size="14">Wrong dose, OR</text>
+  <text x="240" y="760" text-anchor="middle" fill="#ffffff" font-size="14">Drug + alcohol</text>
+  <text x="240" y="800" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Pick intent column</text>
+  <text x="240" y="825" text-anchor="middle" fill="#ffffff" font-size="13">Accidental / SH /</text>
+  <text x="240" y="845" text-anchor="middle" fill="#ffffff" font-size="13">Assault / Undet</text>
+  <text x="240" y="890" text-anchor="middle" fill="#888" font-size="12">Sequence: T-code FIRST</text>
+  <text x="240" y="915" text-anchor="middle" fill="#888" font-size="12">Then code the effect</text>
+  <text x="240" y="950" text-anchor="middle" fill="#ffffff" font-size="13">Ex: T39.1X1A +</text>
+  <text x="240" y="970" text-anchor="middle" fill="#ffffff" font-size="13">K72.00 hepatic failure</text>
+
+  <rect x="410" y="640" width="280" height="340" fill="#10b981" opacity="0.15" rx="8"/>
+  <text x="550" y="675" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">ADVERSE EFFECT</text>
+  <text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="14">Correct drug,</text>
+  <text x="550" y="735" text-anchor="middle" fill="#ffffff" font-size="14">correct dose,</text>
+  <text x="550" y="760" text-anchor="middle" fill="#ffffff" font-size="14">unwanted reaction</text>
+  <text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Adverse Effect column</text>
+  <text x="550" y="825" text-anchor="middle" fill="#ffffff" font-size="13">(T_ _ _ _X5)</text>
+  <text x="550" y="890" text-anchor="middle" fill="#888" font-size="12">Sequence: EFFECT FIRST</text>
+  <text x="550" y="915" text-anchor="middle" fill="#888" font-size="12">Then the T-code</text>
+  <text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="13">Ex: R50.9 fever +</text>
+  <text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="13">T36.0X5A penicillin</text>
+
+  <rect x="720" y="640" width="280" height="340" fill="#8b5cf6" opacity="0.15" rx="8"/>
+  <text x="860" y="675" text-anchor="middle" fill="#8b5cf6" font-size="20" font-weight="bold">UNDERDOSING</text>
+  <text x="860" y="710" text-anchor="middle" fill="#ffffff" font-size="14">Less than prescribed —</text>
+  <text x="860" y="735" text-anchor="middle" fill="#ffffff" font-size="14">non-compliance,</text>
+  <text x="860" y="760" text-anchor="middle" fill="#ffffff" font-size="14">cost, or error</text>
+  <text x="860" y="800" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Underdosing column</text>
+  <text x="860" y="825" text-anchor="middle" fill="#ffffff" font-size="13">(T_ _ _ _X6)</text>
+  <text x="860" y="890" text-anchor="middle" fill="#888" font-size="12">Never sequenced first</text>
+  <text x="860" y="915" text-anchor="middle" fill="#888" font-size="12">+ reason (Z91.12_)</text>
+  <text x="860" y="950" text-anchor="middle" fill="#ffffff" font-size="13">Ex: E11.65 +</text>
+  <text x="860" y="970" text-anchor="middle" fill="#ffffff" font-size="13">T38.3X6A + Z91.120</text>
+</svg>`,
+          caption: "Neoplasm Table chooses behavior; Drugs Table chooses intent. Both still require Tabular verification."
+        }
+      },
+      {
+        type: "example",
+        title: "Walk-Through: Coding 'Acute Appendicitis with Rupture' the Right Way",
+        content: `A physician documents: "**Acute appendicitis with rupture and localized peritonitis**." Watch how a trained coder uses the book.
+
+**Step 1 — Alphabetic Index.** Open the Index and look up the **main term**, which is the condition: **Appendicitis**. Under Appendicitis you'll see indented **subterms**: *acute, chronic, gangrenous, with perforation,* etc. Drill down: *Appendicitis, acute, with, perforation, with localized peritonitis* → the Index points you to **K35.32**.
+
+**Step 2 — Tabular List.** Flip to **Chapter 11 (Diseases of the Digestive System)** and locate **K35.32**. The Tabular shows the full description: *Acute appendicitis with perforation and localized peritonitis, without abscess.* You read the **includes** note (perforation, rupture) and the **excludes** notes (acute with generalized peritonitis = K35.20-21). You confirm no 7th character is required. **K35.32** is the final code.
+
+If the coder had stopped at the Index and assigned **K35.32** without verifying, they'd have **been right by accident this time**. Next time — when the Tabular hides an Excludes1 — they'll be denied.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Two-Step Lookup in Action</text>
+  <text x="550" y="95" text-anchor="middle" fill="#888" font-size="18">Dx: "Acute appendicitis with rupture and localized peritonitis"</text>
+
+  <rect x="60" y="130" width="490" height="450" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <text x="305" y="165" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">STEP 1 — Alphabetic Index</text>
+  <text x="305" y="195" text-anchor="middle" fill="#888" font-size="14">Look up main term (the CONDITION)</text>
+
+  <text x="90" y="240" fill="#ffd700" font-size="18" font-weight="bold">Appendicitis</text>
+  <text x="115" y="270" fill="#ffffff" font-size="15">acute K35.80</text>
+  <text x="140" y="295" fill="#ffffff" font-size="15">with</text>
+  <text x="165" y="320" fill="#ffffff" font-size="15">gangrene K35.890</text>
+  <text x="165" y="345" fill="#ffffff" font-size="15">peritoneal abscess K35.33</text>
+  <text x="165" y="370" fill="#ffffff" font-size="15">peritonitis</text>
+  <text x="190" y="395" fill="#ffffff" font-size="15">generalized K35.20</text>
+  <text x="190" y="420" fill="#10b981" font-size="15" font-weight="bold">localized K35.31</text>
+  <text x="190" y="445" fill="#ffffff" font-size="15">unspecified K35.80</text>
+  <text x="165" y="470" fill="#ffffff" font-size="15">perforation</text>
+  <text x="190" y="495" fill="#10b981" font-size="15" font-weight="bold">with localized peritonitis K35.32</text>
+  <text x="190" y="520" fill="#ffffff" font-size="15">unspecified K35.33</text>
+
+  <text x="305" y="560" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Index points to → K35.32</text>
+
+  <text x="595" y="375" fill="#ffd700" font-size="48">→</text>
+
+  <rect x="650" y="130" width="400" height="450" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="850" y="165" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">STEP 2 — Tabular List</text>
+  <text x="850" y="195" text-anchor="middle" fill="#888" font-size="14">Verify in Chapter 11</text>
+
+  <text x="670" y="240" fill="#ffd700" font-size="16" font-weight="bold">K35 Acute appendicitis</text>
+  <text x="680" y="265" fill="#ffffff" font-size="13">K35.2 Acute appx w/ gen peritonitis</text>
+  <text x="690" y="285" fill="#888" font-size="12">K35.20 ... without abscess</text>
+  <text x="690" y="305" fill="#888" font-size="12">K35.21 ... with abscess</text>
+  <text x="680" y="330" fill="#ffffff" font-size="13">K35.3 Acute appx w/ loc peritonitis</text>
+  <text x="690" y="350" fill="#888" font-size="12">K35.30 ... w/o perforation/abscess</text>
+  <text x="690" y="370" fill="#888" font-size="12">K35.31 ... w/o perf, with abscess</text>
+  <rect x="685" y="380" width="350" height="28" fill="#10b981" opacity="0.3"/>
+  <text x="690" y="400" fill="#ffd700" font-size="13" font-weight="bold">K35.32 ... w/ perf+loc perit, w/o abscess</text>
+  <text x="690" y="425" fill="#888" font-size="12">K35.33 ... w/ perf+loc perit, w/ abscess</text>
+
+  <rect x="670" y="445" width="360" height="60" fill="#ef4444" opacity="0.15" rx="4"/>
+  <text x="680" y="465" fill="#ef4444" font-size="12" font-weight="bold">Excludes1:</text>
+  <text x="680" y="482" fill="#ffffff" font-size="11">Acute appx w/ generalized peritonitis</text>
+  <text x="680" y="498" fill="#ffffff" font-size="11">(K35.20-K35.21)</text>
+
+  <rect x="670" y="510" width="360" height="50" fill="#0ea5e9" opacity="0.15" rx="4"/>
+  <text x="680" y="530" fill="#0ea5e9" font-size="12" font-weight="bold">Includes:</text>
+  <text x="680" y="548" fill="#ffffff" font-size="11">perforation, rupture</text>
+
+  <text x="850" y="580" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">FINAL: K35.32</text>
+
+  <rect x="80" y="620" width="940" height="160" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2" rx="10"/>
+  <text x="550" y="655" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">What the Tabular Confirmed That the Index Hid</text>
+  <text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="16">• "Rupture" is documented — Tabular includes it under "perforation"</text>
+  <text x="550" y="715" text-anchor="middle" fill="#ffffff" font-size="16">• Peritonitis is LOCALIZED, not generalized (Excludes1 catches the wrong sibling)</text>
+  <text x="550" y="740" text-anchor="middle" fill="#ffffff" font-size="16">• No abscess documented → .32, not .33</text>
+  <text x="550" y="765" text-anchor="middle" fill="#ffffff" font-size="16">• No 7th character required for Chapter 11 codes</text>
+
+  <rect x="80" y="800" width="940" height="220" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+  <text x="550" y="835" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">When the Same Workflow Routes Through a Specialized Table</text>
+  <text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="15">Dx: "Adenocarcinoma of the sigmoid colon, primary"</text>
+  <text x="550" y="895" text-anchor="middle" fill="#ffffff" font-size="15">Index "Adenocarcinoma" → "see also Neoplasm, malignant, by site"</text>
+  <text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="15">Open Neoplasm Table → row "Colon, sigmoid" → column "Malignant Primary" → C18.7</text>
+  <text x="550" y="945" text-anchor="middle" fill="#ffd700" font-size="15">Verify C18.7 in the Tabular — confirms description, no extra notes apply</text>
+  <text x="550" y="985" text-anchor="middle" fill="#888" font-size="14" font-style="italic">Same two-step rhythm; the Neoplasm/Drugs Tables just speed up step 1.</text>
+</svg>`,
+          caption: "Index → subterms → candidate code → Tabular verify. The path is identical whether or not a specialized table is involved."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: Which Part of the Book?",
+        content: `Test your grip on the four-part structure.`,
+        question: "A patient is admitted after taking a higher-than-prescribed dose of warfarin and developing a GI bleed. Which combination of tools does the coder use, in the correct order?",
+        options: [
+          { text: "Alphabetic Index only — look up 'warfarin' and assign the first code listed.", correct: false },
+          { text: "Table of Drugs & Chemicals → Poisoning–Accidental column → verify the T-code in the Tabular List, then code the GI bleed.", correct: true },
+          { text: "Tabular List only — flip to Chapter 19 and pick the closest T-code by memory.", correct: false },
+          { text: "Table of Neoplasms — because anticoagulants are pharmacologically related to chemotherapy.", correct: false }
+        ],
+        explanation: `Taking **more** than prescribed is a **poisoning**, not underdosing or an adverse effect. The Drugs Table routes you to the correct **intent column** (Accidental, since it wasn't deliberate self-harm or assault), then you must **verify the T-code in the Tabular List** before assigning it. The GI bleed (K92.2) is the manifestation that gets sequenced **after** the T-code per the poisoning sequencing rule. Skipping the Tabular would miss the 7th-character requirement (A, D, or S) that every T-code demands. The Neoplasm Table is irrelevant — it's for cancer behavior, not drugs.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Warfarin Overdose → Decision Path</text>
+
+  <rect x="350" y="110" width="400" height="80" fill="#6366f1" rx="10"/>
+  <text x="550" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Documented event</text>
+  <text x="550" y="170" text-anchor="middle" fill="#ffffff" font-size="14">"Took more warfarin than prescribed"</text>
+
+  <text x="550" y="220" text-anchor="middle" fill="#ffd700" font-size="32">↓</text>
+
+  <rect x="200" y="240" width="700" height="100" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2" rx="10"/>
+  <text x="550" y="278" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Classify the event</text>
+  <text x="350" y="312" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">More = POISONING</text>
+  <text x="550" y="312" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">As prescribed, bad reaction = ADVERSE</text>
+  <text x="750" y="312" text-anchor="middle" fill="#8b5cf6" font-size="14" font-weight="bold">Less = UNDERDOSING</text>
+
+  <text x="550" y="370" text-anchor="middle" fill="#ffd700" font-size="32">↓</text>
+
+  <rect x="200" y="390" width="700" height="120" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="2" rx="10"/>
+  <text x="550" y="425" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Choose intent column</text>
+  <text x="550" y="455" text-anchor="middle" fill="#ffffff" font-size="14">Accidental (default, no SH or assault documented)</text>
+  <text x="550" y="478" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">Warfarin row, Accidental column → T45.511_</text>
+  <text x="550" y="500" text-anchor="middle" fill="#888" font-size="12">_ = 7th char placeholder (A initial, D subsequent, S sequela)</text>
+
+  <text x="550" y="540" text-anchor="middle" fill="#ffd700" font-size="32">↓</text>
+
+  <rect x="200" y="560" width="700" height="100" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2" rx="10"/>
+  <text x="550" y="595" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Verify in Tabular List</text>
+  <text x="550" y="625" text-anchor="middle" fill="#ffffff" font-size="14">Flip to T45 in Chapter 19, confirm description, read notes</text>
+  <text x="550" y="648" text-anchor="middle" fill="#ffd700" font-size="14">7th character A required → T45.511A</text>
+
+  <text x="550" y="690" text-anchor="middle" fill="#ffd700" font-size="32">↓</text>
+
+  <rect x="200" y="710" width="700" height="120" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="745" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Add the manifestation</text>
+  <text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="14">GI bleed → look up "Hemorrhage, gastrointestinal"</text>
+  <text x="550" y="805" text-anchor="middle" fill="#ffffff" font-size="14">Verify in Tabular → K92.2</text>
+
+  <rect x="200" y="860" width="700" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+  <text x="550" y="895" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Final code set</text>
+  <text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="18">T45.511A   (sequenced FIRST per poisoning rule)</text>
+  <text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">K92.2       (manifestation, sequenced second)</text>
+
+  <text x="550" y="1030" text-anchor="middle" fill="#888" font-size="14" font-style="italic">Three tools used: Drugs Table → Tabular → Index → Tabular. Two-step verification each time.</text>
+</svg>`,
+          caption: "Drugs Table identifies the substance and intent; Tabular adds the 7th character and confirms the code."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Code-Book Workflow Habit",
+        content: `From your very first chart, build a **disciplined lookup workflow** — auditors will eventually spot anyone who shortcuts it. Print this five-step routine and tape it to your monitor:
+
+**1. Identify the main term** — the **condition**, not the anatomy. "Diabetic neuropathy" is looked up under **Diabetes**, not "neuropathy" and not "leg." Eponyms (Crohn, Parkinson) are looked up by name.
+
+**2. Pick the right entry door.** Most diagnoses go through the **Alphabetic Index**. Cancers go through the **Neoplasm Table**. Drug events go through the **Drugs & Chemicals Table**. External cause codes (Chapter 20) go through the separate **Index to External Causes**.
+
+**3. Drill into subterms.** The indented words narrow your specificity — "with," "due to," "acute," "chronic," "complicated by." Read them all before picking.
+
+**4. Verify in the Tabular List — every single time.** Read the **chapter-, block-, and category-level notes**, every **includes**, every **excludes1** and **excludes2**, and confirm any **7th character** or placeholder X.
+
+**5. Document your path.** When a payer questions a code, you should be able to say "Index 'Appendicitis, acute, with perforation, with localized peritonitis' → K35.32, verified in Tabular."
+
+That paper trail wins audits. Memory loses them.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">The Five-Step Lookup Workflow</text>
+  <text x="550" y="95" text-anchor="middle" fill="#888" font-size="18">Tape this to your monitor. Use it every chart.</text>
+
+  <rect x="80" y="130" width="940" height="130" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2" rx="10"/>
+  <circle cx="140" cy="195" r="35" fill="#6366f1"/>
+  <text x="140" y="207" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">1</text>
+  <text x="210" y="170" fill="#6366f1" font-size="22" font-weight="bold">Identify the main term</text>
+  <text x="210" y="200" fill="#ffffff" font-size="16">The CONDITION, not the body part.</text>
+  <text x="210" y="225" fill="#ffffff" font-size="16">"Diabetic neuropathy" → Diabetes (not leg, not neuropathy).</text>
+  <text x="210" y="248" fill="#888" font-size="14">Eponyms by name: Crohn, Parkinson, Bell's palsy.</text>
+
+  <rect x="80" y="275" width="940" height="130" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+  <circle cx="140" cy="340" r="35" fill="#10b981"/>
+  <text x="140" y="352" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">2</text>
+  <text x="210" y="315" fill="#10b981" font-size="22" font-weight="bold">Pick the right entry door</text>
+  <text x="210" y="345" fill="#ffffff" font-size="14">Most dx → Alphabetic Index</text>
+  <text x="210" y="367" fill="#ffffff" font-size="14">Cancer → Neoplasm Table  ·  Drugs → Drugs &amp; Chemicals Table</text>
+  <text x="210" y="389" fill="#ffffff" font-size="14">External causes → separate Index to External Causes</text>
+
+  <rect x="80" y="420" width="940" height="130" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+  <circle cx="140" cy="485" r="35" fill="#f59e0b"/>
+  <text x="140" y="497" text-anchor="middle" fill="#1a1a2e" font-size="32" font-weight="bold">3</text>
+  <text x="210" y="460" fill="#f59e0b" font-size="22" font-weight="bold">Drill into subterms</text>
+  <text x="210" y="490" fill="#ffffff" font-size="14">Read indented modifiers: "with," "due to," "in," "acute," "chronic."</text>
+  <text x="210" y="512" fill="#ffffff" font-size="14">Each level narrows specificity — never stop at the first hit.</text>
+  <text x="210" y="534" fill="#888" font-size="14">"see" sends you elsewhere; "see also" suggests an alternate path.</text>
+
+  <rect x="80" y="565" width="940" height="130" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+  <circle cx="140" cy="630" r="35" fill="#ec4899"/>
+  <text x="140" y="642" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">4</text>
+  <text x="210" y="605" fill="#ec4899" font-size="22" font-weight="bold">VERIFY in the Tabular List — every time</text>
+  <text x="210" y="635" fill="#ffffff" font-size="14">Chapter notes → block notes → category notes → code notes</text>
+  <text x="210" y="657" fill="#ffffff" font-size="14">Read Includes, Excludes1, Excludes2, Code First, Use Additional</text>
+  <text x="210" y="679" fill="#ffd700" font-size="14" font-weight="bold">Confirm 7th character &amp; placeholder X before finalizing</text>
+
+  <rect x="80" y="710" width="940" height="130" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <circle cx="140" cy="775" r="35" fill="#0ea5e9"/>
+  <text x="140" y="787" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">5</text>
+  <text x="210" y="750" fill="#0ea5e9" font-size="22" font-weight="bold">Document your path</text>
+  <text x="210" y="780" fill="#ffffff" font-size="14">Note the Index trail: "Appendicitis → acute → with → perforation"</text>
+  <text x="210" y="802" fill="#ffffff" font-size="14">Note the Tabular page and any notes that influenced your pick</text>
+  <text x="210" y="824" fill="#888" font-size="14">Audit defense: a documented path beats memory every time</text>
+
+  <rect x="80" y="870" width="940" height="150" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+  <text x="550" y="905" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Red Flags That Kill Audits</text>
+  <text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="15">Coding from memory · Skipping the Tabular · Using the Index's first hit</text>
+  <text x="550" y="965" text-anchor="middle" fill="#ffffff" font-size="15">Ignoring chapter notes · Missing the 7th character · Forgetting the placeholder X</text>
+  <text x="550" y="995" text-anchor="middle" fill="#ffd700" font-size="15" font-style="italic">"Right by accident" is still wrong — and auditors find the pattern.</text>
+</svg>`,
+          caption: "Five steps, every chart. The workflow is what survives audits — not the code you remembered."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-icd10cm-lesson-2",
+    title: "The Official Guidelines for Coding and Reporting (OGCR)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The OGCR Is the Rulebook — and It's Federal Law",
+        content: `Inside the front of every ICD-10-CM code book sits a document called the **ICD-10-CM Official Guidelines for Coding and Reporting** — the **OGCR**. Coders sometimes treat it like background reading. That is a **career-ending mistake**.
+
+The OGCR is **co-published every year** by two federal agencies: the **Centers for Medicare & Medicaid Services (CMS)** and the **National Center for Health Statistics (NCHS)**, a division of the CDC. CMS owns the procedure side and the payment side; NCHS owns the diagnosis classification. Together they release one updated rulebook each year, effective **October 1**, the same day the new code set goes live.
+
+The OGCR is the **only national rule source with binding force under HIPAA**. The **Health Insurance Portability and Accountability Act of 1996** designated ICD-10-CM as a HIPAA code set, which means **all HIPAA-covered entities** — providers, hospitals, payers, clearinghouses — **must follow the OGCR**. Violating the guidelines is not just a denied claim; it's **non-compliance with federal regulation**.
+
+Memorize this: every code you assign must be **defensible under the OGCR**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Who Writes the OGCR — and Why It's Binding</text>
+
+  <rect x="80" y="120" width="430" height="200" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <text x="295" y="160" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">CMS</text>
+  <text x="295" y="185" text-anchor="middle" fill="#ffffff" font-size="14">Centers for Medicare &amp; Medicaid Services</text>
+  <text x="295" y="220" text-anchor="middle" fill="#ffffff" font-size="14">Owns: ICD-10-PCS (inpatient procedures)</text>
+  <text x="295" y="245" text-anchor="middle" fill="#ffffff" font-size="14">Owns: Medicare/Medicaid payment rules</text>
+  <text x="295" y="280" text-anchor="middle" fill="#ffd700" font-size="14">Drives the reimbursement side</text>
+  <text x="295" y="305" text-anchor="middle" fill="#888" font-size="13">Part of the Dept. of Health &amp; Human Services</text>
+
+  <rect x="590" y="120" width="430" height="200" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="805" y="160" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">NCHS</text>
+  <text x="805" y="185" text-anchor="middle" fill="#ffffff" font-size="14">National Center for Health Statistics</text>
+  <text x="805" y="220" text-anchor="middle" fill="#ffffff" font-size="14">Owns: ICD-10-CM (diagnosis classification)</text>
+  <text x="805" y="245" text-anchor="middle" fill="#ffffff" font-size="14">Owns: morbidity &amp; mortality data standards</text>
+  <text x="805" y="280" text-anchor="middle" fill="#ffd700" font-size="14">Drives the classification side</text>
+  <text x="805" y="305" text-anchor="middle" fill="#888" font-size="13">Part of the CDC</text>
+
+  <text x="295" y="360" text-anchor="middle" fill="#ffd700" font-size="28">+</text>
+  <text x="805" y="360" text-anchor="middle" fill="#ffd700" font-size="28">+</text>
+  <text x="550" y="365" text-anchor="middle" fill="#ffd700" font-size="14">co-publish</text>
+
+  <rect x="280" y="380" width="540" height="120" fill="#ffd700" rx="10"/>
+  <text x="550" y="420" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">ICD-10-CM Official Guidelines</text>
+  <text x="550" y="445" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">for Coding and Reporting (OGCR)</text>
+  <text x="550" y="475" text-anchor="middle" fill="#1a1a2e" font-size="14">One unified rulebook, refreshed annually</text>
+
+  <text x="550" y="540" text-anchor="middle" fill="#ffd700" font-size="32">↓</text>
+
+  <rect x="80" y="560" width="940" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/>
+  <text x="550" y="600" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Binding Authority Under HIPAA</text>
+  <text x="550" y="635" text-anchor="middle" fill="#ffffff" font-size="16">HIPAA (1996) designated ICD-10-CM as an official "code set"</text>
+  <text x="550" y="660" text-anchor="middle" fill="#ffffff" font-size="16">All HIPAA-covered entities MUST follow the OGCR:</text>
+  <text x="550" y="690" text-anchor="middle" fill="#ffd700" font-size="16">Providers · Hospitals · Health Plans · Clearinghouses · Billing services</text>
+  <text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="14">Coding contrary to the OGCR = HIPAA non-compliance</text>
+  <text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="14">= denied claims, takebacks, audits, possible False Claims Act exposure</text>
+
+  <rect x="80" y="790" width="940" height="230" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="825" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Annual Release Cycle</text>
+  <text x="170" y="860" fill="#ffffff" font-size="14">June-July</text>
+  <text x="170" y="882" fill="#888" font-size="12">Proposed updates posted</text>
+  <text x="170" y="900" fill="#888" font-size="12">at cms.gov &amp; cdc.gov</text>
+
+  <text x="430" y="860" fill="#ffffff" font-size="14">August</text>
+  <text x="430" y="882" fill="#888" font-size="12">Final guidelines</text>
+  <text x="430" y="900" fill="#888" font-size="12">published</text>
+
+  <text x="700" y="860" fill="#ffffff" font-size="14">Oct 1 (fiscal year)</text>
+  <text x="700" y="882" fill="#888" font-size="12">New code set +</text>
+  <text x="700" y="900" fill="#888" font-size="12">new OGCR effective</text>
+
+  <text x="940" y="860" fill="#ffffff" font-size="14">April 1</text>
+  <text x="940" y="882" fill="#888" font-size="12">Mid-year code</text>
+  <text x="940" y="900" fill="#888" font-size="12">addenda (since 2022)</text>
+
+  <text x="550" y="970" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Always cite by year: "FY2026 OGCR, Section I.A.5"</text>
+  <text x="550" y="995" text-anchor="middle" fill="#888" font-size="13" font-style="italic">Auditors reject vague citations. Section + year is the professional standard.</text>
+</svg>`,
+          caption: "CMS + NCHS co-publish the OGCR every October 1; HIPAA gives it federal binding force."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Four Sections of the OGCR — Where Every Rule Lives",
+        content: `The OGCR is split into **four sections**, each governing a different layer of coding. Knowing which section answers your question is half the speed of an experienced coder.
+
+**Section I — Conventions, General Coding Guidelines, and Chapter-Specific Guidelines.** This is the **biggest** section. **Part A** defines the conventions (the symbols and abbreviations — NEC, NOS, Excludes1, Excludes2, Code Also, etc.). **Part B** sets the universal rules (use both Index and Tabular, code to the highest specificity, signs and symptoms when no definitive dx). **Part C** runs through **all 22 chapters** with chapter-specific rules — sepsis sequencing, diabetes "with," pregnancy trimesters, injury 7th characters, and so on.
+
+**Section II — Selection of Principal Diagnosis.** Applies to **inpatient hospital admissions**. Defines the **principal diagnosis** as the condition "established after study to be chiefly responsible for occasioning the admission." Covers two-or-more-diagnoses tiebreakers, complications of surgery, and admissions from observation.
+
+**Section III — Reporting Additional Diagnoses.** Also **inpatient**. Defines what makes a secondary diagnosis reportable: it must be **clinically evaluated, treated, monitored, increase nursing care, or extend length of stay**.
+
+**Section IV — Diagnostic Coding and Reporting Guidelines for Outpatient Services.** The **physician-office and outpatient hospital** rule set. Here, the term shifts from "principal" to **first-listed diagnosis**, and the rule against coding "rule out / probable / suspected" applies (in inpatient, those CAN be coded).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The Four Sections of the OGCR</text>
+  <text x="550" y="92" text-anchor="middle" fill="#888" font-size="16">Each section governs a distinct slice of coding work</text>
+
+  <rect x="60" y="120" width="490" height="430" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <text x="305" y="155" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Section I — Conventions &amp; General Rules</text>
+  <text x="305" y="180" text-anchor="middle" fill="#888" font-size="14">The biggest section. Applies to ALL settings.</text>
+
+  <rect x="80" y="200" width="450" height="100" fill="#6366f1" opacity="0.2" rx="6"/>
+  <text x="305" y="225" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">I.A — Conventions</text>
+  <text x="305" y="250" text-anchor="middle" fill="#ffffff" font-size="13">NEC, NOS, [brackets], (parentheses), :colons</text>
+  <text x="305" y="270" text-anchor="middle" fill="#ffffff" font-size="13">Excludes1, Excludes2, Code Also,</text>
+  <text x="305" y="290" text-anchor="middle" fill="#ffffff" font-size="13">Code First, Use Additional, "and," "with"</text>
+
+  <rect x="80" y="310" width="450" height="100" fill="#6366f1" opacity="0.2" rx="6"/>
+  <text x="305" y="335" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">I.B — General Coding Guidelines</text>
+  <text x="305" y="360" text-anchor="middle" fill="#ffffff" font-size="13">Use both Index AND Tabular</text>
+  <text x="305" y="380" text-anchor="middle" fill="#ffffff" font-size="13">Code highest specificity available</text>
+  <text x="305" y="400" text-anchor="middle" fill="#ffffff" font-size="13">Signs &amp; symptoms when no definitive dx</text>
+
+  <rect x="80" y="420" width="450" height="120" fill="#6366f1" opacity="0.2" rx="6"/>
+  <text x="305" y="445" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">I.C — Chapter-Specific Guidelines</text>
+  <text x="305" y="470" text-anchor="middle" fill="#ffffff" font-size="13">22 sub-sections, one per chapter</text>
+  <text x="305" y="490" text-anchor="middle" fill="#ffffff" font-size="13">Sepsis sequencing · Diabetes "with"</text>
+  <text x="305" y="510" text-anchor="middle" fill="#ffffff" font-size="13">Pregnancy trimesters · Injury 7th chars</text>
+  <text x="305" y="530" text-anchor="middle" fill="#ffffff" font-size="13">HIV, neoplasms, glaucoma laterality</text>
+
+  <rect x="560" y="120" width="490" height="200" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="805" y="155" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Section II — Principal Diagnosis</text>
+  <text x="805" y="180" text-anchor="middle" fill="#888" font-size="14">INPATIENT hospital admissions only</text>
+  <text x="805" y="215" text-anchor="middle" fill="#ffffff" font-size="14">Principal dx = condition "established after</text>
+  <text x="805" y="235" text-anchor="middle" fill="#ffffff" font-size="14">study to be chiefly responsible for</text>
+  <text x="805" y="255" text-anchor="middle" fill="#ffffff" font-size="14">occasioning the admission"</text>
+  <text x="805" y="285" text-anchor="middle" fill="#ffd700" font-size="13">Covers 2+ dx tiebreakers,</text>
+  <text x="805" y="305" text-anchor="middle" fill="#ffd700" font-size="13">complications, observation-to-admit</text>
+
+  <rect x="560" y="335" width="490" height="200" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <text x="805" y="370" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Section III — Additional Diagnoses</text>
+  <text x="805" y="395" text-anchor="middle" fill="#888" font-size="14">INPATIENT hospital admissions only</text>
+  <text x="805" y="425" text-anchor="middle" fill="#ffffff" font-size="14">A secondary dx is reportable when it is:</text>
+  <text x="805" y="450" text-anchor="middle" fill="#ffffff" font-size="13">• Clinically evaluated</text>
+  <text x="805" y="470" text-anchor="middle" fill="#ffffff" font-size="13">• Therapeutically treated</text>
+  <text x="805" y="490" text-anchor="middle" fill="#ffffff" font-size="13">• Diagnostically monitored</text>
+  <text x="805" y="510" text-anchor="middle" fill="#ffffff" font-size="13">• Extends LOS or increases nursing care</text>
+
+  <rect x="60" y="565" width="990" height="280" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <text x="555" y="600" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Section IV — Outpatient Services</text>
+  <text x="555" y="625" text-anchor="middle" fill="#888" font-size="14">Physician offices &amp; outpatient hospital — different rules!</text>
+
+  <rect x="100" y="645" width="440" height="180" fill="#ec4899" opacity="0.2" rx="6"/>
+  <text x="320" y="675" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Different terminology</text>
+  <text x="320" y="700" text-anchor="middle" fill="#ffffff" font-size="13">First-listed diagnosis (not "principal")</text>
+  <text x="320" y="720" text-anchor="middle" fill="#ffffff" font-size="13">Encounter reason drives sequence</text>
+  <text x="320" y="755" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">DO NOT code uncertain dx</text>
+  <text x="320" y="775" text-anchor="middle" fill="#ffffff" font-size="13">No "probable," "suspected," "rule out,"</text>
+  <text x="320" y="795" text-anchor="middle" fill="#ffffff" font-size="13">"questionable," or "compatible with"</text>
+  <text x="320" y="815" text-anchor="middle" fill="#ffffff" font-size="12">Code symptoms instead</text>
+
+  <rect x="570" y="645" width="440" height="180" fill="#ec4899" opacity="0.2" rx="6"/>
+  <text x="790" y="675" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Inpatient EXCEPTION</text>
+  <text x="790" y="700" text-anchor="middle" fill="#ffffff" font-size="13">Section II.H — Uncertain dx CAN be</text>
+  <text x="790" y="720" text-anchor="middle" fill="#ffffff" font-size="13">coded inpatient if still uncertain</text>
+  <text x="790" y="740" text-anchor="middle" fill="#ffffff" font-size="13">at the time of discharge</text>
+  <text x="790" y="775" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Setting matters a LOT</text>
+  <text x="790" y="800" text-anchor="middle" fill="#ffffff" font-size="13">A CPC works mostly Sec I + Sec IV</text>
+  <text x="790" y="820" text-anchor="middle" fill="#ffffff" font-size="13">A CIC works mostly Sec I + Sec II/III</text>
+
+  <rect x="60" y="865" width="990" height="155" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="555" y="900" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Quick Reference: "Which Section Answers My Question?"</text>
+  <text x="555" y="930" text-anchor="middle" fill="#ffffff" font-size="14">"What does this symbol mean?" → Section I.A</text>
+  <text x="555" y="955" text-anchor="middle" fill="#ffffff" font-size="14">"How do I sequence sepsis?" → Section I.C, Chapter 1</text>
+  <text x="555" y="980" text-anchor="middle" fill="#ffffff" font-size="14">"Which dx is principal in this inpatient stay?" → Section II</text>
+  <text x="555" y="1005" text-anchor="middle" fill="#ffffff" font-size="14">"Can I code 'suspected MI' in a clinic visit?" → Section IV (no)</text>
+</svg>`,
+          caption: "Section I is universal; Sections II and III are inpatient; Section IV is outpatient."
+        }
+      },
+      {
+        type: "example",
+        title: "Same Diagnosis, Different Section, Different Code: A Suspected MI",
+        content: `A patient comes to a **cardiologist's outpatient clinic** with chest pain. The physician documents: "**Chest pain, suspected acute MI — discharged home with stat outpatient stress test.**" How does the coder report it?
+
+**Apply Section IV.H.** "Do not code diagnoses documented as 'probable,' 'suspected,' 'questionable,' 'rule out,' or 'working diagnosis,' or other similar terms indicating uncertainty." Instead, code the **condition(s) to the highest degree of certainty for that encounter** — the **symptoms** that brought the patient in.
+
+Final code: **R07.9 — Chest pain, unspecified** (or R07.89 if more specific chest-pain documentation exists). The "suspected MI" is **NOT coded**.
+
+Now imagine the **same physician admits the same patient** to the hospital, and at **discharge two days later** the chart still reads "**suspected acute MI, ruled out vs. unstable angina vs. anxiety — pending stress.**" The coder now applies **Section II.H** and can code the **suspected condition as if it existed** — **I21.9 (Acute MI, unspecified)** would be permitted, because Section II.H explicitly allows coding uncertain diagnoses at the time of inpatient discharge.
+
+**Same words, two settings, two different answers.** The OGCR is the only thing that makes that distinction make sense.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">"Suspected MI" — Same Words, Two Worlds</text>
+
+  <rect x="60" y="100" width="490" height="450" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <text x="305" y="135" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">OUTPATIENT clinic visit</text>
+  <text x="305" y="160" text-anchor="middle" fill="#888" font-size="14">Governed by Section IV</text>
+
+  <rect x="80" y="180" width="450" height="80" fill="#1a1a2e" stroke="#ffffff" stroke-width="1" rx="4"/>
+  <text x="90" y="205" fill="#ffd700" font-size="13" font-weight="bold">Documentation:</text>
+  <text x="90" y="225" fill="#ffffff" font-size="13">"Chest pain, suspected acute MI —</text>
+  <text x="90" y="245" fill="#ffffff" font-size="13">d/c home with stat outpatient stress test"</text>
+
+  <rect x="80" y="280" width="450" height="100" fill="#ec4899" opacity="0.25" rx="6"/>
+  <text x="305" y="310" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Section IV.H — uncertain dx RULE</text>
+  <text x="305" y="335" text-anchor="middle" fill="#ffffff" font-size="13">"Do not code probable, suspected,</text>
+  <text x="305" y="355" text-anchor="middle" fill="#ffffff" font-size="13">questionable, rule out, working dx."</text>
+  <text x="305" y="375" text-anchor="middle" fill="#ffffff" font-size="13">Code only what is certain.</text>
+
+  <rect x="80" y="400" width="450" height="80" fill="#10b981" opacity="0.3" rx="6"/>
+  <text x="305" y="430" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Final code:</text>
+  <text x="305" y="460" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">R07.9  Chest pain, unspecified</text>
+
+  <text x="305" y="510" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">DO NOT code I21.9</text>
+  <text x="305" y="530" text-anchor="middle" fill="#ffffff" font-size="13">"Suspected MI" is uncertain → omit</text>
+
+  <rect x="560" y="100" width="490" height="450" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <text x="805" y="135" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">INPATIENT discharge</text>
+  <text x="805" y="160" text-anchor="middle" fill="#888" font-size="14">Governed by Section II</text>
+
+  <rect x="580" y="180" width="450" height="80" fill="#1a1a2e" stroke="#ffffff" stroke-width="1" rx="4"/>
+  <text x="590" y="205" fill="#ffd700" font-size="13" font-weight="bold">Documentation at discharge:</text>
+  <text x="590" y="225" fill="#ffffff" font-size="13">"Suspected acute MI — ruled out vs.</text>
+  <text x="590" y="245" fill="#ffffff" font-size="13">unstable angina vs. anxiety, pending stress"</text>
+
+  <rect x="580" y="280" width="450" height="100" fill="#6366f1" opacity="0.25" rx="6"/>
+  <text x="805" y="310" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Section II.H — uncertain dx RULE</text>
+  <text x="805" y="335" text-anchor="middle" fill="#ffffff" font-size="13">"If the dx documented at discharge</text>
+  <text x="805" y="355" text-anchor="middle" fill="#ffffff" font-size="13">is qualified... code the condition</text>
+  <text x="805" y="375" text-anchor="middle" fill="#ffffff" font-size="13">as if it existed."</text>
+
+  <rect x="580" y="400" width="450" height="80" fill="#10b981" opacity="0.3" rx="6"/>
+  <text x="805" y="430" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Permitted principal dx:</text>
+  <text x="805" y="460" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">I21.9  Acute MI, unspecified</text>
+
+  <text x="805" y="510" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">May code I21.9 even if "suspected"</text>
+  <text x="805" y="530" text-anchor="middle" fill="#ffffff" font-size="13">Inpatient inverts the outpatient rule</text>
+
+  <rect x="60" y="580" width="990" height="200" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <text x="555" y="615" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Why the Two Worlds Diverge</text>
+  <text x="555" y="650" text-anchor="middle" fill="#ffffff" font-size="14">Outpatient encounters are usually one short visit — a "rule-out" today often becomes a definitive</text>
+  <text x="555" y="670" text-anchor="middle" fill="#ffffff" font-size="14">dx tomorrow at a follow-up. Coding "suspected MI" now would lock the patient into a serious history.</text>
+  <text x="555" y="700" text-anchor="middle" fill="#ffffff" font-size="14">Inpatient stays involve days of workup, monitoring, and treatment AS IF the suspected dx were real.</text>
+  <text x="555" y="720" text-anchor="middle" fill="#ffffff" font-size="14">The resource consumption is documented; the OGCR lets that drive payment.</text>
+  <text x="555" y="755" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">Same diagnostic language. Different setting. Different rule. Only the OGCR resolves it.</text>
+
+  <rect x="60" y="810" width="990" height="210" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="555" y="845" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Audit Implications</text>
+  <text x="555" y="880" text-anchor="middle" fill="#ffffff" font-size="14">Coder bills I21.9 on an OUTPATIENT clinic claim → upcoded false positive, RAC takeback</text>
+  <text x="555" y="905" text-anchor="middle" fill="#ffffff" font-size="14">Coder bills only R07.9 on the INPATIENT discharge → undercoded, lost DRG dollars</text>
+  <text x="555" y="935" text-anchor="middle" fill="#ffffff" font-size="14">Either error is a "missed OGCR" finding — auditors cite the specific section number</text>
+  <text x="555" y="965" text-anchor="middle" fill="#ffd700" font-size="14">Defense: "Per FY2026 OGCR Section IV.H, uncertain dx are not coded in outpatient settings."</text>
+  <text x="555" y="990" text-anchor="middle" fill="#888" font-size="13" font-style="italic">Citing the section number turns a guess into a defensible decision.</text>
+</svg>`,
+          caption: "Section IV bans uncertain dx in outpatient; Section II.H allows it at inpatient discharge."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: Which Section Governs?",
+        content: `Pick the OGCR section that resolves the question.`,
+        question: "A hospital coder is reviewing an inpatient chart and needs to decide whether the patient's well-controlled hypertension — present on admission, monitored daily, and continued on home meds — should be reported as a secondary diagnosis. Which OGCR section answers this?",
+        options: [
+          { text: "Section I.A — Conventions", correct: false },
+          { text: "Section II — Selection of Principal Diagnosis", correct: false },
+          { text: "Section III — Reporting Additional Diagnoses", correct: true },
+          { text: "Section IV — Outpatient Services", correct: false }
+        ],
+        explanation: `**Section III** governs **additional (secondary) diagnoses in inpatient settings**. It defines a reportable secondary dx as one that is **clinically evaluated, therapeutically treated, diagnostically monitored, extends length of stay, or increases nursing care/monitoring**. The hypertension here is being **monitored daily** and **treated with continued medications** — that satisfies Section III's criteria, so **yes, it is reportable**. Section I covers conventions and chapter rules. Section II decides the **principal** dx, not secondary ones. Section IV is for **outpatient** services — this is an inpatient stay, so Section IV does not apply. Citing the right section is the difference between a defensible code and a guess that gets struck on appeal.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Decision Tree: Which OGCR Section?</text>
+
+  <rect x="350" y="100" width="400" height="80" fill="#6366f1" rx="10"/>
+  <text x="550" y="135" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Start: What's your question about?</text>
+  <text x="550" y="160" text-anchor="middle" fill="#ffffff" font-size="14">(setting and topic)</text>
+
+  <text x="550" y="210" text-anchor="middle" fill="#ffd700" font-size="28">↓</text>
+
+  <rect x="200" y="230" width="700" height="80" fill="#0ea5e9" opacity="0.3" rx="10"/>
+  <text x="550" y="265" text-anchor="middle" fill="#0ea5e9" font-size="18" font-weight="bold">Is it a convention symbol, abbreviation, or chapter rule?</text>
+  <text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="14">Examples: Excludes1, NEC, sepsis sequencing, diabetes "with"</text>
+
+  <text x="180" y="345" text-anchor="middle" fill="#10b981" font-size="14">YES →</text>
+  <rect x="50" y="360" width="280" height="80" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2" rx="8"/>
+  <text x="190" y="395" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">SECTION I</text>
+  <text x="190" y="420" text-anchor="middle" fill="#ffffff" font-size="13">Conventions, general, chapter rules</text>
+
+  <text x="550" y="345" text-anchor="middle" fill="#ef4444" font-size="14">NO ↓</text>
+
+  <rect x="200" y="465" width="700" height="80" fill="#f59e0b" opacity="0.3" rx="10"/>
+  <text x="550" y="500" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">Is the patient inpatient or outpatient?</text>
+  <text x="550" y="525" text-anchor="middle" fill="#ffffff" font-size="14">(hospital admission vs. clinic / ER discharge / observation)</text>
+
+  <text x="180" y="585" text-anchor="middle" fill="#10b981" font-size="14">OUTPATIENT →</text>
+  <rect x="50" y="600" width="280" height="80" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2" rx="8"/>
+  <text x="190" y="635" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">SECTION IV</text>
+  <text x="190" y="660" text-anchor="middle" fill="#ffffff" font-size="13">First-listed dx, no uncertain dx</text>
+
+  <text x="550" y="585" text-anchor="middle" fill="#ef4444" font-size="14">INPATIENT ↓</text>
+
+  <rect x="200" y="705" width="700" height="80" fill="#8b5cf6" opacity="0.3" rx="10"/>
+  <text x="550" y="740" text-anchor="middle" fill="#8b5cf6" font-size="18" font-weight="bold">Is it about the principal dx, or a secondary?</text>
+  <text x="550" y="765" text-anchor="middle" fill="#ffffff" font-size="14">Principal = #1 dx; Secondary = anything reportable beyond it</text>
+
+  <text x="280" y="825" text-anchor="middle" fill="#10b981" font-size="14">PRINCIPAL →</text>
+  <rect x="120" y="840" width="300" height="80" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2" rx="8"/>
+  <text x="270" y="875" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">SECTION II</text>
+  <text x="270" y="900" text-anchor="middle" fill="#ffffff" font-size="13">Principal diagnosis selection</text>
+
+  <text x="820" y="825" text-anchor="middle" fill="#10b981" font-size="14">SECONDARY →</text>
+  <rect x="680" y="840" width="300" height="80" fill="#f59e0b" opacity="0.5" stroke="#f59e0b" stroke-width="2" rx="8"/>
+  <text x="830" y="875" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">SECTION III ←</text>
+  <text x="830" y="900" text-anchor="middle" fill="#1a1a2e" font-size="13">Additional dx (evaluated, treated, etc.)</text>
+
+  <rect x="60" y="960" width="990" height="80" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+  <text x="555" y="995" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">Quiz answer path: Inpatient → Secondary → Section III ✓</text>
+  <text x="555" y="1020" text-anchor="middle" fill="#ffffff" font-size="14">HTN was monitored &amp; treated → meets the Section III "reportable" criteria</text>
+</svg>`,
+          caption: "Setting decides the first split; principal-vs-secondary decides between II and III."
+        }
+      },
+      {
+        type: "application",
+        title: "Practical OGCR Habits That Survive Every Audit",
+        content: `Treat the OGCR as a **living document you cite, not background material you skim.** Four habits separate professional coders from hobbyists:
+
+**1. Read the new OGCR every October.** The document is freely available on **cms.gov** and **cdc.gov/nchs/icd**. AAPC and AHIMA publish change summaries, but the **source document** is what you need. New rules can quietly upend long-standing practices — the recent expansions of Section I.B.14 (BMI, pressure ulcer stage from non-physician documentation) and the **Z-code social determinants** rule are good examples.
+
+**2. Cite by section number, every time.** "Per Section I.C.6.b.1, neoplasm-related pain is sequenced first when the encounter is for pain management." That precision wins appeals. "Because the guidelines say so" loses them.
+
+**3. Match the section to the setting.** If you work physician offices, **Section IV is your home base**. If you work hospital inpatient, you live in **Sections II and III**. Either way, **Section I always applies** — it is universal.
+
+**4. When the OGCR conflicts with what the doctor told you, the OGCR wins.** Physicians know medicine; they do not always know coding rules. You may need to query the provider for clarification, but the **final code must satisfy the OGCR**, not the physician's preference.
+
+The OGCR is your shield. Carry it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Four OGCR Habits of a Professional Coder</text>
+
+  <rect x="60" y="110" width="990" height="180" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <circle cx="115" cy="195" r="40" fill="#6366f1"/>
+  <text x="115" y="208" text-anchor="middle" fill="#ffffff" font-size="34" font-weight="bold">1</text>
+  <text x="180" y="155" fill="#6366f1" font-size="22" font-weight="bold">Read the new OGCR every October 1</text>
+  <text x="180" y="185" fill="#ffffff" font-size="15">Free at cms.gov and cdc.gov/nchs/icd — get the SOURCE document</text>
+  <text x="180" y="210" fill="#ffffff" font-size="15">Skim the "Narrative changes" section first — that's the diff log</text>
+  <text x="180" y="235" fill="#ffffff" font-size="15">Block 2 hours; it's a 110-page document</text>
+  <text x="180" y="265" fill="#ffd700" font-size="14">Recent example: Section I.B.14 now lets non-physician staff document BMI &amp; pressure ulcer stage</text>
+
+  <rect x="60" y="310" width="990" height="180" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+  <circle cx="115" cy="395" r="40" fill="#10b981"/>
+  <text x="115" y="408" text-anchor="middle" fill="#1a1a2e" font-size="34" font-weight="bold">2</text>
+  <text x="180" y="355" fill="#10b981" font-size="22" font-weight="bold">Cite by section number, every time</text>
+  <text x="180" y="385" fill="#ffffff" font-size="15">"Per Section I.C.6.b.1, neoplasm-related pain is sequenced first</text>
+  <text x="180" y="408" fill="#ffffff" font-size="15">when the encounter is for pain management."</text>
+  <text x="180" y="440" fill="#ffd700" font-size="14" font-weight="bold">In your audit notes &amp; queries — never just "per the guidelines"</text>
+  <text x="180" y="465" fill="#888" font-size="13">Auditors respect specificity; payers concede when you cite chapter and verse</text>
+
+  <rect x="60" y="510" width="990" height="180" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <circle cx="115" cy="595" r="40" fill="#f59e0b"/>
+  <text x="115" y="608" text-anchor="middle" fill="#1a1a2e" font-size="34" font-weight="bold">3</text>
+  <text x="180" y="555" fill="#f59e0b" font-size="22" font-weight="bold">Match the section to the setting</text>
+  <text x="180" y="585" fill="#ffffff" font-size="15">Outpatient coders live in Section IV — first-listed dx, no uncertain dx</text>
+  <text x="180" y="608" fill="#ffffff" font-size="15">Inpatient coders live in Sections II + III — principal + reportable secondaries</text>
+  <text x="180" y="640" fill="#ffd700" font-size="14" font-weight="bold">Section I always applies — conventions are universal</text>
+  <text x="180" y="665" fill="#888" font-size="13">Coding outpatient with inpatient rules (or vice versa) is the #1 audit finding</text>
+
+  <rect x="60" y="710" width="990" height="180" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <circle cx="115" cy="795" r="40" fill="#ec4899"/>
+  <text x="115" y="808" text-anchor="middle" fill="#ffffff" font-size="34" font-weight="bold">4</text>
+  <text x="180" y="755" fill="#ec4899" font-size="22" font-weight="bold">When OGCR conflicts with the doctor, OGCR wins</text>
+  <text x="180" y="785" fill="#ffffff" font-size="15">Physicians know medicine. They don't always know coding rules.</text>
+  <text x="180" y="808" fill="#ffffff" font-size="15">Query the provider for clarification — never code to their preference.</text>
+  <text x="180" y="840" fill="#ffd700" font-size="14" font-weight="bold">Final code must satisfy the OGCR — not the physician, not the manager</text>
+  <text x="180" y="865" fill="#888" font-size="13">"My boss told me to code it that way" is not a defense in a False Claims Act case</text>
+
+  <rect x="60" y="910" width="990" height="120" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2" rx="10"/>
+  <text x="555" y="945" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">The OGCR Is Your Shield</text>
+  <text x="555" y="975" text-anchor="middle" fill="#ffffff" font-size="14">Memorize its structure. Cite its sections. Trust it over hearsay.</text>
+  <text x="555" y="1000" text-anchor="middle" fill="#ffffff" font-size="14">Every coder who has survived a 5-year audit had one thing in common:</text>
+  <text x="555" y="1022" text-anchor="middle" fill="#ffd700" font-size="14" font-style="italic">they could quote the section that backed every choice.</text>
+</svg>`,
+          caption: "Read it, cite it, match it to setting, defer to it — those four habits define a professional coder."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-icd10cm-lesson-3",
+    title: "Conventions: Excludes1, Excludes2, Code Also, Code First, Use Additional, 'with'/'in'",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Six Words That Decide Whether Your Claim Pays",
+        content: `Walk through any ICD-10-CM Tabular page and you'll see notes printed in **bold, italic, and indentation patterns** that look like clutter — until you realize each is a federal coding instruction. The six most consequential are **Excludes1**, **Excludes2**, **Code Also**, **Code First**, **Use Additional**, and the word **"with"** (and its sibling **"in"**).
+
+These are not suggestions. They are **conventions defined in OGCR Section I.A** and they tell the coder things the description alone hides: which two codes are **forbidden together**, which two are **allowed together**, which one **must be sequenced first**, which **manifestation must be added**, and when ICD-10-CM **assumes a causal link** without the physician spelling it out.
+
+Get them right and your claim glides through. Get them wrong and you'll see an **Excludes1 conflict edit** bounce back from the clearinghouse, a **CMS-1500 denial** because the etiology wasn't sequenced first, or a **down-coded MS-DRG** because you missed a Use Additional code. The conventions are the **mechanical heart** of the code book — and this lesson teaches you to read them fluently.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The Six Conventions That Make or Break a Claim</text>
+  <text x="550" y="92" text-anchor="middle" fill="#888" font-size="16">All defined in OGCR Section I.A — the rulebook for reading the Tabular</text>
+
+  <rect x="60" y="130" width="320" height="180" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="10"/>
+  <text x="220" y="170" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Excludes1</text>
+  <text x="220" y="200" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">"NOT CODED HERE"</text>
+  <text x="220" y="230" text-anchor="middle" fill="#ffffff" font-size="14">Mutually exclusive —</text>
+  <text x="220" y="252" text-anchor="middle" fill="#ffffff" font-size="14">cannot occur together</text>
+  <text x="220" y="285" text-anchor="middle" fill="#888" font-size="13">Pair them = denied claim</text>
+
+  <rect x="390" y="130" width="320" height="180" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="550" y="170" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Excludes2</text>
+  <text x="550" y="200" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">"NOT INCLUDED HERE"</text>
+  <text x="550" y="230" text-anchor="middle" fill="#ffffff" font-size="14">Different conditions —</text>
+  <text x="550" y="252" text-anchor="middle" fill="#ffffff" font-size="14">CAN be coded together</text>
+  <text x="550" y="285" text-anchor="middle" fill="#888" font-size="13">Both billable if both documented</text>
+
+  <rect x="720" y="130" width="320" height="180" fill="#0ea5e9" opacity="0.2" stroke="#0ea5e9" stroke-width="3" rx="10"/>
+  <text x="880" y="170" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Code Also</text>
+  <text x="880" y="200" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">TWO CODES, EITHER ORDER</text>
+  <text x="880" y="230" text-anchor="middle" fill="#ffffff" font-size="14">Sequencing depends on</text>
+  <text x="880" y="252" text-anchor="middle" fill="#ffffff" font-size="14">the circumstances</text>
+  <text x="880" y="285" text-anchor="middle" fill="#888" font-size="13">No fixed first/second</text>
+
+  <rect x="60" y="340" width="320" height="180" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <text x="220" y="380" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Code First</text>
+  <text x="220" y="410" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">ETIOLOGY FIRST</text>
+  <text x="220" y="440" text-anchor="middle" fill="#ffffff" font-size="14">Underlying cause is</text>
+  <text x="220" y="462" text-anchor="middle" fill="#ffffff" font-size="14">sequenced BEFORE this code</text>
+  <text x="220" y="495" text-anchor="middle" fill="#888" font-size="13">Manifestation always second</text>
+
+  <rect x="390" y="340" width="320" height="180" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+  <text x="550" y="380" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Use Additional</text>
+  <text x="550" y="410" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">MANIFESTATION SECOND</text>
+  <text x="550" y="440" text-anchor="middle" fill="#ffffff" font-size="14">Add a secondary code to</text>
+  <text x="550" y="462" text-anchor="middle" fill="#ffffff" font-size="14">describe the manifestation</text>
+  <text x="550" y="495" text-anchor="middle" fill="#888" font-size="13">Paired with Code First</text>
+
+  <rect x="720" y="340" width="320" height="180" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <text x="880" y="380" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">"with" / "in"</text>
+  <text x="880" y="410" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">CAUSAL LINK ASSUMED</text>
+  <text x="880" y="440" text-anchor="middle" fill="#ffffff" font-size="14">No physician statement</text>
+  <text x="880" y="462" text-anchor="middle" fill="#ffffff" font-size="14">of cause required</text>
+  <text x="880" y="495" text-anchor="middle" fill="#888" font-size="13">DM "with" CKD = causal</text>
+
+  <rect x="60" y="555" width="980" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+  <text x="550" y="590" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Sample Tabular Entry — What You're Reading</text>
+  <text x="80" y="625" fill="#ffd700" font-size="16" font-weight="bold">E11   Type 2 diabetes mellitus</text>
+  <text x="100" y="650" fill="#0ea5e9" font-size="14">Code first   any associated underlying condition (E08 cause)</text>
+  <text x="100" y="675" fill="#8b5cf6" font-size="14">Use additional code   to identify control with insulin (Z79.4)</text>
+  <text x="100" y="700" fill="#ef4444" font-size="14">Excludes1:   diabetes mellitus due to underlying condition (E08.-)</text>
+  <text x="100" y="725" fill="#10b981" font-size="14">Excludes2:   gestational diabetes (O24.4-)</text>
+
+  <rect x="60" y="780" width="980" height="240" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="815" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Why This Lesson Matters</text>
+  <text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="14">Excludes1 conflict edits are the #1 reason a clean claim becomes a denial</text>
+  <text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="14">Missing a Use Additional code drops a hospital case to a lower MS-DRG = lost revenue</text>
+  <text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="14">Misreading "with" creates phantom causal links — coding diabetic CKD on a patient who has both diseases independently</text>
+  <text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="14">Reversing Code First / Use Additional sequencing fails the CMS-1500 claim scrubber</text>
+  <text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Six conventions. Master them and you'll out-code 80% of working coders.</text>
+</svg>`,
+          caption: "Six conventions, six different rules. Together they cover the bulk of coding errors auditors find."
+        }
+      },
+      {
+        type: "concept",
+        title: "Excludes1 vs Excludes2 — The Most Misunderstood Pair in ICD-10-CM",
+        content: `When ICD-10-CM launched in 2015, the **Excludes1 note** caused more denied claims than any single code change in the history of US coding. The reason: it looks identical to **Excludes2**, but the two mean **opposite things**.
+
+**Excludes1** literally means **"NOT CODED HERE."** The note appears under a code, lists one or more other codes, and tells you: "**The condition listed below is not represented by this code. The two cannot exist together.**" Excludes1 codes are **mutually exclusive** — same patient, same encounter, **never both**. The classic example: **F03.90 (Unspecified dementia without behavioral disturbance)** has an **Excludes1 for F03.91 (with behavioral disturbance)**. Pick one or the other; never both on the same claim.
+
+**Excludes2** means **"NOT INCLUDED HERE."** The note tells you: "**This condition is not part of the code above, but the patient may have BOTH conditions at the same time. If documented, code both.**" Same example: **N18 (Chronic kidney disease)** has an **Excludes2 for E10/E11 diabetic kidney disease** — a patient who has diabetes AND ALSO has non-diabetic CKD legitimately gets both codes.
+
+**The mnemonic that saves careers**: **"Excludes ONE — pick ONE. Excludes TWO — TWO are okay."** Tape it to your monitor. Excludes1 violations are flagged automatically by **Medicare claim-scrubbing software** the moment the claim enters the gateway.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Excludes1 vs Excludes2 — Side by Side</text>
+  <text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">Look identical on the page. Mean opposite things.</text>
+
+  <rect x="50" y="115" width="490" height="430" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/>
+  <text x="295" y="150" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">EXCLUDES1</text>
+  <text x="295" y="175" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">"NOT CODED HERE"</text>
+  <text x="295" y="200" text-anchor="middle" fill="#ffffff" font-size="14">Mutually exclusive — never together</text>
+
+  <rect x="70" y="220" width="450" height="80" fill="#1a1a2e" stroke="#ef4444" stroke-width="1" rx="4"/>
+  <text x="85" y="245" fill="#ffd700" font-size="13" font-weight="bold">Example Tabular note:</text>
+  <text x="85" y="268" fill="#ffffff" font-size="13">F03.90 Unspecified dementia w/o behavioral</text>
+  <text x="85" y="285" fill="#ef4444" font-size="13" font-weight="bold">  Excludes1: dementia with behavioral (F03.91)</text>
+
+  <rect x="70" y="315" width="450" height="100" fill="#ef4444" opacity="0.2" rx="6"/>
+  <text x="295" y="340" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Translation:</text>
+  <text x="295" y="365" text-anchor="middle" fill="#ffffff" font-size="13">Cannot bill F03.90 AND F03.91 on the</text>
+  <text x="295" y="385" text-anchor="middle" fill="#ffffff" font-size="13">same encounter. Choose ONE based on</text>
+  <text x="295" y="405" text-anchor="middle" fill="#ffffff" font-size="13">whether behavioral disturbance is documented.</text>
+
+  <text x="295" y="445" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">If billed together → Edit / Denial</text>
+  <text x="295" y="475" text-anchor="middle" fill="#888" font-size="12">CMS claim scrubber flags Excludes1 conflicts</text>
+  <text x="295" y="500" text-anchor="middle" fill="#888" font-size="12">automatically. Result: full claim rejection.</text>
+  <text x="295" y="528" text-anchor="middle" fill="#ffd700" font-size="13" font-style="italic">"Excludes ONE — pick ONE."</text>
+
+  <rect x="560" y="115" width="490" height="430" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="805" y="150" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">EXCLUDES2</text>
+  <text x="805" y="175" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">"NOT INCLUDED HERE"</text>
+  <text x="805" y="200" text-anchor="middle" fill="#ffffff" font-size="14">Different conditions — both can coexist</text>
+
+  <rect x="580" y="220" width="450" height="80" fill="#1a1a2e" stroke="#10b981" stroke-width="1" rx="4"/>
+  <text x="595" y="245" fill="#ffd700" font-size="13" font-weight="bold">Example Tabular note:</text>
+  <text x="595" y="268" fill="#ffffff" font-size="13">N18 Chronic kidney disease</text>
+  <text x="595" y="285" fill="#10b981" font-size="13" font-weight="bold">  Excludes2: diabetic CKD (E10.22, E11.22...)</text>
+
+  <rect x="580" y="315" width="450" height="100" fill="#10b981" opacity="0.2" rx="6"/>
+  <text x="805" y="340" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Translation:</text>
+  <text x="805" y="365" text-anchor="middle" fill="#ffffff" font-size="13">A patient may have BOTH diabetic CKD</text>
+  <text x="805" y="385" text-anchor="middle" fill="#ffffff" font-size="13">AND a separate non-diabetic CKD.</text>
+  <text x="805" y="405" text-anchor="middle" fill="#ffffff" font-size="13">If documented, code BOTH.</text>
+
+  <text x="805" y="445" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">Both codes are billable</text>
+  <text x="805" y="475" text-anchor="middle" fill="#888" font-size="12">Documentation must support each independently.</text>
+  <text x="805" y="500" text-anchor="middle" fill="#888" font-size="12">Common with multi-system chronic disease.</text>
+  <text x="805" y="528" text-anchor="middle" fill="#ffd700" font-size="13" font-style="italic">"Excludes TWO — TWO are okay."</text>
+
+  <rect x="50" y="575" width="1000" height="200" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2" rx="10"/>
+  <text x="550" y="610" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">The OGCR-Sanctioned Exception to Excludes1</text>
+  <text x="550" y="645" text-anchor="middle" fill="#ffffff" font-size="14">OGCR Section I.A.12.a was clarified in FY2019: an Excludes1 can be over-ridden when</text>
+  <text x="550" y="668" text-anchor="middle" fill="#ffffff" font-size="14">the two conditions are clearly UNRELATED (e.g., congenital + acquired forms of the same disorder)</text>
+  <text x="550" y="700" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Document the "unrelated" rationale in the chart — or query the provider</text>
+  <text x="550" y="725" text-anchor="middle" fill="#888" font-size="13" font-style="italic">Rare exception. Default is still: Excludes1 = never together.</text>
+  <text x="550" y="755" text-anchor="middle" fill="#ffffff" font-size="13">Examples: Type 1 + Type 2 DM listed under the same patient (genuine clinical separation)</text>
+
+  <rect x="50" y="795" width="1000" height="220" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="830" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Real-World Pattern Recognition</text>
+  <text x="550" y="865" text-anchor="middle" fill="#ffffff" font-size="14">Excludes1 typically appears between SIBLINGS in the same code family (e.g., F03.90 vs F03.91)</text>
+  <text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="14">Excludes2 typically appears between DIFFERENT code families (e.g., N18 vs E11.22)</text>
+  <text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="14">When you see "(category.-)" you're often looking at Excludes2 — the conditions live elsewhere</text>
+  <text x="550" y="950" text-anchor="middle" fill="#ffffff" font-size="14">When you see codes within the same 3-character chapter root, it's usually Excludes1</text>
+  <text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="14">Pattern + mnemonic = no excuse to confuse them again.</text>
+</svg>`,
+          caption: "Excludes1 = mutually exclusive. Excludes2 = co-existing allowed. Same notation, opposite rules."
+        }
+      },
+      {
+        type: "example",
+        title: "Diabetic CKD: Reading 'with,' Code First, and Use Additional in One Chart",
+        content: `A nephrologist documents: "**Type 2 diabetes mellitus. Stage 3a chronic kidney disease. Insulin-managed.**" Notice what the physician did **NOT** write: nowhere does the note say "**due to**" or "**caused by**" or "**diabetic CKD**." A novice coder would assume two unrelated conditions and pull **E11.9** plus **N18.31** and call it done.
+
+That novice would be wrong — and the **OGCR Section I.A.15 "with"/"in" rule** is why.
+
+When the **Alphabetic Index** lists "**Diabetes, with, kidney disease**" → **E11.22**, ICD-10-CM **automatically assumes a causal link** between the two conditions. **No physician statement of causality is required.** The only exception is if the documentation explicitly says the two are unrelated (e.g., "non-diabetic CKD").
+
+So the real workflow is:
+1. **E11.22 — Type 2 diabetes mellitus with diabetic chronic kidney disease** (the "with" rule combines the two).
+2. **Code Also** N18.31 (Stage 3a CKD) — required per the **Use Additional code** note under E11.22 to identify the **stage** of CKD.
+3. **Z79.4 — Long-term (current) use of insulin** per the second **Use Additional** instruction at the **E11 category** level.
+
+**Final sequence: E11.22 → N18.31 → Z79.4.** Three codes, one chart, three conventions in play.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Diabetic CKD: Three Conventions, One Chart</text>
+
+  <rect x="60" y="90" width="980" height="90" fill="#1a1a2e" stroke="#ffffff" stroke-width="2" rx="8"/>
+  <text x="80" y="120" fill="#ffd700" font-size="16" font-weight="bold">Physician documentation (verbatim):</text>
+  <text x="80" y="145" fill="#ffffff" font-size="15">"Type 2 diabetes mellitus. Stage 3a chronic kidney disease. Insulin-managed."</text>
+  <text x="80" y="170" fill="#ef4444" font-size="13">No "due to" — no "diabetic CKD" — no explicit causal language</text>
+
+  <rect x="60" y="200" width="980" height="190" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <text x="550" y="235" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">CONVENTION 1 — the word "with"</text>
+  <text x="550" y="270" text-anchor="middle" fill="#ffffff" font-size="14">OGCR Section I.A.15: the word "with" in the Tabular or Index assumes a causal link</text>
+  <text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="14">between two conditions, UNLESS another guideline requires otherwise OR documentation</text>
+  <text x="550" y="318" text-anchor="middle" fill="#ffffff" font-size="14">explicitly states the conditions are unrelated.</text>
+  <text x="550" y="350" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Index lookup: Diabetes → type 2 → with → kidney disease → E11.22</text>
+  <text x="550" y="375" text-anchor="middle" fill="#888" font-size="13" font-style="italic">The Index combines DM + CKD into one combination code without explicit physician statement</text>
+
+  <rect x="60" y="410" width="980" height="190" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="10"/>
+  <text x="550" y="445" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">CONVENTION 2 — "Use Additional code" at E11.22</text>
+  <text x="80" y="478" fill="#ffffff" font-size="14">Tabular shows under E11.22 (Type 2 DM with diabetic chronic kidney disease):</text>
+  <text x="80" y="505" fill="#f59e0b" font-size="14" font-style="italic">  "Use additional code to identify stage of chronic kidney disease (N18.1-N18.6)"</text>
+  <text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="14">Must add N18.31 (CKD Stage 3a) to capture severity</text>
+  <text x="550" y="565" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Missing this = down-coded risk score, lost HCC capture, denied appeal</text>
+  <text x="550" y="588" text-anchor="middle" fill="#888" font-size="13" font-style="italic">CKD stage drives Medicare Advantage HCC payments — leaving it off is real money</text>
+
+  <rect x="60" y="620" width="980" height="180" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+  <text x="550" y="655" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">CONVENTION 3 — "Use Additional code" at E11 category</text>
+  <text x="80" y="688" fill="#ffffff" font-size="14">At the E11 CATEGORY level (applies to every E11._ code):</text>
+  <text x="80" y="715" fill="#8b5cf6" font-size="14" font-style="italic">  "Use additional code to identify control using insulin (Z79.4)"</text>
+  <text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="14">Patient is "insulin-managed" → must add Z79.4 (Long-term use of insulin)</text>
+  <text x="550" y="775" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Category-level notes cascade to every code in the category</text>
+
+  <rect x="60" y="820" width="980" height="120" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="550" y="855" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Final code set, in sequence</text>
+  <text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">E11.22  →  N18.31  →  Z79.4</text>
+  <text x="550" y="918" text-anchor="middle" fill="#ffffff" font-size="14">Combination code first · CKD stage · Insulin status</text>
+
+  <rect x="60" y="960" width="980" height="80" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2" rx="10"/>
+  <text x="550" y="990" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">What the novice would code (and why it's wrong):</text>
+  <text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="14">E11.9 + N18.31  →  missed the "with" rule, missed the HCC, missed the insulin code</text>
+</svg>`,
+          caption: "The 'with' rule auto-links DM and CKD; two Use Additional notes round out the picture."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: Convention Conflict",
+        content: `A coder is about to submit a claim with **two ICD-10-CM codes** on the same encounter, and a Tabular note jumps out. Pick the correct interpretation.`,
+        question: "Under code I10 (Essential primary hypertension), the Tabular reads: 'Excludes1: hypertensive disease complicating pregnancy, childbirth and the puerperium (O10-O11, O13-O16).' A coder has documentation of essential hypertension AND a 32-week pregnancy with worsening BP requiring monitoring. What does Excludes1 require here?",
+        options: [
+          { text: "Code both I10 and the appropriate O10-O16 code — they describe different time points.", correct: false },
+          { text: "Code only I10, because essential hypertension is the underlying chronic condition.", correct: false },
+          { text: "Code only the appropriate O10-O16 code — Excludes1 forbids pairing I10 with the pregnancy hypertension codes, and pregnancy-specific codes take precedence.", correct: true },
+          { text: "Code I10 plus a Z3A code for weeks of gestation, then add a Use Additional code for the pregnancy.", correct: false }
+        ],
+        explanation: `**Excludes1 = mutually exclusive — never code both.** The Tabular note under I10 explicitly excludes the pregnancy hypertension series (O10-O16), so **I10 cannot be paired** with any of those codes on the same encounter. Per **OGCR Section I.C.15 (chapter 15 — pregnancy)**, **pregnancy-related codes take sequencing priority** over the underlying condition codes during the pregnancy episode. The correct workflow is to assign the appropriate **O10.x** code (which itself is a combination code for **pre-existing essential hypertension complicating pregnancy**) plus **Z3A.32** for weeks of gestation. The other answers each violate the Excludes1 rule directly. This is one of the most common Excludes1 traps in real-world OB coding — and Medicare's claim scrubber will catch it instantly.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Excludes1 in Action: HTN + Pregnancy</text>
+
+  <rect x="60" y="100" width="980" height="120" fill="#1a1a2e" stroke="#ffffff" stroke-width="2" rx="8"/>
+  <text x="80" y="130" fill="#ffd700" font-size="16" font-weight="bold">Tabular note under I10 Essential (primary) hypertension:</text>
+  <text x="80" y="160" fill="#ef4444" font-size="15" font-weight="bold">Excludes1:</text>
+  <text x="200" y="160" fill="#ffffff" font-size="15">hypertensive disease complicating pregnancy,</text>
+  <text x="200" y="185" fill="#ffffff" font-size="15">childbirth and the puerperium (O10-O11, O13-O16)</text>
+
+  <rect x="60" y="240" width="470" height="350" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="10"/>
+  <text x="295" y="275" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">WRONG approach</text>
+  <text x="295" y="305" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Codes assigned:</text>
+  <text x="295" y="335" text-anchor="middle" fill="#ffffff" font-size="16">I10  +  O10.012</text>
+  <text x="295" y="370" text-anchor="middle" fill="#ffffff" font-size="14">Coder thinks: "both conditions are real"</text>
+
+  <text x="295" y="420" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Result:</text>
+  <text x="295" y="450" text-anchor="middle" fill="#ffffff" font-size="14">Claim hits CMS scrubber edit MUE / NCCI</text>
+  <text x="295" y="475" text-anchor="middle" fill="#ffffff" font-size="14">Excludes1 conflict flagged automatically</text>
+  <text x="295" y="500" text-anchor="middle" fill="#ffffff" font-size="14">Full claim rejected before adjudication</text>
+  <text x="295" y="530" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">Days lost, rework cost, AR aging</text>
+  <text x="295" y="565" text-anchor="middle" fill="#888" font-size="13" font-style="italic">"Both are documented" ≠ both are codable</text>
+
+  <rect x="570" y="240" width="470" height="350" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+  <text x="805" y="275" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">CORRECT approach</text>
+  <text x="805" y="305" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Codes assigned:</text>
+  <text x="805" y="335" text-anchor="middle" fill="#ffffff" font-size="16">O10.012  +  Z3A.32</text>
+  <text x="805" y="370" text-anchor="middle" fill="#ffffff" font-size="14">O10.012 = pre-existing essential HTN</text>
+  <text x="805" y="390" text-anchor="middle" fill="#ffffff" font-size="14">complicating pregnancy, 2nd trimester</text>
+  <text x="805" y="420" text-anchor="middle" fill="#ffffff" font-size="14">Z3A.32 = 32 weeks of gestation</text>
+
+  <text x="805" y="465" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">Result:</text>
+  <text x="805" y="495" text-anchor="middle" fill="#ffffff" font-size="14">Claim passes the scrubber</text>
+  <text x="805" y="520" text-anchor="middle" fill="#ffffff" font-size="14">Pregnancy code is the combination code —</text>
+  <text x="805" y="540" text-anchor="middle" fill="#ffffff" font-size="14">it already represents the essential HTN</text>
+  <text x="805" y="570" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">Paid first pass</text>
+
+  <rect x="60" y="610" width="980" height="170" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+  <text x="550" y="645" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Why pregnancy codes take precedence</text>
+  <text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="14">OGCR Section I.C.15.a.1 — Chapter 15 codes always sequence first when an encounter is pregnancy-related</text>
+  <text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="14">The O10-O16 series CONTAINS the essential HTN inside the pregnancy combination code — no need to repeat I10</text>
+  <text x="550" y="735" text-anchor="middle" fill="#ffffff" font-size="14">Z3A.32 is required per the Chapter 15 chapter-specific guidelines (weeks of gestation always reported)</text>
+  <text x="550" y="765" text-anchor="middle" fill="#ffd700" font-size="14">Excludes1 + Chapter 15 sequencing rule = single-code OB approach</text>
+
+  <rect x="60" y="800" width="980" height="220" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2" rx="10"/>
+  <text x="550" y="835" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Pattern to Memorize</text>
+  <text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="14">When you see an Excludes1, your job is to decide which side of the exclusion the patient sits on</text>
+  <text x="550" y="895" text-anchor="middle" fill="#ffffff" font-size="14">Documentation drives it: pregnancy episode → O code · non-pregnant → I10 · history of HTN, now post-partum → may use both</text>
+  <text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="14">Never default to "both" when an Excludes1 appears — it's the literal opposite of what the convention requires</text>
+  <text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Excludes1 = NEVER together. Memorize it. Cite it. Survive every claim edit.</text>
+  <text x="550" y="995" text-anchor="middle" fill="#888" font-size="13" font-style="italic">A single Excludes1 violation can hold a $10K claim for 30+ days. Read every note, every time.</text>
+</svg>`,
+          caption: "Excludes1 forces a choice; in pregnancy, the combination O-code wins."
+        }
+      },
+      {
+        type: "application",
+        title: "Your Convention-Reading Habit: Three Passes Per Code",
+        content: `Working coders develop a **three-pass habit** every time they verify a code in the Tabular. Build this into your routine now and every claim will be cleaner.
+
+**Pass 1 — Read the descriptive line of the code itself.** Confirm the code matches the documentation. Note the **laterality**, any **6th or 7th character** requirements, and any placeholder X. This is the obvious step that everyone does.
+
+**Pass 2 — Walk UP the tree.** Excludes1/Excludes2/Code First/Use Additional notes appear at **four levels**: the **chapter** (e.g., Chapter 4 "Endocrine"), the **block** (E08-E13), the **category** (E11), and the **specific code** (E11.22). A note at a higher level **applies to every code beneath it**. The Code First note for Z79.4 sits at the **E11 category level** — easy to miss if you only look at E11.22's specific line. Walk UP from your code and read every level.
+
+**Pass 3 — Walk DOWN through cross-references.** Each Excludes note lists other codes (e.g., "O10-O16," "N18.-"). Briefly **scan those referenced codes**, especially in long-standing chronic disease coding, to make sure you're not in the wrong family entirely.
+
+**Three passes, every code, every claim.** Slow at first, automatic within a month, and **the single biggest accuracy multiplier** any junior coder can adopt. It's also exactly what auditors are checking when they review your work — so coding the way they audit means you'll never lose an appeal.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="1100" fill="#1a1a2e"/>
+  <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">The Three-Pass Tabular Habit</text>
+  <text x="550" y="92" text-anchor="middle" fill="#888" font-size="16">Done in this order, every time, every code. Survives every audit.</text>
+
+  <rect x="60" y="120" width="990" height="210" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="10"/>
+  <circle cx="120" cy="225" r="45" fill="#6366f1"/>
+  <text x="120" y="240" text-anchor="middle" fill="#ffffff" font-size="38" font-weight="bold">1</text>
+  <text x="195" y="170" fill="#6366f1" font-size="24" font-weight="bold">PASS 1 — Read the code itself</text>
+  <text x="195" y="205" fill="#ffffff" font-size="15">Does the description match the documentation?</text>
+  <text x="195" y="230" fill="#ffffff" font-size="15">Laterality (right/left/bilateral/unspecified) correct?</text>
+  <text x="195" y="255" fill="#ffffff" font-size="15">6th &amp; 7th character present? Placeholder X needed?</text>
+  <text x="195" y="285" fill="#ffd700" font-size="14" font-weight="bold">Output: a candidate code that fits the descriptor line</text>
+  <text x="195" y="312" fill="#888" font-size="13">90% of coders stop here. The next two passes are what separate you.</text>
+
+  <rect x="60" y="350" width="990" height="350" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="10"/>
+  <circle cx="120" cy="525" r="45" fill="#10b981"/>
+  <text x="120" y="540" text-anchor="middle" fill="#1a1a2e" font-size="38" font-weight="bold">2</text>
+  <text x="195" y="395" fill="#10b981" font-size="24" font-weight="bold">PASS 2 — Walk UP the tree</text>
+  <text x="195" y="425" fill="#ffffff" font-size="14">Convention notes cascade from higher levels down. Read all four:</text>
+
+  <rect x="195" y="445" width="800" height="35" fill="#10b981" opacity="0.2" rx="4"/>
+  <text x="215" y="467" fill="#ffd700" font-size="14" font-weight="bold">CHAPTER level</text>
+  <text x="400" y="467" fill="#ffffff" font-size="13">e.g., "Chapter 4 — Endocrine, Nutritional and Metabolic"</text>
+
+  <rect x="195" y="490" width="800" height="35" fill="#10b981" opacity="0.2" rx="4"/>
+  <text x="215" y="512" fill="#ffd700" font-size="14" font-weight="bold">BLOCK level</text>
+  <text x="400" y="512" fill="#ffffff" font-size="13">e.g., "E08-E13 Diabetes mellitus"</text>
+
+  <rect x="195" y="535" width="800" height="35" fill="#10b981" opacity="0.2" rx="4"/>
+  <text x="215" y="557" fill="#ffd700" font-size="14" font-weight="bold">CATEGORY level</text>
+  <text x="400" y="557" fill="#ffffff" font-size="13">e.g., "E11 — Type 2 diabetes mellitus" (Use Additional Z79.4 lives here!)</text>
+
+  <rect x="195" y="580" width="800" height="35" fill="#10b981" opacity="0.2" rx="4"/>
+  <text x="215" y="602" fill="#ffd700" font-size="14" font-weight="bold">SPECIFIC code</text>
+  <text x="400" y="602" fill="#ffffff" font-size="13">e.g., "E11.22 — DM type 2 with diabetic CKD" (Use Additional N18.- lives here)</text>
+
+  <text x="195" y="650" fill="#ffd700" font-size="14" font-weight="bold">Output: every Excludes1/2, Code First, Use Additional that applies</text>
+  <text x="195" y="678" fill="#888" font-size="13">Skipping any level is the #1 reason claims lose Use Additional codes and HCC capture</text>
+
+  <rect x="60" y="720" width="990" height="200" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="10"/>
+  <circle cx="120" cy="820" r="45" fill="#ec4899"/>
+  <text x="120" y="835" text-anchor="middle" fill="#ffffff" font-size="38" font-weight="bold">3</text>
+  <text x="195" y="765" fill="#ec4899" font-size="24" font-weight="bold">PASS 3 — Walk DOWN through cross-references</text>
+  <text x="195" y="800" fill="#ffffff" font-size="14">Each Excludes note lists other codes — "O10-O16," "N18.-," "(E08.-)"</text>
+  <text x="195" y="828" fill="#ffffff" font-size="14">Briefly scan the referenced families to make sure you're in the RIGHT chapter</text>
+  <text x="195" y="855" fill="#ffffff" font-size="14">Verify the cross-reference actually applies to your patient before discarding it</text>
+  <text x="195" y="885" fill="#ffd700" font-size="14" font-weight="bold">Output: confidence that you're not in a forbidden pair AND you haven't missed a better code</text>
+  <text x="195" y="910" fill="#888" font-size="13">10 extra seconds per code. Saves hours of appeals.</text>
+
+  <rect x="60" y="940" width="990" height="80" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="2" rx="10"/>
+  <text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Three passes. Every code. Every claim.</text>
+  <text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="14" font-style="italic">It is the single biggest accuracy multiplier any junior coder can adopt — and exactly how auditors review.</text>
+</svg>`,
+          caption: "Code line, then walk UP the tree, then check the cross-references — three passes lock in compliance."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'cpc-cpt-surg-1',

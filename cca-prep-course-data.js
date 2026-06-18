@@ -3509,8 +3509,1093 @@ A CCA who knows these five items is **immediately valuable** to any HIM director
             id: 'cca-domain-2', title: 'CCA Domain 2: ICD-10-CM Diagnosis Coding',
             author: 'Synthesis Learning',
             description: 'The Official Guidelines, alphabetic/tabular workflow, principal vs. additional diagnoses, and the conditions that always trip up new coders.',
-            lessons: 1, duration: 5, progress: 0, category: 'cca-prep',
-            lessonList: comingSoonLessons('ICD-10-CM Official Guidelines, alphabetic/tabular workflow, and principal vs. additional diagnoses'),
+            lessons: 3, duration: 45, progress: 0, category: 'cca-prep',
+            lessonList: [
+{
+    id: "cca-domain-2-lesson-1",
+    title: "ICD-10-CM Code Structure: Chapters, Specificity, and the Placeholder X",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Code Structure Matters",
+        content: `**ICD-10-CM** (International Classification of Diseases, 10th Revision, Clinical Modification) is the diagnosis code set used for **every encounter** in U.S. healthcare — from a sore throat in urgent care to a complex inpatient stay. As a CCA, you will assign these codes thousands of times. Misreading even one character can change the diagnosis from "initial encounter" to "sequela" — and change the bill.
+
+The code set contains roughly **72,000 codes** organized into **22 chapters**, each covering a body system or condition group (Chapter 1 — Infectious, Chapter 2 — Neoplasms, Chapter 9 — Circulatory, Chapter 19 — Injury, etc.). Every code follows the same skeleton: an alpha letter, then 2–6 alphanumeric characters.
+
+In this lesson you will learn the **anatomy of an ICD-10-CM code** — how many characters, what each position means, when a 7th character is required, and the famous **placeholder X** rule that trips up new coders on nearly every injury case. Master this, and the rest of Domain 2 falls into place.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-family="Arial" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">ICD-10-CM Code Anatomy</text>
+            <text x="550" y="100" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">S52.521A — Torus fracture, lower end of right radius, initial encounter</text>
+            <rect x="100" y="160" width="120" height="120" fill="#6366f1" stroke="#ffd700" stroke-width="3"/>
+            <text x="160" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">S</text>
+            <text x="160" y="310" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">Pos 1: Category</text>
+            <text x="160" y="330" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Always alpha</text>
+            <text x="160" y="348" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">S = Injury</text>
+            <rect x="240" y="160" width="120" height="120" fill="#6366f1" stroke="#ffd700" stroke-width="3"/>
+            <text x="300" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+            <rect x="370" y="160" width="120" height="120" fill="#6366f1" stroke="#ffd700" stroke-width="3"/>
+            <text x="430" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+            <text x="365" y="310" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">Pos 2-3: Etiology</text>
+            <text x="365" y="330" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Numeric</text>
+            <text x="365" y="348" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">52 = Radius/Ulna</text>
+            <text x="495" y="240" font-family="monospace" font-size="64" fill="#ffd700" text-anchor="middle" font-weight="bold">.</text>
+            <rect x="520" y="160" width="120" height="120" fill="#10b981" stroke="#ffd700" stroke-width="3"/>
+            <text x="580" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+            <rect x="650" y="160" width="120" height="120" fill="#10b981" stroke="#ffd700" stroke-width="3"/>
+            <text x="710" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+            <rect x="780" y="160" width="120" height="120" fill="#10b981" stroke="#ffd700" stroke-width="3"/>
+            <text x="840" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+            <text x="710" y="310" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">Pos 4-6: Anatomic site, severity, laterality</text>
+            <text x="710" y="330" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">52 = torus fx lower end · 1 = right</text>
+            <rect x="920" y="160" width="120" height="120" fill="#ec4899" stroke="#ffd700" stroke-width="3"/>
+            <text x="980" y="240" font-family="monospace" font-size="64" fill="#ffffff" text-anchor="middle" font-weight="bold">A</text>
+            <text x="980" y="310" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle">Pos 7: Extension</text>
+            <text x="980" y="330" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">A = Initial</text>
+            <text x="550" y="430" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Length rules</text>
+            <text x="550" y="465" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Codes are 3 to 7 characters. A code with sub-classifications is NEVER valid at 3 chars.</text>
+            <text x="550" y="490" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Always code to the highest level of specificity available.</text>
+            <line x1="100" y1="540" x2="1000" y2="540" stroke="#888" stroke-width="1"/>
+            <text x="550" y="585" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">The 22 Chapters (selected)</text>
+            <text x="180" y="635" font-family="Arial" font-size="16" fill="#ffffff">Ch 1  A00-B99  Infectious &amp; parasitic</text>
+            <text x="180" y="665" font-family="Arial" font-size="16" fill="#ffffff">Ch 2  C00-D49  Neoplasms</text>
+            <text x="180" y="695" font-family="Arial" font-size="16" fill="#ffffff">Ch 4  E00-E89  Endocrine (incl. diabetes)</text>
+            <text x="180" y="725" font-family="Arial" font-size="16" fill="#ffffff">Ch 5  F01-F99  Mental &amp; behavioral</text>
+            <text x="180" y="755" font-family="Arial" font-size="16" fill="#ffffff">Ch 9  I00-I99  Circulatory</text>
+            <text x="180" y="785" font-family="Arial" font-size="16" fill="#ffffff">Ch 10 J00-J99  Respiratory</text>
+            <text x="600" y="635" font-family="Arial" font-size="16" fill="#ffffff">Ch 11 K00-K95  Digestive</text>
+            <text x="600" y="665" font-family="Arial" font-size="16" fill="#ffffff">Ch 14 N00-N99  Genitourinary</text>
+            <text x="600" y="695" font-family="Arial" font-size="16" fill="#ffffff">Ch 15 O00-O9A  Pregnancy/childbirth</text>
+            <text x="600" y="725" font-family="Arial" font-size="16" fill="#ffffff">Ch 19 S00-T88  Injury &amp; poisoning</text>
+            <text x="600" y="755" font-family="Arial" font-size="16" fill="#ffffff">Ch 20 V00-Y99  External causes</text>
+            <text x="600" y="785" font-family="Arial" font-size="16" fill="#ffffff">Ch 21 Z00-Z99  Factors / status / hx</text>
+            <rect x="100" y="830" width="900" height="220" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="870" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">First letter usually = chapter</text>
+            <text x="550" y="905" font-family="monospace" font-size="18" fill="#10b981" text-anchor="middle">A/B → infections · C/D → neoplasms · E → endocrine · F → mental</text>
+            <text x="550" y="935" font-family="monospace" font-size="18" fill="#10b981" text-anchor="middle">I → circulatory · J → respiratory · K → digestive · N → GU</text>
+            <text x="550" y="965" font-family="monospace" font-size="18" fill="#10b981" text-anchor="middle">O → OB · S/T → injury · V/W/X/Y → external · Z → factors</text>
+            <text x="550" y="1010" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle" font-style="italic">Exception: H is split — H00-H59 eye, H60-H95 ear</text>
+          </svg>`,
+          caption: "Every ICD-10-CM code follows the same X##.#### layout, and the first alpha character tells you the chapter at a glance."
+        }
+      },
+      {
+        type: "concept",
+        title: "Specificity, the 7th Character, and Placeholder X",
+        content: `An ICD-10-CM code is **never valid if a more specific code exists**. This is the rule the AHA Coding Clinic, the AAPC, and AHIMA all hammer: **code to the highest level of specificity**.
+
+Some categories require a **7th character extension** — most famously **Chapter 19 (Injuries, S00–T88)** and **Chapter 15 (Obstetrics)**. The three injury extensions you must memorize are:
+- **A — Initial encounter** (active treatment, even by a new provider)
+- **D — Subsequent encounter** (routine healing/recovery, cast change, suture removal)
+- **S — Sequela** (a late effect — scar, contracture, post-traumatic arthritis from an old fracture)
+
+But here is the catch: the 7th character must sit in **position 7**. What if the base code is only 5 characters long? You can't just stick the A at position 6 — that would change its meaning. The fix is the **placeholder X**.
+
+The **placeholder X** is a dummy character that fills any unused position so the 7th character lands where it belongs. Example: **T50.901A** has six characters before the A — no placeholder needed. But **T50.0X5A** (adverse effect of cardiac glycoside, sequela) needs an X in position 5 because the code only "uses" through position 4 for clinical meaning. **Never** assign a code with the X dropped; clearinghouses will reject it as invalid.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">The Placeholder X — When and Why</text>
+            <text x="550" y="100" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">A 7th character MUST sit in position 7. Use X to fill empty spots.</text>
+            <rect x="60" y="140" width="1000" height="220" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="560" y="180" font-family="Arial" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">WRONG — no placeholder</text>
+            <text x="560" y="225" font-family="monospace" font-size="44" fill="#ffffff" text-anchor="middle">T50.0  5A</text>
+            <text x="560" y="265" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">7th char dropped into position 6 — code is now meaningless</text>
+            <text x="560" y="305" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">Clearinghouse rejects with edit: "Invalid code length / 7th char misplaced"</text>
+            <text x="560" y="340" font-family="Arial" font-size="15" fill="#888" text-anchor="middle">Common rookie mistake on injuries, adverse effects, and OB cases</text>
+            <rect x="60" y="390" width="1000" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="560" y="430" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">RIGHT — placeholder X holds position 5 (and 6)</text>
+            <text x="560" y="490" font-family="monospace" font-size="52" fill="#ffffff" text-anchor="middle">T50.0<tspan fill="#ffd700">X</tspan>5<tspan fill="#ec4899">A</tspan></text>
+            <text x="335" y="540" font-family="Arial" font-size="14" fill="#ffd700" text-anchor="middle">↑ placeholder</text>
+            <text x="660" y="540" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">↑ pos 6 (subcategory)</text>
+            <text x="760" y="540" font-family="Arial" font-size="14" fill="#ec4899" text-anchor="middle">↑ pos 7 ext.</text>
+            <text x="560" y="585" font-family="Arial" font-size="17" fill="#ffffff" text-anchor="middle">Adverse effect of cardiac-stimulant glycoside, sequela</text>
+            <text x="560" y="610" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">X is the "empty seat" — it carries NO clinical meaning, just spacing</text>
+            <text x="550" y="685" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">The Three 7th-Character Extensions (Injury Ch. 19)</text>
+            <rect x="120" y="720" width="280" height="200" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="260" y="765" font-family="Arial" font-size="44" fill="#ffd700" text-anchor="middle" font-weight="bold">A</text>
+            <text x="260" y="800" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Initial</text>
+            <text x="260" y="830" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Active treatment phase</text>
+            <text x="260" y="850" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">ER visit, surgery, new dx</text>
+            <text x="260" y="880" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">"Even a new provider</text>
+            <text x="260" y="898" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">in active phase = A"</text>
+            <rect x="410" y="720" width="280" height="200" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="765" font-family="Arial" font-size="44" fill="#ffd700" text-anchor="middle" font-weight="bold">D</text>
+            <text x="550" y="800" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Subsequent</text>
+            <text x="550" y="830" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Routine healing care</text>
+            <text x="550" y="850" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Cast change, suture removal</text>
+            <text x="550" y="880" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Fracture follow-up clinic</text>
+            <text x="550" y="898" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">= D, not A</text>
+            <rect x="700" y="720" width="280" height="200" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="840" y="765" font-family="Arial" font-size="44" fill="#ffd700" text-anchor="middle" font-weight="bold">S</text>
+            <text x="840" y="800" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Sequela</text>
+            <text x="840" y="830" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Late effect of old injury</text>
+            <text x="840" y="850" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Scar, contracture, arthritis</text>
+            <text x="840" y="880" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Code the residual FIRST,</text>
+            <text x="840" y="898" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">then the injury with S</text>
+            <rect x="60" y="950" width="1000" height="130" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="985" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Quick decision: which extension?</text>
+            <text x="560" y="1020" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Patient still in active care for THIS injury? → A</text>
+            <text x="560" y="1045" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Patient healing on schedule, routine follow-up? → D</text>
+            <text x="560" y="1070" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Old injury, now treating its residual effect? → S</text>
+          </svg>`,
+          caption: "Placeholder X holds a seat so the 7th-character extension lands in position 7. A = active treatment, D = routine recovery, S = late effect."
+        }
+      },
+      {
+        type: "example",
+        title: "Example: Walking a Code from Index to Tabular",
+        content: `**Scenario.** A 9-year-old falls off a scooter and arrives at the ER. The physician documents: *"Closed greenstick fracture, distal end of right radius, initial encounter."* You need the right ICD-10-CM code.
+
+**Step 1 — Alphabetic Index.** Look up the main term **Fracture** → subterm **radius** → **lower end** → **greenstick**. The index points you to **S52.51-**. The dash means: not complete, go to Tabular.
+
+**Step 2 — Tabular List.** Find **S52.51** (Greenstick fracture of lower end of radius). The Tabular shows you must specify **laterality** (right vs left vs unspecified) and that this code **requires a 7th character**.
+- S52.511 — right radius
+- S52.512 — left radius
+- S52.519 — unspecified
+
+**Step 3 — Pick laterality.** Documentation says **right** → **S52.511**.
+
+**Step 4 — Apply the 7th character.** The category notes list 16 possible extensions for fractures (A, B, C, D, E, F, G, H, J, K, M, N, P, Q, R, S). Initial encounter for **closed** fracture = **A**.
+
+**Step 5 — Count positions.** S-5-2-5-1-1 is six characters. The A goes in position 7, no placeholder needed. **Final code: S52.511A.**
+
+If the documentation had said "torus fracture" (a less specific subcategory at S52.52-), you would still hit 6 characters before the extension — still no placeholder. But if you were coding **T50.0** (adverse effect of cardiac-stimulant glycosides), the base code stops at 4 characters and you would need **two placeholder Xs** (T50.0X1A) to push the extension to position 7.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Coding Workflow: Greenstick Fx, Right Radius</text>
+            <rect x="60" y="100" width="980" height="120" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="135" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">STEP 1 — Alphabetic Index</text>
+            <text x="80" y="165" font-family="monospace" font-size="16" fill="#ffffff">Fracture, traumatic (abduction) (adduction) (separation)</text>
+            <text x="100" y="185" font-family="monospace" font-size="16" fill="#ffffff">  radius S52.9-</text>
+            <text x="120" y="205" font-family="monospace" font-size="16" fill="#10b981">    lower end S52.50-</text>
+            <text x="600" y="185" font-family="monospace" font-size="16" fill="#10b981">      greenstick → S52.51-</text>
+            <text x="600" y="205" font-family="Arial" font-size="13" fill="#ffd700">↑ dash = go verify in Tabular</text>
+            <rect x="60" y="240" width="980" height="180" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="275" font-family="Arial" font-size="20" fill="#ffd700" font-weight="bold">STEP 2 — Tabular verification (S52.51)</text>
+            <text x="80" y="305" font-family="monospace" font-size="15" fill="#ffffff">S52.51  Greenstick fracture of lower end of radius</text>
+            <text x="80" y="328" font-family="monospace" font-size="14" fill="#ec4899">        The appropriate 7th character is to be added to each code from subcategory S52.51:</text>
+            <text x="120" y="350" font-family="monospace" font-size="14" fill="#ffd700">  A  initial encounter for closed fracture</text>
+            <text x="120" y="370" font-family="monospace" font-size="14" fill="#888">  D  subsequent encounter for closed fracture w/ routine healing</text>
+            <text x="120" y="390" font-family="monospace" font-size="14" fill="#888">  S  sequela</text>
+            <text x="120" y="410" font-family="monospace" font-size="14" fill="#888">  (...13 more for open/delayed/nonunion/malunion...)</text>
+            <rect x="60" y="440" width="980" height="120" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="475" font-family="Arial" font-size="20" fill="#1a1a2e" font-weight="bold">STEP 3 — Laterality</text>
+            <text x="80" y="505" font-family="monospace" font-size="15" fill="#1a1a2e">S52.511  right radius   ← documentation matches</text>
+            <text x="80" y="528" font-family="monospace" font-size="15" fill="#1a1a2e">S52.512  left radius</text>
+            <text x="80" y="551" font-family="monospace" font-size="15" fill="#1a1a2e">S52.519  unspecified radius  (avoid — query if unclear)</text>
+            <rect x="60" y="580" width="980" height="120" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="615" font-family="Arial" font-size="20" fill="#1a1a2e" font-weight="bold">STEP 4 — Add 7th character</text>
+            <text x="80" y="650" font-family="monospace" font-size="20" fill="#1a1a2e">S52.511 + A  (initial, closed)</text>
+            <text x="80" y="678" font-family="Arial" font-size="14" fill="#1a1a2e">Base code is 6 characters → A drops into position 7 directly. No placeholder needed.</text>
+            <rect x="60" y="720" width="980" height="140" fill="#1a1a2e" stroke="#10b981" stroke-width="4" rx="10"/>
+            <text x="550" y="765" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">FINAL CODE</text>
+            <text x="550" y="825" font-family="monospace" font-size="58" fill="#ffd700" text-anchor="middle" font-weight="bold">S52.511A</text>
+            <text x="550" y="850" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Closed greenstick fx, lower end of right radius, initial encounter</text>
+            <rect x="60" y="880" width="980" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="915" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Contrast: a code that DOES need placeholders</text>
+            <text x="550" y="950" font-family="monospace" font-size="22" fill="#ffffff" text-anchor="middle">T50.0  →  base only 4 chars  →  need 2 X's  →  T50.0<tspan fill="#ec4899">XX</tspan>1A</text>
+            <text x="550" y="985" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Adverse effect of cardiac-stimulant glycosides, initial encounter</text>
+            <text x="550" y="1015" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Position 5 (X) + position 6 (1 = adverse effect) + position 7 (A = initial)</text>
+            <text x="550" y="1055" font-family="Arial" font-size="14" fill="#ffd700" text-anchor="middle" font-style="italic">Rule of thumb: short base + required 7th char = grab the X</text>
+          </svg>`,
+          caption: "Index → Tabular → laterality → 7th character. Count base characters before deciding whether you need placeholder Xs."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: 7th Character & Placeholder",
+        content: `A patient is seen for a **return visit** for routine cast care of a previously diagnosed **closed greenstick fracture of the lower end of the left radius**. The fracture is healing as expected.
+
+Which ICD-10-CM code is correct?`,
+        options: [
+          { text: "S52.512A", correct: false },
+          { text: "S52.512D", correct: true },
+          { text: "S52.51XD", correct: false },
+          { text: "S52.5XXD", correct: false }
+        ],
+        explanation: `**S52.512D** is correct. The base subcategory S52.512 already has 6 characters (S-5-2-5-1-2), so the 7th-character extension drops straight into position 7 — no placeholder X required. The encounter is for **routine healing care after the initial visit**, so the extension is **D** (subsequent), not A (initial) or S (sequela). S52.512A would be wrong because active treatment is over; codes ending in just S52.51 or S52.5 are invalid stubs because more specific codes (with laterality) exist. Adding an X here would be wrong because there are no empty positions to fill — the X is only used when the base code is shorter than 6 characters and a 7th is required.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">Decision Tree: 7th Character Selection</text>
+            <rect x="400" y="100" width="300" height="80" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="40"/>
+            <text x="550" y="135" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Encounter for an</text>
+            <text x="550" y="158" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">injury — which 7th?</text>
+            <line x1="550" y1="180" x2="550" y2="230" stroke="#ffd700" stroke-width="2"/>
+            <polygon points="550,235 545,225 555,225" fill="#ffd700"/>
+            <rect x="350" y="240" width="400" height="80" fill="#1a1a2e" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="550" y="275" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Is the injury the reason for THIS visit,</text>
+            <text x="550" y="298" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">or is a late effect being treated?</text>
+            <line x1="350" y1="320" x2="200" y2="380" stroke="#ffd700" stroke-width="2"/>
+            <line x1="750" y1="320" x2="900" y2="380" stroke="#ffd700" stroke-width="2"/>
+            <text x="265" y="365" font-family="Arial" font-size="14" fill="#ffd700">injury itself</text>
+            <text x="800" y="365" font-family="Arial" font-size="14" fill="#ffd700">late effect</text>
+            <rect x="50" y="385" width="300" height="80" fill="#1a1a2e" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="200" y="420" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Receiving ACTIVE</text>
+            <text x="200" y="443" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">treatment right now?</text>
+            <rect x="750" y="385" width="300" height="100" fill="#8b5cf6" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="900" y="425" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">S</text>
+            <text x="900" y="455" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Sequela — code the</text>
+            <text x="900" y="475" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">residual first, injury w/ S</text>
+            <line x1="100" y1="465" x2="50" y2="540" stroke="#ffd700" stroke-width="2"/>
+            <line x1="300" y1="465" x2="350" y2="540" stroke="#ffd700" stroke-width="2"/>
+            <text x="65" y="510" font-family="Arial" font-size="14" fill="#ffd700">yes</text>
+            <text x="335" y="510" font-family="Arial" font-size="14" fill="#ffd700">no, routine recovery</text>
+            <rect x="20" y="545" width="180" height="100" fill="#6366f1" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="110" y="585" font-family="Arial" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">A</text>
+            <text x="110" y="615" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Initial encounter</text>
+            <text x="110" y="633" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">(active phase)</text>
+            <rect x="240" y="545" width="220" height="100" fill="#10b981" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="350" y="585" font-family="Arial" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">D</text>
+            <text x="350" y="615" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Subsequent encounter</text>
+            <text x="350" y="633" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">(routine healing visit)</text>
+            <rect x="60" y="690" width="980" height="350" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="730" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Applied to the quiz scenario</text>
+            <text x="100" y="775" font-family="Arial" font-size="16" fill="#ffffff">Cast care for healing fracture = NOT active treatment, NOT a late effect</text>
+            <text x="100" y="805" font-family="Arial" font-size="16" fill="#ffffff">Patient is in the recovery phase, routine follow-up → 7th character = <tspan fill="#10b981" font-weight="bold">D</tspan></text>
+            <text x="100" y="850" font-family="Arial" font-size="16" fill="#ffffff">Base code S52.512 (left radius greenstick) is already 6 chars</text>
+            <text x="100" y="880" font-family="Arial" font-size="16" fill="#ffffff">→ D drops into position 7 with NO placeholder needed</text>
+            <text x="550" y="940" font-family="monospace" font-size="44" fill="#ffd700" text-anchor="middle" font-weight="bold">S52.512D</text>
+            <text x="550" y="980" font-family="Arial" font-size="15" fill="#888" text-anchor="middle">If the case had been "scar from old fracture" → use S</text>
+            <text x="550" y="1005" font-family="Arial" font-size="15" fill="#888" text-anchor="middle">If still in ER getting reduction → use A</text>
+          </svg>`,
+          caption: "Active treatment = A, routine healing = D, late effect = S. Count the base code length before reaching for an X."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: A Hospital Floor Workflow",
+        content: `**Real-world workflow.** At Memorial Regional Hospital, you are the outpatient coder for the orthopedic clinic. Today's encounter sheet has three patients — all fractures — and your job is to assign accurate codes before the claims drop tonight.
+
+**Patient 1:** 12 y/o boy, ER visit, *"buckle fracture, distal right radius, cast applied today"*. Active treatment, new injury, right side, buckle (torus) → **S52.521A**.
+
+**Patient 2:** Same boy, 4 weeks later, *"cast removed, healing well, no complications"*. Still the same injury, but routine recovery → **S52.521D**.
+
+**Patient 3:** Adult patient with *"chronic wrist pain from old greenstick fracture of the left radius, healed 5 years ago"*. The injury is gone but a residual remains — sequela. You code the **residual first** (chronic pain, e.g., M25.532 — pain in left wrist) and **then** the injury with the S extension → **S52.512S**.
+
+**Things to verify before you submit:**
+1. Every code has 3–7 valid characters — no stray placeholders or missing extensions.
+2. Laterality is documented; if it isn't, **query the physician** rather than coding "unspecified."
+3. The visit type (initial/subsequent/sequela) matches the **encounter intent**, not just the calendar date.
+4. For sequela claims, the residual is sequenced **first** and the original injury **second**.
+
+A clean claim saves the hospital a denial; a clean coder builds a career. The placeholder X and the three injury extensions show up on the CCA exam in nearly every form.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">One Patient, Three Encounters</text>
+            <text x="550" y="90" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">How the 7th character changes as care evolves</text>
+            <line x1="100" y1="150" x2="1000" y2="150" stroke="#ffd700" stroke-width="3"/>
+            <circle cx="200" cy="150" r="14" fill="#6366f1" stroke="#ffd700" stroke-width="3"/>
+            <circle cx="550" cy="150" r="14" fill="#10b981" stroke="#ffd700" stroke-width="3"/>
+            <circle cx="900" cy="150" r="14" fill="#8b5cf6" stroke="#ffd700" stroke-width="3"/>
+            <text x="200" y="125" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Day 0</text>
+            <text x="550" y="125" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Week 4</text>
+            <text x="900" y="125" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">5 years later</text>
+            <rect x="60" y="200" width="280" height="280" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="200" y="240" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Patient 1 — ER visit</text>
+            <text x="200" y="275" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">"Buckle fracture, distal</text>
+            <text x="200" y="293" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">right radius, cast applied"</text>
+            <line x1="100" y1="320" x2="300" y2="320" stroke="#888" stroke-width="1"/>
+            <text x="200" y="350" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Encounter type:</text>
+            <text x="200" y="372" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle" font-weight="bold">Active treatment</text>
+            <text x="200" y="402" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">7th char =</text>
+            <text x="200" y="430" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">A</text>
+            <text x="200" y="465" font-family="monospace" font-size="20" fill="#ffffff" text-anchor="middle">S52.521A</text>
+            <rect x="410" y="200" width="280" height="280" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="240" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Patient 1 — return</text>
+            <text x="550" y="275" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">"Cast removed,</text>
+            <text x="550" y="293" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">healing as expected"</text>
+            <line x1="450" y1="320" x2="650" y2="320" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="550" y="350" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">Encounter type:</text>
+            <text x="550" y="372" font-family="Arial" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Routine healing</text>
+            <text x="550" y="402" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">7th char =</text>
+            <text x="550" y="430" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">D</text>
+            <text x="550" y="465" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">S52.521D</text>
+            <rect x="760" y="200" width="280" height="280" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="900" y="240" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Patient 3 — adult</text>
+            <text x="900" y="275" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">"Chronic pain from</text>
+            <text x="900" y="293" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">old greenstick fx"</text>
+            <line x1="800" y1="320" x2="1000" y2="320" stroke="#888" stroke-width="1"/>
+            <text x="900" y="350" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Encounter type:</text>
+            <text x="900" y="372" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">Sequela (late effect)</text>
+            <text x="900" y="402" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">7th char =</text>
+            <text x="900" y="430" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">S</text>
+            <text x="900" y="465" font-family="monospace" font-size="20" fill="#ffffff" text-anchor="middle">S52.512S</text>
+            <rect x="60" y="510" width="980" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="545" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Sequela sequencing rule</text>
+            <text x="550" y="580" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">For sequela cases, code the RESIDUAL first, then the original injury with S.</text>
+            <text x="550" y="618" font-family="monospace" font-size="20" fill="#10b981" text-anchor="middle">PDX: M25.532 (pain, left wrist)</text>
+            <text x="550" y="648" font-family="monospace" font-size="20" fill="#ec4899" text-anchor="middle">SDX: S52.512S (greenstick fx, left radius, sequela)</text>
+            <text x="550" y="678" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">The residual is what brought the patient in — it goes first.</text>
+            <rect x="60" y="720" width="980" height="340" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="760" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Pre-submission checklist</text>
+            <text x="90" y="800" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="800" font-family="Arial" font-size="16" fill="#ffffff">Every code has 3–7 valid characters; no orphan placeholders</text>
+            <text x="90" y="835" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="835" font-family="Arial" font-size="16" fill="#ffffff">Laterality documented; if missing, QUERY the physician (do not default to "unspecified")</text>
+            <text x="90" y="870" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="870" font-family="Arial" font-size="16" fill="#ffffff">7th character matches encounter intent (A active, D recovery, S late effect)</text>
+            <text x="90" y="905" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="905" font-family="Arial" font-size="16" fill="#ffffff">Sequela cases sequence the residual FIRST, the injury with S second</text>
+            <text x="90" y="940" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="940" font-family="Arial" font-size="16" fill="#ffffff">Placeholder X used wherever base code is &lt; 6 characters AND a 7th is required</text>
+            <text x="90" y="975" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+            <text x="120" y="975" font-family="Arial" font-size="16" fill="#ffffff">Index lookup verified against Tabular — never code from Index alone</text>
+            <text x="550" y="1025" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle" font-style="italic">Six checks. Sixty seconds. Saves a denial.</text>
+          </svg>`,
+          caption: "One injury, three encounter types, three 7th characters. The placeholder X and the encounter intent decide the final code."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-2",
+    title: "Selecting the Principal Diagnosis: UHDDS and the 'After Study' Rule",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Principal Diagnosis Drives the Claim",
+        content: `In inpatient coding, the **principal diagnosis (PDX)** is the single most important code on the claim. It determines the **MS-DRG**, which determines the **hospital's payment**, which is often the difference between a $4,000 reimbursement and a $40,000 one.
+
+But picking it isn't just "the worst thing wrong" or "what the doctor wrote first." It is a precise definition with deep coding-rules logic behind it. That definition lives in the **Uniform Hospital Discharge Data Set (UHDDS)**, codified in 1985 and re-affirmed by CMS:
+
+> *"That condition established **after study** to be **chiefly responsible for occasioning the admission** of the patient to the hospital for care."*
+
+Three phrases matter: **"after study"** (not on arrival, not in the ER — after work-up is complete), **"chiefly responsible"** (not contributory, not comorbid), and **"occasioning the admission"** (it caused the bed to be needed, not just incidentally found).
+
+In this lesson you will master the UHDDS definition, the **symptom-versus-confirmed-diagnosis** rule (Guideline II.A), the **two-or-more conditions equally meeting principal** rule (II.C), and the famous **original-treatment-plan-not-carried-out** rule (II.F). These four rules show up on every CCA exam.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">UHDDS Principal Diagnosis Definition</text>
+            <rect x="60" y="100" width="980" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="4" rx="15"/>
+            <text x="550" y="145" font-family="Arial" font-size="18" fill="#888" text-anchor="middle">The official definition (UHDDS, 1985)</text>
+            <text x="550" y="185" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-style="italic">"That condition established <tspan fill="#10b981">after study</tspan></text>
+            <text x="550" y="220" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-style="italic">to be <tspan fill="#10b981">chiefly responsible</tspan></text>
+            <text x="550" y="255" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-style="italic">for <tspan fill="#10b981">occasioning the admission</tspan> of the patient</text>
+            <text x="550" y="285" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-style="italic">to the hospital for care."</text>
+            <text x="550" y="340" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Three phrases to unpack</text>
+            <rect x="60" y="370" width="310" height="240" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="215" y="410" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">"After study"</text>
+            <line x1="100" y1="425" x2="330" y2="425" stroke="#ffd700" stroke-width="1"/>
+            <text x="215" y="455" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">NOT the admitting diagnosis.</text>
+            <text x="215" y="478" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">NOT the working dx in the ER.</text>
+            <text x="215" y="501" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">NOT the chief complaint.</text>
+            <text x="215" y="535" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">It is what the work-up</text>
+            <text x="215" y="555" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">(labs, imaging, consults)</text>
+            <text x="215" y="575" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">eventually revealed.</text>
+            <text x="215" y="600" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Coder reads the WHOLE chart.</text>
+            <rect x="395" y="370" width="310" height="240" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="410" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">"Chiefly responsible"</text>
+            <line x1="430" y1="425" x2="670" y2="425" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="550" y="455" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">NOT a comorbidity.</text>
+            <text x="550" y="478" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">NOT a complication.</text>
+            <text x="550" y="501" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">NOT an incidental finding.</text>
+            <text x="550" y="535" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">The condition that did</text>
+            <text x="550" y="555" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">most of the heavy lifting</text>
+            <text x="550" y="575" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">to make the admission</text>
+            <text x="550" y="595" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">necessary.</text>
+            <rect x="730" y="370" width="310" height="240" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="885" y="410" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">"Occasioning admission"</text>
+            <line x1="765" y1="425" x2="1005" y2="425" stroke="#ffd700" stroke-width="1"/>
+            <text x="885" y="455" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">It caused the BED to be</text>
+            <text x="885" y="475" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">needed at acute level of care.</text>
+            <text x="885" y="510" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">If patient could have</text>
+            <text x="885" y="530" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">gone home, it's not PDX.</text>
+            <text x="885" y="565" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">Different from outpatient</text>
+            <text x="885" y="585" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">"first-listed" rule.</text>
+            <rect x="60" y="650" width="980" height="170" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="550" y="690" font-family="Arial" font-size="22" fill="#ec4899" text-anchor="middle" font-weight="bold">Inpatient PDX vs Outpatient first-listed</text>
+            <line x1="550" y1="710" x2="550" y2="810" stroke="#888" stroke-width="2"/>
+            <text x="290" y="740" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Inpatient (UHDDS)</text>
+            <text x="290" y="770" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">After study. Confirmed dx required.</text>
+            <text x="290" y="790" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Coding Guidelines Section II.</text>
+            <text x="810" y="740" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Outpatient (HIPAA)</text>
+            <text x="810" y="770" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">First-listed = reason for visit.</text>
+            <text x="810" y="790" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Symptoms OK if dx not confirmed.</text>
+            <rect x="60" y="850" width="980" height="210" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="890" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Why PDX matters financially</text>
+            <text x="550" y="925" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">PDX + secondary dx + procedures → MS-DRG → hospital payment</text>
+            <text x="550" y="965" font-family="monospace" font-size="14" fill="#10b981" text-anchor="middle">PDX "Acute MI" → MS-DRG 280 (~$10K)  vs  PDX "Chest pain" → MS-DRG 313 (~$4K)</text>
+            <text x="550" y="1000" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Same patient. Same labor. Different PDX = different reimbursement.</text>
+            <text x="550" y="1035" font-family="Arial" font-size="14" fill="#ec4899" text-anchor="middle" font-style="italic">Picking the wrong PDX is the #1 cause of inpatient under-billing.</text>
+          </svg>`,
+          caption: "Principal diagnosis is defined by UHDDS — established after study, chiefly responsible, occasioning the admission. Three phrases, big payment impact."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Four PDX Rules You Must Know",
+        content: `Section II of the ICD-10-CM Official Coding Guidelines lists the rules for selecting PDX. The four most-tested:
+
+**II.A — Symptoms vs. confirmed diagnosis.** If a definitive diagnosis is established **after study**, code the diagnosis as PDX, **not the symptom** that triggered admission. Patient admitted with chest pain → work-up reveals **acute MI** → PDX is the MI (I21.-), not the chest pain (R07.9). But if the chest pain remains unexplained at discharge, **then** the symptom becomes PDX.
+
+**II.C — Two or more conditions equally meeting PDX criteria.** When two diagnoses each could be principal and the circumstances of admission, work-up, and treatment are equally responsible, **either may be sequenced first** — unless a specific guideline or Alphabetic Index entry tells you otherwise. The coder usually picks whichever yields the higher-paying MS-DRG (this is legal and explicitly allowed).
+
+**II.F — Original treatment plan not carried out.** If a patient is admitted for surgery (e.g., elective cholecystectomy) but the procedure is **cancelled** (e.g., due to a new hypertensive crisis), the PDX is still **the original reason for admission** — the cholelithiasis — *not* the reason the surgery was cancelled. Counter-intuitive but heavily tested.
+
+**II.B — Two or more interrelated conditions.** When two diagnoses are interrelated (e.g., COPD + acute bronchitis), either may be PDX unless a guideline directs otherwise. Often paired with II.C on exams.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">PDX Selection — The Four Tested Rules</text>
+            <rect x="60" y="100" width="470" height="260" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="295" y="135" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">II.A — Symptom vs. confirmed dx</text>
+            <line x1="80" y1="150" x2="510" y2="150" stroke="#ffd700" stroke-width="1"/>
+            <text x="295" y="180" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Admit with chest pain</text>
+            <text x="295" y="205" font-family="Arial" font-size="15" fill="#10b981" text-anchor="middle">↓ work-up reveals →</text>
+            <text x="295" y="230" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Acute STEMI confirmed</text>
+            <text x="295" y="270" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">PDX = I21.3 (acute MI)</text>
+            <text x="295" y="295" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">NOT R07.9 (chest pain)</text>
+            <text x="295" y="330" font-family="Arial" font-size="13" fill="#ec4899" text-anchor="middle">If dx unconfirmed at d/c → symptom becomes PDX</text>
+            <rect x="570" y="100" width="470" height="260" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="805" y="135" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">II.B — Interrelated conditions</text>
+            <line x1="590" y1="150" x2="1020" y2="150" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="805" y="180" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">COPD + Acute bronchitis</text>
+            <text x="805" y="210" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">Both treated, both contribute</text>
+            <text x="805" y="245" font-family="Arial" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Either may be PDX</text>
+            <text x="805" y="280" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">UNLESS Index/Tabular note</text>
+            <text x="805" y="300" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">forces sequencing</text>
+            <text x="805" y="335" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">(e.g., J44.0 "COPD with acute lower</text>
+            <text x="805" y="350" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">respiratory infection" combo code)</text>
+            <rect x="60" y="380" width="470" height="260" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="295" y="415" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">II.C — Equal PDX candidates</text>
+            <line x1="80" y1="430" x2="510" y2="430" stroke="#ffd700" stroke-width="1"/>
+            <text x="295" y="460" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Acute CHF exacerbation</text>
+            <text x="295" y="480" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">+ Acute kidney injury</text>
+            <text x="295" y="510" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle">Both equally responsible</text>
+            <text x="295" y="540" font-family="Arial" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">Coder picks either</text>
+            <text x="295" y="575" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Optimization: choose the one</text>
+            <text x="295" y="595" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">that lands higher-paying DRG</text>
+            <text x="295" y="625" font-family="Arial" font-size="13" fill="#ec4899" text-anchor="middle">(Legal and explicitly allowed)</text>
+            <rect x="570" y="380" width="470" height="260" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="805" y="415" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">II.F — Plan not carried out</text>
+            <line x1="590" y1="430" x2="1020" y2="430" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="805" y="460" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">Admit for elective lap chole</text>
+            <text x="805" y="480" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">→ pre-op HTN crisis</text>
+            <text x="805" y="500" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">→ surgery cancelled</text>
+            <text x="805" y="540" font-family="Arial" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">PDX still = cholelithiasis</text>
+            <text x="805" y="575" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">(the REASON for admission)</text>
+            <text x="805" y="610" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">Hypertensive crisis = secondary</text>
+            <rect x="60" y="670" width="980" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="710" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">PDX Decision Flow</text>
+            <rect x="100" y="730" width="200" height="60" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="200" y="765" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Read entire chart</text>
+            <text x="305" y="765" font-family="Arial" font-size="20" fill="#ffd700">→</text>
+            <rect x="330" y="730" width="200" height="60" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="430" y="757" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">Confirmed dx</text>
+            <text x="430" y="775" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">after study?</text>
+            <text x="535" y="765" font-family="Arial" font-size="20" fill="#ffd700">→</text>
+            <rect x="560" y="730" width="200" height="60" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="660" y="757" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">If multiple equally</text>
+            <text x="660" y="775" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">→ II.B / II.C</text>
+            <text x="765" y="765" font-family="Arial" font-size="20" fill="#ffd700">→</text>
+            <rect x="790" y="730" width="200" height="60" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="890" y="757" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">Plan carried out?</text>
+            <text x="890" y="775" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">If not → II.F</text>
+            <text x="550" y="830" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">If dx unconfirmed at discharge → fall back to symptom (II.A second half)</text>
+            <text x="550" y="855" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Always check Index/Tabular for "code first" or combo-code overrides</text>
+            <rect x="60" y="890" width="980" height="170" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="550" y="925" font-family="Arial" font-size="20" fill="#ec4899" text-anchor="middle" font-weight="bold">Common rookie errors</text>
+            <text x="100" y="960" font-family="Arial" font-size="15" fill="#ffffff">• Coding the chief complaint as PDX (it's not — that's the SYMPTOM)</text>
+            <text x="100" y="990" font-family="Arial" font-size="15" fill="#ffffff">• Coding what the EMS crew suspected (it's not — wait for "after study")</text>
+            <text x="100" y="1020" font-family="Arial" font-size="15" fill="#ffffff">• Defaulting to the most expensive condition (must be "chiefly responsible")</text>
+            <text x="100" y="1050" font-family="Arial" font-size="15" fill="#ffffff">• Switching PDX when surgery is cancelled (II.F says: don't)</text>
+          </svg>`,
+          caption: "Four Section II rules — II.A symptom vs dx, II.B interrelated, II.C equal candidates, II.F plan not carried out — cover the bulk of inpatient PDX exam questions."
+        }
+      },
+      {
+        type: "example",
+        title: "Example: Walking Through a Real Admission",
+        content: `**Case.** 62 y/o M arrives via EMS at 0300 with **acute substernal chest pain radiating to the left arm**. Admission order says "rule out acute coronary syndrome." Triage codes (admitting dx) include R07.9 (chest pain) and Z03.89 (observation, suspected condition ruled out).
+
+**Hospital course.**
+- ER troponin elevated → repeated, peaks at 8.4 ng/mL.
+- ECG shows ST elevations in II, III, aVF.
+- Cath lab: 90% RCA occlusion. Drug-eluting stent placed.
+- Day 2: develops post-procedure **acute kidney injury** from contrast nephropathy. Creatinine peaks at 2.4, resolves with hydration.
+- Day 3: discharged on dual antiplatelet therapy and ACE inhibitor.
+
+**Discharge summary final diagnoses (in order written by physician):**
+1. Acute kidney injury, contrast-induced
+2. Acute inferior wall STEMI, status post DES to RCA
+3. Hypertension, controlled
+4. Hyperlipidemia
+
+**Coder's analysis.** "After study" — the STEMI is the established diagnosis. "Chiefly responsible for occasioning the admission" — yes, the chest pain led to admission, but the **STEMI is what the chest pain was**. The AKI is a **complication that arose during the stay** — it can't be PDX because it wasn't responsible for the admission. The HTN and hyperlipidemia are chronic comorbidities, not the admitting condition.
+
+**The physician listed AKI first, but the coder does NOT follow that order.** Documentation order doesn't equal sequencing. By UHDDS, the **STEMI is PDX** (I21.19 — STEMI involving other coronary artery of inferior wall). The AKI (N17.9), HTN (I10), and HLD (E78.5) are secondary diagnoses.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">Case Walk-Through: Chest Pain → STEMI</text>
+            <text x="550" y="90" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">"After study" in action</text>
+            <line x1="100" y1="140" x2="1000" y2="140" stroke="#ffd700" stroke-width="3"/>
+            <circle cx="150" cy="140" r="12" fill="#ec4899" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="350" cy="140" r="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="550" cy="140" r="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="750" cy="140" r="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="950" cy="140" r="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="150" y="180" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">0300 ER</text>
+            <text x="350" y="180" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">Troponin+</text>
+            <text x="550" y="180" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">Cath/Stent</text>
+            <text x="750" y="180" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">Day 2 AKI</text>
+            <text x="950" y="180" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">Day 3 D/C</text>
+            <rect x="60" y="220" width="220" height="160" fill="#ec4899" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="170" y="255" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Symptom on arrival</text>
+            <text x="170" y="285" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Substernal chest pain</text>
+            <text x="170" y="305" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">radiating to L arm</text>
+            <text x="170" y="335" font-family="monospace" font-size="15" fill="#ffd700" text-anchor="middle">R07.9</text>
+            <text x="170" y="360" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">(NOT PDX — symptom only)</text>
+            <rect x="300" y="220" width="220" height="160" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="410" y="255" font-family="Arial" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">After study reveals</text>
+            <text x="410" y="285" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">Acute inferior STEMI</text>
+            <text x="410" y="305" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">90% RCA occlusion</text>
+            <text x="410" y="335" font-family="monospace" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">I21.19</text>
+            <text x="410" y="360" font-family="Arial" font-size="12" fill="#1a1a2e" text-anchor="middle">★ THIS IS PDX ★</text>
+            <rect x="540" y="220" width="220" height="160" fill="#ef4444" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="650" y="255" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">In-hospital complication</text>
+            <text x="650" y="285" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Acute kidney injury,</text>
+            <text x="650" y="305" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">contrast-induced</text>
+            <text x="650" y="335" font-family="monospace" font-size="15" fill="#ffd700" text-anchor="middle">N17.9</text>
+            <text x="650" y="360" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">(Secondary — arose after admit)</text>
+            <rect x="780" y="220" width="220" height="160" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="890" y="255" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Chronic comorbidities</text>
+            <text x="890" y="285" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">HTN  ·  Hyperlipidemia</text>
+            <text x="890" y="320" font-family="monospace" font-size="14" fill="#ffd700" text-anchor="middle">I10  ·  E78.5</text>
+            <text x="890" y="355" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">(Secondary — not why admitted)</text>
+            <rect x="60" y="420" width="980" height="240" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="460" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Discharge dx order ≠ coding order</text>
+            <text x="100" y="500" font-family="Arial" font-size="16" fill="#ec4899">Physician wrote:</text>
+            <text x="100" y="525" font-family="monospace" font-size="14" fill="#ffffff">1. AKI, contrast-induced</text>
+            <text x="100" y="548" font-family="monospace" font-size="14" fill="#ffffff">2. Acute inferior STEMI, s/p DES to RCA</text>
+            <text x="100" y="571" font-family="monospace" font-size="14" fill="#ffffff">3. Hypertension</text>
+            <text x="100" y="594" font-family="monospace" font-size="14" fill="#ffffff">4. Hyperlipidemia</text>
+            <text x="600" y="500" font-family="Arial" font-size="16" fill="#10b981">Coder sequences:</text>
+            <text x="600" y="525" font-family="monospace" font-size="14" fill="#ffd700">PDX:  I21.19  (STEMI — chiefly responsible)</text>
+            <text x="600" y="548" font-family="monospace" font-size="14" fill="#ffffff">SDX:  N17.9   (AKI — complication, arose AFTER)</text>
+            <text x="600" y="571" font-family="monospace" font-size="14" fill="#ffffff">SDX:  I10     (HTN — chronic)</text>
+            <text x="600" y="594" font-family="monospace" font-size="14" fill="#ffffff">SDX:  E78.5   (HLD — chronic)</text>
+            <text x="550" y="640" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">UHDDS overrules the physician's listing order, every time.</text>
+            <rect x="60" y="690" width="980" height="370" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="730" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Why not the AKI as PDX?</text>
+            <text x="100" y="770" font-family="Arial" font-size="15" fill="#ffffff">UHDDS test: was the AKI established AFTER STUDY at the time of admission?</text>
+            <text x="100" y="795" font-family="Arial" font-size="15" fill="#ec4899">  → No. AKI developed on day 2 from contrast given during cath.</text>
+            <text x="100" y="830" font-family="Arial" font-size="15" fill="#ffffff">UHDDS test: was the AKI chiefly responsible for occasioning the admission?</text>
+            <text x="100" y="855" font-family="Arial" font-size="15" fill="#ec4899">  → No. The patient was admitted for chest pain that turned out to be a STEMI.</text>
+            <text x="100" y="890" font-family="Arial" font-size="15" fill="#ffffff">UHDDS test: would the patient have been admitted in the absence of AKI?</text>
+            <text x="100" y="915" font-family="Arial" font-size="15" fill="#10b981">  → Yes. The STEMI alone required acute admission.</text>
+            <text x="550" y="970" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Conclusion: STEMI is PDX. AKI is a secondary diagnosis.</text>
+            <text x="550" y="1005" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">(The AKI will still affect DRG severity and reimbursement as a CC/MCC.)</text>
+            <text x="550" y="1035" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">"Arose after admission" = complication, not principal.</text>
+          </svg>`,
+          caption: "Symptom on arrival → confirmed dx after study → that's PDX. In-hospital complications are secondary, not principal."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: PDX Selection",
+        content: `A patient is admitted for an **elective total hip arthroplasty** scheduled the same day. Diagnosis: severe right hip osteoarthritis.
+
+In pre-op holding, the patient has a sudden onset of **atrial fibrillation with rapid ventricular response**. The surgery is **cancelled** to manage the new arrhythmia. The patient is admitted to telemetry, rate-controlled with metoprolol, and discharged on day 2 with a cardiology follow-up. **The hip arthroplasty is rescheduled for a later date.**
+
+What is the principal diagnosis?`,
+        options: [
+          { text: "I48.91 — Unspecified atrial fibrillation (the reason surgery was cancelled and the reason care continued)", correct: false },
+          { text: "M16.11 — Unilateral primary osteoarthritis, right hip (the original reason for admission)", correct: true },
+          { text: "Z53.09 — Procedure not carried out because of contraindication", correct: false },
+          { text: "R00.0 — Tachycardia, unspecified (the symptom that triggered cancellation)", correct: false }
+        ],
+        explanation: `**M16.11 (right hip OA) is correct** by Guideline II.F — "Original treatment plan not carried out." When a patient is admitted for a planned procedure that is cancelled, the **PDX remains the condition the admission was originally for**, even if a different condition takes over the focus of care. The hip OA "occasioned the admission" — that test still passes. The new-onset Afib is sequenced as a **secondary diagnosis** and will likely drive the MS-DRG severity. Z53.09 is an additional code you may also assign to indicate the procedure was not carried out, but it is **not** PDX. R00.0 is just a symptom of the Afib — once Afib is established, you don't code the tachycardia separately. This is one of the most-tested rules on the CCA — counter-intuitive but unambiguous.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">Guideline II.F — Plan Not Carried Out</text>
+            <rect x="60" y="100" width="980" height="160" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="140" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">The rule</text>
+            <text x="550" y="175" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">When a planned procedure is NOT carried out, the PDX is</text>
+            <text x="550" y="200" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">still the condition that led to the admission —</text>
+            <text x="550" y="230" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle" font-weight="bold">NOT the reason the procedure was cancelled.</text>
+            <text x="550" y="295" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Apply to the scenario</text>
+            <rect x="60" y="320" width="980" height="80" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="350" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">Why admitted?</text>
+            <text x="80" y="380" font-family="Arial" font-size="16" fill="#ffffff">Elective total hip arthroplasty for severe right hip osteoarthritis</text>
+            <text x="600" y="380" font-family="monospace" font-size="20" fill="#10b981" font-weight="bold">→ M16.11</text>
+            <rect x="60" y="420" width="980" height="80" fill="#ef4444" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="450" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">What happened?</text>
+            <text x="80" y="480" font-family="Arial" font-size="16" fill="#ffffff">New-onset Afib RVR in pre-op → surgery cancelled, rate-controlled</text>
+            <text x="600" y="480" font-family="monospace" font-size="20" fill="#ffd700" font-weight="bold">→ I48.91 (SDX)</text>
+            <rect x="60" y="520" width="980" height="80" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="550" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">Status code (optional but recommended)</text>
+            <text x="80" y="580" font-family="Arial" font-size="16" fill="#ffffff">Procedure not carried out due to contraindication</text>
+            <text x="600" y="580" font-family="monospace" font-size="20" fill="#ffd700" font-weight="bold">→ Z53.09</text>
+            <rect x="60" y="640" width="980" height="180" fill="#1a1a2e" stroke="#10b981" stroke-width="4" rx="10"/>
+            <text x="550" y="680" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">Final coding</text>
+            <text x="120" y="715" font-family="monospace" font-size="18" fill="#ffd700">PDX:  M16.11   right hip osteoarthritis  ★</text>
+            <text x="120" y="745" font-family="monospace" font-size="18" fill="#ffffff">SDX:  I48.91   atrial fibrillation, unspecified</text>
+            <text x="120" y="775" font-family="monospace" font-size="18" fill="#ffffff">SDX:  Z53.09   procedure not carried out, contraindication</text>
+            <text x="550" y="810" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">No procedure code (surgery wasn't performed)</text>
+            <rect x="60" y="840" width="980" height="220" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="550" y="880" font-family="Arial" font-size="20" fill="#ec4899" text-anchor="middle" font-weight="bold">Why the other answers fail</text>
+            <text x="90" y="920" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="920" font-family="Arial" font-size="15" fill="#ffffff">I48.91 — Afib is the COMPLICATION that cancelled surgery, not the reason for admission.</text>
+            <text x="90" y="955" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="955" font-family="Arial" font-size="15" fill="#ffffff">Z53.09 — Status code only. NEVER assigned as a principal diagnosis on its own.</text>
+            <text x="90" y="990" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="990" font-family="Arial" font-size="15" fill="#ffffff">R00.0 — Symptom code. Once Afib is confirmed (II.A), do not code its symptom.</text>
+            <text x="550" y="1035" font-family="Arial" font-size="15" fill="#ffd700" text-anchor="middle" font-style="italic">"The plan changed, but the reason for admission did not." — II.F in one line.</text>
+          </svg>`,
+          caption: "When a planned procedure is cancelled, the PDX stays the same: the condition the admission was scheduled for, not the reason the plan fell through."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: Reading a Chart Like a Coder",
+        content: `**Workflow on a real inpatient chart.** You will not get a tidy "here is the PDX" sentence. You will get an H&P, progress notes, consults, op notes, and a discharge summary that may disagree with each other. Your job is to **distill** them down to one PDX.
+
+**The coder's 5-pass read.**
+1. **H&P / admission orders.** What was the working diagnosis on the way in? (This is the symptom or suspected dx — not PDX yet, but the starting point.)
+2. **Daily progress notes.** What did the work-up actually find? When did a confirmed diagnosis appear? Did the working dx change?
+3. **Consults and procedure reports.** Specialists often pin down the confirmed dx (cardiology confirms the MI, pulmonology confirms PE).
+4. **Discharge summary.** What does the attending list as final dx? Look at all of them — but remember the listing order is **not binding**.
+5. **Apply UHDDS.** For each candidate, ask: established after study? chiefly responsible? occasioned the admission?
+
+**Documentation traps to watch for:**
+- **"Rule out" / "probable" / "suspected"** language: in inpatient, these are coded **as if confirmed** (Guideline II.H), unlike outpatient where they are not.
+- **Conflicting documentation:** if the discharge summary lists pneumonia but every progress note says CHF, **query the physician**. Never just pick one.
+- **Symptoms with a confirmed dx already coded:** drop the symptom (R-code) unless it is an "integral" part of the dx that the Tabular says to also code.
+- **Status codes (Z-codes) as PDX:** allowed for things like admission for chemotherapy (Z51.11), dialysis (Z49.-), but generally not as standalone PDX without a specific guideline.
+
+A strong PDX selection process is what separates a $35K coder from a $65K CDI specialist. Master Section II first; everything else in Domain 2 hangs off it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">The Coder's 5-Pass Chart Read</text>
+            <rect x="60" y="100" width="980" height="100" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="130" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">1</text>
+            <text x="140" y="130" font-family="Arial" font-size="18" fill="#ffd700" font-weight="bold">H&amp;P + admission orders</text>
+            <text x="140" y="158" font-family="Arial" font-size="14" fill="#ffffff">Working dx, chief complaint, EMS report</text>
+            <text x="140" y="180" font-family="Arial" font-size="13" fill="#888">→ NOT PDX yet, but tells you where the story starts</text>
+            <rect x="60" y="210" width="980" height="100" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="240" font-family="Arial" font-size="22" fill="#1a1a2e" font-weight="bold">2</text>
+            <text x="140" y="240" font-family="Arial" font-size="18" fill="#1a1a2e" font-weight="bold">Daily progress notes</text>
+            <text x="140" y="268" font-family="Arial" font-size="14" fill="#1a1a2e">Work-up results, labs, imaging, dx evolution</text>
+            <text x="140" y="290" font-family="Arial" font-size="13" fill="#1a1a2e">→ Where "after study" actually happens</text>
+            <rect x="60" y="320" width="980" height="100" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="350" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">3</text>
+            <text x="140" y="350" font-family="Arial" font-size="18" fill="#ffd700" font-weight="bold">Consults &amp; procedure reports</text>
+            <text x="140" y="378" font-family="Arial" font-size="14" fill="#ffffff">Cardiology confirms MI · GI confirms bleed · Op note confirms findings</text>
+            <text x="140" y="400" font-family="Arial" font-size="13" fill="#888">→ Specialists usually pin down the confirmed diagnosis</text>
+            <rect x="60" y="430" width="980" height="100" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="460" font-family="Arial" font-size="22" fill="#1a1a2e" font-weight="bold">4</text>
+            <text x="140" y="460" font-family="Arial" font-size="18" fill="#1a1a2e" font-weight="bold">Discharge summary</text>
+            <text x="140" y="488" font-family="Arial" font-size="14" fill="#1a1a2e">Attending's final dx list</text>
+            <text x="140" y="510" font-family="Arial" font-size="13" fill="#1a1a2e">→ Listing order NOT binding. Cross-check against the body of the chart.</text>
+            <rect x="60" y="540" width="980" height="100" fill="#ec4899" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="570" font-family="Arial" font-size="22" fill="#ffd700" font-weight="bold">5</text>
+            <text x="140" y="570" font-family="Arial" font-size="18" fill="#ffd700" font-weight="bold">Apply UHDDS to each candidate</text>
+            <text x="140" y="598" font-family="Arial" font-size="14" fill="#ffffff">After study? Chiefly responsible? Occasioned the admission?</text>
+            <text x="140" y="620" font-family="Arial" font-size="13" fill="#ffffff">→ The one that passes all three = PDX</text>
+            <rect x="60" y="660" width="980" height="260" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="550" y="700" font-family="Arial" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">Documentation traps</text>
+            <text x="80" y="735" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">⚠ "Rule out" / "probable" / "suspected"</text>
+            <text x="80" y="755" font-family="Arial" font-size="14" fill="#ffffff">Inpatient: code AS IF confirmed (II.H). Outpatient: do NOT code as confirmed.</text>
+            <text x="80" y="785" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">⚠ Conflicting documentation</text>
+            <text x="80" y="805" font-family="Arial" font-size="14" fill="#ffffff">Progress notes say CHF; discharge says pneumonia → query physician, don't guess.</text>
+            <text x="80" y="835" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">⚠ Symptoms integral to a confirmed dx</text>
+            <text x="80" y="855" font-family="Arial" font-size="14" fill="#ffffff">Drop the symptom code unless the Tabular tells you to code it separately.</text>
+            <text x="80" y="885" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">⚠ Status codes (Z-codes) as PDX</text>
+            <text x="80" y="905" font-family="Arial" font-size="14" fill="#ffffff">Allowed only when a specific guideline permits (e.g., Z51.11 admit for chemo).</text>
+            <rect x="60" y="940" width="980" height="120" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="975" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Career impact</text>
+            <text x="550" y="1010" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Accurate PDX selection = accurate MS-DRG = correct reimbursement</text>
+            <text x="550" y="1035" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">Strong PDX skills → CDI specialist path → $60K-$80K+ roles</text>
+          </svg>`,
+          caption: "Five passes through the chart, four documentation traps to avoid. The coder distills the entire stay down to one principal diagnosis."
+        }
+      }
+    ]
+  },
+  {
+    id: "cca-domain-2-lesson-3",
+    title: "Coding Conventions: Excludes1, Excludes2, 'With', Code Also, NEC, NOS",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Conventions Make or Break a Claim",
+        content: `If the **chapter structure** is the skeleton of ICD-10-CM and the **PDX rules** are the muscles, then the **conventions** are the nervous system — small, easy to miss, and the difference between a clean claim and a denial.
+
+The conventions are the abbreviations, punctuation marks, and notes that the Tabular List uses to tell you what is and isn't allowed. The most-tested are:
+
+- **NEC** (Not Elsewhere Classifiable) — the provider was specific, but no code exists for that specific thing.
+- **NOS** (Not Otherwise Specified) — the provider wasn't specific enough; equivalent to "unspecified."
+- **Excludes1** — the two conditions can **NEVER** be coded together. Mutually exclusive.
+- **Excludes2** — the conditions are different; **both may be coded together** if patient has both.
+- **"With"** — when the word "with" appears in the Index, ICD-10-CM presumes a **causal relationship** between the two conditions, even without explicit physician linkage.
+- **Code Also** — code both conditions, no sequencing required.
+- **Code First / Use Additional Code** — sequencing IS required: the etiology first, the manifestation second.
+
+This lesson walks each convention with a tabular example you might see on test day. Get these straight and the rest of CCA Domain 2 is downhill.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">The Seven Conventions That Matter</text>
+            <text x="550" y="95" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Each one is a tiny note in the Tabular — and each one is a denial waiting to happen</text>
+            <rect x="60" y="130" width="470" height="180" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="295" y="165" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">NEC vs NOS</text>
+            <line x1="80" y1="180" x2="510" y2="180" stroke="#ffd700" stroke-width="1"/>
+            <text x="100" y="210" font-family="Arial" font-size="16" fill="#10b981" font-weight="bold">NEC — Not Elsewhere Classifiable</text>
+            <text x="100" y="232" font-family="Arial" font-size="13" fill="#ffffff">Doc IS specific, but no code is specific enough</text>
+            <text x="100" y="250" font-family="Arial" font-size="13" fill="#888">→ "Other specified" code (usually .8)</text>
+            <text x="100" y="278" font-family="Arial" font-size="16" fill="#ec4899" font-weight="bold">NOS — Not Otherwise Specified</text>
+            <text x="100" y="300" font-family="Arial" font-size="13" fill="#ffffff">Doc is vague — physician didn't pin it down</text>
+            <text x="100" y="298" font-family="Arial" font-size="13" fill="#888"></text>
+            <rect x="570" y="130" width="470" height="180" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="805" y="165" font-family="Arial" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Excludes1 vs Excludes2</text>
+            <line x1="590" y1="180" x2="1020" y2="180" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="610" y="210" font-family="Arial" font-size="16" fill="#1a1a2e" font-weight="bold">Excludes1 — NEVER together</text>
+            <text x="610" y="232" font-family="Arial" font-size="13" fill="#1a1a2e">"Not coded here" — mutually exclusive</text>
+            <text x="610" y="250" font-family="Arial" font-size="13" fill="#1a1a2e">e.g., congenital vs acquired same condition</text>
+            <text x="610" y="278" font-family="Arial" font-size="16" fill="#1a1a2e" font-weight="bold">Excludes2 — both OK together</text>
+            <text x="610" y="300" font-family="Arial" font-size="13" fill="#1a1a2e">"Not included here" but related — code both if both present</text>
+            <rect x="60" y="330" width="470" height="180" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="295" y="365" font-family="Arial" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">"With" — assumed causal</text>
+            <line x1="80" y1="380" x2="510" y2="380" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="295" y="410" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">When the Index lists "with" subterm:</text>
+            <text x="295" y="435" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">ICD-10 PRESUMES the two are related</text>
+            <text x="295" y="460" font-family="Arial" font-size="15" fill="#1a1a2e" text-anchor="middle">No explicit physician linkage required</text>
+            <text x="295" y="490" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">e.g., "Diabetes with neuropathy" → E11.42 even if</text>
+            <text x="295" y="505" font-family="Arial" font-size="13" fill="#1a1a2e" text-anchor="middle">physician didn't write "diabetic neuropathy" explicitly</text>
+            <rect x="570" y="330" width="470" height="180" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="805" y="365" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Code Also vs Code First</text>
+            <line x1="590" y1="380" x2="1020" y2="380" stroke="#ffd700" stroke-width="1"/>
+            <text x="610" y="410" font-family="Arial" font-size="16" fill="#10b981" font-weight="bold">Code Also</text>
+            <text x="610" y="432" font-family="Arial" font-size="13" fill="#ffffff">Both codes needed · sequencing NOT required</text>
+            <text x="610" y="450" font-family="Arial" font-size="13" fill="#ffffff">Order depends on circumstances</text>
+            <text x="610" y="478" font-family="Arial" font-size="16" fill="#ec4899" font-weight="bold">Code First / Use Additional</text>
+            <text x="610" y="500" font-family="Arial" font-size="13" fill="#ffffff">Both codes needed · sequencing IS required</text>
+            <rect x="60" y="540" width="980" height="220" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="580" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Etiology / Manifestation pair</text>
+            <text x="550" y="615" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Some codes describe both an underlying disease (etiology) AND its manifestation.</text>
+            <text x="550" y="640" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">The Tabular forces you to sequence: etiology code FIRST, manifestation SECOND.</text>
+            <text x="550" y="680" font-family="monospace" font-size="16" fill="#10b981" text-anchor="middle">Example: Diabetic cataract</text>
+            <text x="550" y="705" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">E11.36 (DM type 2 with diabetic cataract) — etiology — sequenced FIRST</text>
+            <text x="550" y="730" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">H28 (cataract in diseases classified elsewhere) — manifestation — SECOND</text>
+            <rect x="60" y="780" width="980" height="280" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="550" y="820" font-family="Arial" font-size="22" fill="#ec4899" text-anchor="middle" font-weight="bold">Cheat sheet: which one when?</text>
+            <text x="100" y="860" font-family="Arial" font-size="15" fill="#ffffff">• Doc says "atypical pneumonia" but no specific code → look for NEC (J16.8)</text>
+            <text x="100" y="890" font-family="Arial" font-size="15" fill="#ffffff">• Doc says just "pneumonia" with nothing more → NOS / unspecified (J18.9)</text>
+            <text x="100" y="920" font-family="Arial" font-size="15" fill="#ffffff">• Type 1 + Type 2 DM in same record → Excludes1 violation — pick one</text>
+            <text x="100" y="950" font-family="Arial" font-size="15" fill="#ffffff">• Otitis media + hearing loss → Excludes2 — both can be coded</text>
+            <text x="100" y="980" font-family="Arial" font-size="15" fill="#ffffff">• "Diabetes with CKD" in Index → assumed causal, use E11.22</text>
+            <text x="100" y="1010" font-family="Arial" font-size="15" fill="#ffffff">• Sepsis with organ dysfunction → "Code first" sepsis, then organ failure</text>
+            <text x="100" y="1040" font-family="Arial" font-size="15" fill="#ffffff">• HIV with related condition → "Code Also" — either order</text>
+          </svg>`,
+          caption: "Seven conventions, one cheat sheet. Master these and most CCA convention questions are sight-readable."
+        }
+      },
+      {
+        type: "concept",
+        title: "Excludes1 vs Excludes2 — the Most-Tested Distinction",
+        content: `The single most common convention question on CCA exams: **Excludes1 vs Excludes2**. Get this distinction right and you have a solid 5–10 points of free credit.
+
+**Excludes1 — "NOT CODED HERE."** A pure mutual exclusion. The two conditions cannot exist in the same patient at the same time, OR ICD-10-CM has decided they cannot be coded together for classification purposes. The classic example: under **F03.9 (Unspecified dementia)** you'll see *Excludes1: senile dementia NOS (F03)*. Same thing — pick one. Or under **Q90 (Down syndrome)** you'll see *Excludes1: Mosaic trisomy 21 (Q90.1)* because the specific code already covers it.
+
+**The 2017 update.** AHA Coding Clinic clarified that Excludes1 has a key exception: **if the two conditions are unrelated to each other**, both can be coded even if one is listed under the other's Excludes1. Example: a patient has congenital heart disease (Excludes1 under acquired) AND develops an unrelated acquired CHF later — both code.
+
+**Excludes2 — "NOT INCLUDED HERE."** The condition listed isn't part of this code, but a patient **can** have both at the same time. **Both codes may be assigned.** Example: under **H66 (suppurative otitis media)** you'll see *Excludes2: otitis media in diseases classified elsewhere (H67)* — if the patient has both presentations, code both.
+
+**Memory trick:** Excludes**1** = "pick **1**." Excludes**2** = "you may have **2** codes."`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Excludes1 vs Excludes2 — Side by Side</text>
+            <rect x="60" y="100" width="470" height="380" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/>
+            <text x="295" y="140" font-family="Arial" font-size="26" fill="#ef4444" text-anchor="middle" font-weight="bold">Excludes1</text>
+            <text x="295" y="170" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-style="italic">"NOT CODED HERE"</text>
+            <line x1="80" y1="190" x2="510" y2="190" stroke="#ef4444" stroke-width="1"/>
+            <text x="295" y="220" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Pick 1 — never both</text>
+            <text x="295" y="260" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Mutually exclusive by definition</text>
+            <text x="295" y="285" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">or by classification design</text>
+            <text x="80" y="325" font-family="Arial" font-size="14" fill="#ffd700" font-weight="bold">Examples in the Tabular:</text>
+            <text x="80" y="350" font-family="monospace" font-size="13" fill="#ffffff">F03.9 (dementia, unsp)</text>
+            <text x="80" y="368" font-family="monospace" font-size="13" fill="#10b981">  Excludes1: senile dementia NOS (F03)</text>
+            <text x="80" y="395" font-family="monospace" font-size="13" fill="#ffffff">Q90 (Down syndrome)</text>
+            <text x="80" y="413" font-family="monospace" font-size="13" fill="#10b981">  Excludes1: mosaic trisomy 21 (Q90.1)</text>
+            <text x="80" y="440" font-family="monospace" font-size="13" fill="#ffffff">E10 (Type 1 DM)</text>
+            <text x="80" y="458" font-family="monospace" font-size="13" fill="#10b981">  Excludes1: Type 2 DM (E11)</text>
+            <rect x="570" y="100" width="470" height="380" fill="#1a1a2e" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="805" y="140" font-family="Arial" font-size="26" fill="#10b981" text-anchor="middle" font-weight="bold">Excludes2</text>
+            <text x="805" y="170" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-style="italic">"NOT INCLUDED HERE"</text>
+            <line x1="590" y1="190" x2="1020" y2="190" stroke="#10b981" stroke-width="1"/>
+            <text x="805" y="220" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Both OK — code 2 if both present</text>
+            <text x="805" y="260" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Different conditions, can co-exist</text>
+            <text x="805" y="285" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">but not part of this code</text>
+            <text x="590" y="325" font-family="Arial" font-size="14" fill="#ffd700" font-weight="bold">Examples in the Tabular:</text>
+            <text x="590" y="350" font-family="monospace" font-size="13" fill="#ffffff">H66 (suppurative OM)</text>
+            <text x="590" y="368" font-family="monospace" font-size="13" fill="#10b981">  Excludes2: OM in dx classified elsewhere (H67)</text>
+            <text x="590" y="395" font-family="monospace" font-size="13" fill="#ffffff">K50 (Crohn disease)</text>
+            <text x="590" y="413" font-family="monospace" font-size="13" fill="#10b981">  Excludes2: Ulcerative colitis (K51)</text>
+            <text x="590" y="440" font-family="monospace" font-size="13" fill="#ffffff">J45 (Asthma)</text>
+            <text x="590" y="458" font-family="monospace" font-size="13" fill="#10b981">  Excludes2: COPD with asthma (J44.x)</text>
+            <rect x="60" y="510" width="980" height="160" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="545" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">The 2017 exception you must know</text>
+            <text x="550" y="580" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Excludes1 has an UNRELATED-CONDITION exception:</text>
+            <text x="550" y="610" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">if both conditions are clinically unrelated, both MAY be coded.</text>
+            <text x="550" y="645" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">Example: congenital cardiac anomaly + UNRELATED acquired heart failure later → both code</text>
+            <rect x="60" y="700" width="980" height="180" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="735" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Memory trick</text>
+            <text x="295" y="785" font-family="Arial" font-size="44" fill="#ef4444" text-anchor="middle" font-weight="bold">1</text>
+            <text x="295" y="820" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">"Pick 1"</text>
+            <text x="295" y="845" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">only ONE code allowed</text>
+            <text x="295" y="865" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">(usually denial if you code both)</text>
+            <text x="805" y="785" font-family="Arial" font-size="44" fill="#10b981" text-anchor="middle" font-weight="bold">2</text>
+            <text x="805" y="820" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">"You may have 2"</text>
+            <text x="805" y="845" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">BOTH codes allowed</text>
+            <text x="805" y="865" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">if patient has both conditions</text>
+            <rect x="60" y="900" width="980" height="160" fill="#1a1a2e" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="550" y="935" font-family="Arial" font-size="20" fill="#ec4899" text-anchor="middle" font-weight="bold">CCA exam trap</text>
+            <text x="550" y="970" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Question stem says "the physician documented both X and Y."</text>
+            <text x="550" y="995" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">You see X under Y's Excludes list.</text>
+            <text x="550" y="1025" font-family="Arial" font-size="15" fill="#10b981" text-anchor="middle">If Excludes1 → code only one. If Excludes2 → code both.</text>
+          </svg>`,
+          caption: "Excludes1 = mutually exclusive (pick one). Excludes2 = different but co-existable (code both). The 2017 unrelated-condition exception softens Excludes1 only when conditions are truly unrelated."
+        }
+      },
+      {
+        type: "example",
+        title: "Example: The 'With' Convention and Diabetes",
+        content: `The **"with"** convention is the convention most likely to cost a coder real money in denials. It governs how ICD-10-CM links **diabetes** to its complications — and diabetes complication coding is on **every CCA exam**.
+
+**The rule (Guideline I.A.15).** When the Alphabetic Index lists conditions under a "with" or "in" subterm, ICD-10-CM **presumes a causal relationship** between the two conditions, **even when the physician has not explicitly linked them**. The coder does not need to see "diabetic neuropathy" in the chart; "diabetes" + "neuropathy" in the same record is enough — unless the physician specifically documents that the neuropathy is **unrelated** to the diabetes.
+
+**Why this matters.** Before this rule, coders had to query the physician to link diabetes to its complications. Now, the link is automatic. This dramatically simplifies coding and increases capture of higher-paying combination codes.
+
+**Diabetes example.** Chart says: *"Type 2 diabetes mellitus. Chronic kidney disease, stage 3."* The Alphabetic Index entry under **Diabetes → with → kidney disease, chronic** points to **E11.22**. You assign **E11.22 + N18.30** (or whatever CKD stage code) without needing the physician to write "diabetic CKD" — the "with" convention has done it for you.
+
+**What "with" does NOT cover.** The rule applies only to "with" subterms in the Alphabetic Index. It does NOT extend to other relationships. Hypertension + heart disease, for example, is governed by its own separate "with" rule in the Tabular (I11.-) — same idea, different mechanism. And anytime the physician explicitly states a condition is **not** related (e.g., "neuropathy unrelated to diabetes"), the assumption is overridden.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">The "With" Convention — Causal Relationship Presumed</text>
+            <rect x="60" y="100" width="980" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="140" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Guideline I.A.15 — in one sentence</text>
+            <text x="550" y="180" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">When "with" appears in the Index between two conditions,</text>
+            <text x="550" y="210" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">ICD-10-CM PRESUMES a causal relationship</text>
+            <text x="550" y="245" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">unless the physician explicitly documents otherwise.</text>
+            <text x="550" y="320" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Walk-through: Type 2 DM + CKD stage 3</text>
+            <rect x="60" y="350" width="280" height="180" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="200" y="385" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Chart documentation</text>
+            <line x1="80" y1="400" x2="320" y2="400" stroke="#ffd700" stroke-width="1"/>
+            <text x="200" y="430" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">"Type 2 diabetes mellitus.</text>
+            <text x="200" y="455" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Chronic kidney disease,</text>
+            <text x="200" y="480" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">stage 3."</text>
+            <text x="200" y="510" font-family="Arial" font-size="13" fill="#888" text-anchor="middle">No explicit "diabetic CKD"</text>
+            <text x="380" y="445" font-family="Arial" font-size="34" fill="#ffd700">→</text>
+            <rect x="420" y="350" width="280" height="180" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="560" y="385" font-family="Arial" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Index lookup</text>
+            <line x1="440" y1="400" x2="680" y2="400" stroke="#1a1a2e" stroke-width="1"/>
+            <text x="440" y="430" font-family="monospace" font-size="13" fill="#1a1a2e">Diabetes, diabetic</text>
+            <text x="460" y="450" font-family="monospace" font-size="13" fill="#1a1a2e">type 2 E11.9</text>
+            <text x="480" y="470" font-family="monospace" font-size="13" fill="#1a1a2e">with</text>
+            <text x="500" y="490" font-family="monospace" font-size="13" fill="#1a1a2e">kidney disease,</text>
+            <text x="500" y="508" font-family="monospace" font-size="13" fill="#1a1a2e">chronic E11.22</text>
+            <text x="740" y="445" font-family="Arial" font-size="34" fill="#ffd700">→</text>
+            <rect x="780" y="350" width="260" height="180" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="910" y="385" font-family="Arial" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Final codes</text>
+            <line x1="800" y1="400" x2="1020" y2="400" stroke="#ffd700" stroke-width="1"/>
+            <text x="910" y="430" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">E11.22</text>
+            <text x="910" y="448" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">(T2DM with CKD)</text>
+            <text x="910" y="475" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">N18.30</text>
+            <text x="910" y="493" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">(CKD stage 3, unsp)</text>
+            <text x="910" y="518" font-family="Arial" font-size="11" fill="#10b981" text-anchor="middle">Causal link AUTOMATIC</text>
+            <rect x="60" y="560" width="980" height="180" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="550" y="600" font-family="Arial" font-size="22" fill="#ec4899" text-anchor="middle" font-weight="bold">When the "with" rule does NOT apply</text>
+            <text x="100" y="635" font-family="Arial" font-size="15" fill="#ffffff">• Physician explicitly states "neuropathy UNRELATED to diabetes" → override the assumption</text>
+            <text x="100" y="665" font-family="Arial" font-size="15" fill="#ffffff">• Relationships not listed under "with" in the Index (e.g., random pairings) → no presumption</text>
+            <text x="100" y="695" font-family="Arial" font-size="15" fill="#ffffff">• The condition is documented as "due to" something else (e.g., chemotherapy-induced)</text>
+            <text x="100" y="725" font-family="Arial" font-size="15" fill="#ffffff">• Sepsis with organ dysfunction uses its OWN guideline (Section I.C.1.d), not "with"</text>
+            <rect x="60" y="770" width="980" height="290" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="810" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">More "with" examples (memorize these)</text>
+            <text x="80" y="850" font-family="monospace" font-size="14" fill="#10b981">DM + retinopathy        → E11.319 (T2DM with unsp diabetic retinopathy w/o macular edema)</text>
+            <text x="80" y="878" font-family="monospace" font-size="14" fill="#10b981">DM + neuropathy         → E11.40 (T2DM with diabetic neuropathy, unspecified)</text>
+            <text x="80" y="906" font-family="monospace" font-size="14" fill="#10b981">DM + foot ulcer         → E11.621 + L97.- (etiology + ulcer site)</text>
+            <text x="80" y="934" font-family="monospace" font-size="14" fill="#10b981">HTN + heart failure     → I11.0 (hypertensive heart disease with HF)</text>
+            <text x="80" y="962" font-family="monospace" font-size="14" fill="#10b981">HTN + CKD               → I12.- (hypertensive CKD)</text>
+            <text x="80" y="990" font-family="monospace" font-size="14" fill="#10b981">HTN + heart dz + CKD    → I13.- (combined)</text>
+            <text x="550" y="1030" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Each pair appears under "with" in the Index — causal link is automatic.</text>
+          </svg>`,
+          caption: "When 'with' is in the Index, the causal link is automatic — no physician query needed. This rule alone simplifies most chronic disease coding."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check: NEC, NOS, and 'Code First'",
+        content: `A patient with **end-stage renal disease secondary to hypertension** is admitted for evaluation. Documentation includes: *"Hypertensive heart and chronic kidney disease, with congestive heart failure, ESRD on dialysis."*
+
+The Tabular at **I13.2** (Hypertensive heart and CKD with HF and stage 5 CKD or ESRD) says:
+> *Use additional code to identify the type of heart failure (I50.-)*
+> *Use additional code to identify stage of chronic kidney disease (N18.5, N18.6)*
+
+Which of the following is the correct coding order?`,
+        options: [
+          { text: "N18.6, I13.2, I50.9, Z99.2 — sequence the ESRD first because it's the most severe condition", correct: false },
+          { text: "I13.2, I50.9, N18.6, Z99.2 — sequence the combination code first, then the additional codes for HF type, CKD stage, and dialysis status", correct: true },
+          { text: "I50.9, I13.2, N18.6 — heart failure is the chief reason for admission and gets PDX", correct: false },
+          { text: "I10, I50.9, N18.6 — code each condition separately; combination codes are optional", correct: false }
+        ],
+        explanation: `**The correct order is I13.2 → I50.9 → N18.6 → Z99.2.** The Tabular's "Use additional code" notes are a sequencing instruction — they tell you the **combination code (I13.2) is sequenced first**, followed by the additional codes the note tells you to add. This is the **"Code First / Use Additional Code"** convention in action: the etiology (hypertensive heart-and-kidney disease with HF and ESRD) is sequenced **first**, and the manifestations (type of HF, stage of CKD) follow. Z99.2 (dependence on renal dialysis) is added per the Tabular note at N18.6. Option A reverses the sequencing — the additional codes never go before the combination code. Option C ignores the combination code entirely, which is a coding error because ICD-10-CM provides one specifically for this scenario. Option D loses the hypertension-CKD-heart-failure link and under-bills the case. This is also a beautiful "with" example: I13.2 captures the **assumed causal relationship** between HTN, the heart disease, and the kidney disease, just like the diabetes example.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">"Use Additional Code" = Sequencing Instruction</text>
+            <rect x="60" y="100" width="980" height="220" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/>
+            <text x="550" y="140" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">The Tabular entry</text>
+            <text x="80" y="180" font-family="monospace" font-size="16" fill="#ffffff">I13.2  Hypertensive heart and chronic kidney disease with</text>
+            <text x="80" y="200" font-family="monospace" font-size="16" fill="#ffffff">       heart failure and with stage 5 CKD or end-stage renal disease</text>
+            <text x="80" y="240" font-family="monospace" font-size="15" fill="#10b981">       Use additional code to identify the type of heart failure (I50.-)</text>
+            <text x="80" y="265" font-family="monospace" font-size="15" fill="#10b981">       Use additional code to identify stage of CKD (N18.5, N18.6)</text>
+            <text x="80" y="295" font-family="Arial" font-size="14" fill="#ffd700" font-style="italic">       ↑ these notes mean: I13.2 goes FIRST, then the additional codes</text>
+            <rect x="60" y="350" width="980" height="240" fill="#1a1a2e" stroke="#10b981" stroke-width="4" rx="10"/>
+            <text x="550" y="390" font-family="Arial" font-size="22" fill="#10b981" text-anchor="middle" font-weight="bold">Correct sequencing</text>
+            <rect x="100" y="420" width="200" height="140" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="200" y="455" font-family="Arial" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">1st (PDX)</text>
+            <text x="200" y="485" font-family="monospace" font-size="20" fill="#ffffff" text-anchor="middle">I13.2</text>
+            <text x="200" y="510" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">Hypertensive heart</text>
+            <text x="200" y="525" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">+ CKD + HF + ESRD</text>
+            <text x="200" y="548" font-family="Arial" font-size="11" fill="#10b981" text-anchor="middle">Combination code</text>
+            <rect x="320" y="420" width="200" height="140" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="420" y="455" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">2nd</text>
+            <text x="420" y="485" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">I50.9</text>
+            <text x="420" y="510" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">Heart failure,</text>
+            <text x="420" y="525" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">unspecified</text>
+            <text x="420" y="548" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">(per Tabular note)</text>
+            <rect x="540" y="420" width="200" height="140" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="640" y="455" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">3rd</text>
+            <text x="640" y="485" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">N18.6</text>
+            <text x="640" y="510" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">End-stage renal</text>
+            <text x="640" y="525" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">disease</text>
+            <text x="640" y="548" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">(per Tabular note)</text>
+            <rect x="760" y="420" width="200" height="140" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="860" y="455" font-family="Arial" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">4th</text>
+            <text x="860" y="485" font-family="monospace" font-size="20" fill="#ffffff" text-anchor="middle">Z99.2</text>
+            <text x="860" y="510" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">Dependence on</text>
+            <text x="860" y="525" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">renal dialysis</text>
+            <text x="860" y="548" font-family="Arial" font-size="11" fill="#10b981" text-anchor="middle">(N18.6 Tabular note)</text>
+            <rect x="60" y="620" width="980" height="200" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="550" y="660" font-family="Arial" font-size="22" fill="#ec4899" text-anchor="middle" font-weight="bold">Why the other answers fail</text>
+            <text x="90" y="695" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="695" font-family="Arial" font-size="15" fill="#ffffff">N18.6 first — "Use additional code" means SECONDARY. Never reverse the sequence.</text>
+            <text x="90" y="730" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="730" font-family="Arial" font-size="15" fill="#ffffff">I50.9 first — same error. Manifestations never come before the etiology combination code.</text>
+            <text x="90" y="765" font-family="Arial" font-size="15" fill="#ef4444">✗</text>
+            <text x="120" y="765" font-family="Arial" font-size="15" fill="#ffffff">I10 + separate codes — loses the I13.2 combination code, under-bills the case.</text>
+            <text x="550" y="805" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Combination codes are mandatory when one exists for the documented scenario.</text>
+            <rect x="60" y="850" width="980" height="210" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="890" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">The two sequencing conventions</text>
+            <text x="100" y="930" font-family="Arial" font-size="16" fill="#10b981" font-weight="bold">"Code First" / "Use Additional Code"</text>
+            <text x="100" y="955" font-family="Arial" font-size="14" fill="#ffffff">Sequencing IS required. Etiology code FIRST, manifestation SECOND.</text>
+            <text x="100" y="975" font-family="Arial" font-size="13" fill="#888">Used for etiology/manifestation pairs, combination codes, manifestation codes.</text>
+            <text x="100" y="1005" font-family="Arial" font-size="16" fill="#10b981" font-weight="bold">"Code Also"</text>
+            <text x="100" y="1030" font-family="Arial" font-size="14" fill="#ffffff">Both codes required, but sequencing is FLEXIBLE — depends on circumstances of admit.</text>
+            <text x="100" y="1050" font-family="Arial" font-size="13" fill="#888">Used when neither code clearly outranks the other.</text>
+          </svg>`,
+          caption: "'Use Additional Code' notes are sequencing instructions: the etiology/combination code first, then the additional codes the note tells you to add."
+        }
+      },
+      {
+        type: "application",
+        title: "Apply It: A Convention Audit on a Live Chart",
+        content: `**Workflow at the coder's desk.** Conventions are not memorized in isolation — they are applied as you read a chart. Here's how a strong CCA coder runs a **convention audit** on every record.
+
+**The audit (5 checkpoints):**
+1. **Index → Tabular cross-check.** Never trust the Index alone. Open the Tabular for every code and read the chapter, block, and category notes — that's where Excludes1/Excludes2, "Code First," and "Use Additional Code" live.
+2. **Excludes1 scan.** For every code you assign, check if any other code you're also assigning appears in its Excludes1 list. If yes, you either have a documentation conflict (query) or a coding error (one of them is wrong).
+3. **"With" check.** For chronic disease records — diabetes, hypertension, kidney disease — verify you've used the combination code if the Index has a "with" subterm. Missing a "with" combination is the #1 cause of under-billing on chronic-disease claims.
+4. **Sequencing instructions.** For every Tabular note saying "Code First [etiology]" or "Use Additional Code," confirm the sequence in your claim matches. Reversing them is an automatic denial.
+5. **NEC vs NOS judgment.** If you're tempted to use an "unspecified" (NOS) code, ask: did the physician really not specify, or is there better documentation buried elsewhere in the chart? Unspecified codes catch auditor attention and may indicate missing physician detail.
+
+**Real-world stakes.** A hospital coder who misses ten "with" combinations a week is leaving roughly $50,000/year of legitimate revenue on the table. A coder who routinely violates Excludes1 triggers RAC audits and possible compliance flags. A coder who masters these conventions becomes an auditor — which pays $20K more than the line-coder role.
+
+The conventions are small. The career impact is not.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-family="Arial" font-size="28" fill="#ffd700" text-anchor="middle" font-weight="bold">The 5-Checkpoint Convention Audit</text>
+            <text x="550" y="90" font-family="Arial" font-size="15" fill="#888" text-anchor="middle">Run this on every inpatient record before you submit</text>
+            <rect x="60" y="120" width="980" height="90" fill="#6366f1" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="155" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">1</text>
+            <text x="140" y="155" font-family="Arial" font-size="17" fill="#ffd700" font-weight="bold">Index → Tabular cross-check</text>
+            <text x="140" y="180" font-family="Arial" font-size="14" fill="#ffffff">Every code: read the chapter / block / category notes in the Tabular before committing.</text>
+            <text x="140" y="200" font-family="Arial" font-size="13" fill="#888">Missing a Tabular note is the #1 cause of preventable denials.</text>
+            <rect x="60" y="220" width="980" height="90" fill="#ef4444" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="255" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">2</text>
+            <text x="140" y="255" font-family="Arial" font-size="17" fill="#ffd700" font-weight="bold">Excludes1 scan</text>
+            <text x="140" y="280" font-family="Arial" font-size="14" fill="#ffffff">Cross-check every code pair against the Excludes1 lists on each side.</text>
+            <text x="140" y="300" font-family="Arial" font-size="13" fill="#1a1a2e">Hit? → check the 2017 "unrelated condition" exception, otherwise drop one code.</text>
+            <rect x="60" y="320" width="980" height="90" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="355" font-family="Arial" font-size="24" fill="#1a1a2e" font-weight="bold">3</text>
+            <text x="140" y="355" font-family="Arial" font-size="17" fill="#1a1a2e" font-weight="bold">"With" check</text>
+            <text x="140" y="380" font-family="Arial" font-size="14" fill="#1a1a2e">Chronic dx records (DM, HTN, CKD): look up Index "with" subterms.</text>
+            <text x="140" y="400" font-family="Arial" font-size="13" fill="#1a1a2e">Combination codes = higher DRG severity, real revenue capture.</text>
+            <rect x="60" y="420" width="980" height="90" fill="#f59e0b" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="455" font-family="Arial" font-size="24" fill="#1a1a2e" font-weight="bold">4</text>
+            <text x="140" y="455" font-family="Arial" font-size="17" fill="#1a1a2e" font-weight="bold">Sequencing instructions</text>
+            <text x="140" y="480" font-family="Arial" font-size="14" fill="#1a1a2e">"Code First [etiology]" and "Use Additional Code" notes are mandatory.</text>
+            <text x="140" y="500" font-family="Arial" font-size="13" fill="#1a1a2e">Reversing the sequence = automatic claim denial.</text>
+            <rect x="60" y="520" width="980" height="90" fill="#8b5cf6" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="100" y="555" font-family="Arial" font-size="24" fill="#ffd700" font-weight="bold">5</text>
+            <text x="140" y="555" font-family="Arial" font-size="17" fill="#ffd700" font-weight="bold">NEC vs NOS judgment</text>
+            <text x="140" y="580" font-family="Arial" font-size="14" fill="#ffffff">Considering an "unspecified" code? Search the chart again for buried detail.</text>
+            <text x="140" y="600" font-family="Arial" font-size="13" fill="#888">If still unspecified, document the query attempt — auditors will check.</text>
+            <rect x="60" y="640" width="980" height="220" fill="#1a1a2e" stroke="#ec4899" stroke-width="3" rx="10"/>
+            <text x="550" y="680" font-family="Arial" font-size="22" fill="#ec4899" text-anchor="middle" font-weight="bold">Real-world dollar impact</text>
+            <text x="100" y="720" font-family="Arial" font-size="16" fill="#ffffff">• Miss 10 "with" combinations / week  →  ~$50K/year of legitimate revenue lost</text>
+            <text x="100" y="750" font-family="Arial" font-size="16" fill="#ffffff">• Routine Excludes1 violations  →  RAC audits, compliance flags</text>
+            <text x="100" y="780" font-family="Arial" font-size="16" fill="#ffffff">• Reversed "Code First" sequence  →  automatic claim denials, rework cost</text>
+            <text x="100" y="810" font-family="Arial" font-size="16" fill="#ffffff">• Overuse of NOS / unspecified codes  →  RADV audit risk in HCC reimbursement</text>
+            <text x="100" y="845" font-family="Arial" font-size="14" fill="#ffd700" font-style="italic">The conventions are small. The career impact is not.</text>
+            <rect x="60" y="880" width="980" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/>
+            <text x="550" y="920" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Career ladder</text>
+            <text x="200" y="960" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Line coder</text>
+            <text x="200" y="985" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">$35K–$50K</text>
+            <text x="350" y="970" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">→</text>
+            <text x="500" y="960" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">Coding auditor</text>
+            <text x="500" y="985" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">$55K–$70K</text>
+            <text x="650" y="970" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">→</text>
+            <text x="800" y="960" font-family="Arial" font-size="15" fill="#ffffff" text-anchor="middle">CDI specialist</text>
+            <text x="800" y="985" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle">$70K–$90K+</text>
+            <text x="550" y="1030" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Each rung up = deeper mastery of the conventions in this lesson</text>
+          </svg>`,
+          caption: "Five checkpoints on every chart. Strong convention audit skills are what separates line coders from auditors and CDI specialists."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'cca-domain-3', title: 'CCA Domain 3: ICD-10-PCS Procedure Coding',
