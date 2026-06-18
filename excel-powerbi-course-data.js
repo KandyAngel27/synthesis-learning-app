@@ -4556,7 +4556,7 @@ Group By is also how you **deduplicate while keeping useful aggregates**: group 
             title: 'DAX Basics for Power Pivot and Power BI',
             author: 'Synthesis Learning',
             description: 'Measures vs. calculated columns, CALCULATE as the heart of DAX, time-intelligence, filter context — the parts you actually need to ship a dashboard.',
-            lessons: 3, duration: 45, progress: 0, category: 'excel-powerbi',
+            lessons: 6, duration: 90, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-dax-lesson-1",
@@ -4919,6 +4919,329 @@ You now have a re-usable foundation that powers every time-based report you'll e
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" font-family="Arial" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">YTD Dashboard Build</text><rect x="80" y="130" width="940" height="170" rx="14" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3"/><text x="550" y="170" font-family="Arial" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Step 1 · Calendar Table</text><rect x="120" y="190" width="860" height="90" fill="#1a1a2e" stroke="#888"/><text x="550" y="220" font-family="monospace" font-size="16" fill="#ffd700" text-anchor="middle">Calendar = ADDCOLUMNS(CALENDARAUTO(),</text><text x="550" y="245" font-family="monospace" font-size="14" fill="#0ea5e9" text-anchor="middle">"Year",YEAR([Date]),"Quarter","Q"&amp;QUARTER([Date]),</text><text x="550" y="270" font-family="monospace" font-size="14" fill="#0ea5e9" text-anchor="middle">"MonthName",FORMAT([Date],"MMM"))</text><rect x="80" y="320" width="940" height="100" rx="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3"/><text x="550" y="360" font-family="Arial" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Step 2 · Mark as Date Table</text><text x="550" y="395" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Right-click Calendar → Mark as Date Table → Date</text><rect x="80" y="440" width="940" height="100" rx="14" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3"/><text x="550" y="480" font-family="Arial" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Step 3 · Build Relationship</text><text x="550" y="515" font-family="monospace" font-size="18" fill="#ffffff" text-anchor="middle">Sales[OrderDate] → Calendar[Date]</text><rect x="80" y="560" width="940" height="160" rx="14" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="3"/><text x="550" y="600" font-family="Arial" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">Step 4 · Create Measures</text><text x="550" y="640" font-family="monospace" font-size="16" fill="#ffffff" text-anchor="middle">Total Sales · Sales YTD · Sales YTD LY · YTD Growth %</text><text x="550" y="685" font-family="Arial" font-size="16" fill="#10b981" text-anchor="middle">Store them in a "_Measures" table for organization</text><rect x="80" y="740" width="940" height="300" rx="14" fill="#888" opacity="0.12" stroke="#ffd700" stroke-width="2"/><text x="550" y="790" font-family="Arial" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Step 5 · Visualize</text><rect x="120" y="820" width="240" height="100" rx="10" fill="#6366f1" opacity="0.4" stroke="#6366f1"/><text x="240" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">KPI Cards</text><text x="240" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">YTD, LY, Growth%</text><rect x="380" y="820" width="340" height="100" rx="10" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="550" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Line Chart</text><text x="550" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">YTD vs YTD LY over time</text><rect x="740" y="820" width="240" height="100" rx="10" fill="#f59e0b" opacity="0.4" stroke="#f59e0b"/><text x="860" y="860" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Year Slicer</text><text x="860" y="890" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Calendar[Year]</text><text x="550" y="980" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle">Reusable foundation for every time-based report</text><text x="550" y="1015" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle">Build once, leverage forever.</text></svg>`,
           caption: "Five steps from raw data to a YTD dashboard. The Calendar table pays dividends forever."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-dax-lesson-4",
+    title: "Iterators: SUMX, AVERAGEX, COUNTX, MAXX, MINX",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why X-Functions Exist",
+        content: `**Iterators** — the **X-functions** — evaluate an expression **row by row** across a table, then aggregate the results. Plain **SUM** can only add a single column; it cannot multiply two columns together at the row level. **SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])** walks every Sales row, computes **Quantity × UnitPrice**, and sums the running total.
+
+The family includes **SUMX**, **AVERAGEX**, **COUNTX**, **MAXX**, and **MINX**. Each takes the same two-argument shape: **(table, expression)**. The table sets the **iteration context**; the expression runs once per row using that row's values.
+
+This pattern replaces the need for a **calculated column** in many cases — the math happens at query time, lives only in the measure, and stays dynamic with filters.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" fill="#ffd700" font-size="38" font-weight="bold" text-anchor="middle">Iterator Pattern: Row-by-Row</text><rect x="100" y="140" width="900" height="80" fill="#6366f1" rx="8"/><text x="550" y="190" fill="#ffffff" font-size="28" text-anchor="middle" font-family="monospace">SUMX( Sales, Sales[Qty] * Sales[Price] )</text><text x="200" y="280" fill="#10b981" font-size="22" text-anchor="middle">Row 1</text><text x="200" y="320" fill="#ffffff" font-size="20" text-anchor="middle">5 × 10 = 50</text><text x="400" y="280" fill="#10b981" font-size="22" text-anchor="middle">Row 2</text><text x="400" y="320" fill="#ffffff" font-size="20" text-anchor="middle">3 × 20 = 60</text><text x="600" y="280" fill="#10b981" font-size="22" text-anchor="middle">Row 3</text><text x="600" y="320" fill="#ffffff" font-size="20" text-anchor="middle">7 × 5 = 35</text><text x="800" y="280" fill="#10b981" font-size="22" text-anchor="middle">Row 4</text><text x="800" y="320" fill="#ffffff" font-size="20" text-anchor="middle">2 × 15 = 30</text><line x1="550" y1="380" x2="550" y2="450" stroke="#ffd700" stroke-width="3"/><polygon points="550,460 540,440 560,440" fill="#ffd700"/><rect x="350" y="480" width="400" height="80" fill="#ffd700" rx="8"/><text x="550" y="530" fill="#1a1a2e" font-size="32" font-weight="bold" text-anchor="middle">SUM = 175</text><text x="550" y="640" fill="#ffffff" font-size="24" text-anchor="middle">Step 1: Iterate table</text><text x="550" y="680" fill="#ffffff" font-size="24" text-anchor="middle">Step 2: Compute expression per row</text><text x="550" y="720" fill="#ffffff" font-size="24" text-anchor="middle">Step 3: Aggregate results</text><rect x="200" y="800" width="700" height="100" fill="#888" rx="8" opacity="0.3"/><text x="550" y="850" fill="#ffd700" font-size="26" text-anchor="middle" font-weight="bold">No calculated column needed —</text><text x="550" y="880" fill="#ffffff" font-size="22" text-anchor="middle">math lives in the measure</text></svg>`,
+          caption: "SUMX iterates over Sales, computes Qty × Price per row, then sums the totals."
+        }
+      },
+      {
+        type: "concept",
+        title: "The X-Function Family",
+        content: `Every iterator follows the same shape: **(table, expression)**.
+
+- **SUMX(table, expr)** — sums the expression across rows
+- **AVERAGEX(table, expr)** — averages the row-level results
+- **COUNTX(table, expr)** — counts rows where the expression is **non-blank**
+- **MAXX(table, expr)** — returns the largest row-level result
+- **MINX(table, expr)** — returns the smallest
+
+The first argument can be a **physical table** or a **table expression** like **FILTER** or **VALUES**. A classic combo: **SUMX(FILTER(Sales, Sales[Region]="West"), Sales[Quantity] * Sales[Unit Price])** — iterate only Western rows.
+
+**Performance note:** on small tables iterators are fast. On **10M+ row** tables, prefer a **calculated column + SUM** when filters never change the expression — the storage engine handles SUM in milliseconds, while iterators force the slower formula engine.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">The X-Function Family</text><rect x="80" y="120" width="940" height="60" fill="#6366f1" rx="6"/><text x="550" y="160" fill="#ffffff" font-size="22" text-anchor="middle" font-family="monospace">FUNCTION( table , expression )</text><rect x="80" y="220" width="440" height="100" fill="#10b981" rx="8"/><text x="300" y="260" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">SUMX</text><text x="300" y="295" fill="#ffffff" font-size="18" text-anchor="middle">Sum row-level results</text><rect x="580" y="220" width="440" height="100" fill="#f59e0b" rx="8"/><text x="800" y="260" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">AVERAGEX</text><text x="800" y="295" fill="#ffffff" font-size="18" text-anchor="middle">Average row-level results</text><rect x="80" y="340" width="440" height="100" fill="#0ea5e9" rx="8"/><text x="300" y="380" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">COUNTX</text><text x="300" y="415" fill="#ffffff" font-size="18" text-anchor="middle">Count non-blank rows</text><rect x="580" y="340" width="440" height="100" fill="#8b5cf6" rx="8"/><text x="800" y="380" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">MAXX / MINX</text><text x="800" y="415" fill="#ffffff" font-size="18" text-anchor="middle">Largest / smallest result</text><rect x="80" y="490" width="940" height="180" fill="#888" opacity="0.2" rx="8"/><text x="550" y="525" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Combined with FILTER:</text><text x="550" y="575" fill="#ffffff" font-size="18" text-anchor="middle" font-family="monospace">SUMX(</text><text x="550" y="605" fill="#ffffff" font-size="18" text-anchor="middle" font-family="monospace">  FILTER(Sales, Sales[Region]="West"),</text><text x="550" y="635" fill="#ffffff" font-size="18" text-anchor="middle" font-family="monospace">  Sales[Quantity] * Sales[Unit Price] )</text><rect x="80" y="710" width="940" height="160" fill="#ef4444" opacity="0.15" rx="8"/><text x="550" y="745" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">Performance Tradeoff</text><text x="550" y="780" fill="#ffffff" font-size="18" text-anchor="middle">Small tables: SUMX is fine</text><text x="550" y="810" fill="#ffffff" font-size="18" text-anchor="middle">10M+ rows + static filter: prefer calc column + SUM</text><text x="550" y="840" fill="#ffffff" font-size="18" text-anchor="middle">Storage engine beats formula engine on raw aggregations</text></svg>`,
+          caption: "Five iterators, one signature — pair with FILTER for selective row scans."
+        }
+      },
+      {
+        type: "example",
+        title: "Revenue Without a Calculated Column",
+        content: `Imagine a **Sales** table with **Quantity** and **UnitPrice** but no **Revenue** column. The naive approach: add a calculated column. The DAX-native approach: write a measure.
+
+**Total Revenue = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])**
+
+This evaluates **Qty × Price** for each row in the current filter context, then sums. If the user slices by **Region**, only that region's rows iterate. If they slice by **Product**, only that product's rows.
+
+For an **average order value** measure:
+
+**Avg Order Value = AVERAGEX(Sales, Sales[Quantity] * Sales[UnitPrice])**
+
+For **largest single order**:
+
+**Biggest Order = MAXX(Sales, Sales[Quantity] * Sales[UnitPrice])**
+
+All three reuse the same expression. No calculated columns. No storage cost. The expression stays in one place — change the formula once, every measure updates.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Three Measures, One Expression</text><rect x="50" y="120" width="1000" height="220" fill="#888" opacity="0.2" rx="8"/><text x="550" y="155" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Sales table — no Revenue column</text><line x1="100" y1="180" x2="1000" y2="180" stroke="#888" stroke-width="2"/><text x="200" y="215" fill="#ffffff" font-size="20" text-anchor="middle">OrderID</text><text x="450" y="215" fill="#ffffff" font-size="20" text-anchor="middle">Quantity</text><text x="750" y="215" fill="#ffffff" font-size="20" text-anchor="middle">UnitPrice</text><text x="200" y="250" fill="#10b981" font-size="18" text-anchor="middle">1001</text><text x="450" y="250" fill="#10b981" font-size="18" text-anchor="middle">5</text><text x="750" y="250" fill="#10b981" font-size="18" text-anchor="middle">$20</text><text x="200" y="280" fill="#10b981" font-size="18" text-anchor="middle">1002</text><text x="450" y="280" fill="#10b981" font-size="18" text-anchor="middle">12</text><text x="750" y="280" fill="#10b981" font-size="18" text-anchor="middle">$15</text><text x="200" y="310" fill="#10b981" font-size="18" text-anchor="middle">1003</text><text x="450" y="310" fill="#10b981" font-size="18" text-anchor="middle">3</text><text x="750" y="310" fill="#10b981" font-size="18" text-anchor="middle">$50</text><rect x="80" y="380" width="940" height="90" fill="#6366f1" rx="8"/><text x="550" y="415" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Total Revenue</text><text x="550" y="450" fill="#ffd700" font-size="18" text-anchor="middle" font-family="monospace">= SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])</text><rect x="80" y="490" width="940" height="90" fill="#10b981" rx="8"/><text x="550" y="525" fill="#1a1a2e" font-size="22" font-weight="bold" text-anchor="middle">Avg Order Value</text><text x="550" y="560" fill="#1a1a2e" font-size="18" text-anchor="middle" font-family="monospace">= AVERAGEX(Sales, Sales[Quantity] * Sales[UnitPrice])</text><rect x="80" y="600" width="940" height="90" fill="#f59e0b" rx="8"/><text x="550" y="635" fill="#1a1a2e" font-size="22" font-weight="bold" text-anchor="middle">Biggest Order</text><text x="550" y="670" fill="#1a1a2e" font-size="18" text-anchor="middle" font-family="monospace">= MAXX(Sales, Sales[Quantity] * Sales[UnitPrice])</text><text x="550" y="780" fill="#ffd700" font-size="24" text-anchor="middle" font-weight="bold">Same expression. Three measures. Zero columns.</text><text x="550" y="830" fill="#ffffff" font-size="20" text-anchor="middle">Change the formula once — all three update.</text></svg>`,
+          caption: "Three measures share one row-level expression — no calculated column required."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "Why would you use SUMX(Sales, Sales[Qty] * Sales[Price]) instead of SUM(Sales[Revenue])?",
+        options: [
+          { text: "SUMX is always faster than SUM", correct: false },
+          { text: "When the Revenue column doesn't exist — SUMX computes the row-level math at query time", correct: true },
+          { text: "SUM cannot work on tables with more than 1M rows", correct: false },
+          { text: "SUMX automatically applies time intelligence", correct: false }
+        ],
+        explanation: "SUMX iterates row by row and evaluates an expression per row, so you can multiply two columns without materializing a Revenue calculated column. SUM is faster when the column already exists, but SUMX is the answer when you need on-the-fly row math.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">SUM vs SUMX</text><rect x="80" y="180" width="440" height="380" fill="#10b981" opacity="0.2" rx="8"/><text x="300" y="225" fill="#10b981" font-size="26" font-weight="bold" text-anchor="middle">SUM</text><text x="300" y="280" fill="#ffffff" font-size="18" text-anchor="middle">One column input</text><text x="300" y="320" fill="#ffffff" font-size="18" text-anchor="middle">Storage engine</text><text x="300" y="360" fill="#ffffff" font-size="18" text-anchor="middle">Blazing fast</text><text x="300" y="420" fill="#ffd700" font-size="18" text-anchor="middle" font-family="monospace">SUM(Sales[Revenue])</text><text x="300" y="480" fill="#ffffff" font-size="16" text-anchor="middle">Needs Revenue to exist</text><rect x="580" y="180" width="440" height="380" fill="#6366f1" opacity="0.2" rx="8"/><text x="800" y="225" fill="#6366f1" font-size="26" font-weight="bold" text-anchor="middle">SUMX</text><text x="800" y="280" fill="#ffffff" font-size="18" text-anchor="middle">Table + expression</text><text x="800" y="320" fill="#ffffff" font-size="18" text-anchor="middle">Row-by-row math</text><text x="800" y="360" fill="#ffffff" font-size="18" text-anchor="middle">Computes on the fly</text><text x="800" y="420" fill="#ffd700" font-size="16" text-anchor="middle" font-family="monospace">SUMX(Sales, Qty*Price)</text><text x="800" y="480" fill="#ffffff" font-size="16" text-anchor="middle">No column needed</text><rect x="200" y="640" width="700" height="120" fill="#ffd700" rx="8"/><text x="550" y="685" fill="#1a1a2e" font-size="24" font-weight="bold" text-anchor="middle">Use SUMX when</text><text x="550" y="725" fill="#1a1a2e" font-size="20" text-anchor="middle">the math involves multiple columns</text></svg>`,
+          caption: "SUM reads a stored column; SUMX builds the value per row from an expression."
+        }
+      },
+      {
+        type: "application",
+        title: "Real Reporting Use Cases",
+        content: `**1. Weighted average price** — Total revenue ÷ total quantity is more accurate than averaging unit prices:
+**Weighted Avg = DIVIDE(SUMX(Sales, Sales[Qty] * Sales[Price]), SUM(Sales[Qty]))**
+
+**2. Commission calculations** — Variable rates per row:
+**Total Commission = SUMX(Sales, Sales[Revenue] * RELATED(Reps[CommissionRate]))**
+
+**3. Inventory valuation** — Quantity on hand × current cost:
+**Inventory Value = SUMX(Stock, Stock[OnHand] * RELATED(Products[Cost]))**
+
+**4. Margin analysis** — Per-row gross profit summed up:
+**Total Margin = SUMX(Sales, Sales[Revenue] - Sales[Cost])**
+
+**5. Conditional counts** — Count orders above a threshold:
+**Big Orders = COUNTROWS(FILTER(Sales, Sales[Revenue] > 10000))**
+
+The X-functions unlock **row-context arithmetic** inside measures — the single biggest unlock after **CALCULATE**. Once you internalize them, you stop adding calculated columns for derived totals.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">5 Iterator Patterns You'll Reuse</text><rect x="60" y="120" width="980" height="140" fill="#6366f1" rx="8"/><text x="100" y="160" fill="#ffd700" font-size="22" font-weight="bold">1. Weighted Average Price</text><text x="100" y="200" fill="#ffffff" font-size="18" font-family="monospace">DIVIDE(SUMX(Sales, Qty*Price), SUM(Sales[Qty]))</text><text x="100" y="235" fill="#888" font-size="16">More accurate than AVERAGE(Price)</text><rect x="60" y="280" width="980" height="140" fill="#10b981" rx="8"/><text x="100" y="320" fill="#1a1a2e" font-size="22" font-weight="bold">2. Variable Commission</text><text x="100" y="360" fill="#1a1a2e" font-size="18" font-family="monospace">SUMX(Sales, Revenue * RELATED(Reps[Rate]))</text><text x="100" y="395" fill="#1a1a2e" font-size="16">Pulls rate from related Reps table</text><rect x="60" y="440" width="980" height="140" fill="#f59e0b" rx="8"/><text x="100" y="480" fill="#1a1a2e" font-size="22" font-weight="bold">3. Inventory Valuation</text><text x="100" y="520" fill="#1a1a2e" font-size="18" font-family="monospace">SUMX(Stock, OnHand * RELATED(Products[Cost]))</text><text x="100" y="555" fill="#1a1a2e" font-size="16">Updates as cost or quantity changes</text><rect x="60" y="600" width="980" height="140" fill="#8b5cf6" rx="8"/><text x="100" y="640" fill="#ffd700" font-size="22" font-weight="bold">4. Margin Analysis</text><text x="100" y="680" fill="#ffffff" font-size="18" font-family="monospace">SUMX(Sales, Revenue - Cost)</text><text x="100" y="715" fill="#ffffff" font-size="16">Row-level profit, then total</text><rect x="60" y="760" width="980" height="140" fill="#ec4899" rx="8"/><text x="100" y="800" fill="#ffffff" font-size="22" font-weight="bold">5. Conditional Counts</text><text x="100" y="840" fill="#ffffff" font-size="18" font-family="monospace">COUNTROWS(FILTER(Sales, Revenue > 10000))</text><text x="100" y="875" fill="#ffffff" font-size="16">Big-order tracking, no helper column</text><text x="550" y="970" fill="#ffd700" font-size="22" text-anchor="middle" font-weight="bold">Master these — stop adding calc columns for totals</text></svg>`,
+          caption: "Five everyday patterns that depend on iterators — keep them in your DAX toolbox."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-5",
+    title: "Variables (VAR) and Cleaner DAX",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why VAR Changes Everything",
+        content: `**Variables** in DAX use the syntax **VAR name = expression RETURN result**. They look like a tidiness tool, but they deliver three real wins:
+
+**1. Performance** — DAX evaluates each **VAR exactly once**, no matter how many times you reference it. Without variables, calling the same measure four times can trigger four separate engine evaluations.
+
+**2. Readability** — Names like **CurrentSales** and **LastYearSales** turn cryptic formulas into self-documenting code. The next person reading it (often **future you**) thanks you.
+
+**3. Debuggability** — Tools like **DAX Studio** and the **Performance Analyzer** let you inspect intermediate VAR values, making complex measures far easier to troubleshoot.
+
+Once you start using **VAR**, you stop nesting CALCULATE inside CALCULATE inside CALCULATE — and your formulas become measurably faster.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">Three Wins from VAR</text><rect x="80" y="140" width="940" height="80" fill="#6366f1" rx="8"/><text x="550" y="175" fill="#ffffff" font-size="22" text-anchor="middle" font-family="monospace">VAR name = expression</text><text x="550" y="205" fill="#ffffff" font-size="22" text-anchor="middle" font-family="monospace">RETURN result</text><rect x="80" y="260" width="300" height="240" fill="#10b981" rx="8"/><text x="230" y="305" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">Performance</text><text x="230" y="360" fill="#1a1a2e" font-size="56" text-anchor="middle" font-weight="bold">1x</text><text x="230" y="410" fill="#1a1a2e" font-size="18" text-anchor="middle">evaluated</text><text x="230" y="440" fill="#1a1a2e" font-size="18" text-anchor="middle">no matter how many</text><text x="230" y="470" fill="#1a1a2e" font-size="18" text-anchor="middle">times referenced</text><rect x="400" y="260" width="300" height="240" fill="#f59e0b" rx="8"/><text x="550" y="305" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">Readability</text><text x="550" y="365" fill="#1a1a2e" font-size="22" text-anchor="middle">Named</text><text x="550" y="395" fill="#1a1a2e" font-size="22" text-anchor="middle">intermediate</text><text x="550" y="425" fill="#1a1a2e" font-size="22" text-anchor="middle">values</text><text x="550" y="470" fill="#1a1a2e" font-size="18" text-anchor="middle">Self-documenting code</text><rect x="720" y="260" width="300" height="240" fill="#8b5cf6" rx="8"/><text x="870" y="305" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">Debuggability</text><text x="870" y="365" fill="#ffffff" font-size="22" text-anchor="middle">Inspect</text><text x="870" y="395" fill="#ffffff" font-size="22" text-anchor="middle">VARs in</text><text x="870" y="425" fill="#ffffff" font-size="22" text-anchor="middle">DAX Studio</text><text x="870" y="470" fill="#ffffff" font-size="18" text-anchor="middle">Step through logic</text><rect x="150" y="580" width="800" height="160" fill="#888" opacity="0.2" rx="8"/><text x="550" y="625" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Without VAR</text><text x="550" y="665" fill="#ef4444" font-size="20" text-anchor="middle" font-family="monospace">CALCULATE(...) - CALCULATE(...)</text><text x="550" y="710" fill="#ffffff" font-size="18" text-anchor="middle">Both halves evaluate separately — slower</text><text x="550" y="820" fill="#ffd700" font-size="24" text-anchor="middle" font-weight="bold">VAR turns one expression into one evaluation</text></svg>`,
+          caption: "VAR delivers performance, readability, and debuggability — three wins in one keyword."
+        }
+      },
+      {
+        type: "concept",
+        title: "Rules of VAR",
+        content: `**VAR** declarations live between the measure name and **RETURN**. You can declare as many as you need:
+
+**Sales Growth = VAR Current = [Total Sales] VAR LastYear = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Calendar[Date])) RETURN DIVIDE(Current - LastYear, LastYear)**
+
+**Critical rules:**
+
+- VARs are **immutable** — once declared, you cannot reassign. **VAR x = 5 VAR x = 10** is invalid.
+- You **cannot reference** a VAR before it's declared. Order matters.
+- VARs evaluate in the **filter context where they're declared**, not where they're used. This is the most common gotcha.
+- Nested VARs inside **IF** branches **lose access** to outer-scope VARs declared after them — declare shared VARs at the top.
+- A single **RETURN** is required at the end; everything else is setup.
+
+Think of VAR as a **constant** in the calculation — value frozen at declaration time.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">The Rules of VAR</text><rect x="60" y="110" width="980" height="240" fill="#6366f1" opacity="0.2" rx="8"/><text x="550" y="145" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Sales Growth Pattern</text><text x="100" y="185" fill="#ffffff" font-size="18" font-family="monospace">VAR Current = [Total Sales]</text><text x="100" y="220" fill="#ffffff" font-size="18" font-family="monospace">VAR LastYear =</text><text x="100" y="250" fill="#ffffff" font-size="18" font-family="monospace">  CALCULATE([Total Sales], SAMEPERIODLASTYEAR(...))</text><text x="100" y="290" fill="#ffd700" font-size="18" font-family="monospace">RETURN</text><text x="100" y="320" fill="#10b981" font-size="18" font-family="monospace">  DIVIDE(Current - LastYear, LastYear)</text><rect x="60" y="380" width="470" height="120" fill="#ef4444" opacity="0.2" rx="8"/><text x="295" y="415" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">Immutable</text><text x="295" y="450" fill="#ffffff" font-size="16" text-anchor="middle">VAR x = 5</text><text x="295" y="475" fill="#ffffff" font-size="16" text-anchor="middle">VAR x = 10  ← INVALID</text><rect x="570" y="380" width="470" height="120" fill="#ef4444" opacity="0.2" rx="8"/><text x="805" y="415" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">No Forward Reference</text><text x="805" y="450" fill="#ffffff" font-size="16" text-anchor="middle">VAR a = b + 1</text><text x="805" y="475" fill="#ffffff" font-size="16" text-anchor="middle">VAR b = 5  ← INVALID</text><rect x="60" y="530" width="980" height="140" fill="#f59e0b" opacity="0.2" rx="8"/><text x="550" y="565" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">Filter Context Trap</text><text x="550" y="605" fill="#ffffff" font-size="18" text-anchor="middle">VARs freeze at declaration</text><text x="550" y="635" fill="#ffffff" font-size="18" text-anchor="middle">Using them inside CALCULATE doesn't re-evaluate</text><rect x="60" y="700" width="980" height="160" fill="#10b981" opacity="0.2" rx="8"/><text x="550" y="735" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">Best Practice</text><text x="550" y="775" fill="#ffffff" font-size="18" text-anchor="middle">Declare shared VARs at top — IF branches can't reach back</text><text x="550" y="810" fill="#ffffff" font-size="18" text-anchor="middle">One RETURN at the end</text><text x="550" y="840" fill="#ffffff" font-size="18" text-anchor="middle">Treat each VAR as a frozen constant</text></svg>`,
+          caption: "Immutable, forward-only, scope-aware — the three constraints on every VAR."
+        }
+      },
+      {
+        type: "example",
+        title: "Refactoring a Messy Measure",
+        content: `**Before** — a real-world tangle that recalculates the same thing repeatedly:
+
+**YoY Growth % = IF(CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date])) = 0, BLANK(), DIVIDE([Sales] - CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date])), CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date]))))**
+
+That **SAMEPERIODLASTYEAR** branch evaluates **three times**. The engine recomputes it every call.
+
+**After** — cleaned with VAR:
+
+**YoY Growth % = VAR Current = [Sales] VAR Prior = CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date])) RETURN IF(Prior = 0, BLANK(), DIVIDE(Current - Prior, Prior))**
+
+Now **Prior** is computed **once**. The IF check, the subtraction, and the division all reuse the cached value. The formula reads top-to-bottom like prose. And in **DAX Studio**, you can hover **Prior** and see its evaluated value at debug time. This is the **VAR refactor** you'll do dozens of times.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Before &amp; After: VAR Refactor</text><rect x="60" y="110" width="980" height="320" fill="#ef4444" opacity="0.15" rx="8"/><text x="550" y="145" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">BEFORE — 3 evaluations</text><text x="90" y="190" fill="#ffffff" font-size="16" font-family="monospace">IF(</text><text x="90" y="220" fill="#ef4444" font-size="16" font-family="monospace">  CALCULATE([Sales], SAMEPERIODLASTYEAR(...)) = 0,</text><text x="90" y="250" fill="#ffffff" font-size="16" font-family="monospace">  BLANK(),</text><text x="90" y="280" fill="#ffffff" font-size="16" font-family="monospace">  DIVIDE(</text><text x="90" y="310" fill="#ffffff" font-size="16" font-family="monospace">    [Sales] -</text><text x="90" y="340" fill="#ef4444" font-size="16" font-family="monospace">    CALCULATE([Sales], SAMEPERIODLASTYEAR(...)),</text><text x="90" y="370" fill="#ef4444" font-size="16" font-family="monospace">    CALCULATE([Sales], SAMEPERIODLASTYEAR(...))</text><text x="90" y="400" fill="#ffffff" font-size="16" font-family="monospace">  ) )</text><rect x="60" y="460" width="980" height="320" fill="#10b981" opacity="0.15" rx="8"/><text x="550" y="495" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">AFTER — 1 evaluation</text><text x="90" y="540" fill="#ffd700" font-size="16" font-family="monospace">VAR Current = [Sales]</text><text x="90" y="570" fill="#ffd700" font-size="16" font-family="monospace">VAR Prior =</text><text x="90" y="600" fill="#ffd700" font-size="16" font-family="monospace">  CALCULATE([Sales], SAMEPERIODLASTYEAR(...))</text><text x="90" y="640" fill="#10b981" font-size="16" font-family="monospace">RETURN</text><text x="90" y="670" fill="#ffffff" font-size="16" font-family="monospace">  IF(Prior = 0,</text><text x="90" y="700" fill="#ffffff" font-size="16" font-family="monospace">     BLANK(),</text><text x="90" y="730" fill="#ffffff" font-size="16" font-family="monospace">     DIVIDE(Current - Prior, Prior))</text><rect x="200" y="820" width="700" height="120" fill="#ffd700" rx="8"/><text x="550" y="865" fill="#1a1a2e" font-size="24" font-weight="bold" text-anchor="middle">SAMEPERIODLASTYEAR called once</text><text x="550" y="910" fill="#1a1a2e" font-size="22" text-anchor="middle">3× faster + reads like a sentence</text></svg>`,
+          caption: "Cache the expensive calculation in a VAR — three calls collapse to one."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "Which statement about DAX variables (VAR) is TRUE?",
+        options: [
+          { text: "VARs are re-evaluated every time you reference them in the measure", correct: false },
+          { text: "A VAR is evaluated once and the result is reused — like a frozen constant within that measure", correct: true },
+          { text: "You can reassign a VAR's value later in the same measure", correct: false },
+          { text: "VARs automatically update when filter context changes mid-measure", correct: false }
+        ],
+        explanation: "A VAR evaluates exactly once at its declaration point and caches the result. That's why VAR boosts performance — repeated references reuse the cached value instead of triggering new evaluations. VARs are immutable and cannot be reassigned.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">VAR = Frozen Constant</text><rect x="200" y="180" width="700" height="100" fill="#6366f1" rx="8"/><text x="550" y="220" fill="#ffffff" font-size="22" text-anchor="middle" font-family="monospace">VAR Prior = CALCULATE(...)</text><text x="550" y="255" fill="#ffd700" font-size="20" text-anchor="middle">Evaluated ONCE here</text><line x1="550" y1="290" x2="550" y2="360" stroke="#ffd700" stroke-width="3"/><polygon points="550,370 540,350 560,350" fill="#ffd700"/><rect x="100" y="400" width="280" height="120" fill="#10b981" rx="8"/><text x="240" y="445" fill="#1a1a2e" font-size="20" font-weight="bold" text-anchor="middle">Reference 1</text><text x="240" y="480" fill="#1a1a2e" font-size="18" text-anchor="middle">Reuses value</text><rect x="410" y="400" width="280" height="120" fill="#10b981" rx="8"/><text x="550" y="445" fill="#1a1a2e" font-size="20" font-weight="bold" text-anchor="middle">Reference 2</text><text x="550" y="480" fill="#1a1a2e" font-size="18" text-anchor="middle">Reuses value</text><rect x="720" y="400" width="280" height="120" fill="#10b981" rx="8"/><text x="860" y="445" fill="#1a1a2e" font-size="20" font-weight="bold" text-anchor="middle">Reference 3</text><text x="860" y="480" fill="#1a1a2e" font-size="18" text-anchor="middle">Reuses value</text><rect x="150" y="600" width="800" height="200" fill="#888" opacity="0.2" rx="8"/><text x="550" y="645" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="middle">Cached &amp; Immutable</text><text x="550" y="690" fill="#ffffff" font-size="20" text-anchor="middle">- Compute once</text><text x="550" y="725" fill="#ffffff" font-size="20" text-anchor="middle">- Cannot reassign</text><text x="550" y="760" fill="#ffffff" font-size="20" text-anchor="middle">- Filter context frozen at declaration</text></svg>`,
+          caption: "A VAR computes once and hands the cached value to every reference."
+        }
+      },
+      {
+        type: "application",
+        title: "When to Reach for VAR",
+        content: `Make **VAR** your default whenever you see these patterns:
+
+**1. Same sub-expression used twice or more** — the textbook case. Cache it, reference it.
+
+**2. Long formulas with division** — guard against divide-by-zero by caching the denominator:
+**VAR Denom = [Last Year Sales] RETURN IF(Denom = 0, BLANK(), DIVIDE([Sales] - Denom, Denom))**
+
+**3. Conditional logic on a calculated value** — compute the test value once:
+**VAR Margin = [Revenue] - [Cost] RETURN IF(Margin > 0, "Profit", "Loss")**
+
+**4. Composing complex measures** — break the logic into named steps that read like instructions.
+
+**5. Working with table VARs** — store **FILTER** or **SUMMARIZE** results once, then reuse in **COUNTROWS** and **SUMX**.
+
+**Style tip:** name VARs in **PascalCase**, keep them short, and put the **RETURN** on its own line. Your future self will read this measure five times — make it pleasant.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">5 Triggers to Reach for VAR</text><rect x="60" y="120" width="980" height="130" fill="#6366f1" rx="8"/><text x="100" y="160" fill="#ffd700" font-size="22" font-weight="bold">1. Same expression used twice+</text><text x="100" y="195" fill="#ffffff" font-size="18">If you'd Ctrl+C it, VAR it.</text><text x="100" y="225" fill="#ffffff" font-size="16" font-style="italic">Single biggest performance lever</text><rect x="60" y="265" width="980" height="130" fill="#10b981" rx="8"/><text x="100" y="305" fill="#1a1a2e" font-size="22" font-weight="bold">2. Divide-by-zero guard</text><text x="100" y="340" fill="#1a1a2e" font-size="18" font-family="monospace">VAR Denom = [LY Sales]</text><text x="100" y="370" fill="#1a1a2e" font-size="16">Test once, divide once</text><rect x="60" y="410" width="980" height="130" fill="#f59e0b" rx="8"/><text x="100" y="450" fill="#1a1a2e" font-size="22" font-weight="bold">3. Conditional on computed value</text><text x="100" y="485" fill="#1a1a2e" font-size="18" font-family="monospace">VAR Margin = [Rev]-[Cost]  IF(Margin&gt;0,...)</text><text x="100" y="515" fill="#1a1a2e" font-size="16">Compute the test once</text><rect x="60" y="555" width="980" height="130" fill="#8b5cf6" rx="8"/><text x="100" y="595" fill="#ffd700" font-size="22" font-weight="bold">4. Long composed measures</text><text x="100" y="630" fill="#ffffff" font-size="18">Break logic into named steps</text><text x="100" y="660" fill="#ffffff" font-size="16">Reads like a recipe</text><rect x="60" y="700" width="980" height="130" fill="#ec4899" rx="8"/><text x="100" y="740" fill="#ffffff" font-size="22" font-weight="bold">5. Table variables</text><text x="100" y="775" fill="#ffffff" font-size="18">Store FILTER / SUMMARIZE results</text><text x="100" y="805" fill="#ffffff" font-size="16">Reuse in COUNTROWS, SUMX, etc.</text><rect x="150" y="870" width="800" height="100" fill="#ffd700" rx="8"/><text x="550" y="910" fill="#1a1a2e" font-size="24" font-weight="bold" text-anchor="middle">Style: PascalCase names, RETURN on own line</text><text x="550" y="950" fill="#1a1a2e" font-size="20" text-anchor="middle">Your future self will thank you</text></svg>`,
+          caption: "Five everyday triggers — when you spot them, reach for VAR."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dax-lesson-6",
+    title: "Common DAX Patterns",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The 5 Patterns That Run Business Reporting",
+        content: `Most business reports recycle the same handful of measures. Once you know these **five DAX patterns**, you can build **~80% of dashboards** without inventing anything new:
+
+**1. Running Total** — Cumulative sum to date
+**2. Year-over-Year %** — Growth versus the prior year
+**3. Top N** — Highlight the top performers
+**4. Distinct Count** — Unique customers, products, sessions
+**5. Percent of Total** — Each slice's share of the whole
+
+These aren't tricks — they're **template formulas** you can copy, paste, and rename. Master the **structure** of each, and you'll spot the shape instantly when a stakeholder asks for "cumulative", "growth", "ranking", "unique", or "share". Let's walk through all five with copy-ready code.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">The Big 5 DAX Patterns</text><text x="550" y="130" fill="#ffffff" font-size="22" text-anchor="middle">~80% of business reporting needs</text><circle cx="275" cy="280" r="100" fill="#6366f1"/><text x="275" y="270" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">1</text><text x="275" y="305" fill="#ffffff" font-size="18" text-anchor="middle">Running</text><text x="275" y="330" fill="#ffffff" font-size="18" text-anchor="middle">Total</text><circle cx="550" cy="280" r="100" fill="#10b981"/><text x="550" y="270" fill="#1a1a2e" font-size="22" font-weight="bold" text-anchor="middle">2</text><text x="550" y="305" fill="#1a1a2e" font-size="18" text-anchor="middle">YoY %</text><text x="550" y="330" fill="#1a1a2e" font-size="18" text-anchor="middle">Growth</text><circle cx="825" cy="280" r="100" fill="#f59e0b"/><text x="825" y="270" fill="#1a1a2e" font-size="22" font-weight="bold" text-anchor="middle">3</text><text x="825" y="305" fill="#1a1a2e" font-size="18" text-anchor="middle">Top N</text><text x="825" y="330" fill="#1a1a2e" font-size="18" text-anchor="middle">Filter</text><circle cx="400" cy="500" r="100" fill="#8b5cf6"/><text x="400" y="490" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">4</text><text x="400" y="525" fill="#ffffff" font-size="18" text-anchor="middle">Distinct</text><text x="400" y="550" fill="#ffffff" font-size="18" text-anchor="middle">Count</text><circle cx="700" cy="500" r="100" fill="#ec4899"/><text x="700" y="490" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">5</text><text x="700" y="525" fill="#ffffff" font-size="18" text-anchor="middle">% of</text><text x="700" y="550" fill="#ffffff" font-size="18" text-anchor="middle">Total</text><rect x="100" y="680" width="900" height="200" fill="#888" opacity="0.2" rx="8"/><text x="550" y="725" fill="#ffd700" font-size="24" text-anchor="middle" font-weight="bold">Memorize the shapes</text><text x="550" y="770" fill="#ffffff" font-size="20" text-anchor="middle">When a stakeholder says "cumulative",</text><text x="550" y="800" fill="#ffffff" font-size="20" text-anchor="middle">"growth", "top", "unique", "share" —</text><text x="550" y="840" fill="#ffd700" font-size="22" text-anchor="middle" font-weight="bold">you already know the formula</text></svg>`,
+          caption: "Five recyclable patterns that cover the majority of business reporting requests."
+        }
+      },
+      {
+        type: "concept",
+        title: "Patterns 1 & 2: Running Total and YoY",
+        content: `**Pattern 1 — Running Total:**
+
+**Cumulative Sales = CALCULATE([Total Sales], FILTER(ALL(Calendar[Date]), Calendar[Date] <= MAX(Calendar[Date])))**
+
+How it works: **ALL** strips the date filter, **FILTER** rebuilds it as "every date ≤ the current row's max date", and **CALCULATE** re-sums. Drop this on a line chart with **Date** on the X-axis — you get a smooth climbing curve.
+
+**Pattern 2 — Year-over-Year %:**
+
+**YoY % = VAR Current = [Sales] VAR Prior = CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date])) RETURN DIVIDE(Current - Prior, Prior, 0)**
+
+The **third argument** of **DIVIDE** is the **alternate result** when the denominator is zero — cleaner than wrapping in **IF**. Format as **percentage** and pair with **conditional formatting** (red for negative, green for positive) for instant insight.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Running Total &amp; YoY %</text><rect x="60" y="110" width="980" height="380" fill="#6366f1" opacity="0.2" rx="8"/><text x="550" y="150" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Pattern 1: Running Total</text><text x="90" y="195" fill="#ffffff" font-size="16" font-family="monospace">Cumulative Sales =</text><text x="90" y="225" fill="#ffffff" font-size="16" font-family="monospace">CALCULATE(</text><text x="90" y="255" fill="#ffffff" font-size="16" font-family="monospace">  [Total Sales],</text><text x="90" y="285" fill="#ffffff" font-size="16" font-family="monospace">  FILTER(</text><text x="90" y="315" fill="#ffd700" font-size="16" font-family="monospace">    ALL(Calendar[Date]),</text><text x="90" y="345" fill="#ffd700" font-size="16" font-family="monospace">    Calendar[Date] &lt;= MAX(Calendar[Date])</text><text x="90" y="375" fill="#ffffff" font-size="16" font-family="monospace">  )</text><text x="90" y="405" fill="#ffffff" font-size="16" font-family="monospace">)</text><text x="550" y="450" fill="#10b981" font-size="18" text-anchor="middle">ALL strips filter, FILTER rebuilds "≤ today"</text><rect x="60" y="510" width="980" height="450" fill="#10b981" opacity="0.2" rx="8"/><text x="550" y="550" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">Pattern 2: Year-over-Year %</text><text x="90" y="595" fill="#ffffff" font-size="16" font-family="monospace">YoY % =</text><text x="90" y="625" fill="#ffd700" font-size="16" font-family="monospace">VAR Current = [Sales]</text><text x="90" y="655" fill="#ffd700" font-size="16" font-family="monospace">VAR Prior =</text><text x="90" y="685" fill="#ffd700" font-size="16" font-family="monospace">  CALCULATE([Sales], SAMEPERIODLASTYEAR(Calendar[Date]))</text><text x="90" y="725" fill="#10b981" font-size="16" font-family="monospace">RETURN</text><text x="90" y="755" fill="#ffffff" font-size="16" font-family="monospace">  DIVIDE(Current - Prior, Prior, 0)</text><text x="550" y="820" fill="#ffd700" font-size="18" text-anchor="middle">DIVIDE's 3rd arg = safe fallback when Prior = 0</text><text x="550" y="870" fill="#ffffff" font-size="18" text-anchor="middle">Format as %, color red/green</text></svg>`,
+          caption: "Two staples: cumulative-to-date and year-over-year growth — copy and rename."
+        }
+      },
+      {
+        type: "example",
+        title: "Patterns 3, 4, 5: Top N, Distinct Count, % of Total",
+        content: `**Pattern 3 — Top N filter:**
+
+**Top 10 Products = CALCULATE([Total Sales], FILTER(VALUES(Products[ProductName]), RANKX(ALL(Products[ProductName]), [Total Sales]) <= 10))**
+
+**RANKX** ranks every product by sales; **FILTER** keeps only ranks ≤ 10; **CALCULATE** sums their sales. Drop into a card visual — boardroom-ready.
+
+**Pattern 4 — Distinct Count:**
+
+**Unique Customers = DISTINCTCOUNT(Sales[CustomerID])**
+
+Always prefer **DISTINCTCOUNT** over **COUNTROWS(VALUES(Sales[CustomerID]))** — same result, far clearer intent, slightly faster.
+
+**Pattern 5 — % of Grand Total:**
+
+**% of Grand Total = DIVIDE([Sales], CALCULATE([Sales], ALL(Sales)))**
+
+**ALL(Sales)** removes every filter from the Sales table, giving you the **grand total** as the denominator. Each row in your visual shows its **share of the whole**. Variants: use **ALL(Products)** for "% of all products" or **ALLSELECTED** to respect slicer choices.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Top N, Distinct, % of Total</text><rect x="60" y="100" width="980" height="290" fill="#f59e0b" opacity="0.2" rx="8"/><text x="550" y="140" fill="#f59e0b" font-size="22" font-weight="bold" text-anchor="middle">Pattern 3: Top 10 Products</text><text x="90" y="185" fill="#ffffff" font-size="16" font-family="monospace">CALCULATE(</text><text x="90" y="215" fill="#ffffff" font-size="16" font-family="monospace">  [Total Sales],</text><text x="90" y="245" fill="#ffffff" font-size="16" font-family="monospace">  FILTER(</text><text x="90" y="275" fill="#ffd700" font-size="16" font-family="monospace">    VALUES(Products[ProductName]),</text><text x="90" y="305" fill="#ffd700" font-size="16" font-family="monospace">    RANKX(ALL(...), [Total Sales]) &lt;= 10</text><text x="90" y="335" fill="#ffffff" font-size="16" font-family="monospace">  ) )</text><text x="550" y="370" fill="#ffffff" font-size="16" text-anchor="middle">RANKX assigns ranks, FILTER keeps top 10</text><rect x="60" y="410" width="980" height="190" fill="#8b5cf6" opacity="0.2" rx="8"/><text x="550" y="450" fill="#8b5cf6" font-size="22" font-weight="bold" text-anchor="middle">Pattern 4: Distinct Count</text><text x="550" y="500" fill="#10b981" font-size="22" text-anchor="middle" font-family="monospace">DISTINCTCOUNT(Sales[CustomerID])</text><text x="550" y="540" fill="#ffffff" font-size="16" text-anchor="middle">vs. COUNTROWS(VALUES(...))</text><text x="550" y="570" fill="#ffd700" font-size="18" text-anchor="middle">Same result, clearer intent, slightly faster</text><rect x="60" y="620" width="980" height="290" fill="#ec4899" opacity="0.2" rx="8"/><text x="550" y="660" fill="#ec4899" font-size="22" font-weight="bold" text-anchor="middle">Pattern 5: % of Grand Total</text><text x="90" y="710" fill="#ffffff" font-size="16" font-family="monospace">DIVIDE(</text><text x="90" y="740" fill="#ffffff" font-size="16" font-family="monospace">  [Sales],</text><text x="90" y="770" fill="#ffd700" font-size="16" font-family="monospace">  CALCULATE([Sales], ALL(Sales))</text><text x="90" y="800" fill="#ffffff" font-size="16" font-family="monospace">)</text><text x="550" y="850" fill="#ffffff" font-size="16" text-anchor="middle">ALL(Sales) → grand total denominator</text><text x="550" y="885" fill="#ffd700" font-size="16" text-anchor="middle">Swap ALL → ALLSELECTED to respect slicers</text></svg>`,
+          caption: "Three more staples: ranking filters, distinct counts, and share-of-total."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Check Your Understanding",
+        question: "In `% of Grand Total = DIVIDE([Sales], CALCULATE([Sales], ALL(Sales)))`, what does `ALL(Sales)` do?",
+        options: [
+          { text: "Sums every column in the Sales table", correct: false },
+          { text: "Removes all filters from the Sales table so the denominator is the grand total", correct: true },
+          { text: "Returns only the unique rows of Sales", correct: false },
+          { text: "Sorts the Sales table from largest to smallest", correct: false }
+        ],
+        explanation: "ALL(Sales) is a filter modifier that strips every active filter from the Sales table. CALCULATE then re-evaluates [Sales] in that filter-free context, producing the grand total. DIVIDE then gives each row's share of that total.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="100" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">ALL() Strips Filters</text><rect x="100" y="180" width="900" height="120" fill="#ef4444" opacity="0.3" rx="8"/><text x="550" y="225" fill="#ef4444" font-size="22" font-weight="bold" text-anchor="middle">Without ALL</text><text x="550" y="265" fill="#ffffff" font-size="20" text-anchor="middle">Numerator and denominator both filtered</text><text x="550" y="290" fill="#ffffff" font-size="20" text-anchor="middle">→ ratio always = 100%</text><line x1="550" y1="320" x2="550" y2="380" stroke="#ffd700" stroke-width="3"/><polygon points="550,390 540,370 560,370" fill="#ffd700"/><rect x="100" y="410" width="900" height="180" fill="#10b981" opacity="0.3" rx="8"/><text x="550" y="455" fill="#10b981" font-size="22" font-weight="bold" text-anchor="middle">With ALL(Sales)</text><text x="550" y="500" fill="#ffffff" font-size="20" text-anchor="middle">Denominator ignores filters →</text><text x="550" y="535" fill="#ffffff" font-size="20" text-anchor="middle">grand total stays constant</text><text x="550" y="575" fill="#ffd700" font-size="20" text-anchor="middle">→ row shows its share of the whole</text><rect x="200" y="650" width="700" height="200" fill="#6366f1" rx="8"/><text x="550" y="695" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle" font-family="monospace">DIVIDE(</text><text x="550" y="730" fill="#ffffff" font-size="18" text-anchor="middle" font-family="monospace">  [Sales],   ← filtered</text><text x="550" y="765" fill="#ffd700" font-size="18" text-anchor="middle" font-family="monospace">  CALCULATE([Sales], ALL(Sales))</text><text x="550" y="795" fill="#ffd700" font-size="16" text-anchor="middle">↑ grand total</text><text x="550" y="830" fill="#ffffff" font-size="18" text-anchor="middle" font-family="monospace">)</text></svg>`,
+          caption: "ALL() removes filters so the denominator stays at the grand total."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Pattern Library",
+        content: `**Treat these five patterns as building blocks** — copy them into a personal **DAX cheat sheet** and rename for each project.
+
+**Practical assembly tips:**
+
+- **Pair YoY with Running Total** on the same chart — actual vs cumulative tells a powerful story.
+- **Top N + % of Total** is a classic Pareto view: "top 10 products are 73% of revenue."
+- **Distinct Count + DIVIDE** gives **avg revenue per customer**: **DIVIDE([Sales], DISTINCTCOUNT(Sales[CustomerID]))**.
+- **ALLSELECTED** is your friend when users add slicers — it respects slicer choices while removing visual-level filters.
+- Add a hidden **measure table** in your model named **_Measures** to keep all measures organized in one spot.
+
+The DAX learning curve flattens dramatically once these five patterns are second nature. Most "**advanced**" measures are just **two or three of these composed together**. You now have the toolkit to handle **production reporting** confidently — congratulations on finishing **DAX Basics**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Compose Patterns Into Insights</text><rect x="60" y="120" width="980" height="120" fill="#6366f1" rx="8"/><text x="100" y="160" fill="#ffd700" font-size="22" font-weight="bold">YoY + Running Total</text><text x="100" y="195" fill="#ffffff" font-size="18">Actual climb + growth % on same chart</text><text x="100" y="225" fill="#ffffff" font-size="16">Tells the trend AND the acceleration story</text><rect x="60" y="255" width="980" height="120" fill="#10b981" rx="8"/><text x="100" y="295" fill="#1a1a2e" font-size="22" font-weight="bold">Top N + % of Total</text><text x="100" y="330" fill="#1a1a2e" font-size="18">"Top 10 products = 73% of revenue"</text><text x="100" y="360" fill="#1a1a2e" font-size="16">Pareto in one visual</text><rect x="60" y="390" width="980" height="120" fill="#f59e0b" rx="8"/><text x="100" y="430" fill="#1a1a2e" font-size="22" font-weight="bold">Distinct Count + DIVIDE</text><text x="100" y="465" fill="#1a1a2e" font-size="18" font-family="monospace">DIVIDE([Sales], DISTINCTCOUNT(CustomerID))</text><text x="100" y="495" fill="#1a1a2e" font-size="16">Avg revenue per customer</text><rect x="60" y="525" width="980" height="120" fill="#8b5cf6" rx="8"/><text x="100" y="565" fill="#ffd700" font-size="22" font-weight="bold">ALLSELECTED for slicer-friendly %</text><text x="100" y="600" fill="#ffffff" font-size="18">Respects slicers, ignores visual filters</text><text x="100" y="630" fill="#ffffff" font-size="16">The "smart" alternative to ALL()</text><rect x="60" y="660" width="980" height="120" fill="#ec4899" rx="8"/><text x="100" y="700" fill="#ffffff" font-size="22" font-weight="bold">_Measures table</text><text x="100" y="735" fill="#ffffff" font-size="18">Hidden table holding every measure</text><text x="100" y="765" fill="#ffffff" font-size="16">One folder, organized model</text><rect x="150" y="830" width="800" height="160" fill="#ffd700" rx="8"/><text x="550" y="875" fill="#1a1a2e" font-size="26" font-weight="bold" text-anchor="middle">DAX Basics complete!</text><text x="550" y="920" fill="#1a1a2e" font-size="20" text-anchor="middle">Most "advanced" measures = 2-3 patterns</text><text x="550" y="955" fill="#1a1a2e" font-size="20" text-anchor="middle">composed together. You have the toolkit.</text></svg>`,
+          caption: "Combine patterns to build sophisticated measures — the real DAX advantage."
         }
       }
     ]
