@@ -10996,7 +10996,7 @@ We'll close with a **multi-modifier claim line** that walks every step. Master t
             title: 'HCPCS Level II: J-Codes, Supplies, and Outpatient Drugs',
             author: 'Synthesis Learning',
             description: 'When CPT runs out, HCPCS picks up — drug J-codes, DME, ambulance, and the modifier overlap.',
-            lessons: 9, duration: 135, progress: 0, category: 'cpc-prep',
+            lessons: 12, duration: 180, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-hcpcs-lesson-1",
@@ -12088,6 +12088,574 @@ This is a typical 9-10 line claim. Missing any single line costs roughly $50-$30
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="30" font-weight="bold" text-anchor="middle">Top 10 Infusion Coding Errors</text><rect x="60" y="100" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="80" y="130" fill="#ef4444" font-size="16" font-weight="bold">1. Missing initial code</text><text x="80" y="155" fill="#ffffff" font-size="13">Add-ons reported alone, entire claim denies</text><rect x="560" y="100" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="580" y="130" fill="#ef4444" font-size="16" font-weight="bold">2. Two initial codes</text><text x="580" y="155" fill="#ffffff" font-size="13">Only ONE initial per encounter</text><rect x="60" y="190" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="80" y="220" fill="#ef4444" font-size="16" font-weight="bold">3. Wrong hierarchy</text><text x="80" y="245" fill="#ffffff" font-size="13">First-given chosen over highest-tier</text><rect x="560" y="190" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="580" y="220" fill="#ef4444" font-size="16" font-weight="bold">4. Sequential as initial</text><text x="580" y="245" fill="#ffffff" font-size="13">96417 needed, 96413 reported</text><rect x="60" y="280" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="80" y="310" fill="#ef4444" font-size="16" font-weight="bold">5. Additional hour without 31 min</text><text x="80" y="335" fill="#ffffff" font-size="13">96415 fails when less than 31 min into hr 2</text><rect x="560" y="280" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="580" y="310" fill="#ef4444" font-size="16" font-weight="bold">6. Missing -JW or -JZ</text><text x="580" y="335" fill="#ffffff" font-size="13">Single-dose vials need wastage modifier</text><rect x="60" y="370" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="80" y="400" fill="#ef4444" font-size="16" font-weight="bold">7. Hydration with chemo</text><text x="80" y="425" fill="#ffffff" font-size="13">Concurrent saline not separately billable</text><rect x="560" y="370" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="580" y="400" fill="#ef4444" font-size="16" font-weight="bold">8. Wrong J-code units</text><text x="580" y="425" fill="#ffffff" font-size="13">Per-mg unit math errors, rounding mistakes</text><rect x="60" y="460" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="80" y="490" fill="#ef4444" font-size="16" font-weight="bold">9. Push vs infusion confusion</text><text x="80" y="515" fill="#ffffff" font-size="13">15 min or less = push, more = infusion</text><rect x="560" y="460" width="480" height="80" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2" rx="6"/><text x="580" y="490" fill="#ef4444" font-size="16" font-weight="bold">10. Missing ESA modifier</text><text x="580" y="515" fill="#ffffff" font-size="13">J0881/J0882 need -EA, -EB, or -EC</text><rect x="60" y="570" width="980" height="220" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="3" rx="8"/><text x="550" y="610" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Monthly Audit Query Checklist</text><text x="100" y="650" fill="#ffffff" font-size="16">- J9xxx lines without 96413 or 96409 (missing chemo admin)</text><text x="100" y="680" fill="#ffffff" font-size="16">- J9xxx lines without -JW or -JZ (wastage modifier missing)</text><text x="100" y="710" fill="#ffffff" font-size="16">- Encounters with both 96413 and 96365 (potential double initial)</text><text x="100" y="740" fill="#ffffff" font-size="16">- 96415 lines where documented time is less than 91 min total</text><text x="100" y="770" fill="#ffffff" font-size="16">- J0881 or J0882 without -EA, -EB, or -EC modifier</text><rect x="60" y="810" width="980" height="240" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3" rx="8"/><text x="550" y="850" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Documentation Best Practices</text><text x="100" y="895" fill="#ffffff" font-size="16">- Nurses record START and STOP times for every drug</text><text x="100" y="930" fill="#ffffff" font-size="16">- Drug name, dose, route, and rate documented in flowsheet</text><text x="100" y="965" fill="#ffffff" font-size="16">- Waste documentation includes vial size and discarded mg</text><text x="100" y="1000" fill="#ffffff" font-size="16">- Pre-medication noted with link to chemo regimen</text><text x="100" y="1035" fill="#ffffff" font-size="16">- ABN signed and filed before non-covered chemo regimens</text></svg>`,
           caption: "Top 10 infusion errors with audit queries and documentation best practices."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-hcpcs-lesson-10",
+    title: "HCPCS Annual Updates and CMS Transmittals",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Living Code Set: Why HCPCS Changes Constantly",
+        content: `Unlike CPT, which publishes annually each January, **HCPCS Level II is a living code set** updated by CMS on a **quarterly cadence**. Coders who ignore this rhythm bill yesterday's codes and trigger today's denials.
+
+**The Four Release Windows:**
+- **January 1** — Major annual update; largest batch of new, deleted, and revised codes. Aligns with CPT and ICD-10-CM cycle.
+- **April 1** — Quarterly update; primarily drug codes (J-codes) for newly FDA-approved biologics and biosimilars.
+- **July 1** — Quarterly update; mid-year corrections, additional drug codes, DMEPOS adjustments.
+- **October 1** — Quarterly update; aligns with federal fiscal year and ICD-10 changes; often includes outpatient hospital (OPPS) adjustments.
+
+**Why CPC candidates must know this:**
+The AAPC exam tests **current-year HCPCS** as of the testing date. Questions reference **CMS Transmittals** (numbered CMS communications announcing policy changes), **MLN Matters articles** (plain-language coder education), and **the HCPCS Quarterly Update files** posted at cms.gov.
+
+**Key CMS publications to recognize:**
+- **HCPCS Quarterly Update** — the official code-list file
+- **CR (Change Request)** numbers — internal CMS tracking IDs
+- **MLN Matters (MM####)** — coder-facing explanations
+- **Pub 100-04** (Medicare Claims Processing Manual) — billing rules
+
+A code that was valid December 31 may be deleted January 1, replaced by a **G2XXX telehealth series** code or a new **J-code** for a freshly approved biosimilar. Billing the deleted code = automatic denial with reason code **CO-181 (Procedure code was invalid on date of service)**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">HCPCS Quarterly Release Cycle</text><text x="550" y="110" text-anchor="middle" fill="#888" font-size="20">CMS publishes 4x per year</text><circle cx="550" cy="600" r="320" fill="none" stroke="#6366f1" stroke-width="3" stroke-dasharray="10,8"/><circle cx="550" cy="600" r="60" fill="#ffd700"/><text x="550" y="595" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">HCPCS</text><text x="550" y="618" text-anchor="middle" fill="#1a1a2e" font-size="16" font-weight="bold">Level II</text><g><circle cx="550" cy="280" r="80" fill="#10b981"/><text x="550" y="270" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">JAN 1</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="14">Annual Major</text><text x="550" y="375" text-anchor="middle" fill="#10b981" font-size="14">Largest batch / aligns CPT</text></g><g><circle cx="870" cy="600" r="80" fill="#f59e0b"/><text x="870" y="590" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">APR 1</text><text x="870" y="615" text-anchor="middle" fill="#1a1a2e" font-size="14">Q2 Drugs</text><text x="990" y="600" text-anchor="middle" fill="#f59e0b" font-size="14">New J-codes</text></g><g><circle cx="550" cy="920" r="80" fill="#ec4899"/><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">JUL 1</text><text x="550" y="935" text-anchor="middle" fill="#ffffff" font-size="14">Q3 Mid-Year</text><text x="550" y="1015" text-anchor="middle" fill="#ec4899" font-size="14">Corrections / DMEPOS</text></g><g><circle cx="230" cy="600" r="80" fill="#0ea5e9"/><text x="230" y="590" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">OCT 1</text><text x="230" y="615" text-anchor="middle" fill="#ffffff" font-size="14">Q4 / FY</text><text x="110" y="600" text-anchor="middle" fill="#0ea5e9" font-size="14">ICD-10 aligned</text></g><line x1="550" y1="360" x2="790" y2="600" stroke="#6366f1" stroke-width="2"/><line x1="790" y1="600" x2="550" y2="840" stroke="#6366f1" stroke-width="2"/><line x1="550" y1="840" x2="310" y2="600" stroke="#6366f1" stroke-width="2"/><line x1="310" y1="600" x2="550" y2="360" stroke="#6366f1" stroke-width="2"/></svg>`,
+          caption: "CMS releases HCPCS updates four times annually; April quarterly drops focus on new J-codes for FDA-approved biologics."
+        }
+      },
+      {
+        type: "concept",
+        title: "Code Lifecycle: New, Revised, Deleted, and Crosswalk",
+        content: `Every HCPCS code travels through a **lifecycle**. The CPC exam tests your ability to recognize each phase and apply the correct billing response.
+
+**1. NEW codes — Add Date**
+- Listed with an **effective date** (usually Jan 1, but Apr/Jul/Oct for quarterly drops)
+- Cannot be billed for DOS (date of service) **before** the effective date
+- Common pattern: temporary **Q-codes** become permanent **J-codes** after FDA biosimilar review
+- Example: Q5121 (biosimilar) → eventually crosswalked to a permanent J-code
+
+**2. REVISED codes — Description Change**
+- Code number stays the same; **descriptor language** changes
+- Watch for unit changes (e.g., "per 10 mg" → "per 1 mg" — a 10x billing difference!)
+- Revisions marked with a **triangle symbol (▲)** in the HCPCS book
+
+**3. DELETED codes — Sunset Date**
+- Marked with a **strikethrough** or **bullet symbol (•)** in the codebook
+- **Cannot be billed for DOS on or after the deletion date**
+- CMS typically provides a **crosswalk** to a replacement code in the same release
+- Billing a deleted code triggers **CO-181** denial
+
+**4. TEMPORARY codes — G, Q, K, S series**
+- **G-codes** (G0000-G9999) — CMS-issued for services not yet in CPT (telehealth G2XXX series exploded post-2020)
+- **Q-codes** (Q0000-Q9999) — Quarterly assignments, often new drugs
+- **K-codes** — DMERC-specific (used by DME MACs)
+- **S-codes** — Private-payer (BCBS) — **NOT payable by Medicare**
+
+**Coder responsibility:** Subscribe to the **CMS HCPCS Quarterly Update** listserv, review **MLN Matters** monthly, and update your encoder/EHR mappings before each effective date. Most denials labeled CO-181 trace to one cause — a coder using a deleted or not-yet-effective code.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">HCPCS Code Lifecycle</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">From proposal through retirement</text><g><rect x="80" y="160" width="940" height="140" fill="#10b981" rx="10"/><text x="120" y="210" fill="#ffffff" font-size="26" font-weight="bold">1. NEW</text><text x="120" y="245" fill="#ffffff" font-size="16">Add Date assigned; cannot bill DOS before effective date</text><text x="120" y="275" fill="#ffffff" font-size="16">Example: Q5121 biosimilar issued Apr 1 quarterly drop</text></g><g><rect x="80" y="320" width="940" height="140" fill="#f59e0b" rx="10"/><text x="120" y="370" fill="#1a1a2e" font-size="26" font-weight="bold">2. REVISED</text><text x="120" y="405" fill="#1a1a2e" font-size="16">Same code number, NEW descriptor (watch unit changes!)</text><text x="120" y="435" fill="#1a1a2e" font-size="16">Triangle marker; check per-mg dosing on J-codes</text></g><g><rect x="80" y="480" width="940" height="140" fill="#ef4444" rx="10"/><text x="120" y="530" fill="#ffffff" font-size="26" font-weight="bold">3. DELETED</text><text x="120" y="565" fill="#ffffff" font-size="16">Sunset date applied; CO-181 denial if billed after</text><text x="120" y="595" fill="#ffffff" font-size="16">Look for crosswalk in same quarterly transmittal</text></g><g><rect x="80" y="640" width="940" height="140" fill="#8b5cf6" rx="10"/><text x="120" y="690" fill="#ffffff" font-size="26" font-weight="bold">4. TEMPORARY</text><text x="120" y="725" fill="#ffffff" font-size="16">G, Q, K, S series — G2XXX telehealth boom 2020+</text><text x="120" y="755" fill="#ffffff" font-size="16">S-codes NOT payable by Medicare (BCBS only)</text></g><g><rect x="80" y="800" width="940" height="140" fill="#0ea5e9" rx="10"/><text x="120" y="850" fill="#ffffff" font-size="26" font-weight="bold">5. CROSSWALK</text><text x="120" y="885" fill="#ffffff" font-size="16">CMS maps retired code to replacement</text><text x="120" y="915" fill="#ffffff" font-size="16">Update encoder mappings BEFORE effective date</text></g><text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Subscribe to CMS HCPCS Listserv + MLN Matters</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="16">Most CO-181 denials = coder used deleted or not-yet-effective code</text></svg>`,
+          caption: "Five-stage HCPCS lifecycle; coders must update encoder mappings before each quarterly effective date to avoid CO-181 denials."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example: Q5121 Biosimilar Through Lifecycle",
+        content: `**Scenario:** It is December 2024. Dr. Chen wants to administer a new biosimilar (infliximab-axxq, brand name Avsola) for a Crohn's disease patient. The clinic coder must determine the correct HCPCS code across three dates of service.
+
+**DOS Date 1: April 15, 2024**
+- Code **Q5121** (Injection, infliximab-axxq, biosimilar, 10 mg) was effective April 1, 2024 quarterly release
+- Coder bills: **Q5121 x 30 units** for 300 mg dose (30 units x 10 mg = 300 mg)
+- **Result:** Clean claim, paid at ASP+6% rate
+
+**DOS Date 2: January 5, 2024** (retrospective audit)
+- Q5121 not yet effective (added April 1, 2024)
+- For January 2024 DOS, coder must use the **prior code** — likely J3590 (unclassified biologics) with the **NDC number** and **invoice price** documented
+- Billing Q5121 for January 2024 DOS = **CO-181 denial** (not valid on DOS)
+
+**DOS Date 3: July 20, 2024**
+- Q5121 is active; bill normally
+- **However:** Check the July 2024 quarterly transmittal — if a permanent J-code replaced Q5121, the crosswalk applies. Q-codes often sunset within 2-3 years as permanent J-codes are assigned.
+
+**Wastage scenario:**
+Patient needs 280 mg. The 100 mg single-dose vial pack means you draw 300 mg, waste 20 mg.
+- Bill: **Q5121 x 28** (administered) + **Q5121-JW x 2** (wastage)
+- Documentation: vial size, NDC, exact mg drawn vs administered, wastage justification
+
+**CPC exam framing:** Expect questions like "Patient receives infliximab-axxq biosimilar 200 mg on April 10, 2024. What is the correct HCPCS code and unit count?" — answer requires recognizing **effective date + per-10-mg dosing = Q5121 x 20**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Q5121 Lifecycle: Three Dates of Service</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">Infliximab-axxq biosimilar (per 10 mg)</text><line x1="100" y1="500" x2="1000" y2="500" stroke="#6366f1" stroke-width="4"/><circle cx="100" cy="500" r="8" fill="#ffd700"/><circle cx="550" cy="500" r="12" fill="#10b981"/><circle cx="1000" cy="500" r="8" fill="#ffd700"/><text x="100" y="475" text-anchor="middle" fill="#888" font-size="14">Jan 1, 2024</text><text x="550" y="475" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">Apr 1, 2024 - Q5121 EFFECTIVE</text><text x="1000" y="475" text-anchor="middle" fill="#888" font-size="14">Dec 31, 2024</text><g><rect x="60" y="180" width="280" height="240" fill="#ef4444" rx="10"/><text x="200" y="220" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">DOS: Jan 5</text><text x="200" y="260" text-anchor="middle" fill="#ffffff" font-size="16">Q5121 NOT effective</text><text x="200" y="290" text-anchor="middle" fill="#ffffff" font-size="16">Bill: J3590</text><text x="200" y="320" text-anchor="middle" fill="#ffffff" font-size="14">+ NDC + invoice</text><text x="200" y="370" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Q5121 = CO-181</text></g><g><rect x="410" y="180" width="280" height="240" fill="#10b981" rx="10"/><text x="550" y="220" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">DOS: Apr 15</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="16">Q5121 ACTIVE</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="16">300 mg dose</text><text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="14">Q5121 x 30 units</text><text x="550" y="370" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Clean claim</text></g><g><rect x="760" y="180" width="280" height="240" fill="#f59e0b" rx="10"/><text x="900" y="220" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">DOS: Jul 20</text><text x="900" y="260" text-anchor="middle" fill="#1a1a2e" font-size="16">Q5121 still active</text><text x="900" y="290" text-anchor="middle" fill="#1a1a2e" font-size="16">Check Jul transmittal</text><text x="900" y="320" text-anchor="middle" fill="#1a1a2e" font-size="14">for J-code crosswalk</text><text x="900" y="370" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">Watch sunsets</text></g><g><rect x="80" y="600" width="940" height="200" fill="#6366f1" rx="10"/><text x="550" y="645" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Wastage Scenario: 280 mg administered, 20 mg discarded</text><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="18">Bill: Q5121 x 28 (administered)</text><text x="550" y="725" text-anchor="middle" fill="#ffd700" font-size="18">+ Q5121-JW x 2 (wastage modifier)</text><text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="14">Documentation: vial size, NDC, exact mg drawn vs administered</text></g><text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">CPC exam tip:</text><text x="550" y="905" text-anchor="middle" fill="#ffffff" font-size="16">200 mg dose = Q5121 x 20 (per 10 mg dosing)</text><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="16">Always verify DOS against quarterly effective date</text><text x="550" y="985" text-anchor="middle" fill="#888" font-size="14">Subscribe to CMS Q-update listserv for real-time effective dates</text></svg>`,
+          caption: "Q5121 example shows DOS-based code selection: pre-effective dates require unclassified codes; post-effective bills cleanly with JW wastage."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A coder is reviewing a claim for an infusion administered on March 25, 2024. The patient received a biosimilar that has a HCPCS Q-code with an effective date of April 1, 2024. Which billing approach is correct?",
+        options: [
+          { text: "Bill the Q-code anyway since it will be effective shortly after the claim is submitted", correct: false },
+          { text: "Hold the claim until after April 1, 2024, then submit with the new Q-code", correct: false },
+          { text: "Bill an unclassified J-code (e.g., J3590) with the NDC number and invoice price documented, since the Q-code is not effective for the DOS", correct: true },
+          { text: "Bill the Q-code with the KX modifier to override the effective date restriction", correct: false }
+        ],
+        explanation: "HCPCS codes are tied to **date of service (DOS)**, not date of submission. For a March 25 DOS, the April 1 Q-code is **not yet effective** — billing it triggers CO-181 (Procedure code invalid on DOS). The correct approach is the **unclassified code** (J3590 for unclassified biologics) with **NDC number** and **invoice price** documentation. KX is a coverage-medical-necessity modifier and cannot override effective-date logic. Holding the claim would also violate timely-filing rules and misrepresent the service date.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quick Check: DOS vs Effective Date</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">When Q-code is not yet effective</text><line x1="100" y1="350" x2="1000" y2="350" stroke="#6366f1" stroke-width="3"/><circle cx="350" cy="350" r="14" fill="#ef4444"/><circle cx="700" cy="350" r="14" fill="#10b981"/><text x="350" y="320" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">DOS Mar 25</text><text x="700" y="320" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">Q-code Apr 1</text><text x="350" y="390" text-anchor="middle" fill="#ffffff" font-size="14">(7 days before)</text><text x="700" y="390" text-anchor="middle" fill="#ffffff" font-size="14">(effective)</text><g><rect x="80" y="450" width="940" height="100" fill="#10b981" rx="10"/><text x="550" y="495" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">CORRECT ANSWER:</text><text x="550" y="525" text-anchor="middle" fill="#ffffff" font-size="18">Bill J3590 (unclassified) + NDC + invoice price</text></g><g><rect x="80" y="580" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="618" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: Bill Q-code anyway = CO-181 denial</text></g><g><rect x="80" y="660" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="698" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: Hold claim = violates timely filing</text></g><g><rect x="80" y="740" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="778" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: KX modifier does NOT override effective dates</text></g><g><rect x="80" y="840" width="940" height="180" fill="#6366f1" rx="10"/><text x="550" y="885" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Key Principle</text><text x="550" y="925" text-anchor="middle" fill="#ffffff" font-size="18">HCPCS codes follow DATE OF SERVICE</text><text x="550" y="960" text-anchor="middle" fill="#ffffff" font-size="18">Not date of billing, not date of payment</text><text x="550" y="998" text-anchor="middle" fill="#ffd700" font-size="16">CO-181 = "Procedure code invalid on date of service"</text></g></svg>`,
+          caption: "DOS-based code selection: when Q-code is not yet effective, use unclassified J-code with NDC and invoice price."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Quarterly Update Workflow",
+        content: `**Your turn:** Build a personal HCPCS quarterly update workflow you can defend in a CPC interview or use on day one of a coding job.
+
+**Step 1: Subscribe to CMS direct sources**
+- Visit **cms.gov/Medicare/Coding/HCPCSReleaseCodeSets** and bookmark the page
+- Sign up for the **CMS HCPCS Updates listserv** (free)
+- Subscribe to **MLN Matters** weekly newsletter for plain-language explanations
+
+**Step 2: Build a quarterly review checklist (60 days out)**
+- **Day -60:** Download the next quarter's draft HCPCS file
+- **Day -45:** Cross-check new codes against your encoder/EHR mappings
+- **Day -30:** Identify **deleted codes** in active fee schedules — flag any open accounts using them
+- **Day -15:** Run a report of claims using soon-to-be-deleted codes; submit before sunset if DOS permits
+- **Day 0 (effective date):** Switch encoder mappings; brief providers on top 10 changes
+- **Day +30:** Audit first month's denials for CO-181 patterns
+
+**Step 3: Build your transmittal cheat sheet**
+Maintain a one-page reference with:
+- The 4 release dates (Jan/Apr/Jul/Oct 1)
+- Top 5 CMS transmittal series you watch (CR numbers + MLN Matters numbers)
+- Your payer's update lag (most commercial payers lag CMS by 30-90 days)
+
+**Step 4: Practice the lookup workflow**
+On every claim, ask: (1) What is the DOS? (2) Was this code effective on that date? (3) Was this code deleted before that date? (4) Is there a crosswalk?
+
+**Reflection prompts:**
+- If a provider asks "Why was this claim denied with CO-181?" what's your three-sentence explanation?
+- A new biosimilar gets FDA approval in February — when can you expect a HCPCS code?
+- Which CMS publication should you cite if a provider disputes a code change?
+
+**CPC exam connection:** Expect 3-5 exam questions on lifecycle, effective dates, and CMS publication recognition. Memorize: **Jan/Apr/Jul/Oct, CO-181, MLN Matters, Pub 100-04.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Your 60-Day Quarterly Update Workflow</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">Coder readiness timeline</text><g><rect x="80" y="160" width="940" height="100" fill="#0ea5e9" rx="10"/><text x="130" y="210" fill="#ffffff" font-size="24" font-weight="bold">Day -60</text><text x="350" y="200" fill="#ffffff" font-size="18">Download draft HCPCS file</text><text x="350" y="230" fill="#ffffff" font-size="16">CMS.gov / HCPCSReleaseCodeSets</text></g><g><rect x="80" y="280" width="940" height="100" fill="#10b981" rx="10"/><text x="130" y="330" fill="#ffffff" font-size="24" font-weight="bold">Day -45</text><text x="350" y="320" fill="#ffffff" font-size="18">Cross-check encoder/EHR mappings</text><text x="350" y="350" fill="#ffffff" font-size="16">Identify NEW codes for top diagnoses</text></g><g><rect x="80" y="400" width="940" height="100" fill="#f59e0b" rx="10"/><text x="130" y="450" fill="#1a1a2e" font-size="24" font-weight="bold">Day -30</text><text x="350" y="440" fill="#1a1a2e" font-size="18">Flag DELETED codes in fee schedule</text><text x="350" y="470" fill="#1a1a2e" font-size="16">Pull open accounts using them</text></g><g><rect x="80" y="520" width="940" height="100" fill="#ec4899" rx="10"/><text x="130" y="570" fill="#ffffff" font-size="24" font-weight="bold">Day -15</text><text x="350" y="560" fill="#ffffff" font-size="18">Submit pre-sunset claims (if DOS permits)</text><text x="350" y="590" fill="#ffffff" font-size="16">Educate providers on top 10 changes</text></g><g><rect x="80" y="640" width="940" height="100" fill="#ef4444" rx="10"/><text x="130" y="690" fill="#ffffff" font-size="24" font-weight="bold">Day 0</text><text x="350" y="680" fill="#ffffff" font-size="18">EFFECTIVE DATE — flip encoder mappings</text><text x="350" y="710" fill="#ffffff" font-size="16">Brief team / post quick-reference card</text></g><g><rect x="80" y="760" width="940" height="100" fill="#8b5cf6" rx="10"/><text x="130" y="810" fill="#ffffff" font-size="24" font-weight="bold">Day +30</text><text x="350" y="800" fill="#ffffff" font-size="18">Audit denials for CO-181 patterns</text><text x="350" y="830" fill="#ffffff" font-size="16">Retrain on miss-mapped codes</text></g><g><rect x="80" y="900" width="940" height="160" fill="#6366f1" rx="10"/><text x="550" y="945" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Memorize for CPC Exam</text><text x="550" y="985" text-anchor="middle" fill="#ffffff" font-size="18">Jan/Apr/Jul/Oct 1 release dates</text><text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="18">CO-181 = invalid on DOS</text><text x="550" y="1045" text-anchor="middle" fill="#ffffff" font-size="18">MLN Matters + Pub 100-04 references</text></g></svg>`,
+          caption: "60-day quarterly readiness workflow ensures encoder mappings flip on effective date, preventing CO-181 denials."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-hcpcs-lesson-11",
+    title: "HCPCS-CPT Crosswalks: Wound Care Case Study",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why HCPCS and CPT Must Be Coded Together",
+        content: `In real-world outpatient billing, **CPT codes describe the procedure** and **HCPCS Level II codes describe the supplies, materials, drugs, and DME** used in that procedure. A wound care encounter is the perfect crucible to learn how the two code sets interlock.
+
+**The wound care encounter is high-stakes for coders because:**
+- Multiple **CPT debridement codes** apply based on depth and surface area
+- Multiple **HCPCS A-codes** apply for dressings, compression, and supplies
+- **Bundling edits** (NCCI / Correct Coding Initiative) determine which CPT/HCPCS pairs can be billed together
+- Medicare requires the **KX modifier** on certain wound supplies (proof of medical necessity)
+- Many supplies require a **valid LCD/NCD** (Local/National Coverage Determination)
+
+**Today's case study setup:**
+A 67-year-old diabetic patient presents to wound care clinic with a chronic Stage 3 pressure ulcer on the right heel. The wound measures 4 cm x 3 cm = 12 sq cm. The clinician performs:
+1. **Selective debridement** (non-excisional) of subcutaneous tissue
+2. Applies **alginate primary dressing** (12 sq cm coverage)
+3. Applies **multi-layer compression bandage system** below the knee
+4. Provides patient with **take-home supplies** for self-care
+
+**Code families involved today:**
+- **CPT 97597-97606** — Active wound care management (selective/non-selective debridement)
+- **HCPCS A6196-A6199** — Alginate dressings (pad size tiers)
+- **HCPCS A6531-A6533** — Gradient compression stockings/bandages
+- **Modifiers** — KX (medical necessity), 59 (distinct procedural service), GA (ABN on file)
+
+By the end of this lesson, you'll code the entire encounter correctly and recognize the **NCCI bundling traps** that snag new coders.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">CPT + HCPCS: The Wound Care Crosswalk</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">Procedure + Supplies = Complete Claim</text><g><rect x="80" y="150" width="440" height="240" fill="#6366f1" rx="10"/><text x="300" y="195" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">CPT (Procedures)</text><text x="110" y="240" fill="#ffffff" font-size="16">97597 - First 20 sq cm debridement</text><text x="110" y="270" fill="#ffffff" font-size="16">97598 - Each addl 20 sq cm</text><text x="110" y="300" fill="#ffffff" font-size="16">97602 - Non-selective debridement</text><text x="110" y="330" fill="#ffffff" font-size="16">97605/06 - NPWT &lt;/&gt;= 50 sq cm</text><text x="300" y="370" text-anchor="middle" fill="#ffd700" font-size="14">"What the clinician DID"</text></g><g><rect x="580" y="150" width="440" height="240" fill="#10b981" rx="10"/><text x="800" y="195" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">HCPCS (Supplies)</text><text x="610" y="240" fill="#ffffff" font-size="16">A6196-A6199 - Alginate dressings</text><text x="610" y="270" fill="#ffffff" font-size="16">A6531-A6533 - Compression stockings</text><text x="610" y="300" fill="#ffffff" font-size="16">A6021-A6024 - Collagen dressings</text><text x="610" y="330" fill="#ffffff" font-size="16">A4450 - Tape per 18 sq in</text><text x="800" y="370" text-anchor="middle" fill="#ffd700" font-size="14">"What the clinician USED"</text></g><line x1="300" y1="390" x2="550" y2="500" stroke="#ffd700" stroke-width="3"/><line x1="800" y1="390" x2="550" y2="500" stroke="#ffd700" stroke-width="3"/><g><rect x="280" y="500" width="540" height="120" fill="#ffd700" rx="10"/><text x="550" y="545" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Complete Claim</text><text x="550" y="585" text-anchor="middle" fill="#1a1a2e" font-size="18">CPT line(s) + HCPCS line(s) + Modifiers</text></g><g><rect x="80" y="660" width="940" height="200" fill="#f59e0b" rx="10"/><text x="550" y="705" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Today's Patient</text><text x="120" y="745" fill="#1a1a2e" font-size="16">67yo diabetic, chronic Stage 3 pressure ulcer, right heel</text><text x="120" y="775" fill="#1a1a2e" font-size="16">Wound: 4 cm x 3 cm = 12 sq cm</text><text x="120" y="805" fill="#1a1a2e" font-size="16">Services: selective debridement + alginate + compression</text><text x="120" y="835" fill="#1a1a2e" font-size="16">Take-home supplies for self-care</text></g><text x="550" y="920" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">NCCI bundling traps will catch new coders</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="16">Modifier 59 may be needed for distinct services</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="16">KX modifier required for wound supplies medical necessity</text></svg>`,
+          caption: "CPT codes procedures; HCPCS codes supplies. A wound care encounter combines both code sets with modifiers for a complete claim."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Code Families: CPT 97597-97606 and HCPCS A6196/A6531",
+        content: `**CPT Active Wound Care Management (97597-97606):**
+This range describes **non-excisional wound care** by clinicians (often non-physicians like RNs, PTs, OTs). It is **different from surgical debridement** (CPT 11042-11047), which physicians use for excisional removal to muscle/bone.
+
+- **97597** — Selective debridement (e.g., high-pressure waterjet, sharp scissors, forceps) **first 20 sq cm or less**
+- **97598** — Each **additional 20 sq cm** (add-on code, no modifier 51)
+- **97602** — **Non-selective** debridement (wet-to-moist, enzymatic, abrasion) — **NOT separately payable by Medicare** (bundled into E/M)
+- **97605** — Negative pressure wound therapy (NPWT) **less than or equal to 50 sq cm**
+- **97606** — NPWT **greater than 50 sq cm**
+
+**HCPCS A6196-A6199 — Alginate Dressings:**
+Alginates are highly absorbent for moderate-to-heavy exudate wounds. **Coded by pad size**, NOT by brand:
+- **A6196** — Pad size **16 sq in or less**, each
+- **A6197** — Pad size **more than 16 sq in but less than or equal to 48 sq in**, each
+- **A6198** — Pad size **more than 48 sq in**, each
+- **A6199** — Wound filler, alginate or other fiber gelling, per 6 inches
+
+For our 12 sq cm wound (~1.86 sq in), **A6196** is the correct tier.
+
+**HCPCS A6531-A6533 — Gradient Compression Stockings/Bandages:**
+- **A6531** — Gradient compression stocking, below knee, 30-40 mm Hg, each
+- **A6532** — Gradient compression stocking, below knee, 40-50 mm Hg, each
+- **A6533** — Gradient compression stocking, thigh length, 18-30 mm Hg, each
+
+**Critical NCCI bundling rules:**
+- **97602** (non-selective) bundles with E/M — **never bill separately to Medicare**
+- **97597** and **97598** are mutually inclusive for the same wound (use add-on for each addl 20 sq cm)
+- **A6196 dressing** is usually **separately payable** when patient takes supplies home (DMEPOS); the dressing applied **in-office during 97597** is **bundled into the procedure**
+
+**KX modifier requirement:** For Medicare DMEPOS wound supplies, append **KX** to confirm the **detailed written order** and **medical necessity documentation** are on file. Without KX, expect a **CO-50** denial (non-covered, lacks documentation).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Code Families Side-by-Side</text><g><rect x="50" y="100" width="500" height="380" fill="#6366f1" rx="10"/><text x="300" y="140" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">CPT 97597-97606</text><text x="300" y="170" text-anchor="middle" fill="#ffffff" font-size="16">Active Wound Care Management</text><text x="80" y="215" fill="#ffffff" font-size="15">97597 - Selective debridement</text><text x="100" y="240" fill="#10b981" font-size="14">first 20 sq cm or less</text><text x="80" y="275" fill="#ffffff" font-size="15">97598 - Each addl 20 sq cm</text><text x="100" y="300" fill="#10b981" font-size="14">add-on, no mod 51</text><text x="80" y="335" fill="#ffffff" font-size="15">97602 - Non-selective</text><text x="100" y="360" fill="#ef4444" font-size="14">BUNDLED with E/M (Medicare)</text><text x="80" y="395" fill="#ffffff" font-size="15">97605/06 - NPWT</text><text x="100" y="420" fill="#10b981" font-size="14">&lt;=50 vs &gt;50 sq cm</text><text x="80" y="455" fill="#ffd700" font-size="14">Different from 11042-11047 surgical</text></g><g><rect x="570" y="100" width="500" height="380" fill="#10b981" rx="10"/><text x="820" y="140" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">HCPCS A6196-A6199</text><text x="820" y="170" text-anchor="middle" fill="#ffffff" font-size="16">Alginate Dressings (by pad size)</text><text x="600" y="215" fill="#ffffff" font-size="15">A6196 - &lt;= 16 sq in, each</text><text x="600" y="250" fill="#ffd700" font-size="14">(Our 12 sq cm = 1.86 sq in)</text><text x="600" y="290" fill="#ffffff" font-size="15">A6197 - 16-48 sq in, each</text><text x="600" y="330" fill="#ffffff" font-size="15">A6198 - &gt; 48 sq in, each</text><text x="600" y="370" fill="#ffffff" font-size="15">A6199 - Filler per 6 inches</text><text x="600" y="420" fill="#ffd700" font-size="14">Coded by pad SIZE not brand</text><text x="600" y="450" fill="#ffd700" font-size="14">Take-home = payable, in-office = bundled</text></g><g><rect x="50" y="500" width="1020" height="200" fill="#f59e0b" rx="10"/><text x="560" y="545" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">HCPCS A6531-A6533: Gradient Compression</text><text x="80" y="590" fill="#1a1a2e" font-size="16">A6531 - Below knee, 30-40 mm Hg, each</text><text x="80" y="625" fill="#1a1a2e" font-size="16">A6532 - Below knee, 40-50 mm Hg, each</text><text x="80" y="660" fill="#1a1a2e" font-size="16">A6533 - Thigh length, 18-30 mm Hg, each</text><text x="80" y="690" fill="#1a1a2e" font-size="14" font-weight="bold">Coded by length, pressure, and quantity (each = one stocking)</text></g><g><rect x="50" y="720" width="1020" height="300" fill="#ef4444" rx="10"/><text x="560" y="765" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">NCCI Bundling Rules</text><text x="80" y="810" fill="#ffffff" font-size="16">97602 (non-selective) bundles with E/M - NEVER bill to Medicare</text><text x="80" y="845" fill="#ffffff" font-size="16">In-office applied dressings = BUNDLED into procedure</text><text x="80" y="880" fill="#ffffff" font-size="16">Take-home dressings = SEPARATELY PAYABLE (DMEPOS benefit)</text><text x="80" y="920" fill="#ffd700" font-size="18" font-weight="bold">KX modifier REQUIRED on wound supplies</text><text x="80" y="955" fill="#ffffff" font-size="16">Confirms detailed written order + medical necessity</text><text x="80" y="990" fill="#ffd700" font-size="16">Missing KX = CO-50 denial (non-covered)</text></g></svg>`,
+          caption: "CPT 97597-97606 codes the procedure; HCPCS A6196 and A6531 code the supplies. NCCI rules determine bundling and KX requirements."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Case: Full Encounter Coded",
+        content: `**Patient encounter (re-summarized):**
+67-year-old diabetic, Stage 3 pressure ulcer right heel, 4 cm x 3 cm = **12 sq cm**.
+
+**Services performed:**
+1. **Selective sharp debridement** of subcutaneous tissue, single wound, 12 sq cm
+2. **Alginate dressing** (A6196 size) applied in-office to wound bed
+3. **Multi-layer compression bandage** applied below knee
+4. **Take-home supplies:** 14-day supply of alginate dressings (one per day = 14 units) + 2 pairs gradient compression stockings (30-40 mm Hg, below knee)
+
+**Step 1: Code the procedure (CPT)**
+- Single wound, 12 sq cm = **less than 20 sq cm** → **97597 x 1**
+- No additional 20 sq cm areas → no 97598
+
+**Step 2: Code the in-office dressing**
+- Alginate applied in-office during 97597 → **BUNDLED, do NOT bill A6196**
+- This is the #1 new-coder mistake. The dressing is part of the procedure value.
+
+**Step 3: Code the compression bandage**
+- Multi-layer compression bandage system applied = part of the wound care procedure → **bundled** (not separately reported as a stocking)
+
+**Step 4: Code the take-home supplies (DMEPOS)**
+- 14 alginate dressings (each A6196 size): **A6196 x 14** with **KX modifier**
+- 2 pairs gradient compression stockings, below knee, 30-40 mm Hg = 4 stockings: **A6531 x 4** with **KX modifier**
+
+**Step 5: Apply ICD-10-CM diagnosis**
+- **L89.613** — Pressure ulcer of right heel, Stage 3 (primary)
+- **E11.9** — Type 2 diabetes mellitus without complications (secondary, supports medical necessity)
+
+**Final claim:**
+
+| Line | Code | Modifier | Units | Description |
+|------|------|----------|-------|-------------|
+| 1 | 97597 | — | 1 | Selective debridement, first 20 sq cm |
+| 2 | A6196 | KX | 14 | Alginate take-home dressings |
+| 3 | A6531 | KX | 4 | Compression stockings take-home |
+
+**Bundling traps avoided:**
+- Did NOT bill A6196 for in-office dressing (bundled)
+- Did NOT bill 97602 (non-selective bundles with E/M)
+- Did NOT bill an E/M separately (wound care visit, no separately identifiable service per modifier 25 criteria)
+
+**Documentation must support:** wound size, depth, debridement method, supplies dispensed (with NDC/serial where applicable), KX justification, and ICD-10 linkage.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Coded Claim: Wound Care Encounter</text><text x="550" y="95" text-anchor="middle" fill="#888" font-size="16">12 sq cm pressure ulcer + take-home supplies</text><g><rect x="60" y="130" width="1000" height="50" fill="#6366f1" rx="6"/><text x="100" y="163" fill="#ffd700" font-size="18" font-weight="bold">Line</text><text x="220" y="163" fill="#ffd700" font-size="18" font-weight="bold">Code</text><text x="420" y="163" fill="#ffd700" font-size="18" font-weight="bold">Modifier</text><text x="600" y="163" fill="#ffd700" font-size="18" font-weight="bold">Units</text><text x="780" y="163" fill="#ffd700" font-size="18" font-weight="bold">Description</text></g><g><rect x="60" y="190" width="1000" height="60" fill="#10b981" rx="6"/><text x="100" y="228" fill="#ffffff" font-size="18" font-weight="bold">1</text><text x="220" y="228" fill="#ffffff" font-size="18" font-weight="bold">97597</text><text x="420" y="228" fill="#ffffff" font-size="18">—</text><text x="600" y="228" fill="#ffffff" font-size="18">1</text><text x="780" y="228" fill="#ffffff" font-size="14">Selective debridement</text></g><g><rect x="60" y="260" width="1000" height="60" fill="#10b981" rx="6"/><text x="100" y="298" fill="#ffffff" font-size="18" font-weight="bold">2</text><text x="220" y="298" fill="#ffffff" font-size="18" font-weight="bold">A6196</text><text x="420" y="298" fill="#ffd700" font-size="18" font-weight="bold">KX</text><text x="600" y="298" fill="#ffffff" font-size="18">14</text><text x="780" y="298" fill="#ffffff" font-size="14">Take-home alginate</text></g><g><rect x="60" y="330" width="1000" height="60" fill="#10b981" rx="6"/><text x="100" y="368" fill="#ffffff" font-size="18" font-weight="bold">3</text><text x="220" y="368" fill="#ffffff" font-size="18" font-weight="bold">A6531</text><text x="420" y="368" fill="#ffd700" font-size="18" font-weight="bold">KX</text><text x="600" y="368" fill="#ffffff" font-size="18">4</text><text x="780" y="368" fill="#ffffff" font-size="14">Compression stockings</text></g><g><rect x="60" y="420" width="1000" height="160" fill="#8b5cf6" rx="10"/><text x="560" y="460" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">ICD-10-CM Diagnosis Linkage</text><text x="90" y="500" fill="#ffffff" font-size="16">L89.613 - Pressure ulcer right heel, Stage 3 (primary)</text><text x="90" y="535" fill="#ffffff" font-size="16">E11.9 - Type 2 DM (secondary, supports necessity)</text><text x="90" y="565" fill="#ffd700" font-size="14">Link to ALL three CPT/HCPCS lines via diagnosis pointer</text></g><g><rect x="60" y="610" width="1000" height="200" fill="#ef4444" rx="10"/><text x="560" y="650" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Bundling Traps AVOIDED</text><text x="90" y="690" fill="#ffffff" font-size="16">Did NOT bill A6196 for in-office dressing (bundled)</text><text x="90" y="725" fill="#ffffff" font-size="16">Did NOT bill 97602 (bundles with E/M)</text><text x="90" y="760" fill="#ffffff" font-size="16">Did NOT bill compression bandage applied in-office</text><text x="90" y="795" fill="#ffffff" font-size="16">Did NOT bill E/M (no separately identifiable service)</text></g><g><rect x="60" y="840" width="1000" height="180" fill="#f59e0b" rx="10"/><text x="560" y="880" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Documentation Required</text><text x="90" y="920" fill="#1a1a2e" font-size="16">Wound size + depth + debridement method</text><text x="90" y="950" fill="#1a1a2e" font-size="16">Supplies dispensed (NDC/serial where applicable)</text><text x="90" y="980" fill="#1a1a2e" font-size="16">KX justification (detailed written order on file)</text><text x="90" y="1010" fill="#1a1a2e" font-size="16">ICD-10 medical necessity linkage</text></g></svg>`,
+          caption: "Three-line claim: CPT 97597 for the procedure, A6196 x 14 for take-home alginate, A6531 x 4 for compression stockings — all with KX."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "During the same wound care encounter as the case study, the clinician applies the alginate dressing to the wound bed in the office. Should the coder bill HCPCS A6196 for this in-office dressing?",
+        options: [
+          { text: "Yes, bill A6196 x 1 with modifier 59 to indicate distinct procedural service", correct: false },
+          { text: "Yes, bill A6196 x 1 with KX modifier since wound supplies require it", correct: false },
+          { text: "No, the in-office dressing applied during the 97597 procedure is bundled and not separately reported", correct: true },
+          { text: "No, but bill A4450 (tape) instead since that supply is always separately payable", correct: false }
+        ],
+        explanation: "Supplies applied **in-office during the procedure** are **bundled into the procedure code** (97597). The dressing is considered part of the procedural value and is not separately reportable. Modifier 59 cannot be used to unbundle services that NCCI defines as inherently included. Only **take-home supplies** dispensed for patient self-care qualify as separately payable DMEPOS items requiring **KX**. Tape (A4450) is also bundled if applied in-office. Billing the in-office dressing would trigger an **NCCI edit denial** and could be flagged as overcoding during an audit.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">In-Office vs Take-Home Supplies</text><text x="550" y="100" text-anchor="middle" fill="#888" font-size="18">The bundling decision tree</text><g><rect x="80" y="160" width="440" height="320" fill="#ef4444" rx="10"/><text x="300" y="205" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">IN-OFFICE</text><text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="16">Applied during procedure</text><text x="300" y="290" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">BUNDLED</text><text x="300" y="320" text-anchor="middle" fill="#ffffff" font-size="16">into CPT 97597</text><text x="110" y="370" fill="#ffffff" font-size="14">Alginate dressing - bundled</text><text x="110" y="395" fill="#ffffff" font-size="14">Tape A4450 - bundled</text><text x="110" y="420" fill="#ffffff" font-size="14">Saline A4216 - bundled</text><text x="110" y="445" fill="#ffffff" font-size="14">Compression bandage - bundled</text></g><g><rect x="580" y="160" width="440" height="320" fill="#10b981" rx="10"/><text x="800" y="205" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">TAKE-HOME</text><text x="800" y="240" text-anchor="middle" fill="#ffffff" font-size="16">Dispensed for self-care</text><text x="800" y="290" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">PAYABLE</text><text x="800" y="320" text-anchor="middle" fill="#ffffff" font-size="16">DMEPOS benefit + KX</text><text x="610" y="370" fill="#ffffff" font-size="14">A6196 x 14 (14-day supply)</text><text x="610" y="395" fill="#ffffff" font-size="14">A6531 x 4 (stockings)</text><text x="610" y="420" fill="#ffffff" font-size="14">Each requires KX modifier</text><text x="610" y="445" fill="#ffffff" font-size="14">Detailed written order on file</text></g><g><rect x="80" y="510" width="940" height="120" fill="#10b981" rx="10"/><text x="550" y="555" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">CORRECT ANSWER:</text><text x="550" y="595" text-anchor="middle" fill="#ffffff" font-size="18">Do NOT bill A6196 for in-office dressing - it is bundled</text></g><g><rect x="80" y="660" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="698" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: Modifier 59 cannot unbundle NCCI-defined included services</text></g><g><rect x="80" y="740" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="778" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: KX does not change bundling status</text></g><g><rect x="80" y="820" width="940" height="60" fill="#ef4444" rx="8"/><text x="550" y="858" text-anchor="middle" fill="#ffffff" font-size="16">WRONG: A4450 tape also bundles in-office</text></g><g><rect x="80" y="900" width="940" height="120" fill="#6366f1" rx="10"/><text x="550" y="945" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Key Audit Principle</text><text x="550" y="985" text-anchor="middle" fill="#ffffff" font-size="18">Billing in-office supplies = potential overcoding flag</text></g></svg>`,
+          caption: "Bundling rule: in-office supplies are part of the procedure; only take-home DMEPOS items are separately payable with KX."
+        }
+      },
+      {
+        type: "application",
+        title: "Build Your Wound Care Coding Workflow",
+        content: `**Your turn:** Build a 7-step workflow you can apply to any wound care encounter to extract a complete, correct claim.
+
+**Step 1: Identify the wound and measurements**
+- Anatomic site (heel, sacrum, calf, etc.) → drives ICD-10
+- Length x width = surface area in sq cm → drives 97597 vs +97598 unit count
+- Depth (subcutaneous, muscle, bone) → drives 97597-series vs 11042-series surgical
+
+**Step 2: Identify the debridement method**
+- **Selective** (sharp, waterjet, scissors) → 97597/97598
+- **Non-selective** (wet-to-moist, enzymatic) → 97602 → **bundle alert**
+- **Excisional / surgical** (physician, to muscle/bone) → 11042-11047 (different code family)
+
+**Step 3: Inventory ALL supplies used**
+- Separate them into: **applied in-office** (bundled) vs **dispensed take-home** (payable)
+- For take-home, list each HCPCS code + quantity + size tier
+
+**Step 4: Apply pad-size logic for dressings**
+- Convert sq cm to sq inches if needed (1 sq in = 6.45 sq cm)
+- Select correct A-code tier (A6196 vs A6197 vs A6198)
+- Each piece dispensed = 1 unit (not per square inch)
+
+**Step 5: Append modifiers**
+- **KX** on every DMEPOS supply (proof of medical necessity / written order)
+- **59** ONLY when NCCI permits unbundling and documentation supports distinct service
+- **GA** if ABN signed for potentially non-covered items
+- **JW** if drug wastage occurs (not typical in wound care)
+
+**Step 6: Link ICD-10-CM diagnoses**
+- Primary: L89.xxx (pressure ulcer with stage) or L97.xxx (chronic leg ulcer)
+- Secondary: E11.x (diabetes), I83.x (varicose veins with ulcer), I87.x (chronic venous hypertension)
+- Diagnosis pointer must link each CPT/HCPCS line to a relevant Dx
+
+**Step 7: Audit yourself**
+- Did I bundle in-office dressings?
+- Did I use KX on every DMEPOS line?
+- Did I pick the right pad-size tier?
+- Does ICD-10 support medical necessity per LCD?
+
+**Reflection prompts:**
+- A 25 sq cm wound — what is your CPT line and unit count?
+- The same patient returns 7 days later for a re-evaluation — do you bill 97597 again?
+- The compression stocking dispensed has a custom fit — does the code change?
+
+**CPC exam connection:** Expect 2-3 questions combining CPT debridement codes with HCPCS supply codes and modifier selection. Memorize: **97597 = first 20 sq cm; 97598 add-on for each addl 20; A6196 = alginate ≤16 sq in; KX = medical necessity.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">7-Step Wound Care Coding Workflow</text><g><rect x="60" y="100" width="1010" height="100" fill="#6366f1" rx="8"/><text x="100" y="145" fill="#ffd700" font-size="22" font-weight="bold">1</text><text x="160" y="135" fill="#ffffff" font-size="18">Identify wound site + sq cm measurement</text><text x="160" y="165" fill="#ffffff" font-size="14">Drives ICD-10 (L89.xxx, L97.xxx) and unit count</text></g><g><rect x="60" y="210" width="1010" height="100" fill="#10b981" rx="8"/><text x="100" y="255" fill="#ffd700" font-size="22" font-weight="bold">2</text><text x="160" y="245" fill="#ffffff" font-size="18">Determine debridement method</text><text x="160" y="275" fill="#ffffff" font-size="14">Selective (97597/8), non-selective (97602 bundles), surgical (11042+)</text></g><g><rect x="60" y="320" width="1010" height="100" fill="#f59e0b" rx="8"/><text x="100" y="365" fill="#1a1a2e" font-size="22" font-weight="bold">3</text><text x="160" y="355" fill="#1a1a2e" font-size="18">Inventory supplies: in-office vs take-home</text><text x="160" y="385" fill="#1a1a2e" font-size="14">In-office = bundled. Take-home = payable DMEPOS</text></g><g><rect x="60" y="430" width="1010" height="100" fill="#ec4899" rx="8"/><text x="100" y="475" fill="#ffd700" font-size="22" font-weight="bold">4</text><text x="160" y="465" fill="#ffffff" font-size="18">Apply pad-size A-code tier</text><text x="160" y="495" fill="#ffffff" font-size="14">A6196 &lt;=16 sq in / A6197 16-48 / A6198 &gt;48 (per piece)</text></g><g><rect x="60" y="540" width="1010" height="100" fill="#8b5cf6" rx="8"/><text x="100" y="585" fill="#ffd700" font-size="22" font-weight="bold">5</text><text x="160" y="575" fill="#ffffff" font-size="18">Append modifiers: KX, 59, GA, JW</text><text x="160" y="605" fill="#ffffff" font-size="14">KX on every DMEPOS line, 59 only when NCCI permits</text></g><g><rect x="60" y="650" width="1010" height="100" fill="#0ea5e9" rx="8"/><text x="100" y="695" fill="#ffd700" font-size="22" font-weight="bold">6</text><text x="160" y="685" fill="#ffffff" font-size="18">Link ICD-10-CM diagnoses</text><text x="160" y="715" fill="#ffffff" font-size="14">L89/L97 primary + E11/I83 secondary for medical necessity</text></g><g><rect x="60" y="760" width="1010" height="100" fill="#ef4444" rx="8"/><text x="100" y="805" fill="#ffd700" font-size="22" font-weight="bold">7</text><text x="160" y="795" fill="#ffffff" font-size="18">Self-audit before submission</text><text x="160" y="825" fill="#ffffff" font-size="14">Check bundling, KX presence, pad-size tier, LCD support</text></g><g><rect x="60" y="880" width="1010" height="180" fill="#ffd700" rx="10"/><text x="565" y="925" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">CPC Exam Memorization</text><text x="85" y="965" fill="#1a1a2e" font-size="16">97597 = first 20 sq cm selective debridement</text><text x="85" y="995" fill="#1a1a2e" font-size="16">97598 = each additional 20 sq cm (add-on, no mod 51)</text><text x="85" y="1025" fill="#1a1a2e" font-size="16">A6196 = alginate &lt;=16 sq in / KX = medical necessity</text></g></svg>`,
+          caption: "7-step workflow ensures every wound care claim captures the procedure, separates bundled from payable supplies, and links medical necessity."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-hcpcs-lesson-12",
+    title: "HCPCS Mastery Capstone: Scenario Sprint",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Capstone Sprint: Synthesizing the Entire HCPCS Universe",
+        content: `Welcome to the **HCPCS Mastery Capstone** — the final lesson of this book. Over the prior 11 lessons you've learned every major HCPCS Level II category, drug coding, DME, supplies, modifiers, and update cycles. This capstone locks all of it into long-term recall through a **scenario-based sprint**.
+
+**What this capstone tests:**
+
+| Category | Codes you should recognize on sight |
+|----------|-------------------------------------|
+| **A-codes** | A4xxx supplies, A6196 dressings, A6531 compression, A0428 ambulance |
+| **E-codes** | E0260 hospital bed, E0570 nebulizer, E1390 oxygen concentrator |
+| **G-codes** | G0008-G0010 vaccine admin, G2010 telehealth check-in, G2025 RHC virtual |
+| **J-codes** | J0696 ceftriaxone, J1100 dexamethasone, J7050 NS, J3490 unclassified |
+| **L-codes** | L1832 knee orthotic, L8000 mastectomy bra, L8500 voice prosthetic |
+| **Q-codes** | Q4054 albuterol unit dose, Q5121 biosimilar |
+| **V-codes** | V2020 frames, V2630 IOL, V5008 hearing aid screening |
+| **Modifiers** | KX, JW, GA, GY, GZ, LT/RT, 59, 25, 50, 51, 76, 77 |
+
+**Capstone format:**
+- This intro card sets up the scenario library
+- The **concept card** walks through 4 scenarios with full coding
+- The **example card** runs a complex multi-service encounter
+- The **quiz card** tests a high-yield exam pattern
+- The **application card** gives you a 25-scenario rapid-recall drill
+
+**Why this matters:**
+On the AAPC CPC exam, HCPCS questions are interwoven throughout the 100-question test. You will face **8-15 HCPCS-specific questions** plus another **10-20 questions** where HCPCS knowledge supports the answer (vaccine admin, drug billing, DME selection, modifier choice). Mastery here is the difference between a 65% (fail) and an 80% (pass).
+
+**Mental model:**
+Every HCPCS question reduces to one of three meta-patterns:
+1. **Code identification** ("Which HCPCS code describes X?")
+2. **Modifier selection** ("Which modifier applies in this scenario?")
+3. **Bundling / coverage** ("Is this code separately payable?")
+
+Train your brain to ask which meta-pattern is in front of you, then deploy the right framework.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">HCPCS Mastery Capstone</text><text x="550" y="95" text-anchor="middle" fill="#888" font-size="18">Synthesizing all 11 prior lessons</text><g><rect x="60" y="130" width="200" height="120" fill="#10b981" rx="8"/><text x="160" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">A-codes</text><text x="160" y="200" text-anchor="middle" fill="#ffffff" font-size="13">Supplies, ambulance</text><text x="160" y="225" text-anchor="middle" fill="#ffffff" font-size="13">dressings, compression</text></g><g><rect x="280" y="130" width="200" height="120" fill="#f59e0b" rx="8"/><text x="380" y="170" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">E-codes</text><text x="380" y="200" text-anchor="middle" fill="#1a1a2e" font-size="13">DME (bed, nebulizer,</text><text x="380" y="225" text-anchor="middle" fill="#1a1a2e" font-size="13">oxygen concentrator)</text></g><g><rect x="500" y="130" width="200" height="120" fill="#ec4899" rx="8"/><text x="600" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">G-codes</text><text x="600" y="200" text-anchor="middle" fill="#ffffff" font-size="13">Temporary CMS</text><text x="600" y="225" text-anchor="middle" fill="#ffffff" font-size="13">vaccines, telehealth</text></g><g><rect x="720" y="130" width="200" height="120" fill="#8b5cf6" rx="8"/><text x="820" y="170" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">J-codes</text><text x="820" y="200" text-anchor="middle" fill="#ffffff" font-size="13">Injectable drugs</text><text x="820" y="225" text-anchor="middle" fill="#ffffff" font-size="13">J3490 unclassified</text></g><g><rect x="60" y="270" width="200" height="120" fill="#0ea5e9" rx="8"/><text x="160" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">L-codes</text><text x="160" y="340" text-anchor="middle" fill="#ffffff" font-size="13">Orthotics + prosthetics</text><text x="160" y="365" text-anchor="middle" fill="#ffffff" font-size="13">L1832, L8000</text></g><g><rect x="280" y="270" width="200" height="120" fill="#ef4444" rx="8"/><text x="380" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Q-codes</text><text x="380" y="340" text-anchor="middle" fill="#ffffff" font-size="13">Quarterly temp</text><text x="380" y="365" text-anchor="middle" fill="#ffffff" font-size="13">Q5121 biosimilars</text></g><g><rect x="500" y="270" width="200" height="120" fill="#6366f1" rx="8"/><text x="600" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">V-codes</text><text x="600" y="340" text-anchor="middle" fill="#ffffff" font-size="13">Vision, hearing</text><text x="600" y="365" text-anchor="middle" fill="#ffffff" font-size="13">V2020, V2630, V5008</text></g><g><rect x="720" y="270" width="200" height="120" fill="#ffd700" rx="8"/><text x="820" y="310" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Modifiers</text><text x="820" y="340" text-anchor="middle" fill="#1a1a2e" font-size="13">KX, JW, GA, GY,</text><text x="820" y="365" text-anchor="middle" fill="#1a1a2e" font-size="13">GZ, LT/RT, 59, 25</text></g><g><rect x="60" y="430" width="980" height="240" fill="#6366f1" rx="10"/><text x="550" y="475" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">3 Meta-Patterns for Every HCPCS Question</text><text x="100" y="525" fill="#ffffff" font-size="18" font-weight="bold">1. Code identification</text><text x="120" y="555" fill="#ffffff" font-size="15">"Which HCPCS code describes X?"</text><text x="100" y="590" fill="#ffffff" font-size="18" font-weight="bold">2. Modifier selection</text><text x="120" y="620" fill="#ffffff" font-size="15">"Which modifier applies to scenario X?"</text><text x="100" y="650" fill="#ffffff" font-size="18" font-weight="bold">3. Bundling / coverage</text></g><g><rect x="60" y="700" width="980" height="320" fill="#10b981" rx="10"/><text x="550" y="745" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Exam Math</text><text x="100" y="790" fill="#ffffff" font-size="16">8-15 direct HCPCS questions on the CPC</text><text x="100" y="820" fill="#ffffff" font-size="16">+ 10-20 HCPCS-supporting questions</text><text x="100" y="850" fill="#ffffff" font-size="16">= up to 35% of the exam touches HCPCS</text><text x="100" y="895" fill="#ffd700" font-size="18" font-weight="bold">Mastery = pass (80%+)</text><text x="100" y="925" fill="#ffffff" font-size="16">Guessing on HCPCS = fail (under 70%)</text><text x="100" y="970" fill="#ffd700" font-size="16">This capstone locks recall through scenarios</text><text x="100" y="1000" fill="#ffffff" font-size="14">Train pattern recognition, not memorization</text></g></svg>`,
+          caption: "Capstone covers all 8 HCPCS code families and 12+ modifiers; train recognition of the 3 meta-patterns that drive every exam question."
+        }
+      },
+      {
+        type: "concept",
+        title: "Four Rapid-Fire Coded Scenarios",
+        content: `**Scenario 1: Medicare patient receives flu vaccine in physician office**
+- Service: influenza vaccine administration + the vaccine product
+- **HCPCS Admin:** **G0008** (admin influenza)
+- **CPT product:** 90686 (IIV4 0.5 mL) — note this is CPT, not HCPCS
+- **Modifier:** none needed; G0008 is the standalone admin code for Medicare
+- **Trap:** Do NOT use 90471 (CPT admin) for Medicare — use G0008/G0009/G0010 instead
+
+**Scenario 2: Provider injects 80 mg of dexamethasone IM**
+- **HCPCS code:** **J1100** (Injection, dexamethasone sodium phosphate, **1 mg**)
+- **Calculation:** 80 mg ÷ 1 mg/unit = **80 units**
+- **Bill:** J1100 x 80
+- **Modifier:** none unless wastage occurred (then JW for the wasted portion)
+- **Trap:** Per-mg dosing requires multiplication; do NOT bill J1100 x 1 for 80 mg
+
+**Scenario 3: Patient receives bilateral knee orthotic, custom-fit, OTS**
+- **HCPCS code:** **L1832** (Knee orthosis, adjustable knee joints, positional orthosis, rigid support, prefabricated, OTS)
+- **Quantity:** 2 (bilateral)
+- **Modifier:** **LT + RT** on two separate lines (or 50 if payer accepts), plus **KX** for medical necessity
+- **Bill format:**
+  - Line 1: L1832-LT-KX x 1
+  - Line 2: L1832-RT-KX x 1
+- **Trap:** Different payers prefer different bilateral conventions; Medicare typically wants LT/RT on separate lines for DMEPOS
+
+**Scenario 4: Patient transported by BLS ambulance, non-emergency, to dialysis**
+- **HCPCS code:** **A0428** (Ambulance service, basic life support, non-emergency transport (BLS))
+- **Mileage code:** **A0425** (Ground mileage, per statute mile)
+- **Origin/destination modifier (2 chars):** **R-D** (Residence → Dialysis facility) or appropriate combo
+- **Bill format:**
+  - Line 1: A0428-RD x 1
+  - Line 2: A0425-RD x [mileage]
+- **Trap:** Forgetting the **two-character origin/destination modifier** triggers an automatic denial; this modifier is HCPCS-specific to ambulance billing.
+
+**Pattern recognition across all four:**
+Each scenario requires (1) the right code family identification, (2) correct dosing or quantity logic, (3) the modifier(s) the payer demands, and (4) awareness of the most common trap. Internalize this **C-Q-M-T framework**: Code, Quantity, Modifier, Trap.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Four Rapid-Fire Scenarios</text><text x="550" y="95" text-anchor="middle" fill="#888" font-size="16">C-Q-M-T: Code, Quantity, Modifier, Trap</text><g><rect x="50" y="130" width="510" height="200" fill="#10b981" rx="10"/><text x="305" y="170" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Scenario 1: Flu Vaccine (Medicare)</text><text x="70" y="205" fill="#ffffff" font-size="16">Code: G0008 (admin) + 90686 (product)</text><text x="70" y="235" fill="#ffffff" font-size="16">Quantity: 1 each</text><text x="70" y="265" fill="#ffffff" font-size="16">Modifier: none</text><text x="70" y="300" fill="#ffd700" font-size="14">Trap: do NOT use 90471 for Medicare</text></g><g><rect x="580" y="130" width="510" height="200" fill="#f59e0b" rx="10"/><text x="835" y="170" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Scenario 2: Dexamethasone 80 mg</text><text x="600" y="205" fill="#1a1a2e" font-size="16">Code: J1100 (per 1 mg)</text><text x="600" y="235" fill="#1a1a2e" font-size="16">Quantity: 80 units</text><text x="600" y="265" fill="#1a1a2e" font-size="16">Modifier: JW if wastage</text><text x="600" y="300" fill="#1a1a2e" font-size="14" font-weight="bold">Trap: per-mg dosing means multiply!</text></g><g><rect x="50" y="350" width="510" height="200" fill="#ec4899" rx="10"/><text x="305" y="390" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Scenario 3: Bilateral Knee Orthotic</text><text x="70" y="425" fill="#ffffff" font-size="16">Code: L1832</text><text x="70" y="455" fill="#ffffff" font-size="16">Quantity: 2 (one per leg)</text><text x="70" y="485" fill="#ffffff" font-size="16">Modifier: LT-KX and RT-KX</text><text x="70" y="520" fill="#ffd700" font-size="14">Trap: Medicare wants separate lines</text></g><g><rect x="580" y="350" width="510" height="200" fill="#8b5cf6" rx="10"/><text x="835" y="390" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Scenario 4: BLS Ambulance to Dialysis</text><text x="600" y="425" fill="#ffffff" font-size="16">Code: A0428 + A0425 mileage</text><text x="600" y="455" fill="#ffffff" font-size="16">Quantity: 1 + mileage units</text><text x="600" y="485" fill="#ffffff" font-size="16">Modifier: RD (residence-dialysis)</text><text x="600" y="520" fill="#ffd700" font-size="14">Trap: 2-char origin/dest modifier!</text></g><g><rect x="50" y="580" width="1040" height="280" fill="#6366f1" rx="10"/><text x="570" y="625" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">C-Q-M-T Framework</text><text x="100" y="675" fill="#ffffff" font-size="20" font-weight="bold">C - Code</text><text x="320" y="675" fill="#ffffff" font-size="16">Right family + specific code</text><text x="100" y="720" fill="#ffffff" font-size="20" font-weight="bold">Q - Quantity</text><text x="320" y="720" fill="#ffffff" font-size="16">Per-mg, per-piece, per-mile math</text><text x="100" y="765" fill="#ffffff" font-size="20" font-weight="bold">M - Modifier</text><text x="320" y="765" fill="#ffffff" font-size="16">Payer-required modifiers in order</text><text x="100" y="810" fill="#ffffff" font-size="20" font-weight="bold">T - Trap</text><text x="320" y="810" fill="#ffffff" font-size="16">What snags new coders here</text></g><text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Apply C-Q-M-T to every HCPCS question</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="16">Pattern recognition beats memorization</text><text x="550" y="1010" text-anchor="middle" fill="#888" font-size="16">Practice until you can name C-Q-M-T in under 30 seconds</text></svg>`,
+          caption: "Four scenarios drilled with C-Q-M-T framework: Code, Quantity, Modifier, Trap — applies to every HCPCS exam question."
+        }
+      },
+      {
+        type: "example",
+        title: "Multi-Service Encounter: ER Visit with Complications",
+        content: `**Patient encounter:**
+75-year-old Medicare patient transported by **ALS ambulance** from home to ER for acute respiratory distress. In the ER, the patient receives:
+1. **ALS ambulance** transport (residence to hospital)
+2. **Mileage**: 12 statute miles
+3. **Nebulizer treatment** with **albuterol unit dose** (in the ER)
+4. **Intramuscular dexamethasone** 10 mg
+5. **Take-home nebulizer machine** (E0570) with **6-month supply** of nebulizer tubing
+6. Patient signs **ABN** for the nebulizer because they had one less than 5 years ago (potential overlap with reasonable useful lifetime)
+
+**Coding the encounter line by line:**
+
+**Ambulance services (pre-hospital):**
+- **A0427** — Ambulance service, ALS, emergency transport, level 1 (ALS1)
+- **Modifier:** **R-H** (Residence → Hospital)
+- Line: A0427-RH x 1
+- **A0425** — Ground mileage, per statute mile
+- Line: A0425-RH x 12
+
+**ER drug + supplies:**
+- **J7611** — Albuterol, up to 1 mg, inhalation solution, FDA-approved, unit dose, **administered through DME** (note: in ER may use Q4093 instead; verify quarterly transmittal)
+- Line: J7611 x [units per documented dose]
+- **J1100** — Dexamethasone sodium phosphate, 1 mg
+- Line: J1100 x 10 (for 10 mg dose)
+
+**Take-home DME:**
+- **E0570** — Nebulizer, with compressor
+- **Modifier:** **KX** (medical necessity) + **GA** (ABN on file due to possible duplicate-DME issue)
+- Line: E0570-KX-GA x 1
+- **A7003** — Administration set, with small volume nonfiltered pneumatic nebulizer, disposable
+- Line: A7003-KX x [quantity per 6-month supply]
+
+**Why GA and not GZ or GY:**
+- **GA** = ABN signed; expect denial but **patient may be billed**
+- **GZ** = expected denial; no ABN; provider cannot bill patient
+- **GY** = statutorily excluded service (e.g., cosmetic surgery) — does NOT apply here
+
+**Modifier stacking order on E0570:**
+The CMS preferred order is **functional modifiers first, then informational**: KX (medical necessity) → GA (ABN). Some payers accept GA-KX; check payer-specific guidance. The principle: **payment-affecting modifiers go first**.
+
+**ICD-10-CM linkage:**
+- Primary: **J96.01** (Acute respiratory failure with hypoxia)
+- Secondary: **J45.901** (Unspecified asthma with acute exacerbation)
+- Both link to the ambulance, nebulizer, drugs, and DME for medical necessity
+
+**Common mistakes avoided:**
+- Did NOT use 90471 for the in-ER nebulizer administration (would be unbundled or wrong code family)
+- Did NOT forget the origin/destination modifier on ambulance lines
+- Did NOT skip the GA modifier on the potentially-duplicate DME
+- Did NOT bill the in-ER albuterol AS a take-home drug (in-ER is bundled differently than outpatient pharmacy)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">ER Multi-Service Encounter</text><text x="550" y="85" text-anchor="middle" fill="#888" font-size="16">Ambulance + drugs + DME + ABN scenario</text><g><rect x="40" y="110" width="1020" height="50" fill="#6366f1" rx="6"/><text x="60" y="145" fill="#ffd700" font-size="16" font-weight="bold">Code</text><text x="260" y="145" fill="#ffd700" font-size="16" font-weight="bold">Modifier</text><text x="480" y="145" fill="#ffd700" font-size="16" font-weight="bold">Units</text><text x="660" y="145" fill="#ffd700" font-size="16" font-weight="bold">Description</text></g><g><rect x="40" y="170" width="1020" height="50" fill="#8b5cf6" rx="6"/><text x="60" y="203" fill="#ffffff" font-size="16" font-weight="bold">A0427</text><text x="260" y="203" fill="#ffd700" font-size="16" font-weight="bold">RH</text><text x="480" y="203" fill="#ffffff" font-size="16">1</text><text x="660" y="203" fill="#ffffff" font-size="14">ALS emergency transport</text></g><g><rect x="40" y="230" width="1020" height="50" fill="#8b5cf6" rx="6"/><text x="60" y="263" fill="#ffffff" font-size="16" font-weight="bold">A0425</text><text x="260" y="263" fill="#ffd700" font-size="16" font-weight="bold">RH</text><text x="480" y="263" fill="#ffffff" font-size="16">12</text><text x="660" y="263" fill="#ffffff" font-size="14">Mileage residence-hospital</text></g><g><rect x="40" y="290" width="1020" height="50" fill="#10b981" rx="6"/><text x="60" y="323" fill="#ffffff" font-size="16" font-weight="bold">J7611</text><text x="260" y="323" fill="#ffffff" font-size="16">—</text><text x="480" y="323" fill="#ffffff" font-size="16">per doc</text><text x="660" y="323" fill="#ffffff" font-size="14">Albuterol unit dose</text></g><g><rect x="40" y="350" width="1020" height="50" fill="#10b981" rx="6"/><text x="60" y="383" fill="#ffffff" font-size="16" font-weight="bold">J1100</text><text x="260" y="383" fill="#ffffff" font-size="16">—</text><text x="480" y="383" fill="#ffffff" font-size="16">10</text><text x="660" y="383" fill="#ffffff" font-size="14">Dexamethasone 10 mg = 10 units</text></g><g><rect x="40" y="410" width="1020" height="50" fill="#f59e0b" rx="6"/><text x="60" y="443" fill="#1a1a2e" font-size="16" font-weight="bold">E0570</text><text x="260" y="443" fill="#1a1a2e" font-size="16" font-weight="bold">KX GA</text><text x="480" y="443" fill="#1a1a2e" font-size="16">1</text><text x="660" y="443" fill="#1a1a2e" font-size="14">Nebulizer compressor + ABN</text></g><g><rect x="40" y="470" width="1020" height="50" fill="#f59e0b" rx="6"/><text x="60" y="503" fill="#1a1a2e" font-size="16" font-weight="bold">A7003</text><text x="260" y="503" fill="#1a1a2e" font-size="16" font-weight="bold">KX</text><text x="480" y="503" fill="#1a1a2e" font-size="16">6mo</text><text x="660" y="503" fill="#1a1a2e" font-size="14">Nebulizer supply tubing</text></g><g><rect x="40" y="540" width="1020" height="140" fill="#ec4899" rx="10"/><text x="550" y="585" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Modifier Stacking Order: KX before GA</text><text x="60" y="625" fill="#ffffff" font-size="16">Functional/payment-affecting modifiers FIRST</text><text x="60" y="655" fill="#ffffff" font-size="16">Informational modifiers (like GA) follow</text></g><g><rect x="40" y="690" width="1020" height="140" fill="#ef4444" rx="10"/><text x="550" y="730" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">GA vs GZ vs GY — Choose Right</text><text x="60" y="770" fill="#ffffff" font-size="15">GA = ABN signed, can bill patient</text><text x="60" y="800" fill="#ffffff" font-size="15">GZ = no ABN, expected denial, cannot bill patient</text></g><g><rect x="40" y="840" width="1020" height="180" fill="#0ea5e9" rx="10"/><text x="550" y="880" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">ICD-10-CM Linkage</text><text x="60" y="920" fill="#ffffff" font-size="16">J96.01 (Acute respiratory failure w/ hypoxia) primary</text><text x="60" y="950" fill="#ffffff" font-size="16">J45.901 (Asthma w/ acute exacerbation) secondary</text><text x="60" y="985" fill="#ffd700" font-size="16">Link to ambulance, drugs, AND take-home DME lines</text></g></svg>`,
+          caption: "Multi-line encounter: ambulance + mileage with origin/dest modifier, ER drugs with per-mg math, take-home DME with KX+GA stacking."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A Medicare patient receives a power wheelchair (HCPCS K0823) and signs an ABN because the supplier believes Medicare will deny coverage based on the LCD requirement for face-to-face evaluation timing. The supplier has all documentation supporting medical necessity except the LCD-required 7-day face-to-face exam window was missed by 2 days. Which HCPCS modifier(s) should appear on the K0823 line?",
+        options: [
+          { text: "KX only — medical necessity is documented", correct: false },
+          { text: "GA only — ABN is signed and the service may be denied", correct: false },
+          { text: "GA and GY — ABN signed and service is statutorily excluded", correct: false },
+          { text: "GA and KX — ABN signed AND coverage criteria asserted; expect denial reviewed against LCD with patient billing rights preserved", correct: true }
+        ],
+        explanation: "**GA** signals an **ABN is on file** so the supplier can bill the patient if Medicare denies. **KX** asserts the **coverage criteria** in the LCD are met **per supplier's clinical judgment** — important when the supplier wants the claim adjudicated against the LCD rather than auto-denied. Using KX without GA risks lost patient-billing rights. **GY** is wrong because a power wheelchair is **not statutorily excluded** — it's a covered benefit when criteria are met. **KX alone** loses the patient-billing safety net. **GA alone** signals to the contractor that you do NOT believe coverage criteria are met (often used with GZ-like intent), bypassing LCD review. The combination **GA + KX** is the audit-defensible pairing for a contested but reasonable claim.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Quick Check: ABN + Coverage Modifiers</text><text x="550" y="95" text-anchor="middle" fill="#888" font-size="18">Power wheelchair LCD contest scenario</text><g><rect x="60" y="130" width="1020" height="140" fill="#10b981" rx="10"/><text x="570" y="175" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">CORRECT: GA + KX</text><text x="80" y="215" fill="#ffffff" font-size="16">GA = ABN signed, patient can be billed if denied</text><text x="80" y="245" fill="#ffffff" font-size="16">KX = coverage criteria asserted per LCD</text></g><g><rect x="60" y="290" width="1020" height="100" fill="#ef4444" rx="8"/><text x="570" y="330" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">WRONG: KX only</text><text x="80" y="365" fill="#ffffff" font-size="15">Loses patient-billing safety net if denied</text></g><g><rect x="60" y="410" width="1020" height="100" fill="#ef4444" rx="8"/><text x="570" y="450" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">WRONG: GA only</text><text x="80" y="485" fill="#ffffff" font-size="15">Signals supplier doesn't believe LCD met - bypasses review</text></g><g><rect x="60" y="530" width="1020" height="100" fill="#ef4444" rx="8"/><text x="570" y="570" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">WRONG: GA + GY</text><text x="80" y="605" fill="#ffffff" font-size="15">Power wheelchair is NOT statutorily excluded</text></g><g><rect x="60" y="660" width="1020" height="200" fill="#6366f1" rx="10"/><text x="570" y="705" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Modifier Cheat Sheet</text><text x="80" y="745" fill="#ffffff" font-size="16">GA = ABN signed (can bill patient if denied)</text><text x="80" y="775" fill="#ffffff" font-size="16">GZ = No ABN, expected denial (cannot bill patient)</text><text x="80" y="805" fill="#ffffff" font-size="16">GY = Statutorily excluded service</text><text x="80" y="835" fill="#ffffff" font-size="16">KX = Coverage criteria met per LCD</text></g><g><rect x="60" y="880" width="1020" height="140" fill="#f59e0b" rx="10"/><text x="570" y="920" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Audit-Defensible Pairing</text><text x="80" y="960" fill="#1a1a2e" font-size="16">Use GA + KX when LCD is contested but criteria asserted</text><text x="80" y="995" fill="#1a1a2e" font-size="16">Preserves LCD review AND patient-billing rights</text></g></svg>`,
+          caption: "GA + KX is the audit-defensible pairing for contested DMEPOS claims: asserts coverage AND preserves patient-billing rights via ABN."
+        }
+      },
+      {
+        type: "application",
+        title: "25-Scenario Rapid-Recall Drill",
+        content: `**Your final exam-prep drill.** Cover the answers, work each scenario, then check. Time goal: **under 30 seconds each**. This drill simulates the rapid pattern recognition the CPC exam demands.
+
+**1.** Patient gets 200 mg ceftriaxone IM → **J0696 x 1** (J0696 is per 250 mg, so 200 mg = round down to nearest unit)
+**2.** Patient gets pneumococcal vaccine administration (Medicare) → **G0009**
+**3.** Wheelchair cushion, skin protection, adjustable, width 16 inches → **E2607**
+**4.** Bilateral mastectomy bra → **L8000 x 2** with LT and RT
+**5.** Hearing aid analog, monaural, in-the-ear → **V5050**
+**6.** Single-vision spectacle frames → **V2020**
+**7.** Albuterol inhalation solution, unit dose, 1 mg via nebulizer (DME) → **J7611 x 1**
+**8.** Insulin pump (external) → **E0784**
+**9.** Manual wheelchair, standard, hemi (low seat) → **K0002**
+**10.** Glucose test strips, box of 50 → **A4253 x 1** (one unit = box of 50)
+**11.** Continuous glucose monitor, sensor, each → **A4239**
+**12.** Sterile saline solution, 500 mL → **A4216 x [doses per documentation]**
+**13.** Surgical mask, per piece → **A4928**
+**14.** Diabetic shoe with custom inserts → **A5500** (shoe) + **A5512** (insert)
+**15.** Hospital bed, semi-electric, with mattress → **E0260**
+**16.** Oxygen concentrator, single delivery port, less than 5 LPM → **E1390**
+**17.** Tracheostomy tube, cuffed → **A4622**
+**18.** Crutches, forearm, adjustable, each → **E0111**
+**19.** Walker, rigid (pickup), adjustable height → **E0130**
+**20.** Cervical collar, molded → **L0150**
+**21.** Cardiokymography (CMS preventive) → **G0366**
+**22.** Telehealth virtual check-in, 5-10 min, established patient → **G2012**
+**23.** Smoking cessation counseling, 3-10 min (Medicare) → **G0436**
+**24.** Diabetes self-management training, group, 30 min → **G0109**
+**25.** Manipulation under anesthesia of shoulder → **CPT 23700** (this is a TRAP — it's CPT, not HCPCS!)
+
+**Self-grading:**
+- 23-25 correct → exam-ready
+- 18-22 correct → review top miss categories
+- Under 18 → revisit lessons 1-9
+
+**Final exam tips:**
+- **Time per question:** Aim for 90 seconds average on the CPC; HCPCS questions should be faster (30-60 sec)
+- **Eliminate impossible answers first:** Wrong code family is the most common distractor
+- **Trust your training:** Per-mg drug calculations, KX for DMEPOS, origin/dest modifiers for ambulance, LT/RT for bilateral
+
+**Congratulations:** You've completed the HCPCS Level II book. You're ready for the AAPC CPC exam. Pair this with strong CPT and ICD-10-CM training, take 5+ timed practice exams, and walk in confident. **Pass rate among coders who complete a structured prep course = 85%+. You are in the right cohort.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">25-Scenario Rapid-Recall Drill</text><text x="550" y="95" text-anchor="middle" fill="#888" font-size="16">Goal: under 30 seconds per scenario</text><g><rect x="40" y="130" width="500" height="320" fill="#10b981" rx="10"/><text x="290" y="170" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Drugs and Admin (1-7)</text><text x="60" y="200" fill="#ffffff" font-size="14">1. Ceftriaxone 200mg = J0696 x1</text><text x="60" y="225" fill="#ffffff" font-size="14">2. Pneumo vaccine admin = G0009</text><text x="60" y="250" fill="#ffffff" font-size="14">3. WC cushion = E2607</text><text x="60" y="275" fill="#ffffff" font-size="14">4. Bilateral mastectomy bra = L8000 x2 LT/RT</text><text x="60" y="300" fill="#ffffff" font-size="14">5. Hearing aid ITE monaural = V5050</text><text x="60" y="325" fill="#ffffff" font-size="14">6. Single-vision frames = V2020</text><text x="60" y="350" fill="#ffffff" font-size="14">7. Albuterol unit dose = J7611</text><text x="60" y="385" fill="#ffd700" font-size="14">Pattern: per-mg math + Medicare G-codes</text></g><g><rect x="560" y="130" width="500" height="320" fill="#f59e0b" rx="10"/><text x="810" y="170" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">DME Supplies (8-17)</text><text x="580" y="200" fill="#1a1a2e" font-size="14">8. Insulin pump external = E0784</text><text x="580" y="225" fill="#1a1a2e" font-size="14">9. Manual WC hemi = K0002</text><text x="580" y="250" fill="#1a1a2e" font-size="14">10. Glucose strips box of 50 = A4253</text><text x="580" y="275" fill="#1a1a2e" font-size="14">11. CGM sensor = A4239</text><text x="580" y="300" fill="#1a1a2e" font-size="14">12. Saline 500mL = A4216</text><text x="580" y="325" fill="#1a1a2e" font-size="14">13. Surgical mask = A4928</text><text x="580" y="350" fill="#1a1a2e" font-size="14">14. Diabetic shoe = A5500 + insert A5512</text><text x="580" y="375" fill="#1a1a2e" font-size="14">15. Hospital bed semi-elec = E0260</text><text x="580" y="400" fill="#1a1a2e" font-size="14">16. Oxygen concentrator = E1390</text><text x="580" y="425" fill="#1a1a2e" font-size="14">17. Tracheostomy tube cuffed = A4622</text></g><g><rect x="40" y="470" width="500" height="320" fill="#ec4899" rx="10"/><text x="290" y="510" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Orthotics + Mobility (18-21)</text><text x="60" y="540" fill="#ffffff" font-size="14">18. Forearm crutches each = E0111</text><text x="60" y="565" fill="#ffffff" font-size="14">19. Rigid walker adjustable = E0130</text><text x="60" y="590" fill="#ffffff" font-size="14">20. Cervical collar molded = L0150</text><text x="60" y="615" fill="#ffffff" font-size="14">21. Cardiokymography = G0366</text><text x="290" y="660" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Telehealth + Counseling (22-24)</text><text x="60" y="690" fill="#ffffff" font-size="14">22. Virtual check-in 5-10min = G2012</text><text x="60" y="715" fill="#ffffff" font-size="14">23. Smoke cessation 3-10min = G0436</text><text x="60" y="740" fill="#ffffff" font-size="14">24. DSME group 30 min = G0109</text></g><g><rect x="560" y="470" width="500" height="320" fill="#ef4444" rx="10"/><text x="810" y="510" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Trap Question (25)</text><text x="580" y="555" fill="#ffffff" font-size="14">25. Shoulder MUA = CPT 23700</text><text x="580" y="585" fill="#ffd700" font-size="16" font-weight="bold">NOT HCPCS</text><text x="580" y="620" fill="#ffffff" font-size="14">CPC tests your ability to NOT</text><text x="580" y="645" fill="#ffffff" font-size="14">use HCPCS when CPT applies</text><text x="580" y="690" fill="#ffd700" font-size="16">CPT = procedures by physicians</text><text x="580" y="715" fill="#ffd700" font-size="16">HCPCS = supplies, DME, drugs</text><text x="580" y="745" fill="#ffd700" font-size="16">Recognize the boundary!</text></g><g><rect x="40" y="810" width="1020" height="210" fill="#6366f1" rx="10"/><text x="550" y="855" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">You're Exam-Ready</text><text x="100" y="895" fill="#ffffff" font-size="16">Time per CPC question: 90 sec; HCPCS faster (30-60s)</text><text x="100" y="925" fill="#ffffff" font-size="16">Eliminate wrong code families first</text><text x="100" y="955" fill="#ffffff" font-size="16">Pass rate among structured-prep coders: 85%+</text><text x="100" y="990" fill="#ffd700" font-size="18" font-weight="bold">Congratulations on completing the HCPCS book!</text></g></svg>`,
+          caption: "25 rapid-fire scenarios across all HCPCS code families; the final question is a CPT trap testing your boundary recognition."
         }
       }
     ]
