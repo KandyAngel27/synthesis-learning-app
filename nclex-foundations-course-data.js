@@ -9847,7 +9847,7 @@ After: **psychological first aid** for staff and survivors, debrief, restock, le
             title: 'Pathophysiology for NCLEX Reasoning',
             author: 'Synthesis Learning',
             description: 'The "why" behind every nursing intervention — pulling the mechanisms together so SATA and prioritization questions get easier.',
-            lessons: 3, duration: 45, progress: 0, category: 'nclex-foundations',
+            lessons: 6, duration: 90, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-pathophys-lesson-1",
@@ -10152,6 +10152,869 @@ The catastrophe is **plaque rupture**: a fibrous cap tears → platelets aggrega
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Nursing Action Cheatsheet</text><rect x="60" y="90" width="980" height="160" fill="#ef4444" stroke="#ffd700" stroke-width="3" rx="10"/><text x="100" y="130" font-family="Arial" font-size="22" fill="#ffffff" font-weight="bold">Suspected MI — TIME CRITICAL</text><text x="100" y="165" font-family="Arial" font-size="18" fill="#ffffff">M-O-N-A: Morphine, Oxygen (if SpO₂&lt;90), Nitroglycerin, Aspirin (chew)</text><text x="100" y="195" font-family="Arial" font-size="18" fill="#ffd700">12-lead EKG + troponin STAT</text><text x="100" y="225" font-family="Arial" font-size="18" fill="#ffd700">STEMI → cath lab within 90 min (door-to-balloon)</text><rect x="60" y="265" width="480" height="240" fill="#0ea5e9" stroke="#ffd700" stroke-width="3" rx="10"/><text x="300" y="305" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Type 1 DM</text><text x="80" y="340" font-family="Arial" font-size="17" fill="#ffd700">• NEVER hold insulin without order</text><text x="80" y="370" font-family="Arial" font-size="17" fill="#ffffff">• Basal insulin even when NPO</text><text x="80" y="400" font-family="Arial" font-size="17" fill="#ffffff">• Sick day rules</text><text x="80" y="430" font-family="Arial" font-size="17" fill="#ef4444">• Hypoglycemia: 15g carbs</text><text x="80" y="460" font-family="Arial" font-size="17" fill="#ffffff">  (juice, glucose tab)</text><text x="80" y="490" font-family="Arial" font-size="17" fill="#ffffff">• Watch for DKA (Kussmaul, fruity)</text><rect x="560" y="265" width="480" height="240" fill="#6366f1" stroke="#ffd700" stroke-width="3" rx="10"/><text x="800" y="305" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Type 2 DM</text><text x="580" y="340" font-family="Arial" font-size="17" fill="#ffd700">• Lifestyle + metformin first-line</text><text x="580" y="370" font-family="Arial" font-size="17" fill="#ffffff">• A1c target &lt;7%</text><text x="580" y="400" font-family="Arial" font-size="17" fill="#ffffff">• Hold metformin: IV contrast,</text><text x="580" y="430" font-family="Arial" font-size="17" fill="#ffffff">  AKI (lactic acidosis risk)</text><text x="580" y="460" font-family="Arial" font-size="17" fill="#ef4444">• HHS: severe hyperglycemia,</text><text x="580" y="490" font-family="Arial" font-size="17" fill="#ef4444">  no ketones, dehydration</text><rect x="60" y="520" width="480" height="240" fill="#8b5cf6" stroke="#ffd700" stroke-width="3" rx="10"/><text x="300" y="560" font-family="Arial" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">COPD</text><text x="80" y="595" font-family="Arial" font-size="17" fill="#ffd700">• O₂ at 1-3 L/min, SpO₂ 88-92%</text><text x="80" y="625" font-family="Arial" font-size="17" fill="#ffffff">• AVOID high-flow (hypoxic drive)</text><text x="80" y="655" font-family="Arial" font-size="17" fill="#ffffff">• Pursed-lip + tripod position</text><text x="80" y="685" font-family="Arial" font-size="17" fill="#ffffff">• Bronchodilators (SABA + LABA)</text><text x="80" y="715" font-family="Arial" font-size="17" fill="#10b981">• Vaccines: flu + pneumococcal</text><text x="80" y="745" font-family="Arial" font-size="17" fill="#ffd700">• SMOKING CESSATION = #1</text><rect x="560" y="520" width="480" height="240" fill="#10b981" stroke="#ffd700" stroke-width="3" rx="10"/><text x="800" y="560" font-family="Arial" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Heart Failure</text><text x="580" y="595" font-family="Arial" font-size="17" fill="#ffd700">• DAILY WEIGHTS, same time</text><text x="580" y="625" font-family="Arial" font-size="17" fill="#ffd700">• Notify: &gt;2 lb/day or 5 lb/wk</text><text x="580" y="655" font-family="Arial" font-size="17" fill="#ffffff">• Low Na (&lt;2g), fluid restriction</text><text x="580" y="685" font-family="Arial" font-size="17" fill="#ffffff">• Meds: ACE-I, BB, diuretic, SGLT2i</text><text x="580" y="715" font-family="Arial" font-size="17" fill="#ef4444">• Pulmonary edema: crackles,</text><text x="580" y="745" font-family="Arial" font-size="17" fill="#ef4444">  pink frothy sputum → EMERGENCY</text><rect x="60" y="775" width="980" height="245" fill="#f59e0b" stroke="#ffd700" stroke-width="3" rx="15"/><text x="550" y="820" font-family="Arial" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Atherosclerosis Prevention (ALL)</text><text x="100" y="865" font-family="Arial" font-size="20" fill="#ffffff">• Smoking cessation (#1 modifiable)</text><text x="100" y="900" font-family="Arial" font-size="20" fill="#ffffff">• BP &lt;130/80 mmHg</text><text x="100" y="935" font-family="Arial" font-size="20" fill="#ffffff">• Statin for ↑LDL — diet + exercise</text><text x="100" y="970" font-family="Arial" font-size="20" fill="#ffffff">• A1c target, weight loss, daily activity</text><text x="100" y="1005" font-family="Arial" font-size="20" fill="#1a1a2e">• Aspirin 81 mg for secondary prevention</text></svg>`,
           caption: "Each Big Four disease has signature nursing actions — risk factor modification cuts across them all."
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-pathophys-lesson-4",
+    title: "Inflammation, Infection, and Sepsis",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Local Inflammation to Septic Shock",
+        content: `Inflammation is the body's **protective response** to injury or infection. It becomes pathologic when the response is excessive, prolonged, or dysregulated. On the NCLEX, you must recognize the **continuum** from local infection to systemic inflammatory response syndrome (**SIRS**), to sepsis, to **septic shock**, and finally to **multiple organ dysfunction syndrome (MODS)**.
+
+**The cardinal signs of inflammation** (Latin: *rubor, calor, tumor, dolor, functio laesa*) are: redness, heat, swelling, pain, and loss of function. These reflect vasodilation, increased capillary permeability, leukocyte migration, and chemical mediator release (histamine, prostaglandins, bradykinin, cytokines like TNF-alpha and IL-6).
+
+**Why this matters for NCLEX**: Septic shock has a mortality of 30-50%. Early recognition saves lives. Nurses are the front-line monitors. Subtle changes — a rising respiratory rate, new confusion in an elderly patient, a temperature swing — often precede frank hemodynamic collapse by hours.
+
+**The qSOFA bedside screen** (≥2 = sepsis risk):
+- Respiratory rate ≥22
+- Altered mentation (GCS <15)
+- Systolic BP ≤100
+
+**SIRS criteria** (≥2 needed):
+- Temp >38°C (100.4°F) or <36°C (96.8°F)
+- HR >90
+- RR >20 or PaCO2 <32
+- WBC >12,000 or <4,000 or >10% bands
+
+**Sepsis** = SIRS + suspected infection. **Septic shock** = sepsis + hypotension unresponsive to fluids + lactate >2 mmol/L requiring vasopressors to maintain MAP ≥65.
+
+This lesson will train your eye to spot the **deteriorating septic patient** before the code is called.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-size="34" fill="#ffd700" text-anchor="middle" font-weight="bold">The Sepsis Continuum</text><text x="550" y="100" font-size="18" fill="#888" text-anchor="middle">Local infection to multi-organ failure</text><rect x="80" y="160" width="200" height="120" fill="#10b981" rx="10"/><text x="180" y="200" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">INFECTION</text><text x="180" y="230" font-size="14" fill="#ffffff" text-anchor="middle">Pathogen invasion</text><text x="180" y="252" font-size="14" fill="#ffffff" text-anchor="middle">Local response</text><text x="180" y="272" font-size="14" fill="#ffffff" text-anchor="middle">Fever, WBC up</text><line x1="290" y1="220" x2="350" y2="220" stroke="#ffd700" stroke-width="4" marker-end="url(#arr)"/><defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ffd700"/></marker></defs><rect x="360" y="160" width="200" height="120" fill="#f59e0b" rx="10"/><text x="460" y="200" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">SIRS</text><text x="460" y="225" font-size="13" fill="#1a1a2e" text-anchor="middle">Temp greater 38 or less 36</text><text x="460" y="245" font-size="13" fill="#1a1a2e" text-anchor="middle">HR greater 90, RR greater 20</text><text x="460" y="265" font-size="13" fill="#1a1a2e" text-anchor="middle">WBC abnormal</text><line x1="570" y1="220" x2="630" y2="220" stroke="#ffd700" stroke-width="4" marker-end="url(#arr)"/><rect x="640" y="160" width="200" height="120" fill="#ef4444" rx="10"/><text x="740" y="200" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">SEPSIS</text><text x="740" y="225" font-size="13" fill="#ffffff" text-anchor="middle">SIRS plus infection</text><text x="740" y="245" font-size="13" fill="#ffffff" text-anchor="middle">Lactate rising</text><text x="740" y="265" font-size="13" fill="#ffffff" text-anchor="middle">Organ dysfunction</text><line x1="850" y1="220" x2="910" y2="220" stroke="#ffd700" stroke-width="4" marker-end="url(#arr)"/><rect x="920" y="160" width="160" height="120" fill="#8b5cf6" rx="10"/><text x="1000" y="195" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SEPTIC</text><text x="1000" y="218" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SHOCK</text><text x="1000" y="243" font-size="12" fill="#ffffff" text-anchor="middle">MAP less 65</text><text x="1000" y="260" font-size="12" fill="#ffffff" text-anchor="middle">Lactate greater 2</text><rect x="80" y="340" width="1000" height="60" fill="#0ea5e9" rx="8"/><text x="580" y="378" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">qSOFA: RR ≥22  +  Altered Mental Status  +  SBP ≤100</text><text x="550" y="450" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Sepsis Bundle (Hour-1)</text><rect x="100" y="480" width="220" height="100" fill="#6366f1" rx="8"/><text x="210" y="515" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Lactate</text><text x="210" y="540" font-size="13" fill="#ffffff" text-anchor="middle">Measure now</text><text x="210" y="560" font-size="13" fill="#ffffff" text-anchor="middle">Recheck if greater 2</text><rect x="340" y="480" width="220" height="100" fill="#6366f1" rx="8"/><text x="450" y="515" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Cultures</text><text x="450" y="540" font-size="13" fill="#ffffff" text-anchor="middle">Blood x2</text><text x="450" y="560" font-size="13" fill="#ffffff" text-anchor="middle">BEFORE antibiotics</text><rect x="580" y="480" width="220" height="100" fill="#6366f1" rx="8"/><text x="690" y="515" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Antibiotics</text><text x="690" y="540" font-size="13" fill="#ffffff" text-anchor="middle">Broad-spectrum</text><text x="690" y="560" font-size="13" fill="#ffffff" text-anchor="middle">Within 1 hour</text><rect x="820" y="480" width="220" height="100" fill="#6366f1" rx="8"/><text x="930" y="515" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Fluids</text><text x="930" y="540" font-size="13" fill="#ffffff" text-anchor="middle">30 mL/kg crystalloid</text><text x="930" y="560" font-size="13" fill="#ffffff" text-anchor="middle">If hypotensive</text><text x="550" y="650" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Inflammatory Mediator Cascade</text><circle cx="200" cy="750" r="55" fill="#ec4899"/><text x="200" y="745" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">TNF-alpha</text><text x="200" y="765" font-size="11" fill="#ffffff" text-anchor="middle">Fever, shock</text><circle cx="380" cy="750" r="55" fill="#ec4899"/><text x="380" y="745" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">IL-1, IL-6</text><text x="380" y="765" font-size="11" fill="#ffffff" text-anchor="middle">Acute phase</text><circle cx="560" cy="750" r="55" fill="#ec4899"/><text x="560" y="745" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Histamine</text><text x="560" y="765" font-size="11" fill="#ffffff" text-anchor="middle">Vasodilation</text><circle cx="740" cy="750" r="55" fill="#ec4899"/><text x="740" y="745" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Bradykinin</text><text x="740" y="765" font-size="11" fill="#ffffff" text-anchor="middle">Pain, edema</text><circle cx="920" cy="750" r="55" fill="#ec4899"/><text x="920" y="745" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Prostaglandins</text><text x="920" y="765" font-size="11" fill="#ffffff" text-anchor="middle">Fever, pain</text><rect x="80" y="860" width="1000" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="580" y="900" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">MODS: Organs Fail in Order</text><text x="150" y="940" font-size="15" fill="#ffffff">Lungs</text><text x="150" y="960" font-size="12" fill="#888">ARDS</text><text x="150" y="978" font-size="12" fill="#888">PaO2/FiO2 less 300</text><text x="320" y="940" font-size="15" fill="#ffffff">Kidneys</text><text x="320" y="960" font-size="12" fill="#888">AKI, oliguria</text><text x="320" y="978" font-size="12" fill="#888">Cr rising</text><text x="490" y="940" font-size="15" fill="#ffffff">Liver</text><text x="490" y="960" font-size="12" fill="#888">Bilirubin up</text><text x="490" y="978" font-size="12" fill="#888">INR up</text><text x="660" y="940" font-size="15" fill="#ffffff">Coagulation</text><text x="660" y="960" font-size="12" fill="#888">DIC</text><text x="660" y="978" font-size="12" fill="#888">Plt less 100K</text><text x="830" y="940" font-size="15" fill="#ffffff">Brain</text><text x="830" y="960" font-size="12" fill="#888">Encephalopathy</text><text x="830" y="978" font-size="12" fill="#888">GCS drop</text><text x="580" y="1030" font-size="16" fill="#ef4444" text-anchor="middle" font-weight="bold">Mortality rises 15-20% per organ system that fails</text></svg>`,
+          caption: "The sepsis continuum from infection to MODS, with hour-1 bundle and inflammatory mediators."
+        }
+      },
+      {
+        type: "concept",
+        title: "Septic Shock Pathophysiology: Distributive Collapse",
+        content: `Septic shock is **distributive shock** — the problem is not pump failure or volume loss, but **massive vasodilation** and **capillary leak**. The patient may have plenty of blood, but it pools in dilated vessels and leaks into tissues, so effective perfusion plummets.
+
+**The cascade:**
+1. **Pathogen recognition**: Endotoxin (gram-negative LPS) or exotoxin binds Toll-like receptors on macrophages.
+2. **Cytokine storm**: TNF-alpha and IL-1 flood the bloodstream within minutes.
+3. **Endothelial activation**: Nitric oxide release causes profound vasodilation. Capillaries become leaky.
+4. **Coagulation activation**: Tissue factor exposure triggers microvascular clotting → **DIC**. Paradoxically, you bleed AND clot.
+5. **Mitochondrial dysfunction**: Cells cannot use oxygen even when delivered → **lactic acidosis**.
+6. **Hemodynamic phases**:
+
+**Warm shock (early)** — counterintuitive:
+- Skin is **warm, flushed, dry** (vasodilation)
+- Bounding pulses
+- Wide pulse pressure
+- Normal or high cardiac output
+- BUT lactate is rising and mentation is changing
+
+**Cold shock (late)** — looks like other shocks:
+- Cool, mottled extremities
+- Weak, thready pulse
+- Narrow pulse pressure
+- Low cardiac output
+- Oliguria (<0.5 mL/kg/hr)
+- Lactate >4
+
+**Key vital sign trends NCLEX loves**:
+- **MAP <65** = inadequate organ perfusion
+- **Pulse pressure <25** = vasoconstriction or cardiac failure
+- **Shock index** (HR/SBP) >0.9 = compensating, deteriorating
+- **Lactate >2** = anaerobic metabolism. **>4 = severe**.
+- **Capillary refill >3 sec** = peripheral hypoperfusion
+
+**Lab patterns**:
+- WBC may be **high OR low** (bandemia = left shift = "shift to immaturity")
+- Procalcitonin elevated in bacterial sepsis
+- Platelets drop (consumption)
+- Cr rises (AKI)
+- ABG: metabolic acidosis with respiratory compensation (low pH, low HCO3, low PaCO2)
+
+**Treatment priorities (in order)**:
+1. **Fluids first** — 30 mL/kg crystalloid (lactated Ringer's preferred)
+2. **Antibiotics within 1 hour** — every hour delay = 7% mortality increase
+3. **Vasopressors** if MAP <65 after fluids — **norepinephrine first-line**
+4. **Source control** — drain abscess, remove infected line, debride
+
+**Nurse alert**: A septic patient who becomes **suddenly less tachycardic** without intervention is decompensating — they have lost the ability to compensate.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Warm Shock vs Cold Shock</text><text x="550" y="95" font-size="16" fill="#888" text-anchor="middle">The two faces of septic distributive collapse</text><rect x="60" y="130" width="490" height="450" fill="#ef4444" rx="12" opacity="0.85"/><text x="305" y="170" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">WARM SHOCK (Early)</text><line x1="80" y1="185" x2="530" y2="185" stroke="#ffffff" stroke-width="2"/><text x="80" y="220" font-size="16" fill="#ffffff" font-weight="bold">Skin:</text><text x="180" y="220" font-size="15" fill="#ffffff">Warm, flushed, dry</text><text x="80" y="255" font-size="16" fill="#ffffff" font-weight="bold">Pulse:</text><text x="180" y="255" font-size="15" fill="#ffffff">Bounding, full</text><text x="80" y="290" font-size="16" fill="#ffffff" font-weight="bold">BP:</text><text x="180" y="290" font-size="15" fill="#ffffff">Wide pulse pressure</text><text x="80" y="325" font-size="16" fill="#ffffff" font-weight="bold">HR:</text><text x="180" y="325" font-size="15" fill="#ffffff">Tachycardic (110-130)</text><text x="80" y="360" font-size="16" fill="#ffffff" font-weight="bold">CO:</text><text x="180" y="360" font-size="15" fill="#ffffff">High output state</text><text x="80" y="395" font-size="16" fill="#ffffff" font-weight="bold">SVR:</text><text x="180" y="395" font-size="15" fill="#ffffff">Decreased (dilation)</text><text x="80" y="430" font-size="16" fill="#ffffff" font-weight="bold">Mentation:</text><text x="220" y="430" font-size="15" fill="#ffffff">Anxious, confused</text><text x="80" y="465" font-size="16" fill="#ffffff" font-weight="bold">Urine:</text><text x="180" y="465" font-size="15" fill="#ffffff">Decreasing</text><text x="80" y="500" font-size="16" fill="#ffd700" font-weight="bold">Lactate: 2-4</text><text x="80" y="535" font-size="14" fill="#ffd700">Looks deceptively stable</text><text x="80" y="560" font-size="14" fill="#ffd700">but deteriorating fast</text><rect x="560" y="130" width="490" height="450" fill="#6366f1" rx="12" opacity="0.9"/><text x="805" y="170" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">COLD SHOCK (Late)</text><line x1="580" y1="185" x2="1030" y2="185" stroke="#ffffff" stroke-width="2"/><text x="580" y="220" font-size="16" fill="#ffffff" font-weight="bold">Skin:</text><text x="680" y="220" font-size="15" fill="#ffffff">Cold, mottled, clammy</text><text x="580" y="255" font-size="16" fill="#ffffff" font-weight="bold">Pulse:</text><text x="680" y="255" font-size="15" fill="#ffffff">Weak, thready</text><text x="580" y="290" font-size="16" fill="#ffffff" font-weight="bold">BP:</text><text x="680" y="290" font-size="15" fill="#ffffff">Narrow, falling, MAP less 65</text><text x="580" y="325" font-size="16" fill="#ffffff" font-weight="bold">HR:</text><text x="680" y="325" font-size="15" fill="#ffffff">Very fast or bradycardic</text><text x="580" y="360" font-size="16" fill="#ffffff" font-weight="bold">CO:</text><text x="680" y="360" font-size="15" fill="#ffffff">Low output</text><text x="580" y="395" font-size="16" fill="#ffffff" font-weight="bold">SVR:</text><text x="680" y="395" font-size="15" fill="#ffffff">Variable, dysfunction</text><text x="580" y="430" font-size="16" fill="#ffffff" font-weight="bold">Mentation:</text><text x="720" y="430" font-size="15" fill="#ffffff">Obtunded</text><text x="580" y="465" font-size="16" fill="#ffffff" font-weight="bold">Urine:</text><text x="680" y="465" font-size="15" fill="#ffffff">Oliguria, anuria</text><text x="580" y="500" font-size="16" fill="#ffd700" font-weight="bold">Lactate: greater 4</text><text x="580" y="535" font-size="14" fill="#ffd700">Pre-arrest physiology</text><text x="580" y="560" font-size="14" fill="#ffd700">CALL RAPID RESPONSE</text><text x="550" y="630" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Hemodynamic Numbers to Know</text><rect x="80" y="660" width="240" height="130" fill="#10b981" rx="8"/><text x="200" y="695" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">MAP Goal</text><text x="200" y="730" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">≥65</text><text x="200" y="760" font-size="13" fill="#ffffff" text-anchor="middle">SBP plus 2x DBP</text><text x="200" y="778" font-size="13" fill="#ffffff" text-anchor="middle">divided by 3</text><rect x="340" y="660" width="240" height="130" fill="#f59e0b" rx="8"/><text x="460" y="695" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Lactate</text><text x="460" y="730" font-size="28" fill="#1a1a2e" text-anchor="middle" font-weight="bold">less 2 normal</text><text x="460" y="760" font-size="13" fill="#1a1a2e" text-anchor="middle">2-4: sepsis flag</text><text x="460" y="778" font-size="13" fill="#1a1a2e" text-anchor="middle">greater 4: severe</text><rect x="600" y="660" width="240" height="130" fill="#0ea5e9" rx="8"/><text x="720" y="695" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Urine Output</text><text x="720" y="730" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">≥0.5 mL/kg/hr</text><text x="720" y="760" font-size="13" fill="#ffffff" text-anchor="middle">Below means</text><text x="720" y="778" font-size="13" fill="#ffffff" text-anchor="middle">renal hypoperfusion</text><rect x="860" y="660" width="200" height="130" fill="#8b5cf6" rx="8"/><text x="960" y="695" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Cap Refill</text><text x="960" y="730" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">≤3 sec</text><text x="960" y="760" font-size="13" fill="#ffffff" text-anchor="middle">Greater 3 = poor</text><text x="960" y="778" font-size="13" fill="#ffffff" text-anchor="middle">perfusion</text><rect x="80" y="820" width="980" height="240" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/><text x="570" y="855" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">NURSING RED FLAGS — Act NOW</text><text x="110" y="895" font-size="16" fill="#ffffff">Sudden confusion in elderly patient — often FIRST sign</text><text x="110" y="925" font-size="16" fill="#ffffff">RR rising silently from 18 to 24 to 28</text><text x="110" y="955" font-size="16" fill="#ffffff">Urine output dropping despite IV fluids</text><text x="110" y="985" font-size="16" fill="#ffffff">Temp swing — fever spike OR sudden hypothermia (worse prognosis)</text><text x="110" y="1015" font-size="16" fill="#ffffff">Mottled knees (livedo reticularis) — severe peripheral hypoperfusion</text><text x="110" y="1045" font-size="16" fill="#ffd700" font-weight="bold">Lactate rising on serial draws — REMEASURE every 2-4 hours</text></svg>`,
+          caption: "The two phases of septic shock — early warm shock often missed, late cold shock often too late."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Mrs. Patel's UTI That Wasn't",
+        content: `**Patient**: Mrs. Patel, 78, admitted from home yesterday with "UTI and weakness." Started on ceftriaxone IV.
+
+**Last shift report (0700)**:
+- T 38.2°C, HR 96, RR 20, BP 124/72, SpO2 95% RA
+- Alert, oriented x3, complaining of dysuria
+- Urine cloudy, foul odor; WBC 14,000 with 8% bands
+- Lactate 1.8 (drawn in ED)
+
+**Your 1000 assessment** (3 hours into shift):
+- T 38.6°C, HR 112, RR 24, BP 108/58, SpO2 92% RA
+- "A little tired today, where am I again?" (was oriented x3 at 0700)
+- Skin warm and dry; cap refill 3 seconds
+- Urine output last 3 hours: 60 mL total (~20 mL/hr)
+- Patient weighs 60 kg
+
+**What's happening?**
+
+Mrs. Patel is moving from **sepsis to septic shock**:
+- **SIRS criteria met**: T >38, HR >90, RR >20, WBC >12 with bands → 4 of 4
+- **qSOFA**: RR ≥22 (yes), altered mentation (yes), SBP ≤100 (almost — 108 trending down) → 2 points = high risk
+- **Urine output**: 20 mL/hr for a 60 kg patient = 0.33 mL/kg/hr → **oliguria** (need ≥30 mL/hr)
+- **MAP**: (108 + 2×58)/3 = 75 — still adequate but trending toward danger
+- **Warm shock features**: warm skin, wide pulse pressure (108-58 = 50)
+
+**Your priority actions (in order)**:
+
+1. **STAY with the patient**, call rapid response / notify provider
+2. **Recheck vitals q15min** — trend is what matters
+3. **Repeat lactate** — this is the single most important lab next
+4. **Insert second large-bore IV (18g)** if not present
+5. **Anticipate fluid bolus**: 30 mL/kg × 60 kg = 1800 mL crystalloid (likely LR)
+6. **Blood cultures x2** if not already drawn before next antibiotic dose
+7. **Foley with urometer** for hourly UO tracking
+8. **Continuous pulse oximetry**, oxygen titrated to SpO2 ≥94%
+9. **Mental status checks q1hr** — document GCS
+
+**One hour later** (after 1L LR bolus):
+- BP 102/52, HR 118, RR 26, T 38.9, lactate now **3.6**
+- Patient lethargic, answers questions slowly
+- Urine output last hour: 15 mL
+
+**This is septic shock evolving**. She needs:
+- ICU transfer
+- Likely norepinephrine drip via central line
+- Possible intubation if mental status declines further
+
+**NCLEX teaching point**: The transition from sepsis to septic shock can occur in **less than an hour**. Trending vitals, mental status, and urine output beat any single snapshot. The lactate rising from 1.8 → 3.6 is the alarm bell.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Mrs. Patel: Vital Sign Trends Across 4 Hours</text><line x1="100" y1="180" x2="100" y2="640" stroke="#888" stroke-width="2"/><line x1="100" y1="640" x2="1050" y2="640" stroke="#888" stroke-width="2"/><text x="50" y="190" font-size="14" fill="#888">High</text><text x="50" y="635" font-size="14" fill="#888">Low</text><text x="150" y="670" font-size="14" fill="#888">0700</text><text x="350" y="670" font-size="14" fill="#888">1000</text><text x="550" y="670" font-size="14" fill="#888">1100</text><text x="750" y="670" font-size="14" fill="#888">1200</text><text x="950" y="670" font-size="14" fill="#888">1300</text><text x="80" y="280" font-size="13" fill="#888" text-anchor="end">130</text><text x="80" y="380" font-size="13" fill="#888" text-anchor="end">100</text><text x="80" y="480" font-size="13" fill="#888" text-anchor="end">70</text><line x1="100" y1="380" x2="1050" y2="380" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 4"/><text x="1060" y="383" font-size="11" fill="#ef4444">MAP 65</text><polyline points="150,400 350,360 550,400 750,440 950,460" fill="none" stroke="#10b981" stroke-width="4"/><circle cx="150" cy="400" r="6" fill="#10b981"/><circle cx="350" cy="360" r="6" fill="#10b981"/><circle cx="550" cy="400" r="6" fill="#10b981"/><circle cx="750" cy="440" r="6" fill="#10b981"/><circle cx="950" cy="460" r="6" fill="#10b981"/><text x="970" y="465" font-size="13" fill="#10b981">SBP</text><polyline points="150,440 350,330 550,310 750,290 950,295" fill="none" stroke="#ef4444" stroke-width="4"/><circle cx="150" cy="440" r="6" fill="#ef4444"/><circle cx="350" cy="330" r="6" fill="#ef4444"/><circle cx="550" cy="310" r="6" fill="#ef4444"/><circle cx="750" cy="290" r="6" fill="#ef4444"/><circle cx="950" cy="295" r="6" fill="#ef4444"/><text x="970" y="298" font-size="13" fill="#ef4444">HR</text><polyline points="150,540 350,500 550,460 750,420 950,400" fill="none" stroke="#f59e0b" stroke-width="4"/><circle cx="150" cy="540" r="6" fill="#f59e0b"/><circle cx="350" cy="500" r="6" fill="#f59e0b"/><circle cx="550" cy="460" r="6" fill="#f59e0b"/><circle cx="750" cy="420" r="6" fill="#f59e0b"/><circle cx="950" cy="400" r="6" fill="#f59e0b"/><text x="970" y="403" font-size="13" fill="#f59e0b">RR</text><polyline points="150,560 350,490 550,400 750,330 950,310" fill="none" stroke="#8b5cf6" stroke-width="4" stroke-dasharray="6 3"/><circle cx="150" cy="560" r="6" fill="#8b5cf6"/><circle cx="350" cy="490" r="6" fill="#8b5cf6"/><circle cx="550" cy="400" r="6" fill="#8b5cf6"/><circle cx="750" cy="330" r="6" fill="#8b5cf6"/><circle cx="950" cy="310" r="6" fill="#8b5cf6"/><text x="970" y="313" font-size="13" fill="#8b5cf6">Lactate</text><rect x="80" y="710" width="490" height="180" fill="#10b981" rx="10" opacity="0.85"/><text x="325" y="745" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">What You Should Do</text><text x="100" y="780" font-size="14" fill="#ffffff">1. Repeat lactate q2-4h</text><text x="100" y="805" font-size="14" fill="#ffffff">2. Start 30 mL/kg LR bolus (1800 mL)</text><text x="100" y="830" font-size="14" fill="#ffffff">3. Blood cultures BEFORE next antibiotic</text><text x="100" y="855" font-size="14" fill="#ffffff">4. Foley with urometer, hourly UO</text><text x="100" y="880" font-size="14" fill="#ffffff">5. Notify provider, prepare ICU transfer</text><rect x="585" y="710" width="475" height="180" fill="#ef4444" rx="10" opacity="0.9"/><text x="822" y="745" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">DO NOT</text><text x="605" y="780" font-size="14" fill="#ffffff">Wait for next routine vitals check</text><text x="605" y="805" font-size="14" fill="#ffffff">Give antipyretics alone and walk away</text><text x="605" y="830" font-size="14" fill="#ffffff">Withhold fluids fearing CHF without assessment</text><text x="605" y="855" font-size="14" fill="#ffffff">Delay antibiotics — every hour costs 7% mortality</text><text x="605" y="880" font-size="14" fill="#ffffff">Assume confusion is just sundowning</text><rect x="80" y="910" width="980" height="160" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="570" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">The 30 mL/kg Fluid Calc</text><text x="570" y="985" font-size="18" fill="#ffffff" text-anchor="middle">60 kg patient × 30 mL/kg = 1800 mL</text><text x="570" y="1015" font-size="16" fill="#ffffff" text-anchor="middle">Give as bolus, reassess MAP, lactate, UO after</text><text x="570" y="1045" font-size="16" fill="#10b981" text-anchor="middle">Crystalloid of choice: Lactated Ringer's (balanced)</text></svg>`,
+          caption: "Mrs. Patel's vitals show classic septic deterioration — silent until decompensation."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is assessing a 72-year-old admitted with pneumonia 6 hours ago. Vitals: T 38.4°C, HR 108, RR 24, BP 96/54, SpO2 91% on 2L. Patient is newly disoriented. Lactate is 3.2 mmol/L. The provider orders a 30 mL/kg crystalloid bolus and broad-spectrum antibiotics. Which action should the nurse take FIRST?",
+        options: [
+          { text: "Administer the first dose of broad-spectrum antibiotics", correct: false },
+          { text: "Draw blood cultures from two separate sites", correct: true },
+          { text: "Insert an indwelling urinary catheter with urometer", correct: false },
+          { text: "Initiate the crystalloid bolus through the existing peripheral IV", correct: false }
+        ],
+        explanation: "Blood cultures must be drawn BEFORE antibiotics are administered to maximize the chance of identifying the causative organism. The sepsis hour-1 bundle sequence is: lactate, cultures, antibiotics, fluids — and the cultures-before-antibiotics rule is sacrosanct. Antibiotics given even minutes before cultures can produce false-negative results, delaying targeted therapy. The fluids and Foley are important but follow cultures. The 30 mL/kg bolus should run concurrent with antibiotic administration once cultures are drawn. NCLEX often tests whether you remember the order: cultures → antibiotics, not the reverse.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">The Hour-1 Sepsis Bundle Sequence</text><text x="550" y="100" font-size="16" fill="#888" text-anchor="middle">Order matters on the NCLEX</text><rect x="80" y="160" width="940" height="100" fill="#0ea5e9" rx="10"/><text x="120" y="200" font-size="22" fill="#ffffff" font-weight="bold">STEP 1</text><text x="280" y="200" font-size="22" fill="#ffffff" font-weight="bold">Measure Lactate</text><text x="120" y="230" font-size="14" fill="#ffffff">First indicator of tissue hypoperfusion</text><text x="120" y="250" font-size="14" fill="#ffffff">Repeat in 2-4 hours if greater than 2 mmol/L</text><line x1="550" y1="270" x2="550" y2="300" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/><defs><marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ffd700"/></marker></defs><rect x="80" y="310" width="940" height="100" fill="#10b981" rx="10"/><text x="120" y="350" font-size="22" fill="#ffffff" font-weight="bold">STEP 2</text><text x="280" y="350" font-size="22" fill="#ffffff" font-weight="bold">Blood Cultures (x2 sites)</text><text x="120" y="380" font-size="14" fill="#ffffff">MUST be drawn BEFORE antibiotics</text><text x="120" y="400" font-size="14" fill="#ffffff">One peripheral, one from line if present</text><line x1="550" y1="420" x2="550" y2="450" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/><rect x="80" y="460" width="940" height="100" fill="#f59e0b" rx="10"/><text x="120" y="500" font-size="22" fill="#1a1a2e" font-weight="bold">STEP 3</text><text x="280" y="500" font-size="22" fill="#1a1a2e" font-weight="bold">Broad-Spectrum Antibiotics</text><text x="120" y="530" font-size="14" fill="#1a1a2e">Within 1 hour of recognition</text><text x="120" y="550" font-size="14" fill="#1a1a2e">Every hour delay = 7% mortality increase</text><line x1="550" y1="570" x2="550" y2="600" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/><rect x="80" y="610" width="940" height="100" fill="#6366f1" rx="10"/><text x="120" y="650" font-size="22" fill="#ffffff" font-weight="bold">STEP 4</text><text x="280" y="650" font-size="22" fill="#ffffff" font-weight="bold">Crystalloid Bolus 30 mL/kg</text><text x="120" y="680" font-size="14" fill="#ffffff">If hypotensive or lactate ≥4</text><text x="120" y="700" font-size="14" fill="#ffffff">Lactated Ringer's preferred over NS</text><line x1="550" y1="720" x2="550" y2="750" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/><rect x="80" y="760" width="940" height="100" fill="#ef4444" rx="10"/><text x="120" y="800" font-size="22" fill="#ffffff" font-weight="bold">STEP 5</text><text x="280" y="800" font-size="22" fill="#ffffff" font-weight="bold">Vasopressors if MAP less 65</text><text x="120" y="830" font-size="14" fill="#ffffff">Norepinephrine FIRST-line</text><text x="120" y="850" font-size="14" fill="#ffffff">Add vasopressin if NE insufficient</text><rect x="80" y="900" width="940" height="160" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/><text x="550" y="940" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">NCLEX Memory Trick</text><text x="550" y="980" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">L-C-A-F-V</text><text x="550" y="1010" font-size="16" fill="#ffffff" text-anchor="middle">Lactate, Cultures, Antibiotics, Fluids, Vasopressors</text><text x="550" y="1040" font-size="16" fill="#10b981" text-anchor="middle">Cultures ALWAYS before Antibiotics</text></svg>`,
+          caption: "Hour-1 bundle order: lactate, cultures, antibiotics, fluids, vasopressors."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Decision Framework: The Septic Patient",
+        content: `**Use this 5-step framework on every shift to catch sepsis before it becomes shock.**
+
+**Step 1 — Screen every patient at risk**
+High-risk populations:
+- Age >65 or <1
+- Immunocompromised (chemo, transplant, HIV, steroids)
+- Diabetes, ESRD, cirrhosis
+- Indwelling devices (Foley, central line, hardware)
+- Recent surgery or invasive procedure
+- Post-partum, breakdown of skin barrier (burns, ulcers)
+
+**Step 2 — Apply qSOFA at every assessment**
+- RR ≥22?
+- Altered mentation (NEW confusion, GCS <15)?
+- SBP ≤100?
+
+**Two or more = STOP and escalate.** Don't wait for a fever — many elderly and immunocompromised septic patients are **afebrile or hypothermic**.
+
+**Step 3 — Look for the source ("the 6 Ps")**
+- **Pneumonia** — crackles, sputum, hypoxia
+- **Pee** — UTI, especially in elderly with confusion
+- **Pus** — wound, abscess, surgical site
+- **Plastic** — central line, Foley, port
+- **Pelvic** — endometritis, post-partum, PID
+- **Pavement** — IV drug use, endocarditis
+
+**Step 4 — Activate the hour-1 bundle**
+Memory: **L-C-A-F-V**
+- **L**actate
+- **C**ultures (BEFORE antibiotics)
+- **A**ntibiotics (broad-spectrum within 1 hour)
+- **F**luids (30 mL/kg crystalloid if hypotensive or lactate ≥4)
+- **V**asopressors if MAP <65 after fluids (norepinephrine first)
+
+**Step 5 — Trend, don't snapshot**
+Re-assess every 1-2 hours minimum:
+- MAP trend (not just SBP)
+- Lactate clearance (should fall >10% in 2 hours)
+- Urine output (≥0.5 mL/kg/hr)
+- Mental status (any change?)
+- Capillary refill, mottling
+
+**Special NCLEX populations:**
+
+**Pediatric sepsis** — kids decompensate FAST and look fine until they crash:
+- Tachycardia is the earliest sign
+- Mottled extremities, prolonged cap refill
+- Hypotension is a **LATE finding**
+- Goal: 60 mL/kg fluids in first hour
+
+**Geriatric sepsis** — often atypical:
+- May NOT have fever (35% afebrile)
+- New confusion may be the only sign
+- "Failure to thrive" presentations
+- Anuria more common
+
+**Immunocompromised sepsis**:
+- Neutropenic fever = oncologic emergency
+- ANC <500 = single temp >38.3 = sepsis until proven otherwise
+- No purulence (no neutrophils to make pus)
+
+**SATA-style question framing** to expect on NCLEX:
+"Which findings indicate the client is progressing from sepsis to septic shock? Select all that apply."
+- Lactate rising from 2.4 to 4.8 — YES
+- MAP dropping from 70 to 58 — YES
+- New mottling of knees — YES
+- Urine output 0.3 mL/kg/hr — YES
+- Capillary refill 4 seconds — YES
+- Temperature normalizing from 39 to 37.2 — YES (often missed; can indicate decompensation in elderly)
+
+**The bottom line**: Sepsis is a **time-sensitive emergency**. Your trending observations and bundle activation can save a life. Don't wait for the order — **call** for it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Bedside Sepsis Decision Tree</text><rect x="350" y="100" width="400" height="80" fill="#0ea5e9" rx="10"/><text x="550" y="135" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">High-risk patient assessment</text><text x="550" y="160" font-size="14" fill="#ffffff" text-anchor="middle">Elderly, immunocompromised, devices</text><line x1="550" y1="190" x2="550" y2="220" stroke="#ffd700" stroke-width="3" marker-end="url(#ar)"/><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ffd700"/></marker></defs><rect x="350" y="230" width="400" height="100" fill="#f59e0b" rx="10"/><text x="550" y="265" font-size="20" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Apply qSOFA</text><text x="550" y="290" font-size="13" fill="#1a1a2e" text-anchor="middle">RR ≥22 + Altered mentation + SBP ≤100</text><text x="550" y="312" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">2 or more = positive screen</text><line x1="550" y1="340" x2="550" y2="370" stroke="#ffd700" stroke-width="3" marker-end="url(#ar)"/><rect x="60" y="380" width="500" height="100" fill="#ef4444" rx="10"/><text x="310" y="415" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SEPSIS LIKELY — Activate bundle</text><text x="310" y="445" font-size="14" fill="#ffffff" text-anchor="middle">L-C-A-F-V protocol</text><text x="310" y="465" font-size="13" fill="#ffffff" text-anchor="middle">Within 60 minutes</text><rect x="580" y="380" width="460" height="100" fill="#10b981" rx="10"/><text x="810" y="415" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Find the source: 6 Ps</text><text x="810" y="445" font-size="13" fill="#ffffff" text-anchor="middle">Pneumonia, Pee, Pus, Plastic,</text><text x="810" y="465" font-size="13" fill="#ffffff" text-anchor="middle">Pelvic, Pavement (IVDU)</text><text x="550" y="530" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">L-C-A-F-V Hour-1 Bundle</text><rect x="60" y="560" width="180" height="120" fill="#6366f1" rx="8"/><text x="150" y="600" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">L</text><text x="150" y="630" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Lactate</text><text x="150" y="655" font-size="12" fill="#ffffff" text-anchor="middle">Stat draw</text><rect x="260" y="560" width="180" height="120" fill="#6366f1" rx="8"/><text x="350" y="600" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">C</text><text x="350" y="630" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Cultures</text><text x="350" y="655" font-size="12" fill="#ffffff" text-anchor="middle">Blood x2 sites</text><rect x="460" y="560" width="180" height="120" fill="#6366f1" rx="8"/><text x="550" y="600" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">A</text><text x="550" y="630" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Antibiotics</text><text x="550" y="655" font-size="12" fill="#ffffff" text-anchor="middle">Within 60 min</text><rect x="660" y="560" width="180" height="120" fill="#6366f1" rx="8"/><text x="750" y="600" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">F</text><text x="750" y="630" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fluids</text><text x="750" y="655" font-size="12" fill="#ffffff" text-anchor="middle">30 mL/kg LR</text><rect x="860" y="560" width="180" height="120" fill="#6366f1" rx="8"/><text x="950" y="600" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">V</text><text x="950" y="630" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Vasopressors</text><text x="950" y="655" font-size="12" fill="#ffffff" text-anchor="middle">Norepi 1st</text><text x="550" y="730" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Trend, Don't Snapshot</text><rect x="60" y="760" width="240" height="140" fill="#10b981" rx="10" opacity="0.85"/><text x="180" y="795" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">MAP</text><text x="180" y="825" font-size="14" fill="#ffffff" text-anchor="middle">Goal ≥65</text><text x="180" y="850" font-size="14" fill="#ffffff" text-anchor="middle">Track q15-30 min</text><text x="180" y="875" font-size="14" fill="#ffffff" text-anchor="middle">During bolus</text><rect x="320" y="760" width="240" height="140" fill="#f59e0b" rx="10" opacity="0.9"/><text x="440" y="795" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Lactate</text><text x="440" y="825" font-size="14" fill="#1a1a2e" text-anchor="middle">Repeat q2-4 hr</text><text x="440" y="850" font-size="14" fill="#1a1a2e" text-anchor="middle">Clear greater 10 percent</text><text x="440" y="875" font-size="14" fill="#1a1a2e" text-anchor="middle">in 2 hr equals good</text><rect x="580" y="760" width="240" height="140" fill="#0ea5e9" rx="10" opacity="0.9"/><text x="700" y="795" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Urine</text><text x="700" y="825" font-size="14" fill="#ffffff" text-anchor="middle">≥0.5 mL/kg/hr</text><text x="700" y="850" font-size="14" fill="#ffffff" text-anchor="middle">Hourly via Foley</text><text x="700" y="875" font-size="14" fill="#ffffff" text-anchor="middle">Earliest warning</text><rect x="840" y="760" width="200" height="140" fill="#8b5cf6" rx="10" opacity="0.9"/><text x="940" y="795" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Mentation</text><text x="940" y="825" font-size="13" fill="#ffffff" text-anchor="middle">GCS each hour</text><text x="940" y="850" font-size="13" fill="#ffffff" text-anchor="middle">New confusion</text><text x="940" y="875" font-size="13" fill="#ffffff" text-anchor="middle">EARLIEST sign</text><rect x="60" y="930" width="980" height="140" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="965" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">Special Populations</text><text x="100" y="1000" font-size="14" fill="#ffffff" font-weight="bold">Elderly:</text><text x="220" y="1000" font-size="13" fill="#ffffff">35 percent afebrile, confusion may be only sign</text><text x="100" y="1025" font-size="14" fill="#ffffff" font-weight="bold">Pediatric:</text><text x="220" y="1025" font-size="13" fill="#ffffff">Tachycardia early, hypotension LATE — 60 mL/kg in first hour</text><text x="100" y="1050" font-size="14" fill="#ffffff" font-weight="bold">Neutropenic:</text><text x="220" y="1050" font-size="13" fill="#ffffff">ANC less 500 plus temp greater 38.3 = oncologic emergency</text></svg>`,
+          caption: "Bedside decision tree: screen, qSOFA, activate L-C-A-F-V bundle, trend response."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-5",
+    title: "Fluid, Electrolyte, and Acid-Base Imbalances",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Lab Values Every Nurse Must Read",
+        content: `Fluid, electrolyte, and acid-base balance is the **single most heavily tested** physiology domain on the NCLEX-RN. Why? Because nurses are the eyes on the ECG monitor, the hands holding the urine measuring cup, the brain reading the morning labs. A missed K+ of 6.8 or a sodium of 118 can mean cardiac arrest or seizure within hours.
+
+**The big four electrolyte killers:**
+1. **Hyperkalemia (K+ >5.5)** — peaked T waves → wide QRS → asystole
+2. **Hyponatremia (Na+ <135)** — confusion → seizures → herniation
+3. **Hypocalcemia (Ca2+ <8.5)** — tetany, Chvostek and Trousseau signs, laryngospasm
+4. **Hypermagnesemia (Mg2+ >2.5)** — loss of deep tendon reflexes → respiratory depression
+
+**Normal lab values you MUST memorize:**
+- Sodium: 135-145 mEq/L
+- Potassium: 3.5-5.0 mEq/L
+- Calcium: 8.5-10.5 mg/dL (ionized 4.5-5.5)
+- Magnesium: 1.5-2.5 mEq/L
+- Phosphorus: 2.5-4.5 mg/dL
+- Chloride: 95-105 mEq/L
+- Bicarbonate (HCO3): 22-26 mEq/L
+- pH: 7.35-7.45
+- PaCO2: 35-45 mmHg
+- PaO2: 80-100 mmHg
+- BUN: 7-20 mg/dL
+- Creatinine: 0.6-1.2 mg/dL
+
+**Fluid compartments:**
+- Total body water = 60% of body weight
+- Intracellular fluid (ICF) = 2/3 of TBW
+- Extracellular fluid (ECF) = 1/3 of TBW (intravascular + interstitial)
+
+**The Frank-Starling forces** govern fluid movement:
+- Hydrostatic pressure pushes fluid out
+- Oncotic pressure (albumin) pulls fluid in
+- Capillary leak (sepsis, burns) destroys this balance
+
+**Tonicity of IV fluids:**
+- **Isotonic** (0.9% NaCl, LR): stays in ECF, expands intravascular volume
+- **Hypotonic** (0.45% NaCl, D5W): moves INTO cells — risk of cerebral edema
+- **Hypertonic** (3% NaCl, D10W): pulls water OUT of cells into ECF — risk of central pontine myelinolysis
+
+This lesson teaches you to **read an ABG, recognize the killer electrolyte patterns, and intervene before the code**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">Electrolyte Quick Reference</text><text x="550" y="95" font-size="16" fill="#888" text-anchor="middle">Know these by heart for NCLEX day</text><rect x="60" y="130" width="320" height="220" fill="#ef4444" rx="12"/><text x="220" y="170" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Potassium</text><text x="220" y="205" font-size="16" fill="#ffffff" text-anchor="middle">Normal: 3.5 to 5.0 mEq/L</text><text x="220" y="240" font-size="14" fill="#ffffff" text-anchor="middle">Hyper: peaked T, wide QRS</text><text x="220" y="262" font-size="14" fill="#ffffff" text-anchor="middle">Hypo: U waves, flat T</text><text x="220" y="295" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">KILLER ELECTROLYTE</text><text x="220" y="325" font-size="13" fill="#ffffff" text-anchor="middle">Causes lethal dysrhythmias</text><rect x="400" y="130" width="320" height="220" fill="#0ea5e9" rx="12"/><text x="560" y="170" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Sodium</text><text x="560" y="205" font-size="16" fill="#ffffff" text-anchor="middle">Normal: 135 to 145 mEq/L</text><text x="560" y="240" font-size="14" fill="#ffffff" text-anchor="middle">Hypo: confusion, seizures</text><text x="560" y="262" font-size="14" fill="#ffffff" text-anchor="middle">Hyper: thirst, lethargy</text><text x="560" y="295" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">BRAIN ELECTROLYTE</text><text x="560" y="325" font-size="13" fill="#ffffff" text-anchor="middle">Correct slowly — less 12/24hr</text><rect x="740" y="130" width="320" height="220" fill="#10b981" rx="12"/><text x="900" y="170" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Calcium</text><text x="900" y="205" font-size="16" fill="#ffffff" text-anchor="middle">Normal: 8.5 to 10.5 mg/dL</text><text x="900" y="240" font-size="14" fill="#ffffff" text-anchor="middle">Hypo: tetany, Chvostek</text><text x="900" y="262" font-size="14" fill="#ffffff" text-anchor="middle">Hyper: stones, bones, groans</text><text x="900" y="295" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">MUSCLE ELECTROLYTE</text><text x="900" y="325" font-size="13" fill="#ffffff" text-anchor="middle">Bind to albumin, check ionized</text><rect x="60" y="380" width="320" height="220" fill="#8b5cf6" rx="12"/><text x="220" y="420" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Magnesium</text><text x="220" y="455" font-size="16" fill="#ffffff" text-anchor="middle">Normal: 1.5 to 2.5 mEq/L</text><text x="220" y="490" font-size="14" fill="#ffffff" text-anchor="middle">Hyper: loss of reflexes</text><text x="220" y="512" font-size="14" fill="#ffffff" text-anchor="middle">Hypo: torsades, seizures</text><text x="220" y="545" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">SEDATIVE ELECTROLYTE</text><text x="220" y="575" font-size="13" fill="#ffffff" text-anchor="middle">Calcium gluconate antidote</text><rect x="400" y="380" width="320" height="220" fill="#f59e0b" rx="12"/><text x="560" y="420" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Phosphorus</text><text x="560" y="455" font-size="16" fill="#1a1a2e" text-anchor="middle">Normal: 2.5 to 4.5 mg/dL</text><text x="560" y="490" font-size="14" fill="#1a1a2e" text-anchor="middle">Inverse to Ca: high Ca, low Phos</text><text x="560" y="512" font-size="14" fill="#1a1a2e" text-anchor="middle">Refeeding syndrome risk</text><text x="560" y="545" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">ENERGY ELECTROLYTE</text><text x="560" y="575" font-size="13" fill="#1a1a2e" text-anchor="middle">ATP requires phosphate</text><rect x="740" y="380" width="320" height="220" fill="#ec4899" rx="12"/><text x="900" y="420" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Chloride and HCO3</text><text x="900" y="455" font-size="16" fill="#ffffff" text-anchor="middle">Cl: 95-105, HCO3: 22-26</text><text x="900" y="490" font-size="14" fill="#ffffff" text-anchor="middle">Inverse relationship</text><text x="900" y="512" font-size="14" fill="#ffffff" text-anchor="middle">Anion gap calculation</text><text x="900" y="545" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">ACID-BASE BUFFERS</text><text x="900" y="575" font-size="13" fill="#ffffff" text-anchor="middle">Drives ABG interpretation</text><text x="550" y="650" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">IV Fluid Tonicity</text><rect x="60" y="680" width="320" height="200" fill="#10b981" rx="10"/><text x="220" y="720" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">ISOTONIC</text><text x="220" y="755" font-size="14" fill="#ffffff" text-anchor="middle">0.9 percent NaCl, LR, D5W</text><text x="220" y="785" font-size="14" fill="#ffffff" text-anchor="middle">Stays in ECF</text><text x="220" y="810" font-size="14" fill="#ffffff" text-anchor="middle">Volume expansion</text><text x="220" y="840" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">Use: shock, dehydration</text><rect x="400" y="680" width="320" height="200" fill="#0ea5e9" rx="10"/><text x="560" y="720" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">HYPOTONIC</text><text x="560" y="755" font-size="14" fill="#ffffff" text-anchor="middle">0.45 percent NaCl, D5 quarter NS</text><text x="560" y="785" font-size="14" fill="#ffffff" text-anchor="middle">Moves INTO cells</text><text x="560" y="810" font-size="14" fill="#ffffff" text-anchor="middle">Cellular hydration</text><text x="560" y="840" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">Risk: cerebral edema</text><rect x="740" y="680" width="320" height="200" fill="#ef4444" rx="10"/><text x="900" y="720" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">HYPERTONIC</text><text x="900" y="755" font-size="14" fill="#ffffff" text-anchor="middle">3 percent NaCl, D10W, D5LR</text><text x="900" y="785" font-size="14" fill="#ffffff" text-anchor="middle">Pulls water OUT of cells</text><text x="900" y="810" font-size="14" fill="#ffffff" text-anchor="middle">Treats severe hypoNa</text><text x="900" y="840" font-size="14" fill="#ffd700" text-anchor="middle" font-weight="bold">Risk: pontine myelinolysis</text><rect x="60" y="910" width="1000" height="150" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="560" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">The Three Things That Will Stop a Heart</text><text x="100" y="985" font-size="16" fill="#ffffff">Hyperkalemia greater 6.5 with wide QRS — give calcium gluconate FIRST</text><text x="100" y="1015" font-size="16" fill="#ffffff">Severe hypocalcemia less 7 with laryngospasm — IV calcium gluconate</text><text x="100" y="1045" font-size="16" fill="#ffffff">Hypermagnesemia greater 4 with respiratory depression — calcium gluconate antidote</text></svg>`,
+          caption: "The big six electrolytes with normal ranges, ECG signs, and IV fluid tonicity guide."
+        }
+      },
+      {
+        type: "concept",
+        title: "ABG Interpretation: TIC-TAC-TOE Method",
+        content: `An arterial blood gas tells you four things: pH, PaCO2, HCO3, and PaO2. Master the **TIC-TAC-TOE method** and you can read any ABG in under 60 seconds.
+
+**Step 1 — Look at the pH:**
+- Normal: 7.35-7.45
+- <7.35 = **acidosis**
+- >7.45 = **alkalosis**
+- 7.35-7.40 with abnormal CO2/HCO3 = **compensated acidosis**
+- 7.40-7.45 with abnormal CO2/HCO3 = **compensated alkalosis**
+
+**Step 2 — Look at PaCO2 (the RESPIRATORY component):**
+- Normal: 35-45 mmHg
+- >45 = **respiratory acidosis** (CO2 retention — lungs failing to blow it off)
+- <35 = **respiratory alkalosis** (hyperventilation — blowing off too much)
+
+**Remember**: CO2 + H2O ↔ H2CO3 ↔ H+ + HCO3-. More CO2 = more H+ = more acid. Lungs fix things FAST (minutes).
+
+**Step 3 — Look at HCO3 (the METABOLIC component):**
+- Normal: 22-26 mEq/L
+- <22 = **metabolic acidosis** (losing bicarb or gaining acid)
+- >26 = **metabolic alkalosis** (gaining bicarb or losing acid)
+
+Kidneys fix things SLOWLY (hours to days).
+
+**The TIC-TAC-TOE grid:**
+
+|  | Acidosis (<7.35) | Normal (7.35-7.45) | Alkalosis (>7.45) |
+|---|---|---|---|
+| **PaCO2 ↑ (>45)** | Resp Acidosis | Compensation | (impossible primary) |
+| **PaCO2 ↓ (<35)** | Compensation | (impossible primary) | Resp Alkalosis |
+| **HCO3 ↓ (<22)** | Metabolic Acid | Compensation | (impossible primary) |
+| **HCO3 ↑ (>26)** | (impossible primary) | Compensation | Metabolic Alkalosis |
+
+**Step 4 — Decide if compensated, partial, or uncompensated:**
+- **Uncompensated**: pH abnormal, only ONE of CO2 or HCO3 abnormal (other normal)
+- **Partially compensated**: pH abnormal, BOTH CO2 and HCO3 abnormal (other moving to fix it)
+- **Fully compensated**: pH normal but borderline, BOTH CO2 and HCO3 abnormal
+
+**Common causes — memorize the patterns:**
+
+**Respiratory acidosis** (high CO2, low pH):
+- COPD exacerbation, opioid overdose, sleep apnea, neuromuscular weakness, pneumonia, ARDS
+- The patient is **NOT breathing enough**
+
+**Respiratory alkalosis** (low CO2, high pH):
+- Anxiety/hyperventilation, PE, fever, salicylate toxicity (early), pregnancy, high altitude
+- The patient is **breathing too much**
+
+**Metabolic acidosis** (low HCO3, low pH):
+- **MUDPILES** mnemonic for anion-gap acidosis: Methanol, Uremia, DKA, Propylene glycol, Isoniazid, Lactic acidosis (sepsis, shock), Ethylene glycol, Salicylates
+- Non-gap: diarrhea, renal tubular acidosis
+
+**Metabolic alkalosis** (high HCO3, high pH):
+- Vomiting/NG suction (loses HCl), diuretics, hypokalemia, Cushing's, milk-alkali syndrome
+
+**Practice ABG**:
+pH 7.28, PaCO2 52, HCO3 24, PaO2 78
+- pH low = acidosis
+- CO2 high = respiratory acid
+- HCO3 normal = no compensation
+- Answer: **uncompensated respiratory acidosis**. Think COPD exacerbation, opioid OD.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">TIC-TAC-TOE ABG Method</text><text x="550" y="90" font-size="16" fill="#888" text-anchor="middle">Look at pH, then which side CO2 and HCO3 fall on</text><rect x="200" y="130" width="700" height="80" fill="#0ea5e9" rx="10"/><text x="550" y="170" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 1: pH determines acidosis or alkalosis</text><text x="550" y="195" font-size="15" fill="#ffffff" text-anchor="middle">less 7.35 = acidosis  |  greater 7.45 = alkalosis</text><line x1="280" y1="240" x2="180" y2="280" stroke="#ffd700" stroke-width="3"/><line x1="820" y1="240" x2="920" y2="280" stroke="#ffd700" stroke-width="3"/><rect x="60" y="290" width="480" height="280" fill="#ef4444" rx="10"/><text x="300" y="325" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">ACIDOSIS (pH less 7.35)</text><line x1="80" y1="340" x2="520" y2="340" stroke="#ffffff" stroke-width="1"/><text x="80" y="375" font-size="16" fill="#ffffff" font-weight="bold">Respiratory Acidosis</text><text x="80" y="400" font-size="14" fill="#ffffff">PaCO2 greater 45</text><text x="80" y="425" font-size="13" fill="#ffd700">COPD, opioid OD, sleep apnea</text><text x="80" y="450" font-size="13" fill="#ffd700">Pneumonia, ARDS, muscle weakness</text><text x="80" y="490" font-size="16" fill="#ffffff" font-weight="bold">Metabolic Acidosis</text><text x="80" y="515" font-size="14" fill="#ffffff">HCO3 less 22</text><text x="80" y="540" font-size="13" fill="#ffd700">MUDPILES: DKA, lactic acid, uremia</text><text x="80" y="560" font-size="13" fill="#ffd700">Diarrhea, sepsis, salicylates</text><rect x="560" y="290" width="480" height="280" fill="#10b981" rx="10"/><text x="800" y="325" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">ALKALOSIS (pH greater 7.45)</text><line x1="580" y1="340" x2="1020" y2="340" stroke="#ffffff" stroke-width="1"/><text x="580" y="375" font-size="16" fill="#ffffff" font-weight="bold">Respiratory Alkalosis</text><text x="580" y="400" font-size="14" fill="#ffffff">PaCO2 less 35</text><text x="580" y="425" font-size="13" fill="#ffd700">Anxiety, hyperventilation, PE</text><text x="580" y="450" font-size="13" fill="#ffd700">Fever, salicylates early, altitude</text><text x="580" y="490" font-size="16" fill="#ffffff" font-weight="bold">Metabolic Alkalosis</text><text x="580" y="515" font-size="14" fill="#ffffff">HCO3 greater 26</text><text x="580" y="540" font-size="13" fill="#ffd700">Vomiting, NG suction, diuretics</text><text x="580" y="560" font-size="13" fill="#ffd700">Hypokalemia, antacids</text><text x="550" y="630" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Compensation Rules</text><rect x="60" y="660" width="320" height="200" fill="#6366f1" rx="10"/><text x="220" y="700" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Uncompensated</text><text x="220" y="735" font-size="14" fill="#ffffff" text-anchor="middle">pH abnormal</text><text x="220" y="760" font-size="14" fill="#ffffff" text-anchor="middle">Only ONE of CO2/HCO3</text><text x="220" y="785" font-size="14" fill="#ffffff" text-anchor="middle">abnormal</text><text x="220" y="820" font-size="14" fill="#ffd700" text-anchor="middle">Other system not yet</text><text x="220" y="840" font-size="14" fill="#ffd700" text-anchor="middle">compensating</text><rect x="400" y="660" width="320" height="200" fill="#f59e0b" rx="10"/><text x="560" y="700" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Partially Compensated</text><text x="560" y="735" font-size="14" fill="#1a1a2e" text-anchor="middle">pH still abnormal</text><text x="560" y="760" font-size="14" fill="#1a1a2e" text-anchor="middle">BOTH CO2 and HCO3</text><text x="560" y="785" font-size="14" fill="#1a1a2e" text-anchor="middle">abnormal in opposite directions</text><text x="560" y="820" font-size="14" fill="#1a1a2e" text-anchor="middle">Other system trying</text><text x="560" y="840" font-size="14" fill="#1a1a2e" text-anchor="middle">but not enough</text><rect x="740" y="660" width="300" height="200" fill="#8b5cf6" rx="10"/><text x="890" y="700" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Fully Compensated</text><text x="890" y="735" font-size="14" fill="#ffffff" text-anchor="middle">pH NORMAL</text><text x="890" y="760" font-size="14" fill="#ffffff" text-anchor="middle">but at the edge</text><text x="890" y="785" font-size="14" fill="#ffffff" text-anchor="middle">BOTH CO2 and HCO3</text><text x="890" y="820" font-size="14" fill="#ffd700" text-anchor="middle">Look at pH side</text><text x="890" y="840" font-size="14" fill="#ffd700" text-anchor="middle">to find primary</text><rect x="60" y="890" width="980" height="170" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="925" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Practice Examples</text><text x="100" y="960" font-size="14" fill="#ffffff" font-weight="bold">Example 1: pH 7.28, CO2 60, HCO3 24</text><text x="100" y="980" font-size="13" fill="#10b981">= UNCOMPENSATED RESPIRATORY ACIDOSIS (think COPD exacerbation)</text><text x="100" y="1005" font-size="14" fill="#ffffff" font-weight="bold">Example 2: pH 7.32, CO2 28, HCO3 14</text><text x="100" y="1025" font-size="13" fill="#10b981">= PARTIALLY COMPENSATED METABOLIC ACIDOSIS (think DKA, lactic acidosis)</text><text x="100" y="1050" font-size="13" fill="#888">Lungs compensating by blowing off CO2 — Kussmaul respirations</text></svg>`,
+          caption: "TIC-TAC-TOE method: pH first, then CO2 (respiratory) and HCO3 (metabolic) sides."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Hyperkalemia on Morning Labs",
+        content: `**Patient**: Mr. Davis, 64, ESRD on hemodialysis (last dialyzed 3 days ago). Admitted yesterday for "missed dialysis, fatigue."
+
+**Morning labs (0600)**:
+- K+ 6.8 mEq/L (critical — call lab confirmed)
+- Na+ 138
+- HCO3- 18
+- BUN 92, Cr 8.4
+- Ca2+ 7.8 (low — ESRD patients often hypocalcemic)
+- Mg2+ 2.6
+- pH 7.30, PaCO2 32, HCO3 18
+
+**ABG interpretation**: pH low (acidosis), HCO3 low (metabolic), CO2 low (lungs compensating with Kussmaul respirations). **Partially compensated metabolic acidosis** — expected in ESRD because failing kidneys cannot excrete H+.
+
+**Your assessment (0615)**:
+- HR 58, BP 148/88, RR 22, T 36.8
+- ECG monitor shows **peaked, tented T waves** in precordial leads
+- Patient reports muscle weakness, "numbness around lips"
+- No chest pain, alert and oriented
+- 0+ deep tendon reflexes (hyporeflexia)
+
+**Why this is an EMERGENCY**:
+Hyperkalemia >6.5 with ECG changes can progress to ventricular fibrillation or asystole within minutes. The ECG progression:
+1. K+ 5.5-6.5: **Peaked T waves** (tall, narrow, symmetric)
+2. K+ 6.5-7.5: **PR prolongation, P wave flattening**
+3. K+ >7.5: **Widening QRS** (sine wave pattern)
+4. K+ >9: **Asystole, V-fib**
+
+**Treatment priorities — the 3-step approach:**
+
+**Step 1: STABILIZE THE MEMBRANE (cardioprotection — does NOT lower K+!)**
+- **Calcium gluconate 1-2g IV** over 2-10 min
+- Onset: immediate
+- Duration: 30-60 min
+- Antagonizes K+ effect on cardiac myocytes
+- **MUST be given FIRST if ECG changes present**
+- Caution if patient on digoxin (causes "stone heart")
+
+**Step 2: SHIFT K+ INTO CELLS (temporary)**
+- **Insulin (regular) 10 units IV + D50W 25g** (prevents hypoglycemia)
+- Onset: 15-30 min, duration: 4-6 hours
+- **Sodium bicarbonate 50 mEq IV** if acidotic
+- **Beta-agonist (albuterol nebulizer 10-20mg)** — high dose
+- These work but K+ will come back out — you need step 3
+
+**Step 3: REMOVE K+ FROM BODY (definitive)**
+- **Hemodialysis** — definitive treatment for ESRD patient
+- **Loop diuretic (furosemide IV)** if kidneys still work
+- **Patiromer or sodium zirconium** (oral binders, slower)
+- ~~Kayexalate (sodium polystyrene sulfonate)~~ — falling out of favor, risk of bowel necrosis
+
+**Mr. Davis's plan**:
+1. Calcium gluconate 2g IV NOW
+2. Insulin 10 units + D50 ampule
+3. Sodium bicarbonate (he's acidotic)
+4. **Emergent hemodialysis** — call nephrology
+5. Continuous cardiac monitoring, repeat K+ in 30 min
+6. Hold any K+-containing fluids, K-sparing diuretics, ACE inhibitors, ARBs
+
+**Two hours post-treatment**:
+- K+ 5.4 (down from 6.8)
+- ECG: T waves less peaked
+- Patient transferred for emergent dialysis
+
+**NCLEX teaching points**:
+- **Peaked T waves** on a patient with renal disease = check K+ STAT
+- **Calcium gluconate is ALWAYS step 1** if ECG changes are present
+- **Insulin + dextrose shifts K+ but does NOT remove it** — temporary fix only
+- **Never give IV potassium faster than 10 mEq/hr** on a regular floor (20 mEq/hr in ICU)
+- **Never give IV potassium push** — fatal arrhythmia`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Hyperkalemia ECG Progression</text><text x="550" y="95" font-size="16" fill="#888" text-anchor="middle">Each ECG change is a step closer to arrest</text><rect x="60" y="130" width="240" height="200" fill="#10b981" rx="10"/><text x="180" y="170" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">K+ 5.5 to 6.5</text><polyline points="80,250 100,250 110,235 120,265 130,250 145,250 155,230 165,270 175,250 195,250 205,230 215,270 225,250 245,250 255,235 265,265 275,250" fill="none" stroke="#ffd700" stroke-width="2"/><text x="180" y="305" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Peaked T waves</text><text x="180" y="322" font-size="11" fill="#888" text-anchor="middle">Tall, narrow, symmetric</text><rect x="320" y="130" width="240" height="200" fill="#f59e0b" rx="10"/><text x="440" y="170" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">K+ 6.5 to 7.5</text><polyline points="340,250 360,250 365,243 370,257 375,250 395,250 405,225 415,275 425,250 445,250 455,225 465,275 475,250" fill="none" stroke="#1a1a2e" stroke-width="2"/><text x="440" y="305" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="bold">P flattens, PR prolongs</text><text x="440" y="322" font-size="11" fill="#1a1a2e" text-anchor="middle">Conduction slowing</text><rect x="580" y="130" width="240" height="200" fill="#ef4444" rx="10"/><text x="700" y="170" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">K+ greater 7.5</text><polyline points="600,250 620,250 630,220 660,280 680,220 710,280 730,225 760,275 780,250" fill="none" stroke="#ffd700" stroke-width="2"/><text x="700" y="305" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Wide QRS, sine wave</text><text x="700" y="322" font-size="11" fill="#ffffff" text-anchor="middle">Pre-arrest pattern</text><rect x="840" y="130" width="200" height="200" fill="#8b5cf6" rx="10"/><text x="940" y="170" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">K+ greater 9</text><line x1="860" y1="250" x2="1020" y2="250" stroke="#ffd700" stroke-width="2"/><text x="940" y="305" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">ASYSTOLE</text><text x="940" y="322" font-size="11" fill="#ffffff" text-anchor="middle">VF or arrest</text><text x="550" y="380" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">3-Step Treatment Approach</text><rect x="60" y="410" width="320" height="220" fill="#0ea5e9" rx="10"/><text x="220" y="450" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 1: STABILIZE</text><text x="220" y="480" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">Calcium Gluconate</text><text x="220" y="505" font-size="13" fill="#ffffff" text-anchor="middle">1 to 2g IV over 2-10 min</text><text x="220" y="528" font-size="13" fill="#ffffff" text-anchor="middle">Onset: immediate</text><text x="220" y="551" font-size="13" fill="#ffffff" text-anchor="middle">Cardioprotection only</text><text x="220" y="585" font-size="13" fill="#ffd700" text-anchor="middle">Does NOT lower K+!</text><text x="220" y="608" font-size="12" fill="#ffffff" text-anchor="middle">Always FIRST if ECG changes</text><rect x="400" y="410" width="320" height="220" fill="#10b981" rx="10"/><text x="560" y="450" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 2: SHIFT</text><text x="560" y="480" font-size="15" fill="#ffd700" text-anchor="middle" font-weight="bold">Insulin 10u + D50</text><text x="560" y="505" font-size="13" fill="#ffffff" text-anchor="middle">Sodium bicarb (if acidotic)</text><text x="560" y="528" font-size="13" fill="#ffffff" text-anchor="middle">Albuterol nebulizer 10-20mg</text><text x="560" y="558" font-size="13" fill="#ffffff" text-anchor="middle">Onset: 15-30 min</text><text x="560" y="585" font-size="13" fill="#ffd700" text-anchor="middle">Temporary — 4 to 6 hr</text><text x="560" y="608" font-size="12" fill="#ffffff" text-anchor="middle">K+ comes back out</text><rect x="740" y="410" width="300" height="220" fill="#ef4444" rx="10"/><text x="890" y="450" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 3: REMOVE</text><text x="890" y="480" font-size="15" fill="#ffd700" text-anchor="middle" font-weight="bold">Hemodialysis</text><text x="890" y="505" font-size="13" fill="#ffffff" text-anchor="middle">Definitive for ESRD</text><text x="890" y="528" font-size="13" fill="#ffffff" text-anchor="middle">Loop diuretic if kidneys work</text><text x="890" y="558" font-size="13" fill="#ffffff" text-anchor="middle">Oral binders for chronic</text><text x="890" y="585" font-size="13" fill="#ffd700" text-anchor="middle">Avoid Kayexalate</text><text x="890" y="608" font-size="12" fill="#ffffff" text-anchor="middle">Bowel necrosis risk</text><text x="550" y="680" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Mr. Davis: Trended Values</text><rect x="60" y="710" width="980" height="180" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="100" y="745" font-size="16" fill="#ffffff" font-weight="bold">Time</text><text x="280" y="745" font-size="16" fill="#ffffff" font-weight="bold">K+</text><text x="450" y="745" font-size="16" fill="#ffffff" font-weight="bold">ECG</text><text x="750" y="745" font-size="16" fill="#ffffff" font-weight="bold">Action</text><line x1="80" y1="755" x2="1020" y2="755" stroke="#888" stroke-width="1"/><text x="100" y="785" font-size="14" fill="#ffffff">0600</text><text x="280" y="785" font-size="14" fill="#ef4444">6.8</text><text x="450" y="785" font-size="14" fill="#ef4444">Peaked T waves</text><text x="750" y="785" font-size="14" fill="#10b981">Calcium gluconate STAT</text><text x="100" y="815" font-size="14" fill="#ffffff">0615</text><text x="280" y="815" font-size="14" fill="#ef4444">6.8</text><text x="450" y="815" font-size="14" fill="#f59e0b">T waves slightly less peaked</text><text x="750" y="815" font-size="14" fill="#10b981">Insulin + D50, bicarb</text><text x="100" y="845" font-size="14" fill="#ffffff">0700</text><text x="280" y="845" font-size="14" fill="#f59e0b">6.1</text><text x="450" y="845" font-size="14" fill="#f59e0b">PR intervals normalizing</text><text x="750" y="845" font-size="14" fill="#10b981">Prep for HD</text><text x="100" y="875" font-size="14" fill="#ffffff">0830</text><text x="280" y="875" font-size="14" fill="#10b981">5.4</text><text x="450" y="875" font-size="14" fill="#10b981">Normal T waves</text><text x="750" y="875" font-size="14" fill="#10b981">Dialysis in progress</text><rect x="60" y="910" width="980" height="150" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="945" font-size="20" fill="#ef4444" text-anchor="middle" font-weight="bold">Hyperkalemia Don'ts</text><text x="100" y="985" font-size="15" fill="#ffffff">Do NOT give IV potassium push — fatal arrhythmia</text><text x="100" y="1010" font-size="15" fill="#ffffff">Do NOT give greater 10 mEq/hr K+ on floor (greater 20 in ICU only)</text><text x="100" y="1035" font-size="15" fill="#ffffff">Do NOT skip calcium if ECG changes present — start there</text></svg>`,
+          caption: "Hyperkalemia ECG progression and 3-step treatment: stabilize, shift, remove."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "An ABG shows: pH 7.30, PaCO2 28 mmHg, HCO3 14 mEq/L, PaO2 96 mmHg. Which clinical scenario is MOST consistent with these results?",
+        options: [
+          { text: "A patient with COPD exacerbation and CO2 retention", correct: false },
+          { text: "An anxious patient hyperventilating with carpopedal spasm", correct: false },
+          { text: "A patient with diabetic ketoacidosis and Kussmaul respirations", correct: true },
+          { text: "A patient with persistent vomiting from gastroenteritis", correct: false }
+        ],
+        explanation: "The ABG shows partially compensated metabolic acidosis: pH low (acidosis), HCO3 low (metabolic acid — the primary problem), and CO2 low (lungs compensating by blowing off CO2 to raise pH). This is the classic pattern of DKA with Kussmaul respirations — deep, rapid breathing that compensates for the ketoacid load. COPD exacerbation causes respiratory ACIDOSIS (high CO2). Hyperventilation from anxiety causes respiratory ALKALOSIS (low CO2, high pH). Persistent vomiting causes metabolic ALKALOSIS (high HCO3 from losing HCl). Remember the MUDPILES mnemonic for anion-gap metabolic acidosis: Methanol, Uremia, DKA, Propylene glycol, Isoniazid, Lactic acidosis, Ethylene glycol, Salicylates.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">ABG Walkthrough</text><rect x="60" y="100" width="980" height="100" fill="#0ea5e9" rx="10"/><text x="550" y="140" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">pH 7.30  |  PaCO2 28  |  HCO3 14  |  PaO2 96</text><text x="550" y="175" font-size="16" fill="#ffffff" text-anchor="middle">What is the primary disorder?</text><rect x="60" y="230" width="320" height="180" fill="#ef4444" rx="10"/><text x="220" y="270" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Step 1: pH</text><text x="220" y="305" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">7.30</text><text x="220" y="335" font-size="16" fill="#ffffff" text-anchor="middle">less 7.35</text><text x="220" y="365" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">ACIDOSIS</text><rect x="400" y="230" width="320" height="180" fill="#10b981" rx="10"/><text x="560" y="270" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Step 2: PaCO2</text><text x="560" y="305" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">28</text><text x="560" y="335" font-size="16" fill="#ffffff" text-anchor="middle">less 35</text><text x="560" y="365" font-size="16" fill="#ffffff" text-anchor="middle">would cause ALKALOSIS</text><text x="560" y="390" font-size="14" fill="#ffd700" text-anchor="middle">NOT the primary — compensating</text><rect x="740" y="230" width="300" height="180" fill="#8b5cf6" rx="10"/><text x="890" y="270" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Step 3: HCO3</text><text x="890" y="305" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">14</text><text x="890" y="335" font-size="16" fill="#ffffff" text-anchor="middle">less 22</text><text x="890" y="365" font-size="16" fill="#ffffff" text-anchor="middle">causes ACIDOSIS</text><text x="890" y="390" font-size="14" fill="#ffd700" text-anchor="middle">THIS IS THE PRIMARY</text><rect x="60" y="440" width="980" height="120" fill="#f59e0b" rx="10"/><text x="550" y="480" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Answer: Partially Compensated METABOLIC ACIDOSIS</text><text x="550" y="510" font-size="15" fill="#1a1a2e" text-anchor="middle">pH abnormal (still acidotic) + both CO2 and HCO3 abnormal</text><text x="550" y="535" font-size="15" fill="#1a1a2e" text-anchor="middle">CO2 trying to compensate by hyperventilation (Kussmaul)</text><text x="550" y="610" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">MUDPILES — Causes of Anion-Gap Metabolic Acidosis</text><rect x="60" y="640" width="240" height="80" fill="#6366f1" rx="8"/><text x="180" y="675" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">M</text><text x="180" y="700" font-size="14" fill="#ffffff" text-anchor="middle">Methanol</text><rect x="320" y="640" width="240" height="80" fill="#6366f1" rx="8"/><text x="440" y="675" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">U</text><text x="440" y="700" font-size="14" fill="#ffffff" text-anchor="middle">Uremia (ESRD)</text><rect x="580" y="640" width="240" height="80" fill="#6366f1" rx="8"/><text x="700" y="675" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">D</text><text x="700" y="700" font-size="14" fill="#ffffff" text-anchor="middle">DKA</text><rect x="840" y="640" width="200" height="80" fill="#6366f1" rx="8"/><text x="940" y="675" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">P</text><text x="940" y="700" font-size="14" fill="#ffffff" text-anchor="middle">Propylene glycol</text><rect x="60" y="730" width="240" height="80" fill="#6366f1" rx="8"/><text x="180" y="765" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">I</text><text x="180" y="790" font-size="14" fill="#ffffff" text-anchor="middle">Isoniazid (INH)</text><rect x="320" y="730" width="240" height="80" fill="#6366f1" rx="8"/><text x="440" y="765" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">L</text><text x="440" y="790" font-size="14" fill="#ffffff" text-anchor="middle">Lactic acidosis (sepsis)</text><rect x="580" y="730" width="240" height="80" fill="#6366f1" rx="8"/><text x="700" y="765" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">E</text><text x="700" y="790" font-size="14" fill="#ffffff" text-anchor="middle">Ethylene glycol</text><rect x="840" y="730" width="200" height="80" fill="#6366f1" rx="8"/><text x="940" y="765" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">S</text><text x="940" y="790" font-size="14" fill="#ffffff" text-anchor="middle">Salicylates</text><rect x="60" y="840" width="980" height="220" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="550" y="875" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Why DKA Fits Best</text><text x="100" y="915" font-size="15" fill="#ffffff">- Hyperglycemia drives osmotic diuresis = dehydration</text><text x="100" y="940" font-size="15" fill="#ffffff">- Ketoacids (acetoacetate, beta-hydroxybutyrate) flood the blood</text><text x="100" y="965" font-size="15" fill="#ffffff">- Anion gap widens (Na minus Cl plus HCO3, normal less 12)</text><text x="100" y="990" font-size="15" fill="#ffffff">- Lungs compensate with deep rapid Kussmaul respirations to blow off CO2</text><text x="100" y="1015" font-size="15" fill="#ffffff">- Patient breath smells fruity (acetone)</text><text x="100" y="1045" font-size="15" fill="#ffd700">- Classic pH 7.30, CO2 28, HCO3 14 picture</text></svg>`,
+          caption: "ABG walkthrough: identifying primary metabolic acidosis with respiratory compensation in DKA."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Patterns: Match Symptoms to the Lab",
+        content: `**The skill that wins the NCLEX: pattern recognition.** A question stem describes a patient. Before you read the options, you should already know which electrolyte and which direction.
+
+**Pattern 1: New confusion in an elderly patient on thiazides** → think **hyponatremia**
+- Thiazides cause volume depletion + ADH activation
+- Na+ <125 = confusion, lethargy
+- Na+ <120 = seizures, coma
+- **Correct SLOWLY**: no faster than 8-12 mEq/L in 24 hours
+- Risk of **osmotic demyelination syndrome (central pontine myelinolysis)** if corrected too fast
+
+**Pattern 2: Muscle cramps + weakness + ECG U waves** → think **hypokalemia**
+- Loop diuretics, vomiting, diarrhea, alkalosis (K+ shifts INTO cells)
+- ECG: **flattened T waves, U waves after T, ST depression**
+- Treat: IV K+ slowly (max 10 mEq/hr on floor) OR oral
+- **Hypokalemia potentiates digoxin toxicity** — watch for nausea, halos, dysrhythmias
+
+**Pattern 3: Tetany, perioral numbness, Chvostek/Trousseau** → **hypocalcemia**
+- Post-thyroidectomy (accidental parathyroid removal)
+- Acute pancreatitis (Ca+ binds to free fatty acids)
+- Massive transfusion (citrate binds Ca+)
+- ECG: prolonged QT → torsades risk
+- Treat: IV calcium gluconate (preferred) or calcium chloride (central line)
+- **Trousseau sign**: BP cuff inflated above SBP for 3 min → carpal spasm
+- **Chvostek sign**: tap facial nerve → facial twitch
+
+**Pattern 4: "Stones, bones, groans, psychiatric overtones"** → **hypercalcemia**
+- Kidney stones, bone pain (osteoporosis), constipation/abdominal pain, depression
+- Causes: hyperparathyroidism, malignancy (bone mets), thiazides, immobility
+- ECG: shortened QT
+- Treat: IV NS hydration (200-300 mL/hr), bisphosphonates, calcitonin
+
+**Pattern 5: Loss of deep tendon reflexes + respiratory depression** → **hypermagnesemia**
+- Eclampsia patient on Mg+ drip — overdose risk
+- Renal failure patients
+- Antidote: **IV calcium gluconate**
+- Monitor patellar reflex hourly on Mg+ drip — if absent, hold drip
+
+**Pattern 6: Vomiting/NG suction patient** → metabolic alkalosis + hypokalemia + hypochloremia
+- Losing HCl in vomitus = alkalosis
+- Losing K+ in vomitus = hypokalemia
+- Losing Cl- = hypochloremia
+- Volume depleted → secondary hyperaldosteronism → more K+ loss
+
+**Pattern 7: SIADH (Syndrome of Inappropriate ADH)**
+- Causes: small cell lung CA, head injury, SSRIs, pneumonia
+- Too much ADH = water retention = **dilutional hyponatremia**
+- Concentrated urine, dilute serum (Na+ low)
+- Treat: **fluid restriction** (800-1000 mL/day), hypertonic saline for severe
+- Vaptans (tolvaptan) — V2 receptor antagonists
+
+**Pattern 8: Diabetes Insipidus (DI)** — opposite of SIADH
+- Too little ADH (central) or kidneys don't respond (nephrogenic)
+- Massive dilute urine, concentrated serum (**hypernatremia**)
+- Polydipsia, polyuria (>3L/day)
+- Treat central DI: **desmopressin (DDAVP)**
+- Treat nephrogenic DI: thiazides paradoxically help
+
+**Always remember the rate limits:**
+- Sodium correction: **≤12 mEq/L in 24 hours** (faster causes osmotic demyelination)
+- Potassium IV: **≤10 mEq/hr floor**, **≤20 mEq/hr ICU with cardiac monitor**
+- Calcium IV: slowly, watch for bradycardia
+- Magnesium IV: slow, watch reflexes
+
+**The nurse's job**: trend, anticipate, intervene early. A pH of 7.30 today and 7.25 tonight is more concerning than a stable 7.28 — direction matters as much as the number.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Symptom-to-Electrolyte Pattern Match</text><rect x="60" y="100" width="500" height="160" fill="#ef4444" rx="10"/><text x="80" y="135" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="240" y="135" font-size="18" fill="#ffd700" font-weight="bold">New confusion, elderly, thiazides</text><text x="80" y="170" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="240" y="170" font-size="18" fill="#ffffff" font-weight="bold">HYPONATREMIA</text><text x="80" y="205" font-size="14" fill="#ffffff">Na less 125 confusion, less 120 seizures</text><text x="80" y="230" font-size="14" fill="#ffd700">Correct max 12 mEq per 24 hours</text><text x="80" y="253" font-size="13" fill="#ffd700">Faster equals pontine myelinolysis</text><rect x="580" y="100" width="460" height="160" fill="#0ea5e9" rx="10"/><text x="600" y="135" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="760" y="135" font-size="18" fill="#ffd700" font-weight="bold">Muscle cramps, U waves</text><text x="600" y="170" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="760" y="170" font-size="18" fill="#ffffff" font-weight="bold">HYPOKALEMIA</text><text x="600" y="205" font-size="14" fill="#ffffff">Loops, vomiting, diarrhea, alkalosis</text><text x="600" y="230" font-size="14" fill="#ffd700">IV K+ max 10 mEq/hr floor</text><text x="600" y="253" font-size="13" fill="#ffd700">Potentiates dig toxicity</text><rect x="60" y="280" width="500" height="160" fill="#10b981" rx="10"/><text x="80" y="315" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="240" y="315" font-size="18" fill="#ffd700" font-weight="bold">Tetany, Chvostek, Trousseau</text><text x="80" y="350" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="240" y="350" font-size="18" fill="#ffffff" font-weight="bold">HYPOCALCEMIA</text><text x="80" y="385" font-size="14" fill="#ffffff">Post-thyroidectomy, pancreatitis</text><text x="80" y="410" font-size="14" fill="#ffd700">Long QT, torsades risk</text><text x="80" y="433" font-size="13" fill="#ffd700">IV calcium gluconate</text><rect x="580" y="280" width="460" height="160" fill="#f59e0b" rx="10"/><text x="600" y="315" font-size="18" fill="#1a1a2e" font-weight="bold">SYMPTOM:</text><text x="760" y="315" font-size="18" fill="#1a1a2e" font-weight="bold">Stones, bones, groans</text><text x="600" y="350" font-size="18" fill="#1a1a2e" font-weight="bold">PATTERN:</text><text x="760" y="350" font-size="18" fill="#1a1a2e" font-weight="bold">HYPERCALCEMIA</text><text x="600" y="385" font-size="14" fill="#1a1a2e">Malignancy, hyperPTH, immobility</text><text x="600" y="410" font-size="14" fill="#1a1a2e">Short QT</text><text x="600" y="433" font-size="13" fill="#1a1a2e">IV NS, bisphosphonates, calcitonin</text><rect x="60" y="460" width="500" height="160" fill="#8b5cf6" rx="10"/><text x="80" y="495" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="240" y="495" font-size="18" fill="#ffd700" font-weight="bold">Lost reflexes, resp depression</text><text x="80" y="530" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="240" y="530" font-size="18" fill="#ffffff" font-weight="bold">HYPERMAGNESEMIA</text><text x="80" y="565" font-size="14" fill="#ffffff">Eclampsia Mg drip, renal failure</text><text x="80" y="590" font-size="14" fill="#ffd700">Antidote: calcium gluconate</text><text x="80" y="613" font-size="13" fill="#ffd700">Hold drip if patellar reflex absent</text><rect x="580" y="460" width="460" height="160" fill="#ec4899" rx="10"/><text x="600" y="495" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="760" y="495" font-size="18" fill="#ffd700" font-weight="bold">Vomiting, NG suction, alkalosis</text><text x="600" y="530" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="760" y="530" font-size="18" fill="#ffffff" font-weight="bold">HYPO K, CL, ALKALOSIS</text><text x="600" y="565" font-size="14" fill="#ffffff">Lose HCl, K, Cl in vomitus</text><text x="600" y="590" font-size="14" fill="#ffd700">Replace K+ AND Cl- IV NS</text><text x="600" y="613" font-size="13" fill="#ffd700">Hyperaldosteronism worsens K loss</text><rect x="60" y="640" width="500" height="160" fill="#6366f1" rx="10"/><text x="80" y="675" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="240" y="675" font-size="18" fill="#ffd700" font-weight="bold">Low Na, concentrated urine</text><text x="80" y="710" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="240" y="710" font-size="18" fill="#ffffff" font-weight="bold">SIADH</text><text x="80" y="745" font-size="14" fill="#ffffff">Small cell lung CA, head injury</text><text x="80" y="770" font-size="14" fill="#ffd700">Fluid restriction 800-1000 mL day</text><text x="80" y="793" font-size="13" fill="#ffd700">Vaptans for severe cases</text><rect x="580" y="640" width="460" height="160" fill="#0ea5e9" rx="10"/><text x="600" y="675" font-size="18" fill="#ffffff" font-weight="bold">SYMPTOM:</text><text x="760" y="675" font-size="18" fill="#ffd700" font-weight="bold">High Na, dilute urine</text><text x="600" y="710" font-size="18" fill="#ffffff" font-weight="bold">PATTERN:</text><text x="760" y="710" font-size="18" fill="#ffffff" font-weight="bold">DIABETES INSIPIDUS</text><text x="600" y="745" font-size="14" fill="#ffffff">UOP greater 3L day, polydipsia</text><text x="600" y="770" font-size="14" fill="#ffd700">Central: DDAVP</text><text x="600" y="793" font-size="13" fill="#ffd700">Nephrogenic: thiazide paradox</text><rect x="60" y="820" width="980" height="240" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="10"/><text x="550" y="855" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Rate Limits That Save Lives</text><text x="100" y="895" font-size="16" fill="#ffffff" font-weight="bold">Sodium:</text><text x="280" y="895" font-size="16" fill="#ffffff">Max 12 mEq/L per 24 hours</text><text x="700" y="895" font-size="14" fill="#888">faster equals demyelination</text><text x="100" y="925" font-size="16" fill="#ffffff" font-weight="bold">IV Potassium:</text><text x="280" y="925" font-size="16" fill="#ffffff">10 mEq/hr floor, 20 in ICU</text><text x="700" y="925" font-size="14" fill="#888">NEVER IV push</text><text x="100" y="955" font-size="16" fill="#ffffff" font-weight="bold">IV Calcium:</text><text x="280" y="955" font-size="16" fill="#ffffff">Slow push, watch for bradycardia</text><text x="700" y="955" font-size="14" fill="#888">Gluconate or chloride</text><text x="100" y="985" font-size="16" fill="#ffffff" font-weight="bold">IV Magnesium:</text><text x="280" y="985" font-size="16" fill="#ffffff">1-2g over 1 hour</text><text x="700" y="985" font-size="14" fill="#888">Check reflexes hourly</text><text x="100" y="1025" font-size="16" fill="#10b981" font-weight="bold">Direction matters more than the absolute number — trend the labs!</text></svg>`,
+          caption: "Symptom-to-electrolyte pattern matching for rapid NCLEX recognition."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-6",
+    title: "Endocrine Pathophysiology: DKA, HHS, Thyroid Storm, Addisonian Crisis",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When Hormones Go Critical",
+        content: `Endocrine emergencies are **time-sensitive killers** that frequently appear on NCLEX-RN. The big four:
+
+1. **Diabetic Ketoacidosis (DKA)** — Type 1 diabetes, ketones, severe acidosis
+2. **Hyperosmolar Hyperglycemic State (HHS)** — Type 2 diabetes, NO ketones, massive hyperosmolality
+3. **Thyroid Storm** — life-threatening hyperthyroidism
+4. **Addisonian Crisis** — acute adrenal insufficiency
+5. **SIADH vs DI** — opposite ADH problems
+
+Each has a **distinctive lab and clinical signature** that NCLEX questions test relentlessly.
+
+**Why these emergencies are deadly:**
+- Mortality of untreated DKA: 5-10% (higher in elderly)
+- Mortality of HHS: 10-20% (often elderly, sicker baseline)
+- Mortality of thyroid storm: 20-30%
+- Mortality of untreated Addisonian crisis: up to 50%
+
+**The shared NCLEX skill**: you must recognize the pattern, prioritize the correct first action, and avoid the common pitfalls (giving insulin before potassium is replaced in DKA, giving levothyroxine to a stable Addisonian patient first instead of hydrocortisone).
+
+**Key glucose numbers**:
+- Normal fasting: 70-99 mg/dL
+- Prediabetes fasting: 100-125
+- Diabetes fasting: ≥126 or random ≥200 with symptoms
+- HbA1c: <5.7% normal, 5.7-6.4% prediabetes, ≥6.5% diabetes
+- **DKA glucose**: usually 250-600 mg/dL
+- **HHS glucose**: usually 600-1200 mg/dL (much higher than DKA)
+
+**Key thyroid numbers**:
+- TSH normal: 0.4-4.0 mIU/L
+- TSH **HIGH = HYPOthyroid** (pituitary screaming for more hormone)
+- TSH **LOW = HYPERthyroid** (pituitary suppressed by excess hormone)
+- Free T4 normal: 0.8-1.8 ng/dL
+
+**Key cortisol numbers**:
+- AM cortisol normal: 5-25 mcg/dL
+- Addison's: low cortisol, **high ACTH** (pituitary trying to stimulate dead adrenals)
+- Cushing's: high cortisol
+
+This lesson teaches you to **distinguish DKA from HHS in 30 seconds**, recognize **thyroid storm before cardiac collapse**, and treat an **Addisonian crisis** before you take a coffee break.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">The Four Endocrine Emergencies</text><rect x="60" y="100" width="490" height="240" fill="#ef4444" rx="12"/><text x="305" y="140" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">DKA</text><text x="305" y="170" font-size="14" fill="#ffffff" text-anchor="middle">Diabetic Ketoacidosis</text><line x1="80" y1="185" x2="530" y2="185" stroke="#ffffff" stroke-width="1"/><text x="80" y="215" font-size="14" fill="#ffffff" font-weight="bold">Population:</text><text x="200" y="215" font-size="14" fill="#ffffff">Type 1 DM (mostly)</text><text x="80" y="240" font-size="14" fill="#ffffff" font-weight="bold">Glucose:</text><text x="200" y="240" font-size="14" fill="#ffffff">250-600</text><text x="80" y="265" font-size="14" fill="#ffffff" font-weight="bold">Ketones:</text><text x="200" y="265" font-size="14" fill="#ffd700">YES (large)</text><text x="80" y="290" font-size="14" fill="#ffffff" font-weight="bold">pH:</text><text x="200" y="290" font-size="14" fill="#ffd700">less 7.30 acidosis</text><text x="80" y="315" font-size="14" fill="#ffffff" font-weight="bold">Onset:</text><text x="200" y="315" font-size="14" fill="#ffffff">Hours to 1-2 days</text><rect x="570" y="100" width="490" height="240" fill="#f59e0b" rx="12"/><text x="815" y="140" font-size="24" fill="#1a1a2e" text-anchor="middle" font-weight="bold">HHS</text><text x="815" y="170" font-size="14" fill="#1a1a2e" text-anchor="middle">Hyperosmolar Hyperglycemic State</text><line x1="590" y1="185" x2="1040" y2="185" stroke="#1a1a2e" stroke-width="1"/><text x="590" y="215" font-size="14" fill="#1a1a2e" font-weight="bold">Population:</text><text x="710" y="215" font-size="14" fill="#1a1a2e">Type 2 DM, elderly</text><text x="590" y="240" font-size="14" fill="#1a1a2e" font-weight="bold">Glucose:</text><text x="710" y="240" font-size="14" fill="#1a1a2e">600-1200+</text><text x="590" y="265" font-size="14" fill="#1a1a2e" font-weight="bold">Ketones:</text><text x="710" y="265" font-size="14" fill="#1a1a2e">NONE/minimal</text><text x="590" y="290" font-size="14" fill="#1a1a2e" font-weight="bold">pH:</text><text x="710" y="290" font-size="14" fill="#1a1a2e">Normal or slight acid</text><text x="590" y="315" font-size="14" fill="#1a1a2e" font-weight="bold">Onset:</text><text x="710" y="315" font-size="14" fill="#1a1a2e">Days to weeks</text><rect x="60" y="360" width="490" height="240" fill="#8b5cf6" rx="12"/><text x="305" y="400" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Thyroid Storm</text><text x="305" y="430" font-size="14" fill="#ffffff" text-anchor="middle">Decompensated hyperthyroidism</text><line x1="80" y1="445" x2="530" y2="445" stroke="#ffffff" stroke-width="1"/><text x="80" y="475" font-size="14" fill="#ffffff" font-weight="bold">Trigger:</text><text x="200" y="475" font-size="14" fill="#ffffff">Surgery, infection, iodine</text><text x="80" y="500" font-size="14" fill="#ffffff" font-weight="bold">Symptoms:</text><text x="200" y="500" font-size="14" fill="#ffffff">T greater 39, HR greater 140</text><text x="80" y="525" font-size="14" fill="#ffffff" font-weight="bold">Labs:</text><text x="200" y="525" font-size="14" fill="#ffd700">TSH less 0.01, T4 very high</text><text x="80" y="550" font-size="14" fill="#ffffff" font-weight="bold">Mortality:</text><text x="200" y="550" font-size="14" fill="#ffd700">20-30 percent</text><text x="80" y="575" font-size="14" fill="#ffffff" font-weight="bold">Treatment:</text><text x="200" y="575" font-size="14" fill="#ffffff">PTU, beta-blocker, steroids</text><rect x="570" y="360" width="490" height="240" fill="#10b981" rx="12"/><text x="815" y="400" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Addisonian Crisis</text><text x="815" y="430" font-size="14" fill="#ffffff" text-anchor="middle">Acute adrenal insufficiency</text><line x1="590" y1="445" x2="1040" y2="445" stroke="#ffffff" stroke-width="1"/><text x="590" y="475" font-size="14" fill="#ffffff" font-weight="bold">Trigger:</text><text x="710" y="475" font-size="14" fill="#ffffff">Steroid stop, stress, sepsis</text><text x="590" y="500" font-size="14" fill="#ffffff" font-weight="bold">Symptoms:</text><text x="710" y="500" font-size="14" fill="#ffffff">Hypotension, shock</text><text x="590" y="525" font-size="14" fill="#ffffff" font-weight="bold">Labs:</text><text x="710" y="525" font-size="14" fill="#ffd700">Low Na, high K, low glucose</text><text x="590" y="550" font-size="14" fill="#ffffff" font-weight="bold">Cortisol:</text><text x="710" y="550" font-size="14" fill="#ffd700">very low, ACTH high</text><text x="590" y="575" font-size="14" fill="#ffffff" font-weight="bold">Treatment:</text><text x="710" y="575" font-size="14" fill="#ffffff">Hydrocortisone STAT</text><text x="550" y="650" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">SIADH vs DI — Opposite ADH Problems</text><rect x="60" y="680" width="490" height="200" fill="#6366f1" rx="10"/><text x="305" y="715" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">SIADH</text><text x="305" y="740" font-size="14" fill="#ffffff" text-anchor="middle">TOO MUCH ADH</text><text x="80" y="775" font-size="14" fill="#ffffff">Water retention</text><text x="80" y="800" font-size="14" fill="#ffd700">Low serum Na (dilutional)</text><text x="80" y="825" font-size="14" fill="#ffffff">Concentrated urine</text><text x="80" y="850" font-size="14" fill="#ffffff">Causes: lung CA, head injury, SSRIs</text><text x="80" y="872" font-size="14" fill="#10b981">Treat: fluid restrict 800-1000 mL</text><rect x="570" y="680" width="490" height="200" fill="#0ea5e9" rx="10"/><text x="815" y="715" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">DIABETES INSIPIDUS</text><text x="815" y="740" font-size="14" fill="#ffffff" text-anchor="middle">TOO LITTLE ADH</text><text x="590" y="775" font-size="14" fill="#ffffff">Massive water loss</text><text x="590" y="800" font-size="14" fill="#ffd700">High serum Na</text><text x="590" y="825" font-size="14" fill="#ffffff">Very dilute urine (specific gravity less 1.005)</text><text x="590" y="850" font-size="14" fill="#ffffff">UOP greater 3L day, polydipsia</text><text x="590" y="872" font-size="14" fill="#10b981">Treat: DDAVP (central type)</text><rect x="60" y="910" width="1000" height="150" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="10"/><text x="560" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">Memory Anchors</text><text x="100" y="985" font-size="15" fill="#ffffff">DKA equals Type 1, ketones, acidosis  vs  HHS equals Type 2, no ketones, ultra-high glucose</text><text x="100" y="1010" font-size="15" fill="#ffffff">Thyroid storm equals fever plus tachycardia plus AMS plus thyroid history</text><text x="100" y="1035" font-size="15" fill="#ffffff">Addisonian crisis equals shock plus low Na plus high K plus hypoglycemia — give STEROIDS FAST</text></svg>`,
+          caption: "The four endocrine emergencies side-by-side with key distinguishing labs and treatments."
+        }
+      },
+      {
+        type: "concept",
+        title: "DKA vs HHS: The Lab Showdown",
+        content: `These two hyperglycemic emergencies look similar at first glance but require subtly different management. Knowing the differences is a **guaranteed NCLEX question**.
+
+**DKA Pathophysiology**:
+1. **Absolute insulin deficiency** (Type 1 DM, missed insulin, new diagnosis, illness)
+2. Without insulin, cells starve → liver makes glucose (gluconeogenesis) → glucose skyrockets
+3. Body burns fat for energy → produces **ketones** (acetoacetate, beta-hydroxybutyrate, acetone)
+4. Ketones are ACIDS → **anion-gap metabolic acidosis**
+5. Glucose >180 spills into urine → **osmotic diuresis** → severe dehydration
+6. Loss of K+ in urine despite **measured hyperkalemia** initially (K+ shifts OUT of cells due to acidosis and insulin lack)
+
+**HHS Pathophysiology**:
+1. **Relative insulin deficiency** (Type 2 DM has SOME insulin) — enough to prevent ketosis, NOT enough to control glucose
+2. Often triggered by infection, MI, stroke, missed medications, dehydration in elderly
+3. Glucose climbs much higher (600-1200) over days/weeks
+4. Massive osmotic diuresis → **severe dehydration** (8-12 L deficit common)
+5. Serum osmolality >320 mOsm/kg → cellular dehydration → **altered mental status, coma**
+6. **NO significant ketones, NO acidosis** (because some insulin is suppressing fat breakdown)
+
+**Side-by-side comparison**:
+
+| Feature | DKA | HHS |
+|---------|-----|-----|
+| Glucose | 250-600 | 600-1200+ |
+| pH | <7.30 | Normal (>7.30) |
+| HCO3 | <18 | Normal |
+| Ketones | Large | None/trace |
+| Anion gap | Wide (>12) | Normal/slightly wide |
+| Osmolality | <320 | >320 |
+| Mental status | Variable | Often comatose |
+| Onset | Hours-days | Days-weeks |
+| Population | Type 1 DM | Type 2 DM, elderly |
+| Dehydration | 3-6 L | 8-12 L |
+| Mortality | 5-10% | 10-20% |
+
+**Treatment principles (similar but with critical differences):**
+
+**Step 1: FLUIDS FIRST**
+- Both: **0.9% NS at 15-20 mL/kg/hr** first hour, then 0.45% NS once volume restored
+- DKA: ~3-6 L total deficit
+- HHS: **8-12 L deficit** — even more aggressive fluid resuscitation
+
+**Step 2: POTASSIUM REPLACEMENT (do this BEFORE insulin if K+ <3.3!)**
+- Despite hyperkalemia on labs, **total body K+ is depleted**
+- Insulin drives K+ INTO cells → can cause **fatal hypokalemia**
+- **Rule**: If K+ <3.3 → REPLACE K+ FIRST, HOLD INSULIN
+- If K+ 3.3-5.2 → Start insulin AND add K+ to fluids (20-40 mEq/L)
+- If K+ >5.2 → Start insulin alone, monitor K+ q2h
+
+**Step 3: INSULIN INFUSION**
+- **Regular insulin 0.1 units/kg/hr IV drip**
+- Goal: lower glucose by **50-75 mg/dL per hour** (NOT faster — risk of cerebral edema, especially pediatric DKA)
+- DKA: insulin needed to stop ketogenesis
+- HHS: lower-dose insulin may suffice
+
+**Step 4: DEXTROSE WHEN GLUCOSE <200-250**
+- Switch fluids to **D5 ½ NS** when glucose hits 200 (DKA) or 250-300 (HHS)
+- Continue insulin to clear ketones (DKA) — DO NOT STOP insulin too early
+- DKA resolution requires **closure of anion gap AND HCO3 >18**, not just normal glucose
+
+**Step 5: TREAT THE TRIGGER**
+- Infection, MI, missed meds, new diagnosis education
+
+**Pediatric DKA pearl**: Cerebral edema is the leading cause of DKA death in kids. Slow fluids, slow glucose correction. Sudden mental status change = lower head of bed, mannitol, ICU.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">DKA vs HHS Comparison</text><rect x="60" y="100" width="490" height="500" fill="#ef4444" rx="12"/><text x="305" y="140" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="bold">DKA</text><text x="305" y="170" font-size="14" fill="#ffffff" text-anchor="middle">Type 1 DM, absolute insulin deficiency</text><line x1="80" y1="185" x2="530" y2="185" stroke="#ffffff" stroke-width="1"/><text x="80" y="220" font-size="16" fill="#ffd700" font-weight="bold">Glucose:</text><text x="280" y="220" font-size="16" fill="#ffffff">250-600 mg/dL</text><text x="80" y="255" font-size="16" fill="#ffd700" font-weight="bold">pH:</text><text x="280" y="255" font-size="16" fill="#ffffff">less 7.30 (acidosis)</text><text x="80" y="290" font-size="16" fill="#ffd700" font-weight="bold">HCO3:</text><text x="280" y="290" font-size="16" fill="#ffffff">less 18</text><text x="80" y="325" font-size="16" fill="#ffd700" font-weight="bold">Ketones:</text><text x="280" y="325" font-size="16" fill="#ffffff">LARGE (urine and serum)</text><text x="80" y="360" font-size="16" fill="#ffd700" font-weight="bold">Anion gap:</text><text x="280" y="360" font-size="16" fill="#ffffff">greater 12 (wide)</text><text x="80" y="395" font-size="16" fill="#ffd700" font-weight="bold">Osmolality:</text><text x="280" y="395" font-size="16" fill="#ffffff">less 320</text><text x="80" y="430" font-size="16" fill="#ffd700" font-weight="bold">Dehydration:</text><text x="280" y="430" font-size="16" fill="#ffffff">3-6 L deficit</text><text x="80" y="465" font-size="16" fill="#ffd700" font-weight="bold">Onset:</text><text x="280" y="465" font-size="16" fill="#ffffff">Hours to 2 days</text><text x="80" y="500" font-size="16" fill="#ffd700" font-weight="bold">Hallmarks:</text><text x="80" y="525" font-size="14" fill="#ffffff">Kussmaul respirations</text><text x="80" y="548" font-size="14" fill="#ffffff">Fruity breath (acetone)</text><text x="80" y="571" font-size="14" fill="#ffffff">Abdominal pain</text><text x="80" y="594" font-size="14" fill="#ffffff">Polyuria, polydipsia</text><rect x="570" y="100" width="490" height="500" fill="#f59e0b" rx="12"/><text x="815" y="140" font-size="26" fill="#1a1a2e" text-anchor="middle" font-weight="bold">HHS</text><text x="815" y="170" font-size="14" fill="#1a1a2e" text-anchor="middle">Type 2 DM, relative insulin deficiency</text><line x1="590" y1="185" x2="1040" y2="185" stroke="#1a1a2e" stroke-width="1"/><text x="590" y="220" font-size="16" fill="#1a1a2e" font-weight="bold">Glucose:</text><text x="790" y="220" font-size="16" fill="#1a1a2e">600-1200+ mg/dL</text><text x="590" y="255" font-size="16" fill="#1a1a2e" font-weight="bold">pH:</text><text x="790" y="255" font-size="16" fill="#1a1a2e">Normal (≥7.30)</text><text x="590" y="290" font-size="16" fill="#1a1a2e" font-weight="bold">HCO3:</text><text x="790" y="290" font-size="16" fill="#1a1a2e">Normal (≥18)</text><text x="590" y="325" font-size="16" fill="#1a1a2e" font-weight="bold">Ketones:</text><text x="790" y="325" font-size="16" fill="#1a1a2e">NONE or trace</text><text x="590" y="360" font-size="16" fill="#1a1a2e" font-weight="bold">Anion gap:</text><text x="790" y="360" font-size="16" fill="#1a1a2e">Normal</text><text x="590" y="395" font-size="16" fill="#1a1a2e" font-weight="bold">Osmolality:</text><text x="790" y="395" font-size="16" fill="#1a1a2e">greater 320 mOsm/kg</text><text x="590" y="430" font-size="16" fill="#1a1a2e" font-weight="bold">Dehydration:</text><text x="790" y="430" font-size="16" fill="#1a1a2e">8-12 L deficit (massive)</text><text x="590" y="465" font-size="16" fill="#1a1a2e" font-weight="bold">Onset:</text><text x="790" y="465" font-size="16" fill="#1a1a2e">Days to weeks</text><text x="590" y="500" font-size="16" fill="#1a1a2e" font-weight="bold">Hallmarks:</text><text x="590" y="525" font-size="14" fill="#1a1a2e">Profound dehydration</text><text x="590" y="548" font-size="14" fill="#1a1a2e">Coma or stupor</text><text x="590" y="571" font-size="14" fill="#1a1a2e">Often elderly, post-stroke MI</text><text x="590" y="594" font-size="14" fill="#1a1a2e">Subtle onset, often missed</text><text x="550" y="650" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Shared Treatment: F-I-K (in order)</text><rect x="60" y="680" width="320" height="180" fill="#0ea5e9" rx="10"/><text x="220" y="720" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">F: FLUIDS</text><text x="220" y="755" font-size="14" fill="#ffffff" text-anchor="middle">0.9 percent NS bolus</text><text x="220" y="780" font-size="14" fill="#ffffff" text-anchor="middle">15-20 mL/kg first hour</text><text x="220" y="805" font-size="14" fill="#ffffff" text-anchor="middle">Then 0.45 percent NS</text><text x="220" y="835" font-size="14" fill="#ffd700" text-anchor="middle">D5 added when glucose less 200</text><rect x="400" y="680" width="320" height="180" fill="#8b5cf6" rx="10"/><text x="560" y="720" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">I: INSULIN</text><text x="560" y="755" font-size="14" fill="#ffffff" text-anchor="middle">Regular IV infusion</text><text x="560" y="780" font-size="14" fill="#ffffff" text-anchor="middle">0.1 units/kg/hr</text><text x="560" y="805" font-size="14" fill="#ffffff" text-anchor="middle">Drop glucose 50-75/hr</text><text x="560" y="835" font-size="14" fill="#ffd700" text-anchor="middle">DO NOT start if K less 3.3</text><rect x="740" y="680" width="300" height="180" fill="#10b981" rx="10"/><text x="890" y="720" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">K: POTASSIUM</text><text x="890" y="755" font-size="14" fill="#ffffff" text-anchor="middle">Total body K depleted</text><text x="890" y="780" font-size="14" fill="#ffffff" text-anchor="middle">despite measured value</text><text x="890" y="805" font-size="14" fill="#ffffff" text-anchor="middle">Add 20-40 mEq/L</text><text x="890" y="835" font-size="14" fill="#ffd700" text-anchor="middle">to fluids if K 3.3-5.2</text><rect x="60" y="890" width="980" height="180" fill="#1a1a2e" stroke="#ef4444" stroke-width="3" rx="10"/><text x="550" y="925" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="bold">CRITICAL RULES</text><text x="100" y="965" font-size="16" fill="#ffffff">If K+ less 3.3 — HOLD INSULIN, REPLACE K+ first (insulin will worsen hypokalemia)</text><text x="100" y="995" font-size="16" fill="#ffffff">DKA resolution = closed anion gap AND HCO3 greater 18, NOT just normal glucose</text><text x="100" y="1025" font-size="16" fill="#ffffff">Pediatric DKA — cerebral edema risk; slow glucose correction less 50/hour</text><text x="100" y="1055" font-size="16" fill="#ffffff">Continue IV insulin overlap with subQ for 1-2 hours to prevent rebound</text></svg>`,
+          caption: "DKA vs HHS labs and the shared F-I-K treatment with critical safety rules."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Thyroid Storm Post-Op",
+        content: `**Patient**: Ms. Chen, 32, post-op day 1 from emergency appendectomy. PMH: Graves' disease (poorly compliant with methimazole), depression. Surgery was uncomplicated.
+
+**0400 — Night nurse hand-off**:
+- T 38.2, HR 118, BP 142/72, RR 22, SpO2 96%
+- Anxious, "warm" but otherwise OK
+- Routine pain meds, normal labs from yesterday
+
+**0700 — Your initial assessment**:
+- T **40.1°C (104.2°F)**, HR **162**, BP 158/68, RR 28, SpO2 94%
+- Drenched in sweat, **markedly anxious, tremulous, agitated**
+- Diarrhea x3 since 0500
+- Diffuse goiter palpated, mild exophthalmos
+- Tachycardia: irregular — new atrial fibrillation
+- Disoriented to date, follows commands but restless
+
+**STAT labs**:
+- TSH **<0.01** mIU/L (suppressed)
+- Free T4 **6.8 ng/dL** (normal 0.8-1.8)
+- Free T3 elevated
+- Na+ 138, K+ 3.6
+- Glucose 145
+- WBC 11,000
+- Calcium 9.2
+
+**What's happening**:
+This is **thyroid storm** — life-threatening decompensated hyperthyroidism. The Burch-Wartofsky score (used to diagnose) factors:
+- Temp ≥40°C: +30 points
+- HR ≥140: +25 points
+- CHF/Afib: +20 points
+- Agitation/delirium: +20 points
+- GI symptoms (diarrhea): +10 points
+- Precipitating event (surgery): +10 points
+- Total >45 = thyroid storm
+
+**Common triggers** (surgery is a classic — NCLEX loves this):
+- Surgery, infection, trauma
+- Iodine load (contrast, amiodarone)
+- Abrupt cessation of antithyroid meds
+- DKA, MI, stroke, pregnancy/labor
+
+**Treatment priorities** — the "**Block, Block, Block**" approach:
+
+**Step 1: BLOCK NEW HORMONE SYNTHESIS**
+- **Propylthiouracil (PTU) 500-1000mg loading** then 250mg q4h PO or NG
+- OR Methimazole 60-80mg/day (PTU preferred in storm because also blocks T4→T3 conversion)
+
+**Step 2: BLOCK HORMONE RELEASE (give 1 HOUR AFTER PTU)**
+- **Iodine** (Lugol's, SSKI, or IV sodium iodide)
+- **Critical: give AFTER PTU**, or iodine fuels new hormone synthesis (Jod-Basedow effect)
+
+**Step 3: BLOCK PERIPHERAL CONVERSION T4→T3**
+- **Hydrocortisone 100mg IV q8h** (also covers possible adrenal insufficiency)
+- High-dose PTU itself blocks conversion
+- Beta-blocker also helps
+
+**Step 4: BLOCK SYMPATHETIC OVERDRIVE**
+- **Propranolol 60-80mg PO q4h** or **esmolol IV drip**
+- Treats tachycardia, tremor, anxiety, also blocks T4→T3 conversion
+- Caution in CHF — use cautiously
+
+**Supportive care**:
+- **Cooling**: cool IV fluids, cooling blanket, acetaminophen (NOT aspirin — displaces T4 from binding protein, makes it worse)
+- IV fluids for dehydration from sweating and diarrhea
+- Treat trigger (surgery in this case — manage post-op pain, infection)
+- ICU admission, continuous cardiac monitoring
+- Anticipate atrial fibrillation rate control
+
+**Things you should NOT do**:
+- Don't give aspirin for fever (displaces thyroid hormone)
+- Don't give iodine before PTU
+- Don't give levothyroxine (opposite problem!)
+- Don't delay treatment waiting for labs
+
+**4 hours post-treatment**:
+- T 38.4, HR 105 (sinus), BP 130/74, RR 18
+- More alert, no longer agitated
+- Continuous propranolol, PTU, hydrocortisone, iodine
+
+**NCLEX pearls**:
+- **Thyroid storm fever responds to acetaminophen, NOT aspirin**
+- **PTU before iodine** — order matters
+- **Beta-blocker is symptomatic** but lifesaving for cardiac protection
+- **Steroids cover possible coexisting adrenal insufficiency** (rare but lethal)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Thyroid Storm: Block, Block, Block</text><text x="550" y="95" font-size="16" fill="#888" text-anchor="middle">Each step blocks a different point in the hormone cascade</text><rect x="60" y="130" width="980" height="80" fill="#ef4444" rx="10"/><text x="550" y="170" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Patient: T 40.1, HR 162 afib, agitated, post-op</text><text x="550" y="195" font-size="14" fill="#ffffff" text-anchor="middle">TSH less 0.01, Free T4 6.8 (greater 3.5x normal)</text><rect x="60" y="240" width="480" height="240" fill="#8b5cf6" rx="10"/><text x="300" y="280" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">BLOCK 1: Synthesis</text><text x="80" y="315" font-size="16" fill="#ffffff" font-weight="bold">Drug: Propylthiouracil (PTU)</text><text x="80" y="345" font-size="14" fill="#ffffff">Loading: 500-1000 mg PO or NG</text><text x="80" y="370" font-size="14" fill="#ffffff">Maintenance: 250 mg q4h</text><text x="80" y="400" font-size="14" fill="#ffffff" font-weight="bold">Why PTU in storm:</text><text x="80" y="425" font-size="13" fill="#ffd700">Blocks NEW T3/T4 production</text><text x="80" y="445" font-size="13" fill="#ffd700">ALSO blocks T4 to T3 conversion</text><text x="80" y="465" font-size="13" fill="#ffd700">Onset within 1 hour</text><rect x="560" y="240" width="480" height="240" fill="#0ea5e9" rx="10"/><text x="800" y="280" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">BLOCK 2: Release</text><text x="580" y="315" font-size="16" fill="#ffffff" font-weight="bold">Drug: Iodine (SSKI, Lugol)</text><text x="580" y="345" font-size="14" fill="#ffffff">Give 1 HOUR AFTER PTU</text><text x="580" y="370" font-size="14" fill="#ffffff">Blocks stored hormone release</text><text x="580" y="400" font-size="14" fill="#ffffff" font-weight="bold">CRITICAL ORDER:</text><text x="580" y="425" font-size="13" fill="#ffd700">PTU first, iodine second</text><text x="580" y="445" font-size="13" fill="#ffd700">Reverse equals fuels new hormone</text><text x="580" y="465" font-size="13" fill="#ffd700">Jod-Basedow effect</text><rect x="60" y="500" width="480" height="240" fill="#10b981" rx="10"/><text x="300" y="540" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">BLOCK 3: Conversion</text><text x="80" y="575" font-size="16" fill="#ffffff" font-weight="bold">Drug: Hydrocortisone 100mg IV q8h</text><text x="80" y="605" font-size="14" fill="#ffffff">Blocks T4 to T3 conversion</text><text x="80" y="630" font-size="14" fill="#ffffff">Also covers adrenal insufficiency</text><text x="80" y="660" font-size="14" fill="#ffffff" font-weight="bold">Why steroids in hyperthyroid?</text><text x="80" y="685" font-size="13" fill="#ffd700">Storm patients can have</text><text x="80" y="705" font-size="13" fill="#ffd700">coexisting Addison's</text><text x="80" y="725" font-size="13" fill="#ffd700">Empiric coverage prevents crash</text><rect x="560" y="500" width="480" height="240" fill="#f59e0b" rx="10"/><text x="800" y="540" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">BLOCK 4: Sympathetic</text><text x="580" y="575" font-size="16" fill="#1a1a2e" font-weight="bold">Drug: Propranolol 60-80mg q4h</text><text x="580" y="605" font-size="14" fill="#1a1a2e">or Esmolol IV drip</text><text x="580" y="630" font-size="14" fill="#1a1a2e">Treats HR, BP, tremor, anxiety</text><text x="580" y="660" font-size="14" fill="#1a1a2e" font-weight="bold">Bonus effects:</text><text x="580" y="685" font-size="13" fill="#1a1a2e">Blocks T4 to T3 too</text><text x="580" y="705" font-size="13" fill="#1a1a2e">Caution in CHF</text><text x="580" y="725" font-size="13" fill="#1a1a2e">Switch to atenolol if reactive airway</text><text x="550" y="790" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Supportive Care and Pitfalls</text><rect x="60" y="820" width="490" height="160" fill="#10b981" rx="10" opacity="0.85"/><text x="305" y="855" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">DO</text><text x="80" y="885" font-size="14" fill="#ffffff">Use acetaminophen for fever</text><text x="80" y="910" font-size="14" fill="#ffffff">Cool IV fluids, cooling blanket</text><text x="80" y="935" font-size="14" fill="#ffffff">Treat the trigger (infection, sx)</text><text x="80" y="960" font-size="14" fill="#ffffff">ICU monitoring, cardiac telemetry</text><rect x="560" y="820" width="490" height="160" fill="#ef4444" rx="10" opacity="0.9"/><text x="805" y="855" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">DO NOT</text><text x="580" y="885" font-size="14" fill="#ffffff">Give aspirin (displaces T4)</text><text x="580" y="910" font-size="14" fill="#ffffff">Give iodine before PTU</text><text x="580" y="935" font-size="14" fill="#ffffff">Give levothyroxine (opposite!)</text><text x="580" y="960" font-size="14" fill="#ffffff">Delay treatment waiting for labs</text><rect x="60" y="1000" width="980" height="60" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/><text x="550" y="1040" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">Order: PTU → Iodine (1hr later) → Hydrocortisone → Beta-blocker → Cooling</text></svg>`,
+          caption: "Thyroid storm 4-block treatment with critical order and don'ts."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A 58-year-old with Type 2 diabetes is admitted with confusion. Glucose 942 mg/dL, pH 7.36, HCO3 22, urine ketones negative, serum osmolality 348 mOsm/kg, Na+ 154, K+ 5.4. The nurse should anticipate that the FIRST priority intervention is:",
+        options: [
+          { text: "Regular insulin 10 units IV push, then continuous insulin infusion at 0.1 units/kg/hr", correct: false },
+          { text: "Rapid infusion of 0.9% normal saline at 15-20 mL/kg over the first hour", correct: true },
+          { text: "Sodium bicarbonate IV to correct the underlying acidosis", correct: false },
+          { text: "Potassium chloride 40 mEq added to maintenance fluids", correct: false }
+        ],
+        explanation: "This patient has HHS (hyperosmolar hyperglycemic state), not DKA — clues: Type 2 DM, glucose >600, NO ketones, normal pH, osmolality >320, hypernatremia. HHS patients typically have 8-12 L of fluid deficit due to prolonged osmotic diuresis. AGGRESSIVE fluid resuscitation with 0.9% NS at 15-20 mL/kg in the first hour is the PRIORITY. Fluids alone can lower glucose 25-50% before insulin is even started. Insulin should NOT be the first action because: (1) without volume restoration, insulin drives glucose into cells but worsens intravascular dehydration and can cause vascular collapse; (2) insulin is not given as IV push for DKA/HHS — only as a continuous infusion; (3) K+ may drop precipitously with insulin. Sodium bicarbonate is not needed (pH is normal). KCl is not the first step because K+ is already 5.4 — replacement comes after fluids and assessment of trending K+.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">DKA or HHS? Decision Tree</text><rect x="350" y="100" width="400" height="80" fill="#0ea5e9" rx="10"/><text x="550" y="135" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Hyperglycemic patient</text><text x="550" y="160" font-size="14" fill="#ffffff" text-anchor="middle">Glucose, ABG, ketones, osm</text><line x1="550" y1="190" x2="550" y2="220" stroke="#ffd700" stroke-width="3" marker-end="url(#ar2)"/><defs><marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ffd700"/></marker></defs><rect x="350" y="230" width="400" height="60" fill="#f59e0b" rx="10"/><text x="550" y="270" font-size="18" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Are ketones present?</text><line x1="450" y1="300" x2="280" y2="350" stroke="#ffd700" stroke-width="3" marker-end="url(#ar2)"/><text x="320" y="335" font-size="14" fill="#ffd700">YES</text><line x1="650" y1="300" x2="820" y2="350" stroke="#ffd700" stroke-width="3" marker-end="url(#ar2)"/><text x="730" y="335" font-size="14" fill="#ffd700">NO</text><rect x="60" y="360" width="440" height="180" fill="#ef4444" rx="10"/><text x="280" y="400" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">DKA</text><text x="80" y="435" font-size="14" fill="#ffffff">Glucose 250-600</text><text x="80" y="460" font-size="14" fill="#ffffff">pH less 7.30</text><text x="80" y="485" font-size="14" fill="#ffffff">HCO3 less 18</text><text x="80" y="510" font-size="14" fill="#ffffff">Anion gap greater 12</text><text x="80" y="535" font-size="14" fill="#ffd700">Type 1 DM, younger</text><rect x="600" y="360" width="440" height="180" fill="#f59e0b" rx="10"/><text x="820" y="400" font-size="22" fill="#1a1a2e" text-anchor="middle" font-weight="bold">HHS</text><text x="620" y="435" font-size="14" fill="#1a1a2e">Glucose 600-1200+</text><text x="620" y="460" font-size="14" fill="#1a1a2e">pH normal</text><text x="620" y="485" font-size="14" fill="#1a1a2e">HCO3 normal</text><text x="620" y="510" font-size="14" fill="#1a1a2e">Osmolality greater 320</text><text x="620" y="535" font-size="14" fill="#1a1a2e" font-weight="bold">Type 2 DM, elderly</text><text x="550" y="600" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">This Patient: HHS</text><rect x="60" y="630" width="980" height="120" fill="#1a1a2e" stroke="#f59e0b" stroke-width="3" rx="10"/><text x="100" y="665" font-size="15" fill="#ffffff">Type 2 DM check</text><text x="380" y="665" font-size="15" fill="#ffffff">Glucose 942 check</text><text x="660" y="665" font-size="15" fill="#ffffff">No ketones check</text><text x="100" y="695" font-size="15" fill="#ffffff">pH 7.36 normal check</text><text x="380" y="695" font-size="15" fill="#ffffff">Osm 348 check</text><text x="660" y="695" font-size="15" fill="#ffffff">Hypernatremia check</text><text x="550" y="730" font-size="18" fill="#10b981" text-anchor="middle" font-weight="bold">All consistent with HHS — massive dehydration 8-12 L deficit</text><text x="550" y="790" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Why FLUIDS FIRST?</text><rect x="60" y="820" width="480" height="180" fill="#10b981" rx="10"/><text x="300" y="855" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Fluids Alone Help</text><text x="80" y="890" font-size="14" fill="#ffffff">Restore intravascular volume</text><text x="80" y="915" font-size="14" fill="#ffffff">Improve renal perfusion</text><text x="80" y="940" font-size="14" fill="#ffffff">Promote glucose excretion</text><text x="80" y="965" font-size="14" fill="#ffd700">Lower glucose 25-50 percent</text><text x="80" y="985" font-size="14" fill="#ffd700">BEFORE insulin even starts</text><rect x="560" y="820" width="480" height="180" fill="#ef4444" rx="10"/><text x="800" y="855" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Insulin First = Danger</text><text x="580" y="890" font-size="14" fill="#ffffff">Drives glucose into cells</text><text x="580" y="915" font-size="14" fill="#ffffff">Water follows glucose intracellularly</text><text x="580" y="940" font-size="14" fill="#ffffff">Vascular collapse risk</text><text x="580" y="965" font-size="14" fill="#ffd700">K+ drops dangerously</text><text x="580" y="985" font-size="14" fill="#ffd700">No volume reserve to protect BP</text><rect x="60" y="1010" width="980" height="50" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="8"/><text x="550" y="1045" font-size="18" fill="#ffd700" text-anchor="middle" font-weight="bold">F-I-K Order: Fluids, then Insulin, with K+ replaced concurrently</text></svg>`,
+          caption: "Decision tree for distinguishing DKA from HHS and why fluids precede insulin."
+        }
+      },
+      {
+        type: "application",
+        title: "Adrenal Crisis: The Patient You Cannot Miss",
+        content: `Addisonian crisis (acute adrenal insufficiency) is the **most lethal endocrine emergency** you can miss because it presents like sepsis, hypovolemia, or just a vague "sick patient." Without steroids, mortality reaches **50%**.
+
+**Pathophysiology**:
+- **Primary adrenal insufficiency (Addison's)**: adrenal gland destruction — autoimmune (most common), TB, hemorrhage (Waterhouse-Friderichsen in meningococcemia), metastases
+- **Secondary adrenal insufficiency**: pituitary failure or **abrupt steroid withdrawal** (most common cause!)
+- Both result in **cortisol deficiency**
+- Primary also has **aldosterone deficiency** → Na+ wasting and K+ retention
+
+**Classic presentation**:
+- **Profound hypotension** unresponsive to fluids and vasopressors
+- **Nausea, vomiting, abdominal pain** (can mimic acute abdomen!)
+- **Fatigue, weakness, weight loss**
+- **Hyperpigmentation** (primary only — high ACTH stimulates melanocytes)
+- **Salt craving** (primary — losing Na+)
+- **Hypoglycemia** (no cortisol = no gluconeogenesis)
+
+**Lab signature** ("the 4-low-and-2-high pattern"):
+- **Low** Na+ (hyponatremia)
+- **Low** glucose
+- **Low** cortisol
+- **Low** bicarbonate (metabolic acidosis)
+- **High** K+ (hyperkalemia)
+- **High** BUN (volume depletion)
+
+**Why someone goes into crisis**:
+- **Abrupt cessation of chronic steroids** (NCLEX favorite!)
+- Surgery, trauma, infection, MI in a chronic steroid user (stress dose missed)
+- Sepsis in someone with undiagnosed Addison's
+- Bilateral adrenal hemorrhage (anticoagulants, meningococcemia)
+- Pituitary apoplexy
+
+**Treatment — Steroids FIRST, ask questions later**:
+
+**Step 1: HYDROCORTISONE 100mg IV PUSH STAT**
+- Then 100mg q8h IV
+- Do NOT wait for cortisol/ACTH levels — draw them but TREAT
+- Hydrocortisone has both glucocorticoid AND mineralocorticoid activity
+- Dexamethasone is OK if cortisol level pending (doesn't interfere with assay)
+
+**Step 2: AGGRESSIVE FLUIDS — 0.9% NS**
+- 1-3 L in first 1-2 hours
+- Add D5 to fluids if hypoglycemic
+- Replaces volume AND glucose
+
+**Step 3: TREAT HYPERKALEMIA if severe**
+- Often resolves with steroids and fluids alone
+- If K+ >6.5 with ECG changes — calcium gluconate, insulin/D50
+
+**Step 4: TREAT THE TRIGGER**
+- Infection: cultures + antibiotics
+- MI: standard ACS protocol
+- Stop precipitating medication
+
+**Step 5: TRANSITION**
+- Once stable, transition to oral prednisone or hydrocortisone
+- ADD fludrocortisone (Florinef) for mineralocorticoid replacement (primary Addison's)
+
+**Patient teaching — PREVENTING the next crisis**:
+- **NEVER stop steroids abruptly** — taper over weeks
+- **Medical alert bracelet** ("Adrenal insufficiency — needs steroids")
+- **Sick day rules**: double oral dose for minor illness
+- **Emergency injectable hydrocortisone** (Solu-Cortef) at home for vomiting
+- Stress doses for surgery/dental procedures (100mg hydrocortisone IV pre-op)
+
+**SIADH vs DI Application Comparison**:
+
+**SIADH** (too much ADH):
+- Water retention, dilutional hyponatremia
+- Concentrated urine, dilute serum
+- Causes: small cell lung CA, head injury, meds (SSRI, carbamazepine)
+- **Treatment**: fluid restriction (800-1000 mL/day), hypertonic saline if seizing, vaptans
+- **Nursing**: daily weights, strict I&O, neuro checks for confusion/seizures
+
+**DI** (too little ADH):
+- Massive water loss, hypernatremia
+- Dilute urine (SG <1.005), concentrated serum
+- Causes: head trauma, pituitary surgery, lithium (nephrogenic)
+- **Treatment**: DDAVP for central DI; thiazides for nephrogenic
+- **Nursing**: strict I&O (UOP often >300 mL/hr), daily weights, IV access for replacement
+
+**Memory anchor**:
+- **S**IADH = **S**oaked (water retained, low Na+)
+- **D**I = **D**ry (water lost, high Na+)
+
+**Final NCLEX wisdom**: If a question shows shock + low Na + high K + low glucose + steroid history → **Addisonian crisis → hydrocortisone STAT**. This is one of the most missable and most testable scenarios on the exam.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Addisonian Crisis: Pattern and Action</text><rect x="60" y="100" width="980" height="100" fill="#ef4444" rx="10"/><text x="550" y="135" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">THE PATTERN: Shock that does NOT respond to fluids and pressors</text><text x="550" y="170" font-size="16" fill="#ffffff" text-anchor="middle">PLUS Low Na, High K, Low glucose, Low cortisol, High BUN</text><text x="550" y="195" font-size="14" fill="#ffd700" text-anchor="middle">Often history of chronic steroids, recent stop, or surgery</text><text x="550" y="250" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Lab Signature: 4-Low and 2-High</text><rect x="60" y="280" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="220" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Sodium</text><text x="220" y="350" font-size="14" fill="#ffffff" text-anchor="middle">No aldosterone</text><text x="220" y="375" font-size="14" fill="#ffffff" text-anchor="middle">Na wasting in urine</text><text x="220" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 135 mEq/L</text><rect x="400" y="280" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="560" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Glucose</text><text x="560" y="350" font-size="14" fill="#ffffff" text-anchor="middle">No cortisol</text><text x="560" y="375" font-size="14" fill="#ffffff" text-anchor="middle">No gluconeogenesis</text><text x="560" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 70 mg/dL</text><rect x="740" y="280" width="300" height="140" fill="#0ea5e9" rx="10"/><text x="890" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Cortisol</text><text x="890" y="350" font-size="14" fill="#ffffff" text-anchor="middle">Adrenals failed</text><text x="890" y="375" font-size="14" fill="#ffffff" text-anchor="middle">Confirms diagnosis</text><text x="890" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 5 mcg/dL AM</text><rect x="60" y="440" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="220" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW HCO3</text><text x="220" y="510" font-size="14" fill="#ffffff" text-anchor="middle">Metabolic acidosis</text><text x="220" y="535" font-size="14" fill="#ffffff" text-anchor="middle">Mild</text><text x="220" y="560" font-size="14" fill="#ffd700" text-anchor="middle">pH 7.30-7.35</text><rect x="400" y="440" width="320" height="140" fill="#ef4444" rx="10"/><text x="560" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">HIGH Potassium</text><text x="560" y="510" font-size="14" fill="#ffffff" text-anchor="middle">No aldosterone</text><text x="560" y="535" font-size="14" fill="#ffffff" text-anchor="middle">K not excreted</text><text x="560" y="560" font-size="14" fill="#ffd700" text-anchor="middle">Greater 5.5 mEq/L</text><rect x="740" y="440" width="300" height="140" fill="#ef4444" rx="10"/><text x="890" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">HIGH BUN</text><text x="890" y="510" font-size="14" fill="#ffffff" text-anchor="middle">Volume depletion</text><text x="890" y="535" font-size="14" fill="#ffffff" text-anchor="middle">Pre-renal AKI</text><text x="890" y="560" font-size="14" fill="#ffd700" text-anchor="middle">BUN to Cr ratio 20</text><text x="550" y="630" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Treatment: STEROIDS FIRST</text><rect x="60" y="660" width="480" height="180" fill="#10b981" rx="10"/><text x="300" y="700" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 1: Hydrocortisone</text><text x="80" y="735" font-size="16" fill="#ffd700" font-weight="bold">100 mg IV PUSH STAT</text><text x="80" y="760" font-size="14" fill="#ffffff">Then 100 mg IV q8h</text><text x="80" y="785" font-size="14" fill="#ffffff">Has glucocorticoid AND</text><text x="80" y="805" font-size="14" fill="#ffffff">mineralocorticoid activity</text><text x="80" y="828" font-size="14" fill="#ffd700">Do NOT wait for labs to treat!</text><rect x="560" y="660" width="480" height="180" fill="#6366f1" rx="10"/><text x="800" y="700" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 2: Fluids</text><text x="580" y="735" font-size="16" fill="#ffd700" font-weight="bold">0.9 percent NS 1-3 L first hours</text><text x="580" y="760" font-size="14" fill="#ffffff">Add D5 to fluids for glucose</text><text x="580" y="785" font-size="14" fill="#ffffff">Restores volume</text><text x="580" y="805" font-size="14" fill="#ffffff">Corrects hyponatremia slowly</text><text x="580" y="828" font-size="14" fill="#ffd700">Continuous monitoring</text><text x="550" y="880" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">SIADH vs DI Memory</text><rect x="60" y="910" width="480" height="150" fill="#6366f1" rx="10"/><text x="300" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">SIADH equals SOAKED</text><text x="80" y="980" font-size="14" fill="#ffffff">Too much ADH</text><text x="80" y="1005" font-size="14" fill="#ffffff">Water retention = low Na</text><text x="80" y="1030" font-size="14" fill="#ffffff">Concentrated urine</text><text x="80" y="1055" font-size="14" fill="#ffd700">Treat: fluid restrict</text><rect x="560" y="910" width="480" height="150" fill="#0ea5e9" rx="10"/><text x="800" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">DI equals DRY</text><text x="580" y="980" font-size="14" fill="#ffffff">Too little ADH</text><text x="580" y="1005" font-size="14" fill="#ffffff">Massive water loss = high Na</text><text x="580" y="1030" font-size="14" fill="#ffffff">Dilute urine SG less 1.005</text><text x="580" y="1055" font-size="14" fill="#ffd700">Treat: DDAVP (central)</text></svg>`,
+          caption: "Addisonian crisis pattern recognition, treatment priority, and SIADH vs DI memory."
         }
       }
     ]
