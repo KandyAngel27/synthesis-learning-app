@@ -9847,7 +9847,7 @@ After: **psychological first aid** for staff and survivors, debrief, restock, le
             title: 'Pathophysiology for NCLEX Reasoning',
             author: 'Synthesis Learning',
             description: 'The "why" behind every nursing intervention — pulling the mechanisms together so SATA and prioritization questions get easier.',
-            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
+            lessons: 12, duration: 180, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-pathophys-lesson-1",
@@ -11512,6 +11512,690 @@ Document NIHSS pre- and post-tPA at standard intervals (15 min × 2 hr, then 30 
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Status Epilepticus: Stepwise Treatment</text><rect x="80" y="110" width="940" height="120" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="150" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Definition</text><text x="550" y="185" text-anchor="middle" fill="#ffffff" font-size="16">&gt;= 5 min continuous seizure</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="16">OR repeated seizures without return to baseline</text><rect x="80" y="260" width="940" height="160" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="300" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 1: First 5 minutes</text><text x="120" y="340" fill="#ffffff" font-size="16">- Side-lying position, suction, O2</text><text x="120" y="370" fill="#ffffff" font-size="16">- Pad rails, remove objects, time it</text><text x="120" y="400" fill="#ef4444" font-size="16">- DO NOT insert anything in mouth</text><rect x="80" y="450" width="940" height="180" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="490" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">STEP 2: 5-20 min - Benzo</text><text x="120" y="530" fill="#ffffff" font-size="16">- Lorazepam 0.1 mg/kg IV (max 4 mg)</text><text x="120" y="560" fill="#ffffff" font-size="16">- Midazolam 10 mg IM if no IV</text><text x="120" y="590" fill="#ffffff" font-size="16">- Diazepam 0.15 mg/kg IV</text><text x="120" y="620" fill="#ffd700" font-size="14">May repeat once</text><rect x="80" y="660" width="940" height="180" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="700" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">STEP 3: 20-40 min - AED load</text><text x="120" y="740" fill="#ffffff" font-size="16">- Levetiracetam 60 mg/kg IV (preferred)</text><text x="120" y="770" fill="#ffffff" font-size="16">- Fosphenytoin 20 mg PE/kg IV</text><text x="160" y="795" fill="#888" font-size="14">(cardiac monitor required)</text><text x="120" y="825" fill="#ffffff" font-size="16">- Valproate 40 mg/kg IV</text><rect x="80" y="870" width="940" height="160" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="910" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">STEP 4: &gt; 40 min - Refractory</text><text x="120" y="950" fill="#ffffff" font-size="16">- Intubate + ICU transfer</text><text x="120" y="980" fill="#ffffff" font-size="16">- Propofol, midazolam, or pentobarb drip</text><text x="120" y="1010" fill="#ffffff" font-size="16">- Continuous EEG monitoring</text></svg>`,
           caption: "Status epilepticus treatment ladder — protect airway, benzo first, AED load, ICU drips if refractory."
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-pathophys-lesson-10",
+    title: "GI and Hepatic Pathophysiology",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Gut-Liver Axis on NCLEX",
+        content: `The GI tract and liver carry an enormous load on NCLEX because they touch nutrition, drug metabolism, coagulation, immunity, and fluid balance. A single failing organ — the pancreas in acute pancreatitis, the liver in cirrhosis, or a bleeding ulcer — can drop a patient into shock within hours.
+
+This lesson walks you through five high-yield emergencies the test loves to mix into SATA and priority items:
+
+**1. Acute Pancreatitis** — autodigestion of the pancreas by its own enzymes. Watch for epigastric pain radiating to the back, lipase greater than 3x normal (the most specific lab), Grey Turner sign (flank bruising) and Cullen sign (periumbilical bruising) signaling hemorrhagic pancreatitis. NPO + IV fluids + pain control is the priority.
+
+**2. Liver Failure / Cirrhosis** — the liver loses its ability to detoxify ammonia and make clotting factors. Ammonia greater than 50 mcg/dL drives hepatic encephalopathy; lactulose is given to trap ammonia in the gut and excrete it (goal: 2-3 soft stools per day). Watch for asterixis, jaundice, ascites, and esophageal varices.
+
+**3. GI Bleed** — upper (hematemesis, melena, BUN elevated from digested blood) vs lower (hematochezia, bright red blood per rectum). Two large-bore IVs, type and crossmatch, and serial H/H are priorities.
+
+**4. IBD vs IBS** — IBD (Crohn's, ulcerative colitis) is autoimmune inflammation with bleeding, weight loss, and elevated CRP. IBS is functional — no structural damage, no bleeding.
+
+**5. Hepatitis A/B/C** — A is fecal-oral (food/water), B and C are blood/body fluid. B has a vaccine; C is the most common cause of chronic liver disease in the U.S.
+
+By the end of this lesson, you will recognize these patterns instantly and pick the correct nursing priority every time.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" fill="#ffd700" font-size="40" font-weight="bold" text-anchor="middle">GI and Hepatic NCLEX Map</text><rect x="60" y="120" width="480" height="200" rx="14" fill="#6366f1" opacity="0.85"/><text x="300" y="160" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">Pancreatitis</text><text x="300" y="200" fill="#ffffff" font-size="20" text-anchor="middle">Lipase greater than 3x normal</text><text x="300" y="232" fill="#ffd700" font-size="20" text-anchor="middle">Grey Turner: flank bruise</text><text x="300" y="262" fill="#ffd700" font-size="20" text-anchor="middle">Cullen: umbilical bruise</text><text x="300" y="296" fill="#ffffff" font-size="18" text-anchor="middle">NPO + IV fluids + pain</text><rect x="560" y="120" width="480" height="200" rx="14" fill="#10b981" opacity="0.85"/><text x="800" y="160" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">Liver Failure</text><text x="800" y="200" fill="#ffffff" font-size="20" text-anchor="middle">Ammonia greater than 50</text><text x="800" y="232" fill="#ffd700" font-size="20" text-anchor="middle">Asterixis, jaundice, ascites</text><text x="800" y="262" fill="#ffd700" font-size="20" text-anchor="middle">Lactulose: 2-3 soft stools</text><text x="800" y="296" fill="#ffffff" font-size="18" text-anchor="middle">Bleed risk: low clotting factors</text><rect x="60" y="350" width="480" height="200" rx="14" fill="#ef4444" opacity="0.85"/><text x="300" y="390" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">GI Bleed</text><text x="300" y="430" fill="#ffffff" font-size="20" text-anchor="middle">Upper: hematemesis, melena</text><text x="300" y="462" fill="#ffffff" font-size="20" text-anchor="middle">Lower: hematochezia</text><text x="300" y="494" fill="#ffd700" font-size="20" text-anchor="middle">2 large-bore IVs, T and C</text><text x="300" y="524" fill="#ffffff" font-size="18" text-anchor="middle">Serial H/H q4-6h</text><rect x="560" y="350" width="480" height="200" rx="14" fill="#f59e0b" opacity="0.85"/><text x="800" y="390" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">IBD vs IBS</text><text x="800" y="430" fill="#ffffff" font-size="20" text-anchor="middle">IBD: bleeding, weight loss</text><text x="800" y="462" fill="#ffffff" font-size="20" text-anchor="middle">IBD: CRP and ESR elevated</text><text x="800" y="494" fill="#ffd700" font-size="20" text-anchor="middle">IBS: functional, no bleed</text><text x="800" y="524" fill="#ffffff" font-size="18" text-anchor="middle">IBS: no structural damage</text><rect x="60" y="580" width="980" height="200" rx="14" fill="#8b5cf6" opacity="0.85"/><text x="550" y="620" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">Hepatitis Transmission</text><text x="280" y="660" fill="#ffd700" font-size="22" text-anchor="middle">Hep A</text><text x="280" y="690" fill="#ffffff" font-size="20" text-anchor="middle">Fecal-oral</text><text x="280" y="720" fill="#ffffff" font-size="18" text-anchor="middle">Food, water, hand hygiene</text><text x="280" y="750" fill="#ffffff" font-size="18" text-anchor="middle">Vaccine available</text><text x="550" y="660" fill="#ffd700" font-size="22" text-anchor="middle">Hep B</text><text x="550" y="690" fill="#ffffff" font-size="20" text-anchor="middle">Blood, body fluids, sex</text><text x="550" y="720" fill="#ffffff" font-size="18" text-anchor="middle">Vertical transmission</text><text x="550" y="750" fill="#ffffff" font-size="18" text-anchor="middle">Vaccine available</text><text x="820" y="660" fill="#ffd700" font-size="22" text-anchor="middle">Hep C</text><text x="820" y="690" fill="#ffffff" font-size="20" text-anchor="middle">Blood (IV drug use)</text><text x="820" y="720" fill="#ffffff" font-size="18" text-anchor="middle">Most chronic liver disease</text><text x="820" y="750" fill="#ffffff" font-size="18" text-anchor="middle">No vaccine, treatable</text><rect x="60" y="810" width="980" height="240" rx="14" fill="#0ea5e9" opacity="0.85"/><text x="550" y="850" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">Priority Pyramid</text><text x="550" y="892" fill="#ffd700" font-size="22" text-anchor="middle">Airway and Bleeding First</text><text x="550" y="930" fill="#ffffff" font-size="20" text-anchor="middle">Then circulation: IV access, fluids, blood</text><text x="550" y="968" fill="#ffffff" font-size="20" text-anchor="middle">Then labs: lipase, ammonia, LFTs, H/H, INR</text><text x="550" y="1006" fill="#ffffff" font-size="20" text-anchor="middle">Then specific therapy: lactulose, PPI, NPO</text></svg>`,
+          caption: "Five GI/hepatic emergencies the NCLEX loves: pancreatitis, liver failure, GI bleed, IBD vs IBS, and hepatitis transmission."
+        }
+      },
+      {
+        type: "concept",
+        title: "Pancreatitis and Liver Failure: Mechanisms That Kill",
+        content: `**Acute Pancreatitis — Autodigestion**
+
+The pancreas normally secretes trypsinogen (inactive) into the duodenum, where it becomes trypsin and digests protein. In pancreatitis, trypsinogen activates inside the pancreas, and the gland literally digests itself. Top causes: gallstones blocking the ampulla of Vater (women) and chronic alcohol use (men).
+
+Key labs and signs:
+- Lipase greater than 3x normal (most specific; normal 0-160 U/L)
+- Amylase elevated (less specific — also rises with mumps, bowel obstruction)
+- Calcium less than 8.5 mg/dL (calcium is consumed in fat saponification — a Chvostek or Trousseau sign is an ominous finding)
+- Grey Turner sign (flank ecchymosis) and Cullen sign (periumbilical ecchymosis) = hemorrhagic pancreatitis = mortality risk skyrockets
+- Pain: severe epigastric, boring through to the back, worse lying flat, better leaning forward
+
+Nursing priorities (in order): NPO to rest the pancreas → IV crystalloid (LR is preferred) → pain control (hydromorphone or fentanyl; morphine is now considered acceptable despite old teaching about Oddi's sphincter) → monitor for ARDS and AKI (multi-organ failure is the killer).
+
+**Liver Failure — The Detox Shutdown**
+
+The cirrhotic liver fails three jobs: detoxification (ammonia builds up), synthesis (clotting factors fall, albumin drops), and bile production (bilirubin rises, fat absorption fails).
+
+Cascade of failure:
+- Ammonia rises greater than 50 mcg/dL → hepatic encephalopathy → asterixis (flapping tremor), confusion, coma
+- Albumin less than 3.5 g/dL → fluid shifts to third space → ascites and peripheral edema
+- Portal hypertension → esophageal varices → catastrophic upper GI bleed
+- Low clotting factors (PT/INR rise) → bruising, bleeding gums, hematemesis
+- Bilirubin greater than 2 → jaundice, pruritus, tea-colored urine, clay-colored stools
+
+Lactulose is the cornerstone treatment for encephalopathy. It acidifies the colon, trapping NH3 as NH4+, which is excreted in stool. The nurse titrates the dose to produce 2-3 soft stools per day. Too few stools = ammonia keeps climbing; too many = dehydration and hypokalemia (which paradoxically worsens encephalopathy).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">Mechanisms of GI/Hepatic Failure</text><rect x="60" y="110" width="980" height="60" rx="10" fill="#6366f1"/><text x="550" y="150" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">PANCREATITIS: Autodigestion Cascade</text><rect x="80" y="190" width="220" height="100" rx="10" fill="#10b981"/><text x="190" y="230" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Trigger</text><text x="190" y="258" fill="#ffffff" font-size="17" text-anchor="middle">Gallstone or</text><text x="190" y="280" fill="#ffffff" font-size="17" text-anchor="middle">Alcohol</text><line x1="300" y1="240" x2="350" y2="240" stroke="#ffd700" stroke-width="4"/><polygon points="350,232 365,240 350,248" fill="#ffd700"/><rect x="370" y="190" width="220" height="100" rx="10" fill="#f59e0b"/><text x="480" y="225" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">Trypsin Activates</text><text x="480" y="252" fill="#ffffff" font-size="17" text-anchor="middle">Inside Pancreas</text><text x="480" y="276" fill="#ffd700" font-size="17" text-anchor="middle">Lipase greater than 3x</text><line x1="590" y1="240" x2="640" y2="240" stroke="#ffd700" stroke-width="4"/><polygon points="640,232 655,240 640,248" fill="#ffd700"/><rect x="660" y="190" width="220" height="100" rx="10" fill="#ef4444"/><text x="770" y="225" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">Hemorrhage</text><text x="770" y="252" fill="#ffffff" font-size="17" text-anchor="middle">Grey Turner</text><text x="770" y="276" fill="#ffffff" font-size="17" text-anchor="middle">Cullen sign</text><line x1="880" y1="240" x2="930" y2="240" stroke="#ffd700" stroke-width="4"/><polygon points="930,232 945,240 930,248" fill="#ffd700"/><rect x="950" y="190" width="90" height="100" rx="10" fill="#ec4899"/><text x="995" y="232" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">MOF</text><text x="995" y="262" fill="#ffffff" font-size="14" text-anchor="middle">ARDS</text><text x="995" y="282" fill="#ffffff" font-size="14" text-anchor="middle">AKI</text><rect x="60" y="320" width="980" height="60" rx="10" fill="#8b5cf6"/><text x="550" y="360" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle">LIVER FAILURE: Three Job Shutdown</text><rect x="80" y="400" width="300" height="180" rx="10" fill="#6366f1"/><text x="230" y="438" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Detox Fails</text><text x="230" y="472" fill="#ffffff" font-size="18" text-anchor="middle">Ammonia greater than 50</text><text x="230" y="502" fill="#ffffff" font-size="17" text-anchor="middle">Asterixis</text><text x="230" y="528" fill="#ffffff" font-size="17" text-anchor="middle">Confusion, coma</text><text x="230" y="558" fill="#ffd700" font-size="17" text-anchor="middle">Tx: Lactulose</text><rect x="400" y="400" width="300" height="180" rx="10" fill="#10b981"/><text x="550" y="438" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Synthesis Fails</text><text x="550" y="472" fill="#ffffff" font-size="18" text-anchor="middle">Albumin less than 3.5</text><text x="550" y="502" fill="#ffffff" font-size="17" text-anchor="middle">PT/INR rise</text><text x="550" y="528" fill="#ffffff" font-size="17" text-anchor="middle">Ascites, edema</text><text x="550" y="558" fill="#ffd700" font-size="17" text-anchor="middle">Bleeding risk</text><rect x="720" y="400" width="300" height="180" rx="10" fill="#f59e0b"/><text x="870" y="438" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Bile Fails</text><text x="870" y="472" fill="#ffffff" font-size="18" text-anchor="middle">Bilirubin greater than 2</text><text x="870" y="502" fill="#ffffff" font-size="17" text-anchor="middle">Jaundice, pruritus</text><text x="870" y="528" fill="#ffffff" font-size="17" text-anchor="middle">Clay stools</text><text x="870" y="558" fill="#ffffff" font-size="17" text-anchor="middle">Tea urine</text><rect x="60" y="620" width="980" height="60" rx="10" fill="#ef4444"/><text x="550" y="660" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Portal Hypertension: Variceal Bleed Risk</text><rect x="80" y="700" width="465" height="160" rx="10" fill="#0ea5e9"/><text x="312" y="738" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Lactulose Goal</text><text x="312" y="770" fill="#ffffff" font-size="18" text-anchor="middle">2-3 soft stools/day</text><text x="312" y="800" fill="#ffffff" font-size="17" text-anchor="middle">Too few: ammonia climbs</text><text x="312" y="826" fill="#ffffff" font-size="17" text-anchor="middle">Too many: dehydration</text><text x="312" y="852" fill="#ffd700" font-size="17" text-anchor="middle">Monitor K+ closely</text><rect x="565" y="700" width="455" height="160" rx="10" fill="#8b5cf6"/><text x="792" y="738" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Pancreatitis Priority</text><text x="792" y="770" fill="#ffffff" font-size="18" text-anchor="middle">1. NPO - rest pancreas</text><text x="792" y="796" fill="#ffffff" font-size="18" text-anchor="middle">2. IV fluids (LR)</text><text x="792" y="822" fill="#ffffff" font-size="18" text-anchor="middle">3. Pain control</text><text x="792" y="848" fill="#ffffff" font-size="18" text-anchor="middle">4. Watch for ARDS/AKI</text><rect x="60" y="900" width="980" height="160" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="942" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">NCLEX Red Flags</text><text x="550" y="980" fill="#ffd700" font-size="20" text-anchor="middle">Grey Turner or Cullen = hemorrhagic pancreatitis</text><text x="550" y="1014" fill="#ffd700" font-size="20" text-anchor="middle">Asterixis = ammonia climbing - give lactulose now</text><text x="550" y="1046" fill="#ffd700" font-size="20" text-anchor="middle">Hematemesis in cirrhosis = ruptured varices = code</text></svg>`,
+          caption: "Pancreatitis autodigests; the liver fails three jobs (detox, synthesis, bile). Memorize the cascades."
+        }
+      },
+      {
+        type: "example",
+        title: "Case Study: The Crashing Cirrhotic",
+        content: `**Patient:** Mr. R, 58-year-old male with a 30-year history of alcohol use disorder, admitted three days ago for hepatic encephalopathy.
+
+**Day 1 baseline:**
+- Ammonia 95 mcg/dL (high)
+- Albumin 2.4 g/dL (low)
+- INR 2.1 (high)
+- Bilirubin 4.8 mg/dL (high)
+- Platelets 65,000 (low)
+- Hgb 10.2, BP 108/62, HR 92
+- Asterixis present, oriented to person only
+- Started on lactulose 30 mL PO q4h
+
+**Day 3 at 0600, you receive report:**
+The night nurse says, "He had 5 watery stools overnight. He's a bit more confused this morning. BP dropped to 92/54, HR 118. I gave him a 500 mL bolus around 0400."
+
+**Your assessment at 0700:**
+- BP 84/48, HR 132, RR 28, O2 sat 91% on room air
+- Pale, diaphoretic, oriented only to self
+- Abdomen distended, soft
+- Coffee-ground emesis 200 mL in basin
+- Last Hgb (drawn at 0500): 7.1 (down from 10.2)
+- K+ 2.9 (down from 4.0)
+
+**What just happened — pathophysiology breakdown:**
+
+1. Lactulose overshoot. Five watery stools is too many. He lost volume and potassium. Hypokalemia paradoxically worsens encephalopathy because alkalosis converts NH4+ back to NH3, which crosses the blood-brain barrier.
+
+2. Esophageal variceal bleed. Portal hypertension + low platelets + INR 2.1 = a powder keg. The coffee-ground emesis + Hgb drop from 10.2 to 7.1 = active upper GI bleed.
+
+3. Hypovolemic shock. BP 84/48, HR 132, narrow pulse pressure, diaphoresis — classic Class III hemorrhagic shock (30-40% blood volume lost).
+
+**Priority actions (in order):**
+1. Call rapid response — patient is unstable.
+2. Two large-bore IVs (16-18 gauge), draw type and crossmatch for 4 units PRBC and 2 units FFP (he needs clotting factors too).
+3. NS or LR bolus 1-2 L while waiting on blood.
+4. NPO, prepare for emergent EGD with banding/sclerotherapy.
+5. Octreotide drip (decreases portal pressure).
+6. Anticipate IV PPI (pantoprazole) and possibly vasopressin.
+7. Hold lactulose temporarily, replace K+ IV (peripheral max 10 mEq/hr).
+
+NCLEX testing point: when a cirrhotic patient hemorrhages, you do not wait for the labs to confirm — the clinical picture (hypotension, tachycardia, coffee-ground emesis, falling Hgb) IS the diagnosis.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Mr. R: Cirrhosis Crash Timeline</text><rect x="60" y="100" width="980" height="50" rx="10" fill="#6366f1"/><text x="550" y="135" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Day 1 Admission - Baseline</text><rect x="60" y="170" width="980" height="120" rx="10" fill="#10b981" opacity="0.85"/><text x="160" y="210" fill="#ffd700" font-size="18" text-anchor="middle">Ammonia</text><text x="160" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">95</text><text x="160" y="262" fill="#ffffff" font-size="14" text-anchor="middle">(high)</text><text x="320" y="210" fill="#ffd700" font-size="18" text-anchor="middle">Albumin</text><text x="320" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">2.4</text><text x="320" y="262" fill="#ffffff" font-size="14" text-anchor="middle">(low)</text><text x="480" y="210" fill="#ffd700" font-size="18" text-anchor="middle">INR</text><text x="480" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">2.1</text><text x="480" y="262" fill="#ffffff" font-size="14" text-anchor="middle">(high)</text><text x="640" y="210" fill="#ffd700" font-size="18" text-anchor="middle">Platelets</text><text x="640" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">65k</text><text x="640" y="262" fill="#ffffff" font-size="14" text-anchor="middle">(low)</text><text x="800" y="210" fill="#ffd700" font-size="18" text-anchor="middle">Hgb</text><text x="800" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">10.2</text><text x="800" y="262" fill="#ffffff" font-size="14" text-anchor="middle">stable</text><text x="950" y="210" fill="#ffd700" font-size="18" text-anchor="middle">BP</text><text x="950" y="235" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">108/62</text><text x="950" y="262" fill="#ffffff" font-size="14" text-anchor="middle">stable</text><rect x="60" y="310" width="980" height="50" rx="10" fill="#f59e0b"/><text x="550" y="345" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Day 3 Night Shift - 5 Watery Stools, K+ Falls</text><rect x="60" y="380" width="980" height="50" rx="10" fill="#ef4444"/><text x="550" y="415" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Day 3 0700 - The Crash</text><rect x="60" y="450" width="980" height="280" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="490" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Vital Signs and Labs</text><text x="160" y="530" fill="#ffd700" font-size="18" text-anchor="middle">BP</text><text x="160" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">84/48</text><text x="320" y="530" fill="#ffd700" font-size="18" text-anchor="middle">HR</text><text x="320" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">132</text><text x="480" y="530" fill="#ffd700" font-size="18" text-anchor="middle">RR</text><text x="480" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">28</text><text x="640" y="530" fill="#ffd700" font-size="18" text-anchor="middle">SpO2</text><text x="640" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">91%</text><text x="800" y="530" fill="#ffd700" font-size="18" text-anchor="middle">Hgb</text><text x="800" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">7.1</text><text x="950" y="530" fill="#ffd700" font-size="18" text-anchor="middle">K+</text><text x="950" y="555" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">2.9</text><text x="550" y="610" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Coffee-Ground Emesis 200 mL</text><text x="550" y="645" fill="#ffffff" font-size="18" text-anchor="middle">Pale, diaphoretic, oriented to self only</text><text x="550" y="680" fill="#ffd700" font-size="20" text-anchor="middle">Diagnosis: Ruptured Esophageal Varices + Hypovolemic Shock</text><text x="550" y="712" fill="#ffffff" font-size="18" text-anchor="middle">Class III hemorrhagic shock - 30-40% blood loss</text><rect x="60" y="750" width="980" height="320" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="550" y="790" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Priority Actions In Order</text><text x="100" y="828" fill="#ffffff" font-size="18">1. Call rapid response - patient unstable</text><text x="100" y="858" fill="#ffffff" font-size="18">2. Two large-bore IVs, T and C 4 units PRBC + 2 FFP</text><text x="100" y="888" fill="#ffffff" font-size="18">3. NS or LR bolus 1-2 L while waiting for blood</text><text x="100" y="918" fill="#ffffff" font-size="18">4. NPO, prep for emergent EGD with banding</text><text x="100" y="948" fill="#ffffff" font-size="18">5. Octreotide drip - reduces portal pressure</text><text x="100" y="978" fill="#ffffff" font-size="18">6. IV pantoprazole, consider vasopressin</text><text x="100" y="1008" fill="#ffd700" font-size="18">7. Hold lactulose, replace K+ IV (max 10 mEq/hr peripheral)</text><text x="100" y="1042" fill="#ffd700" font-size="16">Key teaching: clinical picture IS the diagnosis - act, then confirm</text></svg>`,
+          caption: "Mr. R's crash from cirrhosis to variceal bleed to hypovolemic shock — and the exact priority order for nursing actions."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a 45-year-old man admitted with acute pancreatitis. Lipase is 850 U/L (normal less than 160), calcium is 7.2 mg/dL, and the nurse notes bluish discoloration around the umbilicus. Which assessment finding requires the MOST immediate intervention?",
+        options: [
+          { text: "Calcium of 7.2 mg/dL with a positive Chvostek sign", correct: false },
+          { text: "Cullen sign (periumbilical ecchymosis) with BP 86/50 and HR 128", correct: true },
+          { text: "Severe epigastric pain rated 9/10 radiating to the back", correct: false },
+          { text: "Serum lipase elevated at 5x the upper limit of normal", correct: false }
+        ],
+        explanation: "Cullen sign indicates hemorrhagic pancreatitis. Combined with hypotension (BP 86/50) and tachycardia (HR 128), this patient is in early hypovolemic shock from retroperitoneal hemorrhage — a life-threatening emergency requiring immediate fluid resuscitation, blood products, and surgical consult. While hypocalcemia with Chvostek sign is concerning (risk for tetany and seizures), it is not as immediately life-threatening as ongoing hemorrhage. Severe pain and elevated lipase are expected findings in pancreatitis and do not by themselves indicate decompensation. Remember: ABC (airway, breathing, circulation) — when circulation is failing from hemorrhage, that takes top priority. Grey Turner (flank) and Cullen (umbilical) signs are both ominous indicators of hemorrhagic pancreatitis with mortality exceeding 25%.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Hemorrhagic Pancreatitis Decision</text><rect x="60" y="110" width="980" height="80" rx="10" fill="#ef4444"/><text x="550" y="148" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">RED FLAG: Cullen + Hypotension + Tachycardia</text><text x="550" y="178" fill="#ffd700" font-size="18" text-anchor="middle">= Hemorrhagic Pancreatitis with Shock</text><rect x="60" y="210" width="240" height="280" rx="10" fill="#ef4444" opacity="0.85"/><text x="180" y="250" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Cullen Sign</text><text x="180" y="282" fill="#ffd700" font-size="16" text-anchor="middle">Umbilical bruise</text><text x="180" y="312" fill="#ffffff" font-size="16" text-anchor="middle">BP 86/50</text><text x="180" y="342" fill="#ffffff" font-size="16" text-anchor="middle">HR 128</text><text x="180" y="382" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">HEMORRHAGE</text><text x="180" y="420" fill="#ffffff" font-size="16" text-anchor="middle">Mortality greater than 25%</text><text x="180" y="455" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">PRIORITY #1</text><rect x="320" y="210" width="240" height="280" rx="10" fill="#f59e0b" opacity="0.85"/><text x="440" y="250" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Low Calcium</text><text x="440" y="282" fill="#ffd700" font-size="16" text-anchor="middle">7.2 mg/dL</text><text x="440" y="312" fill="#ffffff" font-size="16" text-anchor="middle">Chvostek positive</text><text x="440" y="342" fill="#ffffff" font-size="16" text-anchor="middle">Tetany risk</text><text x="440" y="382" fill="#ffffff" font-size="18" text-anchor="middle">Concerning</text><text x="440" y="420" fill="#ffffff" font-size="16" text-anchor="middle">but stable</text><text x="440" y="455" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Not as urgent</text><rect x="580" y="210" width="240" height="280" rx="10" fill="#10b981" opacity="0.85"/><text x="700" y="250" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Severe Pain</text><text x="700" y="282" fill="#ffd700" font-size="16" text-anchor="middle">9/10 epigastric</text><text x="700" y="312" fill="#ffffff" font-size="16" text-anchor="middle">Radiates to back</text><text x="700" y="342" fill="#ffffff" font-size="16" text-anchor="middle">Expected finding</text><text x="700" y="382" fill="#ffffff" font-size="18" text-anchor="middle">Treat with</text><text x="700" y="420" fill="#ffffff" font-size="16" text-anchor="middle">opioids</text><text x="700" y="455" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Not most urgent</text><rect x="840" y="210" width="200" height="280" rx="10" fill="#6366f1" opacity="0.85"/><text x="940" y="250" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">High Lipase</text><text x="940" y="282" fill="#ffd700" font-size="16" text-anchor="middle">5x normal</text><text x="940" y="312" fill="#ffffff" font-size="16" text-anchor="middle">Diagnostic of</text><text x="940" y="342" fill="#ffffff" font-size="16" text-anchor="middle">pancreatitis</text><text x="940" y="382" fill="#ffffff" font-size="18" text-anchor="middle">Expected</text><text x="940" y="420" fill="#ffffff" font-size="16" text-anchor="middle">finding</text><text x="940" y="455" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Not urgent</text><rect x="60" y="520" width="980" height="120" rx="10" fill="#0ea5e9"/><text x="550" y="560" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Why Cullen + Shock Wins</text><text x="550" y="595" fill="#ffd700" font-size="20" text-anchor="middle">ABC framework: Circulation is actively failing from hemorrhage</text><text x="550" y="625" fill="#ffffff" font-size="18" text-anchor="middle">All other findings are real but slower-acting</text><rect x="60" y="670" width="980" height="400" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="550" y="710" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Hemorrhagic Pancreatitis: Immediate Actions</text><text x="100" y="752" fill="#ffffff" font-size="18">1. Call rapid response, then surgical consult</text><text x="100" y="784" fill="#ffffff" font-size="18">2. 2 large-bore IVs, type and crossmatch 4-6 units PRBC</text><text x="100" y="816" fill="#ffffff" font-size="18">3. LR bolus 30 mL/kg, then maintenance at 200-300 mL/hr</text><text x="100" y="848" fill="#ffffff" font-size="18">4. CT abdomen with contrast - locate the bleed</text><text x="100" y="880" fill="#ffffff" font-size="18">5. Foley catheter - monitor urine output greater than 0.5 mL/kg/hr</text><text x="100" y="912" fill="#ffffff" font-size="18">6. NPO, NG tube to suction if vomiting</text><text x="100" y="944" fill="#ffffff" font-size="18">7. Replace calcium IV if symptomatic tetany</text><text x="100" y="976" fill="#ffd700" font-size="18">8. Monitor for ARDS - O2 sat, lung sounds q1h</text><text x="100" y="1008" fill="#ffd700" font-size="18">9. Monitor for AKI - urine output, creatinine q6h</text><text x="100" y="1042" fill="#ffd700" font-size="16">Key principle: hemorrhage kills fast - other findings can wait minutes, blood loss cannot</text></svg>`,
+          caption: "Cullen sign + hypotension + tachycardia = hemorrhagic pancreatitis. Circulation failure is always priority #1."
+        }
+      },
+      {
+        type: "application",
+        title: "Building Your GI/Hepatic NCLEX Playbook",
+        content: `Use this five-step playbook every time you see a GI or hepatic question on NCLEX:
+
+**Step 1: Identify the Organ in Trouble**
+Read the stem and find the giveaway:
+- Epigastric pain radiating to back + elevated lipase → pancreas
+- Jaundice, ascites, asterixis, ammonia rise → liver
+- Hematemesis, melena, coffee-ground emesis → upper GI (above the ligament of Treitz)
+- Hematochezia, bright red blood per rectum → lower GI (colon)
+- Bloody diarrhea + weight loss + skip lesions → Crohn's
+- Bloody diarrhea + continuous lesions + tenesmus → ulcerative colitis
+- Diarrhea/constipation alternating + no bleeding + normal labs → IBS
+
+**Step 2: Find the Killer Lab Value**
+- Lipase greater than 3x normal → pancreatitis confirmed
+- Ammonia greater than 50 mcg/dL → encephalopathy brewing
+- INR greater than 1.5 in cirrhosis → bleeding risk
+- Albumin less than 3.5 g/dL → fluid shifts incoming
+- Bilirubin greater than 2 mg/dL → jaundice on the way
+- Hgb drop greater than 2 g/dL in 24h → active hemorrhage
+
+**Step 3: Apply the Priority Hierarchy**
+Active bleeding > shock > airway compromise > electrolyte derangement > pain > nausea. If two findings compete, the one closer to "death in 10 minutes" wins.
+
+**Step 4: Match Intervention to Mechanism**
+- Pancreatitis: NPO + IV LR + pain control + monitor for MOF
+- Liver failure: lactulose to 2-3 stools/day + low-protein diet during encephalopathy + vitamin K for coagulopathy
+- Upper GI bleed: 2 large-bore IVs + T&C + IV PPI + EGD + octreotide if variceal
+- Lower GI bleed: colonoscopy + serial H/H + correct coags
+- IBD: 5-ASA, corticosteroids in flare, biologics; monitor for toxic megacolon
+- Hepatitis: standard precautions for A (contact), bloodborne precautions for B/C
+
+**Step 5: Patient Teaching for Discharge**
+- Alcohol cessation for pancreatitis and cirrhosis (this is almost always a correct SATA option)
+- Low-sodium diet less than 2g/day for ascites
+- Vaccinate household contacts of Hep A and Hep B patients
+- Monitor stool color (clay = obstruction returning) and skin (yellowing worsening)
+- Take lactulose as prescribed even when feeling well
+
+**SATA Practice Stem:** "Which findings would alert the nurse that a client with cirrhosis is developing hepatic encephalopathy?" Select all that apply:
+1. Asterixis (CORRECT)
+2. Confusion and personality change (CORRECT)
+3. Ammonia of 110 mcg/dL (CORRECT)
+4. Sweet, musty breath (fetor hepaticus) (CORRECT)
+5. Hyperreflexia, restlessness (CORRECT)
+6. Hgb of 9.8 g/dL (incorrect — this points to bleeding, not encephalopathy)
+
+Internalize this playbook and you will dominate the GI/hepatic content on NCLEX.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">GI/Hepatic NCLEX Playbook</text><rect x="60" y="100" width="980" height="70" rx="10" fill="#6366f1"/><text x="550" y="135" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Step 1: Identify the Organ</text><text x="550" y="160" fill="#ffd700" font-size="18" text-anchor="middle">Read clues - pain location, lab pattern, bleed type</text><rect x="60" y="185" width="980" height="70" rx="10" fill="#10b981"/><text x="550" y="220" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Step 2: Find the Killer Lab</text><text x="550" y="245" fill="#ffd700" font-size="18" text-anchor="middle">Lipase, ammonia, INR, albumin, bilirubin, Hgb drop</text><rect x="60" y="270" width="980" height="70" rx="10" fill="#f59e0b"/><text x="550" y="305" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Step 3: Apply Priority Hierarchy</text><text x="550" y="330" fill="#ffd700" font-size="18" text-anchor="middle">Bleed greater than shock greater than airway greater than electrolytes greater than pain</text><rect x="60" y="355" width="980" height="70" rx="10" fill="#ef4444"/><text x="550" y="390" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Step 4: Match Intervention to Mechanism</text><text x="550" y="415" fill="#ffd700" font-size="18" text-anchor="middle">NPO + LR for pancreas; lactulose for liver; PPI + EGD for bleed</text><rect x="60" y="440" width="980" height="70" rx="10" fill="#8b5cf6"/><text x="550" y="475" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Step 5: Patient Teaching</text><text x="550" y="500" fill="#ffd700" font-size="18" text-anchor="middle">Alcohol cessation, low sodium, vaccinate contacts</text><rect x="60" y="540" width="980" height="280" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="550" y="580" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Killer Lab Quick Reference</text><text x="100" y="618" fill="#ffffff" font-size="18">Lipase greater than 3x normal (greater than 480) =</text><text x="700" y="618" fill="#ffd700" font-size="18">Pancreatitis</text><text x="100" y="650" fill="#ffffff" font-size="18">Ammonia greater than 50 mcg/dL =</text><text x="700" y="650" fill="#ffd700" font-size="18">Hepatic encephalopathy</text><text x="100" y="682" fill="#ffffff" font-size="18">INR greater than 1.5 in cirrhosis =</text><text x="700" y="682" fill="#ffd700" font-size="18">Bleeding risk</text><text x="100" y="714" fill="#ffffff" font-size="18">Albumin less than 3.5 g/dL =</text><text x="700" y="714" fill="#ffd700" font-size="18">Third spacing, ascites</text><text x="100" y="746" fill="#ffffff" font-size="18">Bilirubin greater than 2 mg/dL =</text><text x="700" y="746" fill="#ffd700" font-size="18">Jaundice</text><text x="100" y="778" fill="#ffffff" font-size="18">Hgb drop greater than 2 in 24h =</text><text x="700" y="778" fill="#ffd700" font-size="18">Active hemorrhage</text><rect x="60" y="840" width="980" height="220" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="880" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">SATA: Signs of Hepatic Encephalopathy</text><text x="100" y="920" fill="#ffffff" font-size="18">[X] Asterixis (flapping tremor)</text><text x="100" y="952" fill="#ffffff" font-size="18">[X] Confusion and personality change</text><text x="100" y="984" fill="#ffffff" font-size="18">[X] Ammonia 110 mcg/dL</text><text x="100" y="1016" fill="#ffffff" font-size="18">[X] Fetor hepaticus (sweet musty breath)</text><text x="100" y="1048" fill="#ffffff" font-size="18">[X] Hyperreflexia, restlessness</text><text x="650" y="920" fill="#ffffff" font-size="18">[ ] Hgb 9.8 = bleeding clue</text><text x="650" y="952" fill="#ffd700" font-size="16">not encephalopathy</text></svg>`,
+          caption: "Five-step playbook: identify organ, find killer lab, apply hierarchy, match intervention, teach for discharge."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-11",
+    title: "Renal and GU Pathophysiology",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Kidneys: The Quiet Killers",
+        content: `The kidneys filter 180 L of plasma per day, regulate fluid balance, control acid-base status, secrete erythropoietin and renin, and activate vitamin D. When they fail, every body system feels it — which is why renal pathology generates so many NCLEX SATA and priority questions.
+
+This lesson covers five high-yield categories:
+
+**1. Acute Kidney Injury (AKI) — Three Causes**
+- Prerenal (most common, 60-70%): hypoperfusion. Think dehydration, hemorrhage, heart failure, sepsis. BUN/creatinine ratio greater than 20:1. Reversible if caught early — give fluids.
+- Intrarenal: damage to the kidney itself. Acute tubular necrosis (ATN) from nephrotoxins (gentamicin, vancomycin, contrast dye) or prolonged prerenal AKI. BUN/creatinine ratio about 10-15:1.
+- Postrenal: obstruction. Kidney stones, BPH, tumors. Imaging shows hydronephrosis. Catheterize or stent to relieve.
+
+**2. Chronic Kidney Disease (CKD) Stages**
+Staged by GFR (mL/min/1.73 m^2):
+- Stage 1: GFR 90+ (kidney damage, normal function)
+- Stage 2: GFR 60-89 (mild)
+- Stage 3: GFR 30-59 (moderate; symptoms begin)
+- Stage 4: GFR 15-29 (severe; prepare for dialysis)
+- Stage 5: GFR less than 15 (ESRD; dialysis or transplant)
+
+**3. Dialysis Indications — AEIOU mnemonic**
+A — Acidosis (pH less than 7.1, refractory)
+E — Electrolytes (K+ greater than 6.5, refractory)
+I — Ingestion (toxins: methanol, ASA, lithium)
+O — Overload (fluid, pulmonary edema)
+U — Uremia (BUN greater than 100, symptomatic: pericarditis, encephalopathy)
+
+**4. Nephrotic vs Nephritic Syndromes**
+- Nephrotic: PROTEIN. Massive proteinuria (greater than 3.5 g/day), hypoalbuminemia, edema, hyperlipidemia. Think "leaky glomerulus."
+- Nephritic: BLOOD. Hematuria, RBC casts, hypertension, mild proteinuria. Think "inflamed glomerulus." Post-streptococcal GN is classic.
+
+**5. BPH and UTI**
+- BPH: enlarged prostate compresses urethra. Symptoms: weak stream, nocturia, hesitancy, retention. Treat with alpha-blockers (tamsulosin) and 5-alpha-reductase inhibitors (finasteride).
+- UTI: cloudy malodorous urine, dysuria, frequency. In older adults, the first sign is often confusion or falls. Treat with antibiotics; push fluids 2-3 L/day.
+
+Master these and renal questions become predictable.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">Renal/GU NCLEX Map</text><rect x="60" y="100" width="980" height="60" rx="10" fill="#6366f1"/><text x="550" y="140" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">AKI: 3 Causes</text><rect x="60" y="170" width="320" height="160" rx="10" fill="#10b981" opacity="0.85"/><text x="220" y="210" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">PRERENAL</text><text x="220" y="240" fill="#ffffff" font-size="18" text-anchor="middle">Hypoperfusion</text><text x="220" y="265" fill="#ffffff" font-size="16" text-anchor="middle">Dehydration, shock, HF</text><text x="220" y="290" fill="#ffd700" font-size="16" text-anchor="middle">BUN/Cr greater than 20:1</text><text x="220" y="316" fill="#ffffff" font-size="16" text-anchor="middle">Fix: IV fluids</text><rect x="390" y="170" width="320" height="160" rx="10" fill="#f59e0b" opacity="0.85"/><text x="550" y="210" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">INTRARENAL</text><text x="550" y="240" fill="#ffffff" font-size="18" text-anchor="middle">Kidney damage</text><text x="550" y="265" fill="#ffffff" font-size="16" text-anchor="middle">ATN, nephrotoxins</text><text x="550" y="290" fill="#ffd700" font-size="16" text-anchor="middle">BUN/Cr about 10-15:1</text><text x="550" y="316" fill="#ffffff" font-size="16" text-anchor="middle">Stop nephrotoxin</text><rect x="720" y="170" width="320" height="160" rx="10" fill="#ef4444" opacity="0.85"/><text x="880" y="210" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">POSTRENAL</text><text x="880" y="240" fill="#ffffff" font-size="18" text-anchor="middle">Obstruction</text><text x="880" y="265" fill="#ffffff" font-size="16" text-anchor="middle">Stones, BPH, tumor</text><text x="880" y="290" fill="#ffd700" font-size="16" text-anchor="middle">Hydronephrosis</text><text x="880" y="316" fill="#ffffff" font-size="16" text-anchor="middle">Fix: catheter, stent</text><rect x="60" y="350" width="980" height="60" rx="10" fill="#8b5cf6"/><text x="550" y="390" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">CKD Stages by GFR</text><rect x="60" y="420" width="195" height="120" rx="10" fill="#10b981" opacity="0.85"/><text x="155" y="455" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Stage 1</text><text x="155" y="485" fill="#ffffff" font-size="18" text-anchor="middle">GFR 90+</text><text x="155" y="510" fill="#ffffff" font-size="14" text-anchor="middle">Damage only</text><rect x="265" y="420" width="195" height="120" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="360" y="455" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Stage 2</text><text x="360" y="485" fill="#ffffff" font-size="18" text-anchor="middle">GFR 60-89</text><text x="360" y="510" fill="#ffffff" font-size="14" text-anchor="middle">Mild</text><rect x="470" y="420" width="195" height="120" rx="10" fill="#f59e0b" opacity="0.85"/><text x="565" y="455" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Stage 3</text><text x="565" y="485" fill="#ffffff" font-size="18" text-anchor="middle">GFR 30-59</text><text x="565" y="510" fill="#ffffff" font-size="14" text-anchor="middle">Symptoms begin</text><rect x="675" y="420" width="195" height="120" rx="10" fill="#ef4444" opacity="0.85"/><text x="770" y="455" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Stage 4</text><text x="770" y="485" fill="#ffffff" font-size="18" text-anchor="middle">GFR 15-29</text><text x="770" y="510" fill="#ffffff" font-size="14" text-anchor="middle">Prep dialysis</text><rect x="880" y="420" width="160" height="120" rx="10" fill="#ec4899" opacity="0.85"/><text x="960" y="455" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Stage 5</text><text x="960" y="485" fill="#ffffff" font-size="18" text-anchor="middle">less than 15</text><text x="960" y="510" fill="#ffffff" font-size="14" text-anchor="middle">ESRD</text><rect x="60" y="560" width="980" height="60" rx="10" fill="#ef4444"/><text x="550" y="600" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Dialysis Indications: AEIOU</text><rect x="60" y="630" width="190" height="120" rx="10" fill="#6366f1" opacity="0.85"/><text x="155" y="668" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">A</text><text x="155" y="700" fill="#ffffff" font-size="16" text-anchor="middle">Acidosis</text><text x="155" y="722" fill="#ffffff" font-size="14" text-anchor="middle">pH less than 7.1</text><rect x="260" y="630" width="190" height="120" rx="10" fill="#10b981" opacity="0.85"/><text x="355" y="668" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">E</text><text x="355" y="700" fill="#ffffff" font-size="16" text-anchor="middle">Electrolytes</text><text x="355" y="722" fill="#ffffff" font-size="14" text-anchor="middle">K+ greater than 6.5</text><rect x="460" y="630" width="190" height="120" rx="10" fill="#f59e0b" opacity="0.85"/><text x="555" y="668" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">I</text><text x="555" y="700" fill="#ffffff" font-size="16" text-anchor="middle">Ingestion</text><text x="555" y="722" fill="#ffffff" font-size="14" text-anchor="middle">Toxins, ASA</text><rect x="660" y="630" width="190" height="120" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="755" y="668" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">O</text><text x="755" y="700" fill="#ffffff" font-size="16" text-anchor="middle">Overload</text><text x="755" y="722" fill="#ffffff" font-size="14" text-anchor="middle">Pulm edema</text><rect x="860" y="630" width="180" height="120" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="950" y="668" fill="#ffd700" font-size="28" font-weight="bold" text-anchor="middle">U</text><text x="950" y="700" fill="#ffffff" font-size="16" text-anchor="middle">Uremia</text><text x="950" y="722" fill="#ffffff" font-size="14" text-anchor="middle">BUN greater than 100</text><rect x="60" y="770" width="980" height="60" rx="10" fill="#0ea5e9"/><text x="550" y="810" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Nephrotic vs Nephritic</text><rect x="60" y="840" width="475" height="220" rx="10" fill="#10b981" opacity="0.85"/><text x="297" y="880" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">NEPHROTIC: Protein</text><text x="297" y="912" fill="#ffffff" font-size="18" text-anchor="middle">Proteinuria greater than 3.5 g/day</text><text x="297" y="942" fill="#ffffff" font-size="18" text-anchor="middle">Hypoalbuminemia</text><text x="297" y="972" fill="#ffffff" font-size="18" text-anchor="middle">Massive edema (anasarca)</text><text x="297" y="1002" fill="#ffffff" font-size="18" text-anchor="middle">Hyperlipidemia</text><text x="297" y="1036" fill="#ffd700" font-size="16" text-anchor="middle">Leaky glomerulus</text><rect x="565" y="840" width="475" height="220" rx="10" fill="#ef4444" opacity="0.85"/><text x="802" y="880" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">NEPHRITIC: Blood</text><text x="802" y="912" fill="#ffffff" font-size="18" text-anchor="middle">Hematuria, RBC casts</text><text x="802" y="942" fill="#ffffff" font-size="18" text-anchor="middle">Hypertension</text><text x="802" y="972" fill="#ffffff" font-size="18" text-anchor="middle">Mild proteinuria less than 3.5 g</text><text x="802" y="1002" fill="#ffffff" font-size="18" text-anchor="middle">Post-strep GN classic</text><text x="802" y="1036" fill="#ffd700" font-size="16" text-anchor="middle">Inflamed glomerulus</text></svg>`,
+          caption: "AKI causes, CKD stages, AEIOU dialysis criteria, and nephrotic vs nephritic — your renal NCLEX map."
+        }
+      },
+      {
+        type: "concept",
+        title: "AKI Differentiation and the Hyperkalemia Emergency",
+        content: `**Differentiating AKI Causes at the Bedside**
+
+The single most important step in AKI is figuring out which of the three causes is in play, because the treatment differs dramatically.
+
+Prerenal AKI: the kidney is fine but starved of blood flow.
+- BUN/creatinine ratio greater than 20:1 (BUN is reabsorbed when filtrate moves slowly)
+- Urine sodium less than 20 mEq/L (kidney conserves Na to hold water)
+- FENa less than 1% (fractional excretion of sodium)
+- Specific gravity greater than 1.020 (concentrated urine)
+- Urine osmolality greater than 500
+- Treatment: restore perfusion. Give crystalloids (NS or LR) 500-1000 mL bolus, treat HF with inotropes, treat sepsis with antibiotics + pressors. Hold ACEs/ARBs/NSAIDs.
+
+Intrarenal AKI: kidney itself is damaged (acute tubular necrosis is the classic).
+- BUN/creatinine ratio about 10-15:1
+- Urine sodium greater than 40 mEq/L (damaged tubules cannot retain Na)
+- FENa greater than 2%
+- Specific gravity 1.010 (isosthenuric — kidney cannot concentrate)
+- Muddy brown casts in urine sediment = ATN
+- Treatment: remove offending agent (vancomycin trough greater than 20 → hold dose, gentamicin → switch, contrast dye → hydrate before/after), supportive care, dialysis if AEIOU criteria met.
+
+Postrenal AKI: something blocks urine outflow.
+- Bladder scan greater than 400 mL after voiding → retention
+- Renal ultrasound shows hydronephrosis
+- Treatment: relieve obstruction. Foley catheter for BPH or urethral block, ureteral stent for stones, percutaneous nephrostomy for severe obstruction.
+
+**The Hyperkalemia Emergency**
+
+K+ greater than 5.5 = monitor; K+ greater than 6.5 = treat now; K+ greater than 7.0 = code-level emergency. Hyperkalemia is one of the fastest killers in renal failure because it causes lethal arrhythmias.
+
+EKG progression as K+ rises:
+1. Peaked T waves (first sign, K+ about 5.5-6.5)
+2. Prolonged PR interval (K+ about 6.5-7.5)
+3. Wide QRS (K+ about 7.5-8.5)
+4. Sine wave pattern (K+ greater than 9, pre-arrest)
+5. Asystole or V-fib
+
+Emergency treatment order (memorize this sequence):
+1. Calcium gluconate IV — stabilizes the cardiac membrane. Does NOT lower K+. Works in 1-3 minutes, lasts 30-60 min.
+2. Insulin + D50 IV — drives K+ into cells. 10 units regular insulin + 1 amp D50. Works in 15-30 min.
+3. Sodium bicarbonate — for acidosis-driven hyperkalemia. Drives K+ into cells via H+ exchange.
+4. Albuterol nebulizer — beta-agonist drives K+ into cells. Works in 30 min.
+5. Kayexalate (PO/PR) or patiromer — removes K+ from body. Slow (hours).
+6. Furosemide — if patient still makes urine.
+7. Hemodialysis — definitive treatment when refractory.
+
+NCLEX nuance: calcium gluconate is ALWAYS first if EKG changes are present. Insulin/D50 lowers the number but does not protect the heart in the meantime.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">AKI Differentiation + Hyperkalemia Emergency</text><rect x="60" y="90" width="980" height="50" rx="10" fill="#6366f1"/><text x="550" y="123" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">AKI Bedside Differentiation</text><rect x="60" y="160" width="320" height="240" rx="10" fill="#10b981" opacity="0.85"/><text x="220" y="195" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">PRERENAL</text><text x="220" y="225" fill="#ffffff" font-size="16" text-anchor="middle">BUN/Cr greater than 20:1</text><text x="220" y="252" fill="#ffffff" font-size="16" text-anchor="middle">Urine Na less than 20</text><text x="220" y="278" fill="#ffffff" font-size="16" text-anchor="middle">FENa less than 1%</text><text x="220" y="304" fill="#ffffff" font-size="16" text-anchor="middle">SG greater than 1.020</text><text x="220" y="335" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Treat: Fluids</text><text x="220" y="362" fill="#ffffff" font-size="14" text-anchor="middle">NS/LR bolus</text><text x="220" y="383" fill="#ffffff" font-size="14" text-anchor="middle">Hold ACE/ARB/NSAID</text><rect x="390" y="160" width="320" height="240" rx="10" fill="#f59e0b" opacity="0.85"/><text x="550" y="195" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">INTRARENAL (ATN)</text><text x="550" y="225" fill="#ffffff" font-size="16" text-anchor="middle">BUN/Cr about 10-15:1</text><text x="550" y="252" fill="#ffffff" font-size="16" text-anchor="middle">Urine Na greater than 40</text><text x="550" y="278" fill="#ffffff" font-size="16" text-anchor="middle">FENa greater than 2%</text><text x="550" y="304" fill="#ffffff" font-size="16" text-anchor="middle">Muddy brown casts</text><text x="550" y="335" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Treat: Stop toxin</text><text x="550" y="362" fill="#ffffff" font-size="14" text-anchor="middle">Vanco, gent, contrast</text><text x="550" y="383" fill="#ffffff" font-size="14" text-anchor="middle">Dialysis if AEIOU</text><rect x="720" y="160" width="320" height="240" rx="10" fill="#ef4444" opacity="0.85"/><text x="880" y="195" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">POSTRENAL</text><text x="880" y="225" fill="#ffffff" font-size="16" text-anchor="middle">Bladder scan greater than 400 mL</text><text x="880" y="252" fill="#ffffff" font-size="16" text-anchor="middle">Hydronephrosis on US</text><text x="880" y="278" fill="#ffffff" font-size="16" text-anchor="middle">Stones, BPH, tumor</text><text x="880" y="304" fill="#ffffff" font-size="16" text-anchor="middle">No urine output</text><text x="880" y="335" fill="#ffd700" font-size="16" font-weight="bold" text-anchor="middle">Treat: Relieve block</text><text x="880" y="362" fill="#ffffff" font-size="14" text-anchor="middle">Foley, stent</text><text x="880" y="383" fill="#ffffff" font-size="14" text-anchor="middle">Nephrostomy</text><rect x="60" y="420" width="980" height="50" rx="10" fill="#ef4444"/><text x="550" y="453" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Hyperkalemia EKG Progression</text><rect x="60" y="490" width="190" height="140" rx="10" fill="#10b981" opacity="0.85"/><text x="155" y="525" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">K+ 5.5-6.5</text><text x="155" y="555" fill="#ffffff" font-size="16" text-anchor="middle">Peaked T waves</text><text x="155" y="585" fill="#ffffff" font-size="14" text-anchor="middle">First sign</text><text x="155" y="610" fill="#ffffff" font-size="14" text-anchor="middle">Monitor</text><rect x="260" y="490" width="190" height="140" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="355" y="525" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">K+ 6.5-7.5</text><text x="355" y="555" fill="#ffffff" font-size="16" text-anchor="middle">PR prolonged</text><text x="355" y="585" fill="#ffffff" font-size="14" text-anchor="middle">P wave flattens</text><text x="355" y="610" fill="#ffffff" font-size="14" text-anchor="middle">Treat now</text><rect x="460" y="490" width="190" height="140" rx="10" fill="#f59e0b" opacity="0.85"/><text x="555" y="525" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">K+ 7.5-8.5</text><text x="555" y="555" fill="#ffffff" font-size="16" text-anchor="middle">Wide QRS</text><text x="555" y="585" fill="#ffffff" font-size="14" text-anchor="middle">Bundle blocks</text><text x="555" y="610" fill="#ffffff" font-size="14" text-anchor="middle">Code likely</text><rect x="660" y="490" width="190" height="140" rx="10" fill="#ef4444" opacity="0.85"/><text x="755" y="525" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">K+ greater than 9</text><text x="755" y="555" fill="#ffffff" font-size="16" text-anchor="middle">Sine wave</text><text x="755" y="585" fill="#ffffff" font-size="14" text-anchor="middle">Pre-arrest</text><text x="755" y="610" fill="#ffffff" font-size="14" text-anchor="middle">Imminent V-fib</text><rect x="860" y="490" width="180" height="140" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="950" y="525" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Asystole</text><text x="950" y="555" fill="#ffffff" font-size="16" text-anchor="middle">V-fib</text><text x="950" y="585" fill="#ffffff" font-size="14" text-anchor="middle">Death</text><text x="950" y="610" fill="#ffffff" font-size="14" text-anchor="middle">CPR</text><rect x="60" y="650" width="980" height="50" rx="10" fill="#ec4899"/><text x="550" y="683" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Treatment Order (Memorize!)</text><rect x="60" y="720" width="980" height="60" rx="10" fill="#10b981" opacity="0.85"/><text x="100" y="758" fill="#ffd700" font-size="20" font-weight="bold">1.</text><text x="140" y="758" fill="#ffffff" font-size="20" font-weight="bold">Calcium gluconate IV</text><text x="500" y="758" fill="#ffffff" font-size="18">- stabilizes heart (does NOT lower K)</text><rect x="60" y="790" width="980" height="60" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="100" y="828" fill="#ffd700" font-size="20" font-weight="bold">2.</text><text x="140" y="828" fill="#ffffff" font-size="20" font-weight="bold">Insulin + D50</text><text x="400" y="828" fill="#ffffff" font-size="18">- drives K into cells (15-30 min)</text><rect x="60" y="860" width="980" height="60" rx="10" fill="#f59e0b" opacity="0.85"/><text x="100" y="898" fill="#ffd700" font-size="20" font-weight="bold">3.</text><text x="140" y="898" fill="#ffffff" font-size="20" font-weight="bold">Sodium bicarb / Albuterol neb</text><text x="600" y="898" fill="#ffffff" font-size="18">- shift K intracellularly</text><rect x="60" y="930" width="980" height="60" rx="10" fill="#6366f1" opacity="0.85"/><text x="100" y="968" fill="#ffd700" font-size="20" font-weight="bold">4.</text><text x="140" y="968" fill="#ffffff" font-size="20" font-weight="bold">Kayexalate / Furosemide</text><text x="560" y="968" fill="#ffffff" font-size="18">- removes K from body</text><rect x="60" y="1000" width="980" height="60" rx="10" fill="#ef4444" opacity="0.85"/><text x="100" y="1038" fill="#ffd700" font-size="20" font-weight="bold">5.</text><text x="140" y="1038" fill="#ffffff" font-size="20" font-weight="bold">Hemodialysis</text><text x="380" y="1038" fill="#ffffff" font-size="18">- definitive treatment when refractory</text></svg>`,
+          caption: "Differentiate AKI by lab pattern. For hyperkalemia: calcium FIRST stabilizes the heart, then shift, then remove."
+        }
+      },
+      {
+        type: "example",
+        title: "Case Study: Vancomycin-Induced AKI",
+        content: `**Patient:** Mrs. K, 72-year-old female admitted 6 days ago for MRSA pneumonia. On IV vancomycin 1.25 g q12h. Day 6 morning labs and assessment:
+
+**Baseline (Day 1):**
+- BUN 18, Creatinine 0.9 (normal)
+- K+ 4.1, Na+ 138
+- Urine output 1500 mL/24h
+- Vancomycin trough Day 3: 14 mcg/mL (therapeutic 10-20)
+
+**Day 6 Labs:**
+- BUN 62, Creatinine 3.4 (up from 0.9)
+- K+ 6.2 (up from 4.1)
+- HCO3 18 (low; normal 22-26), pH 7.28 (acidotic)
+- Urine output last 24h: 380 mL
+- Vancomycin trough this morning: 32 mcg/mL (toxic)
+- Urine sediment: muddy brown casts present
+
+**Day 6 Assessment:**
+- VS: BP 152/88, HR 96, RR 22, Temp 99.4 F
+- Weight up 3.2 kg since admission
+- 2+ pitting edema bilateral lower extremities
+- Crackles in bilateral lung bases
+- SpO2 93% on 2L NC
+- EKG: peaked T waves in leads V2-V4
+
+**Pathophysiology breakdown:**
+
+Mrs. K has classic vancomycin-induced acute tubular necrosis (intrarenal AKI):
+
+1. Vancomycin is nephrotoxic — concentrates in renal tubules and damages tubular epithelium. Trough greater than 20 mcg/mL increases risk dramatically. Hers is 32.
+2. BUN/Cr ratio = 62/3.4 = 18 (within 10-15:1 range for intrarenal — slightly above due to volume overload).
+3. Muddy brown casts confirm ATN.
+4. Oliguria (less than 400 mL/24h) + weight gain + edema + crackles = fluid overload.
+5. K+ 6.2 with peaked T waves = hyperkalemia approaching emergency.
+6. pH 7.28 + HCO3 18 = metabolic acidosis from failure to excrete H+.
+
+This patient meets multiple AEIOU criteria: A (acidosis), E (hyperkalemia with EKG changes), O (overload), and potentially U (uremic symptoms developing).
+
+**Priority Actions (in order):**
+
+1. Notify provider — patient needs emergency intervention now.
+2. Place on cardiac monitor — peaked T waves can progress fast.
+3. STOP vancomycin immediately. Switch to a non-nephrotoxic alternative (linezolid).
+4. Treat hyperkalemia:
+   - Calcium gluconate 1 g IV (cardiac stabilization first)
+   - Regular insulin 10 units IV + D50 1 amp (drive K+ in)
+   - Albuterol 10-20 mg nebulizer (additional shift)
+   - Kayexalate 30 g PO if able to take PO and bowel sounds present
+5. Furosemide 40-80 mg IV — if she still makes any urine, try diuresis.
+6. Anticipate dialysis — meets AEIOU criteria.
+7. Strict I&O, daily weights, fluid restriction to 1000 mL/24h.
+8. Renal diet: low K+ (no bananas, oranges, potatoes), low Na+, low PO4, protein 0.6-0.8 g/kg.
+
+NCLEX teaching point: When a patient on a known nephrotoxin develops AKI, the FIRST nursing action is to hold the offending drug. You cannot fix the kidney while still poisoning it.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Mrs. K: Vancomycin-Induced ATN</text><rect x="60" y="100" width="980" height="50" rx="10" fill="#6366f1"/><text x="550" y="133" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Day 1 vs Day 6 - Trajectory</text><rect x="60" y="170" width="475" height="280" rx="10" fill="#10b981" opacity="0.85"/><text x="297" y="210" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Day 1 Baseline</text><text x="297" y="246" fill="#ffffff" font-size="18" text-anchor="middle">BUN 18 / Cr 0.9</text><text x="297" y="278" fill="#ffffff" font-size="18" text-anchor="middle">K+ 4.1, Na+ 138</text><text x="297" y="310" fill="#ffffff" font-size="18" text-anchor="middle">Urine output 1500 mL/24h</text><text x="297" y="342" fill="#ffffff" font-size="18" text-anchor="middle">Vanco trough 14 (OK)</text><text x="297" y="378" fill="#ffffff" font-size="18" text-anchor="middle">BP 138/82</text><text x="297" y="410" fill="#ffd700" font-size="18" text-anchor="middle">Status: stable</text><rect x="565" y="170" width="475" height="280" rx="10" fill="#ef4444" opacity="0.85"/><text x="802" y="210" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Day 6 Crisis</text><text x="802" y="246" fill="#ffffff" font-size="18" text-anchor="middle">BUN 62 / Cr 3.4</text><text x="802" y="278" fill="#ffffff" font-size="18" text-anchor="middle">K+ 6.2 (peaked T waves)</text><text x="802" y="310" fill="#ffffff" font-size="18" text-anchor="middle">Urine output 380 mL/24h</text><text x="802" y="342" fill="#ffffff" font-size="18" text-anchor="middle">Vanco trough 32 (TOXIC)</text><text x="802" y="378" fill="#ffffff" font-size="18" text-anchor="middle">Muddy brown casts</text><text x="802" y="410" fill="#ffd700" font-size="18" text-anchor="middle">Status: ATN + AEIOU</text><rect x="60" y="470" width="980" height="50" rx="10" fill="#f59e0b"/><text x="550" y="503" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">AEIOU Criteria Met</text><rect x="60" y="540" width="240" height="100" rx="10" fill="#ef4444" opacity="0.85"/><text x="180" y="580" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">A: Acidosis</text><text x="180" y="610" fill="#ffffff" font-size="16" text-anchor="middle">pH 7.28, HCO3 18</text><rect x="310" y="540" width="240" height="100" rx="10" fill="#ef4444" opacity="0.85"/><text x="430" y="580" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">E: K+ 6.2</text><text x="430" y="610" fill="#ffffff" font-size="16" text-anchor="middle">Peaked T waves</text><rect x="560" y="540" width="240" height="100" rx="10" fill="#ef4444" opacity="0.85"/><text x="680" y="580" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">O: Overload</text><text x="680" y="610" fill="#ffffff" font-size="16" text-anchor="middle">+3.2 kg, crackles</text><rect x="810" y="540" width="230" height="100" rx="10" fill="#f59e0b" opacity="0.85"/><text x="925" y="580" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">U: Building</text><text x="925" y="610" fill="#ffffff" font-size="16" text-anchor="middle">BUN 62</text><rect x="60" y="660" width="980" height="50" rx="10" fill="#8b5cf6"/><text x="550" y="693" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Priority Actions (In Order)</text><rect x="60" y="725" width="980" height="320" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="100" y="765" fill="#ffd700" font-size="18" font-weight="bold">1. Notify provider; cardiac monitor on now</text><text x="100" y="795" fill="#ffffff" font-size="18">2. STOP vancomycin (cannot heal kidney while poisoning it)</text><text x="100" y="825" fill="#ffffff" font-size="18">3. Switch to linezolid (non-nephrotoxic MRSA coverage)</text><text x="100" y="855" fill="#ffd700" font-size="18" font-weight="bold">4. Calcium gluconate IV - stabilize heart</text><text x="100" y="885" fill="#ffd700" font-size="18" font-weight="bold">5. Insulin 10u + D50 - drive K+ into cells</text><text x="100" y="915" fill="#ffffff" font-size="18">6. Albuterol neb 10-20 mg - additional shift</text><text x="100" y="945" fill="#ffffff" font-size="18">7. Furosemide 40-80 mg IV - if any UOP</text><text x="100" y="975" fill="#ffd700" font-size="18" font-weight="bold">8. Anticipate dialysis - meets AEIOU</text><text x="100" y="1005" fill="#ffffff" font-size="18">9. Renal diet: low K, low Na, low PO4, protein 0.6-0.8 g/kg</text><text x="100" y="1035" fill="#ffffff" font-size="16">Teaching: hold the nephrotoxin first; everything else is supportive</text></svg>`,
+          caption: "Mrs. K's case: classic vancomycin-induced ATN meeting multiple AEIOU criteria. Stop the toxin first."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a client in acute kidney injury with a serum potassium of 6.8 mEq/L. The cardiac monitor shows peaked T waves and a widening QRS complex. Which medication should the nurse prepare to administer FIRST?",
+        options: [
+          { text: "Regular insulin 10 units IV with 1 amp of D50W", correct: false },
+          { text: "Calcium gluconate 1 g IV over 2-3 minutes", correct: true },
+          { text: "Sodium polystyrene sulfonate (Kayexalate) 30 g PO", correct: false },
+          { text: "Furosemide 40 mg IV push", correct: false }
+        ],
+        explanation: "Calcium gluconate is the FIRST medication in symptomatic hyperkalemia with EKG changes. It does NOT lower potassium — it stabilizes the cardiac membrane, raising the threshold for arrhythmia and preventing imminent V-fib or asystole. It works in 1-3 minutes and buys time for the other treatments to act. Insulin + D50 (option 1) shifts K+ into cells but takes 15-30 minutes and does nothing to protect the heart immediately. Kayexalate (option 3) removes K+ from the body but takes hours and is contraindicated with bowel issues. Furosemide (option 4) helps if the patient still makes urine but is slower and useless if oliguric. Memorize the sequence: 1. Calcium gluconate (stabilize), 2. Insulin + D50 / albuterol / bicarb (shift), 3. Kayexalate / furosemide / dialysis (remove). With peaked T waves AND widening QRS, this patient is on the edge of lethal arrhythmia — the heart needs protection first, then we can address the actual K+ level.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Hyperkalemia: Calcium FIRST</text><rect x="60" y="100" width="980" height="80" rx="10" fill="#ef4444"/><text x="550" y="140" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">K+ 6.8 + Peaked T + Wide QRS</text><text x="550" y="168" fill="#ffd700" font-size="18" text-anchor="middle">Pre-arrest pattern - heart is in danger</text><rect x="60" y="200" width="980" height="50" rx="10" fill="#10b981"/><text x="550" y="233" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">3-Step Treatment Logic</text><rect x="60" y="270" width="310" height="290" rx="10" fill="#10b981" opacity="0.85"/><text x="215" y="305" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">STEP 1: STABILIZE</text><text x="215" y="340" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Calcium gluconate</text><text x="215" y="370" fill="#ffffff" font-size="16" text-anchor="middle">1 g IV over 2-3 min</text><text x="215" y="398" fill="#ffd700" font-size="16" text-anchor="middle">Onset: 1-3 min</text><text x="215" y="424" fill="#ffffff" font-size="16" text-anchor="middle">Stabilizes membrane</text><text x="215" y="450" fill="#ffffff" font-size="16" text-anchor="middle">Does NOT lower K</text><text x="215" y="486" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">CORRECT ANSWER</text><text x="215" y="520" fill="#ffffff" font-size="14" text-anchor="middle">Buys time for other tx</text><rect x="395" y="270" width="310" height="290" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="550" y="305" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">STEP 2: SHIFT</text><text x="550" y="340" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Insulin + D50</text><text x="550" y="370" fill="#ffffff" font-size="16" text-anchor="middle">10 u + 1 amp D50</text><text x="550" y="398" fill="#ffd700" font-size="16" text-anchor="middle">Onset: 15-30 min</text><text x="550" y="424" fill="#ffffff" font-size="16" text-anchor="middle">Drives K into cells</text><text x="550" y="450" fill="#ffffff" font-size="16" text-anchor="middle">Albuterol/bicarb help</text><text x="550" y="486" fill="#ffffff" font-size="14" text-anchor="middle">Lowers serum K</text><text x="550" y="520" fill="#ffffff" font-size="14" text-anchor="middle">Body still has too much K</text><rect x="730" y="270" width="310" height="290" rx="10" fill="#f59e0b" opacity="0.85"/><text x="885" y="305" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">STEP 3: REMOVE</text><text x="885" y="340" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">Kayexalate / HD</text><text x="885" y="370" fill="#ffffff" font-size="16" text-anchor="middle">Kayex: PO/PR</text><text x="885" y="398" fill="#ffd700" font-size="16" text-anchor="middle">Onset: 1-4 hours</text><text x="885" y="424" fill="#ffffff" font-size="16" text-anchor="middle">Furosemide if UOP</text><text x="885" y="450" fill="#ffffff" font-size="16" text-anchor="middle">Dialysis definitive</text><text x="885" y="486" fill="#ffffff" font-size="14" text-anchor="middle">Removes from body</text><text x="885" y="520" fill="#ffffff" font-size="14" text-anchor="middle">Slow but lasting</text><rect x="60" y="580" width="980" height="50" rx="10" fill="#ec4899"/><text x="550" y="613" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Why NOT the Other Options</text><rect x="60" y="650" width="980" height="80" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="550" y="685" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Insulin + D50:</text><text x="550" y="715" fill="#ffffff" font-size="18" text-anchor="middle">Lowers K but takes 15-30 min - heart unprotected meanwhile</text><rect x="60" y="745" width="980" height="80" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="550" y="780" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Kayexalate:</text><text x="550" y="810" fill="#ffffff" font-size="18" text-anchor="middle">Takes hours; useless in immediate cardiac emergency</text><rect x="60" y="840" width="980" height="80" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="550" y="875" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Furosemide:</text><text x="550" y="905" fill="#ffffff" font-size="18" text-anchor="middle">Helpful only if patient still makes urine; not first-line cardiac protection</text><rect x="60" y="935" width="980" height="120" rx="10" fill="#10b981" opacity="0.85"/><text x="550" y="975" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Mnemonic: C BIG K Drop</text><text x="550" y="1008" fill="#ffffff" font-size="20" text-anchor="middle">C - Calcium (stabilize)</text><text x="550" y="1038" fill="#ffffff" font-size="20" text-anchor="middle">BIG - Bicarb, Insulin/D50, beta-aGonist (shift)</text></svg>`,
+          caption: "Calcium gluconate first protects the heart. Then shift (insulin/albuterol/bicarb), then remove (Kayexalate/dialysis)."
+        }
+      },
+      {
+        type: "application",
+        title: "Renal/GU Master Framework",
+        content: `Use this framework on every renal/GU NCLEX question:
+
+**Frame 1: AKI or CKD?**
+- AKI: rapid (hours to days), often reversible, identifiable trigger
+- CKD: gradual (months to years), irreversible, staged by GFR
+- Both can coexist (AKI on CKD) — common in elderly diabetic hypertensive patients
+
+**Frame 2: For AKI, Which of the Three?**
+Use the BUN/Cr ratio and urinary chemistry:
+- Prerenal: BUN/Cr greater than 20:1, FENa less than 1%, give fluids
+- Intrarenal (ATN): BUN/Cr 10-15:1, muddy brown casts, stop nephrotoxin
+- Postrenal: bladder scan greater than 400 mL, hydronephrosis, relieve obstruction
+
+**Frame 3: Dialysis Indicated? Run AEIOU**
+- Acidosis (pH less than 7.1)
+- Electrolytes (K+ greater than 6.5 refractory)
+- Ingestion (toxin like methanol, ASA, lithium)
+- Overload (pulmonary edema)
+- Uremia (BUN greater than 100, pericarditis, encephalopathy)
+
+**Frame 4: Hemodialysis vs Peritoneal Dialysis**
+- HD: 3x/week, 3-4 hours; rapid clearance; needs AV fistula (do NOT use that arm for BP, IV, or labs); check thrill and bruit q shift
+- PD: daily exchanges at home; uses peritoneal membrane; risk for peritonitis (cloudy effluent = call provider, send for culture, start antibiotics)
+- Avoid taking BPs, drawing labs, or starting IVs in the arm with an AV fistula or graft
+
+**Frame 5: Glomerular — Nephrotic vs Nephritic**
+- Nephrotic: massive proteinuria, edema, hypoalbuminemia, hyperlipidemia. Causes: diabetic nephropathy, minimal change, lupus. Treat: ACE/ARB, statin, diuretic, low-sodium diet.
+- Nephritic: hematuria, RBC casts, HTN, mild proteinuria. Causes: post-streptococcal GN, IgA nephropathy, lupus. Treat: BP control, sometimes immunosuppression.
+
+**Frame 6: BPH and UTI Quick Hits**
+- BPH triggers urinary retention → postrenal AKI in older men. Look for distended bladder, post-void residual greater than 100 mL. Tamsulosin (alpha-blocker) relaxes prostate; warn about orthostatic hypotension. Finasteride shrinks the prostate over months.
+- UTI in elders presents as confusion/falls, not dysuria. Always get a UA on a confused older patient. Push fluids 2-3 L/day, cranberry juice for prevention, complete the antibiotic course.
+
+**SATA Practice Stem:** "Which findings would the nurse expect in a client with acute glomerulonephritis (nephritic syndrome)?" Select all that apply:
+1. Hematuria with RBC casts (CORRECT)
+2. BP 168/98 (CORRECT)
+3. Periorbital edema (CORRECT)
+4. Proteinuria 1.2 g/day (CORRECT — mild)
+5. Recent streptococcal pharyngitis (CORRECT — classic trigger)
+6. Massive proteinuria 8 g/day (incorrect — this is nephrotic)
+
+**Renal Diet Teaching (memorize for SATA):**
+- Limit K+: no bananas, oranges, potatoes, tomatoes, salt substitutes
+- Limit Na+: less than 2 g/day; no canned, processed, deli meats
+- Limit phosphorus: no dairy, nuts, cola; give phosphate binder with meals
+- Limit fluids: per provider (often 1000-1500 mL/day)
+- Protein: low if pre-dialysis (0.6-0.8 g/kg); higher on dialysis (1.2 g/kg)
+
+Master these six frames and renal questions become a checklist.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">Renal/GU 6-Frame Master Plan</text><rect x="60" y="100" width="980" height="80" rx="10" fill="#6366f1"/><text x="550" y="140" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 1: AKI or CKD?</text><text x="550" y="170" fill="#ffd700" font-size="18" text-anchor="middle">Rapid + reversible (AKI) vs Gradual + GFR staged (CKD)</text><rect x="60" y="195" width="980" height="80" rx="10" fill="#10b981"/><text x="550" y="235" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 2: AKI Type</text><text x="550" y="265" fill="#ffd700" font-size="18" text-anchor="middle">Prerenal (BUN/Cr greater than 20) / Intrarenal (casts) / Postrenal (block)</text><rect x="60" y="290" width="980" height="80" rx="10" fill="#f59e0b"/><text x="550" y="330" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 3: AEIOU Dialysis?</text><text x="550" y="360" fill="#ffd700" font-size="18" text-anchor="middle">Acidosis / Electrolytes / Ingestion / Overload / Uremia</text><rect x="60" y="385" width="980" height="80" rx="10" fill="#ef4444"/><text x="550" y="425" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 4: HD vs PD</text><text x="550" y="455" fill="#ffd700" font-size="18" text-anchor="middle">HD: AV fistula (no BP/IV/labs that arm) - PD: peritonitis risk</text><rect x="60" y="480" width="980" height="80" rx="10" fill="#8b5cf6"/><text x="550" y="520" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 5: Nephrotic vs Nephritic</text><text x="550" y="550" fill="#ffd700" font-size="18" text-anchor="middle">PROTEIN (massive) vs BLOOD (RBC casts + HTN)</text><rect x="60" y="575" width="980" height="80" rx="10" fill="#0ea5e9"/><text x="550" y="615" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Frame 6: BPH and UTI</text><text x="550" y="645" fill="#ffd700" font-size="18" text-anchor="middle">Confusion = UTI in elders / Retention = BPH</text><rect x="60" y="675" width="980" height="180" rx="10" fill="#10b981" opacity="0.85"/><text x="550" y="715" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Renal Diet Quick Card</text><text x="100" y="752" fill="#ffffff" font-size="18">Low K: no bananas, oranges, potatoes, salt subs</text><text x="100" y="780" fill="#ffffff" font-size="18">Low Na: less than 2g/day; no processed foods</text><text x="100" y="808" fill="#ffffff" font-size="18">Low PO4: no dairy/nuts/cola; binders with meals</text><text x="100" y="836" fill="#ffffff" font-size="18">Protein: 0.6-0.8 pre-dialysis; 1.2 on dialysis</text><rect x="60" y="870" width="980" height="190" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="910" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">SATA: Acute Glomerulonephritis (Nephritic)</text><text x="100" y="948" fill="#ffffff" font-size="18">[X] Hematuria with RBC casts</text><text x="100" y="976" fill="#ffffff" font-size="18">[X] BP 168/98</text><text x="100" y="1004" fill="#ffffff" font-size="18">[X] Periorbital edema</text><text x="100" y="1032" fill="#ffffff" font-size="18">[X] Proteinuria 1.2 g/day (mild)</text><text x="600" y="948" fill="#ffffff" font-size="18">[X] Recent strep pharyngitis</text><text x="600" y="976" fill="#ffffff" font-size="18">[ ] Proteinuria 8 g/day</text><text x="600" y="1004" fill="#ffd700" font-size="16">(that one is nephrotic)</text></svg>`,
+          caption: "Six frames cover the entire renal/GU content: AKI vs CKD, AKI type, AEIOU, HD vs PD, nephrotic vs nephritic, BPH/UTI."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-12",
+    title: "Pathophysiology Synthesis Capstone",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Capstone: Putting It All Together",
+        content: `Congratulations — you have now worked through 11 lessons covering every major pathophysiology system the NCLEX-RN tests:
+
+1. Cellular Pathology — adaptation, injury, death
+2. Genetic and Congenital Disorders
+3. Common Adult Diseases
+4. Inflammation, Infection, and Sepsis
+5. Fluid, Electrolyte, and Acid-Base
+6. Endocrine — DKA, HHS, thyroid storm, Addisonian crisis
+7. Cardiovascular — MI, HF, shock
+8. Pulmonary — ARDS, COPD, asthma, PE
+9. Neurologic — ICP, stroke, seizures, GCS
+10. GI and Hepatic — pancreatitis, liver failure, GI bleed
+11. Renal and GU — AKI, CKD, dialysis, glomerular disease
+
+This final lesson is a synthesis capstone. The NCLEX rarely asks "what is the BUN value for AKI?" in isolation. Instead, it asks: "A 68-year-old with COPD, diabetes, heart failure, and CKD stage 4 comes in with worsening dyspnea, K+ 5.9, BUN 78, creatinine 3.1, BNP 1200, and an A1C of 9.4 — what is the priority?"
+
+To answer that, you need a synthesis framework. We will build three NCLEX-readiness tools in this lesson:
+
+**Tool 1: The Mechanism → Manifestation → Intervention (M-M-I) pattern.** Every disease has a mechanism (what is wrong at the cellular/organ level), a manifestation (what the patient looks like), and an intervention (what the nurse does). Reading questions through this lens makes the right answer obvious.
+
+**Tool 2: The SATA/Priority filter.** SATA questions reward you for picking everything that is true. Priority questions reward you for picking the ONE most-true. Recognizing which type of question you are facing is half the battle.
+
+**Tool 3: The final NCLEX-readiness checklist.** A 25-item self-audit to run the night before exam day.
+
+The reality of NCLEX is that it tests application, not recall. Two students can know the same facts; the one who can synthesize them across body systems is the one who passes. This lesson is your synthesis training ground.
+
+Let's build the toolkit.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" fill="#ffd700" font-size="36" font-weight="bold" text-anchor="middle">Pathophysiology Synthesis Capstone</text><rect x="60" y="100" width="980" height="60" rx="10" fill="#6366f1"/><text x="550" y="140" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">11 Systems Covered</text><rect x="60" y="180" width="240" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="180" y="218" fill="#ffffff" font-size="18" text-anchor="middle">1. Cellular</text><text x="180" y="245" fill="#ffffff" font-size="14" text-anchor="middle">Adaptation/Death</text><rect x="310" y="180" width="240" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="430" y="218" fill="#ffffff" font-size="18" text-anchor="middle">2. Genetic</text><text x="430" y="245" fill="#ffffff" font-size="14" text-anchor="middle">Congenital</text><rect x="560" y="180" width="240" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="680" y="218" fill="#ffffff" font-size="18" text-anchor="middle">3. Adult Disease</text><text x="680" y="245" fill="#ffffff" font-size="14" text-anchor="middle">Common patterns</text><rect x="810" y="180" width="230" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="925" y="218" fill="#ffffff" font-size="18" text-anchor="middle">4. Inflammation</text><text x="925" y="245" fill="#ffffff" font-size="14" text-anchor="middle">Sepsis</text><rect x="60" y="270" width="240" height="80" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="180" y="308" fill="#ffffff" font-size="18" text-anchor="middle">5. F/E/Acid</text><text x="180" y="335" fill="#ffffff" font-size="14" text-anchor="middle">Base balance</text><rect x="310" y="270" width="240" height="80" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="430" y="308" fill="#ffffff" font-size="18" text-anchor="middle">6. Endocrine</text><text x="430" y="335" fill="#ffffff" font-size="14" text-anchor="middle">DKA, thyroid</text><rect x="560" y="270" width="240" height="80" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="680" y="308" fill="#ffffff" font-size="18" text-anchor="middle">7. Cardiovascular</text><text x="680" y="335" fill="#ffffff" font-size="14" text-anchor="middle">MI, HF, shock</text><rect x="810" y="270" width="230" height="80" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="925" y="308" fill="#ffffff" font-size="18" text-anchor="middle">8. Pulmonary</text><text x="925" y="335" fill="#ffffff" font-size="14" text-anchor="middle">ARDS, COPD</text><rect x="60" y="360" width="320" height="80" rx="10" fill="#f59e0b" opacity="0.85"/><text x="220" y="398" fill="#ffffff" font-size="18" text-anchor="middle">9. Neurologic</text><text x="220" y="425" fill="#ffffff" font-size="14" text-anchor="middle">ICP, stroke, sz</text><rect x="390" y="360" width="320" height="80" rx="10" fill="#f59e0b" opacity="0.85"/><text x="550" y="398" fill="#ffffff" font-size="18" text-anchor="middle">10. GI/Hepatic</text><text x="550" y="425" fill="#ffffff" font-size="14" text-anchor="middle">Pancreatitis, liver</text><rect x="720" y="360" width="320" height="80" rx="10" fill="#f59e0b" opacity="0.85"/><text x="880" y="398" fill="#ffffff" font-size="18" text-anchor="middle">11. Renal/GU</text><text x="880" y="425" fill="#ffffff" font-size="14" text-anchor="middle">AKI, CKD, HD</text><rect x="60" y="460" width="980" height="60" rx="10" fill="#ef4444"/><text x="550" y="500" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Three Synthesis Tools</text><rect x="60" y="540" width="320" height="200" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="220" y="580" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">TOOL 1: M-M-I</text><text x="220" y="615" fill="#ffffff" font-size="16" text-anchor="middle">Mechanism</text><text x="220" y="640" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">|</text><text x="220" y="665" fill="#ffffff" font-size="16" text-anchor="middle">Manifestation</text><text x="220" y="690" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">|</text><text x="220" y="715" fill="#ffffff" font-size="16" text-anchor="middle">Intervention</text><rect x="390" y="540" width="320" height="200" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="580" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">TOOL 2: SATA/Priority</text><text x="550" y="618" fill="#ffffff" font-size="16" text-anchor="middle">SATA: pick all true</text><text x="550" y="648" fill="#ffffff" font-size="16" text-anchor="middle">Priority: pick most</text><text x="550" y="678" fill="#ffffff" font-size="16" text-anchor="middle">urgent / important</text><text x="550" y="710" fill="#ffd700" font-size="16" text-anchor="middle">Read stem twice!</text><rect x="720" y="540" width="320" height="200" rx="10" fill="#0ea5e9" opacity="0.85"/><text x="880" y="580" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">TOOL 3: Checklist</text><text x="880" y="618" fill="#ffffff" font-size="16" text-anchor="middle">25-item self-audit</text><text x="880" y="648" fill="#ffffff" font-size="16" text-anchor="middle">Night before exam</text><text x="880" y="678" fill="#ffffff" font-size="16" text-anchor="middle">Identify gaps</text><text x="880" y="710" fill="#ffd700" font-size="16" text-anchor="middle">Targeted review</text><rect x="60" y="760" width="980" height="300" rx="10" fill="#6366f1" opacity="0.85"/><text x="550" y="800" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">NCLEX Truth</text><text x="550" y="838" fill="#ffffff" font-size="18" text-anchor="middle">The test measures APPLICATION, not recall</text><text x="550" y="870" fill="#ffffff" font-size="18" text-anchor="middle">Two students with identical knowledge can</text><text x="550" y="898" fill="#ffffff" font-size="18" text-anchor="middle">get vastly different scores - the synthesizer wins</text><text x="550" y="940" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Your job in this lesson:</text><text x="550" y="976" fill="#ffffff" font-size="18" text-anchor="middle">Learn the M-M-I pattern,</text><text x="550" y="1006" fill="#ffffff" font-size="18" text-anchor="middle">master SATA vs Priority recognition,</text><text x="550" y="1036" fill="#ffffff" font-size="18" text-anchor="middle">complete the readiness checklist</text></svg>`,
+          caption: "Capstone synthesis: 11 systems condensed into 3 reusable tools — M-M-I pattern, SATA/Priority filter, readiness checklist."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Mechanism-Manifestation-Intervention Pattern",
+        content: `Every NCLEX pathophysiology question can be decoded with the M-M-I pattern. This concept card teaches you to apply it across all 11 systems.
+
+**M1 — Mechanism: What is broken at the cellular/organ level?**
+
+Examples:
+- MI: coronary thrombosis blocks blood flow to myocardium → ischemic necrosis
+- DKA: insulin deficiency → fat breakdown → ketones → metabolic acidosis
+- ARDS: alveolar-capillary membrane damage → non-cardiogenic pulmonary edema
+- Cirrhosis: hepatocyte fibrosis → portal hypertension + synthetic failure
+- AKI prerenal: hypoperfusion → low GFR → BUN/Cr rise
+- ICP: brain volume cannot exceed skull volume → herniation risk
+- Sepsis: dysregulated systemic inflammation → endothelial leak → distributive shock
+- Hyperkalemia: K+ depolarizes cardiac cell membranes → lethal arrhythmias
+- Hepatic encephalopathy: ammonia crosses blood-brain barrier → neurotoxicity
+- Pancreatitis: trypsin activates inside pancreas → autodigestion
+
+If you can state the mechanism in one sentence, you understand the disease. If you cannot, you have only memorized facts.
+
+**M2 — Manifestation: What does the patient look like?**
+
+Manifestations follow logically from the mechanism. Once you understand the mechanism, you can predict the signs and symptoms without memorizing.
+
+- MI mechanism (ischemic myocardium) → predicts: crushing chest pain, ST elevation, troponin rise, diaphoresis, anxiety, nausea
+- DKA mechanism (acidosis + osmotic diuresis) → predicts: Kussmaul breathing, fruity breath, polyuria, polydipsia, dehydration, abdominal pain
+- Heart failure mechanism (pump failure, backward congestion) → predicts: JVD, crackles, S3 gallop, edema, fatigue, dyspnea
+- Liver failure mechanism (detox + synthesis fail) → predicts: ammonia rises (asterixis), albumin falls (ascites), clotting factors fall (bleeding), bilirubin rises (jaundice)
+- Hyperkalemia mechanism (membrane depolarization) → predicts: peaked T waves, wide QRS, muscle weakness, paresthesias
+
+If you have to memorize manifestations as a list, you do not understand the mechanism. Go back to M1.
+
+**M3 — Intervention: What does the nurse do?**
+
+Interventions also flow logically. Each intervention either:
+(a) reverses the mechanism (e.g., insulin in DKA reverses insulin deficiency)
+(b) supports failing function (e.g., IV fluids in hypovolemia)
+(c) prevents complications (e.g., DVT prophylaxis in immobile patients)
+
+Always prioritize interventions in the ABC framework: Airway, Breathing, Circulation, Disability, Exposure.
+
+**Putting It Together — Practice Example**
+
+Question: "A 24-year-old presents with fruity breath, rapid deep respirations, blood glucose 542 mg/dL, pH 7.18, K+ 5.8."
+
+M1 (mechanism): DKA from insulin deficiency
+M2 (manifestation): Kussmaul respirations + fruity breath + hyperglycemia + acidosis fit perfectly. K+ falsely elevated because acidosis drives K+ out of cells.
+M3 (intervention): IV NS bolus → regular insulin infusion → when glucose hits 250, switch to D5NS → replace K+ early (it WILL drop fast as insulin pushes K+ back into cells) → monitor for cerebral edema.
+
+The M-M-I pattern eliminates panic. You stop searching memory for facts and start reasoning from first principles. This is how passers think.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">M-M-I Pattern Across All Systems</text><rect x="60" y="100" width="980" height="60" rx="10" fill="#6366f1"/><text x="550" y="140" fill="#ffffff" font-size="24" font-weight="bold" text-anchor="middle">Three Steps to Decode Any Question</text><rect x="60" y="180" width="310" height="240" rx="10" fill="#10b981" opacity="0.85"/><text x="215" y="220" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="middle">M1: Mechanism</text><text x="215" y="258" fill="#ffffff" font-size="16" text-anchor="middle">What is broken?</text><text x="215" y="285" fill="#ffffff" font-size="14" text-anchor="middle">One-sentence pathology</text><text x="215" y="318" fill="#ffd700" font-size="16" text-anchor="middle">Examples:</text><text x="215" y="345" fill="#ffffff" font-size="14" text-anchor="middle">MI = coronary clot</text><text x="215" y="368" fill="#ffffff" font-size="14" text-anchor="middle">DKA = no insulin</text><text x="215" y="391" fill="#ffffff" font-size="14" text-anchor="middle">AKI = low GFR</text><rect x="395" y="180" width="310" height="240" rx="10" fill="#f59e0b" opacity="0.85"/><text x="550" y="220" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="middle">M2: Manifestation</text><text x="550" y="258" fill="#ffffff" font-size="16" text-anchor="middle">What patient looks like</text><text x="550" y="285" fill="#ffffff" font-size="14" text-anchor="middle">Predict from mechanism</text><text x="550" y="318" fill="#ffd700" font-size="16" text-anchor="middle">Don't memorize - derive</text><text x="550" y="345" fill="#ffffff" font-size="14" text-anchor="middle">MI: chest pain, ST up</text><text x="550" y="368" fill="#ffffff" font-size="14" text-anchor="middle">DKA: Kussmaul, fruity</text><text x="550" y="391" fill="#ffffff" font-size="14" text-anchor="middle">AKI: oliguria, BUN up</text><rect x="730" y="180" width="310" height="240" rx="10" fill="#ef4444" opacity="0.85"/><text x="885" y="220" fill="#ffd700" font-size="24" font-weight="bold" text-anchor="middle">M3: Intervention</text><text x="885" y="258" fill="#ffffff" font-size="16" text-anchor="middle">What nurse does</text><text x="885" y="285" fill="#ffffff" font-size="14" text-anchor="middle">Reverse / Support / Prevent</text><text x="885" y="318" fill="#ffd700" font-size="16" text-anchor="middle">ABCs first!</text><text x="885" y="345" fill="#ffffff" font-size="14" text-anchor="middle">MI: MONA + PCI</text><text x="885" y="368" fill="#ffffff" font-size="14" text-anchor="middle">DKA: NS + insulin + K</text><text x="885" y="391" fill="#ffffff" font-size="14" text-anchor="middle">AKI: fix cause</text><rect x="60" y="440" width="980" height="60" rx="10" fill="#8b5cf6"/><text x="550" y="480" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Worked Example: 24yo DKA</text><rect x="60" y="510" width="980" height="80" rx="10" fill="#10b981" opacity="0.85"/><text x="100" y="545" fill="#ffd700" font-size="20" font-weight="bold">M1:</text><text x="170" y="545" fill="#ffffff" font-size="18">Insulin deficiency - fat breakdown - ketones - acidosis</text><text x="170" y="572" fill="#ffffff" font-size="16">Stated in one sentence</text><rect x="60" y="600" width="980" height="80" rx="10" fill="#f59e0b" opacity="0.85"/><text x="100" y="635" fill="#ffd700" font-size="20" font-weight="bold">M2:</text><text x="170" y="635" fill="#ffffff" font-size="18">Kussmaul, fruity breath, glucose 542, pH 7.18, K+ 5.8</text><text x="170" y="662" fill="#ffffff" font-size="16">K+ falsely high - acidosis pushes K out of cells</text><rect x="60" y="690" width="980" height="80" rx="10" fill="#ef4444" opacity="0.85"/><text x="100" y="725" fill="#ffd700" font-size="20" font-weight="bold">M3:</text><text x="170" y="725" fill="#ffffff" font-size="18">NS bolus - insulin drip - D5NS at 250 - replace K early</text><text x="170" y="752" fill="#ffffff" font-size="16">Watch for cerebral edema in young patients</text><rect x="60" y="785" width="980" height="60" rx="10" fill="#0ea5e9"/><text x="550" y="825" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Why This Works</text><rect x="60" y="855" width="980" height="200" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="895" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Memorization vs Mechanism Thinking</text><text x="550" y="935" fill="#ffffff" font-size="18" text-anchor="middle">Memorizer: searches list of facts under stress - often fails</text><text x="550" y="970" fill="#ffffff" font-size="18" text-anchor="middle">M-M-I thinker: derives answer from pathophysiology</text><text x="550" y="1008" fill="#ffd700" font-size="18" text-anchor="middle">Result: faster, more accurate, less anxious test-taking</text><text x="550" y="1040" fill="#ffffff" font-size="16" text-anchor="middle">Apply M-M-I to every practice question from now on</text></svg>`,
+          caption: "M-M-I: state the mechanism, predict the manifestation, derive the intervention. Three sentences, every disease."
+        }
+      },
+      {
+        type: "example",
+        title: "Capstone Case: Multi-System Failure",
+        content: `**Patient:** Mr. T, 68-year-old male with PMHx: COPD (40 pack-year smoker), Type 2 DM (A1C 9.4), HFrEF (EF 30%), CKD stage 4 (baseline Cr 2.8), HTN. He arrived in the ED at 0400 with 3 days of worsening dyspnea, productive yellow sputum, fever to 101.4 F, and confusion since this morning.
+
+**ED Vitals and Labs:**
+- BP 88/52, HR 122, RR 32 labored, Temp 102.1 F, SpO2 84% on room air → 91% on 4L NC
+- WBC 19,200 with 18% bands (left shift)
+- Lactate 4.8 (high; greater than 2 = sepsis screen positive)
+- Procalcitonin 6.2 (high; bacterial infection)
+- Glucose 412 mg/dL, anion gap 22 (elevated)
+- pH 7.21, PaCO2 56, HCO3 18, PaO2 62 (mixed acidosis: respiratory + metabolic)
+- K+ 6.1, Na+ 132, BUN 94, Cr 4.2 (up from baseline 2.8 — AKI on CKD)
+- Troponin 0.42 ng/mL (elevated; baseline less than 0.04)
+- BNP 1880 (high; HF exacerbation)
+- CXR: bilateral lower lobe infiltrates + cardiomegaly + bilateral pleural effusions
+- EKG: sinus tachycardia 122, peaked T waves V2-V4, no ST elevation
+
+**Let's apply M-M-I to each system in play:**
+
+**System 1 — Sepsis (Pulmonary source, pneumonia):**
+- M1: Bacterial pneumonia → cytokine storm → distributive shock
+- M2: Fever, tachycardia, hypotension, leukocytosis with left shift, lactate 4.8
+- M3: 30 mL/kg crystalloid bolus, blood cultures x2, broad-spectrum antibiotics within 1 hour (ceftriaxone + azithromycin), source control
+
+**System 2 — COPD exacerbation:**
+- M1: Airway inflammation + mucus plugging + V/Q mismatch → hypoxemia + hypercapnia
+- M2: RR 32, productive yellow sputum, PaCO2 56, PaO2 62
+- M3: Albuterol/ipratropium nebs, IV methylprednisolone, careful O2 titration (target SpO2 88-92% to avoid CO2 retention)
+
+**System 3 — Acute HF on chronic HFrEF:**
+- M1: Pump failure + volume overload → pulmonary edema
+- M2: BNP 1880, bilateral effusions, cardiomegaly
+- M3: This is tricky — sepsis says GIVE fluids, HF says HOLD fluids. Give the 30 mL/kg bolus for sepsis (mortality benefit), then reassess with bedside ultrasound or CVP. Add diuretic AFTER perfusion is restored.
+
+**System 4 — AKI on CKD:**
+- M1: Hypoperfusion (sepsis) + nephrotoxin risk → ATN superimposed on CKD
+- M2: Cr 4.2 (up from 2.8), BUN 94, oliguria likely
+- M3: Avoid nephrotoxins (no NSAIDs, no contrast unless essential), monitor I&O, anticipate dialysis if AEIOU criteria worsen
+
+**System 5 — Hyperkalemia:**
+- M1: AKI + acidosis driving K+ out of cells
+- M2: K+ 6.1, peaked T waves on EKG
+- M3: Calcium gluconate IV NOW (peaked T waves), then insulin + D50, then loop diuretic if any UOP
+
+**System 6 — Hyperglycemia (likely DKA or HHS):**
+- M1: Stress + infection + relative insulin deficiency
+- M2: Glucose 412, anion gap 22, pH 7.21
+- M3: Insulin infusion (regular insulin 0.1 unit/kg/hr) after K+ trends down, monitor glucose hourly
+
+**Priority order in the first hour:**
+1. Calcium gluconate IV (peaked T waves)
+2. NS 30 mL/kg bolus (sepsis) — about 2 L over 30 min
+3. Blood cultures x2 + lactate redraw
+4. IV antibiotics within 1 hour (ceftriaxone + azithromycin)
+5. Albuterol/ipratropium neb
+6. Foley catheter to measure UOP
+7. Cardiac monitor + arterial line if pressor needed
+8. ICU admission
+
+This patient has six failing systems simultaneously. M-M-I lets you address each one without losing the priority order.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Mr. T: 6 Failing Systems</text><rect x="60" y="90" width="980" height="60" rx="10" fill="#ef4444"/><text x="550" y="130" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">BP 88/52, HR 122, RR 32, SpO2 84%, T 102.1</text><rect x="60" y="170" width="320" height="170" rx="10" fill="#ef4444" opacity="0.85"/><text x="220" y="205" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">1. Sepsis</text><text x="220" y="235" fill="#ffffff" font-size="14" text-anchor="middle">Lactate 4.8, WBC 19k</text><text x="220" y="260" fill="#ffffff" font-size="14" text-anchor="middle">Procalcitonin 6.2</text><text x="220" y="288" fill="#ffd700" font-size="14" text-anchor="middle">M3: 30 mL/kg NS</text><text x="220" y="310" fill="#ffd700" font-size="14" text-anchor="middle">Abx within 1 hr</text><text x="220" y="332" fill="#ffffff" font-size="13" text-anchor="middle">Ceftriaxone + azithro</text><rect x="390" y="170" width="320" height="170" rx="10" fill="#f59e0b" opacity="0.85"/><text x="550" y="205" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">2. COPD Exac</text><text x="550" y="235" fill="#ffffff" font-size="14" text-anchor="middle">RR 32, PaCO2 56</text><text x="550" y="260" fill="#ffffff" font-size="14" text-anchor="middle">Yellow sputum</text><text x="550" y="288" fill="#ffd700" font-size="14" text-anchor="middle">M3: Nebs</text><text x="550" y="310" fill="#ffd700" font-size="14" text-anchor="middle">IV steroids</text><text x="550" y="332" fill="#ffffff" font-size="13" text-anchor="middle">O2 target 88-92%</text><rect x="720" y="170" width="320" height="170" rx="10" fill="#6366f1" opacity="0.85"/><text x="880" y="205" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">3. HF Exac</text><text x="880" y="235" fill="#ffffff" font-size="14" text-anchor="middle">BNP 1880</text><text x="880" y="260" fill="#ffffff" font-size="14" text-anchor="middle">Bilateral effusions</text><text x="880" y="288" fill="#ffd700" font-size="14" text-anchor="middle">M3: Tricky!</text><text x="880" y="310" fill="#ffd700" font-size="14" text-anchor="middle">Bolus first (sepsis)</text><text x="880" y="332" fill="#ffffff" font-size="13" text-anchor="middle">Diurese after perfusion</text><rect x="60" y="360" width="320" height="170" rx="10" fill="#10b981" opacity="0.85"/><text x="220" y="395" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">4. AKI on CKD</text><text x="220" y="425" fill="#ffffff" font-size="14" text-anchor="middle">Cr 4.2 (was 2.8)</text><text x="220" y="450" fill="#ffffff" font-size="14" text-anchor="middle">BUN 94</text><text x="220" y="478" fill="#ffd700" font-size="14" text-anchor="middle">M3: No NSAIDs</text><text x="220" y="500" fill="#ffd700" font-size="14" text-anchor="middle">No contrast</text><text x="220" y="522" fill="#ffffff" font-size="13" text-anchor="middle">Anticipate dialysis</text><rect x="390" y="360" width="320" height="170" rx="10" fill="#ec4899" opacity="0.85"/><text x="550" y="395" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">5. Hyperkalemia</text><text x="550" y="425" fill="#ffffff" font-size="14" text-anchor="middle">K+ 6.1</text><text x="550" y="450" fill="#ffffff" font-size="14" text-anchor="middle">Peaked T waves</text><text x="550" y="478" fill="#ffd700" font-size="14" text-anchor="middle">M3: Ca++ NOW</text><text x="550" y="500" fill="#ffd700" font-size="14" text-anchor="middle">Then insulin/D50</text><text x="550" y="522" fill="#ffffff" font-size="13" text-anchor="middle">Then remove K</text><rect x="720" y="360" width="320" height="170" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="880" y="395" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">6. Hyperglycemia</text><text x="880" y="425" fill="#ffffff" font-size="14" text-anchor="middle">Glucose 412</text><text x="880" y="450" fill="#ffffff" font-size="14" text-anchor="middle">Anion gap 22</text><text x="880" y="478" fill="#ffd700" font-size="14" text-anchor="middle">M3: Insulin gtt</text><text x="880" y="500" fill="#ffd700" font-size="14" text-anchor="middle">After K trends down</text><text x="880" y="522" fill="#ffffff" font-size="13" text-anchor="middle">Hourly checks</text><rect x="60" y="555" width="980" height="60" rx="10" fill="#0ea5e9"/><text x="550" y="595" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Priority Order: First Hour</text><rect x="60" y="630" width="980" height="430" rx="10" fill="#10b981" opacity="0.85"/><text x="100" y="670" fill="#ffd700" font-size="20" font-weight="bold">1.</text><text x="140" y="670" fill="#ffffff" font-size="20" font-weight="bold">Calcium gluconate IV - peaked T waves cannot wait</text><text x="100" y="708" fill="#ffd700" font-size="20" font-weight="bold">2.</text><text x="140" y="708" fill="#ffffff" font-size="20" font-weight="bold">NS 30 mL/kg bolus - sepsis bundle, about 2 L over 30 min</text><text x="100" y="746" fill="#ffd700" font-size="20" font-weight="bold">3.</text><text x="140" y="746" fill="#ffffff" font-size="20" font-weight="bold">Blood cultures x2 + lactate redraw before antibiotics</text><text x="100" y="784" fill="#ffd700" font-size="20" font-weight="bold">4.</text><text x="140" y="784" fill="#ffffff" font-size="20" font-weight="bold">IV antibiotics within 1 hour - ceftriaxone + azithromycin</text><text x="100" y="822" fill="#ffd700" font-size="20" font-weight="bold">5.</text><text x="140" y="822" fill="#ffffff" font-size="20" font-weight="bold">Albuterol/ipratropium neb continuously</text><text x="100" y="860" fill="#ffd700" font-size="20" font-weight="bold">6.</text><text x="140" y="860" fill="#ffffff" font-size="20" font-weight="bold">Foley catheter - hourly UOP target greater than 0.5 mL/kg/hr</text><text x="100" y="898" fill="#ffd700" font-size="20" font-weight="bold">7.</text><text x="140" y="898" fill="#ffffff" font-size="20" font-weight="bold">Cardiac monitor + a-line + ICU admission</text><text x="100" y="936" fill="#ffd700" font-size="20" font-weight="bold">8.</text><text x="140" y="936" fill="#ffffff" font-size="20" font-weight="bold">Insulin gtt after K trends down</text><text x="100" y="974" fill="#ffd700" font-size="20" font-weight="bold">9.</text><text x="140" y="974" fill="#ffffff" font-size="20" font-weight="bold">Reassess HF status with bedside US; diurese once stable</text><text x="100" y="1012" fill="#ffd700" font-size="20" font-weight="bold">10.</text><text x="140" y="1012" fill="#ffffff" font-size="20" font-weight="bold">Norepinephrine if MAP less than 65 after fluid resuscitation</text><text x="550" y="1050" fill="#ffd700" font-size="18" text-anchor="middle">M-M-I scales to multi-system disasters</text></svg>`,
+          caption: "Six failing systems, one priority order. M-M-I lets you address each system without losing the bigger picture."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a 70-year-old client with CKD stage 4, type 2 diabetes, and HFrEF. The client presents with confusion, fever 101.8 F, BP 86/52, HR 126, RR 30, SpO2 88% on room air, lactate 5.1, K+ 6.4 with peaked T waves on EKG, and Cr 4.8 (baseline 2.6). Using the M-M-I framework, which intervention should the nurse perform FIRST?",
+        options: [
+          { text: "Administer broad-spectrum antibiotics within one hour for sepsis", correct: false },
+          { text: "Begin a 30 mL/kg crystalloid bolus for septic shock", correct: false },
+          { text: "Administer calcium gluconate IV to stabilize the cardiac membrane", correct: true },
+          { text: "Initiate emergent hemodialysis for AKI with hyperkalemia", correct: false }
+        ],
+        explanation: "Calcium gluconate is the FIRST intervention because peaked T waves with K+ 6.4 indicate impending lethal arrhythmia — the patient could code in minutes. Calcium gluconate stabilizes the cardiac membrane within 1-3 minutes and buys time for all other interventions. The mistake is to fixate on sepsis (which is real and serious) and forget that the heart is the FASTEST killer. Sepsis bundle interventions (antibiotics within 1 hour, 30 mL/kg bolus) follow within minutes after the calcium is given, but the heart needs protection FIRST. Emergent dialysis takes 30+ minutes to set up — the patient may not survive the wait without calcium first. M-M-I analysis: M1 (mechanism) = K+ depolarizing cardiac cells; M2 (manifestation) = peaked T waves; M3 (intervention) = stabilize membrane with calcium, then shift K+, then remove. This is the universal pattern: when EKG changes are present in hyperkalemia, calcium gluconate is the answer regardless of the other competing diagnoses. ABC framework supports this: C (circulation) failure from arrhythmia trumps everything else.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" fill="#ffd700" font-size="32" font-weight="bold" text-anchor="middle">Multi-System Priority: Heart Wins</text><rect x="60" y="100" width="980" height="80" rx="10" fill="#ef4444"/><text x="550" y="140" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Competing Emergencies:</text><text x="550" y="168" fill="#ffd700" font-size="18" text-anchor="middle">Septic shock + Hyperkalemia + AKI + EKG changes</text><rect x="60" y="200" width="980" height="50" rx="10" fill="#6366f1"/><text x="550" y="233" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Four Options - Apply M-M-I Filter</text><rect x="60" y="270" width="475" height="200" rx="10" fill="#10b981" opacity="0.85"/><text x="297" y="305" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">CORRECT: Calcium gluconate</text><text x="297" y="340" fill="#ffffff" font-size="16" text-anchor="middle">M1: K+ depolarizing cells</text><text x="297" y="365" fill="#ffffff" font-size="16" text-anchor="middle">M2: Peaked T waves</text><text x="297" y="390" fill="#ffffff" font-size="16" text-anchor="middle">M3: Stabilize membrane</text><text x="297" y="420" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Onset 1-3 min</text><text x="297" y="445" fill="#ffd700" font-size="16" text-anchor="middle">Prevents V-fib NOW</text><rect x="565" y="270" width="475" height="200" rx="10" fill="#f59e0b" opacity="0.85"/><text x="802" y="305" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Sepsis Bundle: 2nd</text><text x="802" y="340" fill="#ffffff" font-size="16" text-anchor="middle">Real and serious</text><text x="802" y="365" fill="#ffffff" font-size="16" text-anchor="middle">30 mL/kg bolus</text><text x="802" y="390" fill="#ffffff" font-size="16" text-anchor="middle">Abx within 1 hr</text><text x="802" y="420" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Follows seconds later</text><text x="802" y="445" fill="#ffd700" font-size="16" text-anchor="middle">After calcium given</text><rect x="60" y="490" width="475" height="200" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="297" y="525" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">Dialysis: Wrong (timing)</text><text x="297" y="560" fill="#ffffff" font-size="16" text-anchor="middle">Definitive treatment</text><text x="297" y="585" fill="#ffffff" font-size="16" text-anchor="middle">But takes 30+ min to set up</text><text x="297" y="610" fill="#ffffff" font-size="16" text-anchor="middle">Patient may not survive wait</text><text x="297" y="640" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Must protect heart first</text><text x="297" y="665" fill="#ffd700" font-size="16" text-anchor="middle">Calcium buys time</text><rect x="565" y="490" width="475" height="200" rx="10" fill="#ec4899" opacity="0.85"/><text x="802" y="525" fill="#ffd700" font-size="20" font-weight="bold" text-anchor="middle">M-M-I Lens</text><text x="802" y="560" fill="#ffffff" font-size="16" text-anchor="middle">Identify the FASTEST killer</text><text x="802" y="585" fill="#ffffff" font-size="16" text-anchor="middle">Among competing pathologies</text><text x="802" y="615" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Cardiac arrhythmia</text><text x="802" y="645" fill="#ffffff" font-size="16" text-anchor="middle">kills in minutes</text><text x="802" y="670" fill="#ffffff" font-size="16" text-anchor="middle">Sepsis kills in hours</text><rect x="60" y="710" width="980" height="50" rx="10" fill="#0ea5e9"/><text x="550" y="743" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Universal Rule</text><rect x="60" y="780" width="980" height="280" rx="10" fill="#10b981" opacity="0.85"/><text x="550" y="820" fill="#ffd700" font-size="22" font-weight="bold" text-anchor="middle">Hyperkalemia + EKG changes = Calcium FIRST</text><text x="550" y="858" fill="#ffffff" font-size="18" text-anchor="middle">Regardless of competing diagnoses</text><text x="550" y="895" fill="#ffffff" font-size="18" text-anchor="middle">Sepsis, MI, DKA, AKI - all matter</text><text x="550" y="925" fill="#ffd700" font-size="20" text-anchor="middle">But peaked T waves trump all</text><text x="550" y="965" fill="#ffffff" font-size="18" text-anchor="middle">ABC framework: C (circulation) failure wins</text><text x="550" y="1002" fill="#ffffff" font-size="18" text-anchor="middle">Then run the sepsis bundle within minutes</text><text x="550" y="1038" fill="#ffd700" font-size="18" text-anchor="middle">Memorize: Ca-Insulin-Shift-Remove sequence</text></svg>`,
+          caption: "When EKG changes are present, calcium gluconate trumps every other competing emergency. Protect the heart first."
+        }
+      },
+      {
+        type: "application",
+        title: "Your NCLEX-Readiness Checklist",
+        content: `You have completed 12 lessons covering every major pathophysiology system the NCLEX tests. Use this 25-item readiness checklist the night before exam day. For each item, rate yourself: confident, shaky, weak. Spend the last 24 hours reviewing only your weak items.
+
+**Cellular and Inflammation (Lessons 1, 4)**
+1. Can I explain hypertrophy vs hyperplasia vs metaplasia vs dysplasia?
+2. Do I know the SIRS criteria and sepsis bundle steps?
+3. Can I differentiate the four shock states (hypovolemic, cardiogenic, distributive, obstructive)?
+
+**Fluid, Electrolyte, Acid-Base (Lesson 5)**
+4. Can I read an ABG in 30 seconds (ROME or Tic-Tac-Toe)?
+5. Do I know K+ priority interventions in order (Ca-Insulin-Shift-Remove)?
+6. Can I list signs of hypo/hyper Na+, K+, Ca++, Mg++?
+
+**Endocrine (Lesson 6)**
+7. Can I distinguish DKA from HHS by lab pattern?
+8. Do I know thyroid storm (hyperthermia, tachycardia) vs myxedema coma (hypothermia, bradycardia)?
+9. Addisonian crisis vs Cushing — fluid, K+, glucose differences?
+
+**Cardiovascular (Lesson 7)**
+10. MONA-B for chest pain: aspirin, nitro, morphine, beta-blocker — do I know each one's mechanism?
+11. Left HF (pulmonary congestion) vs Right HF (peripheral edema, JVD)?
+12. STEMI vs NSTEMI: troponin and EKG criteria?
+
+**Pulmonary (Lesson 8)**
+13. ARDS criteria (P/F ratio less than 300, bilateral infiltrates, not cardiogenic)?
+14. COPD O2 target 88-92% — why?
+15. Wells score for PE; D-dimer interpretation?
+
+**Neurologic (Lesson 9)**
+16. ICP signs (Cushing's triad: HTN, bradycardia, irregular respirations)?
+17. Stroke time window (less than 4.5 hr for tPA)?
+18. Status epilepticus management (lorazepam → phenytoin → phenobarb)?
+19. GCS scoring (E4-V5-M6 = 15, less than 8 intubate)?
+
+**GI and Hepatic (Lesson 10)**
+20. Grey Turner and Cullen signs = hemorrhagic pancreatitis?
+21. Lactulose goal: 2-3 soft stools/day for encephalopathy?
+22. Upper vs Lower GI bleed presentation?
+
+**Renal and GU (Lesson 11)**
+23. AKI differentiation (prerenal vs intrarenal vs postrenal)?
+24. AEIOU dialysis criteria?
+25. Nephrotic (protein) vs Nephritic (blood)?
+
+**Final Test-Taking Strategy:**
+
+1. Read the stem twice before looking at options.
+2. Identify the M-M-I before choosing.
+3. For SATA: each option is independently true or false. Do not assume how many are correct.
+4. For Priority: ABCs + safety + Maslow. Physiologic before psychosocial.
+5. Watch for absolutes ("always," "never," "all") — usually wrong.
+6. Watch for delegation/scope questions — RN cannot delegate assessment, teaching, evaluation, or unstable patients.
+7. When two options look correct, pick the more specific one.
+8. Trust the M-M-I framework. The right answer flows from the mechanism.
+
+**Test-Day Logistics:**
+- Sleep 7-8 hours the night before.
+- Eat protein + complex carbs for breakfast.
+- Arrive 30 minutes early.
+- Take breaks at item 75 and 150 (CAT format allows up to 145 items).
+- Stay calm if the test goes long — running to 145 is normal, not a bad sign.
+
+You are ready. Now go pass.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" fill="#ffd700" font-size="34" font-weight="bold" text-anchor="middle">25-Item NCLEX-Readiness Checklist</text><rect x="60" y="90" width="980" height="50" rx="10" fill="#6366f1"/><text x="550" y="123" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Cellular / Inflammation (3 items)</text><rect x="60" y="155" width="980" height="80" rx="10" fill="#6366f1" opacity="0.85"/><text x="100" y="183" fill="#ffffff" font-size="16">1. Hypertrophy/hyperplasia/metaplasia/dysplasia</text><text x="100" y="208" fill="#ffffff" font-size="16">2. SIRS criteria and sepsis bundle</text><text x="100" y="231" fill="#ffffff" font-size="16">3. Four shock states</text><rect x="60" y="245" width="980" height="50" rx="10" fill="#10b981"/><text x="550" y="278" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">F/E/Acid-Base + Endocrine (6 items)</text><rect x="60" y="310" width="980" height="120" rx="10" fill="#10b981" opacity="0.85"/><text x="100" y="338" fill="#ffffff" font-size="16">4. ABG in 30 seconds (ROME)</text><text x="100" y="363" fill="#ffffff" font-size="16">5. K+ priority: Ca-Insulin-Shift-Remove</text><text x="100" y="386" fill="#ffffff" font-size="16">6. Hypo/hyper Na/K/Ca/Mg signs</text><text x="100" y="409" fill="#ffffff" font-size="16">7. DKA vs HHS labs</text><text x="600" y="338" fill="#ffffff" font-size="16">8. Thyroid storm vs myxedema</text><text x="600" y="363" fill="#ffffff" font-size="16">9. Addisonian crisis labs</text><rect x="60" y="445" width="980" height="50" rx="10" fill="#f59e0b"/><text x="550" y="478" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Cardio + Pulmonary (6 items)</text><rect x="60" y="510" width="980" height="120" rx="10" fill="#f59e0b" opacity="0.85"/><text x="100" y="538" fill="#ffffff" font-size="16">10. MONA-B for chest pain</text><text x="100" y="563" fill="#ffffff" font-size="16">11. L HF vs R HF</text><text x="100" y="586" fill="#ffffff" font-size="16">12. STEMI vs NSTEMI</text><text x="100" y="609" fill="#ffffff" font-size="16">13. ARDS criteria (P/F less than 300)</text><text x="600" y="538" fill="#ffffff" font-size="16">14. COPD O2 target 88-92%</text><text x="600" y="563" fill="#ffffff" font-size="16">15. Wells score for PE</text><rect x="60" y="645" width="980" height="50" rx="10" fill="#ef4444"/><text x="550" y="678" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Neuro + GI/Hepatic + Renal (10 items)</text><rect x="60" y="710" width="980" height="200" rx="10" fill="#ef4444" opacity="0.85"/><text x="100" y="740" fill="#ffffff" font-size="16">16. Cushing's triad for ICP</text><text x="100" y="765" fill="#ffffff" font-size="16">17. Stroke tPA window 4.5 hr</text><text x="100" y="788" fill="#ffffff" font-size="16">18. Status epilepticus: lorazepam first</text><text x="100" y="811" fill="#ffffff" font-size="16">19. GCS less than 8 intubate</text><text x="100" y="834" fill="#ffffff" font-size="16">20. Grey Turner / Cullen signs</text><text x="600" y="740" fill="#ffffff" font-size="16">21. Lactulose goal 2-3 stools</text><text x="600" y="765" fill="#ffffff" font-size="16">22. Upper vs Lower GI bleed</text><text x="600" y="788" fill="#ffffff" font-size="16">23. AKI: pre/intra/post-renal</text><text x="600" y="811" fill="#ffffff" font-size="16">24. AEIOU dialysis</text><text x="600" y="834" fill="#ffffff" font-size="16">25. Nephrotic vs Nephritic</text><text x="550" y="884" fill="#ffd700" font-size="18" font-weight="bold" text-anchor="middle">Rate each: Confident / Shaky / Weak - drill the weak ones</text><rect x="60" y="925" width="980" height="60" rx="10" fill="#8b5cf6"/><text x="550" y="965" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Test-Day Logistics</text><rect x="60" y="995" width="980" height="70" rx="10" fill="#8b5cf6" opacity="0.85"/><text x="100" y="1022" fill="#ffffff" font-size="16">Sleep 7-8 hrs - Protein breakfast - Arrive 30 min early</text><text x="100" y="1048" fill="#ffd700" font-size="16">Take breaks at items 75 and 150 - Running to 145 is NORMAL</text></svg>`,
+          caption: "25 items across 11 systems. Run this audit the night before exam day. Drill only your weak items. You are ready."
         }
       }
     ]
