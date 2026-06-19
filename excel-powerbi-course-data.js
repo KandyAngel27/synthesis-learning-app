@@ -7809,7 +7809,7 @@ Certified content gets a **checkmark icon** and ranks **first in search**.
             title: 'Dashboards and Reports: Design for Decisions',
             author: 'Synthesis Learning',
             description: 'Why most dashboards fail — chart-type selection, color discipline, hierarchy, the executive summary that gets read in 30 seconds.',
-            lessons: 6, duration: 90, progress: 0, category: 'excel-powerbi',
+            lessons: 9, duration: 135, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-dashboards-lesson-1",
@@ -8547,6 +8547,529 @@ In Excel:
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">60-Minute Build Plan</text><rect x="60" y="100" width="980" height="80" fill="#10b981" opacity="0.2" stroke="#10b981"/><text x="80" y="135" fill="#10b981" font-size="20" font-weight="bold">Minute 0 – 10  |  Find the headline</text><text x="80" y="165" fill="#ffffff" font-size="14">"If the CEO read one sentence, what should it say?" Write it down before anything else.</text><rect x="60" y="195" width="980" height="80" fill="#6366f1" opacity="0.2" stroke="#6366f1"/><text x="80" y="230" fill="#6366f1" font-size="20" font-weight="bold">Minute 10 – 20  |  Pick exactly 4 KPIs</text><text x="80" y="260" fill="#ffffff" font-size="14">Outcome metrics with clear direction and a target. Not 3, not 5 — four.</text><rect x="60" y="290" width="980" height="120" fill="#f59e0b" opacity="0.2" stroke="#f59e0b"/><text x="80" y="325" fill="#f59e0b" font-size="20" font-weight="bold">Minute 20 – 40  |  Build the cards</text><text x="80" y="355" fill="#ffffff" font-size="14">Headline text box + 4 New Card visuals, 240 x 140px, 16px gutter.</text><text x="80" y="380" fill="#ffffff" font-size="14">Add Status Color DAX measure → bind to card border (Format → Effects → Border).</text><rect x="60" y="425" width="980" height="80" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6"/><text x="80" y="460" fill="#8b5cf6" font-size="20" font-weight="bold">Minute 40 – 55  |  Add the context line</text><text x="80" y="490" fill="#ffffff" font-size="14">One-line plain-English caption per KPI. Static or DAX-driven — both fine.</text><rect x="60" y="520" width="980" height="80" fill="#ec4899" opacity="0.2" stroke="#ec4899"/><text x="80" y="555" fill="#ec4899" font-size="20" font-weight="bold">Minute 55 – 60  |  The 30-second test</text><text x="80" y="585" fill="#ffffff" font-size="14">Show a colleague for 30s. Ask: "What matters most?" Pass → ship Monday.</text><text x="60" y="660" fill="#ffd700" font-size="22" font-weight="bold">Status Color DAX (copy-ready)</text><rect x="60" y="680" width="980" height="180" fill="#1a1a2e" stroke="#888"/><text x="80" y="715" fill="#10b981" font-size="14" font-family="monospace">Status Color =</text><text x="80" y="745" fill="#ffffff" font-size="14" font-family="monospace">  SWITCH(TRUE(),</text><text x="80" y="775" fill="#ffffff" font-size="14" font-family="monospace">    [Metric] &gt;= [Target], "#10b981",      // green</text><text x="80" y="805" fill="#ffffff" font-size="14" font-family="monospace">    [Metric] &gt;= [Target] * 0.9, "#f59e0b", // amber</text><text x="80" y="835" fill="#ffffff" font-size="14" font-family="monospace">    "#ef4444")                              // red</text><rect x="60" y="890" width="980" height="160" fill="#ffd700" opacity="0.15" stroke="#ffd700"/><text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Final principle</text><text x="550" y="970" text-anchor="middle" fill="#ffffff" font-size="18">An exec summary tile is a place to SUBTRACT,</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="18">not to add. Emptiness lets the few remaining</text><text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="18">numbers speak loud enough to be acted on.</text></svg>`,
           caption: "A 60-minute plan to add a decision-grade exec summary band to your highest-traffic dashboard. The build is mechanical; the editing — subtracting everything that isn't decision-grade — is the senior skill."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-dashboards-lesson-7",
+    title: "Performance and Optimization: Building Dashboards That Don't Crawl",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Performance Matters More Than You Think",
+        content: `A dashboard that takes **45 seconds to load** is a dashboard nobody uses. Performance is not a luxury — it is the difference between an executive checking the numbers daily and an executive emailing you to ask for a PDF.
+
+Performance problems compound. A single slow visual on a Power BI report page forces every other visual to wait. An Excel workbook with **volatile functions** like INDIRECT and OFFSET recalculates the entire model whenever anything changes. A poorly written DAX measure can turn a 200ms page into a 12-second page when filtered by region.
+
+The four levers you control are:
+- **Data model design** — star schema versus flat tables
+- **Calculated columns versus measures** — storage cost versus compute cost
+- **Query folding** — pushing transformations back to the source
+- **Refresh strategy** — full refresh versus incremental refresh
+
+Master these four levers and you can build dashboards on **50-million-row** fact tables that respond in under two seconds. Ignore them and even a 100,000-row dataset will feel sluggish.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">The Four Performance Levers</text><rect x="80" y="140" width="440" height="380" rx="14" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2"/><text x="300" y="190" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">1. Data Model Design</text><text x="300" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Star schema beats flat table</text><text x="300" y="280" text-anchor="middle" fill="#ffffff" font-size="18">Compression: 10x smaller</text><text x="300" y="320" text-anchor="middle" fill="#ffffff" font-size="18">Joins: 5x faster</text><text x="300" y="370" text-anchor="middle" fill="#10b981" font-size="18">Impact: HIGH</text><rect x="580" y="140" width="440" height="380" rx="14" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2"/><text x="800" y="190" text-anchor="middle" fill="#f59e0b" font-size="24" font-weight="bold">2. Calc Column vs Measure</text><text x="800" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Column: stored at refresh</text><text x="800" y="280" text-anchor="middle" fill="#ffffff" font-size="18">Measure: computed at query</text><text x="800" y="320" text-anchor="middle" fill="#ffffff" font-size="18">Default to measures</text><text x="800" y="370" text-anchor="middle" fill="#10b981" font-size="18">Impact: HIGH</text><rect x="80" y="560" width="440" height="380" rx="14" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2"/><text x="300" y="610" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">3. Query Folding</text><text x="300" y="660" text-anchor="middle" fill="#ffffff" font-size="18">Push work to SQL source</text><text x="300" y="700" text-anchor="middle" fill="#ffffff" font-size="18">Avoid Table.Buffer early</text><text x="300" y="740" text-anchor="middle" fill="#ffffff" font-size="18">Check: View Native Query</text><text x="300" y="790" text-anchor="middle" fill="#10b981" font-size="18">Impact: MEDIUM</text><rect x="580" y="560" width="440" height="380" rx="14" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2"/><text x="800" y="610" text-anchor="middle" fill="#ec4899" font-size="24" font-weight="bold">4. Refresh Strategy</text><text x="800" y="660" text-anchor="middle" fill="#ffffff" font-size="18">Incremental for big tables</text><text x="800" y="700" text-anchor="middle" fill="#ffffff" font-size="18">8 refreshes/day Pro limit</text><text x="800" y="740" text-anchor="middle" fill="#ffffff" font-size="18">48 refreshes/day Premium</text><text x="800" y="790" text-anchor="middle" fill="#10b981" font-size="18">Impact: MEDIUM</text><text x="550" y="1020" text-anchor="middle" fill="#888" font-size="20">Pull every lever — slow dashboards rarely have one cause</text></svg>`,
+          caption: "Performance comes from balancing four design decisions, not one silver bullet."
+        }
+      },
+      {
+        type: "concept",
+        title: "Calculated Columns vs Measures: The Storage-Compute Tradeoff",
+        content: `The single most common Power BI performance mistake is using a **calculated column** when a **measure** would have worked.
+
+**Calculated columns** are computed once during refresh, then stored in the model. They consume **VertiPaq memory** and increase model size. Every row gets a value, even rows nobody will ever filter to. A calculated column on a 20M-row fact table can add 200MB to the PBIX file.
+
+**Measures** are computed at query time, only over the rows in the current filter context. They consume **CPU during queries** but zero storage. A measure across 20M rows can return in 80ms because VertiPaq scans columnar storage at billions of rows per second.
+
+The rule: **default to measures**. Use calculated columns only when you need the value for:
+- A relationship column (must be a column)
+- A slicer or filter value (measures cannot filter)
+- Row-level grouping in a visual axis
+
+Example — total margin for each row:
+
+\`\`\`DAX
+// BAD — calculated column, stores 20M values
+Margin Column = Sales[Revenue] - Sales[Cost]
+
+// GOOD — measure, computed only when needed
+Total Margin = SUM(Sales[Revenue]) - SUM(Sales[Cost])
+\`\`\`
+
+The measure version produces identical results in any visual but adds **zero bytes** to the model. On a 20M-row table, this swap alone has dropped PBIX files from 380MB to 140MB and cut report open times from 22 seconds to 6 seconds in real deployments.
+
+Beyond the column-vs-measure decision, avoid **iterator functions** over large tables when an aggregator works: \`SUMX(Sales, Sales[Qty] * Sales[Price])\` is fine, but \`SUMX(Sales, IF(Sales[Region]="West", Sales[Qty], 0))\` should be rewritten as \`CALCULATE(SUM(Sales[Qty]), Sales[Region]="West")\`.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Calculated Column vs Measure</text><rect x="60" y="120" width="480" height="820" rx="14" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2"/><text x="300" y="170" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">Calculated Column</text><text x="300" y="210" text-anchor="middle" fill="#ffffff" font-size="18">Computed at REFRESH</text><rect x="100" y="240" width="400" height="180" rx="8" fill="#1a1a2e" stroke="#888" stroke-width="1"/><text x="120" y="270" fill="#10b981" font-size="14" font-family="monospace">Margin Col =</text><text x="120" y="295" fill="#ffffff" font-size="14" font-family="monospace">  Sales[Rev] -</text><text x="120" y="320" fill="#ffffff" font-size="14" font-family="monospace">  Sales[Cost]</text><text x="120" y="370" fill="#f59e0b" font-size="14" font-family="monospace">// 20M values stored</text><text x="120" y="395" fill="#ef4444" font-size="14" font-family="monospace">// +180MB PBIX</text><text x="300" y="470" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Use when:</text><text x="300" y="510" text-anchor="middle" fill="#ffffff" font-size="16">- Used in relationships</text><text x="300" y="545" text-anchor="middle" fill="#ffffff" font-size="16">- Used as slicer filter</text><text x="300" y="580" text-anchor="middle" fill="#ffffff" font-size="16">- Used on visual axis</text><text x="300" y="650" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Cost profile:</text><text x="300" y="690" text-anchor="middle" fill="#ffffff" font-size="16">Storage: HIGH</text><text x="300" y="720" text-anchor="middle" fill="#ffffff" font-size="16">Refresh time: HIGH</text><text x="300" y="750" text-anchor="middle" fill="#ffffff" font-size="16">Query time: LOW</text><rect x="560" y="120" width="480" height="820" rx="14" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="800" y="170" text-anchor="middle" fill="#10b981" font-size="26" font-weight="bold">Measure</text><text x="800" y="210" text-anchor="middle" fill="#ffffff" font-size="18">Computed at QUERY</text><rect x="600" y="240" width="400" height="180" rx="8" fill="#1a1a2e" stroke="#888" stroke-width="1"/><text x="620" y="270" fill="#10b981" font-size="14" font-family="monospace">Total Margin =</text><text x="620" y="295" fill="#ffffff" font-size="14" font-family="monospace">  SUM(Sales[Rev])</text><text x="620" y="320" fill="#ffffff" font-size="14" font-family="monospace">  - SUM(Sales[Cost])</text><text x="620" y="370" fill="#10b981" font-size="14" font-family="monospace">// 0 bytes stored</text><text x="620" y="395" fill="#10b981" font-size="14" font-family="monospace">// scans columns</text><text x="800" y="470" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Use when:</text><text x="800" y="510" text-anchor="middle" fill="#ffffff" font-size="16">- Aggregating values</text><text x="800" y="545" text-anchor="middle" fill="#ffffff" font-size="16">- KPI displays</text><text x="800" y="580" text-anchor="middle" fill="#ffffff" font-size="16">- Anything dynamic</text><text x="800" y="650" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Cost profile:</text><text x="800" y="690" text-anchor="middle" fill="#ffffff" font-size="16">Storage: ZERO</text><text x="800" y="720" text-anchor="middle" fill="#ffffff" font-size="16">Refresh time: ZERO</text><text x="800" y="750" text-anchor="middle" fill="#ffffff" font-size="16">Query time: FAST</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Default to measures — switch to column only when forced</text></svg>`,
+          caption: "Calculated columns burn refresh time and storage; measures compute at query time for free."
+        }
+      },
+      {
+        type: "example",
+        title: "Query Folding in Action: Sales Report on a 50M-Row Source",
+        content: `**Scenario**: You connect Power BI to a SQL Server table \`dbo.SalesTransactions\` with 50 million rows. You need to display monthly revenue by region for the last 24 months.
+
+**Wrong approach** — load everything, then filter in Power Query:
+
+\`\`\`M
+let
+    Source = Sql.Database("server", "db"),
+    Sales = Source{[Schema="dbo",Item="SalesTransactions"]}[Data],
+    Buffered = Table.Buffer(Sales),
+    Filtered = Table.SelectRows(Buffered, each [Date] >= #date(2023,1,1))
+in
+    Filtered
+\`\`\`
+
+The \`Table.Buffer\` call **breaks query folding**. Power Query pulls all 50M rows over the wire, holds them in memory, then filters locally. Refresh takes **18 minutes**.
+
+**Right approach** — let folding push the filter to SQL:
+
+\`\`\`M
+let
+    Source = Sql.Database("server", "db"),
+    Sales = Source{[Schema="dbo",Item="SalesTransactions"]}[Data],
+    Filtered = Table.SelectRows(Sales, each [Date] >= #date(2023,1,1)),
+    GroupedRegion = Table.Group(Filtered, {"Region","YearMonth"},
+        {{"Revenue", each List.Sum([Amount]), type number}})
+in
+    GroupedRegion
+\`\`\`
+
+Right-click the final step and pick **View Native Query**. If it shows generated SQL, folding worked. Power Query sends:
+
+\`\`\`sql
+SELECT Region, YearMonth, SUM(Amount) AS Revenue
+FROM dbo.SalesTransactions
+WHERE Date >= '2023-01-01'
+GROUP BY Region, YearMonth
+\`\`\`
+
+The SQL engine processes the filter and aggregation, returning **288 rows** instead of 50M. Refresh drops to **22 seconds**.
+
+**Folding-killers to avoid**: \`Table.Buffer\`, custom M functions, \`Table.AddIndexColumn\`, anything from \`Excel.Workbook\` or CSV sources (folding only works on database sources). Reorder steps so all foldable transformations happen first; non-foldable steps come last.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Query Folding: Push Work to the Source</text><rect x="60" y="110" width="480" height="430" rx="12" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="2"/><text x="300" y="155" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">No Folding (Table.Buffer)</text><rect x="100" y="190" width="400" height="60" rx="6" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/><text x="300" y="225" text-anchor="middle" fill="#ffffff" font-size="16">SQL Source: 50M rows</text><line x1="300" y1="250" x2="300" y2="290" stroke="#ef4444" stroke-width="3" marker-end="url(#a1)"/><defs><marker id="a1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#ef4444"/></marker><marker id="a2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#10b981"/></marker></defs><rect x="100" y="290" width="400" height="60" rx="6" fill="#ef4444" opacity="0.3" stroke="#ef4444"/><text x="300" y="325" text-anchor="middle" fill="#ffffff" font-size="16">Pull ALL 50M rows over network</text><line x1="300" y1="350" x2="300" y2="390" stroke="#ef4444" stroke-width="3" marker-end="url(#a1)"/><rect x="100" y="390" width="400" height="60" rx="6" fill="#ef4444" opacity="0.3" stroke="#ef4444"/><text x="300" y="425" text-anchor="middle" fill="#ffffff" font-size="16">Filter in Power Query memory</text><text x="300" y="500" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Refresh: 18 minutes</text><rect x="560" y="110" width="480" height="430" rx="12" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="2"/><text x="800" y="155" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Folding Active</text><rect x="600" y="190" width="400" height="60" rx="6" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/><text x="800" y="225" text-anchor="middle" fill="#ffffff" font-size="16">SQL Source: 50M rows</text><line x1="800" y1="250" x2="800" y2="290" stroke="#10b981" stroke-width="3" marker-end="url(#a2)"/><rect x="600" y="290" width="400" height="60" rx="6" fill="#10b981" opacity="0.3" stroke="#10b981"/><text x="800" y="325" text-anchor="middle" fill="#ffffff" font-size="16">SQL filters + aggregates server-side</text><line x1="800" y1="350" x2="800" y2="390" stroke="#10b981" stroke-width="3" marker-end="url(#a2)"/><rect x="600" y="390" width="400" height="60" rx="6" fill="#10b981" opacity="0.3" stroke="#10b981"/><text x="800" y="425" text-anchor="middle" fill="#ffffff" font-size="16">Pull only 288 rows over network</text><text x="800" y="500" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Refresh: 22 seconds</text><rect x="60" y="580" width="980" height="380" rx="12" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="2"/><text x="550" y="625" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Folding Killers — Avoid These Early in M</text><text x="100" y="680" fill="#ef4444" font-size="18" font-family="monospace">- Table.Buffer(...)</text><text x="100" y="715" fill="#ef4444" font-size="18" font-family="monospace">- Custom M functions</text><text x="100" y="750" fill="#ef4444" font-size="18" font-family="monospace">- Table.AddIndexColumn</text><text x="100" y="785" fill="#ef4444" font-size="18" font-family="monospace">- Excel.Workbook source</text><text x="100" y="820" fill="#ef4444" font-size="18" font-family="monospace">- CSV / text file source</text><text x="600" y="680" fill="#10b981" font-size="18" font-family="monospace">Foldable steps first:</text><text x="600" y="715" fill="#10b981" font-size="16" font-family="monospace">- Table.SelectRows</text><text x="600" y="750" fill="#10b981" font-size="16" font-family="monospace">- Table.Group</text><text x="600" y="785" fill="#10b981" font-size="16" font-family="monospace">- Table.SelectColumns</text><text x="600" y="820" fill="#10b981" font-size="16" font-family="monospace">- Right-click View Native Query</text><text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="20">Right-click any step → View Native Query → confirm SQL appears</text></svg>`,
+          caption: "Query folding turns 50M rows in 18 minutes into 288 rows in 22 seconds."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "You have a 30M-row Sales fact table in Power BI. You need to display Total Revenue (SUM of Amount) in a KPI card. Which approach gives the best performance?",
+        options: [
+          { text: "Add a calculated column named TotalRevenue = Sales[Amount] so the value is precomputed at refresh", correct: false },
+          { text: "Create a measure: Total Revenue = SUM(Sales[Amount]) — measures compute at query time over compressed columnar storage", correct: true },
+          { text: "Use SUMX(Sales, Sales[Amount]) so it iterates row by row for accuracy", correct: false },
+          { text: "Add a Power Query step with Table.Buffer to preload the table into memory before refresh", correct: false }
+        ],
+        explanation: "A measure using SUM is the correct choice. It adds zero bytes to the model and VertiPaq scans the compressed Amount column at billions of rows per second. A calculated column duplicates data and bloats the model. SUMX is an iterator and slower than SUM for simple aggregation. Table.Buffer breaks query folding and hurts refresh performance.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="80" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Performance Decision Matrix</text><rect x="80" y="140" width="940" height="80" rx="10" fill="#6366f1" opacity="0.2" stroke="#6366f1"/><text x="200" y="190" fill="#ffffff" font-size="20" font-weight="bold">Approach</text><text x="600" y="190" fill="#ffffff" font-size="20" font-weight="bold">Storage</text><text x="850" y="190" fill="#ffffff" font-size="20" font-weight="bold">Query Time</text><rect x="80" y="240" width="940" height="80" rx="10" fill="#ef4444" opacity="0.15" stroke="#ef4444"/><text x="100" y="290" fill="#ffffff" font-size="18">Calculated column</text><text x="600" y="290" fill="#ef4444" font-size="18">+240MB</text><text x="850" y="290" fill="#f59e0b" font-size="18">Fast</text><rect x="80" y="340" width="940" height="80" rx="10" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="100" y="390" fill="#ffffff" font-size="18" font-weight="bold">Measure: SUM(...)</text><text x="600" y="390" fill="#10b981" font-size="18" font-weight="bold">0 bytes</text><text x="850" y="390" fill="#10b981" font-size="18" font-weight="bold">80ms</text><rect x="80" y="440" width="940" height="80" rx="10" fill="#f59e0b" opacity="0.15" stroke="#f59e0b"/><text x="100" y="490" fill="#ffffff" font-size="18">SUMX iterator</text><text x="600" y="490" fill="#f59e0b" font-size="18">0 bytes</text><text x="850" y="490" fill="#f59e0b" font-size="18">450ms</text><rect x="80" y="540" width="940" height="80" rx="10" fill="#ef4444" opacity="0.15" stroke="#ef4444"/><text x="100" y="590" fill="#ffffff" font-size="18">Table.Buffer in M</text><text x="600" y="590" fill="#ef4444" font-size="18">No folding</text><text x="850" y="590" fill="#ef4444" font-size="18">12 min refresh</text><text x="550" y="720" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Winner: Measure with SUM()</text><text x="550" y="780" text-anchor="middle" fill="#ffffff" font-size="18">Zero storage cost. Columnar scan is the fastest path in VertiPaq.</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">SUM beats SUMX whenever you do not need row-context multiplication.</text><rect x="200" y="880" width="700" height="100" rx="10" fill="#10b981" opacity="0.2" stroke="#10b981"/><text x="550" y="920" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Rule of thumb</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="18">Default to measure. Reach for column only when forced.</text></svg>`,
+          caption: "The measure path is the only one that wins on storage AND query time."
+        }
+      },
+      {
+        type: "application",
+        title: "Performance Audit Checklist for Your Next Dashboard",
+        content: `Run this checklist on every Power BI report before you publish. It catches the issues that show up at scale but hide in development.
+
+**Data Model**
+- Star schema, not flat. Facts in the center, dimensions on the outside.
+- Relationships are single-direction unless you have a documented reason.
+- Hide unused columns from report view (right-click → Hide in report view).
+- Remove the Date and Time portions of datetime columns; split into Date + Time keys.
+- Delete columns you never use. Every column is a separate VertiPaq dictionary.
+
+**DAX**
+- Open DAX Studio → Server Timings. Any visual over 2 seconds gets investigated.
+- Replace calculated columns with measures wherever possible.
+- Replace SUMX/AVERAGEX over the fact table with SUM/AVERAGE where math allows.
+- Wrap measures with \`CALCULATE\` instead of nested \`FILTER(ALL(...))\` patterns.
+- Variables (\`VAR x = ... RETURN ...\`) for any expression used twice.
+
+**Power Query**
+- Right-click the last step → **View Native Query** is enabled (folding works).
+- Filter columns and rows in the first three steps.
+- Remove \`Table.Buffer\` unless you have profiled and need it.
+- Disable load on staging queries you only reference (right-click → Enable Load = off).
+
+**Refresh**
+- **Incremental refresh** configured for any fact table over 5M rows. Set RangeStart/RangeEnd parameters, then Incremental Refresh policy: Store 5 years, Refresh last 7 days.
+- Scheduled refresh time chosen off-peak. Pro workspaces get **8 refreshes/day**; Premium and PPU get **48**.
+- Gateway is **standard mode**, not personal, for shared datasets.
+
+**Excel-side**
+- Replace volatile functions: \`OFFSET\`, \`INDIRECT\`, \`NOW\`, \`TODAY\`, \`RAND\`. Use INDEX/MATCH or XLOOKUP.
+- Convert ranges to **Tables** (Ctrl+T) so PivotTables refresh cleanly.
+- Set Formulas → Calculation Options to **Automatic Except Tables** for huge models.
+
+If a single visual is still slow after this checklist, use **Performance Analyzer** (View tab) to isolate the DAX query, paste it into DAX Studio, and tune from there.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Pre-Publish Performance Checklist</text><rect x="50" y="110" width="500" height="220" rx="10" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2"/><text x="300" y="150" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Data Model</text><text x="70" y="190" fill="#10b981" font-size="16">checkbox Star schema layout</text><text x="70" y="220" fill="#10b981" font-size="16">checkbox Hide unused columns</text><text x="70" y="250" fill="#10b981" font-size="16">checkbox Split datetime to Date + Time</text><text x="70" y="280" fill="#10b981" font-size="16">checkbox Single-direction relationships</text><text x="70" y="310" fill="#10b981" font-size="16">checkbox Remove unused columns</text><rect x="560" y="110" width="490" height="220" rx="10" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2"/><text x="805" y="150" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">DAX</text><text x="580" y="190" fill="#10b981" font-size="16">checkbox DAX Studio Server Timings &lt;2s</text><text x="580" y="220" fill="#10b981" font-size="16">checkbox Columns to measures</text><text x="580" y="250" fill="#10b981" font-size="16">checkbox SUM over SUMX where possible</text><text x="580" y="280" fill="#10b981" font-size="16">checkbox CALCULATE over FILTER(ALL())</text><text x="580" y="310" fill="#10b981" font-size="16">checkbox VAR for repeated expressions</text><rect x="50" y="350" width="500" height="220" rx="10" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2"/><text x="300" y="390" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Power Query</text><text x="70" y="430" fill="#10b981" font-size="16">checkbox View Native Query works</text><text x="70" y="460" fill="#10b981" font-size="16">checkbox Filter in first three steps</text><text x="70" y="490" fill="#10b981" font-size="16">checkbox No Table.Buffer unless needed</text><text x="70" y="520" fill="#10b981" font-size="16">checkbox Disable load on staging queries</text><text x="70" y="550" fill="#10b981" font-size="16">checkbox All steps fold to SQL</text><rect x="560" y="350" width="490" height="220" rx="10" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2"/><text x="805" y="390" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Refresh</text><text x="580" y="430" fill="#10b981" font-size="16">checkbox Incremental refresh (5M+ rows)</text><text x="580" y="460" fill="#10b981" font-size="16">checkbox RangeStart/RangeEnd set</text><text x="580" y="490" fill="#10b981" font-size="16">checkbox Off-peak schedule</text><text x="580" y="520" fill="#10b981" font-size="16">checkbox Pro: 8/day  Premium: 48/day</text><text x="580" y="550" fill="#10b981" font-size="16">checkbox Standard gateway, not personal</text><rect x="50" y="590" width="1000" height="280" rx="10" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2"/><text x="550" y="630" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Excel Side</text><text x="70" y="675" fill="#10b981" font-size="16">checkbox Replace OFFSET, INDIRECT with INDEX/MATCH</text><text x="70" y="705" fill="#10b981" font-size="16">checkbox No volatile NOW/TODAY/RAND in hot cells</text><text x="70" y="735" fill="#10b981" font-size="16">checkbox Ctrl+T converts ranges to Tables</text><text x="70" y="765" fill="#10b981" font-size="16">checkbox XLOOKUP replaces nested IFs</text><text x="70" y="795" fill="#10b981" font-size="16">checkbox Calculation: Automatic Except Tables (huge models)</text><text x="70" y="825" fill="#10b981" font-size="16">checkbox PivotTable source as Table, not range</text><rect x="200" y="910" width="700" height="120" rx="10" fill="#ffd700" opacity="0.2" stroke="#ffd700"/><text x="550" y="955" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Final step</text><text x="550" y="995" text-anchor="middle" fill="#ffffff" font-size="18">Performance Analyzer (View tab) - isolate any visual &gt;2s</text></svg>`,
+          caption: "Walk this checklist before every publish. Most slow dashboards fail two or three of these items."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dashboards-lesson-8",
+    title: "Mobile-Responsive Dashboards: Designing for the Phone Screen",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Mobile Layouts Are Their Own Design Problem",
+        content: `Roughly **40% of Power BI report views** happen on phones. Executives check numbers between meetings, in cars, at airports. Yet most dashboards are built only for the **16:9 desktop canvas** and look like postage stamps on a 6-inch screen.
+
+The mistake is assuming the desktop layout will **shrink gracefully**. It will not. A 12-column dense desktop layout becomes a wall of unreadable text on mobile. Filters that work via mouse hover disappear behind taps. Cross-highlighting that depends on precise cursor positioning fails on fingers.
+
+Power BI has two distinct canvases:
+- The **desktop canvas** (16:9, default)
+- The **mobile layout view** (9:16 portrait, ~320×568 logical units)
+
+Excel does not have a true mobile mode, but workbooks viewed in the **Excel mobile app** or **Excel for the web on phone** respond to scaling rules you can control.
+
+The mobile-design discipline boils down to three rules:
+1. **Pick fewer visuals** — show 3 to 5 max on the mobile canvas
+2. **Reorder by priority** — most important KPI at the top
+3. **Replace, don't shrink** — a matrix on desktop becomes a card list on mobile
+
+This lesson covers the Power BI mobile layout view, the **Power BI Mobile** app rendering behavior, and Excel scaling strategies. By the end you will know exactly which visuals to **hide** on small screens and which to **promote**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Two Canvases, Two Designs</text><rect x="80" y="120" width="500" height="600" rx="10" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="2"/><text x="330" y="170" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">Desktop Canvas</text><text x="330" y="200" text-anchor="middle" fill="#888" font-size="16">16:9 ratio, 1280x720</text><rect x="120" y="230" width="420" height="80" rx="6" fill="#ffd700" opacity="0.3" stroke="#ffd700"/><text x="330" y="280" text-anchor="middle" fill="#ffffff" font-size="16">KPI Row: 4 tiles</text><rect x="120" y="330" width="200" height="170" rx="6" fill="#10b981" opacity="0.3" stroke="#10b981"/><text x="220" y="420" text-anchor="middle" fill="#ffffff" font-size="14">Trend Line</text><rect x="340" y="330" width="200" height="170" rx="6" fill="#f59e0b" opacity="0.3" stroke="#f59e0b"/><text x="440" y="420" text-anchor="middle" fill="#ffffff" font-size="14">Region Bar</text><rect x="120" y="520" width="420" height="170" rx="6" fill="#ec4899" opacity="0.3" stroke="#ec4899"/><text x="330" y="610" text-anchor="middle" fill="#ffffff" font-size="14">Detail Matrix (15 cols)</text><rect x="700" y="120" width="240" height="600" rx="20" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="3"/><text x="820" y="170" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Mobile</text><text x="820" y="195" text-anchor="middle" fill="#888" font-size="14">9:16 portrait</text><rect x="720" y="220" width="200" height="100" rx="6" fill="#ffd700" opacity="0.4" stroke="#ffd700"/><text x="820" y="270" text-anchor="middle" fill="#ffffff" font-size="14">Hero KPI</text><text x="820" y="295" text-anchor="middle" fill="#ffffff" font-size="12">Total Revenue</text><rect x="720" y="335" width="95" height="80" rx="6" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="767" y="380" text-anchor="middle" fill="#ffffff" font-size="12">YoY</text><rect x="825" y="335" width="95" height="80" rx="6" fill="#f59e0b" opacity="0.4" stroke="#f59e0b"/><text x="872" y="380" text-anchor="middle" fill="#ffffff" font-size="12">Target</text><rect x="720" y="430" width="200" height="140" rx="6" fill="#6366f1" opacity="0.4" stroke="#6366f1"/><text x="820" y="505" text-anchor="middle" fill="#ffffff" font-size="14">Trend (3mo)</text><rect x="720" y="585" width="200" height="120" rx="6" fill="#ec4899" opacity="0.4" stroke="#ec4899"/><text x="820" y="650" text-anchor="middle" fill="#ffffff" font-size="14">Top 5 Regions</text><text x="550" y="780" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">The Mobile Layout View is a SEPARATE design</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">Same dataset, different visuals, different priorities</text><rect x="200" y="870" width="700" height="160" rx="10" fill="#f59e0b" opacity="0.18" stroke="#f59e0b"/><text x="550" y="910" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Mobile design rules</text><text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="16">1. Show 3 to 5 visuals max</text><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="16">2. Reorder by priority - hero KPI first</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="16">3. Replace dense matrices with card lists</text></svg>`,
+          caption: "Mobile is a parallel design, not a scaled-down desktop."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Power BI Mobile Layout View — How It Works",
+        content: `Power BI Desktop has a hidden second canvas. Click **View → Mobile layout** and a 320×568 portrait phone frame appears. The visuals tray on the right lists every visual from the desktop page. **Drag** the ones you want to show onto the phone canvas; leave the rest unchecked.
+
+Critical mechanics:
+- The mobile layout is a **per-page** configuration. Each report page needs its own mobile layout, or the Power BI mobile app falls back to a scaled desktop view.
+- Visuals on the mobile canvas are **the same visuals** as on the desktop — same DAX, same filters, same interactions. You are only re-positioning and re-sizing.
+- Mobile-specific properties: you can resize, but you cannot change the visual type. If you want a card on mobile and a chart on desktop, create both visuals on the desktop canvas, then place only the card on the mobile canvas.
+- The Power BI Mobile app on iOS/Android **respects the mobile layout** in portrait. Turn the phone landscape and it flips to the **desktop layout**.
+
+Sync slicers behave differently. A slicer on the desktop canvas does not automatically appear on mobile — you must drag it explicitly. To allow filtering without the slicer visible, use the **Filter Pane** which renders as a slide-out drawer on mobile.
+
+For **multi-page reports**, design the mobile layout for at least the **landing page** and **the page executives view most**. Skipping mobile layouts on detail pages is acceptable; users can pinch-zoom or rotate to landscape.
+
+Three visuals that **do not work well on mobile**:
+- Matrices with more than 4 columns — finger-scroll horizontally is painful
+- Decomposition trees — taps are imprecise on small targets
+- Custom visuals from AppSource — many are not mobile-optimized; test before deploying
+
+Three visuals that **shine on mobile**:
+- Cards with conditional formatting (one number, one color)
+- KPI visual with trend sparkline
+- Bar charts with 5 to 7 categories maximum`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Power BI Desktop: Mobile Layout View</text><rect x="60" y="110" width="600" height="700" rx="10" fill="#888" opacity="0.1" stroke="#888" stroke-width="2"/><text x="360" y="150" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Desktop Canvas (showing all visuals)</text><rect x="100" y="180" width="520" height="60" rx="4" fill="#ffd700" opacity="0.3"/><text x="360" y="220" text-anchor="middle" fill="#ffffff" font-size="14">KPI Row (4 tiles)</text><rect x="100" y="260" width="250" height="200" rx="4" fill="#10b981" opacity="0.3"/><text x="225" y="365" text-anchor="middle" fill="#ffffff" font-size="14">Revenue Trend</text><rect x="370" y="260" width="250" height="200" rx="4" fill="#f59e0b" opacity="0.3"/><text x="495" y="365" text-anchor="middle" fill="#ffffff" font-size="14">Region Bar</text><rect x="100" y="480" width="520" height="180" rx="4" fill="#ec4899" opacity="0.3"/><text x="360" y="575" text-anchor="middle" fill="#ffffff" font-size="14">Detail Matrix</text><rect x="100" y="680" width="250" height="100" rx="4" fill="#8b5cf6" opacity="0.3"/><text x="225" y="735" text-anchor="middle" fill="#ffffff" font-size="14">Decomp Tree</text><rect x="370" y="680" width="250" height="100" rx="4" fill="#0ea5e9" opacity="0.3"/><text x="495" y="735" text-anchor="middle" fill="#ffffff" font-size="14">Slicer</text><rect x="700" y="110" width="340" height="700" rx="15" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="3"/><text x="870" y="150" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Mobile Canvas 320x568</text><rect x="730" y="180" width="280" height="100" rx="6" fill="#ffd700" opacity="0.4" stroke="#ffd700"/><text x="870" y="225" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Revenue $4.2M</text><text x="870" y="255" text-anchor="middle" fill="#10b981" font-size="14">+12% YoY</text><rect x="730" y="300" width="280" height="180" rx="6" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="870" y="395" text-anchor="middle" fill="#ffffff" font-size="14">Revenue Trend</text><rect x="730" y="500" width="280" height="180" rx="6" fill="#f59e0b" opacity="0.4" stroke="#f59e0b"/><text x="870" y="595" text-anchor="middle" fill="#ffffff" font-size="14">Top 5 Regions</text><rect x="730" y="700" width="135" height="90" rx="6" fill="#888" opacity="0.3" stroke="#888"/><text x="797" y="750" text-anchor="middle" fill="#888" font-size="13" font-style="italic">Hidden</text><rect x="875" y="700" width="135" height="90" rx="6" fill="#888" opacity="0.3" stroke="#888"/><text x="942" y="750" text-anchor="middle" fill="#888" font-size="13" font-style="italic">Hidden</text><rect x="80" y="850" width="940" height="200" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="550" y="890" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Mechanics</text><text x="100" y="925" fill="#ffffff" font-size="16">- Drag desktop visuals onto the phone frame</text><text x="100" y="955" fill="#ffffff" font-size="16">- Same DAX, same data - only position changes</text><text x="100" y="985" fill="#ffffff" font-size="16">- Mobile layout is PER PAGE - configure each report page</text><text x="100" y="1015" fill="#ffffff" font-size="16">- Portrait uses mobile layout; landscape uses desktop layout</text></svg>`,
+          caption: "Drag desktop visuals onto the 320x568 phone frame; leave the rest off."
+        }
+      },
+      {
+        type: "example",
+        title: "Redesigning a Sales Dashboard from Desktop to Phone",
+        content: `**Starting point**: a sales dashboard with **11 visuals** on the desktop canvas — 4 KPI cards, a 12-month revenue line, a region bar, a product treemap, a 50-row deals matrix, three slicers, and a decomposition tree.
+
+**Step 1 — Audit what executives actually need on a phone.** A quick stand-up with two sales VPs reveals:
+- They check **total revenue today vs target** first
+- Then **the 3 worst-performing regions**
+- They never use the deals matrix on mobile — they open Excel for that
+
+**Step 2 — Switch to Mobile Layout View.** View → Mobile layout. The phone canvas appears empty. The visuals tray on the right shows all 11 desktop visuals.
+
+**Step 3 — Place only the 4 visuals that match the priority list:**
+
+1. **Hero KPI card** — Revenue vs Target, full-width, top of screen. Conditional format the variance: green if >100% of target, red if <90%.
+2. **Two compact KPI cards** — YoY % and YTD Margin, side by side, half-width each.
+3. **Trend line** — Revenue last 6 months (not 12; phones don't show 12 labels cleanly). Y-axis hidden, data labels on points instead.
+4. **Bar chart** — Bottom 5 regions by performance, sorted ascending so the worst is on top.
+
+**Step 4 — Replace the 50-row matrix with a drill-through link.** On desktop, the matrix shows every deal. On mobile, replace it with a **button** that says "Open Deal Detail" and bookmarks to a phone-optimized deal-list page (one row per deal, 3 fields visible: customer, amount, close date).
+
+**Step 5 — Move filters to the Filter Pane.** On mobile, the three slicers are hidden. Filters live in the slide-out filter drawer (gear icon top-right in the Power BI mobile app).
+
+**Step 6 — Test on the actual phone.** Publish to the workspace, open the Power BI iOS or Android app, walk through the report. Common surprises: text that looked fine in the layout view is **too small** on the phone — Power BI logical units are not pixels. Bump font sizes by 30 to 40% from desktop defaults. Default 9pt becomes 12pt minimum.
+
+This redesign collapsed an 11-visual dashboard into a **4-visual mobile experience** that loads in under 2 seconds and answers the two questions execs ask every morning.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Desktop to Mobile Redesign Walkthrough</text><rect x="50" y="90" width="320" height="400" rx="10" fill="#6366f1" opacity="0.15" stroke="#6366f1"/><text x="210" y="125" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Desktop (11 visuals)</text><text x="70" y="160" fill="#ffffff" font-size="14">1. 4 KPI cards</text><text x="70" y="185" fill="#ffffff" font-size="14">2. 12-month line</text><text x="70" y="210" fill="#ffffff" font-size="14">3. Region bar</text><text x="70" y="235" fill="#ffffff" font-size="14">4. Product treemap</text><text x="70" y="260" fill="#ffffff" font-size="14">5. 50-row matrix</text><text x="70" y="285" fill="#ffffff" font-size="14">6. Slicer: Date</text><text x="70" y="310" fill="#ffffff" font-size="14">7. Slicer: Region</text><text x="70" y="335" fill="#ffffff" font-size="14">8. Slicer: Product</text><text x="70" y="360" fill="#ffffff" font-size="14">9. Decomp tree</text><text x="70" y="385" fill="#ffffff" font-size="14">10. Sparkline grid</text><text x="70" y="410" fill="#ffffff" font-size="14">11. KPI scorecard</text><text x="70" y="455" fill="#888" font-size="13" font-style="italic">Dense, mouse-driven</text><rect x="400" y="220" width="300" height="140" rx="10" fill="#f59e0b" opacity="0.2" stroke="#f59e0b"/><text x="550" y="260" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">Audit</text><text x="550" y="295" text-anchor="middle" fill="#ffffff" font-size="14">Ask: what 2 questions</text><text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="14">do execs ask on the phone?</text><text x="550" y="345" text-anchor="middle" fill="#10b981" font-size="14">Revenue vs target + worst regions</text><rect x="730" y="90" width="320" height="400" rx="15" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3"/><text x="890" y="125" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Mobile (4 visuals)</text><rect x="750" y="155" width="280" height="60" rx="6" fill="#ffd700" opacity="0.4" stroke="#ffd700"/><text x="890" y="190" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Revenue vs Target</text><rect x="750" y="230" width="135" height="80" rx="6" fill="#10b981" opacity="0.4"/><text x="817" y="275" text-anchor="middle" fill="#ffffff" font-size="13">YoY %</text><rect x="895" y="230" width="135" height="80" rx="6" fill="#10b981" opacity="0.4"/><text x="962" y="275" text-anchor="middle" fill="#ffffff" font-size="13">YTD Margin</text><rect x="750" y="320" width="280" height="80" rx="6" fill="#6366f1" opacity="0.4"/><text x="890" y="365" text-anchor="middle" fill="#ffffff" font-size="13">6-month trend</text><rect x="750" y="410" width="280" height="60" rx="6" fill="#ef4444" opacity="0.4"/><text x="890" y="445" text-anchor="middle" fill="#ffffff" font-size="13">Bottom 5 Regions</text><rect x="50" y="520" width="1000" height="240" rx="10" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2"/><text x="550" y="560" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Redesign Choices</text><text x="80" y="600" fill="#ffffff" font-size="16">- 12-month line becomes 6-month line (label density)</text><text x="80" y="630" fill="#ffffff" font-size="16">- Region bar shows BOTTOM 5 (executives focus on problems)</text><text x="80" y="660" fill="#ffffff" font-size="16">- Matrix replaced with drill-through button to a phone-optimized page</text><text x="80" y="690" fill="#ffffff" font-size="16">- Slicers hidden; filters live in the slide-out Filter Pane</text><text x="80" y="720" fill="#ffffff" font-size="16">- Font sizes bumped +30% from desktop (9pt to 12pt minimum)</text><rect x="200" y="790" width="700" height="220" rx="10" fill="#ffd700" opacity="0.18" stroke="#ffd700"/><text x="550" y="830" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Result</text><text x="550" y="870" text-anchor="middle" fill="#ffffff" font-size="18">11 desktop visuals collapsed to 4 mobile visuals</text><text x="550" y="905" text-anchor="middle" fill="#ffffff" font-size="18">Load time: under 2 seconds</text><text x="550" y="940" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Answers the morning question in 1 glance</text><text x="550" y="985" text-anchor="middle" fill="#ffffff" font-size="16">Always test on a real phone, not the Mobile Layout View</text></svg>`,
+          caption: "Audit, prioritize, replace dense visuals, then test on the actual phone."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "An executive complains your Power BI report 'looks broken' on her phone — visuals overlap and text is unreadable. You confirm the desktop version looks perfect. What is the most likely root cause?",
+        options: [
+          { text: "The Power BI dataset needs a manual refresh; phones cache stale layouts", correct: false },
+          { text: "No Mobile Layout View was configured for that page, so the Power BI app fell back to scaling the desktop canvas", correct: true },
+          { text: "Row-level security is misconfigured and the executive is seeing the wrong data", correct: false },
+          { text: "The mobile app needs to be updated from the App Store", correct: false }
+        ],
+        explanation: "When a report page has no Mobile Layout View configured, the Power BI mobile app tries to display the desktop canvas scaled down. The result is overlapping visuals and tiny text. The fix is to open Power BI Desktop, switch to View > Mobile Layout, and drag visuals onto the 320x568 phone canvas. Mobile layouts are per page, so every page execs use on mobile needs its own configuration.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Why Mobile Looks Broken</text><rect x="80" y="120" width="940" height="80" rx="10" fill="#ef4444" opacity="0.18" stroke="#ef4444"/><text x="550" y="170" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Symptom: visuals overlap, text unreadable, scroll forever</text><rect x="80" y="230" width="940" height="120" rx="10" fill="#6366f1" opacity="0.15" stroke="#6366f1"/><text x="550" y="270" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">What is happening</text><text x="100" y="305" fill="#ffffff" font-size="16">Power BI mobile app checks: does this page have a Mobile Layout?</text><text x="100" y="335" fill="#ffffff" font-size="16">If YES - use it.  If NO - shrink the entire desktop canvas to fit screen.</text><rect x="80" y="380" width="940" height="240" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="550" y="420" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Fix in Power BI Desktop</text><text x="100" y="460" fill="#ffffff" font-size="16">1. Open the report  -  View tab  -  Mobile Layout</text><text x="100" y="495" fill="#ffffff" font-size="16">2. The 320 x 568 phone frame appears, empty</text><text x="100" y="530" fill="#ffffff" font-size="16">3. Drag the 3 to 5 most important visuals from the right tray</text><text x="100" y="565" fill="#ffffff" font-size="16">4. Resize so each visual fits the portrait frame without overlap</text><text x="100" y="600" fill="#ffffff" font-size="16">5. Save - Publish - re-open on the phone to verify</text><rect x="80" y="650" width="940" height="280" rx="10" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2"/><text x="550" y="690" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Important details</text><text x="100" y="730" fill="#ffffff" font-size="16">- Mobile Layout is configured PER PAGE - every page execs use needs one</text><text x="100" y="765" fill="#ffffff" font-size="16">- Landscape orientation falls back to the desktop layout (rotate to compare)</text><text x="100" y="800" fill="#ffffff" font-size="16">- Same dataset, same DAX - you only re-position and re-size visuals</text><text x="100" y="835" fill="#ffffff" font-size="16">- Cannot change visual TYPE; if you need a different chart, add it to desktop first</text><text x="100" y="870" fill="#ffffff" font-size="16">- Fonts that look fine in the layout view are usually too small on the phone</text><text x="100" y="905" fill="#ffffff" font-size="16">- Test on a real device - the simulator misrepresents actual rendering</text><text x="550" y="990" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Configure mobile layouts - never assume the desktop will scale</text></svg>`,
+          caption: "Without a Mobile Layout View, Power BI scales the desktop canvas and it always looks broken."
+        }
+      },
+      {
+        type: "application",
+        title: "A Mobile Design Spec You Can Hand to Anyone",
+        content: `Below is a reusable specification you can put into your team's dashboard standards document. It covers Power BI Mobile and Excel-on-mobile, with concrete numeric thresholds.
+
+**Power BI Mobile Layout Standards**
+
+**Canvas budget**
+- Visuals on mobile canvas: **3 minimum, 5 maximum**.
+- Vertical scroll allowed up to **2 screen-heights**. More than that and users abandon.
+- Hero KPI: **full-width, top of canvas, 100 to 120 logical units tall**.
+
+**Typography**
+- Title text: **20pt minimum** (default 14pt is illegible on phones).
+- Category labels: **12pt minimum**.
+- Data labels: **11pt minimum** with bold weight.
+- Hide axes when a single data label per series tells the same story.
+
+**Color**
+- Use only **4 distinct hues** on a mobile page (visual noise is amplified on small screens).
+- Status colors: green / amber / red, never blue for "positive."
+- Avoid 6-color qualitative palettes — they blur together at small sizes.
+
+**Interaction**
+- Tap targets: **44×44 logical units** minimum (iOS HIG, also good for Android).
+- No hover-dependent interactions — phones have no hover.
+- Cross-highlight is fine; drill-through requires a clearly labeled button.
+
+**Excel Mobile Standards**
+
+Excel has no separate mobile canvas, but you can control behavior:
+
+- **Print area** set to your dashboard region. The Excel mobile app respects the print area when you tap "fit to screen."
+- **Set as print titles** for frozen header rows that stay visible on scroll.
+- **Charts**: stack vertically, not side by side. The mobile app reflows them.
+- **Conditional formatting** with **data bars** beats tiny sparklines — bars stay readable when scaled.
+- **Slicers** work but use **buttons mode** (Slicer Settings → uncheck "Display header") to save vertical space.
+- Avoid **merged cells** anywhere on the dashboard — they break tap-to-edit on iOS and Android.
+
+**SharePoint and Teams embedding**
+
+When embedding Power BI in **Teams Mobile**, the app respects the Mobile Layout. When embedding **Excel** in SharePoint pages viewed on phones, use the **Excel web part** with a **named range** selector — it shows only the named region and skips the rest of the workbook.
+
+**Testing protocol**
+
+Every dashboard ships only after passing this 3-device test: open on (1) the latest iPhone you own, (2) a mid-range Android, (3) a tablet in portrait. If any one device shows overlapping visuals, unreadable text, or broken interactions, the mobile layout needs another pass before sign-off.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Mobile Dashboard Spec</text><rect x="50" y="110" width="500" height="320" rx="10" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/><text x="300" y="150" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Power BI Mobile</text><text x="70" y="185" fill="#ffffff" font-size="15">Visuals: 3 to 5 max</text><text x="70" y="215" fill="#ffffff" font-size="15">Scroll: max 2 screen-heights</text><text x="70" y="245" fill="#ffffff" font-size="15">Hero KPI: full-width, top</text><text x="70" y="275" fill="#ffffff" font-size="15">Title font: 20pt minimum</text><text x="70" y="305" fill="#ffffff" font-size="15">Labels: 12pt minimum</text><text x="70" y="335" fill="#ffffff" font-size="15">Tap target: 44x44 units</text><text x="70" y="365" fill="#ffffff" font-size="15">4 distinct colors max</text><text x="70" y="395" fill="#ffffff" font-size="15">No hover-dependent UX</text><rect x="570" y="110" width="480" height="320" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="810" y="150" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Excel on Mobile</text><text x="590" y="185" fill="#ffffff" font-size="15">Set print area to dashboard</text><text x="590" y="215" fill="#ffffff" font-size="15">Print titles freeze headers</text><text x="590" y="245" fill="#ffffff" font-size="15">Stack charts vertically</text><text x="590" y="275" fill="#ffffff" font-size="15">Data bars over sparklines</text><text x="590" y="305" fill="#ffffff" font-size="15">Slicers in button mode</text><text x="590" y="335" fill="#ffffff" font-size="15">Never use merged cells</text><text x="590" y="365" fill="#ffffff" font-size="15">Named range web part for SP</text><text x="590" y="395" fill="#ffffff" font-size="15">Test in Excel mobile app</text><rect x="50" y="450" width="1000" height="300" rx="10" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2"/><text x="550" y="490" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">3-Device Test Protocol (required before sign-off)</text><circle cx="200" cy="580" r="60" fill="#6366f1" opacity="0.3" stroke="#6366f1" stroke-width="2"/><text x="200" y="585" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">iPhone</text><text x="200" y="610" text-anchor="middle" fill="#ffffff" font-size="12">latest</text><text x="200" y="680" text-anchor="middle" fill="#ffffff" font-size="14">Power BI app</text><text x="200" y="705" text-anchor="middle" fill="#ffffff" font-size="14">Excel app</text><circle cx="550" cy="580" r="60" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/><text x="550" y="585" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Android</text><text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="12">mid-range</text><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="14">Power BI app</text><text x="550" y="705" text-anchor="middle" fill="#ffffff" font-size="14">Excel app</text><circle cx="900" cy="580" r="60" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/><text x="900" y="585" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Tablet</text><text x="900" y="610" text-anchor="middle" fill="#ffffff" font-size="12">portrait</text><text x="900" y="680" text-anchor="middle" fill="#ffffff" font-size="14">Both apps</text><text x="900" y="705" text-anchor="middle" fill="#ffffff" font-size="14">Browser too</text><rect x="50" y="780" width="1000" height="230" rx="10" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2"/><text x="550" y="820" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Pass criteria</text><text x="70" y="860" fill="#10b981" font-size="16">checkbox All visuals fit without horizontal scroll</text><text x="70" y="890" fill="#10b981" font-size="16">checkbox Hero KPI readable at arms length</text><text x="70" y="920" fill="#10b981" font-size="16">checkbox All taps register on first attempt (no 44px violations)</text><text x="70" y="950" fill="#10b981" font-size="16">checkbox Load time under 3 seconds on cellular</text><text x="70" y="980" fill="#10b981" font-size="16">checkbox Filter pane opens and applies without breaking layout</text></svg>`,
+          caption: "Hand this spec to anyone building mobile dashboards in your team."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-dashboards-lesson-9",
+    title: "Distribution and Sharing: Workspaces, Apps, RLS, and the Security Pitfalls",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Distribution Is Where Dashboards Go Wrong",
+        content: `You finished the dashboard. The visuals are tight, the DAX flies, the mobile layout is configured. Now comes the part where most projects **leak data, break overnight, or get shared with the wrong people** — distribution.
+
+Power BI offers several sharing paths, and they are **not interchangeable**:
+- **Workspaces** — collaboration spaces for the dashboard team (developers, analysts)
+- **Apps** — published, polished bundles for consumers (executives, business users)
+- **Direct share** — quick links to individuals (avoid for production)
+- **Embedded** — inside Teams, SharePoint, or custom apps
+
+Pick the wrong one and you end up with executives editing the data model, contractors seeing all-region data they should not see, or a refresh that silently fails at 3am every day because the gateway lost credentials.
+
+Excel distribution is simpler on paper but has its own traps:
+- **SharePoint co-authoring** with linked external data (the source of countless "the workbook is read-only" tickets)
+- **OneDrive shared links** that bypass SharePoint permissions
+- **Power Query refresh** that requires the desktop app, not the browser
+
+This lesson covers the **workspace-to-app pipeline**, **row-level security** with concrete DAX roles, **scheduled refresh** mechanics including gateway choices, **Excel SharePoint embedding**, and the **five most common security pitfalls** that bite teams after launch.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Distribution Channels at a Glance</text><rect x="60" y="130" width="500" height="200" rx="10" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/><text x="310" y="170" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Workspace</text><text x="80" y="205" fill="#ffffff" font-size="16">Audience: developers + analysts</text><text x="80" y="235" fill="#ffffff" font-size="16">Edit rights, see raw datasets</text><text x="80" y="265" fill="#ffffff" font-size="16">Roles: Admin, Member, Contributor, Viewer</text><text x="80" y="295" fill="#ffffff" font-size="16">Used during build phase</text><rect x="580" y="130" width="470" height="200" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="815" y="170" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">App</text><text x="600" y="205" fill="#ffffff" font-size="16">Audience: executives + consumers</text><text x="600" y="235" fill="#ffffff" font-size="16">Read-only, polished navigation</text><text x="600" y="265" fill="#ffffff" font-size="16">Versioned - publish in batches</text><text x="600" y="295" fill="#ffffff" font-size="16">Production distribution channel</text><rect x="60" y="360" width="500" height="200" rx="10" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2"/><text x="310" y="400" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Direct Share</text><text x="80" y="435" fill="#ffffff" font-size="16">Audience: one or two people</text><text x="80" y="465" fill="#ffffff" font-size="16">Quick but not auditable</text><text x="80" y="495" fill="#ffffff" font-size="16">Requires Pro license on both ends</text><text x="80" y="525" fill="#ffffff" font-size="16">Avoid for production reports</text><rect x="580" y="360" width="470" height="200" rx="10" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2"/><text x="815" y="400" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Embedded</text><text x="600" y="435" fill="#ffffff" font-size="16">Teams channel tabs</text><text x="600" y="465" fill="#ffffff" font-size="16">SharePoint web parts</text><text x="600" y="495" fill="#ffffff" font-size="16">Custom apps via Embed token</text><text x="600" y="525" fill="#ffffff" font-size="16">Inherits source permissions</text><rect x="60" y="600" width="990" height="380" rx="10" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2"/><text x="550" y="645" text-anchor="middle" fill="#8b5cf6" font-size="24" font-weight="bold">Workspace to App pipeline</text><rect x="100" y="680" width="200" height="100" rx="8" fill="#6366f1" opacity="0.4" stroke="#6366f1"/><text x="200" y="725" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Dev Workspace</text><text x="200" y="755" text-anchor="middle" fill="#ffffff" font-size="14">PBIX uploads</text><line x1="300" y1="730" x2="400" y2="730" stroke="#ffd700" stroke-width="3" marker-end="url(#arr)"/><defs><marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#ffd700"/></marker></defs><rect x="400" y="680" width="200" height="100" rx="8" fill="#f59e0b" opacity="0.4" stroke="#f59e0b"/><text x="500" y="725" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Test Workspace</text><text x="500" y="755" text-anchor="middle" fill="#ffffff" font-size="14">QA + UAT</text><line x1="600" y1="730" x2="700" y2="730" stroke="#ffd700" stroke-width="3" marker-end="url(#arr)"/><rect x="700" y="680" width="200" height="100" rx="8" fill="#10b981" opacity="0.4" stroke="#10b981"/><text x="800" y="725" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Prod Workspace</text><text x="800" y="755" text-anchor="middle" fill="#ffffff" font-size="14">Published as App</text><text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="20">Deployment Pipelines (Premium) automate dev to test to prod</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="18">App audience gets read-only consumption</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="18">Workspace stays the editing zone for the dashboard team</text></svg>`,
+          caption: "Apps are for consumers; workspaces are for the build team — never mix the audiences."
+        }
+      },
+      {
+        type: "concept",
+        title: "Row-Level Security: Filtering Data by Who Is Looking",
+        content: `**Row-level security (RLS)** lets one dataset serve many audiences by **filtering rows based on the viewer's identity**. The North America VP sees only North America data; the EMEA VP sees only EMEA. Same report, same dataset — different visible rows.
+
+You define RLS as **roles** with **DAX filter expressions** in Power BI Desktop:
+
+1. Open **Modeling → Manage Roles**.
+2. Click **Create**, name the role (e.g., \`Region Manager\`).
+3. Pick the table to filter (usually a dimension like \`DimRegion\` or the fact table itself).
+4. Write the DAX filter:
+
+\`\`\`DAX
+// Static role: hard-coded region
+[Region] = "North America"
+
+// Dynamic role: filter by viewer's email
+[RegionManager] = USERPRINCIPALNAME()
+
+// Dynamic with lookup table
+[Region] IN
+  CALCULATETABLE(
+    VALUES('UserAccess'[Region]),
+    'UserAccess'[UserEmail] = USERPRINCIPALNAME()
+  )
+\`\`\`
+
+The **dynamic** pattern is almost always what you want. A \`UserAccess\` table maps emails to regions; a single role works for everyone. To onboard a new manager, you add one row to \`UserAccess\` — no DAX changes, no republish.
+
+**Apply roles in the Power BI Service**: after publishing, go to **Dataset → Security**. Add Azure AD users or groups to each role. **Test the role** with **View as** in Desktop or **Test as role** in the Service before going live.
+
+**Critical pitfalls**:
+- **No role assigned = sees everything.** Forgetting to assign a viewer to a role gives them unfiltered access. Always create a **default Deny role** that returns FALSE() and assign everyone to it as a baseline; then layer specific roles on top.
+- **Workspace Admins and Members bypass RLS.** Anyone in the workspace with Build permission sees the raw dataset. Move consumers to the **App** audience, not the workspace.
+- **Composite models with DirectQuery sources** require RLS to be defined at the source database too — Power BI cannot enforce it across boundaries.
+- **Object-level security (OLS)** hides entire columns (e.g., Salary). Configure via the XMLA endpoint or Tabular Editor; not available in the Desktop UI.
+
+Test every role before launch. The cheapest data breach to prevent is the one caused by a missing FALSE() default role.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Row-Level Security (RLS) Pattern</text><rect x="60" y="120" width="980" height="240" rx="10" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2"/><text x="550" y="160" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Dynamic RLS with UserAccess Lookup</text><rect x="100" y="190" width="280" height="140" rx="8" fill="#0ea5e9" opacity="0.3" stroke="#0ea5e9"/><text x="240" y="225" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">UserAccess (table)</text><text x="120" y="255" fill="#ffffff" font-size="14">UserEmail</text><text x="280" y="255" fill="#ffffff" font-size="14">Region</text><text x="120" y="280" fill="#ffffff" font-size="13">amy@co.com</text><text x="280" y="280" fill="#ffffff" font-size="13">NA</text><text x="120" y="305" fill="#ffffff" font-size="13">bo@co.com</text><text x="280" y="305" fill="#ffffff" font-size="13">EMEA</text><rect x="410" y="190" width="280" height="140" rx="8" fill="#10b981" opacity="0.3" stroke="#10b981"/><text x="550" y="225" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Role DAX filter</text><text x="430" y="255" fill="#ffd700" font-size="12" font-family="monospace">[Region] IN</text><text x="430" y="275" fill="#ffffff" font-size="12" font-family="monospace"> CALCULATETABLE(</text><text x="430" y="295" fill="#ffffff" font-size="12" font-family="monospace">  VALUES('UA'[Region]),</text><text x="430" y="315" fill="#ffffff" font-size="12" font-family="monospace">  'UA'[Email]=USER...())</text><rect x="720" y="190" width="280" height="140" rx="8" fill="#f59e0b" opacity="0.3" stroke="#f59e0b"/><text x="860" y="225" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Result for amy</text><text x="740" y="260" fill="#10b981" font-size="14">checkbox NA rows visible</text><text x="740" y="290" fill="#ef4444" font-size="14">x EMEA rows hidden</text><text x="740" y="320" fill="#ef4444" font-size="14">x APAC rows hidden</text><rect x="60" y="390" width="980" height="240" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="550" y="430" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">DAX patterns you will use</text><rect x="100" y="450" width="900" height="50" rx="6" fill="#1a1a2e" stroke="#888"/><text x="120" y="482" fill="#10b981" font-size="14" font-family="monospace">// Static    [Region] = "North America"</text><rect x="100" y="510" width="900" height="50" rx="6" fill="#1a1a2e" stroke="#888"/><text x="120" y="542" fill="#10b981" font-size="14" font-family="monospace">// Dynamic   [Manager] = USERPRINCIPALNAME()</text><rect x="100" y="570" width="900" height="50" rx="6" fill="#1a1a2e" stroke="#888"/><text x="120" y="602" fill="#10b981" font-size="14" font-family="monospace">// Lookup    [Region] IN CALCULATETABLE(VALUES('UA'[Region]), ...)</text><rect x="60" y="660" width="980" height="370" rx="10" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2"/><text x="550" y="700" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Critical pitfalls</text><text x="80" y="740" fill="#ffffff" font-size="16">- No role assigned means unfiltered access - create a default Deny role: FALSE()</text><text x="80" y="775" fill="#ffffff" font-size="16">- Workspace Members BYPASS RLS - consumers must be App audience only</text><text x="80" y="810" fill="#ffffff" font-size="16">- Test every role: Desktop View as, Service Test as role</text><text x="80" y="845" fill="#ffffff" font-size="16">- Composite models need RLS at the DirectQuery source database too</text><text x="80" y="880" fill="#ffffff" font-size="16">- Object-Level Security (OLS) hides COLUMNS - configure via XMLA / Tabular Editor</text><text x="80" y="915" fill="#ffffff" font-size="16">- USERPRINCIPALNAME() returns the AAD login - not always the display name</text><text x="80" y="950" fill="#ffffff" font-size="16">- Onboarding new users updates the UserAccess table, NOT the role DAX</text><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Test every role. Default-deny. App audience only.</text></svg>`,
+          caption: "Dynamic RLS with a UserAccess lookup table scales to thousands of users without DAX changes."
+        }
+      },
+      {
+        type: "example",
+        title: "Setting Up Scheduled Refresh for a Mixed Excel + Power BI Pipeline",
+        content: `**Scenario**: Finance team owns an Excel-based budget workbook on SharePoint. Operations owns a Power BI dashboard that reads from both the SharePoint Excel file and the on-prem SQL Server. Both need to refresh every weekday at 7:00 AM before the executive standup.
+
+**Step 1 — Install the On-premises Data Gateway** (Standard mode, not Personal).
+
+Standard gateway runs as a service on a always-on server, supports multiple users, and is required for production. Download from \`powerbi.microsoft.com/en-us/gateway/\`, install on a Windows Server VM, sign in with an Azure AD service account (never a personal account — when the employee leaves, refresh breaks).
+
+**Step 2 — Configure data sources in the gateway**:
+
+In the Power BI Service → **Settings → Manage gateways**:
+- Add a data source for **SQL Server**: server name \`SQL-PROD-01\`, database \`Finance\`, authentication = Windows or SQL.
+- Add a data source for **SharePoint File** if the Excel file is on-prem SharePoint. Cloud SharePoint Online does **not** need a gateway — it connects via cloud connectors automatically.
+
+**Step 3 — Bind the dataset to the gateway**:
+
+Find the dataset in the workspace → **Settings → Gateway connection** → toggle "Use an On-premises data gateway" → pick the gateway, map each data source.
+
+**Step 4 — Set the schedule**:
+
+Same Settings page → **Scheduled refresh** → toggle On → set time \`6:30 AM\` (give yourself buffer before 7:00) → time zone matching the executives → frequency **Daily**. Pro workspaces allow **8 refreshes per day**, Premium and PPU allow **48**.
+
+**Step 5 — Failure notifications**:
+
+Add the dataset owner email under "Send refresh failure notifications to:" plus the on-call data engineer. Refreshes will fail eventually — credentials expire, source schemas change, a gateway VM reboots into a Windows Update loop. Notifications turn a 3-day silent outage into a 15-minute Slack ping.
+
+**Step 6 — For the Excel side**:
+
+Excel workbooks on **SharePoint Online** can refresh from Power Query if you use **Power Automate** with the "Refresh a dataset" connector, or upgrade to **Power BI Premium** which can refresh embedded Excel data models. The browser version of Excel **cannot trigger Power Query refresh** — only the Excel desktop app can, which means scheduled refresh of standalone Excel workbooks requires either Power Automate or a Windows scheduled task running on a server.
+
+**Step 7 — Verify with the refresh history**:
+
+Dataset → **Refresh history** shows the last 60 refreshes with success/failure, duration, and the error message. Reviewing this weekly catches degrading performance (a refresh that took 3 minutes when shipped and now takes 22 minutes signals an upstream problem).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Scheduled Refresh Pipeline</text><rect x="60" y="100" width="240" height="180" rx="10" fill="#0ea5e9" opacity="0.25" stroke="#0ea5e9" stroke-width="2"/><text x="180" y="140" text-anchor="middle" fill="#0ea5e9" font-size="18" font-weight="bold">On-Prem SQL</text><text x="180" y="175" text-anchor="middle" fill="#ffffff" font-size="14">SQL-PROD-01</text><text x="180" y="205" text-anchor="middle" fill="#ffffff" font-size="14">Finance DB</text><text x="180" y="240" text-anchor="middle" fill="#ffffff" font-size="14">Windows Auth</text><rect x="60" y="310" width="240" height="180" rx="10" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/><text x="180" y="350" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">SharePoint</text><text x="180" y="385" text-anchor="middle" fill="#ffffff" font-size="14">Budget.xlsx</text><text x="180" y="415" text-anchor="middle" fill="#ffffff" font-size="14">Finance owns</text><text x="180" y="450" text-anchor="middle" fill="#ffffff" font-size="14">Cloud (no gateway)</text><rect x="370" y="200" width="280" height="200" rx="10" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="510" y="245" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">Data Gateway</text><text x="510" y="280" text-anchor="middle" fill="#ffffff" font-size="14">Standard mode</text><text x="510" y="310" text-anchor="middle" fill="#ffffff" font-size="14">Service account login</text><text x="510" y="340" text-anchor="middle" fill="#ffffff" font-size="14">Always-on VM</text><text x="510" y="370" text-anchor="middle" fill="#ffffff" font-size="14">Bridges on-prem to cloud</text><line x1="300" y1="190" x2="370" y2="260" stroke="#0ea5e9" stroke-width="3"/><line x1="300" y1="400" x2="370" y2="340" stroke="#10b981" stroke-width="3"/><rect x="720" y="200" width="320" height="200" rx="10" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/><text x="880" y="245" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Power BI Service</text><text x="880" y="280" text-anchor="middle" fill="#ffffff" font-size="14">Dataset bound to gateway</text><text x="880" y="310" text-anchor="middle" fill="#ffffff" font-size="14">Scheduled: daily 6:30 AM</text><text x="880" y="340" text-anchor="middle" fill="#ffffff" font-size="14">Pro: 8/day  Prem: 48/day</text><text x="880" y="370" text-anchor="middle" fill="#ffffff" font-size="14">Failure notifications ON</text><line x1="650" y1="300" x2="720" y2="300" stroke="#ffd700" stroke-width="3" marker-end="url(#a3)"/><defs><marker id="a3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#ffd700"/></marker></defs><rect x="60" y="520" width="980" height="220" rx="10" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2"/><text x="550" y="560" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Configuration Steps</text><text x="80" y="600" fill="#ffffff" font-size="15">1. Install Standard gateway on always-on VM with service account</text><text x="80" y="630" fill="#ffffff" font-size="15">2. Add SQL Server data source in Manage gateways</text><text x="80" y="660" fill="#ffffff" font-size="15">3. Dataset Settings - bind to gateway, map each source</text><text x="80" y="690" fill="#ffffff" font-size="15">4. Scheduled refresh: 6:30 AM, executives standup at 7:00</text><text x="80" y="720" fill="#ffffff" font-size="15">5. Failure notifications to owner + on-call data engineer</text><rect x="60" y="770" width="980" height="260" rx="10" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2"/><text x="550" y="810" text-anchor="middle" fill="#ec4899" font-size="22" font-weight="bold">Common gotchas</text><text x="80" y="850" fill="#ffffff" font-size="15">- Personal gateway breaks when the user logs off - use Standard</text><text x="80" y="880" fill="#ffffff" font-size="15">- Personal AAD account stops working when employee leaves - use service account</text><text x="80" y="910" fill="#ffffff" font-size="15">- SharePoint Online connects WITHOUT a gateway (cloud connector)</text><text x="80" y="940" fill="#ffffff" font-size="15">- Excel desktop is the only client that can trigger Power Query refresh from a workbook</text><text x="80" y="970" fill="#ffffff" font-size="15">- Refresh history shows the last 60 runs - audit weekly for degradation</text><text x="80" y="1000" fill="#ffffff" font-size="15">- Credential expiry kills refresh silently - notifications are not optional</text></svg>`,
+          caption: "Standard gateway, service account, scheduled with buffer, alerts to a real human."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A contractor needs to view a Power BI dashboard but you must guarantee they cannot see the underlying dataset, edit visuals, or access other reports in the workspace. Which sharing approach correctly enforces this?",
+        options: [
+          { text: "Add the contractor as a Viewer in the workspace so they can see the report read-only", correct: false },
+          { text: "Publish the workspace as an App and add the contractor only to the App audience, then assign them to an appropriate RLS role", correct: true },
+          { text: "Send the contractor a direct share link to the report and assume RLS will protect them", correct: false },
+          { text: "Export the report to PDF every morning and email it to the contractor", correct: false }
+        ],
+        explanation: "Publishing the workspace as an App and adding the contractor only to the App audience is the correct production pattern. App users cannot access the underlying dataset, cannot edit, and only see content explicitly included. Workspace Viewer role still gives access to the dataset metadata and other workspace artifacts. Direct sharing creates audit gaps and does not isolate the dataset. PDF export defeats the purpose of a live dashboard. Layering RLS on top ensures even within the app, the contractor sees only the rows they are entitled to.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Workspace vs App: What Each Audience Sees</text><rect x="60" y="120" width="490" height="450" rx="10" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2"/><text x="305" y="160" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Workspace Viewer</text><text x="80" y="200" fill="#ffffff" font-size="16">Can see:</text><text x="100" y="230" fill="#10b981" font-size="15">checkbox All reports in workspace</text><text x="100" y="260" fill="#10b981" font-size="15">checkbox Dataset metadata</text><text x="100" y="290" fill="#10b981" font-size="15">checkbox Other content</text><text x="80" y="340" fill="#ffffff" font-size="16">Risks:</text><text x="100" y="370" fill="#ef4444" font-size="15">x Sees draft reports</text><text x="100" y="400" fill="#ef4444" font-size="15">x Sees other teams data</text><text x="100" y="430" fill="#ef4444" font-size="15">x Build perm bypasses RLS</text><text x="305" y="510" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Not safe for contractors</text><rect x="570" y="120" width="490" height="450" rx="10" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="815" y="160" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">App Audience</text><text x="590" y="200" fill="#ffffff" font-size="16">Can see:</text><text x="610" y="230" fill="#10b981" font-size="15">checkbox Only the published app</text><text x="610" y="260" fill="#10b981" font-size="15">checkbox Read-only visuals</text><text x="610" y="290" fill="#10b981" font-size="15">checkbox Filtered to RLS scope</text><text x="590" y="340" fill="#ffffff" font-size="16">Safety properties:</text><text x="610" y="370" fill="#10b981" font-size="15">checkbox No dataset access</text><text x="610" y="400" fill="#10b981" font-size="15">checkbox Cannot edit visuals</text><text x="610" y="430" fill="#10b981" font-size="15">checkbox RLS enforced</text><text x="815" y="510" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Correct pattern</text><rect x="60" y="600" width="1000" height="220" rx="10" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2"/><text x="550" y="640" text-anchor="middle" fill="#6366f1" font-size="22" font-weight="bold">Production pattern for external/contractor access</text><text x="80" y="680" fill="#ffffff" font-size="16">1. Build dashboard in workspace (team members only)</text><text x="80" y="710" fill="#ffffff" font-size="16">2. Configure RLS role: Contractor with filter restricting to their scope</text><text x="80" y="740" fill="#ffffff" font-size="16">3. Publish workspace as an App</text><text x="80" y="770" fill="#ffffff" font-size="16">4. App audience: add contractor email, assign to Contractor role</text><text x="80" y="800" fill="#ffffff" font-size="16">5. Contractor gets app URL, sees only filtered report, nothing else</text><rect x="200" y="870" width="700" height="160" rx="10" fill="#ffd700" opacity="0.2" stroke="#ffd700"/><text x="550" y="915" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">The rule</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="18">Consumers = App audience. Builders = Workspace members.</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="18">Never mix the two for external users.</text></svg>`,
+          caption: "The App audience is the only path that truly isolates a contractor from the dataset."
+        }
+      },
+      {
+        type: "application",
+        title: "Pre-Launch Security and Distribution Checklist",
+        content: `Run this checklist the day before launching any dashboard to executives or external parties. Each item maps to a real incident that has shipped to production at some company you have heard of.
+
+**Power BI Workspace**
+
+- Workspace name follows convention: \`<Team>-<Product>-<Env>\` (e.g., \`Sales-Pipeline-Prod\`).
+- Workspace **Admin** = at least two people. One admin leaves and you lose access.
+- **Member** role = only the build team. Members can edit and republish — they should not be consumers.
+- **Contributor** = analysts who can update reports but not change permissions.
+- **Viewer** = a small group who need raw workspace access for audit. Most consumers should not be Viewers.
+
+**Row-Level Security**
+
+- Every fact table either has RLS or is documented as "all users see all rows."
+- **Default Deny role** exists with filter \`FALSE()\` — assigned to a security group that catches anyone unmapped.
+- Each named RLS role tested via **Test as role** in the Service.
+- Dynamic roles use \`USERPRINCIPALNAME()\` (not \`USERNAME()\` which returns the on-prem domain account).
+- UserAccess lookup table refreshes daily — stale mappings cause access drift.
+
+**App Publication**
+
+- App audience is **a security group**, not individual emails. Easier to manage offboarding.
+- App audience does NOT include workspace Members (they already have edit access).
+- App **navigation** (left rail) curated — hide draft pages, only show consumer-ready content.
+- App **description** explains who owns it, refresh schedule, and where to file issues.
+- App is **versioned** — when you republish, audiences see "Update available" and review the changes.
+
+**Refresh and Gateway**
+
+- Standard gateway, not Personal.
+- Gateway service account is **a service account**, not a personal AAD.
+- Gateway VM is in monitoring — uptime alerts go to the on-call engineer.
+- Scheduled refresh has **failure notifications** to two emails, not one.
+- **Refresh history reviewed** weekly for degradation.
+
+**Excel Distribution**
+
+- Workbook stored in **SharePoint** or **OneDrive for Business**, not local network shares.
+- File **link sharing** set to "People in your organization" by default, not "Anyone with the link."
+- **External links** to Power Query sources documented in a hidden tab.
+- Sensitivity label applied: **Confidential** at minimum for any financials.
+- **Co-authoring** enabled only if structurally needed — locked-down workbooks are a single-owner edit.
+
+**Audit and Offboarding**
+
+- Quarterly access review: pull the App audience list and confirm each user still needs access.
+- When employees leave, the Azure AD disable should cut their dashboard access within 24 hours. Verify by Test as Role.
+- Sensitive datasets have **Microsoft Purview** sensitivity labels propagated through Power BI.
+
+Walk this list, fix anything that does not pass, and your dashboard will outlive the project manager who commissioned it without becoming a security incident.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="50" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Pre-Launch Checklist</text><rect x="50" y="100" width="500" height="220" rx="10" fill="#6366f1" opacity="0.18" stroke="#6366f1" stroke-width="2"/><text x="300" y="135" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">Workspace</text><text x="70" y="170" fill="#10b981" font-size="15">checkbox Naming convention applied</text><text x="70" y="200" fill="#10b981" font-size="15">checkbox 2+ Admins assigned</text><text x="70" y="230" fill="#10b981" font-size="15">checkbox Members = build team only</text><text x="70" y="260" fill="#10b981" font-size="15">checkbox Contributors are analysts</text><text x="70" y="290" fill="#10b981" font-size="15">checkbox Viewers limited to audit</text><rect x="570" y="100" width="480" height="220" rx="10" fill="#10b981" opacity="0.18" stroke="#10b981" stroke-width="2"/><text x="810" y="135" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Row-Level Security</text><text x="590" y="170" fill="#10b981" font-size="15">checkbox Every fact table covered</text><text x="590" y="200" fill="#10b981" font-size="15">checkbox Default Deny FALSE() role</text><text x="590" y="230" fill="#10b981" font-size="15">checkbox Each role tested as role</text><text x="590" y="260" fill="#10b981" font-size="15">checkbox USERPRINCIPALNAME used</text><text x="590" y="290" fill="#10b981" font-size="15">checkbox UserAccess refreshes daily</text><rect x="50" y="340" width="500" height="220" rx="10" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2"/><text x="300" y="375" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">App Publication</text><text x="70" y="410" fill="#10b981" font-size="15">checkbox Audience = security group</text><text x="70" y="440" fill="#10b981" font-size="15">checkbox No workspace Members in app</text><text x="70" y="470" fill="#10b981" font-size="15">checkbox Navigation curated</text><text x="70" y="500" fill="#10b981" font-size="15">checkbox Description + owner listed</text><text x="70" y="530" fill="#10b981" font-size="15">checkbox Version published cleanly</text><rect x="570" y="340" width="480" height="220" rx="10" fill="#ec4899" opacity="0.18" stroke="#ec4899" stroke-width="2"/><text x="810" y="375" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Refresh + Gateway</text><text x="590" y="410" fill="#10b981" font-size="15">checkbox Standard gateway installed</text><text x="590" y="440" fill="#10b981" font-size="15">checkbox Service account auth</text><text x="590" y="470" fill="#10b981" font-size="15">checkbox VM monitored for uptime</text><text x="590" y="500" fill="#10b981" font-size="15">checkbox 2+ failure notifications</text><text x="590" y="530" fill="#10b981" font-size="15">checkbox Refresh history weekly review</text><rect x="50" y="580" width="500" height="220" rx="10" fill="#8b5cf6" opacity="0.18" stroke="#8b5cf6" stroke-width="2"/><text x="300" y="615" text-anchor="middle" fill="#8b5cf6" font-size="20" font-weight="bold">Excel Distribution</text><text x="70" y="650" fill="#10b981" font-size="15">checkbox SharePoint or OneDrive only</text><text x="70" y="680" fill="#10b981" font-size="15">checkbox Org-only sharing default</text><text x="70" y="710" fill="#10b981" font-size="15">checkbox External links documented</text><text x="70" y="740" fill="#10b981" font-size="15">checkbox Sensitivity label applied</text><text x="70" y="770" fill="#10b981" font-size="15">checkbox Co-authoring set per need</text><rect x="570" y="580" width="480" height="220" rx="10" fill="#0ea5e9" opacity="0.18" stroke="#0ea5e9" stroke-width="2"/><text x="810" y="615" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Audit + Offboarding</text><text x="590" y="650" fill="#10b981" font-size="15">checkbox Quarterly access review</text><text x="590" y="680" fill="#10b981" font-size="15">checkbox AAD disable cuts access &lt; 24h</text><text x="590" y="710" fill="#10b981" font-size="15">checkbox Purview sensitivity labels</text><text x="590" y="740" fill="#10b981" font-size="15">checkbox Owner documented</text><text x="590" y="770" fill="#10b981" font-size="15">checkbox Issue triage process exists</text><rect x="50" y="830" width="1000" height="220" rx="10" fill="#ffd700" opacity="0.2" stroke="#ffd700" stroke-width="3"/><text x="550" y="875" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Launch only when all 30 boxes are checked</text><text x="550" y="920" text-anchor="middle" fill="#ffffff" font-size="18">Each item maps to a real incident at a real company</text><text x="550" y="955" text-anchor="middle" fill="#ffffff" font-size="18">The cheapest data breach is the one you prevent before launch</text><text x="550" y="1000" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Make this your team standard</text></svg>`,
+          caption: "Thirty checks across six categories. Skip any one and you risk shipping a security incident."
         }
       }
     ]

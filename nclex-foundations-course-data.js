@@ -9847,7 +9847,7 @@ After: **psychological first aid** for staff and survivors, debrief, restock, le
             title: 'Pathophysiology for NCLEX Reasoning',
             author: 'Synthesis Learning',
             description: 'The "why" behind every nursing intervention — pulling the mechanisms together so SATA and prioritization questions get easier.',
-            lessons: 6, duration: 90, progress: 0, category: 'nclex-foundations',
+            lessons: 9, duration: 135, progress: 0, category: 'nclex-foundations',
             lessonList: [
 {
     id: "nclex-pathophys-lesson-1",
@@ -11015,6 +11015,503 @@ This is **thyroid storm** — life-threatening decompensated hyperthyroidism. Th
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="30" fill="#ffd700" text-anchor="middle" font-weight="bold">Addisonian Crisis: Pattern and Action</text><rect x="60" y="100" width="980" height="100" fill="#ef4444" rx="10"/><text x="550" y="135" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">THE PATTERN: Shock that does NOT respond to fluids and pressors</text><text x="550" y="170" font-size="16" fill="#ffffff" text-anchor="middle">PLUS Low Na, High K, Low glucose, Low cortisol, High BUN</text><text x="550" y="195" font-size="14" fill="#ffd700" text-anchor="middle">Often history of chronic steroids, recent stop, or surgery</text><text x="550" y="250" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Lab Signature: 4-Low and 2-High</text><rect x="60" y="280" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="220" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Sodium</text><text x="220" y="350" font-size="14" fill="#ffffff" text-anchor="middle">No aldosterone</text><text x="220" y="375" font-size="14" fill="#ffffff" text-anchor="middle">Na wasting in urine</text><text x="220" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 135 mEq/L</text><rect x="400" y="280" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="560" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Glucose</text><text x="560" y="350" font-size="14" fill="#ffffff" text-anchor="middle">No cortisol</text><text x="560" y="375" font-size="14" fill="#ffffff" text-anchor="middle">No gluconeogenesis</text><text x="560" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 70 mg/dL</text><rect x="740" y="280" width="300" height="140" fill="#0ea5e9" rx="10"/><text x="890" y="320" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW Cortisol</text><text x="890" y="350" font-size="14" fill="#ffffff" text-anchor="middle">Adrenals failed</text><text x="890" y="375" font-size="14" fill="#ffffff" text-anchor="middle">Confirms diagnosis</text><text x="890" y="400" font-size="14" fill="#ffd700" text-anchor="middle">Less 5 mcg/dL AM</text><rect x="60" y="440" width="320" height="140" fill="#0ea5e9" rx="10"/><text x="220" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">LOW HCO3</text><text x="220" y="510" font-size="14" fill="#ffffff" text-anchor="middle">Metabolic acidosis</text><text x="220" y="535" font-size="14" fill="#ffffff" text-anchor="middle">Mild</text><text x="220" y="560" font-size="14" fill="#ffd700" text-anchor="middle">pH 7.30-7.35</text><rect x="400" y="440" width="320" height="140" fill="#ef4444" rx="10"/><text x="560" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">HIGH Potassium</text><text x="560" y="510" font-size="14" fill="#ffffff" text-anchor="middle">No aldosterone</text><text x="560" y="535" font-size="14" fill="#ffffff" text-anchor="middle">K not excreted</text><text x="560" y="560" font-size="14" fill="#ffd700" text-anchor="middle">Greater 5.5 mEq/L</text><rect x="740" y="440" width="300" height="140" fill="#ef4444" rx="10"/><text x="890" y="480" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">HIGH BUN</text><text x="890" y="510" font-size="14" fill="#ffffff" text-anchor="middle">Volume depletion</text><text x="890" y="535" font-size="14" fill="#ffffff" text-anchor="middle">Pre-renal AKI</text><text x="890" y="560" font-size="14" fill="#ffd700" text-anchor="middle">BUN to Cr ratio 20</text><text x="550" y="630" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">Treatment: STEROIDS FIRST</text><rect x="60" y="660" width="480" height="180" fill="#10b981" rx="10"/><text x="300" y="700" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 1: Hydrocortisone</text><text x="80" y="735" font-size="16" fill="#ffd700" font-weight="bold">100 mg IV PUSH STAT</text><text x="80" y="760" font-size="14" fill="#ffffff">Then 100 mg IV q8h</text><text x="80" y="785" font-size="14" fill="#ffffff">Has glucocorticoid AND</text><text x="80" y="805" font-size="14" fill="#ffffff">mineralocorticoid activity</text><text x="80" y="828" font-size="14" fill="#ffd700">Do NOT wait for labs to treat!</text><rect x="560" y="660" width="480" height="180" fill="#6366f1" rx="10"/><text x="800" y="700" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">STEP 2: Fluids</text><text x="580" y="735" font-size="16" fill="#ffd700" font-weight="bold">0.9 percent NS 1-3 L first hours</text><text x="580" y="760" font-size="14" fill="#ffffff">Add D5 to fluids for glucose</text><text x="580" y="785" font-size="14" fill="#ffffff">Restores volume</text><text x="580" y="805" font-size="14" fill="#ffffff">Corrects hyponatremia slowly</text><text x="580" y="828" font-size="14" fill="#ffd700">Continuous monitoring</text><text x="550" y="880" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">SIADH vs DI Memory</text><rect x="60" y="910" width="480" height="150" fill="#6366f1" rx="10"/><text x="300" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">SIADH equals SOAKED</text><text x="80" y="980" font-size="14" fill="#ffffff">Too much ADH</text><text x="80" y="1005" font-size="14" fill="#ffffff">Water retention = low Na</text><text x="80" y="1030" font-size="14" fill="#ffffff">Concentrated urine</text><text x="80" y="1055" font-size="14" fill="#ffd700">Treat: fluid restrict</text><rect x="560" y="910" width="480" height="150" fill="#0ea5e9" rx="10"/><text x="800" y="945" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">DI equals DRY</text><text x="580" y="980" font-size="14" fill="#ffffff">Too little ADH</text><text x="580" y="1005" font-size="14" fill="#ffffff">Massive water loss = high Na</text><text x="580" y="1030" font-size="14" fill="#ffffff">Dilute urine SG less 1.005</text><text x="580" y="1055" font-size="14" fill="#ffd700">Treat: DDAVP (central)</text></svg>`,
           caption: "Addisonian crisis pattern recognition, treatment priority, and SIADH vs DI memory."
+        }
+      }
+    ]
+  },
+{
+    id: "nclex-pathophys-lesson-7",
+    title: "Cardiovascular Pathophysiology: MI, Heart Failure, and Shock",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When the Pump Fails",
+        content: `Cardiovascular emergencies dominate the NCLEX because they kill fast and respond to clear nursing priorities. This lesson focuses on the three highest-yield pump failures: **myocardial infarction (MI)**, **heart failure (HF)**, and **shock states**.
+
+A **STEMI** is a complete occlusion of a coronary artery — ST elevation in two contiguous leads, troponin rising, and a 90-minute door-to-balloon clock ticking. An **NSTEMI** is a partial occlusion — ST depression or T-wave inversion with elevated troponin, treated medically first and cath within 24-72 hours.
+
+Heart failure is a forward-and-backward problem. **Left-sided HF** backs blood into the **lungs** (crackles, pink frothy sputum, orthopnea, dyspnea). **Right-sided HF** backs blood into the **body** (JVD, peripheral edema, hepatomegaly, ascites). The phrase "left = lungs, right = rest of body" wins points.
+
+Shock is inadequate tissue perfusion. The three tested types:
+- **Cardiogenic** — pump failure (post-MI). Cold, clammy, low CO, high SVR, high PCWP.
+- **Hypovolemic** — volume loss (hemorrhage, burns). Cold, low CO, high SVR, low PCWP.
+- **Distributive** — vasodilation (septic, anaphylactic, neurogenic). Warm initially, low SVR, variable CO.
+
+Every shock answer starts with the same nursing priority: **airway, large-bore IV access, fluids, and oxygen** — then escalate to vasopressors when MAP < 65 mmHg despite resuscitation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Cardiovascular Failure Triad</text><circle cx="250" cy="320" r="140" fill="none" stroke="#ef4444" stroke-width="4"/><text x="250" y="290" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">MI</text><text x="250" y="325" text-anchor="middle" fill="#ffffff" font-size="16">STEMI: full block</text><text x="250" y="350" text-anchor="middle" fill="#ffffff" font-size="16">NSTEMI: partial</text><text x="250" y="375" text-anchor="middle" fill="#ffd700" font-size="14">Troponin rises</text><circle cx="850" cy="320" r="140" fill="none" stroke="#0ea5e9" stroke-width="4"/><text x="850" y="290" text-anchor="middle" fill="#0ea5e9" font-size="24" font-weight="bold">HEART FAILURE</text><text x="850" y="325" text-anchor="middle" fill="#ffffff" font-size="16">L-sided = Lungs</text><text x="850" y="350" text-anchor="middle" fill="#ffffff" font-size="16">R-sided = Rest of body</text><text x="850" y="375" text-anchor="middle" fill="#ffd700" font-size="14">BNP &gt; 100 pg/mL</text><circle cx="550" cy="720" r="160" fill="none" stroke="#f59e0b" stroke-width="4"/><text x="550" y="690" text-anchor="middle" fill="#f59e0b" font-size="24" font-weight="bold">SHOCK</text><text x="550" y="725" text-anchor="middle" fill="#ffffff" font-size="16">Cardiogenic / Hypovolemic</text><text x="550" y="750" text-anchor="middle" fill="#ffffff" font-size="16">Distributive</text><text x="550" y="775" text-anchor="middle" fill="#ffd700" font-size="14">MAP target &gt; 65</text><line x1="350" y1="400" x2="500" y2="600" stroke="#888" stroke-width="2" stroke-dasharray="6"/><line x1="750" y1="400" x2="600" y2="600" stroke="#888" stroke-width="2" stroke-dasharray="6"/><line x1="390" y1="320" x2="710" y2="320" stroke="#888" stroke-width="2" stroke-dasharray="6"/><text x="550" y="950" text-anchor="middle" fill="#10b981" font-size="20">Priority: Oxygen, IV access, perfusion</text><text x="550" y="985" text-anchor="middle" fill="#8b5cf6" font-size="18">MONA: Morphine, Oxygen, Nitrates, Aspirin</text></svg>`,
+          caption: "The three cardiovascular failures that dominate NCLEX questions."
+        }
+      },
+      {
+        type: "concept",
+        title: "Reading the 12-Lead: STEMI vs NSTEMI",
+        content: `**ST-Elevation MI (STEMI)** is a transmural infarction — full thickness of the myocardium dies because a coronary artery is completely blocked. The ECG shows **ST elevation ≥ 1 mm in two contiguous limb leads or ≥ 2 mm in two contiguous precordial leads**. Treatment is reperfusion: **PCI within 90 minutes** of first medical contact, or fibrinolytics within 30 minutes if PCI is unavailable within 120 minutes.
+
+Localizing the infarct matters because it predicts complications:
+- **Anterior (V1-V4)** — LAD occlusion. Highest mortality, risk of cardiogenic shock and LV failure.
+- **Inferior (II, III, aVF)** — RCA occlusion. Risk of **bradycardia, heart block**, and **right ventricular infarct** — these patients are **preload dependent**, so nitroglycerin can drop their BP catastrophically.
+- **Lateral (I, aVL, V5, V6)** — circumflex.
+
+**Non-ST-Elevation MI (NSTEMI)** is partial-thickness damage. ECG shows **ST depression or T-wave inversion**, but troponin is elevated. No emergent PCI; the patient gets dual antiplatelet therapy (aspirin + clopidogrel/ticagrelor), heparin, statin, beta-blocker, and **cath within 24-72 hours** based on risk score (TIMI/GRACE).
+
+Troponin I rises in **3-4 hours**, peaks at 24 hours, and stays elevated for **7-10 days**. CK-MB rises in 4-6 hours, normalizes in 48-72 hours — useful for detecting **reinfarction**.
+
+NCLEX priorities for any chest pain patient: **12-lead within 10 minutes**, oxygen if SaO2 < 90%, **aspirin 325 mg chewed**, nitroglycerin SL (hold if SBP < 90 or RV infarct), morphine for refractory pain.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">STEMI vs NSTEMI on 12-Lead</text><rect x="80" y="120" width="440" height="380" fill="none" stroke="#ef4444" stroke-width="3"/><text x="300" y="160" text-anchor="middle" fill="#ef4444" font-size="26" font-weight="bold">STEMI</text><polyline points="100,330 140,330 160,320 180,330 200,330 220,250 240,250 260,330 300,330 320,320 340,330 360,330 380,250 400,250 420,330 460,330 480,320 500,330" fill="none" stroke="#10b981" stroke-width="3"/><text x="300" y="400" text-anchor="middle" fill="#ffffff" font-size="16">ST elevation &gt;= 1mm</text><text x="300" y="425" text-anchor="middle" fill="#ffffff" font-size="16">Complete occlusion</text><text x="300" y="455" text-anchor="middle" fill="#ffd700" font-size="18">PCI within 90 min</text><text x="300" y="480" text-anchor="middle" fill="#ffd700" font-size="16">Fibrinolytics &lt; 30 min</text><rect x="580" y="120" width="440" height="380" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="800" y="160" text-anchor="middle" fill="#f59e0b" font-size="26" font-weight="bold">NSTEMI</text><polyline points="600,300 640,300 660,290 680,300 700,300 720,360 740,360 760,300 800,300 820,290 840,300 860,300 880,360 900,360 920,300 960,300 980,290 1000,300" fill="none" stroke="#10b981" stroke-width="3"/><text x="800" y="400" text-anchor="middle" fill="#ffffff" font-size="16">ST depression / T inv</text><text x="800" y="425" text-anchor="middle" fill="#ffffff" font-size="16">Partial occlusion</text><text x="800" y="455" text-anchor="middle" fill="#ffd700" font-size="18">Cath 24-72 hr</text><text x="800" y="480" text-anchor="middle" fill="#ffd700" font-size="16">DAPT + heparin</text><text x="550" y="560" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Troponin Timeline</text><line x1="150" y1="650" x2="950" y2="650" stroke="#888" stroke-width="2"/><circle cx="200" cy="650" r="6" fill="#ffd700"/><text x="200" y="680" text-anchor="middle" fill="#ffffff" font-size="14">0 hr pain</text><circle cx="350" cy="650" r="6" fill="#ef4444"/><text x="350" y="680" text-anchor="middle" fill="#ffffff" font-size="14">3-4 hr rise</text><circle cx="550" cy="650" r="6" fill="#ef4444"/><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="14">24 hr peak</text><circle cx="800" cy="650" r="6" fill="#10b981"/><text x="800" y="680" text-anchor="middle" fill="#ffffff" font-size="14">7-10 day normal</text><text x="550" y="780" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">Infarct Locations</text><text x="200" y="830" text-anchor="middle" fill="#ffffff" font-size="14">Anterior V1-V4</text><text x="200" y="855" text-anchor="middle" fill="#888" font-size="13">LAD</text><text x="450" y="830" text-anchor="middle" fill="#ffffff" font-size="14">Inferior II,III,aVF</text><text x="450" y="855" text-anchor="middle" fill="#888" font-size="13">RCA - no nitro</text><text x="700" y="830" text-anchor="middle" fill="#ffffff" font-size="14">Lateral I,aVL,V5,V6</text><text x="700" y="855" text-anchor="middle" fill="#888" font-size="13">Circumflex</text><text x="950" y="830" text-anchor="middle" fill="#ffffff" font-size="14">Posterior</text><text x="950" y="855" text-anchor="middle" fill="#888" font-size="13">V1-V2 reciprocal</text><text x="550" y="970" text-anchor="middle" fill="#10b981" font-size="18">ASA 325 mg chewed - first nursing action</text></svg>`,
+          caption: "STEMI shows ST elevation in two contiguous leads; NSTEMI shows ST depression or T-wave inversion with positive troponin."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Cardiogenic Shock Post-Anterior STEMI",
+        content: `**Patient:** 64-year-old man, 12 hours post-anterior STEMI status post PCI of the LAD with one drug-eluting stent. He was stable, then suddenly becomes diaphoretic and confused.
+
+**Assessment:**
+- BP 78/52 mmHg (MAP 60), HR 122, RR 28, SpO2 87% on 4L NC
+- Skin cool, mottled extremities, weak thready pulses
+- Crackles to mid-lung fields bilaterally
+- Urine output 15 mL/hr over the last 2 hours
+- JVD elevated to angle of jaw
+- Telemetry: sinus tachycardia, frequent PVCs
+
+**Labs/Hemodynamics:**
+- Lactate 4.8 mmol/L (normal < 2)
+- Troponin I 18 ng/mL (rising)
+- BNP 1840 pg/mL
+- Cardiac index 1.6 L/min/m² (normal > 2.2)
+- PCWP 26 mmHg (normal 6-12) — **high**
+- SVR 1850 (normal 800-1200) — **high**
+
+**Interpretation:** This is classic **cardiogenic shock** — the LV is failing, so cardiac output drops, the body clamps down (high SVR), and blood backs up into the lungs (high PCWP, crackles). Lactate rising means tissue hypoperfusion.
+
+**Nursing priorities (in order):**
+1. **Call rapid response / cardiology** — patient needs hemodynamic support
+2. **High-flow oxygen / prepare for BiPAP or intubation** — SpO2 87% with crackles
+3. **Start norepinephrine** (first-line vasopressor in cardiogenic shock) to MAP > 65
+4. **Add dobutamine** for inotropic support (increases contractility)
+5. **Avoid aggressive fluids** — PCWP already 26, more fluid worsens pulmonary edema
+6. Prepare for **intra-aortic balloon pump (IABP)** or **Impella** mechanical support
+
+**Key contrast:** In hypovolemic shock, fluids are the answer. In cardiogenic, fluids are the enemy.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Shock State Hemodynamic Profiles</text><line x1="100" y1="130" x2="1000" y2="130" stroke="#888" stroke-width="2"/><text x="180" y="115" fill="#ffffff" font-size="18" font-weight="bold">Type</text><text x="380" y="115" fill="#ffffff" font-size="18" font-weight="bold">CO</text><text x="520" y="115" fill="#ffffff" font-size="18" font-weight="bold">SVR</text><text x="660" y="115" fill="#ffffff" font-size="18" font-weight="bold">PCWP</text><text x="820" y="115" fill="#ffffff" font-size="18" font-weight="bold">Skin</text><text x="180" y="200" fill="#ef4444" font-size="18" font-weight="bold">Cardiogenic</text><text x="380" y="200" fill="#ef4444" font-size="20">LOW</text><text x="520" y="200" fill="#0ea5e9" font-size="20">HIGH</text><text x="660" y="200" fill="#0ea5e9" font-size="20">HIGH</text><text x="820" y="200" fill="#ffffff" font-size="16">cold/wet</text><line x1="100" y1="230" x2="1000" y2="230" stroke="#444" stroke-width="1"/><text x="180" y="280" fill="#f59e0b" font-size="18" font-weight="bold">Hypovolemic</text><text x="380" y="280" fill="#ef4444" font-size="20">LOW</text><text x="520" y="280" fill="#0ea5e9" font-size="20">HIGH</text><text x="660" y="280" fill="#ef4444" font-size="20">LOW</text><text x="820" y="280" fill="#ffffff" font-size="16">cold/dry</text><line x1="100" y1="310" x2="1000" y2="310" stroke="#444" stroke-width="1"/><text x="180" y="360" fill="#10b981" font-size="18" font-weight="bold">Septic (early)</text><text x="380" y="360" fill="#0ea5e9" font-size="20">HIGH</text><text x="520" y="360" fill="#ef4444" font-size="20">LOW</text><text x="660" y="360" fill="#ef4444" font-size="20">LOW</text><text x="820" y="360" fill="#ffffff" font-size="16">warm/flushed</text><line x1="100" y1="390" x2="1000" y2="390" stroke="#444" stroke-width="1"/><text x="180" y="440" fill="#8b5cf6" font-size="18" font-weight="bold">Anaphylactic</text><text x="380" y="440" fill="#ef4444" font-size="20">LOW</text><text x="520" y="440" fill="#ef4444" font-size="20">LOW</text><text x="660" y="440" fill="#ef4444" font-size="20">LOW</text><text x="820" y="440" fill="#ffffff" font-size="16">flushed/edema</text><line x1="100" y1="470" x2="1000" y2="470" stroke="#444" stroke-width="1"/><text x="180" y="520" fill="#ec4899" font-size="18" font-weight="bold">Neurogenic</text><text x="380" y="520" fill="#ef4444" font-size="20">LOW</text><text x="520" y="520" fill="#ef4444" font-size="20">LOW</text><text x="660" y="520" fill="#ef4444" font-size="20">LOW</text><text x="820" y="520" fill="#ffffff" font-size="16">warm/dry</text><rect x="100" y="580" width="900" height="220" fill="none" stroke="#ffd700" stroke-width="2"/><text x="550" y="615" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Case Vitals: Anterior STEMI Day 1</text><text x="200" y="660" fill="#ffffff" font-size="17">BP 78/52   HR 122   SpO2 87%</text><text x="200" y="690" fill="#ffffff" font-size="17">Lactate 4.8 mmol/L (rising)</text><text x="200" y="720" fill="#ffffff" font-size="17">Cardiac Index 1.6   PCWP 26</text><text x="200" y="750" fill="#ffffff" font-size="17">UOP 15 mL/hr   Crackles bilateral</text><text x="200" y="780" fill="#10b981" font-size="17">Norepinephrine + dobutamine, NOT fluids</text><text x="550" y="870" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Cardiogenic shock = pump failed = no fluid bolus</text><text x="550" y="920" text-anchor="middle" fill="#0ea5e9" font-size="18">Mechanical support: IABP / Impella if refractory</text><text x="550" y="960" text-anchor="middle" fill="#ffd700" font-size="18">MAP &gt; 65 mmHg is the resuscitation target</text></svg>`,
+          caption: "Hemodynamic fingerprints differentiate the shock states; cardiogenic shock needs inotropes, not fluids."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a client admitted with an inferior wall MI (ST elevation in leads II, III, and aVF). The client reports chest pain rated 7/10. Vital signs: BP 92/58, HR 52, SpO2 96% on 2L NC. Which intervention should the nurse question if prescribed?",
+        options: [
+          { text: "Aspirin 325 mg chewed now", correct: false },
+          { text: "Nitroglycerin 0.4 mg sublingual", correct: true },
+          { text: "Morphine 2 mg IV push", correct: false },
+          { text: "Continuous cardiac monitoring", correct: false }
+        ],
+        explanation: "Inferior wall MIs (II, III, aVF) result from RCA occlusion and frequently involve the right ventricle. RV infarct patients are **preload-dependent** — administering nitroglycerin causes venodilation, drops preload, and can precipitate severe hypotension and cardiac arrest. The BP is already 92/58 and the heart rate is bradycardic (52), both red flags for RV involvement. The nurse should hold nitroglycerin and clarify the order. Aspirin (antiplatelet), morphine (after withholding nitro fails), and cardiac monitoring are all appropriate. The classic NCLEX teaching: **never give nitrates if SBP < 90 or RV infarct is suspected**.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Inferior MI: The Nitrate Trap</text><ellipse cx="550" cy="450" rx="280" ry="200" fill="none" stroke="#ef4444" stroke-width="4"/><text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Heart</text><path d="M 350 400 Q 400 350 480 400 Q 550 360 620 400 Q 700 360 750 400" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="450" text-anchor="middle" fill="#ef4444" font-size="18">RCA territory</text><text x="550" y="480" text-anchor="middle" fill="#ffffff" font-size="16">Inferior wall + RV</text><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="18">Leads II, III, aVF</text><rect x="100" y="720" width="400" height="180" fill="none" stroke="#10b981" stroke-width="3"/><text x="300" y="755" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">SAFE</text><text x="300" y="790" text-anchor="middle" fill="#ffffff" font-size="16">Aspirin 325 mg chewed</text><text x="300" y="820" text-anchor="middle" fill="#ffffff" font-size="16">IV fluids for preload</text><text x="300" y="850" text-anchor="middle" fill="#ffffff" font-size="16">Cardiac monitor</text><text x="300" y="880" text-anchor="middle" fill="#ffffff" font-size="16">Oxygen if SpO2 &lt; 90</text><rect x="600" y="720" width="400" height="180" fill="none" stroke="#ef4444" stroke-width="3"/><text x="800" y="755" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">HOLD</text><text x="800" y="790" text-anchor="middle" fill="#ffffff" font-size="16">Nitroglycerin</text><text x="800" y="820" text-anchor="middle" fill="#ffffff" font-size="16">Morphine (caution)</text><text x="800" y="850" text-anchor="middle" fill="#ffffff" font-size="16">Diuretics</text><text x="800" y="880" text-anchor="middle" fill="#ffffff" font-size="16">Beta-blockers if HR low</text><text x="550" y="980" text-anchor="middle" fill="#0ea5e9" font-size="20">RV infarct = preload dependent</text><text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="18">SBP &lt; 90 or RV MI = NO NITRATES</text></svg>`,
+          caption: "Inferior MIs often involve the right ventricle, making patients preload-dependent — nitrates can cause cardiovascular collapse."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Decision: HF Exacerbation in the Step-Down Unit",
+        content: `**Scenario:** A 72-year-old woman with ischemic cardiomyopathy (EF 25%) is admitted with acute-on-chronic systolic heart failure. Home meds: lisinopril, carvedilol, furosemide 40 mg PO daily, spironolactone. She presents with 3 days of worsening dyspnea, 8-lb weight gain, and orthopnea (3 pillows now, baseline 1).
+
+**Assessment findings at 0700:**
+- BP 148/86, HR 96, RR 26, SpO2 90% on 2L NC, T 36.8°C
+- Crackles to mid-scapula bilaterally
+- 3+ pitting edema to mid-calf, JVD 4 cm above sternal angle
+- BNP 1450 pg/mL, K+ 3.3, Cr 1.4 (baseline 1.0)
+- CXR: cardiomegaly, bilateral pulmonary edema, blunted costophrenic angles
+
+**Prioritized nursing actions:**
+
+1. **Position upright (high Fowler's) and increase oxygen** — gravity reduces preload to the lungs; titrate O2 to keep SpO2 ≥ 92%.
+
+2. **Administer IV furosemide 40-80 mg** — the home dose IV equivalent or 1.5-2x for an acute exacerbation. Insert a Foley to measure strict I&O. Expect diuresis within 30-60 minutes.
+
+3. **Replace potassium before/with diuresis** — K+ is already 3.3 and Lasix will drop it further. Risk of dysrhythmia with low K+ + low EF.
+
+4. **Daily weight, strict I&O, 2 g sodium / 1.5-2 L fluid restriction** — weight is the most sensitive volume marker. A 1 kg gain = 1 L retained.
+
+5. **Hold carvedilol if BP < 90 systolic or HR < 50**, but do not stop chronically without cardiology — abrupt beta-blocker withdrawal can precipitate ischemia.
+
+6. **Teaching for discharge:** daily morning weight, call provider for **2 lb in 24 hr or 5 lb in a week**, daily med adherence, low-sodium DASH diet, recognize early warning signs (orthopnea, PND, increasing edema).
+
+**Red flags that trigger rapid response:** SpO2 < 88%, pink frothy sputum (flash pulmonary edema), confusion (low CO), or new hypotension after diuresis (over-diuresed).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Acute HF Exacerbation: Priority Cascade</text><circle cx="550" cy="180" r="60" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="175" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">1</text><text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="14">UPRIGHT</text><text x="550" y="265" text-anchor="middle" fill="#ffffff" font-size="14">High Fowler + O2 to SpO2 &gt; 92</text><line x1="550" y1="280" x2="550" y2="320" stroke="#ffd700" stroke-width="3"/><circle cx="550" cy="370" r="60" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="550" y="365" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">2</text><text x="550" y="390" text-anchor="middle" fill="#ffffff" font-size="14">DIURESE</text><text x="550" y="455" text-anchor="middle" fill="#ffffff" font-size="14">IV Lasix 40-80 mg, Foley, I&amp;O</text><line x1="550" y1="470" x2="550" y2="510" stroke="#ffd700" stroke-width="3"/><circle cx="550" cy="560" r="60" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="555" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">3</text><text x="550" y="580" text-anchor="middle" fill="#ffffff" font-size="14">K+ CHECK</text><text x="550" y="645" text-anchor="middle" fill="#ffffff" font-size="14">Replace K+ before/with Lasix</text><line x1="550" y1="660" x2="550" y2="700" stroke="#ffd700" stroke-width="3"/><circle cx="550" cy="750" r="60" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="745" text-anchor="middle" fill="#0ea5e9" font-size="18" font-weight="bold">4</text><text x="550" y="770" text-anchor="middle" fill="#ffffff" font-size="14">RESTRICT</text><text x="550" y="835" text-anchor="middle" fill="#ffffff" font-size="14">2g Na, 1.5-2L fluid, daily wt</text><rect x="60" y="880" width="490" height="200" fill="none" stroke="#10b981" stroke-width="2"/><text x="305" y="915" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">LEFT-sided = LUNGS</text><text x="305" y="945" text-anchor="middle" fill="#ffffff" font-size="14">Crackles, dyspnea, orthopnea</text><text x="305" y="970" text-anchor="middle" fill="#ffffff" font-size="14">Pink frothy sputum</text><text x="305" y="995" text-anchor="middle" fill="#ffffff" font-size="14">PND, S3 gallop</text><text x="305" y="1025" text-anchor="middle" fill="#ffffff" font-size="14">BNP &gt; 100 = HF likely</text><text x="305" y="1055" text-anchor="middle" fill="#ffd700" font-size="14">BNP &gt; 400 = HF very likely</text><rect x="560" y="880" width="490" height="200" fill="none" stroke="#0ea5e9" stroke-width="2"/><text x="805" y="915" text-anchor="middle" fill="#0ea5e9" font-size="18" font-weight="bold">RIGHT-sided = REST</text><text x="805" y="945" text-anchor="middle" fill="#ffffff" font-size="14">JVD, peripheral edema</text><text x="805" y="970" text-anchor="middle" fill="#ffffff" font-size="14">Hepatomegaly, ascites</text><text x="805" y="995" text-anchor="middle" fill="#ffffff" font-size="14">Weight gain (1 kg = 1 L)</text><text x="805" y="1025" text-anchor="middle" fill="#ffffff" font-size="14">Call for 2 lb in 24 hr</text><text x="805" y="1055" text-anchor="middle" fill="#ffd700" font-size="14">or 5 lb in a week</text></svg>`,
+          caption: "The HF exacerbation priority cascade — position, diurese, replace K+, restrict — with the classic left-vs-right symptom split."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-8",
+    title: "Pulmonary Pathophysiology: ARDS, COPD, PE, and ABG Reasoning",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "When Gas Exchange Breaks",
+        content: `Pulmonary pathophysiology shows up everywhere on the NCLEX because every system needs oxygen. This lesson connects four high-yield breakdowns: **ARDS, pneumonia, COPD/asthma exacerbations, and pulmonary embolism**, then teaches you the **ABG decision tree** that ties them all together.
+
+**ARDS (Acute Respiratory Distress Syndrome)** is non-cardiogenic pulmonary edema from massive inflammation — sepsis, trauma, aspiration, pancreatitis. The Berlin criteria require: acute onset (≤ 7 days), bilateral infiltrates on CXR, PaO2/FiO2 ratio ≤ 300 (mild), ≤ 200 (moderate), ≤ 100 (severe), and not explained by cardiac failure. Hallmark: **refractory hypoxemia** — SaO2 stays low despite high FiO2. Treatment is low tidal volume ventilation (**6 mL/kg ideal body weight**), high PEEP, and prone positioning.
+
+**Pneumonia** is alveolar infection — fever, productive cough, focal crackles, lobar consolidation on CXR. CAP responds to ceftriaxone + azithromycin; HAP/VAP needs broader Pseudomonas coverage.
+
+**COPD vs Asthma exacerbations** both present with wheezing and dyspnea, but COPD is **chronic CO2 retention** (hypoxic drive matters; cautious with O2, target SpO2 88-92%), while asthma is **acute bronchospasm** with a normal baseline.
+
+**Pulmonary embolism** is sudden onset dyspnea, pleuritic chest pain, tachycardia, hypoxia, with normal CXR. D-dimer screens; CT pulmonary angiogram confirms.
+
+The **ABG decision tree** decodes every one of these in 60 seconds.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Four Pulmonary Emergencies</text><rect x="80" y="120" width="460" height="220" fill="none" stroke="#ef4444" stroke-width="3"/><text x="310" y="155" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">ARDS</text><text x="310" y="195" text-anchor="middle" fill="#ffffff" font-size="15">Bilateral infiltrates</text><text x="310" y="220" text-anchor="middle" fill="#ffffff" font-size="15">PaO2/FiO2 &lt;= 300</text><text x="310" y="245" text-anchor="middle" fill="#ffffff" font-size="15">Refractory hypoxia</text><text x="310" y="275" text-anchor="middle" fill="#ffd700" font-size="15">6 mL/kg IBW + PEEP</text><text x="310" y="305" text-anchor="middle" fill="#10b981" font-size="15">Prone 12-16 hr/day</text><rect x="560" y="120" width="460" height="220" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="790" y="155" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">PNEUMONIA</text><text x="790" y="195" text-anchor="middle" fill="#ffffff" font-size="15">Focal crackles</text><text x="790" y="220" text-anchor="middle" fill="#ffffff" font-size="15">Lobar consolidation</text><text x="790" y="245" text-anchor="middle" fill="#ffffff" font-size="15">Fever, productive cough</text><text x="790" y="275" text-anchor="middle" fill="#ffd700" font-size="15">CAP: ceftriaxone + azithro</text><text x="790" y="305" text-anchor="middle" fill="#10b981" font-size="15">VAP: anti-Pseudomonal</text><rect x="80" y="380" width="460" height="220" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="310" y="415" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">COPD vs ASTHMA</text><text x="310" y="455" text-anchor="middle" fill="#ffffff" font-size="15">Wheezing, dyspnea</text><text x="310" y="480" text-anchor="middle" fill="#ffffff" font-size="15">COPD: chronic CO2 retain</text><text x="310" y="505" text-anchor="middle" fill="#ffffff" font-size="15">Asthma: reversible bronchospasm</text><text x="310" y="535" text-anchor="middle" fill="#ffd700" font-size="15">SABA + steroid</text><text x="310" y="565" text-anchor="middle" fill="#10b981" font-size="15">COPD: SpO2 88-92%</text><rect x="560" y="380" width="460" height="220" fill="none" stroke="#8b5cf6" stroke-width="3"/><text x="790" y="415" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">PULMONARY EMBOLISM</text><text x="790" y="455" text-anchor="middle" fill="#ffffff" font-size="15">Sudden dyspnea</text><text x="790" y="480" text-anchor="middle" fill="#ffffff" font-size="15">Pleuritic chest pain</text><text x="790" y="505" text-anchor="middle" fill="#ffffff" font-size="15">Tachycardia, hypoxia</text><text x="790" y="535" text-anchor="middle" fill="#ffd700" font-size="15">D-dimer screen, CTPA dx</text><text x="790" y="565" text-anchor="middle" fill="#10b981" font-size="15">Heparin gtt + thrombolytics</text><rect x="100" y="660" width="900" height="380" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="700" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">ABG Decision Tree</text><text x="200" y="755" fill="#ffffff" font-size="18" font-weight="bold">Normal pH: 7.35-7.45</text><text x="200" y="785" fill="#ffffff" font-size="18" font-weight="bold">Normal CO2: 35-45</text><text x="200" y="815" fill="#ffffff" font-size="18" font-weight="bold">Normal HCO3: 22-26</text><text x="200" y="845" fill="#ffffff" font-size="18" font-weight="bold">Normal PaO2: 80-100</text><line x1="100" y1="870" x2="1000" y2="870" stroke="#888" stroke-width="2"/><text x="200" y="910" fill="#ef4444" font-size="17" font-weight="bold">Resp Acidosis: pH down, CO2 up</text><text x="200" y="940" fill="#888" font-size="14">- COPD, opioids, hypoventilation</text><text x="200" y="975" fill="#0ea5e9" font-size="17" font-weight="bold">Resp Alkalosis: pH up, CO2 down</text><text x="200" y="1005" fill="#888" font-size="14">- PE, anxiety, salicylates</text><text x="650" y="910" fill="#f59e0b" font-size="17" font-weight="bold">Met Acidosis: pH down, HCO3 down</text><text x="650" y="940" fill="#888" font-size="14">- DKA, lactic, renal failure</text><text x="650" y="975" fill="#10b981" font-size="17" font-weight="bold">Met Alkalosis: pH up, HCO3 up</text><text x="650" y="1005" fill="#888" font-size="14">- Vomiting, NG suction, diuretics</text></svg>`,
+          caption: "Four pulmonary emergencies tied together by ABG interpretation."
+        }
+      },
+      {
+        type: "concept",
+        title: "ABG ROME Method and Clinical Pattern Recognition",
+        content: `**ROME** is the fastest ABG memory tool: **Respiratory Opposite, Metabolic Equal**.
+
+**Step 1: Look at pH.** Normal 7.35-7.45. < 7.35 = acidosis. > 7.45 = alkalosis.
+
+**Step 2: Look at PaCO2.** Normal 35-45 mmHg.
+- If pH and CO2 move in **opposite directions** → **Respiratory** problem.
+- Example: pH 7.28 (low), CO2 58 (high) → respiratory acidosis (COPD exacerbation, oversedation).
+
+**Step 3: Look at HCO3.** Normal 22-26 mEq/L.
+- If pH and HCO3 move in the **same direction** → **Metabolic** problem.
+- Example: pH 7.22 (low), HCO3 14 (low) → metabolic acidosis (DKA, sepsis, lactic acidosis).
+
+**Step 4: Compensation check.**
+- **Uncompensated:** only one value abnormal beside pH.
+- **Partially compensated:** pH still abnormal, both CO2 and HCO3 abnormal.
+- **Fully compensated:** pH normal, but CO2 and HCO3 both abnormal.
+
+**Clinical pattern translations:**
+
+| Pattern | Likely cause |
+|---------|--------------|
+| pH 7.28, CO2 58, HCO3 24 | **Resp acidosis** — COPD, opioid overdose, hypoventilation |
+| pH 7.50, CO2 28, HCO3 24 | **Resp alkalosis** — early PE, anxiety, salicylate toxicity (early), pregnancy |
+| pH 7.22, CO2 28, HCO3 12 | **Met acidosis + resp compensation** — DKA (Kussmaul respirations), lactic acidosis, AKI |
+| pH 7.50, CO2 44, HCO3 34 | **Met alkalosis** — vomiting, NG suction, loop diuretics |
+| pH 7.32, CO2 52, HCO3 30 | **Fully compensated resp acidosis** — chronic COPD baseline |
+
+**Anion gap** matters for metabolic acidosis: gap = Na - (Cl + HCO3). Normal 8-12.
+- **High gap (MUDPILES):** Methanol, Uremia, DKA, Propylene glycol, Isoniazid, Lactic acid, Ethylene glycol, Salicylates.
+- **Normal gap:** GI bicarb loss (diarrhea), renal tubular acidosis.
+
+**P/F ratio** (PaO2 ÷ FiO2 as decimal) defines ARDS severity: > 300 normal, 200-300 mild, 100-200 moderate, < 100 severe.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">ROME Method for ABG Interpretation</text><rect x="100" y="110" width="900" height="120" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="150" text-anchor="middle" fill="#ffd700" font-size="26" font-weight="bold">R O M E</text><text x="280" y="195" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Respiratory Opposite</text><text x="820" y="195" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">Metabolic Equal</text><text x="280" y="220" text-anchor="middle" fill="#888" font-size="14">pH and CO2 go opposite ways</text><text x="820" y="220" text-anchor="middle" fill="#888" font-size="14">pH and HCO3 go same way</text><circle cx="200" cy="320" r="50" fill="none" stroke="#ffd700" stroke-width="3"/><text x="200" y="315" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Step 1</text><text x="200" y="338" text-anchor="middle" fill="#ffffff" font-size="14">pH</text><text x="200" y="395" text-anchor="middle" fill="#888" font-size="13">7.35-7.45</text><line x1="250" y1="320" x2="320" y2="320" stroke="#888" stroke-width="2" marker-end="url(#a)"/><circle cx="400" cy="320" r="50" fill="none" stroke="#ef4444" stroke-width="3"/><text x="400" y="315" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Step 2</text><text x="400" y="338" text-anchor="middle" fill="#ffffff" font-size="14">CO2</text><text x="400" y="395" text-anchor="middle" fill="#888" font-size="13">35-45</text><line x1="450" y1="320" x2="520" y2="320" stroke="#888" stroke-width="2"/><circle cx="600" cy="320" r="50" fill="none" stroke="#10b981" stroke-width="3"/><text x="600" y="315" text-anchor="middle" fill="#10b981" font-size="16" font-weight="bold">Step 3</text><text x="600" y="338" text-anchor="middle" fill="#ffffff" font-size="14">HCO3</text><text x="600" y="395" text-anchor="middle" fill="#888" font-size="13">22-26</text><line x1="650" y1="320" x2="720" y2="320" stroke="#888" stroke-width="2"/><circle cx="800" cy="320" r="50" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="800" y="315" text-anchor="middle" fill="#0ea5e9" font-size="16" font-weight="bold">Step 4</text><text x="800" y="338" text-anchor="middle" fill="#ffffff" font-size="14">Comp</text><text x="800" y="395" text-anchor="middle" fill="#888" font-size="13">Full/partial</text><rect x="80" y="450" width="450" height="280" fill="none" stroke="#ef4444" stroke-width="2"/><text x="305" y="485" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Acidosis (pH &lt; 7.35)</text><text x="100" y="525" fill="#ffffff" font-size="16">Resp: CO2 &gt; 45 (hypoventilation)</text><text x="100" y="555" fill="#888" font-size="14">- COPD, opioids, OSA, sedation</text><text x="100" y="595" fill="#ffffff" font-size="16">Met: HCO3 &lt; 22</text><text x="100" y="625" fill="#888" font-size="14">- DKA, lactic, AKI, diarrhea</text><text x="100" y="665" fill="#ffd700" font-size="15">Kussmaul = compensating met acid</text><text x="100" y="700" fill="#10b981" font-size="15">Check anion gap</text><rect x="570" y="450" width="450" height="280" fill="none" stroke="#0ea5e9" stroke-width="2"/><text x="795" y="485" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Alkalosis (pH &gt; 7.45)</text><text x="590" y="525" fill="#ffffff" font-size="16">Resp: CO2 &lt; 35 (hyperventilation)</text><text x="590" y="555" fill="#888" font-size="14">- PE, pain, anxiety, ASA early</text><text x="590" y="595" fill="#ffffff" font-size="16">Met: HCO3 &gt; 26</text><text x="590" y="625" fill="#888" font-size="14">- Vomiting, NG suction, diuretics</text><text x="590" y="665" fill="#ffd700" font-size="15">Tetany, paresthesia = alkalosis</text><text x="590" y="700" fill="#10b981" font-size="15">Tx underlying cause</text><rect x="100" y="770" width="900" height="240" fill="none" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="805" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">MUDPILES (High Anion Gap)</text><text x="270" y="850" fill="#ffffff" font-size="16">M - Methanol</text><text x="270" y="880" fill="#ffffff" font-size="16">U - Uremia (AKI)</text><text x="270" y="910" fill="#ffffff" font-size="16">D - DKA</text><text x="270" y="940" fill="#ffffff" font-size="16">P - Propylene glycol</text><text x="650" y="850" fill="#ffffff" font-size="16">I - Isoniazid</text><text x="650" y="880" fill="#ffffff" font-size="16">L - Lactic acidosis</text><text x="650" y="910" fill="#ffffff" font-size="16">E - Ethylene glycol</text><text x="650" y="940" fill="#ffffff" font-size="16">S - Salicylates</text><text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="16">Gap = Na - (Cl + HCO3); normal 8-12</text></svg>`,
+          caption: "ROME method, the acidosis/alkalosis split, and MUDPILES anion gap mnemonic."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Asthma vs COPD Exacerbation Side-by-Side",
+        content: `**Patient A — Asthma exacerbation:** 22-year-old woman, known asthma since age 6. Triggered by URI 2 days ago. Used albuterol MDI 6 times in the past 4 hours with minimal relief.
+
+- BP 132/82, HR 124, RR 32, SpO2 89% room air, T 37.4°C
+- Expiratory wheezes throughout, prolonged expiratory phase, accessory muscle use
+- Can speak only 3-4 words per breath
+- Peak flow 38% of personal best
+- ABG: pH 7.46, CO2 30, HCO3 22, PaO2 62 → **respiratory alkalosis with hypoxemia**
+
+**Critical insight:** A "**normalizing" CO2 in a severe asthma attack is a danger sign**, not improvement. It means the patient is tiring and can no longer hyperventilate — impending respiratory failure. Prepare for intubation.
+
+**Interventions:**
+- Continuous albuterol nebulizer + ipratropium
+- IV/oral systemic steroid (methylprednisolone 60-125 mg IV)
+- Magnesium sulfate 2 g IV over 20 min for severe attack
+- O2 to keep SpO2 ≥ 94% (asthma is NOT chronic CO2 retention)
+- Monitor for silent chest — disappearing wheezes = total obstruction
+
+**Patient B — COPD exacerbation:** 68-year-old man, 50 pack-year history, GOLD stage 3. Increased dyspnea, purulent green sputum × 3 days, ankle swelling.
+
+- BP 156/92, HR 108, RR 26, SpO2 86% room air, T 37.8°C
+- Diffuse wheezes and rhonchi, barrel chest, pursed-lip breathing
+- ABG: pH 7.30, CO2 68, HCO3 32, PaO2 58 → **partially compensated respiratory acidosis** with chronic CO2 retention
+
+**Key contrast:** This patient lives at a baseline CO2 of ~55-60. His drive to breathe is partly hypoxic, so **flooding him with O2 (high FiO2) can blunt his drive and worsen CO2 retention**. Target **SpO2 88-92%**, usually via Venturi mask 28-35%.
+
+**Interventions:**
+- Controlled oxygen via Venturi mask, titrate to SpO2 88-92%
+- Albuterol + ipratropium nebulizer
+- Systemic steroid (prednisone 40 mg PO × 5 days)
+- Antibiotic if purulent sputum (azithromycin or doxycycline)
+- **BiPAP** if pH < 7.35 with CO2 > 45 — reduces intubation rate by 50%`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Asthma vs COPD Exacerbation</text><rect x="60" y="110" width="500" height="450" fill="none" stroke="#ef4444" stroke-width="3"/><text x="310" y="150" text-anchor="middle" fill="#ef4444" font-size="24" font-weight="bold">ASTHMA</text><text x="80" y="195" fill="#ffffff" font-size="16">22 yo, URI trigger</text><text x="80" y="225" fill="#ffffff" font-size="16">SpO2 89% RA, RR 32</text><text x="80" y="255" fill="#ffffff" font-size="16">Peak flow 38% PB</text><text x="80" y="295" fill="#ffd700" font-size="16" font-weight="bold">ABG: 7.46 / 30 / 22 / 62</text><text x="80" y="320" fill="#888" font-size="14">Resp alkalosis + hypoxia</text><text x="80" y="365" fill="#ef4444" font-size="15" font-weight="bold">Normalizing CO2 = ALARM</text><text x="80" y="390" fill="#ef4444" font-size="14">means impending failure</text><text x="80" y="430" fill="#10b981" font-size="14">Continuous neb + steroid</text><text x="80" y="455" fill="#10b981" font-size="14">Magnesium sulfate 2g IV</text><text x="80" y="480" fill="#10b981" font-size="14">O2 to SpO2 &gt;= 94%</text><text x="80" y="510" fill="#10b981" font-size="14">Silent chest = intubate</text><text x="80" y="540" fill="#0ea5e9" font-size="13">Reversible bronchospasm</text><rect x="580" y="110" width="460" height="450" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="810" y="150" text-anchor="middle" fill="#0ea5e9" font-size="24" font-weight="bold">COPD</text><text x="600" y="195" fill="#ffffff" font-size="16">68 yo, 50 pack-yr</text><text x="600" y="225" fill="#ffffff" font-size="16">SpO2 86%, RR 26</text><text x="600" y="255" fill="#ffffff" font-size="16">Pursed-lip, barrel chest</text><text x="600" y="295" fill="#ffd700" font-size="16" font-weight="bold">ABG: 7.30 / 68 / 32 / 58</text><text x="600" y="320" fill="#888" font-size="14">Partially comp resp acidosis</text><text x="600" y="365" fill="#0ea5e9" font-size="15" font-weight="bold">Chronic CO2 retainer</text><text x="600" y="390" fill="#0ea5e9" font-size="14">Hypoxic drive at risk</text><text x="600" y="430" fill="#10b981" font-size="14">Venturi mask 28-35%</text><text x="600" y="455" fill="#10b981" font-size="14">SpO2 TARGET 88-92%</text><text x="600" y="480" fill="#10b981" font-size="14">BiPAP if pH &lt; 7.35</text><text x="600" y="510" fill="#10b981" font-size="14">Antibiotic if purulent</text><text x="600" y="540" fill="#0ea5e9" font-size="13">Chronic, progressive</text><rect x="100" y="600" width="900" height="180" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="550" y="640" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="bold">Shared Treatments</text><text x="270" y="685" fill="#ffffff" font-size="16">- Albuterol nebulizer</text><text x="270" y="715" fill="#ffffff" font-size="16">- Ipratropium</text><text x="270" y="745" fill="#ffffff" font-size="16">- Systemic steroids</text><text x="650" y="685" fill="#ffffff" font-size="16">- Continuous SpO2 monitor</text><text x="650" y="715" fill="#ffffff" font-size="16">- Tripod position</text><text x="650" y="745" fill="#ffffff" font-size="16">- Suction prn</text><rect x="100" y="810" width="900" height="220" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">NCLEX Red Flags</text><text x="270" y="895" fill="#ef4444" font-size="16">Silent chest (no wheeze)</text><text x="270" y="925" fill="#ef4444" font-size="16">Decreased LOC</text><text x="270" y="955" fill="#ef4444" font-size="16">SpO2 &lt; 88% despite tx</text><text x="270" y="985" fill="#ef4444" font-size="16">Inability to speak</text><text x="650" y="895" fill="#ef4444" font-size="16">Rising CO2 in asthma</text><text x="650" y="925" fill="#ef4444" font-size="16">pH &lt; 7.25 in COPD</text><text x="650" y="955" fill="#ef4444" font-size="16">Cyanosis</text><text x="650" y="985" fill="#ef4444" font-size="16">RR &gt; 30 or &lt; 8</text></svg>`,
+          caption: "Asthma is reversible bronchospasm; COPD is chronic CO2 retention requiring controlled oxygen."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a postoperative client (day 3 after total hip arthroplasty) who suddenly reports sharp pleuritic chest pain and shortness of breath. Assessment: BP 102/68, HR 124, RR 32, SpO2 86% on room air, calf swelling on the operative side. The nurse should anticipate which orders? Select all that apply.",
+        options: [
+          { text: "STAT CT pulmonary angiogram, ABG, D-dimer, troponin, and ECG", correct: true },
+          { text: "Heparin drip with goal aPTT 1.5-2.5x control, then transition to warfarin or DOAC", correct: false },
+          { text: "Encourage early ambulation and remove sequential compression devices to assess the leg", correct: false },
+          { text: "Apply oxygen via non-rebreather and place head of bed in semi-Fowler's position", correct: false }
+        ],
+        explanation: "This is a classic postop pulmonary embolism presentation — sudden pleuritic chest pain, tachycardia, tachypnea, hypoxia, and unilateral calf swelling (likely DVT source). The correct comprehensive workup is STAT **CT pulmonary angiogram** (gold standard), **ABG** (expect resp alkalosis + hypoxia), **D-dimer**, **troponin** (right heart strain), and **ECG** (classic S1Q3T3, sinus tach most common). Option B is partially right but heparin alone isn't a complete workup answer; the question asks anticipated orders broadly. Option C is wrong — ambulating a patient with suspected PE can dislodge more clot; bed rest until anticoagulated. Option D oxygen and positioning are nursing actions, not the most complete anticipated medical orders. In a SATA-style NCLEX, the comprehensive diagnostic bundle is the highest-yield answer. Once diagnosed, treatment is **heparin bridge to warfarin/DOAC** or **tPA if massive PE with hemodynamic instability**.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Suspected PE: Workup Cascade</text><circle cx="550" cy="200" r="100" fill="none" stroke="#8b5cf6" stroke-width="4"/><text x="550" y="195" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Suspect PE</text><text x="550" y="225" text-anchor="middle" fill="#ffffff" font-size="14">Sudden dyspnea</text><text x="550" y="250" text-anchor="middle" fill="#ffffff" font-size="14">Pleuritic pain, tachy</text><line x1="550" y1="305" x2="550" y2="370" stroke="#ffd700" stroke-width="3"/><rect x="200" y="380" width="700" height="80" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="415" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">STAT Bundle</text><text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="14">CT-PA + ABG + D-dimer + Troponin + ECG</text><line x1="550" y1="465" x2="550" y2="530" stroke="#ffd700" stroke-width="3"/><rect x="100" y="540" width="430" height="200" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="315" y="580" text-anchor="middle" fill="#0ea5e9" font-size="20" font-weight="bold">Stable PE</text><text x="315" y="615" text-anchor="middle" fill="#ffffff" font-size="16">Heparin gtt</text><text x="315" y="645" text-anchor="middle" fill="#ffffff" font-size="16">aPTT 1.5-2.5x</text><text x="315" y="675" text-anchor="middle" fill="#ffffff" font-size="16">Bridge to warfarin/DOAC</text><text x="315" y="710" text-anchor="middle" fill="#10b981" font-size="14">3-6 months minimum</text><rect x="570" y="540" width="430" height="200" fill="none" stroke="#ef4444" stroke-width="3"/><text x="785" y="580" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">Massive PE</text><text x="785" y="615" text-anchor="middle" fill="#ffffff" font-size="16">Hemodynamic instability</text><text x="785" y="645" text-anchor="middle" fill="#ffffff" font-size="16">tPA (alteplase)</text><text x="785" y="675" text-anchor="middle" fill="#ffffff" font-size="16">or embolectomy</text><text x="785" y="710" text-anchor="middle" fill="#10b981" font-size="14">IVC filter if anticoag contra</text><rect x="100" y="780" width="900" height="240" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PE Diagnostic Findings</text><text x="270" y="865" fill="#ffffff" font-size="16">ABG: pH up, CO2 down</text><text x="270" y="895" fill="#888" font-size="14">resp alkalosis + hypoxia</text><text x="270" y="935" fill="#ffffff" font-size="16">D-dimer: elevated</text><text x="270" y="965" fill="#888" font-size="14">sensitive, not specific</text><text x="650" y="865" fill="#ffffff" font-size="16">ECG: S1Q3T3 classic</text><text x="650" y="895" fill="#888" font-size="14">sinus tach most common</text><text x="650" y="935" fill="#ffffff" font-size="16">CXR usually NORMAL</text><text x="650" y="965" fill="#888" font-size="14">Westermark, Hampton hump rare</text><text x="550" y="1005" text-anchor="middle" fill="#ec4899" font-size="16">Bed rest until anticoagulated, NO ambulation</text></svg>`,
+          caption: "Postop PE diagnostic and treatment cascade — recognize the pattern fast."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Decision: ARDS on the Vent",
+        content: `**Scenario:** A 58-year-old man is in the ICU on day 2 of intubation for severe community-acquired pneumonia complicated by ARDS. He weighs 75 kg (IBW 70 kg). Ventilator settings: AC mode, Vt 600 mL, RR 18, FiO2 80%, PEEP 10 cmH2O.
+
+**0800 ABG and assessment:**
+- pH 7.28, CO2 52, HCO3 24, PaO2 64 (SpO2 88%)
+- P/F ratio = 64 / 0.80 = **80** → **severe ARDS**
+- BP 102/64, HR 108, T 38.6°C
+- Plateau pressure 36 cmH2O (high — risk of barotrauma)
+- Bilateral diffuse infiltrates on CXR ("ground glass")
+
+**Problem identification:** Patient is on volutrauma-prone settings. Tidal volume of 600 mL = **8.6 mL/kg IBW**, exceeding the **ARDSNet target of 6 mL/kg IBW (420 mL for this patient)**. Plateau pressure > 30 increases mortality.
+
+**Evidence-based interventions (low tidal volume / ARDSNet protocol):**
+
+1. **Reduce Vt to 420 mL (6 mL/kg IBW)** — this is the single most important mortality-lowering intervention in ARDS (ARMA trial).
+
+2. **Accept permissive hypercapnia** — pH down to 7.20 is acceptable to protect lungs. Don't chase CO2 with bigger breaths.
+
+3. **Increase PEEP** in a stepwise fashion to recruit alveoli; titrate against FiO2 (PEEP/FiO2 ladder). Goal SpO2 88-95% or PaO2 55-80.
+
+4. **Prone positioning 12-16 hours/day** — improves V/Q matching, mortality benefit (PROSEVA trial) in moderate-severe ARDS (P/F < 150).
+
+5. **Conservative fluid strategy** — net even or net negative fluid balance once hemodynamically stable (FACTT trial). No fluid boluses unless hypotensive.
+
+6. **Daily sedation interruption + spontaneous breathing trial** when oxygenation improves. Prevent delirium with light sedation (RASS -1 to 0).
+
+7. **DVT prophylaxis** (heparin SC), **stress ulcer prophylaxis** (PPI/H2 blocker), **head of bed 30-45 degrees** (VAP bundle), **oral chlorhexidine**.
+
+**Family communication:** ARDS mortality is 30-45%; survivors face long ICU stays, weakness, and cognitive deficits. Early palliative consult is appropriate alongside aggressive care.
+
+**Escalation if refractory hypoxemia:** neuromuscular blockade (cisatracurium), inhaled nitric oxide or epoprostenol, **VV-ECMO** at experienced centers.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">ARDSNet Lung-Protective Ventilation</text><rect x="80" y="110" width="940" height="180" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="150" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Berlin Criteria for ARDS</text><text x="120" y="190" fill="#ffffff" font-size="16">- Acute onset within 7 days</text><text x="120" y="220" fill="#ffffff" font-size="16">- Bilateral infiltrates on CXR / CT</text><text x="120" y="250" fill="#ffffff" font-size="16">- Not explained by cardiac failure (PCWP &lt;= 18)</text><text x="120" y="280" fill="#ffd700" font-size="16">- P/F ratio: &gt;300 normal, 200-300 mild, 100-200 mod, &lt;100 severe</text><rect x="80" y="320" width="940" height="280" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="360" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Lung-Protective Settings</text><text x="120" y="405" fill="#ffd700" font-size="18" font-weight="bold">1.</text><text x="160" y="405" fill="#ffffff" font-size="16">Tidal volume 6 mL/kg IBW (not actual weight)</text><text x="120" y="440" fill="#ffd700" font-size="18" font-weight="bold">2.</text><text x="160" y="440" fill="#ffffff" font-size="16">Plateau pressure &lt;= 30 cmH2O</text><text x="120" y="475" fill="#ffd700" font-size="18" font-weight="bold">3.</text><text x="160" y="475" fill="#ffffff" font-size="16">PEEP titrated via PEEP/FiO2 ladder</text><text x="120" y="510" fill="#ffd700" font-size="18" font-weight="bold">4.</text><text x="160" y="510" fill="#ffffff" font-size="16">Permissive hypercapnia OK (pH &gt; 7.20)</text><text x="120" y="545" fill="#ffd700" font-size="18" font-weight="bold">5.</text><text x="160" y="545" fill="#ffffff" font-size="16">Goal SpO2 88-95%, PaO2 55-80 mmHg</text><text x="120" y="580" fill="#ffd700" font-size="18" font-weight="bold">6.</text><text x="160" y="580" fill="#ffffff" font-size="16">Prone 12-16 hr/day if P/F &lt; 150</text><rect x="80" y="630" width="940" height="200" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="670" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Bundle of Care</text><text x="120" y="710" fill="#ffffff" font-size="16">- Head of bed 30-45 degrees (VAP bundle)</text><text x="120" y="740" fill="#ffffff" font-size="16">- Oral chlorhexidine, suction subglottic secretions</text><text x="120" y="770" fill="#ffffff" font-size="16">- DVT prophylaxis (heparin SC)</text><text x="120" y="800" fill="#ffffff" font-size="16">- Stress ulcer prophylaxis (PPI/H2 blocker)</text><rect x="80" y="860" width="940" height="180" fill="none" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="900" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Refractory Hypoxemia Escalation</text><text x="120" y="940" fill="#ffffff" font-size="16">- Neuromuscular blockade (cisatracurium)</text><text x="120" y="970" fill="#ffffff" font-size="16">- Inhaled nitric oxide / epoprostenol</text><text x="120" y="1000" fill="#ffffff" font-size="16">- VV-ECMO at experienced centers</text><text x="120" y="1030" fill="#ec4899" font-size="16">- ARDS mortality remains 30-45% despite optimal care</text></svg>`,
+          caption: "ARDSNet protocol: 6 mL/kg IBW, plateau pressure < 30, prone positioning, conservative fluids."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-pathophys-lesson-9",
+    title: "Neuro Pathophysiology: ICP, Stroke, Seizures, and GCS",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Brain Emergencies on the Clock",
+        content: `Neurologic emergencies live or die on **minute-by-minute recognition**. This lesson covers four high-stakes patterns: **increased intracranial pressure (ICP)**, **ischemic vs hemorrhagic stroke**, **seizures**, and **Glasgow Coma Scale (GCS) interpretation**.
+
+The skull is a closed box (Monro-Kellie doctrine): brain + blood + CSF = constant. Add a clot, bleed, or edema and pressure rises. **Normal ICP is 5-15 mmHg.** Sustained ICP > 20 = treatment. **Cerebral perfusion pressure (CPP) = MAP - ICP**, target **> 60 mmHg**.
+
+**Cushing's triad** = late, ominous sign of dangerously high ICP:
+- **Widened pulse pressure** (SBP rises, DBP stable or falls)
+- **Bradycardia** (reflex)
+- **Irregular respirations** (Cheyne-Stokes)
+
+By the time you see Cushing's, herniation is imminent.
+
+**Stroke** has a 4.5-hour tPA window for ischemic and 24-hour mechanical thrombectomy window for large vessel occlusion. **FAST** screen, **CT without contrast first** to rule out bleed, then act. Hemorrhagic strokes need **reversal of anticoagulation, BP control (SBP < 140), and neurosurgical evaluation**.
+
+**Seizures** range from focal aware to **status epilepticus** (≥ 5 minutes continuous or repeated seizures without recovery) — true emergency requiring **lorazepam IV, then fosphenytoin or levetiracetam**.
+
+**GCS** scores eye (1-4), verbal (1-5), motor (1-6); total 3-15. **GCS ≤ 8: intubate.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The Closed Cranial Vault</text><ellipse cx="550" cy="320" rx="280" ry="200" fill="none" stroke="#ffd700" stroke-width="4"/><text x="550" y="225" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Monro-Kellie Doctrine</text><circle cx="450" cy="320" r="80" fill="none" stroke="#ec4899" stroke-width="3"/><text x="450" y="320" text-anchor="middle" fill="#ec4899" font-size="16">BRAIN 80%</text><circle cx="600" cy="290" r="50" fill="none" stroke="#ef4444" stroke-width="3"/><text x="600" y="295" text-anchor="middle" fill="#ef4444" font-size="14">BLOOD 10%</text><circle cx="600" cy="380" r="50" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="600" y="385" text-anchor="middle" fill="#0ea5e9" font-size="14">CSF 10%</text><text x="550" y="475" text-anchor="middle" fill="#ffffff" font-size="16">Add edema, blood, mass = ICP rises</text><rect x="80" y="560" width="430" height="220" fill="none" stroke="#ef4444" stroke-width="3"/><text x="295" y="600" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Cushing's Triad</text><text x="120" y="645" fill="#ffffff" font-size="17">- Widened pulse pressure</text><text x="140" y="670" fill="#888" font-size="14">(SBP up, DBP stable)</text><text x="120" y="700" fill="#ffffff" font-size="17">- Bradycardia</text><text x="120" y="730" fill="#ffffff" font-size="17">- Irregular respirations</text><text x="140" y="755" fill="#888" font-size="14">(Cheyne-Stokes)</text><rect x="570" y="560" width="430" height="220" fill="none" stroke="#10b981" stroke-width="3"/><text x="785" y="600" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">ICP / CPP Numbers</text><text x="610" y="645" fill="#ffffff" font-size="17">- Normal ICP: 5-15 mmHg</text><text x="610" y="675" fill="#ffffff" font-size="17">- Treat if &gt; 20 sustained</text><text x="610" y="705" fill="#ffffff" font-size="17">- CPP = MAP - ICP</text><text x="610" y="735" fill="#ffffff" font-size="17">- Target CPP &gt; 60 mmHg</text><text x="610" y="765" fill="#ffd700" font-size="14">Maintain to perfuse brain</text><rect x="80" y="810" width="920" height="220" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="540" y="850" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Early vs Late ICP Signs</text><text x="120" y="895" fill="#10b981" font-size="17" font-weight="bold">EARLY (treat NOW):</text><text x="120" y="925" fill="#ffffff" font-size="15">- Headache, vomiting, restless</text><text x="120" y="950" fill="#ffffff" font-size="15">- Decreased LOC, confusion</text><text x="120" y="975" fill="#ffffff" font-size="15">- Pupil sluggish, papilledema</text><text x="120" y="1005" fill="#ffffff" font-size="15">- Focal weakness</text><text x="580" y="895" fill="#ef4444" font-size="17" font-weight="bold">LATE (herniation imminent):</text><text x="580" y="925" fill="#ffffff" font-size="15">- Cushing's triad</text><text x="580" y="950" fill="#ffffff" font-size="15">- Blown / fixed pupil</text><text x="580" y="975" fill="#ffffff" font-size="15">- Posturing (decort/decereb)</text><text x="580" y="1005" fill="#ffffff" font-size="15">- GCS rapidly dropping</text></svg>`,
+          caption: "The closed cranial vault — when something adds volume, ICP rises and CPP drops."
+        }
+      },
+      {
+        type: "concept",
+        title: "Glasgow Coma Scale: Score It Right, Act on It",
+        content: `**GCS** is the gold standard neuro assessment for level of consciousness. Score eye opening (E1-4), verbal response (V1-5), and best motor response (M1-6). Total 3 (deep coma) to 15 (fully alert).
+
+**Eye opening (E):**
+- 4 = Spontaneous
+- 3 = To voice
+- 2 = To pain
+- 1 = None
+
+**Verbal response (V):**
+- 5 = Oriented (person, place, time, situation)
+- 4 = Confused conversation
+- 3 = Inappropriate words
+- 2 = Incomprehensible sounds
+- 1 = None
+- (T = intubated — record E + M + "T")
+
+**Best motor response (M):**
+- 6 = Obeys commands
+- 5 = Localizes to pain
+- 4 = Withdraws from pain
+- 3 = **Decorticate (flexor) posturing** — arms flexed to core, legs extended ("to the core")
+- 2 = **Decerebrate (extensor) posturing** — arms extended and pronated, legs extended (worse)
+- 1 = None
+
+**Decision points:**
+- **GCS 15-13:** mild injury, observe.
+- **GCS 12-9:** moderate, frequent reassessment, prepare for deterioration.
+- **GCS ≤ 8:** severe; **intubate** for airway protection. "Eight or less, intubate."
+- Drop of **≥ 2 points** = significant deterioration, call provider, prepare for imaging.
+
+**Pupil exam adds critical data:**
+- **PERRLA** = normal
+- **Unilateral fixed, dilated pupil** ("blown pupil") = uncal herniation (CN III compression) on same side as lesion
+- **Pinpoint pupils** = pontine lesion or opioid toxicity
+- **Mid-position fixed** = midbrain herniation
+
+**NIH Stroke Scale (NIHSS)** scores stroke severity 0 (no deficit) to 42 (worst). Components: LOC, gaze, visual fields, facial palsy, motor arm/leg, ataxia, sensory, language, dysarthria, neglect. Thresholds:
+- **NIHSS < 4:** mild — tPA still considered
+- **NIHSS 5-15:** moderate
+- **NIHSS > 15:** severe — high risk of hemorrhagic transformation; assess thrombectomy candidacy
+
+Document NIHSS pre- and post-tPA at standard intervals (15 min × 2 hr, then 30 min × 6 hr, then hourly × 16 hr).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Glasgow Coma Scale</text><rect x="60" y="100" width="320" height="380" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="220" y="140" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">Eye (1-4)</text><text x="90" y="185" fill="#ffffff" font-size="16">4 - Spontaneous</text><text x="90" y="225" fill="#ffffff" font-size="16">3 - To voice</text><text x="90" y="265" fill="#ffffff" font-size="16">2 - To pain</text><text x="90" y="305" fill="#ffffff" font-size="16">1 - None</text><text x="220" y="380" text-anchor="middle" fill="#ffd700" font-size="14">Open eyes spontaneous</text><text x="220" y="405" text-anchor="middle" fill="#888" font-size="13">= awake / alert</text><rect x="390" y="100" width="320" height="380" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="140" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Verbal (1-5)</text><text x="420" y="185" fill="#ffffff" font-size="16">5 - Oriented</text><text x="420" y="220" fill="#ffffff" font-size="16">4 - Confused</text><text x="420" y="255" fill="#ffffff" font-size="16">3 - Inappropriate</text><text x="420" y="290" fill="#ffffff" font-size="16">2 - Incomprehensible</text><text x="420" y="325" fill="#ffffff" font-size="16">1 - None</text><text x="420" y="370" fill="#ffd700" font-size="15">T - intubated</text><text x="550" y="430" text-anchor="middle" fill="#888" font-size="13">Person/place/time</text><rect x="720" y="100" width="320" height="380" fill="none" stroke="#ef4444" stroke-width="3"/><text x="880" y="140" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Motor (1-6)</text><text x="750" y="180" fill="#ffffff" font-size="16">6 - Obeys</text><text x="750" y="210" fill="#ffffff" font-size="16">5 - Localizes</text><text x="750" y="240" fill="#ffffff" font-size="16">4 - Withdraws</text><text x="750" y="275" fill="#f59e0b" font-size="16">3 - Decorticate</text><text x="775" y="295" fill="#888" font-size="13">(flex to core)</text><text x="750" y="325" fill="#ef4444" font-size="16">2 - Decerebrate</text><text x="775" y="345" fill="#888" font-size="13">(extend - worse)</text><text x="750" y="375" fill="#ffffff" font-size="16">1 - None</text><rect x="60" y="510" width="980" height="180" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="550" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Decision Thresholds</text><text x="180" y="595" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">GCS 13-15</text><text x="180" y="620" text-anchor="middle" fill="#ffffff" font-size="15">Mild</text><text x="180" y="645" text-anchor="middle" fill="#888" font-size="13">Observe, reassess</text><text x="450" y="595" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">GCS 9-12</text><text x="450" y="620" text-anchor="middle" fill="#ffffff" font-size="15">Moderate</text><text x="450" y="645" text-anchor="middle" fill="#888" font-size="13">Watch for deterioration</text><text x="720" y="595" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">GCS &lt;= 8</text><text x="720" y="620" text-anchor="middle" fill="#ffffff" font-size="15">Severe</text><text x="720" y="645" text-anchor="middle" fill="#ef4444" font-size="13">INTUBATE</text><text x="950" y="595" text-anchor="middle" fill="#ec4899" font-size="18" font-weight="bold">Drop 2+</text><text x="950" y="620" text-anchor="middle" fill="#ffffff" font-size="15">Deteriorating</text><text x="950" y="645" text-anchor="middle" fill="#ec4899" font-size="13">Call provider</text><rect x="60" y="720" width="980" height="310" fill="none" stroke="#8b5cf6" stroke-width="3"/><text x="550" y="760" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Pupil + Posturing Pearls</text><text x="120" y="805" fill="#0ea5e9" font-size="17" font-weight="bold">PERRLA</text><text x="240" y="805" fill="#ffffff" font-size="15">= normal</text><text x="120" y="840" fill="#ef4444" font-size="17" font-weight="bold">Blown unilateral</text><text x="320" y="840" fill="#ffffff" font-size="15">= uncal herniation (CN III)</text><text x="120" y="875" fill="#f59e0b" font-size="17" font-weight="bold">Pinpoint</text><text x="240" y="875" fill="#ffffff" font-size="15">= pons lesion or opioids</text><text x="120" y="910" fill="#ec4899" font-size="17" font-weight="bold">Mid-fixed</text><text x="240" y="910" fill="#ffffff" font-size="15">= midbrain herniation</text><text x="120" y="955" fill="#f59e0b" font-size="17" font-weight="bold">Decorticate</text><text x="280" y="955" fill="#ffffff" font-size="15">= arms flexed to CORE (cortical lesion)</text><text x="120" y="990" fill="#ef4444" font-size="17" font-weight="bold">Decerebrate</text><text x="280" y="990" fill="#ffffff" font-size="15">= arms extended (BRAINSTEM - worse)</text></svg>`,
+          caption: "GCS scoring with decision thresholds; pupil findings and posturing localize the lesion."
+        }
+      },
+      {
+        type: "example",
+        title: "Case: Ischemic Stroke in the ED",
+        content: `**Patient:** 71-year-old woman with atrial fibrillation (on apixaban, last dose 22 hours ago), HTN, and diabetes. Husband called 911 at 0815 when she developed sudden right-sided weakness and slurred speech. **Last known well (LKW): 0700.** Arrived to ED at 0850.
+
+**Initial assessment (0900):**
+- BP 198/104, HR 92 irregularly irregular, RR 18, SpO2 96% RA, T 36.8°C
+- Awake, lethargic but follows commands
+- Right facial droop, right arm drift in 10 seconds, right leg paresis (3/5)
+- Slurred speech, mild expressive aphasia
+- NIHSS = 12 (moderate)
+- Fingerstick glucose 142 (rules out hypoglycemia mimicking stroke)
+
+**Stroke alert workflow:**
+
+1. **Non-contrast head CT within 25 minutes of arrival** — rules out hemorrhage (bleed = no tPA). CT shows no blood, no early ischemic changes.
+
+2. **Time check:** LKW 0700, now 0915 → **2 hours 15 minutes in window** (tPA up to 4.5 hr, mechanical thrombectomy up to 24 hr for LVO).
+
+3. **tPA contraindications screen:**
+   - Active bleed, recent surgery, stroke or head trauma < 3 months — NO
+   - INR > 1.7 / DOAC within 48 hr — **YES (apixaban 22 hr ago is < 48 hr)** — relative contraindication, consider andexanet alfa reversal
+   - BP > 185/110 → need to control before tPA
+   - Platelets < 100k, glucose < 50 — NO
+
+4. **BP control before tPA:** **labetalol 10-20 mg IV** or nicardipine drip to target **< 185/110**.
+
+5. **tPA dose:** 0.9 mg/kg IV (max 90 mg), 10% as bolus over 1 min, remainder over 60 min — only if eligible after reversal discussion.
+
+6. **CT angiogram** identifies large vessel occlusion (LVO) → if LVO and within 24 hr, **mechanical thrombectomy** at comprehensive stroke center.
+
+**Post-tPA nursing protocol:**
+- Neuro checks q15 min × 2 hr, q30 min × 6 hr, q1 hr × 16 hr
+- Maintain **BP < 180/105** for 24 hr (more aggressive than pre-tPA)
+- **NO antiplatelet or anticoagulant × 24 hr** post-tPA
+- Watch for **hemorrhagic transformation:** sudden HA, vomiting, neuro decline → STAT CT, stop tPA, reverse with cryo and TXA
+- NPO until **bedside dysphagia screen** passed (aspiration risk)
+- DVT prophylaxis with SCDs initially (no chemical DVT prophylaxis × 24 hr post-tPA)
+
+**Ischemic vs Hemorrhagic in one sentence:** ischemic = clot, give clot-buster if in window; hemorrhagic = bleed, reverse anticoag, drop BP, call neurosurgery.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Acute Stroke Timeline</text><line x1="80" y1="200" x2="1020" y2="200" stroke="#888" stroke-width="3"/><circle cx="80" cy="200" r="10" fill="#10b981"/><text x="80" y="170" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">LKW</text><text x="80" y="240" text-anchor="middle" fill="#ffffff" font-size="13">0700</text><circle cx="280" cy="200" r="10" fill="#ffd700"/><text x="280" y="170" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Symptom onset</text><text x="280" y="240" text-anchor="middle" fill="#ffffff" font-size="13">0815</text><circle cx="430" cy="200" r="10" fill="#0ea5e9"/><text x="430" y="170" text-anchor="middle" fill="#0ea5e9" font-size="14" font-weight="bold">ED arrival</text><text x="430" y="240" text-anchor="middle" fill="#ffffff" font-size="13">0850</text><circle cx="580" cy="200" r="10" fill="#8b5cf6"/><text x="580" y="170" text-anchor="middle" fill="#8b5cf6" font-size="14" font-weight="bold">CT done</text><text x="580" y="240" text-anchor="middle" fill="#ffffff" font-size="13">0915</text><circle cx="780" cy="200" r="10" fill="#ef4444"/><text x="780" y="170" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold">tPA 4.5hr cutoff</text><text x="780" y="240" text-anchor="middle" fill="#ffffff" font-size="13">1130</text><circle cx="1000" cy="200" r="10" fill="#ec4899"/><text x="1000" y="170" text-anchor="middle" fill="#ec4899" font-size="14" font-weight="bold">EVT 24 hr</text><text x="1000" y="240" text-anchor="middle" fill="#ffffff" font-size="13">D+1</text><rect x="60" y="290" width="490" height="320" fill="none" stroke="#ef4444" stroke-width="3"/><text x="305" y="330" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Ischemic (87%)</text><text x="80" y="375" fill="#ffffff" font-size="16">Clot occludes artery</text><text x="80" y="405" fill="#ffffff" font-size="16">Embolic (AF) or thrombotic</text><text x="80" y="445" fill="#ffd700" font-size="16">- tPA &lt; 4.5 hr from LKW</text><text x="80" y="475" fill="#ffd700" font-size="16">- EVT &lt; 24 hr for LVO</text><text x="80" y="510" fill="#10b981" font-size="16">BP &lt; 185/110 pre-tPA</text><text x="80" y="540" fill="#10b981" font-size="16">BP &lt; 180/105 post-tPA</text><text x="80" y="575" fill="#0ea5e9" font-size="15">NIHSS scoring guides eligibility</text><rect x="570" y="290" width="470" height="320" fill="none" stroke="#8b5cf6" stroke-width="3"/><text x="805" y="330" text-anchor="middle" fill="#8b5cf6" font-size="22" font-weight="bold">Hemorrhagic (13%)</text><text x="590" y="375" fill="#ffffff" font-size="16">Bleed - ICH or SAH</text><text x="590" y="405" fill="#ffffff" font-size="16">Worst HA of life (SAH)</text><text x="590" y="445" fill="#ffd700" font-size="16">- Reverse anticoagulation</text><text x="590" y="475" fill="#ffd700" font-size="16">- SBP &lt; 140 (target tight)</text><text x="590" y="510" fill="#10b981" font-size="16">Nimodipine for SAH</text><text x="590" y="540" fill="#10b981" font-size="16">Neurosurgery consult</text><text x="590" y="575" fill="#ef4444" font-size="15">NO TPA - would worsen bleed</text><rect x="60" y="630" width="980" height="200" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="670" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">tPA Eligibility Screen</text><text x="100" y="715" fill="#ffffff" font-size="16">- Within 4.5 hr of LKW</text><text x="100" y="745" fill="#ffffff" font-size="16">- CT shows no bleed</text><text x="100" y="775" fill="#ffffff" font-size="16">- BP &lt; 185/110</text><text x="100" y="805" fill="#ffffff" font-size="16">- Glucose 50-400</text><text x="560" y="715" fill="#ffffff" font-size="16">- No active bleed</text><text x="560" y="745" fill="#ffffff" font-size="16">- No recent surgery/trauma</text><text x="560" y="775" fill="#ffffff" font-size="16">- INR &lt; 1.7, DOAC &gt; 48 hr</text><text x="560" y="805" fill="#ffffff" font-size="16">- Platelets &gt; 100k</text><rect x="60" y="850" width="980" height="200" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="890" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Post-tPA Nursing</text><text x="100" y="935" fill="#ffffff" font-size="16">- Neuro q15 min x 2 hr</text><text x="100" y="965" fill="#ffffff" font-size="16">- q30 min x 6 hr</text><text x="100" y="995" fill="#ffffff" font-size="16">- q1 hr x 16 hr</text><text x="100" y="1025" fill="#ffffff" font-size="16">- NO antiplt/AC x 24 hr</text><text x="560" y="935" fill="#ffffff" font-size="16">- BP &lt; 180/105 x 24 hr</text><text x="560" y="965" fill="#ffffff" font-size="16">- Dysphagia screen NPO</text><text x="560" y="995" fill="#ffffff" font-size="16">- Watch hemorrhagic transformation</text><text x="560" y="1025" fill="#ef4444" font-size="16">- Sudden HA = STAT CT</text></svg>`,
+          caption: "Stroke timeline, ischemic vs hemorrhagic management, and post-tPA nursing protocol."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is caring for a client 6 hours post-craniotomy for resection of a glioblastoma. Hourly assessments show the following trend over the past 3 hours: BP went from 138/82 to 152/78 to 178/74; HR went from 88 to 72 to 54; respirations went from 16 regular to 14 with brief pauses to 12 with Cheyne-Stokes pattern. The right pupil has become sluggish; GCS dropped from 14 to 11. Which action should the nurse take FIRST?",
+        options: [
+          { text: "Administer mannitol 1 g/kg IV as ordered for elevated ICP", correct: false },
+          { text: "Notify the neurosurgeon and rapid response team immediately", correct: true },
+          { text: "Position the head of bed at 30 degrees with neck midline", correct: false },
+          { text: "Obtain a STAT non-contrast head CT scan", correct: false }
+        ],
+        explanation: "This client is showing **Cushing's triad** — widened pulse pressure (178/74), bradycardia (54), and abnormal respirations (Cheyne-Stokes) — plus a unilateral sluggish pupil and a **GCS drop of 3 points** in 3 hours. These findings indicate **impending brainstem herniation**, a true emergency. The FIRST action is to **alert the neurosurgeon and rapid response** because the patient needs immediate decompressive intervention (possibly OR for ventriculostomy/decompressive craniectomy) and the nurse cannot fix herniation alone. Mannitol, head elevation, and CT are all correct interventions, but the question asks for FIRST action in a deteriorating patient — **mobilize the team that can save the brain**. NCLEX priority hierarchy: when a patient is herniating, **definitive surgical care is the only thing that prevents death**, and the nurse's first job is summoning the right people. After calling, the nurse should simultaneously elevate the HOB to 30 degrees, keep neck midline (no jugular compression), give ordered mannitol/3% saline, hyperventilate briefly (target PaCO2 30-35), and prep for OR/CT.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Cushing's Triad: Herniation Alarm</text><rect x="80" y="110" width="940" height="280" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="150" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Trend Over 3 Hours</text><line x1="120" y1="220" x2="980" y2="220" stroke="#888" stroke-width="2"/><text x="200" y="200" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Hour 1</text><text x="500" y="200" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Hour 2</text><text x="850" y="200" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Hour 3</text><text x="200" y="260" text-anchor="middle" fill="#10b981" font-size="16">BP 138/82</text><text x="500" y="260" text-anchor="middle" fill="#f59e0b" font-size="16">BP 152/78</text><text x="850" y="260" text-anchor="middle" fill="#ef4444" font-size="16">BP 178/74</text><text x="200" y="295" text-anchor="middle" fill="#10b981" font-size="16">HR 88</text><text x="500" y="295" text-anchor="middle" fill="#f59e0b" font-size="16">HR 72</text><text x="850" y="295" text-anchor="middle" fill="#ef4444" font-size="16">HR 54</text><text x="200" y="330" text-anchor="middle" fill="#10b981" font-size="16">RR 16 reg</text><text x="500" y="330" text-anchor="middle" fill="#f59e0b" font-size="16">RR 14 pauses</text><text x="850" y="330" text-anchor="middle" fill="#ef4444" font-size="16">Cheyne-Stokes</text><text x="200" y="365" text-anchor="middle" fill="#10b981" font-size="16">GCS 14</text><text x="500" y="365" text-anchor="middle" fill="#f59e0b" font-size="16">GCS 12</text><text x="850" y="365" text-anchor="middle" fill="#ef4444" font-size="16">GCS 11 + R pupil</text><rect x="80" y="420" width="940" height="200" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="460" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">FIRST: Call neurosurgeon + RRT</text><text x="550" y="500" text-anchor="middle" fill="#ffffff" font-size="16">Patient is herniating</text><text x="550" y="535" text-anchor="middle" fill="#ffffff" font-size="16">Only surgical decompression saves brain</text><text x="550" y="575" text-anchor="middle" fill="#ec4899" font-size="16">Nurse alone cannot fix herniation</text><rect x="80" y="650" width="940" height="380" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="690" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">Simultaneous Interventions</text><text x="120" y="735" fill="#ffffff" font-size="16">1. HOB to 30 degrees, neck midline</text><text x="160" y="760" fill="#888" font-size="14">- promote venous drainage</text><text x="120" y="800" fill="#ffffff" font-size="16">2. Mannitol 1 g/kg IV or 3% saline</text><text x="160" y="825" fill="#888" font-size="14">- osmotic diuresis pulls fluid from brain</text><text x="120" y="865" fill="#ffffff" font-size="16">3. Hyperventilate to PaCO2 30-35 briefly</text><text x="160" y="890" fill="#888" font-size="14">- vasoconstriction, temporary</text><text x="120" y="930" fill="#ffffff" font-size="16">4. STAT non-contrast head CT</text><text x="160" y="955" fill="#888" font-size="14">- identifies bleed, mass effect, midline shift</text><text x="120" y="995" fill="#ef4444" font-size="16">5. Prepare OR for emergent decompression</text></svg>`,
+          caption: "Cushing's triad means herniation is imminent — call the team that can decompress the skull."
+        }
+      },
+      {
+        type: "application",
+        title: "Bedside Decision: Status Epilepticus on the Unit",
+        content: `**Scenario:** A 34-year-old woman with a history of epilepsy on levetiracetam is admitted for pneumonia. At 0230, the night nurse finds her in a generalized tonic-clonic seizure. Roommate reports it started 4 minutes ago.
+
+**Immediate priorities (in order):**
+
+1. **Time the seizure / call for help / start the clock** — **status epilepticus = ≥ 5 minutes continuous seizure or repeated seizures without recovery between**. Brain damage accumulates after 30 minutes; treat aggressively before that mark.
+
+2. **Protect the airway and prevent injury:**
+   - **Side-lying position** to prevent aspiration
+   - Loosen restrictive clothing
+   - **Pad bed rails**, remove harmful objects
+   - Suction at bedside, oxygen via NRB
+   - **DO NOT** restrain the patient or insert anything (tongue blade, finger, oral airway during active seizing) — risk of injury to patient or staff. A bite block is contraindicated.
+
+3. **First-line: Benzodiazepine IV**
+   - **Lorazepam 0.1 mg/kg IV (max 4 mg per dose)**, may repeat in 5-10 min
+   - Or midazolam 10 mg IM if no IV access
+   - Or diazepam 0.15 mg/kg IV
+
+4. **Second-line (after benzodiazepine): IV antiepileptic load**
+   - **Levetiracetam 60 mg/kg IV** (up to 4.5 g) — fewest interactions
+   - Or **fosphenytoin 20 mg PE/kg IV** at max 150 mg/min (cardiac monitoring required — risk of bradycardia, hypotension)
+   - Or valproate 40 mg/kg IV
+
+5. **Third-line (refractory status, > 30 min): Continuous IV anesthetics + intubation**
+   - **Propofol, midazolam infusion, or pentobarbital** with continuous EEG monitoring
+   - This is ICU territory
+
+**During seizure assessment:**
+- Note time of onset, type (focal vs generalized), duration, body parts involved, eye deviation, incontinence, cyanosis
+- **Tongue biting** and **post-ictal Todd's paralysis** confirm true seizure (vs psychogenic)
+
+**Post-ictal nursing:**
+- Maintain side-lying, suction, oxygen
+- Reorient gently — patient will be confused and may be combative
+- Check fingerstick glucose, electrolytes (Na, Ca, Mg), drug levels
+- Watch for hypoxia, hyperthermia, lactic acidosis from muscle activity
+- Identify trigger: missed meds, infection, sleep deprivation, electrolyte imbalance, alcohol withdrawal, new lesion
+
+**Red flag SATA-style triggers for non-convulsive status:** prolonged altered LOC after a witnessed seizure should prompt **continuous EEG** — patients can be seizing electrically without movement.
+
+**Seizure precautions to maintain throughout admission:** suction and oxygen at bedside, IV access maintained, padded side rails up, bed in lowest position, do not leave bath water or unsupervised meals.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Status Epilepticus: Stepwise Treatment</text><rect x="80" y="110" width="940" height="120" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="150" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">Definition</text><text x="550" y="185" text-anchor="middle" fill="#ffffff" font-size="16">&gt;= 5 min continuous seizure</text><text x="550" y="215" text-anchor="middle" fill="#ffffff" font-size="16">OR repeated seizures without return to baseline</text><rect x="80" y="260" width="940" height="160" fill="none" stroke="#ffd700" stroke-width="3"/><text x="550" y="300" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">STEP 1: First 5 minutes</text><text x="120" y="340" fill="#ffffff" font-size="16">- Side-lying position, suction, O2</text><text x="120" y="370" fill="#ffffff" font-size="16">- Pad rails, remove objects, time it</text><text x="120" y="400" fill="#ef4444" font-size="16">- DO NOT insert anything in mouth</text><rect x="80" y="450" width="940" height="180" fill="none" stroke="#0ea5e9" stroke-width="3"/><text x="550" y="490" text-anchor="middle" fill="#0ea5e9" font-size="22" font-weight="bold">STEP 2: 5-20 min - Benzo</text><text x="120" y="530" fill="#ffffff" font-size="16">- Lorazepam 0.1 mg/kg IV (max 4 mg)</text><text x="120" y="560" fill="#ffffff" font-size="16">- Midazolam 10 mg IM if no IV</text><text x="120" y="590" fill="#ffffff" font-size="16">- Diazepam 0.15 mg/kg IV</text><text x="120" y="620" fill="#ffd700" font-size="14">May repeat once</text><rect x="80" y="660" width="940" height="180" fill="none" stroke="#10b981" stroke-width="3"/><text x="550" y="700" text-anchor="middle" fill="#10b981" font-size="22" font-weight="bold">STEP 3: 20-40 min - AED load</text><text x="120" y="740" fill="#ffffff" font-size="16">- Levetiracetam 60 mg/kg IV (preferred)</text><text x="120" y="770" fill="#ffffff" font-size="16">- Fosphenytoin 20 mg PE/kg IV</text><text x="160" y="795" fill="#888" font-size="14">(cardiac monitor required)</text><text x="120" y="825" fill="#ffffff" font-size="16">- Valproate 40 mg/kg IV</text><rect x="80" y="870" width="940" height="160" fill="none" stroke="#ef4444" stroke-width="3"/><text x="550" y="910" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="bold">STEP 4: &gt; 40 min - Refractory</text><text x="120" y="950" fill="#ffffff" font-size="16">- Intubate + ICU transfer</text><text x="120" y="980" fill="#ffffff" font-size="16">- Propofol, midazolam, or pentobarb drip</text><text x="120" y="1010" fill="#ffffff" font-size="16">- Continuous EEG monitoring</text></svg>`,
+          caption: "Status epilepticus treatment ladder — protect airway, benzo first, AED load, ICU drips if refractory."
         }
       }
     ]
