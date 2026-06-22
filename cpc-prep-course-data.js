@@ -12667,7 +12667,7 @@ The CMS preferred order is **functional modifiers first, then informational**: K
             title: 'Compliance, Audits, and the OIG Work Plan',
             author: 'Synthesis Learning',
             description: 'The False Claims Act, the OIG annual work plan, RAC/MAC/ZPIC audits, and the documentation that survives them.',
-            lessons: 3, duration: 45, progress: 0, category: 'cpc-prep',
+            lessons: 6, duration: 90, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-compliance-lesson-1",
@@ -13162,6 +13162,987 @@ The CPC exam will test you on: what the OIG Work Plan is, who maintains it (HHS-
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">Your Quarterly Work Plan Routine</text><text x="550" y="90" font-size="16" fill="#888" text-anchor="middle">4 hours per quarter = lifetime liability shield</text><circle cx="275" cy="320" r="170" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="3"/><text x="275" y="240" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">HOUR 1</text><text x="275" y="275" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">SCAN</text><text x="275" y="315" font-size="14" fill="#ffffff" text-anchor="middle">Visit oig.hhs.gov</text><text x="275" y="340" font-size="14" fill="#ffffff" text-anchor="middle">Filter by specialty</text><text x="275" y="365" font-size="14" fill="#ffffff" text-anchor="middle">Subscribe RSS</text><text x="275" y="400" font-size="13" fill="#ffffff" text-anchor="middle">Note new/changed items</text><circle cx="825" cy="320" r="170" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="3"/><text x="825" y="240" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">HOUR 2</text><text x="825" y="275" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">MAP</text><text x="825" y="315" font-size="14" fill="#ffffff" text-anchor="middle">Match items to your codes</text><text x="825" y="340" font-size="14" fill="#ffffff" text-anchor="middle">Pull annual volume</text><text x="825" y="365" font-size="14" fill="#ffffff" text-anchor="middle">Spot-audit 10 charts</text><text x="825" y="400" font-size="13" fill="#ffffff" text-anchor="middle">Write Risk Memo</text><circle cx="275" cy="710" r="170" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="3"/><text x="275" y="630" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">HOUR 3</text><text x="275" y="665" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">AUDIT</text><text x="275" y="705" font-size="14" fill="#ffffff" text-anchor="middle">Top 3 risks</text><text x="275" y="730" font-size="14" fill="#ffffff" text-anchor="middle">30-chart sample each</text><text x="275" y="755" font-size="14" fill="#ffffff" text-anchor="middle">Apply doc tests</text><text x="275" y="790" font-size="13" fill="#ffffff" text-anchor="middle">Calculate error rate</text><circle cx="825" cy="710" r="170" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="3"/><text x="825" y="630" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">HOUR 4</text><text x="825" y="665" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">ACT</text><text x="825" y="705" font-size="14" fill="#ffffff" text-anchor="middle">&lt;2% = monitor</text><text x="825" y="730" font-size="14" fill="#ffffff" text-anchor="middle">2-10% = train + correct</text><text x="825" y="755" font-size="14" fill="#ffffff" text-anchor="middle">&gt;10% = self-disclose</text><text x="825" y="790" font-size="13" fill="#ffffff" text-anchor="middle">Refund within 60 days</text><line x1="430" y1="320" x2="670" y2="320" stroke="#888" stroke-width="3" marker-end="url(#wa)"/><line x1="825" y1="475" x2="825" y2="555" stroke="#888" stroke-width="3" marker-end="url(#wa)"/><line x1="670" y1="710" x2="430" y2="710" stroke="#888" stroke-width="3" marker-end="url(#wa)"/><line x1="275" y1="555" x2="275" y2="475" stroke="#888" stroke-width="3" marker-end="url(#wa)"/><defs><marker id="wa" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#888"/></marker></defs><rect x="60" y="900" width="1000" height="150" rx="12" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2"/><text x="560" y="940" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">The Annual Capstone</text><text x="80" y="975" font-size="15" fill="#ffffff">One-page year-end report to compliance committee:</text><text x="80" y="1005" font-size="14" fill="#ffffff">items reviewed - specialty matches - audits conducted - corrective actions - self-disclosures filed</text><text x="80" y="1035" font-size="15" font-weight="bold" fill="#10b981">This document is your personal evidence of good-faith effort. It is dispositive in FCA defense.</text></svg>`,
           caption: "Four hours per quarter — scan, map, audit, act — produces a documented trail that protects the coder for life."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-compliance-lesson-4",
+    title: "RAC, MAC, SMRC, UPIC — Who Audits Whom",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Alphabet Soup of Medicare Audit Contractors",
+        content: `When a Medicare claim is paid, the story isn't over — it has just entered a multi-year window of potential review. CMS does not audit providers directly; instead, it contracts the work to a constellation of private companies, each with a specific mandate, lookback period, and recovery target. Confusing one contractor for another is one of the fastest ways to mishandle a demand letter and forfeit appeal rights.
+
+The four contractors a CPC must recognize on sight are RAC, MAC, SMRC, and UPIC. **Recovery Audit Contractors (RACs)** are paid on contingency — they keep 9 to 12.5 percent of every overpayment they identify, which is why their reviews are aggressive and volume-driven. There are four RAC regions (Performant for Region 1 Northeast, Cotiviti for Regions 2 and 3, HMS/Gainwell for Region 4 West), plus a separate national RAC for DMEPOS and home health.
+
+**Medicare Administrative Contractors (MACs)** are the claim processors themselves — Noridian (Jurisdictions E and F), Palmetto GBA (J, M), WPS (J5, J8), CGS (J15), Novitas (JH, JL), First Coast (JN), and NGS (J6, JK). MACs run their own Targeted Probe and Educate (TPE) reviews on top of processing.
+
+**Supplemental Medical Review Contractors (SMRCs)** — currently Noridian Healthcare Solutions — perform large-scale national reviews on topics CMS specifically assigns, with a four-year lookback.
+
+**Unified Program Integrity Contractors (UPICs)** — AdvanceMed, CoventBridge, Qlarant, SafeGuard Services — hunt for fraud, waste, and abuse. UPIC contact is the most serious of the four because it can escalate to law enforcement referral, payment suspension under 42 CFR §405.371, or exclusion.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="34" font-weight="bold">Medicare Audit Contractor Map</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Four contractors. Four mandates. Four lookback windows.</text>
+            <rect x="60" y="160" width="480" height="200" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="200" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">RAC</text>
+            <text x="300" y="230" text-anchor="middle" fill="#ffd700" font-size="16">Recovery Audit Contractor</text>
+            <text x="300" y="260" text-anchor="middle" fill="#ffffff" font-size="15">Lookback: 3 years</text>
+            <text x="300" y="285" text-anchor="middle" fill="#ffffff" font-size="15">Pay model: 9 to 12.5% contingency</text>
+            <text x="300" y="310" text-anchor="middle" fill="#ffffff" font-size="15">Focus: improper payments</text>
+            <text x="300" y="335" text-anchor="middle" fill="#ffffff" font-size="15">Regions 1-4 plus national DME RAC</text>
+            <rect x="560" y="160" width="480" height="200" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="200" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">MAC</text>
+            <text x="800" y="230" text-anchor="middle" fill="#ffd700" font-size="16">Medicare Administrative Contractor</text>
+            <text x="800" y="260" text-anchor="middle" fill="#ffffff" font-size="15">Lookback: 1 year (TPE)</text>
+            <text x="800" y="285" text-anchor="middle" fill="#ffffff" font-size="15">Pay model: fixed contract</text>
+            <text x="800" y="310" text-anchor="middle" fill="#ffffff" font-size="15">Focus: claim processing plus TPE</text>
+            <text x="800" y="335" text-anchor="middle" fill="#ffffff" font-size="15">12 A/B MAC jurisdictions</text>
+            <rect x="60" y="400" width="480" height="200" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="440" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">SMRC</text>
+            <text x="300" y="470" text-anchor="middle" fill="#1a1a2e" font-size="16">Supplemental Medical Review</text>
+            <text x="300" y="500" text-anchor="middle" fill="#1a1a2e" font-size="15">Lookback: 4 years</text>
+            <text x="300" y="525" text-anchor="middle" fill="#1a1a2e" font-size="15">Pay model: fixed contract</text>
+            <text x="300" y="550" text-anchor="middle" fill="#1a1a2e" font-size="15">Focus: CMS-directed projects</text>
+            <text x="300" y="575" text-anchor="middle" fill="#1a1a2e" font-size="15">Currently held by Noridian</text>
+            <rect x="560" y="400" width="480" height="200" rx="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="440" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">UPIC</text>
+            <text x="800" y="470" text-anchor="middle" fill="#ffd700" font-size="16">Unified Program Integrity</text>
+            <text x="800" y="500" text-anchor="middle" fill="#ffffff" font-size="15">Lookback: unlimited (fraud)</text>
+            <text x="800" y="525" text-anchor="middle" fill="#ffffff" font-size="15">Pay model: fixed contract</text>
+            <text x="800" y="550" text-anchor="middle" fill="#ffffff" font-size="15">Focus: fraud, waste, abuse</text>
+            <text x="800" y="575" text-anchor="middle" fill="#ffffff" font-size="15">5 zones plus national DME</text>
+            <rect x="60" y="640" width="980" height="380" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="685" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Severity Ladder</text>
+            <line x1="120" y1="730" x2="980" y2="730" stroke="#888" stroke-width="2"/>
+            <circle cx="200" cy="730" r="14" fill="#10b981"/>
+            <text x="200" y="770" text-anchor="middle" fill="#1a1a2e" font-size="15">MAC TPE</text>
+            <text x="200" y="790" text-anchor="middle" fill="#888" font-size="13">education first</text>
+            <circle cx="430" cy="730" r="14" fill="#6366f1"/>
+            <text x="430" y="770" text-anchor="middle" fill="#1a1a2e" font-size="15">RAC</text>
+            <text x="430" y="790" text-anchor="middle" fill="#888" font-size="13">overpayment recovery</text>
+            <circle cx="660" cy="730" r="14" fill="#f59e0b"/>
+            <text x="660" y="770" text-anchor="middle" fill="#1a1a2e" font-size="15">SMRC</text>
+            <text x="660" y="790" text-anchor="middle" fill="#888" font-size="13">national topic review</text>
+            <circle cx="900" cy="730" r="14" fill="#ef4444"/>
+            <text x="900" y="770" text-anchor="middle" fill="#1a1a2e" font-size="15">UPIC</text>
+            <text x="900" y="790" text-anchor="middle" fill="#888" font-size="13">criminal referral possible</text>
+            <text x="550" y="870" text-anchor="middle" fill="#1a1a2e" font-size="17" font-weight="bold">Reading the demand letter header is step one</text>
+            <text x="550" y="905" text-anchor="middle" fill="#1a1a2e" font-size="15">The contractor name on the envelope dictates your timeline, your appeal route,</text>
+            <text x="550" y="930" text-anchor="middle" fill="#1a1a2e" font-size="15">and whether you are facing dollar recovery or federal investigation.</text>
+            <text x="550" y="985" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">A UPIC letter is never just a billing dispute.</text>
+          </svg>`,
+          caption: "Four Medicare audit contractors, each with a different lookback window, payment model, and escalation risk."
+        }
+      },
+      {
+        type: "concept",
+        title: "Automated vs Complex Review, ADR Limits, and the 30/41 Day Recoupment Clock",
+        content: `Once a contractor decides to review your claims, the next question is which review track they will use. **Automated review** is a pure data analytics pass — the contractor mines the National Claims History file for billing patterns that violate a Local Coverage Determination, National Coverage Determination, or NCCI edit. No records are requested; the denial is generated from the claim line itself. Automated review is fast, cheap, and accounts for roughly two-thirds of RAC findings.
+
+**Complex review** requires the medical record. The contractor issues an **Additional Documentation Request (ADR)** demanding records within 45 days for RAC and SMRC (30 days for some MAC TPE rounds). Missing the ADR deadline is treated as a "no documentation" denial under CMS Pub 100-08 Chapter 3 — the claim is recouped in full. RACs are capped by ADR limits set in the Statement of Work: small providers may receive only 10 ADRs per 45-day cycle, while large hospitals can face hundreds. The cap is calculated as 0.5 percent of paid Medicare claims, with a maximum of 200 ADRs per cycle for the largest providers.
+
+The financial timeline is unforgiving. CMS regulation at 42 CFR §405.379 establishes the **demand letter calendar**:
+
+- **Day 0**: Demand letter is issued. Interest begins to accrue at the rate published by Treasury (currently around 11.625 percent annually).
+- **Day 30**: Recoupment from current claim payments begins — unless you file a **first-level redetermination** appeal before this date, which pauses recoupment.
+- **Day 41**: If no redetermination was filed, full recoupment is now active. CMS will withhold 100 percent of your Medicare remittances until the debt is satisfied.
+- **Day 60**: Last day to file a redetermination without losing appeal rights entirely.
+- **Day 120**: Absolute deadline for first-level appeal under 42 CFR §405.942.
+
+The single most expensive mistake a billing office makes is treating day 30 like day 60. Filing a timely redetermination before day 30 is what keeps the cash flowing while the appeal is pending.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Demand Letter Timeline</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">42 CFR §405.379 — every day matters</text>
+            <line x1="100" y1="280" x2="1000" y2="280" stroke="#ffd700" stroke-width="4"/>
+            <circle cx="120" cy="280" r="20" fill="#10b981"/>
+            <text x="120" y="240" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Day 0</text>
+            <text x="120" y="330" text-anchor="middle" fill="#ffffff" font-size="14">Letter issued</text>
+            <text x="120" y="350" text-anchor="middle" fill="#888" font-size="13">interest starts</text>
+            <circle cx="340" cy="280" r="20" fill="#f59e0b"/>
+            <text x="340" y="240" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Day 30</text>
+            <text x="340" y="330" text-anchor="middle" fill="#ffffff" font-size="14">Recoupment begins</text>
+            <text x="340" y="350" text-anchor="middle" fill="#888" font-size="13">unless appealed</text>
+            <circle cx="560" cy="280" r="20" fill="#ef4444"/>
+            <text x="560" y="240" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Day 41</text>
+            <text x="560" y="330" text-anchor="middle" fill="#ffffff" font-size="14">100% withhold</text>
+            <text x="560" y="350" text-anchor="middle" fill="#888" font-size="13">all remits stopped</text>
+            <circle cx="780" cy="280" r="20" fill="#8b5cf6"/>
+            <text x="780" y="240" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Day 60</text>
+            <text x="780" y="330" text-anchor="middle" fill="#ffffff" font-size="14">Redetermination</text>
+            <text x="780" y="350" text-anchor="middle" fill="#888" font-size="13">last safe filing day</text>
+            <circle cx="980" cy="280" r="20" fill="#ec4899"/>
+            <text x="980" y="240" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Day 120</text>
+            <text x="980" y="330" text-anchor="middle" fill="#ffffff" font-size="14">Appeal forfeited</text>
+            <text x="980" y="350" text-anchor="middle" fill="#888" font-size="13">debt becomes final</text>
+            <rect x="80" y="430" width="450" height="280" rx="10" fill="#0ea5e9" stroke="#ffd700" stroke-width="2"/>
+            <text x="305" y="475" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Automated Review</text>
+            <text x="305" y="510" text-anchor="middle" fill="#ffffff" font-size="15">Data analytics only</text>
+            <text x="305" y="540" text-anchor="middle" fill="#ffffff" font-size="15">No record request</text>
+            <text x="305" y="570" text-anchor="middle" fill="#ffffff" font-size="15">NCCI, LCD, NCD edits</text>
+            <text x="305" y="600" text-anchor="middle" fill="#ffffff" font-size="15">Duplicate billing detection</text>
+            <text x="305" y="630" text-anchor="middle" fill="#ffffff" font-size="15">Frequency limit violations</text>
+            <text x="305" y="675" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Roughly 2/3 of RAC findings</text>
+            <rect x="570" y="430" width="450" height="280" rx="10" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="795" y="475" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Complex Review</text>
+            <text x="795" y="510" text-anchor="middle" fill="#ffffff" font-size="15">ADR triggers record pull</text>
+            <text x="795" y="540" text-anchor="middle" fill="#ffffff" font-size="15">45 days to respond</text>
+            <text x="795" y="570" text-anchor="middle" fill="#ffffff" font-size="15">Clinical reviewer reads chart</text>
+            <text x="795" y="600" text-anchor="middle" fill="#ffffff" font-size="15">Medical necessity decision</text>
+            <text x="795" y="630" text-anchor="middle" fill="#ffffff" font-size="15">ADR cap: 0.5% paid, max 200</text>
+            <text x="795" y="675" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">Missed ADR = automatic denial</text>
+            <rect x="80" y="750" width="940" height="280" rx="10" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="790" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">The Single Most Important Sentence</text>
+            <text x="550" y="840" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">File the redetermination before day 30.</text>
+            <text x="550" y="880" text-anchor="middle" fill="#1a1a2e" font-size="15">A timely first-level appeal under 42 CFR §405.379 freezes recoupment until</text>
+            <text x="550" y="905" text-anchor="middle" fill="#1a1a2e" font-size="15">the contractor issues its redetermination decision — typically 60 days later.</text>
+            <text x="550" y="950" text-anchor="middle" fill="#1a1a2e" font-size="15">Interest still accrues, but your remittances keep flowing. Treating day 60</text>
+            <text x="550" y="975" text-anchor="middle" fill="#1a1a2e" font-size="15">as the deadline costs the average mid-size practice $40,000-$200,000 in</text>
+            <text x="550" y="1000" text-anchor="middle" fill="#1a1a2e" font-size="15">withheld payments during the appeal window. Watch day 30.</text>
+          </svg>`,
+          caption: "The 30 and 41 day recoupment milestones under 42 CFR §405.379 — and the difference between automated and complex review."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — A Cotiviti RAC ADR for Inpatient Cardiac Stents",
+        content: `Consider a real-world scenario based on published RAC issue 0150. Memorial Regional, a 340-bed hospital in Cotiviti's Region 2 (Midwest), receives a packet on March 14 containing 87 Additional Documentation Requests. The cover letter references **RAC Issue 0150: Inpatient Hospital — Cardiac Stent Procedures, Medical Necessity**. Each ADR lists a specific date of service from 2022 and 2023, a claim control number, and demands the complete medical record within 45 calendar days.
+
+**Step 1 — Identify the contractor and lookback.** Cotiviti is the Region 2 RAC. Region 2 covers a swath of Midwestern states. RAC lookback is three years from the date of payment, so 2022 dates of service paid in early 2023 are still within window in March 2025. SMRC could have looked back four years, but the cover letter explicitly says RAC.
+
+**Step 2 — Check the ADR limit.** Memorial Regional billed approximately 18,000 Medicare inpatient claims last year. The 0.5 percent cap yields 90 ADRs per 45-day cycle. The 87 received are within limit and cannot be contested on volume.
+
+**Step 3 — Calendar the response.** ADRs dated March 14 are due by **April 28**. The HIM department must pull, certify, and transmit each chart via esMD or the contractor portal. Missing even one means an automatic "insufficient documentation" denial with no chance to add records later in the appeal — per CMS MLN SE17010, the ALJ cannot consider documents not provided at the initial review.
+
+**Step 4 — Anticipate the denial pattern.** RAC Issue 0150 targets Two-Midnight Rule compliance and the use of MS-DRG 246-251 for stent admissions. Reviewers look for: documented unstable angina or NSTEMI (not stable angina alone), failed medical management, a physician certification of expected stay crossing two midnights, and an admission order signed before discharge.
+
+**Step 5 — Track the demand letter date.** If denials flow back on June 1, recoupment starts July 1 (day 30). The CFO must instruct the revenue cycle team to file redeterminations by June 28 to protect cash flow on the contested $4.2 million.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Memorial Regional — 87 ADR Case</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Cotiviti Region 2 RAC, Issue 0150 cardiac stents</text>
+            <rect x="60" y="140" width="980" height="100" rx="10" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="180" fill="#ffd700" font-size="20" font-weight="bold">March 14:</text>
+            <text x="230" y="180" fill="#ffffff" font-size="17">Packet arrives — 87 ADRs, Issue 0150 cited, 45-day response window opens</text>
+            <text x="80" y="215" fill="#ffffff" font-size="15">Volume check: 87 of 90 cap (0.5% of 18,000 inpatient claims) — within limit</text>
+            <rect x="60" y="260" width="980" height="100" rx="10" fill="#0ea5e9" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="300" fill="#ffd700" font-size="20" font-weight="bold">April 28:</text>
+            <text x="230" y="300" fill="#ffffff" font-size="17">ADR response deadline — every chart must be transmitted via esMD</text>
+            <text x="80" y="335" fill="#ffffff" font-size="15">Missed chart = automatic insufficient documentation denial, no later add-backs</text>
+            <rect x="60" y="380" width="980" height="100" rx="10" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="420" fill="#1a1a2e" font-size="20" font-weight="bold">June 1:</text>
+            <text x="220" y="420" fill="#1a1a2e" font-size="17">Demand letters arrive — $4.2 million across 64 denied claims</text>
+            <text x="80" y="455" fill="#1a1a2e" font-size="15">Two-Midnight Rule violations cited under MS-DRG 246-251</text>
+            <rect x="60" y="500" width="980" height="100" rx="10" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="540" fill="#ffffff" font-size="20" font-weight="bold">June 28:</text>
+            <text x="240" y="540" fill="#ffffff" font-size="17">Redetermination must be filed — day 27 of 30, two-day safety buffer</text>
+            <text x="80" y="575" fill="#ffffff" font-size="15">Filing this date freezes recoupment under 42 CFR §405.379</text>
+            <rect x="60" y="620" width="980" height="100" rx="10" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="660" fill="#ffffff" font-size="20" font-weight="bold">July 1:</text>
+            <text x="220" y="660" fill="#ffffff" font-size="17">Day 30 — recoupment would have begun without timely appeal</text>
+            <text x="80" y="695" fill="#ffffff" font-size="15">Cash flow preserved on $4.2M while reviewer revisits each chart</text>
+            <rect x="60" y="750" width="980" height="280" rx="10" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="790" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">What the RAC Reviewer Looks For</text>
+            <text x="100" y="830" fill="#1a1a2e" font-size="16">1. Unstable angina or NSTEMI documented — not stable angina alone</text>
+            <text x="100" y="860" fill="#1a1a2e" font-size="16">2. Failed medical management noted in H and P or progress note</text>
+            <text x="100" y="890" fill="#1a1a2e" font-size="16">3. Physician certification of expected stay crossing two midnights</text>
+            <text x="100" y="920" fill="#1a1a2e" font-size="16">4. Inpatient admission order signed before discharge</text>
+            <text x="100" y="950" fill="#1a1a2e" font-size="16">5. Catheterization report with culprit lesion identified, percent stenosis</text>
+            <text x="100" y="980" fill="#1a1a2e" font-size="16">6. Procedure note matching billed HCPCS C9600 or 92928 series</text>
+            <text x="550" y="1015" text-anchor="middle" fill="#ef4444" font-size="15" font-weight="bold">All six elements must appear or the claim is downgraded to observation.</text>
+          </svg>`,
+          caption: "Memorial Regional's response calendar across the ADR, denial, and demand-letter milestones."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A solo cardiology practice receives a Cotiviti RAC demand letter dated August 5 totaling $87,000. The biller plans to file the first-level redetermination on day 55. Under 42 CFR §405.379, what is the financial consequence of waiting that long even though the appeal is still timely?",
+        options: [
+          { text: "No consequence — any filing within 120 days fully protects the practice from recoupment.", correct: false },
+          { text: "Recoupment will already have begun on day 30 and full 100 percent withhold will be active by day 41 — only filing before day 30 freezes payments.", correct: true },
+          { text: "The MAC will automatically waive recoupment because the appeal is within the 60-day window.", correct: false },
+          { text: "Treasury interest stops accruing the moment any appeal is filed, regardless of timing.", correct: false }
+        ],
+        explanation: "Filing a redetermination is timely up to day 120 — but only a filing on or before day 30 pauses recoupment. Between day 30 and day 41, CMS begins withholding remittances; by day 41 the withhold reaches 100 percent and continues until the debt is satisfied. The appeal will still proceed, but the practice loses cash flow for the duration. The rule lives at 42 CFR §405.379(a)(1).",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Filing Day vs Recoupment</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Two appeals, same outcome — very different cash flow</text>
+            <rect x="60" y="160" width="980" height="50" fill="#888"/>
+            <text x="550" y="195" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="bold">120-Day Appeal Window</text>
+            <rect x="60" y="240" width="980" height="240" rx="10" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="280" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Scenario A: File on Day 25</text>
+            <text x="550" y="320" text-anchor="middle" fill="#ffffff" font-size="16">Day 0 letter received</text>
+            <text x="550" y="350" text-anchor="middle" fill="#ffffff" font-size="16">Day 25 redetermination filed</text>
+            <text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="16">Day 30 recoupment paused — appeal pending</text>
+            <text x="550" y="410" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Cash flow: 100% preserved</text>
+            <text x="550" y="445" text-anchor="middle" fill="#ffffff" font-size="14">Practice continues to receive Medicare remittances</text>
+            <rect x="60" y="510" width="980" height="240" rx="10" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Scenario B: File on Day 55</text>
+            <text x="550" y="590" text-anchor="middle" fill="#ffffff" font-size="16">Day 30 recoupment begins automatically</text>
+            <text x="550" y="620" text-anchor="middle" fill="#ffffff" font-size="16">Day 41 full 100% withhold active</text>
+            <text x="550" y="650" text-anchor="middle" fill="#ffffff" font-size="16">Day 55 appeal filed — but 25 days of withholds already lost</text>
+            <text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Cash flow: cratered for appeal duration</text>
+            <text x="550" y="715" text-anchor="middle" fill="#ffffff" font-size="14">Filing is timely but financial damage is already done</text>
+            <rect x="60" y="780" width="980" height="240" rx="10" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="820" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">The Rule You Memorize for the Exam</text>
+            <text x="550" y="860" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">Day 30 freezes recoupment. Day 120 preserves appeal.</text>
+            <text x="550" y="900" text-anchor="middle" fill="#1a1a2e" font-size="15">42 CFR §405.379(a)(1) — first-level redetermination filed by day 30 pauses</text>
+            <text x="550" y="925" text-anchor="middle" fill="#1a1a2e" font-size="15">withholding. After day 30, withholding begins; after day 41, full 100%.</text>
+            <text x="550" y="970" text-anchor="middle" fill="#1a1a2e" font-size="15">Both filings remain valid appeals — but the cash flow impact diverges.</text>
+            <text x="550" y="995" text-anchor="middle" fill="#1a1a2e" font-size="15">Sophisticated compliance offices treat day 25 as the internal deadline.</text>
+          </svg>`,
+          caption: "Two timely appeals, two very different cash-flow outcomes — day 30 is the line that matters."
+        }
+      },
+      {
+        type: "application",
+        title: "Building Your Practice's Audit Response Protocol",
+        content: `Translate the theory into a written **Audit Response Protocol** that lives in your compliance binder and on the shared drive. A working version contains five components.
+
+**1. Mail intake.** Every envelope addressed to billing, compliance, or the medical director must be opened the day it arrives. A simple log captures: date received, contractor name, contractor type (RAC, MAC, SMRC, UPIC, ZPIC, CERT), issue number if cited, number of claims involved, dollar value, and response deadline. The log is reviewed every morning by the compliance officer. UPIC envelopes are escalated to outside counsel the same day they arrive.
+
+**2. ADR fulfillment workflow.** Identify a single ADR coordinator in HIM with backup. Each ADR is logged into a tracking sheet with claim number, date of service, patient MRN, deadline, status (pulled, certified, transmitted), and esMD confirmation number. Build in a five-day internal buffer — if ADRs are due April 28, your internal target is April 23. Use the OIG-recommended certification page (CMS-1500 attestation language) on every submission.
+
+**3. Demand letter triage.** When a denial arrives, the revenue cycle manager calculates two dates within one business day: the day-30 recoupment trigger and the day-120 absolute deadline. Both go on the compliance calendar with email reminders at day 20, day 25, and day 28. Standard policy is to file the redetermination by day 25 to leave a five-day cushion.
+
+**4. Root-cause review.** For every confirmed denial, perform a five-why analysis. Was it documentation (clinician failed to capture failed medical management)? Coding (wrong modifier)? Billing (incorrect place of service)? Systemic (EHR template missing a required field)? Findings feed your annual OIG Work Plan crosswalk and your quarterly internal audit calendar.
+
+**5. Education loop.** Within 30 days of any denial pattern, the impacted providers receive a written summary and a 30-minute coding lunch-and-learn. The compliance officer signs off and the session attendance roster is filed. This closes the loop the OIG explicitly recommends in its Compliance Program Guidance and is the same "education first" philosophy MAC TPE applies — done internally, it short-circuits the next external audit.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Audit Response Protocol</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Five components that turn chaos into a checklist</text>
+            <rect x="60" y="150" width="480" height="180" rx="10" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="190" fill="#ffd700" font-size="20" font-weight="bold">1. Mail Intake</text>
+            <text x="80" y="225" fill="#ffffff" font-size="15">Open every envelope same day</text>
+            <text x="80" y="250" fill="#ffffff" font-size="15">Log contractor, type, deadline, $</text>
+            <text x="80" y="275" fill="#ffffff" font-size="15">UPIC = outside counsel today</text>
+            <text x="80" y="305" fill="#ffffff" font-size="15">Compliance officer reviews daily</text>
+            <rect x="560" y="150" width="480" height="180" rx="10" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="190" fill="#ffd700" font-size="20" font-weight="bold">2. ADR Fulfillment</text>
+            <text x="580" y="225" fill="#ffffff" font-size="15">Single coordinator with backup</text>
+            <text x="580" y="250" fill="#ffffff" font-size="15">5-day internal buffer rule</text>
+            <text x="580" y="275" fill="#ffffff" font-size="15">esMD confirmation captured</text>
+            <text x="580" y="305" fill="#ffffff" font-size="15">CMS-1500 attestation attached</text>
+            <rect x="60" y="350" width="480" height="180" rx="10" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="390" fill="#1a1a2e" font-size="20" font-weight="bold">3. Demand Letter Triage</text>
+            <text x="80" y="425" fill="#1a1a2e" font-size="15">Day 30 and day 120 on calendar</text>
+            <text x="80" y="450" fill="#1a1a2e" font-size="15">Reminders at day 20, 25, 28</text>
+            <text x="80" y="475" fill="#1a1a2e" font-size="15">Standard: file by day 25</text>
+            <text x="80" y="505" fill="#1a1a2e" font-size="15">Revenue cycle owns the dates</text>
+            <rect x="560" y="350" width="480" height="180" rx="10" fill="#ec4899" stroke="#ffd700" stroke-width="2"/>
+            <text x="580" y="390" fill="#ffffff" font-size="20" font-weight="bold">4. Root-Cause Review</text>
+            <text x="580" y="425" fill="#ffffff" font-size="15">Five-why on every denial</text>
+            <text x="580" y="450" fill="#ffffff" font-size="15">Doc, coding, billing, systemic</text>
+            <text x="580" y="475" fill="#ffffff" font-size="15">Feeds OIG Work Plan crosswalk</text>
+            <text x="580" y="505" fill="#ffffff" font-size="15">Quarterly internal audit input</text>
+            <rect x="310" y="550" width="480" height="180" rx="10" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="330" y="590" fill="#ffffff" font-size="20" font-weight="bold">5. Education Loop</text>
+            <text x="330" y="625" fill="#ffffff" font-size="15">Written summary within 30 days</text>
+            <text x="330" y="650" fill="#ffffff" font-size="15">30-min coding lunch-and-learn</text>
+            <text x="330" y="675" fill="#ffffff" font-size="15">Attendance roster archived</text>
+            <text x="330" y="705" fill="#ffffff" font-size="15">Closes the OIG-recommended loop</text>
+            <rect x="60" y="760" width="980" height="270" rx="10" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="800" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Weekly Compliance Standup Agenda</text>
+            <text x="100" y="840" fill="#1a1a2e" font-size="16">- Open ADRs: how many, due dates, % transmitted</text>
+            <text x="100" y="870" fill="#1a1a2e" font-size="16">- Demand letters in window: day 30 alerts, day 120 alerts</text>
+            <text x="100" y="900" fill="#1a1a2e" font-size="16">- Appeals filed last week: level, dollars, contractor</text>
+            <text x="100" y="930" fill="#1a1a2e" font-size="16">- Root-cause findings: top three denial reasons this month</text>
+            <text x="100" y="960" fill="#1a1a2e" font-size="16">- Education sessions delivered: provider names, topics, attendance</text>
+            <text x="100" y="990" fill="#1a1a2e" font-size="16">- New OIG Work Plan updates that change our risk profile</text>
+            <text x="550" y="1020" text-anchor="middle" fill="#ef4444" font-size="15" font-weight="bold">Fifteen minutes a week. Zero surprises.</text>
+          </svg>`,
+          caption: "Five components that convert audit response from reactive chaos into a documented, repeatable protocol."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-compliance-lesson-5",
+    title: "Surviving an Audit — The Five CMS Appeal Levels",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Five Doors, Five Deadlines, Five Decision-Makers",
+        content: `Every Medicare claim denial in the United States travels the same five-level appeals ladder established by Section 1869 of the Social Security Act and codified at 42 CFR §§405.940 through 405.1136. Each level has a unique filing window, decision-maker, dollar threshold, and statistical success rate. Knowing all five cold is what separates a CPC who simply codes from one who can hold a payer accountable.
+
+**Level 1 — Redetermination by the MAC** is filed within **120 days** of the initial denial date on the Remittance Advice. The same MAC that processed the claim now reviews it with fresh eyes, typically a different clinician. Decision is due within 60 days. No dollar minimum. Historical success rate hovers around 23 percent for Part B claims, lower for inpatient.
+
+**Level 2 — Reconsideration by a Qualified Independent Contractor (QIC)** is filed within **180 days** of the redetermination decision. Five QICs cover the country, with Maximus Federal Services handling Part A East, Part B North, and DME. The QIC has 60 days to decide. Still no dollar minimum. Success rates here climb to roughly 30 percent because the QIC is contractually independent of the MAC.
+
+**Level 3 — Administrative Law Judge (ALJ) hearing at OMHA** is filed within **60 days** of the reconsideration decision. The 2024 amount-in-controversy threshold is **$190** per claim — claims can be combined to meet it. ALJ success rates historically run 40 to 60 percent. The catch is the backlog: as of 2024, OMHA wait times average 18 to 24 months even after backlog reduction efforts.
+
+**Level 4 — Medicare Appeals Council (MAC, the Departmental Appeals Board)** is filed within **60 days** of the ALJ decision. Five-member panel reviews the record. Decision target is 90 days but rarely met.
+
+**Level 5 — Federal District Court** requires **60 days** to file and an amount in controversy of **$1,900** in 2024. This is where the law gets made.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The Five-Level Appeal Ladder</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">42 CFR §§405.940 to 405.1136</text>
+            <rect x="60" y="150" width="980" height="150" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="195" fill="#ffd700" font-size="22" font-weight="bold">Level 1 — Redetermination (MAC)</text>
+            <text x="80" y="230" fill="#ffffff" font-size="16">File within 120 days  |  Decision in 60 days  |  No dollar minimum</text>
+            <text x="80" y="260" fill="#ffffff" font-size="15">Same MAC, different reviewer — fresh look at the same record</text>
+            <text x="80" y="285" fill="#ffffff" font-size="15">Success rate around 23%</text>
+            <rect x="60" y="320" width="980" height="150" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="365" fill="#ffd700" font-size="22" font-weight="bold">Level 2 — Reconsideration (QIC)</text>
+            <text x="80" y="400" fill="#ffffff" font-size="16">File within 180 days  |  Decision in 60 days  |  No dollar minimum</text>
+            <text x="80" y="430" fill="#ffffff" font-size="15">Maximus Federal Services or C2C — independent of the MAC</text>
+            <text x="80" y="455" fill="#ffffff" font-size="15">Success rate around 30%</text>
+            <rect x="60" y="490" width="980" height="150" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="535" fill="#1a1a2e" font-size="22" font-weight="bold">Level 3 — ALJ Hearing (OMHA)</text>
+            <text x="80" y="570" fill="#1a1a2e" font-size="16">File within 60 days  |  Threshold $190 (2024)  |  Hearing by video</text>
+            <text x="80" y="600" fill="#1a1a2e" font-size="15">Average wait 18-24 months — backlog still material</text>
+            <text x="80" y="625" fill="#1a1a2e" font-size="15">Success rate historically 40-60%</text>
+            <rect x="60" y="660" width="980" height="150" rx="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="705" fill="#ffffff" font-size="22" font-weight="bold">Level 4 — Medicare Appeals Council (DAB)</text>
+            <text x="80" y="740" fill="#ffffff" font-size="16">File within 60 days  |  Target decision 90 days  |  Record review</text>
+            <text x="80" y="770" fill="#ffffff" font-size="15">Five-judge panel within Departmental Appeals Board</text>
+            <text x="80" y="795" fill="#ffffff" font-size="15">Reviews ALJ for legal and factual error</text>
+            <rect x="60" y="830" width="980" height="150" rx="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="875" fill="#ffd700" font-size="22" font-weight="bold">Level 5 — Federal District Court</text>
+            <text x="80" y="910" fill="#ffffff" font-size="16">File within 60 days  |  Threshold $1,900 (2024)  |  Article III judge</text>
+            <text x="80" y="940" fill="#ffffff" font-size="15">Where Medicare regulatory case law is made</text>
+            <text x="80" y="965" fill="#ffffff" font-size="15">Aggregation of claims allowed to meet threshold</text>
+            <text x="550" y="1030" text-anchor="middle" fill="#ffd700" font-size="17" font-weight="bold">Miss any deadline and the door closes permanently.</text>
+          </svg>`,
+          caption: "Five levels of CMS appeal — each with its own deadline, threshold, and decision-maker."
+        }
+      },
+      {
+        type: "concept",
+        title: "Thresholds, Aggregation, Escalation, and the OMHA Backlog Problem",
+        content: `Three statutory mechanics power the appeals system: **amount-in-controversy thresholds**, **claim aggregation**, and **escalation rights**. Misunderstanding any of the three is the most common reason a billing office leaves money on the table.
+
+**Amount in controversy (AIC).** Levels 1 and 2 have no minimum — a $4 lab denial can be appealed. Level 3 (ALJ) requires the AIC to equal or exceed the threshold published annually in the Federal Register, set at **$190 for 2024** and adjusted by the medical care component of the CPI-U each year. Level 5 (federal court) requires **$1,900 for 2024**. The threshold is calculated on the amount Medicare would have paid, not the billed charge.
+
+**Aggregation.** Under 42 CFR §405.1006, multiple claims can be combined to reach the ALJ or federal court threshold provided they involve the **same beneficiary or the same provider**, the **same items or services**, and were all the **subject of QIC reconsiderations decided on or after the same date** (or within a reasonable proximity for same-provider aggregation). A solo nephrologist with 40 denied $25 ESRD claims aggregates to $1,000 — well over the ALJ threshold. The aggregation request is filed with the ALJ on form OMHA-100A.
+
+**Escalation.** When the QIC fails to issue a reconsideration decision within its 60-day window, the appellant can **escalate** the case directly to the ALJ under 42 CFR §405.970(e). Same option exists at Level 4 — if the Council does not act within 180 days, the case escalates to federal court. Escalation is a sword against contractor delay.
+
+**OMHA backlog.** The Level 3 ALJ system has been chronically backlogged since the RAC program ramped up in 2010. At the 2018 peak, average wait times exceeded 1,400 days. After the Vilsack court order and 2018-2022 funding increases, the backlog has improved but remains 18-24 months for most appeals. The 2024 OMHA Statistical Snapshot reports 220,000 pending appeals. For appellants this means: file early, use the 60-day filing window fully, and document everything because the hearing may be two years out.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Thresholds and Aggregation</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">How small claims reach the ALJ and federal court</text>
+            <rect x="60" y="140" width="480" height="280" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Amount in Controversy</text>
+            <text x="80" y="220" fill="#ffffff" font-size="16">Level 1 (MAC):       no minimum</text>
+            <text x="80" y="250" fill="#ffffff" font-size="16">Level 2 (QIC):       no minimum</text>
+            <text x="80" y="280" fill="#ffffff" font-size="16">Level 3 (ALJ):       $190 in 2024</text>
+            <text x="80" y="310" fill="#ffffff" font-size="16">Level 4 (Council):  no minimum</text>
+            <text x="80" y="340" fill="#ffffff" font-size="16">Level 5 (Court):    $1,900 in 2024</text>
+            <text x="300" y="385" text-anchor="middle" fill="#ffd700" font-size="14">Adjusted annually by CPI-U medical</text>
+            <rect x="560" y="140" width="480" height="280" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Aggregation Math</text>
+            <text x="580" y="225" fill="#ffffff" font-size="16">40 denied claims at $25 each</text>
+            <text x="580" y="255" fill="#ffffff" font-size="16">Aggregate: $1,000</text>
+            <text x="580" y="290" fill="#ffffff" font-size="16">$1,000 > $190 ALJ threshold</text>
+            <text x="580" y="320" fill="#ffffff" font-size="16">Aggregate via form OMHA-100A</text>
+            <text x="580" y="355" fill="#ffd700" font-size="15">Same beneficiary OR same provider</text>
+            <text x="580" y="380" fill="#ffd700" font-size="15">Same items, same QIC decision date</text>
+            <rect x="60" y="450" width="980" height="220" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="490" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Escalation Rights — 42 CFR §405.970</text>
+            <text x="80" y="530" fill="#1a1a2e" font-size="16">QIC misses 60-day deadline → escalate to ALJ at Level 3</text>
+            <text x="80" y="560" fill="#1a1a2e" font-size="16">ALJ misses 90-day deadline → escalate to Council at Level 4</text>
+            <text x="80" y="590" fill="#1a1a2e" font-size="16">Council misses 180-day deadline → escalate to federal court at Level 5</text>
+            <text x="550" y="635" text-anchor="middle" fill="#1a1a2e" font-size="15" font-weight="bold">Escalation is the appellant's leverage against contractor delay</text>
+            <text x="550" y="660" text-anchor="middle" fill="#1a1a2e" font-size="14">Used carefully — escalating up means losing the de novo review at that level</text>
+            <rect x="60" y="700" width="980" height="320" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="740" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">The OMHA Backlog — Real Numbers</text>
+            <line x1="120" y1="800" x2="120" y2="980" stroke="#888" stroke-width="2"/>
+            <line x1="120" y1="980" x2="1000" y2="980" stroke="#888" stroke-width="2"/>
+            <rect x="170" y="820" width="80" height="160" fill="#ef4444"/>
+            <text x="210" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="14">2018</text>
+            <text x="210" y="810" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">1,400 days</text>
+            <rect x="320" y="870" width="80" height="110" fill="#f59e0b"/>
+            <text x="360" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="14">2020</text>
+            <text x="360" y="860" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">900 days</text>
+            <rect x="470" y="910" width="80" height="70" fill="#f59e0b"/>
+            <text x="510" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="14">2022</text>
+            <text x="510" y="900" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">600 days</text>
+            <rect x="620" y="930" width="80" height="50" fill="#10b981"/>
+            <text x="660" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="14">2023</text>
+            <text x="660" y="920" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">540 days</text>
+            <rect x="770" y="940" width="80" height="40" fill="#10b981"/>
+            <text x="810" y="1010" text-anchor="middle" fill="#1a1a2e" font-size="14">2024</text>
+            <text x="810" y="930" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">540-720 days</text>
+            <text x="900" y="900" fill="#888" font-size="12">220K pending</text>
+          </svg>`,
+          caption: "Aggregation lets small denials reach the ALJ; escalation lets appellants force movement when contractors stall."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — Climbing the Ladder on a $14,200 Denial",
+        content: `Dr. Patel, a rheumatologist in Texas, receives a Novitas (MAC JL) remittance on **January 12** denying 14 Remicade infusions for a single rheumatoid arthritis patient — total billed allowable $14,200. Denial reason: medical necessity not established for J1745 at the billed units. Walk the appeal ladder.
+
+**Level 1 — Redetermination.** Patel has until **May 12** (120 days) to file. He submits the CMS-20027 form on **February 8**, attaches the patient's TNF-failure documentation, methotrexate failure notes, and DAS28 scores showing active disease. Novitas issues a redetermination decision on **April 5** — partially favorable, allowing 6 of 14 infusions. Remaining at stake: $8,100.
+
+**Level 2 — Reconsideration.** Patel has until **October 2** (180 days from April 5) to file with Maximus Federal Services, the Part B QIC. He files form CMS-20033 on **May 1** with additional rheumatology society guidelines and the original infusion protocol. Maximus issues unfavorable reconsideration on **June 30**.
+
+**Level 3 — ALJ.** Patel has until **August 29** (60 days) to file form OMHA-100. Amount in controversy is $8,100 — far above the $190 threshold. He files on **July 15**. OMHA acknowledges receipt and assigns docket number. Hearing date: **March 2026** — roughly 20 months out. At the video hearing, an ALJ from OMHA's Mid-Atlantic field office considers de novo evidence; Patel testifies, his rheumatology expert submits an affidavit, and the ALJ issues a fully favorable decision in **April 2026**. Recovery: $8,100 plus Medicare interest under 42 CFR §405.378.
+
+**What if the hearing slipped past the 18-month decision target?** Patel could have escalated to Level 4 by filing notice with OMHA under §405.1104. Escalation forfeits the ALJ hearing but pushes the case to the Council faster. He chose to wait — for a single-claim case, the ALJ statistically gives the best outcome.
+
+**Cumulative cost.** Patel's outside coding consultant logged 22 hours across all three levels at $185/hour, totaling $4,070. Net recovery: $8,100 minus $4,070 equals $4,030 — plus the systemic value of a documented win that he uses to defend his next 50 Remicade prior authorizations.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Dr. Patel's 18-Month Journey</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">$14,200 Remicade denial — three appeal levels, fully favorable</text>
+            <rect x="60" y="140" width="980" height="120" rx="10" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="180" fill="#ffd700" font-size="20" font-weight="bold">Jan 12:</text>
+            <text x="200" y="180" fill="#ffffff" font-size="17">Novitas denial received — J1745 medical necessity</text>
+            <text x="80" y="215" fill="#ffffff" font-size="15">14 infusions denied, $14,200 allowable at stake</text>
+            <text x="80" y="240" fill="#ffffff" font-size="15">Level 1 deadline: May 12</text>
+            <rect x="60" y="280" width="980" height="120" rx="10" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="320" fill="#ffd700" font-size="20" font-weight="bold">Feb 8:</text>
+            <text x="200" y="320" fill="#ffffff" font-size="17">CMS-20027 redetermination filed</text>
+            <text x="80" y="355" fill="#ffffff" font-size="15">Apr 5: partial reversal — 6 of 14 allowed, $8,100 remains</text>
+            <text x="80" y="380" fill="#ffffff" font-size="15">Level 2 deadline: Oct 2 (180 days from Apr 5)</text>
+            <rect x="60" y="420" width="980" height="120" rx="10" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="460" fill="#1a1a2e" font-size="20" font-weight="bold">May 1:</text>
+            <text x="200" y="460" fill="#1a1a2e" font-size="17">CMS-20033 to Maximus QIC filed</text>
+            <text x="80" y="495" fill="#1a1a2e" font-size="15">Jun 30: unfavorable reconsideration — $8,100 still at stake</text>
+            <text x="80" y="520" fill="#1a1a2e" font-size="15">Level 3 deadline: Aug 29 (60 days)</text>
+            <rect x="60" y="560" width="980" height="120" rx="10" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="600" fill="#ffd700" font-size="20" font-weight="bold">Jul 15:</text>
+            <text x="200" y="600" fill="#ffffff" font-size="17">OMHA-100 ALJ request filed — AIC $8,100 vs $190 threshold</text>
+            <text x="80" y="635" fill="#ffffff" font-size="15">Hearing scheduled Mar 2026 — 20-month wait</text>
+            <text x="80" y="660" fill="#ffffff" font-size="15">Video hearing, rheumatology expert affidavit</text>
+            <rect x="60" y="700" width="980" height="120" rx="10" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="80" y="740" fill="#ffd700" font-size="20" font-weight="bold">Apr 2026:</text>
+            <text x="240" y="740" fill="#ffffff" font-size="17">Fully favorable ALJ decision — $8,100 plus 42 CFR §405.378 interest</text>
+            <text x="80" y="775" fill="#ffffff" font-size="15">Documented win used to defend 50 future Remicade authorizations</text>
+            <text x="80" y="800" fill="#ffffff" font-size="15">Consultant cost: 22 hours at $185/hr = $4,070; net $4,030</text>
+            <rect x="60" y="840" width="980" height="190" rx="10" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="880" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Lessons from the Ladder</text>
+            <text x="100" y="915" fill="#1a1a2e" font-size="15">- Each level uses different evidence — fresh documents helped at L1 and L3</text>
+            <text x="100" y="945" fill="#1a1a2e" font-size="15">- AIC thresholds are tiny relative to typical specialty denials</text>
+            <text x="100" y="975" fill="#1a1a2e" font-size="15">- The 20-month ALJ wait must be planned for, not feared</text>
+            <text x="100" y="1005" fill="#1a1a2e" font-size="15">- The documented win becomes precedent for future authorizations</text>
+          </svg>`,
+          caption: "Three appeal levels, 18 months, and $8,100 recovered on a J1745 Remicade denial."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A practice has 25 denied claims, each for $30, all involving the same beneficiary and the same Lucentis injection service, all reconsidered by the same QIC on the same date. The practice wants to appeal to an Administrative Law Judge. Can they reach the 2024 ALJ amount-in-controversy threshold, and if so, how?",
+        options: [
+          { text: "No — each claim is below $190, so none qualify for ALJ review.", correct: false },
+          { text: "Yes — under 42 CFR §405.1006 the claims may be aggregated because they share beneficiary, service, and QIC decision date, yielding $750 which exceeds the $190 threshold.", correct: true },
+          { text: "Yes — but only by escalating from the QIC; aggregation is not available at the ALJ level.", correct: false },
+          { text: "No — aggregation is only available for claims worth at least $190 individually.", correct: false }
+        ],
+        explanation: "42 CFR §405.1006 permits aggregation when claims share the same beneficiary (or same provider for multi-beneficiary cases), involve the same items or services, and were the subject of QIC reconsiderations decided on or about the same date. Here all three criteria are satisfied: 25 claims at $30 aggregate to $750, comfortably above the $190 ALJ threshold. The aggregation request is submitted on form OMHA-100A alongside the OMHA-100 request for hearing.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Aggregation Math</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">25 Lucentis denials × $30 each → ALJ threshold cleared</text>
+            <rect x="60" y="150" width="980" height="200" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="200" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">42 CFR §405.1006 — Three Conditions</text>
+            <text x="80" y="245" fill="#ffffff" font-size="17">1. Same beneficiary OR same provider</text>
+            <text x="80" y="280" fill="#ffffff" font-size="17">2. Same items or services</text>
+            <text x="80" y="315" fill="#ffffff" font-size="17">3. QIC reconsiderations decided on or about the same date</text>
+            <rect x="60" y="390" width="480" height="220" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="430" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Without Aggregation</text>
+            <text x="300" y="475" text-anchor="middle" fill="#ffffff" font-size="40" font-weight="bold">$30</text>
+            <text x="300" y="510" text-anchor="middle" fill="#ffffff" font-size="16">per single claim</text>
+            <text x="300" y="555" text-anchor="middle" fill="#ef4444" font-size="18" font-weight="bold">Below $190 threshold</text>
+            <text x="300" y="585" text-anchor="middle" fill="#ffffff" font-size="15">ALJ door closed for each one</text>
+            <rect x="560" y="390" width="480" height="220" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="430" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">With Aggregation</text>
+            <text x="800" y="475" text-anchor="middle" fill="#1a1a2e" font-size="40" font-weight="bold">$750</text>
+            <text x="800" y="510" text-anchor="middle" fill="#1a1a2e" font-size="16">25 claims combined</text>
+            <text x="800" y="555" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">Above $190 threshold</text>
+            <text x="800" y="585" text-anchor="middle" fill="#1a1a2e" font-size="15">Hearing rights preserved</text>
+            <rect x="60" y="650" width="980" height="380" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="700" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Filing Pack — How It Looks</text>
+            <text x="100" y="745" fill="#1a1a2e" font-size="16">Form OMHA-100 (Request for ALJ Hearing) — one filed for the lead claim</text>
+            <text x="100" y="775" fill="#1a1a2e" font-size="16">Form OMHA-100A (Aggregation Request) — lists 24 additional claim numbers</text>
+            <text x="100" y="805" fill="#1a1a2e" font-size="16">Cover memo demonstrating shared beneficiary, service, QIC decision dates</text>
+            <text x="100" y="835" fill="#1a1a2e" font-size="16">Copies of all 25 QIC reconsideration decisions attached as exhibits</text>
+            <text x="100" y="865" fill="#1a1a2e" font-size="16">Single docket number issued by OMHA upon acceptance</text>
+            <text x="100" y="905" fill="#1a1a2e" font-size="16">Hearing held by video — ALJ decides all 25 claims in one decision</text>
+            <text x="100" y="935" fill="#1a1a2e" font-size="16">Favorable result = $750 plus 42 CFR §405.378 interest</text>
+            <text x="550" y="985" text-anchor="middle" fill="#ef4444" font-size="17" font-weight="bold">Aggregation transforms unwinnable small claims into hearable cases.</text>
+          </svg>`,
+          caption: "Aggregation under 42 CFR §405.1006 transforms 25 small denials into a single ALJ-eligible case."
+        }
+      },
+      {
+        type: "application",
+        title: "Building an Appeal Decision Matrix for Your Practice",
+        content: `In a healthy compliance program, every denial flows through a documented decision matrix that determines whether and how to appeal. Build yours around four questions.
+
+**Question 1 — Is the denial worth the fight?** Calculate expected value: (probability of reversal at each level × dollar amount) minus (staff time × loaded labor rate). At Level 1 a 23 percent reversal on a $200 denial yields $46 in expected value against perhaps 90 minutes at $60/hour ($90 in labor) — break-even at best. The same denial at Level 2 with a 30 percent reversal yields $60 expected value at perhaps another 60 minutes. Set a practice floor: many compliance officers do not pursue solo claims below $150 unless there is precedent value.
+
+**Question 2 — Is there precedent value?** A $25 claim that establishes a coverage principle for an entire CPT may be worth taking to Level 3 even when the math is negative. Document the rationale in your appeal log — auditors look for evidence of a systematic appeal philosophy, not opportunistic cherry-picking.
+
+**Question 3 — Can the denial be aggregated?** If you have multiple similar denials, calendar them so the QIC decisions land in the same week. Then file a single OMHA-100A at Level 3. This is the single most underused efficiency in the appeals system.
+
+**Question 4 — What evidence is missing?** Each level allows fresh evidence (with limited exceptions at Level 3 for issues not raised earlier — see 42 CFR §405.1018). Build an evidence checklist by service line: for Remicade, that means TNF-failure documentation, methotrexate dose escalation history, DAS28 scores, and rheumatology society guidelines. For inpatient stays, that means the H&P, two-midnight certification, daily progress notes, and discharge summary.
+
+**The dashboard.** A simple spreadsheet captures claim, denial date, level, deadline, expected value, actual outcome, and dollars recovered. Reviewed monthly, it shows which denials produce the highest yield and which providers most often trigger denials — fueling targeted education. Practices that maintain the dashboard typically recover 18-35 percent more on denied claims than those that work appeals reactively.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Appeal Decision Matrix</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Four questions every denial must answer</text>
+            <rect x="60" y="150" width="480" height="200" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="190" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Q1: Worth the Fight?</text>
+            <text x="80" y="230" fill="#ffffff" font-size="15">Expected value calculation:</text>
+            <text x="80" y="260" fill="#ffffff" font-size="15">(reversal % × $) − (hours × rate)</text>
+            <text x="80" y="295" fill="#ffffff" font-size="15">Practice floor: skip solos under $150</text>
+            <text x="80" y="325" fill="#ffffff" font-size="15">unless precedent value exists</text>
+            <rect x="560" y="150" width="480" height="200" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="190" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Q2: Precedent Value?</text>
+            <text x="580" y="230" fill="#ffffff" font-size="15">$25 claim that establishes</text>
+            <text x="580" y="260" fill="#ffffff" font-size="15">coverage rule for a CPT</text>
+            <text x="580" y="295" fill="#ffffff" font-size="15">may be worth Level 3</text>
+            <text x="580" y="325" fill="#ffffff" font-size="15">despite negative math</text>
+            <rect x="60" y="380" width="480" height="200" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="420" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Q3: Aggregate Possible?</text>
+            <text x="80" y="460" fill="#1a1a2e" font-size="15">Calendar QIC filings so decisions</text>
+            <text x="80" y="490" fill="#1a1a2e" font-size="15">cluster in the same week</text>
+            <text x="80" y="525" fill="#1a1a2e" font-size="15">File OMHA-100A at Level 3</text>
+            <text x="80" y="555" fill="#1a1a2e" font-size="15">Most underused efficiency</text>
+            <rect x="560" y="380" width="480" height="200" rx="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="420" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Q4: Evidence Gap?</text>
+            <text x="580" y="460" fill="#ffffff" font-size="15">Build service-line checklists</text>
+            <text x="580" y="490" fill="#ffffff" font-size="15">Remicade: TNF, MTX, DAS28</text>
+            <text x="580" y="525" fill="#ffffff" font-size="15">Inpatient: H and P, certification</text>
+            <text x="580" y="555" fill="#ffffff" font-size="15">42 CFR §405.1018 limits at L3</text>
+            <rect x="60" y="610" width="980" height="420" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="655" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Monthly Appeal Dashboard</text>
+            <rect x="80" y="690" width="940" height="30" fill="#6366f1"/>
+            <text x="120" y="710" fill="#ffffff" font-size="14" font-weight="bold">Claim</text>
+            <text x="280" y="710" fill="#ffffff" font-size="14" font-weight="bold">Denial Date</text>
+            <text x="460" y="710" fill="#ffffff" font-size="14" font-weight="bold">Level</text>
+            <text x="580" y="710" fill="#ffffff" font-size="14" font-weight="bold">EV</text>
+            <text x="700" y="710" fill="#ffffff" font-size="14" font-weight="bold">Outcome</text>
+            <text x="880" y="710" fill="#ffffff" font-size="14" font-weight="bold">$ Recovered</text>
+            <text x="120" y="745" fill="#1a1a2e" font-size="14">J1745 #4421</text>
+            <text x="280" y="745" fill="#1a1a2e" font-size="14">01/12</text>
+            <text x="460" y="745" fill="#1a1a2e" font-size="14">L3</text>
+            <text x="580" y="745" fill="#1a1a2e" font-size="14">$4,030</text>
+            <text x="700" y="745" fill="#10b981" font-size="14">Won</text>
+            <text x="880" y="745" fill="#1a1a2e" font-size="14">$8,100</text>
+            <text x="120" y="780" fill="#1a1a2e" font-size="14">93306 #4422</text>
+            <text x="280" y="780" fill="#1a1a2e" font-size="14">02/03</text>
+            <text x="460" y="780" fill="#1a1a2e" font-size="14">L1</text>
+            <text x="580" y="780" fill="#1a1a2e" font-size="14">$50</text>
+            <text x="700" y="780" fill="#10b981" font-size="14">Won</text>
+            <text x="880" y="780" fill="#1a1a2e" font-size="14">$240</text>
+            <text x="120" y="815" fill="#1a1a2e" font-size="14">99214 #4423</text>
+            <text x="280" y="815" fill="#1a1a2e" font-size="14">02/19</text>
+            <text x="460" y="815" fill="#1a1a2e" font-size="14">L2</text>
+            <text x="580" y="815" fill="#1a1a2e" font-size="14">$110</text>
+            <text x="700" y="815" fill="#ef4444" font-size="14">Lost</text>
+            <text x="880" y="815" fill="#1a1a2e" font-size="14">$0</text>
+            <text x="120" y="850" fill="#1a1a2e" font-size="14">G0008 #4424</text>
+            <text x="280" y="850" fill="#1a1a2e" font-size="14">03/05</text>
+            <text x="460" y="850" fill="#1a1a2e" font-size="14">L3 agg</text>
+            <text x="580" y="850" fill="#1a1a2e" font-size="14">$320</text>
+            <text x="700" y="850" fill="#10b981" font-size="14">Won</text>
+            <text x="880" y="850" fill="#1a1a2e" font-size="14">$750</text>
+            <text x="120" y="885" fill="#1a1a2e" font-size="14">29881 #4425</text>
+            <text x="280" y="885" fill="#1a1a2e" font-size="14">03/22</text>
+            <text x="460" y="885" fill="#1a1a2e" font-size="14">L1</text>
+            <text x="580" y="885" fill="#1a1a2e" font-size="14">$220</text>
+            <text x="700" y="885" fill="#10b981" font-size="14">Won</text>
+            <text x="880" y="885" fill="#1a1a2e" font-size="14">$1,400</text>
+            <line x1="80" y1="910" x2="1020" y2="910" stroke="#888" stroke-width="2"/>
+            <text x="120" y="940" fill="#1a1a2e" font-size="15" font-weight="bold">Totals this month</text>
+            <text x="700" y="940" fill="#1a1a2e" font-size="15" font-weight="bold">4 won, 1 lost</text>
+            <text x="880" y="940" fill="#10b981" font-size="15" font-weight="bold">$10,490</text>
+            <text x="550" y="990" text-anchor="middle" fill="#1a1a2e" font-size="16" font-weight="bold">Practices that maintain the dashboard recover 18-35% more.</text>
+          </svg>`,
+          caption: "A four-question matrix plus a monthly dashboard converts appeals from reactive scramble to disciplined revenue recovery."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-compliance-lesson-6",
+    title: "Documentation that Survives Audit",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "If It Wasn't Documented, It Wasn't Done",
+        content: `The sentence every compliance officer engraves on the wall comes verbatim from CMS Publication 100-08 (Program Integrity Manual), Chapter 3, Section 3.3.2.4: **"In the absence of documentation, services billed cannot be considered to have been provided."** That single sentence powers virtually every Medicare audit denial. The clinical reality is irrelevant if the chart does not memorialize it; the auditor reads only what the record contains.
+
+Documentation requirements span three statutory and sub-regulatory layers. **Layer one** is the Social Security Act §1862(a)(1)(A) — services must be "reasonable and necessary." **Layer two** is 42 CFR §410.32(d)(2), which adds the requirement that documentation must support the order, the medical necessity, and the result. **Layer three** is CMS Pub 100-08, which gives auditors the operational rules they actually apply.
+
+A chart that survives audit shares six attributes:
+
+1. **Legibility** — handwritten notes must be readable; the chart should not require translation.
+2. **Authentication** — every entry signed by the rendering provider with credentials (M.D., D.O., N.P., P.A.). Electronic signatures must comply with CMS MLN 905364.
+3. **Date-and-time stamp** — the date the service was rendered, not solely the date documented.
+4. **Sufficient detail to recreate the encounter** — chief complaint, history, exam, decision-making, plan; for procedures, indication, technique, findings, complications.
+5. **Specificity for the code billed** — if you billed 99214, the MDM or time must support 99214. If you billed J1745 for 700 mg, the chart must show 700 mg administered.
+6. **Internal consistency** — the H&P, progress notes, orders, and discharge summary cannot contradict each other.
+
+When any element is missing, the auditor downgrades or denies the claim, and the appellate record is frozen — you cannot add documentation later to fix a contemporaneous gap.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">The Six Survival Attributes</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Per CMS Pub 100-08 Chapter 3, §3.3.2.4</text>
+            <rect x="60" y="140" width="480" height="160" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">1. Legibility</text>
+            <text x="300" y="220" text-anchor="middle" fill="#ffffff" font-size="15">Readable by a third party</text>
+            <text x="300" y="250" text-anchor="middle" fill="#ffffff" font-size="15">EHR templates encouraged</text>
+            <text x="300" y="280" text-anchor="middle" fill="#ffffff" font-size="15">Illegible = denial</text>
+            <rect x="560" y="140" width="480" height="160" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">2. Authentication</text>
+            <text x="800" y="220" text-anchor="middle" fill="#ffffff" font-size="15">Signed by rendering provider</text>
+            <text x="800" y="250" text-anchor="middle" fill="#ffffff" font-size="15">Credentials included</text>
+            <text x="800" y="280" text-anchor="middle" fill="#ffffff" font-size="15">E-signature per MLN 905364</text>
+            <rect x="60" y="320" width="480" height="160" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="360" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">3. Date and Time</text>
+            <text x="300" y="400" text-anchor="middle" fill="#1a1a2e" font-size="15">Date of service captured</text>
+            <text x="300" y="430" text-anchor="middle" fill="#1a1a2e" font-size="15">Time stamp on procedures</text>
+            <text x="300" y="460" text-anchor="middle" fill="#1a1a2e" font-size="15">Not just authoring date</text>
+            <rect x="560" y="320" width="480" height="160" rx="12" fill="#ec4899" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="360" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">4. Sufficient Detail</text>
+            <text x="800" y="400" text-anchor="middle" fill="#ffffff" font-size="15">CC, Hx, Exam, MDM, Plan</text>
+            <text x="800" y="430" text-anchor="middle" fill="#ffffff" font-size="15">Indication, technique, findings</text>
+            <text x="800" y="460" text-anchor="middle" fill="#ffffff" font-size="15">Enough to recreate the visit</text>
+            <rect x="60" y="500" width="480" height="160" rx="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="540" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">5. Specificity</text>
+            <text x="300" y="580" text-anchor="middle" fill="#ffffff" font-size="15">Chart supports the exact code</text>
+            <text x="300" y="610" text-anchor="middle" fill="#ffffff" font-size="15">99214 must show 99214 MDM</text>
+            <text x="300" y="640" text-anchor="middle" fill="#ffffff" font-size="15">J1745 dose must match billed</text>
+            <rect x="560" y="500" width="480" height="160" rx="12" fill="#0ea5e9" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="540" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">6. Internal Consistency</text>
+            <text x="800" y="580" text-anchor="middle" fill="#ffffff" font-size="15">H and P matches progress notes</text>
+            <text x="800" y="610" text-anchor="middle" fill="#ffffff" font-size="15">Orders match medication admin</text>
+            <text x="800" y="640" text-anchor="middle" fill="#ffffff" font-size="15">Discharge summary aligns</text>
+            <rect x="60" y="700" width="980" height="320" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="745" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">The Statutory Stack</text>
+            <text x="100" y="790" fill="#1a1a2e" font-size="16">Layer 1: Social Security Act §1862(a)(1)(A)</text>
+            <text x="140" y="815" fill="#888" font-size="14">"Reasonable and necessary"</text>
+            <text x="100" y="855" fill="#1a1a2e" font-size="16">Layer 2: 42 CFR §410.32(d)(2)</text>
+            <text x="140" y="880" fill="#888" font-size="14">"Documentation must support order, necessity, and result"</text>
+            <text x="100" y="920" fill="#1a1a2e" font-size="16">Layer 3: CMS Pub 100-08 Chapter 3, §3.3.2.4</text>
+            <text x="140" y="945" fill="#888" font-size="14">"In the absence of documentation, services billed cannot be considered to have been provided"</text>
+            <text x="550" y="995" text-anchor="middle" fill="#ef4444" font-size="17" font-weight="bold">The auditor reads only what the chart says.</text>
+          </svg>`,
+          caption: "Six attributes that distinguish a chart that survives audit from one that does not."
+        }
+      },
+      {
+        type: "concept",
+        title: "Queries, Late Entries, Addenda, Signatures, and Time-Stamp Discipline",
+        content: `Documentation is dynamic — clarifications, corrections, and additions happen daily. CMS has explicit rules for each, and violating them undermines the entire chart.
+
+**Queries.** A CDI specialist or coder may query a provider when documentation is ambiguous, incomplete, or conflicting. The AHIMA/ACDIS 2022 Guidelines for Achieving a Compliant Query Practice require: (1) non-leading wording — never suggest a diagnosis the provider hasn't already implied; (2) clinical evidence cited from the chart; (3) multiple-choice format with "no clinically significant finding" and "unable to determine" options; (4) provider signature and date on the response; (5) query and response retained as part of the legal record. A leading query — "the patient's hemoglobin is 7.2, would you like to add acute blood loss anemia?" — is a False Claims Act risk because it pushes a diagnosis.
+
+**Late entries.** When the provider documents something more than 24 hours after the service but within a clinically reasonable window, the entry must be labeled **"Late Entry"** with the current date and time of the addendum, plus a reference to the service date being documented. CMS Pub 100-08 §3.3.2.5 explicitly allows late entries provided they are clearly marked. Late entries dated after a claim has been denied are heavily scrutinized — most auditors disregard them entirely.
+
+**Addenda and corrections.** An addendum adds information; a correction fixes an error. Per CMS rules, electronic corrections must show the original entry (struck through, not deleted), the corrected entry, the date and time of the correction, and the author. Deleting prior content from an EHR is a Stark and HIPAA violation under 45 CFR §164.530.
+
+**Signature requirements.** CMS MLN Matters SE1237 governs signatures. Acceptable: legible handwritten signature, electronic signature with date stamp, signature log for illegible signatures (must be on file before the audit). **Unacceptable**: stamped signatures (with narrow exceptions for documented physical disability), unsigned templates auto-populated by EHR, signatures dated more than 30 days after the encounter without a late-entry label.
+
+**Time stamps for E/M and procedures.** Since the 2021 and 2023 E/M reforms, time-based coding requires a documented total time on date of service. For 99205-99215, the chart must record the time (in minutes) spent on the encounter day, not just "spent 40 minutes with patient" — the start/stop or total minutes must be specific.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Rules for Modifying the Record</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Queries, late entries, addenda, signatures</text>
+            <rect x="60" y="140" width="480" height="220" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Compliant Query</text>
+            <text x="80" y="220" fill="#ffffff" font-size="14">- Non-leading wording</text>
+            <text x="80" y="245" fill="#ffffff" font-size="14">- Clinical evidence cited from chart</text>
+            <text x="80" y="270" fill="#ffffff" font-size="14">- Multiple-choice with "unable to determine"</text>
+            <text x="80" y="295" fill="#ffffff" font-size="14">- Provider signs and dates response</text>
+            <text x="80" y="320" fill="#ffffff" font-size="14">- Query retained as legal record</text>
+            <text x="80" y="350" fill="#ffd700" font-size="13" font-weight="bold">Per AHIMA/ACDIS 2022 Guidelines</text>
+            <rect x="560" y="140" width="480" height="220" rx="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Leading Query (Bad)</text>
+            <text x="580" y="220" fill="#ffffff" font-size="14">"The Hgb is 7.2 — should we add</text>
+            <text x="580" y="245" fill="#ffffff" font-size="14">acute blood loss anemia?"</text>
+            <text x="580" y="285" fill="#ffffff" font-size="14">Pushes a specific diagnosis</text>
+            <text x="580" y="310" fill="#ffffff" font-size="14">No "no significant finding" option</text>
+            <text x="580" y="335" fill="#ffd700" font-size="13" font-weight="bold">FCA exposure — never use</text>
+            <rect x="60" y="380" width="480" height="220" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="420" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Late Entry</text>
+            <text x="80" y="460" fill="#1a1a2e" font-size="14">- Label "Late Entry" required</text>
+            <text x="80" y="485" fill="#1a1a2e" font-size="14">- Current date and time of writing</text>
+            <text x="80" y="510" fill="#1a1a2e" font-size="14">- Reference to actual service date</text>
+            <text x="80" y="535" fill="#1a1a2e" font-size="14">- Authored by service provider</text>
+            <text x="80" y="565" fill="#1a1a2e" font-size="13" font-weight="bold">CMS Pub 100-08 §3.3.2.5</text>
+            <rect x="560" y="380" width="480" height="220" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="420" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Addendum / Correction</text>
+            <text x="580" y="460" fill="#ffffff" font-size="14">- Original entry preserved (strikethrough)</text>
+            <text x="580" y="485" fill="#ffffff" font-size="14">- Correction clearly marked</text>
+            <text x="580" y="510" fill="#ffffff" font-size="14">- Date, time, and author on correction</text>
+            <text x="580" y="535" fill="#ffffff" font-size="14">- Deletion is HIPAA violation</text>
+            <text x="580" y="565" fill="#ffd700" font-size="13" font-weight="bold">45 CFR §164.530</text>
+            <rect x="60" y="620" width="980" height="180" rx="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="660" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Signature Discipline — CMS MLN SE1237</text>
+            <text x="80" y="700" fill="#ffffff" font-size="15">Acceptable: legible handwritten, e-signature with timestamp, signature log on file</text>
+            <text x="80" y="730" fill="#ffffff" font-size="15">Unacceptable: stamped signatures (rare disability exception), unsigned auto-populated templates</text>
+            <text x="80" y="760" fill="#ffffff" font-size="15">Unacceptable: signature dated more than 30 days after encounter without late-entry label</text>
+            <text x="80" y="785" fill="#ffd700" font-size="14" font-weight="bold">Each provider must have an attestation statement on file</text>
+            <rect x="60" y="820" width="980" height="200" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="860" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Time-Based E/M After 2021/2023 Reform</text>
+            <text x="100" y="900" fill="#1a1a2e" font-size="15">99202-99215 office visits — total time on date of service</text>
+            <text x="100" y="930" fill="#1a1a2e" font-size="15">99221-99239 inpatient — total time on date of service since 2023</text>
+            <text x="100" y="960" fill="#1a1a2e" font-size="15">Document specific minutes (e.g., "55 minutes spent including chart review,</text>
+            <text x="100" y="985" fill="#1a1a2e" font-size="15">examination, counseling, ordering studies, documenting") — round numbers fail audit</text>
+          </svg>`,
+          caption: "Each modification to the medical record follows specific CMS rules — violations create False Claims Act exposure."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — Defending a 99215 Time-Based E/M After 2023 Reform",
+        content: `Dr. Chen, an endocrinologist, bills 99215 (established patient, high complexity) for a complex diabetes follow-up. A Cotiviti RAC ADR arrives seven months later requesting the chart and the time documentation. Walk through what survives audit and what does not.
+
+**The chart as Dr. Chen first wrote it (pre-audit education):**
+
+> "Patient seen today for diabetes follow-up. A1c 9.4, up from 8.2. Discussed medication adjustment. Spent significant time counseling on diet and CGM use. Plan: start GLP-1, increase metformin, return 6 weeks."
+
+**Why this fails 99215.** The 2023 E/M time-based rules require **specific minutes documented on the date of service** for codes 99211-99215. "Significant time" is not a number. The auditor downgrades 99215 ($183 allowable) to 99213 ($93 allowable) — a $90 takeback per visit. Dr. Chen sees 14 such patients per month; the annual exposure across the three-year RAC lookback is roughly $45,000.
+
+**The chart as it should have been written, supporting either MDM-based or time-based 99215:**
+
+> "Total time spent on date of service: 47 minutes, including 8 minutes pre-visit chart review (A1c trend, CGM download analysis, prior endocrinology notes), 28 minutes face-to-face evaluation, history update, problem-focused exam, discussion of GLP-1 risks (pancreatitis, MTC family history screen), CGM data review with patient, dietary counseling on carbohydrate load, and 11 minutes post-visit documentation, prior authorization initiation for semaglutide, and updating the diabetes care plan. Independent interpretation of CGM tracing performed.
+
+> MDM elements: Problems addressed — 2 chronic illnesses with severe exacerbation (uncontrolled DM with A1c 9.4, escalating dose-resistance) and a new comorbidity (hyperlipidemia). Data — independent interpretation of CGM data, review of A1c trend, two external prior records. Risk — prescription drug management with high-risk medication (GLP-1) plus social determinants impacting adherence. MDM: High."
+
+**Why this survives.** The 47 minutes is specific and exceeds the 99215 threshold of 40 minutes. The MDM also independently supports 99215. The auditor has two pathways to approve the code and will struggle to find downgrade grounds.
+
+**Annual lift from the rewrite.** With 14 visits/month at $90 each, the documentation upgrade preserves roughly $15,120 per year and removes $45,000 of three-year audit exposure. Same physician, same clinical care, different documentation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">99215 — Before and After</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Same visit. Two charts. $90 difference per encounter.</text>
+            <rect x="60" y="140" width="480" height="380" rx="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Original Chart (Fails)</text>
+            <text x="80" y="220" fill="#ffffff" font-size="14">"Patient seen for diabetes</text>
+            <text x="80" y="245" fill="#ffffff" font-size="14">follow-up. A1c 9.4, up from</text>
+            <text x="80" y="270" fill="#ffffff" font-size="14">8.2. Discussed medication</text>
+            <text x="80" y="295" fill="#ffffff" font-size="14">adjustment. Spent significant</text>
+            <text x="80" y="320" fill="#ffffff" font-size="14">time counseling on diet and</text>
+            <text x="80" y="345" fill="#ffffff" font-size="14">CGM use. Plan: start GLP-1,</text>
+            <text x="80" y="370" fill="#ffffff" font-size="14">increase metformin, return 6 wks."</text>
+            <line x1="80" y1="395" x2="520" y2="395" stroke="#ffd700" stroke-width="1"/>
+            <text x="80" y="425" fill="#ffd700" font-size="14" font-weight="bold">Problems:</text>
+            <text x="80" y="450" fill="#ffffff" font-size="13">- No specific minutes documented</text>
+            <text x="80" y="475" fill="#ffffff" font-size="13">- No MDM elements broken out</text>
+            <text x="80" y="500" fill="#ffffff" font-size="13">- "Significant time" is not auditable</text>
+            <rect x="560" y="140" width="480" height="380" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Rewritten Chart (Survives)</text>
+            <text x="580" y="215" fill="#ffffff" font-size="13">"Total time on DOS: 47 minutes</text>
+            <text x="580" y="237" fill="#ffffff" font-size="13">  8 min pre-visit CGM review</text>
+            <text x="580" y="259" fill="#ffffff" font-size="13">  28 min face-to-face encounter</text>
+            <text x="580" y="281" fill="#ffffff" font-size="13">  11 min post-visit doc, PA"</text>
+            <text x="580" y="315" fill="#ffffff" font-size="13">MDM: Problems — 2 chronic with</text>
+            <text x="580" y="337" fill="#ffffff" font-size="13">severe exacerbation + new comorbid</text>
+            <text x="580" y="359" fill="#ffffff" font-size="13">Data — independent CGM interp,</text>
+            <text x="580" y="381" fill="#ffffff" font-size="13">A1c trend, two external records</text>
+            <text x="580" y="403" fill="#ffffff" font-size="13">Risk — high-risk drug (GLP-1)</text>
+            <line x1="580" y1="425" x2="1020" y2="425" stroke="#ffd700" stroke-width="1"/>
+            <text x="580" y="455" fill="#ffd700" font-size="14" font-weight="bold">Survives because:</text>
+            <text x="580" y="480" fill="#ffffff" font-size="13">- Time exceeds 99215 (40+ min)</text>
+            <text x="580" y="505" fill="#ffffff" font-size="13">- MDM independently meets 99215</text>
+            <rect x="60" y="540" width="980" height="200" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="580" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">The Math</text>
+            <text x="100" y="620" fill="#1a1a2e" font-size="16">99215 allowable: $183     99213 allowable: $93     Per-visit downgrade: $90</text>
+            <text x="100" y="655" fill="#1a1a2e" font-size="16">14 visits/month × $90 = $1,260/month exposure</text>
+            <text x="100" y="685" fill="#1a1a2e" font-size="16">Annual: $15,120     Three-year RAC lookback: $45,360</text>
+            <text x="550" y="725" text-anchor="middle" fill="#ef4444" font-size="17" font-weight="bold">Same clinical care. Different documentation. Different audit outcome.</text>
+            <rect x="60" y="760" width="980" height="260" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="800" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">2023 E/M Time Thresholds Cheat Sheet</text>
+            <text x="100" y="840" fill="#ffffff" font-size="16">99212: 10-19 min     99213: 20-29 min     99214: 30-39 min     99215: 40-54 min</text>
+            <text x="100" y="875" fill="#ffffff" font-size="16">99202: 15-29 min     99203: 30-44 min     99204: 45-59 min     99205: 60-74 min</text>
+            <text x="100" y="910" fill="#ffffff" font-size="16">99221: 40 min        99222: 55 min        99223: 75 min        Add 99417/G2212 for extra time</text>
+            <text x="100" y="950" fill="#ffffff" font-size="15">Time includes: chart review, exam, counseling, documenting, coordinating care,</text>
+            <text x="100" y="975" fill="#ffffff" font-size="15">independent interpretation, ordering tests, prior authorization — all on date of service</text>
+            <text x="100" y="1005" fill="#ffffff" font-size="15">Does NOT include: separately reportable services or time on a different day</text>
+          </svg>`,
+          caption: "The same diabetes visit documented two ways — one fails audit, one survives. The clinical care is identical."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A coder reviewing a chart sees a hemoglobin of 6.8 and intravenous iron ordered. The discharge summary lists only 'fatigue' as a discharge diagnosis. The coder wants to query the physician to capture acute blood loss anemia for accurate MS-DRG assignment. Which query format complies with 2022 AHIMA/ACDIS guidelines?",
+        options: [
+          { text: "'The patient's hemoglobin is 6.8 and IV iron was ordered. Please add acute blood loss anemia to support DRG.'", correct: false },
+          { text: "'Hemoglobin on admission was 6.8 (normal 12-16). IV iron sucrose 200 mg was administered. Based on these findings, can you further specify the etiology? Options: acute blood loss anemia, chronic anemia, anemia of chronic disease, other (specify), no clinically significant finding, unable to determine.'", correct: true },
+          { text: "'Documentation is missing acute blood loss anemia. Add it to support reimbursement.'", correct: false },
+          { text: "'Need DRG bump. Please add acute blood loss anemia to discharge summary.'", correct: false }
+        ],
+        explanation: "AHIMA/ACDIS 2022 Guidelines for Achieving a Compliant Query Practice require non-leading wording, citation of clinical evidence from the chart, multiple-choice options including 'unable to determine' and 'no clinically significant finding,' and avoidance of any language tied to reimbursement. The compliant version states the clinical evidence (Hgb 6.8, IV iron given), asks an open-ended specificity question, and provides full multiple-choice options including escape choices. Reimbursement-linked or leading queries create False Claims Act exposure.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Compliant vs Leading Query</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">AHIMA/ACDIS 2022 Guidelines</text>
+            <rect x="60" y="140" width="480" height="440" rx="12" fill="#ef4444" stroke="#ffd700" stroke-width="2"/>
+            <text x="300" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Leading (Wrong)</text>
+            <text x="80" y="220" fill="#ffffff" font-size="14">"Hemoglobin is 6.8 and IV iron</text>
+            <text x="80" y="245" fill="#ffffff" font-size="14">was ordered. Please add acute</text>
+            <text x="80" y="270" fill="#ffffff" font-size="14">blood loss anemia to support DRG."</text>
+            <line x1="80" y1="310" x2="520" y2="310" stroke="#ffd700" stroke-width="1"/>
+            <text x="80" y="345" fill="#ffd700" font-size="15" font-weight="bold">Violations:</text>
+            <text x="80" y="375" fill="#ffffff" font-size="14">- Suggests specific diagnosis</text>
+            <text x="80" y="400" fill="#ffffff" font-size="14">- Mentions DRG / reimbursement</text>
+            <text x="80" y="425" fill="#ffffff" font-size="14">- No clinical context provided</text>
+            <text x="80" y="450" fill="#ffffff" font-size="14">- No multiple-choice format</text>
+            <text x="80" y="475" fill="#ffffff" font-size="14">- No "unable to determine" option</text>
+            <text x="80" y="500" fill="#ffffff" font-size="14">- No "no clinical finding" option</text>
+            <text x="80" y="545" fill="#ffd700" font-size="15" font-weight="bold">FCA exposure</text>
+            <rect x="560" y="140" width="480" height="440" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="800" y="180" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Compliant (Right)</text>
+            <text x="580" y="220" fill="#ffffff" font-size="14">"Hemoglobin on admission 6.8</text>
+            <text x="580" y="245" fill="#ffffff" font-size="14">(normal 12-16). IV iron sucrose</text>
+            <text x="580" y="270" fill="#ffffff" font-size="14">200 mg administered. Can you</text>
+            <text x="580" y="295" fill="#ffffff" font-size="14">further specify the etiology?</text>
+            <text x="580" y="325" fill="#ffffff" font-size="14">  [ ] Acute blood loss anemia</text>
+            <text x="580" y="350" fill="#ffffff" font-size="14">  [ ] Chronic anemia</text>
+            <text x="580" y="375" fill="#ffffff" font-size="14">  [ ] Anemia of chronic disease</text>
+            <text x="580" y="400" fill="#ffffff" font-size="14">  [ ] Other (specify)</text>
+            <text x="580" y="425" fill="#ffffff" font-size="14">  [ ] No clinically significant</text>
+            <text x="580" y="450" fill="#ffffff" font-size="14">  [ ] Unable to determine"</text>
+            <line x1="580" y1="475" x2="1020" y2="475" stroke="#ffd700" stroke-width="1"/>
+            <text x="580" y="510" fill="#ffd700" font-size="15" font-weight="bold">Survives audit:</text>
+            <text x="580" y="540" fill="#ffffff" font-size="14">- Clinical evidence cited</text>
+            <text x="580" y="565" fill="#ffffff" font-size="14">- Multiple-choice with escapes</text>
+            <rect x="60" y="610" width="980" height="200" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="650" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Five Rules of a Compliant Query</text>
+            <text x="100" y="690" fill="#1a1a2e" font-size="16">1. Non-leading — never suggest a diagnosis the provider has not implied</text>
+            <text x="100" y="720" fill="#1a1a2e" font-size="16">2. Clinical evidence cited from the chart itself</text>
+            <text x="100" y="750" fill="#1a1a2e" font-size="16">3. Multiple choice including "no clinical finding" and "unable to determine"</text>
+            <text x="100" y="780" fill="#1a1a2e" font-size="16">4. No reference to reimbursement, DRG, MCC, or CC impact</text>
+            <text x="550" y="810" text-anchor="middle" fill="#1a1a2e" font-size="16">5. Query and signed response retained as part of the legal medical record</text>
+            <rect x="60" y="840" width="980" height="180" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Why It Matters</text>
+            <text x="100" y="920" fill="#ffffff" font-size="15">Leading queries have been the foundation of False Claims Act cases against</text>
+            <text x="100" y="945" fill="#ffffff" font-size="15">hospitals — most recently the $90M Prime Healthcare 2018 settlement involving</text>
+            <text x="100" y="970" fill="#ffffff" font-size="15">CDI queries that pushed septicemia and ABLA diagnoses to inflate DRGs.</text>
+            <text x="100" y="1000" fill="#ffffff" font-size="15">Coders and CDI staff are personally named in qui tam complaints.</text>
+          </svg>`,
+          caption: "Five rules separate a compliant clinical-clarification query from a False Claims Act exposure."
+        }
+      },
+      {
+        type: "application",
+        title: "A Documentation Self-Audit Your Practice Can Run This Week",
+        content: `Translate the rules into a quarterly **Documentation Self-Audit** that any practice — solo to multi-specialty — can execute internally. The goal is to find weaknesses before a contractor does.
+
+**Step 1 — Sample.** Pull a stratified random sample of 30 encounters per provider per quarter: 10 high-level E/M (99214/99215), 10 procedure codes the practice uses most, and 10 randomly selected. The sample size matches OIG-recommended audit volumes from its Compliance Program Guidance for Individual and Small Group Physician Practices.
+
+**Step 2 — Score against the six attributes.** Build a 20-point rubric covering: legibility (2), signature compliance (3), date-time (2), CC/HPI completeness (3), exam specificity (3), MDM or time documentation (4), code-to-chart match (3). Anything below 80 percent triggers provider feedback.
+
+**Step 3 — Flag the high-risk patterns.** Look for: (1) E/M visits with no time documented when time was likely the basis, (2) procedure notes missing indication or technique, (3) signature gaps over 30 days, (4) charts with copy-forward text identical across multiple visits (the #1 cloned-note flag), (5) queries answered by anyone other than the rendering provider, (6) late entries without the "Late Entry" label.
+
+**Step 4 — Calculate the financial exposure.** For each chart that fails, identify the most likely downgrade. A failed 99215 typically drops to 99213 (a $90 swing per visit per Medicare physician fee schedule); a failed inpatient stay can drop from MS-DRG 871 (severe sepsis, ~$13,000) to MS-DRG 872 (~$6,500). Multiply by provider volume and the three-year RAC lookback. The number is sobering — and motivating.
+
+**Step 5 — Close the loop.** For every provider scored below 80 percent, schedule a 30-minute one-on-one within two weeks, share the specific deficient charts (de-identified copy), and provide one rewritten exemplar per deficiency. Re-audit that provider in 60 days; expect 90+ percent on the re-audit.
+
+**Step 6 — Document the program.** Auditors will ask whether you have an internal compliance program. The Self-Audit log — sample sizes, scores, education delivered, re-audit results — is exhibit one in defending the practice's good-faith compliance posture under OIG's Seven Elements of an Effective Compliance Program.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Quarterly Documentation Self-Audit</text>
+            <text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="17">Six steps — under 8 hours per provider per quarter</text>
+            <rect x="60" y="140" width="320" height="200" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="220" y="180" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">1. Sample</text>
+            <text x="80" y="220" fill="#ffffff" font-size="14">30 charts per provider</text>
+            <text x="80" y="245" fill="#ffffff" font-size="14">10 high-level E/M</text>
+            <text x="80" y="270" fill="#ffffff" font-size="14">10 top procedures</text>
+            <text x="80" y="295" fill="#ffffff" font-size="14">10 random</text>
+            <text x="80" y="325" fill="#ffffff" font-size="13" font-style="italic">OIG-recommended size</text>
+            <rect x="390" y="140" width="320" height="200" rx="12" fill="#10b981" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="180" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">2. Score</text>
+            <text x="410" y="220" fill="#ffffff" font-size="14">20-point rubric</text>
+            <text x="410" y="245" fill="#ffffff" font-size="14">Six attributes weighted</text>
+            <text x="410" y="270" fill="#ffffff" font-size="14">Below 80% = feedback</text>
+            <text x="410" y="295" fill="#ffffff" font-size="14">Track scores over time</text>
+            <text x="410" y="325" fill="#ffffff" font-size="13" font-style="italic">Aim for 95% by year 2</text>
+            <rect x="720" y="140" width="320" height="200" rx="12" fill="#f59e0b" stroke="#ffd700" stroke-width="2"/>
+            <text x="880" y="180" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">3. Flag Patterns</text>
+            <text x="740" y="220" fill="#1a1a2e" font-size="14">Missing time on E/M</text>
+            <text x="740" y="245" fill="#1a1a2e" font-size="14">Cloned-note copy-forward</text>
+            <text x="740" y="270" fill="#1a1a2e" font-size="14">Signature gaps >30 days</text>
+            <text x="740" y="295" fill="#1a1a2e" font-size="14">Late entries unlabeled</text>
+            <text x="740" y="325" fill="#1a1a2e" font-size="13" font-style="italic">Top six high-risk flags</text>
+            <rect x="60" y="360" width="320" height="200" rx="12" fill="#ec4899" stroke="#ffd700" stroke-width="2"/>
+            <text x="220" y="400" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">4. Quantify $</text>
+            <text x="80" y="440" fill="#ffffff" font-size="14">99215 → 99213 = -$90</text>
+            <text x="80" y="465" fill="#ffffff" font-size="14">DRG 871 → 872 = -$6,500</text>
+            <text x="80" y="490" fill="#ffffff" font-size="14">Multiply by volume</text>
+            <text x="80" y="515" fill="#ffffff" font-size="14">Multiply by 3-yr lookback</text>
+            <text x="80" y="545" fill="#ffffff" font-size="13" font-style="italic">Makes the case for change</text>
+            <rect x="390" y="360" width="320" height="200" rx="12" fill="#8b5cf6" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="400" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">5. Close Loop</text>
+            <text x="410" y="440" fill="#ffffff" font-size="14">30-min 1-on-1 within 2 wks</text>
+            <text x="410" y="465" fill="#ffffff" font-size="14">Deficient charts shared</text>
+            <text x="410" y="490" fill="#ffffff" font-size="14">Rewritten exemplar provided</text>
+            <text x="410" y="515" fill="#ffffff" font-size="14">Re-audit in 60 days</text>
+            <text x="410" y="545" fill="#ffffff" font-size="13" font-style="italic">Target: 90%+ on re-audit</text>
+            <rect x="720" y="360" width="320" height="200" rx="12" fill="#0ea5e9" stroke="#ffd700" stroke-width="2"/>
+            <text x="880" y="400" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">6. Document</text>
+            <text x="740" y="440" fill="#ffffff" font-size="14">Sample sizes logged</text>
+            <text x="740" y="465" fill="#ffffff" font-size="14">Scores trended quarterly</text>
+            <text x="740" y="490" fill="#ffffff" font-size="14">Education delivered logged</text>
+            <text x="740" y="515" fill="#ffffff" font-size="14">Re-audit results stored</text>
+            <text x="740" y="545" fill="#ffffff" font-size="13" font-style="italic">Defense exhibit one</text>
+            <rect x="60" y="590" width="980" height="220" rx="12" fill="#ffffff" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="630" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Sample Rubric Excerpt</text>
+            <text x="100" y="670" fill="#1a1a2e" font-size="15">Legibility (2 pts):       readable by independent reader  → 0/1/2</text>
+            <text x="100" y="695" fill="#1a1a2e" font-size="15">Signature (3 pts):        signed, credentialed, within 30 days  → 0/1/2/3</text>
+            <text x="100" y="720" fill="#1a1a2e" font-size="15">Date/time (2 pts):        DOS captured, procedure time-stamped  → 0/1/2</text>
+            <text x="100" y="745" fill="#1a1a2e" font-size="15">CC/HPI (3 pts):           chief complaint plus 4+ HPI elements  → 0/1/2/3</text>
+            <text x="100" y="770" fill="#1a1a2e" font-size="15">Exam (3 pts):             body areas/systems specified, findings detailed  → 0/1/2/3</text>
+            <text x="100" y="795" fill="#1a1a2e" font-size="15">MDM or Time (4 pts):      meets level billed, time stated if time-based  → 0/1/2/3/4</text>
+            <rect x="60" y="830" width="980" height="200" rx="12" fill="#6366f1" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="870" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">OIG Seven Elements of an Effective Compliance Program</text>
+            <text x="100" y="910" fill="#ffffff" font-size="15">1. Written policies     2. Compliance officer     3. Training and education</text>
+            <text x="100" y="940" fill="#ffffff" font-size="15">4. Effective communication     5. Internal monitoring and AUDITING ←</text>
+            <text x="100" y="970" fill="#ffffff" font-size="15">6. Enforcement and discipline     7. Response and prevention</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="15" font-style="italic">Element 5 is exactly what this self-audit fulfills.</text>
+          </svg>`,
+          caption: "A six-step quarterly self-audit fulfills OIG Element 5 and finds documentation gaps before contractors do."
         }
       }
     ]
