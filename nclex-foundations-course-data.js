@@ -12207,8 +12207,965 @@ You are ready. Now go pass.`,
             title: 'NCLEX Test-Taking Strategy and SATA',
             author: 'Synthesis Learning',
             description: 'How CAT scoring actually works, the Select-All-That-Apply technique that beats guessing, and the four-step process for prioritization questions.',
-            lessons: 1, duration: 5, progress: 0, category: 'nclex-foundations',
-            lessonList: comingSoonLessons('how CAT scoring works, SATA technique, and a four-step process for prioritization questions'),
+            lessons: 3, duration: 45, progress: 0, category: 'nclex-foundations',
+            lessonList: [
+{
+    id: "nclex-strategy-lesson-1",
+    title: "How CAT Scoring Actually Works",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Test That Adapts to You",
+        content: `The NCLEX-RN is a **Computerized Adaptive Test (CAT)**, not a fixed-form exam. Every candidate sees a unique combination of questions, and the test ends when the computer is **95% confident** about your ability — not when you hit a time limit or a question count.
+
+**The three numbers every candidate must know:**
+- **Minimum: 75 questions** (used to be 75 — under the 2023 Next Generation NCLEX the minimum is now **85**)
+- **Maximum: 150 questions** (raised from 145 under NGN)
+- **Time limit: 5 hours total** (including breaks and the tutorial)
+
+**Why this matters for your strategy.** Because the test adapts, it will **always feel hard**. After a correct answer, the algorithm raises difficulty until you miss. After a wrong answer, it lowers it until you hit again. Your equilibrium hovers right around your true ability — so roughly **half** of your questions will feel like coin-flips. That is not a sign you are failing. That is a sign the test is working correctly.
+
+**The candidate's three big misconceptions:**
+1. *"I only got 85 questions, so I failed."* — False. Short tests can end in a clear pass.
+2. *"I got 150 questions, so I failed."* — False. Maximum-length tests usually end at the borderline; about **40-50%** of max-length test-takers pass.
+3. *"The questions got easier, so I'm doing badly."* — False. The algorithm only knows your final ability estimate, not the trend.
+
+This lesson cracks open the black box: **Item Response Theory**, the **95% confidence rule**, the **maximum-length rule**, and the **run-out-of-time rule** — the four ways the NCLEX decides if you pass.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" font-size="38" font-weight="bold" fill="#ffd700" text-anchor="middle">NCLEX-RN: The Adaptive Test Map</text>
+            <text x="550" y="115" font-size="20" fill="#888" text-anchor="middle">85 minimum · 150 maximum · 5-hour clock</text>
+            <line x1="100" y1="900" x2="1000" y2="900" stroke="#888" stroke-width="3"/>
+            <line x1="100" y1="200" x2="100" y2="900" stroke="#888" stroke-width="3"/>
+            <text x="80" y="220" font-size="18" fill="#ffffff" text-anchor="end">High</text>
+            <text x="80" y="900" font-size="18" fill="#ffffff" text-anchor="end">Low</text>
+            <text x="40" y="560" font-size="20" fill="#ffd700" text-anchor="middle" transform="rotate(-90 40 560)">Difficulty</text>
+            <text x="550" y="950" font-size="20" fill="#ffd700" text-anchor="middle">Question Number</text>
+            <line x1="100" y1="550" x2="1000" y2="550" stroke="#10b981" stroke-width="2" stroke-dasharray="8 8"/>
+            <text x="1020" y="556" font-size="18" fill="#10b981">Pass Line</text>
+            <polyline points="100,700 160,640 220,580 280,520 340,560 400,500 460,540 520,490 580,530 640,480 700,520 760,470 820,510 880,460" fill="none" stroke="#6366f1" stroke-width="3"/>
+            <circle cx="100" cy="700" r="6" fill="#6366f1"/>
+            <circle cx="280" cy="520" r="6" fill="#6366f1"/>
+            <circle cx="460" cy="540" r="6" fill="#6366f1"/>
+            <circle cx="640" cy="480" r="6" fill="#6366f1"/>
+            <circle cx="880" cy="460" r="6" fill="#ffd700" stroke="#ffffff" stroke-width="3"/>
+            <text x="880" y="430" font-size="16" fill="#ffd700" text-anchor="middle">95% confident</text>
+            <text x="880" y="412" font-size="16" fill="#ffd700" text-anchor="middle">PASS — test ends</text>
+            <rect x="150" y="1000" width="220" height="60" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="260" y="1025" font-size="16" fill="#ffffff" text-anchor="middle">Correct answer</text>
+            <text x="260" y="1048" font-size="14" fill="#888" text-anchor="middle">→ harder next question</text>
+            <rect x="440" y="1000" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="1025" font-size="16" fill="#ffffff" text-anchor="middle">Wrong answer</text>
+            <text x="550" y="1048" font-size="14" fill="#888" text-anchor="middle">→ easier next question</text>
+            <rect x="730" y="1000" width="220" height="60" fill="#ffd700" opacity="0.25" stroke="#ffd700" stroke-width="2"/>
+            <text x="840" y="1025" font-size="16" fill="#ffffff" text-anchor="middle">Hovering near line</text>
+            <text x="840" y="1048" font-size="14" fill="#888" text-anchor="middle">= test working correctly</text>
+          </svg>`,
+          caption: "The adaptive engine narrows on your ability and ends when 95% confident you're above (or below) the pass line."
+        }
+      },
+      {
+        type: "concept",
+        title: "Item Response Theory and the 95% Rule",
+        content: `**Item Response Theory (IRT)** is the math behind CAT. Every NCLEX item has a calibrated **difficulty parameter** (b-value) set during pre-test. As you answer, the computer maintains a running estimate of your ability (theta, θ) and a **confidence interval** around it.
+
+**The four ways the NCLEX ends:**
+
+1. **The 95% Confidence Interval Rule** — The most common ending. As soon as the entire confidence interval sits clearly **above** the passing standard (θ = 0.00 on the NCSBN scale), you pass. As soon as it sits clearly **below**, you fail. This can happen at question 85 (the minimum) or at any point after.
+
+2. **The Maximum-Length Rule** — If you reach question 150 and the interval still straddles the line, the computer uses your **final ability estimate**. Above the standard = pass. At or below = fail. Roughly half of max-length test-takers pass.
+
+3. **The Run-Out-of-Time Rule** — If the 5-hour clock expires mid-test, the computer looks at the **last 60 ability estimates**. If all 60 were above the passing standard, you pass. Even one dip below = fail. This rule punishes streaky performance late in the test.
+
+4. **The All-Below-Standard Rule** — Very rare. If your first 85 answers put you so far below the line that no realistic recovery is possible, the test ends at 85 with a fail.
+
+**Difficulty doesn't determine your score — accuracy at difficulty does.** A correct answer on a hard item moves theta up more than a correct answer on an easy item. A wrong answer on an easy item drops you further than a wrong on a hard item. This is why **you cannot game the test by skipping hard items** — there is no skipping, and "playing it safe" mathematically guarantees a fail.
+
+**The passing standard itself.** The NCSBN re-evaluates the passing standard every three years. The current logit standard (effective April 2023 through March 2026) is **0.00** — meaning the bar is set at the **minimum competency level** for safe entry-level practice. You are not competing against other candidates. You are competing against an absolute standard.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">The 4 Ways the NCLEX Ends</text>
+            <rect x="60" y="120" width="480" height="220" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="300" y="160" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">1. 95% Confidence Rule</text>
+            <text x="80" y="195" font-size="17" fill="#ffffff">Confidence interval sits</text>
+            <text x="80" y="220" font-size="17" fill="#ffffff">entirely above (or below) the</text>
+            <text x="80" y="245" font-size="17" fill="#ffffff">passing standard.</text>
+            <text x="80" y="285" font-size="16" fill="#888">Most common ending.</text>
+            <text x="80" y="315" font-size="16" fill="#ffd700">Can stop at Q85 or any time after.</text>
+            <rect x="560" y="120" width="480" height="220" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="800" y="160" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">2. Maximum-Length Rule</text>
+            <text x="580" y="195" font-size="17" fill="#ffffff">You hit Q150. Final ability</text>
+            <text x="580" y="220" font-size="17" fill="#ffffff">estimate vs. passing standard.</text>
+            <text x="580" y="285" font-size="16" fill="#888">~40-50% of max-length</text>
+            <text x="580" y="315" font-size="16" fill="#ffd700">test-takers still pass.</text>
+            <rect x="60" y="380" width="480" height="220" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="300" y="420" font-size="22" font-weight="bold" fill="#0ea5e9" text-anchor="middle">3. Run-Out-of-Time Rule</text>
+            <text x="80" y="455" font-size="17" fill="#ffffff">5-hour clock expires.</text>
+            <text x="80" y="480" font-size="17" fill="#ffffff">Last 60 ability estimates</text>
+            <text x="80" y="505" font-size="17" fill="#ffffff">must ALL be above standard.</text>
+            <text x="80" y="545" font-size="16" fill="#ef4444">One dip below = fail.</text>
+            <text x="80" y="575" font-size="16" fill="#ffd700">Pace yourself: ~1 min/question.</text>
+            <rect x="560" y="380" width="480" height="220" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="800" y="420" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">4. All-Below-Standard Rule</text>
+            <text x="580" y="455" font-size="17" fill="#ffffff">First 85 answers put you so</text>
+            <text x="580" y="480" font-size="17" fill="#ffffff">far below the line that no</text>
+            <text x="580" y="505" font-size="17" fill="#ffffff">recovery is possible.</text>
+            <text x="580" y="545" font-size="16" fill="#888">Rare — test ends at Q85.</text>
+            <text x="550" y="660" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The Theta Number Line (NCSBN scale)</text>
+            <line x1="120" y1="780" x2="980" y2="780" stroke="#ffffff" stroke-width="3"/>
+            <line x1="550" y1="740" x2="550" y2="820" stroke="#10b981" stroke-width="4"/>
+            <text x="550" y="850" font-size="20" fill="#10b981" text-anchor="middle" font-weight="bold">θ = 0.00</text>
+            <text x="550" y="875" font-size="16" fill="#10b981" text-anchor="middle">Passing Standard</text>
+            <text x="160" y="755" font-size="18" fill="#ef4444">−2.0 (lower)</text>
+            <text x="940" y="755" font-size="18" fill="#10b981" text-anchor="end">+2.0 (higher)</text>
+            <text x="280" y="810" font-size="16" fill="#888" text-anchor="middle">FAIL zone</text>
+            <text x="820" y="810" font-size="16" fill="#888" text-anchor="middle">PASS zone</text>
+            <rect x="60" y="930" width="980" height="130" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="12"/>
+            <text x="550" y="970" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Key insight</text>
+            <text x="550" y="1005" font-size="17" fill="#ffffff" text-anchor="middle">A correct answer on a HARD item moves theta UP more.</text>
+            <text x="550" y="1035" font-size="17" fill="#ffffff" text-anchor="middle">A wrong answer on an EASY item moves theta DOWN more.</text>
+          </svg>`,
+          caption: "Four ending rules govern the CAT. The 95% confidence rule fires most often; the max-length rule is not a death sentence."
+        }
+      },
+      {
+        type: "example",
+        title: "Three Candidates, Three Endings",
+        content: `Walk through three realistic test sessions to see how CAT plays out in practice.
+
+**Candidate A — Maria, ends at question 87.**
+Maria's first 30 questions feel mixed. Her ability estimate climbs from θ = −0.4 (uncertain) to θ = +0.7 by question 60. By question 87 her confidence interval is **entirely above 0.00** — the computer is 95% sure she is above competency. The screen goes blue. **Result: Pass.** Maria walks out terrified, convinced she failed because the test ended early. Short tests are usually clear passes (or clear fails), not the other way around.
+
+**Candidate B — Jordan, ends at question 150.**
+Jordan answers about 50% correctly throughout the test. His ability estimate dances within ±0.2 of the passing standard the entire 5 hours. At question 150 the computer makes its final call on the last ability estimate: θ = +0.04. That is **above** the passing standard, even if barely. **Result: Pass.** Going the full distance is **not** evidence of failure — it is evidence that you are exactly at the competency line, and a 0.01 nudge in the right direction wins.
+
+**Candidate C — Devon, ends at question 85 (FAIL).**
+Devon's first 30 questions go badly. By question 60 his ability estimate sits at θ = −0.9 with a tight confidence interval — the computer is already 95% sure he is below standard. The test ends at the minimum 85 questions. Devon thought he was "running through" because the questions felt easier toward the end. **They were easier — because his ability estimate had crashed**. Easy-feeling questions late in the test are a warning sign, not a green light.
+
+**The lesson.** You cannot reliably predict pass/fail from how the test felt, what time it ended, or how many questions you got. The only thing you control is **maintaining careful, deliberate reasoning on every question**. The algorithm will sort out the rest.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Three Test Sessions</text>
+            <rect x="60" y="100" width="320" height="280" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="220" y="140" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Maria — Q87</text>
+            <line x1="90" y1="320" x2="350" y2="320" stroke="#888" stroke-width="2"/>
+            <line x1="90" y1="200" x2="350" y2="200" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="365" y="206" font-size="13" fill="#10b981">pass</text>
+            <polyline points="90,290 130,270 170,250 210,220 250,195 290,180 330,170" fill="none" stroke="#10b981" stroke-width="3"/>
+            <circle cx="330" cy="170" r="6" fill="#ffd700"/>
+            <text x="220" y="365" font-size="16" fill="#ffffff" text-anchor="middle">PASS — short clean exit</text>
+            <rect x="390" y="100" width="320" height="280" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="550" y="140" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Jordan — Q150</text>
+            <line x1="420" y1="320" x2="680" y2="320" stroke="#888" stroke-width="2"/>
+            <line x1="420" y1="240" x2="680" y2="240" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="695" y="246" font-size="13" fill="#10b981">pass</text>
+            <polyline points="420,260 450,250 480,255 510,245 540,250 570,240 600,245 630,235 660,238" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <circle cx="660" cy="238" r="6" fill="#ffd700"/>
+            <text x="550" y="365" font-size="16" fill="#ffffff" text-anchor="middle">PASS — max-length still a win</text>
+            <rect x="720" y="100" width="320" height="280" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="880" y="140" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Devon — Q85 (fail)</text>
+            <line x1="750" y1="320" x2="1010" y2="320" stroke="#888" stroke-width="2"/>
+            <line x1="750" y1="240" x2="1010" y2="240" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="1025" y="246" font-size="13" fill="#10b981">pass</text>
+            <polyline points="750,260 790,275 830,290 870,295 910,300 950,305 990,308" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <circle cx="990" cy="308" r="6" fill="#ffd700"/>
+            <text x="880" y="365" font-size="16" fill="#ffffff" text-anchor="middle">FAIL — early drop below line</text>
+            <rect x="60" y="420" width="980" height="290" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="2" rx="12"/>
+            <text x="550" y="460" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">What the algorithm "saw" in each case</text>
+            <text x="80" y="500" font-size="17" fill="#10b981" font-weight="bold">Maria:</text>
+            <text x="150" y="500" font-size="17" fill="#ffffff">Confidence interval clears 0.00 by Q87. STOP — pass.</text>
+            <text x="80" y="540" font-size="17" fill="#f59e0b" font-weight="bold">Jordan:</text>
+            <text x="155" y="540" font-size="17" fill="#ffffff">Interval straddles 0.00 entire test. Final θ = +0.04. Pass.</text>
+            <text x="80" y="580" font-size="17" fill="#ef4444" font-weight="bold">Devon:</text>
+            <text x="155" y="580" font-size="17" fill="#ffffff">Interval entirely below 0.00 by Q85. STOP — fail.</text>
+            <text x="80" y="640" font-size="17" fill="#ffd700">Easy questions late in the test = a warning, not relief.</text>
+            <text x="80" y="675" font-size="17" fill="#ffd700">Hard questions throughout = the test is calibrating correctly.</text>
+            <rect x="60" y="750" width="980" height="290" fill="#8b5cf6" opacity="0.12" stroke="#8b5cf6" stroke-width="2" rx="12"/>
+            <text x="550" y="800" font-size="22" font-weight="bold" fill="#8b5cf6" text-anchor="middle">You cannot read the outcome from these clues:</text>
+            <text x="100" y="845" font-size="18" fill="#ffffff">- How many questions you got</text>
+            <text x="100" y="880" font-size="18" fill="#ffffff">- How "hard" or "easy" the test felt overall</text>
+            <text x="100" y="915" font-size="18" fill="#ffffff">- How many SATA questions appeared</text>
+            <text x="100" y="950" font-size="18" fill="#ffffff">- How much time you used</text>
+            <text x="550" y="1005" font-size="19" fill="#ffd700" text-anchor="middle">Only one signal matters: deliberate reasoning on every question.</text>
+          </svg>`,
+          caption: "Three real adaptive paths — short pass, max-length pass, short fail — show why test-feel is a terrible predictor."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A test-taker finishes the NCLEX at question 150 — the maximum length. They feel certain they failed because the test 'never got easier.' Which statement is most accurate?",
+        options: [
+          { text: "Reaching the maximum length always means failure because the algorithm could not confirm a passing ability.", correct: false },
+          { text: "Reaching the maximum length means the test-taker was near the passing line; the result depends on the final ability estimate, and roughly 40-50% of max-length candidates still pass.", correct: true },
+          { text: "Reaching the maximum length means the test-taker passed because the computer kept giving them harder questions to confirm competency.", correct: false },
+          { text: "Reaching the maximum length triggers the run-out-of-time rule, which examines the last 60 ability estimates.", correct: false }
+        ],
+        explanation: "Max-length tests end via the maximum-length rule, not the time rule. The computer makes its final pass/fail call on the candidate's final ability estimate vs. the passing standard (currently θ = 0.00). Because the algorithm only reaches Q150 when the candidate is hovering near the line, the population of max-length test-takers splits roughly 40-50% pass/fail. Test-feel ('never got easier') is meaningless — the test only feels easier if your ability estimate has dropped significantly, which is a fail signal, not a pass signal.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Max-Length Test Outcomes</text>
+            <text x="550" y="115" font-size="20" fill="#888" text-anchor="middle">Of candidates who reach Q150...</text>
+            <rect x="200" y="200" width="700" height="500" fill="none" stroke="#888" stroke-width="2"/>
+            <rect x="200" y="450" width="350" height="250" fill="#10b981" opacity="0.4"/>
+            <rect x="550" y="200" width="350" height="500" fill="#ef4444" opacity="0.4"/>
+            <text x="375" y="590" font-size="32" font-weight="bold" fill="#10b981" text-anchor="middle">~45%</text>
+            <text x="375" y="625" font-size="22" fill="#ffffff" text-anchor="middle">PASS</text>
+            <text x="375" y="655" font-size="16" fill="#888" text-anchor="middle">final θ ≥ 0.00</text>
+            <text x="725" y="430" font-size="32" font-weight="bold" fill="#ef4444" text-anchor="middle">~55%</text>
+            <text x="725" y="465" font-size="22" fill="#ffffff" text-anchor="middle">FAIL</text>
+            <text x="725" y="495" font-size="16" fill="#888" text-anchor="middle">final θ &lt; 0.00</text>
+            <text x="550" y="190" font-size="18" fill="#ffd700" text-anchor="middle">Pass standard θ = 0.00 cuts the population near the middle</text>
+            <rect x="100" y="780" width="900" height="240" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2" rx="12"/>
+            <text x="550" y="820" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Why max-length doesn't mean failure</text>
+            <text x="130" y="860" font-size="18" fill="#ffffff">The computer ONLY reaches Q150 when the confidence interval</text>
+            <text x="130" y="895" font-size="18" fill="#ffffff">straddles the passing line — i.e., when the candidate is borderline.</text>
+            <text x="130" y="935" font-size="18" fill="#ffd700">Borderline candidates fall on BOTH sides of the line.</text>
+            <text x="130" y="975" font-size="18" fill="#ffd700">Final ability estimate decides — not question count, not test-feel.</text>
+          </svg>`,
+          caption: "Max-length tests split nearly 50/50. Hitting Q150 is a borderline signal, not a fail signal."
+        }
+      },
+      {
+        type: "application",
+        title: "Strategy Rules That Fall Out of CAT",
+        content: `Knowing how CAT works lets you derive testing rules that beginners get wrong. Memorize these.
+
+**Rule 1 — Never give up mid-test.** Your ability estimate updates after every answer. A streak of correct answers in the last 30 questions can move a borderline interval over the line. Beginners who say *"I'll just guess the rest"* hand the test away — every guess on a difficult item near your ability has a roughly 25% chance of being right, and a wrong answer in the last 60 questions can trigger the run-out-of-time fail rule.
+
+**Rule 2 — Pace at 1 minute per question, not 2.** You have 300 minutes and a max of 150 questions = exactly 2 min per question — but that ignores breaks, the tutorial, and the fact that **most candidates finish well before 150**. Aim for 60-75 seconds on standard items. Spend extra time only on SATA, drag-and-drop, and case studies. Pacing too slowly is a top reason for run-out-of-time failures.
+
+**Rule 3 — Don't change answers after submitting.** You can't — once you confirm an answer, the computer has already updated your ability estimate and selected the next item. There is no "go back" button.
+
+**Rule 4 — The first 30 questions are not more important than the rest.** A myth. Every question updates the same ability estimate. There is no "establishing phase" — the algorithm starts with a moderately difficult item and recalibrates continuously.
+
+**Rule 5 — Pre-test items are mixed in.** About **15 of your 150 items** are unscored "tryout" items used to calibrate difficulty for future exams. You cannot identify them. Treat every question as scored — because for all you know, it is.
+
+**Rule 6 — Read every question stem completely.** CAT is unforgiving of careless errors at your ability level because each wrong answer matters more when the algorithm is honing in. A 5-second reread is the highest-yield habit you can build.
+
+**Bottom line.** The NCLEX is not a test of how much you know — it is a test of whether your decision-making is reliably safe. CAT scoring is engineered to find that line precisely. Trust the algorithm. Focus on each question, one at a time.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">6 Rules That Fall Out of CAT</text>
+            <rect x="60" y="110" width="480" height="140" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="80" y="145" font-size="20" font-weight="bold" fill="#10b981">1. Never give up mid-test</text>
+            <text x="80" y="180" font-size="16" fill="#ffffff">Every answer updates the estimate.</text>
+            <text x="80" y="205" font-size="16" fill="#ffffff">A late streak can swing borderline</text>
+            <text x="80" y="230" font-size="16" fill="#ffffff">intervals over the line.</text>
+            <rect x="560" y="110" width="480" height="140" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2" rx="10"/>
+            <text x="580" y="145" font-size="20" font-weight="bold" fill="#f59e0b">2. Pace at ~1 min/question</text>
+            <text x="580" y="180" font-size="16" fill="#ffffff">300 min total. Save extra time for</text>
+            <text x="580" y="205" font-size="16" fill="#ffffff">SATA, drag-and-drop, case studies.</text>
+            <text x="580" y="230" font-size="16" fill="#ffffff">Slow pacing = top fail reason.</text>
+            <rect x="60" y="270" width="480" height="140" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="2" rx="10"/>
+            <text x="80" y="305" font-size="20" font-weight="bold" fill="#6366f1">3. No going back</text>
+            <text x="80" y="340" font-size="16" fill="#ffffff">Once confirmed, the next item is</text>
+            <text x="80" y="365" font-size="16" fill="#ffffff">already chosen for your new theta.</text>
+            <text x="80" y="390" font-size="16" fill="#ffffff">Commit before clicking Next.</text>
+            <rect x="560" y="270" width="480" height="140" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="2" rx="10"/>
+            <text x="580" y="305" font-size="20" font-weight="bold" fill="#0ea5e9">4. First 30 aren't special</text>
+            <text x="580" y="340" font-size="16" fill="#ffffff">Every question weights the same</text>
+            <text x="580" y="365" font-size="16" fill="#ffffff">ability estimate. No "warm-up" or</text>
+            <text x="580" y="390" font-size="16" fill="#ffffff">"establishing" phase exists.</text>
+            <rect x="60" y="430" width="480" height="140" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+            <text x="80" y="465" font-size="20" font-weight="bold" fill="#8b5cf6">5. ~15 pre-test items mixed in</text>
+            <text x="80" y="500" font-size="16" fill="#ffffff">Unscored tryout items. You CANNOT</text>
+            <text x="80" y="525" font-size="16" fill="#ffffff">tell which. Treat every item as</text>
+            <text x="80" y="550" font-size="16" fill="#ffffff">scored — because it might be.</text>
+            <rect x="560" y="430" width="480" height="140" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="2" rx="10"/>
+            <text x="580" y="465" font-size="20" font-weight="bold" fill="#ec4899">6. Reread every stem</text>
+            <text x="580" y="500" font-size="16" fill="#ffffff">Careless errors at your ability</text>
+            <text x="580" y="525" font-size="16" fill="#ffffff">level cost more than careless</text>
+            <text x="580" y="550" font-size="16" fill="#ffffff">errors elsewhere.</text>
+            <rect x="60" y="610" width="980" height="180" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="655" font-size="24" font-weight="bold" fill="#ffd700" text-anchor="middle">The mindset that beats CAT</text>
+            <text x="550" y="700" font-size="18" fill="#ffffff" text-anchor="middle">Trust the algorithm. Read carefully. Decide deliberately.</text>
+            <text x="550" y="735" font-size="18" fill="#ffffff" text-anchor="middle">Move on without lingering. Treat every question as the one</text>
+            <text x="550" y="765" font-size="18" fill="#ffffff" text-anchor="middle">that decides your pass.</text>
+            <rect x="60" y="820" width="980" height="220" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="2" rx="12"/>
+            <text x="550" y="865" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">Top run-out-of-time mistakes</text>
+            <text x="100" y="910" font-size="17" fill="#ffffff">- Spending 4-5 minutes on a single hard SATA</text>
+            <text x="100" y="945" font-size="17" fill="#ffffff">- Re-reading answer choices 3+ times when uncertain</text>
+            <text x="100" y="980" font-size="17" fill="#ffffff">- Taking unscheduled breaks instead of pushing through</text>
+            <text x="100" y="1015" font-size="17" fill="#ffffff">- Second-guessing answers AFTER deciding (then changing mind)</text>
+          </svg>`,
+          caption: "Six concrete CAT-derived rules. Pace, commit, and trust the algorithm to do its job."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-strategy-lesson-2",
+    title: "SATA Mastery — The All-or-Nothing Question",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why SATA Is the Question Type That Breaks Candidates",
+        content: `**Select-All-That-Apply (SATA)** questions present 5-7 options, ask you to choose every option that is correct, and award **no partial credit**. Pick 4 out of 5 correct options? You still get the item wrong. Add 1 wrong option to 5 correct ones? Wrong. The all-or-nothing scoring is what makes SATA the highest-leverage question type on the NCLEX.
+
+**The math is brutal.** On a 5-option SATA, there are 31 possible answer combinations (2⁵ minus the impossible "select none" set). Random guessing gives you a **1 in 31 chance** — about 3.2%. On a 6-option SATA the odds drop to 1 in 63. Compare to a standard multiple choice item where guessing gives 25%. **You cannot guess SATA. You must reason through every option.**
+
+**SATA frequency on the NCLEX.** Roughly **25-30% of items on a modern NCLEX-RN exam are alternate-format**, and SATA is the most common alternate format. Plan for 20-40 SATA questions per test. They tend to cluster around **safety, prioritization, infection control, medication administration**, and **psychiatric/neuro assessment** — the content areas where the NCSBN most wants to discriminate competent from borderline test-takers.
+
+**The hidden upside.** Because SATA is so unforgiving, getting one right moves your ability estimate **substantially** in IRT terms. A correctly answered hard SATA can offset two missed easy multiple-choice items. SATA is where you build a lead — or where you give one back.
+
+**This lesson teaches the only system that consistently beats SATA:** the **"True About This Patient"** test applied to each option independently, plus a 5-step workflow that protects against the four common SATA traps.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="36" font-weight="bold" fill="#ffd700" text-anchor="middle">SATA: All-or-Nothing</text>
+            <text x="550" y="110" font-size="20" fill="#888" text-anchor="middle">No partial credit. ~25-30% of NCLEX items.</text>
+            <rect x="100" y="160" width="900" height="320" fill="#1a1a2e" stroke="#6366f1" stroke-width="3" rx="12"/>
+            <text x="550" y="200" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">A typical 5-option SATA</text>
+            <text x="130" y="245" font-size="18" fill="#ffffff">Select all that apply for a patient with right-sided heart failure:</text>
+            <rect x="150" y="270" width="800" height="30" fill="#10b981" opacity="0.2"/>
+            <text x="170" y="291" font-size="17" fill="#ffffff">□ Jugular venous distention</text>
+            <text x="900" y="291" font-size="17" fill="#10b981" text-anchor="end">CORRECT</text>
+            <rect x="150" y="305" width="800" height="30" fill="#10b981" opacity="0.2"/>
+            <text x="170" y="326" font-size="17" fill="#ffffff">□ Peripheral edema</text>
+            <text x="900" y="326" font-size="17" fill="#10b981" text-anchor="end">CORRECT</text>
+            <rect x="150" y="340" width="800" height="30" fill="#ef4444" opacity="0.2"/>
+            <text x="170" y="361" font-size="17" fill="#ffffff">□ Pink frothy sputum</text>
+            <text x="900" y="361" font-size="17" fill="#ef4444" text-anchor="end">WRONG (left HF)</text>
+            <rect x="150" y="375" width="800" height="30" fill="#10b981" opacity="0.2"/>
+            <text x="170" y="396" font-size="17" fill="#ffffff">□ Hepatomegaly</text>
+            <text x="900" y="396" font-size="17" fill="#10b981" text-anchor="end">CORRECT</text>
+            <rect x="150" y="410" width="800" height="30" fill="#ef4444" opacity="0.2"/>
+            <text x="170" y="431" font-size="17" fill="#ffffff">□ Crackles in all lung fields</text>
+            <text x="900" y="431" font-size="17" fill="#ef4444" text-anchor="end">WRONG (left HF)</text>
+            <rect x="100" y="520" width="440" height="200" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2" rx="10"/>
+            <text x="320" y="560" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">If you mark 3 of 3 correct</text>
+            <text x="320" y="595" font-size="18" fill="#ffffff" text-anchor="middle">and ZERO wrong:</text>
+            <text x="320" y="640" font-size="32" font-weight="bold" fill="#10b981" text-anchor="middle">FULL CREDIT</text>
+            <text x="320" y="680" font-size="16" fill="#888" text-anchor="middle">Theta moves UP significantly.</text>
+            <rect x="560" y="520" width="440" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2" rx="10"/>
+            <text x="780" y="560" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">If you mark 2 of 3 correct</text>
+            <text x="780" y="595" font-size="18" fill="#ffffff" text-anchor="middle">OR add 1 wrong:</text>
+            <text x="780" y="640" font-size="32" font-weight="bold" fill="#ef4444" text-anchor="middle">ZERO CREDIT</text>
+            <text x="780" y="680" font-size="16" fill="#888" text-anchor="middle">Theta moves DOWN.</text>
+            <rect x="100" y="760" width="900" height="260" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="805" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Guess-math: don't.</text>
+            <text x="550" y="845" font-size="18" fill="#ffffff" text-anchor="middle">5 options → 31 combinations → ~3.2% chance from random</text>
+            <text x="550" y="880" font-size="18" fill="#ffffff" text-anchor="middle">6 options → 63 combinations → ~1.6% chance from random</text>
+            <text x="550" y="935" font-size="18" fill="#10b981" text-anchor="middle">7 options → 127 combinations → ~0.8% chance from random</text>
+            <text x="550" y="985" font-size="20" font-weight="bold" fill="#ffd700" text-anchor="middle">The only winning strategy: judge each option separately.</text>
+          </svg>`,
+          caption: "SATA is binary scoring on a multi-option problem. The math rewards systematic per-option reasoning."
+        }
+      },
+      {
+        type: "concept",
+        title: "The 'True About This Patient' Test and the 5-Step Workflow",
+        content: `**The single most important SATA technique** is to treat every option as a **standalone true/false question** about *this specific patient*. Cover up the other options mentally. Ask: *"If I were caring for ONLY this patient right now, is this statement true ABOUT this patient?"* If yes → check it. If no → leave it. Move to the next option.
+
+This works because **SATA distractors are usually true in general but false for this patient** — or false in general but plausible if you skim. The "True About This Patient" frame forces you to anchor every judgment to the stem.
+
+**The 5-Step SATA Workflow:**
+
+**Step 1 — Read the stem twice.** Identify (a) the patient (age, dx, status), (b) the timeframe ("on admission" vs. "after 3 days of treatment"), and (c) the type of judgment requested (assessment finding, intervention, teaching point, complication). Most SATA misses come from missing one of these three anchors.
+
+**Step 2 — Cover the options. Predict 2-3 correct answers.** Before reading the choices, jot mental notes: *"For this patient I'd expect to see X, Y, Z."* Anything in the options that matches your prediction is likely correct; anything wildly off is suspect.
+
+**Step 3 — Apply "True About This Patient" to each option independently.** Treat each as its own true/false. Use only the information in the stem — do not invent context.
+
+**Step 4 — Check for the four SATA traps** (covered in the next card). If an option contains a vague absolute (always, never, all), a wrong age/dx pairing, a confused timeframe, or a normal value being labeled "abnormal" — flag it.
+
+**Step 5 — Commit and move on.** You will be tempted to second-guess. **Don't.** Your first systematic pass through is statistically the most accurate. Re-examining options without new information adds noise, not signal.
+
+**The mistake to avoid.** Beginners read all 5 options first, then pick a few that "sound right together." This pattern-matching approach is exactly what SATA distractors are engineered to defeat. **Option-by-option isolation** is the discipline that wins.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">The 5-Step SATA Workflow</text>
+            <rect x="100" y="120" width="900" height="140" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <circle cx="160" cy="190" r="38" fill="#10b981"/>
+            <text x="160" y="200" font-size="32" font-weight="bold" fill="#1a1a2e" text-anchor="middle">1</text>
+            <text x="230" y="170" font-size="22" font-weight="bold" fill="#10b981">Read the stem TWICE</text>
+            <text x="230" y="205" font-size="17" fill="#ffffff">Identify: patient (age + dx + status), timeframe,</text>
+            <text x="230" y="235" font-size="17" fill="#ffffff">and the type of judgment requested.</text>
+            <rect x="100" y="280" width="900" height="140" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="12"/>
+            <circle cx="160" cy="350" r="38" fill="#6366f1"/>
+            <text x="160" y="360" font-size="32" font-weight="bold" fill="#1a1a2e" text-anchor="middle">2</text>
+            <text x="230" y="330" font-size="22" font-weight="bold" fill="#6366f1">Cover options. Predict 2-3 answers.</text>
+            <text x="230" y="365" font-size="17" fill="#ffffff">Before looking, ask: "What would I expect</text>
+            <text x="230" y="395" font-size="17" fill="#ffffff">to see in this patient?"</text>
+            <rect x="100" y="440" width="900" height="140" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <circle cx="160" cy="510" r="38" fill="#f59e0b"/>
+            <text x="160" y="520" font-size="32" font-weight="bold" fill="#1a1a2e" text-anchor="middle">3</text>
+            <text x="230" y="490" font-size="22" font-weight="bold" fill="#f59e0b">"True About This Patient?" — option by option</text>
+            <text x="230" y="525" font-size="17" fill="#ffffff">Each option = its own true/false question.</text>
+            <text x="230" y="555" font-size="17" fill="#ffffff">Cover the others. Anchor every answer to the stem.</text>
+            <rect x="100" y="600" width="900" height="140" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <circle cx="160" cy="670" r="38" fill="#ef4444"/>
+            <text x="160" y="680" font-size="32" font-weight="bold" fill="#1a1a2e" text-anchor="middle">4</text>
+            <text x="230" y="650" font-size="22" font-weight="bold" fill="#ef4444">Check for the 4 SATA traps</text>
+            <text x="230" y="685" font-size="17" fill="#ffffff">Absolutes · Age/dx mismatch · Timeframe shift ·</text>
+            <text x="230" y="715" font-size="17" fill="#ffffff">Normal value mislabeled abnormal.</text>
+            <rect x="100" y="760" width="900" height="140" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="12"/>
+            <circle cx="160" cy="830" r="38" fill="#8b5cf6"/>
+            <text x="160" y="840" font-size="32" font-weight="bold" fill="#1a1a2e" text-anchor="middle">5</text>
+            <text x="230" y="810" font-size="22" font-weight="bold" fill="#8b5cf6">Commit. Move on.</text>
+            <text x="230" y="845" font-size="17" fill="#ffffff">First systematic pass is most accurate.</text>
+            <text x="230" y="875" font-size="17" fill="#ffffff">Re-examination adds noise, not signal.</text>
+            <rect x="100" y="930" width="900" height="120" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="970" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">The core question for every SATA option:</text>
+            <text x="550" y="1015" font-size="20" fill="#ffffff" text-anchor="middle">"Is this statement TRUE about THIS patient, right now?"</text>
+          </svg>`,
+          caption: "Five steps, in order. Predict before peeking. Isolate before judging. Commit before moving on."
+        }
+      },
+      {
+        type: "example",
+        title: "The Four Classic SATA Traps in Action",
+        content: `**Stem:** *The nurse is caring for an 8-year-old with newly diagnosed type 1 diabetes. Which assessment findings during this hospital admission would the nurse expect? Select all that apply.*
+
+**Option A — "Polyuria, polydipsia, and polyphagia."**
+*True about this patient?* Yes — the classic 3 P's of new-onset T1DM. **Correct.**
+
+**Option B — "All children with diabetes always have ketoacidosis on admission."**
+*Trap 1: Vague absolute.* "All" and "always" almost guarantee a false statement on the NCLEX. Roughly 30% of new T1DM pediatric cases present with DKA — common but not universal. **Distractor.**
+
+**Option C — "Acanthosis nigricans on the back of the neck."**
+*Trap 2: Age/dx mismatch.* Acanthosis nigricans is associated with **insulin resistance** (type 2 DM), not autoimmune type 1. The finding is real and clinically relevant — but for the wrong patient. **Distractor.**
+
+**Option D — "Random blood glucose 280 mg/dL."**
+*True about this patient?* Yes — consistent with new T1DM. **Correct.**
+
+**Option E — "Hemoglobin A1C of 5.4%."**
+*Trap 3: Normal value mislabeled as a positive finding.* HbA1C of 5.4% is **normal** (non-diabetic range, &lt;5.7%). For a newly diagnosed T1DM patient you'd expect an A1C of 8-12%+. The number sounds clinical but it does not match the diagnosis. **Distractor.**
+
+**Option F — "Weight loss over the past few weeks before admission."**
+*Trap 4: Timeframe shift.* Read the stem again — it asks about findings **during this hospital admission**. Reported weight loss is **history**, not a current admission finding. This is a softer trap and some test banks would accept it as correct on grounds that history is part of the admission assessment. **Likely distractor on a strict reading.** The NCLEX favors the strict reading.
+
+**Option G — "Fruity breath odor."**
+*True about this patient?* Plausible — fruity breath occurs with ketosis, common in new T1DM. **Correct.**
+
+**The answer:** A, D, G. The "True About This Patient" test plus trap awareness eliminates the four distractors cleanly. Pattern-matching ("all the ones that sound like diabetes") would catch A and D but miss the trap in C and E.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">The 4 SATA Traps</text>
+            <text x="550" y="95" font-size="18" fill="#888" text-anchor="middle">Pattern recognition the NCLEX is engineered to exploit</text>
+            <rect x="60" y="130" width="480" height="200" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="80" y="170" font-size="22" font-weight="bold" fill="#ef4444">TRAP 1 — Vague absolutes</text>
+            <text x="80" y="205" font-size="17" fill="#ffffff">Watch words: always, never, all,</text>
+            <text x="80" y="230" font-size="17" fill="#ffffff">none, every, only, must.</text>
+            <text x="80" y="270" font-size="16" fill="#ffd700">Almost always FALSE in clinical</text>
+            <text x="80" y="295" font-size="16" fill="#ffd700">contexts. The body has exceptions.</text>
+            <rect x="560" y="130" width="480" height="200" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="580" y="170" font-size="22" font-weight="bold" fill="#f59e0b">TRAP 2 — Age/dx mismatch</text>
+            <text x="580" y="205" font-size="17" fill="#ffffff">Right finding, wrong patient.</text>
+            <text x="580" y="230" font-size="17" fill="#ffffff">Type 1 ≠ Type 2. Geriatric ≠ peds.</text>
+            <text x="580" y="270" font-size="16" fill="#ffd700">Anchor to the EXACT diagnosis</text>
+            <text x="580" y="295" font-size="16" fill="#ffd700">and age in the stem.</text>
+            <rect x="60" y="350" width="480" height="200" fill="#8b5cf6" opacity="0.12" stroke="#8b5cf6" stroke-width="3" rx="12"/>
+            <text x="80" y="390" font-size="22" font-weight="bold" fill="#8b5cf6">TRAP 3 — Timeframe shift</text>
+            <text x="80" y="425" font-size="17" fill="#ffffff">"On admission" vs. "after 3 days"</text>
+            <text x="80" y="450" font-size="17" fill="#ffffff">vs. "discharge teaching" matters.</text>
+            <text x="80" y="490" font-size="16" fill="#ffd700">Re-read the stem timeframe before</text>
+            <text x="80" y="515" font-size="16" fill="#ffd700">judging each option.</text>
+            <rect x="560" y="350" width="480" height="200" fill="#0ea5e9" opacity="0.12" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="580" y="390" font-size="22" font-weight="bold" fill="#0ea5e9">TRAP 4 — Normal labeled abnormal</text>
+            <text x="580" y="425" font-size="17" fill="#ffffff">A1C 5.4% looks like a number that</text>
+            <text x="580" y="450" font-size="17" fill="#ffffff">"belongs" in a diabetes question.</text>
+            <text x="580" y="490" font-size="16" fill="#ffd700">Verify lab values fit the diagnosis</text>
+            <text x="580" y="515" font-size="16" fill="#ffd700">before checking the option.</text>
+            <rect x="60" y="580" width="980" height="450" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="620" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Walkthrough: 8-year-old, new T1DM, on admission</text>
+            <rect x="100" y="650" width="900" height="40" fill="#10b981" opacity="0.2"/>
+            <text x="120" y="676" font-size="17" fill="#ffffff">A. Polyuria, polydipsia, polyphagia</text>
+            <text x="980" y="676" font-size="17" fill="#10b981" text-anchor="end">✓ TRUE</text>
+            <rect x="100" y="700" width="900" height="40" fill="#ef4444" opacity="0.2"/>
+            <text x="120" y="726" font-size="17" fill="#ffffff">B. All children always have DKA on admission</text>
+            <text x="980" y="726" font-size="17" fill="#ef4444" text-anchor="end">trap 1: absolutes</text>
+            <rect x="100" y="750" width="900" height="40" fill="#ef4444" opacity="0.2"/>
+            <text x="120" y="776" font-size="17" fill="#ffffff">C. Acanthosis nigricans on neck</text>
+            <text x="980" y="776" font-size="17" fill="#ef4444" text-anchor="end">trap 2: T2DM finding</text>
+            <rect x="100" y="800" width="900" height="40" fill="#10b981" opacity="0.2"/>
+            <text x="120" y="826" font-size="17" fill="#ffffff">D. Random glucose 280 mg/dL</text>
+            <text x="980" y="826" font-size="17" fill="#10b981" text-anchor="end">✓ TRUE</text>
+            <rect x="100" y="850" width="900" height="40" fill="#ef4444" opacity="0.2"/>
+            <text x="120" y="876" font-size="17" fill="#ffffff">E. HbA1C of 5.4%</text>
+            <text x="980" y="876" font-size="17" fill="#ef4444" text-anchor="end">trap 4: normal value</text>
+            <rect x="100" y="900" width="900" height="40" fill="#ef4444" opacity="0.2"/>
+            <text x="120" y="926" font-size="17" fill="#ffffff">F. Weight loss over the past few weeks</text>
+            <text x="980" y="926" font-size="17" fill="#ef4444" text-anchor="end">trap 3: history</text>
+            <rect x="100" y="950" width="900" height="40" fill="#10b981" opacity="0.2"/>
+            <text x="120" y="976" font-size="17" fill="#ffffff">G. Fruity breath odor</text>
+            <text x="980" y="976" font-size="17" fill="#10b981" text-anchor="end">✓ TRUE</text>
+            <text x="550" y="1015" font-size="18" font-weight="bold" fill="#ffd700" text-anchor="middle">Answer: A, D, G</text>
+          </svg>`,
+          caption: "Each option judged independently against the patient. Four trap categories cover 90% of distractors."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is answering a SATA question about post-operative complications after total hip arthroplasty (POD 1). One option reads: 'The patient should never get out of bed for the first 48 hours.' Which step in the 5-step SATA workflow should flag this option as a likely distractor?",
+        options: [
+          { text: "Step 1 — Reading the stem twice would reveal this option is unrelated to post-op complications.", correct: false },
+          { text: "Step 4 — Checking for SATA traps would identify the vague absolute 'never,' which almost always signals a false statement in clinical contexts.", correct: true },
+          { text: "Step 2 — Predicting 2-3 correct answers would force the test-taker to skip this option entirely.", correct: false },
+          { text: "Step 5 — Committing and moving on would prevent re-examination of the option.", correct: false }
+        ],
+        explanation: "Step 4 (check for the 4 SATA traps) is the step that catches absolute language. 'Never,' 'always,' 'all,' and 'only' are red-flag words in clinical statements because human physiology and nursing practice almost always have exceptions. Early ambulation after total hip arthroplasty is in fact strongly encouraged (often POD 0-1) to prevent DVT, pneumonia, and ileus — so the 'never get out of bed for 48 hours' statement is both absolute AND factually wrong. Step 1 (reading the stem) and Step 2 (predicting answers) help set up the analysis, but Step 4 is the specific trap-detection step that catches this pattern of distractor.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Absolutes: The Red-Flag Word List</text>
+            <rect x="60" y="120" width="980" height="320" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="550" y="170" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">Words that almost always signal a false statement</text>
+            <rect x="100" y="200" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="210" y="240" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">ALWAYS</text>
+            <rect x="340" y="200" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="450" y="240" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">NEVER</text>
+            <rect x="580" y="200" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="690" y="240" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">ALL</text>
+            <rect x="820" y="200" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="930" y="240" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">NONE</text>
+            <rect x="100" y="280" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="210" y="320" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">EVERY</text>
+            <rect x="340" y="280" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="450" y="320" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">ONLY</text>
+            <rect x="580" y="280" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="690" y="320" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">MUST</text>
+            <rect x="820" y="280" width="220" height="60" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="930" y="320" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">CANNOT</text>
+            <text x="550" y="395" font-size="18" fill="#ffd700" text-anchor="middle">Exceptions to this rule exist (e.g., "Never give potassium IV push")</text>
+            <text x="550" y="420" font-size="18" fill="#ffd700" text-anchor="middle">but most clinical absolutes on NCLEX are distractors.</text>
+            <rect x="60" y="480" width="980" height="280" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="525" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">Hedged language is friendlier to truth</text>
+            <text x="100" y="570" font-size="20" fill="#ffffff">- "Usually," "often," "may," "can"</text>
+            <text x="100" y="610" font-size="20" fill="#ffffff">- "Most patients with X experience..."</text>
+            <text x="100" y="650" font-size="20" fill="#ffffff">- "Common findings include..."</text>
+            <text x="100" y="690" font-size="20" fill="#ffffff">- "The nurse should consider..."</text>
+            <text x="100" y="730" font-size="18" fill="#ffd700">More likely to be correct on a SATA — hedging accepts exceptions.</text>
+            <rect x="60" y="800" width="980" height="220" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="2" rx="12"/>
+            <text x="550" y="845" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">The exception you must respect</text>
+            <text x="100" y="885" font-size="17" fill="#ffffff">Safety absolutes ARE real:</text>
+            <text x="100" y="915" font-size="17" fill="#10b981">- "Never give potassium IV push" — TRUE</text>
+            <text x="100" y="945" font-size="17" fill="#10b981">- "Never recap needles" — TRUE</text>
+            <text x="100" y="975" font-size="17" fill="#10b981">- "Always wash hands between patients" — TRUE</text>
+            <text x="100" y="1005" font-size="17" fill="#888">When in doubt, check if the absolute protects from harm.</text>
+          </svg>`,
+          caption: "Absolutes are usually distractors. Hedged language signals likely-true statements. Safety absolutes are the legitimate exception."
+        }
+      },
+      {
+        type: "application",
+        title: "SATA Pacing, Anxiety Management, and the Long Game",
+        content: `**Pacing on SATA.** Standard items deserve 60-75 seconds; SATA items get **90-120 seconds**. Beyond 2 minutes, you are no longer reasoning — you are spinning. Set a personal time bomb: at 90 seconds, commit your current best answer and click forward. The cost of moving on is one item; the cost of stalling is 3-5 items of lost time across the test.
+
+**Anxiety management.** SATA triggers more test anxiety than any other format because the all-or-nothing scoring feels punishing. Two anxiety-fighters:
+- **The "two-shot" mindset.** Tell yourself before the test: "I am willing to miss 4 SATA questions today. I just need to convert the other 16." This reframes SATA from a perfection task to a percentage task and breaks the spiral when one feels impossible.
+- **Box-breathing between hard items.** After a brutal SATA, take 8 seconds: inhale 4, exhale 4. This drops your sympathetic arousal enough to focus on the next item. The candidates who fail are usually the ones who carry one bad SATA's panic into the next 30 items.
+
+**The "5-7 option" rule.** Modern NCLEX SATA items have 5-7 options. Roughly **2-4 options will be correct**. If you find yourself checking only 1 (or all 7), reread the stem — you have probably misread it. The correct-count usually clusters in the 2-4 range.
+
+**SATA-style traps in non-SATA items.** The four trap patterns (absolutes, age/dx mismatch, timeframe shift, normal-as-abnormal) also infect standard multiple choice. Your SATA discipline transfers directly to the easier item type.
+
+**The two-pass habit.** When you finish a SATA, glance at your checked options one time. Ask: *"Does this combination make sense for this patient?"* If it does, click forward. If something feels off, do not unpick — instead reread the stem one more time to verify your understanding of the patient. **Re-reading the stem is allowed; second-guessing the options is not.** This distinction protects against the panic-driven answer changes that turn 80% performance into 50% performance.
+
+**Bottom line.** SATA is the most powerful theta-mover on the NCLEX. The 5-step workflow plus trap awareness consistently puts candidates 1-2 SATA items ahead per test — enough to swing pass/fail at the borderline. Practice the workflow until it is muscle memory.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">SATA Game Plan</text>
+            <rect x="60" y="120" width="480" height="220" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="300" y="165" font-size="22" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Pacing</text>
+            <text x="80" y="205" font-size="17" fill="#ffffff">Standard items: 60-75 sec</text>
+            <text x="80" y="235" font-size="17" fill="#ffd700">SATA items: 90-120 sec</text>
+            <text x="80" y="275" font-size="16" fill="#ffffff">At 90 sec → commit your best</text>
+            <text x="80" y="300" font-size="16" fill="#ffffff">guess and click forward.</text>
+            <text x="80" y="325" font-size="16" fill="#888">Stalling costs 3-5 items.</text>
+            <rect x="560" y="120" width="480" height="220" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="800" y="165" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Anxiety reset</text>
+            <text x="580" y="205" font-size="17" fill="#ffd700">"I'm willing to miss 4 today."</text>
+            <text x="580" y="240" font-size="17" fill="#ffffff">Box breathing 4-4 between</text>
+            <text x="580" y="265" font-size="17" fill="#ffffff">brutal items.</text>
+            <text x="580" y="305" font-size="16" fill="#888">One bad SATA shouldn't poison</text>
+            <text x="580" y="330" font-size="16" fill="#888">the next 30 items.</text>
+            <rect x="60" y="360" width="480" height="220" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="300" y="405" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Correct-count rule</text>
+            <text x="80" y="445" font-size="17" fill="#ffffff">Most SATAs have 2-4 correct</text>
+            <text x="80" y="475" font-size="17" fill="#ffffff">options out of 5-7.</text>
+            <text x="80" y="515" font-size="16" fill="#ffd700">Only 1 checked? Reread stem.</text>
+            <text x="80" y="545" font-size="16" fill="#ffd700">All 7 checked? Reread stem.</text>
+            <rect x="560" y="360" width="480" height="220" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="3" rx="12"/>
+            <text x="800" y="405" font-size="22" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Two-pass habit</text>
+            <text x="580" y="445" font-size="17" fill="#ffffff">Glance once at your picks.</text>
+            <text x="580" y="475" font-size="17" fill="#ffffff">"Does this combo fit the patient?"</text>
+            <text x="580" y="515" font-size="16" fill="#10b981">Reread stem = allowed.</text>
+            <text x="580" y="545" font-size="16" fill="#ef4444">Second-guess options = not allowed.</text>
+            <rect x="60" y="610" width="980" height="180" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="655" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">SATA discipline that wins</text>
+            <text x="100" y="700" font-size="18" fill="#ffffff">- Apply "True About This Patient?" to each option in isolation</text>
+            <text x="100" y="735" font-size="18" fill="#ffffff">- Run through the 4 trap categories before committing</text>
+            <text x="100" y="770" font-size="18" fill="#ffffff">- Commit at 90 seconds. Move on. Do not re-pick.</text>
+            <rect x="60" y="810" width="980" height="230" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-width="2" rx="12"/>
+            <text x="550" y="855" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Why this lesson pays off</text>
+            <text x="100" y="900" font-size="17" fill="#ffffff">SATA items move theta substantially in IRT terms.</text>
+            <text x="100" y="935" font-size="17" fill="#ffffff">A correctly answered hard SATA can offset 2 missed</text>
+            <text x="100" y="960" font-size="17" fill="#ffffff">easy multiple choice items.</text>
+            <text x="100" y="1000" font-size="18" fill="#ffd700">Master the workflow → swing pass/fail at the borderline.</text>
+          </svg>`,
+          caption: "Time-cap SATA at 90-120 seconds. Reread the stem (allowed) but never re-pick options (a panic move that loses items)."
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-strategy-lesson-3",
+    title: "Prioritization Framework — The 4-Step Decision Tree",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Why Prioritization Questions Decide Borderline Tests",
+        content: `**Prioritization questions** ask: *"Which patient does the nurse see first?"*, *"Which intervention takes priority?"*, *"Which assignment is most appropriate?"* They make up an estimated **15-20% of NCLEX items** and concentrate in the **Management of Care** subcategory — which carries the largest weight in the test plan (17-23% of items).
+
+**Why they matter disproportionately.** Prioritization questions are written at the **application/analysis** level of Bloom's taxonomy, which means they are calibrated as **hard items**. A correct answer on a hard prioritization question moves your ability estimate up more than a correct answer on a recall item. **These questions decide borderline tests.**
+
+**The trap that catches everyone.** Beginners pick the patient or intervention that is *most familiar* or *most acute-sounding*. The NCLEX exploits this by writing distractors that:
+- Use vivid clinical language ("crushing chest pain") for a stable patient.
+- Use mild language ("complaining of leg pain") for an unstable patient (post-op DVT → PE risk).
+- Mix new-onset symptoms (high priority) with chronic symptoms (low priority) of the same name.
+
+**The cure.** A **4-step decision tree** that runs from most life-threatening to least, applied uniformly to every option. It looks like this:
+
+1. **ABCs** (Airway, Breathing, Circulation) — does any patient have a threat to one of these?
+2. **Unstable vs. stable** — if no ABC threat, who is hemodynamically/neurologically unstable?
+3. **New-onset vs. chronic** — among stable patients, who has a *change* from baseline?
+4. **Actual vs. potential** — among chronic stable patients, who has an actual problem now versus a potential one?
+
+This card opens the framework. The remaining cards show how to apply each step, what the common distractors look like, and how to handle "delegation" and "assignment" variants of the prioritization question.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">The 4-Step Prioritization Tree</text>
+            <text x="550" y="105" font-size="18" fill="#888" text-anchor="middle">Apply in order. Stop at the first step that distinguishes.</text>
+            <rect x="200" y="140" width="700" height="120" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="550" y="180" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">STEP 1 — ABCs</text>
+            <text x="550" y="215" font-size="18" fill="#ffffff" text-anchor="middle">Airway → Breathing → Circulation</text>
+            <text x="550" y="245" font-size="16" fill="#888" text-anchor="middle">Threats here trump everything else.</text>
+            <line x1="550" y1="265" x2="550" y2="285" stroke="#ffffff" stroke-width="3"/>
+            <polygon points="540,285 560,285 550,300" fill="#ffffff"/>
+            <rect x="200" y="310" width="700" height="120" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="550" y="350" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">STEP 2 — Unstable vs. Stable</text>
+            <text x="550" y="385" font-size="18" fill="#ffffff" text-anchor="middle">Abnormal VS, altered LOC, active bleeding</text>
+            <text x="550" y="415" font-size="16" fill="#888" text-anchor="middle">Unstable wins, even with intact ABCs.</text>
+            <line x1="550" y1="435" x2="550" y2="455" stroke="#ffffff" stroke-width="3"/>
+            <polygon points="540,455 560,455 550,470" fill="#ffffff"/>
+            <rect x="200" y="480" width="700" height="120" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="3" rx="12"/>
+            <text x="550" y="520" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">STEP 3 — New-onset vs. Chronic</text>
+            <text x="550" y="555" font-size="18" fill="#ffffff" text-anchor="middle">"Sudden" / "new" / "first time" beats chronic.</text>
+            <text x="550" y="585" font-size="16" fill="#888" text-anchor="middle">New change demands assessment.</text>
+            <line x1="550" y1="605" x2="550" y2="625" stroke="#ffffff" stroke-width="3"/>
+            <polygon points="540,625 560,625 550,640" fill="#ffffff"/>
+            <rect x="200" y="650" width="700" height="120" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="690" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">STEP 4 — Actual vs. Potential</text>
+            <text x="550" y="725" font-size="18" fill="#ffffff" text-anchor="middle">An actual problem beats a potential one.</text>
+            <text x="550" y="755" font-size="16" fill="#888" text-anchor="middle">Last tiebreaker when patients are all stable/chronic.</text>
+            <rect x="60" y="810" width="980" height="220" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="855" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Why "see first" doesn't mean "most familiar"</text>
+            <text x="100" y="900" font-size="17" fill="#ffffff">Distractors use vivid familiar language ("crushing chest pain")</text>
+            <text x="100" y="930" font-size="17" fill="#ffffff">for a stable patient, and mild language ("leg pain") for an</text>
+            <text x="100" y="960" font-size="17" fill="#ffffff">unstable post-op DVT/PE risk.</text>
+            <text x="100" y="1005" font-size="18" fill="#ffd700">The framework protects against familiarity bias.</text>
+          </svg>`,
+          caption: "Four-step tree. Run top-down. Stop at the first step that produces a winner."
+        }
+      },
+      {
+        type: "concept",
+        title: "The Three Supporting Rules: Maslow, Acute over Chronic, Nursing Process",
+        content: `The 4-step tree is the **primary** framework. Three supporting rules fill in the corners.
+
+**Supporting Rule A — Maslow's Hierarchy.** When all options are physiologically stable, fall back to Maslow:
+- **Physiological** (oxygen, food, water, elimination, rest) wins.
+- Then **safety** (fall risk, suicide risk, allergy).
+- Then **love/belonging** (loneliness, family support).
+- Then **esteem** (independence, dignity).
+- Then **self-actualization** (long-term goals).
+
+Maslow is your tiebreaker when nobody is in physical danger. The classic miss: choosing "the patient who is depressed" over "the patient who hasn't eaten in 2 days." Hunger (physiological) beats depression (love/belonging) on the priority axis even though depression feels more clinically urgent.
+
+**Supporting Rule B — Acute Beats Chronic.** A patient with **new-onset** chest pain takes priority over a patient with chronic angina. A new fever in a post-op patient beats a chronic low-grade fever in a patient with autoimmune disease. The NCLEX rewards nurses who recognize a *change from baseline* as the highest-priority signal.
+
+**Supporting Rule C — The Nursing Process: Assess before Intervene.** For "what does the nurse do FIRST" questions, the answer is almost always an **assessment** step unless:
+- The patient has a life-threatening ABC problem (then intervene immediately).
+- The assessment has already been completed in the stem.
+
+If the stem describes a sudden change ("BP drops to 80/50") and the options include both "check the pulse" and "call the provider," **assess first**. You cannot communicate accurate information about something you haven't yet measured.
+
+**The exception to "assess first."** When an emergent intervention is universally indicated — CPR for pulselessness, EpiPen for anaphylaxis, suction for a blocked airway — **act before reassessing**. The rule is "assess first" not "assess only." Trust the ABC-trumps-everything logic of Step 1.
+
+**Putting it together.** The 4-step tree handles the question *"which patient first?"* The three supporting rules handle *"what does the nurse do first?"* Together they cover virtually every prioritization stem the NCLEX writes.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Maslow + Acute/Chronic + Nursing Process</text>
+            <text x="550" y="120" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">Maslow's Hierarchy (for stable patients)</text>
+            <polygon points="550,150 350,330 750,330" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="270" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">PHYSIOLOGICAL</text>
+            <text x="550" y="295" font-size="14" fill="#888" text-anchor="middle">O2, food, water, sleep, elimination</text>
+            <polygon points="350,330 250,440 850,440 750,330" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="400" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">SAFETY</text>
+            <text x="550" y="425" font-size="14" fill="#888" text-anchor="middle">Fall, suicide, allergy</text>
+            <polygon points="250,440 200,510 900,510 850,440" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="485" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">LOVE / BELONGING</text>
+            <polygon points="200,510 170,560 930,560 900,510" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="545" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">ESTEEM</text>
+            <polygon points="170,560 150,600 950,600 930,560" fill="#8b5cf6" opacity="0.25" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="585" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SELF-ACTUALIZATION</text>
+            <rect x="60" y="640" width="480" height="200" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="300" y="680" font-size="22" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Acute over Chronic</text>
+            <text x="80" y="715" font-size="17" fill="#ffffff">- New-onset chest pain &gt; chronic angina</text>
+            <text x="80" y="745" font-size="17" fill="#ffffff">- New fever post-op &gt; chronic low-grade</text>
+            <text x="80" y="775" font-size="17" fill="#ffffff">- Sudden confusion &gt; baseline dementia</text>
+            <text x="80" y="815" font-size="16" fill="#ffd700">Change from baseline = highest signal.</text>
+            <rect x="560" y="640" width="480" height="200" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="800" y="680" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Assess before Intervene</text>
+            <text x="580" y="715" font-size="17" fill="#ffffff">For "what FIRST?" → usually assessment.</text>
+            <text x="580" y="745" font-size="17" fill="#ffffff">Exception: ABC emergencies (act first).</text>
+            <text x="580" y="775" font-size="17" fill="#ffffff">Exception: stem says assessment is done.</text>
+            <text x="580" y="815" font-size="16" fill="#ffd700">CPR, EpiPen, suction — act first.</text>
+            <rect x="60" y="860" width="980" height="180" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="905" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Two question shapes, two frameworks</text>
+            <text x="100" y="950" font-size="18" fill="#ffffff">"Which PATIENT first?" → run the 4-step tree</text>
+            <text x="100" y="985" font-size="18" fill="#ffffff">"Which ACTION first?" → assess before intervene (+ ABC exception)</text>
+            <text x="100" y="1020" font-size="18" fill="#ffd700">Maslow is the universal tiebreaker for both.</text>
+          </svg>`,
+          caption: "Maslow handles stable-patient ties. Acute/chronic catches new changes. Nursing process answers 'what FIRST?'"
+        }
+      },
+      {
+        type: "example",
+        title: "Walking the Tree — Four Patients, Which First?",
+        content: `**Stem:** *The nurse is starting the shift on a med-surg floor. After receiving report, which patient should the nurse assess first?*
+
+**Patient A:** *Day 2 post-op total knee arthroplasty, complaining of right calf pain and tenderness, denies SOB.*
+
+**Patient B:** *Admitted yesterday for chronic CHF exacerbation, currently sitting up in bed eating breakfast, RR 22, SpO2 94% on 2L NC, no acute distress.*
+
+**Patient C:** *Newly admitted with right-sided weakness and slurred speech that began 30 minutes ago, BP 188/102, awake and answering questions.*
+
+**Patient D:** *POD 3 cholecystectomy, mild incisional pain rated 4/10, requesting morphine, otherwise stable.*
+
+**Step 1 — ABCs.** No patient has a current airway, breathing, or circulation collapse. Patient B is on O2 but stable on 94%. Move to Step 2.
+
+**Step 2 — Unstable vs. stable.** Patient C has **new-onset neurologic deficits** suggestive of acute stroke + hypertensive emergency. Patient A has **new-onset unilateral calf pain** post-op — classic DVT presentation with PE risk. Both are unstable; both demand assessment. Patient B is chronic-stable. Patient D is post-op stable with routine pain. Eliminate B and D.
+
+**Step 3 — Between A and C, who has the more time-critical change?** Stroke is a **time-window emergency** (tPA window is ≤4.5 hours from symptom onset; this patient is at 30 minutes — well within window). A delay of even 30 minutes meaningfully reduces tPA candidacy and worsens infarct size. DVT/PE is also serious, but the timeline is hours, not minutes. **Patient C wins.**
+
+**Why familiar logic loses.** A pattern-matching candidate picks Patient A because "post-op DVT" is a vivid drilled scenario. The NCLEX exploits this: the test rewards recognizing that **stroke is a tighter time window than DVT**, and time-window emergencies trump non-time-window emergencies.
+
+**The answer: Patient C.**
+
+**Variation: same stem, different timing.** If Patient C's symptoms started **5 hours ago** (outside tPA window), the tree would still pick C — but only by a smaller margin, because the salvageable-brain urgency drops. The exam writers deliberately keep stroke times under 4 hours to test whether you know the window.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" font-size="32" font-weight="bold" fill="#ffd700" text-anchor="middle">4 Patients — Run the Tree</text>
+            <rect x="60" y="100" width="480" height="180" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="80" y="135" font-size="20" font-weight="bold" fill="#f59e0b">A — TKA POD 2</text>
+            <text x="80" y="170" font-size="16" fill="#ffffff">Right calf pain + tenderness</text>
+            <text x="80" y="195" font-size="16" fill="#ffffff">Denies SOB</text>
+            <text x="80" y="230" font-size="15" fill="#888">DVT concern — PE risk</text>
+            <text x="80" y="260" font-size="14" fill="#ffd700">Unstable change, hours-window</text>
+            <rect x="560" y="100" width="480" height="180" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="580" y="135" font-size="20" font-weight="bold" fill="#10b981">B — Chronic CHF</text>
+            <text x="580" y="170" font-size="16" fill="#ffffff">Eating breakfast, RR 22</text>
+            <text x="580" y="195" font-size="16" fill="#ffffff">SpO2 94% on 2L, no distress</text>
+            <text x="580" y="230" font-size="15" fill="#888">Chronic, stable on O2</text>
+            <text x="580" y="260" font-size="14" fill="#10b981">Eliminate at Step 2</text>
+            <rect x="60" y="300" width="480" height="180" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="80" y="335" font-size="20" font-weight="bold" fill="#ef4444">C — Acute stroke + HTN</text>
+            <text x="80" y="370" font-size="16" fill="#ffffff">Right-sided weakness +</text>
+            <text x="80" y="395" font-size="16" fill="#ffffff">slurred speech 30 min ago</text>
+            <text x="80" y="430" font-size="15" fill="#888">BP 188/102, awake</text>
+            <text x="80" y="460" font-size="14" fill="#ffd700">TIME-WINDOW EMERGENCY</text>
+            <rect x="560" y="300" width="480" height="180" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="12"/>
+            <text x="580" y="335" font-size="20" font-weight="bold" fill="#6366f1">D — Cholecystectomy POD 3</text>
+            <text x="580" y="370" font-size="16" fill="#ffffff">Mild incisional pain 4/10</text>
+            <text x="580" y="395" font-size="16" fill="#ffffff">Requesting morphine</text>
+            <text x="580" y="430" font-size="15" fill="#888">Post-op stable, routine pain</text>
+            <text x="580" y="460" font-size="14" fill="#10b981">Eliminate at Step 2</text>
+            <rect x="60" y="510" width="980" height="280" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="550" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">The tree in action</text>
+            <text x="100" y="590" font-size="17" fill="#ffffff">Step 1 — ABCs intact for all 4 (B on stable O2). No winner.</text>
+            <text x="100" y="625" font-size="17" fill="#10b981">Step 2 — B and D chronic-stable → eliminated.</text>
+            <text x="100" y="655" font-size="17" fill="#ffffff">A and C both unstable with new changes.</text>
+            <text x="100" y="695" font-size="17" fill="#ffd700">Step 3 — Time-window comparison:</text>
+            <text x="100" y="725" font-size="17" fill="#ffffff">  Stroke tPA window ≤ 4.5 hrs (C at 30 min — open)</text>
+            <text x="100" y="755" font-size="17" fill="#ffffff">  DVT/PE window measured in hours, not minutes</text>
+            <rect x="60" y="820" width="980" height="220" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="870" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">Answer: Patient C</text>
+            <text x="550" y="910" font-size="17" fill="#ffffff" text-anchor="middle">New-onset focal deficits + open tPA window =</text>
+            <text x="550" y="940" font-size="17" fill="#ffffff" text-anchor="middle">tightest time-critical emergency on the floor.</text>
+            <text x="550" y="990" font-size="17" fill="#ffd700" text-anchor="middle">A pattern-matcher picks A because "post-op DVT"</text>
+            <text x="550" y="1020" font-size="17" fill="#ffd700" text-anchor="middle">sounds vivid. The tree picks C because minutes matter more.</text>
+          </svg>`,
+          caption: "Tree run top-down. ABCs intact. Two chronic-stable patients eliminated. Stroke beats DVT on time-window urgency."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "The nurse on a busy med-surg unit needs to assess four patients. Using the 4-step prioritization tree, which patient should the nurse assess FIRST?",
+        options: [
+          { text: "A 72-year-old with chronic COPD on 2L nasal cannula, RR 24, SpO2 93%, sitting up watching TV.", correct: false },
+          { text: "A 45-year-old post-op POD 1 from open cholecystectomy, complaining of pain 6/10 at the incision site, BP 128/76, alert.", correct: false },
+          { text: "A 60-year-old admitted 2 hours ago with pneumonia, now confused and combative when 1 hour ago was alert and oriented, RR 28, SpO2 88% on room air.", correct: true },
+          { text: "A 30-year-old with sickle cell crisis receiving IV hydromorphone, reporting pain 8/10 in lower extremities, VS stable.", correct: false }
+        ],
+        explanation: "Apply the tree top-down: **Step 1 (ABCs)** — Patient C has a Breathing problem (RR 28, SpO2 88% on room air — hypoxic) AND Circulation/neurologic deterioration (new-onset confusion suggesting cerebral hypoxia or sepsis). The other three are oxygenating adequately. **Step 2 (Unstable vs. stable)** — even if we ignored Step 1, C has a *change from baseline* in the last hour (alert → confused/combative), which is the highest-signal change. Patient A's SpO2 of 93% on 2L is at his baseline for chronic COPD. Patient B has expected post-op pain. Patient D has chronic painful crisis being treated appropriately. The 'time has changed in the last hour' phrasing is the NCLEX writer's signal that this patient has an emergent change requiring immediate assessment for sepsis, ARDS, or respiratory failure.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="65" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Why Patient C Wins</text>
+            <rect x="60" y="120" width="980" height="200" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="3" rx="12"/>
+            <text x="550" y="165" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">Step 1 catches it instantly</text>
+            <text x="100" y="210" font-size="18" fill="#ffffff">- RR 28 (tachypnea) + SpO2 88% RA → BREATHING failing</text>
+            <text x="100" y="245" font-size="18" fill="#ffffff">- New confusion → cerebral hypoxia OR sepsis-induced delirium</text>
+            <text x="100" y="280" font-size="18" fill="#ffffff">- Two-system change in 1 hour = emergent</text>
+            <rect x="60" y="340" width="320" height="280" fill="#888" opacity="0.15" stroke="#888" stroke-width="2" rx="10"/>
+            <text x="220" y="380" font-size="20" font-weight="bold" fill="#888" text-anchor="middle">A — COPD baseline</text>
+            <text x="80" y="415" font-size="15" fill="#ffffff">SpO2 93% on 2L</text>
+            <text x="80" y="440" font-size="15" fill="#ffffff">RR 24</text>
+            <text x="80" y="475" font-size="14" fill="#888">Within baseline for</text>
+            <text x="80" y="495" font-size="14" fill="#888">chronic COPD.</text>
+            <text x="80" y="540" font-size="14" fill="#888">Eliminate Step 2:</text>
+            <text x="80" y="565" font-size="14" fill="#888">stable / chronic.</text>
+            <rect x="390" y="340" width="320" height="280" fill="#888" opacity="0.15" stroke="#888" stroke-width="2" rx="10"/>
+            <text x="550" y="380" font-size="20" font-weight="bold" fill="#888" text-anchor="middle">B — Post-op pain</text>
+            <text x="410" y="415" font-size="15" fill="#ffffff">Cholecystectomy POD 1</text>
+            <text x="410" y="440" font-size="15" fill="#ffffff">Pain 6/10, VS stable</text>
+            <text x="410" y="475" font-size="14" fill="#888">Expected post-op</text>
+            <text x="410" y="495" font-size="14" fill="#888">presentation.</text>
+            <text x="410" y="540" font-size="14" fill="#888">Eliminate Step 2:</text>
+            <text x="410" y="565" font-size="14" fill="#888">stable / expected.</text>
+            <rect x="720" y="340" width="320" height="280" fill="#888" opacity="0.15" stroke="#888" stroke-width="2" rx="10"/>
+            <text x="880" y="380" font-size="20" font-weight="bold" fill="#888" text-anchor="middle">D — Sickle crisis</text>
+            <text x="740" y="415" font-size="15" fill="#ffffff">Pain 8/10, VS stable</text>
+            <text x="740" y="440" font-size="15" fill="#ffffff">Receiving hydromorphone</text>
+            <text x="740" y="475" font-size="14" fill="#888">Chronic crisis being</text>
+            <text x="740" y="495" font-size="14" fill="#888">actively treated.</text>
+            <text x="740" y="540" font-size="14" fill="#888">Eliminate Step 2:</text>
+            <text x="740" y="565" font-size="14" fill="#888">chronic with plan.</text>
+            <rect x="60" y="650" width="980" height="200" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="695" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">NCLEX writer's tell</text>
+            <text x="100" y="740" font-size="17" fill="#ffffff">"1 hour ago was alert and oriented" → explicit change from baseline.</text>
+            <text x="100" y="775" font-size="17" fill="#ffffff">The exam embeds time markers ("now," "previously," "2 hours ago")</text>
+            <text x="100" y="810" font-size="17" fill="#ffffff">when a patient is the right answer.</text>
+            <rect x="60" y="870" width="980" height="170" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="550" y="915" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">Answer: Patient C</text>
+            <text x="550" y="955" font-size="17" fill="#ffffff" text-anchor="middle">Acute respiratory + neurologic deterioration with</text>
+            <text x="550" y="985" font-size="17" fill="#ffffff" text-anchor="middle">documented change from baseline = highest priority.</text>
+            <text x="550" y="1020" font-size="17" fill="#ffd700" text-anchor="middle">Tree stops at Step 1. Confidence: high.</text>
+          </svg>`,
+          caption: "Tree stops at Step 1 — breathing failure plus new neurologic change wins outright."
+        }
+      },
+      {
+        type: "application",
+        title: "Delegation, Assignment, and the Real-World Application",
+        content: `Prioritization questions come in three flavors. Master all three with the same tree.
+
+**Flavor 1 — "Which patient FIRST?"** Already covered. Run the 4-step tree.
+
+**Flavor 2 — "Which patient can the nurse DELEGATE to the LPN/UAP?"** Inverted prioritization. The delegated patient is the **MOST stable** — usually the one the tree would assess LAST. Rules:
+- **UAP scope:** vital signs on stable patients, bathing, feeding, ambulating, basic ADLs, repositioning. **No teaching, assessment, medication, invasive care.**
+- **LPN/LVN scope:** stable patients with predictable outcomes. Can do most meds (varies by state), wound care, suctioning, foley insertion, reinforce teaching. **Cannot do initial assessment, blood admin, IV push narcotics (most states), unstable patient care.**
+- **RN-only:** initial assessment, teaching, plan of care, unstable patients, blood products, IV push narcotics, evaluating outcomes.
+
+**Flavor 3 — "Which assignment is APPROPRIATE for the float nurse / new graduate?"** Same logic as delegation: assign the **most stable, most predictable patient** to less-experienced staff. The patient with new-onset symptoms or unstable VS belongs with the experienced RN.
+
+**The recurring trap.** Beginners pick the patient with the most familiar diagnosis for delegation ("the diabetic patient is straightforward") without checking stability. The right framing is *"who is most STABLE right now,"* not *"who is most familiar."*
+
+**The 4-step tree in real practice.** On a real shift, an RN runs an abbreviated version of this tree every time they leave the nurses' station. The NCLEX is testing whether you have internalized the safety prioritization that protects patients in resource-constrained environments — where one nurse covers 4-6 patients and decisions are constant.
+
+**Practice habit.** When you do practice questions, **read the stem first, write down which step of the tree you expect to use BEFORE reading the options.** This builds the habit of letting the framework drive the answer rather than reverse-engineering from the choices. After 50-100 practice prioritization questions with this habit, the tree becomes automatic.
+
+**Bottom line.** Prioritization questions are how the NCLEX measures whether you can be trusted with patient assignments. The 4-step tree + Maslow + acute/chronic + assess-before-intervene cover virtually every shape this question can take. Drill the tree until it is reflexive, and you will gain a measurable theta advantage on the highest-leverage category in the test plan.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" font-size="34" font-weight="bold" fill="#ffd700" text-anchor="middle">Delegation &amp; Assignment Scopes</text>
+            <rect x="60" y="110" width="320" height="320" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" rx="12"/>
+            <text x="220" y="150" font-size="22" font-weight="bold" fill="#10b981" text-anchor="middle">UAP / CNA</text>
+            <text x="80" y="190" font-size="16" fill="#ffffff">- Vital signs (stable patients)</text>
+            <text x="80" y="220" font-size="16" fill="#ffffff">- Bathing, feeding, ADLs</text>
+            <text x="80" y="250" font-size="16" fill="#ffffff">- Ambulating stable patients</text>
+            <text x="80" y="280" font-size="16" fill="#ffffff">- Repositioning, I&amp;O recording</text>
+            <text x="80" y="310" font-size="16" fill="#ffffff">- Specimen collection</text>
+            <text x="80" y="360" font-size="15" fill="#ef4444">NOT: assessment, teaching,</text>
+            <text x="80" y="385" font-size="15" fill="#ef4444">medication, unstable patients</text>
+            <text x="80" y="415" font-size="15" fill="#ef4444">invasive procedures.</text>
+            <rect x="390" y="110" width="320" height="320" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="3" rx="12"/>
+            <text x="550" y="150" font-size="22" font-weight="bold" fill="#0ea5e9" text-anchor="middle">LPN / LVN</text>
+            <text x="410" y="190" font-size="16" fill="#ffffff">- Stable, predictable patients</text>
+            <text x="410" y="220" font-size="16" fill="#ffffff">- Most oral / IM / SQ meds</text>
+            <text x="410" y="250" font-size="16" fill="#ffffff">- Wound care, dressing changes</text>
+            <text x="410" y="280" font-size="16" fill="#ffffff">- Sterile dressing, foley, NG</text>
+            <text x="410" y="310" font-size="16" fill="#ffffff">- Reinforce teaching</text>
+            <text x="410" y="360" font-size="15" fill="#ef4444">NOT: initial assessment, blood,</text>
+            <text x="410" y="385" font-size="15" fill="#ef4444">IV push narcs, IV titration,</text>
+            <text x="410" y="415" font-size="15" fill="#ef4444">unstable patient care.</text>
+            <rect x="720" y="110" width="320" height="320" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="3" rx="12"/>
+            <text x="880" y="150" font-size="22" font-weight="bold" fill="#ec4899" text-anchor="middle">RN only</text>
+            <text x="740" y="190" font-size="16" fill="#ffffff">- Initial / ongoing assessment</text>
+            <text x="740" y="220" font-size="16" fill="#ffffff">- Plan of care, evaluation</text>
+            <text x="740" y="250" font-size="16" fill="#ffffff">- Patient/family teaching</text>
+            <text x="740" y="280" font-size="16" fill="#ffffff">- Unstable patient care</text>
+            <text x="740" y="310" font-size="16" fill="#ffffff">- Blood products</text>
+            <text x="740" y="340" font-size="16" fill="#ffffff">- IV push narcotics, titration</text>
+            <text x="740" y="380" font-size="15" fill="#ffd700">Rule: anything requiring</text>
+            <text x="740" y="405" font-size="15" fill="#ffd700">nursing judgment.</text>
+            <rect x="60" y="460" width="980" height="180" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="3" rx="12"/>
+            <text x="550" y="505" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Delegation = Inverted Prioritization</text>
+            <text x="100" y="545" font-size="17" fill="#ffffff">"Delegate to LPN / UAP" → assign the MOST stable patient</text>
+            <text x="100" y="580" font-size="17" fill="#ffffff">(the one the tree would assess LAST).</text>
+            <text x="100" y="620" font-size="17" fill="#ffd700">Same tree, run upside down.</text>
+            <rect x="60" y="670" width="980" height="180" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="3" rx="12"/>
+            <text x="550" y="715" font-size="22" font-weight="bold" fill="#6366f1" text-anchor="middle">Float nurse / new grad assignments</text>
+            <text x="100" y="755" font-size="17" fill="#ffffff">Assign the most STABLE, most PREDICTABLE patient.</text>
+            <text x="100" y="790" font-size="17" fill="#ffffff">Unstable + new-onset + unusual diagnoses stay with the</text>
+            <text x="100" y="820" font-size="17" fill="#ffffff">experienced charge or primary RN.</text>
+            <rect x="60" y="880" width="980" height="160" fill="#ffd700" opacity="0.12" stroke="#ffd700" stroke-width="2" rx="12"/>
+            <text x="550" y="920" font-size="22" font-weight="bold" fill="#ffd700" text-anchor="middle">Habit that locks in the tree</text>
+            <text x="100" y="960" font-size="17" fill="#ffffff">Before reading options, write down which step you expect to use.</text>
+            <text x="100" y="995" font-size="17" fill="#ffffff">After 50-100 reps, the tree becomes automatic — and the highest-</text>
+            <text x="100" y="1025" font-size="17" fill="#ffffff">leverage NCLEX category becomes your strongest.</text>
+          </svg>`,
+          caption: "Same tree, three question shapes. Delegation flips the tree upside down — assign the most stable patient down the chain."
+        }
+      }
+    ]
+  }
+],
         },
         {
             id: 'nclex-mock',
