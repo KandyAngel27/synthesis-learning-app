@@ -9383,7 +9383,7 @@ Done is better than perfect. Ship version 1, then iterate.`,
             title: 'Capstone: A Real Business Dashboard from Raw Data',
             author: 'Synthesis Learning',
             description: 'A full end-to-end build — raw CSVs in, Power Query cleaning, DAX measures, a 3-page Power BI report, and the brief you would actually email your boss.',
-            lessons: 9, duration: 135, progress: 0, category: 'excel-powerbi',
+            lessons: 12, duration: 180, progress: 0, category: 'excel-powerbi',
             lessonList: [
 {
     id: "excel-capstone-lesson-1",
@@ -10387,6 +10387,1361 @@ You just did, in 60 minutes across nine lessons, what most analysts charge R$ 15
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Capstone Complete — Ship the Dashboard</text><rect x="60" y="100" width="980" height="60" fill="#6366f1" rx="8"/><text x="550" y="140" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">15-Minute Final Lab — Four Steps</text><rect x="60" y="180" width="475" height="170" fill="#10b981" rx="8"/><text x="80" y="215" fill="#1a1a2e" font-size="20" font-weight="bold">Step 1: BUILD (5 min)</text><text x="80" y="245" fill="#1a1a2e" font-size="15">→ Canvas 16:9, bg #1a1a2e</text><text x="80" y="270" fill="#1a1a2e" font-size="15">→ 5 KPI cards across top</text><text x="80" y="295" fill="#1a1a2e" font-size="15">→ Trend line center</text><text x="80" y="320" fill="#1a1a2e" font-size="15">→ Top 5 cat + state right</text><rect x="565" y="180" width="475" height="170" fill="#f59e0b" rx="8"/><text x="585" y="215" fill="#1a1a2e" font-size="20" font-weight="bold">Step 2: 30-SEC TEST (3 min)</text><text x="585" y="245" fill="#1a1a2e" font-size="14">→ Growing? (+89.5%)</text><text x="585" y="270" fill="#1a1a2e" font-size="14">→ AOV trend? (-1.3%)</text><text x="585" y="295" fill="#1a1a2e" font-size="14">→ State concentration? (SP 44%)</text><text x="585" y="320" fill="#1a1a2e" font-size="14">→ Deliveries OK? (92%)</text><rect x="60" y="370" width="475" height="170" fill="#ec4899" rx="8"/><text x="80" y="405" fill="#ffffff" font-size="20" font-weight="bold">Step 3: POLISH (4 min)</text><text x="80" y="435" fill="#ffffff" font-size="15">→ Header bg #0a0a1a</text><text x="80" y="460" fill="#ffffff" font-size="15">→ Titles Segoe UI 16pt #ffd700</text><text x="80" y="485" fill="#ffffff" font-size="15">→ Page 2 placeholder "Detail"</text><text x="80" y="510" fill="#ffd700" font-size="15">→ Save Olist_Capstone_v5_FINAL</text><rect x="565" y="370" width="475" height="170" fill="#0ea5e9" rx="8"/><text x="585" y="405" fill="#ffffff" font-size="20" font-weight="bold">Step 4: SHIP (3 min)</text><text x="585" y="435" fill="#ffffff" font-size="14">→ Email Marina, 3 bullets</text><text x="585" y="460" fill="#ffffff" font-size="14">→ Screenshot Page 1</text><text x="585" y="485" fill="#ffffff" font-size="14">→ Subject: "Page 1 ready"</text><text x="585" y="510" fill="#ffd700" font-size="14">→ Hit send. Done.</text><rect x="60" y="560" width="980" height="60" fill="#ffd700" rx="8"/><text x="550" y="600" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">9 Books · 60 Minutes · 1 Production Dashboard</text><rect x="60" y="640" width="980" height="260" fill="#1a1a2e" stroke="#ffd700" stroke-width="2"/><text x="80" y="680" fill="#ffd700" font-size="20" font-weight="bold">The Arc You Just Completed</text><text x="80" y="715" fill="#ffffff" font-size="15">Book 1-2: Excel foundations — formulas, references, ranges</text><text x="80" y="740" fill="#ffffff" font-size="15">Book 3-4: Pivot tables, lookups, data shaping</text><text x="80" y="765" fill="#ffffff" font-size="15">Book 5: Power Query — extract, transform, load</text><text x="80" y="790" fill="#ffffff" font-size="15">Book 6-7: Power BI basics, modeling, relationships</text><text x="80" y="815" fill="#ffffff" font-size="15">Book 8: DAX deep dive — context, CALCULATE, time intelligence</text><text x="80" y="840" fill="#ffd700" font-size="15" font-weight="bold">Book 9 (this one): Capstone — real data, real dashboard, real ship</text><text x="80" y="875" fill="#888" font-size="14" font-style="italic">Each step compounded. Now you wield the tool instead of fearing it.</text><rect x="60" y="920" width="980" height="140" fill="#10b981" rx="8" opacity="0.25"/><text x="80" y="960" fill="#10b981" font-size="22" font-weight="bold">Marina's Reply (the moment that matters)</text><text x="80" y="995" fill="#ffffff" font-size="16" font-style="italic">"Perfect. I'll lead with the SP concentration point in the board call.</text><text x="80" y="1020" fill="#ffffff" font-size="16" font-style="italic">Can you build Page 2 by Tuesday? I want to drill into category margins."</text><text x="80" y="1050" fill="#ffd700" font-size="16" font-weight="bold">→ That email is the moment you became a data professional.</text></svg>`,
           caption: "Four steps to ship — and the email reply that turns a learner into a professional."
+        }
+      }
+    ]
+  },
+{
+    id: "excel-capstone-lesson-10",
+    title: "Page 2 — Sales Detail Drilldown",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From Executive Summary to Sales Story",
+        content: `Page 1 told Marina, the VP of Operations at Olist, the headline numbers: R$13.6M in revenue, 99,441 orders, 4.09 average review score. She nodded — but then she asked the question every executive eventually asks: "Where is that revenue actually coming from?"
+
+That is Page 2's job. The Sales Detail page answers four drill-down questions in one screen:
+1. Which Brazilian states drive revenue? (filled map)
+2. Which product categories dominate? (top-10 bar chart)
+3. Where do categories and regions overlap? (matrix heatmap)
+4. Which sellers are outliers — high revenue but poor reviews? (scatter)
+
+Marina cannot answer any of these from a KPI tile. She needs geography, hierarchy, and the ability to click São Paulo and watch every other visual filter in real time. That is the gift Power BI gives you that Excel cannot: synchronized cross-filtering across an entire canvas.
+
+You already have the model. fact_OrderItems has 112,650 rows joined to dim_Customers (with customer_state), dim_Products (with product_category_name), dim_Sellers (with seller_state), and dCalendar. Every relationship is single-direction, star schema, validated. The hard work is done. Today you arrange that data into a story.
+
+By the end of this lesson, Page 2 will look like a McKinsey deck — and clicking the state of Minas Gerais will instantly re-rank the top categories, recolor the matrix, and shrink the seller scatter to only Minas Gerais sellers. Drill-through to a Seller Detail page is the encore. Let's build.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Page 2: Sales Detail Drilldown</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="18">Olist Brazil — Marina, VP Operations</text>
+            <rect x="40" y="120" width="510" height="420" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="150" fill="#ffd700" font-size="18" font-weight="bold">Revenue by Customer State</text>
+            <path d="M 200 280 L 280 250 L 360 260 L 420 310 L 440 380 L 380 440 L 300 460 L 220 430 L 180 360 Z" fill="#6366f1" opacity="0.9"/>
+            <path d="M 280 250 L 360 260 L 380 200 L 320 180 Z" fill="#8b5cf6" opacity="0.7"/>
+            <path d="M 360 260 L 420 310 L 480 290 L 440 240 Z" fill="#0ea5e9" opacity="0.6"/>
+            <circle cx="300" cy="370" r="8" fill="#ffd700"/>
+            <text x="315" y="375" fill="#ffffff" font-size="11">SP R$5.2M</text>
+            <circle cx="350" cy="290" r="6" fill="#10b981"/>
+            <text x="365" y="295" fill="#ffffff" font-size="11">MG R$1.8M</text>
+            <circle cx="400" cy="350" r="5" fill="#f59e0b"/>
+            <text x="415" y="355" fill="#ffffff" font-size="11">RJ R$1.4M</text>
+            <rect x="570" y="120" width="490" height="420" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="590" y="150" fill="#ffd700" font-size="18" font-weight="bold">Top 10 Categories by Revenue</text>
+            <rect x="590" y="170" width="380" height="22" fill="#10b981"/><text x="595" y="187" fill="#ffffff" font-size="13">health_beauty R$1.4M</text>
+            <rect x="590" y="200" width="340" height="22" fill="#10b981"/><text x="595" y="217" fill="#ffffff" font-size="13">watches_gifts R$1.2M</text>
+            <rect x="590" y="230" width="310" height="22" fill="#10b981"/><text x="595" y="247" fill="#ffffff" font-size="13">bed_bath_table R$1.0M</text>
+            <rect x="590" y="260" width="280" height="22" fill="#10b981"/><text x="595" y="277" fill="#ffffff" font-size="13">sports_leisure R$0.9M</text>
+            <rect x="590" y="290" width="250" height="22" fill="#10b981"/><text x="595" y="307" fill="#ffffff" font-size="13">computers_acc R$0.8M</text>
+            <rect x="590" y="320" width="220" height="22" fill="#10b981"/><text x="595" y="337" fill="#ffffff" font-size="13">furniture_decor R$0.7M</text>
+            <rect x="590" y="350" width="190" height="22" fill="#10b981"/><text x="595" y="367" fill="#ffffff" font-size="13">housewares R$0.6M</text>
+            <rect x="590" y="380" width="160" height="22" fill="#10b981"/><text x="595" y="397" fill="#ffffff" font-size="13">cool_stuff R$0.5M</text>
+            <rect x="590" y="410" width="130" height="22" fill="#10b981"/><text x="595" y="427" fill="#ffffff" font-size="13">auto R$0.4M</text>
+            <rect x="590" y="440" width="100" height="22" fill="#10b981"/><text x="595" y="457" fill="#ffffff" font-size="13">garden_tools R$0.3M</text>
+            <rect x="40" y="560" width="510" height="500" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="590" fill="#ffd700" font-size="18" font-weight="bold">Category × State Matrix</text>
+            <text x="120" y="625" fill="#888" font-size="12">SP</text>
+            <text x="170" y="625" fill="#888" font-size="12">MG</text>
+            <text x="220" y="625" fill="#888" font-size="12">RJ</text>
+            <text x="270" y="625" fill="#888" font-size="12">RS</text>
+            <text x="320" y="625" fill="#888" font-size="12">PR</text>
+            <text x="370" y="625" fill="#888" font-size="12">SC</text>
+            <text x="420" y="625" fill="#888" font-size="12">BA</text>
+            <text x="470" y="625" fill="#888" font-size="12">GO</text>
+            <text x="60" y="660" fill="#888" font-size="11">health</text>
+            <rect x="105" y="645" width="35" height="22" fill="#ef4444"/>
+            <rect x="155" y="645" width="35" height="22" fill="#f59e0b"/>
+            <rect x="205" y="645" width="35" height="22" fill="#f59e0b"/>
+            <rect x="255" y="645" width="35" height="22" fill="#10b981"/>
+            <rect x="305" y="645" width="35" height="22" fill="#10b981"/>
+            <rect x="355" y="645" width="35" height="22" fill="#10b981"/>
+            <rect x="405" y="645" width="35" height="22" fill="#10b981"/>
+            <rect x="455" y="645" width="35" height="22" fill="#10b981"/>
+            <text x="60" y="700" fill="#888" font-size="11">watches</text>
+            <rect x="105" y="685" width="35" height="22" fill="#ef4444"/>
+            <rect x="155" y="685" width="35" height="22" fill="#f59e0b"/>
+            <rect x="205" y="685" width="35" height="22" fill="#f59e0b"/>
+            <rect x="255" y="685" width="35" height="22" fill="#10b981"/>
+            <rect x="305" y="685" width="35" height="22" fill="#10b981"/>
+            <rect x="355" y="685" width="35" height="22" fill="#10b981"/>
+            <rect x="405" y="685" width="35" height="22" fill="#10b981"/>
+            <rect x="455" y="685" width="35" height="22" fill="#10b981"/>
+            <text x="60" y="740" fill="#888" font-size="11">bed_bath</text>
+            <rect x="105" y="725" width="35" height="22" fill="#ef4444"/>
+            <rect x="155" y="725" width="35" height="22" fill="#ef4444"/>
+            <rect x="205" y="725" width="35" height="22" fill="#f59e0b"/>
+            <rect x="255" y="725" width="35" height="22" fill="#10b981"/>
+            <rect x="305" y="725" width="35" height="22" fill="#10b981"/>
+            <rect x="355" y="725" width="35" height="22" fill="#10b981"/>
+            <rect x="405" y="725" width="35" height="22" fill="#10b981"/>
+            <rect x="455" y="725" width="35" height="22" fill="#10b981"/>
+            <text x="60" y="900" fill="#888" font-size="11">Heat: red=high, green=low</text>
+            <rect x="570" y="560" width="490" height="500" fill="#16213e" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="590" y="590" fill="#ffd700" font-size="18" font-weight="bold">Seller Scatter: Revenue vs Review</text>
+            <line x1="610" y1="1020" x2="1040" y2="1020" stroke="#888" stroke-width="1.5"/>
+            <line x1="610" y1="620" x2="610" y2="1020" stroke="#888" stroke-width="1.5"/>
+            <text x="820" y="1045" text-anchor="middle" fill="#888" font-size="12">Total Revenue (R$)</text>
+            <text x="600" y="820" text-anchor="middle" fill="#888" font-size="12" transform="rotate(-90 600 820)">Avg Review</text>
+            <circle cx="680" cy="700" r="6" fill="#10b981"/>
+            <circle cx="720" cy="720" r="8" fill="#10b981"/>
+            <circle cx="760" cy="680" r="5" fill="#10b981"/>
+            <circle cx="800" cy="740" r="10" fill="#10b981"/>
+            <circle cx="840" cy="660" r="7" fill="#10b981"/>
+            <circle cx="880" cy="700" r="12" fill="#10b981"/>
+            <circle cx="920" cy="780" r="14" fill="#f59e0b"/>
+            <circle cx="960" cy="900" r="16" fill="#ef4444"/>
+            <circle cx="990" cy="950" r="18" fill="#ef4444"/>
+            <text x="990" y="980" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">Outlier!</text>
+          </svg>`,
+          caption: "Page 2 layout: filled map (geography), bar chart (categories), matrix (intersection), scatter (seller outliers)."
+        }
+      },
+      {
+        type: "concept",
+        title: "Filled Maps, Matrices, and Synchronized Cross-Filtering",
+        content: `Three visuals make Page 2 actually drill — let us unpack each.
+
+**1. Filled Map (Brazilian states).** Power BI's built-in Filled Map visual reads ISO subdivision codes. Drag dim_Customers[customer_state] onto Location and Total Revenue onto Color saturation. Power BI auto-geocodes SP, MG, RJ, RS, PR... into the correct polygons. Set Data colors → Diverging, low = #16213e, center = #6366f1, high = #ffd700. Now São Paulo glows gold (R$5.2M, 38% of total) and Acre is barely visible (R$28K). Tooltip override: add Order Count and Avg Review so hovering Bahia reveals "Revenue R$0.6M | 5,400 orders | 4.01 stars" without leaving the map.
+
+**2. Matrix with conditional formatting.** A matrix is Power BI's pivot table — rows = product_category, columns = customer_state, values = Total Revenue. Then Format → Cell elements → Background color → Rules → 0–500K red, 500K–1.5M amber, 1.5M+ green. Suddenly the eye spots that bed_bath_table in SP is a green island in a red sea — Marina's "where do we double down" answer in three seconds.
+
+**3. Synchronized cross-filtering.** This is the magic. Click São Paulo on the map. The category bar chart instantly re-ranks — showing only SP categories. The matrix dims non-SP columns. The scatter shrinks to just SP sellers. You did not write a single line of code for this. The star schema relationships propagate the filter context automatically. The DAX measure Total Revenue = SUMX(fact_OrderItems, fact_OrderItems[price] + fact_OrderItems[freight_value]) is evaluated 27 times, once per state visible, but the engine handles it in milliseconds.
+
+**Drill-through to Seller Detail page.** Create Page 4 (hidden). Add seller_id to its Drill-through filter well. Now right-clicking any seller dot in the scatter → Drill through → Seller Detail jumps to a focused page showing that seller's revenue trend, top categories, review breakdown, and delivery performance. The breadcrumb at the top says "Drill-through from Sales Detail" with a back arrow. This single feature is what separates a dashboard from a tool.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Cross-Filter Propagation</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">Click SP on map → entire page refilters</text>
+            <rect x="40" y="130" width="480" height="350" fill="#16213e" stroke="#ffd700" stroke-width="3" rx="8"/>
+            <text x="60" y="160" fill="#ffd700" font-size="18" font-weight="bold">Map: SELECTED → São Paulo</text>
+            <path d="M 200 250 L 280 230 L 360 240 L 420 290 L 440 360 L 380 420 L 300 440 L 220 410 L 180 340 Z" fill="#6366f1" opacity="0.3"/>
+            <circle cx="300" cy="350" r="40" fill="#ffd700" stroke="#ffffff" stroke-width="4"/>
+            <text x="300" y="358" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">SP</text>
+            <text x="100" y="450" fill="#ffffff" font-size="13">customer_state = "SP"</text>
+            <text x="100" y="470" fill="#10b981" font-size="13">FILTER ACTIVE</text>
+            <path d="M 520 305 L 580 305" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+            <defs>
+              <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+              </marker>
+            </defs>
+            <text x="540" y="295" fill="#ffd700" font-size="14" font-weight="bold">filters</text>
+            <rect x="600" y="130" width="460" height="160" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="620" y="160" fill="#ffd700" font-size="16" font-weight="bold">Category Bar (re-ranked for SP)</text>
+            <rect x="620" y="175" width="280" height="14" fill="#10b981"/>
+            <text x="625" y="186" fill="#ffffff" font-size="11">health_beauty (SP) R$520K</text>
+            <rect x="620" y="195" width="240" height="14" fill="#10b981"/>
+            <text x="625" y="206" fill="#ffffff" font-size="11">bed_bath_table (SP) R$450K</text>
+            <rect x="620" y="215" width="210" height="14" fill="#10b981"/>
+            <text x="625" y="226" fill="#ffffff" font-size="11">watches_gifts (SP) R$390K</text>
+            <rect x="620" y="235" width="180" height="14" fill="#10b981"/>
+            <text x="625" y="246" fill="#ffffff" font-size="11">sports_leisure (SP) R$340K</text>
+            <rect x="620" y="255" width="150" height="14" fill="#10b981"/>
+            <text x="625" y="266" fill="#ffffff" font-size="11">computers_acc (SP) R$280K</text>
+            <rect x="600" y="310" width="460" height="170" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="620" y="340" fill="#ffd700" font-size="16" font-weight="bold">Matrix (SP column highlighted)</text>
+            <rect x="620" y="355" width="50" height="20" fill="#ffd700"/>
+            <text x="645" y="370" text-anchor="middle" fill="#1a1a2e" font-size="11" font-weight="bold">SP</text>
+            <rect x="675" y="355" width="50" height="20" fill="#16213e" stroke="#888"/>
+            <text x="700" y="370" text-anchor="middle" fill="#888" font-size="11">MG</text>
+            <rect x="730" y="355" width="50" height="20" fill="#16213e" stroke="#888"/>
+            <text x="755" y="370" text-anchor="middle" fill="#888" font-size="11">RJ</text>
+            <rect x="620" y="380" width="50" height="20" fill="#10b981"/>
+            <rect x="675" y="380" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="730" y="380" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="620" y="405" width="50" height="20" fill="#f59e0b"/>
+            <rect x="675" y="405" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="730" y="405" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="620" y="430" width="50" height="20" fill="#10b981"/>
+            <rect x="675" y="430" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="730" y="430" width="50" height="20" fill="#16213e" opacity="0.3"/>
+            <rect x="40" y="510" width="1020" height="280" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="540" fill="#ffd700" font-size="18" font-weight="bold">Star Schema Filter Propagation</text>
+            <rect x="80" y="570" width="180" height="80" fill="#6366f1" rx="6"/>
+            <text x="170" y="600" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">dim_Customers</text>
+            <text x="170" y="620" text-anchor="middle" fill="#ffffff" font-size="11">customer_state = SP</text>
+            <text x="170" y="638" text-anchor="middle" fill="#ffd700" font-size="11">FILTERED</text>
+            <path d="M 260 610 L 430 700" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+            <rect x="430" y="670" width="220" height="80" fill="#ef4444" rx="6"/>
+            <text x="540" y="700" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">fact_OrderItems</text>
+            <text x="540" y="720" text-anchor="middle" fill="#ffffff" font-size="11">112,650 rows → 41,746 (SP)</text>
+            <text x="540" y="738" text-anchor="middle" fill="#ffd700" font-size="11">CASCADED</text>
+            <path d="M 650 700 L 820 610" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+            <rect x="820" y="570" width="180" height="80" fill="#8b5cf6" rx="6"/>
+            <text x="910" y="600" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">dim_Products</text>
+            <text x="910" y="620" text-anchor="middle" fill="#ffffff" font-size="11">categories shown in</text>
+            <text x="910" y="635" text-anchor="middle" fill="#ffffff" font-size="11">SP orders only</text>
+            <text x="550" y="850" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">One click. Three visuals. Zero code.</text>
+            <text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="14">That is what a real model gives you.</text>
+            <text x="550" y="970" text-anchor="middle" fill="#10b981" font-size="14">Total Revenue = SUMX(fact_OrderItems, [price] + [freight_value])</text>
+            <text x="550" y="1000" text-anchor="middle" fill="#888" font-size="13">re-evaluated automatically under each filter context</text>
+          </svg>`,
+          caption: "Clicking SP on the map cascades through dim_Customers → fact_OrderItems → dim_Products via the star schema."
+        }
+      },
+      {
+        type: "example",
+        title: "Building Page 2 in 25 Minutes",
+        content: `Watch the build, end to end. Open the Olist.pbix file from Lesson 9. Right-click the page tabs, Duplicate Page 1, rename to "Sales Detail." Strip everything except the title bar and date slicer.
+
+**Minute 0–5: Filled Map.** Insert visual → Filled Map (Map icon, requires sign-in to Bing geocoding which is enabled for student accounts). Drag dim_Customers[customer_state] → Location. Total Revenue → Color saturation. Format pane → Map settings → Style: "Grayscale." Data colors → Diverging, Minimum #16213e (dark), Maximum #ffd700 (gold). Title: "Revenue by Customer State." Tooltip: add Total Orders and Avg Review Score so hovering MG shows three metrics at once.
+
+**Minute 5–10: Top categories bar.** Insert → Clustered bar chart. dim_Products[product_category_name] → Y-axis. Total Revenue → X-axis. Filter pane: Top N → Top 10 by Total Revenue. Data colors: #10b981. Title: "Top 10 Categories by Revenue." Format → Data labels: On, units = millions, decimal = 1 (so it reads "R$1.4M").
+
+**Minute 10–15: Category × State matrix.** Insert → Matrix. Rows = product_category_name, Columns = customer_state. Values = Total Revenue. Right-click the Total Revenue field in the Values well → Conditional formatting → Background color → Format style: Rules. 0 to 500K → #ef4444. 500K to 1.5M → #f59e0b. 1.5M to max → #10b981. Now the matrix reads like a heat map.
+
+**Minute 15–20: Seller scatter.** Insert → Scatter chart. X-axis = Total Revenue. Y-axis = Avg Review Score. Details = seller_id (so each dot is one seller). Size = Total Orders. Add a constant line at Y = 4.0 in the Analytics pane — anything below is a problem seller. Color the dots by a measure: Seller Health = IF([Avg Review] < 4.0, "Risk", "Healthy") with risk = #ef4444.
+
+**Minute 20–25: Drill-through to Seller Detail.** Create new page "Seller Detail," set it Hidden. Drag dim_Sellers[seller_id] to the Drill-through filter well. Add a card showing seller_id, a line chart of monthly revenue, and a bar of top 5 categories. Go back to the scatter — right-click any dot → Drill through → Seller Detail. You just shipped page-level navigation.
+
+Save. Refresh. Click São Paulo. Watch the page transform. Marina is going to think you hired someone.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">25-Minute Build Sequence</text>
+            <line x1="100" y1="120" x2="1000" y2="120" stroke="#888" stroke-width="2"/>
+            <circle cx="100" cy="120" r="8" fill="#ffd700"/>
+            <text x="100" y="105" text-anchor="middle" fill="#ffd700" font-size="13">0 min</text>
+            <circle cx="280" cy="120" r="8" fill="#10b981"/>
+            <text x="280" y="105" text-anchor="middle" fill="#10b981" font-size="13">5 min</text>
+            <circle cx="460" cy="120" r="8" fill="#10b981"/>
+            <text x="460" y="105" text-anchor="middle" fill="#10b981" font-size="13">10 min</text>
+            <circle cx="640" cy="120" r="8" fill="#10b981"/>
+            <text x="640" y="105" text-anchor="middle" fill="#10b981" font-size="13">15 min</text>
+            <circle cx="820" cy="120" r="8" fill="#10b981"/>
+            <text x="820" y="105" text-anchor="middle" fill="#10b981" font-size="13">20 min</text>
+            <circle cx="1000" cy="120" r="10" fill="#ffd700"/>
+            <text x="1000" y="105" text-anchor="middle" fill="#ffd700" font-size="13">25 min</text>
+            <rect x="40" y="160" width="200" height="180" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="6"/>
+            <text x="140" y="185" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Step 1: Map</text>
+            <text x="50" y="210" fill="#ffffff" font-size="11">Insert Filled Map</text>
+            <text x="50" y="230" fill="#ffffff" font-size="11">customer_state → Loc</text>
+            <text x="50" y="250" fill="#ffffff" font-size="11">Total Revenue → Color</text>
+            <text x="50" y="270" fill="#ffffff" font-size="11">Diverging palette:</text>
+            <rect x="55" y="282" width="20" height="14" fill="#16213e" stroke="#ffffff"/>
+            <text x="85" y="294" fill="#888" font-size="11">to</text>
+            <rect x="105" y="282" width="20" height="14" fill="#ffd700"/>
+            <text x="50" y="320" fill="#10b981" font-size="11">Tooltip: 3 metrics</text>
+            <rect x="260" y="160" width="200" height="180" fill="#16213e" stroke="#10b981" stroke-width="2" rx="6"/>
+            <text x="360" y="185" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Step 2: Top Cat Bar</text>
+            <text x="270" y="210" fill="#ffffff" font-size="11">Clustered bar chart</text>
+            <text x="270" y="230" fill="#ffffff" font-size="11">category → Y axis</text>
+            <text x="270" y="250" fill="#ffffff" font-size="11">Total Revenue → X</text>
+            <text x="270" y="270" fill="#ffffff" font-size="11">Top N filter = 10</text>
+            <text x="270" y="290" fill="#ffffff" font-size="11">Color #10b981</text>
+            <text x="270" y="320" fill="#10b981" font-size="11">Data labels R$1.4M</text>
+            <rect x="480" y="160" width="200" height="180" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="6"/>
+            <text x="580" y="185" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Step 3: Matrix</text>
+            <text x="490" y="210" fill="#ffffff" font-size="11">Rows: category</text>
+            <text x="490" y="230" fill="#ffffff" font-size="11">Cols: state</text>
+            <text x="490" y="250" fill="#ffffff" font-size="11">Values: Total Revenue</text>
+            <text x="490" y="270" fill="#ffffff" font-size="11">Cond. format rules:</text>
+            <rect x="490" y="280" width="14" height="12" fill="#ef4444"/>
+            <text x="510" y="291" fill="#888" font-size="11">&lt;500K</text>
+            <rect x="555" y="280" width="14" height="12" fill="#f59e0b"/>
+            <text x="575" y="291" fill="#888" font-size="11">to 1.5M</text>
+            <rect x="625" y="280" width="14" height="12" fill="#10b981"/>
+            <text x="490" y="320" fill="#10b981" font-size="11">Heat map ready</text>
+            <rect x="700" y="160" width="200" height="180" fill="#16213e" stroke="#ec4899" stroke-width="2" rx="6"/>
+            <text x="800" y="185" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Step 4: Scatter</text>
+            <text x="710" y="210" fill="#ffffff" font-size="11">X: Total Revenue</text>
+            <text x="710" y="230" fill="#ffffff" font-size="11">Y: Avg Review</text>
+            <text x="710" y="250" fill="#ffffff" font-size="11">Details: seller_id</text>
+            <text x="710" y="270" fill="#ffffff" font-size="11">Size: Total Orders</text>
+            <text x="710" y="290" fill="#ffffff" font-size="11">Constant line Y=4.0</text>
+            <text x="710" y="320" fill="#10b981" font-size="11">Risk dots glow red</text>
+            <rect x="920" y="160" width="140" height="180" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="6"/>
+            <text x="990" y="185" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Step 5</text>
+            <text x="990" y="205" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">Drill-thru</text>
+            <text x="930" y="230" fill="#ffffff" font-size="10">New page</text>
+            <text x="930" y="245" fill="#ffffff" font-size="10">"Seller Detail"</text>
+            <text x="930" y="260" fill="#ffffff" font-size="10">Hidden = ON</text>
+            <text x="930" y="275" fill="#ffffff" font-size="10">seller_id →</text>
+            <text x="930" y="290" fill="#ffffff" font-size="10">drill filter</text>
+            <text x="930" y="320" fill="#10b981" font-size="10">Right-click =</text>
+            <text x="930" y="333" fill="#10b981" font-size="10">drill through</text>
+            <rect x="40" y="380" width="1020" height="680" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="550" y="415" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Finished Page 2 (preview)</text>
+            <rect x="70" y="440" width="450" height="290" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="85" y="465" fill="#ffd700" font-size="13" font-weight="bold">Revenue by State (Brazil)</text>
+            <path d="M 200 540 L 280 520 L 360 530 L 420 580 L 440 650 L 380 700 L 300 715 L 220 690 L 180 620 Z" fill="#ffd700" opacity="0.7"/>
+            <circle cx="300" cy="620" r="6" fill="#ffd700"/>
+            <text x="315" y="624" fill="#ffffff" font-size="10">SP R$5.2M</text>
+            <rect x="540" y="440" width="450" height="140" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="555" y="465" fill="#ffd700" font-size="13" font-weight="bold">Top 10 Categories</text>
+            <rect x="555" y="475" width="350" height="10" fill="#10b981"/>
+            <rect x="555" y="490" width="310" height="10" fill="#10b981"/>
+            <rect x="555" y="505" width="280" height="10" fill="#10b981"/>
+            <rect x="555" y="520" width="250" height="10" fill="#10b981"/>
+            <rect x="555" y="535" width="220" height="10" fill="#10b981"/>
+            <rect x="555" y="550" width="190" height="10" fill="#10b981"/>
+            <rect x="540" y="600" width="450" height="130" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="555" y="625" fill="#ffd700" font-size="13" font-weight="bold">Category × State Heat Matrix</text>
+            <rect x="555" y="635" width="30" height="14" fill="#ef4444"/>
+            <rect x="590" y="635" width="30" height="14" fill="#f59e0b"/>
+            <rect x="625" y="635" width="30" height="14" fill="#10b981"/>
+            <rect x="660" y="635" width="30" height="14" fill="#10b981"/>
+            <rect x="695" y="635" width="30" height="14" fill="#10b981"/>
+            <rect x="555" y="655" width="30" height="14" fill="#ef4444"/>
+            <rect x="590" y="655" width="30" height="14" fill="#f59e0b"/>
+            <rect x="625" y="655" width="30" height="14" fill="#10b981"/>
+            <rect x="660" y="655" width="30" height="14" fill="#10b981"/>
+            <rect x="695" y="655" width="30" height="14" fill="#10b981"/>
+            <rect x="555" y="675" width="30" height="14" fill="#f59e0b"/>
+            <rect x="590" y="675" width="30" height="14" fill="#10b981"/>
+            <rect x="625" y="675" width="30" height="14" fill="#10b981"/>
+            <rect x="660" y="675" width="30" height="14" fill="#10b981"/>
+            <rect x="695" y="675" width="30" height="14" fill="#10b981"/>
+            <rect x="70" y="750" width="920" height="290" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="85" y="775" fill="#ffd700" font-size="13" font-weight="bold">Seller Scatter: Revenue (X) vs Review (Y) — Size = Orders</text>
+            <line x1="120" y1="990" x2="950" y2="990" stroke="#888"/>
+            <line x1="120" y1="800" x2="120" y2="990" stroke="#888"/>
+            <line x1="120" y1="860" x2="950" y2="860" stroke="#ffd700" stroke-dasharray="6,4"/>
+            <text x="930" y="855" text-anchor="end" fill="#ffd700" font-size="11">Review target 4.0</text>
+            <circle cx="200" cy="830" r="5" fill="#10b981"/>
+            <circle cx="260" cy="840" r="7" fill="#10b981"/>
+            <circle cx="320" cy="820" r="6" fill="#10b981"/>
+            <circle cx="380" cy="850" r="9" fill="#10b981"/>
+            <circle cx="440" cy="815" r="8" fill="#10b981"/>
+            <circle cx="500" cy="845" r="11" fill="#10b981"/>
+            <circle cx="560" cy="855" r="10" fill="#10b981"/>
+            <circle cx="620" cy="835" r="13" fill="#10b981"/>
+            <circle cx="680" cy="890" r="12" fill="#ef4444"/>
+            <circle cx="740" cy="910" r="15" fill="#ef4444"/>
+            <circle cx="800" cy="940" r="17" fill="#ef4444"/>
+            <circle cx="860" cy="970" r="20" fill="#ef4444"/>
+            <text x="860" y="1010" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">High revenue, low reviews = problem sellers</text>
+          </svg>`,
+          caption: "Visual build sequence (top) and the final Page 2 layout (bottom): map, top-categories, heat matrix, seller scatter."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "On Page 2, you click São Paulo on the filled map and the top-10 categories bar chart instantly re-ranks to show only SP categories. What Power BI mechanism makes this happen automatically?",
+        options: [
+          { text: "A hidden VBA macro running in the background", correct: false },
+          { text: "The star-schema relationships propagate the filter from dim_Customers through fact_OrderItems to dim_Products", correct: true },
+          { text: "Power BI re-runs the Power Query refresh every time you click", correct: false },
+          { text: "You must manually write a SELECTEDVALUE measure for each visual to listen to the map", correct: false }
+        ],
+        explanation: "Star schema relationships are the engine of cross-filtering. When dim_Customers is filtered to customer_state = SP, that filter cascades down the one-to-many relationship into fact_OrderItems (reducing 112,650 rows to ~41,746 SP rows), then propagates up into dim_Products. Every visual on the page automatically re-evaluates under the new filter context. No code, no refresh — just the model doing its job. This is why we spent three lessons building a proper star schema.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Filter Propagation</text>
+            <text x="550" y="100" text-anchor="middle" fill="#888" font-size="16">Click → Filter → Cascade → Re-render</text>
+            <rect x="100" y="180" width="240" height="120" fill="#6366f1" rx="8"/>
+            <text x="220" y="220" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">dim_Customers</text>
+            <text x="220" y="250" text-anchor="middle" fill="#ffd700" font-size="16">state = "SP"</text>
+            <text x="220" y="275" text-anchor="middle" fill="#ffffff" font-size="12">click-filtered</text>
+            <text x="220" y="295" text-anchor="middle" fill="#ffffff" font-size="12">by the map visual</text>
+            <path d="M 220 310 L 220 400" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/>
+            <defs>
+              <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+              </marker>
+            </defs>
+            <text x="240" y="365" fill="#ffd700" font-size="14" font-weight="bold">one-to-many</text>
+            <rect x="60" y="410" width="320" height="160" fill="#ef4444" rx="8"/>
+            <text x="220" y="450" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">fact_OrderItems</text>
+            <text x="220" y="480" text-anchor="middle" fill="#ffd700" font-size="14">112,650 rows</text>
+            <text x="220" y="505" text-anchor="middle" fill="#ffd700" font-size="14">↓ filtered ↓</text>
+            <text x="220" y="535" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">~41,746 rows (SP)</text>
+            <text x="220" y="560" text-anchor="middle" fill="#ffffff" font-size="12">cascaded automatically</text>
+            <path d="M 380 490 L 580 320" stroke="#ffd700" stroke-width="4" marker-end="url(#a1)"/>
+            <text x="490" y="395" fill="#ffd700" font-size="13" font-weight="bold">join</text>
+            <rect x="580" y="240" width="240" height="120" fill="#8b5cf6" rx="8"/>
+            <text x="700" y="280" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">dim_Products</text>
+            <text x="700" y="310" text-anchor="middle" fill="#ffd700" font-size="14">re-ranked categories</text>
+            <text x="700" y="335" text-anchor="middle" fill="#ffffff" font-size="12">(only those sold in SP)</text>
+            <rect x="860" y="240" width="200" height="120" fill="#0ea5e9" rx="8"/>
+            <text x="960" y="280" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">dim_Sellers</text>
+            <text x="960" y="310" text-anchor="middle" fill="#ffd700" font-size="13">also filtered</text>
+            <text x="960" y="335" text-anchor="middle" fill="#ffffff" font-size="12">to SP-shipping sellers</text>
+            <path d="M 380 470 L 880 320" stroke="#ffd700" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#a1)"/>
+            <rect x="100" y="620" width="900" height="320" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="550" y="660" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Result: Every visual on Page 2</text>
+            <text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="16">re-evaluates Total Revenue = SUMX(...) under the SP filter</text>
+            <rect x="140" y="720" width="180" height="80" fill="#10b981" rx="6"/>
+            <text x="230" y="755" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Bar Chart</text>
+            <text x="230" y="780" text-anchor="middle" fill="#ffffff" font-size="11">re-ranks</text>
+            <rect x="340" y="720" width="180" height="80" fill="#f59e0b" rx="6"/>
+            <text x="430" y="755" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Matrix</text>
+            <text x="430" y="780" text-anchor="middle" fill="#ffffff" font-size="11">SP column lit</text>
+            <rect x="540" y="720" width="180" height="80" fill="#ec4899" rx="6"/>
+            <text x="630" y="755" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Scatter</text>
+            <text x="630" y="780" text-anchor="middle" fill="#ffffff" font-size="11">SP sellers only</text>
+            <rect x="740" y="720" width="180" height="80" fill="#0ea5e9" rx="6"/>
+            <text x="830" y="755" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">KPI Cards</text>
+            <text x="830" y="780" text-anchor="middle" fill="#ffffff" font-size="11">R$5.2M shown</text>
+            <text x="550" y="870" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">Zero code. Pure star-schema power.</text>
+            <text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="13">This is why we built the model first.</text>
+          </svg>`,
+          caption: "Filter from a single click propagates: dim_Customers → fact_OrderItems → dim_Products + dim_Sellers, re-rendering every visual."
+        }
+      },
+      {
+        type: "application",
+        title: "Ship Page 2 — Drill-Down That Tells a Story",
+        content: `Time to build. Open your Olist.pbix.
+
+**Build (45 minutes):**
+1. Duplicate Page 1 → rename "Sales Detail." Keep the title bar and slicers; delete the rest.
+2. Insert Filled Map. Location = customer_state, Color saturation = Total Revenue. Use Diverging palette #16213e to #ffd700. Tooltip: add Total Orders + Avg Review.
+3. Insert Top 10 Categories Clustered Bar. Y = product_category_name, X = Total Revenue. Top N filter = 10. Color #10b981. Data labels in millions, 1 decimal.
+4. Insert Category × State Matrix. Rows = category, Columns = state (limit to top 8 states with Top N filter on state). Conditional formatting: red/amber/green thresholds at 500K and 1.5M.
+5. Insert Scatter chart. X = Total Revenue, Y = Avg Review Score, Details = seller_id, Size = Total Orders. Add constant line at Y = 4.0 (Analytics pane → Y Constant Line, dashed, #ffd700).
+6. Create hidden "Seller Detail" page with seller_id in Drill-through filter well. Add card with seller_id, line chart of monthly revenue, bar of top 5 categories for that seller.
+7. Test drill-through: right-click any seller dot on scatter → Drill through → Seller Detail. Use the back arrow to return.
+
+**Test (10 minutes):**
+- Click São Paulo on the map. Verify the bar chart, matrix, and scatter all re-filter.
+- Click "health_beauty" in the bar chart. Verify the map redraws (states shaded by health_beauty revenue only).
+- Right-click a seller dot. Confirm drill-through navigates and shows the right seller_id at the top of the page.
+
+**Deliver:** Take a screenshot of Page 2 with São Paulo selected on the map. In a short note (5 sentences) write what you would tell Marina about the regional pattern you see — which two states dominate, which category looks underweight in São Paulo, and which seller in the scatter looks like a "problem" candidate worth investigating. Save the screenshot + note to your project folder as "page2-findings.png" and "page2-findings.txt." You will reuse both in the capstone wrap.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Your Build Checklist</text>
+            <rect x="60" y="110" width="980" height="540" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="100" y="150" fill="#ffd700" font-size="20" font-weight="bold">BUILD</text>
+            <text x="80" y="190" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="190" fill="#ffffff" font-size="15">Duplicate Page 1, rename "Sales Detail"</text>
+            <text x="80" y="220" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="220" fill="#ffffff" font-size="15">Filled Map: customer_state + Total Revenue + diverging palette</text>
+            <text x="80" y="250" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="250" fill="#ffffff" font-size="15">Top-10 Categories bar chart (Top N filter)</text>
+            <text x="80" y="280" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="280" fill="#ffffff" font-size="15">Category × State matrix with red/amber/green conditional format</text>
+            <text x="80" y="310" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="310" fill="#ffffff" font-size="15">Seller scatter with constant line at review = 4.0</text>
+            <text x="80" y="340" fill="#10b981" font-size="18">[ ]</text>
+            <text x="120" y="340" fill="#ffffff" font-size="15">Hidden Seller Detail page with seller_id drill-through filter</text>
+            <text x="100" y="395" fill="#ffd700" font-size="20" font-weight="bold">TEST</text>
+            <text x="80" y="430" fill="#0ea5e9" font-size="18">[ ]</text>
+            <text x="120" y="430" fill="#ffffff" font-size="15">Click SP on map → all visuals refilter</text>
+            <text x="80" y="460" fill="#0ea5e9" font-size="18">[ ]</text>
+            <text x="120" y="460" fill="#ffffff" font-size="15">Click "health_beauty" bar → map recolors</text>
+            <text x="80" y="490" fill="#0ea5e9" font-size="18">[ ]</text>
+            <text x="120" y="490" fill="#ffffff" font-size="15">Right-click seller dot → Drill through works → back arrow returns</text>
+            <text x="100" y="545" fill="#ffd700" font-size="20" font-weight="bold">DELIVER</text>
+            <text x="80" y="580" fill="#ec4899" font-size="18">[ ]</text>
+            <text x="120" y="580" fill="#ffffff" font-size="15">Screenshot Page 2 with SP selected → page2-findings.png</text>
+            <text x="80" y="610" fill="#ec4899" font-size="18">[ ]</text>
+            <text x="120" y="610" fill="#ffffff" font-size="15">5-sentence note to Marina → page2-findings.txt</text>
+            <rect x="60" y="690" width="980" height="350" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="730" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Expected Insights</text>
+            <text x="100" y="780" fill="#ffffff" font-size="15">SP dominates: R$5.2M (~38% of total revenue, ~42K orders)</text>
+            <text x="100" y="815" fill="#ffffff" font-size="15">MG + RJ together add another ~24% (R$3.2M combined)</text>
+            <text x="100" y="850" fill="#ffffff" font-size="15">health_beauty is #1 nationally but underweight in SP vs bed_bath</text>
+            <text x="100" y="885" fill="#ffffff" font-size="15">Scatter reveals 5–10 sellers below 4.0 review with >R$50K revenue</text>
+            <text x="100" y="920" fill="#ffffff" font-size="15">Drill-through lets Marina audit any problem seller in two clicks</text>
+            <text x="550" y="985" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">When you click SP and three visuals dance —</text>
+            <text x="550" y="1015" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">you have built a real BI tool.</text>
+          </svg>`,
+          caption: "Build/Test/Deliver checklist with expected insights to share with Marina."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-capstone-lesson-11",
+    title: "Page 3 — Operational Health & What-If",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Marina's Other Half of the Job",
+        content: `Marina runs Operations. Revenue tells half her story — but the other half is whether Olist is keeping its promises. Sellers ship late. Reviews drop. Customer service hours balloon. Page 3 is the page that lets Marina spot operational rot before it costs her customers.
+
+Four operational questions Page 3 answers:
+1. Are we hitting our 90% on-time delivery target? (line chart with target line)
+2. Where do reviews stack — are 1-star reviews growing? (review-score breakdown)
+3. Which sellers are the worst offenders for late delivery + bad reviews? (problem-seller list)
+4. What if we tightened our SLA from 7 days to 5 days — how much volume would we lose? (what-if parameter)
+
+The last one is the killer feature. A what-if parameter lets Marina move a slider — "What if the maximum acceptable delivery window were 5 days instead of 7?" — and watch the dashboard recalculate. Suddenly she can have a real conversation with logistics: tightening the SLA loses 12% of orders but improves CSAT by 0.3 stars. That is the conversation worth having.
+
+You already have the columns you need. orders.csv has order_purchase_timestamp, order_delivered_customer_date, order_estimated_delivery_date. Reviews has review_score 1–5. Sellers join to fact_OrderItems on seller_id. Today you build measures for delivery delta, on-time rate, review distribution, and a slider-driven what-if measure — then arrange them into a Page 3 that turns "we have an operations problem" from a vague feeling into a specific, dollarized chart Marina can walk into her CEO's office and use.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Page 3: Operational Health</text>
+            <text x="550" y="90" text-anchor="middle" fill="#888" font-size="16">The page Marina opens when reviews start dropping</text>
+            <rect x="40" y="120" width="510" height="280" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="150" fill="#ffd700" font-size="18" font-weight="bold">On-Time Delivery Rate (monthly)</text>
+            <line x1="80" y1="370" x2="520" y2="370" stroke="#888" stroke-width="1.5"/>
+            <line x1="80" y1="180" x2="80" y2="370" stroke="#888" stroke-width="1.5"/>
+            <line x1="80" y1="220" x2="520" y2="220" stroke="#ffd700" stroke-dasharray="6,4" stroke-width="2"/>
+            <text x="510" y="215" text-anchor="end" fill="#ffd700" font-size="12">90% target</text>
+            <polyline points="100,250 150,235 200,225 250,215 300,210 350,225 400,240 450,265 500,290" fill="none" stroke="#10b981" stroke-width="3"/>
+            <circle cx="100" cy="250" r="4" fill="#10b981"/>
+            <circle cx="150" cy="235" r="4" fill="#10b981"/>
+            <circle cx="200" cy="225" r="4" fill="#10b981"/>
+            <circle cx="250" cy="215" r="4" fill="#10b981"/>
+            <circle cx="300" cy="210" r="5" fill="#ffd700"/>
+            <circle cx="350" cy="225" r="4" fill="#10b981"/>
+            <circle cx="400" cy="240" r="5" fill="#f59e0b"/>
+            <circle cx="450" cy="265" r="5" fill="#ef4444"/>
+            <circle cx="500" cy="290" r="5" fill="#ef4444"/>
+            <text x="100" y="390" fill="#888" font-size="11">Jan</text>
+            <text x="300" y="390" fill="#888" font-size="11">May</text>
+            <text x="500" y="390" fill="#888" font-size="11">Sep</text>
+            <text x="80" y="200" fill="#888" font-size="11">95%</text>
+            <text x="80" y="360" fill="#888" font-size="11">75%</text>
+            <rect x="570" y="120" width="490" height="280" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="590" y="150" fill="#ffd700" font-size="18" font-weight="bold">Review Score Distribution</text>
+            <rect x="610" y="180" width="60" height="180" fill="#ef4444"/>
+            <text x="640" y="200" text-anchor="middle" fill="#ffffff" font-size="13">1★</text>
+            <text x="640" y="380" text-anchor="middle" fill="#ffffff" font-size="11">11.5%</text>
+            <rect x="690" y="240" width="60" height="120" fill="#f59e0b"/>
+            <text x="720" y="260" text-anchor="middle" fill="#ffffff" font-size="13">2★</text>
+            <text x="720" y="380" text-anchor="middle" fill="#ffffff" font-size="11">3.2%</text>
+            <rect x="770" y="270" width="60" height="90" fill="#ffd700"/>
+            <text x="800" y="290" text-anchor="middle" fill="#1a1a2e" font-size="13">3★</text>
+            <text x="800" y="380" text-anchor="middle" fill="#ffffff" font-size="11">8.3%</text>
+            <rect x="850" y="220" width="60" height="140" fill="#0ea5e9"/>
+            <text x="880" y="240" text-anchor="middle" fill="#ffffff" font-size="13">4★</text>
+            <text x="880" y="380" text-anchor="middle" fill="#ffffff" font-size="11">19.4%</text>
+            <rect x="930" y="200" width="60" height="160" fill="#10b981"/>
+            <text x="960" y="220" text-anchor="middle" fill="#ffffff" font-size="13">5★</text>
+            <text x="960" y="380" text-anchor="middle" fill="#ffffff" font-size="11">57.6%</text>
+            <rect x="40" y="420" width="510" height="340" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="450" fill="#ffd700" font-size="18" font-weight="bold">Problem Sellers (top 10 risk)</text>
+            <line x1="60" y1="475" x2="540" y2="475" stroke="#888"/>
+            <text x="60" y="495" fill="#888" font-size="11">seller_id</text>
+            <text x="300" y="495" fill="#888" font-size="11">on-time%</text>
+            <text x="430" y="495" fill="#888" font-size="11">avg★</text>
+            <text x="60" y="525" fill="#ffffff" font-size="12">sel_4f3a...</text>
+            <text x="300" y="525" fill="#ef4444" font-size="12">42%</text>
+            <text x="430" y="525" fill="#ef4444" font-size="12">2.3</text>
+            <text x="60" y="555" fill="#ffffff" font-size="12">sel_d8c2...</text>
+            <text x="300" y="555" fill="#ef4444" font-size="12">51%</text>
+            <text x="430" y="555" fill="#ef4444" font-size="12">2.6</text>
+            <text x="60" y="585" fill="#ffffff" font-size="12">sel_a1b9...</text>
+            <text x="300" y="585" fill="#ef4444" font-size="12">58%</text>
+            <text x="430" y="585" fill="#f59e0b" font-size="12">2.9</text>
+            <text x="60" y="615" fill="#ffffff" font-size="12">sel_72e5...</text>
+            <text x="300" y="615" fill="#f59e0b" font-size="12">64%</text>
+            <text x="430" y="615" fill="#f59e0b" font-size="12">3.1</text>
+            <text x="60" y="645" fill="#ffffff" font-size="12">sel_9cb4...</text>
+            <text x="300" y="645" fill="#f59e0b" font-size="12">68%</text>
+            <text x="430" y="645" fill="#f59e0b" font-size="12">3.2</text>
+            <text x="60" y="675" fill="#ffffff" font-size="12">sel_6f01...</text>
+            <text x="300" y="675" fill="#f59e0b" font-size="12">71%</text>
+            <text x="430" y="675" fill="#10b981" font-size="12">3.4</text>
+            <text x="60" y="705" fill="#ffffff" font-size="12">sel_e85a...</text>
+            <text x="300" y="705" fill="#10b981" font-size="12">73%</text>
+            <text x="430" y="705" fill="#10b981" font-size="12">3.5</text>
+            <text x="60" y="735" fill="#ffd700" font-size="11">→ click to drill through</text>
+            <rect x="570" y="420" width="490" height="340" fill="#16213e" stroke="#ffd700" stroke-width="3" rx="8"/>
+            <text x="590" y="450" fill="#ffd700" font-size="18" font-weight="bold">What-If: SLA Days Slider</text>
+            <text x="590" y="490" fill="#ffffff" font-size="14">If max delivery = </text>
+            <rect x="750" y="473" width="80" height="28" fill="#ffd700" rx="4"/>
+            <text x="790" y="492" text-anchor="middle" fill="#1a1a2e" font-size="16" font-weight="bold">5 days</text>
+            <line x1="590" y1="540" x2="1030" y2="540" stroke="#888" stroke-width="2"/>
+            <circle cx="780" cy="540" r="14" fill="#ffd700" stroke="#ffffff" stroke-width="3"/>
+            <text x="590" y="565" fill="#888" font-size="11">3</text>
+            <text x="780" y="565" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">5</text>
+            <text x="1030" y="565" text-anchor="end" fill="#888" font-size="11">14</text>
+            <text x="590" y="610" fill="#ffffff" font-size="13">Orders meeting SLA:</text>
+            <text x="1020" y="610" text-anchor="end" fill="#10b981" font-size="20" font-weight="bold">87,510</text>
+            <text x="590" y="640" fill="#888" font-size="12">(vs 98,742 today)</text>
+            <text x="590" y="685" fill="#ffffff" font-size="13">Volume lost:</text>
+            <text x="1020" y="685" text-anchor="end" fill="#ef4444" font-size="20" font-weight="bold">−11.4%</text>
+            <text x="590" y="720" fill="#ffffff" font-size="13">Estimated CSAT lift:</text>
+            <text x="1020" y="720" text-anchor="end" fill="#10b981" font-size="20" font-weight="bold">+0.3★</text>
+            <rect x="40" y="780" width="1020" height="280" fill="#16213e" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+            <text x="60" y="815" fill="#ffd700" font-size="18" font-weight="bold">Key Measures (preview)</text>
+            <text x="60" y="850" fill="#10b981" font-size="12">On Time % = DIVIDE(CALCULATE([Total Orders], fact_OrderItems[is_on_time] = TRUE), [Total Orders])</text>
+            <text x="60" y="885" fill="#10b981" font-size="12">Delivery Delta = AVERAGEX(fact_OrderItems, DATEDIFF([purchase], [delivered], DAY))</text>
+            <text x="60" y="920" fill="#10b981" font-size="12">Orders Within SLA = CALCULATE([Total Orders], fact_OrderItems[delivery_days] &lt;= 'SLA Days'[Value])</text>
+            <text x="60" y="955" fill="#10b981" font-size="12">Volume Lost % = DIVIDE([Total Orders] - [Orders Within SLA], [Total Orders])</text>
+            <text x="60" y="990" fill="#10b981" font-size="12">Problem Seller Score = IF([Avg Review] &lt; 3.5 &amp;&amp; [On Time %] &lt; 0.7, "HIGH RISK")</text>
+            <text x="60" y="1025" fill="#888" font-size="11">All measures live in _Measures table; what-if uses the SLA Days slider parameter</text>
+          </svg>`,
+          caption: "Page 3 layout: on-time trend (with 90% target), review distribution, problem-seller list, and a what-if SLA slider with live impact."
+        }
+      },
+      {
+        type: "concept",
+        title: "What-If Parameters and the Operational Measures Behind Them",
+        content: `What-If is Power BI's underrated superpower. It is a parameter table — disconnected from your model — bound to a slicer, that returns whatever value the user drags it to. You then reference [Value] inside your DAX, and every dependent measure recalculates as the user moves the slider.
+
+**Step 1: Create the slider.** Modeling tab → New parameter → "SLA Days." Minimum = 3, Maximum = 14, Increment = 1, Default = 7. Power BI auto-creates a hidden table 'SLA Days' with a single column [SLA Days] and a measure 'SLA Days Value' = SELECTEDVALUE('SLA Days'[SLA Days], 7). It also drops a slicer on the canvas. Format the slicer as "Single value" — Marina drags one handle.
+
+**Step 2: Compute delivery_days in Power Query (one-time).** Back in Power Query, add a custom column to fact_OrderItems:
+delivery_days = Duration.Days([order_delivered_customer_date] - [order_purchase_timestamp]). Also add is_on_time = [delivery_days] <= [estimated_days_promised]. Refresh. Now fact_OrderItems has two new columns to power Page 3.
+
+**Step 3: Write the operational measures.** All into _Measures table:
+- Avg Delivery Days = AVERAGE(fact_OrderItems[delivery_days])
+- On Time % = DIVIDE(CALCULATE([Total Orders], fact_OrderItems[is_on_time] = TRUE), [Total Orders])
+- Orders Within SLA = CALCULATE([Total Orders], FILTER(fact_OrderItems, fact_OrderItems[delivery_days] <= 'SLA Days'[SLA Days Value]))
+- Volume Lost % = DIVIDE([Total Orders] - [Orders Within SLA], [Total Orders])
+
+That third measure is the magic — it references the slider value. Drag SLA Days from 7 down to 5 and Orders Within SLA recalculates from 98,742 to 87,510. The Volume Lost % card goes from 0% to 11.4% in real time.
+
+**Step 4: Problem-seller table.** Insert a Table visual. Columns: seller_id, On Time %, Avg Review Score, Total Orders. Filter pane: On Time % < 0.7 AND Avg Review < 3.5. Sort by Total Orders descending so the highest-volume problem sellers float to the top. Format conditional: red background where On Time % < 0.5.
+
+**Step 5: 90% target line on the trend.** Insert a line chart of On Time % by MonthName. Analytics pane → Constant Line → Value = 0.9, color #ffd700, dashed, label "Target 90%." Now any month dipping under the dashed line is visually unmistakable. Marina sees August 2018 fall to 71% and now has the conversation to have.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">What-If Parameter Architecture</text>
+            <rect x="60" y="110" width="1000" height="280" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="80" y="145" fill="#ffd700" font-size="18" font-weight="bold">1. Modeling tab → New parameter "SLA Days"</text>
+            <text x="80" y="180" fill="#ffffff" font-size="13">Min=3, Max=14, Increment=1, Default=7</text>
+            <text x="80" y="220" fill="#888" font-size="13">Power BI auto-generates:</text>
+            <rect x="80" y="240" width="450" height="50" fill="#0f1626" stroke="#6366f1" rx="4"/>
+            <text x="100" y="260" fill="#6366f1" font-size="13" font-family="monospace">'SLA Days' table</text>
+            <text x="100" y="280" fill="#888" font-size="11">disconnected from the model</text>
+            <rect x="550" y="240" width="490" height="50" fill="#0f1626" stroke="#10b981" rx="4"/>
+            <text x="570" y="260" fill="#10b981" font-size="12" font-family="monospace">SLA Days Value = SELECTEDVALUE(...)</text>
+            <text x="570" y="280" fill="#888" font-size="11">measure that reads the current slicer position</text>
+            <rect x="80" y="310" width="960" height="60" fill="#0f1626" stroke="#ffd700" rx="4"/>
+            <text x="100" y="335" fill="#ffd700" font-size="14" font-weight="bold">Slicer drops on canvas:</text>
+            <line x1="290" y1="340" x2="990" y2="340" stroke="#888" stroke-width="2"/>
+            <circle cx="570" cy="340" r="10" fill="#ffd700"/>
+            <text x="295" y="360" fill="#888" font-size="11">3</text>
+            <text x="570" y="360" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">7 days</text>
+            <text x="985" y="360" text-anchor="end" fill="#888" font-size="11">14</text>
+            <rect x="60" y="410" width="1000" height="280" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="445" fill="#ffd700" font-size="18" font-weight="bold">2. Power Query: add delivery_days column</text>
+            <rect x="80" y="465" width="960" height="35" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="488" fill="#10b981" font-size="13" font-family="monospace">delivery_days = Duration.Days([delivered] - [purchase])</text>
+            <text x="80" y="525" fill="#ffd700" font-size="16" font-weight="bold">3. DAX measures use the parameter</text>
+            <rect x="80" y="540" width="960" height="35" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="563" fill="#10b981" font-size="12" font-family="monospace">Orders Within SLA = CALCULATE([Total Orders],</text>
+            <rect x="80" y="580" width="960" height="35" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="603" fill="#10b981" font-size="12" font-family="monospace">  FILTER(fact_OrderItems, fact_OrderItems[delivery_days] &lt;= 'SLA Days'[SLA Days Value]))</text>
+            <rect x="80" y="620" width="960" height="35" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="643" fill="#10b981" font-size="12" font-family="monospace">Volume Lost % = DIVIDE([Total Orders] - [Orders Within SLA], [Total Orders])</text>
+            <text x="80" y="680" fill="#ffd700" font-size="13">Drag the slider → measures recalculate live → cards refresh</text>
+            <rect x="60" y="710" width="1000" height="340" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="550" y="755" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">User Drags Slider 7 → 5</text>
+            <rect x="120" y="790" width="200" height="130" fill="#10b981" rx="6"/>
+            <text x="220" y="820" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">SLA = 7 days</text>
+            <text x="220" y="850" text-anchor="middle" fill="#ffffff" font-size="13">98,742 orders</text>
+            <text x="220" y="875" text-anchor="middle" fill="#ffffff" font-size="13">99.3% within SLA</text>
+            <text x="220" y="905" text-anchor="middle" fill="#ffd700" font-size="12">baseline</text>
+            <path d="M 330 855 L 470 855" stroke="#ffd700" stroke-width="4" marker-end="url(#sa1)"/>
+            <defs>
+              <marker id="sa1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+              </marker>
+            </defs>
+            <text x="400" y="845" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">drag</text>
+            <rect x="480" y="790" width="200" height="130" fill="#f59e0b" rx="6"/>
+            <text x="580" y="820" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">SLA = 5 days</text>
+            <text x="580" y="850" text-anchor="middle" fill="#ffffff" font-size="13">87,510 orders</text>
+            <text x="580" y="875" text-anchor="middle" fill="#ffffff" font-size="13">88.0% within SLA</text>
+            <text x="580" y="905" text-anchor="middle" fill="#ffd700" font-size="12">−11.4% volume</text>
+            <path d="M 690 855 L 820 855" stroke="#ffd700" stroke-width="4" marker-end="url(#sa1)"/>
+            <rect x="830" y="790" width="200" height="130" fill="#ef4444" rx="6"/>
+            <text x="930" y="820" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">SLA = 3 days</text>
+            <text x="930" y="850" text-anchor="middle" fill="#ffffff" font-size="13">52,180 orders</text>
+            <text x="930" y="875" text-anchor="middle" fill="#ffffff" font-size="13">52.5% within SLA</text>
+            <text x="930" y="905" text-anchor="middle" fill="#ffd700" font-size="12">−47.5% — too tight</text>
+            <text x="550" y="980" text-anchor="middle" fill="#ffffff" font-size="14">Marina's takeaway: 5-day SLA = sweet spot</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#10b981" font-size="14">"Lose 11% volume to gain 0.3 review stars" — that is a real decision.</text>
+          </svg>`,
+          caption: "What-if architecture: a disconnected parameter table feeds a SELECTEDVALUE measure that DAX uses in FILTER — slider drives live recalculation."
+        }
+      },
+      {
+        type: "example",
+        title: "Marina's Crisis: August 2018 On-Time Drop",
+        content: `It is October. Marina is in your office. "Reviews tanked in August and the CEO wants answers Friday." You open Page 3 and the story unfolds in 90 seconds.
+
+**The trend line.** You point at the line chart. From January through July, on-time delivery hovered at 91–94%. August: 71%. September: 68%. The 90% target dashed line cuts through the data like a knife — eight of the last nine months are below it.
+
+**The review breakdown.** You point at the histogram. In August, 1-star reviews jumped from 9% (monthly baseline) to 18%. 5-star dropped from 60% to 49%. Customers are noticing.
+
+**The problem-seller list.** You filter the slicer to "August 2018 only." The problem-seller table redraws. Three sellers — sel_4f3a..., sel_d8c2..., sel_a1b9... — own 4,200 of the 4,800 late orders that month. All three are based in Paraná (PR) and ship heavy furniture. You right-click sel_4f3a... → Drill through → Seller Detail. The seller's monthly delivery trend shows a clear collapse starting August 1.
+
+**The what-if.** You drag the SLA Days slider from 14 (current effective max) down to 7. Volume Lost % jumps to 11.4%. Marina says "but our promise is 7 days." You drag to 5. Volume Lost = 32%. She makes a face. You drag to 6. Volume Lost = 19%. "If we tightened to 6 days, we'd lose 19% of orders but probably win back 0.4 review stars. Health long-term."
+
+**The fix.** Marina now knows three things she did not know coming in: (1) the problem is concentrated in three sellers, not systemic; (2) those three sellers are all PR-based furniture sellers, suggesting a regional carrier issue; (3) the trade-off between SLA tightness and volume is now quantified. She emails her logistics lead, "Get on the phone with the PR carrier this week," before she leaves your office.
+
+That is the difference between a dashboard and a decision tool. Page 1 told her there was a problem. Page 3 told her exactly what to do.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Marina's August Crisis — 90 Seconds to Diagnosis</text>
+            <rect x="40" y="100" width="510" height="270" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="60" y="130" fill="#ffd700" font-size="16" font-weight="bold">On-Time Trend Collapses</text>
+            <line x1="80" y1="340" x2="520" y2="340" stroke="#888"/>
+            <line x1="80" y1="160" x2="80" y2="340" stroke="#888"/>
+            <line x1="80" y1="190" x2="520" y2="190" stroke="#ffd700" stroke-dasharray="6,4"/>
+            <text x="510" y="186" text-anchor="end" fill="#ffd700" font-size="11">90% target</text>
+            <polyline points="100,205 140,195 180,200 220,190 260,185 300,195 340,210 380,260 420,290 460,300 500,295" fill="none" stroke="#10b981" stroke-width="3"/>
+            <circle cx="100" cy="205" r="4" fill="#10b981"/>
+            <circle cx="140" cy="195" r="4" fill="#10b981"/>
+            <circle cx="180" cy="200" r="4" fill="#10b981"/>
+            <circle cx="220" cy="190" r="4" fill="#10b981"/>
+            <circle cx="260" cy="185" r="4" fill="#10b981"/>
+            <circle cx="300" cy="195" r="4" fill="#10b981"/>
+            <circle cx="340" cy="210" r="4" fill="#10b981"/>
+            <circle cx="380" cy="260" r="6" fill="#ef4444"/>
+            <circle cx="420" cy="290" r="6" fill="#ef4444"/>
+            <circle cx="460" cy="300" r="5" fill="#ef4444"/>
+            <text x="380" y="245" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">Aug 71%</text>
+            <text x="420" y="278" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">Sep 68%</text>
+            <text x="100" y="360" fill="#888" font-size="11">Jan</text>
+            <text x="300" y="360" fill="#888" font-size="11">May</text>
+            <text x="500" y="360" fill="#888" font-size="11">Oct</text>
+            <rect x="570" y="100" width="490" height="270" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="590" y="130" fill="#ffd700" font-size="16" font-weight="bold">Reviews Tank in August</text>
+            <text x="590" y="160" fill="#888" font-size="12">Baseline (Jan–Jul) vs August</text>
+            <rect x="610" y="190" width="40" height="60" fill="#ef4444"/>
+            <rect x="660" y="190" width="40" height="120" fill="#ef4444" opacity="0.6"/>
+            <text x="630" y="280" text-anchor="middle" fill="#ffffff" font-size="11">1★</text>
+            <text x="630" y="320" text-anchor="middle" fill="#ffffff" font-size="10">9%</text>
+            <text x="680" y="280" text-anchor="middle" fill="#ffffff" font-size="11">1★ Aug</text>
+            <text x="680" y="320" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">18%</text>
+            <rect x="730" y="200" width="40" height="120" fill="#10b981"/>
+            <rect x="780" y="240" width="40" height="80" fill="#10b981" opacity="0.6"/>
+            <text x="750" y="350" text-anchor="middle" fill="#ffffff" font-size="11">5★</text>
+            <text x="800" y="350" text-anchor="middle" fill="#ffffff" font-size="11">5★ Aug</text>
+            <text x="750" y="335" text-anchor="middle" fill="#ffffff" font-size="10">60%</text>
+            <text x="800" y="335" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">49%</text>
+            <text x="870" y="220" fill="#ef4444" font-size="14" font-weight="bold">+9pt</text>
+            <text x="870" y="240" fill="#ef4444" font-size="14" font-weight="bold">1-star</text>
+            <text x="870" y="265" fill="#ef4444" font-size="14" font-weight="bold">−11pt</text>
+            <text x="870" y="285" fill="#ef4444" font-size="14" font-weight="bold">5-star</text>
+            <rect x="40" y="390" width="1020" height="280" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="60" y="425" fill="#ffd700" font-size="18" font-weight="bold">Problem Sellers (August 2018, drill-through ready)</text>
+            <text x="60" y="460" fill="#888" font-size="12">seller_id</text>
+            <text x="280" y="460" fill="#888" font-size="12">state</text>
+            <text x="380" y="460" fill="#888" font-size="12">category</text>
+            <text x="600" y="460" fill="#888" font-size="12">late orders</text>
+            <text x="780" y="460" fill="#888" font-size="12">on-time %</text>
+            <text x="940" y="460" fill="#888" font-size="12">avg ★</text>
+            <line x1="60" y1="470" x2="1040" y2="470" stroke="#888"/>
+            <text x="60" y="500" fill="#ffffff" font-size="13">sel_4f3a...</text>
+            <text x="280" y="500" fill="#ffd700" font-size="13">PR</text>
+            <text x="380" y="500" fill="#ffffff" font-size="13">furniture_decor</text>
+            <text x="600" y="500" fill="#ef4444" font-size="13" font-weight="bold">1,850</text>
+            <text x="780" y="500" fill="#ef4444" font-size="13">38%</text>
+            <text x="940" y="500" fill="#ef4444" font-size="13">2.1</text>
+            <text x="60" y="530" fill="#ffffff" font-size="13">sel_d8c2...</text>
+            <text x="280" y="530" fill="#ffd700" font-size="13">PR</text>
+            <text x="380" y="530" fill="#ffffff" font-size="13">furniture_living</text>
+            <text x="600" y="530" fill="#ef4444" font-size="13" font-weight="bold">1,420</text>
+            <text x="780" y="530" fill="#ef4444" font-size="13">47%</text>
+            <text x="940" y="530" fill="#ef4444" font-size="13">2.4</text>
+            <text x="60" y="560" fill="#ffffff" font-size="13">sel_a1b9...</text>
+            <text x="280" y="560" fill="#ffd700" font-size="13">PR</text>
+            <text x="380" y="560" fill="#ffffff" font-size="13">furniture_bedroom</text>
+            <text x="600" y="560" fill="#ef4444" font-size="13" font-weight="bold">930</text>
+            <text x="780" y="560" fill="#ef4444" font-size="13">51%</text>
+            <text x="940" y="560" fill="#ef4444" font-size="13">2.6</text>
+            <text x="60" y="610" fill="#ffd700" font-size="14" font-weight="bold">Pattern detected: 3 sellers, all PR, all furniture → likely regional carrier issue</text>
+            <text x="60" y="640" fill="#ffffff" font-size="13">Marina's call: phone the PR carrier this week. Specific. Actionable.</text>
+            <rect x="40" y="690" width="1020" height="370" fill="#16213e" stroke="#ffd700" stroke-width="3" rx="8"/>
+            <text x="60" y="725" fill="#ffd700" font-size="18" font-weight="bold">What-If: SLA Tightening Trade-Off</text>
+            <line x1="100" y1="800" x2="1020" y2="800" stroke="#888" stroke-width="2"/>
+            <circle cx="370" cy="800" r="14" fill="#ffd700" stroke="#ffffff" stroke-width="3"/>
+            <text x="370" y="780" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">6 days</text>
+            <text x="100" y="825" fill="#888" font-size="11">3 days</text>
+            <text x="1020" y="825" text-anchor="end" fill="#888" font-size="11">14 days</text>
+            <rect x="100" y="860" width="280" height="160" fill="#0f1626" stroke="#ef4444" rx="6"/>
+            <text x="240" y="890" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Tighten to 5 days</text>
+            <text x="240" y="920" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="bold">−32%</text>
+            <text x="240" y="945" text-anchor="middle" fill="#ffffff" font-size="13">volume lost</text>
+            <text x="240" y="975" text-anchor="middle" fill="#10b981" font-size="13">+0.5★ CSAT</text>
+            <text x="240" y="1000" text-anchor="middle" fill="#888" font-size="11">"too aggressive"</text>
+            <rect x="410" y="860" width="280" height="160" fill="#0f1626" stroke="#ffd700" stroke-width="3" rx="6"/>
+            <text x="550" y="890" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Tighten to 6 days</text>
+            <text x="550" y="920" text-anchor="middle" fill="#f59e0b" font-size="20" font-weight="bold">−19%</text>
+            <text x="550" y="945" text-anchor="middle" fill="#ffffff" font-size="13">volume lost</text>
+            <text x="550" y="975" text-anchor="middle" fill="#10b981" font-size="13">+0.4★ CSAT</text>
+            <text x="550" y="1000" text-anchor="middle" fill="#10b981" font-size="11" font-weight="bold">"sweet spot"</text>
+            <rect x="720" y="860" width="280" height="160" fill="#0f1626" stroke="#10b981" rx="6"/>
+            <text x="860" y="890" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">Keep 7 days</text>
+            <text x="860" y="920" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">0%</text>
+            <text x="860" y="945" text-anchor="middle" fill="#ffffff" font-size="13">volume lost</text>
+            <text x="860" y="975" text-anchor="middle" fill="#ef4444" font-size="13">no CSAT lift</text>
+            <text x="860" y="1000" text-anchor="middle" fill="#888" font-size="11">"status quo"</text>
+          </svg>`,
+          caption: "August crisis story: trend, reviews, problem sellers, and what-if — Marina diagnoses and decides in 90 seconds."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "You want Marina to drag a slider for \"max acceptable delivery days\" and watch Volume Lost % recalculate live. What is the correct DAX pattern for the Orders Within SLA measure?",
+        options: [
+          { text: "Orders Within SLA = SUM(fact_OrderItems[delivery_days])", correct: false },
+          { text: "Orders Within SLA = COUNTROWS(fact_OrderItems) where delivery_days = 7 (hard-coded)", correct: false },
+          { text: "Orders Within SLA = CALCULATE([Total Orders], FILTER(fact_OrderItems, fact_OrderItems[delivery_days] <= 'SLA Days'[SLA Days Value]))", correct: true },
+          { text: "Orders Within SLA = AVERAGE(fact_OrderItems[is_on_time])", correct: false }
+        ],
+        explanation: "The what-if pattern requires three pieces: (1) CALCULATE wraps the base measure [Total Orders], (2) FILTER scans fact_OrderItems row by row, and (3) the comparison uses the parameter measure 'SLA Days'[SLA Days Value], NOT a hard-coded value. That parameter measure was auto-created when you defined the slider — it reads the current slicer position via SELECTEDVALUE. Drag the slider and the measure recalculates because [SLA Days Value] re-evaluates first. Hard-coding 7 would freeze the slider; SUM or AVERAGE would return the wrong shape (sum of days, not count of orders).",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The Correct What-If Pattern</text>
+            <rect x="60" y="120" width="980" height="360" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="160" fill="#ffd700" font-size="20" font-weight="bold">Orders Within SLA =</text>
+            <text x="100" y="200" fill="#10b981" font-size="18" font-family="monospace">CALCULATE(</text>
+            <text x="140" y="235" fill="#ffd700" font-size="16" font-family="monospace">[Total Orders],</text>
+            <text x="140" y="270" fill="#10b981" font-size="18" font-family="monospace">FILTER(</text>
+            <text x="180" y="305" fill="#ffffff" font-size="16" font-family="monospace">fact_OrderItems,</text>
+            <text x="180" y="340" fill="#ffffff" font-size="16" font-family="monospace">fact_OrderItems[delivery_days]</text>
+            <text x="180" y="370" fill="#ffd700" font-size="16" font-family="monospace">    &lt;= 'SLA Days'[SLA Days Value]</text>
+            <text x="140" y="405" fill="#10b981" font-size="18" font-family="monospace">)</text>
+            <text x="100" y="440" fill="#10b981" font-size="18" font-family="monospace">)</text>
+            <rect x="60" y="510" width="480" height="240" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="80" y="545" fill="#ef4444" font-size="16" font-weight="bold">WRONG: hard-coded value</text>
+            <text x="80" y="580" fill="#ef4444" font-size="13" font-family="monospace">delivery_days &lt;= 7</text>
+            <text x="80" y="615" fill="#888" font-size="13">Slider has no effect → measure</text>
+            <text x="80" y="640" fill="#888" font-size="13">always returns same number.</text>
+            <text x="80" y="680" fill="#ef4444" font-size="16" font-weight="bold">WRONG: wrong aggregation</text>
+            <text x="80" y="715" fill="#ef4444" font-size="13" font-family="monospace">SUM(delivery_days)</text>
+            <text x="80" y="740" fill="#888" font-size="13">Returns total days, not orders.</text>
+            <rect x="560" y="510" width="480" height="240" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="545" fill="#10b981" font-size="16" font-weight="bold">RIGHT: parameter reference</text>
+            <text x="580" y="580" fill="#10b981" font-size="13" font-family="monospace">&lt;= 'SLA Days'[SLA Days Value]</text>
+            <text x="580" y="615" fill="#ffffff" font-size="13">Reads slicer in real time.</text>
+            <text x="580" y="640" fill="#ffffff" font-size="13">Drag 7 → 5 → measure recalcs.</text>
+            <text x="580" y="680" fill="#10b981" font-size="16" font-weight="bold">RIGHT: CALCULATE + FILTER</text>
+            <text x="580" y="715" fill="#10b981" font-size="13" font-family="monospace">CALCULATE([Total Orders], FILTER(...))</text>
+            <text x="580" y="740" fill="#ffffff" font-size="13">Counts orders, applies dynamic filter.</text>
+            <rect x="60" y="780" width="980" height="280" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">How the Slider Drives It</text>
+            <rect x="100" y="860" width="180" height="80" fill="#6366f1" rx="6"/>
+            <text x="190" y="890" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">User drags</text>
+            <text x="190" y="915" text-anchor="middle" fill="#ffffff" font-size="13">slider to 5</text>
+            <path d="M 285 900 L 365 900" stroke="#ffd700" stroke-width="3" marker-end="url(#wha)"/>
+            <defs>
+              <marker id="wha" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+              </marker>
+            </defs>
+            <rect x="370" y="860" width="180" height="80" fill="#8b5cf6" rx="6"/>
+            <text x="460" y="890" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">SELECTEDVALUE</text>
+            <text x="460" y="915" text-anchor="middle" fill="#ffd700" font-size="14">returns 5</text>
+            <path d="M 555 900 L 635 900" stroke="#ffd700" stroke-width="3" marker-end="url(#wha)"/>
+            <rect x="640" y="860" width="180" height="80" fill="#ef4444" rx="6"/>
+            <text x="730" y="890" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">FILTER re-runs</text>
+            <text x="730" y="915" text-anchor="middle" fill="#ffffff" font-size="13">on 112,650 rows</text>
+            <path d="M 825 900 L 905 900" stroke="#ffd700" stroke-width="3" marker-end="url(#wha)"/>
+            <rect x="910" y="860" width="140" height="80" fill="#10b981" rx="6"/>
+            <text x="980" y="890" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Card shows</text>
+            <text x="980" y="915" text-anchor="middle" fill="#ffd700" font-size="14">87,510</text>
+            <text x="550" y="1000" text-anchor="middle" fill="#10b981" font-size="14">All in &lt;100ms. That is what live what-if feels like.</text>
+          </svg>`,
+          caption: "CALCULATE + FILTER + parameter reference is the canonical what-if pattern — hard-coding the threshold breaks the slider."
+        }
+      },
+      {
+        type: "application",
+        title: "Ship Page 3 — The Operational Health Dashboard",
+        content: `Last build before the wrap. Open Olist.pbix.
+
+**Power Query prep (5 min):**
+1. Edit fact_OrderItems in Power Query. Add custom column delivery_days = Duration.Days([order_delivered_customer_date] - [order_purchase_timestamp]). Set type Whole Number.
+2. Add is_on_time = [delivery_days] <= [estimated_days_promised] (boolean).
+3. Close & Apply.
+
+**Create the what-if parameter (3 min):**
+- Modeling → New parameter → Numeric range → Name "SLA Days," Min 3, Max 14, Increment 1, Default 7. Check "Add slicer to this page." Power BI creates the 'SLA Days' table + slicer.
+
+**Build measures in _Measures (10 min):**
+- Avg Delivery Days = AVERAGE(fact_OrderItems[delivery_days])
+- On Time % = DIVIDE(CALCULATE([Total Orders], fact_OrderItems[is_on_time] = TRUE), [Total Orders])
+- Orders Within SLA = CALCULATE([Total Orders], FILTER(fact_OrderItems, fact_OrderItems[delivery_days] <= 'SLA Days'[SLA Days Value]))
+- Volume Lost % = DIVIDE([Total Orders] - [Orders Within SLA], [Total Orders])
+- Avg Review = AVERAGE(reviews[review_score])
+
+**Build the page (25 min):**
+1. Duplicate Page 2, rename "Operational Health."
+2. Line chart: X = dCalendar[MonthName] (sorted by MonthNumber), Y = On Time %. Add constant line at 0.9, color #ffd700, dashed, label "Target 90%."
+3. Stacked column: X = review_score (1–5), Y = Total Orders. Colors: 1★ #ef4444, 2★ #f59e0b, 3★ #ffd700, 4★ #0ea5e9, 5★ #10b981.
+4. Table: seller_id, On Time %, Avg Review, Total Orders. Filter to On Time % < 0.7 AND Avg Review < 3.5. Sort by Total Orders descending. Conditional format the On Time % column red when < 0.5.
+5. Place the SLA Days slicer top-right. Below it, two large cards: Orders Within SLA, Volume Lost %.
+6. Insert a text box explaining: "Drag the SLA slider to model the impact of tightening our delivery promise."
+
+**Test (5 min):**
+- Drag slider 7 → 5: Volume Lost should jump to roughly 11%.
+- Click a single bad month on the trend line: problem-seller table should refilter.
+- Right-click a problem seller: drill-through to Seller Detail still works.
+
+**Deliver:** Save the file. Screenshot Page 3 with the SLA slider at 5 days. Write a 3-sentence recommendation to Marina: which SLA tightening level you'd recommend and why. Save as page3-recommendation.txt. Next lesson you publish.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Page 3 Build Checklist</text>
+            <rect x="40" y="100" width="500" height="240" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="60" y="135" fill="#ffd700" font-size="18" font-weight="bold">Power Query Prep (5 min)</text>
+            <text x="80" y="170" fill="#ffffff" font-size="13">[ ] delivery_days = Duration.Days(...)</text>
+            <text x="80" y="200" fill="#ffffff" font-size="13">[ ] is_on_time = delivery_days &lt;= est</text>
+            <text x="80" y="230" fill="#ffffff" font-size="13">[ ] Close & Apply</text>
+            <text x="60" y="280" fill="#ffd700" font-size="18" font-weight="bold">Parameter (3 min)</text>
+            <text x="80" y="310" fill="#ffffff" font-size="13">[ ] New parameter "SLA Days"</text>
+            <text x="80" y="333" fill="#ffffff" font-size="13">[ ] Min 3, Max 14, Default 7</text>
+            <rect x="560" y="100" width="500" height="240" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="580" y="135" fill="#ffd700" font-size="18" font-weight="bold">Measures (10 min)</text>
+            <text x="600" y="170" fill="#10b981" font-size="11" font-family="monospace">[ ] Avg Delivery Days</text>
+            <text x="600" y="195" fill="#10b981" font-size="11" font-family="monospace">[ ] On Time %</text>
+            <text x="600" y="220" fill="#10b981" font-size="11" font-family="monospace">[ ] Orders Within SLA (uses parameter)</text>
+            <text x="600" y="245" fill="#10b981" font-size="11" font-family="monospace">[ ] Volume Lost %</text>
+            <text x="600" y="270" fill="#10b981" font-size="11" font-family="monospace">[ ] Avg Review</text>
+            <text x="580" y="310" fill="#888" font-size="12">All in _Measures table</text>
+            <rect x="40" y="360" width="1020" height="380" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="60" y="395" fill="#ffd700" font-size="18" font-weight="bold">Build the Page (25 min)</text>
+            <text x="80" y="430" fill="#ffffff" font-size="13">[ ] Duplicate Page 2 → rename "Operational Health"</text>
+            <text x="80" y="460" fill="#ffffff" font-size="13">[ ] Line chart: On Time % by MonthName + constant line 90% (dashed #ffd700)</text>
+            <text x="80" y="490" fill="#ffffff" font-size="13">[ ] Stacked column: review_score 1–5 with red→green color ladder</text>
+            <text x="80" y="520" fill="#ffffff" font-size="13">[ ] Problem-seller table: filter to OnTime &lt; 70% AND Review &lt; 3.5</text>
+            <text x="80" y="550" fill="#ffffff" font-size="13">[ ] Conditional format On Time column red where &lt; 50%</text>
+            <text x="80" y="580" fill="#ffffff" font-size="13">[ ] Place SLA Days slicer top-right</text>
+            <text x="80" y="610" fill="#ffffff" font-size="13">[ ] Two big cards: Orders Within SLA, Volume Lost %</text>
+            <text x="80" y="640" fill="#ffffff" font-size="13">[ ] Text annotation explaining the slider</text>
+            <text x="80" y="690" fill="#ffd700" font-size="16" font-weight="bold">Test (5 min)</text>
+            <text x="80" y="720" fill="#10b981" font-size="13">[ ] Slider 7→5: Volume Lost ≈ 11%</text>
+            <rect x="40" y="760" width="1020" height="300" fill="#16213e" stroke="#ec4899" stroke-width="2" rx="8"/>
+            <text x="60" y="795" fill="#ffd700" font-size="18" font-weight="bold">Deliver</text>
+            <text x="80" y="830" fill="#ffffff" font-size="13">[ ] Screenshot Page 3 with SLA slider at 5 → page3-screenshot.png</text>
+            <text x="80" y="860" fill="#ffffff" font-size="13">[ ] 3-sentence SLA recommendation → page3-recommendation.txt</text>
+            <text x="80" y="900" fill="#ffd700" font-size="14" font-weight="bold">Recommendation template:</text>
+            <text x="80" y="930" fill="#888" font-size="12">"I recommend tightening to X days. This loses Y% volume but lifts CSAT by Z stars,</text>
+            <text x="80" y="950" fill="#888" font-size="12">which converts to ~R$N retained revenue annually based on the cohort effect..."</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold">When the slider moves and Marina nods —</text>
+            <text x="550" y="1040" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">you have built an actual decision tool.</text>
+          </svg>`,
+          caption: "Page 3 ship list: PQ prep, parameter, five measures, six visuals, slider test, written recommendation."
+        }
+      }
+    ]
+  },
+  {
+    id: "excel-capstone-lesson-12",
+    title: "Capstone Wrap & Career Launch",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "From .pbix File to Hired Analyst",
+        content: `You have built it. Three pages. Sixteen DAX measures. A what-if parameter. A drill-through. A star schema with 112,650 fact rows that responds in milliseconds. The Olist dashboard sits on your laptop, beautiful and complete.
+
+And nobody knows it exists.
+
+That changes today. Lesson 12 is the bridge from "I made a thing" to "I got hired." Five moves:
+
+1. **Publish.** Upload Olist.pbix to a Power BI Service workspace. Get a shareable URL. Marina (or any recruiter) clicks once and is inside your work.
+2. **The email.** Write the email you send Marina with the workspace link. Three paragraphs. Confident, specific, decision-ready.
+3. **The handover doc.** One page. PDF. Bullet-point everything: data sources, measures glossary, refresh schedule, known limitations, next steps.
+4. **GitHub portfolio entry.** Public repo with the .pbix, a screenshot folder, the handover PDF, a README that recruiters actually read. README starts with the result, not the process.
+5. **The career conversation.** Power BI Analyst is the title. R$15,000–R$22,000 / month in São Paulo. US$70K–$95K in the United States. From here, your trajectory branches: Senior BI Analyst, Data Analyst, Analytics Engineer, eventually Data Scientist or Director of Analytics. You now have the foundation.
+
+The Excel + Power BI track ends here. Nine books. From "what is a cell reference" to "I built a production-grade BI dashboard." The skills you learned — Power Query M, DAX, dimensional modeling, what-if parameters, drill-through navigation — are the exact skills posted in 90% of analyst job descriptions today. The hiring manager wants to see you do them on real, messy, multi-table data. That is exactly what you just did with Olist.
+
+Today, you finish. And then you go get the job.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">From .pbix to Hired</text>
+            <text x="550" y="95" text-anchor="middle" fill="#888" font-size="16">The final five moves of the Excel + Power BI track</text>
+            <rect x="60" y="140" width="200" height="200" fill="#16213e" stroke="#6366f1" stroke-width="3" rx="10"/>
+            <text x="160" y="180" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">1</text>
+            <text x="160" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">PUBLISH</text>
+            <text x="160" y="250" text-anchor="middle" fill="#ffffff" font-size="12">Power BI Service</text>
+            <text x="160" y="270" text-anchor="middle" fill="#ffffff" font-size="12">workspace upload</text>
+            <text x="160" y="300" text-anchor="middle" fill="#10b981" font-size="11">shareable URL</text>
+            <text x="160" y="320" text-anchor="middle" fill="#10b981" font-size="11">scheduled refresh</text>
+            <rect x="280" y="140" width="200" height="200" fill="#16213e" stroke="#10b981" stroke-width="3" rx="10"/>
+            <text x="380" y="180" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">2</text>
+            <text x="380" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">THE EMAIL</text>
+            <text x="380" y="250" text-anchor="middle" fill="#ffffff" font-size="12">3 paragraphs to</text>
+            <text x="380" y="270" text-anchor="middle" fill="#ffffff" font-size="12">Marina</text>
+            <text x="380" y="300" text-anchor="middle" fill="#10b981" font-size="11">opens with answer</text>
+            <text x="380" y="320" text-anchor="middle" fill="#10b981" font-size="11">closes with ask</text>
+            <rect x="500" y="140" width="200" height="200" fill="#16213e" stroke="#f59e0b" stroke-width="3" rx="10"/>
+            <text x="600" y="180" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">3</text>
+            <text x="600" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">HANDOVER</text>
+            <text x="600" y="250" text-anchor="middle" fill="#ffffff" font-size="12">1-page PDF</text>
+            <text x="600" y="270" text-anchor="middle" fill="#ffffff" font-size="12">documentation</text>
+            <text x="600" y="300" text-anchor="middle" fill="#10b981" font-size="11">measures glossary</text>
+            <text x="600" y="320" text-anchor="middle" fill="#10b981" font-size="11">refresh notes</text>
+            <rect x="720" y="140" width="200" height="200" fill="#16213e" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+            <text x="820" y="180" text-anchor="middle" fill="#ffd700" font-size="40" font-weight="bold">4</text>
+            <text x="820" y="220" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">GITHUB</text>
+            <text x="820" y="250" text-anchor="middle" fill="#ffffff" font-size="12">public repo</text>
+            <text x="820" y="270" text-anchor="middle" fill="#ffffff" font-size="12">README + .pbix</text>
+            <text x="820" y="300" text-anchor="middle" fill="#10b981" font-size="11">screenshots</text>
+            <text x="820" y="320" text-anchor="middle" fill="#10b981" font-size="11">link from resume</text>
+            <rect x="940" y="140" width="120" height="200" fill="#ffd700" stroke="#ffffff" stroke-width="3" rx="10"/>
+            <text x="1000" y="180" text-anchor="middle" fill="#1a1a2e" font-size="40" font-weight="bold">5</text>
+            <text x="1000" y="220" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="bold">JOB</text>
+            <text x="1000" y="250" text-anchor="middle" fill="#1a1a2e" font-size="12">apply</text>
+            <text x="1000" y="270" text-anchor="middle" fill="#1a1a2e" font-size="12">interview</text>
+            <text x="1000" y="295" text-anchor="middle" fill="#1a1a2e" font-size="12">hired</text>
+            <text x="1000" y="320" text-anchor="middle" fill="#1a1a2e" font-size="11" font-weight="bold">$70-95K</text>
+            <rect x="60" y="380" width="1000" height="280" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="560" y="420" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Career Path: Where Power BI Analyst Leads</text>
+            <rect x="100" y="450" width="160" height="80" fill="#10b981" rx="6"/>
+            <text x="180" y="485" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Power BI Analyst</text>
+            <text x="180" y="510" text-anchor="middle" fill="#ffd700" font-size="12">US$70-95K</text>
+            <path d="M 260 490 L 320 490" stroke="#ffd700" stroke-width="3" marker-end="url(#ca1)"/>
+            <defs>
+              <marker id="ca1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+              </marker>
+            </defs>
+            <rect x="320" y="450" width="160" height="80" fill="#0ea5e9" rx="6"/>
+            <text x="400" y="485" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Data Analyst</text>
+            <text x="400" y="510" text-anchor="middle" fill="#ffd700" font-size="12">US$85-115K</text>
+            <path d="M 480 490 L 540 490" stroke="#ffd700" stroke-width="3" marker-end="url(#ca1)"/>
+            <rect x="540" y="450" width="160" height="80" fill="#6366f1" rx="6"/>
+            <text x="620" y="485" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Analytics Eng.</text>
+            <text x="620" y="510" text-anchor="middle" fill="#ffd700" font-size="12">US$110-145K</text>
+            <path d="M 700 490 L 760 490" stroke="#ffd700" stroke-width="3" marker-end="url(#ca1)"/>
+            <rect x="760" y="450" width="160" height="80" fill="#8b5cf6" rx="6"/>
+            <text x="840" y="485" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Sr Data Analyst</text>
+            <text x="840" y="510" text-anchor="middle" fill="#ffd700" font-size="12">US$125-170K</text>
+            <path d="M 400 540 L 400 590" stroke="#ffd700" stroke-width="3" marker-end="url(#ca1)"/>
+            <rect x="320" y="590" width="160" height="60" fill="#ec4899" rx="6"/>
+            <text x="400" y="615" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Data Scientist</text>
+            <text x="400" y="638" text-anchor="middle" fill="#ffd700" font-size="11">US$120-180K</text>
+            <path d="M 840 540 L 840 590" stroke="#ffd700" stroke-width="3" marker-end="url(#ca1)"/>
+            <rect x="760" y="590" width="160" height="60" fill="#ef4444" rx="6"/>
+            <text x="840" y="615" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Director Analytics</text>
+            <text x="840" y="638" text-anchor="middle" fill="#ffd700" font-size="11">US$160-240K</text>
+            <rect x="60" y="690" width="1000" height="370" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="560" y="730" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">What You Built That Recruiters Love</text>
+            <text x="100" y="775" fill="#10b981" font-size="14">[+] Power Query M code (cleaned 9 CSVs, joined star schema)</text>
+            <text x="100" y="810" fill="#10b981" font-size="14">[+] Dimensional model (4 dim tables, 1 fact, 112,650 rows)</text>
+            <text x="100" y="845" fill="#10b981" font-size="14">[+] 16 DAX measures including time intelligence (YoY, MoM, YTD, Rolling)</text>
+            <text x="100" y="880" fill="#10b981" font-size="14">[+] What-if parameter with SELECTEDVALUE + FILTER pattern</text>
+            <text x="100" y="915" fill="#10b981" font-size="14">[+] Drill-through navigation between report pages</text>
+            <text x="100" y="950" fill="#10b981" font-size="14">[+] Filled map, matrix heatmap, scatter — three visual idioms</text>
+            <text x="100" y="985" fill="#10b981" font-size="14">[+] Published to Power BI Service with shareable workspace URL</text>
+            <text x="100" y="1020" fill="#ffd700" font-size="14" font-weight="bold">[+] One-page handover doc = "I think like a business analyst, not a button-clicker"</text>
+          </svg>`,
+          caption: "Five moves to convert your .pbix into a job offer — plus the career path waiting on the other side."
+        }
+      },
+      {
+        type: "concept",
+        title: "Publishing, the Handover Doc, and the GitHub Portfolio README",
+        content: `**Publishing to Power BI Service.** In Power BI Desktop, click Home → Publish. Sign in with your school/Microsoft account. Select destination workspace (create one called "Portfolio - YourName" if you don't have one). Wait 30 seconds. You will get a URL like app.powerbi.com/groups/.../reports/.../ReportSection. Click Share → "People in your organization can view." Copy the link. Open it in an incognito window to confirm it renders.
+
+Then in the workspace, click your dataset → Schedule refresh → set Brazilian time zone, daily 6 AM, alert on failure. Optional: configure a gateway if pulling from a local file (for portfolio, we leave it as a snapshot).
+
+**The Handover Doc (one page, PDF).** Title: "Olist BI Dashboard — Operator Handover." Five sections, three bullets each:
+
+1. **What this is.** "An interactive Power BI dashboard analyzing 99,441 Olist orders Jan 2017–Oct 2018 to answer revenue, regional, category, and operational health questions for VP Operations."
+2. **Data sources.** "9 CSVs: orders, order_items, customers, sellers, products, reviews, payments, geolocation, category_translation. Source: Kaggle Olist dataset."
+3. **Measures glossary.** List the 16 measures with one-line descriptions: "Total Revenue = order item price + freight," "On Time % = orders delivered ≤ promised date / total orders," etc.
+4. **How to use it.** "Page 1 = exec summary. Page 2 = drill into regions/categories/sellers. Page 3 = operational health + SLA what-if. Right-click any seller to drill through to detail."
+5. **Refresh + ownership.** "Refreshes daily 6 AM Brazil time. Owner: [Your Name]. Questions: [your email]."
+
+Export to PDF. One page. White space. No emojis. Looks like a McKinsey one-pager.
+
+**The GitHub README.** Public repo named "olist-bi-dashboard." README.md structure:
+- **H1**: "Olist Brazil — Power BI Sales & Operations Dashboard"
+- **Result first**: "Built a 3-page Power BI dashboard analyzing 99,441 orders, 112,650 order lines, R$13.6M revenue across 27 Brazilian states. Surfaced 3 problem sellers driving 80% of late deliveries in August 2018."
+- **Screenshot** (Page 1 hero shot, full-width)
+- **Stack**: Power Query M, DAX, Power BI Service, Star Schema
+- **What I built**: bullet list of the 5 hardest things (Power Query joins, star schema, time intelligence DAX, what-if parameter, drill-through)
+- **Live link**: Power BI Service URL
+- **Data source**: link to Kaggle Olist
+- **Files in this repo**: Olist.pbix, /screenshots/, handover.pdf
+
+Pin the repo on your GitHub profile. Add the live link to your LinkedIn featured section. Add "Power BI | DAX | Power Query | Dimensional Modeling" to your skills.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Publishing Stack</text>
+            <rect x="60" y="100" width="480" height="450" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="80" y="135" fill="#ffd700" font-size="18" font-weight="bold">1. Power BI Service Publish</text>
+            <rect x="80" y="160" width="440" height="60" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="185" fill="#ffffff" font-size="13">Home tab → Publish button</text>
+            <text x="100" y="205" fill="#888" font-size="11">select "Portfolio - YourName" workspace</text>
+            <rect x="80" y="235" width="440" height="60" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="260" fill="#ffffff" font-size="13">Share → "People in org can view"</text>
+            <text x="100" y="280" fill="#888" font-size="11">copy shareable URL</text>
+            <rect x="80" y="310" width="440" height="60" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="335" fill="#ffffff" font-size="13">Schedule refresh: daily 6 AM Brazil</text>
+            <text x="100" y="355" fill="#888" font-size="11">alert on failure → your email</text>
+            <rect x="80" y="385" width="440" height="60" fill="#0f1626" stroke="#10b981" rx="4"/>
+            <text x="100" y="410" fill="#10b981" font-size="13">Test in incognito → renders publicly?</text>
+            <text x="100" y="430" fill="#10b981" font-size="11">if yes, you have a portfolio asset</text>
+            <text x="80" y="490" fill="#ffd700" font-size="14" font-weight="bold">URL format:</text>
+            <text x="80" y="520" fill="#888" font-size="11" font-family="monospace">app.powerbi.com/groups/&lt;id&gt;/reports/&lt;id&gt;</text>
+            <rect x="560" y="100" width="480" height="450" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="580" y="135" fill="#ffd700" font-size="18" font-weight="bold">2. Handover PDF (1 page)</text>
+            <rect x="580" y="160" width="440" height="380" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="600" y="195" fill="#ffd700" font-size="14" font-weight="bold">Olist BI Dashboard — Handover</text>
+            <text x="600" y="225" fill="#10b981" font-size="12" font-weight="bold">What this is</text>
+            <text x="600" y="245" fill="#ffffff" font-size="11">Interactive 3-page Power BI dashboard.</text>
+            <text x="600" y="260" fill="#ffffff" font-size="11">99,441 orders Jan 2017 – Oct 2018.</text>
+            <text x="600" y="290" fill="#10b981" font-size="12" font-weight="bold">Data sources</text>
+            <text x="600" y="310" fill="#ffffff" font-size="11">9 CSVs from Kaggle Olist set.</text>
+            <text x="600" y="325" fill="#ffffff" font-size="11">Star schema in Power Query.</text>
+            <text x="600" y="355" fill="#10b981" font-size="12" font-weight="bold">Measures (16 total)</text>
+            <text x="600" y="375" fill="#ffffff" font-size="11">Total Revenue, On Time %, YoY,</text>
+            <text x="600" y="390" fill="#ffffff" font-size="11">Orders Within SLA (what-if), ...</text>
+            <text x="600" y="420" fill="#10b981" font-size="12" font-weight="bold">How to use</text>
+            <text x="600" y="440" fill="#ffffff" font-size="11">Pages 1–3 + drill-through to seller.</text>
+            <text x="600" y="455" fill="#ffffff" font-size="11">SLA slider on Page 3 = what-if model.</text>
+            <text x="600" y="485" fill="#10b981" font-size="12" font-weight="bold">Refresh + ownership</text>
+            <text x="600" y="505" fill="#ffffff" font-size="11">Daily 6 AM BRT. Owner: Your Name.</text>
+            <text x="600" y="520" fill="#ffffff" font-size="11">Questions: your@email.com</text>
+            <rect x="60" y="580" width="980" height="470" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="80" y="615" fill="#ffd700" font-size="18" font-weight="bold">3. GitHub README — recruiters open this first</text>
+            <rect x="80" y="640" width="940" height="390" fill="#0f1626" stroke="#888" rx="4"/>
+            <text x="100" y="675" fill="#ffd700" font-size="20" font-weight="bold"># Olist Brazil — Power BI Sales &amp; Operations Dashboard</text>
+            <text x="100" y="715" fill="#ffffff" font-size="13">Built a 3-page interactive Power BI dashboard analyzing 99,441 Olist orders,</text>
+            <text x="100" y="735" fill="#ffffff" font-size="13">112,650 order lines, R$13.6M revenue across 27 Brazilian states. Surfaced 3 problem</text>
+            <text x="100" y="755" fill="#ffffff" font-size="13">sellers driving 80% of late deliveries in August 2018.</text>
+            <rect x="100" y="775" width="700" height="120" fill="#16213e" stroke="#888" rx="4"/>
+            <text x="450" y="845" text-anchor="middle" fill="#888" font-size="12">[Page 1 hero screenshot]</text>
+            <text x="100" y="925" fill="#10b981" font-size="13" font-weight="bold">Stack:</text>
+            <text x="180" y="925" fill="#ffffff" font-size="13">Power Query M • DAX • Power BI Service • Star Schema</text>
+            <text x="100" y="955" fill="#10b981" font-size="13" font-weight="bold">Live:</text>
+            <text x="180" y="955" fill="#0ea5e9" font-size="13">app.powerbi.com/groups/.../reports/...</text>
+            <text x="100" y="985" fill="#10b981" font-size="13" font-weight="bold">Data:</text>
+            <text x="180" y="985" fill="#0ea5e9" font-size="13">kaggle.com/datasets/olistbr/brazilian-ecommerce</text>
+            <text x="100" y="1015" fill="#10b981" font-size="13" font-weight="bold">Files:</text>
+            <text x="180" y="1015" fill="#ffffff" font-size="13">Olist.pbix • /screenshots/ • handover.pdf</text>
+          </svg>`,
+          caption: "The three artifacts: published service URL, one-page handover PDF, GitHub README that opens with the result."
+        }
+      },
+      {
+        type: "example",
+        title: "The Email to Marina (and What to Steal for Your Cover Letter)",
+        content: `Here is the actual email. Subject line included. Use this format every time you ship analytical work.
+
+---
+
+**To:** marina.rodrigues@olist.com.br
+**From:** [your name]
+**Subject:** Olist BI Dashboard — published, with 3 findings for your Friday meeting
+
+Marina,
+
+The dashboard is live. Workspace link is at the bottom of this email. Three findings I think matter most for your conversation with the CEO Friday:
+
+**1. Revenue is healthy but concentrated.** Total R$13.6M across 99,441 orders. São Paulo alone is 38% of that, and SP + MG + RJ combined are 62%. Three states are doing most of the work. If you lose São Paulo's growth rate, the rest of the country cannot backfill quickly. Worth a strategy conversation about expanding the seller base in PR, RS, and SC where current penetration is under 5%.
+
+**2. August's on-time drop is a 3-seller problem, not systemic.** On-time delivery fell from a 91% baseline to 71% in August 2018. When I drilled in, three sellers — all PR-based furniture sellers — accounted for ~4,200 of the 4,800 late orders that month. This looks like a regional carrier issue, not an operations breakdown. Recommend a direct conversation with the PR shipping partner this week.
+
+**3. Tightening the SLA from 7 days to 6 days is a real trade-off, not a small one.** Using the what-if slider on Page 3, moving from 7 to 6 days drops us from 99.3% to 81% of orders meeting promise, but historical data suggests this would lift average review scores by ~0.4 stars. That is roughly +R$340K of retained revenue annually based on the cohort effect from review-score uplift. Not a slam dunk — wanted you to see the slider yourself.
+
+The dashboard refreshes daily at 6 AM Brazil time. Right-click any seller to drill through to their detail page. SLA slider lives top-right of Page 3. Handover PDF attached for your team.
+
+Happy to walk through any of this in person — 15 minutes is enough.
+
+[Live dashboard link]
+
+Best,
+[your name]
+
+---
+
+**Why this email works** — and what to steal for every analyst cover letter you ever write:
+
+1. **Subject line has the verb of value.** "Published, with 3 findings." Not "Update on dashboard." Recruiters scan subjects.
+2. **First paragraph is the answer, not the process.** No "I was tasked with..." or "I analyzed nine CSVs..." Just: link is at the bottom, three findings, here they are.
+3. **Each finding follows: number → context → recommendation → quantified impact.** R$340K. 4,200 of 4,800. 38%. Numbers earn the reader's attention.
+4. **It quantifies trade-offs, doesn't hide them.** "Not a slam dunk — wanted you to see the slider yourself." This is the move that separates analyst from button-clicker.
+5. **The close is concrete and short.** "15 minutes is enough." Marina knows exactly what she is agreeing to.
+
+Cover-letter version: replace "Marina" with "Hiring Manager," replace "the dashboard is live" with "Here is a Power BI dashboard I built on the Olist dataset that demonstrates the analytical pattern your job posting describes." Link to the GitHub README. Same three findings. Same close.
+
+You just turned a school project into a hiring artifact.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">The Email That Earns Trust</text>
+            <rect x="60" y="100" width="980" height="900" fill="#ffffff" rx="8"/>
+            <rect x="60" y="100" width="980" height="60" fill="#16213e" rx="8"/>
+            <text x="80" y="135" fill="#ffd700" font-size="14" font-weight="bold">Subject: Olist BI Dashboard — published, with 3 findings for your Friday meeting</text>
+            <text x="80" y="195" fill="#1a1a2e" font-size="14" font-weight="bold">To:</text>
+            <text x="120" y="195" fill="#1a1a2e" font-size="14">marina.rodrigues@olist.com.br</text>
+            <text x="80" y="220" fill="#1a1a2e" font-size="14" font-weight="bold">From:</text>
+            <text x="120" y="220" fill="#1a1a2e" font-size="14">[your name]</text>
+            <line x1="80" y1="240" x2="1020" y2="240" stroke="#888"/>
+            <text x="80" y="275" fill="#1a1a2e" font-size="14">Marina,</text>
+            <text x="80" y="310" fill="#1a1a2e" font-size="13">The dashboard is live. Workspace link is at the bottom. Three findings</text>
+            <text x="80" y="330" fill="#1a1a2e" font-size="13">I think matter most for your conversation with the CEO Friday:</text>
+            <text x="80" y="380" fill="#6366f1" font-size="13" font-weight="bold">1. Revenue is healthy but concentrated.</text>
+            <text x="80" y="405" fill="#1a1a2e" font-size="12">R$13.6M across 99,441 orders. SP alone is 38%. SP + MG + RJ = 62%.</text>
+            <text x="80" y="425" fill="#1a1a2e" font-size="12">Three states do most of the work. Recommend expanding seller base in PR, RS, SC.</text>
+            <text x="80" y="475" fill="#ef4444" font-size="13" font-weight="bold">2. August on-time drop = 3-seller problem, not systemic.</text>
+            <text x="80" y="500" fill="#1a1a2e" font-size="12">91% baseline → 71% in August. Three PR-based furniture sellers own 4,200 of</text>
+            <text x="80" y="520" fill="#1a1a2e" font-size="12">4,800 late orders. Likely regional carrier issue. Recommend PR carrier call this week.</text>
+            <text x="80" y="570" fill="#10b981" font-size="13" font-weight="bold">3. Tightening SLA 7d → 6d is a real trade-off.</text>
+            <text x="80" y="595" fill="#1a1a2e" font-size="12">Drops on-time-promise from 99.3% to 81%, lifts CSAT ~0.4 stars,</text>
+            <text x="80" y="615" fill="#1a1a2e" font-size="12">≈ R$340K retained revenue annually via review-score cohort effect.</text>
+            <text x="80" y="635" fill="#1a1a2e" font-size="12">Not a slam dunk — wanted you to see the slider yourself.</text>
+            <text x="80" y="685" fill="#1a1a2e" font-size="13">Refreshes daily 6 AM BRT. Right-click any seller for drill-through. SLA slider</text>
+            <text x="80" y="705" fill="#1a1a2e" font-size="13">top-right of Page 3. Handover PDF attached.</text>
+            <text x="80" y="745" fill="#1a1a2e" font-size="13">Happy to walk through any of this — 15 minutes is enough.</text>
+            <text x="80" y="785" fill="#0ea5e9" font-size="13" font-weight="bold">[Live dashboard link]</text>
+            <text x="80" y="820" fill="#1a1a2e" font-size="13">Best,</text>
+            <text x="80" y="840" fill="#1a1a2e" font-size="13">[your name]</text>
+            <rect x="80" y="870" width="940" height="110" fill="#16213e" rx="6"/>
+            <text x="100" y="900" fill="#ffd700" font-size="14" font-weight="bold">Why this works — steal for every cover letter:</text>
+            <text x="100" y="925" fill="#10b981" font-size="11">[1] Subject has verb of value [2] First para = answer not process</text>
+            <text x="100" y="947" fill="#10b981" font-size="11">[3] Each finding: number → context → recommendation → R$ impact</text>
+            <text x="100" y="969" fill="#10b981" font-size="11">[4] Quantifies trade-offs honestly [5] Close is concrete: "15 minutes is enough"</text>
+          </svg>`,
+          caption: "Replace Marina with hiring manager, replace 'dashboard is live' with 'attached portfolio link' — same email works as your cover letter."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "You are emailing the Olist dashboard to a hiring manager as part of a job application. Which opening line maximizes the chance the manager actually clicks the link?",
+        options: [
+          { text: "I was tasked with building a Power BI dashboard analyzing nine CSV files from the Olist Brazilian e-commerce dataset...", correct: false },
+          { text: "Please find attached my Power BI dashboard portfolio submission for the Data Analyst role.", correct: false },
+          { text: "Built a 3-page Power BI dashboard on 99,441 Olist orders — surfaced 3 problem sellers driving 80% of August late deliveries. Link below.", correct: true },
+          { text: "I would love to discuss the opportunity at your company and demonstrate my Power BI skills if given the chance...", correct: false }
+        ],
+        explanation: "The winning opener leads with the result (3 problem sellers, 80% of late deliveries) plus a concrete number (99,441 orders) — both happen in the first sentence. Recruiters read hundreds of these and skim ruthlessly; if the first line is a job description (option 1) or boilerplate (option 2, 4), they tap delete. The findings-first opener mirrors how senior analysts communicate: answer first, then evidence. Same principle as the email to Marina: open with the answer, never with the process.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Open With the Answer</text>
+            <rect x="60" y="120" width="980" height="220" fill="#16213e" stroke="#ef4444" stroke-width="2" rx="8"/>
+            <text x="80" y="160" fill="#ef4444" font-size="20" font-weight="bold">WRONG: Process-first</text>
+            <text x="80" y="195" fill="#ffffff" font-size="14">"I was tasked with building a Power BI dashboard analyzing</text>
+            <text x="80" y="220" fill="#ffffff" font-size="14">nine CSV files from the Olist Brazilian e-commerce dataset..."</text>
+            <text x="80" y="270" fill="#ef4444" font-size="13">Reader thinks: "I don't care about your task. What did you find?"</text>
+            <text x="80" y="295" fill="#ef4444" font-size="13">Result: delete in 4 seconds.</text>
+            <text x="80" y="320" fill="#888" font-size="12">→ this is the default that 90% of students send.</text>
+            <rect x="60" y="370" width="980" height="220" fill="#16213e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+            <text x="80" y="410" fill="#f59e0b" font-size="20" font-weight="bold">MEDIOCRE: Generic boilerplate</text>
+            <text x="80" y="445" fill="#ffffff" font-size="14">"Please find attached my Power BI dashboard portfolio</text>
+            <text x="80" y="470" fill="#ffffff" font-size="14">submission for the Data Analyst role."</text>
+            <text x="80" y="520" fill="#f59e0b" font-size="13">Reader thinks: "OK... why should I open it though?"</text>
+            <text x="80" y="545" fill="#f59e0b" font-size="13">Result: maybe opens it, maybe doesn't.</text>
+            <text x="80" y="570" fill="#888" font-size="12">→ neither offensive nor compelling. Most miss the opportunity.</text>
+            <rect x="60" y="620" width="980" height="240" fill="#16213e" stroke="#10b981" stroke-width="3" rx="8"/>
+            <text x="80" y="660" fill="#10b981" font-size="22" font-weight="bold">RIGHT: Result-first</text>
+            <text x="80" y="700" fill="#ffffff" font-size="15" font-weight="bold">"Built a 3-page Power BI dashboard on 99,441 Olist orders —</text>
+            <text x="80" y="725" fill="#ffffff" font-size="15" font-weight="bold">surfaced 3 problem sellers driving 80% of August late</text>
+            <text x="80" y="750" fill="#ffffff" font-size="15" font-weight="bold">deliveries. Link below."</text>
+            <text x="80" y="790" fill="#10b981" font-size="14" font-weight="bold">Reader thinks: "Wait, they found something specific. Show me."</text>
+            <text x="80" y="815" fill="#10b981" font-size="14" font-weight="bold">Result: clicks the link. Calendar invite goes out the same day.</text>
+            <text x="80" y="840" fill="#ffd700" font-size="13">→ this is how senior analysts open every email they send.</text>
+            <rect x="60" y="890" width="980" height="170" fill="#16213e" stroke="#ffd700" stroke-width="2" rx="8"/>
+            <text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">The Pattern</text>
+            <text x="100" y="970" fill="#ffffff" font-size="14">[1] State what you built in one verb + object phrase</text>
+            <text x="100" y="1000" fill="#ffffff" font-size="14">[2] Insert ONE concrete number that proves volume or impact</text>
+            <text x="100" y="1030" fill="#ffffff" font-size="14">[3] Surface the most surprising finding in 8 words or fewer</text>
+          </svg>`,
+          caption: "Process-first openings get deleted. Result-first openings get interviews."
+        }
+      },
+      {
+        type: "application",
+        title: "Ship It & Apply — Your Last Excel + Power BI Assignment",
+        content: `This is the last assignment in the Excel + Power BI track. Nine books. Three months. You earned this.
+
+**Tonight (90 min):**
+
+1. **Publish the .pbix.** Home → Publish → Portfolio workspace. Verify the URL renders in incognito. Set scheduled refresh daily 6 AM (your local time). 15 min.
+
+2. **Write the handover PDF.** One page. Use the 5-section structure from this lesson: What this is, Data sources, Measures (list all 16), How to use, Refresh + ownership. Export from Word/Docs to PDF. Save as handover.pdf. 20 min.
+
+3. **Create GitHub repo.** Name: olist-bi-dashboard. Make it public. Upload: Olist.pbix, /screenshots/page1.png, /screenshots/page2.png, /screenshots/page3.png, handover.pdf, and a README.md. README opens with "Built a 3-page Power BI dashboard..." — result first. 20 min.
+
+4. **Write the email.** Save as olist-email-template.txt in the repo. Use the Marina template from this lesson. You will reuse it for every job application from here. 10 min.
+
+5. **Update LinkedIn.** Add to Featured: link to the GitHub repo. Update Skills: Power BI, DAX, Power Query, Dimensional Modeling, Data Visualization, Microsoft Fabric (yes, claim it — what you learned applies). Add a short post: "Just shipped a 3-page Power BI dashboard on the Olist Brazilian e-commerce dataset — 99,441 orders, 16 DAX measures, what-if SLA modeling. Link in featured." 15 min.
+
+6. **Apply to one Power BI Analyst job tonight.** Just one. Search LinkedIn for "Power BI Analyst" with location filter. Find one posting where the requirements look like things you actually did in this course. Send your standard application with the GitHub link in the cover letter. 10 min.
+
+**This week (3 hours):**
+- Apply to 10 more Power BI Analyst or Data Analyst jobs using the same template.
+- Record a 2-minute Loom walkthrough of your dashboard. Voice over: "Here is Page 1. Total Revenue card uses Total Revenue = SUMX(fact_OrderItems, [price] + [freight_value])..." Drop the Loom link in the GitHub README.
+- Reach out to 3 people on LinkedIn who currently hold Power BI Analyst roles at companies you respect. Short message: "Just finished an end-to-end Power BI portfolio project — would love 15 minutes of your time to ask how you broke into the role."
+
+**The next track:** Your foundation is set. Next moves in the analytics career: SQL (you cannot avoid it — most analyst roles require it), Python for analytics (pandas + Jupyter), then deeper specialization in either Analytics Engineering (dbt + Snowflake) or Data Science (statistics + ML).
+
+This is the end of one road and the start of the next. Marina got her dashboard. You got the skills. Go get the job.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Ship It Tonight (90 min)</text>
+            <rect x="40" y="100" width="500" height="500" fill="#16213e" stroke="#10b981" stroke-width="2" rx="8"/>
+            <text x="60" y="135" fill="#ffd700" font-size="18" font-weight="bold">The 6-Step Tonight Plan</text>
+            <text x="60" y="175" fill="#10b981" font-size="14">[1] Publish .pbix (15 min)</text>
+            <text x="80" y="200" fill="#ffffff" font-size="12">Home → Publish → workspace</text>
+            <text x="80" y="220" fill="#ffffff" font-size="12">Test incognito → scheduled refresh</text>
+            <text x="60" y="255" fill="#10b981" font-size="14">[2] Handover PDF (20 min)</text>
+            <text x="80" y="280" fill="#ffffff" font-size="12">5 sections, 1 page, export to PDF</text>
+            <text x="60" y="315" fill="#10b981" font-size="14">[3] GitHub repo (20 min)</text>
+            <text x="80" y="340" fill="#ffffff" font-size="12">Public, olist-bi-dashboard</text>
+            <text x="80" y="360" fill="#ffffff" font-size="12">.pbix + screenshots + handover + README</text>
+            <text x="60" y="395" fill="#10b981" font-size="14">[4] Email template (10 min)</text>
+            <text x="80" y="420" fill="#ffffff" font-size="12">Save Marina format → olist-email.txt</text>
+            <text x="60" y="455" fill="#10b981" font-size="14">[5] LinkedIn (15 min)</text>
+            <text x="80" y="480" fill="#ffffff" font-size="12">Featured link + skills + post</text>
+            <text x="60" y="515" fill="#ffd700" font-size="14" font-weight="bold">[6] Apply to ONE job (10 min)</text>
+            <text x="80" y="540" fill="#ffd700" font-size="12">Power BI Analyst, any company</text>
+            <text x="80" y="560" fill="#ffd700" font-size="12">Use the cover letter template</text>
+            <text x="80" y="585" fill="#10b981" font-size="13" font-weight="bold">JUST ONE — momentum matters.</text>
+            <rect x="560" y="100" width="500" height="500" fill="#16213e" stroke="#6366f1" stroke-width="2" rx="8"/>
+            <text x="580" y="135" fill="#ffd700" font-size="18" font-weight="bold">This Week (3 hr)</text>
+            <text x="580" y="175" fill="#0ea5e9" font-size="14">[+] 10 more applications</text>
+            <text x="600" y="200" fill="#ffffff" font-size="12">Same cover letter template,</text>
+            <text x="600" y="220" fill="#ffffff" font-size="12">vary the 3 findings per role.</text>
+            <text x="580" y="255" fill="#0ea5e9" font-size="14">[+] 2-min Loom walkthrough</text>
+            <text x="600" y="280" fill="#ffffff" font-size="12">Walk through Pages 1–3</text>
+            <text x="600" y="300" fill="#ffffff" font-size="12">Pin Loom link in README</text>
+            <text x="580" y="335" fill="#0ea5e9" font-size="14">[+] 3 LinkedIn outreach DMs</text>
+            <text x="600" y="360" fill="#ffffff" font-size="12">To current Power BI Analysts</text>
+            <text x="600" y="380" fill="#ffffff" font-size="12">Ask for 15 minutes of their time</text>
+            <text x="580" y="420" fill="#ffd700" font-size="16" font-weight="bold">Expected outcome:</text>
+            <text x="600" y="445" fill="#ffffff" font-size="13">1–2 phone screens this month</text>
+            <text x="600" y="470" fill="#ffffff" font-size="13">3+ informational chats</text>
+            <text x="600" y="495" fill="#ffffff" font-size="13">Refined portfolio &amp; pitch</text>
+            <text x="580" y="535" fill="#10b981" font-size="14" font-weight="bold">Next 60 days:</text>
+            <text x="600" y="560" fill="#10b981" font-size="12">First Power BI Analyst offer</text>
+            <text x="600" y="580" fill="#10b981" font-size="12">at R$15-22K/mo or US$70-95K</text>
+            <rect x="40" y="630" width="1020" height="430" fill="#16213e" stroke="#ffd700" stroke-width="3" rx="8"/>
+            <text x="550" y="670" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">What You Mastered in 9 Books</text>
+            <text x="80" y="710" fill="#10b981" font-size="14">Book 1: Excel foundations — cells, formulas, references, formatting</text>
+            <text x="80" y="740" fill="#10b981" font-size="14">Book 2: Functions deep dive — IF, VLOOKUP/XLOOKUP, INDEX/MATCH, text functions</text>
+            <text x="80" y="770" fill="#10b981" font-size="14">Book 3: PivotTables &amp; pivot charts — slicing real datasets</text>
+            <text x="80" y="800" fill="#10b981" font-size="14">Book 4: Data analysis &amp; Power Pivot — DAX intro, calculated columns vs measures</text>
+            <text x="80" y="830" fill="#10b981" font-size="14">Book 5: Power Query — connecting, cleaning, M language fundamentals</text>
+            <text x="80" y="860" fill="#10b981" font-size="14">Book 6: Power BI Desktop — model view, visuals gallery, themes</text>
+            <text x="80" y="890" fill="#10b981" font-size="14">Book 7: DAX Mastery — CALCULATE, FILTER, time intelligence, iterators</text>
+            <text x="80" y="920" fill="#10b981" font-size="14">Book 8: Dashboard Design — UX, color theory, executive layouts</text>
+            <text x="80" y="950" fill="#ffd700" font-size="14" font-weight="bold">Book 9: Capstone — Olist end-to-end build (where you are now)</text>
+            <text x="550" y="1005" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Excel + Power BI Track: COMPLETE</text>
+            <text x="550" y="1040" text-anchor="middle" fill="#10b981" font-size="18">Go get the job. You earned it.</text>
+          </svg>`,
+          caption: "Tonight ships the artifacts. This week applies. The next 60 days lands your first analyst offer."
         }
       }
     ]
