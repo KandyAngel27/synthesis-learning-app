@@ -14393,8 +14393,683 @@ You have a plan. Now go execute.`,
             title: 'Full-Length NCLEX Mock Exams',
             author: 'Synthesis Learning',
             description: 'Computer-adaptive-style mock exams with the same question-type mix and difficulty as the real Next Gen NCLEX.',
-            lessons: 1, duration: 5, progress: 0, category: 'nclex-foundations',
-            lessonList: comingSoonLessons('computer-adaptive-style mock exams matching the Next Gen NCLEX question mix and difficulty'),
+            lessons: 3, duration: 45, progress: 0, category: 'nclex-foundations',
+            lessonList: [
+{
+    id: "nclex-mock-lesson-1",
+    title: "Mock Exam 1: Adult Med-Surg CAT Simulation",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "75 Questions. One Computer. The Real Thing.",
+        content: `It is 8:02 AM at the Pearson VUE testing center. Your locker key is in your pocket, your palm vein scan is logged, and the screen in front of you displays the **Next Generation NCLEX (NGN) tutorial**. In 90 seconds, the first question will load — and the **computerized adaptive test (CAT)** engine will begin its silent calibration of your nursing judgment.\n\nThis mock is built to mirror that morning. You will face a **75-item Adult Med-Surg-focused simulation** weighted toward the **three highest-failure subsystems on the actual NCLEX**: cardiovascular (heart failure, MI, dysrhythmias), pulmonary (COPD exacerbations, ARDS, chest tubes), and renal (AKI, CKD, dialysis, electrolytes).\n\nWhy these three? On the most recent NCSBN test-plan analysis, **Physiological Adaptation** and **Reduction of Risk Potential** together account for **24-40%** of test items, and CV/pulm/renal scenarios drive the bulk of those.\n\nBy the end of this 15-minute lesson, you will know exactly what to expect on Mock 1, how the CAT engine decides when to stop, and what a "passing" performance actually looks like under the new **0.00 logit cut score**. Open your scratch paper. Let's calibrate.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 1</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Adult Med-Surg CAT Simulation</text>
+            <rect x="100" y="160" width="900" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="200" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">75 ITEMS  -  5 HOURS MAX</text>
+            <text x="550" y="235" text-anchor="middle" fill="#fff" font-size="18">CAT engine adapts each question to your ability</text>
+            <rect x="80" y="300" width="320" height="320" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="240" y="350" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">CARDIOVASCULAR</text>
+            <text x="240" y="395" text-anchor="middle" fill="#fff" font-size="18">Heart failure</text>
+            <text x="240" y="425" text-anchor="middle" fill="#fff" font-size="18">MI / ACS</text>
+            <text x="240" y="455" text-anchor="middle" fill="#fff" font-size="18">Dysrhythmias</text>
+            <text x="240" y="485" text-anchor="middle" fill="#fff" font-size="18">Hypertension</text>
+            <text x="240" y="515" text-anchor="middle" fill="#fff" font-size="18">Shock states</text>
+            <text x="240" y="570" text-anchor="middle" fill="#888" font-size="18">~25 items</text>
+            <rect x="390" y="300" width="320" height="320" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="350" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">PULMONARY</text>
+            <text x="550" y="395" text-anchor="middle" fill="#fff" font-size="18">COPD exacerbation</text>
+            <text x="550" y="425" text-anchor="middle" fill="#fff" font-size="18">ARDS / pneumonia</text>
+            <text x="550" y="455" text-anchor="middle" fill="#fff" font-size="18">Chest tubes</text>
+            <text x="550" y="485" text-anchor="middle" fill="#fff" font-size="18">PE / DVT</text>
+            <text x="550" y="515" text-anchor="middle" fill="#fff" font-size="18">ABG interpretation</text>
+            <text x="550" y="570" text-anchor="middle" fill="#888" font-size="18">~25 items</text>
+            <rect x="700" y="300" width="320" height="320" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="860" y="350" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">RENAL</text>
+            <text x="860" y="395" text-anchor="middle" fill="#fff" font-size="18">AKI / CKD</text>
+            <text x="860" y="425" text-anchor="middle" fill="#fff" font-size="18">Hemodialysis</text>
+            <text x="860" y="455" text-anchor="middle" fill="#fff" font-size="18">Peritoneal dialysis</text>
+            <text x="860" y="485" text-anchor="middle" fill="#fff" font-size="18">Hyperkalemia</text>
+            <text x="860" y="515" text-anchor="middle" fill="#fff" font-size="18">Fluid overload</text>
+            <text x="860" y="570" text-anchor="middle" fill="#888" font-size="18">~25 items</text>
+            <rect x="150" y="680" width="800" height="120" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="720" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">CAT STOP RULES</text>
+            <text x="550" y="755" text-anchor="middle" fill="#fff" font-size="18">75-item minimum  -  150-item maximum  -  5-hour clock</text>
+            <text x="550" y="785" text-anchor="middle" fill="#888" font-size="16">Engine stops when ability estimate is 95% above or below the cut score</text>
+            <rect x="200" y="850" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="900" text-anchor="middle" fill="#ffd700" font-size="20">Treat every item as if it could be your last</text>
+          </svg>`,
+          caption: "Mock 1 blueprint: 75 items weighted toward the three highest-yield adult systems"
+        }
+      },
+      {
+        type: "concept",
+        title: "How the CAT Engine Picks Your Next Question",
+        content: `The NCLEX CAT engine is governed by an **Item Response Theory (IRT)** model — specifically a **Rasch one-parameter logistic model**. Here is what is actually happening behind the screen, item by item.\n\n**1. Starting ability estimate.** You begin at a **logit of -0.30** (slightly below the cut score). The engine knows nothing about you yet, so it serves a moderate-difficulty item from a content area you have not yet seen.\n\n**2. After every answer**, three things update:\n• **Your ability estimate** (theta) moves up if correct, down if incorrect\n• **The 95% confidence interval** around your theta narrows\n• **The content blueprint counter** ticks — the engine MUST honor the **NCSBN test plan** (Safe & Effective Care, Health Promotion, Psychosocial Integrity, Physiological Integrity)\n\n**3. The engine then selects the next item** that satisfies all of:\n• Difficulty closest to your current theta (maximizes information)\n• Content category still owed under the blueprint\n• Item type rotation (multiple choice, **drag-and-drop**, **drop-down cloze**, **matrix multiple-response**, **bow-tie**, **trend**)\n\n**4. Stop rule.** The exam ends the moment your **95% CI sits entirely above OR entirely below the 0.00 logit cut**. If after 75 items the CI still straddles the cut, the engine keeps serving items up to 150. If time runs out, the **last-60-items rule** decides pass/fail.\n\nTakeaway: a wrong answer is not catastrophic — but a **streak** of wrong answers at lower difficulty IS, because it pulls theta below the cut and widens the CI on the wrong side.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THE CAT ENGINE</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">How your theta moves with each click</text>
+            <line x1="100" y1="500" x2="1000" y2="500" stroke="#888" stroke-width="2"/>
+            <line x1="550" y1="200" x2="550" y2="800" stroke="#ffd700" stroke-width="2" stroke-dasharray="6"/>
+            <text x="550" y="180" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="20">CUT SCORE  =  0.00 logit</text>
+            <text x="120" y="490" text-anchor="start" fill="#888" font-size="16">Item 1</text>
+            <text x="980" y="490" text-anchor="end" fill="#888" font-size="16">Item 75</text>
+            <text x="80" y="220" text-anchor="middle" fill="#10b981" font-size="16">+2</text>
+            <text x="80" y="500" text-anchor="middle" fill="#888" font-size="16">0</text>
+            <text x="80" y="780" text-anchor="middle" fill="#ef4444" font-size="16">-2</text>
+            <circle cx="150" cy="540" r="8" fill="#6366f1"/>
+            <circle cx="220" cy="500" r="8" fill="#10b981"/>
+            <circle cx="290" cy="460" r="8" fill="#10b981"/>
+            <circle cx="360" cy="500" r="8" fill="#ef4444"/>
+            <circle cx="430" cy="450" r="8" fill="#10b981"/>
+            <circle cx="500" cy="410" r="8" fill="#10b981"/>
+            <circle cx="570" cy="430" r="8" fill="#ef4444"/>
+            <circle cx="640" cy="390" r="8" fill="#10b981"/>
+            <circle cx="710" cy="360" r="8" fill="#10b981"/>
+            <circle cx="780" cy="340" r="8" fill="#10b981"/>
+            <circle cx="850" cy="320" r="8" fill="#10b981"/>
+            <circle cx="920" cy="310" r="8" fill="#10b981"/>
+            <path d="M150 540 L220 500 L290 460 L360 500 L430 450 L500 410 L570 430 L640 390 L710 360 L780 340 L850 320 L920 310" stroke="#ffd700" stroke-width="2" fill="none"/>
+            <rect x="850" y="240" width="180" height="120" rx="15" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="940" y="285" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="18">PASSING</text>
+            <text x="940" y="320" text-anchor="middle" fill="#fff" font-size="16">95% CI above</text>
+            <text x="940" y="345" text-anchor="middle" fill="#fff" font-size="16">the cut line</text>
+            <rect x="150" y="850" width="800" height="180" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="895" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">FOUR STOP CONDITIONS</text>
+            <text x="180" y="935" text-anchor="start" fill="#fff" font-size="17">1. 95% CI entirely above cut  -  PASS</text>
+            <text x="180" y="965" text-anchor="start" fill="#fff" font-size="17">2. 95% CI entirely below cut  -  FAIL</text>
+            <text x="180" y="995" text-anchor="start" fill="#fff" font-size="17">3. 150-item maximum reached  -  last estimate decides</text>
+            <text x="180" y="1025" text-anchor="start" fill="#fff" font-size="17">4. 5-hour clock expires  -  last 60 items rule applies</text>
+          </svg>`,
+          caption: "Theta movement across 75 items - PASS occurs when the confidence band clears the cut"
+        }
+      },
+      {
+        type: "example",
+        title: "Three Representative Stems (and How to Crack Them)",
+        content: `**Item 1 - Cardiovascular (Bow-Tie):** A 64-year-old male with a history of HF presents with weight gain of 8 lb in 4 days, JVD to 10 cm, crackles to mid-lung fields, BP 168/94, HR 112, SpO2 88% on room air. Drag the **two priority actions**, **two anticipated medications**, and **two parameters to monitor**.\n\n*Crack it:* Priorities = **high-Fowler's + supplemental O2**. Meds = **IV furosemide + IV nitroglycerin** (preload reduction). Monitor = **daily weights + potassium**. Avoid the distractor "beta-blocker now" — never start a beta-blocker during acute decompensation.\n\n**Item 2 - Pulmonary (Drop-Down Cloze):** "The nurse is caring for a client with COPD exacerbation. The client's ABG shows pH 7.31 / PaCO2 62 / HCO3 32. This represents **[dropdown]** with **[dropdown]**."\n\n*Crack it:* pH low + CO2 high + bicarb high = **respiratory acidosis with partial metabolic compensation**. The bicarb is climbing but pH has not normalized. Do NOT pick "uncompensated" — the elevated bicarb proves compensation has begun.\n\n**Item 3 - Renal (Matrix Multiple Response):** A client with CKD stage 5 has K+ 6.8, calcium 7.2, phosphorus 6.4, magnesium 2.6. For each intervention, indicate whether it is **Indicated** or **Contraindicated**.\n\n*Crack it:* Indicated = **IV calcium gluconate** (stabilize myocardium), **insulin + D50** (shift K into cells), **sodium polystyrene or patiromer** (excrete K). Contraindicated = **IV potassium**, **spironolactone**, **ACE inhibitor**, **NSAIDs**. Memorize the **C-BIG-K** mnemonic: **C**alcium, **B**eta-agonist, **I**nsulin/D50, **G**lucose, **K**ayexalate/Lokelma.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">SAMPLE ITEM WALK-THROUGH</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Three stems, three NGN item types</text>
+            <rect x="60" y="150" width="980" height="240" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="195" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">ITEM 1  -  ACUTE HF DECOMPENSATION (BOW-TIE)</text>
+            <text x="100" y="240" text-anchor="start" fill="#fff" font-size="18">Stem: 8-lb gain, JVD 10 cm, crackles, SpO2 88%</text>
+            <text x="100" y="275" text-anchor="start" fill="#10b981" font-size="17">Priorities: high-Fowler's + supplemental O2</text>
+            <text x="100" y="305" text-anchor="start" fill="#10b981" font-size="17">Meds: IV furosemide + IV nitroglycerin</text>
+            <text x="100" y="335" text-anchor="start" fill="#10b981" font-size="17">Monitor: daily weights + serum potassium</text>
+            <text x="100" y="370" text-anchor="start" fill="#ef4444" font-size="17">Distractor: starting a beta-blocker mid-decompensation</text>
+            <rect x="60" y="410" width="980" height="240" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="455" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">ITEM 2  -  COPD ABG (DROP-DOWN CLOZE)</text>
+            <text x="100" y="500" text-anchor="start" fill="#fff" font-size="18">pH 7.31  /  PaCO2 62  /  HCO3 32</text>
+            <text x="100" y="535" text-anchor="start" fill="#10b981" font-size="17">Answer: respiratory acidosis</text>
+            <text x="100" y="565" text-anchor="start" fill="#10b981" font-size="17">         with partial metabolic compensation</text>
+            <text x="100" y="600" text-anchor="start" fill="#ef4444" font-size="17">Trap: choosing uncompensated despite elevated bicarb</text>
+            <text x="100" y="630" text-anchor="start" fill="#888" font-size="16">Rule: if HCO3 has moved, compensation has started</text>
+            <rect x="60" y="670" width="980" height="320" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="715" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">ITEM 3  -  CKD HYPERKALEMIA (MATRIX)</text>
+            <text x="100" y="760" text-anchor="start" fill="#fff" font-size="18">K+ 6.8  -  C-BIG-K stabilize + shift + excrete</text>
+            <text x="100" y="800" text-anchor="start" fill="#10b981" font-size="17">Indicated: calcium gluconate, insulin+D50, Kayexalate</text>
+            <text x="100" y="830" text-anchor="start" fill="#10b981" font-size="17">Indicated: albuterol nebulizer, sodium bicarb if acidotic</text>
+            <text x="100" y="865" text-anchor="start" fill="#ef4444" font-size="17">Contraindicated: ACE inhibitor, spironolactone, NSAIDs</text>
+            <text x="100" y="895" text-anchor="start" fill="#ef4444" font-size="17">Contraindicated: any potassium-containing IV fluid</text>
+            <text x="100" y="930" text-anchor="start" fill="#ffd700" font-size="17">Cardiac priority: calcium gluconate FIRST if peaked T waves</text>
+            <text x="100" y="965" text-anchor="start" fill="#888" font-size="16">Recheck K+ within 1 hour of any intervention</text>
+          </svg>`,
+          caption: "Three NGN item formats - bow-tie, drop-down cloze, and matrix multiple-response"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A client on Day 2 post-MI develops sudden chest pain, dyspnea, and a new harsh systolic murmur at the apex. BP drops from 128/76 to 88/52. Which complication should the nurse suspect FIRST?",
+        options: [
+          { text: "Recurrent ischemia in the same coronary distribution", correct: false },
+          { text: "Acute mitral regurgitation from papillary muscle rupture", correct: true },
+          { text: "Pericarditis (Dressler syndrome)", correct: false },
+          { text: "Acute pulmonary embolism from immobility", correct: false }
+        ],
+        explanation: "**Papillary muscle rupture** is a catastrophic mechanical complication of MI, typically occurring 2-7 days post-infarct, most often after an **inferior or posterior MI** affecting the posteromedial papillary muscle (single blood supply from the PDA). The triad is: **new holosystolic murmur at the apex + acute pulmonary edema + hemodynamic collapse**. Dressler's appears 2-10 weeks later with a friction rub and fever, not a new murmur. Recurrent ischemia would not produce a new murmur. PE causes hypoxia and a loud P2, not an apical systolic murmur. This client needs an emergent **echo + cardiothoracic surgery consult**.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <rect x="100" y="130" width="900" height="180" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="180" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">DAY 2 POST-MI  -  NEW APICAL MURMUR  -  SHOCK</text>
+            <text x="550" y="220" text-anchor="middle" fill="#fff" font-size="18">BP 88/52  -  sudden dyspnea  -  harsh systolic at apex</text>
+            <text x="550" y="255" text-anchor="middle" fill="#fff" font-size="18">Which mechanical complication is unfolding?</text>
+            <text x="550" y="290" text-anchor="middle" fill="#888" font-size="16">Pick the lesion most likely to fit the triad</text>
+            <rect x="150" y="350" width="800" height="100" rx="15" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="395" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="20">PAPILLARY MUSCLE RUPTURE</text>
+            <text x="550" y="425" text-anchor="middle" fill="#fff" font-size="17">Posteromedial PM - single PDA blood supply</text>
+            <rect x="150" y="470" width="800" height="100" rx="15" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="515" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="20">CLASSIC TIMING</text>
+            <text x="550" y="545" text-anchor="middle" fill="#fff" font-size="17">2-7 days post-infarct  -  often inferior/posterior MI</text>
+            <rect x="150" y="590" width="800" height="100" rx="15" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="635" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="20">NURSING ACTION</text>
+            <text x="550" y="665" text-anchor="middle" fill="#fff" font-size="17">Stat echo  -  CT surgery  -  pressors + IABP bridge</text>
+            <rect x="150" y="720" width="800" height="200" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="765" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">RULE OUT THE DISTRACTORS</text>
+            <text x="180" y="800" text-anchor="start" fill="#fff" font-size="17">Dressler: 2-10 weeks later, friction rub, fever</text>
+            <text x="180" y="830" text-anchor="start" fill="#fff" font-size="17">Recurrent ischemia: no new murmur</text>
+            <text x="180" y="860" text-anchor="start" fill="#fff" font-size="17">PE: hypoxia + loud P2, not apical systolic</text>
+            <text x="180" y="890" text-anchor="start" fill="#fff" font-size="17">Free wall rupture: tamponade, JVD, equalized pressures</text>
+            <rect x="200" y="950" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="20">New murmur + shock + days 2-7 = mechanical failure</text>
+          </svg>`,
+          caption: "Mechanical complications of MI and the murmur signature that identifies each"
+        }
+      },
+      {
+        type: "application",
+        title: "Your Mock 1 Debrief Protocol",
+        content: `Finishing the mock is half the work — the **debrief** is where your score actually moves. Use this protocol after every full-length practice exam.\n\n**1. Score the raw data (10 min).** Mark every item Correct, Incorrect, or Guessed-Right. **Guessed-Right counts as incorrect for debrief purposes** — you cannot rely on luck on test day.\n\n**2. Categorize every miss by failure type (15 min).** Use four buckets:\n• **Content gap** — you did not know the fact (pathophysiology, drug, lab value)\n• **Cue missed** — the fact was in your head but you skipped over the data in the stem\n• **Priority error** — you knew everything but picked the wrong "first" action\n• **Test-taking error** — you misread, double-negative, ran out of time\n\n**3. Build a remediation list (10 min).** Every content gap goes to a one-page note: **drug name + class + 3 priority side effects + 1 nursing action**. Every priority error goes to a **Maslow / ABC / safety hierarchy** flash card.\n\n**4. Re-test the missed concept within 48 hours.** Spaced repetition at 48 hours converts short-term recognition into long-term retrieval. Use **UWorld, Kaplan Qbank, or NCSBN Learning Extension** items tagged to the same subtopic.\n\n**5. Track your CV/pulm/renal hit rate.** Goal: **≥65% correct in each system** before sitting for the real NCLEX. Below that, you are not yet at the cut score for adult med-surg.\n\nDo not move on to Mock 2 until Mock 1 is fully debriefed. Volume without analysis is wasted hours.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">DEBRIEF PROTOCOL</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Where your real score gains happen</text>
+            <rect x="100" y="160" width="900" height="100" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="150" y="210" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">1.</text>
+            <text x="200" y="210" text-anchor="start" fill="#fff" font-size="18">Score the raw data  -  guessed-right counts as incorrect</text>
+            <text x="200" y="240" text-anchor="start" fill="#888" font-size="16">10 minutes  -  pen and paper, no calculator</text>
+            <rect x="100" y="280" width="900" height="100" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="150" y="330" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="22">2.</text>
+            <text x="200" y="330" text-anchor="start" fill="#fff" font-size="18">Categorize each miss: content / cue / priority / test-taking</text>
+            <text x="200" y="360" text-anchor="start" fill="#888" font-size="16">15 minutes  -  the bucket determines the fix</text>
+            <rect x="100" y="400" width="900" height="100" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="150" y="450" text-anchor="start" fill="#10b981" font-weight="bold" font-size="22">3.</text>
+            <text x="200" y="450" text-anchor="start" fill="#fff" font-size="18">Build a one-page remediation note per gap</text>
+            <text x="200" y="480" text-anchor="start" fill="#888" font-size="16">10 minutes  -  drug = class + 3 SE + 1 nursing action</text>
+            <rect x="100" y="520" width="900" height="100" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="150" y="570" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="22">4.</text>
+            <text x="200" y="570" text-anchor="start" fill="#fff" font-size="18">Re-test the missed concept within 48 hours</text>
+            <text x="200" y="600" text-anchor="start" fill="#888" font-size="16">Spaced repetition = long-term retrieval</text>
+            <rect x="100" y="640" width="900" height="100" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="150" y="690" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="22">5.</text>
+            <text x="200" y="690" text-anchor="start" fill="#fff" font-size="18">Track CV / pulm / renal hit rate  -  goal 65 percent each</text>
+            <text x="200" y="720" text-anchor="start" fill="#888" font-size="16">Below 65 percent = not yet at the cut score</text>
+            <rect x="150" y="780" width="800" height="200" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="825" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE DEBRIEF RULE</text>
+            <text x="550" y="870" text-anchor="middle" fill="#fff" font-size="20">Volume without analysis is wasted hours</text>
+            <text x="550" y="905" text-anchor="middle" fill="#fff" font-size="18">Do not start Mock 2 until Mock 1 is fully categorized</text>
+            <text x="550" y="940" text-anchor="middle" fill="#888" font-size="17">90 minutes of debrief is worth more than another mock</text>
+          </svg>`,
+          caption: "Five-step debrief - the score-moving work that happens AFTER you click Submit"
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-mock-lesson-2",
+    title: "Mock Exam 2: Pediatrics + Maternal CAT Simulation",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "Two Patients in Every Room",
+        content: `Maternal and pediatric items punch above their weight on the NCLEX. They appear in roughly **9-15%** of the test plan, but they generate a **disproportionately high failure rate** because they require you to hold two patients in your mind at once — the **mother-fetus dyad**, the **infant-caregiver dyad**, the **child whose vitals are different at every age**.\n\nMock 2 is a **75-item CAT simulation** weighted toward four content blocks:\n• **Pediatric developmental milestones** — including the **Denver II**, language red flags, and immunization schedule\n• **Labor complications** — prolapsed cord, placental abruption, uterine rupture, shoulder dystocia, postpartum hemorrhage\n• **Postpartum** — uterine atony, DVT, postpartum psychosis vs. blues, mastitis, RH incompatibility\n• **Neonatal** — APGAR interpretation, transient tachypnea, hypoglycemia, jaundice, NAS (neonatal abstinence)\n\nWhat makes peds-maternal hard is that **"normal" is a moving target**. A heart rate of 140 is hypotensive in an adult, normal in a newborn, tachycardic in an 8-year-old. A respiratory rate of 50 is alarming in a teen, expected in a 1-month-old.\n\nIn this 15-minute lesson, you will see how Mock 2 is built, walk through four representative stems across the lifespan, and learn the **vital-sign-by-age table** that the NCLEX will absolutely test. By the end, the words "head bobbing," "grunting," and "boggy fundus" will trigger an instant clinical response.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 2</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Pediatrics + Maternal CAT Simulation</text>
+            <rect x="100" y="160" width="900" height="100" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="550" y="200" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="24">75 ITEMS  -  TWO-PATIENT MINDSET</text>
+            <text x="550" y="235" text-anchor="middle" fill="#fff" font-size="18">Mother-fetus and child-caregiver dyads on every stem</text>
+            <rect x="60" y="290" width="500" height="280" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="310" y="340" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="22">MATERNAL BLOCKS</text>
+            <text x="310" y="385" text-anchor="middle" fill="#fff" font-size="18">Labor complications</text>
+            <text x="310" y="420" text-anchor="middle" fill="#888" font-size="16">prolapse, abruption, rupture</text>
+            <text x="310" y="460" text-anchor="middle" fill="#fff" font-size="18">Postpartum</text>
+            <text x="310" y="495" text-anchor="middle" fill="#888" font-size="16">atony, DVT, psychosis, mastitis</text>
+            <text x="310" y="535" text-anchor="middle" fill="#fff" font-size="18">RH and Rhogam timing</text>
+            <rect x="580" y="290" width="460" height="280" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="810" y="340" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">PEDIATRIC BLOCKS</text>
+            <text x="810" y="385" text-anchor="middle" fill="#fff" font-size="18">Denver II milestones</text>
+            <text x="810" y="420" text-anchor="middle" fill="#888" font-size="16">gross/fine motor, language</text>
+            <text x="810" y="460" text-anchor="middle" fill="#fff" font-size="18">Immunization schedule</text>
+            <text x="810" y="495" text-anchor="middle" fill="#888" font-size="16">CDC catch-up rules</text>
+            <text x="810" y="535" text-anchor="middle" fill="#fff" font-size="18">Neonatal red flags</text>
+            <rect x="60" y="600" width="980" height="200" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="645" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">VITAL SIGNS BY AGE  -  THIS WILL APPEAR</text>
+            <text x="120" y="690" text-anchor="start" fill="#fff" font-size="17">Newborn:  HR 120-160   RR 30-60   BP ~70/50</text>
+            <text x="120" y="720" text-anchor="start" fill="#fff" font-size="17">Infant:    HR 100-150   RR 25-40   BP 80/55</text>
+            <text x="120" y="750" text-anchor="start" fill="#fff" font-size="17">Toddler:   HR 90-140    RR 20-30   BP 90/55</text>
+            <text x="120" y="780" text-anchor="start" fill="#fff" font-size="17">School:    HR 70-110    RR 16-22   BP 100/60</text>
+            <rect x="200" y="830" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="20">Normal in one age is alarming in another</text>
+            <rect x="200" y="940" width="700" height="80" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="990" text-anchor="middle" fill="#10b981" font-size="18">9-15 percent of the NCLEX test plan</text>
+          </svg>`,
+          caption: "Mock 2 blueprint - two-patient mindset and the age-dependent vital signs that drive every stem"
+        }
+      },
+      {
+        type: "concept",
+        title: "How NGN Builds a Maternal-Child Case",
+        content: `The NGN format changed how peds-maternal is tested. Stand-alone trivia ("a 9-month-old should be able to ___") is now folded into **case studies** — a single unfolding scenario across **5-6 linked items** that count as a single bow-tie or trend.\n\n**Anatomy of a peds-maternal NGN case:**\n\n**Slide 1 - Initial presentation.** You see the EHR header (mother's age, GTPAL, gestational age, presenting complaint) plus the first set of vitals and a brief assessment. Item type: **Highlight / Drag-Drop** — "Highlight findings that require immediate follow-up."\n\n**Slide 2 - Provider orders.** New labs return, new orders post. Item type: **Matrix Multi-Response** — "For each order, mark Anticipated / Contraindicated / Non-essential."\n\n**Slide 3 - Trend.** Vitals across the last 3 hours appear in a table. Item type: **Trend** — "The client's condition is most likely ___ as evidenced by ___."\n\n**Slide 4 - Action selection.** Item type: **Bow-Tie** — two priority actions, the most likely condition, two parameters to monitor.\n\n**Slide 5 - Reassessment.** New data after intervention. Item type: **Drop-down cloze** — "The intervention was effective as evidenced by ___."\n\n**Slide 6 - Final synthesis.** Item type: **Multiple response with N=5+ options** — "Which findings now warrant escalation?"\n\nKey survival rule: **the case carries forward**. If you misidentify the condition on Slide 1, every subsequent slide compounds the error. Spend extra time on the opening highlight — it sets the trajectory for the next four items.\n\nNGN scoring uses **partial credit** (+/- scoring on matrix items, all-or-nothing on bow-tie cores). You can recover from a wrong slide if the rest are right.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">ANATOMY OF AN NGN CASE</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Six linked slides, one unfolding patient</text>
+            <rect x="60" y="160" width="980" height="90" rx="15" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="100" y="200" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="20">SLIDE 1</text>
+            <text x="100" y="230" text-anchor="start" fill="#fff" font-size="17">Initial presentation  -  HIGHLIGHT findings that need follow-up</text>
+            <rect x="60" y="265" width="980" height="90" rx="15" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="100" y="305" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="20">SLIDE 2</text>
+            <text x="100" y="335" text-anchor="start" fill="#fff" font-size="17">Provider orders  -  MATRIX  Anticipated / Contraindicated / Non-essential</text>
+            <rect x="60" y="370" width="980" height="90" rx="15" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="100" y="410" text-anchor="start" fill="#10b981" font-weight="bold" font-size="20">SLIDE 3</text>
+            <text x="100" y="440" text-anchor="start" fill="#fff" font-size="17">Vital sign trend table  -  TREND  client status is ___ because ___</text>
+            <rect x="60" y="475" width="980" height="90" rx="15" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="100" y="515" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="20">SLIDE 4</text>
+            <text x="100" y="545" text-anchor="start" fill="#fff" font-size="17">Decision point  -  BOW-TIE  2 actions  +  diagnosis  +  2 parameters</text>
+            <rect x="60" y="580" width="980" height="90" rx="15" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="100" y="620" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="20">SLIDE 5</text>
+            <text x="100" y="650" text-anchor="start" fill="#fff" font-size="17">Reassessment  -  DROP-DOWN  intervention effective as evidenced by ___</text>
+            <rect x="60" y="685" width="980" height="90" rx="15" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="100" y="725" text-anchor="start" fill="#0ea5e9" font-weight="bold" font-size="20">SLIDE 6</text>
+            <text x="100" y="755" text-anchor="start" fill="#fff" font-size="17">Synthesis  -  MULTI-RESPONSE  which findings now require escalation</text>
+            <rect x="60" y="800" width="980" height="100" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="840" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">THE COMPOUNDING RULE</text>
+            <text x="550" y="875" text-anchor="middle" fill="#fff" font-size="18">A miss on Slide 1 distorts every slide that follows it</text>
+            <rect x="60" y="920" width="980" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="960" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">PARTIAL CREDIT</text>
+            <text x="550" y="995" text-anchor="middle" fill="#fff" font-size="18">Matrix gives +/-  -  bow-tie cores are all-or-nothing</text>
+          </svg>`,
+          caption: "Six-slide NGN case study structure - misread the opener and you carry the error forward"
+        }
+      },
+      {
+        type: "example",
+        title: "Four Stems Across the Dyad",
+        content: `**Stem 1 - Prolapsed Cord:** A G2P1 at 39 weeks reports sudden gush of fluid. On exam, the nurse palpates a pulsating cord at the introitus. FHR drops to 70 bpm with variables.\n\n*Crack it:* **Knee-chest or Trendelenburg, gloved hand into vagina to lift the presenting part OFF the cord, call for STAT C-section, O2 10 L NRB, IV fluid bolus, terbutaline if ordered.** Do NOT push the cord back in. Do NOT leave the bedside.\n\n**Stem 2 - Postpartum Hemorrhage:** Two hours post-vaginal delivery, the nurse finds the fundus boggy and displaced 3 cm right of midline. Lochia rubra is heavy with clots. BP 92/56, HR 118.\n\n*Crack it:* The displaced fundus = **full bladder**. Step 1: **fundal massage AND have the client void or catheterize**. Step 2: oxytocin already infusing, increase per protocol. Step 3: if atony persists, the order is **methergine** (avoid in HTN), then **hemabate** (avoid in asthma), then **misoprostol** rectally. The mnemonic: **"Tone, Trauma, Tissue, Thrombin"** — the 4 T's of PPH.\n\n**Stem 3 - Neonatal TTN vs RDS:** A 38-week LGA newborn born via C-section shows RR 78, grunting, mild retractions at 2 hours of life. SpO2 92% room air. CXR shows **streaky perihilar infiltrates**.\n\n*Crack it:* This is **Transient Tachypnea of the Newborn (TTN)** — retained fetal lung fluid, classic in C-section + LGA + late preterm. Self-resolves in 24-72 hours. RDS would have a **ground-glass appearance** with air bronchograms and worsens without surfactant. Action: **monitor, gentle CPAP if needed, NPO if RR >60**.\n\n**Stem 4 - Pediatric Dehydration:** A 14-month-old with 3 days of vomiting and diarrhea, weight 9.5 kg (was 10.5 kg). Skin tents, dry mucous membranes, cap refill 4 seconds, HR 168, BP 78/40.\n\n*Crack it:* **10% weight loss = severe dehydration**. Bolus **20 mL/kg of NS** = 190 mL, repeat up to 3 times, then start maintenance with **D5 1/4 NS + 20 mEq KCl after voiding**. Do not give potassium until urine output is established.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">FOUR LIFESPAN STEMS</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Prolapse - PPH - TTN - peds dehydration</text>
+            <rect x="60" y="150" width="500" height="220" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="310" y="195" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">PROLAPSED CORD</text>
+            <text x="310" y="230" text-anchor="middle" fill="#fff" font-size="17">FHR 70 with variables</text>
+            <text x="310" y="260" text-anchor="middle" fill="#fff" font-size="17">Knee-chest + lift presenting part</text>
+            <text x="310" y="290" text-anchor="middle" fill="#fff" font-size="17">STAT C-section + O2 + bolus</text>
+            <text x="310" y="335" text-anchor="middle" fill="#888" font-size="16">Never push the cord back in</text>
+            <rect x="580" y="150" width="460" height="220" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="810" y="195" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="22">POSTPARTUM HEMORRHAGE</text>
+            <text x="810" y="230" text-anchor="middle" fill="#fff" font-size="17">Boggy fundus + displaced right</text>
+            <text x="810" y="260" text-anchor="middle" fill="#fff" font-size="17">Empty bladder + massage</text>
+            <text x="810" y="290" text-anchor="middle" fill="#fff" font-size="17">Oxytocin - methergine - hemabate</text>
+            <text x="810" y="335" text-anchor="middle" fill="#888" font-size="16">4 Ts: Tone Trauma Tissue Thrombin</text>
+            <rect x="60" y="390" width="500" height="220" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="310" y="435" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">TTN vs RDS</text>
+            <text x="310" y="470" text-anchor="middle" fill="#fff" font-size="17">LGA + C-section + RR 78</text>
+            <text x="310" y="500" text-anchor="middle" fill="#fff" font-size="17">Streaky perihilar = TTN</text>
+            <text x="310" y="530" text-anchor="middle" fill="#fff" font-size="17">Ground-glass = RDS</text>
+            <text x="310" y="575" text-anchor="middle" fill="#888" font-size="16">TTN resolves in 24-72 hours</text>
+            <rect x="580" y="390" width="460" height="220" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="810" y="435" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">PEDS DEHYDRATION</text>
+            <text x="810" y="470" text-anchor="middle" fill="#fff" font-size="17">10 percent weight loss = severe</text>
+            <text x="810" y="500" text-anchor="middle" fill="#fff" font-size="17">Bolus 20 mL/kg NS x up to 3</text>
+            <text x="810" y="530" text-anchor="middle" fill="#fff" font-size="17">Hold K+ until voiding</text>
+            <text x="810" y="575" text-anchor="middle" fill="#888" font-size="16">Cap refill more than 3 sec = warning</text>
+            <rect x="100" y="640" width="900" height="280" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="685" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">WHY THESE STEMS WORK ON THE NCLEX</text>
+            <text x="150" y="725" text-anchor="start" fill="#fff" font-size="18">- Each forces priority among multiple plausible actions</text>
+            <text x="150" y="760" text-anchor="start" fill="#fff" font-size="18">- Each has a classic distractor that pulls B nursing students</text>
+            <text x="150" y="795" text-anchor="start" fill="#fff" font-size="18">- Each requires an age- or stage-specific normal range</text>
+            <text x="150" y="830" text-anchor="start" fill="#fff" font-size="18">- Each maps to physiological adaptation AND risk reduction</text>
+            <text x="150" y="865" text-anchor="start" fill="#fff" font-size="18">- All four use NGN case-study scaffolding in the live exam</text>
+            <text x="150" y="900" text-anchor="start" fill="#ffd700" font-size="18">Memorize the action sequence, not just the diagnosis</text>
+            <rect x="200" y="950" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="20">Two patients. One nurse. Pick the priority that protects both.</text>
+          </svg>`,
+          caption: "Four lifespan stems with their classic distractors and action sequences"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is assessing a 4-month-old at a well-child visit. Which finding requires immediate follow-up with the pediatrician?",
+        options: [
+          { text: "The infant does not yet roll from back to front", correct: false },
+          { text: "The infant has a persistent Moro reflex when startled", correct: true },
+          { text: "The infant babbles but uses no recognizable words", correct: false },
+          { text: "The anterior fontanel remains soft and slightly depressed when sitting", correct: false }
+        ],
+        explanation: "The **Moro (startle) reflex should disappear by 4 months of age**. Persistence beyond 4-6 months suggests **neurologic dysfunction** — cerebral palsy, hypoxic-ischemic injury, or structural CNS abnormality — and warrants prompt evaluation. Rolling back-to-front typically occurs between **4-6 months** (front-to-back at 4, back-to-front by 6), so absence at exactly 4 months is normal. Babbling without words is **expected** at this age; first words emerge around 10-14 months. The anterior fontanel normally remains open until **12-18 months** and slight depression in the upright position is normal as long as it is not sunken.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <rect x="100" y="130" width="900" height="160" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="175" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">4-MONTH WELL-CHILD VISIT</text>
+            <text x="550" y="215" text-anchor="middle" fill="#fff" font-size="18">Which finding needs prompt follow-up?</text>
+            <text x="550" y="250" text-anchor="middle" fill="#888" font-size="16">Three are within normal variation - one is a red flag</text>
+            <rect x="60" y="320" width="500" height="180" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="310" y="365" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">PRIMITIVE REFLEXES</text>
+            <text x="310" y="400" text-anchor="middle" fill="#fff" font-size="17">Moro:        gone by 4-6 months</text>
+            <text x="310" y="430" text-anchor="middle" fill="#fff" font-size="17">Palmar:      gone by 3 months</text>
+            <text x="310" y="460" text-anchor="middle" fill="#fff" font-size="17">Babinski:    gone by 12 months</text>
+            <text x="310" y="490" text-anchor="middle" fill="#fff" font-size="17">Rooting:     gone by 4 months</text>
+            <rect x="580" y="320" width="460" height="180" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="810" y="365" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">MILESTONES AT 4 MO</text>
+            <text x="810" y="400" text-anchor="middle" fill="#fff" font-size="17">Rolls front-to-back</text>
+            <text x="810" y="430" text-anchor="middle" fill="#fff" font-size="17">Holds head steady</text>
+            <text x="810" y="460" text-anchor="middle" fill="#fff" font-size="17">Babbles and coos</text>
+            <text x="810" y="490" text-anchor="middle" fill="#fff" font-size="17">Reaches for objects</text>
+            <rect x="100" y="540" width="900" height="160" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="585" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">PERSISTENT MORO = RED FLAG</text>
+            <text x="550" y="620" text-anchor="middle" fill="#fff" font-size="18">Suggests cerebral palsy, HIE, or CNS abnormality</text>
+            <text x="550" y="655" text-anchor="middle" fill="#fff" font-size="18">Needs neuro eval, imaging, developmental specialist</text>
+            <text x="550" y="685" text-anchor="middle" fill="#888" font-size="16">Reflexes that linger past their window = pathology</text>
+            <rect x="100" y="740" width="900" height="200" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="785" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">FONTANEL TIMELINE</text>
+            <text x="180" y="820" text-anchor="start" fill="#fff" font-size="17">Posterior: closes by 2-3 months</text>
+            <text x="180" y="850" text-anchor="start" fill="#fff" font-size="17">Anterior: closes by 12-18 months</text>
+            <text x="180" y="880" text-anchor="start" fill="#fff" font-size="17">Slight depression upright = normal</text>
+            <text x="180" y="910" text-anchor="start" fill="#fff" font-size="17">Sunken at rest = dehydration  -  bulging = ICP</text>
+            <rect x="200" y="970" width="700" height="60" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="20">Know the window. Outside the window = follow up.</text>
+          </svg>`,
+          caption: "Primitive reflex timeline - persistence past the disappearance window flags neuropathology"
+        }
+      },
+      {
+        type: "application",
+        title: "Your Peds-Maternal Mastery Cycle",
+        content: `Peds-maternal items live or die on **age-specific normals**. Without a reflex table for vital signs, milestones, and immunizations, every stem becomes a guess. Use this 5-step mastery cycle for the 72 hours after Mock 2.\n\n**1. Build the vital-sign-by-age card (Day 1, 20 min).** One index card with HR, RR, BP ranges for newborn → infant → toddler → preschool → school → adolescent. Tape it inside your study notebook. Quiz yourself daily until you can recite all 6 age groups in under 90 seconds.\n\n**2. Build the milestone-by-month card (Day 1, 30 min).** Cover **2 months, 4, 6, 9, 12, 15, 18 months, 2 years, 3, 4, 5**. For each: **gross motor + fine motor + language + social**. The NCLEX loves "the child does X — is this expected?" stems.\n\n**3. Build the immunization schedule card (Day 2, 20 min).** Birth (HepB), 2 mo (DTaP, IPV, Hib, PCV, RV, HepB), 4 mo (same minus HepB), 6 mo (same + HepB + flu), 12 mo (MMR, VAR, HepA, PCV booster), 4-6 yr boosters, 11-12 yr (Tdap, HPV, MenACWY).\n\n**4. Pattern-bank the 12 OB emergencies (Day 2, 45 min).** Prolapsed cord, abruption, previa, rupture, shoulder dystocia, eclampsia, HELLP, amniotic fluid embolism, PPH, mastitis, postpartum DVT, postpartum psychosis. For each: **3 cardinal signs + first nursing action + classic distractor**.\n\n**5. Re-test on Day 3.** Pull 30 peds-maternal items from a Qbank. Aim for **≥70% correct**. Anything below that triggers another pass through Steps 1-4.\n\nThe goal is not to memorize every fact — it is to recognize the **age + presentation + intervention triad** within 30 seconds of reading a stem.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">72-HOUR MASTERY CYCLE</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">From Mock 2 score to NCLEX-ready</text>
+            <rect x="100" y="160" width="900" height="120" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="150" y="200" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">DAY 1  -  STEP 1</text>
+            <text x="150" y="235" text-anchor="start" fill="#fff" font-size="18">Vital signs by age card  -  6 age groups in 90 sec</text>
+            <text x="150" y="265" text-anchor="start" fill="#888" font-size="16">20 minutes  -  index card taped inside notebook</text>
+            <rect x="100" y="300" width="900" height="120" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="150" y="340" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="22">DAY 1  -  STEP 2</text>
+            <text x="150" y="375" text-anchor="start" fill="#fff" font-size="18">Milestone card  -  11 age points  -  4 domains each</text>
+            <text x="150" y="405" text-anchor="start" fill="#888" font-size="16">30 minutes  -  gross + fine + language + social</text>
+            <rect x="100" y="440" width="900" height="120" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="150" y="480" text-anchor="start" fill="#10b981" font-weight="bold" font-size="22">DAY 2  -  STEP 3</text>
+            <text x="150" y="515" text-anchor="start" fill="#fff" font-size="18">Immunization schedule  -  birth through adolescence</text>
+            <text x="150" y="545" text-anchor="start" fill="#888" font-size="16">20 minutes  -  CDC catch-up rules included</text>
+            <rect x="100" y="580" width="900" height="120" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="150" y="620" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="22">DAY 2  -  STEP 4</text>
+            <text x="150" y="655" text-anchor="start" fill="#fff" font-size="18">12 OB emergencies  -  3 signs + first action + distractor</text>
+            <text x="150" y="685" text-anchor="start" fill="#888" font-size="16">45 minutes  -  the pattern bank for labor and postpartum</text>
+            <rect x="100" y="720" width="900" height="120" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="150" y="760" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="22">DAY 3  -  STEP 5</text>
+            <text x="150" y="795" text-anchor="start" fill="#fff" font-size="18">Re-test 30 peds-maternal items  -  goal 70 percent</text>
+            <text x="150" y="825" text-anchor="start" fill="#888" font-size="16">Below 70 = repeat the cycle  -  above 70 = move on</text>
+            <rect x="150" y="870" width="800" height="160" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="915" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE TRIAD GOAL</text>
+            <text x="550" y="955" text-anchor="middle" fill="#fff" font-size="20">Age  +  presentation  +  intervention</text>
+            <text x="550" y="990" text-anchor="middle" fill="#fff" font-size="18">Recognize the pattern in under 30 seconds per stem</text>
+            <text x="550" y="1020" text-anchor="middle" fill="#888" font-size="16">Speed comes from pattern recognition, not memorization</text>
+          </svg>`,
+          caption: "Five-step 72-hour mastery cycle for peds-maternal weak points"
+        }
+      }
+    ]
+  },
+  {
+    id: "nclex-mock-lesson-3",
+    title: "Mock Exam 3: Mental Health + Pharmacology CAT",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Two Categories That Decide Everything",
+        content: `Walk into any nursing school's data wall and you will find the same two killers at the top of the failure list: **psychiatric-mental health** and **pharmacology**. Together they account for roughly **30-37%** of the NCLEX test plan (Psychosocial Integrity 6-12%, Pharmacological and Parenteral Therapies 13-19%, Reduction of Risk and Physiological Adaptation overlap heavily).\n\nMock 3 is built to crush both at once. It is a **75-item CAT** with:\n• **25 psych items** — schizophrenia spectrum, bipolar I/II, MDD, GAD/panic, PTSD, OCD, anorexia/bulimia, substance use, suicide assessment, the **Tarasoff** duty, involuntary commitment, ECT, restraints\n• **35 pharmacology items** — drawn from the **50 most-tested drugs**: insulins, anticoagulants, antiplatelets, beta-blockers, ACE/ARBs, diuretics, statins, antibiotics, antipsychotics, mood stabilizers, SSRIs/SNRIs, benzos, opioids, chemo, immunosuppressants\n• **15 integrated items** — psych meds with somatic side effects, polypharmacy in the elderly, prescription monitoring\n\nWhat makes this mock brutal is the **side-effect overlap**: lithium and SSRIs both cause tremor, but only one is life-threatening at low levels. Olanzapine and clozapine both treat schizophrenia, but only one needs an **ANC every week for the first 6 months**. The NCLEX is testing whether you can tell them apart in under 60 seconds.\n\nThis lesson previews Mock 3's structure, walks through three signature drug-psych stems, and gives you a **48-hour cram framework** for the top-50 drug list.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 3</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Mental Health + Pharmacology CAT</text>
+            <rect x="100" y="160" width="900" height="100" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="200" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">75 ITEMS  -  30 TO 37 PERCENT OF NCLEX</text>
+            <text x="550" y="235" text-anchor="middle" fill="#fff" font-size="18">Psych + pharm together drive the most failures</text>
+            <rect x="60" y="290" width="320" height="320" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="220" y="340" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">PSYCH  -  25 ITEMS</text>
+            <text x="220" y="385" text-anchor="middle" fill="#fff" font-size="17">Schizophrenia spectrum</text>
+            <text x="220" y="415" text-anchor="middle" fill="#fff" font-size="17">Bipolar I and II</text>
+            <text x="220" y="445" text-anchor="middle" fill="#fff" font-size="17">MDD and GAD/panic</text>
+            <text x="220" y="475" text-anchor="middle" fill="#fff" font-size="17">PTSD - OCD</text>
+            <text x="220" y="505" text-anchor="middle" fill="#fff" font-size="17">Eating disorders</text>
+            <text x="220" y="535" text-anchor="middle" fill="#fff" font-size="17">Suicide and Tarasoff</text>
+            <text x="220" y="575" text-anchor="middle" fill="#888" font-size="16">Restraints - commitment - ECT</text>
+            <rect x="390" y="290" width="320" height="320" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="340" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">PHARM  -  35 ITEMS</text>
+            <text x="550" y="385" text-anchor="middle" fill="#fff" font-size="17">Insulins - anticoagulants</text>
+            <text x="550" y="415" text-anchor="middle" fill="#fff" font-size="17">Beta-blockers - ACE/ARB</text>
+            <text x="550" y="445" text-anchor="middle" fill="#fff" font-size="17">Diuretics - statins</text>
+            <text x="550" y="475" text-anchor="middle" fill="#fff" font-size="17">Antibiotics - antifungals</text>
+            <text x="550" y="505" text-anchor="middle" fill="#fff" font-size="17">Antipsychotics - mood stab</text>
+            <text x="550" y="535" text-anchor="middle" fill="#fff" font-size="17">SSRIs/SNRIs - benzos</text>
+            <text x="550" y="575" text-anchor="middle" fill="#888" font-size="16">Opioids - chemo - immuno</text>
+            <rect x="720" y="290" width="320" height="320" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="880" y="340" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">INTEGRATED  -  15</text>
+            <text x="880" y="385" text-anchor="middle" fill="#fff" font-size="17">Lithium toxicity</text>
+            <text x="880" y="415" text-anchor="middle" fill="#fff" font-size="17">SSRI + tramadol</text>
+            <text x="880" y="445" text-anchor="middle" fill="#fff" font-size="17">Clozapine and ANC</text>
+            <text x="880" y="475" text-anchor="middle" fill="#fff" font-size="17">Neuroleptic malignant</text>
+            <text x="880" y="505" text-anchor="middle" fill="#fff" font-size="17">Serotonin syndrome</text>
+            <text x="880" y="535" text-anchor="middle" fill="#fff" font-size="17">Polypharmacy in elderly</text>
+            <text x="880" y="575" text-anchor="middle" fill="#888" font-size="16">PDMP and controlled subs</text>
+            <rect x="150" y="650" width="800" height="200" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="695" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">SIDE-EFFECT OVERLAP TRAP</text>
+            <text x="550" y="735" text-anchor="middle" fill="#fff" font-size="18">Lithium and SSRI both cause tremor</text>
+            <text x="550" y="765" text-anchor="middle" fill="#fff" font-size="18">Only lithium is life-threatening at low levels</text>
+            <text x="550" y="800" text-anchor="middle" fill="#fff" font-size="18">Olanzapine and clozapine both treat schizophrenia</text>
+            <text x="550" y="830" text-anchor="middle" fill="#fff" font-size="18">Only clozapine needs weekly ANC monitoring</text>
+            <rect x="200" y="880" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="930" text-anchor="middle" fill="#ffd700" font-size="20">Tell similar drugs apart in under 60 seconds</text>
+            <rect x="200" y="980" width="700" height="60" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="1020" text-anchor="middle" fill="#10b981" font-size="18">This is where Mock 3 makes or breaks scores</text>
+          </svg>`,
+          caption: "Mock 3 blueprint - psych and pharm overlap, where the highest-yield NCLEX items live"
+        }
+      },
+      {
+        type: "concept",
+        title: "The 50 Most-Tested Drugs in 5 Buckets",
+        content: `You cannot memorize 50 drugs by Friday. You CAN memorize **5 buckets of 10**, each with one shared mechanism, one shared monitor, and one shared "STOP and call the provider" trigger. This is how Kaplan, UWorld, and Hurst all structure their pharm cram lists.\n\n**Bucket 1 - Anticoagulants and Antiplatelets (10).** Warfarin, heparin, enoxaparin, apixaban, rivaroxaban, dabigatran, aspirin, clopidogrel, ticagrelor, alteplase.\n• Monitor: **PT/INR** (warfarin: target 2-3 for AFib, 2.5-3.5 for mechanical valves), **aPTT** (heparin: 1.5-2.5x control), platelets, signs of bleeding\n• STOP: hematuria, melena, INR >5, sudden severe headache, platelets <100k\n\n**Bucket 2 - Diabetes (10).** Regular insulin, NPH, glargine, lispro, metformin, glipizide, glyburide, sitagliptin, empagliflozin, semaglutide.\n• Monitor: **fingerstick glucose, A1C, renal function** (metformin contraindicated GFR <30), ketones\n• STOP: glucose <70 or >300, lactic acidosis signs (metformin), DKA\n\n**Bucket 3 - Cardiovascular (10).** Metoprolol, carvedilol, lisinopril, losartan, amlodipine, furosemide, spironolactone, digoxin, atorvastatin, nitroglycerin.\n• Monitor: **BP, HR, K+, BUN/Cr, dig level (0.5-2 ng/mL), liver enzymes**\n• STOP: HR <60, K+ >5.5 (ACE), K+ <3.5 (loop), dig >2, cough/angioedema (ACE)\n\n**Bucket 4 - Psych (10).** Lithium, valproate, carbamazepine, sertraline, fluoxetine, venlafaxine, olanzapine, risperidone, haloperidol, clozapine.\n• Monitor: **lithium 0.6-1.2 mEq/L, valproate level, ANC** (clozapine), **EPS/NMS** signs, **suicidality** in first 4 weeks of SSRI\n• STOP: lithium >1.5, ANC <1500, fever + rigidity (NMS), serotonin syndrome\n\n**Bucket 5 - High-Alert Misc (10).** Vancomycin, gentamicin, methotrexate, prednisone, levothyroxine, phenytoin, morphine, naloxone, magnesium sulfate, potassium chloride.\n• Monitor: **trough levels, peak/trough timing, TSH, phenytoin 10-20 mcg/mL, RR (opioids), DTRs (mag)**\n• STOP: vanc trough >20, gent peak >10, RR <12, DTRs absent (mag toxicity)`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">50 DRUGS IN 5 BUCKETS</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Mechanism - monitor - STOP trigger</text>
+            <rect x="60" y="160" width="980" height="150" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="100" y="200" text-anchor="start" fill="#ef4444" font-weight="bold" font-size="22">1. ANTICOAGS / ANTIPLATELETS</text>
+            <text x="100" y="235" text-anchor="start" fill="#fff" font-size="17">Warfarin heparin enox apix riva dabi ASA clopi tica alteplase</text>
+            <text x="100" y="265" text-anchor="start" fill="#fff" font-size="17">Monitor: INR aPTT platelets bleeding</text>
+            <text x="100" y="295" text-anchor="start" fill="#888" font-size="16">STOP: melena - INR over 5 - platelets under 100k</text>
+            <rect x="60" y="325" width="980" height="150" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="100" y="365" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="22">2. DIABETES</text>
+            <text x="100" y="400" text-anchor="start" fill="#fff" font-size="17">Regular NPH glargine lispro metformin glipi glybu sita empa sema</text>
+            <text x="100" y="430" text-anchor="start" fill="#fff" font-size="17">Monitor: FSBG A1C renal function ketones</text>
+            <text x="100" y="460" text-anchor="start" fill="#888" font-size="16">STOP: glucose under 70 - lactic acidosis - GFR under 30</text>
+            <rect x="60" y="490" width="980" height="150" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="100" y="530" text-anchor="start" fill="#ef4444" font-weight="bold" font-size="22">3. CARDIOVASCULAR</text>
+            <text x="100" y="565" text-anchor="start" fill="#fff" font-size="17">Metop carve lis losa amlo furo spiro dig atorva NTG</text>
+            <text x="100" y="595" text-anchor="start" fill="#fff" font-size="17">Monitor: BP HR K+ BUN/Cr dig level LFTs</text>
+            <text x="100" y="625" text-anchor="start" fill="#888" font-size="16">STOP: HR under 60 - K+ over 5.5 - dig over 2 - angioedema</text>
+            <rect x="60" y="655" width="980" height="150" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="100" y="695" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="22">4. PSYCHIATRIC</text>
+            <text x="100" y="730" text-anchor="start" fill="#fff" font-size="17">Lithium valpro carba sertra fluox venla olan ris halo cloz</text>
+            <text x="100" y="760" text-anchor="start" fill="#fff" font-size="17">Monitor: lithium level ANC EPS suicidality</text>
+            <text x="100" y="790" text-anchor="start" fill="#888" font-size="16">STOP: lithium over 1.5 - ANC under 1500 - fever and rigidity</text>
+            <rect x="60" y="820" width="980" height="220" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="100" y="860" text-anchor="start" fill="#0ea5e9" font-weight="bold" font-size="22">5. HIGH-ALERT MISC</text>
+            <text x="100" y="895" text-anchor="start" fill="#fff" font-size="17">Vanc gent MTX pred levo phenytoin morph nalox mag KCl</text>
+            <text x="100" y="925" text-anchor="start" fill="#fff" font-size="17">Monitor: trough/peak TSH phenytoin level RR DTRs</text>
+            <text x="100" y="955" text-anchor="start" fill="#888" font-size="16">STOP: vanc trough over 20 - RR under 12 - absent DTRs</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="20">Five buckets - one shared rule per bucket</text>
+          </svg>`,
+          caption: "The top-50 NCLEX drug list compressed into five-bucket mental shelves"
+        }
+      },
+      {
+        type: "example",
+        title: "Three Signature Psych-Pharm Stems",
+        content: `**Stem 1 - Lithium Toxicity:** A 42-year-old with bipolar I has been on lithium 900 mg daily for 5 years. She presents reporting "the flu" — nausea, vomiting, fine tremor that has become coarse, slurred speech, and ataxia. She was started on **hydrochlorothiazide** two weeks ago for hypertension. Serum lithium = 2.1 mEq/L.\n\n*Crack it:* **Lithium toxicity** triggered by HCTZ-induced volume depletion and sodium loss (lithium and sodium share the same renal transporter). Therapeutic range = **0.6-1.2 mEq/L**, mild toxicity 1.5-2.0, severe 2.0+, lethal 3.5+. Action: **hold lithium, IV NS to restore sodium, monitor neuro status, anticipate hemodialysis if >3.5 or symptomatic at >2.5**. Teaching: avoid sodium-depleting diuretics, dehydration, and low-sodium diets.\n\n**Stem 2 - Serotonin Syndrome vs NMS:** A client on sertraline 100 mg is started on **tramadol** for back pain. Within 48 hours: hyperthermia (39.8°C), agitation, myoclonus, **hyperreflexia**, dilated pupils, diaphoresis, diarrhea.\n\n*Crack it:* **Serotonin syndrome** — the triad is **autonomic instability + altered mental status + neuromuscular HYPER-activity** (hyperreflexia, clonus, tremor). Distinguish from **NMS**: NMS has **HYPO-reflexia + lead-pipe rigidity**, develops over days to weeks, and is tied to **antipsychotics**. SS develops over hours, is tied to **serotonergic agents**. Action: **STOP all serotonergic agents (SSRI, tramadol, ondansetron, linezolid, St. John's wort), cooling, benzos, cyproheptadine** as 5-HT2A antagonist.\n\n**Stem 3 - Clozapine Agranulocytosis:** A client on clozapine for 4 months presents with fever 39.1°C, sore throat, fatigue. ANC = 800/mm3 (normal 1500-8000).\n\n*Crack it:* **Clozapine-induced agranulocytosis**. Mandatory **weekly CBC for the first 6 months, then biweekly months 6-12, then monthly**. ANC <1500 = **stop the drug immediately**, <1000 = withhold + daily ANC, <500 = consult hematology, never rechallenge. This client cannot be discharged until ANC recovers and infection is ruled out — broad-spectrum antibiotics plus reverse isolation.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THREE SIGNATURE STEMS</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Lithium - serotonin syndrome - clozapine</text>
+            <rect x="60" y="150" width="980" height="240" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="195" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">STEM 1  -  LITHIUM TOXICITY</text>
+            <text x="100" y="235" text-anchor="start" fill="#fff" font-size="18">Trigger: HCTZ added 2 weeks ago - volume and sodium depletion</text>
+            <text x="100" y="270" text-anchor="start" fill="#fff" font-size="18">Level 2.1 mEq/L  -  therapeutic 0.6-1.2</text>
+            <text x="100" y="305" text-anchor="start" fill="#10b981" font-size="17">Action: hold lithium - IV NS - dialysis if more than 3.5</text>
+            <text x="100" y="340" text-anchor="start" fill="#10b981" font-size="17">Teach: no sodium-restricted diet - report flu-like symptoms</text>
+            <text x="100" y="375" text-anchor="start" fill="#ef4444" font-size="17">Trap: assuming flu - missing the HCTZ link</text>
+            <rect x="60" y="410" width="980" height="240" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="455" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">STEM 2  -  SEROTONIN vs NMS</text>
+            <text x="100" y="495" text-anchor="start" fill="#fff" font-size="18">Sertraline + tramadol = hyperreflexia + clonus + hyperthermia</text>
+            <text x="100" y="530" text-anchor="start" fill="#fff" font-size="18">SS = HYPER-reflexia - hours - serotonergic agents</text>
+            <text x="100" y="565" text-anchor="start" fill="#fff" font-size="18">NMS = HYPO-reflexia - days - antipsychotics + lead-pipe rigidity</text>
+            <text x="100" y="600" text-anchor="start" fill="#10b981" font-size="17">SS treatment: stop agents - benzos - cyproheptadine</text>
+            <text x="100" y="635" text-anchor="start" fill="#ef4444" font-size="17">Trap: calling SS a fever workup - missing the drug history</text>
+            <rect x="60" y="670" width="980" height="240" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="715" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">STEM 3  -  CLOZAPINE AGRANULOCYTOSIS</text>
+            <text x="100" y="755" text-anchor="start" fill="#fff" font-size="18">ANC 800  -  sore throat  -  fever 39.1 C</text>
+            <text x="100" y="790" text-anchor="start" fill="#fff" font-size="18">Weekly CBC x 6 mo - biweekly mo 6-12 - monthly after</text>
+            <text x="100" y="825" text-anchor="start" fill="#10b981" font-size="17">ANC under 1500 = stop - under 500 = hematology consult</text>
+            <text x="100" y="860" text-anchor="start" fill="#10b981" font-size="17">Reverse isolation + broad-spectrum antibiotics</text>
+            <text x="100" y="895" text-anchor="start" fill="#ef4444" font-size="17">Trap: never rechallenging  -  do NOT restart clozapine</text>
+            <rect x="200" y="940" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="990" text-anchor="middle" fill="#ffd700" font-size="20">Drug history first - syndrome second - action third</text>
+          </svg>`,
+          caption: "Three signature psych-pharm stems and the distractors that separate them"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A nurse is preparing to administer haloperidol IM to an agitated client with acute psychosis. Forty minutes later, the client develops temperature 40.1°C, severe muscle rigidity ('lead-pipe'), diaphoresis, BP 178/102, HR 132, and decreased level of consciousness. CK is 6,800 U/L. Which condition is MOST likely and what is the priority nursing action?",
+        options: [
+          { text: "Serotonin syndrome - administer cyproheptadine and discontinue all serotonergic agents", correct: false },
+          { text: "Neuroleptic malignant syndrome - discontinue haloperidol, initiate cooling, and prepare to administer dantrolene", correct: true },
+          { text: "Acute dystonic reaction - administer IV diphenhydramine 50 mg and reassure the client", correct: false },
+          { text: "Malignant hyperthermia - administer dantrolene and discontinue all volatile anesthetics", correct: false }
+        ],
+        explanation: "This is classic **Neuroleptic Malignant Syndrome (NMS)** — onset within hours-days of starting or increasing a **dopamine antagonist** (haloperidol, fluphenazine, olanzapine). The tetrad: **hyperthermia + lead-pipe muscle rigidity + autonomic instability + altered mental status**. Markedly elevated **CK** (often >5000) reflects rhabdomyolysis. Priority: **stop the antipsychotic immediately, aggressive cooling, IV hydration, and dantrolene** (direct skeletal muscle relaxant) or bromocriptine. Serotonin syndrome has HYPER-reflexia and clonus, not lead-pipe rigidity. Dystonic reactions cause torticollis or oculogyric crisis without hyperthermia. Malignant hyperthermia occurs only with volatile anesthetics or succinylcholine.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <rect x="100" y="130" width="900" height="180" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="180" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">POST-HALDOL  -  T 40.1  -  LEAD-PIPE RIGIDITY</text>
+            <text x="550" y="220" text-anchor="middle" fill="#fff" font-size="18">CK 6,800  -  BP 178/102  -  altered mental status</text>
+            <text x="550" y="255" text-anchor="middle" fill="#fff" font-size="18">Identify the syndrome and the priority action</text>
+            <text x="550" y="290" text-anchor="middle" fill="#888" font-size="16">All four distractors share at least one feature</text>
+            <rect x="60" y="340" width="500" height="220" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="310" y="385" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">NMS  =  CORRECT</text>
+            <text x="310" y="420" text-anchor="middle" fill="#fff" font-size="17">Lead-pipe rigidity + HYPO-reflexia</text>
+            <text x="310" y="450" text-anchor="middle" fill="#fff" font-size="17">Dopamine antagonist trigger</text>
+            <text x="310" y="480" text-anchor="middle" fill="#fff" font-size="17">CK greatly elevated  -  rhabdo</text>
+            <text x="310" y="510" text-anchor="middle" fill="#fff" font-size="17">Treat: stop drug + cool + dantrolene</text>
+            <text x="310" y="545" text-anchor="middle" fill="#888" font-size="16">Onset hours to days</text>
+            <rect x="580" y="340" width="460" height="220" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="810" y="385" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">SS  -  DISTRACTOR 1</text>
+            <text x="810" y="420" text-anchor="middle" fill="#fff" font-size="17">HYPER-reflexia + clonus</text>
+            <text x="810" y="450" text-anchor="middle" fill="#fff" font-size="17">Serotonergic agents</text>
+            <text x="810" y="480" text-anchor="middle" fill="#fff" font-size="17">No lead-pipe rigidity</text>
+            <text x="810" y="510" text-anchor="middle" fill="#fff" font-size="17">Onset hours</text>
+            <text x="810" y="545" text-anchor="middle" fill="#888" font-size="16">Cyproheptadine reverses</text>
+            <rect x="60" y="590" width="500" height="220" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="310" y="635" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">DYSTONIA  -  DISTRACTOR 2</text>
+            <text x="310" y="670" text-anchor="middle" fill="#fff" font-size="17">Torticollis or oculogyric</text>
+            <text x="310" y="700" text-anchor="middle" fill="#fff" font-size="17">No fever - no rigidity</text>
+            <text x="310" y="730" text-anchor="middle" fill="#fff" font-size="17">Onset minutes to hours</text>
+            <text x="310" y="760" text-anchor="middle" fill="#fff" font-size="17">Diphenhydramine reverses</text>
+            <text x="310" y="795" text-anchor="middle" fill="#888" font-size="16">Not life-threatening</text>
+            <rect x="580" y="590" width="460" height="220" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="810" y="635" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">MH  -  DISTRACTOR 3</text>
+            <text x="810" y="670" text-anchor="middle" fill="#fff" font-size="17">Volatile anesthetics only</text>
+            <text x="810" y="700" text-anchor="middle" fill="#fff" font-size="17">Succinylcholine trigger</text>
+            <text x="810" y="730" text-anchor="middle" fill="#fff" font-size="17">Intraoperative onset</text>
+            <text x="810" y="760" text-anchor="middle" fill="#fff" font-size="17">Dantrolene also works</text>
+            <text x="810" y="795" text-anchor="middle" fill="#888" font-size="16">Wrong clinical context here</text>
+            <rect x="100" y="840" width="900" height="180" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="885" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">PRIORITY ACTIONS  -  NMS</text>
+            <text x="550" y="925" text-anchor="middle" fill="#fff" font-size="20">1. Stop the antipsychotic immediately</text>
+            <text x="550" y="960" text-anchor="middle" fill="#fff" font-size="20">2. Cool aggressively  -  ice packs, cool IV fluids</text>
+            <text x="550" y="995" text-anchor="middle" fill="#fff" font-size="20">3. Dantrolene IV  -  consider bromocriptine</text>
+          </svg>`,
+          caption: "NMS vs SS vs dystonia vs MH - the four-way separation that gets tested"
+        }
+      },
+      {
+        type: "application",
+        title: "Your 48-Hour Pharm Cram Framework",
+        content: `Pharmacology is the single highest-ROI study area in the final 48 hours before your NCLEX. You will not learn new physiology, but you can absolutely add 5-10 percentage points to your pharm hit rate. Use this framework after Mock 3.\n\n**1. Build the 5-bucket flash deck (Day 1 morning, 90 min).** Fifty cards. Front = drug name + class. Back = mechanism, top 3 side effects, monitor parameter, "STOP and call" trigger, key teaching point. Use the lesson's 5-bucket structure as your spine.\n\n**2. Drill the lethal lab values (Day 1 afternoon, 30 min).** Memorize these 12 numbers cold: **lithium >1.5, dig >2, vanc trough >20, gent peak >10, phenytoin >20, INR >5, platelets <100k, K+ <3.0 or >6.0, Na+ <125 or >155, glucose <70 or >300, ANC <1500, magnesium >5.5**. Each one triggers an immediate nursing action.\n\n**3. Walk-through 5 polypharmacy cases (Day 1 evening, 45 min).** Elderly client + 10 meds. Identify the **Beers Criteria** offenders: diphenhydramine, long-acting benzos, anticholinergics, NSAIDs, sliding-scale insulin alone. The NCLEX loves "which med should the nurse question?" stems.\n\n**4. Practice 50 pharm-only items (Day 2 morning, 90 min).** Pull from UWorld pharmacology filter. Target **70% correct**. Anything below = pause, restudy that bucket, retest.\n\n**5. Final pharm review the night before (Day 2 evening, 45 min).** Walk through your 50 flash cards one final time. Do NOT learn new drugs. Reinforce what is already in the bank. Then sleep — 8 hours minimum.\n\nOn test day, you will recognize a drug name in <2 seconds, its bucket in <5, and its top side effect in <10. That is the recall speed the CAT engine rewards.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">48-HOUR PHARM CRAM</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">5 to 10 percentage points within reach</text>
+            <rect x="100" y="160" width="900" height="120" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="150" y="200" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="22">DAY 1 AM  -  STEP 1</text>
+            <text x="150" y="235" text-anchor="start" fill="#fff" font-size="18">5-bucket flash deck  -  50 cards  -  90 minutes</text>
+            <text x="150" y="265" text-anchor="start" fill="#888" font-size="16">Front: name + class  -  Back: MoA + SE + STOP + teach</text>
+            <rect x="100" y="300" width="900" height="120" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="150" y="340" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="22">DAY 1 PM  -  STEP 2</text>
+            <text x="150" y="375" text-anchor="start" fill="#fff" font-size="18">12 lethal lab values  -  cold recall  -  30 minutes</text>
+            <text x="150" y="405" text-anchor="start" fill="#888" font-size="16">Lithium dig vanc gent INR plt K+ Na+ glucose ANC mag</text>
+            <rect x="100" y="440" width="900" height="120" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="150" y="480" text-anchor="start" fill="#10b981" font-weight="bold" font-size="22">DAY 1 EVE  -  STEP 3</text>
+            <text x="150" y="515" text-anchor="start" fill="#fff" font-size="18">5 polypharmacy cases  -  Beers Criteria  -  45 minutes</text>
+            <text x="150" y="545" text-anchor="start" fill="#888" font-size="16">Which med should the nurse question in the 80-year-old?</text>
+            <rect x="100" y="580" width="900" height="120" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="150" y="620" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="22">DAY 2 AM  -  STEP 4</text>
+            <text x="150" y="655" text-anchor="start" fill="#fff" font-size="18">50 pharm-only items from a Qbank  -  90 minutes</text>
+            <text x="150" y="685" text-anchor="start" fill="#888" font-size="16">Target 70 percent correct  -  weak bucket = restudy</text>
+            <rect x="100" y="720" width="900" height="120" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="150" y="760" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="22">DAY 2 EVE  -  STEP 5</text>
+            <text x="150" y="795" text-anchor="start" fill="#fff" font-size="18">Final flash review  -  45 min  -  no new drugs</text>
+            <text x="150" y="825" text-anchor="start" fill="#888" font-size="16">Reinforce only  -  then 8 hours of sleep</text>
+            <rect x="100" y="860" width="900" height="170" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="905" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">RECALL SPEED GOAL</text>
+            <text x="550" y="945" text-anchor="middle" fill="#fff" font-size="20">Name in 2 sec  -  bucket in 5 sec  -  side effect in 10 sec</text>
+            <text x="550" y="985" text-anchor="middle" fill="#fff" font-size="18">This is the speed the CAT engine rewards</text>
+            <text x="550" y="1015" text-anchor="middle" fill="#888" font-size="16">Speed comes from spaced repetition, not last-minute reading</text>
+          </svg>`,
+          caption: "Five-step 48-hour pharm cram framework - the highest-ROI prep window before test day"
+        }
+      }
+    ]
+  }
+],
         },
     ];
 
