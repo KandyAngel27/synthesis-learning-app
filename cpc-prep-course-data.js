@@ -15078,7 +15078,7 @@ You've completed Book 9: Compliance, Audits, and the OIG Work Plan. You now know
             title: 'CPC Mock Exam Bank & Test-Taking Strategy',
             author: 'Synthesis Learning',
             description: '5+ full-length 100-question mock exams in CPC format, plus the timing, elimination, and code-book strategies that buy you 30 extra minutes.',
-            lessons: 3, duration: 45, progress: 0, category: 'cpc-prep',
+            lessons: 6, duration: 90, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-mock-lesson-1",
@@ -15268,6 +15268,516 @@ You've completed Book 9: Compliance, Audits, and the OIG Work Plan. You now know
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" font-family="Arial" font-size="32" fill="#ffd700" text-anchor="middle" font-weight="bold">DISTRACTOR PATTERN JOURNAL</text><rect x="60" y="100" width="980" height="40" fill="#6366f1" rx="6"/><text x="100" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">MOCK</text><text x="200" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">Q#</text><text x="290" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">SECTION</text><text x="470" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">CORRECT</text><text x="630" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">DISTRACTOR</text><text x="850" y="128" font-family="Arial" font-size="15" fill="#ffd700" font-weight="bold">TYPE</text><rect x="60" y="145" width="980" height="40" fill="#10b981" rx="6"/><text x="100" y="172" font-family="Arial" font-size="14" fill="#ffffff">1</text><text x="200" y="172" font-family="Arial" font-size="14" fill="#ffffff">14</text><text x="290" y="172" font-family="Arial" font-size="14" fill="#ffffff">Surg 30000s</text><text x="470" y="172" font-family="Arial" font-size="14" fill="#ffffff">33208</text><text x="630" y="172" font-family="Arial" font-size="14" fill="#ffffff">33207</text><text x="850" y="172" font-family="Arial" font-size="14" fill="#ffffff">Digit-swap</text><rect x="60" y="190" width="980" height="40" fill="#10b981" rx="6"/><text x="100" y="217" font-family="Arial" font-size="14" fill="#ffffff">1</text><text x="200" y="217" font-family="Arial" font-size="14" fill="#ffffff">27</text><text x="290" y="217" font-family="Arial" font-size="14" fill="#ffffff">E/M</text><text x="470" y="217" font-family="Arial" font-size="14" fill="#ffffff">99204</text><text x="630" y="217" font-family="Arial" font-size="14" fill="#ffffff">99214</text><text x="850" y="217" font-family="Arial" font-size="14" fill="#ffffff">New vs estab</text><rect x="60" y="235" width="980" height="40" fill="#10b981" rx="6"/><text x="100" y="262" font-family="Arial" font-size="14" fill="#ffffff">1</text><text x="200" y="262" font-family="Arial" font-size="14" fill="#ffffff">41</text><text x="290" y="262" font-family="Arial" font-size="14" fill="#ffffff">ICD-10</text><text x="470" y="262" font-family="Arial" font-size="14" fill="#ffffff">T82.7XXA</text><text x="630" y="262" font-family="Arial" font-size="14" fill="#ffffff">T82.7XXD</text><text x="850" y="262" font-family="Arial" font-size="14" fill="#ffffff">Encounter</text><rect x="60" y="280" width="980" height="40" fill="#10b981" rx="6"/><text x="100" y="307" font-family="Arial" font-size="14" fill="#ffffff">1</text><text x="200" y="307" font-family="Arial" font-size="14" fill="#ffffff">63</text><text x="290" y="307" font-family="Arial" font-size="14" fill="#ffffff">Surg 10000s</text><text x="470" y="307" font-family="Arial" font-size="14" fill="#ffffff">11402</text><text x="630" y="307" font-family="Arial" font-size="14" fill="#ffffff">11402+12001</text><text x="850" y="307" font-family="Arial" font-size="14" fill="#ffffff">Bundling</text><rect x="60" y="325" width="980" height="40" fill="#10b981" rx="6"/><text x="100" y="352" font-family="Arial" font-size="14" fill="#ffffff">1</text><text x="200" y="352" font-family="Arial" font-size="14" fill="#ffffff">78</text><text x="290" y="352" font-family="Arial" font-size="14" fill="#ffffff">Surg 40000s</text><text x="470" y="352" font-family="Arial" font-size="14" fill="#ffffff">49652</text><text x="630" y="352" font-family="Arial" font-size="14" fill="#ffffff">49560</text><text x="850" y="352" font-family="Arial" font-size="14" fill="#ffffff">Approach</text><text x="550" y="420" font-family="Arial" font-size="22" fill="#ffd700" text-anchor="middle" font-weight="bold">FIVE PATTERN CATEGORIES</text><rect x="80" y="445" width="450" height="80" fill="#ef4444" rx="8"/><text x="305" y="478" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">1. DIGIT-SWAP</text><text x="305" y="505" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Size, site, approach, age</text><rect x="570" y="445" width="450" height="80" fill="#f59e0b" rx="8"/><text x="795" y="478" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">2. MODIFIER TRAP</text><text x="795" y="505" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Added or missing modifier</text><rect x="80" y="540" width="450" height="80" fill="#0ea5e9" rx="8"/><text x="305" y="573" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">3. BUNDLING VIOLATION</text><text x="305" y="600" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Bundled code added separately</text><rect x="570" y="540" width="450" height="80" fill="#8b5cf6" rx="8"/><text x="795" y="573" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">4. SEQUENCING ERROR</text><text x="795" y="600" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Multi-code wrong order</text><rect x="80" y="635" width="940" height="80" fill="#ec4899" rx="8"/><text x="550" y="668" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">5. APPROACH MISMATCH</text><text x="550" y="695" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Open vs lap vs endo vs percutaneous</text><rect x="60" y="740" width="980" height="240" fill="#1a1a2e" stroke="#ffd700" stroke-width="2" rx="12"/><text x="550" y="775" font-family="Arial" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">THE WEEKLY REVIEW</text><text x="100" y="810" font-family="Arial" font-size="16" fill="#ffffff">- Every Sunday: tally each category</text><text x="100" y="838" font-family="Arial" font-size="16" fill="#ffffff">- Highest tally = 30 min targeted drill that week</text><text x="100" y="866" font-family="Arial" font-size="16" fill="#ffffff">- Pull 10 questions of that exact pattern type</text><text x="100" y="894" font-family="Arial" font-size="16" fill="#ffd700" font-weight="bold">Time savings: ~85 sec per question recognized = 20 min/exam</text><text x="550" y="950" font-family="Arial" font-size="18" fill="#10b981" text-anchor="middle" font-weight="bold">Explicit logging becomes automatic recognition.</text></svg>`,
           caption: "Distractor Pattern Journal template: log every miss by category. Weekly tally drives targeted drills. Recognition speeds up by ~85 seconds per question."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-mock-lesson-4",
+    title: "Mock Exam 1 — Med Term, Anatomy & ICD-10-CM (20 Q Walk-Through)",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "What This Mock Tests",
+        content: `Mock Exam 1 mirrors the first 20 questions of the actual CPC — the "warm-up" block that sets your confidence for the next 80. AAPC weights this opening segment heavily on Medical Terminology, Anatomy, and ICD-10-CM. Specifically:
+
+• **Medical Terminology (4 Q):** Root + prefix + suffix dissection. You will see "cholecystectomy," "nephrolithotripsy," "oophorosalpingectomy." Memorize the root for each body system — chole = gallbladder, nephro = kidney, oophor = ovary, salping = fallopian tube.
+
+• **Anatomy (6 Q):** Direction, plane, body cavity, and layer identification. Expect "which layer of skin contains the sebaceous glands?" (dermis) or "the left ventricle pumps blood to the…" (aorta, systemic circulation).
+
+• **ICD-10-CM (10 Q):** The largest sub-block. AAPC tests:
+  1. 7th-character extensions (A = initial, D = subsequent, S = sequela).
+  2. Combination codes (diabetes with complication, hypertension with heart failure).
+  3. "Code first" / "use additional code" instructional notes.
+  4. Excludes1 vs Excludes2 distinction.
+  5. Trimester-specific obstetric codes (O09.xx).
+
+**Critical rule for this block:** When a patient returns for **routine follow-up of a healing fracture or wound**, the 7th character is **D** (subsequent encounter, routine healing), **NOT A**. The "A" is reserved for *active* treatment — surgical repair, ER visit, new cast. A clinic visit two weeks later for staple removal? D.
+
+**Time target:** 20 questions × 2.4 min = 48 minutes. Aim for 40 to bank cushion. Flag and move on any item that takes more than 3 minutes — these are usually combination-code traps that resolve faster on a second pass.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="70" text-anchor="middle" fill="#ffd700" font-size="36" font-weight="bold">Mock Exam 1 — Q1-20 Breakdown</text><text x="550" y="110" text-anchor="middle" fill="#ffffff" font-size="20">20 questions, 48-minute target</text><rect x="100" y="160" width="900" height="120" fill="#6366f1" rx="12"/><text x="550" y="205" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Medical Terminology — 4 Q</text><text x="550" y="240" text-anchor="middle" fill="#ffffff" font-size="18">Root + Prefix + Suffix dissection (chole-, nephro-, -ectomy, -otomy)</text><text x="550" y="265" text-anchor="middle" fill="#ffd700" font-size="16">Budget: ~8 min</text><rect x="100" y="300" width="900" height="120" fill="#10b981" rx="12"/><text x="550" y="345" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">Anatomy — 6 Q</text><text x="550" y="380" text-anchor="middle" fill="#ffffff" font-size="18">Planes, cavities, layers, vessels, organ landmarks</text><text x="550" y="405" text-anchor="middle" fill="#ffd700" font-size="16">Budget: ~12 min</text><rect x="100" y="440" width="900" height="160" fill="#f59e0b" rx="12"/><text x="550" y="485" text-anchor="middle" fill="#1a1a2e" font-size="26" font-weight="bold">ICD-10-CM — 10 Q</text><text x="550" y="520" text-anchor="middle" fill="#1a1a2e" font-size="18">7th char, combination codes, Excludes1/2, "code first" notes</text><text x="550" y="550" text-anchor="middle" fill="#1a1a2e" font-size="18">Trimester OB codes, diabetic complications, hypertension+CHF</text><text x="550" y="585" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Budget: ~24 min — Highest weight in block</text><rect x="100" y="640" width="900" height="180" fill="#8b5cf6" rx="12"/><text x="550" y="685" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">7th Character Quick Reference</text><text x="200" y="725" fill="#ffffff" font-size="18">A = Initial encounter (active Tx, surgery, ER, new cast)</text><text x="200" y="755" fill="#ffd700" font-size="18" font-weight="bold">D = Subsequent encounter (routine healing, staple removal)</text><text x="200" y="785" fill="#ffffff" font-size="18">S = Sequela (late effect: scar, contracture, post-stroke aphasia)</text><rect x="100" y="850" width="900" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="895" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Trap of the Block — Diabetic Foot Ulcer</text><text x="550" y="930" text-anchor="middle" fill="#ffffff" font-size="18">Patient with Type 2 DM + non-pressure foot ulcer →</text><text x="550" y="960" text-anchor="middle" fill="#10b981" font-size="20" font-weight="bold">E11.621 (combination code) + L97.5xx (depth)</text><text x="550" y="990" text-anchor="middle" fill="#ffffff" font-size="16">Do NOT use separate E11.9 + L97 — the combo code is required</text><text x="550" y="1020" text-anchor="middle" fill="#ef4444" font-size="16">"With" in alphabetic index = presumed causal link</text></svg>`,
+          caption: "Q1-20 segment map — Med Term (4) + Anatomy (6) + ICD-10-CM (10) with budget allocations and the diabetic foot ulcer combination-code trap."
+        }
+      },
+      {
+        type: "concept",
+        title: "Five Highest-Yield ICD-10-CM Patterns",
+        content: `These five patterns produce roughly 60% of the ICD-10-CM questions on the CPC. Memorize the rule and the exemplar code.
+
+**1. The "With" Convention (Presumed Causal Link)**
+When the Alphabetic Index lists two conditions linked by the word "with" (e.g., "Diabetes with polyneuropathy"), ICD-10-CM **presumes** a causal relationship — even without explicit physician documentation. Result: use the **combination code** (E11.42), not two separate codes. Exception: hypertension + CKD always presumes link; hypertension + heart disease requires physician to state "hypertensive."
+
+**2. Seventh Character A vs D vs S**
+• **A** — Active treatment phase. Includes surgery, ER, evaluation by new provider.
+• **D** — Routine healing/follow-up. Cast change, suture removal, PT visit.
+• **S** — Sequela (late effect). The acute condition is resolved; code the residual + the original injury with S. Example: keloid scar from old burn → L91.0 + T22.30XS.
+
+**3. Hypertension + Heart Failure = I11.0 + I50.x**
+ICD-10 presumes the link (unlike with simple heart disease). You must add the failure type code from I50 as a secondary code. "Code also" instructional note appears at I11.0.
+
+**4. Obstetric Trimester Codes (O09.xx, O24.xx, etc.)**
+Almost every OB code requires a final digit specifying trimester. **First** = <14 wks, **second** = 14-27 wks 6 days, **third** = 28 wks – delivery. If the encounter spans trimesters or unspecified, use 0 or 9 per Chapter 15 guidelines.
+
+**5. Excludes1 vs Excludes2**
+• **Excludes1** = "NOT CODED HERE." The two conditions cannot coexist. Congenital vs acquired form.
+• **Excludes2** = "Not included here, but may coexist." Code both if both documented.
+
+**Memorize this comparison table — it appears almost verbatim on the exam.**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">5 ICD-10-CM Patterns That Produce 60% of Q1-20</text><rect x="50" y="100" width="500" height="180" fill="#6366f1" rx="12"/><text x="300" y="140" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">1. "With" = Presumed Link</text><text x="300" y="175" text-anchor="middle" fill="#ffffff" font-size="16">Index lists "Diabetes with neuropathy"</text><text x="300" y="200" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">E11.42 (combo)</text><text x="300" y="230" text-anchor="middle" fill="#ffffff" font-size="14">NOT E11.9 + G63</text><text x="300" y="260" text-anchor="middle" fill="#10b981" font-size="14">No physician statement required</text><rect x="560" y="100" width="490" height="180" fill="#10b981" rx="12"/><text x="805" y="140" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">2. 7th Character A/D/S</text><text x="805" y="170" text-anchor="middle" fill="#ffffff" font-size="16">A = ER, surgery, new cast</text><text x="805" y="195" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">D = Cast removal, follow-up</text><text x="805" y="220" text-anchor="middle" fill="#ffffff" font-size="16">S = Scar from old burn (L91.0)</text><text x="805" y="255" text-anchor="middle" fill="#ef4444" font-size="14">Most missed: follow-up = D, not A</text><rect x="50" y="300" width="500" height="180" fill="#f59e0b" rx="12"/><text x="300" y="340" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">3. HTN + Heart Failure</text><text x="300" y="375" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">I11.0 + I50.x</text><text x="300" y="405" text-anchor="middle" fill="#1a1a2e" font-size="14">Causal link IS presumed</text><text x="300" y="430" text-anchor="middle" fill="#1a1a2e" font-size="14">Must add failure type code</text><text x="300" y="460" text-anchor="middle" fill="#1a1a2e" font-size="14">"Code also" note at I11.0</text><rect x="560" y="300" width="490" height="180" fill="#8b5cf6" rx="12"/><text x="805" y="340" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">4. OB Trimester Final Digit</text><text x="805" y="370" text-anchor="middle" fill="#ffffff" font-size="16">1 = First (&lt;14 wks)</text><text x="805" y="395" text-anchor="middle" fill="#ffffff" font-size="16">2 = Second (14-27w6d)</text><text x="805" y="420" text-anchor="middle" fill="#ffffff" font-size="16">3 = Third (28w-delivery)</text><text x="805" y="450" text-anchor="middle" fill="#ffd700" font-size="14">Example: O09.213 (3rd tri)</text><rect x="50" y="500" width="1000" height="200" fill="#ef4444" rx="12"/><text x="550" y="540" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">5. Excludes1 vs Excludes2 — Most Tested</text><line x1="550" y1="555" x2="550" y2="690" stroke="#ffffff" stroke-width="2"/><text x="280" y="580" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Excludes1</text><text x="280" y="610" text-anchor="middle" fill="#ffd700" font-size="16">"NOT CODED HERE"</text><text x="280" y="635" text-anchor="middle" fill="#ffffff" font-size="14">Cannot coexist</text><text x="280" y="660" text-anchor="middle" fill="#ffffff" font-size="14">Congenital vs acquired</text><text x="280" y="685" text-anchor="middle" fill="#ffffff" font-size="14">Pick ONE</text><text x="820" y="580" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Excludes2</text><text x="820" y="610" text-anchor="middle" fill="#ffd700" font-size="16">"Not included, may coexist"</text><text x="820" y="635" text-anchor="middle" fill="#ffffff" font-size="14">Can both occur</text><text x="820" y="660" text-anchor="middle" fill="#ffffff" font-size="14">Code BOTH if documented</text><text x="820" y="685" text-anchor="middle" fill="#ffffff" font-size="14">"And" not "or"</text><rect x="50" y="720" width="1000" height="350" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="760" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Worked Combination Codes — Memorize These</text><text x="100" y="800" fill="#ffffff" font-size="16">DM Type 2 + foot ulcer + depth → E11.621 + L97.5x9</text><text x="100" y="830" fill="#ffffff" font-size="16">DM Type 2 + neuropathy → E11.42 (no G63)</text><text x="100" y="860" fill="#ffffff" font-size="16">DM Type 2 + CKD stage 3 → E11.22 + N18.3x</text><text x="100" y="890" fill="#ffffff" font-size="16">HTN + CHF + CKD st 4 → I13.0 + I50.x + N18.4</text><text x="100" y="920" fill="#ffffff" font-size="16">UTI due to E. coli → N39.0 + B96.20</text><text x="100" y="950" fill="#ffffff" font-size="16">Sepsis from MRSA pneumonia → A41.02 + J15.212</text><text x="100" y="980" fill="#ffffff" font-size="16">Late-effect CVA hemiplegia → I69.354 (dominant side)</text><text x="100" y="1010" fill="#ffd700" font-size="16">Asthma + COPD → J44.9 + J45.909 (Excludes2 — code both)</text><text x="100" y="1040" fill="#ef4444" font-size="16">Acute MI within 4 wks → I21.x (NOT I25.2 — that's old MI)</text></svg>`,
+          caption: "Five highest-yield ICD-10-CM patterns with their canonical combination codes. The Excludes1 vs Excludes2 distinction is the most-tested single concept in this block."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — Diabetic Foot Ulcer Vignette",
+        content: `**Vignette (Q14 of mock):** A 62-year-old male with Type 2 diabetes mellitus presents to wound clinic for follow-up of a non-pressure chronic ulcer of the right heel. The ulcer was first treated 3 weeks ago. Documentation reads: "Chronic ulcer right heel, extending through skin into subcutaneous tissue. Patient's diabetes is well-controlled on metformin." Wound bed is granulating, no infection. Assign the ICD-10-CM codes.
+
+**Step 1 — Identify all conditions documented:**
+• Type 2 DM (well-controlled, on metformin)
+• Non-pressure chronic ulcer, right heel
+• Depth: through skin into subcutaneous tissue
+
+**Step 2 — Alphabetic Index lookup #1: "Diabetes"**
+Diabetes → type 2 → with → foot ulcer. Index points to **E11.621**. Check tabular: E11.621 "Type 2 diabetes mellitus with foot ulcer." A **"Use additional code"** instructional note directs you to identify the ulcer site/severity from L97.4– or L97.5–.
+
+**Step 3 — Alphabetic Index lookup #2: "Ulcer"**
+Ulcer → lower limb → heel → right. Tabular L97.5 = ulcer of other part of foot. Drill to **L97.509** initially (unspecified depth right foot), then refine by depth note: 5th char 5 = right heel/midfoot. Sixth character: **2** = with fat layer exposed (subcutaneous).
+
+**Step 4 — Final code build:**
+• **L97.512** = Non-pressure chronic ulcer of other part of right foot with fat layer exposed.
+• Sequence: **E11.621 first** (per "code first" relationship in the index), then **L97.512**.
+
+**Step 5 — 7th character check:** L97 codes do NOT take a 7th character. Don't add one.
+
+**Final answer:** E11.621, L97.512.
+
+**Common wrong answers AAPC plants:** (a) E11.9 + L97.512 — misses the combination code. (b) E11.621 + L97.519 — uses unspecified depth despite documentation. (c) L97.512 + E11.621 — wrong sequence; the combo code is primary.
+
+**Lookup time benchmark: 90 seconds.** Practice this exact pattern 10× and your speed doubles.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Worked Example — Diabetic Foot Ulcer</text><rect x="50" y="100" width="1000" height="140" fill="#6366f1" rx="12"/><text x="70" y="135" fill="#ffffff" font-size="16" font-weight="bold">VIGNETTE:</text><text x="70" y="165" fill="#ffffff" font-size="14">62 y/o male, Type 2 DM on metformin, follow-up for non-pressure</text><text x="70" y="190" fill="#ffffff" font-size="14">chronic ulcer R heel, through skin into subcutaneous tissue.</text><text x="70" y="215" fill="#ffffff" font-size="14">Wound granulating, no infection.</text><circle cx="100" cy="290" r="25" fill="#ffd700"/><text x="100" y="298" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">1</text><text x="150" y="285" fill="#ffffff" font-size="18" font-weight="bold">Identify conditions</text><text x="150" y="310" fill="#ffffff" font-size="14">DM Type 2 + Ulcer R heel + Depth: subcutaneous</text><circle cx="100" cy="370" r="25" fill="#ffd700"/><text x="100" y="378" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">2</text><text x="150" y="365" fill="#ffffff" font-size="18" font-weight="bold">Index lookup: Diabetes</text><text x="150" y="390" fill="#10b981" font-size="16">Diabetes → type 2 → with → foot ulcer = E11.621</text><circle cx="100" cy="450" r="25" fill="#ffd700"/><text x="100" y="458" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">3</text><text x="150" y="445" fill="#ffffff" font-size="18" font-weight="bold">Index lookup: Ulcer</text><text x="150" y="470" fill="#10b981" font-size="16">Ulcer → lower limb → heel → R + depth = L97.512</text><circle cx="100" cy="530" r="25" fill="#ffd700"/><text x="100" y="538" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">4</text><text x="150" y="525" fill="#ffffff" font-size="18" font-weight="bold">Sequence</text><text x="150" y="550" fill="#ffd700" font-size="16" font-weight="bold">E11.621 first, then L97.512</text><circle cx="100" cy="610" r="25" fill="#ffd700"/><text x="100" y="618" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">5</text><text x="150" y="605" fill="#ffffff" font-size="18" font-weight="bold">7th char check</text><text x="150" y="630" fill="#ffffff" font-size="14">L97 does NOT take 7th char — do not add</text><rect x="50" y="670" width="1000" height="120" fill="#10b981" rx="12"/><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">FINAL ANSWER</text><text x="550" y="745" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">E11.621, L97.512</text><text x="550" y="775" text-anchor="middle" fill="#1a1a2e" font-size="14">Sequence matters — combination code is primary</text><rect x="50" y="810" width="1000" height="260" fill="#ef4444" rx="12"/><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AAPC Distractor Traps</text><text x="100" y="890" fill="#ffffff" font-size="16">A) E11.9 + L97.512  →  misses combination code</text><text x="100" y="925" fill="#ffffff" font-size="16">B) E11.621 + L97.519  →  uses unspecified depth</text><text x="100" y="960" fill="#ffffff" font-size="16">C) L97.512 + E11.621  →  wrong sequence</text><text x="100" y="995" fill="#ffd700" font-size="16" font-weight="bold">D) E11.621 + L97.512  →  CORRECT</text><text x="550" y="1040" text-anchor="middle" fill="#ffffff" font-size="14">Lookup benchmark: 90 sec — practice 10x for fluency</text></svg>`,
+          caption: "Five-step lookup workflow for the diabetic foot ulcer vignette, ending in E11.621 + L97.512. The three distractor traps illustrate AAPC's favorite mistakes for this pattern."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A patient suffered a closed fracture of the right distal radius 6 weeks ago. Today she presents for routine follow-up; the cast is removed and the fracture is healing well per X-ray. Which ICD-10-CM code is correct?",
+        options: [
+          { text: "S52.501A — Unspecified fracture of lower end of right radius, initial encounter for closed fracture", correct: false },
+          { text: "S52.501D — Unspecified fracture of lower end of right radius, subsequent encounter for closed fracture with routine healing", correct: true },
+          { text: "S52.501S — Unspecified fracture of lower end of right radius, sequela", correct: false },
+          { text: "Z47.89 — Encounter for other orthopedic aftercare", correct: false }
+        ],
+        explanation: "The 7th character D denotes subsequent encounter with routine healing — exactly what a cast-removal follow-up is. A is reserved for active treatment (ER, surgery, new cast application). S is for sequela (late effect like a malunion or scar after the fracture is resolved). Z47.89 is incorrect because ICD-10-CM guidelines instruct coders to use the injury code with 7th character D for aftercare of healing fractures, not the Z aftercare codes (Z47 is used for joint replacement and surgical aftercare, not routine fracture follow-up).",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">7th Character A vs D vs S</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Distal radius fracture, week 6, cast removal, healing well</text><rect x="50" y="150" width="320" height="280" fill="#ef4444" rx="12"/><text x="210" y="190" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">A</text><text x="210" y="225" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Initial Encounter</text><text x="210" y="265" text-anchor="middle" fill="#ffffff" font-size="14">Active treatment</text><text x="210" y="290" text-anchor="middle" fill="#ffffff" font-size="14">ER visit</text><text x="210" y="315" text-anchor="middle" fill="#ffffff" font-size="14">Surgical repair</text><text x="210" y="340" text-anchor="middle" fill="#ffffff" font-size="14">New cast application</text><text x="210" y="365" text-anchor="middle" fill="#ffffff" font-size="14">New provider evaluation</text><text x="210" y="405" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">WRONG here</text><rect x="390" y="150" width="320" height="280" fill="#10b981" rx="12"/><text x="550" y="190" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">D</text><text x="550" y="225" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Subsequent Encounter</text><text x="550" y="265" text-anchor="middle" fill="#ffffff" font-size="14">Routine healing</text><text x="550" y="290" text-anchor="middle" fill="#ffffff" font-size="14">Cast removal</text><text x="550" y="315" text-anchor="middle" fill="#ffffff" font-size="14">Suture removal</text><text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="14">PT follow-up</text><text x="550" y="365" text-anchor="middle" fill="#ffffff" font-size="14">Medication management</text><text x="550" y="405" text-anchor="middle" fill="#ffd700" font-size="16" font-weight="bold">CORRECT</text><rect x="730" y="150" width="320" height="280" fill="#8b5cf6" rx="12"/><text x="890" y="190" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">S</text><text x="890" y="225" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">Sequela</text><text x="890" y="265" text-anchor="middle" fill="#ffffff" font-size="14">Late effect</text><text x="890" y="290" text-anchor="middle" fill="#ffffff" font-size="14">Acute resolved</text><text x="890" y="315" text-anchor="middle" fill="#ffffff" font-size="14">Scar from burn</text><text x="890" y="340" text-anchor="middle" fill="#ffffff" font-size="14">Post-CVA hemiplegia</text><text x="890" y="365" text-anchor="middle" fill="#ffffff" font-size="14">Malunion years later</text><text x="890" y="405" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">WRONG here</text><rect x="100" y="470" width="900" height="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="510" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Answer: S52.501D</text><text x="550" y="550" text-anchor="middle" fill="#ffffff" font-size="18">Subsequent encounter for closed fracture, routine healing</text><line x1="100" y1="570" x2="1000" y2="570" stroke="#ffd700" stroke-width="1"/><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="16">Cast-removal visit at week 6 = routine healing phase</text><text x="550" y="625" text-anchor="middle" fill="#ffffff" font-size="16">NOT Z47.89 — that's for ortho aftercare (joint replacement)</text><text x="550" y="650" text-anchor="middle" fill="#10b981" font-size="16">Use injury code + 7th char D for healing fractures</text><rect x="100" y="700" width="900" height="350" fill="#f59e0b" rx="12"/><text x="550" y="740" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Mnemonic — "Active, Doing well, Scar"</text><text x="550" y="780" text-anchor="middle" fill="#1a1a2e" font-size="18">A = Active (the trauma is being treated NOW)</text><text x="550" y="815" text-anchor="middle" fill="#1a1a2e" font-size="18">D = Doing well (routine healing in progress)</text><text x="550" y="850" text-anchor="middle" fill="#1a1a2e" font-size="18">S = Scar (the residual after the acute is gone)</text><line x1="200" y1="880" x2="900" y2="880" stroke="#1a1a2e" stroke-width="2"/><text x="550" y="910" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">Common AAPC trap:</text><text x="550" y="940" text-anchor="middle" fill="#1a1a2e" font-size="16">"Patient seen for follow-up 2 weeks after surgery"</text><text x="550" y="965" text-anchor="middle" fill="#1a1a2e" font-size="16">= D (routine post-op), NOT A</text><text x="550" y="1000" text-anchor="middle" fill="#1a1a2e" font-size="16" font-weight="bold">"Initial" ≠ first ever visit — it means active Tx phase</text><text x="550" y="1035" text-anchor="middle" fill="#1a1a2e" font-size="14">A patient seen 4× during ER stabilization is still "A" each time</text></svg>`,
+          caption: "Decision flow for 7th character A vs D vs S. Mnemonic: Active treatment / Doing well (routine healing) / Scar (sequela)."
+        }
+      },
+      {
+        type: "application",
+        title: "30-Minute Self-Drill Plan",
+        content: `Use this drill TODAY before moving to Lesson 5. Mock blocks build endurance — read-only review does not.
+
+**Setup (3 min):** Print or open 20 ICD-10-CM-only practice questions from your AAPC study guide or any reputable CPC prep set. Set a timer for 24 minutes (20 × 1.2 min — twice your goal pace to force speed adaptation later).
+
+**Drill Block A (10 min, 10 questions):**
+Focus on the five patterns from this lesson:
+1. Two diabetes-with-complication vignettes (force yourself to find combo code)
+2. Two 7th-character vignettes (one A, one D — verify by encounter context)
+3. Two hypertension vignettes (with vs without CHF)
+4. Two OB vignettes (identify trimester first, then code)
+5. Two Excludes1/Excludes2 lookups (write down which one applies before coding)
+
+For each question: **Index first, tabular second**, write the lookup path on scratch paper. Goal — under 60 seconds per item.
+
+**Self-check (3 min):** Score Block A. Mark any miss with a category:
+• **Index miss** = wrong main term used
+• **Tabular miss** = correct code family, wrong 4th/5th/6th digit
+• **Sequence miss** = right codes, wrong primary
+• **Convention miss** = ignored Excludes/With/Use additional
+
+**Drill Block B (10 min, 10 questions):**
+Mixed Med Term + Anatomy + ICD-10-CM (mirrors the actual block). Time pressure: 60 sec per Med Term, 75 sec per Anatomy, 90 sec per ICD. Wear noise-canceling headphones to simulate testing center.
+
+**Cool-down (4 min):**
+Update your error log spreadsheet — one row per missed question with columns: pattern, what you did, what was right, fix for next time. Reviewing this log 24 hours before the real exam recovers 5-8 questions worth of points.
+
+**Pass criteria for advancing to Lesson 5:** 16/20 correct AND under 28 minutes total. If you miss this twice in a row, re-watch Lesson 4 concept card before retrying.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">30-Min Self-Drill Plan</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Build mock-exam endurance before Lesson 5</text><rect x="50" y="140" width="1000" height="80" fill="#6366f1" rx="12"/><text x="100" y="180" fill="#ffffff" font-size="20" font-weight="bold">Setup — 3 min</text><text x="100" y="205" fill="#ffffff" font-size="16">20 ICD-10-CM Qs from AAPC study guide. Timer: 24 min.</text><rect x="50" y="240" width="1000" height="200" fill="#10b981" rx="12"/><text x="100" y="280" fill="#ffffff" font-size="20" font-weight="bold">Block A — 10 min / 10 Qs (Focused)</text><text x="100" y="310" fill="#ffffff" font-size="15">2x Diabetes-with-complication (combo code)</text><text x="100" y="335" fill="#ffffff" font-size="15">2x 7th character (one A, one D)</text><text x="100" y="360" fill="#ffffff" font-size="15">2x Hypertension (with vs without CHF)</text><text x="100" y="385" fill="#ffffff" font-size="15">2x OB trimester (identify before coding)</text><text x="100" y="410" fill="#ffffff" font-size="15">2x Excludes1/Excludes2 lookup</text><text x="100" y="435" fill="#ffd700" font-size="14" font-weight="bold">Target: under 60 sec per item</text><rect x="50" y="460" width="1000" height="160" fill="#f59e0b" rx="12"/><text x="100" y="500" fill="#1a1a2e" font-size="20" font-weight="bold">Self-Check — 3 min</text><text x="100" y="530" fill="#1a1a2e" font-size="15">Categorize each miss:</text><text x="130" y="555" fill="#1a1a2e" font-size="14">• Index miss — wrong main term</text><text x="130" y="580" fill="#1a1a2e" font-size="14">• Tabular miss — wrong 4th/5th/6th digit</text><text x="130" y="605" fill="#1a1a2e" font-size="14">• Sequence miss / Convention miss</text><rect x="50" y="640" width="1000" height="180" fill="#8b5cf6" rx="12"/><text x="100" y="680" fill="#ffffff" font-size="20" font-weight="bold">Block B — 10 min / 10 Qs (Mixed)</text><text x="100" y="710" fill="#ffffff" font-size="15">Med Term + Anatomy + ICD-10-CM blended</text><text x="100" y="735" fill="#ffffff" font-size="15">60s Med Term, 75s Anatomy, 90s ICD</text><text x="100" y="765" fill="#ffd700" font-size="15">Wear headphones — simulate testing center</text><text x="100" y="795" fill="#ffffff" font-size="14">Mirrors actual Q1-20 block sequence</text><rect x="50" y="840" width="1000" height="100" fill="#ec4899" rx="12"/><text x="100" y="880" fill="#ffffff" font-size="20" font-weight="bold">Cool-down — 4 min</text><text x="100" y="910" fill="#ffffff" font-size="15">Error log: pattern, what you did, what was right, fix.</text><text x="100" y="930" fill="#ffffff" font-size="14">Review 24h before real exam = 5-8 recovered Qs</text><rect x="50" y="960" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS CRITERIA TO ADVANCE</text><text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="18">16/20 correct AND under 28 min total</text><text x="550" y="1055" text-anchor="middle" fill="#ef4444" font-size="14">Miss this twice → re-watch Concept card before retry</text></svg>`,
+          caption: "30-minute drill: 3-min setup, two 10-question blocks with 3-min self-check between, 4-min error log. Pass at 16/20 + under 28 minutes."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-mock-lesson-5",
+    title: "Mock Exam 2 — CPT 10000-29999 Integumentary & Musculoskeletal",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "What This Mock Tests",
+        content: `Mock Exam 2 covers questions 21-40 of the CPC: the **Integumentary (10000-19999)** and **Musculoskeletal (20000-29999)** CPT sections. This block produces more coding errors per minute than any other on the exam because the procedures stack — a single skin-cancer excision can involve excision + intermediate repair + adjacent tissue transfer, each with its own measurement rule.
+
+**Section weighting:**
+• Integumentary — 6 questions (lesion excision/destruction, biopsy, repair, skin grafts, Mohs)
+• Musculoskeletal — 6 questions (fracture care, arthroscopy, joint injections, casting)
+• Mixed modifier application — 8 questions blended into above (-25, -51, -59, -RT/LT, -78, -79)
+
+**Three high-yield concept clusters to internalize before drilling:**
+
+1. **Lesion excision = the SIZE you measure.** Excised diameter = the largest **clinical lesion diameter** + **the narrowest margin × 2**. A 1.5 cm lesion with 0.5 cm margins on each side = 1.5 + (0.5×2) = 2.5 cm excised diameter. Use **2.5 cm**, not the pathology report's 3.1 cm post-fixation shrinkage measurement.
+
+2. **Repair hierarchy: simple → intermediate → complex.** Simple (12001-12018) = single-layer. Intermediate (12031-12057) = layered closure including subcutaneous. Complex (13100-13160) = scar revision, undermining, retention sutures. If documentation says "layered closure" → intermediate at minimum.
+
+3. **Debridement depth governs code family:**
+• 11042 — subcutaneous tissue (first 20 sq cm)
+• 11043 — muscle/fascia
+• 11044 — bone
+Add 11045/11046/11047 per **additional 20 sq cm**. The **deepest tissue removed**, not the most superficial, drives the primary code.
+
+**Time target:** 20 Q × 2.4 min = 48 min. CPT lookup is slower than ICD — budget closer to 45 min and use the index aggressively. Don't read code descriptors before consulting the index first.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Mock Exam 2 — Q21-40 Breakdown</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">CPT 10000-29999 — Integ + Musculoskeletal</text><rect x="50" y="140" width="500" height="180" fill="#6366f1" rx="12"/><text x="300" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Integumentary — 6 Q</text><text x="300" y="210" text-anchor="middle" fill="#ffffff" font-size="16">Lesion excision (measurement)</text><text x="300" y="235" text-anchor="middle" fill="#ffffff" font-size="16">Biopsy (single vs add'l)</text><text x="300" y="260" text-anchor="middle" fill="#ffffff" font-size="16">Repair (simple/inter/complex)</text><text x="300" y="285" text-anchor="middle" fill="#ffffff" font-size="16">Adjacent tissue transfer</text><text x="300" y="310" text-anchor="middle" fill="#ffd700" font-size="14">Mohs surgery stages</text><rect x="560" y="140" width="490" height="180" fill="#10b981" rx="12"/><text x="805" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Musculoskeletal — 6 Q</text><text x="805" y="210" text-anchor="middle" fill="#ffffff" font-size="16">Fracture Tx (open/closed/percut)</text><text x="805" y="235" text-anchor="middle" fill="#ffffff" font-size="16">Arthroscopy (Dx vs surgical)</text><text x="805" y="260" text-anchor="middle" fill="#ffffff" font-size="16">Joint injection (sm/med/lg)</text><text x="805" y="285" text-anchor="middle" fill="#ffffff" font-size="16">Casting / strapping</text><text x="805" y="310" text-anchor="middle" fill="#ffd700" font-size="14">Application of fixation</text><rect x="50" y="340" width="1000" height="120" fill="#f59e0b" rx="12"/><text x="550" y="380" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Modifiers Embedded — 8 Q</text><text x="200" y="415" fill="#1a1a2e" font-size="16" font-weight="bold">-25 sig sep E/M</text><text x="200" y="440" fill="#1a1a2e" font-size="16" font-weight="bold">-51 multi proc</text><text x="500" y="415" fill="#1a1a2e" font-size="16" font-weight="bold">-59 distinct proc</text><text x="500" y="440" fill="#1a1a2e" font-size="16" font-weight="bold">-RT / -LT</text><text x="800" y="415" fill="#1a1a2e" font-size="16" font-weight="bold">-78 unplanned</text><text x="800" y="440" fill="#1a1a2e" font-size="16" font-weight="bold">-79 unrelated</text><rect x="50" y="480" width="1000" height="170" fill="#8b5cf6" rx="12"/><text x="550" y="520" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Lesion Excision Formula</text><text x="550" y="560" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Excised Dia = Lesion Dia + (narrowest margin × 2)</text><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="16">1.5 cm lesion + 0.5 cm margins each side = 2.5 cm</text><text x="550" y="625" text-anchor="middle" fill="#ef4444" font-size="14">USE clinical pre-op measurement — NOT path report</text><rect x="50" y="670" width="1000" height="180" fill="#ef4444" rx="12"/><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Debridement Depth Hierarchy</text><text x="100" y="750" fill="#ffffff" font-size="16">11042 — Subcutaneous tissue (first 20 sq cm)</text><text x="100" y="780" fill="#ffffff" font-size="16">11043 — Muscle and/or fascia</text><text x="100" y="810" fill="#ffffff" font-size="16">11044 — Bone</text><text x="100" y="838" fill="#ffd700" font-size="14">+11045/+11046/+11047 = each addt'l 20 sq cm of same depth</text><rect x="50" y="870" width="1000" height="190" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="910" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Repair Code Hierarchy</text><text x="100" y="950" fill="#ffffff" font-size="16">SIMPLE 12001-12018 — single layer (skin only)</text><text x="100" y="980" fill="#10b981" font-size="16" font-weight="bold">INTERMEDIATE 12031-12057 — layered (incl subQ)</text><text x="100" y="1010" fill="#ffffff" font-size="16">COMPLEX 13100-13160 — undermining, scar revision</text><text x="100" y="1040" fill="#f59e0b" font-size="14">"Layered closure" in op note = intermediate floor</text></svg>`,
+          caption: "Q21-40 block map. Six integumentary + six musculoskeletal + eight modifier questions. Memorize the lesion excision formula and debridement depth hierarchy."
+        }
+      },
+      {
+        type: "concept",
+        title: "Five Highest-Yield CPT 10000-29999 Patterns",
+        content: `These five concepts unlock the majority of integumentary and musculoskeletal questions.
+
+**1. Lesion Excision Bundle vs Unbundle**
+Excision codes (11400-11646) **include** simple repair. You do NOT bill 12001-12018 separately for a simple closure after a lesion excision. However:
+• Intermediate closure (12031+) → bill **separately** with -59 if necessary
+• Complex closure (13100+) → bill separately
+• Adjacent tissue transfer (14000+) → bill separately AND it includes the excision (do NOT bill the excision code with 14xxx)
+
+**2. Debridement Add-On Math**
+For a 60 sq cm subcutaneous debridement: 11042 (first 20) + 11045 × 2 (additional 40). Total: three codes. Each 11045 represents another 20 sq cm at the same depth. If multiple depths in same wound, code only the **deepest** with the highest debridement code.
+
+**3. Arthroscopy Bundling — Same Compartment**
+Knee arthroscopy has medial, lateral, and patellofemoral compartments. CPT instructs:
+• Same compartment, multiple procedures → bill only the most extensive
+• Different compartments → bill each (with -59)
+Example: medial meniscectomy (29881) + lateral meniscectomy (29881 with -59) = both bill.
+Trap: medial meniscectomy + chondroplasty same compartment → only 29881 (it includes the chondroplasty).
+
+**4. Joint Injection Sizing**
+• **Small** (20600 series): finger, toe — TMJ
+• **Intermediate** (20605): wrist, elbow, ankle
+• **Major** (20610): shoulder, hip, knee, subacromial bursa
+Add **20611** when ultrasound guidance is used WITH permanent image documentation. Without imaging documentation, use the non-guided code.
+
+**5. Fracture Treatment Codes Specify Method, Not Result**
+• **Closed treatment** = no surgical opening (even if reduced under anesthesia)
+• **Percutaneous fixation** = pins through skin without exposure
+• **Open treatment** = surgical exposure of the fracture
+A reduction under conscious sedation **without** opening the skin is still **closed treatment**. The code reflects approach, not anesthesia depth.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">5 CPT 10000-29999 Patterns That Trap Coders</text><rect x="50" y="100" width="1000" height="170" fill="#6366f1" rx="12"/><text x="550" y="140" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">1. Lesion Excision Bundle Logic</text><text x="100" y="175" fill="#ffffff" font-size="16">Excision INCLUDES simple repair (12001-12018) — do NOT bill</text><text x="100" y="205" fill="#10b981" font-size="16">Intermediate (12031+) → BILL with -59</text><text x="100" y="235" fill="#10b981" font-size="16">Complex (13100+) → BILL separately</text><text x="100" y="260" fill="#ef4444" font-size="14" font-weight="bold">Adj tissue transfer (14xxx) INCLUDES excision — do NOT bill 11xxx</text><rect x="50" y="290" width="1000" height="150" fill="#10b981" rx="12"/><text x="550" y="330" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">2. Debridement Math Example</text><text x="100" y="365" fill="#ffffff" font-size="18">60 sq cm subQ debridement →</text><text x="100" y="395" fill="#ffd700" font-size="18" font-weight="bold">11042 + 11045 × 2 = three codes</text><text x="100" y="425" fill="#ffffff" font-size="14">First 20 sq cm: 11042 / Each addt'l 20: +11045 (×2 for next 40)</text><rect x="50" y="460" width="1000" height="170" fill="#f59e0b" rx="12"/><text x="550" y="500" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">3. Knee Arthroscopy Compartments</text><text x="100" y="535" fill="#1a1a2e" font-size="16" font-weight="bold">Same compartment, multiple procs → bill MOST extensive only</text><text x="100" y="565" fill="#1a1a2e" font-size="16" font-weight="bold">Diff compartments → bill EACH with -59</text><text x="100" y="595" fill="#1a1a2e" font-size="14">Medial meniscectomy + chondroplasty SAME compartment = 29881 only</text><text x="100" y="620" fill="#1a1a2e" font-size="14">Medial + lateral menisc = 29881 + 29881-59</text><rect x="50" y="650" width="1000" height="180" fill="#8b5cf6" rx="12"/><text x="550" y="690" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">4. Joint Injection Sizing</text><text x="100" y="725" fill="#ffffff" font-size="16">20600 — Small (finger, toe, TMJ)</text><text x="100" y="755" fill="#ffffff" font-size="16">20605 — Intermediate (wrist, elbow, ankle)</text><text x="100" y="785" fill="#ffffff" font-size="16">20610 — Major (shoulder, hip, knee, subacromial)</text><text x="100" y="815" fill="#ffd700" font-size="14">20611 = +US guidance with permanent image documentation</text><rect x="50" y="850" width="1000" height="200" fill="#ef4444" rx="12"/><text x="550" y="890" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">5. Fracture Tx = Approach, Not Anesthesia</text><text x="100" y="925" fill="#ffffff" font-size="16">CLOSED = no surgical opening (even if reduced under GA)</text><text x="100" y="955" fill="#ffffff" font-size="16">PERCUTANEOUS = pins through skin, no exposure</text><text x="100" y="985" fill="#ffffff" font-size="16">OPEN = surgical exposure of fracture site</text><text x="100" y="1020" fill="#ffd700" font-size="14" font-weight="bold">Conscious sedation w/o skin opening = STILL closed treatment</text></svg>`,
+          caption: "Five CPT patterns: lesion bundle rules, debridement add-on math, arthroscopy compartments, joint injection sizing, fracture approach taxonomy."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — Excision + Intermediate Closure",
+        content: `**Vignette (Q26 of mock):** A 58-year-old female presents with a suspicious malignant lesion on the back. The lesion measures 2.0 cm. The surgeon excises the lesion with 0.5 cm margins on each side. The closure requires a layered intermediate repair of 3.2 cm. Pathology confirms basal cell carcinoma. Code the procedure.
+
+**Step 1 — Identify the procedures performed:**
+• Excision of malignant lesion, trunk (back)
+• Intermediate (layered) repair, trunk
+
+**Step 2 — Calculate excised diameter:**
+Lesion size + (narrowest margin × 2) = 2.0 + (0.5 × 2) = **2.5 cm**.
+
+**Step 3 — CPT Index for excision:**
+"Excision, lesion, skin, malignant" → 11600-11646 series. Trunk = 11600-11606.
+Looking at the descriptors:
+• 11600 — Excised diameter 0.5 cm or less
+• 11601 — 0.6 to 1.0 cm
+• 11602 — 1.1 to 2.0 cm
+• 11603 — 2.1 to 3.0 cm ← **2.5 cm falls here**
+• 11604 — 3.1 to 4.0 cm
+
+**Primary code: 11603.**
+
+**Step 4 — CPT Index for repair:**
+"Repair, intermediate, skin, trunk" → 12031-12037.
+3.2 cm trunk = 12032 (2.6 to 7.5 cm intermediate, trunk/scalp/axillae/extremities).
+
+**Step 5 — Bundle check:**
+Excision codes 11400-11646 INCLUDE simple repair only. Intermediate or complex repair is reported separately. We can bill both — but is a modifier needed?
+
+**Step 6 — Modifier check:**
+Modifier -51 (multiple procedures) is technically appropriate when two procedures are performed in the same session. Many payers don't require it for the 12xxx repair codes anymore, but the CPC exam typically expects -51 on the second code unless the question states the payer drops it.
+
+**Final answer:** **11603, 12032-51**
+
+**Distractor traps:**
+• 11602 — codes the lesion size (2.0) instead of excised diameter
+• 11604 — adds margins to BOTH sides as 1.0 (0.5 + 0.5 = wrong math)
+• 11603 alone — forgets to bill the intermediate repair separately
+
+**Lookup benchmark: 2 min.** Heavy lookup but pattern is template — practice 10× for fluency.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Worked Example — Excision + Intermediate Closure</text><rect x="50" y="100" width="1000" height="130" fill="#6366f1" rx="12"/><text x="70" y="130" fill="#ffffff" font-size="14" font-weight="bold">VIGNETTE:</text><text x="70" y="160" fill="#ffffff" font-size="14">58 y/o F. Malignant lesion on back. Lesion = 2.0 cm.</text><text x="70" y="185" fill="#ffffff" font-size="14">Margins 0.5 cm each side. Layered repair 3.2 cm. Path = BCC.</text><text x="70" y="215" fill="#ffd700" font-size="14">Goal: code the excision and the repair</text><circle cx="100" cy="280" r="22" fill="#ffd700"/><text x="100" y="288" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">1</text><text x="140" y="288" fill="#ffffff" font-size="16">Excised diameter = 2.0 + (0.5 × 2) = 2.5 cm</text><circle cx="100" cy="340" r="22" fill="#ffd700"/><text x="100" y="348" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">2</text><text x="140" y="348" fill="#ffffff" font-size="16">Index: Excision → lesion → skin → malignant → trunk</text><circle cx="100" cy="400" r="22" fill="#ffd700"/><text x="100" y="408" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">3</text><text x="140" y="408" fill="#ffffff" font-size="16">Range 11600-11606. 2.5 cm falls in 2.1-3.0 = </text><text x="700" y="408" fill="#10b981" font-size="16" font-weight="bold">11603</text><circle cx="100" cy="460" r="22" fill="#ffd700"/><text x="100" y="468" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">4</text><text x="140" y="468" fill="#ffffff" font-size="16">Index: Repair → intermediate → skin → trunk. 3.2 cm = </text><text x="800" y="468" fill="#10b981" font-size="16" font-weight="bold">12032</text><circle cx="100" cy="520" r="22" fill="#ffd700"/><text x="100" y="528" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">5</text><text x="140" y="528" fill="#ffffff" font-size="16">Excision INCLUDES simple repair only — intermediate billable</text><circle cx="100" cy="580" r="22" fill="#ffd700"/><text x="100" y="588" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">6</text><text x="140" y="588" fill="#ffffff" font-size="16">Append -51 to secondary procedure (multi-proc)</text><rect x="50" y="630" width="1000" height="120" fill="#10b981" rx="12"/><text x="550" y="670" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">FINAL ANSWER</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold">11603, 12032-51</text><text x="550" y="735" text-anchor="middle" fill="#1a1a2e" font-size="14">Excision (size includes margins) + intermediate repair with -51</text><rect x="50" y="770" width="1000" height="290" fill="#ef4444" rx="12"/><text x="550" y="810" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AAPC Distractor Traps</text><text x="100" y="850" fill="#ffffff" font-size="16">A) 11602 alone — uses lesion size, ignores margins</text><text x="100" y="885" fill="#ffffff" font-size="16">B) 11604 + 12032 — adds margins wrong (1.0 each side)</text><text x="100" y="920" fill="#ffffff" font-size="16">C) 11603 alone — forgets intermediate repair is separately billable</text><text x="100" y="955" fill="#ffd700" font-size="16" font-weight="bold">D) 11603, 12032-51 — CORRECT</text><text x="550" y="1000" text-anchor="middle" fill="#ffffff" font-size="16">Watch: "narrowest margin × 2" — not sum of both margins</text><text x="550" y="1030" text-anchor="middle" fill="#ffffff" font-size="14">If margins differ (0.3 / 0.6) use 0.3 × 2 — the narrowest doubled</text></svg>`,
+          caption: "Six-step workflow yielding 11603 + 12032-51. The narrowest-margin-doubled formula is what AAPC tests, not the sum of both margins."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "An orthopedic surgeon performs a left knee arthroscopy with medial meniscectomy AND chondroplasty (shaving of articular cartilage) in the medial compartment. The lateral compartment is normal. Which CPT codes are correct?",
+        options: [
+          { text: "29881-LT, 29877-LT-59 — both procedures bill because they are distinct services", correct: false },
+          { text: "29881-LT only — chondroplasty in the SAME compartment is bundled into the meniscectomy", correct: true },
+          { text: "29870-LT, 29881-LT — diagnostic arthroscopy plus meniscectomy", correct: false },
+          { text: "29881-LT-RT, 29877-LT-59 — bilateral coding with -59", correct: false }
+        ],
+        explanation: "Per CPT instructions for the knee arthroscopy code family, when meniscectomy AND chondroplasty are performed in the SAME compartment, only the most comprehensive procedure (the meniscectomy, 29881) is reported. Chondroplasty (29877) bundles into the meniscectomy when in the same compartment. If the chondroplasty had been performed in a DIFFERENT compartment, then 29881-LT and 29877-LT-59 (with the HCPCS modifier G0289 in some payer contexts) would be correct. 29870 (diagnostic) is never reported with a surgical arthroscopy of the same joint at the same session — it bundles. The bilateral modifier -RT doesn't apply because only the left knee was operated on.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">Knee Arthroscopy Compartment Rules</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">L knee scope + medial meniscectomy + medial chondroplasty</text><circle cx="350" cy="400" r="200" fill="#1a1a2e" stroke="#ffd700" stroke-width="4"/><text x="350" y="220" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">LEFT KNEE</text><line x1="350" y1="240" x2="350" y2="560" stroke="#ffd700" stroke-width="2" stroke-dasharray="6,4"/><text x="250" y="380" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Medial</text><text x="250" y="405" text-anchor="middle" fill="#10b981" font-size="14">Meniscectomy</text><text x="250" y="425" text-anchor="middle" fill="#10b981" font-size="14">+ Chondroplasty</text><text x="250" y="455" text-anchor="middle" fill="#ef4444" font-size="12">BUNDLED</text><text x="450" y="380" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Lateral</text><text x="450" y="410" text-anchor="middle" fill="#888" font-size="14">Normal</text><rect x="650" y="240" width="380" height="180" fill="#10b981" rx="12"/><text x="840" y="280" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Rule</text><text x="840" y="315" text-anchor="middle" fill="#ffffff" font-size="16">Same compartment +</text><text x="840" y="340" text-anchor="middle" fill="#ffffff" font-size="16">multiple procedures =</text><text x="840" y="375" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Bill MOST extensive</text><text x="840" y="405" text-anchor="middle" fill="#ffffff" font-size="14">Chondroplasty bundles in</text><rect x="650" y="440" width="380" height="180" fill="#ef4444" rx="12"/><text x="840" y="480" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Different compartment?</text><text x="840" y="515" text-anchor="middle" fill="#ffffff" font-size="16">29881 + 29877-59</text><text x="840" y="545" text-anchor="middle" fill="#ffffff" font-size="14">Both bill — distinct sites</text><text x="840" y="580" text-anchor="middle" fill="#ffd700" font-size="14">Modifier -59 required</text><rect x="50" y="640" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="680" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Answer: 29881-LT only</text><text x="550" y="710" text-anchor="middle" fill="#ffffff" font-size="16">Meniscectomy is the comprehensive code — chondroplasty bundles</text><rect x="50" y="760" width="1000" height="300" fill="#8b5cf6" rx="12"/><text x="550" y="800" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Why other options are wrong</text><text x="100" y="840" fill="#ffffff" font-size="16">A) 29881 + 29877-59 — assumes -59 unbundles same compartment</text><text x="100" y="875" fill="#ffffff" font-size="16">C) 29870 + 29881 — Dx scope bundles into surgical scope same joint</text><text x="100" y="910" fill="#ffffff" font-size="16">D) Adds -RT — wrong; only left knee operated</text><line x1="100" y1="940" x2="1000" y2="940" stroke="#ffffff" stroke-width="1"/><text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold">Memory hook: "Same compartment = one code only"</text><text x="550" y="1010" text-anchor="middle" fill="#ffffff" font-size="14">If procedures in DIFFERENT compartments → -59 unbundles</text><text x="550" y="1040" text-anchor="middle" fill="#ffffff" font-size="14">If Dx + surgical same joint same session → surgical absorbs Dx</text></svg>`,
+          caption: "Knee compartment bundling: same compartment = one code, different compartment = bill both with -59. Diagnostic arthroscopy never bills with surgical arthroscopy of the same joint."
+        }
+      },
+      {
+        type: "application",
+        title: "30-Minute Self-Drill Plan",
+        content: `**Goal:** Convert this lesson's five patterns into reflexive lookups before moving to Lesson 6.
+
+**Setup (3 min):** Open your CPT codebook to 10000 and tab the following section headers with sticky flags: 11400 (Excision-Benign), 11600 (Excision-Malignant), 11900 (Injections), 12001 (Repair-Simple), 12031 (Repair-Intermediate), 13100 (Repair-Complex), 14000 (Adjacent Transfer), 20600 (Joint Injections), 29800 (Arthroscopy). The 90 seconds you spend tabbing now saves 8 minutes on the exam.
+
+**Drill Block A — Integumentary (12 min, 8 questions):**
+1. Two lesion excision + simple repair (no extra code for repair)
+2. Two lesion excision + intermediate repair (two codes, -51)
+3. One excision + adjacent tissue transfer (one code only — 14xxx)
+4. One debridement multi-depth (deepest code only)
+5. Two Mohs surgery + biopsy combinations
+
+For each: write the excised diameter formula on scratch paper. Time benchmark — under 90 sec per item once tabs are set.
+
+**Drill Block B — Musculoskeletal (12 min, 8 questions):**
+1. Two knee arthroscopy multi-procedure (same vs different compartment)
+2. Two fracture treatments (closed vs open vs percutaneous identification)
+3. Two joint injections (size + with/without US guidance)
+4. Two cast applications (initial vs replacement, modifier -77 trap)
+
+**Self-check + error log (3 min):**
+Track these specific miss types:
+• "Bundled-but-billed" — added a code that bundles
+• "Wrong size bucket" — picked wrong CPT range by 1
+• "Missed modifier" — forgot -51, -59, or -RT/LT
+• "Approach error" — chose open when closed (or vice versa)
+
+**Pass criteria:** 13/16 correct AND under 28 minutes. The integumentary block is where strong coders gain 4-6 points over weak coders — this drill is the difference between 70% and 78% on the real exam.
+
+**Bonus exercise (if time):** Build a 5×5 grid mapping body region (head, trunk, extremity, etc.) to excision size buckets. Memorize it. Recall on demand within 2 days.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">30-Min Drill — CPT 10000-29999</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Convert lesion + arthroscopy patterns into reflex</text><rect x="50" y="140" width="1000" height="120" fill="#6366f1" rx="12"/><text x="100" y="180" fill="#ffffff" font-size="20" font-weight="bold">Setup — 3 min</text><text x="100" y="210" fill="#ffffff" font-size="15">Sticky-tab sections: 11400, 11600, 12001, 12031, 13100, 14000, 20600, 29800</text><text x="100" y="240" fill="#ffd700" font-size="14">90s spent tabbing = 8 min saved on exam</text><rect x="50" y="280" width="490" height="280" fill="#10b981" rx="12"/><text x="295" y="320" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Block A — Integ (12m)</text><text x="70" y="355" fill="#ffffff" font-size="15">2x Excision + simple (1 code)</text><text x="70" y="385" fill="#ffffff" font-size="15">2x Excision + intermediate (2 codes)</text><text x="70" y="415" fill="#ffffff" font-size="15">1x Adjacent transfer (1 code)</text><text x="70" y="445" fill="#ffffff" font-size="15">1x Multi-depth debridement</text><text x="70" y="475" fill="#ffffff" font-size="15">2x Mohs + biopsy</text><text x="70" y="510" fill="#ffd700" font-size="14">Time: under 90s per item</text><text x="70" y="540" fill="#ffffff" font-size="14">Always write excised diameter formula</text><rect x="560" y="280" width="490" height="280" fill="#f59e0b" rx="12"/><text x="805" y="320" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Block B — MSK (12m)</text><text x="580" y="355" fill="#1a1a2e" font-size="15">2x Knee arthroscopy (compartment)</text><text x="580" y="385" fill="#1a1a2e" font-size="15">2x Fracture (closed/open/percut)</text><text x="580" y="415" fill="#1a1a2e" font-size="15">2x Joint injection (size + US)</text><text x="580" y="445" fill="#1a1a2e" font-size="15">2x Casting (initial vs replace)</text><text x="580" y="475" fill="#1a1a2e" font-size="15">Modifier -77 trap on replacement</text><text x="580" y="510" fill="#1a1a2e" font-size="14" font-weight="bold">Time: under 90s per item</text><text x="580" y="540" fill="#1a1a2e" font-size="14">Approach drives code, not anesthesia</text><rect x="50" y="580" width="1000" height="180" fill="#ec4899" rx="12"/><text x="100" y="620" fill="#ffffff" font-size="20" font-weight="bold">Self-Check — 3 min</text><text x="100" y="655" fill="#ffffff" font-size="15">Track miss types:</text><text x="130" y="685" fill="#ffffff" font-size="14">• Bundled-but-billed (added code that bundles)</text><text x="130" y="710" fill="#ffffff" font-size="14">• Wrong size bucket (off-by-one CPT range)</text><text x="130" y="735" fill="#ffffff" font-size="14">• Missed modifier (-51, -59, -RT/LT)</text><rect x="50" y="780" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="820" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS CRITERIA</text><text x="550" y="850" text-anchor="middle" fill="#ffffff" font-size="18">13/16 correct AND under 28 min</text><text x="550" y="875" text-anchor="middle" fill="#ef4444" font-size="14">Integ block separates 70% scorers from 78% scorers</text><rect x="50" y="900" width="1000" height="160" fill="#8b5cf6" rx="12"/><text x="550" y="940" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Bonus Exercise</text><text x="550" y="975" text-anchor="middle" fill="#ffffff" font-size="16">Build 5×5 grid: Body region × Excision size bucket</text><text x="550" y="1005" text-anchor="middle" fill="#ffffff" font-size="14">Trunk/Arms/Legs/Hands/Feet × 0.5/1.0/2.0/3.0/4.0 cm</text><text x="550" y="1035" text-anchor="middle" fill="#ffd700" font-size="14">Memorize. Recall on demand within 48 hours.</text></svg>`,
+          caption: "30-min drill: 3-min tab setup, 12-min integumentary block, 12-min MSK block, 3-min error log. Pass at 13/16 + under 28 min."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-mock-lesson-6",
+    title: "Mock Exam 3 — CPT 30000-49999 Cardio, Respiratory, Digestive",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "What This Mock Tests",
+        content: `Mock Exam 3 covers questions 41-60 of the CPC — the high-revenue "cavity" sections: respiratory (30000-32999), cardiovascular (33010-37799), digestive (40490-49999). These produce some of the highest-value claims in real practice, so AAPC tests them heavily.
+
+**Section weighting:**
+• Respiratory — 5 Q (bronchoscopy, sinus surgery, FESS, lung biopsy)
+• Cardiovascular — 7 Q (CABG, angioplasty, pacemaker, vein procedures)
+• Digestive — 8 Q (EGD, colonoscopy, ERCP, hernia repair, cholecystectomy)
+
+**Three critical concept clusters before drilling:**
+
+1. **CABG bundling — vein vs arterial.** Coronary artery bypass codes (33510-33536) have two separate families:
+• 33510-33516 = venous graft only (vein bypasses)
+• 33533-33536 = arterial graft (combined arterial-venous or arterial only)
+When BOTH artery AND vein grafts are used, you bill from the **33533 series** + add-on **33517-33523** for the venous components. You do NOT bill from both families at the same time.
+
+2. **EGD / Colonoscopy multi-procedure rule.** When multiple endoscopic procedures are done through the same scope, code the **most complex** procedure at full value, then subsequent procedures with the relevant base-procedure deduction (or use family endoscopy guidelines). On the CPC, this typically appears as: "Which is sequenced first?" — answer is highest-RVU procedure.
+
+3. **Colonoscopy modifier 53 (Discontinued) vs 52 (Reduced)**:
+• **Modifier 53** — colonoscopy aborted due to extenuating circumstances (patient instability, poor prep with risk). Appended to 45378.
+• **Modifier 52** — colonoscopy reduced (couldn't reach cecum due to anatomy but no risk to patient).
+The CPC favorite trap: "Could not advance past the splenic flexure due to a tortuous colon" → **modifier 53** if procedure aborted, or just append **52** with **45378** if reduced. Read carefully: if "patient hemodynamically stable, prep adequate, decision to stop" — usually **53**.
+
+**Time target:** 20 Q × 2.4 min = 48 min. CPT 30000-49999 has the densest descriptors on the exam — index aggressively, don't read code text first.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">Mock Exam 3 — Q41-60 Breakdown</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">CPT 30000-49999 — Cavity Surgery Block</text><rect x="50" y="140" width="320" height="150" fill="#6366f1" rx="12"/><text x="210" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Respiratory — 5 Q</text><text x="210" y="210" text-anchor="middle" fill="#ffffff" font-size="14">Bronchoscopy</text><text x="210" y="235" text-anchor="middle" fill="#ffffff" font-size="14">Sinus surgery / FESS</text><text x="210" y="260" text-anchor="middle" fill="#ffffff" font-size="14">Lung biopsy</text><rect x="390" y="140" width="320" height="150" fill="#ef4444" rx="12"/><text x="550" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Cardiovascular — 7 Q</text><text x="550" y="210" text-anchor="middle" fill="#ffffff" font-size="14">CABG vein vs arterial</text><text x="550" y="235" text-anchor="middle" fill="#ffffff" font-size="14">Angioplasty / stent</text><text x="550" y="260" text-anchor="middle" fill="#ffffff" font-size="14">Pacemaker / ICD</text><rect x="730" y="140" width="320" height="150" fill="#10b981" rx="12"/><text x="890" y="180" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Digestive — 8 Q</text><text x="890" y="210" text-anchor="middle" fill="#ffffff" font-size="14">EGD / Colonoscopy</text><text x="890" y="235" text-anchor="middle" fill="#ffffff" font-size="14">ERCP, hernia repair</text><text x="890" y="260" text-anchor="middle" fill="#ffffff" font-size="14">Cholecystectomy</text><rect x="50" y="320" width="1000" height="220" fill="#f59e0b" rx="12"/><text x="550" y="360" text-anchor="middle" fill="#1a1a2e" font-size="24" font-weight="bold">CABG Family Hierarchy</text><line x1="550" y1="375" x2="550" y2="510" stroke="#1a1a2e" stroke-width="2"/><text x="280" y="405" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Vein-only Grafts</text><text x="280" y="435" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">33510-33516</text><text x="280" y="465" text-anchor="middle" fill="#1a1a2e" font-size="14">e.g., 33513 = three coronary</text><text x="280" y="490" text-anchor="middle" fill="#1a1a2e" font-size="14">venous bypass grafts only</text><text x="820" y="405" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="bold">Arterial / Combined</text><text x="820" y="435" text-anchor="middle" fill="#1a1a2e" font-size="18" font-weight="bold">33533-33536 + 33517-33523</text><text x="820" y="465" text-anchor="middle" fill="#1a1a2e" font-size="14">If artery + vein combo,</text><text x="820" y="490" text-anchor="middle" fill="#1a1a2e" font-size="14">use 33533 + 33517-33523</text><rect x="50" y="560" width="1000" height="220" fill="#8b5cf6" rx="12"/><text x="550" y="600" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">Colonoscopy Modifiers 52 vs 53</text><line x1="550" y1="615" x2="550" y2="760" stroke="#ffffff" stroke-width="2"/><text x="280" y="645" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">-52 Reduced</text><text x="280" y="675" text-anchor="middle" fill="#ffd700" font-size="16">Couldn't reach cecum</text><text x="280" y="700" text-anchor="middle" fill="#ffffff" font-size="14">Anatomy reason</text><text x="280" y="725" text-anchor="middle" fill="#ffffff" font-size="14">Patient stable, no risk</text><text x="280" y="750" text-anchor="middle" fill="#ffffff" font-size="14">Procedure technically complete</text><text x="820" y="645" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">-53 Discontinued</text><text x="820" y="675" text-anchor="middle" fill="#ffd700" font-size="16">Aborted for safety</text><text x="820" y="700" text-anchor="middle" fill="#ffffff" font-size="14">Patient unstable</text><text x="820" y="725" text-anchor="middle" fill="#ffffff" font-size="14">Poor prep, risk to continue</text><text x="820" y="750" text-anchor="middle" fill="#ffffff" font-size="14">Procedure never completed</text><rect x="50" y="800" width="1000" height="260" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="840" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">EGD / Colonoscopy Multi-Procedure Rule</text><text x="100" y="880" fill="#ffffff" font-size="16">Same scope, multiple procedures:</text><text x="100" y="910" fill="#10b981" font-size="16" font-weight="bold">→ Bill MOST COMPLEX at full value first</text><text x="100" y="940" fill="#ffffff" font-size="16">→ Add subsequent procedures per family endoscopy guidelines</text><text x="100" y="970" fill="#ffffff" font-size="16">→ Apply -59 if separately identifiable</text><text x="100" y="1005" fill="#ffd700" font-size="16" font-weight="bold">CPC favorite: "Which is sequenced first?"</text><text x="100" y="1035" fill="#ffffff" font-size="14">Answer = highest-RVU / most complex / therapeutic over Dx</text></svg>`,
+          caption: "Q41-60 layout: respiratory + cardio + digestive blocks. Critical rules: CABG vein/arterial families, EGD/colonoscopy multi-procedure sequencing, modifier 52 vs 53 distinction."
+        }
+      },
+      {
+        type: "concept",
+        title: "Five Highest-Yield CPT 30000-49999 Patterns",
+        content: `These are the patterns that dominate AAPC's question bank for this block.
+
+**1. CABG Combination Rule**
+If the procedure uses arterial graft (LIMA, RIMA, radial, gastroepiploic) PLUS one or more venous grafts:
+• Primary: 33533 (1 coronary), 33534 (2 coronary), 33535 (3 coronary), 33536 (4+ coronary) — counts ARTERIAL grafts
+• Add-on: 33517 (1 venous), 33518 (2 venous), 33519 (3 venous), 33521 (4 venous), 33522 (5 venous), 33523 (6+ venous) — counts VENOUS grafts
+Example: LIMA to LAD + 2 saphenous vein grafts → **33533 + 33518**. NOT 33513 (which is venous-only family).
+
+**2. Bronchoscopy Family Bundling**
+Diagnostic bronchoscopy (31622) is **always bundled** into therapeutic bronchoscopy procedures (e.g., 31628 transbronchial biopsy includes 31622). Do NOT bill both.
+Exception: if multiple sites biopsied, +31632 per additional lobe.
+
+**3. Sinus Surgery — FESS Side and Procedure Specific**
+FESS codes (31256-31276) are reported **per side** (use -LT and -RT) AND per type (maxillary, ethmoid, frontal, sphenoid). Each sinus operated on each side gets its own code. Bilateral maxillary antrostomy with anterior and posterior ethmoidectomy = 31256-RT, 31256-LT, 31255-RT, 31255-LT (four codes).
+
+**4. Hernia Repair — Reducible vs Incarcerated + Initial vs Recurrent**
+• Initial inguinal hernia, reducible, age 5+ → 49505
+• Initial inguinal hernia, incarcerated/strangulated → 49507
+• Recurrent inguinal hernia, reducible → 49520
+• Recurrent inguinal hernia, incarcerated → 49521
+Mesh (49568) reports ONLY with incisional or ventral hernia repair, never with inguinal.
+
+**5. Colonoscopy Coding Decision Tree**
+• Screening, average risk, completed to cecum → G0121 (Medicare) or 45378 with appropriate Dx
+• Screening that **becomes therapeutic** (polyp removed) → 45380-45398 with modifier -PT (Medicare) for the screening-converted-to-therapeutic indicator
+• Not reached cecum, patient stable → 45378-52
+• Aborted for safety → 45378-53
+
+These five patterns address roughly 70% of digestive block questions.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">5 CPT 30000-49999 Patterns That Trap Coders</text><rect x="50" y="100" width="1000" height="180" fill="#ef4444" rx="12"/><text x="550" y="140" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">1. CABG Combination — LIMA + 2 SVG</text><text x="100" y="175" fill="#ffffff" font-size="16">Arterial primary code = 33533 (1 arterial graft)</text><text x="100" y="205" fill="#ffffff" font-size="16">Add-on venous = 33518 (2 venous grafts)</text><text x="100" y="235" fill="#ffd700" font-size="18" font-weight="bold">Final: 33533 + 33518</text><text x="100" y="263" fill="#ef4444" font-size="14" font-weight="bold">Do NOT use 33513 (vein-only family) when artery present</text><rect x="50" y="300" width="1000" height="140" fill="#6366f1" rx="12"/><text x="550" y="340" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">2. Bronchoscopy Bundling</text><text x="100" y="375" fill="#ffffff" font-size="16">Dx bronchoscopy 31622 ALWAYS bundles into therapeutic</text><text x="100" y="405" fill="#ffd700" font-size="16">31628 (transbronch bx) INCLUDES 31622 — do not bill both</text><text x="100" y="430" fill="#ffffff" font-size="14">+31632 per addt'l lobe biopsied</text><rect x="50" y="460" width="1000" height="180" fill="#f59e0b" rx="12"/><text x="550" y="500" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">3. FESS — Per Side, Per Sinus</text><text x="100" y="535" fill="#1a1a2e" font-size="16">Each sinus type × each side = own code</text><text x="100" y="565" fill="#1a1a2e" font-size="16">Bilateral maxillary antrostomy + ant/post ethmoidectomy:</text><text x="100" y="595" fill="#1a1a2e" font-size="16" font-weight="bold">31256-RT, 31256-LT, 31255-RT, 31255-LT</text><text x="100" y="625" fill="#1a1a2e" font-size="14">Four codes! Don't collapse bilateral into one.</text><rect x="50" y="660" width="1000" height="180" fill="#8b5cf6" rx="12"/><text x="550" y="700" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">4. Hernia Repair Matrix</text><text x="100" y="730" fill="#ffffff" font-size="14">49505 — Initial inguinal, reducible, age 5+</text><text x="100" y="755" fill="#ffffff" font-size="14">49507 — Initial inguinal, incarcerated/strangulated</text><text x="100" y="780" fill="#ffffff" font-size="14">49520 — Recurrent inguinal, reducible</text><text x="100" y="805" fill="#ffffff" font-size="14">49521 — Recurrent inguinal, incarcerated</text><text x="100" y="830" fill="#ffd700" font-size="14">+49568 mesh ONLY with incisional/ventral — never inguinal</text><rect x="50" y="860" width="1000" height="200" fill="#10b981" rx="12"/><text x="550" y="900" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">5. Colonoscopy Decision Tree</text><text x="100" y="935" fill="#ffffff" font-size="15">Screening complete (avg risk) → G0121 (Medicare) / 45378</text><text x="100" y="965" fill="#ffffff" font-size="15">Screening converted to therapeutic → 45380-45398 + -PT</text><text x="100" y="995" fill="#ffffff" font-size="15">Not reached cecum, stable → 45378-52 (Reduced)</text><text x="100" y="1025" fill="#ffd700" font-size="15" font-weight="bold">Aborted for safety/risk → 45378-53 (Discontinued)</text><text x="100" y="1050" fill="#ffffff" font-size="13">Read carefully: "stable" vs "unstable" determines -52 vs -53</text></svg>`,
+          caption: "Five patterns: CABG arterial+venous combo, bronchoscopy bundling, FESS per-side coding, hernia repair matrix, colonoscopy modifier decision tree."
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Example — CABG with LIMA + 3 SVG",
+        content: `**Vignette (Q47 of mock):** A 65-year-old male undergoes urgent coronary artery bypass grafting for triple-vessel disease. The surgeon harvests the left internal mammary artery (LIMA) and grafts it to the left anterior descending (LAD) artery. The greater saphenous vein is harvested from the left leg and used to create three additional bypass grafts: to the obtuse marginal, posterior descending, and right coronary arteries. Cardiopulmonary bypass time was 95 minutes. Code the surgical procedure.
+
+**Step 1 — Identify all bypass grafts:**
+• Arterial graft: LIMA → LAD (1 arterial graft)
+• Venous grafts: 3 saphenous vein grafts (3 venous grafts)
+• Saphenous vein harvest is included in the bypass code (do not separately bill)
+
+**Step 2 — CPT Index for primary code:**
+Index: "Bypass Graft, Coronary Artery, Arterial" → 33533-33536.
+• 33533 — 1 coronary arterial graft
+• 33534 — 2 coronary arterial grafts
+• 33535 — 3 coronary arterial grafts
+• 33536 — 4 or more coronary arterial grafts
+
+Patient had **1 arterial graft** (LIMA) → **33533**.
+
+**Step 3 — CPT Index for add-on venous code:**
+Index: "Bypass Graft, Coronary Artery, Venous" → 33517-33523 (these are add-on codes; report ONLY in combination with 33533-33536).
+• 33517 — 1 venous graft
+• 33518 — 2 venous grafts
+• 33519 — 3 venous grafts ← **patient had 3**
+• 33521 — 4 venous grafts
+
+Add-on code: **33519**.
+
+**Step 4 — Vein harvest check:**
+CPT note: "Procurement of saphenous vein graft is included in the description of the work for 33510-33523 and should not be reported as a separate service." Do NOT bill 35500 (endoscopic vein harvest is exception: 33508 add-on).
+
+If the question stated **endoscopic** vein harvest → add **+33508**. Standard open harvest → no add-on.
+
+**Step 5 — Cardiopulmonary bypass code?**
+CPB (cardiopulmonary bypass) is INCLUDED in 33533+ codes. Do not bill separately.
+
+**Final answer:** **33533, 33519**
+
+**Distractor traps:**
+• 33513 — wrong family (venous only); ignores that LIMA was arterial graft
+• 33533, 33519, 35500 — over-bills with separate vein harvest
+• 33535, 33519 — counts LIMA + 3 vein as 4 arterial grafts (wrong — arterial code counts ONLY arterial)
+
+**Memory hook:** "Count the arteries to pick the primary (33533-33536), count the veins to pick the add-on (33517-33523)."
+
+**Lookup benchmark: 2 min.** This is a near-guaranteed CPC question — own this pattern.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Worked Example — CABG with LIMA + 3 SVG</text><rect x="50" y="100" width="1000" height="130" fill="#6366f1" rx="12"/><text x="70" y="130" fill="#ffffff" font-size="14" font-weight="bold">VIGNETTE:</text><text x="70" y="160" fill="#ffffff" font-size="14">65 y/o M, triple-vessel CABG. LIMA → LAD (1 arterial).</text><text x="70" y="185" fill="#ffffff" font-size="14">Saphenous vein to OM, PDA, RCA (3 venous). CPB 95 min.</text><text x="70" y="215" fill="#ffd700" font-size="14">Goal: pick primary + add-on codes</text><rect x="50" y="250" width="500" height="220" fill="#ef4444" rx="12"/><text x="300" y="290" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Step 2 — Arterial Primary</text><text x="300" y="320" text-anchor="middle" fill="#ffffff" font-size="14">Count arterial grafts: 1 (LIMA)</text><text x="70" y="355" fill="#ffffff" font-size="14">33533 — 1 arterial graft</text><text x="70" y="380" fill="#888" font-size="14">33534 — 2 arterial grafts</text><text x="70" y="405" fill="#888" font-size="14">33535 — 3 arterial grafts</text><text x="70" y="430" fill="#888" font-size="14">33536 — 4+ arterial grafts</text><text x="300" y="460" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">→ 33533</text><rect x="560" y="250" width="490" height="220" fill="#10b981" rx="12"/><text x="805" y="290" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Step 3 — Venous Add-On</text><text x="805" y="320" text-anchor="middle" fill="#ffffff" font-size="14">Count venous grafts: 3 (SVG)</text><text x="580" y="355" fill="#888" font-size="14">33517 — 1 venous</text><text x="580" y="380" fill="#888" font-size="14">33518 — 2 venous</text><text x="580" y="405" fill="#ffffff" font-size="14">33519 — 3 venous</text><text x="580" y="430" fill="#888" font-size="14">33521 — 4 venous</text><text x="805" y="460" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">→ 33519</text><rect x="50" y="490" width="1000" height="130" fill="#f59e0b" rx="12"/><text x="550" y="530" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Steps 4 & 5 — Don't Over-Bill</text><text x="100" y="565" fill="#1a1a2e" font-size="16">Open saphenous harvest INCLUDED — do NOT add 35500</text><text x="100" y="595" fill="#1a1a2e" font-size="16">Cardiopulmonary bypass INCLUDED — do NOT bill separately</text><rect x="50" y="640" width="1000" height="130" fill="#10b981" rx="12"/><text x="550" y="680" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">FINAL ANSWER</text><text x="550" y="720" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold">33533, 33519</text><text x="550" y="755" text-anchor="middle" fill="#1a1a2e" font-size="14">1 arterial primary + 3 venous add-on</text><rect x="50" y="790" width="1000" height="270" fill="#ef4444" rx="12"/><text x="550" y="830" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">AAPC Distractor Traps</text><text x="100" y="870" fill="#ffffff" font-size="16">A) 33513 — wrong family (vein only — ignores LIMA)</text><text x="100" y="905" fill="#ffffff" font-size="16">B) 33533, 33519, 35500 — adds separate vein harvest (bundled)</text><text x="100" y="940" fill="#ffffff" font-size="16">C) 33535, 33519 — counts LIMA + 3 SVG as 4 arterial (wrong)</text><text x="100" y="975" fill="#ffd700" font-size="16" font-weight="bold">D) 33533, 33519 — CORRECT</text><text x="550" y="1015" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Memory hook:</text><text x="550" y="1045" text-anchor="middle" fill="#ffd700" font-size="14">"Count arteries for primary, count veins for add-on"</text></svg>`,
+          caption: "Worked CABG vignette: 1 LIMA + 3 SVG = 33533 + 33519. Arterial code counts ONLY arterials; venous add-on counts ONLY veins. Open vein harvest and CPB both bundle."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A 58-year-old presents for screening colonoscopy. The endoscope is advanced to the splenic flexure but cannot proceed further due to a tortuous, redundant colon. Patient remained hemodynamically stable throughout; prep was adequate. The physician documents that the procedure is complete to the extent possible. No polyps removed. What is the correct CPT code?",
+        options: [
+          { text: "45378 — Colonoscopy, flexible; diagnostic, no modifier needed", correct: false },
+          { text: "45378-53 — Colonoscopy, discontinued procedure (aborted for patient safety)", correct: false },
+          { text: "45378-52 — Colonoscopy, reduced services (couldn't reach cecum but patient stable)", correct: true },
+          { text: "45330-52 — Sigmoidoscopy, reduced services (since only sigmoid was reached)", correct: false }
+        ],
+        explanation: "Modifier -52 (Reduced Services) is correct because the procedure was performed but reduced in scope — the scope did not reach the cecum due to anatomy, but the patient was stable, prep was adequate, and there was no safety concern. Modifier -53 (Discontinued) is reserved for procedures aborted due to patient instability or risk (such as a vasovagal response or poor prep creating perforation risk). The physician's documentation of stable patient + adequate prep + 'complete to the extent possible' is the giveaway for -52. 45378 without a modifier would be incorrect because CPT guidance instructs that an incomplete colonoscopy requires -52 or -53. 45330 is wrong because the intent was colonoscopy, not sigmoidoscopy — code based on intended procedure, not extent reached.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">Colonoscopy Modifier — -52 vs -53</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="16">Splenic flexure max, stable patient, adequate prep, complete as possible</text><rect x="50" y="140" width="490" height="380" fill="#10b981" rx="12"/><text x="295" y="180" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">-52</text><text x="295" y="215" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Reduced Services</text><line x1="70" y1="235" x2="520" y2="235" stroke="#ffffff" stroke-width="1"/><text x="70" y="270" fill="#ffffff" font-size="16" font-weight="bold">Triggers:</text><text x="70" y="300" fill="#ffffff" font-size="14">- Couldn't reach cecum</text><text x="70" y="325" fill="#ffffff" font-size="14">- Anatomic reason</text><text x="70" y="350" fill="#ffffff" font-size="14">- Patient STABLE</text><text x="70" y="375" fill="#ffffff" font-size="14">- Prep ADEQUATE</text><text x="70" y="400" fill="#ffffff" font-size="14">- No safety risk</text><text x="70" y="425" fill="#ffffff" font-size="14">- Procedure technically complete</text><text x="295" y="475" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">CORRECT here</text><rect x="560" y="140" width="490" height="380" fill="#ef4444" rx="12"/><text x="805" y="180" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="bold">-53</text><text x="805" y="215" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">Discontinued</text><line x1="580" y1="235" x2="1030" y2="235" stroke="#ffffff" stroke-width="1"/><text x="580" y="270" fill="#ffffff" font-size="16" font-weight="bold">Triggers:</text><text x="580" y="300" fill="#ffffff" font-size="14">- Aborted for safety</text><text x="580" y="325" fill="#ffffff" font-size="14">- Patient UNSTABLE</text><text x="580" y="350" fill="#ffffff" font-size="14">- Hemodynamic event</text><text x="580" y="375" fill="#ffffff" font-size="14">- Poor prep + risk</text><text x="580" y="400" fill="#ffffff" font-size="14">- Perforation risk</text><text x="580" y="425" fill="#ffffff" font-size="14">- Procedure incomplete</text><text x="805" y="475" text-anchor="middle" fill="#ffd700" font-size="20" font-weight="bold">Wrong here — pt stable</text><rect x="50" y="540" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="580" text-anchor="middle" fill="#ffd700" font-size="24" font-weight="bold">Answer: 45378-52</text><text x="550" y="610" text-anchor="middle" fill="#ffffff" font-size="16">Reduced services — anatomic limit with stable patient</text><rect x="50" y="660" width="1000" height="200" fill="#8b5cf6" rx="12"/><text x="550" y="700" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Why other options are wrong</text><text x="100" y="740" fill="#ffffff" font-size="15">A) 45378 alone — CPT requires modifier when not to cecum</text><text x="100" y="770" fill="#ffffff" font-size="15">B) 45378-53 — aborted requires safety/instability concern</text><text x="100" y="800" fill="#ffffff" font-size="15">D) 45330-52 — coded by extent reached, not by intent</text><text x="100" y="835" fill="#ffd700" font-size="15">Rule: code the intended procedure + modifier</text><rect x="50" y="880" width="1000" height="180" fill="#f59e0b" rx="12"/><text x="550" y="920" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="bold">Decision Phrase Cheat Sheet</text><text x="100" y="955" fill="#1a1a2e" font-size="15">"Patient stable, anatomic limit" → -52</text><text x="100" y="985" fill="#1a1a2e" font-size="15">"Vasovagal, hemodynamic instability" → -53</text><text x="100" y="1015" fill="#1a1a2e" font-size="15">"Poor prep, decision to stop for safety" → -53</text><text x="100" y="1045" fill="#1a1a2e" font-size="15">"Tortuous colon, complete as possible" → -52</text></svg>`,
+          caption: "Modifier 52 (reduced — anatomic limit, stable patient) vs Modifier 53 (discontinued — aborted for safety). Stable patient with tortuous anatomy = -52."
+        }
+      },
+      {
+        type: "application",
+        title: "30-Minute Self-Drill Plan + Final Mock Prep",
+        content: `This is your FINAL drill before the simulated full exam. Make it count.
+
+**Setup (3 min):** Tab the CPT codebook at these critical sections: 31256 (FESS), 31622 (Bronchoscopy), 33510 (CABG-vein), 33533 (CABG-arterial), 43235 (EGD), 45378 (Colonoscopy), 47562 (Lap chole), 49505 (Inguinal hernia). Tab the modifier appendix too — you will look up -52/-53 distinction.
+
+**Drill Block A — Cardio + Respiratory (12 min, 8 questions):**
+1. Two CABG vignettes (one arterial-only, one combined) — practice counting grafts
+2. Two pacemaker insertions (single-chamber vs dual-chamber, with/without leads)
+3. Two bronchoscopy procedures (Dx + therapeutic combo — find the bundle)
+4. Two FESS surgeries (count sides + sinus types)
+
+Time pressure: 90 sec per item once you've tabbed. Index → tabular → modifier check.
+
+**Drill Block B — Digestive (12 min, 8 questions):**
+1. Two colonoscopy scenarios (screening complete vs screening converted to therapeutic)
+2. Two EGD multi-procedure (biopsy + dilation, sequencing question)
+3. Two hernia repairs (initial vs recurrent, reducible vs incarcerated, mesh applicability)
+4. Two cholecystectomy procedures (laparoscopic vs open, with cholangiography +47563)
+
+**Self-check + meta-review (3 min):**
+By now your error log spans Lessons 4-5-6. Look for **systemic patterns**:
+• Do you always miss bundling questions? → Review CPT introductory notes
+• Do you always miss size buckets? → Print and memorize ranges
+• Do you always miss modifiers? → Build a one-page modifier cheat card
+
+**Pass criteria:** 13/16 correct AND under 28 min. If hit, proceed to full 100-Q mock in Lesson 7+.
+
+**End-of-block ritual:**
+1. Close your CPT book.
+2. Spend 5 minutes writing on a single index card: "The 3 patterns I will deliberately scan for on the real exam." Sample card: (1) Excised diameter formula, (2) 7th char A/D/S, (3) CABG vein vs arterial.
+3. Put the card in your study area. Review it each morning until exam day.
+
+Patterns you can identify in 3 seconds become free points on the real test. This index card is the highest-leverage 5 minutes in your entire prep.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">FINAL Drill — CPT 30000-49999</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Last drill before full 100-Q simulated mock</text><rect x="50" y="140" width="1000" height="110" fill="#6366f1" rx="12"/><text x="100" y="180" fill="#ffffff" font-size="20" font-weight="bold">Setup — 3 min</text><text x="100" y="210" fill="#ffffff" font-size="14">Tab: 31256 FESS, 31622 Bronch, 33510 CABG-vein, 33533 CABG-art</text><text x="100" y="235" fill="#ffffff" font-size="14">Tab: 43235 EGD, 45378 Colonoscopy, 47562 Lap chole, 49505 Hernia, Modifiers</text><rect x="50" y="270" width="490" height="270" fill="#ef4444" rx="12"/><text x="295" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Block A — Cardio+Resp (12m)</text><text x="70" y="345" fill="#ffffff" font-size="15">2x CABG (count arterial + venous)</text><text x="70" y="370" fill="#ffffff" font-size="15">2x Pacemaker (single vs dual chamber)</text><text x="70" y="395" fill="#ffffff" font-size="15">2x Bronchoscopy (find bundle)</text><text x="70" y="420" fill="#ffffff" font-size="15">2x FESS (sides + sinus types)</text><text x="70" y="455" fill="#ffd700" font-size="14">90s per item once tabbed</text><text x="70" y="485" fill="#ffffff" font-size="13">Index → Tabular → Modifier check</text><text x="70" y="510" fill="#ffffff" font-size="13">Memory: count grafts!</text><rect x="560" y="270" width="490" height="270" fill="#10b981" rx="12"/><text x="805" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Block B — Digestive (12m)</text><text x="580" y="345" fill="#ffffff" font-size="15">2x Colonoscopy (-52 vs -53)</text><text x="580" y="370" fill="#ffffff" font-size="15">2x EGD multi-proc (sequencing)</text><text x="580" y="395" fill="#ffffff" font-size="15">2x Hernia (initial/recurrent, mesh)</text><text x="580" y="420" fill="#ffffff" font-size="15">2x Chole (lap vs open + cholangio)</text><text x="580" y="455" fill="#ffd700" font-size="14">90s per item</text><text x="580" y="485" fill="#ffffff" font-size="13">"With cholangiography" → +47563</text><text x="580" y="510" fill="#ffffff" font-size="13">Mesh ONLY ventral/incisional</text><rect x="50" y="560" width="1000" height="170" fill="#f59e0b" rx="12"/><text x="100" y="600" fill="#1a1a2e" font-size="20" font-weight="bold">Meta-Review — 3 min</text><text x="100" y="630" fill="#1a1a2e" font-size="15">Spot SYSTEMIC patterns across Lessons 4-5-6 error log:</text><text x="130" y="660" fill="#1a1a2e" font-size="14">- Always miss bundling? Review CPT intro notes</text><text x="130" y="685" fill="#1a1a2e" font-size="14">- Always miss size buckets? Print + memorize ranges</text><text x="130" y="710" fill="#1a1a2e" font-size="14">- Always miss modifiers? Build cheat card</text><rect x="50" y="750" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS CRITERIA</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">13/16 correct AND under 28 min</text><text x="550" y="845" text-anchor="middle" fill="#ef4444" font-size="14">If pass → full 100-Q mock simulation next session</text><rect x="50" y="870" width="1000" height="190" fill="#8b5cf6" rx="12"/><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">End-of-Block Ritual — 5 min</text><text x="100" y="945" fill="#ffffff" font-size="15">1. Close CPT book</text><text x="100" y="975" fill="#ffffff" font-size="15">2. Index card: "3 patterns I will scan for on real exam"</text><text x="100" y="1005" fill="#ffd700" font-size="15">Sample: (1) Excised dia formula (2) 7th char A/D/S (3) CABG art/vein</text><text x="100" y="1035" fill="#ffffff" font-size="15">3. Review card every morning until exam day</text><text x="550" y="1055" text-anchor="middle" fill="#ffffff" font-size="13">5 min that recovers 5-10 points</text></svg>`,
+          caption: "Final drill before full mock. Tab setup, Cardio+Resp + Digestive blocks, meta-review of error log patterns, plus end-of-block index-card ritual for daily review."
         }
       }
     ]
