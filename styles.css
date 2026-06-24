@@ -1249,7 +1249,7 @@ body {
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 12px 16px; /* Smaller padding */
-    display: flex !important;
+    display: flex;
     gap: 12px; /* Smaller gap */
     justify-content: center;
     align-items: center;
@@ -1263,35 +1263,15 @@ body {
     max-width: 140px;
     padding: 10px 20px; /* Smaller padding */
     font-size: 0.9rem; /* Smaller text */
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 #next-card-btn {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background: var(--color-primary) !important;
-}
-
-#prev-card-btn {
-    display: inline-block !important;
-    visibility: visible !important;
-}
-
-/* Make sure lesson view shows navigation */
-#lesson-view .lesson-navigation {
-    display: flex !important;
-}
-
-#lesson-view.active .lesson-navigation {
-    display: flex !important;
+    background: var(--color-primary);
 }
 
 /* Hide bottom nav when in lesson view */
 #lesson-view.active ~ .bottom-nav {
-    display: none !important;
+    display: none;
 }
 
 /* ============================================
