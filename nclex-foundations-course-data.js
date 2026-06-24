@@ -3014,9 +3014,28 @@ Beyond format, the exam tests the **non-negotiable legal rules**: never erase, n
       {
         type: "quiz",
         title: "NCLEX-Style Question: Documentation",
-        content: `**Question:** A nurse realizes at the end of shift that she forgot to document a dressing change she performed 4 hours earlier. Which action is **most appropriate**?
+        question: `**Question:** A nurse realizes at the end of shift that she forgot to document a dressing change she performed 4 hours earlier. Which action is **most appropriate**?
 
 The NCLEX is testing whether you understand that **omitted entries are added as late entries** — never backdated, never squeezed in, never falsified. The chart is a legal document; altering its appearance to hide an omission is **fraud**, even if the care was actually performed correctly. The right move is transparency: write a new entry now, label it "late entry," reference the original time, and sign it.`,
+        options: [
+                {
+                        "text": "Squeeze a note into the 4-hours-ago section so the timing looks accurate",
+                        "correct": false
+                },
+                {
+                        "text": "Document a late entry now: write current time, label \"late entry,\" reference the original time, sign",
+                        "correct": true
+                },
+                {
+                        "text": "Wait until the next shift's nurse documents her assessment and add yours below",
+                        "correct": false
+                },
+                {
+                        "text": "Tell the oncoming nurse verbally and ask them to chart it in the next shift's notes",
+                        "correct": false
+                }
+        ],
+        explanation: "Omitted entries are documented as **late entries** — never backdated, never squeezed in, never delegated to another nurse. The chart is a legal document; altering its appearance to hide an omission is **fraud**, even if the care was performed correctly. The right move is transparency: write a new entry now, label it \"late entry,\" reference the original time of the dressing change, and sign it.",
         visual: {
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
@@ -3361,9 +3380,28 @@ Key NCLEX trap: a family member **cannot override** a competent patient's advanc
       {
         type: "quiz",
         title: "NCLEX-Style Question: Ethics",
-        content: `**Question:** A 78-year-old patient with end-stage COPD has a signed living will stating "no intubation, no CPR." She becomes unresponsive with agonal breathing. Her adult son arrives, sobbing, and shouts at the nurse: *"Do EVERYTHING — intubate her, save her!"* Which action by the nurse is **most appropriate**?
+        question: `**Question:** A 78-year-old patient with end-stage COPD has a signed living will stating "no intubation, no CPR." She becomes unresponsive with agonal breathing. Her adult son arrives, sobbing, and shouts at the nurse: *"Do EVERYTHING — intubate her, save her!"* Which action by the nurse is **most appropriate**?
 
 This question tests **fidelity to the patient's advance directive** versus emotional pressure from a family surrogate. A competent adult's prior written wishes — when documented and witnessed — bind the healthcare team. The family does **not** have the legal authority to override the patient's own decision. The nurse's role is to **honor the directive, support the family emotionally, and document**.`,
+        options: [
+                {
+                        "text": "Initiate CPR and intubation as the son demands — family wishes override advance directives",
+                        "correct": false
+                },
+                {
+                        "text": "Honor the living will: provide comfort care, support the son, and notify the provider",
+                        "correct": true
+                },
+                {
+                        "text": "Call the ethics committee for guidance before doing anything",
+                        "correct": false
+                },
+                {
+                        "text": "Ask the son to sign a form rescinding the living will, then begin CPR",
+                        "correct": false
+                }
+        ],
+        explanation: "A competent adult's prior written advance directive — properly documented and witnessed — binds the healthcare team. The family does **not** have legal authority to override the patient's wishes under emotional pressure. The nurse honors the living will (comfort care only, no CPR or intubation), supports the grieving son with presence and empathy, and notifies the provider. Calling ethics is appropriate for ambiguous cases but not when the directive is clear. A family member cannot rescind a competent patient's directive.",
         visual: {
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
@@ -3649,11 +3687,30 @@ Run these in order. The first step that decisively picks a winner is your answer
       {
         type: "quiz",
         title: "NCLEX-Style Question: The Capstone",
-        content: `**Question:** A nurse on a busy med-surg unit receives report on 4 patients. Which patient should the nurse assess **first**?
+        question: `**Question:** A nurse on a busy med-surg unit receives report on 4 patients. Which patient should the nurse assess **first**?
 
 This question is built specifically to make you run the 4-step algorithm. Multiple patients have problems; all sound urgent. The trick is to identify which problem is an **ABC threat** versus which is *concerning but stable*. Use Step 1 first. If multiple ABCs are flagged, A beats B beats C. If no clear ABC, move to Step 2 (Maslow) and Step 3 (acute vs chronic).
 
 Notice the language tells you everything: "scheduled," "stable," "baseline" = lower priority. "New," "increasing," "worsening," "sudden" = higher priority. Tie that to the ABCs and you have your winner.`,
+        options: [
+                {
+                        "text": "A 72-year-old with stable angina scheduled for a cardiac catheterization at 10 AM",
+                        "correct": false
+                },
+                {
+                        "text": "A 45-year-old post-op day 2 from a knee replacement with pain rated 4/10 on opioids",
+                        "correct": false
+                },
+                {
+                        "text": "A 60-year-old with new-onset shortness of breath, RR 28, O2 sat 88% on room air",
+                        "correct": true
+                },
+                {
+                        "text": "An 80-year-old with chronic constipation requesting a PRN stool softener",
+                        "correct": false
+                }
+        ],
+        explanation: "Step 1 of the algorithm is **ABC**. The 60-year-old with new-onset SOB, tachypnea (RR 28), and hypoxia (88%) is a **Breathing threat** — assess first. Stable angina with a scheduled procedure is concerning but stable. Post-op pain at 4/10 on opioids is being managed. Chronic constipation requesting a PRN is the lowest priority. Notice the language: \"scheduled,\" \"stable,\" \"baseline\" = lower priority. \"New,\" \"increased,\" \"sudden,\" \"acute\" with abnormal vitals = higher priority.",
         visual: {
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">

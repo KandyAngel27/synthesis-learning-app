@@ -469,6 +469,7 @@ class GamificationSystem {
         // Track category
         if (category && !stats.categoriesExplored.includes(category)) {
             stats.categoriesExplored.push(category);
+            this.updateChallengeProgress('new_category');
         }
 
         // Update heat map
@@ -508,6 +509,10 @@ class GamificationSystem {
         if (isPerfect) {
             stats.quizzesPerfect++;
             this.updateChallengeProgress('quiz_perfect');
+        }
+        // 80% pass threshold counts toward quiz_pass challenges
+        if (percentage >= 80) {
+            this.updateChallengeProgress('quiz_pass');
         }
 
         // Update average
