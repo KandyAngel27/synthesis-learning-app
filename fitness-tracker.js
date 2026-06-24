@@ -422,8 +422,6 @@ class FitnessTracker {
     }
 
     saveInjection() {
-        alert('Save injection called!');
-        console.log('saveInjection called');
         try {
             const typeSelect = document.getElementById('injection-type');
             if (!typeSelect) {
@@ -5986,15 +5984,6 @@ class FitnessTracker {
                 <button class="btn-delete-sm" onclick="window.fitnessTracker.deleteWorkout('${w.id}')" title="Delete">×</button>
             </div>
         `).join('');
-    }
-
-    deleteWorkout(id) {
-        if (confirm('Delete this workout?')) {
-            APP_DATA.user.workouts = APP_DATA.user.workouts.filter(w => w.id !== id && w.id !== parseInt(id));
-            APP_DATA.user.workoutStats.totalWorkouts = APP_DATA.user.workouts.length;
-            saveProgress();
-            this.renderWorkoutHub();
-        }
     }
 
     getWorkoutIcon(type) {

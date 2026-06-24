@@ -328,7 +328,7 @@ class GamificationSystem {
     }
 
     checkStreakBadges() {
-        const streak = APP_DATA.user.streak;
+        const streak = APP_DATA.user.currentStreak || 0;
         const badges = APP_DATA.user.badges.filter(b => b.category === 'streak');
 
         badges.forEach(badge => {
@@ -566,7 +566,7 @@ class GamificationSystem {
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon">🔥</div>
-                    <div class="stat-value">${user.streak}</div>
+                    <div class="stat-value">${user.currentStreak || 0}</div>
                     <div class="stat-label">Day Streak</div>
                 </div>
                 <div class="stat-card">
@@ -677,6 +677,7 @@ class GamificationSystem {
         lesson.cards.forEach((card, index) => {
             if (card.type === 'concept' || card.type === 'visual') {
                 // Extract key concepts as flashcards
+                if (typeof card.content !== 'string') return;
                 const lines = card.content.split('\n').filter(l => l.includes('**') || l.includes(':'));
                 lines.slice(0, 3).forEach((line, lineIndex) => {
                     cards.push({
