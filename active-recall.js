@@ -510,7 +510,7 @@ class ActiveRecallSystem {
 
         // Record results
         if (window.gamification) {
-            window.gamification.recordQuizResult('quick-quiz', 0, this.quizScore, total);
+            window.gamification.recordQuizResult('quick-quiz', 'quick-quiz', this.quizScore, total);
         }
 
         let grade, gradeClass;

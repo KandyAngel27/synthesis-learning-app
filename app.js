@@ -405,7 +405,7 @@ class SynthesisApp {
     }
 
     updateStreak() {
-        document.getElementById('streak-count').textContent = APP_DATA.user.streak;
+        document.getElementById('streak-count').textContent = APP_DATA.user.currentStreak || 0;
     }
 
     render() {
@@ -819,7 +819,7 @@ class SynthesisApp {
                         <button onclick="app.switchView('exam')" style="background: white; color: #0369a1; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">
                             Open Exam Center →
                         </button>
-                        <button onclick="if(window.examCenter){window.examCenter.startDailyReview();} app.switchView('exam');" style="background: rgba(255,255,255,0.18); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                        <button onclick="app.switchView('exam'); if(window.examCenter){window.examCenter.startDaily();}" style="background: rgba(255,255,255,0.18); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">
                             Start Today's Spaced Review
                         </button>
                     </div>
@@ -1907,7 +1907,7 @@ class SynthesisApp {
                         <span class="profile-stat-label">Books Completed</span>
                     </div>
                     <div class="profile-stat-card">
-                        <span class="profile-stat-value">${APP_DATA.user.streak}</span>
+                        <span class="profile-stat-value">${APP_DATA.user.currentStreak || 0}</span>
                         <span class="profile-stat-label">Day Streak</span>
                     </div>
                     <div class="profile-stat-card">
@@ -2060,7 +2060,8 @@ class SynthesisApp {
 
             // Refresh gamification if loaded
             if (window.gamification) {
-                window.gamification.refreshDailyChallenges();
+                window.gamification.generateDailyChallenges();
+                window.gamification.renderDailyChallenges();
             }
 
             // Show success message
