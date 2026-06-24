@@ -15078,7 +15078,7 @@ You've completed Book 9: Compliance, Audits, and the OIG Work Plan. You now know
             title: 'CPC Mock Exam Bank & Test-Taking Strategy',
             author: 'Synthesis Learning',
             description: '5+ full-length 100-question mock exams in CPC format, plus the timing, elimination, and code-book strategies that buy you 30 extra minutes.',
-            lessons: 6, duration: 90, progress: 0, category: 'cpc-prep',
+            lessons: 9, duration: 135, progress: 0, category: 'cpc-prep',
             lessonList: [
 {
     id: "cpc-mock-lesson-1",
@@ -15778,6 +15778,616 @@ Patterns you can identify in 3 seconds become free points on the real test. This
           type: "diagram",
           svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg"><rect width="1100" height="1100" fill="#1a1a2e"/><text x="550" y="60" text-anchor="middle" fill="#ffd700" font-size="30" font-weight="bold">FINAL Drill — CPT 30000-49999</text><text x="550" y="100" text-anchor="middle" fill="#ffffff" font-size="18">Last drill before full 100-Q simulated mock</text><rect x="50" y="140" width="1000" height="110" fill="#6366f1" rx="12"/><text x="100" y="180" fill="#ffffff" font-size="20" font-weight="bold">Setup — 3 min</text><text x="100" y="210" fill="#ffffff" font-size="14">Tab: 31256 FESS, 31622 Bronch, 33510 CABG-vein, 33533 CABG-art</text><text x="100" y="235" fill="#ffffff" font-size="14">Tab: 43235 EGD, 45378 Colonoscopy, 47562 Lap chole, 49505 Hernia, Modifiers</text><rect x="50" y="270" width="490" height="270" fill="#ef4444" rx="12"/><text x="295" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Block A — Cardio+Resp (12m)</text><text x="70" y="345" fill="#ffffff" font-size="15">2x CABG (count arterial + venous)</text><text x="70" y="370" fill="#ffffff" font-size="15">2x Pacemaker (single vs dual chamber)</text><text x="70" y="395" fill="#ffffff" font-size="15">2x Bronchoscopy (find bundle)</text><text x="70" y="420" fill="#ffffff" font-size="15">2x FESS (sides + sinus types)</text><text x="70" y="455" fill="#ffd700" font-size="14">90s per item once tabbed</text><text x="70" y="485" fill="#ffffff" font-size="13">Index → Tabular → Modifier check</text><text x="70" y="510" fill="#ffffff" font-size="13">Memory: count grafts!</text><rect x="560" y="270" width="490" height="270" fill="#10b981" rx="12"/><text x="805" y="310" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Block B — Digestive (12m)</text><text x="580" y="345" fill="#ffffff" font-size="15">2x Colonoscopy (-52 vs -53)</text><text x="580" y="370" fill="#ffffff" font-size="15">2x EGD multi-proc (sequencing)</text><text x="580" y="395" fill="#ffffff" font-size="15">2x Hernia (initial/recurrent, mesh)</text><text x="580" y="420" fill="#ffffff" font-size="15">2x Chole (lap vs open + cholangio)</text><text x="580" y="455" fill="#ffd700" font-size="14">90s per item</text><text x="580" y="485" fill="#ffffff" font-size="13">"With cholangiography" → +47563</text><text x="580" y="510" fill="#ffffff" font-size="13">Mesh ONLY ventral/incisional</text><rect x="50" y="560" width="1000" height="170" fill="#f59e0b" rx="12"/><text x="100" y="600" fill="#1a1a2e" font-size="20" font-weight="bold">Meta-Review — 3 min</text><text x="100" y="630" fill="#1a1a2e" font-size="15">Spot SYSTEMIC patterns across Lessons 4-5-6 error log:</text><text x="130" y="660" fill="#1a1a2e" font-size="14">- Always miss bundling? Review CPT intro notes</text><text x="130" y="685" fill="#1a1a2e" font-size="14">- Always miss size buckets? Print + memorize ranges</text><text x="130" y="710" fill="#1a1a2e" font-size="14">- Always miss modifiers? Build cheat card</text><rect x="50" y="750" width="1000" height="100" fill="#1a1a2e" stroke="#ffd700" stroke-width="3" rx="12"/><text x="550" y="790" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">PASS CRITERIA</text><text x="550" y="820" text-anchor="middle" fill="#ffffff" font-size="18">13/16 correct AND under 28 min</text><text x="550" y="845" text-anchor="middle" fill="#ef4444" font-size="14">If pass → full 100-Q mock simulation next session</text><rect x="50" y="870" width="1000" height="190" fill="#8b5cf6" rx="12"/><text x="550" y="910" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">End-of-Block Ritual — 5 min</text><text x="100" y="945" fill="#ffffff" font-size="15">1. Close CPT book</text><text x="100" y="975" fill="#ffffff" font-size="15">2. Index card: "3 patterns I will scan for on real exam"</text><text x="100" y="1005" fill="#ffd700" font-size="15">Sample: (1) Excised dia formula (2) 7th char A/D/S (3) CABG art/vein</text><text x="100" y="1035" fill="#ffffff" font-size="15">3. Review card every morning until exam day</text><text x="550" y="1055" text-anchor="middle" fill="#ffffff" font-size="13">5 min that recovers 5-10 points</text></svg>`,
           caption: "Final drill before full mock. Tab setup, Cardio+Resp + Digestive blocks, meta-review of error log patterns, plus end-of-block index-card ritual for daily review."
+        }
+      }
+    ]
+  },
+{
+    id: "cpc-mock-lesson-7",
+    title: "Mock Exam 4: CPT 50000-69999 + Radiology 70000-79999",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Back Half of CPT (and All of Radiology)",
+        content: `You are 40% through the surgery section and the codes are about to get **specialty-dense**: urinary (50010-53899), male/female reproductive (54000-58999), endocrine (60000-60699), nervous (61000-64999), eye (65091-68899), and auditory (69000-69979). Then comes the entire **Radiology chapter (70000-79999)** with its split-billing modifiers.\n\nThis mock exam targets the codes most CPC candidates miss:\n\n• **TURP** — is it 52601 (complete), 52630 (residual), or 52640 (postoperative bladder neck contracture)?\n• **Laparoscopic nephrectomy** — when does bilateral modifier 50 apply vs. when do you bill two separate codes?\n• **Radiology professional/technical split** — when does the hospital own the equipment vs. the radiologist?\n\nIf you can navigate these waters under the 2.4-minute clock, you can navigate the real exam. Pull out a blank scratch sheet, set a timer for 36 minutes (15 questions × 2.4 min), and treat this as the real thing. Each card here represents a high-yield exam pattern that has appeared on multiple AAPC exam forms.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 4</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="23">CPT 50000-69999 + Radiology 70000-79999</text>
+            <rect x="80" y="170" width="440" height="160" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="300" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">URINARY 50010-53899</text>
+            <text x="300" y="265" text-anchor="middle" fill="#fff" font-size="18">Kidney, ureter, bladder, urethra</text>
+            <text x="300" y="295" text-anchor="middle" fill="#888" font-size="16">TURP series 52601-52640</text>
+            <rect x="580" y="170" width="440" height="160" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="800" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">REPRODUCTIVE 54000-58999</text>
+            <text x="800" y="265" text-anchor="middle" fill="#fff" font-size="18">Male and female systems</text>
+            <text x="800" y="295" text-anchor="middle" fill="#888" font-size="16">Lap hysterectomy 58570-58573</text>
+            <rect x="80" y="360" width="440" height="160" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="300" y="415" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">NERVOUS 61000-64999</text>
+            <text x="300" y="455" text-anchor="middle" fill="#fff" font-size="18">Skull, spine, peripheral nerves</text>
+            <text x="300" y="485" text-anchor="middle" fill="#888" font-size="16">Injections 64400-64530</text>
+            <rect x="580" y="360" width="440" height="160" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="800" y="415" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">EYE + EAR 65091-69979</text>
+            <text x="800" y="455" text-anchor="middle" fill="#fff" font-size="18">Cataract, retina, tympanostomy</text>
+            <text x="800" y="485" text-anchor="middle" fill="#888" font-size="16">Cataract 66982 vs 66984</text>
+            <rect x="80" y="550" width="940" height="160" rx="20" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="605" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="24">RADIOLOGY 70000-79999</text>
+            <text x="550" y="645" text-anchor="middle" fill="#fff" font-size="18">Diagnostic, ultrasound, nuclear medicine, radiation oncology</text>
+            <text x="550" y="680" text-anchor="middle" fill="#888" font-size="16">Modifier 26 (professional) vs TC (technical)</text>
+            <rect x="200" y="760" width="700" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="815" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">36 MINUTES. 15 QUESTIONS.</text>
+            <text x="550" y="845" text-anchor="middle" fill="#fff" font-size="18">Start the timer. No notes. Real conditions.</text>
+            <text x="550" y="950" text-anchor="middle" fill="#888" font-size="18">High-yield: TURP series, bilateral modifier 50, professional/technical split</text>
+          </svg>`,
+          caption: "The specialty-dense second half of surgery plus the full radiology chapter"
+        }
+      },
+      {
+        type: "concept",
+        title: "Three Patterns That Win This Section",
+        content: `**Pattern 1: The TURP Family (52601 / 52630 / 52640)**\n\nTransurethral resection of prostate is one of the most-tested urology codes. The three siblings differ by *when* and *why* the resection happens:\n\n• **52601** — Complete TURP, **including** vasectomy, meatotomy, cystourethroscopy, urethral calibration/dilation, internal urethrotomy, and transurethral resection of postoperative bleeding (all bundled — do not unbundle)\n• **52630** — Transurethral resection of **residual or regrowth** of obstructive prostate tissue (a re-do)\n• **52640** — Transurethral resection of **postoperative bladder neck contracture**\n\n**Pattern 2: Bilateral Modifier 50 in Urinary/Reproductive**\n\nFor paired organs (kidneys, ureters, ovaries, testes), if the code descriptor does **not** already say "bilateral," you must append **modifier 50** when both sides are done in the same session. A laparoscopic nephrectomy on both kidneys = **50545-50** (not 50545 × 2).\n\n**Pattern 3: Radiology Modifier 26 vs TC**\n\nMost radiology codes are **global** by default (professional + technical components). When the radiologist only **interprets** an image taken at a hospital they don't own, append **modifier 26** to bill the professional component only. When a freestanding imaging center bills for the equipment, supplies, and tech (but a different radiologist reads it), the center appends **modifier TC** for the technical component.\n\nMemorize: **26 = read, TC = take**.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THREE WINNING PATTERNS</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Memorize these and you bank 6-8 points</text>
+            <rect x="80" y="160" width="940" height="240" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="210" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">PATTERN 1: THE TURP FAMILY</text>
+            <text x="120" y="260" text-anchor="start" fill="#fff" font-size="20">52601 = Complete TURP (first time, all-inclusive bundle)</text>
+            <text x="120" y="300" text-anchor="start" fill="#fff" font-size="20">52630 = Re-do for residual/regrowth tissue</text>
+            <text x="120" y="340" text-anchor="start" fill="#fff" font-size="20">52640 = Postop bladder neck contracture release</text>
+            <text x="550" y="380" text-anchor="middle" fill="#888" font-size="16">Watch for "history of prior TURP" in vignette — points to 52630</text>
+            <rect x="80" y="430" width="940" height="200" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="480" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">PATTERN 2: BILATERAL MODIFIER 50</text>
+            <text x="550" y="525" text-anchor="middle" fill="#fff" font-size="20">If descriptor says "bilateral" — DO NOT add 50</text>
+            <text x="550" y="565" text-anchor="middle" fill="#fff" font-size="20">If descriptor is silent and both sides done — ADD 50</text>
+            <text x="550" y="605" text-anchor="middle" fill="#888" font-size="16">Bilateral lap nephrectomy = 50545-50 (one line, modifier 50)</text>
+            <rect x="80" y="660" width="940" height="220" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="710" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">PATTERN 3: RADIOLOGY 26 vs TC</text>
+            <text x="120" y="755" text-anchor="start" fill="#fff" font-size="20">Modifier 26 = Professional component (the READ)</text>
+            <text x="120" y="795" text-anchor="start" fill="#fff" font-size="20">Modifier TC = Technical component (the TAKE — equipment + tech)</text>
+            <text x="120" y="835" text-anchor="start" fill="#fff" font-size="20">No modifier = Global (radiologist owns the equipment)</text>
+            <text x="550" y="870" text-anchor="middle" fill="#888" font-size="16">Memorize: 26 = read, TC = take</text>
+            <rect x="200" y="920" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="970" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="20">Three patterns. Roughly 8 questions on the real exam.</text>
+          </svg>`,
+          caption: "TURP family, bilateral 50, and radiology 26/TC — the three highest-yield patterns"
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Vignette: TURP Plus Cystoscopy",
+        content: `**Operative Note (read it like the exam):**\n\n*"Patient is a 68-year-old male with a 4-year history of benign prostatic hyperplasia, refractory to medical therapy. He underwent TURP **18 months ago** with initial improvement, but obstructive symptoms have returned. Cystoscopy in clinic revealed regrowth of prostatic tissue. Today, under spinal anesthesia, a cystourethroscope was passed, the bladder was inspected (no stones, no tumors), and the **regrown obstructive prostate tissue was resected** using bipolar loop. Estimated tissue weight: 14 g. Hemostasis confirmed. Foley placed."*\n\n**Step 1 — Identify the procedure.** This is NOT a first-time TURP. The phrase **"TURP 18 months ago"** and **"regrowth of prostatic tissue"** is the dead giveaway.\n\n**Step 2 — Match to code.** Re-resection for residual/regrowth = **52630**.\n\n**Step 3 — Should you also code 52000 (cystourethroscopy)?** **No.** Per CPT guidelines, diagnostic cystoscopy is bundled into all transurethral surgical codes when performed in the same session. Unbundling triggers a wrong-answer trap.\n\n**Step 4 — Modifiers?** None needed — single side, no separate provider, no reduced service.\n\n**Final answer: 52630.**\n\nThe wrong-answer choices on the real exam will include 52601 (complete TURP — wrong, this is a re-do), 52601 + 52000 (unbundling trap), and 52640 (bladder neck contracture — wrong, no contracture mentioned). The single keyword that disqualifies all three: **"regrowth."**`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">VIGNETTE WALKTHROUGH</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Re-do TURP for regrowth — 52630</text>
+            <rect x="60" y="160" width="220" height="120" rx="15" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="2"/>
+            <text x="170" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="20">STEP 1</text>
+            <text x="170" y="245" text-anchor="middle" fill="#fff" font-size="16">Find keywords</text>
+            <text x="170" y="265" text-anchor="middle" fill="#888" font-size="14">"18 mo ago" + "regrowth"</text>
+            <path d="M280 220 L340 220" stroke="#888" stroke-width="2"/>
+            <polygon points="340,220 328,212 328,228" fill="#888"/>
+            <rect x="340" y="160" width="220" height="120" rx="15" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="450" y="210" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="20">STEP 2</text>
+            <text x="450" y="245" text-anchor="middle" fill="#fff" font-size="16">Identify procedure</text>
+            <text x="450" y="265" text-anchor="middle" fill="#888" font-size="14">Re-resection</text>
+            <path d="M560 220 L620 220" stroke="#888" stroke-width="2"/>
+            <polygon points="620,220 608,212 608,228" fill="#888"/>
+            <rect x="620" y="160" width="220" height="120" rx="15" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
+            <text x="730" y="210" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="20">STEP 3</text>
+            <text x="730" y="245" text-anchor="middle" fill="#fff" font-size="16">Bundling check</text>
+            <text x="730" y="265" text-anchor="middle" fill="#888" font-size="14">Cysto = bundled</text>
+            <path d="M840 220 L900 220" stroke="#888" stroke-width="2"/>
+            <polygon points="900,220 888,212 888,228" fill="#888"/>
+            <rect x="900" y="160" width="140" height="120" rx="15" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="970" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">52630</text>
+            <text x="970" y="245" text-anchor="middle" fill="#fff" font-size="14">Final</text>
+            <rect x="80" y="330" width="940" height="220" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="380" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">DISTRACTOR TRAPS</text>
+            <text x="120" y="425" text-anchor="start" fill="#fff" font-size="20">52601 — first-time complete TURP (wrong: this is a re-do)</text>
+            <text x="120" y="460" text-anchor="start" fill="#fff" font-size="20">52601 + 52000 — unbundling trap (cysto is included)</text>
+            <text x="120" y="495" text-anchor="start" fill="#fff" font-size="20">52640 — bladder neck contracture (no contracture mentioned)</text>
+            <text x="120" y="530" text-anchor="start" fill="#888" font-size="18">All three are eliminated by ONE word: "regrowth"</text>
+            <rect x="80" y="580" width="940" height="180" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="630" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">THE KEYWORD TECHNIQUE</text>
+            <text x="550" y="675" text-anchor="middle" fill="#fff" font-size="20">Underline the dates and recurrence language first</text>
+            <text x="550" y="710" text-anchor="middle" fill="#fff" font-size="20">"Prior" / "history of" / "regrowth" / "residual" = re-do code</text>
+            <text x="550" y="745" text-anchor="middle" fill="#888" font-size="18">This single habit saves ~5 points across the exam</text>
+            <rect x="200" y="800" width="700" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="855" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">ANSWER: 52630</text>
+            <text x="550" y="885" text-anchor="middle" fill="#fff" font-size="18">Resection of residual/regrowth obstructive tissue</text>
+            <text x="550" y="970" text-anchor="middle" fill="#888" font-size="16">Read once. Underline dates. Match the verb to the code family.</text>
+          </svg>`,
+          caption: "Underline dates and recurrence language — they unlock the re-do codes"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A freestanding imaging center performs a CT scan of the abdomen with contrast (74170). The center owns the CT scanner and employs the technologist. A teleradiology group at another facility reads the images and dictates the report. How does each entity bill?",
+        options: [
+          { text: "Center bills 74170 (global); teleradiology group bills nothing — only one entity can bill a global code.", correct: false },
+          { text: "Center bills 74170-TC (technical component); teleradiology group bills 74170-26 (professional component).", correct: true },
+          { text: "Center bills 74170-26; teleradiology group bills 74170-TC.", correct: false },
+          { text: "Center bills 74170-50 (bilateral); teleradiology group bills 74170-59 (separate procedure).", correct: false }
+        ],
+        explanation: "When the technical work (equipment, supplies, technologist) and the professional work (interpretation, report) are performed by DIFFERENT entities, each bills the same CPT code with the appropriate split modifier. The entity that OWNS the equipment and EMPLOYS the tech bills modifier TC (technical). The radiologist who READS the images and dictates the report bills modifier 26 (professional). Memory aid: TC = Take, 26 = Read. Modifier 50 (bilateral) and 59 (distinct procedural service) are unrelated to component splits.",
+        options_unused: null,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Modifier 26 vs TC — the split-billing rule</text>
+            <rect x="60" y="170" width="460" height="320" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="290" y="225" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">IMAGING CENTER</text>
+            <text x="290" y="270" text-anchor="middle" fill="#fff" font-size="20">Owns the CT scanner</text>
+            <text x="290" y="305" text-anchor="middle" fill="#fff" font-size="20">Employs the technologist</text>
+            <text x="290" y="340" text-anchor="middle" fill="#fff" font-size="20">Provides supplies / contrast</text>
+            <text x="290" y="395" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="28">Bills 74170-TC</text>
+            <text x="290" y="440" text-anchor="middle" fill="#888" font-size="18">TC = Take (equipment + tech)</text>
+            <rect x="580" y="170" width="460" height="320" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="810" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">TELERADIOLOGY GROUP</text>
+            <text x="810" y="270" text-anchor="middle" fill="#fff" font-size="20">Reads images remotely</text>
+            <text x="810" y="305" text-anchor="middle" fill="#fff" font-size="20">Dictates the report</text>
+            <text x="810" y="340" text-anchor="middle" fill="#fff" font-size="20">Provides interpretation only</text>
+            <text x="810" y="395" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">Bills 74170-26</text>
+            <text x="810" y="440" text-anchor="middle" fill="#888" font-size="18">26 = Read (professional)</text>
+            <rect x="80" y="530" width="940" height="160" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="585" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">THE RULE</text>
+            <text x="550" y="625" text-anchor="middle" fill="#fff" font-size="20">Two entities, one global code, two modifiers</text>
+            <text x="550" y="660" text-anchor="middle" fill="#888" font-size="18">TC + 26 together = the full global service</text>
+            <rect x="200" y="730" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="780" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">Memory: 26 = read, TC = take</text>
+            <text x="550" y="900" text-anchor="middle" fill="#888" font-size="18">Eliminate any answer that uses modifier 50 or 59 — wrong category</text>
+          </svg>`,
+          caption: "Split billing: TC for the equipment side, 26 for the interpreting radiologist"
+        }
+      },
+      {
+        type: "application",
+        title: "Drill This Section Until It's Automatic",
+        content: `**Today's 45-minute drill plan:**\n\n1. **TURP triplet flashcards (10 min)** — Write 52601, 52630, 52640 on three cards. On the back, write ONE keyword each: "complete," "regrowth," "contracture." Run through them until you can match in under 2 seconds.\n\n2. **Bilateral modifier 50 sprint (10 min)** — Open the CPT urinary and reproductive sections. For each code from 50010 to 58999, ask out loud: "Does the descriptor say bilateral?" If no, write the code + "needs -50 if both sides." Build the reflex.\n\n3. **Radiology 26/TC quiz (15 min)** — Find 5 radiology codes (70450, 71046, 72148, 73721, 74170). For each, draft a 1-sentence vignette where (a) the radiologist owns the equipment, (b) the hospital owns it but the radiologist reads, (c) a freestanding center bills technical only. Assign the right modifier each time.\n\n4. **Distractor hunt (10 min)** — Pull 5 missed urology/radiology questions from your last mock. For each wrong answer, write WHY the trap worked. Common traps: unbundling cystoscopy, missing the "prior" keyword, applying modifier 50 to a code that already says bilateral, confusing 26 and TC.\n\n**Tonight, before bed:** Quiz yourself one more time on the TURP triplet. The CPC exam will have at least one question from this family. Do not lose that point.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">YOUR 45-MIN DRILL</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Four targeted blocks — automatic recall</text>
+            <rect x="150" y="170" width="800" height="120" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="200" y="225" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
+            <text x="250" y="225" text-anchor="start" fill="#fff" font-size="22">TURP Triplet Flashcards (10 min)</text>
+            <text x="250" y="262" text-anchor="start" fill="#888" font-size="18">52601 = complete, 52630 = regrowth, 52640 = contracture</text>
+            <rect x="150" y="310" width="800" height="120" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="200" y="365" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="24">2.</text>
+            <text x="250" y="365" text-anchor="start" fill="#fff" font-size="22">Bilateral Modifier 50 Sprint (10 min)</text>
+            <text x="250" y="402" text-anchor="start" fill="#888" font-size="18">Scan 50010-58999, flag codes needing -50</text>
+            <rect x="150" y="450" width="800" height="120" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="200" y="505" text-anchor="start" fill="#10b981" font-weight="bold" font-size="24">3.</text>
+            <text x="250" y="505" text-anchor="start" fill="#fff" font-size="22">Radiology 26/TC Quiz (15 min)</text>
+            <text x="250" y="542" text-anchor="start" fill="#888" font-size="18">5 codes, 3 scenarios each — assign modifier</text>
+            <rect x="150" y="590" width="800" height="120" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="200" y="645" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="24">4.</text>
+            <text x="250" y="645" text-anchor="start" fill="#fff" font-size="22">Distractor Hunt (10 min)</text>
+            <text x="250" y="682" text-anchor="start" fill="#888" font-size="18">5 missed questions — write WHY the trap worked</text>
+            <rect x="200" y="750" width="700" height="100" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
+            <text x="550" y="800" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="22">BEDTIME REVIEW</text>
+            <text x="550" y="835" text-anchor="middle" fill="#fff" font-size="20">One more pass on the TURP triplet — guaranteed exam point</text>
+            <rect x="200" y="880" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="925" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="20">Goal: zero hesitation on these patterns</text>
+            <text x="550" y="990" text-anchor="middle" fill="#888" font-size="16">Repetition builds the 2.4-minute reflex</text>
+          </svg>`,
+          caption: "Four blocks. Forty-five minutes. Three near-guaranteed exam points."
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-mock-lesson-8",
+    title: "Mock Exam 5: Path/Lab + Medicine + Anesthesia",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "The Three Sections Everyone Underestimates",
+        content: `Most candidates burn 80% of their study time on surgery and ICD-10-CM, then walk into the exam and lose 10-15 points to **Path/Lab (80000-89999), Medicine (90000-99499), and Anesthesia (00000-01999)**. Do not be that candidate.\n\nThis mock exam targets the three most-tested mechanics:\n\n• **The Anesthesia Formula** — Base units + Time units + Modifying units = Total units × Conversion factor = **Allowed charge**. Almost every exam includes 2-3 anesthesia calculations.\n\n• **Pathology Consult Levels (88300-88309)** — The specimen-complexity ladder. 88300 is gross only, no microscopic. 88302 is the simplest with microscopic. 88309 is the most complex (radical resection specimens). Choosing one level off costs a point.\n\n• **Physical Status Modifiers (P1-P6)** — The anesthesiologist appends P1 (healthy) through P6 (declared brain dead, organs being harvested). Some payers add extra units for P3+, but for AAPC-style exams you must select the correct status from the vignette.\n\nThis is also the section where **HCPCS Level II modifiers** (-QS for monitored anesthesia care, -AA for personally performed by anesthesiologist, -QK for medical direction of 2-4 concurrent cases) appear frequently. Set your timer for 36 minutes. 15 questions. Begin.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 5</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="23">Path/Lab + Medicine + Anesthesia</text>
+            <rect x="80" y="170" width="940" height="160" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">PATHOLOGY / LAB 80000-89999</text>
+            <text x="550" y="265" text-anchor="middle" fill="#fff" font-size="20">Surgical pathology 88300-88309 — six specimen-complexity levels</text>
+            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="18">Panels (80048, 80053, 80061) — DO NOT unbundle into individual tests</text>
+            <rect x="80" y="360" width="940" height="160" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="415" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="26">MEDICINE 90000-99499</text>
+            <text x="550" y="455" text-anchor="middle" fill="#fff" font-size="20">Vaccines, dialysis, cardiology, neurology, PT/OT</text>
+            <text x="550" y="490" text-anchor="middle" fill="#888" font-size="18">Vaccine admin (90460-90474) PLUS product code (90686, 90707, etc.)</text>
+            <rect x="80" y="550" width="940" height="200" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="605" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">ANESTHESIA 00000-01999</text>
+            <text x="550" y="650" text-anchor="middle" fill="#fff" font-size="22">(Base + Time + Modifying) units × Conversion factor</text>
+            <text x="550" y="690" text-anchor="middle" fill="#fff" font-size="20">Physical status P1-P6 + HCPCS -AA, -QK, -QS</text>
+            <text x="550" y="725" text-anchor="middle" fill="#888" font-size="18">Time units = total anesthesia minutes / 15 (most regions)</text>
+            <rect x="200" y="780" width="700" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="835" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">36 MINUTES. 15 QUESTIONS.</text>
+            <text x="550" y="865" text-anchor="middle" fill="#fff" font-size="18">No notes. The formula must be memorized.</text>
+            <text x="550" y="970" text-anchor="middle" fill="#888" font-size="18">High-yield: anesthesia formula, 88300-88309, P-status modifiers</text>
+          </svg>`,
+          caption: "The three sections that quietly decide pass/fail for most candidates"
+        }
+      },
+      {
+        type: "concept",
+        title: "Memorize the Anesthesia Formula (and the Specimen Ladder)",
+        content: `**The Anesthesia Formula — Drill until automatic:**\n\n**(Base + Time + Modifying) × Conversion factor = Allowed charge**\n\n• **Base units** — Assigned per anesthesia code by ASA (e.g., 00790 upper abdomen = 7 base units). The exam will give you the base.\n• **Time units** — Total anesthesia time **÷ 15 minutes** in most regions (some payers use 10 min — the exam will specify).\n• **Modifying units** — Physical status add-ons (P3 = +1, P4 = +2, P5 = +3) and qualifying circumstances (99100 patient under 1 or over 70 = +1, 99140 emergency = +2).\n• **Conversion factor** — A dollar amount per unit, given in the vignette (e.g., $22/unit).\n\n**Example:** Code 00790, 60 min anesthesia time, P3 patient, age 75, CF $22.\n• Base 7 + Time (60÷15=4) + Modifying (P3=1 + age 75=1) = **13 units**\n• 13 × $22 = **$286 allowed charge**\n\n**Surgical Pathology Specimen Ladder (88300-88309):**\n\n• **88300** — Gross examination only, no microscopic (e.g., teeth, foreskin without lesion)\n• **88302** — Gross + microscopic, simplest (e.g., fallopian tube sterilization, vas deferens)\n• **88304** — Gross + microscopic, low complexity (e.g., gallbladder for cholelithiasis, skin cyst)\n• **88305** — Gross + microscopic, moderate complexity (e.g., breast biopsy, colon polyp, endometrium biopsy) — **most common code**\n• **88307** — Gross + microscopic, high complexity (e.g., breast excision with margin, colon resection non-tumor)\n• **88309** — Gross + microscopic, very high complexity (e.g., radical resection of tumor with lymph nodes)\n\nKey rule: Each **separately submitted specimen** = a separate line. A breast lumpectomy AND axillary nodes = 88307 + 88307 (or higher) on separate lines.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THE TWO FORMULAS</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Anesthesia math + pathology ladder</text>
+            <rect x="80" y="160" width="940" height="280" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="210" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">ANESTHESIA FORMULA</text>
+            <text x="550" y="265" text-anchor="middle" fill="#fff" font-weight="bold" font-size="28">(Base + Time + Modifying) × CF</text>
+            <text x="550" y="310" text-anchor="middle" fill="#fff" font-size="20">Base units — assigned per ASA code</text>
+            <text x="550" y="345" text-anchor="middle" fill="#fff" font-size="20">Time units — minutes ÷ 15</text>
+            <text x="550" y="380" text-anchor="middle" fill="#fff" font-size="20">Modifying — P3 +1, P4 +2, P5 +3, age &lt;1 or &gt;70 +1</text>
+            <text x="550" y="415" text-anchor="middle" fill="#888" font-size="18">Example: 7 + 4 + 2 = 13 units × $22 = $286</text>
+            <rect x="80" y="460" width="940" height="460" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="510" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="26">SURGICAL PATHOLOGY LADDER</text>
+            <text x="120" y="560" text-anchor="start" fill="#fff" font-size="20">88300 — Gross only, NO microscopic</text>
+            <text x="120" y="595" text-anchor="start" fill="#888" font-size="16">Teeth, foreskin without lesion</text>
+            <text x="120" y="635" text-anchor="start" fill="#fff" font-size="20">88302 — Simplest gross + microscopic</text>
+            <text x="120" y="670" text-anchor="start" fill="#888" font-size="16">Fallopian tube sterilization, vas deferens</text>
+            <text x="120" y="710" text-anchor="start" fill="#fff" font-size="20">88304 — Low complexity</text>
+            <text x="120" y="745" text-anchor="start" fill="#888" font-size="16">Gallbladder for stones, skin cyst</text>
+            <text x="120" y="785" text-anchor="start" fill="#fff" font-size="20">88305 — Moderate (most common)</text>
+            <text x="120" y="820" text-anchor="start" fill="#888" font-size="16">Breast biopsy, colon polyp, endometrium biopsy</text>
+            <text x="120" y="860" text-anchor="start" fill="#fff" font-size="20">88307 / 88309 — High / very high</text>
+            <text x="120" y="895" text-anchor="start" fill="#888" font-size="16">Excision w/ margin / radical resection w/ nodes</text>
+            <rect x="200" y="950" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="20">Each separately submitted specimen = separate line</text>
+          </svg>`,
+          caption: "The two cheat-sheet formulas that decide 6-8 exam points"
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Vignette: Anesthesia for Elderly Patient",
+        content: `**Vignette (read aloud, scratch sheet ready):**\n\n*"A 78-year-old woman with insulin-dependent diabetes and stable angina (ASA Physical Status 3) undergoes elective laparoscopic cholecystectomy under general anesthesia. Anesthesia start time: 08:00. Anesthesia stop time: 09:30. The anesthesiologist personally performed the case. Local conversion factor: $24/unit. Base units for code 00790 (anesthesia for upper abdomen procedures, not otherwise specified): 7."*\n\n**Step 1 — Confirm the code.** Upper abdomen, not otherwise specified = **00790** (base = 7). Note: lap chole uses 00790, not a more specific code, because there is no separate ASA code for laparoscopic gallbladder.\n\n**Step 2 — Time units.** 08:00 to 09:30 = 90 minutes. 90 ÷ 15 = **6 time units**.\n\n**Step 3 — Modifying units.** Patient is ASA P3 (+1) AND age 78 (over 70 = qualifying circumstance 99100, +1). Modifying total = **2 units**.\n\n**Step 4 — Total units.** 7 (base) + 6 (time) + 2 (modifying) = **15 units**.\n\n**Step 5 — Allowed charge.** 15 × $24 = **$360**.\n\n**Step 6 — Modifier.** Personally performed by anesthesiologist = **modifier AA**. Final claim line: **00790-AA-P3**, plus **+99100** as an add-on for age >70. Some payers require the P3 modifier separately; AAPC exams test recognition of P-status as a real modifier — do not skip it.\n\n**The wrong answers will be:** $336 (forgot age qualifying), $264 (forgot P3), or 12 units (used 30-min intervals instead of 15). Slow down on time math — that is where most candidates lose this question.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">ANESTHESIA CALC WALK-THROUGH</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">00790-AA-P3 + 99100 = $360</text>
+            <rect x="80" y="160" width="440" height="120" rx="20" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
+            <text x="300" y="210" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">BASE UNITS</text>
+            <text x="300" y="250" text-anchor="middle" fill="#fff" font-size="28">7</text>
+            <rect x="580" y="160" width="440" height="120" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="800" y="210" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">TIME UNITS</text>
+            <text x="800" y="250" text-anchor="middle" fill="#fff" font-size="24">90 min ÷ 15 = 6</text>
+            <rect x="80" y="310" width="440" height="120" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="300" y="360" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">MODIFYING UNITS</text>
+            <text x="300" y="400" text-anchor="middle" fill="#fff" font-size="22">P3 (+1) + Age 78 (+1) = 2</text>
+            <rect x="580" y="310" width="440" height="120" rx="20" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="800" y="360" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">TOTAL UNITS</text>
+            <text x="800" y="400" text-anchor="middle" fill="#fff" font-size="28">7 + 6 + 2 = 15</text>
+            <rect x="80" y="460" width="940" height="120" rx="20" fill="rgba(236,72,153,0.12)" stroke="#ec4899" stroke-width="2"/>
+            <text x="550" y="510" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="26">15 units × $24 conversion factor</text>
+            <text x="550" y="555" text-anchor="middle" fill="#fff" font-weight="bold" font-size="32">= $360 allowed charge</text>
+            <rect x="80" y="610" width="940" height="160" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="660" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="24">CLAIM LINE</text>
+            <text x="550" y="705" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">00790-AA-P3 + 99100</text>
+            <text x="550" y="740" text-anchor="middle" fill="#888" font-size="18">AA = personally performed; P3 = status; +99100 = age ≥70</text>
+            <rect x="80" y="790" width="940" height="180" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="840" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">DISTRACTOR TRAPS</text>
+            <text x="120" y="885" text-anchor="start" fill="#fff" font-size="18">$336 — forgot age qualifying circumstance (+1)</text>
+            <text x="120" y="920" text-anchor="start" fill="#fff" font-size="18">$264 — forgot ASA P3 status add-on (+1)</text>
+            <text x="120" y="955" text-anchor="start" fill="#fff" font-size="18">12 units — used 30-min intervals instead of 15</text>
+            <text x="550" y="1010" text-anchor="middle" fill="#888" font-size="16">Slow down on time math — that's where candidates lose this question</text>
+          </svg>`,
+          caption: "Anesthesia math — break the formula into four steps and check each unit"
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "A pathologist receives the following from a single patient: (1) a gallbladder removed for cholelithiasis, (2) a colon polyp from screening colonoscopy, and (3) an endometrial biopsy from a separate procedure. Each specimen requires gross and microscopic examination. How should the pathologist code these?",
+        options: [
+          { text: "88305 × 1 (combine all three specimens onto a single line).", correct: false },
+          { text: "88304 (gallbladder) + 88305 (colon polyp) + 88305 (endometrium) — three separate lines.", correct: true },
+          { text: "88307 × 3 (all biopsies default to the high-complexity tier).", correct: false },
+          { text: "88300 × 3 (multiple specimens always start at gross-only level).", correct: false }
+        ],
+        explanation: "Each separately identified specimen submitted to pathology is coded on its own line at the level appropriate to that specimen's complexity. Gallbladder for cholelithiasis is explicitly listed at 88304 (low complexity, stone disease). Colon polyp and endometrial biopsy are both listed at 88305 (moderate complexity). You never combine specimens onto a single line — each gets its own code at its own level. 88307 is reserved for higher-complexity specimens (e.g., breast excision with margins). 88300 is gross-only with NO microscopic examination — wrong category entirely since the vignette specifies microscopic on all three.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Surgical pathology — one specimen, one line, correct level</text>
+            <rect x="80" y="170" width="300" height="240" rx="20" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
+            <text x="230" y="225" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">SPECIMEN 1</text>
+            <text x="230" y="270" text-anchor="middle" fill="#fff" font-size="18">Gallbladder</text>
+            <text x="230" y="300" text-anchor="middle" fill="#fff" font-size="18">(cholelithiasis)</text>
+            <text x="230" y="360" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="32">88304</text>
+            <rect x="400" y="170" width="300" height="240" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="225" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">SPECIMEN 2</text>
+            <text x="550" y="270" text-anchor="middle" fill="#fff" font-size="18">Colon polyp</text>
+            <text x="550" y="300" text-anchor="middle" fill="#fff" font-size="18">(screening)</text>
+            <text x="550" y="360" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="32">88305</text>
+            <rect x="720" y="170" width="300" height="240" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="870" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">SPECIMEN 3</text>
+            <text x="870" y="270" text-anchor="middle" fill="#fff" font-size="18">Endometrium</text>
+            <text x="870" y="300" text-anchor="middle" fill="#fff" font-size="18">(biopsy)</text>
+            <text x="870" y="360" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="32">88305</text>
+            <rect x="80" y="440" width="940" height="160" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="495" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">THE RULE</text>
+            <text x="550" y="535" text-anchor="middle" fill="#fff" font-size="20">Each separately submitted specimen = one line at its own level</text>
+            <text x="550" y="570" text-anchor="middle" fill="#888" font-size="18">Never combine; never default everyone to the same code</text>
+            <rect x="80" y="630" width="940" height="200" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="680" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">WHY THE TRAPS FAIL</text>
+            <text x="120" y="725" text-anchor="start" fill="#fff" font-size="18">88305 x 1 — wrong: must list each specimen separately</text>
+            <text x="120" y="760" text-anchor="start" fill="#fff" font-size="18">88307 x 3 — wrong: only one level matches each specimen</text>
+            <text x="120" y="795" text-anchor="start" fill="#fff" font-size="18">88300 x 3 — wrong: 88300 excludes microscopic exam</text>
+            <rect x="200" y="870" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="920" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">Answer: 88304 + 88305 + 88305</text>
+          </svg>`,
+          caption: "One specimen per line, one level per specimen — never default the same code across the board"
+        }
+      },
+      {
+        type: "application",
+        title: "Drill the Formula Until You Can Do It in 90 Seconds",
+        content: `**Today's 50-minute drill plan:**\n\n1. **Anesthesia formula sprint (15 min)** — Write the formula at the top of a blank page: **(Base + Time + Modifying) × CF**. Generate 8 random vignettes (or use AAPC practice questions). Solve each in under 90 seconds. If you go over time, you do not yet own the formula.\n\n2. **P-status flashcards (5 min)** — Write P1 through P6 on six cards. On the back: P1 = healthy, P2 = mild systemic disease, P3 = severe systemic disease, P4 = severe systemic disease with constant threat to life, P5 = moribund (not expected to survive without operation), P6 = declared brain dead/organ donor. Drill until <2 seconds per card.\n\n3. **Pathology ladder mapping (10 min)** — On a single page, draw a vertical ladder with 88300, 88302, 88304, 88305, 88307, 88309. Next to each, write 3-5 specimens from CPT Appendix. Quiz yourself: "Where does foreskin without lesion go? Skin cyst? Breast lumpectomy with margins?"\n\n4. **HCPCS anesthesia modifiers (10 min)** — Memorize the four big ones: **AA** (personally performed), **QK** (medical direction of 2-4 concurrent cases by anesthesiologist), **QX** (CRNA with medical direction), **QZ** (CRNA without medical direction). Add **QS** (monitored anesthesia care) for completeness.\n\n5. **Vaccine admin pair drill (10 min)** — Every vaccine claim needs TWO codes: the **product** (e.g., 90686 flu) AND the **administration** (90460 if patient under 19 with counseling, 90471/90472 otherwise). Run through 10 vaccine vignettes and code both lines each time.\n\nThe candidate who walks in owning these five mechanics gains 5-8 points over the candidate who does not.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">YOUR 50-MIN DRILL</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Five blocks. 5-8 points of upside.</text>
+            <rect x="150" y="160" width="800" height="100" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="200" y="210" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
+            <text x="250" y="210" text-anchor="start" fill="#fff" font-size="22">Anesthesia formula sprint — 15 min</text>
+            <text x="250" y="245" text-anchor="start" fill="#888" font-size="18">8 vignettes, &lt;90 sec each</text>
+            <rect x="150" y="280" width="800" height="100" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="200" y="330" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="24">2.</text>
+            <text x="250" y="330" text-anchor="start" fill="#fff" font-size="22">P-status flashcards — 5 min</text>
+            <text x="250" y="365" text-anchor="start" fill="#888" font-size="18">P1-P6 definitions, &lt;2 sec each</text>
+            <rect x="150" y="400" width="800" height="100" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="200" y="450" text-anchor="start" fill="#10b981" font-weight="bold" font-size="24">3.</text>
+            <text x="250" y="450" text-anchor="start" fill="#fff" font-size="22">Pathology ladder mapping — 10 min</text>
+            <text x="250" y="485" text-anchor="start" fill="#888" font-size="18">88300-88309 with 3-5 specimens each</text>
+            <rect x="150" y="520" width="800" height="100" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="200" y="570" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="24">4.</text>
+            <text x="250" y="570" text-anchor="start" fill="#fff" font-size="22">HCPCS anesthesia modifiers — 10 min</text>
+            <text x="250" y="605" text-anchor="start" fill="#888" font-size="18">AA, QK, QX, QZ, QS</text>
+            <rect x="150" y="640" width="800" height="100" rx="20" fill="rgba(236,72,153,0.12)" stroke="#ec4899" stroke-width="2"/>
+            <text x="200" y="690" text-anchor="start" fill="#ec4899" font-weight="bold" font-size="24">5.</text>
+            <text x="250" y="690" text-anchor="start" fill="#fff" font-size="22">Vaccine admin pair drill — 10 min</text>
+            <text x="250" y="725" text-anchor="start" fill="#888" font-size="18">Product code + admin code on every claim</text>
+            <rect x="200" y="780" width="700" height="100" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="830" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">REPEAT TOMORROW</text>
+            <text x="550" y="865" text-anchor="middle" fill="#fff" font-size="20">Speed comes from repetition, not understanding alone</text>
+            <rect x="200" y="900" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="950" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">Target: 90-second anesthesia calc</text>
+          </svg>`,
+          caption: "Five blocks, fifty minutes — the difference between passing and not"
+        }
+      }
+    ]
+  },
+  {
+    id: "cpc-mock-lesson-9",
+    title: "Mock Exam 6: E/M Coding with 2021/2023 MDM-or-Time Rules",
+    duration: "15",
+    cards: [
+      {
+        type: "intro",
+        title: "E/M Was Rewritten — Master the New Rules",
+        content: `In 2021, **AMA rewrote the rules for office E/M (99202-99215)** and in 2023, the same logic was extended to nearly every other E/M section: hospital inpatient/observation (99221-99239), consultations (99242-99255), emergency department (99281-99285), nursing facility (99304-99316), and home/residence services (99341-99350). **History and exam no longer determine code level.** Instead, every visit is leveled by ONE of two methods:\n\n**1. Medical Decision Making (MDM)** — based on three elements: number/complexity of problems, amount/complexity of data reviewed, and risk of complications/morbidity/mortality.\n\n**2. Total Time on the date of encounter** — face-to-face PLUS non-face-to-face activities (chart review, ordering, documentation, care coordination), as long as performed by the **billing provider** on the **same calendar date**.\n\nThe coder picks whichever method yields the higher level (or matches documentation best). If both are present, use the one that supports the higher code unless the chart only documents one.\n\nThis mock targets the highest-yield E/M traps:\n• **Critical care 99291 (first 30-74 min) + 99292 (each additional 30 min)** — time-based, NOT MDM\n• **Observation/Inpatient same-day admit-and-discharge 99234-99236** — single code, not two\n• **Prolonged services 99417 (office)** vs **G2212 (Medicare office)** — used ONLY when time exceeds the 99215/99205 threshold\n\nTimer set. 36 minutes. 15 questions. Begin.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MOCK EXAM 6</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="23">E/M with 2021/2023 MDM-or-Time Rules</text>
+            <rect x="80" y="170" width="940" height="160" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="220" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">THE NEW RULE (2021 / 2023)</text>
+            <text x="550" y="265" text-anchor="middle" fill="#fff" font-size="22">Level the visit by MDM **OR** Total Time</text>
+            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="18">History and exam no longer determine code level</text>
+            <rect x="60" y="360" width="460" height="320" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="290" y="410" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">METHOD 1: MDM</text>
+            <text x="290" y="455" text-anchor="middle" fill="#fff" font-size="20">Three elements (need 2 of 3):</text>
+            <text x="290" y="495" text-anchor="middle" fill="#fff" font-size="20">• Problems addressed</text>
+            <text x="290" y="530" text-anchor="middle" fill="#fff" font-size="20">• Data reviewed</text>
+            <text x="290" y="565" text-anchor="middle" fill="#fff" font-size="20">• Risk of complications</text>
+            <text x="290" y="615" text-anchor="middle" fill="#888" font-size="16">Straightforward → Low → Moderate → High</text>
+            <text x="290" y="650" text-anchor="middle" fill="#888" font-size="16">= 99202/3/4/5 or 99212/3/4/5</text>
+            <rect x="580" y="360" width="460" height="320" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="810" y="410" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">METHOD 2: TOTAL TIME</text>
+            <text x="810" y="455" text-anchor="middle" fill="#fff" font-size="20">Same calendar date includes:</text>
+            <text x="810" y="495" text-anchor="middle" fill="#fff" font-size="20">• Chart review</text>
+            <text x="810" y="530" text-anchor="middle" fill="#fff" font-size="20">• Face-to-face visit</text>
+            <text x="810" y="565" text-anchor="middle" fill="#fff" font-size="20">• Documentation, orders</text>
+            <text x="810" y="615" text-anchor="middle" fill="#888" font-size="16">99215 = 40-54 min established</text>
+            <text x="810" y="650" text-anchor="middle" fill="#888" font-size="16">99205 = 60-74 min new</text>
+            <rect x="80" y="710" width="940" height="160" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="760" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">SPECIAL CODES</text>
+            <text x="550" y="800" text-anchor="middle" fill="#fff" font-size="20">99291/99292 critical care • 99234-99236 same-day admit/D/C</text>
+            <text x="550" y="835" text-anchor="middle" fill="#fff" font-size="20">99417 prolonged (office) / G2212 prolonged (Medicare)</text>
+            <rect x="200" y="900" width="700" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="955" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">36 MIN. 15 QUESTIONS. GO.</text>
+            <text x="550" y="985" text-anchor="middle" fill="#fff" font-size="18">No notes. The new rule must be reflex.</text>
+          </svg>`,
+          caption: "The new E/M world: MDM or Time. History and exam are now context, not levelers."
+        }
+      },
+      {
+        type: "concept",
+        title: "Critical Care, Same-Day Admit/Discharge, and Prolonged Service",
+        content: `**Critical Care 99291 / 99292** — Pure time-based code for treating a critically ill patient (organ failure, high probability of imminent deterioration).\n\n• **99291** — First **30-74 minutes** on a given calendar date. You CANNOT bill 99291 for under 30 minutes — those minutes roll into a regular E/M.\n• **+99292** — Each additional 30 minutes beyond the first 74. Bill once per full 30-min block.\n• Time can be cumulative across multiple visits to the patient on the same day, as long as it is **direct patient contact** or **immediately available time at the bedside or on the unit dedicated to that patient**. Hallway conversation with family, chart review on the same unit — all count. Time spent on separately reportable procedures does not.\n\n**Worked time example:** Provider spends 45 min at 09:00, 25 min at 14:00, 35 min at 19:00 on a critically ill patient. Total = 105 min. Code: **99291** (first 30-74 min) + **99292 × 1** (one additional 30-min block — minutes 75-104). The final minute (105) does not earn a second 99292 because you need a full 30-min block.\n\n**Same-Day Admit and Discharge 99234-99236** — When a patient is admitted to observation or inpatient AND discharged on the same calendar date by the same provider, you use a SINGLE code, not separate admission + discharge codes. Level is based on MDM or time:\n• **99234** — Straightforward/low MDM or 45-69 min\n• **99235** — Moderate MDM or 70-84 min\n• **99236** — High MDM or 85+ min\n\n**Prolonged Service 99417 (CPT) / G2212 (Medicare)** — Add-on used ONLY when total time exceeds the upper threshold of the highest level code. For office: 99215 ceiling = 54 min established / 99205 ceiling = 74 min new. Add 99417 (or G2212 for Medicare) for each **additional 15 minutes** beyond that ceiling. You cannot use 99417/G2212 unless the highest-level code is already maxed out.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THREE SPECIAL E/M CODES</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Critical care, same-day admit/DC, prolonged service</text>
+            <rect x="80" y="160" width="940" height="240" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="210" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">CRITICAL CARE 99291 / 99292</text>
+            <text x="120" y="260" text-anchor="start" fill="#fff" font-size="20">99291 — first 30-74 min on the date</text>
+            <text x="120" y="295" text-anchor="start" fill="#fff" font-size="20">+99292 — each additional 30 min after the first 74</text>
+            <text x="120" y="335" text-anchor="start" fill="#fff" font-size="20">Time is cumulative across same-day encounters</text>
+            <text x="120" y="370" text-anchor="start" fill="#888" font-size="18">Under 30 min = bill regular E/M, not critical care</text>
+            <rect x="80" y="430" width="940" height="240" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="480" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">SAME-DAY ADMIT + DISCHARGE 99234-99236</text>
+            <text x="120" y="530" text-anchor="start" fill="#fff" font-size="20">99234 — straightforward/low MDM or 45-69 min</text>
+            <text x="120" y="565" text-anchor="start" fill="#fff" font-size="20">99235 — moderate MDM or 70-84 min</text>
+            <text x="120" y="600" text-anchor="start" fill="#fff" font-size="20">99236 — high MDM or 85+ min</text>
+            <text x="120" y="640" text-anchor="start" fill="#888" font-size="18">ONE code — never bill admit + discharge separately</text>
+            <rect x="80" y="700" width="940" height="240" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="750" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">PROLONGED SERVICE 99417 / G2212</text>
+            <text x="120" y="800" text-anchor="start" fill="#fff" font-size="20">99417 (CPT) — non-Medicare office prolonged</text>
+            <text x="120" y="835" text-anchor="start" fill="#fff" font-size="20">G2212 (HCPCS) — Medicare office prolonged</text>
+            <text x="120" y="870" text-anchor="start" fill="#fff" font-size="20">Each unit = +15 min beyond 99215/99205 ceiling</text>
+            <text x="120" y="910" text-anchor="start" fill="#888" font-size="18">Cannot use unless highest-level code already maxed</text>
+            <text x="550" y="990" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="20">Time rules are the new battleground — drill them cold.</text>
+          </svg>`,
+          caption: "Three time-driven codes that quietly determine 5-7 points on every CPC exam"
+        }
+      },
+      {
+        type: "example",
+        title: "Worked Vignette: Critical Care Then Office Follow-Up",
+        content: `**Vignette:**\n\n*"Dr. Patel admitted a 72-year-old male to the ICU at 06:00 for septic shock with multi-organ dysfunction. She personally provided critical care from 06:00 to 07:15 (initial resuscitation), returned at 11:30 and provided continuous bedside management until 12:50, then returned again at 17:00 for 35 minutes of ventilator management and family meeting. Total documented critical care time: 75 + 80 + 35 = 190 minutes. No separately billable procedures performed."*\n\n**Step 1 — Confirm critical care criteria.** Patient is critically ill (septic shock, multi-organ dysfunction). Provider time was direct bedside care or immediately available on the unit. Criteria met.\n\n**Step 2 — Add up the minutes.** 75 + 80 + 35 = **190 minutes** total. Time is cumulative across the date, so all three blocks count.\n\n**Step 3 — Apply the code ladder.**\n• 99291 covers the first 30-74 min. Use **99291 × 1**.\n• Remaining time: 190 − 74 = **116 minutes**.\n• Each 99292 covers 30 min. 116 ÷ 30 = **3 full blocks** (minutes 75-104, 105-134, 135-164). Remaining 26 min (165-190) does NOT earn a fourth 99292 — not a full 30-min block.\n• Final: **99291 × 1 + 99292 × 3**.\n\n**Step 4 — Are there add-ons?** No separately billable procedures, no other E/M code on the same day from the same provider for this patient (would conflict).\n\n**Final answer: 99291 + 99292 × 3.**\n\n**Distractor traps:** 99291 + 99292 × 4 (assumes partial block counts — wrong), 99291 alone (only first 74 min — wrong), 99221 high-level admit + 99291 (double billing — admit and critical care same provider/day are bundled into 99291 unless documentation supports a clearly separate, identifiable evaluation BEFORE the critical care began, which is not the case here).`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">CRITICAL CARE TIME MATH</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">190 minutes total = 99291 + 99292 × 3</text>
+            <rect x="80" y="160" width="300" height="160" rx="20" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="2"/>
+            <text x="230" y="215" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">BLOCK 1</text>
+            <text x="230" y="255" text-anchor="middle" fill="#fff" font-size="20">06:00 - 07:15</text>
+            <text x="230" y="290" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">75 min</text>
+            <rect x="400" y="160" width="300" height="160" rx="20" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="215" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">BLOCK 2</text>
+            <text x="550" y="255" text-anchor="middle" fill="#fff" font-size="20">11:30 - 12:50</text>
+            <text x="550" y="290" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">80 min</text>
+            <rect x="720" y="160" width="300" height="160" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="870" y="215" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">BLOCK 3</text>
+            <text x="870" y="255" text-anchor="middle" fill="#fff" font-size="20">17:00 - 17:35</text>
+            <text x="870" y="290" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">35 min</text>
+            <rect x="80" y="350" width="940" height="100" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="400" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">TOTAL = 75 + 80 + 35 = 190 minutes</text>
+            <text x="550" y="430" text-anchor="middle" fill="#888" font-size="18">Time is cumulative across the date for same patient</text>
+            <rect x="80" y="480" width="940" height="240" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="530" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">APPLY THE LADDER</text>
+            <text x="120" y="575" text-anchor="start" fill="#fff" font-size="20">99291 = min 1-74 → use 99291 × 1</text>
+            <text x="120" y="610" text-anchor="start" fill="#fff" font-size="20">Remaining = 190 - 74 = 116 minutes</text>
+            <text x="120" y="645" text-anchor="start" fill="#fff" font-size="20">99292 each 30 min → 116 ÷ 30 = 3 full blocks</text>
+            <text x="120" y="685" text-anchor="start" fill="#888" font-size="18">Last 26 min (165-190) too short for a 4th 99292</text>
+            <rect x="80" y="740" width="940" height="120" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="790" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">99291 × 1 + 99292 × 3</text>
+            <text x="550" y="825" text-anchor="middle" fill="#fff" font-size="20">Final claim line</text>
+            <rect x="80" y="880" width="940" height="100" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="925" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">TRAP</text>
+            <text x="550" y="960" text-anchor="middle" fill="#fff" font-size="18">99292 × 4 — assumes partial block counts (WRONG)</text>
+          </svg>`,
+          caption: "Critical care time math — cumulative minutes, then ladder. Partial blocks never count."
+        }
+      },
+      {
+        type: "quiz",
+        title: "Quick Check",
+        question: "An established patient is seen in the physician's office. The provider documents 58 total minutes on the date of encounter, including 35 min face-to-face, 12 min chart review beforehand, and 11 min documenting/ordering after. MDM is assessed as moderate complexity. Which code(s) should be reported?",
+        options: [
+          { text: "99214 only — moderate MDM caps at 99214; the extra 4 minutes over the 30-39 min range do not change the code.", correct: false },
+          { text: "99215 only — total time of 58 min falls within the 99215 range (40-54 min) and exceeds the moderate MDM cap.", correct: false },
+          { text: "99215 only — time-based leveling: 58 min falls within the 99215 range of 40-54 min for established patients, which outranks moderate MDM (99214).", correct: true },
+          { text: "99215 + 99417 — 58 min exceeds the 99215 ceiling of 54 min, so prolonged service is required for the extra 4 minutes.", correct: false }
+        ],
+        explanation: "Under the 2021 office E/M rules, you pick MDM OR Total Time — whichever yields the higher level. Established patient time ranges: 99212 (10-19 min), 99213 (20-29 min), 99214 (30-39 min), 99215 (40-54 min). 58 minutes falls within the 99215 range (40-54 min — the official AMA range for established 99215; some sources express it as ≥40 min). Moderate MDM would support only 99214; time supports 99215, so use 99215. Prolonged service 99417 is NOT used here because 58 minutes does not exceed the upper threshold by a full 15-minute increment beyond the maximum 99215 range — and 99417 is only added when you first max out 99215 by at least 15 additional minutes (i.e., when total time reaches ≥69 min established). Note: AMA updated the threshold language; on AAPC exams, the safe rule is 99417 is added per +15 min beyond the 99215/99205 maximum.",
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">KNOWLEDGE CHECK</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Pick MDM or Total Time — whichever supports higher level</text>
+            <rect x="60" y="170" width="460" height="280" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="290" y="225" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">MDM PATH</text>
+            <text x="290" y="265" text-anchor="middle" fill="#fff" font-size="20">Moderate MDM</text>
+            <text x="290" y="305" text-anchor="middle" fill="#fff" font-size="20">↓</text>
+            <text x="290" y="345" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="32">99214</text>
+            <text x="290" y="395" text-anchor="middle" fill="#888" font-size="18">(loses to time path)</text>
+            <rect x="580" y="170" width="460" height="280" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+            <text x="810" y="225" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">TIME PATH</text>
+            <text x="810" y="265" text-anchor="middle" fill="#fff" font-size="20">35 + 12 + 11 = 58 min</text>
+            <text x="810" y="305" text-anchor="middle" fill="#fff" font-size="20">↓</text>
+            <text x="810" y="345" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="32">99215</text>
+            <text x="810" y="395" text-anchor="middle" fill="#888" font-size="18">(40-54 min range)</text>
+            <rect x="80" y="490" width="940" height="160" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="540" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">ESTABLISHED PATIENT TIME RANGES</text>
+            <text x="550" y="580" text-anchor="middle" fill="#fff" font-size="20">99212: 10-19 min • 99213: 20-29 min</text>
+            <text x="550" y="615" text-anchor="middle" fill="#fff" font-size="20">99214: 30-39 min • 99215: 40-54 min</text>
+            <rect x="80" y="680" width="940" height="160" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="730" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">99417 NOT APPLIED YET</text>
+            <text x="550" y="770" text-anchor="middle" fill="#fff" font-size="20">Add 99417 only when ≥15 min past 99215 ceiling</text>
+            <text x="550" y="805" text-anchor="middle" fill="#888" font-size="18">58 min has not crossed the prolonged-service threshold</text>
+            <rect x="200" y="870" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="920" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">Answer: 99215 only</text>
+          </svg>`,
+          caption: "Time path wins — moderate MDM would have undercounted this visit"
+        }
+      },
+      {
+        type: "application",
+        title: "Drill the New E/M Until It's Muscle Memory",
+        content: `**Today's 60-minute drill plan:**\n\n1. **Time-range memorization (10 min)** — Write out both columns from memory:\n   • **Established**: 99212 (10-19), 99213 (20-29), 99214 (30-39), 99215 (40-54)\n   • **New**: 99202 (15-29), 99203 (30-44), 99204 (45-59), 99205 (60-74)\n   • Drill until you can write both columns in under 60 seconds.\n\n2. **MDM grid mapping (15 min)** — Sketch the AMA MDM table: rows = level (straightforward, low, moderate, high), columns = problems / data / risk. Fill in 2-3 examples per cell (e.g., moderate problems = "one chronic illness with exacerbation"). Quiz yourself on edge cases.\n\n3. **Critical care time problems (15 min)** — Generate 5 vignettes with different total minutes (45, 90, 105, 165, 200). For each, write the correct 99291 + 99292 × n combination. Verify: partial blocks NEVER count.\n\n4. **Same-day admit/discharge drill (10 min)** — Quiz yourself: which code (99234 / 99235 / 99236) applies when MDM is moderate and time is 80 min? (Answer: 99235 by moderate MDM; 99235 also matches the 70-84 min range. They agree — easy.) Run 5 variations where MDM and time DISAGREE so you practice picking the higher level.\n\n5. **99417 vs G2212 ID drill (10 min)** — Flashcard: payer is Medicare → G2212. Payer is anything else (commercial, Medicaid-secondary) → 99417. Five vignettes, five identifications.\n\n**Final tip:** On the real exam, when an E/M vignette mentions explicit minutes, START with the time path. When it mentions complex diagnoses, comorbidities, or multiple Rx changes, START with MDM. Either way, pick the path that yields the higher supported code — that is the new rule, and the exam tests it relentlessly.`,
+        visual: {
+          type: "diagram",
+          svg: `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="60" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">YOUR 60-MIN E/M DRILL</text>
+            <text x="550" y="105" text-anchor="middle" fill="#888" font-size="22">Five blocks for total E/M mastery</text>
+            <rect x="150" y="160" width="800" height="100" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="200" y="210" text-anchor="start" fill="#6366f1" font-weight="bold" font-size="24">1.</text>
+            <text x="250" y="210" text-anchor="start" fill="#fff" font-size="22">Time-range memorization — 10 min</text>
+            <text x="250" y="245" text-anchor="start" fill="#888" font-size="18">Both columns, under 60 sec, from memory</text>
+            <rect x="150" y="280" width="800" height="100" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="200" y="330" text-anchor="start" fill="#8b5cf6" font-weight="bold" font-size="24">2.</text>
+            <text x="250" y="330" text-anchor="start" fill="#fff" font-size="22">MDM grid mapping — 15 min</text>
+            <text x="250" y="365" text-anchor="start" fill="#888" font-size="18">4 levels × 3 elements with examples</text>
+            <rect x="150" y="400" width="800" height="100" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="200" y="450" text-anchor="start" fill="#ef4444" font-weight="bold" font-size="24">3.</text>
+            <text x="250" y="450" text-anchor="start" fill="#fff" font-size="22">Critical care time problems — 15 min</text>
+            <text x="250" y="485" text-anchor="start" fill="#888" font-size="18">5 vignettes, 99291 + 99292 × n math</text>
+            <rect x="150" y="520" width="800" height="100" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="200" y="570" text-anchor="start" fill="#10b981" font-weight="bold" font-size="24">4.</text>
+            <text x="250" y="570" text-anchor="start" fill="#fff" font-size="22">Same-day admit/DC drill — 10 min</text>
+            <text x="250" y="605" text-anchor="start" fill="#888" font-size="18">99234-99236 with MDM vs time conflicts</text>
+            <rect x="150" y="640" width="800" height="100" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="200" y="690" text-anchor="start" fill="#f59e0b" font-weight="bold" font-size="24">5.</text>
+            <text x="250" y="690" text-anchor="start" fill="#fff" font-size="22">99417 vs G2212 ID drill — 10 min</text>
+            <text x="250" y="725" text-anchor="start" fill="#888" font-size="18">Medicare → G2212, else → 99417</text>
+            <rect x="80" y="770" width="940" height="160" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="820" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">EXAM-DAY TIP</text>
+            <text x="550" y="855" text-anchor="middle" fill="#fff" font-size="20">Vignette mentions minutes → start time path</text>
+            <text x="550" y="890" text-anchor="middle" fill="#fff" font-size="20">Vignette mentions complex Dx → start MDM path</text>
+            <rect x="200" y="950" width="700" height="80" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="1000" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">Pick whichever supports the higher code.</text>
+          </svg>`,
+          caption: "Five blocks. Sixty minutes. The new E/M rules become reflex."
         }
       }
     ]
