@@ -510,24 +510,28 @@ class SynthesisApp {
                   title="${c.key}${c.future ? '' : ` · ${c.count} action${c.count === 1 ? '' : 's'}`}"></div>`
         ).join('');
 
+        const expanded = localStorage.getItem('synthesis_streak_heatmap_open') === '1';
         container.innerHTML = `
             <div class="streak-card">
-                <div class="streak-stats">
-                    <div class="streak-stat streak-current ${active && current > 0 ? 'streak-on-fire' : ''}">
-                        <span class="streak-icon">${active && current > 0 ? '🔥' : '⏳'}</span>
-                        <span class="streak-value">${current}</span>
-                        <span class="streak-label">${current === 1 ? 'Day Streak' : 'Day Streak'}</span>
+                <div class="streak-header" onclick="app.toggleStreakHeatmap()" role="button" tabindex="0" aria-expanded="${expanded}" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                    <div class="streak-stats">
+                        <div class="streak-stat streak-current ${active && current > 0 ? 'streak-on-fire' : ''}">
+                            <span class="streak-icon">${active && current > 0 ? '🔥' : '⏳'}</span>
+                            <span class="streak-value">${current}</span>
+                            <span class="streak-label">${current === 1 ? 'Day Streak' : 'Day Streak'}</span>
+                        </div>
+                        <div class="streak-stat">
+                            <span class="streak-value">${longest}</span>
+                            <span class="streak-label">Longest</span>
+                        </div>
+                        <div class="streak-stat">
+                            <span class="streak-value">${totalActiveDays}</span>
+                            <span class="streak-label">Active Days</span>
+                        </div>
                     </div>
-                    <div class="streak-stat">
-                        <span class="streak-value">${longest}</span>
-                        <span class="streak-label">Longest</span>
-                    </div>
-                    <div class="streak-stat">
-                        <span class="streak-value">${totalActiveDays}</span>
-                        <span class="streak-label">Active Days</span>
-                    </div>
+                    <span class="streak-toggle" aria-hidden="true" style="font-size:1.5rem;color:#888;transition:transform 0.2s;transform:rotate(${expanded ? 180 : 0}deg);padding:0 0.5rem;">▾</span>
                 </div>
-                <div class="streak-heatmap-wrap">
+                <div class="streak-heatmap-wrap" style="display:${expanded ? 'block' : 'none'};">
                     <div class="streak-heatmap-title">Activity — last 12 weeks</div>
                     <div class="streak-heatmap">${heatHtml}</div>
                     <div class="streak-legend">
@@ -541,6 +545,12 @@ class SynthesisApp {
                     </div>
                 </div>
             </div>`;
+    }
+
+    toggleStreakHeatmap() {
+        const current = localStorage.getItem('synthesis_streak_heatmap_open') === '1';
+        localStorage.setItem('synthesis_streak_heatmap_open', current ? '0' : '1');
+        this.renderStreakSection();
     }
 
     manageFavorites() {

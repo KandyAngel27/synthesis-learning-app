@@ -181,6 +181,7 @@ class PremiumFeatures {
 
         APP_DATA.user.visionBoard.push(newVision);
         saveProgress();
+        if (window.gamification) window.gamification.updateChallengeProgress('vision');
         this.renderVisionBoard();
     }
 
@@ -516,6 +517,7 @@ class PremiumFeatures {
         todayEntry.notes = notes;
 
         saveProgress();
+        if (window.gamification) window.gamification.updateChallengeProgress('journal');
         alert('✨ Journal entry saved! Your manifestations are taking root.');
         this.renderManifestation(); // Refresh to show saved data
     }

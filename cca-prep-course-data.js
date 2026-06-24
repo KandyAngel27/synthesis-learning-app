@@ -3711,7 +3711,7 @@ If the documentation had said "torus fracture" (a less specific subcategory at S
       {
         type: "quiz",
         title: "Quick Check: 7th Character & Placeholder",
-        content: `A patient is seen for a **return visit** for routine cast care of a previously diagnosed **closed greenstick fracture of the lower end of the left radius**. The fracture is healing as expected.
+        question: `A patient is seen for a **return visit** for routine cast care of a previously diagnosed **closed greenstick fracture of the lower end of the left radius**. The fracture is healing as expected.
 
 Which ICD-10-CM code is correct?`,
         options: [
@@ -4110,7 +4110,7 @@ In this lesson you will master the UHDDS definition, the **symptom-versus-confir
       {
         type: "quiz",
         title: "Quick Check: PDX Selection",
-        content: `A patient is admitted for an **elective total hip arthroplasty** scheduled the same day. Diagnosis: severe right hip osteoarthritis.
+        question: `A patient is admitted for an **elective total hip arthroplasty** scheduled the same day. Diagnosis: severe right hip osteoarthritis.
 
 In pre-op holding, the patient has a sudden onset of **atrial fibrillation with rapid ventricular response**. The surgery is **cancelled** to manage the new arrhythmia. The patient is admitted to telemetry, rate-controlled with metoprolol, and discharged on day 2 with a cardiology follow-up. **The hip arthroplasty is rescheduled for a later date.**
 
@@ -4452,7 +4452,7 @@ This lesson walks each convention with a tabular example you might see on test d
       {
         type: "quiz",
         title: "Quick Check: NEC, NOS, and 'Code First'",
-        content: `A patient with **end-stage renal disease secondary to hypertension** is admitted for evaluation. Documentation includes: *"Hypertensive heart and chronic kidney disease, with congestive heart failure, ESRD on dialysis."*
+        question: `A patient with **end-stage renal disease secondary to hypertension** is admitted for evaluation. Documentation includes: *"Hypertensive heart and chronic kidney disease, with congestive heart failure, ESRD on dialysis."*
 
 The Tabular at **I13.2** (Hypertensive heart and CKD with HF and stage 5 CKD or ESRD) says:
 > *Use additional code to identify the type of heart failure (I50.-)*
