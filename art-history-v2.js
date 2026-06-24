@@ -37,6 +37,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Setting the Scene: Europe Around 1400",
                             content: "Imagine Europe in the late 1300s: the Black Death has killed nearly half the population, the Catholic Church is split between rival popes, and warfare is constant. Yet in royal courts from Prague to Paris to London, a remarkably unified artistic style emerges - one focused on beauty, elegance, and escape from harsh reality. This is the International Gothic style (c. 1375-1425), the last great flowering of medieval art before the Renaissance changed everything. It's called 'International' because, for the first time, art looked similar whether made in France, Italy, Bohemia, or England - aristocrats across Europe shared the same taste for graceful figures, glittering gold, and fairy-tale luxury.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">INTERNATIONAL GOTHIC: 1375-1425</text>
@@ -83,7 +84,8 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Bottom date bar -->
                                     <rect x="200" y="920" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
                                     <text x="550" y="960" text-anchor="middle" fill="#888" font-size="28">c. 1375-1425 • The last great medieval style</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -91,6 +93,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "What Makes It 'International Gothic'?",
                             content: "The International Gothic style has several defining characteristics that you can spot immediately:\n\nELEGANT S-CURVES: Figures stand in graceful, swaying poses - imagine a fashion model's contrapposto taken to an extreme. Bodies curve like flames or letters S.\n\nLAVISH GOLD: Real gold leaf covers backgrounds and details, making paintings shimmer like jewelry. This wasn't just decoration - gold symbolized divine light and heavenly realms.\n\nMINUTE DETAIL: Artists painted individual leaves on trees, patterns on fabrics, and fur on animals with obsessive precision. Viewers were meant to get lost in these tiny worlds.\n\nFLATTENED SPACE: Unlike later Renaissance art, there's no realistic depth. Figures stack vertically, and landscapes look like beautiful stage sets rather than real places.\n\nCOURTLY SUBJECTS: Scenes show aristocratic life - hunting, feasting, romance - or religious subjects treated with courtly elegance. Even the Virgin Mary looks like a fashionable noblewoman.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="42">5 KEY CHARACTERISTICS</text>
@@ -160,7 +163,8 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="80" y="900" width="940" height="150" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="960" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="29">These 5 features define International Gothic art</text>
                                     <text x="550" y="1005" text-anchor="middle" fill="#888" font-size="25">Look for them in manuscripts, altarpieces, and courtly paintings</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -168,6 +172,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Why Did This Style Spread?",
                             content: "Three factors made art 'international' for the first time:\n\n1. ROYAL MARRIAGES: When a French princess married an English king, she brought artists, manuscripts, and tastes with her. Royal families were all related, and they shared aesthetic preferences.\n\n2. TRAVELING ARTISTS: Unlike later periods when artists stayed in one city, Gothic artists moved between courts seeking patronage. A painter might work in Paris, then Prague, then Milan.\n\n3. PORTABLE ART: The most prized artworks were small - illuminated manuscripts, ivory carvings, goldsmith work. These luxury objects traveled as diplomatic gifts, spreading styles across borders.\n\nThe result: a duke in France and a duke in Italy owned art that looked remarkably similar, both reflecting the same aristocratic ideals of refinement and wealth.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="40">3 REASONS ART WENT INTERNATIONAL</text>
@@ -229,7 +234,8 @@ const ART_HISTORY_CATEGORY = {
 
                                     <!-- Arrow indicators -->
                                     <text x="550" y="1010" text-anchor="middle" fill="#888" font-size="25">Dukes in France and Italy owned remarkably similar art</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -237,6 +243,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Masterpiece: The Très Riches Heures (1412-1416)",
                             content: "The Très Riches Heures du Duc de Berry is often called the most beautiful illuminated manuscript ever created. Here's what you need to know:\n\nWHAT IT IS: A 'Book of Hours' - a personal prayer book that wealthy people used for daily devotions. It contains prayers organized by the hours of the day and the months of the year.\n\nWHO MADE IT: The Limbourg Brothers (Paul, Jean, and Herman) - three Dutch artists working for the Duke of Berry, one of the richest art collectors in history. Tragically, all three brothers and the Duke died in 1416, probably from plague, leaving the book unfinished.\n\nWHY IT MATTERS: The calendar pages are revolutionary. For each month, the brothers painted scenes of life - peasants farming, nobles hunting, castles in the background. These aren't generic scenes; they show REAL castles the Duke owned. It's like a medieval photo album of aristocratic life.\n\nTHE TECHNICAL ACHIEVEMENT: The brothers used ultramarine blue (made from crushed lapis lazuli, more expensive than gold), created shadows using scientific observation of light, and painted details so fine you need magnification to see them all.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="40">THE TRÈS RICHES HEURES</text>
@@ -298,7 +305,8 @@ const ART_HISTORY_CATEGORY = {
 
                                     <!-- Status at very bottom -->
                                     <text x="550" y="950" text-anchor="middle" fill="#666" font-size="25">Created 1412-1416 • Left unfinished when all artists died</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -306,6 +314,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Understanding a Book of Hours",
                             content: "To truly appreciate the Très Riches Heures, you need to understand what a Book of Hours was:\n\nPURPOSE: Medieval Christians structured their day around eight prayer times (called 'canonical hours'). A Book of Hours contained the prayers, psalms, and readings for each.\n\nSTRUCTURE: It typically included a calendar (showing feast days and saints), Gospel readings, prayers to the Virgin Mary, penitential psalms, and prayers for the dead.\n\nSTATUS SYMBOL: Only the wealthy could afford these handmade books. The more elaborate the decoration, the higher your status. The Duke of Berry owned several, each more luxurious than the last.\n\nPERSONAL DEVOTION: Unlike church services, these books were for private prayer. They were intimate objects - you held them, touched them, spent hours with them. The beautiful images were meant to inspire devotion and help you meditate on religious themes.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="38">THE 8 CANONICAL HOURS</text>
@@ -351,7 +360,8 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Bottom note - centered text -->
                                     <rect x="150" y="1000" width="800" height="70" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="1045" text-anchor="middle" fill="#ffd700" font-size="29">Each hour had specific prayers in the Book of Hours</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -359,6 +369,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Looking Closely: The January Page",
                             content: "Let's examine one page in detail - January from the Très Riches Heures:\n\nTHE SCENE: The Duke of Berry hosts a New Year's feast. He sits at right in a blue robe, wearing a fur hat. Guests crowd around a table laden with food. A fire screen protects him from the massive fireplace.\n\nHIDDEN DETAILS: Above the Duke's head, a canopy displays his coat of arms. The tapestry behind him shows knights in battle - probably the Trojan War. On the table, you can identify specific dishes and a golden salt cellar shaped like a ship.\n\nTHE LUNETTE: The semicircle at top shows the zodiac signs for January (Capricorn and Aquarius) and a sun chariot crossing the sky - combining astronomy with mythology.\n\nWHAT IT TELLS US: This wasn't just pretty decoration. It documents real medieval life - what people wore, what they ate, how they celebrated. Historians use these images to understand daily life in ways written records can't show.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="40">JANUARY PAGE - CLOSE ANALYSIS</text>
@@ -444,7 +455,8 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Key insight at very bottom -->
                                     <rect x="150" y="960" width="800" height="80" rx="15" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="1"/>
                                     <text x="550" y="1010" text-anchor="middle" fill="#888" font-size="25">Created 1412-1416 • Left unfinished when all artists died</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -463,6 +475,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Masterpiece: Adoration of the Magi by Gentile da Fabriano (1423)",
                             content: "This altarpiece, now in the Uffizi Gallery in Florence, represents International Gothic at its most dazzling:\n\nTHE COMMISSION: Palla Strozzi, the richest man in Florence, paid for this painting to display his wealth and piety. It was meant to outshine every other artwork in the city.\n\nTHE SUBJECT: The three Magi (wise men) present gifts to the infant Jesus. But the real subject is LUXURY - look at the brocade fabrics, the gold crowns, the exotic animals (monkeys, leopards, camels).\n\nARTISTIC ACHIEVEMENT: Gentile used more gold leaf than any other painter of his era. He created textures by pressing the gold with tools, making it catch light differently. The haloes aren't flat circles - they're stamped with intricate patterns.\n\nTHE THREE KINGS: They represent three ages of man (young, middle-aged, old) and three continents (Europe, Asia, Africa). The oldest king kneels and has removed his crown - earthly power bowing to divine power.\n\nDETAILS TO NOTICE: In the predella (bottom panels), you can follow the Magi's journey from seeing the star to their return home. Each section tells part of the story, like a medieval comic strip.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">ADORATION OF THE MAGI (1423)</text>
@@ -534,7 +547,8 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="40" y="840" width="1020" height="100" rx="16" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="33" font-weight="bold">MOST GOLD LEAF EVER USED IN A PAINTING</text>
                                     <text x="550" y="915" text-anchor="middle" fill="#888" font-size="26">Commissioned by Palla Strozzi, richest man in Florence</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -542,6 +556,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Gold in Medieval Art: More Than Decoration",
                             content: "Understanding gold's role helps you appreciate Gothic art:\n\nSPIRITUAL MEANING: Gold represented divine light - the uncreated light of heaven. A gold background didn't mean 'blank space'; it meant the scene took place in sacred, eternal space outside normal time.\n\nTECHNIQUE: Artists applied gold leaf (real gold hammered incredibly thin) over a red clay base called 'bole.' They then burnished it with agate stones to make it shine. Different tools created different textures.\n\nCOST: Gold leaf was expensive, but labor was even more so. A richly gilded painting took months of painstaking work. Patrons often specified exact amounts of gold in contracts.\n\nTHE TRANSITION: Renaissance artists eventually abandoned gold backgrounds for realistic blue skies. This wasn't 'progress' - it was a philosophical shift. Gold represented heavenly truth; blue skies represented earthly observation. Different goals, different techniques.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="40">GOLD LEAF APPLICATION PROCESS</text>
@@ -592,7 +607,8 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Bottom message - centered -->
                                     <rect x="100" y="860" width="900" height="80" rx="16" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
                                     <text x="550" y="910" text-anchor="middle" fill="#ec4899" font-size="31" font-weight="bold">Different philosophies, not "progress"</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -611,6 +627,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Memory Tool: ELEGANCE",
                             content: "Remember the key features of International Gothic with ELEGANCE:\n\nE - Elegant S-curves in figures' poses\nL - Lavish gold leaf on surfaces\nE - Exquisite patterns in textiles and details\nG - Graceful courtly scenes and subjects\nA - Animals and nature depicted with care\nN - No deep perspective (flattened space)\nC - Courtly subject matter (aristocratic life)\nE - European courts united by shared taste\n\nWhen you see a painting from this era, look for these elements. The more you find, the more 'International Gothic' the work is.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="46">E L E G A N C E</text>
@@ -703,7 +720,8 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="960" y="620" width="45" height="130" fill="#ef4444"/>
                                     <text x="925" y="875" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">FLAT SPACE</text>
                                     <text x="925" y="905" text-anchor="middle" fill="#ccc" font-size="22">No perspective depth</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -711,6 +729,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "International Gothic vs. What Came Before and After",
                             content: "Understanding context helps you identify the style:\n\nBEFORE (Earlier Gothic, 1200s-1300s):\n- Figures were stiffer and more hieratic\n- Less interest in naturalistic detail\n- Stronger Byzantine influence\n- More symbolic, less decorative\n\nINTERNATIONAL GOTHIC (c. 1375-1425):\n- Maximum elegance and decoration\n- Careful observation of nature\n- Courtly, aristocratic subjects\n- Gold and luxury materials\n\nAFTER (Early Renaissance, 1400s+):\n- Scientific perspective creates depth\n- Figures have weight and volume\n- Less gold, more realistic settings\n- Focus on human anatomy and proportion\n\nThe International Gothic was the medieval world's last artistic gasp before Renaissance humanism changed art forever.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#fff" font-weight="bold" font-size="40">ART STYLE EVOLUTION</text>
@@ -786,7 +805,8 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="60" y="860" width="980" height="130" rx="16" fill="rgba(236,72,153,0.15)" stroke="#ec4899" stroke-width="2"/>
                                     <text x="550" y="915" text-anchor="middle" fill="#ec4899" font-size="38" font-weight="bold">International Gothic = Medieval art's final flourish</text>
                                     <text x="550" y="960" text-anchor="middle" fill="#ccc" font-size="30">before Renaissance humanism changed everything</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -805,6 +825,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Conversation Starter: Why International Gothic Matters",
                             content: "When discussing this period, here are the key points that show real understanding:\n\n1. IT WAS A RESPONSE TO CRISIS: The elegance and fantasy of International Gothic emerged during one of history's worst periods - plague, war, schism. Art offered escape.\n\n2. IT SHOWS MEDIEVAL SOPHISTICATION: Far from being 'primitive,' these artists achieved incredible technical skill. They simply had different goals than Renaissance artists.\n\n3. IT WAS TRULY INTERNATIONAL: This was the first time European art was unified by style rather than region. The global art world we know today has roots here.\n\n4. IT DOCUMENTED REAL LIFE: Despite the fairy-tale quality, these images show us real clothes, real food, real castles. They're historical documents as much as art.\n\n5. IT ENDED ABRUPTLY: Within a generation, Renaissance ideas swept this style away in Italy (though it lingered longer in the North). Understanding WHY helps you understand what the Renaissance was really about.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">5 KEY TALKING POINTS</text>
@@ -853,7 +874,8 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="550" y="730" text-anchor="middle" fill="#fff" font-size="25">"International Gothic wasn't 'primitive medieval art' — it was</text>
                                     <text x="550" y="775" text-anchor="middle" fill="#fff" font-size="25">deliberately elegant escapism created during Europe's darkest hour,</text>
                                     <text x="550" y="820" text-anchor="middle" fill="#fff" font-size="25">using technical skills Renaissance artists would later envy."</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -861,6 +883,7 @@ const ART_HISTORY_CATEGORY = {
                             title: "Spotting International Gothic in Museums",
                             content: "Next time you're in a museum, here's how to identify International Gothic works:\n\nLOOK FOR: Swaying figures, gold backgrounds, intricate textile patterns, charming animals, courtly scenes, Gothic pointed arches in frames.\n\nCHECK THE DATE: Most works are from 1375-1425. Earlier is 'just' Gothic; later starts showing Renaissance influence.\n\nNOTICE THE SPACE: Is there realistic depth? If not, and figures seem to float on gold or stack vertically, it's probably International Gothic.\n\nEXAMINE FACES: International Gothic faces are idealized, sweet, somewhat generic. Renaissance faces show individual character.\n\nFAMOUS EXAMPLES TO SEEK OUT:\n- The Wilton Diptych (National Gallery, London)\n- Works by Lorenzo Monaco (Uffizi, Florence)\n- The Tres Riches Heures (facsimiles in many museums)\n- Gentile da Fabriano's works (Uffizi, Florence)",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="40" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">MUSEUM GUIDE: SPOTTING THE STYLE</text>
@@ -928,7 +951,8 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="925" y="735" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">Gentile da Fabriano</text>
                                     <text x="925" y="800" text-anchor="middle" fill="#fff" font-size="24">Uffizi Gallery</text>
                                     <text x="925" y="850" text-anchor="middle" fill="#888" font-size="24">Florence</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -972,6 +996,7 @@ const ART_HISTORY_CATEGORY = {
 
 You can now identify International Gothic art in museums!`,
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -1011,7 +1036,8 @@ You can now identify International Gothic art in museums!`,
                                     <!-- Feynman badge -->
                                     <rect x="200" y="760" width="700" height="85" rx="40" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
                                     <text x="550" y="815" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">FEYNMAN TEST READY - You can explain it!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -1030,6 +1056,7 @@ You can now identify International Gothic art in museums!`,
                             title: "The Birth of the Renaissance in Florence",
                             content: "In the early 1400s, something revolutionary happened in Florence, Italy. A small city-state of only 60,000 people became the birthplace of the Renaissance - a cultural rebirth that would transform Western art forever.\n\nWHY FLORENCE?\n• Wealthy banking families (especially the Medici) competed through art patronage\n• Republican government valued civic pride\n• Florentines saw themselves as heirs to ancient Rome\n• Competition drove innovation\n\nTHE KEY INNOVATORS:\n• Filippo Brunelleschi - invented linear perspective\n• Masaccio - first painter to fully use perspective\n• Donatello - revived classical sculpture\n• Leon Battista Alberti - wrote the rules down\n\nTHE BIG SHIFT:\nArt moved from flat, symbolic medieval style to realistic, three-dimensional space. Artists became individual celebrities, not anonymous craftsmen. The goal changed from representing the divine to capturing the visible world accurately.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="42">EARLY ITALIAN RENAISSANCE</text>
@@ -1076,7 +1103,8 @@ You can now identify International Gothic art in museums!`,
                                     <rect x="100" y="740" width="900" height="100" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
                                     <text x="550" y="785" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="26">THE KEY INVENTION: LINEAR PERSPECTIVE</text>
                                     <text x="550" y="820" text-anchor="middle" fill="#fff" font-size="20">Mathematical system to create realistic 3D space on a flat surface</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1095,6 +1123,7 @@ You can now identify International Gothic art in museums!`,
                             title: "Brunelleschi's Perspective Experiment (c. 1413)",
                             content: "Filippo Brunelleschi didn't just invent linear perspective - he PROVED it worked with an ingenious experiment that amazed Florence.\n\nTHE SETUP:\n1. He painted a small panel showing the Florence Baptistery (a famous octagonal building) using his new mathematical perspective system\n2. He drilled a small peephole through the center of the painted panel\n3. He coated a flat mirror to reflect the sky\n\nTHE DEMONSTRATION:\n1. Standing in the exact spot where he'd made the painting, he held the panel with the painted side facing away\n2. He looked through the peephole from behind at a mirror held in his other hand\n3. The painting's reflection in the mirror matched the real building PERFECTLY\n\nWHY THIS MATTERED:\n• It proved perspective could mathematically recreate how we actually see\n• Before this, artists guessed at depth - now they had a SYSTEM\n• It transformed painting from craft to science\n• Every realistic painting since uses his principles\n\nThe three key rules he established:\n1. All parallel lines converge at a single vanishing point\n2. Objects shrink proportionally with distance\n3. The vanishing point sits at the viewer's eye level",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 950" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="950" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="40">HOW BRUNELLESCHI PROVED PERSPECTIVE WORKS</text>
@@ -1231,6 +1260,7 @@ You can now identify International Gothic art in museums!`,
                             title: "Donatello's 4 Revolutionary Innovations",
                             content: "Donato di Niccolò di Betto Bardi, called Donatello, worked for over 60 years and revolutionized sculpture in ways that are still influential today.\n\nINNOVATION 1: THE BRONZE DAVID (c. 1440s)\n• First free-standing nude male sculpture since ancient Rome\n• Shocking at the time - nudity in art had been taboo for 1000 years\n• Shows David as a young boy, not a warrior - contemplative, almost feminine\n• Cast in bronze using lost-wax technique\n\nINNOVATION 2: SCHIACCIATO (ski-ah-CHA-to)\n• Italian for 'squashed' or 'flattened'\n• Ultra-shallow relief carving that creates depth illusion\n• Donatello carved figures that appear to recede into space using paper-thin variations in depth\n• Applied perspective principles to sculpture\n\nINNOVATION 3: PSYCHOLOGICAL DEPTH\n• His figures show real emotions: pride, weariness, sternness, anguish\n• Before Donatello, sculptures showed types, not individuals\n• His prophets look like real men you might meet on the street\n\nINNOVATION 4: CONTRAPPOSTO (contra-POST-oh)\n• Italian for 'counterpose'\n• Weight shifted to one leg, creating natural S-curve\n• Revived ancient Greek technique that had been lost\n• Made figures look alive, not stiff",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 800" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="800" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">DONATELLO (c. 1386-1466) - SCULPTURE MASTER</text>
@@ -1309,6 +1339,7 @@ You can now identify International Gothic art in museums!`,
                             title: "Alberti: The Man Who Wrote the Rules",
                             content: "Leon Battista Alberti didn't invent perspective or create famous sculptures - he did something equally important: he EXPLAINED how Renaissance art worked.\n\nHIS KEY WRITINGS:\n\n'ON PAINTING' (De Pictura, 1435):\n• First systematic treatise on painting\n• Explained perspective in mathematical terms anyone could learn\n• Introduced the 'window' metaphor - a painting is like looking through a window\n• Argued painters should study geometry, optics, and anatomy\n\n'ON ARCHITECTURE' (De re aedificatoria, 1452):\n• First architectural treatise since ancient Rome\n• Adapted classical principles for modern buildings\n• Influenced architecture for 400 years\n\nHIS FAMOUS QUOTE:\n'The painter who draws merely by practice and by eye, without any reason, is like a mirror which copies everything placed in front of it without being conscious of their existence.'\n\nWHY THIS MATTERS:\n• Before Alberti, artists learned by apprenticeship and imitation\n• After Alberti, art became a learnable intellectual discipline\n• His books spread Florentine ideas across Europe\n• He invented the concept of the 'Renaissance man' - someone who excels at many fields",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 800" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="800" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="44">ALBERTI: THE RENAISSANCE RULEBOOK</text>
@@ -1338,7 +1369,8 @@ You can now identify International Gothic art in museums!`,
                                     <rect x="200" y="610" width="700" height="120" rx="60" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="2"/>
                                     <text x="550" y="665" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="34">THE ORIGINAL 'RENAISSANCE MAN'</text>
                                     <text x="550" y="700" text-anchor="middle" fill="#ccc" font-size="24">Architect - Author - Athlete - Mathematician</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1357,6 +1389,7 @@ You can now identify International Gothic art in museums!`,
                             title: "Memory Tool: BMDA",
                             content: "Remember the Florentine Four with BMDA - 'Big Men Did Art':\n\nB - BRUNELLESCHI (perspective inventor)\n• Think: 'B' for 'Baptistery' - where he did his famous experiment\n• Also built the dome (B for Building)\n\nM - MASACCIO (first perspective painter)\n• Think: 'M' for 'Magic' - his Holy Trinity looks magical\n• Died young at 27 (M for Mortality)\n\nD - DONATELLO (sculpture revolutionary)\n• Think: Teenage Mutant Ninja Turtles! (named after these artists)\n• 'D' for 'David' - his famous nude\n\nA - ALBERTI (wrote the rulebook)\n• Think: 'A' for 'Author' - he wrote the theory\n• 'A' for 'All-rounder' - the Renaissance man\n\nCHRONOLOGICAL ORDER:\nBrunelleschi (1377) → Donatello (1386) → Masaccio (1401) → Alberti (1404)\n\nThe memory trick: The 'B' and 'D' came first (older generation), then 'M' and 'A' (younger generation).",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 800" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="800" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="48">B M D A</text>
@@ -1398,7 +1431,8 @@ You can now identify International Gothic art in museums!`,
                                     <rect x="80" y="570" width="940" height="110" rx="14" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="2"/>
                                     <text x="550" y="615" text-anchor="middle" fill="#3b82f6" font-size="26">CHRONOLOGICAL: B (1377) → D (1386) → M (1401) → A (1404)</text>
                                     <text x="550" y="655" text-anchor="middle" fill="#ccc" font-size="22">Older generation (BD) taught younger generation (MA)</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1406,6 +1440,7 @@ You can now identify International Gothic art in museums!`,
                             title: "Conversation Starter: Why the Early Renaissance Matters",
                             content: "Here's what you can say to show you really understand the Early Florentine Renaissance:\n\n1. 'IT WAS MORE SCIENTIFIC THAN ARTISTIC'\n'Renaissance artists didn't just have better taste - they applied mathematics, geometry, and optics to create systematic methods. Brunelleschi's perspective wasn't an artistic flourish; it was geometry.'\n\n2. 'FLORENCE WAS TINY BUT MIGHTY'\n'This revolution happened in a city of only 60,000 people - smaller than many suburbs today. But wealth, competition, and civic pride created perfect conditions for innovation.'\n\n3. 'THEY WEREN'T REJECTING RELIGION'\n'Despite the focus on human achievement, these artists were deeply religious. They used new techniques to make sacred subjects more moving, not less. Masaccio's Holy Trinity combines mathematical precision with profound spiritual meaning.'\n\n4. 'IT SPREAD THROUGH BOOKS'\n'Alberti's treatises were revolutionary because they made artistic knowledge portable. Before him, you had to apprentice in Florence to learn these techniques.'\n\n5. 'THE NINJA TURTLES CONNECTION'\n'The Teenage Mutant Ninja Turtles are named Donatello, Raphael, Michelangelo, and Leonardo - all Renaissance artists. That's actually a great memory device!'",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 850" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="850" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">5 CONVERSATION STARTERS</text>
@@ -1455,7 +1490,8 @@ You can now identify International Gothic art in museums!`,
                                     <text x="570" y="718" text-anchor="middle" fill="#ccc" font-size="22">Great memory device</text>
 
                                     <text x="550" y="810" text-anchor="middle" fill="#ffd700" font-size="28">Use these to sound knowledgeable at museums!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1493,6 +1529,7 @@ You can now identify International Gothic art in museums!`,
 
 You can now discuss Early Italian Renaissance art with confidence!`,
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -1532,7 +1569,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <!-- Feynman badge -->
                                     <rect x="200" y="760" width="700" height="85" rx="40" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
                                     <text x="550" y="815" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">FEYNMAN TEST READY - You can explain it!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -1551,6 +1589,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                             title: "A Different Kind of Renaissance",
                             content: "While Italy was revolutionizing art with perspective and classical forms, something equally revolutionary was happening in the North - in Flanders (modern Belgium), the Netherlands, and Germany.\n\nTHE NORTHERN DIFFERENCE:\n• No Roman ruins to inspire classical revival\n• Focused on OBSERVATION over mathematics\n• Perfected oil painting techniques\n• Wealthy merchant patrons (not aristocrats)\n• Domestic scenes and portraits\n\nJAN VAN EYCK (c. 1390-1441):\nThe most important Northern Renaissance painter, Van Eyck didn't invent oil painting but perfected it to an unprecedented degree. His works have a jewel-like luminosity that still amazes today.\n\nKEY CONCEPTS WE'LL EXPLORE:\n• Oil painting and glazing techniques\n• 'Disguised symbolism' - hidden meanings in everyday objects\n• The Arnolfini Portrait - most analyzed painting in Western art\n• North vs South - two valid paths to artistic truth",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">NORTHERN RENAISSANCE</text>
@@ -1598,7 +1637,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <!-- Bottom note -->
                                     <rect x="100" y="830" width="900" height="80" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
                                     <text x="550" y="880" text-anchor="middle" fill="#ffd700" font-size="22">Both North and South achieved revolutionary realism - through different methods</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1674,6 +1714,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                             type: "visual",
                             title: "Disguised Symbolism: A Visual Guide",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 750" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="750" fill="#1a1a2e"/>
                                     <text x="550" y="45" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="38">HIDDEN MEANINGS IN NORTHERN ART</text>
@@ -1728,6 +1769,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                             type: "visual",
                             title: "The Ghent Altarpiece (1432) - Masterpiece Breakdown",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="42">THE GHENT ALTARPIECE</text>
@@ -1787,6 +1829,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                             title: "Memory Tool: GOLD",
                             content: "Remember Northern Renaissance art with GOLD (what Flemish merchants had plenty of!):\n\nG - GLAZES (layered oil painting)\n• Multiple thin, transparent layers\n• Creates luminous, glowing effect\n• Van Eyck's signature technique\n\nO - OBSERVATION (microscopic detail)\n• Paint exactly what you see\n• Every hair, thread, and reflection\n• Nature over idealization\n\nL - LIGHT (realistic light effects)\n• Light behaves as in real life\n• Reflections in curved surfaces\n• Consistent shadows from specific sources\n\nD - DISGUISED SYMBOLISM\n• Religious meanings in everyday objects\n• Candle = God's presence\n• Dog = Fidelity\n• Mirror = God's all-seeing eye\n\nWhen you see a Northern Renaissance painting, look for all four elements!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="54">G  O  L  D</text>
@@ -1841,7 +1884,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="800" y="585" text-anchor="middle" fill="#fff" font-size="24">= Wealth</text>
 
                                     <text x="550" y="640" text-anchor="middle" fill="#ffd700" font-size="26">Northern art = everyday objects with sacred meaning</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1849,6 +1893,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                             title: "Conversation Starter: Northern vs Italian Art",
                             content: "Here's how to sound knowledgeable when discussing the Northern Renaissance:\n\n1. 'IT'S NOT BETTER OR WORSE - IT'S DIFFERENT'\n'Italian artists wanted ideal beauty through math; Northern artists wanted truth through observation. Both are valid approaches to representing reality.'\n\n2. 'VAN EYCK DIDN'T INVENT OIL PAINTING'\n'Despite the old myth, he perfected it. His layered glaze technique created effects impossible before - and barely matched since.'\n\n3. 'EVERYTHING HAS MEANING'\n'In Northern art, nothing is just decoration. That dog isn't just cute - it means fidelity. That candle isn't just lighting - it's God watching.'\n\n4. 'IT'S ABOUT WEALTH'\n'Flanders was the banking and trading capital of Northern Europe. Wealthy merchants wanted art that showed off their possessions - and justified their wealth with religious meaning.'\n\n5. 'THE MIRROR TRICK'\n'The convex mirror in the Arnolfini Portrait is the most famous detail in Northern art. It shows the whole room including (probably) Van Eyck himself. It's like an early selfie!'",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">5 WAYS TO SOUND LIKE AN EXPERT</text>
@@ -1894,7 +1939,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <!-- Bottom tip -->
                                     <rect x="180" y="615" width="740" height="65" rx="30" fill="rgba(255,215,0,0.2)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="657" text-anchor="middle" fill="#ffd700" font-size="26">Use these at museums to impress your friends!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -1933,6 +1979,7 @@ You can now discuss Early Italian Renaissance art with confidence!`,
 
 You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -1963,7 +2010,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Feynman badge -->
                                     <rect x="200" y="590" width="700" height="85" rx="40" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
                                     <text x="550" y="645" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="32">FEYNMAN TEST READY - You can explain it!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -2025,6 +2073,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Ming Dynasty China: 3 Masterpieces",
                             content: "The Ming Dynasty (1368-1644) produced art that influenced the entire world - and Europe specifically tried to copy it for centuries.\n\n1. BLUE-AND-WHITE PORCELAIN\n• Made from kaolin clay and fired at extreme temperatures\n• The white body was painted with cobalt blue designs\n• Europe couldn't figure out the recipe until 1709!\n• 'China' became the English word for porcelain\n• Dutch Delftware was Europe's attempt to imitate it\n\n2. SCHOLAR-PAINTING\n• Literati (educated officials) painted as personal expression, not for money\n• Landscapes represented inner spiritual states\n• 'The Four Treasures': brush, ink, inkstone, paper\n• Painting, poetry, and calligraphy were combined\n• Artists sought to capture 'qi' (life force) not just appearance\n\n3. THE FORBIDDEN CITY (1406-1420)\n• World's largest palace complex: 980 buildings, 8,886 rooms\n• Built by Emperor Yongle, who moved the capital to Beijing\n• Took 1 million workers and 100,000 craftsmen\n• Named 'Forbidden' because commoners couldn't enter\n• Central axis represents imperial cosmic order\n\nWHY MING ART MATTERS:\nMing porcelain influenced European ceramics. Ming landscape painting influenced Japanese aesthetics. Ming architecture influenced all of East Asia.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="38">MING DYNASTY MASTERPIECES</text>
@@ -2082,6 +2131,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Scholar-Painting: Art Without Money",
                             content: "In Ming China, the highest form of painting wasn't made by professional artists - it was made by scholar-officials who painted as personal expression, never for sale.\n\nTHE LITERATI IDEAL:\n• Educated men (passed civil service exams) painted for self-cultivation\n• Selling art was considered vulgar - it was given as gifts between friends\n• The goal wasn't realistic depiction but expressing inner character\n• 'Qi' (life force/energy) mattered more than likeness\n\nTHE FOUR TREASURES OF THE STUDY:\n1. BRUSH - Made from animal hair (wolf, rabbit, goat)\n2. INK - Solid stick ground with water on inkstone\n3. INKSTONE - Where ink was prepared\n4. PAPER/SILK - The painting surface\n\nTHE THREE PERFECTIONS:\nA true scholar combined:\n• PAINTING - Visual expression\n• POETRY - Written on the painting itself\n• CALLIGRAPHY - The art of beautiful writing\n\nWHY THIS MATTERS:\nThis is the opposite of European patronage where artists worked for wealthy clients. In China, the amateur ideal meant the best art came from those who didn't need to sell it.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">SCHOLAR-PAINTING: THE LITERATI IDEAL</text>
@@ -2141,7 +2191,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <rect x="600" y="890" width="400" height="80" rx="15" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <text x="800" y="940" text-anchor="middle" fill="#10b981" font-size="24">CHINA: Scholars paint freely</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2199,6 +2250,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "The Alhambra: Islamic Architecture's Masterpiece",
                             content: "The Alhambra in Granada, Spain (14th century) is the finest surviving example of Islamic palace architecture - and it profoundly influenced European design.\n\nWHAT MAKES IT SPECIAL:\n\n1. MUQARNAS (Honeycomb Vaulting)\n• Intricate 3D geometric ceilings\n• Look like stalactites or honeycombs\n• In the Hall of the Abencerrajes, 8,000+ individual cells\n• Creates illusion of infinite, dissolving space\n\n2. WATER AS ART\n• Courtyards with reflecting pools\n• Fountains create sound and coolness\n• Water mirrors architecture, doubling its beauty\n• Represents paradise (gardens, rivers)\n\n3. GEOMETRIC TILE WORK (Zellij)\n• Mathematical patterns using only 17 possible symmetry groups\n• Colors: blue, green, white, black, yellow\n• No representational images (aniconism)\n• Patterns suggest infinity - no beginning or end\n\n4. CALLIGRAPHY EVERYWHERE\n• Quranic verses and poetry carved into walls\n• Phrases like 'There is no conqueror but God'\n• Writing becomes decoration\n• The building literally speaks\n\nWHY THIS MATTERS:\nThe Alhambra shows that 'decoration' can be deeply intellectual. Every geometric pattern is based on complex mathematics. When Christians conquered Granada in 1492, they were so awed they preserved it rather than destroying it.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">THE ALHAMBRA: ISLAMIC MASTERPIECE</text>
@@ -2251,13 +2303,15 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="120" y="905" width="860" height="90" rx="15" fill="rgba(236,72,153,0.1)" stroke="#ec4899" stroke-width="2"/>
                                     <text x="550" y="945" text-anchor="middle" fill="#ec4899" font-size="22">Influenced European design:</text>
                                     <text x="550" y="975" text-anchor="middle" fill="#ec4899" font-size="22">pointed arches → Gothic cathedrals</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
                             type: "visual",
                             title: "Islamic Art: The 4 Core Principles",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="38">ISLAMIC ART: 4 CORE PRINCIPLES</text>
@@ -2306,6 +2360,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Japan: Zen Aesthetics and Ink Painting",
                             content: "While Europe developed oil painting, Japan created an entirely different aesthetic revolution during the Muromachi period (1336-1573).\n\nINK WASH PAINTING (SUIBOKU-GA):\n• Introduced from China via Zen Buddhist monks\n• Uses only black ink in varying dilutions\n• 'Ma' (negative space) is as important as what's painted\n• Spontaneous brushwork captures essence, not appearance\n• Master Sesshū (1420-1506) perfected the style\n\nZEN INFLUENCE ON ART:\n• WABI-SABI: Beauty in imperfection and transience\n• Less is more - empty space speaks\n• Art should suggest, never fully explain\n• Asymmetry preferred over symmetry\n• Natural materials in natural states\n\nTHE TEA CEREMONY (CHADŌ):\n• Tea bowls became high art objects\n• RAKU WARE: Deliberately rough, handmade ceramics\n• The 'imperfect' tea bowl worth more than 'perfect' Chinese porcelain\n• Every object in the tea room is art: scroll, flower, bowl\n\nGARDEN DESIGN:\n• DRY GARDENS (karesansui): Rocks and raked gravel = mountains and water\n• Ryōan-ji temple garden: 15 rocks, endless interpretation\n• Gardens designed to be viewed, not walked through\n• Borrowed scenery (shakkei): Framing distant landscapes\n\nWHY THIS MATTERS:\nJapanese aesthetics influenced modern Western art - Impressionists collected Japanese prints, and minimalist design echoes Zen principles.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">JAPAN: ZEN AESTHETICS</text>
@@ -2362,7 +2417,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="80" y="905" width="940" height="90" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="945" text-anchor="middle" fill="#ffd700" font-size="22">Japanese aesthetics later influenced</text>
                                     <text x="550" y="975" text-anchor="middle" fill="#ffd700" font-size="22">Impressionists and modern minimalist design</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2370,6 +2426,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Mesoamerica: Art of the Aztec and Maya",
                             content: "The Americas developed sophisticated art traditions completely independent of the Old World - then lost most of it to Spanish conquest.\n\nAZTEC EMPIRE (1428-1521):\n\nSCULPTURE:\n• Colossal stone works WITHOUT metal tools\n• Sun Stone: 24-ton calendar/cosmological diagram\n• Coatlicue: Mother goddess, 8 feet tall, covered in skulls and serpents\n• Sacrificial stones with channels for blood\n\nFEATHERWORK:\n• Most prized art form (more valuable than gold)\n• Quetzal feathers were worth more than jade\n• Headdress of Moctezuma: 450 quetzal feathers, now in Vienna\n• Almost none survives - incredibly fragile\n\nCODICES:\n• Folding books on deerskin or bark paper\n• Combined pictographic writing with images\n• Recorded history, astronomy, rituals, tribute lists\n• Spanish burned nearly all of them - fewer than 20 pre-conquest codices survive\n\nMAYA (Classic Period 250-900 CE):\n• Most sophisticated writing system in Americas\n• Elaborate painted ceramics\n• Stucco sculptures on temple facades\n• Murals at Bonampak showing war and ritual\n\nWHAT WAS LOST:\n• 99% of Aztec gold was melted into bullion\n• Featherwork rotted in humid climates\n• Codices systematically burned by Spanish priests\n• We'll never know the full scope of what existed",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="42">MESOAMERICAN ART</text>
@@ -2428,7 +2485,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="120" y="920" width="860" height="85" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="955" text-anchor="middle" fill="#ffd700" font-size="22">Moctezuma's headdress (450 quetzal feathers)</text>
                                     <text x="550" y="985" text-anchor="middle" fill="#ffd700" font-size="22">now in Vienna, Austria</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2446,6 +2504,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             type: "visual",
                             title: "Aztec Sun Stone: A Visual Breakdown",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="38">AZTEC SUN STONE</text>
@@ -2496,6 +2555,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Memory Tool: MIBA",
                             content: "Remember global art centers with MIBA - 'Making Incredible Beautiful Art':\n\nM - MING CHINA\n• Blue-and-white porcelain (Europe couldn't copy until 1709)\n• Scholar-painting (personal expression)\n• Forbidden City (world's largest palace)\n• Think: 'M' for 'Ming vase' - the iconic porcelain\n\nI - ISLAMIC WORLD\n• Infinite geometric patterns\n• Calligraphy as highest art\n• Architecture that inspired Europe\n• Think: 'I' for 'Infinite' patterns\n\nB - BENIN & IFE (Africa)\n• Bronze sculptures using lost-wax casting\n• So sophisticated Europeans couldn't believe Africans made them\n• Now at center of repatriation debates\n• Think: 'B' for 'Bronze' heads\n\nA - AZTEC & MAYA (Americas)\n• Monumental architecture without metal tools\n• Featherwork, gold, jade, codices\n• Much destroyed by Spanish conquest\n• Think: 'A' for 'Aztec Sun Stone'\n\nAll four regions had art as sophisticated as Renaissance Europe!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="48">M  I  B  A</text>
@@ -2540,7 +2600,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="890" y="550" text-anchor="middle" fill="#3b82f6" font-size="20">African bronze</text>
                                     <text x="890" y="575" text-anchor="middle" fill="#3b82f6" font-size="20">→ Modern sculpture</text>
                                     <text x="550" y="630" text-anchor="middle" fill="#888" font-size="20">Art history is global history</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2548,6 +2609,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Conversation Starter: Why Global Art Matters",
                             content: "Here's how to sound knowledgeable when discussing global art:\n\n1. 'EUROPE COPIED CHINA'\n'Ming blue-and-white porcelain was so valued that Europe spent 300 years trying to copy it. Dutch Delftware and English 'chinoiserie' were imitation attempts.'\n\n2. 'THE BENIN BRONZES DEBATE'\n'The British Museum has more Benin Bronzes than any Nigerian museum. They were taken in 1897 and Nigeria wants them back. It's one of the biggest art repatriation debates today.'\n\n3. 'LOST AFRICAN TECHNIQUES'\n'Ife and Benin artists used lost-wax bronze casting as sophisticated as any in Europe. When Europeans first saw them, they couldn't believe Africans made them.'\n\n4. 'ISLAMIC INFLUENCE ON EUROPE'\n'Gothic architecture was influenced by Islamic design. The pointed arch came from Islamic buildings. Even 'arabesque' patterns influenced European decoration.'\n\n5. 'WHAT THE SPANISH DESTROYED'\n'The Spanish conquistadors melted down almost all Aztec gold art for bullion. We'll never know how much was lost. The few surviving codices are invaluable.'",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">WHY GLOBAL ART MATTERS</text>
@@ -2584,7 +2646,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="200" y="530" width="700" height="120" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="580" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="26">CONVERSATION STARTER</text>
                                     <text x="550" y="620" text-anchor="middle" fill="#fff" font-size="22">"Art history is global history - always has been"</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2592,6 +2655,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Lesson Summary: Key Takeaways",
                             content: "You should now be able to explain:\n\n1. THE BIG PICTURE:\n• Art history is often Euro-centric but shouldn't be\n• Sophisticated art was made worldwide simultaneously\n• Trade routes connected cultures more than we realize\n\n2. MING CHINA (MIBA - M):\n• Blue-and-white porcelain (Europe couldn't copy until 1709)\n• Scholar-painting emphasized personal expression\n• Forbidden City: world's largest palace complex\n\n3. ISLAMIC WORLD (MIBA - I):\n• Infinite geometric patterns based on mathematics\n• Calligraphy as highest art form\n• Architecture influenced European Gothic\n\n4. BENIN & IFE (MIBA - B):\n• Bronze sculptures using sophisticated lost-wax casting\n• Europeans initially couldn't believe Africans made them\n• Center of major repatriation debates today\n\n5. AZTEC & MAYA (MIBA - A):\n• Monumental architecture without metal tools\n• Codices combined writing and art\n• Much destroyed by Spanish conquest\n\nYou can now discuss global art traditions with confidence!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="38">LESSON COMPLETE!</text>
@@ -2626,7 +2690,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="200" y="618" text-anchor="middle" fill="#fff" font-size="32">&#10003;</text>
     <text x="570" y="600" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">FEYNMAN TEST READY</text>
     <text x="570" y="635" text-anchor="middle" fill="#fff" font-size="22">You can explain Mannerism!</text>
-</svg>`
+</svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -2695,6 +2760,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Leonardo da Vinci: The Universal Man",
                             content: "Leonardo da Vinci (1452-1519) was history's greatest polymath - equally brilliant as painter, scientist, inventor, anatomist, and engineer. Only about 15 paintings by him survive, but each one changed art forever.\n\nHIS 4 ARTISTIC INNOVATIONS:\n\n1. SFUMATO (sfoo-MAH-toh)\n• Italian for 'smoky' or 'vanished'\n• Edges blur like smoke instead of having hard outlines\n• Creates mysterious, dreamlike quality\n• Best seen in the Mona Lisa's soft facial features\n\n2. CHIAROSCURO (key-ARE-oh-SKOO-roh)\n• Italian for 'light-dark'\n• Dramatic contrast between light and shadow\n• Makes figures seem three-dimensional\n• Creates dramatic, theatrical effects\n\n3. SCIENTIFIC OBSERVATION\n• Dissected 30+ human corpses to understand anatomy\n• Studied how light behaves in nature\n• Applied mathematics to composition\n• His notebooks contain 7,000+ pages of scientific observations\n\n4. PSYCHOLOGICAL DEPTH\n• His figures have inner lives - they think and feel\n• The Mona Lisa's enigmatic smile is the most famous example\n• Captured fleeting emotions no one had painted before\n\nWHY SO FEW PAINTINGS?\nLeonardo was a perfectionist who worked slowly and often abandoned projects. He was also distracted by science, engineering, and invention.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="38">LEONARDO DA VINCI</text>
@@ -2803,6 +2869,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Michelangelo: The Divine One",
                             content: "Michelangelo Buonarroti (1475-1564) lived to 88, working until weeks before his death. He was called 'Il Divino' (The Divine One) in his own lifetime - unprecedented honor for a living artist.\n\nHIS 4 ARTISTIC DOMAINS:\n\n1. SCULPTURE (His True Love)\n• DAVID (1501-1504): 17-foot marble giant showing moment BEFORE battle\n• PIETÀ (1498-1499): Made at age 24, only work he signed\n• MOSES (1513-1515): For Julius II's tomb, with famous 'horns'\n• 'I saw the angel in the marble and carved until I set him free'\n\n2. PAINTING (Reluctant Genius)\n• SISTINE CEILING (1508-1512): 300+ figures, 4 years on scaffolding\n• LAST JUDGMENT (1536-1541): End wall, painted in his 60s\n• 'I am not a painter' - he said it repeatedly\n• Painted standing, not lying down as myth claims\n\n3. ARCHITECTURE\n• ST. PETER'S DOME: Designed the iconic dome (finished after his death)\n• LAURENTIAN LIBRARY: Dramatic staircase in Florence\n• CAMPIDOGLIO: Civic plaza in Rome\n\n4. POETRY\n• Wrote over 300 poems, mostly sonnets\n• Themes of spiritual struggle, unrequited love, art\n• Published posthumously\n\nHIS PERSONALITY:\nDifficult, competitive, paranoid, devoutly religious, lived simply despite wealth. His rivalry with Leonardo was legendary.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="42">MICHELANGELO: IL DIVINO</text>
@@ -2857,7 +2924,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Bottom personality -->
                                     <rect x="200" y="890" width="700" height="80" rx="15" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="550" y="940" text-anchor="middle" fill="#8b5cf6" font-size="24">Difficult • Competitive • Devout • Lived simply despite wealth</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2865,6 +2933,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "The Sistine Chapel Ceiling: A Visual Guide",
                             content: "The Sistine Chapel ceiling is the most ambitious painting project in Western art. Here's how to understand it:\n\nTHE COMMISSION (1508)\n• Pope Julius II forced a reluctant Michelangelo to paint\n• Original plan: 12 apostles, simple design\n• Michelangelo negotiated: 300+ figures, complex theology\n\nTHE STRUCTURE:\n• 9 central panels tell Genesis story\n• Surrounding figures: Prophets, Sibyls, Christ's ancestors\n• Corners: David & Goliath, Judith & Holofernes, etc.\n• Architectural framework is painted illusion (trompe l'oeil)\n\nTHE 9 GENESIS SCENES (Read altar to entrance):\n1-3: Creation (Light, Heavens, Earth)\n4-6: Adam & Eve (Creation of Adam, Eve, Fall)\n7-9: Noah (Sacrifice, Flood, Drunkenness)\n\nTHE CREATION OF ADAM:\n• Most famous image: God reaching to touch Adam's finger\n• God's cloak shapes like a human brain (intentional?)\n• Adam is passive; God dynamic and powerful\n• Gap between fingers = dramatic tension\n\nTHE WORK:\n• 4 years (1508-1512), mostly alone\n• Painted standing (NOT lying down - that's a myth)\n• Complained constantly: neck bent, paint dripping in eyes\n• Wrote poems about his suffering\n\nAFTERMATH:\nJulius II died months after completion. 25 years later, Michelangelo returned to paint the Last Judgment on the altar wall.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="42">SISTINE CHAPEL CEILING</text>
@@ -2935,7 +3004,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="100" y="850" width="900" height="100" rx="15" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
                                     <text x="550" y="890" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">MYTH: He painted lying on his back</text>
                                     <text x="550" y="925" text-anchor="middle" fill="#ef4444" font-size="22">FACT: He stood on scaffolding looking up!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -2953,6 +3023,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             type: "visual",
                             title: "Michelangelo's 2 Greatest Masterpieces",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="38">MICHELANGELO'S MASTERPIECES</text>
@@ -3004,6 +3075,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             type: "visual",
                             title: "Raphael: The School of Athens Decoded",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="38">SCHOOL OF ATHENS DECODED</text>
@@ -3078,6 +3150,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Memory Tool: LMR",
                             content: "Remember the High Renaissance masters with LMR - 'Leonardo, Michelangelo, Raphael' (also the Ninja Turtles!):\n\nL - LEONARDO (1452-1519)\n• Think: 'L' for 'Layers' - his sfumato uses many translucent layers\n• Key technique: SFUMATO (smoky blending)\n• Masterpiece: MONA LISA\n• Also known for: Scientific notebooks, inventions\n• Personality: Perfectionist, left works unfinished\n\nM - MICHELANGELO (1475-1564)\n• Think: 'M' for 'Muscle' - his figures are incredibly powerful\n• Key quality: TERRIBILITÀ (awesome power)\n• Masterpiece: SISTINE CEILING, DAVID\n• Also known for: Architecture (St. Peter's dome)\n• Personality: Difficult, competitive, worked until death at 88\n\nR - RAPHAEL (1483-1520)\n• Think: 'R' for 'Refined' - perfect harmony and grace\n• Key quality: HARMONY (perfect balance)\n• Masterpiece: SCHOOL OF ATHENS\n• Also known for: Beautiful Madonnas\n• Personality: Charming, diplomatic, died young at 37\n\nFUN FACT: The Teenage Mutant Ninja Turtles are named after these artists (plus Donatello from the Early Renaissance)!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="48">L  M  R</text>
@@ -3115,7 +3188,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="200" y="560" width="700" height="100" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="600" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">REMEMBER: LMR</text>
                                     <text x="550" y="635" text-anchor="middle" fill="#fff" font-size="20">Leonardo (sfumato) • Michelangelo (terribilità) • Raphael (grazia)</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -3123,6 +3197,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Conversation Starter: High Renaissance Insights",
                             content: "Here's how to sound knowledgeable about the High Renaissance:\n\n1. 'IT WAS INCREDIBLY SHORT'\n'The High Renaissance lasted only 37 years - from about 1490 to 1527. It ended when Rome was sacked by imperial troops, scattering artists and ending the era's optimism.'\n\n2. 'THEY WERE RIVALS'\n'Leonardo and Michelangelo despised each other. When both were working in Florence around 1504, their rivalry was the talk of the city. They had completely opposite personalities and artistic philosophies.'\n\n3. 'MICHELANGELO DIDN'T WANT TO PAINT THE SISTINE'\n'He considered himself a sculptor, not a painter. Pope Julius II forced him to do it. Yet he created one of history's greatest paintings - while complaining about it in letters and poems.'\n\n4. 'THE MONA LISA ISN'T SPECIAL BECAUSE IT'S BEAUTIFUL'\n'It's special because of sfumato - the smoky blending technique Leonardo invented. Look at her face: there are no hard lines anywhere. That was revolutionary.'\n\n5. 'RAPHAEL SYNTHESIZED EVERYTHING'\n'Raphael wasn't the most original of the three, but he combined Leonardo's sfumato with Michelangelo's powerful figures into perfect harmony. The School of Athens is basically a greatest hits of Renaissance techniques.'",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">HIGH RENAISSANCE CONVERSATION STARTERS</text>
@@ -3160,7 +3235,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <rect x="200" y="610" width="700" height="60" rx="30" fill="rgba(255,215,0,0.2)" stroke="#ffd700"/>
                                     <text x="550" y="650" text-anchor="middle" fill="#ffd700" font-size="22">Use these facts to impress at any museum!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -3168,6 +3244,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Lesson Summary: Key Takeaways",
                             content: "You should now be able to explain:\n\n1. WHAT IS THE HIGH RENAISSANCE?\n• Brief period c. 1490-1527 (only 37 years)\n• Peak of Renaissance artistic achievement\n• Ended with Sack of Rome in 1527\n\n2. LEONARDO DA VINCI (L in LMR)\n• Sfumato technique (smoky blending)\n• Scientific observation in art\n• Only ~15 paintings survive (perfectionist)\n• Mona Lisa, Last Supper, Vitruvian Man\n\n3. MICHELANGELO (M in LMR)\n• Terribilità (awesome power in figures)\n• Considered himself a sculptor first\n• Sistine Ceiling, David, Pietà, St. Peter's dome\n• Lived to 88, working until weeks before death\n\n4. RAPHAEL (R in LMR)\n• Perfect harmony and grace\n• Synthesized Leonardo + Michelangelo techniques\n• School of Athens, Sistine Madonna\n• Died young at 37\n\n5. KEY TECHNIQUES:\n• Sfumato = smoky blending (Leonardo)\n• Chiaroscuro = light/dark contrast\n• Terribilità = awesome power (Michelangelo)\n• Contrapposto = natural S-curve pose\n\nYou can now discuss the High Renaissance masters with confidence!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1024" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1024" fill="#1a1a2e"/>
                                     <text x="550" y="79" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -3203,7 +3280,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="200" y="728" text-anchor="middle" fill="#fff" font-size="36">✓</text>
                                     <text x="600" y="700" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="32">FEYNMAN TEST READY</text>
                                     <text x="600" y="738" text-anchor="middle" fill="#fff" font-size="26">You can explain the High Renaissance!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -3264,6 +3342,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             type: "visual",
                             title: "5 Rules Mannerists Broke",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 750" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="750" fill="#1a1a2e"/>
     <text x="550" y="50" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="36">MANNERISM: BREAKING RENAISSANCE RULES</text>
@@ -3329,6 +3408,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "The Key Mannerist Artists",
                             content: "Meet the masters who deliberately broke Renaissance rules:\n\nPARMIGIANINO (1503-1540)\n• Created Madonna with the Long Neck\n• Master of elegant elongation\n• Also known for Self-Portrait in a Convex Mirror\n• Died at 37, obsessed with alchemy\n\nPONTORMO (1494-1557)\n• Painted Deposition from the Cross\n• Acid pink and pale green palette\n• Extreme emotional intensity\n• Became a recluse in later life\n\nBRONZINO (1503-1572)\n• Court painter to the Medici\n• Portraits with icy perfection\n• Allegory with Venus and Cupid = iconic Mannerism\n• Cold, alabaster flesh tones\n\nGIAMBOLOGNA (1529-1608)\n• Master of figura serpentinata in sculpture\n• Rape of the Sabine Women = spiraling perfection\n• Figures meant to be viewed from all angles\n• Created Mercury and other bronzes\n\nEL GRECO (1541-1614)\n• Took Mannerism to Spain\n• Extreme elongation + spiritual ecstasy\n• View of Toledo = stormy expressionism\n• Influenced modern Expressionism",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="42">MANNERIST MASTERS</text>
@@ -3376,13 +3456,15 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Bottom fact -->
                                     <rect x="200" y="900" width="700" height="70" rx="15" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="550" y="945" text-anchor="middle" fill="#8b5cf6" font-size="22">All five artists shared: elongation, strange colors, twisted poses</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
                             type: "visual",
                             title: "Artwork Spotlight: Madonna with the Long Neck (c. 1535)",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 750" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="750" fill="#1a1a2e"/>
     <text x="550" y="45" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="34">PARMIGIANINO'S MANNERIST MASTERPIECE</text>
@@ -3446,6 +3528,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Memory Tool: SEALS",
                             content: "Remember Mannerism's 5 rule-breaking characteristics with SEALS:\n\nS - SERPENTINATA (figura serpentinata)\n• Twisted, spiraling poses like a serpent\n• Bodies curve impossibly\n• Think: 'S' for the S-curve shape\n\nE - ELONGATION\n• Impossibly long necks, fingers, limbs\n• 'Madonna with Long Neck' = perfect example\n• Anti-natural proportions\n\nA - ACID COLORS\n• Cool pinks, lime greens, icy blues\n• Not the warm Renaissance palette\n• Unsettling, otherworldly\n\nL - LIMBO SPACE\n• Ambiguous, crowded compositions\n• Unclear foreground/background\n• Spatial confusion is deliberate\n\nS - SELF-CONSCIOUS STYLE\n• Art that shows off being artificial\n• 'Maniera' = stylishness over naturalism\n• Sophistication over sincerity\n\nREMEMBER THE CONTEXT:\nSack of Rome (1527) + Reformation = Crisis → Mannerism",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
     <text x="550" y="50" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="42">S E A L S</text>
@@ -3497,7 +3580,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <rect x="80" y="530" width="940" height="80" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
     <text x="550" y="570" text-anchor="middle" fill="#8b5cf6" font-size="24">KEY WORK: Madonna with the Long Neck (Parmigianino)</text>
     <text x="550" y="595" text-anchor="middle" fill="#ccc" font-size="20">Shows all 5 SEALS characteristics!</text>
-</svg>`
+</svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -3505,6 +3589,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Conversation Starter: Understanding Mannerism",
                             content: "Here's how to sound knowledgeable about Mannerism:\n\n1. 'IT WAS A REACTION TO PERFECTION'\n'After Raphael died in 1520, artists couldn't out-perfect perfection. So they deliberately broke the rules - like a jazz musician who knows the rules well enough to break them interestingly.'\n\n2. 'IT'S NOT 'BAD' RENAISSANCE ART'\n'For centuries, critics dismissed Mannerism as decadent. Now we recognize it as a sophisticated response to crisis - art that reflects the anxiety of its time.'\n\n3. 'LOOK AT THE NECKS'\n'The easiest way to spot Mannerism is impossibly long necks. The Madonna with Long Neck is the most famous example - her neck is literally swan-like.'\n\n4. 'THE COLORS ARE A GIVEAWAY'\n'Mannerist colors are acid and cool - pinks, lime greens, icy blues. Renaissance colors are warm - deep reds, rich browns. The palette alone tells you the era.'\n\n5. 'EL GRECO WAS A MANNERIST'\n'Most people know El Greco's elongated figures but don't realize he was a Mannerist. His lightning-flashed skies and stretched saints are textbook Mannerism.'",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
     <text x="550" y="50" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="34">5 MANNERISM CONVERSATION STARTERS</text>
@@ -3548,7 +3633,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <!-- Bottom bar -->
     <rect x="100" y="550" width="900" height="70" rx="35" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6"/>
     <text x="550" y="595" text-anchor="middle" fill="#8b5cf6" font-size="26">Now you can spot Mannerism anywhere!</text>
-</svg>`
+</svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -3567,6 +3653,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Lesson Summary: Key Takeaways",
                             content: "You should now be able to explain:\n\n1. WHAT IS MANNERISM?\n• Art style c. 1520-1600\n• Deliberate rule-breaking after High Renaissance 'perfection'\n• Name from 'maniera' (stylishness)\n\n2. WHY DID IT EMERGE?\n• 1517: Protestant Reformation\n• 1527: Sack of Rome\n• Crisis shattered Renaissance confidence\n• Artists responded with unsettling elegance\n\n3. THE 5 SEALS:\n• S - Serpentinata (twisted poses)\n• E - Elongation (long necks, fingers)\n• A - Acid colors (cool pinks, icy blues)\n• L - Limbo space (ambiguous depth)\n• S - Self-conscious style (artificial elegance)\n\n4. KEY WORKS:\n• Madonna with Long Neck (Parmigianino)\n• Descent from the Cross (Pontormo)\n• El Greco's stretched saints\n• Giambologna's spiraling sculptures\n\n5. HOW TO SPOT IT:\n• Long necks and fingers\n• Cool, unusual colors\n• Crowded, unclear spaces\n• Twisted, spiraling poses\n\nYou can now identify Mannerism with confidence!",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1024" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1024" fill="#1a1a2e"/>
                                     <text x="550" y="79" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -3596,7 +3683,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="239" y="728" text-anchor="middle" fill="#fff" font-size="42">✓</text>
                                     <text x="583" y="704" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="34">FEYNMAN TEST READY</text>
                                     <text x="583" y="740" text-anchor="middle" fill="#fff" font-size="29">You can explain Mannerism!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
@@ -5320,6 +5408,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Bernini's 4 Masterpieces",
                             content: "These four works define Baroque sculpture:\n\n**1. APOLLO AND DAPHNE (1622-1625)**\nBernini was only 24 when he completed this. It captures the EXACT moment Daphne transforms into a laurel tree to escape Apollo. Her fingers become branches. Bark crawls up her legs. You can see the horror on her face and Apollo's shock.\n\nTechnical miracle: Multiple textures in one stone—smooth flesh, rough bark, delicate leaves.\n\n**2. DAVID (1623-1624)**\nForget Michelangelo's calm, contemplative David. Bernini's David is MOVING—caught mid-sling, face twisted with concentration, muscles tensed. You want to duck. This is action sculpture.\n\n**3. THE ECSTASY OF ST. TERESA (1647-1652)**\nA nun experiencing divine rapture as an angel prepares to pierce her heart with a golden arrow. The most controversial Baroque sculpture—is this religious ecstasy or something more sensual? Bernini wanted that ambiguity.\n\n**4. THE BALDACHIN IN ST. PETER'S (1624-1633)**\n95 feet of spiraling bronze columns over the main altar. Bernini invented a new architectural form. The bronze was taken from the Pantheon (scandalizing Romans).",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="42">BERNINI'S 4 MASTERPIECES</text>
@@ -5362,7 +5451,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Bottom fact -->
                                     <rect x="200" y="900" width="700" height="70" rx="15" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="550" y="945" text-anchor="middle" fill="#8b5cf6" font-size="22">Worked for 8 popes • Designed St. Peter's Square</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -5381,6 +5471,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "The Ecstasy of St. Teresa: Detailed Analysis",
                             content: "This is the most analyzed—and most controversial—sculpture in art history.\n\n**THE SCENE:**\nSt. Teresa of Ávila, a 16th-century Spanish nun, described a vision where an angel pierced her heart with a golden arrow, causing pain and ecstasy simultaneously. Bernini captured this exact moment.\n\n**WHAT YOU SEE:**\n• Teresa reclines on clouds (carved marble looking like vapor)\n• Her eyes are closed, lips parted, head thrown back\n• An angel smiles as he prepares to thrust the golden arrow\n• Golden rays of light descend from a hidden window above\n• Teresa's robes twist and flow as if caught in divine wind\n\n**THE CONTROVERSY:**\nTeresa's expression looks... orgasmic. Was Bernini making a theological point about the body-soul connection, or something more subversive? He never said. The ambiguity is intentional.\n\n**THEATRICAL SETTING:**\nBernini placed the sculpture in a chapel he designed, with marble 'box seats' on either side showing the Cornaro family 'watching' the vision—turning sacred art into theater.\n\n**TECHNICAL MASTERY:**\nThe clouds are marble. The fabric is marble. The arrow is gilded bronze. The rays are real light. Bernini unified sculpture, architecture, painting (the ceiling fresco), and lighting into one overwhelming experience.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="42">ECSTASY OF ST. TERESA</text>
@@ -5421,7 +5512,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="200" y="830" width="700" height="100" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="550" y="875" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="26">REMEMBER</text>
                                     <text x="550" y="910" text-anchor="middle" fill="#fff" font-size="22">Bernini's goal: Make you FEEL, not think. Bypass intellect, hit emotion.</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -5440,6 +5532,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Bernini vs Borromini: The Baroque Rivalry",
                             content: "While Bernini dominated Rome, he had one fierce rival: Francesco Borromini (1599-1667).\n\n**THE CONTRAST:**\n\nBERNINI:\n• Charming, politically savvy, beloved by popes\n• Worked in sculpture AND architecture\n• St. Peter's Square, Baldachin, fountains\n• Theatrical, emotional, classical foundations\n• Rich, famous, lived to 81\n\nBORROMINI:\n• Difficult, depressive, intensely private\n• Purely an architect\n• San Carlo alle Quattro Fontane, Sant'Ivo\n• Geometric, intellectual, revolutionary\n• Died by suicide at 67, largely forgotten\n\n**THEIR CLASH:**\nThey started as collaborators on St. Peter's Baldachin. Then became bitter enemies. Bernini got the big commissions; Borromini seethed.\n\n**BORROMINI'S REVENGE:**\nModern architects prefer Borromini. His complex geometries and innovative spaces influenced 20th-century architecture far more than Bernini's crowd-pleasing theatrics.\n\n**THE LESSON:**\nSuccess in your lifetime doesn't guarantee lasting influence. The outsider can have the last word.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#fff" font-weight="bold" font-size="42">BAROQUE RIVALRY</text>
@@ -5481,7 +5574,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="300" y="850" text-anchor="middle" fill="#f59e0b" font-size="20">Baldachin, Fountains</text>
                                     <text x="800" y="820" text-anchor="middle" fill="#8b5cf6" font-size="20">Borromini: San Carlo</text>
                                     <text x="800" y="850" text-anchor="middle" fill="#8b5cf6" font-size="20">Sant'Ivo alla Sapienza</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         },
                         {
@@ -5489,6 +5583,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                             title: "Lesson Summary: Bernini",
                             content: "You should now understand:\n\n**WHO WAS BERNINI?**\n• Gian Lorenzo Bernini (1598-1680)\n• 'The Michelangelo of the Baroque'\n• Sculptor, architect, painter, theatrical designer\n• Worked for 8 popes, most famous artist in Europe for 50 years\n\n**HIS 4 MASTERPIECES:**\n1. Apollo and Daphne - transformation mid-moment\n2. David - action vs Michelangelo's contemplation\n3. Ecstasy of St. Teresa - controversial rapture\n4. St. Peter's Baldachin - 95 feet of bronze\n\n**WHAT MADE HIM REVOLUTIONARY:**\n• Made marble look like flesh, fabric, clouds\n• Captured figures mid-movement\n• Unified sculpture + architecture + lighting + painting\n• Art as theater—designed to overwhelm emotion\n\n**THE RIVALRY:**\nBernini vs Borromini = Theater vs Geometry = Fame vs Legacy\n\n**KEY CONCEPT:**\nBernini's goal was to bypass intellect and hit you directly in the gut. You FEEL his art before you think about it.",
                             visual: {
+                                type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <text x="550" y="55" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
@@ -5525,7 +5620,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="200" y="690" width="700" height="100" rx="50" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
                                     <text x="550" y="740" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">FEYNMAN TEST READY</text>
                                     <text x="550" y="775" text-anchor="middle" fill="#fff" font-size="22">You can explain Bernini to anyone!</text>
-                                </svg>`
+                                </svg>`,
+                                caption: "Lesson visual"
                             }
                         }
                     ]
