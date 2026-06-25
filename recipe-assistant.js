@@ -80,12 +80,6 @@ function hideRecipeAssistant() {
     addAssistantMessage('Recipe Assistant hidden. You can re-enable it in Profile > Settings.');
 }
 
-// Show assistant (called from settings)
-function showRecipeAssistant() {
-    localStorage.setItem('synthesis_hide_recipe_assistant', 'false');
-    // Will show on next visit to nutrition hub
-}
-
 // Add a message to the chat
 function addAssistantMessage(text, isHtml = false) {
     const messages = document.getElementById('ra-messages');
@@ -378,95 +372,6 @@ function saveRecipeToMyRecipes() {
 
     // Close the assistant and return to Nutrition Hub
     hideRecipeAssistant();
-}
-
-// Get random recipe suggestion
-async function getRandomRecipe() {
-    addUserMessage('Surprise me!');
-    addAssistantMessage('Finding a random recipe for you...');
-
-    try {
-        let response;
-        let data;
-
-        try {
-            response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
-            data = await response.json();
-        } catch (corsError) {
-            console.log('Direct random fetch failed, trying CORS proxy...');
-            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.themealdb.com/api/json/v1/1/random.php')}`);
-            data = await response.json();
-        }
-
-        const messages = document.getElementById('ra-messages');
-        messages.removeChild(messages.lastChild);
-
-        if (data.meals && data.meals[0]) {
-            const meal = data.meals[0];
-
-            let html = `
-                <p>How about this?</p>
-                <div class="ra-recipes">
-                    <div class="ra-recipe-card" onclick="showRecipeDetails('${meal.idMeal}')">
-                        <img src="${meal.strMealThumb}/preview" alt="${meal.strMeal}">
-                        <span>${meal.strMeal}</span>
-                    </div>
-                </div>
-            `;
-
-            addAssistantMessage(html, true);
-        }
-    } catch (error) {
-        console.error('Random recipe error:', error);
-        const messages = document.getElementById('ra-messages');
-        if (messages.lastChild) messages.removeChild(messages.lastChild);
-        addAssistantMessage('Sorry, there was an error. Please try again.');
-    }
-}
-
-// Search by category
-async function searchByCategory(category) {
-    addUserMessage(`Show me ${category} recipes`);
-    addAssistantMessage('Searching...');
-
-    try {
-        let response;
-        let data;
-
-        try {
-            response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${encodeURIComponent(category)}`);
-            data = await response.json();
-        } catch (corsError) {
-            console.log('Direct category fetch failed, trying CORS proxy...');
-            response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)}`);
-            data = await response.json();
-        }
-
-        const messages = document.getElementById('ra-messages');
-        messages.removeChild(messages.lastChild);
-
-        if (data.meals && data.meals.length > 0) {
-            const recipes = data.meals.slice(0, 6);
-
-            let html = `<p>${category} recipes:</p>`;
-            html += '<div class="ra-recipes">';
-
-            for (const meal of recipes) {
-                html += `
-                    <div class="ra-recipe-card" onclick="showRecipeDetails('${meal.idMeal}')">
-                        <img src="${meal.strMealThumb}/preview" alt="${meal.strMeal}">
-                        <span>${meal.strMeal}</span>
-                    </div>
-                `;
-            }
-
-            html += '</div>';
-            addAssistantMessage(html, true);
-        }
-    } catch (error) {
-        console.error('Category search error:', error);
-        addAssistantMessage('Sorry, there was an error. Please try again.');
-    }
 }
 
 // Show more results from the last search

@@ -824,10 +824,6 @@ class ActiveRecallSystem {
     }
 }
 
-// Initialize active recall system
-let activeRecall;
-document.addEventListener('DOMContentLoaded', () => {
-    // Will be initialized when app is ready
-});
+// (Active recall is initialized by app.js via new ActiveRecallSystem(this).)
 
 window.ActiveRecallSystem = ActiveRecallSystem;

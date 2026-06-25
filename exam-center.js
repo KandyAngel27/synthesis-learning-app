@@ -860,11 +860,6 @@ class ExamCenter {
         }
     }
 
-    nextLessonName(bookId, lessonId) {
-        const nxt = this.nextLessonInfo(bookId, lessonId);
-        return nxt ? nxt.title : null;
-    }
-
     // Returns the next lesson across the whole curriculum (crosses book
     // boundaries), or null if this is the last lesson of the last book.
     nextLessonInfo(bookId, lessonId) {

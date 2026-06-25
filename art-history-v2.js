@@ -379,7 +379,7 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="30" y="140" width="200" height="130" rx="12" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
                                     <text x="130" y="180" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">LUNETTE</text>
                                     <text x="130" y="210" text-anchor="middle" fill="#fff" font-size="25">Zodiac signs</text>
-                                    <text x="130" y="240" text-anchor="middle" fill="#888" font-size="25">♑ ♒</text>
+                                    <text x="130" y="240" text-anchor="middle" fill="#888" font-size="25"> </text>
 
                                     <rect x="30" y="280" width="200" height="130" rx="12" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="2"/>
                                     <text x="130" y="320" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="bold">TAPESTRY</text>
@@ -392,8 +392,8 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Lunette at top -->
                                     <path d="M 265 155 Q 520 85 775 155 L 775 230 Q 520 175 265 230 Z" fill="#1e3a5f"/>
                                     <circle cx="520" cy="185" r="55" fill="#ffd700"/>
-                                    <text x="360" y="195" fill="#fff" font-size="34">♑</text>
-                                    <text x="680" y="195" fill="#fff" font-size="34">♒</text>
+                                    <text x="360" y="195" fill="#fff" font-size="34"></text>
+                                    <text x="680" y="195" fill="#fff" font-size="34"></text>
 
                                     <!-- Tapestry area -->
                                     <rect x="265" y="245" width="510" height="150" fill="#8b0000"/>
@@ -502,7 +502,7 @@ const ART_HISTORY_CATEGORY = {
                                     <ellipse cx="470" cy="440" rx="55" ry="90" fill="#dc143c"/>
                                     <circle cx="470" cy="370" r="30" fill="#ffe4c4"/>
                                     <circle cx="505" cy="330" r="25" fill="#ffd700"/>
-                                    <text x="505" y="340" text-anchor="middle" fill="#8b4513" font-size="28">♛</text>
+                                    <text x="505" y="340" text-anchor="middle" fill="#8b4513" font-size="28"></text>
 
                                     <!-- Middle-aged King -->
                                     <ellipse cx="590" cy="420" rx="60" ry="110" fill="#228b22"/>
@@ -656,14 +656,14 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="940" y="145" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="40">G</text>
                                     <text x="940" y="180" text-anchor="middle" fill="#fff" font-size="26">Graceful</text>
                                     <text x="940" y="210" text-anchor="middle" fill="#fff" font-size="26">courtly</text>
-                                    <text x="940" y="240" text-anchor="middle" fill="#10b981" font-size="28">👑</text>
+                                    <text x="940" y="240" text-anchor="middle" fill="#10b981" font-size="28"></text>
 
                                     <!-- Row 2: A N C E - more spacing from row 1 -->
                                     <rect x="40" y="300" width="240" height="160" rx="14" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
                                     <text x="160" y="335" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="40">A</text>
                                     <text x="160" y="370" text-anchor="middle" fill="#fff" font-size="26">Animals &</text>
                                     <text x="160" y="400" text-anchor="middle" fill="#fff" font-size="26">nature</text>
-                                    <text x="160" y="435" text-anchor="middle" fill="#f59e0b" font-size="28">🦌</text>
+                                    <text x="160" y="435" text-anchor="middle" fill="#f59e0b" font-size="28"></text>
 
                                     <rect x="300" y="300" width="240" height="160" rx="14" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="3"/>
                                     <text x="420" y="335" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="40">N</text>
@@ -676,13 +676,13 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="680" y="335" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="40">C</text>
                                     <text x="680" y="370" text-anchor="middle" fill="#fff" font-size="26">Courtly</text>
                                     <text x="680" y="400" text-anchor="middle" fill="#fff" font-size="26">subjects</text>
-                                    <text x="680" y="435" text-anchor="middle" fill="#ef4444" font-size="28">🏰</text>
+                                    <text x="680" y="435" text-anchor="middle" fill="#ef4444" font-size="28"></text>
 
                                     <rect x="820" y="300" width="240" height="160" rx="14" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="3"/>
                                     <text x="940" y="335" text-anchor="middle" fill="#a855f7" font-weight="bold" font-size="40">E</text>
                                     <text x="940" y="370" text-anchor="middle" fill="#fff" font-size="26">European</text>
                                     <text x="940" y="400" text-anchor="middle" fill="#fff" font-size="26">courts</text>
-                                    <text x="940" y="435" text-anchor="middle" fill="#a855f7" font-size="28">🌍</text>
+                                    <text x="940" y="435" text-anchor="middle" fill="#a855f7" font-size="28"></text>
 
                                     <!-- Visual example at bottom - more spacing from letters -->
                                     <rect x="40" y="500" width="1020" height="460" rx="16" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
@@ -5162,7 +5162,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Feynman badge -->
                                     <rect x="212" y="570" width="636" height="68" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
-                                    <text x="550" y="616" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">🎓 Ready to explain Baroque to anyone!</text>
+                                    <text x="550" y="616" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31"> Ready to explain Baroque to anyone!</text>
                                 </svg>`,
                                 caption: "You now understand the foundations of Baroque art"
                             }
@@ -5337,7 +5337,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="498" text-anchor="middle" fill="#888" font-size="27">You don't need perfect beauty to depict the divine</text>
 
                                     <rect x="212" y="534" width="636" height="72" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
-                                    <text x="550" y="582" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">🎓 You can now explain Caravaggio's revolution!</text>
+                                    <text x="550" y="582" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31"> You can now explain Caravaggio's revolution!</text>
                                 </svg>`,
                                 caption: "The outlaw genius who changed how we see"
                             }
@@ -5793,13 +5793,13 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="40" y="675" width="1020" height="180" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444"/>
                                     <text x="550" y="715" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="31">SURPRISING FACTS</text>
 
-                                    <text x="280" y="765" text-anchor="middle" fill="#fff" font-size="26">🎨 Size: 11.9 × 14.3 ft</text>
+                                    <text x="280" y="765" text-anchor="middle" fill="#fff" font-size="26"> Size: 11.9 × 14.3 ft</text>
                                     <text x="280" y="800" text-anchor="middle" fill="#888" font-size="22">One of largest Dutch paintings</text>
 
-                                    <text x="550" y="765" text-anchor="middle" fill="#fff" font-size="26">✂️ Originally larger</text>
+                                    <text x="550" y="765" text-anchor="middle" fill="#fff" font-size="26"> Originally larger</text>
                                     <text x="550" y="800" text-anchor="middle" fill="#888" font-size="22">Trimmed to fit new location</text>
 
-                                    <text x="820" y="765" text-anchor="middle" fill="#fff" font-size="26">☀️ Not "Night"!</text>
+                                    <text x="820" y="765" text-anchor="middle" fill="#fff" font-size="26"> Not "Night"!</text>
                                     <text x="820" y="800" text-anchor="middle" fill="#888" font-size="22">Daytime scene; dark varnish</text>
 
                                     <!-- Bottom note -->
@@ -5879,16 +5879,16 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="100" y="530" width="900" height="160" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
                                     <text x="550" y="575" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="31">WHY 90+ SELF-PORTRAITS?</text>
 
-                                    <text x="250" y="625" text-anchor="middle" fill="#fff" font-size="24">🎨 Practice</text>
+                                    <text x="250" y="625" text-anchor="middle" fill="#fff" font-size="24"> Practice</text>
                                     <text x="250" y="660" text-anchor="middle" fill="#888" font-size="20">Study of expressions</text>
 
-                                    <text x="450" y="625" text-anchor="middle" fill="#fff" font-size="24">💰 Marketing</text>
+                                    <text x="450" y="625" text-anchor="middle" fill="#fff" font-size="24"> Marketing</text>
                                     <text x="450" y="660" text-anchor="middle" fill="#888" font-size="20">Show off skills</text>
 
-                                    <text x="650" y="625" text-anchor="middle" fill="#fff" font-size="24">🔍 Self-Analysis</text>
+                                    <text x="650" y="625" text-anchor="middle" fill="#fff" font-size="24"> Self-Analysis</text>
                                     <text x="650" y="660" text-anchor="middle" fill="#888" font-size="20">Understand aging</text>
 
-                                    <text x="850" y="625" text-anchor="middle" fill="#fff" font-size="24">❓ Humanity</text>
+                                    <text x="850" y="625" text-anchor="middle" fill="#fff" font-size="24"> Humanity</text>
                                     <text x="850" y="660" text-anchor="middle" fill="#888" font-size="20">What does it mean?</text>
 
                                     <!-- Key Self-Portraits -->
@@ -5956,7 +5956,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- The touching hands -->
                                     <circle cx="535" cy="350" r="30" fill="rgba(255,215,0,0.4)" stroke="#ffd700" stroke-width="3"/>
-                                    <text x="535" y="355" text-anchor="middle" fill="#fff" font-size="16">❤️</text>
+                                    <text x="535" y="355" text-anchor="middle" fill="#fff" font-size="16"></text>
                                     <text x="535" y="420" text-anchor="middle" fill="#ffd700" font-size="20">THE GESTURE</text>
                                     <text x="535" y="450" text-anchor="middle" fill="#888" font-size="18">Gentle, intimate, eternal</text>
 
@@ -5993,7 +5993,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Location -->
                                     <rect x="300" y="990" width="500" height="50" rx="15" fill="rgba(255,255,255,0.05)"/>
-                                    <text x="550" y="1025" text-anchor="middle" fill="#ffd700" font-size="24">📍 Rijksmuseum, Amsterdam</text>
+                                    <text x="550" y="1025" text-anchor="middle" fill="#ffd700" font-size="24"> Rijksmuseum, Amsterdam</text>
                                 </svg>`,
                                 caption: "Van Gogh would give 10 years of his life to sit before this painting"
                             }
@@ -6319,7 +6319,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Location -->
                                     <rect x="300" y="960" width="500" height="50" rx="15" fill="rgba(255,255,255,0.05)"/>
-                                    <text x="550" y="995" text-anchor="middle" fill="#ffd700" font-size="24">📍 Mauritshuis, The Hague</text>
+                                    <text x="550" y="995" text-anchor="middle" fill="#ffd700" font-size="24"> Mauritshuis, The Hague</text>
                                 </svg>`,
                                 caption: "Two dabs of white paint create an immortal pearl"
                             }
@@ -6397,7 +6397,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Location -->
                                     <rect x="300" y="975" width="500" height="50" rx="15" fill="rgba(255,255,255,0.05)"/>
-                                    <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="24">📍 Rijksmuseum, Amsterdam</text>
+                                    <text x="550" y="1010" text-anchor="middle" fill="#ffd700" font-size="24"> Rijksmuseum, Amsterdam</text>
                                 </svg>`,
                                 caption: "350 years of pouring milk in eternal stillness"
                             }
@@ -6630,11 +6630,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="185" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="29">WHAT IS A FÊTE GALANTE?</text>
                                     <text x="550" y="225" text-anchor="middle" fill="#fff" font-size="24">An elegant outdoor party—a new genre Watteau invented</text>
 
-                                    <text x="220" y="280" text-anchor="middle" fill="#888" font-size="20">🌳 Park/garden</text>
-                                    <text x="380" y="280" text-anchor="middle" fill="#888" font-size="20">👗 Silk & satin</text>
-                                    <text x="550" y="280" text-anchor="middle" fill="#888" font-size="20">🎵 Music/dance</text>
-                                    <text x="720" y="280" text-anchor="middle" fill="#888" font-size="20">💕 Flirtation</text>
-                                    <text x="880" y="280" text-anchor="middle" fill="#888" font-size="20">😢 Melancholy</text>
+                                    <text x="220" y="280" text-anchor="middle" fill="#888" font-size="20"> Park/garden</text>
+                                    <text x="380" y="280" text-anchor="middle" fill="#888" font-size="20"> Silk & satin</text>
+                                    <text x="550" y="280" text-anchor="middle" fill="#888" font-size="20"> Music/dance</text>
+                                    <text x="720" y="280" text-anchor="middle" fill="#888" font-size="20"> Flirtation</text>
+                                    <text x="880" y="280" text-anchor="middle" fill="#888" font-size="20"> Melancholy</text>
 
                                     <!-- Pilgrimage to Cythera -->
                                     <rect x="100" y="375" width="900" height="280" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
@@ -6749,7 +6749,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Location -->
                                     <rect x="300" y="915" width="500" height="50" rx="15" fill="rgba(255,255,255,0.05)"/>
-                                    <text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="24">📍 Wallace Collection, London</text>
+                                    <text x="550" y="950" text-anchor="middle" fill="#ffd700" font-size="24"> Wallace Collection, London</text>
                                 </svg>`,
                                 caption: "A flying shoe tells a scandalous story"
                             }
@@ -7036,17 +7036,17 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="140" y="460" width="260" height="100" rx="10" fill="rgba(16,185,129,0.2)"/>
                                     <text x="270" y="495" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">FULLY AUTOGRAPH</text>
                                     <text x="270" y="525" text-anchor="middle" fill="#fff" font-size="18">100% by Rubens</text>
-                                    <text x="270" y="550" text-anchor="middle" fill="#888" font-size="16">💰💰💰 Most expensive</text>
+                                    <text x="270" y="550" text-anchor="middle" fill="#888" font-size="16"> Most expensive</text>
 
                                     <rect x="420" y="460" width="260" height="100" rx="10" fill="rgba(245,158,11,0.2)"/>
                                     <text x="550" y="495" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">TOUCHED BY RUBENS</text>
                                     <text x="550" y="525" text-anchor="middle" fill="#fff" font-size="18">Workshop + finishing</text>
-                                    <text x="550" y="550" text-anchor="middle" fill="#888" font-size="16">💰💰 Mid-range</text>
+                                    <text x="550" y="550" text-anchor="middle" fill="#888" font-size="16"> Mid-range</text>
 
                                     <rect x="700" y="460" width="260" height="100" rx="10" fill="rgba(139,92,246,0.2)"/>
                                     <text x="830" y="495" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">WORKSHOP COPY</text>
                                     <text x="830" y="525" text-anchor="middle" fill="#fff" font-size="18">Fully by assistants</text>
-                                    <text x="830" y="550" text-anchor="middle" fill="#888" font-size="16">💰 Cheapest</text>
+                                    <text x="830" y="550" text-anchor="middle" fill="#888" font-size="16"> Cheapest</text>
 
                                     <!-- Famous assistants -->
                                     <rect x="100" y="615" width="900" height="180" rx="20" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
@@ -7175,17 +7175,17 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- How painting helped -->
                                     <rect x="100" y="375" width="430" height="220" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
                                     <text x="315" y="420" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="27">HOW PAINTING HELPED</text>
-                                    <text x="315" y="465" text-anchor="middle" fill="#fff" font-size="20">🎨 Art = cover for negotiations</text>
-                                    <text x="315" y="505" text-anchor="middle" fill="#fff" font-size="20">🚪 Fame opened all doors</text>
-                                    <text x="315" y="545" text-anchor="middle" fill="#fff" font-size="20">👑 Portraits built relationships</text>
+                                    <text x="315" y="465" text-anchor="middle" fill="#fff" font-size="20"> Art = cover for negotiations</text>
+                                    <text x="315" y="505" text-anchor="middle" fill="#fff" font-size="20"> Fame opened all doors</text>
+                                    <text x="315" y="545" text-anchor="middle" fill="#fff" font-size="20"> Portraits built relationships</text>
                                     <text x="315" y="580" text-anchor="middle" fill="#888" font-size="18">No one suspects the painter!</text>
 
                                     <!-- The intellectual -->
                                     <rect x="570" y="375" width="430" height="220" rx="20" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="785" y="420" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="27">THE INTELLECTUAL</text>
-                                    <text x="785" y="465" text-anchor="middle" fill="#fff" font-size="20">🗣️ 6 languages fluent</text>
-                                    <text x="785" y="505" text-anchor="middle" fill="#fff" font-size="20">📚 Philosophical correspondence</text>
-                                    <text x="785" y="545" text-anchor="middle" fill="#fff" font-size="20">🏛️ Own palazzo with collection</text>
+                                    <text x="785" y="465" text-anchor="middle" fill="#fff" font-size="20"> 6 languages fluent</text>
+                                    <text x="785" y="505" text-anchor="middle" fill="#fff" font-size="20"> Philosophical correspondence</text>
+                                    <text x="785" y="545" text-anchor="middle" fill="#fff" font-size="20"> Own palazzo with collection</text>
                                     <text x="785" y="580" text-anchor="middle" fill="#888" font-size="18">Renaissance man par excellence</text>
 
                                     <!-- The languages -->
@@ -7307,7 +7307,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 svg: `<svg viewBox="0 0 1100 908" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="908" fill="#1a1a2e"/>
                                     <rect x="212" y="50" width="636" height="97" rx="34" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="5"/>
-                                    <text x="550" y="110" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">🎓 BOOK 2 COMPLETE!</text>
+                                    <text x="550" y="110" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42"> BOOK 2 COMPLETE!</text>
 
                                     <text x="550" y="183" text-anchor="middle" fill="#fff" font-weight="bold" font-size="34">YOUR BAROQUE-ROCOCO JOURNEY</text>
 
@@ -8934,9 +8934,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Signature Elements -->
                                     <rect x="567" y="435" width="480" height="200" rx="27" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="807" y="480" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="28">DALÍ'S VISUAL LANGUAGE</text>
-                                    <text x="680" y="530" fill="#fff" font-size="22">🐜 Ants = decay, mortality</text>
-                                    <text x="680" y="565" fill="#fff" font-size="22">🥚 Eggs = birth, potential</text>
-                                    <text x="680" y="600" fill="#fff" font-size="22">🐘 Elephants = distorted memory</text>
+                                    <text x="680" y="530" fill="#fff" font-size="22"> Ants = decay, mortality</text>
+                                    <text x="680" y="565" fill="#fff" font-size="22"> Eggs = birth, potential</text>
+                                    <text x="680" y="600" fill="#fff" font-size="22"> Elephants = distorted memory</text>
                                     <text x="680" y="635" fill="#888" font-size="20">Crutches = fragile reality</text>
 
                                     <!-- Technical Mastery -->
@@ -9011,9 +9011,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Signature Imagery -->
                                     <rect x="567" y="420" width="480" height="200" rx="27" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
                                     <text x="807" y="465" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="28">SIGNATURE IMAGERY</text>
-                                    <text x="680" y="515" fill="#fff" font-size="22">🎩 Bowler-hatted men</text>
-                                    <text x="680" y="550" fill="#fff" font-size="22">🍎 Giant apples in rooms</text>
-                                    <text x="680" y="585" fill="#fff" font-size="22">☁️ Cloud-filled silhouettes</text>
+                                    <text x="680" y="515" fill="#fff" font-size="22"> Bowler-hatted men</text>
+                                    <text x="680" y="550" fill="#fff" font-size="22"> Giant apples in rooms</text>
+                                    <text x="680" y="585" fill="#fff" font-size="22"> Cloud-filled silhouettes</text>
                                     <text x="680" y="620" fill="#888" font-size="20">Ordinary made mysterious</text>
 
                                     <!-- Famous Works -->
@@ -9970,7 +9970,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="560" y="130" width="500" height="280" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
                                     <text x="810" y="170" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="32">CONCEPTUAL ART</text>
                                     <text x="810" y="205" text-anchor="middle" fill="#fff" font-size="24">"The idea IS the artwork"</text>
-                                    <text x="810" y="270" text-anchor="middle" fill="#8b5cf6" font-size="50">💭</text>
+                                    <text x="810" y="270" text-anchor="middle" fill="#8b5cf6" font-size="50"></text>
                                     <text x="810" y="320" text-anchor="middle" fill="#fff" font-size="22">Physical object optional</text>
                                     <text x="810" y="350" text-anchor="middle" fill="#888" font-size="20">Art as instruction, language, thought</text>
                                     <text x="810" y="395" text-anchor="middle" fill="#8b5cf6" font-size="22">Kosuth • LeWitt • Weiner</text>
