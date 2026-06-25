@@ -47,7 +47,7 @@ const ART_HISTORY_CATEGORY = {
                                     <ellipse cx="550" cy="420" rx="380" ry="260" fill="none" stroke="#444" stroke-width="3"/>
 
                                     <!-- Court locations - larger circles -->
-                                    <circle cx="340" cy="340" r="72" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="3"/>
+                                    <circle cx="340" cy="340" r="72" fill="rgba(59,130,246,0.4)" stroke="#6366f1" stroke-width="3"/>
                                     <text x="340" y="348" text-anchor="middle" fill="#fff" font-weight="bold" font-size="29">Paris</text>
 
                                     <circle cx="550" cy="260" r="72" fill="rgba(236,72,153,0.4)" stroke="#ec4899" stroke-width="3"/>
@@ -131,9 +131,9 @@ const ART_HISTORY_CATEGORY = {
 
                                     <!-- Row 2: Two boxes - Flat Space, Courtly Life -->
                                     <!-- Flat Space -->
-                                    <rect x="60" y="500" width="460" height="360" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="290" y="545" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">FLAT SPACE</text>
-                                    <rect x="120" y="575" width="340" height="200" fill="#3b82f6" opacity="0"/>
+                                    <rect x="60" y="500" width="460" height="360" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="290" y="545" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">FLAT SPACE</text>
+                                    <rect x="120" y="575" width="340" height="200" fill="#6366f1" opacity="0"/>
                                     <ellipse cx="200" cy="660" rx="45" ry="80" fill="#dc143c" opacity="1"/>
                                     <ellipse cx="310" cy="690" rx="40" ry="65" fill="#4169e1" opacity="1"/>
                                     <text x="290" y="825" text-anchor="middle" fill="#888" font-size="25">No realistic depth</text>
@@ -186,7 +186,7 @@ const ART_HISTORY_CATEGORY = {
                                     <polygon points="155,230 185,320 205,260 225,320 255,230 205,290" fill="#ffd700" stroke="#b8860b" stroke-width="2"/>
                                     <!-- Wedding rings -->
                                     <circle cx="160" cy="420" r="50" fill="none" stroke="#ec4899" stroke-width="4"/>
-                                    <circle cx="250" cy="420" r="50" fill="none" stroke="#3b82f6" stroke-width="4"/>
+                                    <circle cx="250" cy="420" r="50" fill="none" stroke="#6366f1" stroke-width="4"/>
                                     <line x1="198" y1="420" x2="212" y2="420" stroke="#ffd700" stroke-width="6"/>
                                     <text x="205" y="520" text-anchor="middle" fill="#fff" font-size="28">Royal families</text>
                                     <text x="205" y="560" text-anchor="middle" fill="#fff" font-size="28">shared tastes</text>
@@ -195,20 +195,20 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="205" y="760" text-anchor="middle" fill="#ec4899" font-size="25">French → English</text>
 
                                     <!-- Column 2: Traveling Artists -->
-                                    <rect x="385" y="120" width="330" height="680" rx="18" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="550" y="170" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">2. ARTISTS MOVED</text>
+                                    <rect x="385" y="120" width="330" height="680" rx="18" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="550" y="170" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">2. ARTISTS MOVED</text>
                                     <!-- Simplified walking figure -->
                                     <circle cx="490" cy="260" r="35" fill="#ffe4c4"/>
-                                    <line x1="490" y1="295" x2="490" y2="400" stroke="#3b82f6" stroke-width="5"/>
-                                    <line x1="490" y1="400" x2="460" y2="480" stroke="#3b82f6" stroke-width="5"/>
-                                    <line x1="490" y1="400" x2="520" y2="480" stroke="#3b82f6" stroke-width="5"/>
+                                    <line x1="490" y1="295" x2="490" y2="400" stroke="#6366f1" stroke-width="5"/>
+                                    <line x1="490" y1="400" x2="460" y2="480" stroke="#6366f1" stroke-width="5"/>
+                                    <line x1="490" y1="400" x2="520" y2="480" stroke="#6366f1" stroke-width="5"/>
                                     <!-- Travel path -->
                                     <path d="M 540 300 Q 600 240 640 300 Q 670 380 640 460" stroke="#ffd700" stroke-width="4" fill="none" stroke-dasharray="10"/>
                                     <text x="550" y="560" text-anchor="middle" fill="#fff" font-size="28">Paris → Prague</text>
                                     <text x="550" y="600" text-anchor="middle" fill="#fff" font-size="28">→ Milan</text>
                                     <text x="550" y="680" text-anchor="middle" fill="#888" font-size="25">Seeking wealthy</text>
                                     <text x="550" y="720" text-anchor="middle" fill="#888" font-size="25">patrons</text>
-                                    <text x="550" y="760" text-anchor="middle" fill="#3b82f6" font-size="25">Court to court</text>
+                                    <text x="550" y="760" text-anchor="middle" fill="#6366f1" font-size="25">Court to court</text>
 
                                     <!-- Column 3: Portable Art -->
                                     <rect x="730" y="120" width="330" height="680" rx="18" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="3"/>
@@ -263,10 +263,10 @@ const ART_HISTORY_CATEGORY = {
                                     <rect x="70" y="270" width="460" height="300" fill="#87ceeb"/>
                                     <rect x="70" y="450" width="460" height="120" fill="#228b22"/>
                                     <!-- Castle -->
-                                    <rect x="180" y="300" width="180" height="180" fill="#6b7280"/>
-                                    <polygon points="180,300 220,240 220,300" fill="#6b7280"/>
-                                    <polygon points="260,300 300,230 300,300" fill="#6b7280"/>
-                                    <polygon points="330,300 330,260 315,260 315,300" fill="#6b7280"/>
+                                    <rect x="180" y="300" width="180" height="180" fill="#888"/>
+                                    <polygon points="180,300 220,240 220,300" fill="#888"/>
+                                    <polygon points="260,300 300,230 300,300" fill="#888"/>
+                                    <polygon points="330,300 330,260 315,260 315,300" fill="#888"/>
                                     <!-- Figures -->
                                     <ellipse cx="130" cy="520" rx="40" ry="70" fill="#dc143c"/>
                                     <circle cx="130" cy="460" r="25" fill="#ffe4c4"/>
@@ -277,8 +277,8 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="300" y="655" text-anchor="middle" fill="#555" font-size="25">Real Duke's castles!</text>
 
                                     <!-- Right page - Info boxes - properly spaced within page -->
-                                    <rect x="570" y="150" width="460" height="120" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="800" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">THE ARTISTS</text>
+                                    <rect x="570" y="150" width="460" height="120" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="800" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">THE ARTISTS</text>
                                     <text x="800" y="225" text-anchor="middle" fill="#333" font-size="26">Limbourg Brothers</text>
                                     <text x="800" y="255" text-anchor="middle" fill="#666" font-size="25">Paul, Jean, Herman</text>
 
@@ -337,8 +337,8 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="890" y="522" text-anchor="middle" fill="#10b981" font-size="29" font-weight="bold">PRIME</text>
                                     <text x="890" y="552" text-anchor="middle" fill="#fff" font-size="28">~7am</text>
 
-                                    <circle cx="800" cy="780" r="75" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="800" y="772" text-anchor="middle" fill="#3b82f6" font-size="29" font-weight="bold">TERCE</text>
+                                    <circle cx="800" cy="780" r="75" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="800" y="772" text-anchor="middle" fill="#6366f1" font-size="29" font-weight="bold">TERCE</text>
                                     <text x="800" y="802" text-anchor="middle" fill="#fff" font-size="28">~9am</text>
 
                                     <circle cx="550" cy="900" r="75" fill="rgba(236,72,153,0.3)" stroke="#ec4899" stroke-width="3"/>
@@ -372,12 +372,12 @@ const ART_HISTORY_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="45" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="40">JANUARY PAGE - CLOSE ANALYSIS</text>
+                                    <text x="550" y="45" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="40">JANUARY PAGE - CLOSE ANALYSIS</text>
                                     <text x="550" y="85" text-anchor="middle" fill="#888" font-size="28">Detailed examination of one illuminated page</text>
 
                                     <!-- Left labels (outside page) -->
-                                    <rect x="30" y="140" width="200" height="130" rx="12" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="130" y="180" text-anchor="middle" fill="#3b82f6" font-size="28" font-weight="bold">LUNETTE</text>
+                                    <rect x="30" y="140" width="200" height="130" rx="12" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="130" y="180" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">LUNETTE</text>
                                     <text x="130" y="210" text-anchor="middle" fill="#fff" font-size="25">Zodiac signs</text>
                                     <text x="130" y="240" text-anchor="middle" fill="#888" font-size="25">♑ ♒</text>
 
@@ -665,12 +665,12 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="160" y="400" text-anchor="middle" fill="#fff" font-size="26">nature</text>
                                     <text x="160" y="435" text-anchor="middle" fill="#f59e0b" font-size="28">🦌</text>
 
-                                    <rect x="300" y="300" width="240" height="160" rx="14" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="420" y="335" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="40">N</text>
+                                    <rect x="300" y="300" width="240" height="160" rx="14" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="420" y="335" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="40">N</text>
                                     <text x="420" y="370" text-anchor="middle" fill="#fff" font-size="26">No deep</text>
                                     <text x="420" y="400" text-anchor="middle" fill="#fff" font-size="26">perspective</text>
-                                    <rect x="395" y="420" width="50" height="8" fill="#3b82f6"/>
-                                    <rect x="400" y="432" width="40" height="6" fill="#3b82f6"/>
+                                    <rect x="395" y="420" width="50" height="8" fill="#6366f1"/>
+                                    <rect x="400" y="432" width="40" height="6" fill="#6366f1"/>
 
                                     <rect x="560" y="300" width="240" height="160" rx="14" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
                                     <text x="680" y="335" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="40">C</text>
@@ -699,7 +699,7 @@ const ART_HISTORY_CATEGORY = {
                                     <!-- Box 2: Gold background - center at 425 -->
                                     <rect x="310" y="565" width="230" height="380" rx="12" fill="#ffd700"/>
                                     <circle cx="425" cy="630" r="28" fill="#ffe4c4" stroke="#000" stroke-width="2"/>
-                                    <rect x="400" y="665" width="50" height="90" fill="#3b82f6"/>
+                                    <rect x="400" y="665" width="50" height="90" fill="#6366f1"/>
                                     <circle cx="425" cy="615" r="6" fill="#b8860b"/>
                                     <text x="425" y="875" text-anchor="middle" fill="#000" font-weight="bold" font-size="22">GOLD GROUND</text>
                                     <text x="425" y="905" text-anchor="middle" fill="#333" font-size="22">Divine light background</text>
@@ -714,11 +714,11 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="675" y="905" text-anchor="middle" fill="#ccc" font-size="22">Intricate patterns</text>
 
                                     <!-- Box 4: Flat space - center at 925 -->
-                                    <rect x="810" y="565" width="230" height="380" rx="12" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
+                                    <rect x="810" y="565" width="230" height="380" rx="12" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
                                     <rect x="860" y="660" width="45" height="90" fill="#10b981"/>
                                     <rect x="910" y="640" width="45" height="110" fill="#f59e0b"/>
                                     <rect x="960" y="620" width="45" height="130" fill="#ef4444"/>
-                                    <text x="925" y="875" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">FLAT SPACE</text>
+                                    <text x="925" y="875" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">FLAT SPACE</text>
                                     <text x="925" y="905" text-anchor="middle" fill="#ccc" font-size="22">No perspective depth</text>
                                 </svg>`,
                                 caption: "Lesson visual"
@@ -746,8 +746,8 @@ const ART_HISTORY_CATEGORY = {
                                     <circle cx="550" cy="150" r="26" fill="#ffd700"/>
                                     <text x="550" y="195" text-anchor="middle" fill="#ffd700" font-size="28" font-weight="bold">1375-1425</text>
 
-                                    <circle cx="900" cy="150" r="22" fill="#3b82f6"/>
-                                    <text x="900" y="195" text-anchor="middle" fill="#3b82f6" font-size="28" font-weight="bold">1400s+</text>
+                                    <circle cx="900" cy="150" r="22" fill="#6366f1"/>
+                                    <text x="900" y="195" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">1400s+</text>
 
                                     <!-- BEFORE: Earlier Gothic -->
                                     <rect x="40" y="230" width="320" height="600" rx="16" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="3"/>
@@ -783,14 +783,14 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="550" y="780" text-anchor="middle" fill="#ffd700" font-size="32" font-weight="bold">ELEGANT</text>
 
                                     <!-- AFTER: Early Renaissance -->
-                                    <rect x="740" y="230" width="320" height="600" rx="16" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="900" y="275" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">RENAISSANCE</text>
+                                    <rect x="740" y="230" width="320" height="600" rx="16" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="900" y="275" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">RENAISSANCE</text>
 
                                     <!-- Realistic figure with perspective -->
                                     <rect x="825" y="300" width="150" height="180" fill="#87ceeb"/>
                                     <!-- Perspective grid -->
-                                    <line x1="845" y1="440" x2="900" y2="330" stroke="#3b82f6" stroke-width="2"/>
-                                    <line x1="955" y1="440" x2="900" y2="330" stroke="#3b82f6" stroke-width="2"/>
+                                    <line x1="845" y1="440" x2="900" y2="330" stroke="#6366f1" stroke-width="2"/>
+                                    <line x1="955" y1="440" x2="900" y2="330" stroke="#6366f1" stroke-width="2"/>
                                     <!-- Solid figure -->
                                     <ellipse cx="900" cy="370" rx="26" ry="28" fill="#ffe4c4" stroke="#000" stroke-width="2"/>
                                     <rect x="882" y="395" width="45" height="60" fill="#10b981" rx="8"/>
@@ -799,7 +799,7 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="900" y="585" text-anchor="middle" fill="#fff" font-size="25">• Volume & weight</text>
                                     <text x="900" y="625" text-anchor="middle" fill="#fff" font-size="25">• Blue sky (not gold)</text>
                                     <text x="900" y="665" text-anchor="middle" fill="#fff" font-size="25">• Anatomy focus</text>
-                                    <text x="900" y="780" text-anchor="middle" fill="#3b82f6" font-size="32" font-weight="bold">REALISTIC</text>
+                                    <text x="900" y="780" text-anchor="middle" fill="#6366f1" font-size="32" font-weight="bold">REALISTIC</text>
 
                                     <!-- Bottom note -->
                                     <rect x="60" y="860" width="980" height="130" rx="16" fill="rgba(236,72,153,0.15)" stroke="#ec4899" stroke-width="2"/>
@@ -861,10 +861,10 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="375" y="500" text-anchor="middle" fill="#fff" font-size="24">Fantasy shows reality</text>
                                     <text x="375" y="540" text-anchor="middle" fill="#888" font-size="24">Clothes • Food • Castles</text>
 
-                                    <rect x="565" y="370" width="320" height="200" rx="16" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <circle cx="725" cy="410" r="26" fill="#3b82f6"/>
+                                    <rect x="565" y="370" width="320" height="200" rx="16" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <circle cx="725" cy="410" r="26" fill="#6366f1"/>
                                     <text x="725" y="420" text-anchor="middle" fill="#fff" font-weight="bold" font-size="28">5</text>
-                                    <text x="725" y="460" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">SUDDEN END</text>
+                                    <text x="725" y="460" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">SUDDEN END</text>
                                     <text x="725" y="500" text-anchor="middle" fill="#fff" font-size="24">Renaissance swept in</text>
                                     <text x="725" y="540" text-anchor="middle" fill="#888" font-size="24">Why? = key insight</text>
 
@@ -902,7 +902,7 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="812" y="138" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="27">✓ CHECK FOR GOLD</text>
                                     <rect x="615" y="165" width="80" height="110" fill="#ffd700"/>
                                     <circle cx="655" cy="200" r="16" fill="#ffe4c4"/>
-                                    <rect x="642" y="220" width="30" height="45" fill="#3b82f6"/>
+                                    <rect x="642" y="220" width="30" height="45" fill="#6366f1"/>
                                     <text x="850" y="195" text-anchor="middle" fill="#fff" font-size="24">Gold = divine light</text>
                                     <text x="850" y="230" text-anchor="middle" fill="#fff" font-size="24">Not just decoration</text>
                                     <text x="850" y="270" text-anchor="middle" fill="#888" font-size="23">Sacred, eternal space</text>
@@ -929,8 +929,8 @@ const ART_HISTORY_CATEGORY = {
                                     <text x="880" y="515" text-anchor="middle" fill="#888" font-size="23">individual character</text>
 
                                     <!-- Famous Examples Section - more spacing from checklist -->
-                                    <rect x="40" y="590" width="1020" height="340" rx="16" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="550" y="640" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="30">FAMOUS EXAMPLES TO FIND IN MUSEUMS</text>
+                                    <rect x="40" y="590" width="1020" height="340" rx="16" fill="rgba(59,130,246,0.1)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="550" y="640" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="30">FAMOUS EXAMPLES TO FIND IN MUSEUMS</text>
 
                                     <rect x="60" y="680" width="220" height="220" rx="12" fill="rgba(255,215,0,0.2)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="170" y="740" text-anchor="middle" fill="#ffd700" font-size="25" font-weight="bold">Wilton Diptych</text>
@@ -1003,8 +1003,8 @@ You can now identify International Gothic art in museums!`,
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">International Gothic Style (c. 1375-1425)</text>
 
                                     <!-- Row 1: Two boxes -->
-                                    <rect x="40" y="130" width="500" height="200" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="175" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="30">1. UNIFIED STYLE</text>
+                                    <rect x="40" y="130" width="500" height="200" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="175" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="30">1. UNIFIED STYLE</text>
                                     <text x="290" y="215" text-anchor="middle" fill="#fff" font-size="22">One look across all Europe</text>
                                     <text x="290" y="250" text-anchor="middle" fill="#888" font-size="20">Prague • Paris • London • Milan</text>
                                     <text x="290" y="285" text-anchor="middle" fill="#888" font-size="18">Spread through royal marriages</text>
@@ -1071,8 +1071,8 @@ You can now identify International Gothic art in museums!`,
                                     <text x="290" y="300" text-anchor="middle" fill="#888" font-size="18">Only 60,000 people - but giants!</text>
 
                                     <!-- The Innovators -->
-                                    <rect x="560" y="130" width="500" height="220" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="810" y="170" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">THE PIONEERS</text>
+                                    <rect x="560" y="130" width="500" height="220" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="810" y="170" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">THE PIONEERS</text>
                                     <text x="810" y="210" text-anchor="middle" fill="#fff" font-size="20">Brunelleschi - Perspective</text>
                                     <text x="810" y="240" text-anchor="middle" fill="#fff" font-size="20">Masaccio - First to use it</text>
                                     <text x="810" y="270" text-anchor="middle" fill="#fff" font-size="20">Donatello - Classical sculpture</text>
@@ -1158,8 +1158,8 @@ You can now identify International Gothic art in museums!`,
                                     <text x="890" y="400" text-anchor="middle" fill="#ccc" font-size="24">Painting matches reality!</text>
 
                                     <!-- Key Principles box - wider -->
-                                    <rect x="50" y="480" width="1000" height="420" rx="16" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="550" y="535" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="36">3 KEY PRINCIPLES OF LINEAR PERSPECTIVE</text>
+                                    <rect x="50" y="480" width="1000" height="420" rx="16" fill="rgba(59,130,246,0.1)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="550" y="535" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="36">3 KEY PRINCIPLES OF LINEAR PERSPECTIVE</text>
 
                                     <!-- Principle 1 - Row 1 Left -->
                                     <circle cx="130" cy="620" r="50" fill="#f59e0b"/>
@@ -1227,18 +1227,18 @@ You can now identify International Gothic art in museums!`,
                                     <text x="550" y="645" text-anchor="middle" fill="#ccc" font-size="24">(Viewer's Eye Level)</text>
 
                                     <!-- Perspective lines -->
-                                    <line x1="330" y1="800" x2="550" y2="560" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8"/>
-                                    <line x1="770" y1="800" x2="550" y2="560" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8"/>
-                                    <line x1="375" y1="560" x2="550" y2="560" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8"/>
-                                    <line x1="725" y1="560" x2="550" y2="560" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8"/>
+                                    <line x1="330" y1="800" x2="550" y2="560" stroke="#6366f1" stroke-width="2" stroke-dasharray="8"/>
+                                    <line x1="770" y1="800" x2="550" y2="560" stroke="#6366f1" stroke-width="2" stroke-dasharray="8"/>
+                                    <line x1="375" y1="560" x2="550" y2="560" stroke="#6366f1" stroke-width="2" stroke-dasharray="8"/>
+                                    <line x1="725" y1="560" x2="550" y2="560" stroke="#6366f1" stroke-width="2" stroke-dasharray="8"/>
 
                                     <!-- Skeleton (memento mori) -->
                                     <rect x="400" y="690" width="300" height="100" fill="#d4c4b0" stroke="#8b7355" stroke-width="2"/>
                                     <text x="550" y="750" text-anchor="middle" fill="#5c4033" font-size="28">SKELETON</text>
 
                                     <!-- Annotations - Left Side -->
-                                    <rect x="40" y="120" width="260" height="130" rx="14" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="170" y="170" text-anchor="middle" fill="#3b82f6" font-size="28">Barrel Vault</text>
+                                    <rect x="40" y="120" width="260" height="130" rx="14" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="170" y="170" text-anchor="middle" fill="#6366f1" font-size="28">Barrel Vault</text>
                                     <text x="170" y="205" text-anchor="middle" fill="#fff" font-size="22">Creates illusionistic</text>
                                     <text x="170" y="230" text-anchor="middle" fill="#fff" font-size="22">depth</text>
 
@@ -1428,8 +1428,8 @@ You can now identify International Gothic art in museums!`,
                                     <text x="550" y="485" text-anchor="middle" fill="#ec4899" font-size="28">FUN FACT: The Teenage Mutant Ninja Turtles</text>
                                     <text x="550" y="525" text-anchor="middle" fill="#ccc" font-size="24">are named after these Renaissance artists!</text>
 
-                                    <rect x="80" y="570" width="940" height="110" rx="14" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="550" y="615" text-anchor="middle" fill="#3b82f6" font-size="26">CHRONOLOGICAL: B (1377) → D (1386) → M (1401) → A (1404)</text>
+                                    <rect x="80" y="570" width="940" height="110" rx="14" fill="rgba(59,130,246,0.1)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="550" y="615" text-anchor="middle" fill="#6366f1" font-size="26">CHRONOLOGICAL: B (1377) → D (1386) → M (1401) → A (1404)</text>
                                     <text x="550" y="655" text-anchor="middle" fill="#ccc" font-size="22">Older generation (BD) taught younger generation (MA)</text>
                                 </svg>`,
                                 caption: "Lesson visual"
@@ -1536,8 +1536,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">Early Italian Renaissance (c. 1400-1490)</text>
 
                                     <!-- Row 1: Two boxes -->
-                                    <rect x="40" y="130" width="500" height="200" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="175" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="30">1. WHY FLORENCE?</text>
+                                    <rect x="40" y="130" width="500" height="200" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="175" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="30">1. WHY FLORENCE?</text>
                                     <text x="290" y="215" text-anchor="middle" fill="#fff" font-size="22">Medici wealth + competition</text>
                                     <text x="290" y="250" text-anchor="middle" fill="#888" font-size="20">Republican civic pride</text>
                                     <text x="290" y="285" text-anchor="middle" fill="#888" font-size="18">Only 60,000 people - but giants!</text>
@@ -1592,12 +1592,12 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">NORTHERN RENAISSANCE</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">NORTHERN RENAISSANCE</text>
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">A Different Path to Artistic Truth (c. 1400-1550)</text>
 
                                     <!-- North vs South Comparison -->
-                                    <rect x="40" y="130" width="500" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="175" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">NORTHERN APPROACH</text>
+                                    <rect x="40" y="130" width="500" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="175" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">NORTHERN APPROACH</text>
                                     <text x="290" y="220" text-anchor="middle" fill="#fff" font-size="20">• Oil painting perfection</text>
                                     <text x="290" y="255" text-anchor="middle" fill="#fff" font-size="20">• Microscopic observation</text>
                                     <text x="290" y="290" text-anchor="middle" fill="#fff" font-size="20">• Disguised symbolism</text>
@@ -1683,9 +1683,9 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="125" y="325" text-anchor="middle" fill="#fff" font-size="24">Holy ground</text>
 
                                     <!-- Annotations - Right side (larger boxes) -->
-                                    <line x1="770" y1="280" x2="870" y2="200" stroke="#3b82f6" stroke-width="3"/>
-                                    <rect x="870" y="140" width="210" height="120" rx="12" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="975" y="180" text-anchor="middle" fill="#3b82f6" font-size="26" font-weight="bold">MIRROR</text>
+                                    <line x1="770" y1="280" x2="870" y2="200" stroke="#6366f1" stroke-width="3"/>
+                                    <rect x="870" y="140" width="210" height="120" rx="12" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="975" y="180" text-anchor="middle" fill="#6366f1" font-size="26" font-weight="bold">MIRROR</text>
                                     <text x="975" y="215" text-anchor="middle" fill="#fff" font-size="22">Shows witnesses</text>
                                     <text x="975" y="245" text-anchor="middle" fill="#fff" font-size="22">and artist</text>
 
@@ -1740,8 +1740,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="895" y="300" text-anchor="middle" fill="#fff" font-size="26">in marriage</text>
 
                                     <!-- Row 2: 3 boxes -->
-                                    <rect x="40" y="390" width="330" height="255" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="205" y="445" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="50">4</text>
+                                    <rect x="40" y="390" width="330" height="255" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="205" y="445" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="50">4</text>
                                     <text x="205" y="495" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">Removed Shoes</text>
                                     <text x="205" y="540" text-anchor="middle" fill="#fff" font-size="26">Standing on holy</text>
                                     <text x="205" y="575" text-anchor="middle" fill="#fff" font-size="26">ground (sacrament)</text>
@@ -1793,8 +1793,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="550" y="390" text-anchor="middle" fill="#fff" font-size="28">Central Lower Panel - Christ's Sacrifice</text>
 
                                     <!-- Bottom info boxes -->
-                                    <rect x="40" y="445" width="330" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="205" y="495" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="32">STRUCTURE</text>
+                                    <rect x="40" y="445" width="330" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="205" y="495" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="32">STRUCTURE</text>
                                     <text x="205" y="545" text-anchor="middle" fill="#fff" font-size="28">12 panels open/close</text>
 
                                     <rect x="385" y="445" width="330" height="130" rx="15" fill="rgba(236,72,153,0.15)" stroke="#ec4899" stroke-width="2"/>
@@ -1836,8 +1836,8 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="550" y="90" text-anchor="middle" fill="#888" font-size="28">Remember Northern Renaissance with wealth!</text>
 
                                     <!-- 4 letter boxes -->
-                                    <rect x="40" y="125" width="245" height="275" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="162" y="185" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="58">G</text>
+                                    <rect x="40" y="125" width="245" height="275" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="162" y="185" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="58">G</text>
                                     <text x="162" y="235" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">GLAZES</text>
                                     <text x="162" y="275" text-anchor="middle" fill="#fff" font-size="24">Layered oil</text>
                                     <text x="162" y="305" text-anchor="middle" fill="#fff" font-size="24">painting</text>
@@ -1899,10 +1899,10 @@ You can now discuss Early Italian Renaissance art with confidence!`,
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="38">5 WAYS TO SOUND LIKE AN EXPERT</text>
 
                                     <!-- Row 1 -->
-                                    <rect x="40" y="85" width="500" height="155" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="105" cy="162" r="35" fill="#3b82f6"/>
+                                    <rect x="40" y="85" width="500" height="155" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="105" cy="162" r="35" fill="#6366f1"/>
                                     <text x="105" y="173" text-anchor="middle" fill="#fff" font-weight="bold" font-size="28">1</text>
-                                    <text x="315" y="140" text-anchor="middle" fill="#3b82f6" font-size="28" font-weight="bold">NOT BETTER - DIFFERENT</text>
+                                    <text x="315" y="140" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold">NOT BETTER - DIFFERENT</text>
                                     <text x="315" y="180" text-anchor="middle" fill="#fff" font-size="24">Italians: ideal beauty</text>
                                     <text x="315" y="210" text-anchor="middle" fill="#fff" font-size="24">Northerners: truth</text>
 
@@ -1985,8 +1985,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="50" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
 
                                     <!-- Row 1: Two large boxes -->
-                                    <rect x="40" y="85" width="500" height="170" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="145" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">1. DIFFERENT PATH</text>
+                                    <rect x="40" y="85" width="500" height="170" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="145" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">1. DIFFERENT PATH</text>
                                     <text x="290" y="195" text-anchor="middle" fill="#fff" font-size="28">Oil + Detail + Symbolism</text>
 
                                     <rect x="560" y="85" width="500" height="170" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
@@ -2057,8 +2057,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="365" y="510" text-anchor="middle" fill="#888" font-size="20">Monumental architecture</text>
                                     <text x="365" y="550" text-anchor="middle" fill="#888" font-size="20">Codices & calendars</text>
 
-                                    <rect x="570" y="370" width="330" height="250" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="735" y="420" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="32">JAPAN</text>
+                                    <rect x="570" y="370" width="330" height="250" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="735" y="420" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="32">JAPAN</text>
                                     <text x="735" y="470" text-anchor="middle" fill="#fff" font-size="24">Ink wash painting</text>
                                     <text x="735" y="510" text-anchor="middle" fill="#888" font-size="20">Zen aesthetics</text>
                                     <text x="735" y="550" text-anchor="middle" fill="#888" font-size="20">Tea ceremony art</text>
@@ -2080,13 +2080,13 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="90" text-anchor="middle" fill="#888" font-size="24">1368-1644</text>
 
                                     <!-- 3 columns -->
-                                    <rect x="40" y="130" width="330" height="520" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="205" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">PORCELAIN</text>
-                                    <ellipse cx="205" cy="280" rx="80" ry="30" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-                                    <path d="M125 280 L125 400 Q165 440 205 400 L205 280" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-                                    <path d="M285 280 L285 400 Q245 440 205 400" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-                                    <path d="M150 320 Q205 360 260 320" stroke="#3b82f6" stroke-width="2" fill="none"/>
-                                    <circle cx="205" cy="370" r="15" fill="none" stroke="#3b82f6" stroke-width="2"/>
+                                    <rect x="40" y="130" width="330" height="520" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="205" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">PORCELAIN</text>
+                                    <ellipse cx="205" cy="280" rx="80" ry="30" fill="#fff" stroke="#6366f1" stroke-width="3"/>
+                                    <path d="M125 280 L125 400 Q165 440 205 400 L205 280" fill="#fff" stroke="#6366f1" stroke-width="3"/>
+                                    <path d="M285 280 L285 400 Q245 440 205 400" fill="#fff" stroke="#6366f1" stroke-width="3"/>
+                                    <path d="M150 320 Q205 360 260 320" stroke="#6366f1" stroke-width="2" fill="none"/>
+                                    <circle cx="205" cy="370" r="15" fill="none" stroke="#6366f1" stroke-width="2"/>
                                     <text x="205" y="500" text-anchor="middle" fill="#fff" font-size="22">Blue &amp; White</text>
                                     <text x="205" y="535" text-anchor="middle" fill="#888" font-size="18">Europe copied for centuries</text>
                                     <text x="205" y="565" text-anchor="middle" fill="#888" font-size="18">"China" = porcelain</text>
@@ -2167,8 +2167,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="270" y="550" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="28">PAINTING</text>
                                     <text x="270" y="590" text-anchor="middle" fill="#fff" font-size="22">Visual expression</text>
 
-                                    <circle cx="550" cy="560" r="100" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="550" y="550" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">POETRY</text>
+                                    <circle cx="550" cy="560" r="100" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="550" y="550" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">POETRY</text>
                                     <text x="550" y="590" text-anchor="middle" fill="#fff" font-size="22">Written on painting</text>
 
                                     <circle cx="830" cy="560" r="100" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
@@ -2269,14 +2269,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="315" y="310" width="60" height="35" fill="rgba(16,185,129,0.4)"/>
                                     <text x="300" y="390" text-anchor="middle" fill="#888" font-size="22">8,000+ cells in one ceiling</text>
 
-                                    <rect x="560" y="140" width="480" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="800" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">2. WATER AS ART</text>
+                                    <rect x="560" y="140" width="480" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="800" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">2. WATER AS ART</text>
                                     <text x="800" y="230" text-anchor="middle" fill="#fff" font-size="26">Reflecting Pools</text>
                                     <!-- Water representation -->
                                     <rect x="680" y="270" width="240" height="80" fill="rgba(59,130,246,0.3)" rx="5"/>
-                                    <line x1="700" y1="290" x2="900" y2="290" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
-                                    <line x1="700" y1="310" x2="900" y2="310" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
-                                    <line x1="700" y1="330" x2="900" y2="330" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+                                    <line x1="700" y1="290" x2="900" y2="290" stroke="#6366f1" stroke-width="1" opacity="0.5"/>
+                                    <line x1="700" y1="310" x2="900" y2="310" stroke="#6366f1" stroke-width="1" opacity="0.5"/>
+                                    <line x1="700" y1="330" x2="900" y2="330" stroke="#6366f1" stroke-width="1" opacity="0.5"/>
                                     <text x="800" y="390" text-anchor="middle" fill="#888" font-size="22">Paradise symbolized</text>
 
                                     <rect x="60" y="440" width="480" height="280" rx="20" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="3"/>
@@ -2323,9 +2323,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <polygon points="290,200 310,220 310,260 290,280 270,260 270,220" fill="none" stroke="#10b981" stroke-width="2"/>
                                     <text x="290" y="350" text-anchor="middle" fill="#888" font-size="20">Infinite complexity from simple shapes</text>
 
-                                    <rect x="560" y="100" width="500" height="270" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="810" y="150" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">2. CALLIGRAPHY</text>
-                                    <text x="810" y="250" text-anchor="middle" fill="#3b82f6" font-size="60" font-style="italic">الله</text>
+                                    <rect x="560" y="100" width="500" height="270" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="810" y="150" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">2. CALLIGRAPHY</text>
+                                    <text x="810" y="250" text-anchor="middle" fill="#6366f1" font-size="60" font-style="italic">الله</text>
                                     <text x="810" y="350" text-anchor="middle" fill="#888" font-size="20">Writing as highest art form</text>
 
                                     <rect x="40" y="390" width="500" height="270" rx="15" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
@@ -2363,16 +2363,16 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">JAPAN: ZEN AESTHETICS</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">JAPAN: ZEN AESTHETICS</text>
                                     <text x="550" y="100" text-anchor="middle" fill="#888" font-size="29">Muromachi Period (1336-1573)</text>
 
                                     <!-- 2x2 Grid of concepts -->
                                     <!-- Ink Painting -->
-                                    <rect x="60" y="140" width="480" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="300" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">INK WASH PAINTING</text>
+                                    <rect x="60" y="140" width="480" height="280" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="300" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">INK WASH PAINTING</text>
                                     <!-- Mountain suggestion in ink style -->
-                                    <polygon points="200,350 300,220 400,350" fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.6"/>
-                                    <polygon points="250,350 320,260 390,350" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+                                    <polygon points="200,350 300,220 400,350" fill="none" stroke="#6366f1" stroke-width="3" opacity="0.6"/>
+                                    <polygon points="250,350 320,260 390,350" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4"/>
                                     <text x="300" y="395" text-anchor="middle" fill="#888" font-size="24">Black ink only • Empty space speaks</text>
 
                                     <!-- Wabi-Sabi -->
@@ -2576,8 +2576,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="427" y="320" text-anchor="middle" fill="#888" font-size="18">Techniques,</text>
                                     <text x="427" y="345" text-anchor="middle" fill="#888" font-size="18">styles, beliefs</text>
 
-                                    <rect x="570" y="130" width="245" height="300" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="692" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="52">B</text>
+                                    <rect x="570" y="130" width="245" height="300" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="692" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="52">B</text>
                                     <text x="692" y="240" text-anchor="middle" fill="#fff" font-size="26">BOTH</text>
                                     <text x="692" y="280" text-anchor="middle" fill="#888" font-size="20">directions flow</text>
                                     <text x="692" y="320" text-anchor="middle" fill="#888" font-size="18">East ↔ West</text>
@@ -2597,8 +2597,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="210" y="575" text-anchor="middle" fill="#ef4444" font-size="20">→ European ceramics</text>
                                     <text x="550" y="550" text-anchor="middle" fill="#10b981" font-size="20">Islamic geometry</text>
                                     <text x="550" y="575" text-anchor="middle" fill="#10b981" font-size="20">→ Gothic arch.</text>
-                                    <text x="890" y="550" text-anchor="middle" fill="#3b82f6" font-size="20">African bronze</text>
-                                    <text x="890" y="575" text-anchor="middle" fill="#3b82f6" font-size="20">→ Modern sculpture</text>
+                                    <text x="890" y="550" text-anchor="middle" fill="#6366f1" font-size="20">African bronze</text>
+                                    <text x="890" y="575" text-anchor="middle" fill="#6366f1" font-size="20">→ Modern sculpture</text>
                                     <text x="550" y="630" text-anchor="middle" fill="#888" font-size="20">Art history is global history</text>
                                 </svg>`,
                                 caption: "Lesson visual"
@@ -2633,10 +2633,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="380" text-anchor="middle" fill="#888" font-size="18">Silk Road, Indian Ocean,</text>
                                     <text x="550" y="410" text-anchor="middle" fill="#888" font-size="18">Trans-Saharan routes</text>
 
-                                    <rect x="730" y="100" width="330" height="400" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="895" cy="170" r="35" fill="#3b82f6"/>
+                                    <rect x="730" y="100" width="330" height="400" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="895" cy="170" r="35" fill="#6366f1"/>
                                     <text x="895" y="182" text-anchor="middle" fill="#fff" font-weight="bold" font-size="28">3</text>
-                                    <text x="895" y="240" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">EXPLAINS INFLUENCE</text>
+                                    <text x="895" y="240" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">EXPLAINS INFLUENCE</text>
                                     <text x="895" y="290" text-anchor="middle" fill="#fff" font-size="20">"Many 'European' ideas</text>
                                     <text x="895" y="320" text-anchor="middle" fill="#fff" font-size="20">came from elsewhere"</text>
                                     <text x="895" y="380" text-anchor="middle" fill="#888" font-size="18">Perspective, pigments,</text>
@@ -2714,14 +2714,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="90" text-anchor="middle" fill="#888" font-size="24">The Summit of Renaissance Art</text>
 
                                     <!-- 3 masters -->
-                                    <rect x="40" y="130" width="330" height="520" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="205" cy="220" r="60" fill="#ffe4c4" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="205" y="310" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">LEONARDO</text>
+                                    <rect x="40" y="130" width="330" height="520" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="205" cy="220" r="60" fill="#ffe4c4" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="205" y="310" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">LEONARDO</text>
                                     <text x="205" y="350" text-anchor="middle" fill="#fff" font-size="22">The Universal Man</text>
                                     <text x="205" y="400" text-anchor="middle" fill="#888" font-size="18">• Sfumato technique</text>
                                     <text x="205" y="430" text-anchor="middle" fill="#888" font-size="18">• Scientific observation</text>
                                     <text x="205" y="460" text-anchor="middle" fill="#888" font-size="18">• Mona Lisa, Last Supper</text>
-                                    <text x="205" y="510" text-anchor="middle" fill="#3b82f6" font-size="20">1452-1519</text>
+                                    <text x="205" y="510" text-anchor="middle" fill="#6366f1" font-size="20">1452-1519</text>
 
                                     <rect x="385" y="130" width="330" height="520" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
                                     <circle cx="550" cy="220" r="60" fill="#ffe4c4" stroke="#8b5cf6" stroke-width="3"/>
@@ -2763,12 +2763,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
-                                    <text x="550" y="50" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="38">LEONARDO DA VINCI</text>
+                                    <text x="550" y="50" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="38">LEONARDO DA VINCI</text>
                                     <text x="550" y="90" text-anchor="middle" fill="#888" font-size="24">The Universal Man (1452-1519)</text>
 
                                     <!-- 2x2 grid of his contributions -->
-                                    <rect x="40" y="130" width="500" height="250" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">SFUMATO TECHNIQUE</text>
+                                    <rect x="40" y="130" width="500" height="250" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">SFUMATO TECHNIQUE</text>
                                     <text x="290" y="220" text-anchor="middle" fill="#fff" font-size="20">"Smoke-like" blending</text>
                                     <text x="290" y="255" text-anchor="middle" fill="#888" font-size="18">No harsh outlines</text>
                                     <text x="290" y="285" text-anchor="middle" fill="#888" font-size="18">Soft transitions between tones</text>
@@ -2819,10 +2819,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="405" text-anchor="middle" fill="#888" font-size="16">Calm center</text>
 
                                     <!-- Groups of apostles -->
-                                    <circle cx="200" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="280" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="360" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="280" y="380" text-anchor="middle" fill="#3b82f6" font-size="16">Group 1</text>
+                                    <circle cx="200" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="280" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="360" cy="300" r="30" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="280" y="380" text-anchor="middle" fill="#6366f1" font-size="16">Group 1</text>
 
                                     <circle cx="740" cy="300" r="30" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="2"/>
                                     <circle cx="820" cy="300" r="30" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="2"/>
@@ -2835,8 +2835,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="440" y="400" text-anchor="middle" fill="#888" font-size="14">In shadow</text>
 
                                     <!-- Key insights -->
-                                    <rect x="100" y="530" width="280" height="130" rx="10" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="240" y="570" text-anchor="middle" fill="#3b82f6" font-size="20" font-weight="bold">PERSPECTIVE</text>
+                                    <rect x="100" y="530" width="280" height="130" rx="10" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="240" y="570" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">PERSPECTIVE</text>
                                     <text x="240" y="600" text-anchor="middle" fill="#fff" font-size="16">All lines lead to Christ</text>
                                     <text x="240" y="625" text-anchor="middle" fill="#888" font-size="14">He is the vanishing point</text>
 
@@ -2946,15 +2946,15 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="180" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="26">9 GENESIS SCENES</text>
 
                                     <!-- Row 1: Creation -->
-                                    <rect x="200" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2" rx="10"/>
+                                    <rect x="200" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2" rx="10"/>
                                     <text x="300" y="240" text-anchor="middle" fill="#fff" font-size="18">Separation</text>
                                     <text x="300" y="265" text-anchor="middle" fill="#fff" font-size="18">of Light</text>
 
-                                    <rect x="450" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2" rx="10"/>
+                                    <rect x="450" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2" rx="10"/>
                                     <text x="550" y="240" text-anchor="middle" fill="#fff" font-size="18">Creation of</text>
                                     <text x="550" y="265" text-anchor="middle" fill="#fff" font-size="18">Sun & Moon</text>
 
-                                    <rect x="700" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2" rx="10"/>
+                                    <rect x="700" y="200" width="200" height="100" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2" rx="10"/>
                                     <text x="800" y="240" text-anchor="middle" fill="#fff" font-size="18">Separation</text>
                                     <text x="800" y="265" text-anchor="middle" fill="#fff" font-size="18">of Waters</text>
 
@@ -3091,8 +3091,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="480" y="380" text-anchor="middle" fill="#888" font-size="14">Points UP</text>
                                     <text x="480" y="400" text-anchor="middle" fill="#888" font-size="14">(Ideals)</text>
 
-                                    <circle cx="620" cy="300" r="40" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="620" y="360" text-anchor="middle" fill="#3b82f6" font-size="18">ARISTOTLE</text>
+                                    <circle cx="620" cy="300" r="40" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="620" y="360" text-anchor="middle" fill="#6366f1" font-size="18">ARISTOTLE</text>
                                     <text x="620" y="380" text-anchor="middle" fill="#888" font-size="14">Points DOWN</text>
                                     <text x="620" y="400" text-anchor="middle" fill="#888" font-size="14">(Reality)</text>
 
@@ -3116,8 +3116,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="600" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="20">HIDDEN PORTRAITS</text>
                                     <text x="550" y="630" text-anchor="middle" fill="#fff" font-size="16">Leonardo, Michelangelo, Raphael</text>
 
-                                    <rect x="730" y="560" width="330" height="110" rx="10" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="895" y="600" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="20">PERFECT SYNTHESIS</text>
+                                    <rect x="730" y="560" width="330" height="110" rx="10" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="895" y="600" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="20">PERFECT SYNTHESIS</text>
                                     <text x="895" y="630" text-anchor="middle" fill="#fff" font-size="16">Ancient + Renaissance wisdom</text>
                                 </svg>`,
                                 caption: "Raphael's Madonnas became the standard for beauty, serenity, and tenderness"
@@ -3157,14 +3157,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="26">The Three Giants of High Renaissance</text>
 
                                     <!-- 3 columns -->
-                                    <rect x="40" y="130" width="330" height="400" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="205" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="56">L</text>
+                                    <rect x="40" y="130" width="330" height="400" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="205" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="56">L</text>
                                     <text x="205" y="240" text-anchor="middle" fill="#fff" font-size="28">LEONARDO</text>
-                                    <text x="205" y="290" text-anchor="middle" fill="#3b82f6" font-size="24">Sfumato</text>
+                                    <text x="205" y="290" text-anchor="middle" fill="#6366f1" font-size="24">Sfumato</text>
                                     <text x="205" y="340" text-anchor="middle" fill="#888" font-size="18">"Smoke-like" softness</text>
                                     <text x="205" y="380" text-anchor="middle" fill="#888" font-size="18">Mona Lisa's smile</text>
                                     <text x="205" y="420" text-anchor="middle" fill="#888" font-size="18">Last Supper drama</text>
-                                    <text x="205" y="480" text-anchor="middle" fill="#3b82f6" font-size="18">Science + Art unified</text>
+                                    <text x="205" y="480" text-anchor="middle" fill="#6366f1" font-size="18">Science + Art unified</text>
 
                                     <rect x="385" y="130" width="330" height="400" rx="15" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="2"/>
                                     <text x="550" y="190" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="56">M</text>
@@ -3203,10 +3203,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">HIGH RENAISSANCE CONVERSATION STARTERS</text>
 
                                     <!-- 2x2 + 1 -->
-                                    <rect x="40" y="100" width="500" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <circle cx="100" cy="175" r="30" fill="#3b82f6"/>
+                                    <rect x="40" y="100" width="500" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <circle cx="100" cy="175" r="30" fill="#6366f1"/>
                                     <text x="100" y="185" text-anchor="middle" fill="#fff" font-weight="bold" font-size="24">1</text>
-                                    <text x="310" y="155" text-anchor="middle" fill="#3b82f6" font-size="24" font-weight="bold">THE SMILE SECRET</text>
+                                    <text x="310" y="155" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">THE SMILE SECRET</text>
                                     <text x="310" y="190" text-anchor="middle" fill="#fff" font-size="18">"Mona Lisa's smile uses sfumato - no hard lines"</text>
 
                                     <rect x="560" y="100" width="500" height="150" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
@@ -3249,8 +3249,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="0" y="0" width="1100" height="1024" fill="#1a1a2e"/>
                                     <text x="550" y="79" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">LESSON COMPLETE!</text>
 
-                                    <rect x="40" y="122" width="320" height="194" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="200" y="171" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">L</text>
+                                    <rect x="40" y="122" width="320" height="194" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="200" y="171" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">L</text>
                                     <text x="200" y="214" text-anchor="middle" fill="#fff" font-size="31">LEONARDO</text>
                                     <text x="200" y="251" text-anchor="middle" fill="#888" font-size="27">Sfumato</text>
                                     <text x="200" y="287" text-anchor="middle" fill="#888" font-size="27">Mona Lisa</text>
@@ -3381,8 +3381,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="880" y="400" fill="#888" font-size="22">Not warm Renaissance palette</text>
 
     <!-- Rule 5 centered -->
-    <rect x="200" y="470" width="700" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-    <text x="550" y="520" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">5. SELF-CONSCIOUS ARTIFICE</text>
+    <rect x="200" y="470" width="700" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+    <text x="550" y="520" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">5. SELF-CONSCIOUS ARTIFICE</text>
     <text x="550" y="560" text-anchor="middle" fill="#fff" font-size="24">Art that shows off its own artificiality</text>
 
     <!-- Context -->
@@ -3429,8 +3429,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="800" y="295" text-anchor="middle" fill="#888" font-size="18">1494-1557</text>
 
                                     <!-- Row 2 -->
-                                    <rect x="60" y="340" width="480" height="180" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="3"/>
-                                    <text x="300" y="385" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">BRONZINO</text>
+                                    <rect x="60" y="340" width="480" height="180" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="3"/>
+                                    <text x="300" y="385" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">BRONZINO</text>
                                     <text x="300" y="425" text-anchor="middle" fill="#fff" font-size="22">Allegory with Venus and Cupid</text>
                                     <text x="300" y="460" text-anchor="middle" fill="#888" font-size="20">Icy, alabaster perfection</text>
                                     <text x="300" y="495" text-anchor="middle" fill="#888" font-size="18">1503-1572</text>
@@ -3565,8 +3565,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <rect x="740" y="285" width="24" height="28" fill="none" stroke="#f59e0b" stroke-width="2"/>
     <rect x="755" y="297" width="24" height="28" fill="none" stroke="#f59e0b" stroke-width="2"/>
 
-    <rect x="880" y="120" width="180" height="260" rx="12" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="2"/>
-    <text x="970" y="170" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="48">S</text>
+    <rect x="880" y="120" width="180" height="260" rx="12" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="2"/>
+    <text x="970" y="170" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="48">S</text>
     <text x="970" y="205" text-anchor="middle" fill="#fff" font-size="20">Self-conscious</text>
     <text x="970" y="235" text-anchor="middle" fill="#ccc" font-size="18">Stylish over</text>
     <text x="970" y="260" text-anchor="middle" fill="#ccc" font-size="18">natural</text>
@@ -3623,10 +3623,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="830" y="315" text-anchor="middle" fill="#fff" font-size="20">Cool pinks vs warm reds</text>
     <text x="830" y="345" text-anchor="middle" fill="#888" font-size="18">Palette = era giveaway</text>
 
-    <rect x="250" y="390" width="600" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <circle cx="310" cy="455" r="22" fill="#3b82f6"/>
+    <rect x="250" y="390" width="600" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <circle cx="310" cy="455" r="22" fill="#6366f1"/>
     <text x="310" y="462" text-anchor="middle" fill="#fff" font-weight="bold" font-size="20">5</text>
-    <text x="570" y="435" text-anchor="middle" fill="#3b82f6" font-size="24" font-weight="bold">EL GRECO = MANNERIST</text>
+    <text x="570" y="435" text-anchor="middle" fill="#6366f1" font-size="24" font-weight="bold">EL GRECO = MANNERIST</text>
     <text x="570" y="465" text-anchor="middle" fill="#fff" font-size="20">His stretched figures are textbook Mannerism</text>
     <text x="570" y="495" text-anchor="middle" fill="#888" font-size="18">Lightning skies & elongated saints</text>
 
@@ -3707,8 +3707,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="550" y="50" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="36">WHY VENICE WAS DIFFERENT</text>
 
     <!-- Geographic factors -->
-    <rect x="40" y="90" width="1020" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <text x="550" y="130" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">GEOGRAPHIC FACTORS</text>
+    <rect x="40" y="90" width="1020" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <text x="550" y="130" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">GEOGRAPHIC FACTORS</text>
     <text x="210" y="170" text-anchor="middle" fill="#fff" font-size="22">Built on water</text>
     <text x="550" y="170" text-anchor="middle" fill="#fff" font-size="22">Humid climate</text>
     <text x="890" y="170" text-anchor="middle" fill="#fff" font-size="22">Reflected light</text>
@@ -3717,7 +3717,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="890" y="200" text-anchor="middle" fill="#888" font-size="18">(Shimmering effects)</text>
 
     <!-- Arrows -->
-    <path d="M 550 220 L 550 250" stroke="#3b82f6" stroke-width="3"/>
+    <path d="M 550 220 L 550 250" stroke="#6366f1" stroke-width="3"/>
 
     <!-- Innovations -->
     <rect x="40" y="260" width="1020" height="130" rx="15" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
@@ -3735,8 +3735,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <line x1="100" y1="500" x2="1000" y2="500" stroke="#f59e0b" stroke-width="3"/>
     <circle cx="200" cy="500" r="8" fill="#10b981"/>
     <text x="200" y="540" text-anchor="middle" fill="#10b981" font-size="20">Bellini</text>
-    <circle cx="380" cy="500" r="8" fill="#3b82f6"/>
-    <text x="380" y="540" text-anchor="middle" fill="#3b82f6" font-size="20">Giorgione</text>
+    <circle cx="380" cy="500" r="8" fill="#6366f1"/>
+    <text x="380" y="540" text-anchor="middle" fill="#6366f1" font-size="20">Giorgione</text>
     <circle cx="560" cy="500" r="10" fill="#ef4444"/>
     <text x="560" y="540" text-anchor="middle" fill="#ef4444" font-size="20">TITIAN</text>
     <circle cx="740" cy="500" r="8" fill="#8b5cf6"/>
@@ -3846,20 +3846,20 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
-    <text x="550" y="45" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="36">GIORGIONE (c. 1477-1510)</text>
+    <text x="550" y="45" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="36">GIORGIONE (c. 1477-1510)</text>
     <text x="550" y="80" text-anchor="middle" fill="#888" font-size="22">"The most mysterious genius in art history"</text>
 
     <!-- Two columns -->
     <!-- Left: The Tempest -->
-    <rect x="40" y="110" width="500" height="280" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-    <text x="290" y="150" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">THE TEMPEST (c. 1508)</text>
+    <rect x="40" y="110" width="500" height="280" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+    <text x="290" y="150" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">THE TEMPEST (c. 1508)</text>
 
     <!-- Storm representation -->
     <ellipse cx="180" cy="210" rx="70" ry="30" fill="#374151"/>
     <ellipse cx="290" cy="200" rx="90" ry="35" fill="#4b5563"/>
     <ellipse cx="400" cy="210" rx="70" ry="30" fill="#374151"/>
     <!-- Lightning -->
-    <path d="M 290 180 L 280 230 L 300 220 L 285 280" stroke="#fcd34d" stroke-width="3" fill="none"/>
+    <path d="M 290 180 L 280 230 L 300 220 L 285 280" stroke="#ffd700" stroke-width="3" fill="none"/>
     <!-- Figures -->
     <circle cx="150" cy="330" r="15" fill="#666"/>
     <circle cx="410" cy="340" r="12" fill="#d4a574"/>
@@ -3884,8 +3884,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="550" y="530" text-anchor="middle" fill="#fff" font-size="22">Taught Titian, who finished some of his works</text>
 
     <!-- Bottom bar -->
-    <rect x="200" y="570" width="700" height="70" rx="35" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-    <text x="550" y="615" text-anchor="middle" fill="#3b82f6" font-size="22">Influenced Romantic painting 300 years later</text>
+    <rect x="200" y="570" width="700" height="70" rx="35" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+    <text x="550" y="615" text-anchor="middle" fill="#6366f1" font-size="22">Influenced Romantic painting 300 years later</text>
 </svg>`,
                                 caption: "Giorgione died young but changed art forever"
                             }
@@ -3922,10 +3922,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="180" y="160" text-anchor="middle" fill="#10b981" font-size="16">Works with</text>
     <text x="180" y="178" text-anchor="middle" fill="#10b981" font-size="16">Giorgione</text>
 
-    <circle cx="400" cy="130" r="8" fill="#3b82f6"/>
+    <circle cx="400" cy="130" r="8" fill="#6366f1"/>
     <text x="400" y="115" text-anchor="middle" fill="#888" font-size="16">1516</text>
-    <text x="400" y="160" text-anchor="middle" fill="#3b82f6" font-size="16">Official</text>
-    <text x="400" y="178" text-anchor="middle" fill="#3b82f6" font-size="16">Painter</text>
+    <text x="400" y="160" text-anchor="middle" fill="#6366f1" font-size="16">Official</text>
+    <text x="400" y="178" text-anchor="middle" fill="#6366f1" font-size="16">Painter</text>
 
     <circle cx="620" cy="130" r="8" fill="#f59e0b"/>
     <text x="620" y="115" text-anchor="middle" fill="#888" font-size="16">1533</text>
@@ -4016,7 +4016,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <rect x="120" y="160" width="20" height="80" fill="#ef4444" transform="rotate(-10 130 200)"/>
     <rect x="150" y="160" width="20" height="80" fill="#f59e0b" transform="rotate(5 160 200)"/>
     <rect x="180" y="160" width="20" height="80" fill="#ef4444" transform="rotate(-5 190 200)"/>
-    <rect x="210" y="160" width="20" height="80" fill="#fcd34d" transform="rotate(8 220 200)"/>
+    <rect x="210" y="160" width="20" height="80" fill="#ffd700" transform="rotate(8 220 200)"/>
     <rect x="240" y="160" width="20" height="80" fill="#ef4444" transform="rotate(-3 250 200)"/>
 
     <text x="205" y="280" text-anchor="middle" fill="#fff" font-size="20">Separate strokes</text>
@@ -4032,8 +4032,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
     <!-- Thick paint blob -->
     <ellipse cx="550" cy="210" rx="100" ry="50" fill="#f59e0b" stroke="#dc8a0a" stroke-width="6"/>
-    <ellipse cx="530" cy="195" rx="50" ry="25" fill="#fcd34d"/>
-    <ellipse cx="510" cy="180" rx="25" ry="12" fill="#fef3c7"/>
+    <ellipse cx="530" cy="195" rx="50" ry="25" fill="#ffd700"/>
+    <ellipse cx="510" cy="180" rx="25" ry="12" fill="#ffd700"/>
 
     <text x="550" y="300" text-anchor="middle" fill="#fff" font-size="20">THICK paint</text>
     <text x="550" y="325" text-anchor="middle" fill="#fff" font-size="20">creates real</text>
@@ -4046,8 +4046,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
     <!-- Abstract strokes -->
     <path d="M 840 170 Q 880 150 920 180 Q 960 210 940 260" stroke="#8b5cf6" stroke-width="8" fill="none"/>
-    <path d="M 850 200 Q 890 240 870 290" stroke="#a78bfa" stroke-width="6" fill="none"/>
-    <path d="M 900 160 Q 950 200 930 260" stroke="#c4b5fd" stroke-width="5" fill="none"/>
+    <path d="M 850 200 Q 890 240 870 290" stroke="#8b5cf6" stroke-width="6" fill="none"/>
+    <path d="M 900 160 Q 950 200 930 260" stroke="#8b5cf6" stroke-width="5" fill="none"/>
 
     <text x="895" y="310" text-anchor="middle" fill="#fff" font-size="20">In his 80s:</text>
     <text x="895" y="335" text-anchor="middle" fill="#fff" font-size="20">FREE, loose,</text>
@@ -4154,9 +4154,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="550" y="85" text-anchor="middle" fill="#888" font-size="22">Remember Venetian Renaissance in 4 letters</text>
 
     <!-- 4 boxes -->
-    <rect x="40" y="120" width="245" height="300" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-    <text x="162" y="175" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="52">G</text>
-    <text x="162" y="215" text-anchor="middle" fill="#3b82f6" font-size="22">GIORGIONE</text>
+    <rect x="40" y="120" width="245" height="300" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+    <text x="162" y="175" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="52">G</text>
+    <text x="162" y="215" text-anchor="middle" fill="#6366f1" font-size="22">GIORGIONE</text>
     <text x="162" y="255" text-anchor="middle" fill="#fff" font-size="20">Mystery &amp;</text>
     <text x="162" y="280" text-anchor="middle" fill="#fff" font-size="20">Mood</text>
     <text x="162" y="330" text-anchor="middle" fill="#ccc" font-size="18">The Tempest</text>
@@ -4218,8 +4218,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="290" y="175" text-anchor="middle" fill="#fff" font-size="20">"Notice how there are no hard outlines—</text>
     <text x="290" y="200" text-anchor="middle" fill="#888" font-size="18">Titian builds with color"</text>
 
-    <rect x="560" y="100" width="500" height="140" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-    <text x="810" y="140" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">ABOUT TECHNIQUE</text>
+    <rect x="560" y="100" width="500" height="140" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+    <text x="810" y="140" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">ABOUT TECHNIQUE</text>
     <text x="810" y="175" text-anchor="middle" fill="#fff" font-size="20">"Venice's humidity created oil on canvas—</text>
     <text x="810" y="200" text-anchor="middle" fill="#888" font-size="18">the standard we still use today"</text>
 
@@ -4262,14 +4262,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="550" y="78" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="32">LESSON 7 COMPLETE!</text>
 
     <!-- Core concept -->
-    <rect x="40" y="120" width="1020" height="80" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-    <text x="550" y="155" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">CORE CONCEPT</text>
+    <rect x="40" y="120" width="1020" height="80" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+    <text x="550" y="155" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">CORE CONCEPT</text>
     <text x="550" y="185" text-anchor="middle" fill="#fff" font-size="20">COLORITO: Color as the foundation of painting (vs Florence's DISEGNO)</text>
 
     <!-- Artists grid -->
     <rect x="40" y="220" width="1020" height="110" rx="15" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
     <text x="550" y="255" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="22">THE MASTERS</text>
-    <text x="175" y="295" text-anchor="middle" fill="#3b82f6" font-size="20">Giorgione</text>
+    <text x="175" y="295" text-anchor="middle" fill="#6366f1" font-size="20">Giorgione</text>
     <text x="175" y="315" text-anchor="middle" fill="#888" font-size="16">Mystery</text>
     <text x="420" y="295" text-anchor="middle" fill="#ef4444" font-size="20">Titian</text>
     <text x="420" y="315" text-anchor="middle" fill="#888" font-size="16">Color</text>
@@ -4318,7 +4318,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
-    <text x="550" y="50" text-anchor="middle" fill="#fcd34d" font-weight="bold" font-size="36">FINAL REVIEW</text>
+    <text x="550" y="50" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">FINAL REVIEW</text>
     <text x="550" y="85" text-anchor="middle" fill="#888" font-size="22">300 Years of Art History Mastered</text>
 
     <!-- Progress circles - 7 lessons -->
@@ -4330,8 +4330,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="270" y="190" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="32">2</text>
     <text x="270" y="240" text-anchor="middle" fill="#888" font-size="18">Florence</text>
 
-    <circle cx="410" cy="180" r="45" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="4"/>
-    <text x="410" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="32">3</text>
+    <circle cx="410" cy="180" r="45" fill="rgba(59,130,246,0.2)" stroke="#6366f1" stroke-width="4"/>
+    <text x="410" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="32">3</text>
     <text x="410" y="240" text-anchor="middle" fill="#888" font-size="18">Northern</text>
 
     <circle cx="550" cy="180" r="45" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="4"/>
@@ -4351,8 +4351,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="970" y="240" text-anchor="middle" fill="#888" font-size="18">Venice</text>
 
     <!-- What you'll review -->
-    <rect x="40" y="290" width="1020" height="180" rx="15" fill="rgba(255,215,0,0.1)" stroke="#fcd34d"/>
-    <text x="550" y="335" text-anchor="middle" fill="#fcd34d" font-weight="bold" font-size="28">THIS REVIEW WILL:</text>
+    <rect x="40" y="290" width="1020" height="180" rx="15" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
+    <text x="550" y="335" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="28">THIS REVIEW WILL:</text>
     <text x="270" y="380" text-anchor="middle" fill="#fff" font-size="20">Test your knowledge</text>
     <text x="550" y="380" text-anchor="middle" fill="#fff" font-size="20">Refresh memory tools</text>
     <text x="830" y="380" text-anchor="middle" fill="#fff" font-size="20">Connect movements</text>
@@ -4402,9 +4402,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="530" y="185" fill="#888" font-size="16">BMDA</text>
 
     <!-- Northern -->
-    <circle cx="120" cy="250" r="10" fill="#3b82f6"/>
-    <text x="145" y="245" fill="#3b82f6" font-weight="bold" font-size="20">1430</text>
-    <rect x="180" y="230" width="320" height="45" rx="12" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
+    <circle cx="120" cy="250" r="10" fill="#6366f1"/>
+    <text x="145" y="245" fill="#6366f1" font-weight="bold" font-size="20">1430</text>
+    <rect x="180" y="230" width="320" height="45" rx="12" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
     <text x="340" y="260" text-anchor="middle" fill="#fff" font-size="18">Northern Renaissance</text>
     <text x="530" y="260" fill="#888" font-size="16">GOLD</text>
 
@@ -4444,7 +4444,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="840" y="120" text-anchor="middle" fill="#fff" font-weight="bold" font-size="22">MNEMONICS:</text>
     <text x="660" y="160" fill="#f59e0b" font-size="18">ELEGANCE - Courtly refinement</text>
     <text x="660" y="190" fill="#10b981" font-size="18">BMDA - 4 Florence pioneers</text>
-    <text x="660" y="220" fill="#3b82f6" font-size="18">GOLD - Oil &amp; symbolism</text>
+    <text x="660" y="220" fill="#6366f1" font-size="18">GOLD - Oil &amp; symbolism</text>
     <text x="660" y="250" fill="#ec4899" font-size="18">MIBA - Global trade</text>
     <text x="660" y="280" fill="#6366f1" font-size="18">LMR - The 3 giants</text>
     <text x="660" y="310" fill="#8b5cf6" font-size="18">SEALS - Rule-breaking</text>
@@ -4480,7 +4480,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
-    <text x="550" y="45" text-anchor="middle" fill="#fcd34d" font-weight="bold" font-size="34">YOUR MEMORY TOOLKIT</text>
+    <text x="550" y="45" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="34">YOUR MEMORY TOOLKIT</text>
 
     <!-- Row 1: 4 boxes -->
     <rect x="40" y="80" width="245" height="150" rx="15" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
@@ -4495,8 +4495,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="427" y="185" text-anchor="middle" fill="#888" font-size="16">4 pioneers</text>
     <text x="427" y="210" text-anchor="middle" fill="#888" font-size="16">Science of art</text>
 
-    <rect x="570" y="80" width="245" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <text x="692" y="120" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">GOLD</text>
+    <rect x="570" y="80" width="245" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <text x="692" y="120" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">GOLD</text>
     <text x="692" y="155" text-anchor="middle" fill="#fff" font-size="20">Northern</text>
     <text x="692" y="185" text-anchor="middle" fill="#888" font-size="16">Oil &amp; detail</text>
     <text x="692" y="210" text-anchor="middle" fill="#888" font-size="16">Hidden symbols</text>
@@ -4576,8 +4576,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="60" y="300" fill="#888" font-size="16">• Botticelli</text>
 
     <!-- Column 2: Northern -->
-    <rect x="385" y="70" width="330" height="280" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-    <text x="550" y="105" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">NORTHERN</text>
+    <rect x="385" y="70" width="330" height="280" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+    <text x="550" y="105" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">NORTHERN</text>
     <text x="405" y="140" fill="#fff" font-size="18">Oil Masters:</text>
     <text x="405" y="165" fill="#888" font-size="16">• Jan van Eyck</text>
     <text x="405" y="200" fill="#fff" font-size="18">German:</text>
@@ -4657,7 +4657,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 700" class="lesson-visual">
     <rect x="0" y="0" width="1100" height="700" fill="#1a1a2e"/>
-    <text x="550" y="45" text-anchor="middle" fill="#fcd34d" font-weight="bold" font-size="32">5 INNOVATIONS THAT CHANGED EVERYTHING</text>
+    <text x="550" y="45" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="32">5 INNOVATIONS THAT CHANGED EVERYTHING</text>
 
     <!-- Innovation 1 -->
     <rect x="40" y="80" width="500" height="120" rx="15" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
@@ -4666,8 +4666,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="290" y="180" text-anchor="middle" fill="#888" font-size="16">Brunelleschi | Florence | 1420s</text>
 
     <!-- Innovation 2 -->
-    <rect x="560" y="80" width="500" height="120" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <text x="810" y="120" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">2. OIL PAINTING</text>
+    <rect x="560" y="80" width="500" height="120" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <text x="810" y="120" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">2. OIL PAINTING</text>
     <text x="810" y="150" text-anchor="middle" fill="#fff" font-size="20">Layering, glazing, detail</text>
     <text x="810" y="180" text-anchor="middle" fill="#888" font-size="16">Van Eyck → Venice | 1430s</text>
 
@@ -4732,8 +4732,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="290" y="120" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">TECHNIQUES</text>
     <text x="290" y="155" text-anchor="middle" fill="#fff" font-size="20">Perspective | Sfumato | Oil | Colorito</text>
 
-    <rect x="560" y="80" width="500" height="110" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <text x="810" y="120" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">MOVEMENTS</text>
+    <rect x="560" y="80" width="500" height="110" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <text x="810" y="120" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">MOVEMENTS</text>
     <text x="810" y="155" text-anchor="middle" fill="#fff" font-size="20">Gothic | Florence | Northern | Venice</text>
 
     <rect x="40" y="210" width="500" height="110" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6"/>
@@ -4797,8 +4797,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
     <text x="550" y="80" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="36">BOOK 1 COMPLETE!</text>
 
     <!-- Stats row -->
-    <rect x="40" y="130" width="320" height="120" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-    <text x="200" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="48">8</text>
+    <rect x="40" y="130" width="320" height="120" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+    <text x="200" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="48">8</text>
     <text x="200" y="215" text-anchor="middle" fill="#fff" font-size="22">Lessons</text>
     <text x="200" y="240" text-anchor="middle" fill="#888" font-size="16">Completed</text>
 
@@ -4885,8 +4885,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="304" text-anchor="middle" fill="#888" font-size="27">Art as EMOTIONAL weapon</text>
                                     <text x="290" y="333" text-anchor="middle" fill="#888" font-size="27">Feel faith, don't just think it</text>
 
-                                    <rect x="560" y="134" width="500" height="206" rx="34" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="183" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">SCIENTIFIC REVOLUTION</text>
+                                    <rect x="560" y="134" width="500" height="206" rx="34" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="183" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">SCIENTIFIC REVOLUTION</text>
                                     <text x="810" y="224" text-anchor="middle" fill="#fff" font-size="29">Galileo, Newton reveal</text>
                                     <text x="810" y="260" text-anchor="middle" fill="#fff" font-size="29">a strange new universe</text>
                                     <text x="810" y="304" text-anchor="middle" fill="#888" font-size="27">Awe and wonder</text>
@@ -4914,7 +4914,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="398" y="655" text-anchor="middle" fill="#888" font-size="25">Flanders 1610</text>
                                     <circle cx="764" cy="619" r="10" fill="#10b981"/>
                                     <text x="583" y="655" text-anchor="middle" fill="#888" font-size="25">Dutch 1620</text>
-                                    <circle cx="1007" cy="619" r="10" fill="#3b82f6"/>
+                                    <circle cx="1007" cy="619" r="10" fill="#6366f1"/>
                                     <text x="769" y="655" text-anchor="middle" fill="#888" font-size="25">France 1640</text>
                                 </svg>`,
                                 caption: "Baroque art emerged from religious and scientific revolutions"
@@ -5091,9 +5091,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="742" y="413" text-anchor="middle" fill="#888" font-size="25">before God</text>
 
                                     <!-- O -->
-                                    <rect x="848" y="171" width="172" height="242" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="933" y="224" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="51">O</text>
-                                    <text x="933" y="268" text-anchor="middle" fill="#3b82f6" font-size="27">OVERWHELM</text>
+                                    <rect x="848" y="171" width="172" height="242" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="933" y="224" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="51">O</text>
+                                    <text x="933" y="268" text-anchor="middle" fill="#6366f1" font-size="27">OVERWHELM</text>
                                     <text x="933" y="311" text-anchor="middle" fill="#fff" font-size="25">Sensory</text>
                                     <text x="933" y="340" text-anchor="middle" fill="#fff" font-size="25">overload</text>
                                     <text x="933" y="388" text-anchor="middle" fill="#888" font-size="25">Every</text>
@@ -5161,8 +5161,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="534" text-anchor="middle" fill="#fff" font-size="29">Tenebrism • Emotion • Movement • Power • Overwhelm</text>
 
                                     <!-- Feynman badge -->
-                                    <rect x="212" y="570" width="636" height="68" rx="27" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="550" y="616" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">🎓 Ready to explain Baroque to anyone!</text>
+                                    <rect x="212" y="570" width="636" height="68" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="550" y="616" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">🎓 Ready to explain Baroque to anyone!</text>
                                 </svg>`,
                                 caption: "You now understand the foundations of Baroque art"
                             }
@@ -5216,8 +5216,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="875" y="328" text-anchor="middle" fill="#fff" font-size="25">Dies at 38</text>
 
                                     <!-- Before/After -->
-                                    <rect x="40" y="388" width="500" height="158" rx="27" fill="rgba(107,114,128,0.2)" stroke="#6b7280"/>
-                                    <text x="290" y="430" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="31">BEFORE CARAVAGGIO</text>
+                                    <rect x="40" y="388" width="500" height="158" rx="27" fill="rgba(107,114,128,0.2)" stroke="#888"/>
+                                    <text x="290" y="430" text-anchor="middle" fill="#888" font-weight="bold" font-size="31">BEFORE CARAVAGGIO</text>
                                     <text x="290" y="474" text-anchor="middle" fill="#888" font-size="27">Saints like Greek gods</text>
                                     <text x="290" y="505" text-anchor="middle" fill="#888" font-size="27">Heavenly settings</text>
                                     <text x="290" y="536" text-anchor="middle" fill="#888" font-size="27">Idealized beauty</text>
@@ -5336,8 +5336,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="461" text-anchor="middle" fill="#fff" font-size="29">"Holiness can be found in ordinary humanity"</text>
                                     <text x="550" y="498" text-anchor="middle" fill="#888" font-size="27">You don't need perfect beauty to depict the divine</text>
 
-                                    <rect x="212" y="534" width="636" height="72" rx="27" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="550" y="582" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">🎓 You can now explain Caravaggio's revolution!</text>
+                                    <rect x="212" y="534" width="636" height="72" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="550" y="582" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">🎓 You can now explain Caravaggio's revolution!</text>
                                 </svg>`,
                                 caption: "The outlaw genius who changed how we see"
                             }
@@ -5769,9 +5769,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="40" y="370" width="1020" height="280" rx="20" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <text x="550" y="410" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">KEY FIGURES IN THE PAINTING</text>
 
-                                    <circle cx="180" cy="520" r="60" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="3"/>
+                                    <circle cx="180" cy="520" r="60" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="3"/>
                                     <text x="180" y="510" text-anchor="middle" fill="#fff" font-size="22">CAPTAIN</text>
-                                    <text x="180" y="535" text-anchor="middle" fill="#3b82f6" font-size="20">Cocq</text>
+                                    <text x="180" y="535" text-anchor="middle" fill="#6366f1" font-size="20">Cocq</text>
                                     <text x="180" y="605" text-anchor="middle" fill="#888" font-size="20">In black, giving orders</text>
 
                                     <circle cx="400" cy="520" r="60" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3"/>
@@ -5892,8 +5892,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="850" y="660" text-anchor="middle" fill="#888" font-size="20">What does it mean?</text>
 
                                     <!-- Key Self-Portraits -->
-                                    <rect x="100" y="720" width="900" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="765" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">FAMOUS SELF-PORTRAITS</text>
+                                    <rect x="100" y="720" width="900" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="765" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">FAMOUS SELF-PORTRAITS</text>
 
                                     <rect x="140" y="795" width="200" height="100" rx="10" fill="rgba(16,185,129,0.2)"/>
                                     <text x="240" y="830" text-anchor="middle" fill="#fff" font-size="22">Age 23 (1629)</text>
@@ -6035,8 +6035,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="555" y="300" text-anchor="middle" fill="#fff" font-size="20">Unflinching honesty</text>
                                     <text x="555" y="330" text-anchor="middle" fill="#888" font-size="18">Visual autobiography</text>
 
-                                    <rect x="740" y="190" width="320" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="900" y="230" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="25">3. GROUP PORTRAITS</text>
+                                    <rect x="740" y="190" width="320" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="900" y="230" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="25">3. GROUP PORTRAITS</text>
                                     <text x="900" y="270" text-anchor="middle" fill="#fff" font-size="20">Night Watch revolution</text>
                                     <text x="900" y="300" text-anchor="middle" fill="#fff" font-size="20">Action, not lineups</text>
                                     <text x="900" y="330" text-anchor="middle" fill="#888" font-size="18">Narrative drama</text>
@@ -6066,7 +6066,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="660" y="630" text-anchor="middle" fill="#10b981" font-size="24">Jewish Bride</text>
                                     <text x="660" y="660" text-anchor="middle" fill="#888" font-size="18">1667</text>
 
-                                    <text x="870" y="630" text-anchor="middle" fill="#3b82f6" font-size="24">Anatomy Lesson</text>
+                                    <text x="870" y="630" text-anchor="middle" fill="#6366f1" font-size="24">Anatomy Lesson</text>
                                     <text x="870" y="660" text-anchor="middle" fill="#888" font-size="18">1632</text>
 
                                     <!-- Influence -->
@@ -6106,11 +6106,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 852" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="852" fill="#1a1a2e"/>
-                                    <text x="550" y="86" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">VERMEER (1632-1675)</text>
+                                    <text x="550" y="86" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">VERMEER (1632-1675)</text>
                                     <text x="550" y="134" text-anchor="middle" fill="#888" font-size="31">"Only 34 paintings, yet among the greatest ever"</text>
 
-                                    <rect x="40" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="290" y="219" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">THE MYSTERY</text>
+                                    <rect x="40" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="290" y="219" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">THE MYSTERY</text>
                                     <text x="290" y="268" text-anchor="middle" fill="#fff" font-size="27">Unknown for 200 years</text>
                                     <text x="290" y="304" text-anchor="middle" fill="#fff" font-size="27">Almost no life records</text>
                                     <text x="290" y="340" text-anchor="middle" fill="#fff" font-size="27">Camera obscura?</text>
@@ -6153,12 +6153,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="60" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">VERMEER'S LIGHT</text>
+                                    <text x="550" y="60" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">VERMEER'S LIGHT</text>
                                     <text x="550" y="105" text-anchor="middle" fill="#888" font-size="29">"The Magic of the Northern Window"</text>
 
                                     <!-- The Vermeer Room diagram -->
-                                    <rect x="150" y="140" width="800" height="300" rx="20" fill="rgba(59,130,246,0.08)" stroke="#3b82f6"/>
-                                    <text x="550" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">THE VERMEER ROOM</text>
+                                    <rect x="150" y="140" width="800" height="300" rx="20" fill="rgba(59,130,246,0.08)" stroke="#6366f1"/>
+                                    <text x="550" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">THE VERMEER ROOM</text>
 
                                     <!-- Simplified room layout -->
                                     <rect x="200" y="210" width="100" height="180" fill="none" stroke="#ffd700" stroke-width="3" stroke-dasharray="10,5"/>
@@ -6195,12 +6195,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="555" y="620" text-anchor="middle" fill="#888" font-size="20">Effect: Psychological</text>
                                     <text x="555" y="655" text-anchor="middle" fill="#8b5cf6" font-size="18">REVELATION</text>
 
-                                    <rect x="740" y="470" width="320" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="900" y="510" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="27">VERMEER</text>
+                                    <rect x="740" y="470" width="320" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="900" y="510" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="27">VERMEER</text>
                                     <text x="900" y="550" text-anchor="middle" fill="#fff" font-size="22">Natural daylight</text>
                                     <text x="900" y="585" text-anchor="middle" fill="#fff" font-size="20">Source: Specific window</text>
                                     <text x="900" y="620" text-anchor="middle" fill="#fff" font-size="20">Effect: Tangible reality</text>
-                                    <text x="900" y="655" text-anchor="middle" fill="#3b82f6" font-size="18">PRESENCE</text>
+                                    <text x="900" y="655" text-anchor="middle" fill="#6366f1" font-size="18">PRESENCE</text>
 
                                     <!-- Technical mastery -->
                                     <rect x="100" y="700" width="900" height="180" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700"/>
@@ -6220,7 +6220,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Quote -->
                                     <rect x="200" y="910" width="700" height="60" rx="15" fill="rgba(255,255,255,0.05)"/>
-                                    <text x="550" y="950" text-anchor="middle" fill="#3b82f6" font-style="italic" font-size="24">"You can almost feel the temperature of the room"</text>
+                                    <text x="550" y="950" text-anchor="middle" fill="#6366f1" font-style="italic" font-size="24">"You can almost feel the temperature of the room"</text>
                                 </svg>`,
                                 caption: "Vermeer's light feels more real than any other painter's"
                             }
@@ -6248,8 +6248,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="105" text-anchor="middle" fill="#888" font-size="29">"The Mona Lisa of the North" (c. 1665)</text>
 
                                     <!-- Main composition analysis -->
-                                    <rect x="100" y="140" width="400" height="380" rx="20" fill="rgba(59,130,246,0.08)" stroke="#3b82f6"/>
-                                    <text x="300" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">THE COMPOSITION</text>
+                                    <rect x="100" y="140" width="400" height="380" rx="20" fill="rgba(59,130,246,0.08)" stroke="#6366f1"/>
+                                    <text x="300" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">THE COMPOSITION</text>
 
                                     <!-- Simplified figure outline -->
                                     <ellipse cx="300" cy="350" rx="100" ry="130" fill="rgba(236,72,153,0.2)" stroke="#ec4899" stroke-width="2"/>
@@ -6261,8 +6261,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <circle cx="370" cy="370" r="15" fill="rgba(255,255,255,0.8)" stroke="#ffd700" stroke-width="2"/>
                                     <text x="420" y="375" fill="#ffd700" font-size="16">PEARL</text>
 
-                                    <ellipse cx="280" cy="240" rx="60" ry="30" fill="none" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="280" y="205" text-anchor="middle" fill="#3b82f6" font-size="16">TURBAN</text>
+                                    <ellipse cx="280" cy="240" rx="60" ry="30" fill="none" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="280" y="205" text-anchor="middle" fill="#6366f1" font-size="16">TURBAN</text>
 
                                     <text x="300" y="500" text-anchor="middle" fill="#888" font-size="20">Dark background</text>
                                     <text x="300" y="480" text-anchor="middle" fill="#fff" font-size="20">→ Figure emerges into light</text>
@@ -6280,7 +6280,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="915" y="275" text-anchor="middle" fill="#888" font-size="18">Symbol of purity, beauty</text>
 
                                     <rect x="560" y="320" width="230" height="90" rx="10" fill="rgba(59,130,246,0.15)"/>
-                                    <text x="675" y="355" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">THE TURBAN</text>
+                                    <text x="675" y="355" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">THE TURBAN</text>
                                     <text x="675" y="385" text-anchor="middle" fill="#888" font-size="18">Exotic mystery</text>
 
                                     <rect x="800" y="320" width="230" height="90" rx="10" fill="rgba(16,185,129,0.15)"/>
@@ -6369,12 +6369,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="555" y="510" text-anchor="middle" fill="#fff" font-size="20">Impasto catches real light</text>
                                     <text x="555" y="550" text-anchor="middle" fill="#fff" font-size="20">Smooth glazes for milk</text>
 
-                                    <rect x="740" y="345" width="320" height="220" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="900" y="390" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="27">THE STILLNESS</text>
+                                    <rect x="740" y="345" width="320" height="220" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="900" y="390" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="27">THE STILLNESS</text>
                                     <text x="900" y="440" text-anchor="middle" fill="#fff" font-size="20">Time stops completely</text>
                                     <text x="900" y="480" text-anchor="middle" fill="#888" font-size="18">She has poured this milk</text>
                                     <text x="900" y="510" text-anchor="middle" fill="#888" font-size="18">for 350+ years</text>
-                                    <text x="900" y="550" text-anchor="middle" fill="#3b82f6" font-size="18">Frozen in eternal present</text>
+                                    <text x="900" y="550" text-anchor="middle" fill="#6366f1" font-size="18">Frozen in eternal present</text>
 
                                     <!-- The dignity -->
                                     <rect x="100" y="595" width="900" height="160" rx="20" fill="rgba(236,72,153,0.1)" stroke="#ec4899"/>
@@ -6451,7 +6451,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Bottom line -->
                                     <rect x="200" y="930" width="700" height="80" rx="15" fill="rgba(59,130,246,0.1)"/>
-                                    <text x="550" y="965" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">THE BOTTOM LINE</text>
+                                    <text x="550" y="965" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">THE BOTTOM LINE</text>
                                     <text x="550" y="995" text-anchor="middle" fill="#fff" font-size="20">His genius was translating what he saw—however he saw it—into paint</text>
                                 </svg>`,
                                 caption: "Tool for observation, not tracing—the debate continues"
@@ -6476,7 +6476,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="60" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">VERMEER: LESSON SUMMARY</text>
+                                    <text x="550" y="60" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">VERMEER: LESSON SUMMARY</text>
                                     <text x="550" y="105" text-anchor="middle" fill="#888" font-size="29">The Poet of Light (1632-1675)</text>
 
                                     <!-- 5 Key Contributions -->
@@ -6488,8 +6488,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="205" y="300" text-anchor="middle" fill="#fff" font-size="20">How it falls, bounces, glows</text>
                                     <text x="205" y="330" text-anchor="middle" fill="#888" font-size="18">Northern window magic</text>
 
-                                    <rect x="390" y="190" width="330" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="555" y="230" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="25">2. SUSPENDED TIME</text>
+                                    <rect x="390" y="190" width="330" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="555" y="230" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="25">2. SUSPENDED TIME</text>
                                     <text x="555" y="270" text-anchor="middle" fill="#fff" font-size="20">Moments that feel eternal</text>
                                     <text x="555" y="300" text-anchor="middle" fill="#fff" font-size="20">350 years of pouring milk</text>
                                     <text x="555" y="330" text-anchor="middle" fill="#888" font-size="18">Frozen present tense</text>
@@ -6529,8 +6529,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="870" y="655" text-anchor="middle" fill="#888" font-size="18">c. 1664</text>
 
                                     <!-- Legacy -->
-                                    <rect x="100" y="700" width="900" height="120" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="745" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">LASTING INFLUENCE</text>
+                                    <rect x="100" y="700" width="900" height="120" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="745" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">LASTING INFLUENCE</text>
                                     <text x="550" y="790" text-anchor="middle" fill="#fff" font-size="24">Photography • Cinema • Contemporary painting • Interior design</text>
 
                                     <!-- The mystery -->
@@ -6540,7 +6540,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <!-- Quote -->
                                     <text x="550" y="1020" text-anchor="middle" fill="#ffd700" font-style="italic" font-size="26">"Only 34 paintings, yet among the greatest ever"</text>
-                                    <text x="550" y="1060" text-anchor="middle" fill="#3b82f6" font-size="22">JOHANNES VERMEER (1632-1675)</text>
+                                    <text x="550" y="1060" text-anchor="middle" fill="#6366f1" font-size="22">JOHANNES VERMEER (1632-1675)</text>
                                 </svg>`,
                                 caption: "34 paintings that changed how we see light forever"
                             }
@@ -6797,8 +6797,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="580" y="295" text-anchor="middle" fill="#888" font-size="16">Pink, blue, cream</text>
                                     <text x="580" y="325" text-anchor="middle" fill="#888" font-size="16">Gold accents</text>
 
-                                    <rect x="700" y="190" width="200" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="800" y="230" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">MIRRORS</text>
+                                    <rect x="700" y="190" width="200" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="800" y="230" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">MIRRORS</text>
                                     <text x="800" y="265" text-anchor="middle" fill="#fff" font-size="18">Multiply light</text>
                                     <text x="800" y="295" text-anchor="middle" fill="#888" font-size="16">Expand space</text>
                                     <text x="800" y="325" text-anchor="middle" fill="#888" font-size="16">Dazzling effect</text>
@@ -6959,8 +6959,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="335" text-anchor="middle" fill="#fff" font-size="27">Blazing colors</text>
                                     <text x="290" y="372" text-anchor="middle" fill="#888" font-size="25">Italian + Flemish fusion</text>
 
-                                    <rect x="560" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="214" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">THE DIPLOMAT</text>
+                                    <rect x="560" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="214" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">THE DIPLOMAT</text>
                                     <text x="810" y="263" text-anchor="middle" fill="#fff" font-size="27">6 languages fluent</text>
                                     <text x="810" y="299" text-anchor="middle" fill="#fff" font-size="27">Negotiated peace treaties</text>
                                     <text x="810" y="335" text-anchor="middle" fill="#fff" font-size="27">Served multiple courts</text>
@@ -7008,9 +7008,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
 
                                     <text x="310" y="270" fill="#ffd700" font-size="36">→</text>
 
-                                    <rect x="340" y="195" width="240" height="150" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="460" y="235" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">2. ASSISTANTS</text>
-                                    <text x="460" y="265" text-anchor="middle" fill="#3b82f6" font-size="20">ENLARGE</text>
+                                    <rect x="340" y="195" width="240" height="150" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="460" y="235" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">2. ASSISTANTS</text>
+                                    <text x="460" y="265" text-anchor="middle" fill="#6366f1" font-size="20">ENLARGE</text>
                                     <text x="460" y="300" text-anchor="middle" fill="#fff" font-size="18">Full-size canvas</text>
                                     <text x="460" y="325" text-anchor="middle" fill="#888" font-size="16">Backgrounds, details</text>
 
@@ -7153,12 +7153,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="60" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">RUBENS THE DIPLOMAT</text>
+                                    <text x="550" y="60" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">RUBENS THE DIPLOMAT</text>
                                     <text x="550" y="105" text-anchor="middle" fill="#888" font-size="29">"The Painter-Spy Who Negotiated Peace"</text>
 
                                     <!-- Diplomatic achievements -->
-                                    <rect x="100" y="145" width="900" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="190" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">DIPLOMATIC ACHIEVEMENTS</text>
+                                    <rect x="100" y="145" width="900" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="190" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">DIPLOMATIC ACHIEVEMENTS</text>
 
                                     <text x="280" y="245" text-anchor="middle" fill="#fff" font-size="22">Spain-England Peace</text>
                                     <text x="280" y="275" text-anchor="middle" fill="#888" font-size="18">Successfully negotiated!</text>
@@ -7239,8 +7239,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="360" y="300" text-anchor="middle" fill="#fff" font-size="18">Monumental size</text>
                                     <text x="360" y="330" text-anchor="middle" fill="#888" font-size="16">He thought BIG</text>
 
-                                    <rect x="480" y="190" width="200" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="580" y="230" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">BUSINESS</text>
+                                    <rect x="480" y="190" width="200" height="150" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="580" y="230" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">BUSINESS</text>
                                     <text x="580" y="270" text-anchor="middle" fill="#fff" font-size="18">Workshop system</text>
                                     <text x="580" y="300" text-anchor="middle" fill="#fff" font-size="18">Art as industry</text>
                                     <text x="580" y="330" text-anchor="middle" fill="#888" font-size="16">Innovation</text>
@@ -7324,8 +7324,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="652" y="268" text-anchor="middle" fill="#8b5cf6" font-size="29">Rembrandt</text>
                                     <text x="652" y="304" text-anchor="middle" fill="#888" font-size="25">Psychology</text>
 
-                                    <rect x="785" y="219" width="225" height="121" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="896" y="268" text-anchor="middle" fill="#3b82f6" font-size="29">Vermeer</text>
+                                    <rect x="785" y="219" width="225" height="121" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="896" y="268" text-anchor="middle" fill="#6366f1" font-size="29">Vermeer</text>
                                     <text x="896" y="304" text-anchor="middle" fill="#888" font-size="25">34 paintings</text>
 
                                     <rect x="297" y="364" width="225" height="121" rx="20" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
@@ -7342,8 +7342,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="582" text-anchor="middle" fill="#fff" font-size="29">Tenebrism • Emotion • Movement • Power • Overwhelm</text>
 
                                     <!-- Next -->
-                                    <rect x="212" y="619" width="636" height="68" rx="27" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="550" y="665" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">→ NEXT: Book 3 - Modern &amp; Contemporary</text>
+                                    <rect x="212" y="619" width="636" height="68" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="550" y="665" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">→ NEXT: Book 3 - Modern &amp; Contemporary</text>
                                 </svg>`,
                                 caption: "From 1600 to 1800: Drama to elegance"
                             }
@@ -7394,12 +7394,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 908" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="908" fill="#1a1a2e"/>
-                                    <text x="550" y="86" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">IMPRESSIONISM (1860s-1880s)</text>
+                                    <text x="550" y="86" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">IMPRESSIONISM (1860s-1880s)</text>
                                     <text x="550" y="134" text-anchor="middle" fill="#888" font-size="31">"Not a failure at old art—an invention of new art"</text>
 
                                     <!-- What made it possible -->
-                                    <rect x="53" y="171" width="954" height="169" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="214" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">WHAT MADE IT POSSIBLE</text>
+                                    <rect x="53" y="171" width="954" height="169" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="214" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">WHAT MADE IT POSSIBLE</text>
                                     <text x="186" y="268" text-anchor="middle" fill="#fff" font-size="27">Paint tubes</text>
                                     <text x="186" y="304" text-anchor="middle" fill="#888" font-size="25">Portable art!</text>
                                     <text x="424" y="268" text-anchor="middle" fill="#fff" font-size="27">Trains</text>
@@ -7410,14 +7410,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="902" y="304" text-anchor="middle" fill="#888" font-size="25">New compositions</text>
 
                                     <!-- Before vs After -->
-                                    <rect x="53" y="364" width="451" height="158" rx="27" fill="rgba(107,114,128,0.2)" stroke="#6b7280"/>
-                                    <text x="278" y="408" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="31">ACADEMIC ART</text>
+                                    <rect x="53" y="364" width="451" height="158" rx="27" fill="rgba(107,114,128,0.2)" stroke="#888"/>
+                                    <text x="278" y="408" text-anchor="middle" fill="#888" font-weight="bold" font-size="31">ACADEMIC ART</text>
                                     <text x="278" y="449" text-anchor="middle" fill="#888" font-size="27">Studio painting</text>
                                     <text x="278" y="486" text-anchor="middle" fill="#888" font-size="27">Smooth invisible brushwork</text>
                                     <text x="278" y="522" text-anchor="middle" fill="#888" font-size="27">Historical subjects</text>
 
-                                    <rect x="557" y="364" width="451" height="158" rx="27" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="782" y="408" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">IMPRESSIONISM</text>
+                                    <rect x="557" y="364" width="451" height="158" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="782" y="408" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">IMPRESSIONISM</text>
                                     <text x="782" y="449" text-anchor="middle" fill="#fff" font-size="27">Plein air (outdoors)</text>
                                     <text x="782" y="486" text-anchor="middle" fill="#fff" font-size="27">Visible bold brushstrokes</text>
                                     <text x="782" y="522" text-anchor="middle" fill="#fff" font-size="27">Modern life moments</text>
@@ -7447,13 +7447,13 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 908" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="908" fill="#1a1a2e"/>
-                                    <text x="550" y="86" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="47">L I G H T</text>
+                                    <text x="550" y="86" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="47">L I G H T</text>
                                     <text x="550" y="134" text-anchor="middle" fill="#888" font-size="34">Remember Impressionism in 5 letters</text>
 
                                     <!-- L -->
-                                    <rect x="53" y="171" width="186" height="242" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="146" y="224" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="51">L</text>
-                                    <text x="146" y="268" text-anchor="middle" fill="#3b82f6" font-size="27">LOOSE</text>
+                                    <rect x="53" y="171" width="186" height="242" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="146" y="224" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="51">L</text>
+                                    <text x="146" y="268" text-anchor="middle" fill="#6366f1" font-size="27">LOOSE</text>
                                     <text x="146" y="311" text-anchor="middle" fill="#fff" font-size="25">Visible</text>
                                     <text x="146" y="340" text-anchor="middle" fill="#fff" font-size="25">brushwork</text>
                                     <text x="146" y="388" text-anchor="middle" fill="#888" font-size="25">Energy in</text>
@@ -7496,7 +7496,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="933" y="413" text-anchor="middle" fill="#888" font-size="25">subject</text>
 
                                     <!-- Phrase -->
-                                    <rect x="100" y="449" width="900" height="109" rx="27" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
+                                    <rect x="100" y="449" width="900" height="109" rx="27" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
                                     <text x="550" y="498" text-anchor="middle" fill="#fff" font-size="31">"Impressionism captures LIGHT—</text>
                                     <text x="550" y="534" text-anchor="middle" fill="#fff" font-size="31">Loose brushwork, Instant moments, Glowing color, Haute air, Transient"</text>
 
@@ -7528,8 +7528,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 svg: `<svg viewBox="0 0 1100 824" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="824" fill="#1a1a2e"/>
 
-                                    <rect x="265" y="50" width="530" height="85" rx="34" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="550" y="105" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">✓ LESSON 1 COMPLETE</text>
+                                    <rect x="265" y="50" width="530" height="85" rx="34" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="550" y="105" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">✓ LESSON 1 COMPLETE</text>
 
                                     <rect x="40" y="159" width="500" height="182" rx="27" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <text x="290" y="200" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">KEY ARTISTS</text>
@@ -7543,8 +7543,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="280" text-anchor="middle" fill="#fff" font-size="27">Pure color (no mixing)</text>
                                     <text x="810" y="316" text-anchor="middle" fill="#fff" font-size="27">Colored shadows</text>
 
-                                    <rect x="53" y="364" width="954" height="85" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="401" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">REMEMBER: LIGHT</text>
+                                    <rect x="53" y="364" width="954" height="85" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="401" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">REMEMBER: LIGHT</text>
                                     <text x="550" y="437" text-anchor="middle" fill="#fff" font-size="29">Loose • Instant • Glowing • Haute air • Transient</text>
 
                                     <rect x="106" y="474" width="848" height="133" rx="27" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
@@ -7600,8 +7600,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="510" text-anchor="middle" fill="#888" font-size="25">→ Led to Symbolism</text>
 
                                     <!-- Seurat -->
-                                    <rect x="560" y="352" width="500" height="169" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="396" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">SEURAT</text>
+                                    <rect x="560" y="352" width="500" height="169" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="396" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">SEURAT</text>
                                     <text x="810" y="437" text-anchor="middle" fill="#fff" font-size="29">"Scientific Impressionism"</text>
                                     <text x="810" y="478" text-anchor="middle" fill="#fff" font-size="27">Make it PRECISE</text>
                                     <text x="810" y="510" text-anchor="middle" fill="#888" font-size="25">→ Led to Pointillism</text>
@@ -7664,8 +7664,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="415" text-anchor="middle" fill="#888" font-size="22">Not light studies—structural analysis</text>
 
                                     <!-- Before/After comparison -->
-                                    <rect x="50" y="460" width="480" height="200" rx="25" fill="rgba(107,114,128,0.15)" stroke="#6b7280"/>
-                                    <text x="290" y="505" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="29">IMPRESSIONISM</text>
+                                    <rect x="50" y="460" width="480" height="200" rx="25" fill="rgba(107,114,128,0.15)" stroke="#888"/>
+                                    <text x="290" y="505" text-anchor="middle" fill="#888" font-weight="bold" font-size="29">IMPRESSIONISM</text>
                                     <text x="290" y="545" text-anchor="middle" fill="#888" font-size="26">Captures the MOMENT</text>
                                     <text x="290" y="580" text-anchor="middle" fill="#888" font-size="26">How light appears NOW</text>
                                     <text x="290" y="615" text-anchor="middle" fill="#888" font-size="26">Dissolving, fleeting</text>
@@ -7739,8 +7739,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="595" text-anchor="middle" fill="#888" font-size="22">that pulse with emotional energy</text>
 
                                     <!-- Starry Night -->
-                                    <rect x="570" y="300" width="480" height="300" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="345" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">STARRY NIGHT (1889)</text>
+                                    <rect x="570" y="300" width="480" height="300" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="345" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">STARRY NIGHT (1889)</text>
 
                                     <!-- Simplified starry night illustration -->
                                     <circle cx="680" cy="420" r="30" fill="#ffd700"/>
@@ -7752,7 +7752,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <circle cx="980" cy="450" r="10" fill="#fff"/>
 
                                     <!-- Swirling sky -->
-                                    <path d="M600,480 Q700,450 800,480 Q900,510 1000,480" stroke="#3b82f6" stroke-width="6" fill="none"/>
+                                    <path d="M600,480 Q700,450 800,480 Q900,510 1000,480" stroke="#6366f1" stroke-width="6" fill="none"/>
                                     <path d="M600,510 Q700,480 800,510 Q900,540 1000,510" stroke="#8b5cf6" stroke-width="6" fill="none"/>
 
                                     <text x="810" y="560" text-anchor="middle" fill="#fff" font-size="24">Painted from memory in asylum</text>
@@ -7766,7 +7766,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="190" y="750" text-anchor="middle" fill="#1a1a2e" font-weight="bold" font-size="24">Yellow</text>
                                     <text x="190" y="775" text-anchor="middle" fill="#1a1a2e" font-size="20">Joy, sunlight, hope</text>
 
-                                    <rect x="310" y="700" width="180" height="80" rx="15" fill="#3b82f6"/>
+                                    <rect x="310" y="700" width="180" height="80" rx="15" fill="#6366f1"/>
                                     <text x="400" y="750" text-anchor="middle" fill="#fff" font-weight="bold" font-size="24">Blue</text>
                                     <text x="400" y="775" text-anchor="middle" fill="#fff" font-size="20">Night, infinity, peace</text>
 
@@ -7880,41 +7880,41 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="65" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">SEURAT: SCIENTIFIC IMPRESSIONISM</text>
+                                    <text x="550" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">SEURAT: SCIENTIFIC IMPRESSIONISM</text>
                                     <text x="550" y="110" text-anchor="middle" fill="#888" font-size="29">(1859-1891) • Pointillism / Divisionism</text>
 
                                     <!-- The Science -->
-                                    <rect x="50" y="150" width="1000" height="200" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="550" y="195" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">THE OPTICAL COLOR THEORY</text>
+                                    <rect x="50" y="150" width="1000" height="200" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="550" y="195" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">THE OPTICAL COLOR THEORY</text>
 
                                     <!-- Traditional mixing vs optical mixing -->
-                                    <rect x="100" y="220" width="400" height="100" rx="15" fill="rgba(107,114,128,0.2)" stroke="#6b7280"/>
-                                    <text x="300" y="250" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="24">TRADITIONAL MIXING</text>
+                                    <rect x="100" y="220" width="400" height="100" rx="15" fill="rgba(107,114,128,0.2)" stroke="#888"/>
+                                    <text x="300" y="250" text-anchor="middle" fill="#888" font-weight="bold" font-size="24">TRADITIONAL MIXING</text>
                                     <circle cx="180" cy="290" r="20" fill="#ef4444"/>
                                     <text x="220" y="295" fill="#888" font-size="24">+</text>
-                                    <circle cx="260" cy="290" r="20" fill="#3b82f6"/>
+                                    <circle cx="260" cy="290" r="20" fill="#6366f1"/>
                                     <text x="300" y="295" fill="#888" font-size="24">=</text>
                                     <circle cx="350" cy="290" r="25" fill="#4a3728"/>
                                     <text x="420" y="295" fill="#888" font-size="20">Muddy</text>
 
-                                    <rect x="550" y="220" width="450" height="100" rx="15" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
-                                    <text x="775" y="250" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">OPTICAL MIXING (Seurat)</text>
+                                    <rect x="550" y="220" width="450" height="100" rx="15" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
+                                    <text x="775" y="250" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">OPTICAL MIXING (Seurat)</text>
                                     <!-- Dots pattern -->
                                     <circle cx="620" cy="285" r="8" fill="#ef4444"/>
-                                    <circle cx="640" cy="285" r="8" fill="#3b82f6"/>
+                                    <circle cx="640" cy="285" r="8" fill="#6366f1"/>
                                     <circle cx="660" cy="285" r="8" fill="#ef4444"/>
-                                    <circle cx="680" cy="285" r="8" fill="#3b82f6"/>
-                                    <circle cx="620" cy="305" r="8" fill="#3b82f6"/>
+                                    <circle cx="680" cy="285" r="8" fill="#6366f1"/>
+                                    <circle cx="620" cy="305" r="8" fill="#6366f1"/>
                                     <circle cx="640" cy="305" r="8" fill="#ef4444"/>
-                                    <circle cx="660" cy="305" r="8" fill="#3b82f6"/>
+                                    <circle cx="660" cy="305" r="8" fill="#6366f1"/>
                                     <circle cx="680" cy="305" r="8" fill="#ef4444"/>
                                     <text x="730" y="295" fill="#888" font-size="24">=</text>
                                     <circle cx="800" cy="295" r="25" fill="#8b5cf6"/>
                                     <text x="880" y="295" fill="#fff" font-size="20">Vibrant!</text>
 
                                     <!-- The Technique close-up -->
-                                    <rect x="50" y="380" width="480" height="300" rx="25" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="290" y="425" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">POINTILLIST TECHNIQUE</text>
+                                    <rect x="50" y="380" width="480" height="300" rx="25" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="290" y="425" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">POINTILLIST TECHNIQUE</text>
 
                                     <!-- Dot pattern demonstration -->
                                     <g transform="translate(100, 470)">
@@ -7924,9 +7924,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                         <circle cx="80" cy="0" r="12" fill="#ef4444"/>
                                         <circle cx="110" cy="0" r="12" fill="#10b981"/>
                                         <circle cx="140" cy="0" r="12" fill="#ef4444"/>
-                                        <circle cx="170" cy="0" r="12" fill="#3b82f6"/>
+                                        <circle cx="170" cy="0" r="12" fill="#6366f1"/>
                                         <circle cx="200" cy="0" r="12" fill="#ffd700"/>
-                                        <circle cx="230" cy="0" r="12" fill="#3b82f6"/>
+                                        <circle cx="230" cy="0" r="12" fill="#6366f1"/>
                                         <circle cx="260" cy="0" r="12" fill="#ffd700"/>
                                         <circle cx="290" cy="0" r="12" fill="#ec4899"/>
                                         <!-- Row 2 -->
@@ -7934,9 +7934,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                         <circle cx="50" cy="30" r="12" fill="#ef4444"/>
                                         <circle cx="80" cy="30" r="12" fill="#10b981"/>
                                         <circle cx="110" cy="30" r="12" fill="#ef4444"/>
-                                        <circle cx="140" cy="30" r="12" fill="#3b82f6"/>
+                                        <circle cx="140" cy="30" r="12" fill="#6366f1"/>
                                         <circle cx="170" cy="30" r="12" fill="#ffd700"/>
-                                        <circle cx="200" cy="30" r="12" fill="#3b82f6"/>
+                                        <circle cx="200" cy="30" r="12" fill="#6366f1"/>
                                         <circle cx="230" cy="30" r="12" fill="#ffd700"/>
                                         <circle cx="260" cy="30" r="12" fill="#ec4899"/>
                                         <circle cx="290" cy="30" r="12" fill="#ffd700"/>
@@ -7944,9 +7944,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                         <circle cx="20" cy="60" r="12" fill="#ef4444"/>
                                         <circle cx="50" cy="60" r="12" fill="#10b981"/>
                                         <circle cx="80" cy="60" r="12" fill="#ef4444"/>
-                                        <circle cx="110" cy="60" r="12" fill="#3b82f6"/>
+                                        <circle cx="110" cy="60" r="12" fill="#6366f1"/>
                                         <circle cx="140" cy="60" r="12" fill="#ffd700"/>
-                                        <circle cx="170" cy="60" r="12" fill="#3b82f6"/>
+                                        <circle cx="170" cy="60" r="12" fill="#6366f1"/>
                                         <circle cx="200" cy="60" r="12" fill="#ffd700"/>
                                         <circle cx="230" cy="60" r="12" fill="#ec4899"/>
                                         <circle cx="260" cy="60" r="12" fill="#ffd700"/>
@@ -7981,7 +7981,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="825" text-anchor="middle" fill="#888" font-size="22">Color theories influenced Fauvism → Digital pixels use same principle!</text>
 
                                     <!-- Key takeaway -->
-                                    <rect x="200" y="860" width="700" height="70" rx="20" fill="rgba(59,130,246,0.25)" stroke="#3b82f6" stroke-width="3"/>
+                                    <rect x="200" y="860" width="700" height="70" rx="20" fill="rgba(59,130,246,0.25)" stroke="#6366f1" stroke-width="3"/>
                                     <text x="550" y="905" text-anchor="middle" fill="#fff" font-weight="bold" font-size="26">KEY: Science + Art = Optical color mixing</text>
                                 </svg>`,
                                 caption: "Seurat made Impressionism scientific with millions of carefully placed dots"
@@ -8032,11 +8032,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="575" text-anchor="middle" fill="#fff" font-size="24">"Primitive truth"</text>
                                     <text x="290" y="620" text-anchor="middle" fill="#ec4899" font-size="28">→ SYMBOLISM</text>
 
-                                    <rect x="570" y="450" width="480" height="200" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="495" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">SEURAT</text>
+                                    <rect x="570" y="450" width="480" height="200" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="495" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">SEURAT</text>
                                     <text x="810" y="535" text-anchor="middle" fill="#fff" font-size="26">Science & System</text>
                                     <text x="810" y="575" text-anchor="middle" fill="#fff" font-size="24">"Optical color mixing"</text>
-                                    <text x="810" y="620" text-anchor="middle" fill="#3b82f6" font-size="28">→ POINTILLISM</text>
+                                    <text x="810" y="620" text-anchor="middle" fill="#6366f1" font-size="28">→ POINTILLISM</text>
 
                                     <!-- Flow diagram -->
                                     <rect x="100" y="690" width="900" height="100" rx="25" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
@@ -8082,8 +8082,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="340" text-anchor="middle" fill="#888" font-size="27">Kirchner, Nolde</text>
                                     <text x="290" y="372" text-anchor="middle" fill="#888" font-size="25">Dresden 1905</text>
 
-                                    <rect x="560" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="219" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">DER BLAUE REITER</text>
+                                    <rect x="560" y="171" width="500" height="206" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="219" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">DER BLAUE REITER</text>
                                     <text x="810" y="263" text-anchor="middle" fill="#fff" font-size="29">"The Blue Rider"</text>
                                     <text x="810" y="304" text-anchor="middle" fill="#fff" font-size="27">Spiritual, abstract, musical</text>
                                     <text x="810" y="340" text-anchor="middle" fill="#888" font-size="27">Kandinsky, Marc, Klee</text>
@@ -8137,8 +8137,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <path d="M80,290 Q180,270 280,290 Q380,310 480,290" stroke="#f59e0b" stroke-width="4" fill="none"/>
 
                                     <!-- Bridge/railing -->
-                                    <line x1="100" y1="350" x2="500" y2="450" stroke="#6b7280" stroke-width="6"/>
-                                    <line x1="100" y1="380" x2="500" y2="480" stroke="#6b7280" stroke-width="4"/>
+                                    <line x1="100" y1="350" x2="500" y2="450" stroke="#888" stroke-width="6"/>
+                                    <line x1="100" y1="380" x2="500" y2="480" stroke="#888" stroke-width="4"/>
 
                                     <!-- The figure (simplified) -->
                                     <ellipse cx="290" cy="420" rx="50" ry="70" fill="#f59e0b" stroke="#ef4444" stroke-width="3"/>
@@ -8153,8 +8153,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <ellipse cx="340" cy="365" rx="12" ry="20" fill="#f5deb3" stroke="#ef4444" stroke-width="2"/>
 
                                     <!-- Water with wavy lines -->
-                                    <path d="M80,500 Q180,480 280,500 Q380,520 480,500" stroke="#3b82f6" stroke-width="3" fill="none"/>
-                                    <path d="M80,530 Q180,510 280,530 Q380,550 480,530" stroke="#3b82f6" stroke-width="3" fill="none"/>
+                                    <path d="M80,500 Q180,480 280,500 Q380,520 480,500" stroke="#6366f1" stroke-width="3" fill="none"/>
+                                    <path d="M80,530 Q180,510 280,530 Q380,550 480,530" stroke="#6366f1" stroke-width="3" fill="none"/>
 
                                     <text x="290" y="580" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">Not what anxiety LOOKS like</text>
                                     <text x="290" y="610" text-anchor="middle" fill="#fff" font-size="22">What anxiety FEELS like</text>
@@ -8177,8 +8177,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="575" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">Nature itself screams</text>
 
                                     <!-- Four versions -->
-                                    <rect x="50" y="630" width="480" height="150" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="290" y="675" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="27">FOUR VERSIONS</text>
+                                    <rect x="50" y="630" width="480" height="150" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="290" y="675" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="27">FOUR VERSIONS</text>
                                     <text x="140" y="720" text-anchor="middle" fill="#fff" font-size="20">1893</text>
                                     <text x="140" y="745" text-anchor="middle" fill="#888" font-size="18">Painting</text>
                                     <text x="240" y="720" text-anchor="middle" fill="#fff" font-size="20">1893</text>
@@ -8243,8 +8243,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="375" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="27">KIRCHNER'S "STREET, BERLIN" (1913)</text>
 
                                     <!-- Simplified street scene -->
-                                    <line x1="620" y1="500" x2="1000" y2="430" stroke="#6b7280" stroke-width="3"/>
-                                    <line x1="620" y1="530" x2="1000" y2="460" stroke="#6b7280" stroke-width="3"/>
+                                    <line x1="620" y1="500" x2="1000" y2="430" stroke="#888" stroke-width="3"/>
+                                    <line x1="620" y1="530" x2="1000" y2="460" stroke="#888" stroke-width="3"/>
 
                                     <!-- Angular figures -->
                                     <polygon points="700,420 720,400 740,420 730,480 710,480" fill="#8b5cf6" stroke="#fff" stroke-width="2"/>
@@ -8288,12 +8288,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="65" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">DER BLAUE REITER (THE BLUE RIDER)</text>
+                                    <text x="550" y="65" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">DER BLAUE REITER (THE BLUE RIDER)</text>
                                     <text x="550" y="110" text-anchor="middle" fill="#888" font-size="29">Munich, 1911 • Spiritual, Abstract, Musical</text>
 
                                     <!-- Key figures -->
-                                    <rect x="50" y="150" width="1000" height="180" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="550" y="195" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">KEY FIGURES</text>
+                                    <rect x="50" y="150" width="1000" height="180" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="550" y="195" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">KEY FIGURES</text>
 
                                     <text x="200" y="250" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">Kandinsky</text>
                                     <text x="200" y="280" text-anchor="middle" fill="#888" font-size="20">Pioneer of</text>
@@ -8312,12 +8312,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="850" y="305" text-anchor="middle" fill="#888" font-size="20">harmonies</text>
 
                                     <!-- Color as spiritual language -->
-                                    <rect x="50" y="360" width="480" height="250" rx="25" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="290" y="405" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="27">COLOR AS SPIRITUAL LANGUAGE</text>
+                                    <rect x="50" y="360" width="480" height="250" rx="25" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="290" y="405" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="27">COLOR AS SPIRITUAL LANGUAGE</text>
 
                                     <!-- Color circles -->
-                                    <circle cx="150" cy="500" r="50" fill="#3b82f6"/>
-                                    <text x="150" y="575" text-anchor="middle" fill="#3b82f6" font-size="20" font-weight="bold">BLUE</text>
+                                    <circle cx="150" cy="500" r="50" fill="#6366f1"/>
+                                    <text x="150" y="575" text-anchor="middle" fill="#6366f1" font-size="20" font-weight="bold">BLUE</text>
                                     <text x="150" y="595" text-anchor="middle" fill="#888" font-size="18">Spiritual, celestial</text>
 
                                     <circle cx="290" cy="500" r="50" fill="#ffd700"/>
@@ -8334,7 +8334,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="445" text-anchor="middle" fill="#fff" font-size="24">1910: First purely abstract painting</text>
 
                                     <!-- Abstract shapes illustration -->
-                                    <circle cx="680" cy="520" r="30" fill="#3b82f6" opacity="0.7"/>
+                                    <circle cx="680" cy="520" r="30" fill="#6366f1" opacity="0.7"/>
                                     <rect x="730" y="480" width="60" height="60" fill="#ef4444" opacity="0.7" transform="rotate(15,760,510)"/>
                                     <polygon points="850,470 890,540 810,540" fill="#ffd700" opacity="0.7"/>
                                     <line x1="920" y1="480" x2="980" y2="550" stroke="#10b981" stroke-width="8"/>
@@ -8356,11 +8356,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="755" text-anchor="middle" fill="#888" font-size="20">Art should work the same way</text>
 
                                     <!-- Comparison -->
-                                    <rect x="150" y="800" width="800" height="100" rx="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6"/>
+                                    <rect x="150" y="800" width="800" height="100" rx="20" fill="rgba(59,130,246,0.2)" stroke="#6366f1"/>
                                     <text x="350" y="840" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">DIE BRÜCKE</text>
                                     <text x="350" y="870" text-anchor="middle" fill="#888" font-size="20">Raw emotion, figurative</text>
                                     <text x="550" y="855" text-anchor="middle" fill="#666" font-size="30">vs</text>
-                                    <text x="750" y="840" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">DER BLAUE REITER</text>
+                                    <text x="750" y="840" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">DER BLAUE REITER</text>
                                     <text x="750" y="870" text-anchor="middle" fill="#888" font-size="20">Spiritual, toward abstraction</text>
                                 </svg>`,
                                 caption: "Der Blaue Reiter moved Expressionism toward spiritual abstraction"
@@ -8407,14 +8407,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="575" text-anchor="middle" fill="#888" font-size="20">Woodcuts, urban alienation</text>
                                     <text x="290" y="610" text-anchor="middle" fill="#ef4444" font-size="20">→ Stayed emotionally raw</text>
 
-                                    <rect x="570" y="340" width="480" height="280" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="385" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">DER BLAUE REITER</text>
+                                    <rect x="570" y="340" width="480" height="280" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="385" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">DER BLAUE REITER</text>
                                     <text x="810" y="420" text-anchor="middle" fill="#888" font-size="22">Munich, 1911</text>
                                     <text x="810" y="460" text-anchor="middle" fill="#fff" font-size="24">Spiritual • Abstract • Musical</text>
                                     <text x="810" y="500" text-anchor="middle" fill="#fff" font-size="22">Kandinsky, Marc, Klee</text>
                                     <text x="810" y="540" text-anchor="middle" fill="#888" font-size="20">Color as spiritual language</text>
                                     <text x="810" y="575" text-anchor="middle" fill="#888" font-size="20">Music as ideal art form</text>
-                                    <text x="810" y="610" text-anchor="middle" fill="#3b82f6" font-size="20">→ Led to pure abstraction</text>
+                                    <text x="810" y="610" text-anchor="middle" fill="#6366f1" font-size="20">→ Led to pure abstraction</text>
 
                                     <!-- Key techniques -->
                                     <rect x="50" y="650" width="1000" height="120" rx="25" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
@@ -8456,9 +8456,9 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="134" text-anchor="middle" fill="#888" font-size="31">"Multiple viewpoints at once"</text>
 
                                     <!-- Traditional vs Cubist -->
-                                    <rect x="53" y="171" width="451" height="182" rx="27" fill="rgba(107,114,128,0.2)" stroke="#6b7280"/>
-                                    <text x="278" y="214" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="31">TRADITIONAL (500 years)</text>
-                                    <rect x="172" y="243" width="212" height="85" rx="16" fill="rgba(107,114,128,0.3)" stroke="#6b7280"/>
+                                    <rect x="53" y="171" width="451" height="182" rx="27" fill="rgba(107,114,128,0.2)" stroke="#888"/>
+                                    <text x="278" y="214" text-anchor="middle" fill="#888" font-weight="bold" font-size="31">TRADITIONAL (500 years)</text>
+                                    <rect x="172" y="243" width="212" height="85" rx="16" fill="rgba(107,114,128,0.3)" stroke="#888"/>
                                     <text x="278" y="297" text-anchor="middle" fill="#888" font-size="27">ONE viewpoint</text>
                                     <text x="278" y="345" text-anchor="middle" fill="#888" font-size="25">Like a window</text>
 
@@ -8524,7 +8524,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <polygon points="100,270 130,250 140,320 160,400 110,400" fill="rgba(236,72,153,0.4)" stroke="#ec4899" stroke-width="2"/>
                                     <polygon points="170,260 200,240 210,310 230,380 180,380" fill="rgba(245,158,11,0.4)" stroke="#f59e0b" stroke-width="2"/>
                                     <polygon points="250,250 280,230 290,300 310,370 260,370" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2"/>
-                                    <polygon points="330,260 360,240 370,310 390,380 340,380" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2"/>
+                                    <polygon points="330,260 360,240 370,310 390,380 340,380" fill="rgba(59,130,246,0.4)" stroke="#6366f1" stroke-width="2"/>
                                     <polygon points="410,270 440,250 450,320 470,400 420,400" fill="rgba(16,185,129,0.4)" stroke="#10b981" stroke-width="2"/>
 
                                     <!-- Angular faces on two figures -->
@@ -8603,8 +8603,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="340" y="420" text-anchor="middle" fill="#888" font-size="18">Multiple angles at once</text>
 
                                     <!-- Characteristics -->
-                                    <rect x="570" y="150" width="480" height="280" rx="25" fill="rgba(107,114,128,0.2)" stroke="#6b7280"/>
-                                    <text x="810" y="195" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="29">CHARACTERISTICS</text>
+                                    <rect x="570" y="150" width="480" height="280" rx="25" fill="rgba(107,114,128,0.2)" stroke="#888"/>
+                                    <text x="810" y="195" text-anchor="middle" fill="#888" font-weight="bold" font-size="29">CHARACTERISTICS</text>
 
                                     <!-- Monochromatic palette -->
                                     <rect x="620" y="230" width="50" height="50" fill="#6b5344"/>
@@ -8682,8 +8682,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="355" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="29">COLLAGE: THE GAME CHANGER</text>
 
                                     <!-- Collage illustration -->
-                                    <rect x="100" y="390" width="150" height="100" fill="#3b82f6" opacity="0.3"/>
-                                    <rect x="120" y="410" width="100" height="60" fill="#6b7280" stroke="#888" stroke-dasharray="5,3"/>
+                                    <rect x="100" y="390" width="150" height="100" fill="#6366f1" opacity="0.3"/>
+                                    <rect x="120" y="410" width="100" height="60" fill="#888" stroke="#888" stroke-dasharray="5,3"/>
                                     <text x="170" y="450" text-anchor="middle" fill="#888" font-size="14">NEWSPAPER</text>
 
                                     <rect x="280" y="400" width="120" height="80" fill="#f59e0b" opacity="0.4"/>
@@ -8703,14 +8703,14 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="590" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="20">Art would never be the same</text>
 
                                     <!-- Characteristics -->
-                                    <rect x="570" y="310" width="480" height="300" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="810" y="355" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">CHARACTERISTICS</text>
+                                    <rect x="570" y="310" width="480" height="300" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="810" y="355" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">CHARACTERISTICS</text>
 
                                     <!-- Color returns -->
                                     <rect x="620" y="390" width="40" height="40" fill="#ef4444"/>
                                     <rect x="670" y="390" width="40" height="40" fill="#f59e0b"/>
                                     <rect x="720" y="390" width="40" height="40" fill="#10b981"/>
-                                    <rect x="770" y="390" width="40" height="40" fill="#3b82f6"/>
+                                    <rect x="770" y="390" width="40" height="40" fill="#6366f1"/>
                                     <rect x="820" y="390" width="40" height="40" fill="#8b5cf6"/>
                                     <rect x="870" y="390" width="40" height="40" fill="#ec4899"/>
                                     <rect x="920" y="390" width="40" height="40" fill="#ffd700"/>
@@ -8776,17 +8776,17 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="650" y="460" width="30" height="30" fill="#ef4444"/>
                                     <rect x="690" y="460" width="30" height="30" fill="#f59e0b"/>
                                     <rect x="730" y="460" width="30" height="30" fill="#10b981"/>
-                                    <rect x="770" y="460" width="30" height="30" fill="#3b82f6"/>
+                                    <rect x="770" y="460" width="30" height="30" fill="#6366f1"/>
 
                                     <text x="810" y="520" text-anchor="middle" fill="#888" font-size="20">Bright colors return</text>
                                     <text x="810" y="550" text-anchor="middle" fill="#888" font-size="20">COLLAGE invention</text>
                                     <text x="810" y="580" text-anchor="middle" fill="#10b981" font-size="18">Focus: SYNTHESIS & MATERIALS</text>
 
                                     <!-- Founders -->
-                                    <rect x="50" y="620" width="480" height="120" rx="25" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="290" y="665" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="29">THE FOUNDERS</text>
+                                    <rect x="50" y="620" width="480" height="120" rx="25" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="290" y="665" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="29">THE FOUNDERS</text>
                                     <text x="170" y="710" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">Picasso</text>
-                                    <text x="290" y="710" text-anchor="middle" fill="#3b82f6" font-size="26">+</text>
+                                    <text x="290" y="710" text-anchor="middle" fill="#6366f1" font-size="26">+</text>
                                     <text x="410" y="710" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">Braque</text>
 
                                     <!-- Legacy -->
@@ -8848,10 +8848,10 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="350" y="525" fill="#888" font-size="20">Persistence of Memory</text>
 
                                     <!-- Magritte Section -->
-                                    <rect x="567" y="350" width="480" height="200" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="807" y="395" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">MAGRITTE</text>
+                                    <rect x="567" y="350" width="480" height="200" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="807" y="395" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">MAGRITTE</text>
                                     <!-- Pipe icon -->
-                                    <path d="M 680 470 Q 680 440 720 440 L 780 440 Q 800 440 800 460 L 800 480 Q 800 500 780 500 L 720 500 Q 680 500 680 470" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                                    <path d="M 680 470 Q 680 440 720 440 L 780 440 Q 800 440 800 460 L 800 480 Q 800 500 780 500 L 720 500 Q 680 500 680 470" fill="none" stroke="#6366f1" stroke-width="3"/>
                                     <text x="860" y="455" fill="#fff" font-size="24">"This is not a pipe"</text>
                                     <text x="860" y="490" fill="#fff" font-size="24">Philosophical puzzles</text>
                                     <text x="860" y="525" fill="#888" font-size="20">The Treachery of Images</text>
@@ -8940,8 +8940,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="680" y="635" fill="#888" font-size="20">Crutches = fragile reality</text>
 
                                     <!-- Technical Mastery -->
-                                    <rect x="53" y="660" width="994" height="130" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="705" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">TECHNICAL MASTERY</text>
+                                    <rect x="53" y="660" width="994" height="130" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="705" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">TECHNICAL MASTERY</text>
                                     <text x="230" y="755" text-anchor="middle" fill="#fff" font-size="22">Old Master technique</text>
                                     <text x="550" y="755" text-anchor="middle" fill="#fff" font-size="22">Photorealistic rendering</text>
                                     <text x="870" y="755" text-anchor="middle" fill="#fff" font-size="22">Impossible made real</text>
@@ -8981,12 +8981,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">RENÉ MAGRITTE (1890-1967)</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">RENÉ MAGRITTE (1890-1967)</text>
                                     <text x="550" y="100" text-anchor="middle" fill="#888" font-size="28">"Everything we see hides another thing"</text>
 
                                     <!-- The Treachery of Images -->
-                                    <rect x="53" y="135" width="994" height="260" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="175" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">THE TREACHERY OF IMAGES (1929)</text>
+                                    <rect x="53" y="135" width="994" height="260" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="175" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">THE TREACHERY OF IMAGES (1929)</text>
 
                                     <!-- Pipe illustration -->
                                     <path d="M 250 280 Q 250 230 320 230 L 420 230 Q 470 230 470 270 L 470 310 Q 470 350 420 350 L 320 350 Q 250 350 250 300 Z" fill="none" stroke="#8b5cf6" stroke-width="4"/>
@@ -9035,8 +9035,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="800" y="935" text-anchor="middle" fill="#888" font-size="18">How we misunderstand reality</text>
 
                                     <!-- Key Insight -->
-                                    <rect x="53" y="970" width="994" height="70" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="550" y="1015" text-anchor="middle" fill="#3b82f6" font-size="24">Magritte made visible the gap between things, images of things, and words for things</text>
+                                    <rect x="53" y="970" width="994" height="70" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="550" y="1015" text-anchor="middle" fill="#6366f1" font-size="24">Magritte made visible the gap between things, images of things, and words for things</text>
                                 </svg>`,
                                 caption: "Magritte's philosophical Surrealism questioned our assumptions about reality"
                             }
@@ -9094,7 +9094,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Miró visual elements -->
                                     <circle cx="200" cy="580" r="40" fill="none" stroke="#ef4444" stroke-width="4"/>
                                     <circle cx="200" cy="580" r="10" fill="#ef4444"/>
-                                    <ellipse cx="320" cy="600" rx="50" ry="30" fill="none" stroke="#3b82f6" stroke-width="4"/>
+                                    <ellipse cx="320" cy="600" rx="50" ry="30" fill="none" stroke="#6366f1" stroke-width="4"/>
                                     <path d="M 380 550 Q 420 500 450 570 Q 480 630 430 650" fill="none" stroke="#f59e0b" stroke-width="4"/>
                                     <polygon points="280,520 290,550 260,550" fill="#ffd700"/>
 
@@ -9162,8 +9162,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="173" y="465" text-anchor="middle" fill="#888" font-size="18">Paranoiac-critical</text>
                                     <text x="173" y="495" text-anchor="middle" fill="#888" font-size="18">method</text>
 
-                                    <rect x="313" y="310" width="240" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="433" y="355" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">MAGRITTE</text>
+                                    <rect x="313" y="310" width="240" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="433" y="355" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">MAGRITTE</text>
                                     <text x="433" y="395" text-anchor="middle" fill="#fff" font-size="20">Philosophical</text>
                                     <text x="433" y="425" text-anchor="middle" fill="#fff" font-size="20">puzzles</text>
                                     <text x="433" y="465" text-anchor="middle" fill="#888" font-size="18">Image vs reality</text>
@@ -9206,8 +9206,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="885" text-anchor="middle" fill="#888" font-size="20">Surrealism showed art could explore the mind's hidden depths</text>
 
                                     <!-- Timeline -->
-                                    <rect x="53" y="915" width="994" height="120" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="960" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">HISTORICAL CONTEXT</text>
+                                    <rect x="53" y="915" width="994" height="120" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="960" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">HISTORICAL CONTEXT</text>
                                     <text x="200" y="1000" text-anchor="middle" fill="#fff" font-size="20">1924: Breton's Manifesto</text>
                                     <text x="450" y="1000" text-anchor="middle" fill="#fff" font-size="20">1929: Dalí joins</text>
                                     <text x="700" y="1000" text-anchor="middle" fill="#fff" font-size="20">1930s: Peak period</text>
@@ -9333,7 +9333,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Drip visualization -->
                                     <path d="M 150 250 Q 200 220 250 280 Q 300 230 350 270 Q 400 210 450 260" stroke="#ef4444" stroke-width="6" fill="none"/>
                                     <path d="M 170 290 Q 220 260 270 320 Q 320 270 370 310" stroke="#f59e0b" stroke-width="5" fill="none"/>
-                                    <path d="M 200 330 Q 250 300 300 360 Q 350 310 400 350" stroke="#3b82f6" stroke-width="4" fill="none"/>
+                                    <path d="M 200 330 Q 250 300 300 360 Q 350 310 400 350" stroke="#6366f1" stroke-width="4" fill="none"/>
                                     <circle cx="220" cy="280" r="8" fill="#ef4444"/>
                                     <circle cx="280" cy="320" r="6" fill="#f59e0b"/>
                                     <circle cx="350" cy="290" r="10" fill="#8b5cf6"/>
@@ -9633,8 +9633,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="400" y="350" fill="#888" font-size="18">Repetition reveals consumption</text>
 
                                     <!-- Lichtenstein Section -->
-                                    <rect x="567" y="135" width="480" height="240" rx="27" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="807" y="180" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="31">ROY LICHTENSTEIN</text>
+                                    <rect x="567" y="135" width="480" height="240" rx="27" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="807" y="180" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="31">ROY LICHTENSTEIN</text>
                                     <!-- Ben-Day dots pattern -->
                                     <circle cx="620" cy="240" r="6" fill="#fff"/>
                                     <circle cx="640" cy="240" r="6" fill="#fff"/>
@@ -9784,11 +9784,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">OTHER POP MASTERS</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">OTHER POP MASTERS</text>
 
                                     <!-- Lichtenstein -->
-                                    <rect x="53" y="100" width="994" height="260" rx="27" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="145" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="34">ROY LICHTENSTEIN (1923-1997)</text>
+                                    <rect x="53" y="100" width="994" height="260" rx="27" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="145" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="34">ROY LICHTENSTEIN (1923-1997)</text>
 
                                     <!-- Ben-Day dots pattern -->
                                     <circle cx="120" cy="220" r="8" fill="#ef4444"/>
@@ -9817,7 +9817,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <rect x="53" y="385" width="480" height="240" rx="27" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <text x="293" y="430" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">JASPER JOHNS (b. 1930)</text>
                                     <!-- Flag visualization -->
-                                    <rect x="120" y="470" width="150" height="80" fill="#3b82f6"/>
+                                    <rect x="120" y="470" width="150" height="80" fill="#6366f1"/>
                                     <rect x="120" y="470" width="150" height="16" fill="#ef4444"/>
                                     <rect x="120" y="502" width="150" height="16" fill="#ef4444"/>
                                     <rect x="120" y="534" width="150" height="16" fill="#ef4444"/>
@@ -9882,8 +9882,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="173" y="450" text-anchor="middle" fill="#fff" font-size="20">The Factory</text>
                                     <text x="173" y="485" text-anchor="middle" fill="#888" font-size="16">"Be a machine"</text>
 
-                                    <rect x="313" y="305" width="240" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="433" y="350" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">LICHTENSTEIN</text>
+                                    <rect x="313" y="305" width="240" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="433" y="350" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">LICHTENSTEIN</text>
                                     <text x="433" y="390" text-anchor="middle" fill="#fff" font-size="20">Comic panels</text>
                                     <text x="433" y="420" text-anchor="middle" fill="#fff" font-size="20">Ben-Day dots</text>
                                     <text x="433" y="450" text-anchor="middle" fill="#fff" font-size="20">WHAAM!</text>
@@ -9952,19 +9952,19 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="42">MINIMALISM &amp; CONCEPTUAL ART</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#888" font-weight="bold" font-size="42">MINIMALISM &amp; CONCEPTUAL ART</text>
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">(1960s-1970s) • Stripping art to essentials</text>
 
                                     <!-- Minimalism Section -->
-                                    <rect x="40" y="130" width="500" height="280" rx="20" fill="rgba(107,114,128,0.15)" stroke="#6b7280" stroke-width="2"/>
-                                    <text x="290" y="170" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="32">MINIMALISM</text>
+                                    <rect x="40" y="130" width="500" height="280" rx="20" fill="rgba(107,114,128,0.15)" stroke="#888" stroke-width="2"/>
+                                    <text x="290" y="170" text-anchor="middle" fill="#888" font-weight="bold" font-size="32">MINIMALISM</text>
                                     <text x="290" y="205" text-anchor="middle" fill="#fff" font-size="24">"What you see is what you see"</text>
-                                    <rect x="170" y="230" width="80" height="70" fill="none" stroke="#6b7280" stroke-width="4"/>
-                                    <rect x="260" y="230" width="80" height="70" fill="none" stroke="#6b7280" stroke-width="4"/>
-                                    <rect x="350" y="230" width="80" height="70" fill="none" stroke="#6b7280" stroke-width="4"/>
+                                    <rect x="170" y="230" width="80" height="70" fill="none" stroke="#888" stroke-width="4"/>
+                                    <rect x="260" y="230" width="80" height="70" fill="none" stroke="#888" stroke-width="4"/>
+                                    <rect x="350" y="230" width="80" height="70" fill="none" stroke="#888" stroke-width="4"/>
                                     <text x="290" y="335" text-anchor="middle" fill="#fff" font-size="22">Industrial fabrication</text>
                                     <text x="290" y="365" text-anchor="middle" fill="#888" font-size="20">No emotion, no narrative</text>
-                                    <text x="290" y="395" text-anchor="middle" fill="#6b7280" font-size="22">Judd • Flavin • Andre</text>
+                                    <text x="290" y="395" text-anchor="middle" fill="#888" font-size="22">Judd • Flavin • Andre</text>
 
                                     <!-- Conceptual Section -->
                                     <rect x="560" y="130" width="500" height="280" rx="20" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
@@ -9976,8 +9976,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="395" text-anchor="middle" fill="#8b5cf6" font-size="22">Kosuth • LeWitt • Weiner</text>
 
                                     <!-- Key Artists Row -->
-                                    <rect x="40" y="430" width="330" height="150" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="205" y="465" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">DONALD JUDD</text>
+                                    <rect x="40" y="430" width="330" height="150" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="205" y="465" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">DONALD JUDD</text>
                                     <text x="205" y="495" text-anchor="middle" fill="#fff" font-size="20">"Specific Objects"</text>
                                     <text x="205" y="525" text-anchor="middle" fill="#888" font-size="18">Industrial aluminum boxes</text>
                                     <text x="205" y="555" text-anchor="middle" fill="#888" font-size="18">Neither painting nor sculpture</text>
@@ -10007,7 +10007,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="695" text-anchor="middle" fill="#888" font-size="18">Instructions, not objects</text>
                                     <text x="550" y="725" text-anchor="middle" fill="#888" font-size="18">"The idea becomes the machine"</text>
 
-                                    <rect x="730" y="600" width="330" height="150" rx="15" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
+                                    <rect x="730" y="600" width="330" height="150" rx="15" fill="rgba(107,114,128,0.1)" stroke="#888"/>
                                     <text x="895" y="635" text-anchor="middle" fill="#fff" font-weight="bold" font-size="24">LAWRENCE WEINER</text>
                                     <text x="895" y="665" text-anchor="middle" fill="#fff" font-size="20">Language Art</text>
                                     <text x="895" y="695" text-anchor="middle" fill="#888" font-size="18">Words as artwork</text>
@@ -10045,12 +10045,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="55" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="42">DONALD JUDD (1928-1994)</text>
+                                    <text x="550" y="55" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">DONALD JUDD (1928-1994)</text>
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">The Theorist of Minimalism</text>
 
                                     <!-- "Specific Objects" Section -->
-                                    <rect x="50" y="130" width="480" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="290" y="165" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="28">"SPECIFIC OBJECTS" (1965)</text>
+                                    <rect x="50" y="130" width="480" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="290" y="165" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">"SPECIFIC OBJECTS" (1965)</text>
                                     <text x="290" y="200" text-anchor="middle" fill="#fff" font-size="22">Neither painting nor sculpture</text>
                                     <text x="290" y="235" text-anchor="middle" fill="#888" font-size="20">A new category of art</text>
                                     <text x="290" y="270" text-anchor="middle" fill="#888" font-size="18">Real 3D space, not illusion</text>
@@ -10065,19 +10065,19 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="295" text-anchor="middle" fill="#fff" font-size="20">• Space between = important</text>
 
                                     <!-- The Stacks Visualization -->
-                                    <rect x="50" y="360" width="1000" height="280" rx="20" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
-                                    <text x="550" y="400" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="28">THE STACKS: Judd's Signature Works</text>
+                                    <rect x="50" y="360" width="1000" height="280" rx="20" fill="rgba(107,114,128,0.1)" stroke="#888"/>
+                                    <text x="550" y="400" text-anchor="middle" fill="#888" font-weight="bold" font-size="28">THE STACKS: Judd's Signature Works</text>
 
                                     <!-- Stack visualization -->
-                                    <rect x="200" y="430" width="150" height="40" fill="none" stroke="#6b7280" stroke-width="3"/>
-                                    <rect x="200" y="490" width="150" height="40" fill="none" stroke="#6b7280" stroke-width="3"/>
-                                    <rect x="200" y="550" width="150" height="40" fill="none" stroke="#6b7280" stroke-width="3"/>
+                                    <rect x="200" y="430" width="150" height="40" fill="none" stroke="#888" stroke-width="3"/>
+                                    <rect x="200" y="490" width="150" height="40" fill="none" stroke="#888" stroke-width="3"/>
+                                    <rect x="200" y="550" width="150" height="40" fill="none" stroke="#888" stroke-width="3"/>
 
                                     <text x="490" y="475" text-anchor="start" fill="#fff" font-size="20">Identical aluminum boxes</text>
                                     <text x="490" y="505" text-anchor="start" fill="#888" font-size="18">Equal spacing between each</text>
                                     <text x="490" y="535" text-anchor="start" fill="#888" font-size="18">Mounted vertically on walls</text>
                                     <text x="490" y="565" text-anchor="start" fill="#888" font-size="18">Negative space is part of the work</text>
-                                    <text x="490" y="610" text-anchor="start" fill="#6b7280" font-size="18">No symbolism—just the thing itself</text>
+                                    <text x="490" y="610" text-anchor="start" fill="#888" font-size="18">No symbolism—just the thing itself</text>
 
                                     <!-- Quote -->
                                     <rect x="100" y="670" width="900" height="90" rx="15" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
@@ -10162,8 +10162,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="395" text-anchor="middle" fill="#8b5cf6" font-size="18">The idea IS the art</text>
 
                                     <!-- Lawrence Weiner Section -->
-                                    <rect x="40" y="430" width="1020" height="180" rx="20" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
-                                    <text x="550" y="470" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="28">LAWRENCE WEINER (1942-2021)</text>
+                                    <rect x="40" y="430" width="1020" height="180" rx="20" fill="rgba(107,114,128,0.1)" stroke="#888"/>
+                                    <text x="550" y="470" text-anchor="middle" fill="#888" font-weight="bold" font-size="28">LAWRENCE WEINER (1942-2021)</text>
                                     <text x="550" y="510" text-anchor="middle" fill="#fff" font-size="22">Language as Art</text>
 
                                     <rect x="150" y="530" width="800" height="60" rx="10" fill="rgba(255,255,255,0.05)"/>
@@ -10219,12 +10219,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">Minimalism &amp; Conceptual Art</text>
 
                                     <!-- Minimalism Summary -->
-                                    <rect x="40" y="130" width="500" height="320" rx="20" fill="rgba(107,114,128,0.15)" stroke="#6b7280" stroke-width="2"/>
-                                    <text x="290" y="170" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="30">MINIMALISM</text>
+                                    <rect x="40" y="130" width="500" height="320" rx="20" fill="rgba(107,114,128,0.15)" stroke="#888" stroke-width="2"/>
+                                    <text x="290" y="170" text-anchor="middle" fill="#888" font-weight="bold" font-size="30">MINIMALISM</text>
                                     <text x="290" y="210" text-anchor="middle" fill="#fff" font-size="22">"What you see is what you see"</text>
 
                                     <rect x="80" y="240" width="420" height="180" rx="15" fill="rgba(255,255,255,0.03)"/>
-                                    <text x="290" y="275" text-anchor="middle" fill="#6b7280" font-size="20">KEY ARTISTS</text>
+                                    <text x="290" y="275" text-anchor="middle" fill="#888" font-size="20">KEY ARTISTS</text>
                                     <text x="290" y="305" text-anchor="middle" fill="#fff" font-size="18">Donald Judd - Stacks, boxes</text>
                                     <text x="290" y="330" text-anchor="middle" fill="#fff" font-size="18">Dan Flavin - Fluorescent lights</text>
                                     <text x="290" y="355" text-anchor="middle" fill="#fff" font-size="18">Carl Andre - Floor plates</text>
@@ -10252,11 +10252,11 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="620" text-anchor="middle" fill="#f59e0b" font-size="18">Central question: What's the MINIMUM needed for art?</text>
 
                                     <!-- Comparison Diagram -->
-                                    <rect x="100" y="660" width="400" height="140" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="300" y="700" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">MINIMALISM</text>
+                                    <rect x="100" y="660" width="400" height="140" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="300" y="700" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">MINIMALISM</text>
                                     <text x="300" y="735" text-anchor="middle" fill="#fff" font-size="18">Reduced art to FORM</text>
                                     <text x="300" y="765" text-anchor="middle" fill="#888" font-size="16">Physical object essential</text>
-                                    <text x="300" y="790" text-anchor="middle" fill="#3b82f6" font-size="16">A cube is just a cube</text>
+                                    <text x="300" y="790" text-anchor="middle" fill="#6366f1" font-size="16">A cube is just a cube</text>
 
                                     <text x="550" y="730" text-anchor="middle" fill="#666" font-size="40">→</text>
 
@@ -10299,8 +10299,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="95" text-anchor="middle" fill="#888" font-size="28">(1970s-Present) • Radical pluralism</text>
 
                                     <!-- Row 1: Major Mediums -->
-                                    <rect x="40" y="130" width="330" height="150" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="205" y="170" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="26">VIDEO &amp; DIGITAL</text>
+                                    <rect x="40" y="130" width="330" height="150" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="205" y="170" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">VIDEO &amp; DIGITAL</text>
                                     <text x="205" y="205" text-anchor="middle" fill="#fff" font-size="20">Nam June Paik - Video pioneer</text>
                                     <text x="205" y="235" text-anchor="middle" fill="#888" font-size="18">Bill Viola - Emotional immersion</text>
                                     <text x="205" y="265" text-anchor="middle" fill="#888" font-size="16">NFTs, AI art, generative</text>
@@ -10330,8 +10330,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="620" y="405" text-anchor="middle" fill="#888" font-size="18">Identity politics</text>
                                     <text x="620" y="435" text-anchor="middle" fill="#888" font-size="16">Ai Weiwei, Kara Walker</text>
 
-                                    <rect x="800" y="300" width="260" height="150" rx="20" fill="rgba(107,114,128,0.15)" stroke="#6b7280" stroke-width="2"/>
-                                    <text x="930" y="340" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="24">APPROPRIATION</text>
+                                    <rect x="800" y="300" width="260" height="150" rx="20" fill="rgba(107,114,128,0.15)" stroke="#888" stroke-width="2"/>
+                                    <text x="930" y="340" text-anchor="middle" fill="#888" font-weight="bold" font-size="24">APPROPRIATION</text>
                                     <text x="930" y="375" text-anchor="middle" fill="#fff" font-size="18">Remix culture</text>
                                     <text x="930" y="405" text-anchor="middle" fill="#888" font-size="16">Richard Prince</text>
                                     <text x="930" y="430" text-anchor="middle" fill="#888" font-size="16">Sherrie Levine</text>
@@ -10343,8 +10343,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="600" text-anchor="middle" fill="#888" font-size="20">This constant boundary negotiation IS contemporary art</text>
 
                                     <!-- Key Institutions -->
-                                    <rect x="40" y="650" width="500" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="290" y="690" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">KEY INSTITUTIONS</text>
+                                    <rect x="40" y="650" width="500" height="200" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="290" y="690" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">KEY INSTITUTIONS</text>
                                     <text x="290" y="725" text-anchor="middle" fill="#fff" font-size="18">Biennials: Venice, Whitney, Documenta</text>
                                     <text x="290" y="755" text-anchor="middle" fill="#888" font-size="16">Mega-galleries: Gagosian, Pace</text>
                                     <text x="290" y="785" text-anchor="middle" fill="#888" font-size="16">Museums: MoMA, Tate Modern, Pompidou</text>
@@ -10437,16 +10437,16 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="290" y="810" text-anchor="middle" fill="#888" font-size="16">• Often involves endurance or risk</text>
 
                                     <!-- Questions Raised -->
-                                    <rect x="560" y="640" width="500" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="810" y="680" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">QUESTIONS RAISED</text>
+                                    <rect x="560" y="640" width="500" height="200" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="810" y="680" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">QUESTIONS RAISED</text>
                                     <text x="810" y="720" text-anchor="middle" fill="#fff" font-size="18">• Where is the boundary between</text>
                                     <text x="810" y="745" text-anchor="middle" fill="#fff" font-size="18">  art and life?</text>
                                     <text x="810" y="780" text-anchor="middle" fill="#fff" font-size="18">• Can an experience be collected?</text>
                                     <text x="810" y="810" text-anchor="middle" fill="#888" font-size="16">• What remains when performer leaves?</text>
 
                                     <!-- Documentation Note -->
-                                    <rect x="100" y="870" width="900" height="100" rx="15" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
-                                    <text x="550" y="910" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="22">THE DOCUMENTATION PARADOX</text>
+                                    <rect x="100" y="870" width="900" height="100" rx="15" fill="rgba(107,114,128,0.1)" stroke="#888"/>
+                                    <text x="550" y="910" text-anchor="middle" fill="#888" font-weight="bold" font-size="22">THE DOCUMENTATION PARADOX</text>
                                     <text x="550" y="945" text-anchor="middle" fill="#fff" font-size="18">Performance can only be documented (photo, video), not owned—yet documentation sells for millions</text>
                                 </svg>`,
                                 caption: "Performance art makes presence and the body the artwork itself"
@@ -10494,8 +10494,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="795" y="385" text-anchor="middle" fill="#10b981" font-size="14">Light, nature, perception</text>
 
                                     <!-- Video Art Section -->
-                                    <rect x="40" y="430" width="1020" height="260" rx="20" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
-                                    <text x="550" y="470" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="30">VIDEO ART</text>
+                                    <rect x="40" y="430" width="1020" height="260" rx="20" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="2"/>
+                                    <text x="550" y="470" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="30">VIDEO ART</text>
                                     <text x="550" y="505" text-anchor="middle" fill="#fff" font-size="22">Moving image as artistic medium</text>
 
                                     <rect x="80" y="530" width="450" height="140" rx="15" fill="rgba(255,255,255,0.03)"/>
@@ -10524,7 +10524,7 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="810" y="860" text-anchor="middle" fill="#888" font-size="16">• Explores perception, emotion</text>
 
                                     <!-- Other Key Artists -->
-                                    <rect x="100" y="920" width="900" height="80" rx="15" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
+                                    <rect x="100" y="920" width="900" height="80" rx="15" fill="rgba(107,114,128,0.1)" stroke="#888"/>
                                     <text x="550" y="955" text-anchor="middle" fill="#fff" font-size="18">Other Key Artists: James Turrell (light), Christo &amp; Jeanne-Claude (wrapping), Ai Weiwei (political)</text>
                                     <text x="550" y="985" text-anchor="middle" fill="#888" font-size="16">Richard Serra (massive steel), Doris Salcedo (trauma), teamLab (digital immersion)</text>
                                 </svg>`,
@@ -10569,8 +10569,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="430" y="330" text-anchor="middle" fill="#fff" font-size="16">Kusama, Eliasson</text>
                                     <text x="430" y="355" text-anchor="middle" fill="#888" font-size="14">Immersive spaces</text>
 
-                                    <rect x="570" y="260" width="250" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#3b82f6"/>
-                                    <text x="695" y="300" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="22">VIDEO</text>
+                                    <rect x="570" y="260" width="250" height="130" rx="15" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
+                                    <text x="695" y="300" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="22">VIDEO</text>
                                     <text x="695" y="330" text-anchor="middle" fill="#fff" font-size="16">Paik, Viola</text>
                                     <text x="695" y="355" text-anchor="middle" fill="#888" font-size="14">Time-based media</text>
 
@@ -10580,8 +10580,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="947" y="355" text-anchor="middle" fill="#888" font-size="14">Public space</text>
 
                                     <!-- More Mediums -->
-                                    <rect x="170" y="410" width="250" height="130" rx="15" fill="rgba(107,114,128,0.15)" stroke="#6b7280"/>
-                                    <text x="295" y="450" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="22">DIGITAL/NFT</text>
+                                    <rect x="170" y="410" width="250" height="130" rx="15" fill="rgba(107,114,128,0.15)" stroke="#888"/>
+                                    <text x="295" y="450" text-anchor="middle" fill="#888" font-weight="bold" font-size="22">DIGITAL/NFT</text>
                                     <text x="295" y="480" text-anchor="middle" fill="#fff" font-size="16">Beeple, generative</text>
                                     <text x="295" y="505" text-anchor="middle" fill="#888" font-size="14">Technology as medium</text>
 
@@ -10596,12 +10596,12 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="835" y="505" text-anchor="middle" fill="#888" font-size="14">Remix culture</text>
 
                                     <!-- Art World Today -->
-                                    <rect x="40" y="570" width="500" height="180" rx="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="290" y="610" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="24">THE ART WORLD TODAY</text>
+                                    <rect x="40" y="570" width="500" height="180" rx="20" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="290" y="610" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">THE ART WORLD TODAY</text>
                                     <text x="290" y="650" text-anchor="middle" fill="#fff" font-size="18">Biennials: Venice, Whitney, Documenta</text>
                                     <text x="290" y="680" text-anchor="middle" fill="#888" font-size="16">Art fairs: Basel, Frieze</text>
                                     <text x="290" y="710" text-anchor="middle" fill="#888" font-size="16">Record prices: $400M+ at auction</text>
-                                    <text x="290" y="740" text-anchor="middle" fill="#3b82f6" font-size="14">Art as investment, brand, experience</text>
+                                    <text x="290" y="740" text-anchor="middle" fill="#6366f1" font-size="14">Art as investment, brand, experience</text>
 
                                     <!-- Key Artists -->
                                     <rect x="560" y="570" width="500" height="180" rx="20" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
@@ -10652,8 +10652,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <!-- Timeline -->
                                     <line x1="80" y1="190" x2="1020" y2="190" stroke="#666" stroke-width="3"/>
 
-                                    <circle cx="120" cy="190" r="10" fill="#3b82f6"/>
-                                    <text x="120" y="220" text-anchor="middle" fill="#3b82f6" font-size="14">1874</text>
+                                    <circle cx="120" cy="190" r="10" fill="#6366f1"/>
+                                    <text x="120" y="220" text-anchor="middle" fill="#6366f1" font-size="14">1874</text>
                                     <text x="120" y="240" text-anchor="middle" fill="#888" font-size="12">Impressionism</text>
 
                                     <circle cx="240" cy="190" r="10" fill="#f59e0b"/>
@@ -10685,8 +10685,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="980" y="240" text-anchor="middle" fill="#888" font-size="12">Contemporary</text>
 
                                     <!-- Movement Summary Grid -->
-                                    <rect x="40" y="270" width="330" height="110" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="205" y="305" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="20">IMPRESSIONISM</text>
+                                    <rect x="40" y="270" width="330" height="110" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="205" y="305" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="20">IMPRESSIONISM</text>
                                     <text x="205" y="330" text-anchor="middle" fill="#fff" font-size="16">Capturing light and moment</text>
                                     <text x="205" y="355" text-anchor="middle" fill="#888" font-size="14">Monet, Renoir, Degas</text>
 
@@ -10720,8 +10720,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="275" y="580" text-anchor="middle" fill="#fff" font-size="16">Consumer culture as subject</text>
                                     <text x="275" y="605" text-anchor="middle" fill="#888" font-size="14">Warhol, Lichtenstein</text>
 
-                                    <rect x="455" y="520" width="330" height="110" rx="15" fill="rgba(107,114,128,0.1)" stroke="#6b7280"/>
-                                    <text x="620" y="555" text-anchor="middle" fill="#6b7280" font-weight="bold" font-size="20">MINIMALISM/CONCEPTUAL</text>
+                                    <rect x="455" y="520" width="330" height="110" rx="15" fill="rgba(107,114,128,0.1)" stroke="#888"/>
+                                    <text x="620" y="555" text-anchor="middle" fill="#888" font-weight="bold" font-size="20">MINIMALISM/CONCEPTUAL</text>
                                     <text x="620" y="580" text-anchor="middle" fill="#fff" font-size="16">Stripping to essentials</text>
                                     <text x="620" y="605" text-anchor="middle" fill="#888" font-size="14">Judd, LeWitt, Kosuth</text>
 
@@ -10743,8 +10743,8 @@ You can now discuss Van Eyck and Northern Renaissance art with confidence!`,
                                     <text x="550" y="925" text-anchor="middle" fill="#888" font-size="18">600+ years of art history mastered!</text>
 
                                     <!-- Key Mnemonic -->
-                                    <rect x="100" y="960" width="900" height="60" rx="15" fill="rgba(59,130,246,0.1)" stroke="#3b82f6"/>
-                                    <text x="550" y="1000" text-anchor="middle" fill="#3b82f6" font-size="18">Remember: LIGHT = Loose, Instant, Glowing, Haute air, Transient (Impressionism characteristics)</text>
+                                    <rect x="100" y="960" width="900" height="60" rx="15" fill="rgba(59,130,246,0.1)" stroke="#6366f1"/>
+                                    <text x="550" y="1000" text-anchor="middle" fill="#6366f1" font-size="18">Remember: LIGHT = Loose, Instant, Glowing, Haute air, Transient (Impressionism characteristics)</text>
                                 </svg>`,
                                 caption: "You've mastered the entire story of Western art!"
                             }
