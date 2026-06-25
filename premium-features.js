@@ -2043,10 +2043,19 @@ class PremiumFeatures {
         APP_DATA.user.workouts.push(workout);
         APP_DATA.user.workoutStats.totalWorkouts++;
         APP_DATA.user.workoutStats.totalMinutes += duration;
-        APP_DATA.user.workoutStats.currentStreak++;
 
-        if (APP_DATA.user.workoutStats.currentStreak > APP_DATA.user.workoutStats.longestStreak) {
-            APP_DATA.user.workoutStats.longestStreak = APP_DATA.user.workoutStats.currentStreak;
+        // Day-boundary streak: only advance when today is a new day relative
+        // to the last logged workout. Two logs on the same day don't double-count.
+        const stats = APP_DATA.user.workoutStats;
+        const today = new Date().toISOString().slice(0, 10);
+        const last = stats.lastWorkoutDate || null;
+        if (last !== today) {
+            const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+            stats.currentStreak = (last === yesterday) ? (stats.currentStreak || 0) + 1 : 1;
+            stats.lastWorkoutDate = today;
+            if (stats.currentStreak > (stats.longestStreak || 0)) {
+                stats.longestStreak = stats.currentStreak;
+            }
         }
 
         saveProgress();

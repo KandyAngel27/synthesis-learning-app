@@ -20,10 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chat = document.getElementById('recipe-assistant');
     if (fab) fab.style.display = 'none';
     if (chat) chat.classList.add('hidden');
-
-    // Clear any previous "hidden" preference so users can see it
-    // Remove this line if you want the hide preference to persist
-    localStorage.removeItem('synthesis_hide_recipe_assistant');
+    // The hide preference persists across reloads — checked by isAssistantHidden().
 });
 
 // Also try to show when nutrition content is rendered
@@ -340,13 +337,16 @@ function saveRecipeToMyRecipes() {
         id: 'assistant-' + Date.now(),
         name: currentRecipeData.name,
         category: mappedCategory,
-        servings: 4,
-        prepTime: '15 min',
-        cookTime: '30 min',
-        calories: 0, // Not available from TheMealDB
-        protein: 0,
-        carbs: 0,
-        fats: 0,
+        // TheMealDB does not provide servings, timing, or macros.
+        // Leave as null so the nutrition tracker can flag them rather than
+        // computing wrong totals against a fake "0".
+        servings: null,
+        prepTime: null,
+        cookTime: null,
+        calories: null,
+        protein: null,
+        carbs: null,
+        fats: null,
         ingredients: currentRecipeData.ingredients.join('\n'),
         instructions: currentRecipeData.instructions,
         notes: `Cuisine: ${currentRecipeData.area} (${currentRecipeData.category})${currentRecipeData.youtube ? `\nVideo: ${currentRecipeData.youtube}` : ''}\n\n(Found via Recipe Assistant)`,

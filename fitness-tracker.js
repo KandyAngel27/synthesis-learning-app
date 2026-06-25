@@ -9620,10 +9620,5 @@ Serve as is or over rice.`,
     }
 }
 
-// Initialize fitness tracker
-let fitnessTracker;
-document.addEventListener('DOMContentLoaded', () => {
-    // Will be initialized when app is ready
-});
-
+// (Fitness tracker is initialized by app.js via new FitnessTracker(this).)
 window.FitnessTracker = FitnessTracker;

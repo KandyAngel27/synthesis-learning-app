@@ -781,11 +781,7 @@ class GamificationSystem {
     }
 }
 
-// Initialize gamification when app loads
-let gamification;
-document.addEventListener('DOMContentLoaded', () => {
-    // Will be initialized when app is ready
-});
+// (Gamification is initialized by app.js via new GamificationSystem(this).)
 
 // Make globally accessible
 window.GamificationSystem = GamificationSystem;
