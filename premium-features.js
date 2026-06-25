@@ -1,5 +1,8 @@
 // ============================================
-// PREMIUM FEATURES - VISION BOARD, MANIFESTATION, SHADOW WORK, WORKOUT
+// LIFESTYLE FEATURES — Vision Board, Manifestation Journal,
+// Shadow Work, Workout Tracker. The "premium-features" filename
+// is historical: there is no paywall and no gating; every feature
+// in this module is freely available to every user.
 // ============================================
 
 // Helper function to parse MM/DD/YYYY to ISO format (YYYY-MM-DD)
