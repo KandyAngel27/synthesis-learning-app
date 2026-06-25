@@ -5,7 +5,7 @@
     const COMING_SOON_SVG = `<svg viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
         <rect width="1100" height="1100" fill="#1a1a2e"/>
         <rect x="80" y="180" width="940" height="740" rx="24" fill="rgba(139,92,246,0.08)" stroke="#8b5cf6" stroke-width="3"/>
-        <text x="550" y="320" text-anchor="middle" font-size="78" fill="#ffd700" font-weight="bold">🚧 Coming Soon</text>
+        <text x="550" y="320" text-anchor="middle" font-size="78" fill="#ffd700" font-weight="bold"> Coming Soon</text>
         <text x="550" y="410" text-anchor="middle" font-size="32" fill="#888">CCA Prep Track</text>
         <text x="550" y="540" text-anchor="middle" font-size="26" fill="#ffffff">This domain is being authored.</text>
         <text x="550" y="600" text-anchor="middle" font-size="26" fill="#ffffff">Start with Domain 1 — Health Information</text>

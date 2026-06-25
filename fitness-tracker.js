@@ -421,53 +421,6 @@ class FitnessTracker {
         }
     }
 
-    saveInjection() {
-        try {
-            const typeSelect = document.getElementById('injection-type');
-            if (!typeSelect) {
-                alert('Error: Could not find injection type select');
-                return;
-            }
-            let type = typeSelect.value;
-
-            if (type === 'custom') {
-                const customInput = document.getElementById('custom-injection-type');
-                type = customInput ? customInput.value || 'Custom' : 'Custom';
-            }
-
-            const dateInput = document.getElementById('injection-date');
-            const dosageInput = document.getElementById('injection-dosage');
-            const energyInput = document.getElementById('injection-energy');
-            const notesInput = document.getElementById('injection-notes');
-
-            const injection = {
-                id: Date.now(),
-                type: type,
-                date: dateInput ? dateInput.value : new Date().toISOString().split('T')[0],
-                dosage: dosageInput ? dosageInput.value : '',
-                energy: energyInput ? parseInt(energyInput.value) : 7,
-                notes: notesInput ? notesInput.value : ''
-            };
-
-            // Save to localStorage
-            const injections = this.getInjectionHistory();
-            injections.push(injection);
-            localStorage.setItem('synthesis_injections', JSON.stringify(injections));
-
-            // Also save energy level to health notes history for trending
-            this.saveEnergyToHistory(injection.date, injection.energy);
-
-            // Close modal and refresh
-            const modal = document.querySelector('.injection-modal-overlay');
-            if (modal) modal.remove();
-
-            this.renderWorkoutHub();
-        } catch (error) {
-            alert('Error saving injection: ' + error.message);
-            console.error('Save injection error:', error);
-        }
-    }
-
     getInjectionHistory() {
         const data = localStorage.getItem('synthesis_injections');
         return data ? JSON.parse(data) : [];

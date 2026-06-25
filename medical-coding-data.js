@@ -94,11 +94,11 @@ const MEDICAL_CODING_CATEGORY = {
                                     <rect x="110" y="770" width="880" height="141" rx="26" fill="rgba(255,255,255,0.05)"/>
                                     <text x="550" y="823" text-anchor="middle" fill="#888" font-size="25">WHO USES THESE CODES?</text>
 
-                                    <text x="220" y="886" text-anchor="middle" fill="#fff" font-size="42">🏥</text>
-                                    <text x="385" y="886" text-anchor="middle" fill="#fff" font-size="42">💰</text>
-                                    <text x="550" y="886" text-anchor="middle" fill="#fff" font-size="42">🔬</text>
-                                    <text x="715" y="886" text-anchor="middle" fill="#fff" font-size="42">📊</text>
-                                    <text x="880" y="886" text-anchor="middle" fill="#fff" font-size="42">🌍</text>
+                                    <text x="220" y="886" text-anchor="middle" fill="#fff" font-size="42"></text>
+                                    <text x="385" y="886" text-anchor="middle" fill="#fff" font-size="42"></text>
+                                    <text x="550" y="886" text-anchor="middle" fill="#fff" font-size="42"></text>
+                                    <text x="715" y="886" text-anchor="middle" fill="#fff" font-size="42"></text>
+                                    <text x="880" y="886" text-anchor="middle" fill="#fff" font-size="42"></text>
                                 </svg>`,
                                 caption: "ICD-10-CM turns any medical description into a universal code"
                             }
@@ -249,19 +249,19 @@ const MEDICAL_CODING_CATEGORY = {
                                     <!-- Row 1 -->
                                     <rect x="55" y="188" width="233" height="172" rx="19" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
                                     <text x="170" y="267" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="42">A-B</text>
-                                    <text x="170" y="330" text-anchor="middle" fill="#fff" font-size="25">🦠 Infections</text>
+                                    <text x="170" y="330" text-anchor="middle" fill="#fff" font-size="25"> Infections</text>
 
                                     <rect x="316" y="188" width="233" height="172" rx="19" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
                                     <text x="431" y="267" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="42">C-D</text>
-                                    <text x="431" y="330" text-anchor="middle" fill="#fff" font-size="25">🎗️ Cancer/Blood</text>
+                                    <text x="431" y="330" text-anchor="middle" fill="#fff" font-size="25"> Cancer/Blood</text>
 
                                     <rect x="577" y="188" width="233" height="172" rx="19" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
                                     <text x="693" y="267" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">E</text>
-                                    <text x="693" y="330" text-anchor="middle" fill="#fff" font-size="25">🍬 Diabetes/Endo</text>
+                                    <text x="693" y="330" text-anchor="middle" fill="#fff" font-size="25"> Diabetes/Endo</text>
 
                                     <rect x="838" y="188" width="233" height="172" rx="19" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6"/>
                                     <text x="954" y="267" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="42">F</text>
-                                    <text x="954" y="330" text-anchor="middle" fill="#fff" font-size="25">🧠 Mental Health</text>
+                                    <text x="954" y="330" text-anchor="middle" fill="#fff" font-size="25"> Mental Health</text>
 
                                     <!-- Row 2 -->
                                     <rect x="55" y="392" width="233" height="172" rx="19" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
@@ -270,41 +270,41 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <rect x="316" y="392" width="233" height="172" rx="19" fill="rgba(236,72,153,0.15)" stroke="#ec4899"/>
                                     <text x="431" y="471" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="42">I</text>
-                                    <text x="431" y="534" text-anchor="middle" fill="#fff" font-size="25">❤️ Heart/Circ</text>
+                                    <text x="431" y="534" text-anchor="middle" fill="#fff" font-size="25"> Heart/Circ</text>
 
                                     <rect x="577" y="392" width="233" height="172" rx="19" fill="rgba(20,184,166,0.15)" stroke="#10b981"/>
                                     <text x="693" y="471" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="42">J</text>
-                                    <text x="693" y="534" text-anchor="middle" fill="#fff" font-size="25">🫁 Respiratory</text>
+                                    <text x="693" y="534" text-anchor="middle" fill="#fff" font-size="25"> Respiratory</text>
 
                                     <rect x="838" y="392" width="233" height="172" rx="19" fill="rgba(251,146,60,0.15)" stroke="#f59e0b"/>
                                     <text x="954" y="471" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="42">K</text>
-                                    <text x="954" y="534" text-anchor="middle" fill="#fff" font-size="25">🍽️ Digestive</text>
+                                    <text x="954" y="534" text-anchor="middle" fill="#fff" font-size="25"> Digestive</text>
 
                                     <!-- Row 3 -->
                                     <rect x="55" y="597" width="233" height="172" rx="19" fill="rgba(168,85,247,0.15)" stroke="#a855f7"/>
                                     <text x="170" y="675" text-anchor="middle" fill="#a855f7" font-weight="bold" font-size="42">M</text>
-                                    <text x="170" y="738" text-anchor="middle" fill="#fff" font-size="25">🦴 Muscles/Bones</text>
+                                    <text x="170" y="738" text-anchor="middle" fill="#fff" font-size="25"> Muscles/Bones</text>
 
                                     <rect x="316" y="597" width="233" height="172" rx="19" fill="rgba(34,197,94,0.15)" stroke="#22c55e"/>
                                     <text x="431" y="675" text-anchor="middle" fill="#22c55e" font-weight="bold" font-size="42">N</text>
-                                    <text x="431" y="738" text-anchor="middle" fill="#fff" font-size="25">🫘 Kidney/GU</text>
+                                    <text x="431" y="738" text-anchor="middle" fill="#fff" font-size="25"> Kidney/GU</text>
 
                                     <rect x="577" y="597" width="233" height="172" rx="19" fill="rgba(244,63,94,0.15)" stroke="#f43f5e"/>
                                     <text x="693" y="675" text-anchor="middle" fill="#f43f5e" font-weight="bold" font-size="42">O</text>
-                                    <text x="693" y="738" text-anchor="middle" fill="#fff" font-size="25">🤰 Pregnancy</text>
+                                    <text x="693" y="738" text-anchor="middle" fill="#fff" font-size="25"> Pregnancy</text>
 
                                     <rect x="838" y="597" width="233" height="172" rx="19" fill="rgba(99,102,241,0.15)" stroke="#6366f1"/>
                                     <text x="954" y="675" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="42">S-T</text>
-                                    <text x="954" y="738" text-anchor="middle" fill="#fff" font-size="25">🩹 Injuries</text>
+                                    <text x="954" y="738" text-anchor="middle" fill="#fff" font-size="25"> Injuries</text>
 
                                     <!-- Row 4 - Z codes highlighted -->
                                     <rect x="316" y="817" width="467" height="172" rx="19" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="7"/>
                                     <text x="550" y="911" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="42">Z</text>
-                                    <text x="550" y="968" text-anchor="middle" fill="#fff" font-size="25">✅ Encounters, Screenings, History</text>
+                                    <text x="550" y="968" text-anchor="middle" fill="#fff" font-size="25"> Encounters, Screenings, History</text>
 
                                     <!-- Tip at bottom -->
                                     <rect x="110" y="1037" width="880" height="125" rx="26" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
-                                    <text x="151" y="1115" fill="#f59e0b" font-size="31">💡</text>
+                                    <text x="151" y="1115" fill="#f59e0b" font-size="31"></text>
                                     <text x="550" y="1115" text-anchor="middle" fill="#fff" font-size="25">See a code? Look at the first letter - you already know the body system!</text>
                                 </svg>`,
                                 caption: "Memorize these letters to quickly identify any diagnosis category"
@@ -325,7 +325,7 @@ const MEDICAL_CODING_CATEGORY = {
                                     <!-- Step 1 -->
                                     <rect x="343" y="110" width="412" height="125" rx="66" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="7"/>
                                     <text x="550" y="182" text-anchor="middle" fill="#fff" font-size="25">1. Read Documentation</text>
-                                    <text x="123" y="172" fill="#10b981" font-size="42">📋</text>
+                                    <text x="123" y="172" fill="#10b981" font-size="42"></text>
 
                                     <line x1="550" y1="235" x2="550" y2="282" stroke="#888" stroke-width="7" marker-end="url(#arrowGray)"/>
                                     <defs><marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#888"/></marker></defs>
@@ -333,14 +333,14 @@ const MEDICAL_CODING_CATEGORY = {
                                     <!-- Step 2 -->
                                     <rect x="343" y="282" width="412" height="125" rx="66" fill="rgba(59,130,246,0.3)" stroke="#6366f1" stroke-width="7"/>
                                     <text x="550" y="355" text-anchor="middle" fill="#fff" font-size="25">2. Find Main Term</text>
-                                    <text x="123" y="345" fill="#6366f1" font-size="42">🔍</text>
+                                    <text x="123" y="345" fill="#6366f1" font-size="42"></text>
 
                                     <line x1="550" y1="408" x2="550" y2="455" stroke="#888" stroke-width="7" marker-end="url(#arrowGray)"/>
 
                                     <!-- Step 3 -->
                                     <rect x="343" y="455" width="412" height="125" rx="66" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="7"/>
                                     <text x="550" y="528" text-anchor="middle" fill="#fff" font-size="25">3. Look Up in Index</text>
-                                    <text x="123" y="518" fill="#f59e0b" font-size="42">📖</text>
+                                    <text x="123" y="518" fill="#f59e0b" font-size="42"></text>
 
                                     <line x1="550" y1="581" x2="550" y2="628" stroke="#888" stroke-width="7" marker-end="url(#arrowGray)"/>
 
@@ -348,21 +348,21 @@ const MEDICAL_CODING_CATEGORY = {
                                     <rect x="288" y="628" width="522" height="157" rx="19" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="12"/>
                                     <text x="550" y="697" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">4. VERIFY IN TABULAR LIST</text>
                                     <text x="550" y="748" text-anchor="middle" fill="#fff" font-size="25">Never skip this step!</text>
-                                    <text x="123" y="707" fill="#ef4444" font-size="42">⚠️</text>
+                                    <text x="123" y="707" fill="#ef4444" font-size="42">⚠</text>
 
                                     <line x1="550" y1="785" x2="550" y2="832" stroke="#888" stroke-width="7" marker-end="url(#arrowGray)"/>
 
                                     <!-- Step 5 -->
                                     <rect x="343" y="832" width="412" height="125" rx="66" fill="rgba(139,92,246,0.3)" stroke="#8b5cf6" stroke-width="7"/>
                                     <text x="550" y="905" text-anchor="middle" fill="#fff" font-size="25">5. Read ALL Notes</text>
-                                    <text x="123" y="895" fill="#8b5cf6" font-size="42">📝</text>
+                                    <text x="123" y="895" fill="#8b5cf6" font-size="42"></text>
 
                                     <line x1="550" y1="958" x2="550" y2="1005" stroke="#888" stroke-width="7" marker-end="url(#arrowGray)"/>
 
                                     <!-- Step 6 -->
                                     <rect x="343" y="1005" width="412" height="125" rx="66" fill="rgba(14,165,233,0.3)" stroke="#0ea5e9" stroke-width="7"/>
                                     <text x="550" y="1078" text-anchor="middle" fill="#fff" font-size="25">6. Assign Most Specific</text>
-                                    <text x="123" y="1068" fill="#0ea5e9" font-size="42">✅</text>
+                                    <text x="123" y="1068" fill="#0ea5e9" font-size="42"></text>
 
                                     <!-- Success indicator -->
                                     <circle cx="976" y="1068" r="41" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="7"/>
@@ -391,7 +391,7 @@ const MEDICAL_CODING_CATEGORY = {
                                     <!-- Index Column -->
                                     <rect x="55" y="157" width="467" height="722" rx="33" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
                                     <rect x="55" y="157" width="467" height="125" rx="33" fill="rgba(245,158,11,0.2)"/>
-                                    <text x="288" y="235" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="28">📖 ALPHABETIC INDEX</text>
+                                    <text x="288" y="235" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="28"> ALPHABETIC INDEX</text>
 
                                     <text x="96" y="345" fill="#fff" font-size="25">✓ Alphabetical by condition</text>
                                     <text x="96" y="408" fill="#fff" font-size="25">✓ Quick lookup tool</text>
@@ -407,7 +407,7 @@ const MEDICAL_CODING_CATEGORY = {
                                     <!-- Tabular Column -->
                                     <rect x="577" y="157" width="467" height="722" rx="33" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <rect x="577" y="157" width="467" height="125" rx="33" fill="rgba(16,185,129,0.2)"/>
-                                    <text x="811" y="235" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28">📋 TABULAR LIST</text>
+                                    <text x="811" y="235" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="28"> TABULAR LIST</text>
 
                                     <text x="618" y="345" fill="#fff" font-size="25">✓ Numerical order by code</text>
                                     <text x="618" y="408" fill="#fff" font-size="25">✓ Full code descriptions</text>
@@ -422,7 +422,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Bottom rule -->
                                     <rect x="110" y="927" width="880" height="110" rx="19" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
-                                    <text x="550" y="999" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="28">⚠️ NEVER code from the Index alone!</text>
+                                    <text x="550" y="999" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="28">⚠ NEVER code from the Index alone!</text>
                                 </svg>`,
                                 caption: "Always use both tools together - Index to find, Tabular to verify"
                             }
@@ -441,7 +441,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Original documentation -->
                                     <rect x="68" y="110" width="962" height="141" rx="19" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
-                                    <text x="110" y="172" fill="#f59e0b" font-size="25">📋 DOCUMENTATION:</text>
+                                    <text x="110" y="172" fill="#f59e0b" font-size="25"> DOCUMENTATION:</text>
                                     <text x="110" y="226" fill="#fff" font-size="25">"Type 2 diabetes mellitus with diabetic CKD, stage 3"</text>
 
                                     <!-- Step 1 -->
@@ -468,7 +468,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Note about additional code -->
                                     <rect x="68" y="722" width="962" height="157" rx="19" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6"/>
-                                    <text x="110" y="785" fill="#8b5cf6" font-size="25">📝 TABULAR NOTE SAYS:</text>
+                                    <text x="110" y="785" fill="#8b5cf6" font-size="25"> TABULAR NOTE SAYS:</text>
                                     <text x="110" y="848" fill="#fff" font-size="25">"Use additional code to identify stage of CKD (N18.-)"</text>
 
                                     <!-- Second code lookup -->
@@ -551,7 +551,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <rect x="27" y="31" width="1045" height="360" rx="39" fill="rgba(14,165,233,0.05)" stroke="#0ea5e9" stroke-width="7"/>
-                                    <text x="550" y="110" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="28">📋 ICD-10-CM QUICK REFERENCE</text>
+                                    <text x="550" y="110" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="28"> ICD-10-CM QUICK REFERENCE</text>
 
                                     <!-- Code Structure -->
                                     <rect x="68" y="157" width="453" height="282" rx="19" fill="rgba(239,68,68,0.1)" stroke="#ef4444"/>
@@ -633,7 +633,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 1 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 1 COMPLETE!</text>
 
                                     <!-- Achievement unlocked style -->
                                     <rect x="137" y="157" width="825" height="880" rx="49" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="7"/>
@@ -691,7 +691,7 @@ const MEDICAL_CODING_CATEGORY = {
                                     <rect x="82" y="141" width="935" height="220" rx="26" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
                                     <text x="550" y="220" text-anchor="middle" fill="#f59e0b" font-size="28">WITHOUT CONVENTIONS</text>
                                     <text x="550" y="298" text-anchor="middle" fill="#888" font-size="25">Like driving without road signs...</text>
-                                    <text x="550" y="345" text-anchor="middle" fill="#ef4444" font-size="25">❌ Wrong turns, missed exits, accidents</text>
+                                    <text x="550" y="345" text-anchor="middle" fill="#ef4444" font-size="25"> Wrong turns, missed exits, accidents</text>
 
                                     <rect x="82" y="392" width="935" height="220" rx="26" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
                                     <text x="550" y="471" text-anchor="middle" fill="#10b981" font-size="28">WITH CONVENTIONS</text>
@@ -729,7 +729,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Excludes1 - Red/Danger -->
                                     <rect x="55" y="361" width="990" height="267" rx="26" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="7"/>
-                                    <text x="110" y="433" fill="#ef4444" font-weight="bold" font-size="28">⛔ EXCLUDES1</text>
+                                    <text x="110" y="433" fill="#ef4444" font-weight="bold" font-size="28"> EXCLUDES1</text>
                                     <text x="110" y="496" fill="#fff" font-size="25">NEVER code together - mutually exclusive!</text>
                                     <text x="110" y="550" fill="#888" font-size="25">Patient cannot have both conditions simultaneously</text>
                                     <rect x="687" y="392" width="330" height="94" rx="13" fill="rgba(239,68,68,0.3)"/>
@@ -738,7 +738,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Excludes2 - Yellow/Caution -->
                                     <rect x="55" y="660" width="990" height="267" rx="26" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="7"/>
-                                    <text x="110" y="732" fill="#f59e0b" font-weight="bold" font-size="28">⚠️ EXCLUDES2</text>
+                                    <text x="110" y="732" fill="#f59e0b" font-weight="bold" font-size="28">⚠ EXCLUDES2</text>
                                     <text x="110" y="795" fill="#fff" font-size="25">Not here, but CAN coexist - code both if documented</text>
                                     <text x="110" y="848" fill="#888" font-size="25">Patient could have both, just use different codes</text>
                                     <rect x="687" y="691" width="330" height="94" rx="13" fill="rgba(245,158,11,0.3)"/>
@@ -922,7 +922,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Warning -->
                                     <rect x="110" y="817" width="880" height="141" rx="19" fill="rgba(239,68,68,0.2)" stroke="#ef4444"/>
-                                    <text x="550" y="880" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">⚠️ MISSING 7TH CHARACTER = CLAIM REJECTED!</text>
+                                    <text x="550" y="880" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">⚠ MISSING 7TH CHARACTER = CLAIM REJECTED!</text>
                                     <text x="550" y="927" text-anchor="middle" fill="#fff" font-size="25">Always check if code requires 7 characters</text>
                                 </svg>`,
                                 caption: "X is a placeholder, 7th character is mandatory for many codes"
@@ -958,7 +958,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 2 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 2 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="785" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -1046,7 +1046,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Bottom callout -->
                                     <rect x="110" y="707" width="880" height="188" rx="26" fill="rgba(239,68,68,0.1)" stroke="#ef4444"/>
-                                    <text x="550" y="779" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">⚠️ NOT OPTIONAL!</text>
+                                    <text x="550" y="779" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">⚠ NOT OPTIONAL!</text>
                                     <text x="550" y="842" text-anchor="middle" fill="#fff" font-size="25">These guidelines are required by HIPAA for all</text>
                                     <text x="550" y="886" text-anchor="middle" fill="#fff" font-size="25">healthcare settings - violation = compliance risk</text>
                                 </svg>`,
@@ -1079,7 +1079,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Good vs Bad example -->
                                     <rect x="55" y="628" width="467" height="172" rx="19" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
-                                    <text x="288" y="691" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">❌ TOO VAGUE</text>
+                                    <text x="288" y="691" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25"> TOO VAGUE</text>
                                     <text x="288" y="754" text-anchor="middle" fill="#fff" font-size="25">M54.5 Low back pain</text>
                                     <text x="288" y="792" text-anchor="middle" fill="#888" font-size="25">"Unspecified"</text>
 
@@ -1133,7 +1133,7 @@ const MEDICAL_CODING_CATEGORY = {
                                     <text x="550" y="606" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="28">EXAMPLE: COPD with Acute Exacerbation</text>
 
                                     <rect x="110" y="660" width="398" height="172" rx="19" fill="rgba(239,68,68,0.1)"/>
-                                    <text x="308" y="716" text-anchor="middle" fill="#ef4444" font-size="25">❌ DON'T DO THIS:</text>
+                                    <text x="308" y="716" text-anchor="middle" fill="#ef4444" font-size="25"> DON'T DO THIS:</text>
                                     <text x="308" y="770" text-anchor="middle" fill="#fff" font-size="25">J44.9 + J44.1</text>
                                     <text x="308" y="810" text-anchor="middle" fill="#888" font-size="25">Redundant codes</text>
 
@@ -1168,7 +1168,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- Example -->
                                     <rect x="55" y="455" width="467" height="251" rx="19" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
-                                    <text x="288" y="518" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">❌ WRONG (2 codes)</text>
+                                    <text x="288" y="518" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25"> WRONG (2 codes)</text>
                                     <text x="288" y="581" text-anchor="middle" fill="#fff" font-size="25">E11.9 Type 2 diabetes</text>
                                     <text x="288" y="628" text-anchor="middle" fill="#fff" font-size="25">R73.9 Hyperglycemia</text>
                                     <text x="288" y="685" text-anchor="middle" fill="#888" font-size="25">Redundant!</text>
@@ -1283,7 +1283,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 3 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 3 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="785" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -1340,35 +1340,35 @@ const MEDICAL_CODING_CATEGORY = {
                                     <text x="206" y="204" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">CH 1: A-B</text>
                                     <text x="206" y="257" text-anchor="middle" fill="#fff" font-size="25">Infectious</text>
                                     <text x="206" y="298" text-anchor="middle" fill="#fff" font-size="25">Diseases</text>
-                                    <text x="206" y="339" text-anchor="middle" fill="#888" font-size="25">🦠 Infections</text>
+                                    <text x="206" y="339" text-anchor="middle" fill="#888" font-size="25"> Infections</text>
 
                                     <rect x="398" y="141" width="302" height="220" rx="19" fill="rgba(236,72,153,0.15)" stroke="#ec4899"/>
                                     <text x="550" y="204" text-anchor="middle" fill="#ec4899" font-weight="bold" font-size="25">CH 2: C-D48</text>
                                     <text x="550" y="257" text-anchor="middle" fill="#fff" font-size="25">Neoplasms</text>
                                     <text x="550" y="298" text-anchor="middle" fill="#fff" font-size="25">(Tumors)</text>
-                                    <text x="550" y="339" text-anchor="middle" fill="#888" font-size="25">🎗️ Cancer</text>
+                                    <text x="550" y="339" text-anchor="middle" fill="#888" font-size="25"> Cancer</text>
 
                                     <rect x="742" y="141" width="302" height="220" rx="19" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6"/>
                                     <text x="893" y="204" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="25">CH 3: D50-89</text>
                                     <text x="893" y="257" text-anchor="middle" fill="#fff" font-size="25">Blood &amp;</text>
                                     <text x="893" y="298" text-anchor="middle" fill="#fff" font-size="25">Immune</text>
-                                    <text x="893" y="339" text-anchor="middle" fill="#888" font-size="25">🩸 Anemia</text>
+                                    <text x="893" y="339" text-anchor="middle" fill="#888" font-size="25"> Anemia</text>
 
                                     <rect x="220" y="392" width="302" height="220" rx="19" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
                                     <text x="371" y="455" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="25">CH 4: E</text>
                                     <text x="371" y="509" text-anchor="middle" fill="#fff" font-size="25">Endocrine</text>
                                     <text x="371" y="550" text-anchor="middle" fill="#fff" font-size="25">&amp; Metabolic</text>
-                                    <text x="371" y="590" text-anchor="middle" fill="#888" font-size="25">🍬 Diabetes</text>
+                                    <text x="371" y="590" text-anchor="middle" fill="#888" font-size="25"> Diabetes</text>
 
                                     <rect x="577" y="392" width="302" height="220" rx="19" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
                                     <text x="728" y="455" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="25">CH 5: F</text>
                                     <text x="728" y="509" text-anchor="middle" fill="#fff" font-size="25">Mental</text>
                                     <text x="728" y="550" text-anchor="middle" fill="#fff" font-size="25">&amp; Behavioral</text>
-                                    <text x="728" y="590" text-anchor="middle" fill="#888" font-size="25">🧠 Psychiatric</text>
+                                    <text x="728" y="590" text-anchor="middle" fill="#888" font-size="25"> Psychiatric</text>
 
                                     <!-- Why it matters -->
                                     <rect x="82" y="660" width="935" height="235" rx="26" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"/>
-                                    <text x="550" y="729" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="25">⚠️ WHY CHAPTER GUIDELINES MATTER</text>
+                                    <text x="550" y="729" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="25">⚠ WHY CHAPTER GUIDELINES MATTER</text>
                                     <text x="550" y="792" text-anchor="middle" fill="#fff" font-size="25">Each chapter has UNIQUE rules that override general guidelines</text>
                                     <text x="550" y="848" text-anchor="middle" fill="#fff" font-size="25">Missing these = coding errors, claim denials, audit findings</text>
                                 </svg>`,
@@ -1649,7 +1649,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 4 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 4 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="722" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -1709,22 +1709,22 @@ const MEDICAL_CODING_CATEGORY = {
                                     <rect x="398" y="141" width="302" height="204" rx="19" fill="rgba(59,130,246,0.15)" stroke="#6366f1"/>
                                     <text x="550" y="204" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="25">CH 7: H00-59</text>
                                     <text x="550" y="257" text-anchor="middle" fill="#fff" font-size="25">Eye &amp; Adnexa</text>
-                                    <text x="550" y="320" text-anchor="middle" fill="#888" font-size="25">👁️ Vision</text>
+                                    <text x="550" y="320" text-anchor="middle" fill="#888" font-size="25"> Vision</text>
 
                                     <rect x="742" y="141" width="302" height="204" rx="19" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
                                     <text x="893" y="204" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="25">CH 8: H60-95</text>
                                     <text x="893" y="257" text-anchor="middle" fill="#fff" font-size="25">Ear &amp; Mastoid</text>
-                                    <text x="893" y="320" text-anchor="middle" fill="#888" font-size="25">👂 Hearing</text>
+                                    <text x="893" y="320" text-anchor="middle" fill="#888" font-size="25"> Hearing</text>
 
                                     <rect x="220" y="377" width="302" height="204" rx="19" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="7"/>
                                     <text x="371" y="440" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">CH 9: I</text>
                                     <text x="371" y="493" text-anchor="middle" fill="#fff" font-size="25">Circulatory</text>
-                                    <text x="371" y="556" text-anchor="middle" fill="#ef4444" font-size="25">❤️ #1 CODED!</text>
+                                    <text x="371" y="556" text-anchor="middle" fill="#ef4444" font-size="25"> #1 CODED!</text>
 
                                     <rect x="577" y="377" width="302" height="204" rx="19" fill="rgba(20,184,166,0.2)" stroke="#10b981" stroke-width="7"/>
                                     <text x="728" y="440" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="25">CH 10: J</text>
                                     <text x="728" y="493" text-anchor="middle" fill="#fff" font-size="25">Respiratory</text>
-                                    <text x="728" y="556" text-anchor="middle" fill="#10b981" font-size="25">🫁 HIGH VOLUME!</text>
+                                    <text x="728" y="556" text-anchor="middle" fill="#10b981" font-size="25"> HIGH VOLUME!</text>
 
                                     <rect x="82" y="628" width="935" height="267" rx="26" fill="rgba(239,68,68,0.1)" stroke="#ef4444"/>
                                     <text x="550" y="697" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="25">⚡ HIGH-FREQUENCY CHAPTERS</text>
@@ -1938,7 +1938,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 5 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 5 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="722" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -2013,7 +2013,7 @@ const MEDICAL_CODING_CATEGORY = {
 
                                     <!-- 7th Character -->
                                     <rect x="41" y="612" width="1017" height="345" rx="26" fill="rgba(59,130,246,0.15)" stroke="#6366f1" stroke-width="7"/>
-                                    <text x="550" y="685" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">⚠️ 7TH CHARACTER REQUIRED!</text>
+                                    <text x="550" y="685" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="28">⚠ 7TH CHARACTER REQUIRED!</text>
 
                                     <rect x="110" y="738" width="275" height="172" rx="19" fill="rgba(16,185,129,0.2)"/>
                                     <text x="247" y="810" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">A</text>
@@ -2161,7 +2161,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 6 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 6 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="660" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -2317,7 +2317,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 type: "diagram",
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
-                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎉 LESSON 7 COMPLETE!</text>
+                                    <text x="550" y="94" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> LESSON 7 COMPLETE!</text>
 
                                     <rect x="110" y="157" width="880" height="597" rx="39" fill="rgba(16,185,129,0.1)" stroke="#10b981"/>
 
@@ -2539,7 +2539,7 @@ const MEDICAL_CODING_CATEGORY = {
                                 svg: `<svg viewBox="0 0 1100 1100" class="lesson-visual">
                                     <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
                                     <rect x="165" y="47" width="770" height="157" rx="33" fill="rgba(16,185,129,0.3)" stroke="#10b981" stroke-width="7"/>
-                                    <text x="550" y="150" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31">🎓 COURSE COMPLETE!</text>
+                                    <text x="550" y="150" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="31"> COURSE COMPLETE!</text>
 
                                     <text x="550" y="267" text-anchor="middle" fill="#fff" font-weight="bold" font-size="28">YOUR MNEMONICS TOOLKIT:</text>
 
