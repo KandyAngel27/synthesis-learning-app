@@ -948,7 +948,7 @@ class FitnessTracker {
         const notes = document.getElementById('sleep-notes').value;
 
         if (!date || !hours) {
-            alert('Please enter date and hours slept');
+            toast('Please enter date and hours slept', 'error');
             return;
         }
 
@@ -1785,7 +1785,7 @@ class FitnessTracker {
             // Return to hub
             this.renderWorkoutHub();
         } catch (error) {
-            alert('Error saving workout: ' + error.message);
+            toast('Error saving workout: ' + error.message, 'error');
             console.error('Save workout error:', error);
         }
     }
@@ -5274,7 +5274,7 @@ class FitnessTracker {
         const notes = document.getElementById('log-notes').value;
 
         if (!weight || !reps) {
-            alert('Please enter both weight and reps');
+            toast('Please enter both weight and reps', 'error');
             return;
         }
 
@@ -5300,7 +5300,7 @@ class FitnessTracker {
             window.gamification.awardXP(25, 'Logged Exercise Progress');
         }
 
-        alert(`Progress saved! ${weight} lbs x ${reps} reps`);
+        toast(`Progress saved! ${weight} lbs x ${reps} reps`, 'success');
 
         // Refresh the current view - search all plans for the exercise
         for (const plan of this.workoutPlans) {
@@ -5723,7 +5723,7 @@ class FitnessTracker {
         const sets = parseInt(document.getElementById('quick-sets')?.value) || 1;
 
         if (!exercise) {
-            alert('Please enter an exercise name');
+            toast('Please enter an exercise name', 'error');
             return;
         }
 
@@ -5765,7 +5765,7 @@ class FitnessTracker {
         document.getElementById('quick-sets').value = '';
 
         // Show feedback
-        alert(`Logged: ${exercise} - ${weight}lbs x ${reps} reps x ${sets} sets`);
+        toast(`Logged: ${exercise} - ${weight}lbs x ${reps} reps x ${sets} sets`, 'success');
 
         // Refresh the hub
         this.renderWorkoutHub();
@@ -5897,7 +5897,7 @@ class FitnessTracker {
             window.gamification.updateChallengeProgress('workout');
         }
 
-        alert('Workout logged! +50 XP');
+        toast('Workout logged! +50 XP', 'success');
         this.renderWorkoutHub();
     }
 
@@ -6092,7 +6092,7 @@ class FitnessTracker {
         APP_DATA.user.bodyMetrics.entries.push(entry);
         saveProgress();
 
-        alert('Measurements saved!');
+        toast('Measurements saved!', 'success');
         this.renderBodyMetrics();
     }
 
@@ -6414,7 +6414,7 @@ class FitnessTracker {
         };
 
         saveProgress();
-        alert('Injection updated!');
+        toast('Injection updated!', 'info');
         this.renderTRT();
     }
 
@@ -6737,7 +6737,7 @@ class FitnessTracker {
 
         APP_DATA.user.trtProtocol.bloodwork.push(bloodwork);
         saveProgress();
-        alert('Bloodwork saved!');
+        toast('Bloodwork saved!', 'success');
         this.renderTRT();
     }
 
@@ -7153,7 +7153,7 @@ class FitnessTracker {
         };
 
         saveProgress();
-        alert('Bloodwork updated!');
+        toast('Bloodwork updated!', 'info');
         this.showBloodworkDetail(id);
     }
 
@@ -7498,7 +7498,7 @@ class FitnessTracker {
         };
 
         if (!supp.name) {
-            alert('Please enter a supplement name');
+            toast('Please enter a supplement name', 'error');
             return;
         }
 
@@ -8509,7 +8509,7 @@ Serve as is or over rice.`,
 
         // Check if already saved
         if (APP_DATA.user.recipes.some(r => r.name === recipe.name)) {
-            alert('This recipe is already in your collection!');
+            toast('This recipe is already in your collection!', 'info');
             return;
         }
 
@@ -8537,7 +8537,7 @@ Serve as is or over rice.`,
             window.gamification.awardXP(10, 'Saved Recipe');
         }
 
-        alert('Recipe saved to your collection!');
+        toast('Recipe saved to your collection!', 'success');
         this.viewSuggestedRecipe(id); // Refresh to show "Already Saved"
     }
 
@@ -8554,7 +8554,7 @@ Serve as is or over rice.`,
             recipe.fats
         );
 
-        alert(`Logged ${recipe.name} to today's food!`);
+        toast(`Logged ${recipe.name} to today's food!`, 'success');
     }
 
     renderRecipesList() {
@@ -8729,7 +8729,7 @@ Serve as is or over rice.`,
     saveRecipe() {
         const name = document.getElementById('recipe-name').value.trim();
         if (!name) {
-            alert('Please enter a recipe name');
+            toast('Please enter a recipe name', 'error');
             return;
         }
 
@@ -8763,7 +8763,7 @@ Serve as is or over rice.`,
             window.gamification.awardXP(15, 'Added Recipe');
         }
 
-        alert('Recipe saved!');
+        toast('Recipe saved!', 'success');
         this.renderNutrition();
     }
 
@@ -8982,7 +8982,7 @@ Serve as is or over rice.`,
 
         const name = document.getElementById('recipe-name').value.trim();
         if (!name) {
-            alert('Please enter a recipe name');
+            toast('Please enter a recipe name', 'error');
             return;
         }
 
@@ -9299,7 +9299,7 @@ Serve as is or over rice.`,
         };
 
         if (!food.name) {
-            alert('Please enter a food name');
+            toast('Please enter a food name', 'error');
             return;
         }
 
@@ -9554,7 +9554,7 @@ Serve as is or over rice.`,
         const notesTextarea = document.getElementById('health-notes-text');
 
         if (!kneeSelect || !energySlider || !notesTextarea) {
-            alert('Could not find health notes form fields');
+            toast('Could not find health notes form fields', 'info');
             return;
         }
 
@@ -9576,7 +9576,7 @@ Serve as is or over rice.`,
         // Also save energy to the energy history for the chart
         this.saveEnergyToHistory(healthNote.energyLevel);
 
-        alert('Health notes saved!');
+        toast('Health notes saved!', 'success');
     }
 
     // Get health notes history
@@ -9608,13 +9608,13 @@ Serve as is or over rice.`,
                 storageKey = 'synthesis_energy_history';
                 break;
             default:
-                alert('Unknown data type');
+                toast('Unknown data type', 'info');
                 return;
         }
 
         if (confirm(message)) {
             localStorage.removeItem(storageKey);
-            alert('Data has been reset.');
+            toast('Data has been reset.', 'info');
             this.renderWorkoutHub();
         }
     }

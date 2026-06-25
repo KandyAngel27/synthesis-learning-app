@@ -554,7 +554,7 @@ class SynthesisApp {
     }
 
     manageFavorites() {
-        alert('You can add books to your favorites from any book detail page! Look for the star icon.');
+        toast('You can add books to your favorites from any book detail page! Look for the star icon.', 'info');
     }
 
     // Re-apply persisted per-lesson completions to the in-memory lesson
@@ -659,12 +659,12 @@ class SynthesisApp {
         );
         if (!input) return;
         if (!/^\d{4}-\d{2}-\d{2}$/.test(input.trim())) {
-            alert('Please enter the date as YYYY-MM-DD.');
+            toast('Please enter the date as YYYY-MM-DD.', 'error');
             return;
         }
         const d = new Date(input.trim() + 'T00:00:00');
-        if (isNaN(d.getTime())) { alert('Invalid date.'); return; }
-        if (d <= new Date()) { alert('Target date must be in the future.'); return; }
+        if (isNaN(d.getTime())) { toast('Invalid date.', 'error'); return; }
+        if (d <= new Date()) { toast('Target date must be in the future.', 'info'); return; }
         this.setGoal(categoryId, input.trim(), null);
         this.renderCourseHub(this.currentCategory);
     }
@@ -1898,7 +1898,7 @@ class SynthesisApp {
                     }
                 }
             }
-            alert('No lessons available yet. Check back soon!');
+            toast('No lessons available yet. Check back soon!', 'info');
         }
     }
 
@@ -2075,19 +2075,17 @@ class SynthesisApp {
             }
 
             // Show success message
-            alert(
-                '✅ RESET COMPLETE!\n\n' +
+            toast('✅ RESET COMPLETE!\n\n' +
                 'Your app has been reset to Day 0.\n\n' +
                 '• All progress cleared\n' +
                 '• All lessons unmarked\n' +
                 '• Starting fresh!\n\n' +
-                'The page will now reload.'
-            );
+                'The page will now reload.', 'success');
 
             // Reload the page to ensure clean state
             window.location.reload();
         } else {
-            alert('Error: Reset function not found. Please refresh the page and try again.');
+            toast('Error: Reset function not found. Please refresh the page and try again.', 'error');
         }
     }
 
