@@ -169,7 +169,7 @@ class ActiveRecallSystem {
         });
 
         if (this.flashcardQueue.length === 0) {
-            alert('No cards due in this deck!');
+            toast('No cards due in this deck!', 'info');
             return;
         }
 
@@ -399,7 +399,7 @@ class ActiveRecallSystem {
         const allQuizzes = this.gatherAllQuizzes();
 
         if (allQuizzes.length === 0) {
-            alert('No quiz questions available! Complete some lessons with quizzes first.');
+            toast('No quiz questions available! Complete some lessons with quizzes first.', 'success');
             return;
         }
 
@@ -697,7 +697,7 @@ class ActiveRecallSystem {
         const explanation = document.getElementById('feynman-explanation').value.trim();
 
         if (!explanation) {
-            alert('Please write an explanation first!');
+            toast('Please write an explanation first!', 'info');
             return;
         }
 
@@ -724,7 +724,7 @@ class ActiveRecallSystem {
             window.gamification.awardXP(30, 'Feynman Technique Practice');
         }
 
-        alert('Explanation saved! +30 XP');
+        toast('Explanation saved! +30 XP', 'success');
         this.renderFeynman();
     }
 
@@ -789,7 +789,7 @@ class ActiveRecallSystem {
             APP_DATA.user.favoriteBooks.splice(index, 1);
         } else {
             if (APP_DATA.user.favoriteBooks.length >= 5) {
-                alert('You can only have 5 favorite books. Remove one first!');
+                toast('You can only have 5 favorite books. Remove one first!', 'info');
                 return;
             }
             APP_DATA.user.favoriteBooks.push(bookId);

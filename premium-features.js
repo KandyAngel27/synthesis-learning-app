@@ -211,14 +211,14 @@ class PremiumFeatures {
 
             saveProgress();
             this.renderVisionBoard();
-            alert('Vision updated!');
+            toast('Vision updated!', 'info');
         } else if (action === '2') {
             // Delete
             if (confirm(`Are you sure you want to delete "${vision.title}"?`)) {
                 APP_DATA.user.visionBoard = APP_DATA.user.visionBoard.filter(v => v.id !== visionId);
                 saveProgress();
                 this.renderVisionBoard();
-                alert('Vision deleted.');
+                toast('Vision deleted.', 'info');
             }
         }
     }
@@ -437,7 +437,7 @@ class PremiumFeatures {
 
         // Check if already added
         if (todayEntry.affirmations.includes(affirmation)) {
-            alert('This affirmation is already in your list!');
+            toast('This affirmation is already in your list!', 'info');
             return;
         }
 
@@ -518,7 +518,7 @@ class PremiumFeatures {
 
         saveProgress();
         if (window.gamification) window.gamification.updateChallengeProgress('journal');
-        alert('✨ Journal entry saved! Your manifestations are taking root.');
+        toast('✨ Journal entry saved! Your manifestations are taking root.', 'success');
         this.renderManifestation(); // Refresh to show saved data
     }
 
@@ -709,12 +709,10 @@ class PremiumFeatures {
 
         const info = archetypeInfo[archetype] || { light: "Unknown", shadow: "Unknown" };
 
-        alert(
-            `${this.getArchetypeIcon(archetype)} THE ${archetype.toUpperCase()}\n\n` +
+        toast(`${this.getArchetypeIcon(archetype)} THE ${archetype.toUpperCase()}\n\n` +
             `✨ Light Side:\n${info.light}\n\n` +
             `🌑 Shadow Side:\n${info.shadow}\n\n` +
-            `Your Score: ${typeof archetypeData === 'object' ? archetypeData.score : archetypeData}%`
-        );
+            `Your Score: ${typeof archetypeData === 'object' ? archetypeData.score : archetypeData}%`, 'success');
     }
 
     toggleExercise(index) {
@@ -727,7 +725,7 @@ class PremiumFeatures {
         const reflection = textarea.value;
 
         if (!reflection.trim()) {
-            alert('Please write your reflection before saving.');
+            toast('Please write your reflection before saving.', 'info');
             return;
         }
 
@@ -745,7 +743,7 @@ class PremiumFeatures {
         }
 
         saveProgress();
-        alert('✨ Reflection saved. This is brave work you\'re doing. Scroll down to see your journal.');
+        toast('✨ Reflection saved. This is brave work you\'re doing. Scroll down to see your journal.', 'success');
         textarea.value = '';
         this.renderShadowWork(); // Refresh to show new reflection
     }
@@ -758,7 +756,7 @@ class PremiumFeatures {
         );
         saveProgress();
         this.renderShadowWork(); // Refresh
-        alert('Reflection deleted.');
+        toast('Reflection deleted.', 'info');
     }
 
     takeArchetypeQuiz() {
@@ -1306,7 +1304,7 @@ class PremiumFeatures {
     nextArchetypeQuestion() {
         const currentQ = this.quizQuestions[this.archetypeQuizData.currentQuestion];
         if (!this.archetypeQuizData.answers[currentQ.id]) {
-            alert('Please select an answer before continuing.');
+            toast('Please select an answer before continuing.', 'info');
             return;
         }
 
@@ -1853,7 +1851,7 @@ class PremiumFeatures {
         };
 
         saveProgress();
-        alert('✅ Workout data has been reset. Starting fresh!');
+        toast('✅ Workout data has been reset. Starting fresh!', 'info');
         this.renderWorkout();
     }
 
@@ -1919,25 +1917,23 @@ class PremiumFeatures {
         const exerciseName = select.value;
 
         if (!exerciseName || exerciseName === 'custom') {
-            alert('Please select an exercise first to see instructions.');
+            toast('Please select an exercise first to see instructions.', 'info');
             return;
         }
 
         const exercise = APP_DATA.exercises[exerciseName];
         if (!exercise) {
-            alert(`No instructions available for "${exerciseName}"`);
+            toast(`No instructions available for "${exerciseName}"`, 'info');
             return;
         }
 
         const cuesList = exercise.cues.map((cue, i) => `${i + 1}. ${cue}`).join('\n');
 
-        alert(
-            `${exercise.icon} ${exerciseName.toUpperCase()}\n` +
+        toast(`${exercise.icon} ${exerciseName.toUpperCase()}\n` +
             `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
             `📋 WHAT IT DOES:\n${exercise.description}\n\n` +
             `🎯 HOW TO DO IT:\n${exercise.howTo}\n\n` +
-            `✅ FORM CUES:\n${cuesList}`
-        );
+            `✅ FORM CUES:\n${cuesList}`, 'info');
     }
 
     addExerciseInput() {
@@ -2002,7 +1998,7 @@ class PremiumFeatures {
         const duration = parseInt(document.getElementById('workout-duration').value);
 
         if (!duration) {
-            alert('Please enter workout duration');
+            toast('Please enter workout duration', 'error');
             return;
         }
 
@@ -2023,7 +2019,7 @@ class PremiumFeatures {
         });
 
         if (exercises.length === 0) {
-            alert('Please add at least one exercise with sets and reps');
+            toast('Please add at least one exercise with sets and reps', 'error');
             return;
         }
 
@@ -2059,7 +2055,7 @@ class PremiumFeatures {
         }
 
         saveProgress();
-        alert('💪 Workout logged! Great work!');
+        toast('💪 Workout logged! Great work!', 'success');
         this.renderWorkout();
     }
 }

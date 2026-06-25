@@ -309,7 +309,7 @@ function saveRecipeToMyRecipes() {
     console.log('currentRecipeData:', currentRecipeData);
 
     if (!currentRecipeData) {
-        alert('No recipe to save. Please view a recipe first.');
+        toast('No recipe to save. Please view a recipe first.', 'info');
         return;
     }
 
@@ -319,7 +319,7 @@ function saveRecipeToMyRecipes() {
 
     // Check if already saved
     if (APP_DATA.user.recipeIdeas.some(r => r.name === currentRecipeData.name)) {
-        alert('This recipe is already in your Recipe Ideas!');
+        toast('This recipe is already in your Recipe Ideas!', 'info');
         return;
     }
 

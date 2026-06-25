@@ -2255,7 +2255,7 @@ class RandomWorkoutUI {
 
     removeExercise(index) {
         if (!this.currentWorkout || this.currentWorkout.exercises.length <= 3) {
-            alert('Minimum 3 exercises required!');
+            toast('Minimum 3 exercises required!', 'info');
             return;
         }
         this.currentWorkout = this.generator.removeExercise(this.currentWorkout, index);
@@ -2264,13 +2264,13 @@ class RandomWorkoutUI {
 
     showExerciseDetails(index) {
         const exercise = this.currentWorkout.exercises[index];
-        alert(`${exercise.name}\n\n${exercise.instructions}\n\nMuscles: ${exercise.muscleGroups.join(', ')}\nEquipment: ${exercise.equipment.join(', ') || 'None'}`);
+        toast(`${exercise.name}\n\n${exercise.instructions}\n\nMuscles: ${exercise.muscleGroups.join(', ')}\nEquipment: ${exercise.equipment.join(', ') || 'None'}`, 'info');
     }
 
     startWorkout() {
         if (!this.currentWorkout) return;
         // Could integrate with existing workout tracking here
-        alert('Workout started! Track your sets as you go. Click "Complete Workout" when done.');
+        toast('Workout started! Track your sets as you go. Click "Complete Workout" when done.', 'success');
 
         // Add complete button
         const actionsDiv = document.querySelector('.rw-workout-actions');
@@ -2376,7 +2376,7 @@ class RandomWorkoutUI {
     saveAsFavorite() {
         if (!this.currentWorkout) return;
         this.generator.saveAsFavorite(this.currentWorkout);
-        alert('Saved to favorites! ⭐');
+        toast('Saved to favorites! ⭐', 'success');
     }
 
     showHistory() {
