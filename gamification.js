@@ -691,9 +691,13 @@ class GamificationSystem {
                         lessonId: lesson.id,
                         front: card.title,
                         back: line.replace(/\*\*/g, '').trim(),
+                        // FSRS state — initialized to 0 / null so reviewFlashcard()
+                        // picks the appropriate first-review S and D from the grade.
+                        stability: 0,
+                        difficulty: 0,
                         interval: 1,
                         nextReview: new Date().toISOString(),
-                        easeFactor: 2.5,
+                        lastReviewed: null,
                         reviewCount: 0
                     });
                 });
@@ -708,9 +712,11 @@ class GamificationSystem {
                     lessonId: lesson.id,
                     front: card.question,
                     back: correctOption ? correctOption.text : card.explanation,
+                    stability: 0,
+                    difficulty: 0,
                     interval: 1,
                     nextReview: new Date().toISOString(),
-                    easeFactor: 2.5,
+                    lastReviewed: null,
                     reviewCount: 0
                 });
             }
@@ -741,40 +747,70 @@ class GamificationSystem {
     }
 
     reviewFlashcard(cardId, quality) {
-        // Quality: 0 = forgot, 1 = hard, 2 = good, 3 = easy
+        // UI passes quality 0..3 (Again/Hard/Good/Easy). Map to FSRS grade 1..4.
         const card = APP_DATA.user.flashcards.cards.find(c => c.id === cardId);
         if (!card) return;
+        const grade = Math.max(1, Math.min(4, (quality | 0) + 1));
 
-        card.reviewCount++;
+        // FSRS-4 default weights (Open Spaced Repetition v4 published defaults).
+        const w = [0.4, 0.6, 2.4, 5.8, 4.93, 0.94, 0.86, 0.01, 1.49, 0.14, 0.94, 2.18, 0.05, 0.34, 1.26, 0.29, 2.61];
+        const REQUEST_R = 0.9;       // desired retention
 
-        // SM-2 algorithm implementation
-        if (quality < 2) {
-            // Failed - reset
-            card.interval = 1;
-            card.easeFactor = Math.max(1.3, card.easeFactor - 0.2);
-        } else {
-            if (card.reviewCount === 1) {
-                card.interval = 1;
-            } else if (card.reviewCount === 2) {
-                card.interval = 6;
-            } else {
-                card.interval = Math.round(card.interval * card.easeFactor);
-            }
+        const now = new Date();
+        const isFirstReview = !card.stability || card.stability <= 0;
 
-            card.easeFactor = card.easeFactor + (0.1 - (3 - quality) * (0.08 + (3 - quality) * 0.02));
-            card.easeFactor = Math.max(1.3, card.easeFactor);
+        // Migrate legacy SM-2 fields on first FSRS review.
+        if (isFirstReview && (typeof card.interval === 'number' || typeof card.easeFactor === 'number')) {
+            // Seed stability from previous SM-2 interval (with floor of 1 day).
+            card.stability = Math.max(1, card.interval || 1);
+            // Seed difficulty inversely from old easeFactor: high ease -> low difficulty.
+            const ef = typeof card.easeFactor === 'number' ? card.easeFactor : 2.5;
+            card.difficulty = Math.max(1, Math.min(10, 11 - ((ef - 1.3) / 1.7) * 9));
         }
 
-        // Set next review date
-        const nextReview = new Date();
-        nextReview.setDate(nextReview.getDate() + card.interval);
-        card.nextReview = nextReview.toISOString();
+        const lastReviewed = card.lastReviewed ? new Date(card.lastReviewed) : null;
+        const daysSince = lastReviewed ? Math.max(0, (now - lastReviewed) / 86400000) : 0;
 
-        // Update stats
+        if (!card.stability || card.stability <= 0) {
+            // First-ever review: initial S and D from the grade.
+            card.stability = Math.max(w[Math.min(3, grade - 1)], 0.1);
+            card.difficulty = Math.max(1, Math.min(10, w[4] - (grade - 3) * w[5]));
+        } else {
+            // Compute retrievability and update S and D.
+            const R = Math.pow(1 + daysSince / (9 * card.stability), -1);
+            const D = card.difficulty || w[4];
+            // Difficulty update
+            const newD_pre = D - w[6] * (grade - 3);
+            // Pull difficulty toward the mean (regression term)
+            const newD = Math.max(1, Math.min(10, w[7] * w[4] + (1 - w[7]) * newD_pre));
+            card.difficulty = newD;
+            // Stability update — different formulas for fail vs success
+            if (grade === 1) {
+                // Forgot: stability collapses
+                card.stability = Math.max(0.1, w[11] * Math.pow(newD, -w[12]) *
+                    (Math.pow(card.stability + 1, w[13]) - 1) * Math.exp(w[14] * (1 - R)));
+            } else {
+                // Success path. Hard/Good/Easy modifier.
+                const modifier = grade === 2 ? w[15] : grade === 4 ? w[16] : 1;
+                const inc = 1 + Math.exp(w[8]) * (11 - newD) *
+                    Math.pow(card.stability, -w[9]) * (Math.exp(w[10] * (1 - R)) - 1) * modifier;
+                card.stability = Math.max(0.1, card.stability * inc);
+            }
+        }
+
+        // Next interval = stability days (rounded), with a 1-day minimum.
+        const intervalDays = Math.max(1, Math.round(card.stability));
+        card.interval = intervalDays;  // kept for backwards-compat with anything that reads it
+        const nextReview = new Date(now);
+        nextReview.setDate(nextReview.getDate() + intervalDays);
+        card.nextReview = nextReview.toISOString();
+        card.lastReviewed = now.toISOString();
+        card.reviewCount = (card.reviewCount || 0) + 1;
+        card.lastGrade = grade;
+
+        // Stats + challenges + XP
         APP_DATA.user.learningStats.flashcardsReviewed++;
         this.updateChallengeProgress('flashcards');
-
-        // Award XP for reviewing
         this.awardXP(APP_DATA.user.xpRewards.flashcardReview, 'Flashcard Review');
 
         saveProgress();
