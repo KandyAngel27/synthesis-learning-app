@@ -405,7 +405,8 @@ class SynthesisApp {
     }
 
     updateStreak() {
-        document.getElementById('streak-count').textContent = APP_DATA.user.currentStreak || 0;
+        const el = document.getElementById('streak-count');
+        if (el) el.textContent = APP_DATA.user.currentStreak || 0;
     }
 
     render() {
