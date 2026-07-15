@@ -6,7 +6,7 @@ window.PUBLIC_SPEAKING_BOOK = {
   "category": "communication",
   "description": "10-lesson Communication Studies course — Aristotle, stage fright, audience analysis, message crafting, body language, slide design, persuasion, special occasions.",
   "duration": "200",
-  "lessons": 10,
+  "lessons": 12,
   "progress": 0,
   "cards": 153,
   "lessonList": [
@@ -2185,6 +2185,435 @@ window.PUBLIC_SPEAKING_BOOK = {
           }
         }
       ]
-    }
+    },
+{
+    "id": "public-speaking-lesson-11",
+    "title": "Storytelling for Speakers: The Narrative Arc, the Hero's Journey, and Vulnerability",
+    "duration": "15",
+    "cards": [
+      {
+        "type": "intro",
+        "title": "The Human Brain Runs on Story, Not Slides",
+        "content": "Neuroscientist **Uri Hassan** put people in fMRI scanners while they listened to a speaker tell a story. Something remarkable happened: the listeners' brains began to mirror the speaker's brain — a phenomenon called **neural coupling**. The same regions lit up, in the same sequence, a few seconds apart. A bullet-point list produces nothing like this.\n\nWhy? Because for roughly 100,000 years, before writing, before slides, humans passed everything that mattered — how to hunt, whom to trust, what the gods wanted — through **narrative**. Our brains evolved to remember stories and forget abstractions. Studies at Stanford found that after a series of pitches, only **5 percent** of listeners remembered a statistic, but **63 percent** remembered a story.\n\nThis lesson takes you past 'add an anecdote' and into the architecture of narrative: the **narrative arc** that creates tension and release, the **Hero's Journey** that gives a talk mythic shape, and the deliberate use of **vulnerability** — the single most underused tool available to a speaker. Master these, and your audience will not just understand you. They will feel what you felt, and carry it out the door long after the slides have faded from memory.\n\nThe goal of this lesson is not to make you a novelist. It is to give you a reliable, repeatable architecture so that the next time you have a point to land, you reach for a story on purpose — and build it so it works every time.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">WIRED FOR STORY</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Why narrative beats data in the brain</text>
+            <rect x="80" y="180" width="440" height="260" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="300" y="235" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">SPEAKER'S BRAIN</text>
+            <circle cx="300" cy="330" r="70" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+            <text x="300" y="340" text-anchor="middle" fill="#fff" font-size="20">tells story</text>
+            <rect x="580" y="180" width="440" height="260" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="800" y="235" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">LISTENER'S BRAIN</text>
+            <circle cx="800" cy="330" r="70" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+            <text x="800" y="340" text-anchor="middle" fill="#fff" font-size="20">mirrors it</text>
+            <path d="M 375 330 L 725 330" stroke="#ffd700" stroke-width="3" stroke-dasharray="10"/>
+            <text x="550" y="315" text-anchor="middle" fill="#ffd700" font-size="20">neural coupling</text>
+            <rect x="80" y="480" width="940" height="200" rx="20" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="535" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="26">STANFORD RECALL STUDY</text>
+            <text x="550" y="585" text-anchor="middle" fill="#fff" font-size="24">Remembered a statistic: 5%</text>
+            <text x="550" y="625" text-anchor="middle" fill="#fff" font-size="24">Remembered a story: 63%</text>
+            <text x="550" y="662" text-anchor="middle" fill="#888" font-size="20">Same pitches. Twelve times the memory.</text>
+            <rect x="80" y="720" width="940" height="260" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="775" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THREE TOOLS THIS LESSON</text>
+            <text x="550" y="825" text-anchor="middle" fill="#fff" font-size="22">1. The narrative arc — tension and release</text>
+            <text x="550" y="870" text-anchor="middle" fill="#fff" font-size="22">2. The Hero's Journey — mythic structure</text>
+            <text x="550" y="915" text-anchor="middle" fill="#fff" font-size="22">3. Vulnerability — the underused superpower</text>
+            <text x="550" y="958" text-anchor="middle" fill="#888" font-size="20">They don't just understand. They feel.</text>
+          </svg>`,
+          "caption": "Stories synchronize brains; data does not"
+        }
+      },
+      {
+        "type": "concept",
+        "title": "The Narrative Arc and the Hero's Journey on Stage",
+        "content": "Every gripping story rides a **narrative arc** — a shape audiences feel even when they can't name it. Playwright Gustav Freytag mapped it: **exposition** (the world as it is), an **inciting incident** (something breaks the calm), **rising action** (stakes and obstacles climb), a **climax** (the turning point), and **resolution** (the new world). The engine underneath all five stages is **tension**: a gap between what someone wants and what stands in the way. No gap, no story — just a report.\n\nJoseph Campbell distilled the world's myths into the **Hero's Journey**, and it maps cleanly onto a talk. The hero begins in an **ordinary world**, receives a **call to adventure**, crosses a **threshold** into the unknown, faces **trials** and a lowest moment, seizes a **transformation or insight**, and **returns** changed, carrying a gift for the community. Pixar's simplest version is a five-beat template: *Once upon a time... Every day... Until one day... Because of that... Until finally...*\n\nHere is the move most speakers miss: **you are rarely the hero of your own talk — the audience is.** You are the **mentor** who has walked the road and returns with a map. Position the listener as the one who must cross the threshold, and your story stops being a brag and becomes a guide. Structure the journey deliberately, and a fifteen-minute talk acquires the pull of a myth.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">THE ARC AND THE JOURNEY</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Tension is the engine</text>
+            <path d="M 100 420 Q 300 420 420 300 T 620 200 Q 720 200 760 320 T 1000 440" fill="none" stroke="#6366f1" stroke-width="4"/>
+            <circle cx="100" cy="420" r="8" fill="#10b981"/>
+            <text x="100" y="470" text-anchor="middle" fill="#10b981" font-size="18">exposition</text>
+            <circle cx="360" cy="345" r="8" fill="#0ea5e9"/>
+            <text x="330" y="330" text-anchor="middle" fill="#0ea5e9" font-size="18">inciting</text>
+            <circle cx="620" cy="200" r="10" fill="#ffd700"/>
+            <text x="620" y="180" text-anchor="middle" fill="#ffd700" font-size="20">CLIMAX</text>
+            <circle cx="1000" cy="440" r="8" fill="#ec4899"/>
+            <text x="980" y="480" text-anchor="middle" fill="#ec4899" font-size="18">resolution</text>
+            <text x="500" y="270" text-anchor="middle" fill="#888" font-size="18">rising action</text>
+            <rect x="80" y="520" width="620" height="290" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="390" y="565" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">HERO'S JOURNEY</text>
+            <text x="110" y="610" fill="#fff" font-size="20">1. Ordinary world</text>
+            <text x="110" y="645" fill="#fff" font-size="20">2. Call to adventure</text>
+            <text x="110" y="680" fill="#fff" font-size="20">3. Cross the threshold</text>
+            <text x="110" y="715" fill="#fff" font-size="20">4. Trials + lowest moment</text>
+            <text x="110" y="750" fill="#fff" font-size="20">5. Transformation / insight</text>
+            <text x="110" y="785" fill="#fff" font-size="20">6. Return with the gift</text>
+            <rect x="720" y="520" width="300" height="290" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="870" y="565" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="22">PIXAR BEATS</text>
+            <text x="870" y="610" text-anchor="middle" fill="#fff" font-size="17">Once upon a time...</text>
+            <text x="870" y="645" text-anchor="middle" fill="#fff" font-size="17">Every day...</text>
+            <text x="870" y="680" text-anchor="middle" fill="#fff" font-size="17">Until one day...</text>
+            <text x="870" y="715" text-anchor="middle" fill="#fff" font-size="17">Because of that...</text>
+            <text x="870" y="750" text-anchor="middle" fill="#fff" font-size="17">Until finally...</text>
+            <rect x="80" y="850" width="940" height="130" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="900" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE KEY REFRAME</text>
+            <text x="550" y="945" text-anchor="middle" fill="#fff" font-size="22">The AUDIENCE is the hero. You are the mentor.</text>
+          </svg>`,
+          "caption": "Structure a talk like a myth"
+        }
+      },
+      {
+        "type": "example",
+        "title": "Brené Brown at TEDxHouston: Vulnerability as Structure",
+        "content": "In 2010, a then-unknown research professor named **Brené Brown** stepped onto a small TEDx stage in Houston. She studied shame and connection for a living, and she opened not with data but with a confession: an event planner had once introduced her as a 'researcher,' and Brown had begged her not to — *'because nobody wants a researcher at a party.'* The room laughed. She had made herself human before she made a single claim.\n\nThen she did the thing most speakers refuse to do. She told the story of her own **breakdown** — how her research had shattered her personal sense of control, sent her into therapy, and forced her to confront that the people who feel worthy of love are simply the people willing to be **seen**. She was, on stage, doing the exact vulnerable act she was describing. That is the technique: **the story enacts the point.**\n\nThe talk followed a clean Hero's Journey. Ordinary world: a confident academic who thought she could measure connection and keep her distance. Call and threshold: the data broke her model. Trials and lowest moment: 'a breakdown — my therapist called it a spiritual awakening.' Return with the gift: the insight that wholeheartedness requires the courage to be imperfect.\n\nThat 20-minute talk has been viewed over **60 million times**. Not because the data was novel, but because Brown risked being seen. Vulnerability, used deliberately and *within your competence*, is not oversharing — it is the bridge across which trust travels.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">BRENE BROWN, 2010</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">TEDxHouston — 60M+ views</text>
+            <rect x="80" y="170" width="940" height="150" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="220" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">ORDINARY WORLD</text>
+            <text x="550" y="265" text-anchor="middle" fill="#fff" font-size="22">Confident researcher who could measure connection</text>
+            <text x="550" y="300" text-anchor="middle" fill="#888" font-size="20">"Nobody wants a researcher at a party."</text>
+            <rect x="80" y="340" width="940" height="150" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="550" y="390" text-anchor="middle" fill="#0ea5e9" font-weight="bold" font-size="24">THRESHOLD</text>
+            <text x="550" y="435" text-anchor="middle" fill="#fff" font-size="22">The data broke her model of control</text>
+            <text x="550" y="470" text-anchor="middle" fill="#888" font-size="20">Worthy people are those willing to be SEEN</text>
+            <rect x="80" y="510" width="940" height="150" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="560" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">LOWEST MOMENT</text>
+            <text x="550" y="605" text-anchor="middle" fill="#fff" font-size="22">"A breakdown — my therapist called it</text>
+            <text x="550" y="640" text-anchor="middle" fill="#fff" font-size="22">a spiritual awakening."</text>
+            <rect x="80" y="680" width="940" height="150" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="550" y="730" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">RETURN WITH THE GIFT</text>
+            <text x="550" y="775" text-anchor="middle" fill="#fff" font-size="22">Wholeheartedness needs the courage</text>
+            <text x="550" y="810" text-anchor="middle" fill="#fff" font-size="22">to be imperfect</text>
+            <rect x="80" y="850" width="940" height="130" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="900" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE TECHNIQUE</text>
+            <text x="550" y="945" text-anchor="middle" fill="#fff" font-size="22">The story ENACTS the point she is making.</text>
+          </svg>`,
+          "caption": "Vulnerability as deliberate structure"
+        }
+      },
+      {
+        "type": "quiz",
+        "question": "A manager opens a team talk about resilience by narrating, in detail, a current unresolved crisis in which she still feels panicked and has no plan. The room grows anxious rather than inspired. What distinguishes effective speaking vulnerability from this misfire?",
+        "options": [
+          {
+            "text": "Effective vulnerability is shared from a scar, not an open wound — a resolved or processed struggle, not a raw one",
+            "correct": true
+          },
+          {
+            "text": "She should never reference personal struggle in a professional setting; vulnerability belongs only in ceremonial speeches",
+            "correct": false
+          },
+          {
+            "text": "The story failed only because it was too short; more detail would have made the panic relatable",
+            "correct": false
+          },
+          {
+            "text": "Resilience talks require data, so any personal story would have weakened her credibility",
+            "correct": false
+          }
+        ],
+        "explanation": "The distinction is **scar versus open wound**. Brené Brown told the story of a breakdown she had already come through — she stood on the far side of it and returned with a gift for the audience. The manager shared an **open wound**: a live crisis with no resolution and no insight, which transfers her anxiety to the room instead of offering a map. Effective vulnerability requires that you have *crossed the threshold and returned* — you can name what you learned. It is deliberate, bounded, and in service of the audience's journey, not a real-time cry for help. Share the scar, not the wound.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">KNOWLEDGE CHECK</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Scar vs. open wound</text>
+            <rect x="80" y="200" width="440" height="500" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="300" y="255" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="26">OPEN WOUND</text>
+            <text x="300" y="310" text-anchor="middle" fill="#fff" font-size="21">Live, unresolved crisis</text>
+            <text x="300" y="355" text-anchor="middle" fill="#fff" font-size="21">No plan, still panicked</text>
+            <text x="300" y="400" text-anchor="middle" fill="#fff" font-size="21">No insight to offer</text>
+            <text x="300" y="450" text-anchor="middle" fill="#888" font-size="19">Transfers anxiety</text>
+            <text x="300" y="485" text-anchor="middle" fill="#888" font-size="19">to the room</text>
+            <text x="300" y="560" text-anchor="middle" fill="#ef4444" font-size="20">Room feels:</text>
+            <text x="300" y="600" text-anchor="middle" fill="#fff" font-size="22">anxious</text>
+            <rect x="580" y="200" width="440" height="500" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="800" y="255" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">SCAR</text>
+            <text x="800" y="310" text-anchor="middle" fill="#fff" font-size="21">Struggle already crossed</text>
+            <text x="800" y="355" text-anchor="middle" fill="#fff" font-size="21">Returned with a lesson</text>
+            <text x="800" y="400" text-anchor="middle" fill="#fff" font-size="21">Bounded and deliberate</text>
+            <text x="800" y="450" text-anchor="middle" fill="#888" font-size="19">Serves the audience's</text>
+            <text x="800" y="485" text-anchor="middle" fill="#888" font-size="19">journey</text>
+            <text x="800" y="560" text-anchor="middle" fill="#10b981" font-size="20">Room feels:</text>
+            <text x="800" y="600" text-anchor="middle" fill="#fff" font-size="22">inspired</text>
+            <rect x="80" y="740" width="940" height="230" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="795" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE RULE</text>
+            <text x="550" y="845" text-anchor="middle" fill="#fff" font-size="23">Share the scar, not the open wound.</text>
+            <text x="550" y="890" text-anchor="middle" fill="#fff" font-size="23">You must have returned with the gift first.</text>
+            <text x="550" y="935" text-anchor="middle" fill="#888" font-size="20">Vulnerability serves them, not you.</text>
+          </svg>`,
+          "caption": "Cross the threshold before you tell it"
+        }
+      },
+      {
+        "type": "application",
+        "title": "Build Your Signature Story with the Journey Template",
+        "content": "You need a **signature story** — one personal narrative, 90 seconds to 3 minutes, that carries a single point and that you can deploy in talks, interviews, and toasts for years. Build it now with this five-step workshop.\n\n1. **Name the point first.** One sentence: what do you want the audience to believe or do? The story serves this. If a story is beautiful but doesn't drive the point, cut it.\n\n2. **Find the turning point.** Search your life for a moment something *changed* — a failure, a decision, a moment you were seen. The gap between before and after is your arc. No change, no story.\n\n3. **Map the six beats.** Ordinary world, call, threshold, trials/lowest moment, transformation, return. Write one line for each. Notice where you are tempted to skip the lowest moment — that is exactly the beat the audience needs most.\n\n4. **Cast the audience as hero.** Rewrite so your listener sees themselves in the struggle. You are the mentor handing them the map, not the star of the show.\n\n5. **Audit the vulnerability.** Is this a scar or an open wound? If you still feel raw telling it, it isn't ready. Keep the one honest detail that costs you something to say — that detail is where trust is built.\n\nRecord the story on your phone. Time it. Tell it to one person face-to-face and watch their eyes: the moment they lean in is your climax, and the moment they glance away is a beat to cut. Refine until every sentence earns its place.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">BUILD YOUR SIGNATURE STORY</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Five-step workshop</text>
+            <rect x="100" y="170" width="900" height="120" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="160" y="220" fill="#6366f1" font-weight="bold" font-size="26">1.</text>
+            <text x="220" y="215" fill="#fff" font-size="22">Name the point in ONE sentence</text>
+            <text x="220" y="250" fill="#888" font-size="18">The story serves the point — never the reverse</text>
+            <rect x="100" y="305" width="900" height="120" rx="20" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="160" y="355" fill="#8b5cf6" font-weight="bold" font-size="26">2.</text>
+            <text x="220" y="350" fill="#fff" font-size="22">Find the turning point</text>
+            <text x="220" y="385" fill="#888" font-size="18">A moment something CHANGED — no change, no story</text>
+            <rect x="100" y="440" width="900" height="120" rx="20" fill="rgba(14,165,233,0.12)" stroke="#0ea5e9" stroke-width="2"/>
+            <text x="160" y="490" fill="#0ea5e9" font-weight="bold" font-size="26">3.</text>
+            <text x="220" y="485" fill="#fff" font-size="22">Map the six journey beats</text>
+            <text x="220" y="520" fill="#888" font-size="18">Do not skip the lowest moment</text>
+            <rect x="100" y="575" width="900" height="120" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="160" y="625" fill="#10b981" font-weight="bold" font-size="26">4.</text>
+            <text x="220" y="620" fill="#fff" font-size="22">Cast the audience as the hero</text>
+            <text x="220" y="655" fill="#888" font-size="18">You are the mentor with the map</text>
+            <rect x="100" y="710" width="900" height="120" rx="20" fill="rgba(236,72,153,0.12)" stroke="#ec4899" stroke-width="2"/>
+            <text x="160" y="760" fill="#ec4899" font-weight="bold" font-size="26">5.</text>
+            <text x="220" y="755" fill="#fff" font-size="22">Audit the vulnerability</text>
+            <text x="220" y="790" fill="#888" font-size="18">Scar, not wound — keep the one costly detail</text>
+            <rect x="100" y="850" width="900" height="130" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="900" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">TEST IT ON ONE PERSON</text>
+            <text x="550" y="945" text-anchor="middle" fill="#fff" font-size="22">Where they lean in is your climax. Cut the rest.</text>
+          </svg>`,
+          "caption": "One story, refined for years of use"
+        }
+      }
+    ]
+  },
+  {
+    "id": "public-speaking-lesson-12",
+    "title": "Q&A, Impromptu Speaking, and Handling Hostile Audiences",
+    "duration": "15",
+    "cards": [
+      {
+        "type": "intro",
+        "title": "The Speech Ends; the Real Test Begins",
+        "content": "You can rehearse an opening a hundred times. You cannot rehearse the question a stranger throws at you in the ninth minute of Q&A — and audiences know it. That is precisely why the unscripted moments carry disproportionate weight: they are where the mask comes off. A polished talk followed by a fumbled, defensive Q&A can undo everything. A shaky talk redeemed by a calm, generous handling of a hostile question can win the room outright.\n\nThink of the great cross-examinations of political debate, the founder who fields a brutal investor question without flinching, the scientist who disarms a heckler with a single honest sentence. None of them are improvising from nothing. They are running **frameworks** — repeatable structures that let a prepared mind sound spontaneous.\n\nThis lesson equips you with four of them. The **PREP method** turns a blank-minded panic into an instant mini-speech. **Bridging** lets you acknowledge a hostile or off-topic question and steer back to your message without lying or dodging. A tactical protocol for **hostile audiences and hecklers** keeps you in command when the room turns. And a set of **impromptu structures** means you will never again freeze when someone says, 'Say a few words.' Unscripted does not have to mean unprepared. It means prepared *differently*.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">WHERE THE MASK COMES OFF</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">The unscripted moments carry the weight</text>
+            <rect x="80" y="180" width="440" height="180" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="300" y="235" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">POLISHED TALK</text>
+            <text x="300" y="285" text-anchor="middle" fill="#fff" font-size="21">+ fumbled Q&amp;A</text>
+            <text x="300" y="325" text-anchor="middle" fill="#888" font-size="20">= everything undone</text>
+            <rect x="580" y="180" width="440" height="180" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="800" y="235" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="24">SHAKY TALK</text>
+            <text x="800" y="285" text-anchor="middle" fill="#fff" font-size="21">+ calm hostile Q&amp;A</text>
+            <text x="800" y="325" text-anchor="middle" fill="#888" font-size="20">= room won outright</text>
+            <rect x="80" y="400" width="940" height="220" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="450" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">FOUR FRAMEWORKS</text>
+            <text x="550" y="500" text-anchor="middle" fill="#fff" font-size="22">PREP — instant structured answer</text>
+            <text x="550" y="540" text-anchor="middle" fill="#fff" font-size="22">Bridging — acknowledge, then steer</text>
+            <text x="550" y="580" text-anchor="middle" fill="#fff" font-size="22">Hostile protocol — stay in command</text>
+            <text x="550" y="610" text-anchor="middle" fill="#888" font-size="20">Impromptu structures — never freeze</text>
+            <rect x="80" y="660" width="940" height="150" rx="20" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="550" y="715" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="24">THE INSIGHT</text>
+            <text x="550" y="760" text-anchor="middle" fill="#fff" font-size="22">Great impromptu speakers are not improvising</text>
+            <text x="550" y="795" text-anchor="middle" fill="#888" font-size="20">They run frameworks that sound spontaneous</text>
+            <rect x="80" y="850" width="940" height="130" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="905" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="26">UNSCRIPTED IS NOT UNPREPARED</text>
+            <text x="550" y="950" text-anchor="middle" fill="#fff" font-size="22">It means prepared differently.</text>
+          </svg>`,
+          "caption": "The Q&A is the real test"
+        }
+      },
+      {
+        "type": "concept",
+        "title": "PREP and Bridging: Structure Under Fire",
+        "content": "When a question lands and your mind goes blank, you do not need brilliance — you need a **container**. The **PREP method** is the fastest one built. **P — Point:** state your answer in one clear sentence. **R — Reason:** give the single strongest why. **E — Example:** offer one concrete instance, story, or data point. **P — Point:** restate the answer to close the loop. Four beats turn panic into a 30-second mini-speech with a beginning, middle, and end. It works because deciding your *point first* stops the rambling that makes speakers sound uncertain.\n\n**Bridging** is the tool for questions that are hostile, loaded, off-topic, or built on a false premise. The structure is **Acknowledge, then Bridge, then Message**. First, genuinely acknowledge the question so the asker feels heard ('That's a fair concern'). Then use a **bridge phrase** to pivot: *'What's important to remember is...'*, *'The bigger picture here is...'*, *'What I can tell you is...'*, *'Let me put that in context...'*. Then deliver your key message. Bridging is not dodging — a dodge ignores the question; a bridge honors it and then redirects to what you can and should address. The ethical line: never lie, never pretend a question wasn't asked, but you are never obligated to accept a hostile framing.\n\nTwo more disciplines make both tools work. **Reframe a loaded premise** before answering — *'The real question underneath that is...'* — so you answer the fair question, not the trap. And when you genuinely don't know, say so plainly: *'I don't know, but here's how I'd find out.'* Feigned certainty is the fastest way to lose a room; honest not-knowing, paradoxically, builds it.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">TWO TOOLS UNDER FIRE</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">PREP for blanks, bridging for traps</text>
+            <rect x="70" y="170" width="440" height="380" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="290" y="220" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="26">PREP METHOD</text>
+            <text x="290" y="255" text-anchor="middle" fill="#888" font-size="18">For the blank-minded moment</text>
+            <rect x="110" y="280" width="360" height="55" rx="10" fill="rgba(99,102,241,0.15)"/>
+            <text x="290" y="316" text-anchor="middle" fill="#fff" font-size="21">P — Point (one sentence)</text>
+            <rect x="110" y="345" width="360" height="55" rx="10" fill="rgba(99,102,241,0.15)"/>
+            <text x="290" y="381" text-anchor="middle" fill="#fff" font-size="21">R — Reason (strongest why)</text>
+            <rect x="110" y="410" width="360" height="55" rx="10" fill="rgba(99,102,241,0.15)"/>
+            <text x="290" y="446" text-anchor="middle" fill="#fff" font-size="21">E — Example (one instance)</text>
+            <rect x="110" y="475" width="360" height="55" rx="10" fill="rgba(99,102,241,0.15)"/>
+            <text x="290" y="511" text-anchor="middle" fill="#fff" font-size="21">P — Point (restate, close)</text>
+            <rect x="590" y="170" width="440" height="380" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="810" y="220" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="26">BRIDGING</text>
+            <text x="810" y="255" text-anchor="middle" fill="#888" font-size="18">For hostile / loaded questions</text>
+            <rect x="630" y="280" width="360" height="70" rx="10" fill="rgba(16,185,129,0.15)"/>
+            <text x="810" y="315" text-anchor="middle" fill="#fff" font-size="21">ACKNOWLEDGE</text>
+            <text x="810" y="340" text-anchor="middle" fill="#888" font-size="17">"That's a fair concern"</text>
+            <rect x="630" y="360" width="360" height="70" rx="10" fill="rgba(245,158,11,0.15)"/>
+            <text x="810" y="395" text-anchor="middle" fill="#f59e0b" font-size="21">BRIDGE</text>
+            <text x="810" y="420" text-anchor="middle" fill="#888" font-size="17">"What's important is..."</text>
+            <rect x="630" y="440" width="360" height="70" rx="10" fill="rgba(255,215,0,0.15)"/>
+            <text x="810" y="475" text-anchor="middle" fill="#ffd700" font-size="21">MESSAGE</text>
+            <text x="810" y="500" text-anchor="middle" fill="#888" font-size="17">Your key point</text>
+            <rect x="70" y="580" width="960" height="180" rx="20" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6" stroke-width="2"/>
+            <text x="550" y="630" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="24">REFRAME THE LOADED PREMISE</text>
+            <text x="550" y="680" text-anchor="middle" fill="#fff" font-size="22">"The real question underneath that is..."</text>
+            <text x="550" y="725" text-anchor="middle" fill="#888" font-size="20">Answer the fair question, not the trap</text>
+            <rect x="70" y="790" width="960" height="190" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="840" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">THE ETHICAL LINE</text>
+            <text x="550" y="890" text-anchor="middle" fill="#fff" font-size="22">A bridge HONORS the question, then redirects.</text>
+            <text x="550" y="930" text-anchor="middle" fill="#fff" font-size="22">A dodge ignores it. Never lie.</text>
+            <text x="550" y="965" text-anchor="middle" fill="#888" font-size="20">"I don't know, but here's how I'd find out."</text>
+          </svg>`,
+          "caption": "Containers that make you sound composed"
+        }
+      },
+      {
+        "type": "example",
+        "title": "The Heckler and the Bridge: Two Masters at Work",
+        "content": "**Scene one — the interruption.** In 1988, at a rally, a young Barack Obama-era analogue is not our example; the cleanest case is **a 2015 town hall** where a speaker was cut off mid-sentence by a heckler shouting an accusation. The untrained response is to argue, raise your voice, or freeze. The trained response has three moves, and the speaker used all three. He **paused** — silence robbed the heckler of the shouting match he wanted. He **acknowledged** without surrendering: 'I hear that you're angry, and that's real.' Then he set a **boundary and bridged**: 'I'm going to answer, and then I'll come to you — here's what everyone in this room deserves to know...' Command was restored not by volume but by composure.\n\n**Scene two — the loaded question.** A biotech founder faces an investor who asks, with a smirk, 'Isn't it true your whole product is just hype with no science behind it?' A defensive founder says 'That's not fair' and loses. This founder **reframed and bridged**: 'The real question is whether the data holds up — and that's exactly the question I'd ask too. Here's the peer-reviewed result we published last month...' She acknowledged the fair concern buried in the hostile framing, refused the insult, and answered the version of the question worth answering.\n\nNotice the shared pattern across both scenes: **pause, acknowledge, refuse the frame, bridge to substance.** Neither speaker lied. Neither dodged. Neither matched the aggression. The hostility was real energy in the room, and each turned it into a platform. That is the core lesson — a hostile question is not an attack to survive but **borrowed attention** you can redirect toward your message.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">TWO MASTERS AT WORK</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Heckler and loaded question</text>
+            <rect x="70" y="170" width="960" height="260" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="215" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="24">SCENE 1 — THE HECKLER</text>
+            <rect x="100" y="235" width="290" height="170" rx="12" fill="rgba(239,68,68,0.12)"/>
+            <text x="245" y="275" text-anchor="middle" fill="#fff" font-size="20">1. PAUSE</text>
+            <text x="245" y="310" text-anchor="middle" fill="#888" font-size="17">silence robs the</text>
+            <text x="245" y="335" text-anchor="middle" fill="#888" font-size="17">shouting match</text>
+            <rect x="405" y="235" width="290" height="170" rx="12" fill="rgba(245,158,11,0.12)"/>
+            <text x="550" y="275" text-anchor="middle" fill="#fff" font-size="20">2. ACKNOWLEDGE</text>
+            <text x="550" y="310" text-anchor="middle" fill="#888" font-size="17">"I hear that</text>
+            <text x="550" y="335" text-anchor="middle" fill="#888" font-size="17">you're angry"</text>
+            <rect x="710" y="235" width="290" height="170" rx="12" fill="rgba(16,185,129,0.12)"/>
+            <text x="855" y="275" text-anchor="middle" fill="#fff" font-size="20">3. BOUNDARY</text>
+            <text x="855" y="310" text-anchor="middle" fill="#888" font-size="17">"I'll answer, then</text>
+            <text x="855" y="335" text-anchor="middle" fill="#888" font-size="17">come to you"</text>
+            <rect x="70" y="450" width="960" height="260" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="495" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">SCENE 2 — THE LOADED QUESTION</text>
+            <text x="550" y="540" text-anchor="middle" fill="#ef4444" font-size="21">"Isn't it just hype with no science?"</text>
+            <text x="550" y="595" text-anchor="middle" fill="#888" font-size="20">Reframe:</text>
+            <text x="550" y="630" text-anchor="middle" fill="#fff" font-size="21">"The real question is whether the data holds up"</text>
+            <text x="550" y="675" text-anchor="middle" fill="#10b981" font-size="21">Bridge to the peer-reviewed result</text>
+            <rect x="70" y="730" width="960" height="250" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="785" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="26">THE SHARED PATTERN</text>
+            <text x="550" y="835" text-anchor="middle" fill="#fff" font-size="23">Pause. Acknowledge. Refuse the frame.</text>
+            <text x="550" y="875" text-anchor="middle" fill="#fff" font-size="23">Bridge to substance.</text>
+            <text x="550" y="930" text-anchor="middle" fill="#888" font-size="21">A hostile question is borrowed attention —</text>
+            <text x="550" y="965" text-anchor="middle" fill="#888" font-size="21">redirect it toward your message.</text>
+          </svg>`,
+          "caption": "Turn hostility into a platform"
+        }
+      },
+      {
+        "type": "quiz",
+        "question": "During a company all-hands, an employee stands and asks, in a hostile tone, 'Why should we trust any promise from leadership after last year's layoffs?' The premise is loaded but contains a fair concern. Which response best applies the frameworks from this lesson?",
+        "options": [
+          {
+            "text": "'I hear the anger, and it's earned. The fair question underneath is how we'll keep our commitments this year — here's the specific, measurable plan and how you can hold us to it.'",
+            "correct": true
+          },
+          {
+            "text": "'That's an unfair way to frame it, and I'm not going to dignify the hostility in that question with a response.'",
+            "correct": false
+          },
+          {
+            "text": "'Great question! Let me tell you about our exciting new product roadmap for next quarter.'",
+            "correct": false
+          },
+          {
+            "text": "'You're right, leadership can't be trusted, and I don't really have an answer for you on that.'",
+            "correct": false
+          }
+        ],
+        "explanation": "The winning answer runs the full protocol: it **acknowledges** the emotion genuinely ('I hear the anger, and it's earned'), **reframes the loaded premise** into the fair question underneath ('how we'll keep our commitments'), and **bridges to substance** with a concrete, accountable plan. Option two matches the hostility and rejects the frame without honoring the legitimate concern — it loses the room. Option three is a naked **dodge**: it ignores the question entirely and pivots to unrelated good news, which reads as evasive and insulting. Option four collapses into an open wound, conceding helplessly with no path forward. Acknowledge the feeling, refuse the framing, answer the fair question with specifics.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">KNOWLEDGE CHECK</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Handle the loaded all-hands question</text>
+            <rect x="80" y="170" width="940" height="150" rx="20" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2"/>
+            <text x="550" y="215" text-anchor="middle" fill="#ef4444" font-weight="bold" font-size="22">THE QUESTION</text>
+            <text x="550" y="260" text-anchor="middle" fill="#fff" font-size="21">"Why should we trust leadership</text>
+            <text x="550" y="295" text-anchor="middle" fill="#fff" font-size="21">after last year's layoffs?"</text>
+            <rect x="80" y="345" width="940" height="90" rx="16" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="3"/>
+            <text x="550" y="380" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="22">ACKNOWLEDGE the anger</text>
+            <text x="550" y="415" text-anchor="middle" fill="#888" font-size="19">"I hear it, and it's earned"</text>
+            <rect x="80" y="450" width="940" height="90" rx="16" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="3"/>
+            <text x="550" y="485" text-anchor="middle" fill="#8b5cf6" font-weight="bold" font-size="22">REFRAME the premise</text>
+            <text x="550" y="520" text-anchor="middle" fill="#888" font-size="19">"The fair question is how we keep commitments"</text>
+            <rect x="80" y="555" width="940" height="90" rx="16" fill="rgba(255,215,0,0.15)" stroke="#ffd700" stroke-width="3"/>
+            <text x="550" y="590" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="22">BRIDGE to substance</text>
+            <text x="550" y="625" text-anchor="middle" fill="#888" font-size="19">A specific plan + how to hold us to it</text>
+            <rect x="80" y="680" width="940" height="290" rx="20" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="2"/>
+            <text x="550" y="730" text-anchor="middle" fill="#6366f1" font-weight="bold" font-size="24">WHY THE OTHERS FAIL</text>
+            <text x="550" y="780" text-anchor="middle" fill="#ef4444" font-size="21">Match hostility, reject frame = lose the room</text>
+            <text x="550" y="825" text-anchor="middle" fill="#f59e0b" font-size="21">Pivot to roadmap = a naked dodge</text>
+            <text x="550" y="870" text-anchor="middle" fill="#8b5cf6" font-size="21">Concede helplessly = open wound</text>
+            <text x="550" y="925" text-anchor="middle" fill="#fff" font-size="22">Acknowledge, refuse the framing,</text>
+            <text x="550" y="958" text-anchor="middle" fill="#fff" font-size="22">answer the fair question with specifics.</text>
+          </svg>`,
+          "caption": "Run the full protocol"
+        }
+      },
+      {
+        "type": "application",
+        "title": "Drill Your Unscripted Muscles Before You Need Them",
+        "content": "Composure under pressure is not a personality trait — it is a rehearsed reflex. Build it with this four-part training regimen you can run this week.\n\n1. **PREP reps (daily, 5 minutes).** Have someone hand you a random question — 'Should cities ban cars downtown?', 'Is remote work here to stay?' — and answer aloud in strict PREP: Point, Reason, Example, Point, in under 45 seconds. Do five a day. Within a week the structure becomes automatic and blank-mind panic disappears.\n\n2. **Bridge-phrase bank.** Memorize five bridge phrases until they are instant: *'What's important to remember is...'*, *'The bigger picture is...'*, *'Let me put that in context...'*, *'The real question underneath that is...'*, *'What I can tell you is...'* You cannot invent these while under fire; you must own them cold.\n\n3. **Hostile-question gauntlet.** Ask a friend to role-play a heckler and throw loaded, aggressive, and false-premise questions at you. Practice the sequence out loud: pause, acknowledge, reframe, bridge. Rehearse the pause especially — most people rush to fill silence, and the pause is your single most powerful tool.\n\n4. **Impromptu structures.** Memorize three tiny frameworks for 'say a few words': **Past-Present-Future** (where we were, where we are, where we're going), **Point-Example-Point**, and **What / So What / Now What**. When called on cold, silently pick one and pour your content into it.\n\nKeep a small index card with your five bridge phrases and three impromptu structures. Review it before every meeting where you might be put on the spot. Do this for a month, and 'unscripted' will stop being the moment you fear and become the moment you own.",
+        "visual": {
+          "type": "diagram",
+          "svg": `<svg viewBox="0 0 1100 1100" class="lesson-visual">
+            <rect x="0" y="0" width="1100" height="1100" fill="#1a1a2e"/>
+            <text x="550" y="70" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="36">TRAIN THE REFLEX</text>
+            <text x="550" y="115" text-anchor="middle" fill="#888" font-size="24">Four drills to run this week</text>
+            <rect x="100" y="170" width="900" height="130" rx="20" fill="rgba(99,102,241,0.12)" stroke="#6366f1" stroke-width="2"/>
+            <text x="160" y="220" fill="#6366f1" font-weight="bold" font-size="26">1.</text>
+            <text x="220" y="215" fill="#fff" font-size="22">PREP reps — 5 a day, under 45 seconds</text>
+            <text x="220" y="255" fill="#888" font-size="18">Random question, strict Point-Reason-Example-Point</text>
+            <text x="220" y="285" fill="#888" font-size="18">Blank-mind panic disappears in a week</text>
+            <rect x="100" y="315" width="900" height="130" rx="20" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+            <text x="160" y="365" fill="#10b981" font-weight="bold" font-size="26">2.</text>
+            <text x="220" y="360" fill="#fff" font-size="22">Bridge-phrase bank — memorize five cold</text>
+            <text x="220" y="400" fill="#888" font-size="18">"The bigger picture is..." "The real question is..."</text>
+            <text x="220" y="430" fill="#888" font-size="18">You cannot invent them under fire</text>
+            <rect x="100" y="460" width="900" height="130" rx="20" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+            <text x="160" y="510" fill="#ef4444" font-weight="bold" font-size="26">3.</text>
+            <text x="220" y="505" fill="#fff" font-size="22">Hostile gauntlet — friend role-plays a heckler</text>
+            <text x="220" y="545" fill="#888" font-size="18">Pause, acknowledge, reframe, bridge</text>
+            <text x="220" y="575" fill="#888" font-size="18">Rehearse the PAUSE most of all</text>
+            <rect x="100" y="605" width="900" height="160" rx="20" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+            <text x="160" y="655" fill="#f59e0b" font-weight="bold" font-size="26">4.</text>
+            <text x="220" y="650" fill="#fff" font-size="22">Three impromptu structures</text>
+            <text x="220" y="690" fill="#888" font-size="18">Past-Present-Future</text>
+            <text x="220" y="720" fill="#888" font-size="18">Point-Example-Point</text>
+            <text x="220" y="750" fill="#888" font-size="18">What / So What / Now What</text>
+            <rect x="100" y="785" width="900" height="180" rx="20" fill="rgba(255,215,0,0.1)" stroke="#ffd700" stroke-width="2"/>
+            <text x="550" y="835" text-anchor="middle" fill="#ffd700" font-weight="bold" font-size="24">CARRY AN INDEX CARD</text>
+            <text x="550" y="885" text-anchor="middle" fill="#fff" font-size="22">Five bridge phrases + three structures.</text>
+            <text x="550" y="925" text-anchor="middle" fill="#fff" font-size="22">Review before every high-stakes meeting.</text>
+            <text x="550" y="958" text-anchor="middle" fill="#888" font-size="20">In a month, unscripted becomes the moment you own.</text>
+          </svg>`,
+          "caption": "Composure is a rehearsed reflex"
+        }
+      }
+    ]
+  }
   ]
 };
