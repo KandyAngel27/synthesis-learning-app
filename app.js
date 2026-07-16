@@ -163,7 +163,7 @@ class SynthesisApp {
             insightExcerpt.textContent = todayLesson.excerpt;
         }
         if (insightTime) {
-            insightTime.textContent = `${todayLesson.duration} min • ${todayLesson.bookTitle}`;
+            insightTime.textContent = `${todayLesson.duration || 11} min • ${todayLesson.bookTitle}`;
         }
         if (insightBadge) {
             insightBadge.textContent = `${todayLesson.categoryIcon} ${todayLesson.category}`;
@@ -566,8 +566,15 @@ class SynthesisApp {
         if (!map || typeof map !== 'object') return;
         for (const cat of APP_DATA.categories || []) {
             for (const book of (cat.books || [])) {
+                let completedLessons = 0;
                 for (const lesson of (book.lessonList || [])) {
-                    if (map[book.id + '::' + lesson.id]) lesson.completed = true;
+                    if (map[book.id + '::' + lesson.id]) {
+                        lesson.completed = true;
+                        completedLessons++;
+                    }
+                }
+                if (book.lessonList && book.lessonList.length) {
+                    book.progress = Math.round((completedLessons / book.lessonList.length) * 100);
                 }
             }
         }
@@ -1763,7 +1770,7 @@ class SynthesisApp {
         this.currentBook.progress = Math.round((completedLessons / this.currentBook.lessonList.length) * 100);
 
         // Update user stats
-        APP_DATA.user.totalLearningTime += this.currentLesson.duration;
+        APP_DATA.user.totalLearningTime += (this.currentLesson.duration || 11);
 
         // Check if book is completed
         const bookJustCompleted = this.currentBook.progress === 100 && completedLessons === this.currentBook.lessonList.length;
