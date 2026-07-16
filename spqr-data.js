@@ -10,6 +10,7 @@ window.SPQR_BOOK = {
   "category": "history",
   "lessonList": [
     {
+      "id": 1,
       "title": "SPQR: What It Means + Why Rome Matters",
       "description": "Unpacking the four letters that branded an empire — and why a 1,000-year-old story still shapes how we think about citizenship, law, and power.",
       "cards": [
@@ -244,6 +245,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 2,
       "title": "Cicero's Finest Hour: The Catiline Conspiracy of 63 BCE",
       "description": "Why Mary Beard opens her book in 63 BCE — a single year that exposes the late Republic's contradictions about law, citizenship, and emergency power.",
       "cards": [
@@ -478,6 +480,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 3,
       "title": "In the Beginning: Romulus, Aeneas & Myth vs. Reality",
       "description": "How Romans manufactured two competing origin stories — a wolf-suckled twin and a Trojan refugee — centuries after the fact, and what archaeology actually finds beneath them.",
       "cards": [
@@ -712,6 +715,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 4,
       "title": "The Kings of Rome (753-509 BCE)",
       "description": "Seven legendary kings, Etruscan influence, the violation of Lucretia, and the murky transition to the Republic — what we can plausibly know, and how to read what we cannot.",
       "cards": [
@@ -946,6 +950,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 5,
       "title": "The Roman Republic: Constitution & Conflict",
       "description": "Consuls, Senate, assemblies, tribunes — and the centuries-long struggle between patricians and plebs that shaped SPQR.",
       "cards": [
@@ -1193,6 +1198,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 6,
       "title": "Rome's Great Leap Forward: Mediterranean Power",
       "description": "Punic Wars, Hannibal, Scipio, conquest of Greece and Spain — how a city-state became a Mediterranean superpower.",
       "cards": [
@@ -1440,6 +1446,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 7,
       "title": "Crisis of the Republic (133-44 BCE)",
       "description": "From the Gracchi to the Ides of March — how a century of civil violence destroyed the Republic.",
       "cards": [
@@ -1687,6 +1694,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 8,
       "title": "Augustus & the Birth of Empire",
       "description": "From Octavian to Augustus — how the heir of Caesar restored the Republic in name while creating an autocracy in fact.",
       "cards": [
@@ -2650,6 +2658,7 @@ window.SPQR_BOOK = {
       ]
     },
     {
+      "id": 12,
       "title": "Crisis, Christianity & Late Empire (3rd-4th C)",
       "description": "The empire nearly collapses, then is radically restructured by Diocletian and transformed by Constantine. Christianity moves from persecuted sect to imperial religion as the capital shifts east.",
       "cards": [
@@ -2884,6 +2893,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 13,
       "title": "Fall (or Transformation?) of Rome",
       "description": "We follow the West to 476 CE and the East to 1453 CE, weigh the classic 'fall' narrative against newer ideas of transformation and continuity, and ask why Mary Beard chooses to end her own history a century before any of it.",
       "cards": [
@@ -3118,6 +3128,7 @@ window.SPQR_BOOK = {
       "completed": false
     },
     {
+      "id": 14,
       "title": "Capstone: Rome's Legacy & SPQR Today",
       "description": "A synthetic finale. We step back from chronology to ask what Rome bequeathed to us, why we keep returning to it, and what Mary Beard's SPQR tells us about reading ancient history in the 21st century.",
       "cards": [

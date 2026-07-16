@@ -1515,6 +1515,7 @@ window.FIGURE_MLK_BOOK = {
       ]
     },
 {
+    id: "figure-mlk-jr-lesson-7",
     title: "The Theology: From Crozer to Boston U",
     duration: "15 min",
     cards: [
@@ -1578,6 +1579,7 @@ window.FIGURE_MLK_BOOK = {
     ]
   },
   {
+    id: "figure-mlk-jr-lesson-8",
     title: "Letter from Birmingham Jail: A Line-by-Line Reading",
     duration: "15 min",
     cards: [
@@ -1641,6 +1643,7 @@ window.FIGURE_MLK_BOOK = {
     ]
   },
   {
+    id: "figure-mlk-jr-lesson-9",
     title: "The Poor People's Campaign: King's Economic Vision",
     duration: "15 min",
     cards: [
@@ -1704,6 +1707,7 @@ window.FIGURE_MLK_BOOK = {
     ]
   },
   {
+    id: "figure-mlk-jr-lesson-10",
     title: "FBI Surveillance: COINTELPRO and the Suicide Letter",
     duration: "15 min",
     cards: [
@@ -1767,6 +1771,7 @@ window.FIGURE_MLK_BOOK = {
     ]
   },
   {
+    id: "figure-mlk-jr-lesson-11",
     title: "Coretta Scott King: Partner, Activist, Founder",
     duration: "15 min",
     cards: [
@@ -1830,6 +1835,7 @@ window.FIGURE_MLK_BOOK = {
     ]
   },
   {
+    id: "figure-mlk-jr-lesson-12",
     title: "King in the 21st Century: Holiday, Monument, Reduction",
     duration: "15 min",
     cards: [

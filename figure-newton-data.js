@@ -1387,6 +1387,7 @@ window.FIGURE_NEWTON_BOOK = {
       ]
     },
 {
+    id: "figure-newton-lesson-7",
     title: "The Apple Story: How a Myth Got Made",
     duration: "15 min",
     cards: [
@@ -1450,6 +1451,7 @@ window.FIGURE_NEWTON_BOOK = {
     ]
   },
   {
+    id: "figure-newton-lesson-8",
     title: "Newton vs Leibniz: Anatomy of the Calculus Priority War",
     duration: "15 min",
     cards: [
@@ -1513,6 +1515,7 @@ window.FIGURE_NEWTON_BOOK = {
     ]
   },
   {
+    id: "figure-newton-lesson-9",
     title: "The Method of Fluxions: Newton's Calculus in His Own Notation",
     duration: "15 min",
     cards: [
@@ -1576,6 +1579,7 @@ window.FIGURE_NEWTON_BOOK = {
     ]
   },
   {
+    id: "figure-newton-lesson-10",
     title: "The Principia, Book 3: System of the World — Kepler's Laws from First Principles",
     duration: "15 min",
     cards: [
@@ -1639,6 +1643,7 @@ window.FIGURE_NEWTON_BOOK = {
     ]
   },
   {
+    id: "figure-newton-lesson-11",
     title: "Newton the Theologian: His Anti-Trinitarian Manuscripts and the Suppressed Heresy",
     duration: "15 min",
     cards: [
@@ -1702,6 +1707,7 @@ window.FIGURE_NEWTON_BOOK = {
     ]
   },
   {
+    id: "figure-newton-lesson-12",
     title: "Newton's Legacy: Mach, Einstein, and Why F=ma Still Works for Almost Everything",
     duration: "15 min",
     cards: [

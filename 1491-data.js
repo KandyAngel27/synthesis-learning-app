@@ -10,6 +10,7 @@ window.BOOK_1491 = {
   "category": "history",
   "lessonList": [
     {
+      "id": "1491-l01",
       "title": "Beyond Columbus: Reframing the Pre-Contact Americas",
       "cards": [
         {
@@ -243,6 +244,7 @@ window.BOOK_1491 = {
       "completed": false
     },
     {
+      "id": "1491-l02",
       "title": "Holmberg's Mistake",
       "cards": [
         {
@@ -466,6 +468,7 @@ window.BOOK_1491 = {
       "completed": false
     },
     {
+      "id": "1491-l03",
       "title": "Numbers from Nowhere: Counting the Pre-Columbian Americas",
       "cards": [
         {
@@ -689,6 +692,7 @@ window.BOOK_1491 = {
       "completed": false
     },
     {
+      "id": "1491-l04",
       "title": "The Great Dying: Epidemics and the Demographic Catastrophe",
       "cards": [
         {
@@ -925,6 +929,7 @@ window.BOOK_1491 = {
       "completed": false
     },
     {
+      "id": "1491-l05",
       "title": "Mound Builders and Cahokia: North American Civilization",
       "cards": [
         {

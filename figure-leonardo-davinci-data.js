@@ -1506,6 +1506,7 @@ window.FIGURE_LEONARDO_BOOK = {
       ]
     },
 {
+    id: "figure-leonardo-davinci-lesson-7",
     title: "The Last Supper: Composition, Technique, Why It Decayed",
     duration: "15 min",
     cards: [
@@ -1569,6 +1570,7 @@ window.FIGURE_LEONARDO_BOOK = {
     ]
   },
   {
+    id: "figure-leonardo-davinci-lesson-8",
     title: "The Anatomical Drawings: Dissection in Renaissance Italy",
     duration: "15 min",
     cards: [
@@ -1632,6 +1634,7 @@ window.FIGURE_LEONARDO_BOOK = {
     ]
   },
   {
+    id: "figure-leonardo-davinci-lesson-9",
     title: "Leonardo the Engineer: Flying Machines, War Machines, Hydraulic Plans",
     duration: "15 min",
     cards: [
@@ -1694,6 +1697,7 @@ window.FIGURE_LEONARDO_BOOK = {
       }
     ]
   },  {
+    id: "figure-leonardo-davinci-lesson-10",
     title: "The Lost Battle of Anghiari: A Mural That Vanished",
     duration: "15 min",
     cards: [
@@ -1757,6 +1761,7 @@ window.FIGURE_LEONARDO_BOOK = {
     ]
   },
   {
+    id: "figure-leonardo-davinci-lesson-11",
     title: "The Codex Leicester: Bill Gates Buys a Notebook",
     duration: "15 min",
     cards: [
@@ -1820,6 +1825,7 @@ window.FIGURE_LEONARDO_BOOK = {
     ]
   },
   {
+    id: "figure-leonardo-davinci-lesson-12",
     title: "The Salvator Mundi Mystery: $450M and the Question of Authenticity",
     duration: "15 min",
     cards: [
