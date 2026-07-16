@@ -10,6 +10,7 @@ window.MAKE_TIME_EXT_BOOK = {
  "category": "productivity",
  "lessonList": [
   {
+   "id": "make-time-lesson-1",
    "title": "The Make Time Framework",
    "cards": [
     {
@@ -213,6 +214,7 @@ window.MAKE_TIME_EXT_BOOK = {
    "completed": false
   },
   {
+   "id": "make-time-lesson-2",
    "title": "Highlight: One Big Thing per Day",
    "cards": [
     {
@@ -416,6 +418,7 @@ window.MAKE_TIME_EXT_BOOK = {
    "completed": false
   },
   {
+   "id": "make-time-lesson-3",
    "title": "Laser: Beat Distraction",
    "cards": [
     {
@@ -619,6 +622,7 @@ window.MAKE_TIME_EXT_BOOK = {
    "completed": false
   },
   {
+   "id": "make-time-lesson-4",
    "title": "Energize: Body Tactics for Focus",
    "cards": [
     {
@@ -822,6 +826,7 @@ window.MAKE_TIME_EXT_BOOK = {
    "completed": false
   },
   {
+   "id": "make-time-lesson-5",
    "title": "Reflect: Refine Daily",
    "cards": [
     {
@@ -1025,6 +1030,7 @@ window.MAKE_TIME_EXT_BOOK = {
    "completed": false
   },
   {
+   "id": "make-time-lesson-6",
    "title": "Capstone — Tactics and Trying",
    "cards": [
     {

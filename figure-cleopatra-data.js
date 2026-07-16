@@ -1373,6 +1373,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
       ]
     },
 {
+    id: "figure-cleopatra-lesson-7",
     title: "Lesson 7: The Library of Alexandria and Ptolemaic Scholarship",
     duration: "15 min",
     cards: [
@@ -1435,6 +1436,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
       }
     ]
   },  {
+    id: "figure-cleopatra-lesson-8",
     title: "Lesson 8: Caesarion — The Son of Caesar",
     duration: "15 min",
     cards: [
@@ -1498,6 +1500,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
     ]
   },
   {
+    id: "figure-cleopatra-lesson-9",
     title: "Lesson 9: The Royal Court in Alexandria",
     duration: "15 min",
     cards: [
@@ -1561,6 +1564,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
     ]
   },
   {
+    id: "figure-cleopatra-lesson-10",
     title: "Lesson 10: Cleopatra the Linguist and Pharmacist",
     duration: "15 min",
     cards: [
@@ -1624,6 +1628,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
     ]
   },
   {
+    id: "figure-cleopatra-lesson-11",
     title: "Lesson 11: Roman Propaganda vs Reality",
     duration: "15 min",
     cards: [
@@ -1687,6 +1692,7 @@ window.FIGURE_CLEOPATRA_BOOK = {
     ]
   },
   {
+    id: "figure-cleopatra-lesson-12",
     title: "Lesson 12: Cleopatra in Art — Shakespeare, Plutarch, Liz Taylor, Revisionism",
     duration: "15 min",
     cards: [
