@@ -122,16 +122,29 @@ class PremiumFeatures {
                 </div>
             </div>
 
+            ${(() => {
+                const achievedCount = visions.filter(v => v.achieved).length;
+                return achievedCount > 0 ? `
+                    <div style="margin-top: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.15)); border-radius: 0.75rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        🏆 ${achievedCount} vision${achievedCount === 1 ? '' : 's'} achieved
+                    </div>
+                ` : '';
+            })()}
+
             <h2 style="margin: 2rem 0 1rem;">Your Vision Board</h2>
             <div class="vision-board-grid">
-                ${visions.map(vision => `
-                    <div class="vision-card" onclick="window.premiumFeatures.editVision(${vision.id})">
-                        <div class="vision-card-image" style="background: linear-gradient(135deg, ${this.getCategoryGradient(vision.category)})">
+                ${visions.slice().sort((a, b) => (a.achieved === b.achieved) ? 0 : (a.achieved ? 1 : -1)).map(vision => `
+                    <div class="vision-card ${vision.achieved ? 'vision-achieved' : ''}" onclick="window.premiumFeatures.editVision(${vision.id})">
+                        <div class="vision-card-image" style="background: linear-gradient(135deg, ${this.getCategoryGradient(vision.category)}); ${vision.achieved ? 'opacity: 0.6;' : ''}">
                             <span style="font-size: 4rem;">${vision.icon}</span>
+                            ${vision.achieved ? '<div class="vision-achieved-badge">🏆 Achieved</div>' : ''}
                         </div>
-                        <div class="vision-card-title">${vision.title}</div>
-                        <div class="vision-card-description">${vision.description}</div>
-                        <div class="vision-card-date">🎯 Target: ${formatDateForDisplay(vision.targetDate)}</div>
+                        <div class="vision-card-title">${escapeHtml(vision.title)}</div>
+                        <div class="vision-card-description">${escapeHtml(vision.description)}</div>
+                        <div class="vision-card-date">${vision.achieved ? `✅ Achieved ${formatDateForDisplay(vision.achievedDate)}` : `🎯 Target: ${formatDateForDisplay(vision.targetDate)}`}</div>
+                        <button class="vision-achieve-btn" onclick="event.stopPropagation(); window.premiumFeatures.toggleVisionAchieved(${vision.id})">
+                            ${vision.achieved ? '↩️ Mark Not Yet Achieved' : '🏆 Mark as Achieved'}
+                        </button>
                     </div>
                 `).join('')}
 
@@ -143,6 +156,22 @@ class PremiumFeatures {
         `;
 
         container.innerHTML = html;
+    }
+
+    toggleVisionAchieved(visionId) {
+        const vision = APP_DATA.user.visionBoard.find(v => v.id === visionId);
+        if (!vision) return;
+
+        vision.achieved = !vision.achieved;
+        vision.achievedDate = vision.achieved ? new Date().toISOString().split('T')[0] : null;
+        saveProgress();
+
+        if (vision.achieved) {
+            toast(`🏆 "${vision.title}" achieved! Manifestation in action.`, 'success');
+            if (window.gamification) window.gamification.awardXP(15, 'Vision Achieved');
+        }
+
+        this.renderVisionBoard();
     }
 
     getCategoryGradient(category) {
@@ -304,12 +333,16 @@ class PremiumFeatures {
         };
 
         const affirmationStreak = this.getAffirmationStreak();
+        const allEntries = APP_DATA.user.manifestationJournal || [];
+        const totalEntries = allEntries.length;
+        const totalSpoken = allEntries.reduce((sum, e) => sum + (e.affirmations || []).map(normalizeAffirmation).filter(a => a.spoken).length, 0);
 
         const html = `
             <div class="manifestation-header">
                 <h2>🌙 Today's Manifestation Practice</h2>
                 <p style="opacity: 0.9; margin-top: 0.5rem;">${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 ${affirmationStreak > 0 ? `<p style="margin-top: 0.5rem; font-weight: 600;">🔥 ${affirmationStreak}-day affirmation streak</p>` : ''}
+                ${totalEntries > 0 ? `<p style="margin-top: 0.5rem; opacity: 0.85; font-size: 0.85rem;">📖 ${totalEntries} journal ${totalEntries === 1 ? 'entry' : 'entries'} · ✨ ${totalSpoken} affirmation${totalSpoken === 1 ? '' : 's'} spoken all-time</p>` : ''}
             </div>
 
             <div class="gratitude-section">
@@ -676,6 +709,9 @@ class PremiumFeatures {
                 <h3 style="margin-bottom: 0.5rem;">🗺️ Your Individuation Journey</h3>
                 <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Current Phase: <strong style="color: var(--color-primary-light);">${userProgress.currentPhase.charAt(0).toUpperCase() + userProgress.currentPhase.slice(1)}</strong></p>
                 <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Exercises Completed: <strong style="color: var(--color-primary-light);">${userProgress.completedExercises.length} / ${exercises.length}</strong></p>
+                ${userProgress.quizHistory && userProgress.quizHistory.length > 0 ? `
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Archetype Assessments Taken: <strong style="color: var(--color-primary-light);">${userProgress.quizHistory.length}</strong> (last: ${formatDateForDisplay(userProgress.quizHistory[userProgress.quizHistory.length - 1].date)})</p>
+                ` : ''}
             </div>
 
             <h2 style="margin: 2rem 0 1rem;">🌱 Beginner Exercises</h2>
@@ -1497,6 +1533,14 @@ class PremiumFeatures {
         const dominant = sorted.slice(0, 3);
         const suppressed = sorted.slice(-3).reverse();
 
+        // Capture the previous attempt's scores (if any) before overwriting, so
+        // the results screen can show how each archetype has shifted over time.
+        const quizHistory = APP_DATA.user.shadowWork.quizHistory || [];
+        const previousScores = quizHistory.length > 0 ? quizHistory[quizHistory.length - 1].scores : null;
+
+        quizHistory.push({ date: new Date().toISOString().split('T')[0], scores });
+        APP_DATA.user.shadowWork.quizHistory = quizHistory;
+
         // Save to user data
         Object.keys(scores).forEach(key => {
             APP_DATA.user.shadowWork.archetypes[key] = {
@@ -1726,8 +1770,13 @@ class PremiumFeatures {
 
                 <div class="all-scores" style="margin-bottom: 2rem;">
                     <h3 style="margin-bottom: 1rem;">📊 Complete Archetype Map</h3>
+                    ${previousScores ? `<p style="color: var(--color-text-tertiary); font-size: 0.8rem; margin-bottom: 1rem;">Change vs. your previous assessment (${quizHistory[quizHistory.length - 2].date})</p>` : ''}
                     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
-                        ${sorted.map(([archetype, score]) => `
+                        ${sorted.map(([archetype, score]) => {
+                            const delta = previousScores ? score - previousScores[archetype] : null;
+                            const deltaLabel = delta === null || delta === 0 ? '' :
+                                `<span style="font-size: 0.7rem; font-weight: 700; color: ${delta > 0 ? '#10b981' : '#ef4444'};">${delta > 0 ? '▲' : '▼'} ${Math.abs(delta)}</span>`;
+                            return `
                             <div style="
                                 background: var(--color-bg-secondary);
                                 border-radius: 1rem;
@@ -1736,7 +1785,7 @@ class PremiumFeatures {
                             ">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">${this.getArchetypeIcon(archetype)}</div>
                                 <div style="font-size: 0.7rem; color: var(--color-text-tertiary); text-transform: uppercase;">${archetype}</div>
-                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-light);">${score}%</div>
+                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-light);">${score}% ${deltaLabel}</div>
                                 <div style="
                                     height: 4px;
                                     background: var(--color-bg-tertiary);
@@ -1751,7 +1800,8 @@ class PremiumFeatures {
                                     "></div>
                                 </div>
                             </div>
-                        `).join('')}
+                        `;
+                        }).join('')}
                     </div>
                 </div>
 
