@@ -423,6 +423,9 @@ class SynthesisApp {
             updateRecipeAssistantVisibility(viewName);
         }
 
+        // Update AI Tutor visibility (only shows while reading a lesson)
+        this.updateAiTutorVisibility(viewName);
+
         // Render specific view content
         if (viewName === 'profile') {
             this.renderProfile();
@@ -1312,6 +1315,164 @@ class SynthesisApp {
     }
 
     // ============================================
+    // AI TUTOR CHAT
+    // Bring-your-own Anthropic API key: this is a static app with no
+    // backend to proxy the request, and Anthropic's API blocks direct
+    // browser calls by default specifically to stop keys from leaking out
+    // of client-side apps. The "anthropic-dangerous-direct-browser-access"
+    // header is Anthropic's own documented opt-in for exactly this
+    // scenario — a personal, single-user tool where the key living in
+    // this browser's localStorage is an acceptable tradeoff. It is NOT
+    // safe for a multi-user product; the Profile copy says so.
+    // Chat history is intentionally NOT persisted to APP_DATA — it's
+    // in-memory only for the session, so it can't bloat exported backups
+    // or leak lesson-adjacent conversation into a shared/synced device.
+    // ============================================
+    getAnthropicApiKey() {
+        return localStorage.getItem('synthesis_anthropic_api_key') || '';
+    }
+
+    saveAnthropicApiKey(key) {
+        const trimmed = (key || '').trim();
+        if (!trimmed) {
+            toast('Enter a key first.', 'info');
+            return;
+        }
+        localStorage.setItem('synthesis_anthropic_api_key', trimmed);
+        toast('🔑 API key saved on this device.', 'success');
+        this.renderAiTutorSettings();
+    }
+
+    clearAnthropicApiKey() {
+        if (!confirm('Remove your saved API key from this browser?')) return;
+        localStorage.removeItem('synthesis_anthropic_api_key');
+        toast('API key removed.', 'info');
+        this.renderAiTutorSettings();
+    }
+
+    renderAiTutorSettings() {
+        const container = document.getElementById('ai-tutor-settings');
+        if (!container) return;
+        const hasKey = !!this.getAnthropicApiKey();
+
+        container.innerHTML = hasKey ? `
+            <p style="color: var(--color-success); font-size: 0.85rem; margin-bottom: 0.75rem;">✅ API key saved on this device — look for the 💬 button while reading a lesson.</p>
+            <button class="backup-btn backup-btn-secondary" onclick="app.clearAnthropicApiKey()">Remove API Key</button>
+        ` : `
+            <div class="form-group" style="margin-bottom: 0.75rem;">
+                <input type="password" id="ai-tutor-key-input" class="fitness-input" placeholder="sk-ant-..." autocomplete="off">
+            </div>
+            <button class="backup-btn backup-btn-primary" onclick="app.saveAnthropicApiKey(document.getElementById('ai-tutor-key-input').value)">Save API Key</button>
+        `;
+    }
+
+    // Shows/hides the chat FAB — only makes sense while actually reading a
+    // lesson, since the tutor is grounded in that lesson's content.
+    updateAiTutorVisibility(viewName) {
+        const fab = document.getElementById('ai-tutor-fab');
+        if (!fab) return;
+        const shouldShow = viewName === 'lesson' && !!this.getAnthropicApiKey();
+        fab.classList.toggle('visible', shouldShow);
+        if (!shouldShow) this.closeAiTutorChat();
+    }
+
+    openAiTutorChat() {
+        if (!this.getAnthropicApiKey()) {
+            toast('Add your Anthropic API key in Profile > AI Tutor first.', 'info');
+            return;
+        }
+        const panel = document.getElementById('ai-tutor-panel');
+        if (!panel) return;
+        panel.classList.add('open');
+        this.renderAiTutorMessages();
+        document.getElementById('ai-tutor-input')?.focus();
+    }
+
+    closeAiTutorChat() {
+        document.getElementById('ai-tutor-panel')?.classList.remove('open');
+    }
+
+    renderAiTutorMessages() {
+        const container = document.getElementById('ai-tutor-messages');
+        if (!container) return;
+
+        if (!this._aiTutorMessages || this._aiTutorMessages.length === 0) {
+            const lessonName = this.currentLesson ? this.currentLesson.title : 'this lesson';
+            container.innerHTML = `<div class="ai-tutor-empty">Ask me anything about "${escapeHtml(lessonName)}" — explain a concept differently, quiz you on it, or dig into something the lesson glossed over.</div>`;
+            return;
+        }
+
+        container.innerHTML = this._aiTutorMessages.map(m =>
+            `<div class="ai-tutor-msg ai-tutor-msg-${m.role}">${escapeHtml(m.content)}</div>`
+        ).join('');
+        container.scrollTop = container.scrollHeight;
+    }
+
+    async sendAiTutorMessage() {
+        const input = document.getElementById('ai-tutor-input');
+        const text = (input?.value || '').trim();
+        if (!text) return;
+        input.value = '';
+
+        if (!this._aiTutorMessages) this._aiTutorMessages = [];
+        this._aiTutorMessages.push({ role: 'user', content: text });
+
+        const sendBtn = document.getElementById('ai-tutor-send-btn');
+        if (sendBtn) sendBtn.disabled = true;
+        this._aiTutorMessages.push({ role: 'assistant', content: '…', pending: true });
+        this.renderAiTutorMessages();
+
+        try {
+            const reply = await this.callAnthropicApi(this._aiTutorMessages.filter(m => !m.pending));
+            this._aiTutorMessages = this._aiTutorMessages.filter(m => !m.pending);
+            this._aiTutorMessages.push({ role: 'assistant', content: reply });
+        } catch (err) {
+            this._aiTutorMessages = this._aiTutorMessages.filter(m => !m.pending);
+            this._aiTutorMessages.push({ role: 'assistant', content: `⚠️ ${err.message}` });
+        }
+
+        if (sendBtn) sendBtn.disabled = false;
+        this.renderAiTutorMessages();
+    }
+
+    async callAnthropicApi(messages) {
+        const apiKey = this.getAnthropicApiKey();
+        if (!apiKey) throw new Error('No API key saved. Add one in Profile > AI Tutor.');
+
+        const lessonContext = this.currentLesson
+            ? `The user is currently studying the lesson "${this.currentLesson.title}" from "${this.currentBook?.title || 'a book'}" on Synthesis, a personal learning app. Here is the lesson content read so far, for grounding:\n\n${(this.currentLesson.cards || []).slice(0, this.currentCard + 1).map(c => c.content || c.question || '').join('\n\n').slice(0, 3000)}`
+            : 'The user is browsing Synthesis, a personal learning app, and hasn\'t started a specific lesson yet.';
+
+        const response = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'x-api-key': apiKey,
+                'anthropic-version': '2023-06-01',
+                'anthropic-dangerous-direct-browser-access': 'true'
+            },
+            body: JSON.stringify({
+                model: 'claude-sonnet-5',
+                max_tokens: 1024,
+                system: `You are a friendly, encouraging tutor helping a student inside the Synthesis learning app. ${lessonContext}\n\nKeep answers focused and conversational — this is a chat, not an essay. Ground your answers in the lesson content when relevant, but you can go beyond it if the student asks something adjacent.`,
+                messages: messages.map(m => ({ role: m.role, content: m.content }))
+            })
+        });
+
+        if (!response.ok) {
+            const body = await response.text().catch(() => '');
+            if (response.status === 401) throw new Error('Invalid API key — check it in Profile > AI Tutor.');
+            if (response.status === 429) throw new Error('Rate limited by Anthropic — try again in a moment.');
+            throw new Error(`API error (${response.status}): ${body.slice(0, 200)}`);
+        }
+
+        const data = await response.json();
+        const text = data?.content?.find(c => c.type === 'text')?.text;
+        if (!text) throw new Error('Unexpected response shape from the API.');
+        return text;
+    }
+
+    // ============================================
     // PERSONAL GLOSSARY
     // Auto-collected from lessons you've actually completed — bold terms
     // already exist in the source content, this just surfaces them as a
@@ -2057,6 +2218,12 @@ class SynthesisApp {
 
         this.recordDailyActivity();
 
+        // A new lesson means a new grounding context — don't carry the
+        // previous lesson's chat into this one.
+        if (this.currentLesson?.id !== lessonId || this.currentBook?.id !== bookId) {
+            this._aiTutorMessages = [];
+        }
+
         this.currentBook = book;
         this.currentLesson = book.lessonList.find(l => String(l.id) === String(lessonId));
         if (!this.currentLesson) return;
@@ -2746,6 +2913,7 @@ class SynthesisApp {
         this.renderStreakReminderControls();
         this.renderMyNotes();
         this.renderMistakesLog();
+        this.renderAiTutorSettings();
         this.renderAccessibilityControls();
 
         // Render gamification stats overview
