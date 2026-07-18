@@ -9415,6 +9415,55 @@ body {
     outline-offset: 2px;
 }
 
+.notes-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.notes-list-item:hover {
+    border-color: #6366f1;
+    transform: translateX(2px);
+}
+
+.notes-list-item-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.notes-list-item-book {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.notes-list-item-text {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.notes-list-item-remove {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 0.25rem;
+    flex-shrink: 0;
+}
+
 .reset-section {
     margin-top: 3rem;
     padding: 2rem;

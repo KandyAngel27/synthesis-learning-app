@@ -877,6 +877,123 @@ class SynthesisApp {
         `).join('');
     }
 
+    // ============================================
+    // LESSON NOTES ("jot a note on this lesson to review later")
+    // Scoped deliberately to whole-lesson free-text notes rather than
+    // in-passage highlighting — highlighting would require tracking DOM
+    // text-selection ranges across re-renders, which is fragile against
+    // this app's markdown-ish card content. A note gets you most of the
+    // value ("review this before the exam") far more robustly.
+    // ============================================
+    lessonNoteKey(bookId, lessonId) {
+        return `${bookId}::${lessonId}`;
+    }
+
+    getLessonNote(bookId, lessonId) {
+        return (APP_DATA.user.lessonNotes || {})[this.lessonNoteKey(bookId, lessonId)] || null;
+    }
+
+    updateLessonNotesButton() {
+        const btn = document.getElementById('lesson-notes-btn');
+        if (!btn || !this.currentBook || !this.currentLesson) return;
+        const hasNote = !!this.getLessonNote(this.currentBook.id, this.currentLesson.id);
+        btn.classList.toggle('bookmarked', hasNote);
+        btn.title = hasNote ? 'Edit your note for this lesson' : 'Add a note to this lesson';
+    }
+
+    openLessonNotes() {
+        if (!this.currentBook || !this.currentLesson) return;
+        const existing = this.getLessonNote(this.currentBook.id, this.currentLesson.id);
+
+        const modal = document.createElement('div');
+        modal.className = 'premium-modal-overlay';
+        modal.innerHTML = `
+            <div class="premium-modal">
+                <h3>📝 ${escapeHtml(this.currentLesson.title)}</h3>
+                <div class="premium-form">
+                    <div class="form-group">
+                        <label>Your Note</label>
+                        <textarea id="lesson-note-input" class="fitness-input" rows="6" placeholder="Anything worth remembering — a key term, something to review before the exam...">${escapeHtml(existing ? existing.text : '')}</textarea>
+                    </div>
+                    <div class="modal-buttons">
+                        ${existing ? '<button class="btn-secondary" id="lesson-note-delete-btn" style="border-color:#ef4444;color:#ef4444;">Delete</button>' : ''}
+                        <button class="btn-secondary" id="lesson-note-cancel-btn">Cancel</button>
+                        <button class="btn-primary" id="lesson-note-save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.querySelector('#lesson-note-input').focus();
+
+        modal.querySelector('#lesson-note-cancel-btn').onclick = () => modal.remove();
+
+        const deleteBtn = modal.querySelector('#lesson-note-delete-btn');
+        if (deleteBtn) {
+            deleteBtn.onclick = () => {
+                this.deleteLessonNote(this.currentBook.id, this.currentLesson.id);
+                modal.remove();
+            };
+        }
+
+        modal.querySelector('#lesson-note-save-btn').onclick = () => {
+            const text = modal.querySelector('#lesson-note-input').value.trim();
+            if (!text) {
+                this.deleteLessonNote(this.currentBook.id, this.currentLesson.id);
+                modal.remove();
+                return;
+            }
+            if (!APP_DATA.user.lessonNotes) APP_DATA.user.lessonNotes = {};
+            APP_DATA.user.lessonNotes[this.lessonNoteKey(this.currentBook.id, this.currentLesson.id)] = {
+                bookId: this.currentBook.id,
+                lessonId: this.currentLesson.id,
+                bookTitle: this.currentBook.title,
+                lessonTitle: this.currentLesson.title,
+                text,
+                updatedAt: new Date().toISOString()
+            };
+            saveProgress();
+            toast('📝 Note saved!', 'success');
+            this.updateLessonNotesButton();
+            modal.remove();
+        };
+    }
+
+    deleteLessonNote(bookId, lessonId) {
+        if (!APP_DATA.user.lessonNotes) return;
+        delete APP_DATA.user.lessonNotes[this.lessonNoteKey(bookId, lessonId)];
+        saveProgress();
+        this.updateLessonNotesButton();
+        this.renderMyNotes();
+        toast('Note deleted.', 'info');
+    }
+
+    renderMyNotes() {
+        const section = document.getElementById('my-notes-section');
+        const container = document.getElementById('my-notes-list');
+        if (!section || !container) return;
+
+        const notes = Object.values(APP_DATA.user.lessonNotes || {})
+            .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+
+        if (notes.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        section.style.display = '';
+
+        container.innerHTML = notes.map(n => `
+            <div class="notes-list-item" onclick="app.startLesson('${n.bookId}', '${n.lessonId}')">
+                <div style="flex:1; min-width:0;">
+                    <div class="notes-list-item-title">${escapeHtml(n.lessonTitle)}</div>
+                    <div class="notes-list-item-book">${escapeHtml(n.bookTitle)}</div>
+                    <div class="notes-list-item-text">${escapeHtml(n.text)}</div>
+                </div>
+                <button class="notes-list-item-remove" onclick="event.stopPropagation(); app.deleteLessonNote('${n.bookId}', '${n.lessonId}')" title="Delete note" aria-label="Delete note">✕</button>
+            </div>
+        `).join('');
+    }
+
     renderContinueLearning() {
         const container = document.getElementById('continue-learning');
         const booksInProgress = getBooksInProgress();
@@ -1558,6 +1675,7 @@ class SynthesisApp {
         const progress = ((this.currentCard + 1) / totalCards) * 100;
 
         this.updateLessonBookmarkButton();
+        this.updateLessonNotesButton();
 
         // Update progress bar
         document.getElementById('lesson-progress-fill').style.width = `${progress}%`;
@@ -2101,6 +2219,7 @@ class SynthesisApp {
 
     renderProfile() {
         this.renderStreakReminderControls();
+        this.renderMyNotes();
 
         // Render gamification stats overview
         if (window.gamification) {
