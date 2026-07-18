@@ -99,6 +99,26 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Text size: everything else in this stylesheet is sized in rem, so
+   scaling the root font-size scales the whole app consistently. */
+html.text-size-large { font-size: 18px; }
+html.text-size-xlarge { font-size: 20px; }
+
+/* Dyslexia-friendly mode: wider letter/word spacing and a taller line
+   height measurably help reading speed and comprehension for many
+   dyslexic readers, without requiring a new external font dependency. */
+html.dyslexia-friendly body {
+    font-family: Verdana, Tahoma, Arial, var(--font-sans);
+    letter-spacing: 0.035em;
+    word-spacing: 0.12em;
+    line-height: 1.9;
+}
+html.dyslexia-friendly .insight-excerpt,
+html.dyslexia-friendly .lesson-card p,
+html.dyslexia-friendly .notes-list-item-text {
+    line-height: 1.9;
+}
+
 body {
     font-family: var(--font-sans);
     background: var(--color-bg-primary);
@@ -1279,6 +1299,23 @@ body {
 .quiz-option.incorrect {
     border-color: var(--color-error);
     background: rgba(239, 68, 68, 0.1);
+}
+
+/* Correct/incorrect answers are marked with an icon, not color alone —
+   color-only distinctions are unreadable for the ~8% of men with
+   red-green colorblindness, which is exactly the palette used here. */
+.quiz-option.correct::before,
+.quiz-option-btn.correct::before,
+.exam-opt.correct::before {
+    content: "✓ ";
+    font-weight: 700;
+}
+
+.quiz-option.incorrect::before,
+.quiz-option-btn.incorrect::before,
+.exam-opt.incorrect::before {
+    content: "✗ ";
+    font-weight: 700;
 }
 
 .lesson-navigation {

@@ -13,6 +13,10 @@ class SynthesisApp {
     }
 
     init() {
+        // Apply saved accessibility preferences before anything renders, so
+        // there's no flash of default-sized/default-spaced content.
+        this.applyAccessibilityPreferences();
+
         // Rehydrate per-lesson completed flag from the persisted user store.
         // saveProgress() only persists APP_DATA.user (not the static categories),
         // so on a fresh page load we have to re-apply completions to the
@@ -1253,6 +1257,58 @@ class SynthesisApp {
         this._retestQueue = null;
         this._retestIndex = 0;
         this._retestCorrectCount = 0;
+    }
+
+    // ============================================
+    // ACCESSIBILITY
+    // Text size scales the whole app via the root font-size, since every
+    // other size in this stylesheet is in rem. Dyslexia-friendly mode
+    // widens letter/word spacing and line height rather than pulling in an
+    // external font — measurable readability gains without a new
+    // dependency this static app would need to fetch reliably.
+    // ============================================
+    applyAccessibilityPreferences() {
+        const textSize = localStorage.getItem('synthesis_text_size') || 'normal';
+        document.documentElement.classList.remove('text-size-large', 'text-size-xlarge');
+        if (textSize === 'large') document.documentElement.classList.add('text-size-large');
+        if (textSize === 'xlarge') document.documentElement.classList.add('text-size-xlarge');
+
+        const dyslexiaFriendly = localStorage.getItem('synthesis_dyslexia_friendly') === '1';
+        document.documentElement.classList.toggle('dyslexia-friendly', dyslexiaFriendly);
+    }
+
+    setTextSize(size) {
+        localStorage.setItem('synthesis_text_size', size);
+        this.applyAccessibilityPreferences();
+        this.renderAccessibilityControls();
+    }
+
+    toggleDyslexiaFriendly() {
+        const current = localStorage.getItem('synthesis_dyslexia_friendly') === '1';
+        localStorage.setItem('synthesis_dyslexia_friendly', current ? '0' : '1');
+        this.applyAccessibilityPreferences();
+        this.renderAccessibilityControls();
+    }
+
+    renderAccessibilityControls() {
+        const container = document.getElementById('accessibility-controls');
+        if (!container) return;
+        const textSize = localStorage.getItem('synthesis_text_size') || 'normal';
+        const dyslexiaFriendly = localStorage.getItem('synthesis_dyslexia_friendly') === '1';
+
+        container.innerHTML = `
+            <div style="margin-bottom: 1rem;">
+                <label style="display:block; font-weight:600; font-size:0.85rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">Text Size</label>
+                <div class="backup-btn-row">
+                    <button class="backup-btn ${textSize === 'normal' ? 'backup-btn-primary' : 'backup-btn-secondary'}" onclick="app.setTextSize('normal')" aria-pressed="${textSize === 'normal'}">A</button>
+                    <button class="backup-btn ${textSize === 'large' ? 'backup-btn-primary' : 'backup-btn-secondary'}" onclick="app.setTextSize('large')" aria-pressed="${textSize === 'large'}" style="font-size:1.15em;">A</button>
+                    <button class="backup-btn ${textSize === 'xlarge' ? 'backup-btn-primary' : 'backup-btn-secondary'}" onclick="app.setTextSize('xlarge')" aria-pressed="${textSize === 'xlarge'}" style="font-size:1.3em;">A</button>
+                </div>
+            </div>
+            <button class="backup-btn ${dyslexiaFriendly ? 'backup-btn-primary' : 'backup-btn-secondary'}" onclick="app.toggleDyslexiaFriendly()" style="width:100%;" aria-pressed="${dyslexiaFriendly}">
+                ${dyslexiaFriendly ? '✅ Dyslexia-Friendly Spacing: On' : 'Enable Dyslexia-Friendly Spacing'}
+            </button>
+        `;
     }
 
     // ============================================
@@ -2690,6 +2746,7 @@ class SynthesisApp {
         this.renderStreakReminderControls();
         this.renderMyNotes();
         this.renderMistakesLog();
+        this.renderAccessibilityControls();
 
         // Render gamification stats overview
         if (window.gamification) {
