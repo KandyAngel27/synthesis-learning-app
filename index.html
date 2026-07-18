@@ -340,6 +340,22 @@
                         </div>
                     </div>
 
+                    <!-- AI Tutor Section -->
+                    <div class="backup-section">
+                        <h3 class="backup-section-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            AI Tutor
+                        </h3>
+                        <p class="backup-section-desc">
+                            Chat with an AI tutor about whatever lesson you're on — a 💬 button appears while reading. This app has no backend server, so there's no way to proxy this safely for everyone; instead, paste your own Anthropic API key below and the app calls Claude directly from this browser. Your key is stored only in this browser's local storage — never sent anywhere except directly to Anthropic — but anyone with access to this device could find it in dev tools, so only use this on a device you trust.
+                        </p>
+                        <div id="ai-tutor-settings">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
                     <!-- Accessibility Section -->
                     <div class="backup-section">
                         <h3 class="backup-section-title">
@@ -716,6 +732,26 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M3 11h18M3 11v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9M3 11V9a2 2 0 0 1 2-2h2l1-3h8l1 3h2a2 2 0 0 1 2 2v2"/>
                 <circle cx="12" cy="16" r="2"/>
+            </svg>
+        </button>
+
+        <!-- AI Tutor Chat Widget (only shown while viewing a lesson) -->
+        <div id="ai-tutor-panel" class="ai-tutor-panel">
+            <div class="ai-tutor-header">
+                <span class="ai-tutor-title">🧑‍🏫 AI Tutor</span>
+                <button class="ai-tutor-close" onclick="app.closeAiTutorChat()" title="Close" aria-label="Close AI tutor">×</button>
+            </div>
+            <div class="ai-tutor-messages" id="ai-tutor-messages">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="ai-tutor-input-area">
+                <input type="text" id="ai-tutor-input" placeholder="Ask about this lesson..." onkeypress="if(event.key==='Enter')app.sendAiTutorMessage()">
+                <button class="ai-tutor-send" id="ai-tutor-send-btn" onclick="app.sendAiTutorMessage()">Send</button>
+            </div>
+        </div>
+        <button id="ai-tutor-fab" class="ai-tutor-fab" onclick="app.openAiTutorChat()" title="Ask the AI Tutor about this lesson" aria-label="AI Tutor">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
         </button>
 
