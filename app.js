@@ -29,6 +29,12 @@ class SynthesisApp {
 
             // Restore last view from localStorage
             this.restoreLastView();
+
+            // Nudge if it's evening and today's activity hasn't happened yet;
+            // re-check periodically in case the tab stays open past the hour
+            // threshold. No-ops entirely if reminders aren't enabled.
+            this.checkStreakReminder();
+            setInterval(() => this.checkStreakReminder(), 15 * 60 * 1000);
         }, 2000);
 
         // Set up event listeners
@@ -481,6 +487,95 @@ class SynthesisApp {
         if (!last) return false;
         const diff = Math.round((new Date(this.todayKey()) - new Date(last)) / 86400000);
         return diff <= 1; // active if last activity was today or yesterday
+    }
+
+    // ============================================
+    // STREAK REMINDERS
+    // ============================================
+    // This is a static app with no backend/push server, so this can only
+    // fire a Notification while Synthesis is open in a browser tab
+    // (foreground or backgrounded) via the service worker — it cannot
+    // reach the user after the tab is fully closed. Still useful: leave a
+    // tab open and it nudges you in the evening if you haven't studied yet.
+    streakRemindersSupported() {
+        return typeof Notification !== 'undefined';
+    }
+
+    streakRemindersEnabled() {
+        return localStorage.getItem('synthesis_streak_reminders_enabled') === '1'
+            && this.streakRemindersSupported()
+            && Notification.permission === 'granted';
+    }
+
+    async enableStreakReminders() {
+        if (!this.streakRemindersSupported()) {
+            toast("Notifications aren't supported in this browser.", 'error');
+            return;
+        }
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+            toast('Notification permission denied — enable it in your browser settings to use this.', 'info');
+            this.renderStreakReminderControls();
+            return;
+        }
+        localStorage.setItem('synthesis_streak_reminders_enabled', '1');
+        toast('🔔 Streak reminders enabled!', 'success');
+        this.renderStreakReminderControls();
+        this.checkStreakReminder();
+    }
+
+    disableStreakReminders() {
+        localStorage.setItem('synthesis_streak_reminders_enabled', '0');
+        toast('Streak reminders turned off.', 'info');
+        this.renderStreakReminderControls();
+    }
+
+    renderStreakReminderControls() {
+        const container = document.getElementById('streak-reminder-controls');
+        if (!container) return;
+
+        if (!this.streakRemindersSupported()) {
+            container.innerHTML = `<p class="backup-section-desc" style="margin:0;">Notifications aren't supported in this browser.</p>`;
+            return;
+        }
+
+        container.innerHTML = this.streakRemindersEnabled()
+            ? `<button class="backup-btn backup-btn-secondary" onclick="app.disableStreakReminders()">🔕 Turn Off Reminders</button>`
+            : `<button class="backup-btn backup-btn-primary" onclick="app.enableStreakReminders()">🔔 Enable Streak Reminders</button>`;
+    }
+
+    // Called at boot and on a periodic timer while the tab stays open.
+    checkStreakReminder() {
+        if (!this.streakRemindersEnabled()) return;
+
+        const today = this.todayKey();
+        if (APP_DATA.user?.lastActivityDate === today) return; // already studied today
+        if (localStorage.getItem('synthesis_streak_reminder_shown_' + today) === '1') return; // already nudged today
+        if (new Date().getHours() < 19) return; // only nudge in the evening
+
+        const streak = APP_DATA.user?.currentStreak || 0;
+        const title = streak > 0 ? `🔥 Don't lose your ${streak}-day streak!` : '📚 Keep the habit going';
+        const body = streak > 0
+            ? "You haven't studied today yet — a few minutes keeps your streak alive."
+            : "You haven't studied today yet — even one lesson counts.";
+
+        this.showStreakReminderNotification(title, body);
+        localStorage.setItem('synthesis_streak_reminder_shown_' + today, '1');
+    }
+
+    async showStreakReminderNotification(title, body) {
+        try {
+            if ('serviceWorker' in navigator) {
+                const reg = await navigator.serviceWorker.getRegistration();
+                if (reg) {
+                    await reg.showNotification(title, { body, icon: 'icon.svg', tag: 'streak-reminder' });
+                    return;
+                }
+            }
+            new Notification(title, { body, icon: 'icon.svg' });
+        } catch (err) {
+            console.error('Failed to show streak reminder notification:', err);
+        }
     }
 
     renderStreakSection() {
@@ -1922,6 +2017,8 @@ class SynthesisApp {
     }
 
     renderProfile() {
+        this.renderStreakReminderControls();
+
         // Render gamification stats overview
         if (window.gamification) {
             window.gamification.renderStatsOverview();
