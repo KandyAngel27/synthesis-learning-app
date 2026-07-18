@@ -1,8 +1,10 @@
 // ============================================
 // LIFESTYLE FEATURES — Vision Board, Manifestation Journal,
-// Shadow Work, Workout Tracker. The "premium-features" filename
-// is historical: there is no paywall and no gating; every feature
-// in this module is freely available to every user.
+// Shadow Work. The "premium-features" filename is historical:
+// there is no paywall and no gating; every feature in this module
+// is freely available to every user. (Workout tracking lives in
+// fitness-tracker.js, which fully supersedes this file's old
+// Workout Tracker section.)
 // ============================================
 
 // Helper function to parse MM/DD/YYYY to ISO format (YYYY-MM-DD)
@@ -45,27 +47,22 @@ function formatDateForDisplay(dateStr) {
     return date.toLocaleDateString('en-US', options);
 }
 
-// Helper function to format date for editing (MM/DD/YYYY)
-function formatDateForEdit(dateStr) {
-    if (!dateStr) return '';
-    // Parse the date
-    let date;
-    if (dateStr.match(/^\d{4}-\d{2}-\d{2}/)) {
-        const parts = dateStr.split('-');
-        date = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-    } else if (dateStr.includes('/')) {
-        const parts = dateStr.split('/');
-        date = new Date(parseInt(parts[2]), parseInt(parts[0]) - 1, parseInt(parts[1]));
-    } else {
-        return dateStr;
-    }
+// Helper function to normalize an affirmation entry: legacy saves stored a
+// plain string, current saves store {text, spoken} so the "spoken" checkmark
+// can persist across reloads.
+function normalizeAffirmation(a) {
+    return typeof a === 'string' ? { text: a, spoken: false } : a;
+}
 
-    if (isNaN(date.getTime())) return dateStr;
-
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const year = date.getFullYear();
-    return `${month}/${day}/${year}`;
+// Helper function to safely inject text into an HTML attribute or text node
+function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 }
 
 class PremiumFeatures {
@@ -125,16 +122,29 @@ class PremiumFeatures {
                 </div>
             </div>
 
+            ${(() => {
+                const achievedCount = visions.filter(v => v.achieved).length;
+                return achievedCount > 0 ? `
+                    <div style="margin-top: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.15)); border-radius: 0.75rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        🏆 ${achievedCount} vision${achievedCount === 1 ? '' : 's'} achieved
+                    </div>
+                ` : '';
+            })()}
+
             <h2 style="margin: 2rem 0 1rem;">Your Vision Board</h2>
             <div class="vision-board-grid">
-                ${visions.map(vision => `
-                    <div class="vision-card" onclick="window.premiumFeatures.editVision(${vision.id})">
-                        <div class="vision-card-image" style="background: linear-gradient(135deg, ${this.getCategoryGradient(vision.category)})">
+                ${visions.slice().sort((a, b) => (a.achieved === b.achieved) ? 0 : (a.achieved ? 1 : -1)).map(vision => `
+                    <div class="vision-card ${vision.achieved ? 'vision-achieved' : ''}" onclick="window.premiumFeatures.editVision(${vision.id})">
+                        <div class="vision-card-image" style="background: linear-gradient(135deg, ${this.getCategoryGradient(vision.category)}); ${vision.achieved ? 'opacity: 0.6;' : ''}">
                             <span style="font-size: 4rem;">${vision.icon}</span>
+                            ${vision.achieved ? '<div class="vision-achieved-badge">🏆 Achieved</div>' : ''}
                         </div>
-                        <div class="vision-card-title">${vision.title}</div>
-                        <div class="vision-card-description">${vision.description}</div>
-                        <div class="vision-card-date">🎯 Target: ${formatDateForDisplay(vision.targetDate)}</div>
+                        <div class="vision-card-title">${escapeHtml(vision.title)}</div>
+                        <div class="vision-card-description">${escapeHtml(vision.description)}</div>
+                        <div class="vision-card-date">${vision.achieved ? `✅ Achieved ${formatDateForDisplay(vision.achievedDate)}` : `🎯 Target: ${formatDateForDisplay(vision.targetDate)}`}</div>
+                        <button class="vision-achieve-btn" onclick="event.stopPropagation(); window.premiumFeatures.toggleVisionAchieved(${vision.id})">
+                            ${vision.achieved ? '↩️ Mark Not Yet Achieved' : '🏆 Mark as Achieved'}
+                        </button>
                     </div>
                 `).join('')}
 
@@ -146,6 +156,22 @@ class PremiumFeatures {
         `;
 
         container.innerHTML = html;
+    }
+
+    toggleVisionAchieved(visionId) {
+        const vision = APP_DATA.user.visionBoard.find(v => v.id === visionId);
+        if (!vision) return;
+
+        vision.achieved = !vision.achieved;
+        vision.achievedDate = vision.achieved ? new Date().toISOString().split('T')[0] : null;
+        saveProgress();
+
+        if (vision.achieved) {
+            toast(`🏆 "${vision.title}" achieved! Manifestation in action.`, 'success');
+            if (window.gamification) window.gamification.awardXP(15, 'Vision Achieved');
+        }
+
+        this.renderVisionBoard();
     }
 
     getCategoryGradient(category) {
@@ -160,70 +186,135 @@ class PremiumFeatures {
     }
 
     addVision() {
-        const title = prompt("What is your vision?");
-        if (!title) return;
-
-        const description = prompt("Describe your vision in detail:");
-        if (!description) return;
-
-        const targetDateInput = prompt("Target date (MM/DD/YYYY):");
-        if (!targetDateInput) return;
-
-        // Parse the date to ISO format for consistent storage
-        const targetDate = parseDateMMDDYYYY(targetDateInput);
-
-        const newVision = {
-            id: Date.now(),
-            title,
-            description,
-            targetDate,
-            category: "personal",
-            icon: "✨",
-            created: new Date().toISOString().split('T')[0]
-        };
-
-        APP_DATA.user.visionBoard.push(newVision);
-        saveProgress();
-        if (window.gamification) window.gamification.updateChallengeProgress('vision');
-        this.renderVisionBoard();
+        this.openVisionModal(null);
     }
 
     editVision(visionId) {
         const vision = APP_DATA.user.visionBoard.find(v => v.id === visionId);
         if (!vision) return;
+        this.openVisionModal(vision);
+    }
 
-        const action = prompt(
-            `"${vision.title}"\n\nWhat would you like to do?\n\n1 = Edit\n2 = Delete\n\nEnter 1 or 2:`
-        );
+    openVisionModal(vision) {
+        const isEdit = !!vision;
+        const categories = [
+            { key: 'business', label: '💼 Business' },
+            { key: 'health', label: '💪 Health' },
+            { key: 'personal', label: '✨ Personal' },
+            { key: 'relationships', label: '❤️ Relationships' },
+            { key: 'spiritual', label: '🧘 Spiritual' }
+        ];
+        const icons = ['✨', '💼', '💪', '❤️', '🧘', '🏠', '💰', '🎓', '🌱', '🎯', '🚀', '📚', '🎨', '✈️', '🏆'];
+        let pickedCategory = vision ? vision.category : 'personal';
+        let pickedIcon = vision ? vision.icon : '✨';
 
-        if (action === '1') {
-            // Edit
-            const newTitle = prompt("Edit vision title:", vision.title);
-            if (newTitle === null) return;
+        const modal = document.createElement('div');
+        modal.className = 'premium-modal-overlay';
+        modal.innerHTML = `
+            <div class="premium-modal">
+                <h3>${isEdit ? 'Edit Vision' : 'Add New Vision'}</h3>
+                <div class="premium-form">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" id="vision-title-input" class="fitness-input" value="${escapeHtml(vision ? vision.title : '')}" placeholder="e.g., Launch a woodworking business">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="vision-description-input" class="fitness-input" placeholder="Describe your vision in detail...">${escapeHtml(vision ? vision.description : '')}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Target Date</label>
+                        <input type="date" id="vision-date-input" class="fitness-input" value="${vision && vision.targetDate ? parseDateMMDDYYYY(vision.targetDate) : ''}">
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <div class="category-picker" id="vision-category-picker">
+                            ${categories.map(c => `<div class="category-picker-option ${c.key === pickedCategory ? 'selected' : ''}" data-category="${c.key}" style="background: linear-gradient(135deg, ${this.getCategoryGradient(c.key)})">${c.label}</div>`).join('')}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Icon</label>
+                        <div class="icon-picker" id="vision-icon-picker">
+                            ${icons.map(i => `<div class="icon-picker-option ${i === pickedIcon ? 'selected' : ''}" data-icon="${i}">${i}</div>`).join('')}
+                        </div>
+                    </div>
+                    <div class="modal-buttons">
+                        ${isEdit ? '<button class="btn-secondary" id="vision-delete-btn" style="border-color:#ef4444;color:#ef4444;">Delete</button>' : ''}
+                        <button class="btn-secondary" id="vision-cancel-btn">Cancel</button>
+                        <button class="btn-primary" id="vision-save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
 
-            const newDescription = prompt("Edit description:", vision.description);
-            if (newDescription === null) return;
+        modal.querySelectorAll('.category-picker-option').forEach(el => {
+            el.onclick = () => {
+                modal.querySelectorAll('.category-picker-option').forEach(o => o.classList.remove('selected'));
+                el.classList.add('selected');
+                pickedCategory = el.dataset.category;
+            };
+        });
+        modal.querySelectorAll('.icon-picker-option').forEach(el => {
+            el.onclick = () => {
+                modal.querySelectorAll('.icon-picker-option').forEach(o => o.classList.remove('selected'));
+                el.classList.add('selected');
+                pickedIcon = el.dataset.icon;
+            };
+        });
 
-            const currentDateFormatted = formatDateForEdit(vision.targetDate);
-            const newDate = prompt("Edit target date (MM/DD/YYYY):", currentDateFormatted);
-            if (newDate === null) return;
+        modal.querySelector('#vision-cancel-btn').onclick = () => modal.remove();
 
-            vision.title = newTitle || vision.title;
-            vision.description = newDescription || vision.description;
-            vision.targetDate = newDate ? parseDateMMDDYYYY(newDate) : vision.targetDate;
-
-            saveProgress();
-            this.renderVisionBoard();
-            toast('Vision updated!', 'info');
-        } else if (action === '2') {
-            // Delete
-            if (confirm(`Are you sure you want to delete "${vision.title}"?`)) {
-                APP_DATA.user.visionBoard = APP_DATA.user.visionBoard.filter(v => v.id !== visionId);
-                saveProgress();
-                this.renderVisionBoard();
-                toast('Vision deleted.', 'info');
-            }
+        const deleteBtn = modal.querySelector('#vision-delete-btn');
+        if (deleteBtn) {
+            deleteBtn.onclick = () => {
+                if (confirm(`Are you sure you want to delete "${vision.title}"?`)) {
+                    APP_DATA.user.visionBoard = APP_DATA.user.visionBoard.filter(v => v.id !== vision.id);
+                    saveProgress();
+                    modal.remove();
+                    this.renderVisionBoard();
+                    toast('Vision deleted.', 'info');
+                }
+            };
         }
+
+        modal.querySelector('#vision-save-btn').onclick = () => {
+            const title = modal.querySelector('#vision-title-input').value.trim();
+            const description = modal.querySelector('#vision-description-input').value.trim();
+            const targetDate = modal.querySelector('#vision-date-input').value;
+            if (!title) {
+                toast('Please enter a title for your vision.', 'error');
+                return;
+            }
+
+            if (isEdit) {
+                vision.title = title;
+                vision.description = description;
+                vision.targetDate = targetDate || vision.targetDate;
+                vision.category = pickedCategory;
+                vision.icon = pickedIcon;
+                saveProgress();
+                modal.remove();
+                this.renderVisionBoard();
+                toast('Vision updated!', 'info');
+            } else {
+                const newVision = {
+                    id: Date.now(),
+                    title,
+                    description,
+                    targetDate: targetDate || null,
+                    category: pickedCategory,
+                    icon: pickedIcon,
+                    created: new Date().toISOString().split('T')[0]
+                };
+                APP_DATA.user.visionBoard.push(newVision);
+                saveProgress();
+                if (window.gamification) window.gamification.updateChallengeProgress('vision');
+                modal.remove();
+                this.renderVisionBoard();
+                toast('Vision added!', 'info');
+            }
+        };
     }
 
     // ============================================
@@ -241,10 +332,17 @@ class PremiumFeatures {
             notes: ""
         };
 
+        const affirmationStreak = this.getAffirmationStreak();
+        const allEntries = APP_DATA.user.manifestationJournal || [];
+        const totalEntries = allEntries.length;
+        const totalSpoken = allEntries.reduce((sum, e) => sum + (e.affirmations || []).map(normalizeAffirmation).filter(a => a.spoken).length, 0);
+
         const html = `
             <div class="manifestation-header">
                 <h2>🌙 Today's Manifestation Practice</h2>
                 <p style="opacity: 0.9; margin-top: 0.5rem;">${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                ${affirmationStreak > 0 ? `<p style="margin-top: 0.5rem; font-weight: 600;">🔥 ${affirmationStreak}-day affirmation streak</p>` : ''}
+                ${totalEntries > 0 ? `<p style="margin-top: 0.5rem; opacity: 0.85; font-size: 0.85rem;">📖 ${totalEntries} journal ${totalEntries === 1 ? 'entry' : 'entries'} · ✨ ${totalSpoken} affirmation${totalSpoken === 1 ? '' : 's'} spoken all-time</p>` : ''}
             </div>
 
             <div class="gratitude-section">
@@ -268,10 +366,10 @@ class PremiumFeatures {
                 </div>
                 <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">Powerful statements that shape your reality. Click to mark as spoken!</p>
                 <div class="affirmation-list" id="affirmation-list">
-                    ${todayEntry.affirmations && todayEntry.affirmations.length > 0 ? todayEntry.affirmations.map((aff, index) => `
+                    ${todayEntry.affirmations && todayEntry.affirmations.length > 0 ? todayEntry.affirmations.map(normalizeAffirmation).map((aff, index) => `
                         <div class="affirmation-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--color-bg-secondary); border-radius: 0.75rem; margin-bottom: 0.75rem; cursor: pointer;" onclick="window.premiumFeatures.toggleAffirmation(${index})">
-                            <div class="affirmation-checkbox" style="width: 24px; height: 24px; border: 2px solid var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;"></div>
-                            <div class="affirmation-text" style="flex: 1;">${aff}</div>
+                            <div class="affirmation-checkbox ${aff.spoken ? 'checked' : ''}" style="width: 24px; height: 24px; border: 2px solid var(--color-primary); border-radius: 50%; transition: all 0.3s;"></div>
+                            <div class="affirmation-text ${aff.spoken ? 'spoken' : ''}" style="flex: 1;">${escapeHtml(aff.text)}</div>
                             <button onclick="event.stopPropagation(); window.premiumFeatures.deleteAffirmation(${index})" style="background: none; border: none; color: #ef4444; cursor: pointer; padding: 0.25rem;">✕</button>
                         </div>
                     `).join('') : '<p style="color: var(--color-text-tertiary);">No affirmations yet. Add one below!</p>'}
@@ -328,7 +426,7 @@ class PremiumFeatures {
                             <div class="entry-date" style="color: var(--color-primary-light); font-weight: 600; margin-bottom: 0.75rem;">${new Date(entry.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</div>
                             <div class="entry-content">
                                 ${entry.gratitude?.length ? `<p style="margin-bottom: 0.5rem;"><strong>🙏 Grateful for:</strong> ${entry.gratitude.join(', ')}</p>` : ''}
-                                ${entry.affirmations?.length ? `<p style="margin-bottom: 0.5rem;"><strong>✨ Affirmations:</strong> ${entry.affirmations.join(' • ')}</p>` : ''}
+                                ${entry.affirmations?.length ? `<p style="margin-bottom: 0.5rem;"><strong>✨ Affirmations:</strong> ${entry.affirmations.map(normalizeAffirmation).map(a => a.spoken ? `✓ ${escapeHtml(a.text)}` : escapeHtml(a.text)).join(' • ')}</p>` : ''}
                                 ${entry.goals?.length ? `<p style="margin-bottom: 0.5rem;"><strong>🎯 Intentions:</strong> ${entry.goals.join(', ')}</p>` : ''}
                                 ${entry.notes ? `<p style="margin-top: 0.75rem; font-style: italic; color: var(--color-text-secondary);">"${entry.notes}"</p>` : ''}
                             </div>
@@ -439,12 +537,12 @@ class PremiumFeatures {
         }
 
         // Check if already added
-        if (todayEntry.affirmations.includes(affirmation)) {
+        if (todayEntry.affirmations.map(normalizeAffirmation).some(a => a.text === affirmation)) {
             toast('This affirmation is already in your list!', 'info');
             return;
         }
 
-        todayEntry.affirmations.push(affirmation);
+        todayEntry.affirmations.push({ text: affirmation, spoken: false });
         saveProgress();
         this.renderManifestation();
 
@@ -472,17 +570,45 @@ class PremiumFeatures {
             APP_DATA.user.manifestationJournal.push(todayEntry);
         }
 
-        todayEntry.affirmations.push(affirmation);
+        todayEntry.affirmations.push({ text: affirmation, spoken: false });
         saveProgress();
         this.renderManifestation();
     }
 
     toggleAffirmation(index) {
-        // Mark affirmation as spoken/completed
-        const checkboxes = document.querySelectorAll('.affirmation-checkbox');
-        if (checkboxes[index]) {
-            checkboxes[index].classList.toggle('checked');
+        const today = new Date().toISOString().split('T')[0];
+        const todayEntry = APP_DATA.user.manifestationJournal?.find(e => e.date === today);
+        if (!todayEntry || !todayEntry.affirmations || !todayEntry.affirmations[index]) return;
+
+        todayEntry.affirmations[index] = normalizeAffirmation(todayEntry.affirmations[index]);
+        todayEntry.affirmations[index].spoken = !todayEntry.affirmations[index].spoken;
+        saveProgress();
+        this.renderManifestation();
+    }
+
+    // Consecutive days (ending today or yesterday) with at least one affirmation marked spoken
+    getAffirmationStreak() {
+        const entries = APP_DATA.user.manifestationJournal || [];
+        const spokenDates = new Set(
+            entries
+                .filter(e => (e.affirmations || []).map(normalizeAffirmation).some(a => a.spoken))
+                .map(e => e.date)
+        );
+        if (spokenDates.size === 0) return 0;
+
+        let streak = 0;
+        const cursor = new Date();
+        cursor.setHours(0, 0, 0, 0);
+        // If today hasn't been done yet, start counting from yesterday so an
+        // in-progress day doesn't zero out an existing streak.
+        if (!spokenDates.has(cursor.toISOString().split('T')[0])) {
+            cursor.setDate(cursor.getDate() - 1);
         }
+        while (spokenDates.has(cursor.toISOString().split('T')[0])) {
+            streak++;
+            cursor.setDate(cursor.getDate() - 1);
+        }
+        return streak;
     }
 
     deleteAffirmation(index) {
@@ -565,15 +691,27 @@ class PremiumFeatures {
                         </div>
                     `).join('')}
                 </div>
-                <button class="btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="window.premiumFeatures.takeArchetypeQuiz()">
-                    🔍 Take Archetype Assessment
-                </button>
+                ${userProgress.quizInProgress && Object.keys(userProgress.quizInProgress.answers || {}).length > 0 ? `
+                    <button class="btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="window.premiumFeatures.resumeArchetypeQuiz()">
+                        ▶️ Resume Assessment (${Object.keys(userProgress.quizInProgress.answers).length}/${userProgress.quizInProgress.totalQuestions || 48} answered)
+                    </button>
+                    <button class="btn-secondary" style="width: 100%; margin-top: 0.75rem;" onclick="window.premiumFeatures.takeArchetypeQuiz()">
+                        🔍 Start New Assessment
+                    </button>
+                ` : `
+                    <button class="btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="window.premiumFeatures.takeArchetypeQuiz()">
+                        🔍 Take Archetype Assessment
+                    </button>
+                `}
             </div>
 
             <div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1)); border-radius: 1rem;">
                 <h3 style="margin-bottom: 0.5rem;">🗺️ Your Individuation Journey</h3>
                 <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Current Phase: <strong style="color: var(--color-primary-light);">${userProgress.currentPhase.charAt(0).toUpperCase() + userProgress.currentPhase.slice(1)}</strong></p>
                 <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Exercises Completed: <strong style="color: var(--color-primary-light);">${userProgress.completedExercises.length} / ${exercises.length}</strong></p>
+                ${userProgress.quizHistory && userProgress.quizHistory.length > 0 ? `
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Archetype Assessments Taken: <strong style="color: var(--color-primary-light);">${userProgress.quizHistory.length}</strong> (last: ${formatDateForDisplay(userProgress.quizHistory[userProgress.quizHistory.length - 1].date)})</p>
+                ` : ''}
             </div>
 
             <h2 style="margin: 2rem 0 1rem;">🌱 Beginner Exercises</h2>
@@ -763,6 +901,13 @@ class PremiumFeatures {
     }
 
     takeArchetypeQuiz() {
+        const inProgress = APP_DATA.user.shadowWork.quizInProgress;
+        if (inProgress && Object.keys(inProgress.answers || {}).length > 0) {
+            if (!confirm('You have an assessment in progress. Starting a new one will discard your saved answers. Continue?')) {
+                return;
+            }
+        }
+
         this.archetypeQuizData = {
             currentQuestion: 0,
             answers: {},
@@ -772,9 +917,35 @@ class PremiumFeatures {
                 jester: 0, sage: 0, magician: 0, ruler: 0
             }
         };
+        APP_DATA.user.shadowWork.quizInProgress = null;
+        saveProgress();
 
-        // 48 Deep psychological questions - 4 per archetype
-        this.quizQuestions = [
+        this.quizQuestions = this.buildQuizQuestions();
+        this.renderArchetypeQuiz();
+    }
+
+    resumeArchetypeQuiz() {
+        const inProgress = APP_DATA.user.shadowWork.quizInProgress;
+        if (!inProgress) {
+            this.takeArchetypeQuiz();
+            return;
+        }
+        this.archetypeQuizData = {
+            currentQuestion: inProgress.currentQuestion || 0,
+            answers: inProgress.answers || {},
+            archetypeScores: inProgress.archetypeScores || {
+                innocent: 0, orphan: 0, hero: 0, caregiver: 0,
+                explorer: 0, rebel: 0, lover: 0, creator: 0,
+                jester: 0, sage: 0, magician: 0, ruler: 0
+            }
+        };
+        this.quizQuestions = this.buildQuizQuestions();
+        this.renderArchetypeQuiz();
+    }
+
+    // 48 Deep psychological questions - 4 per archetype
+    buildQuizQuestions() {
+        return [
             // INNOCENT (Questions 1-4)
             {
                 id: 1,
@@ -1135,8 +1306,6 @@ class PremiumFeatures {
                 shadowWarning: "Shadow: using responsibility to justify control, entitled leadership."
             }
         ];
-
-        this.renderArchetypeQuiz();
     }
 
     renderArchetypeQuiz() {
@@ -1294,12 +1463,14 @@ class PremiumFeatures {
 
     selectArchetypeAnswer(questionId, value, archetype) {
         this.archetypeQuizData.answers[questionId] = value;
+        this.saveArchetypeQuizProgress();
         this.renderArchetypeQuiz();
     }
 
     previousArchetypeQuestion() {
         if (this.archetypeQuizData.currentQuestion > 0) {
             this.archetypeQuizData.currentQuestion--;
+            this.saveArchetypeQuizProgress();
             this.renderArchetypeQuiz();
         }
     }
@@ -1312,11 +1483,27 @@ class PremiumFeatures {
         }
 
         this.archetypeQuizData.currentQuestion++;
+        this.saveArchetypeQuizProgress();
         this.renderArchetypeQuiz();
     }
 
+    // Persists in-progress quiz answers so exiting mid-assessment doesn't lose them
+    saveArchetypeQuizProgress() {
+        APP_DATA.user.shadowWork.quizInProgress = {
+            currentQuestion: this.archetypeQuizData.currentQuestion,
+            answers: this.archetypeQuizData.answers,
+            archetypeScores: this.archetypeQuizData.archetypeScores,
+            totalQuestions: this.quizQuestions.length
+        };
+        saveProgress();
+    }
+
     exitArchetypeQuiz() {
-        if (confirm('Your progress will be saved. Return to Shadow Work?')) {
+        const answeredCount = Object.keys(this.archetypeQuizData.answers || {}).length;
+        const message = answeredCount > 0
+            ? 'Your progress has been saved. Return to Shadow Work?'
+            : 'Return to Shadow Work?';
+        if (confirm(message)) {
             this.renderShadowWork();
         }
     }
@@ -1346,6 +1533,14 @@ class PremiumFeatures {
         const dominant = sorted.slice(0, 3);
         const suppressed = sorted.slice(-3).reverse();
 
+        // Capture the previous attempt's scores (if any) before overwriting, so
+        // the results screen can show how each archetype has shifted over time.
+        const quizHistory = APP_DATA.user.shadowWork.quizHistory || [];
+        const previousScores = quizHistory.length > 0 ? quizHistory[quizHistory.length - 1].scores : null;
+
+        quizHistory.push({ date: new Date().toISOString().split('T')[0], scores });
+        APP_DATA.user.shadowWork.quizHistory = quizHistory;
+
         // Save to user data
         Object.keys(scores).forEach(key => {
             APP_DATA.user.shadowWork.archetypes[key] = {
@@ -1353,6 +1548,7 @@ class PremiumFeatures {
                 shadow: this.getArchetypeShadowDescription(key)
             };
         });
+        APP_DATA.user.shadowWork.quizInProgress = null;
         saveProgress();
 
         const archetypeDetails = {
@@ -1574,8 +1770,13 @@ class PremiumFeatures {
 
                 <div class="all-scores" style="margin-bottom: 2rem;">
                     <h3 style="margin-bottom: 1rem;">📊 Complete Archetype Map</h3>
+                    ${previousScores ? `<p style="color: var(--color-text-tertiary); font-size: 0.8rem; margin-bottom: 1rem;">Change vs. your previous assessment (${quizHistory[quizHistory.length - 2].date})</p>` : ''}
                     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
-                        ${sorted.map(([archetype, score]) => `
+                        ${sorted.map(([archetype, score]) => {
+                            const delta = previousScores ? score - previousScores[archetype] : null;
+                            const deltaLabel = delta === null || delta === 0 ? '' :
+                                `<span style="font-size: 0.7rem; font-weight: 700; color: ${delta > 0 ? '#10b981' : '#ef4444'};">${delta > 0 ? '▲' : '▼'} ${Math.abs(delta)}</span>`;
+                            return `
                             <div style="
                                 background: var(--color-bg-secondary);
                                 border-radius: 1rem;
@@ -1584,7 +1785,7 @@ class PremiumFeatures {
                             ">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">${this.getArchetypeIcon(archetype)}</div>
                                 <div style="font-size: 0.7rem; color: var(--color-text-tertiary); text-transform: uppercase;">${archetype}</div>
-                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-light);">${score}%</div>
+                                <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-light);">${score}% ${deltaLabel}</div>
                                 <div style="
                                     height: 4px;
                                     background: var(--color-bg-tertiary);
@@ -1599,7 +1800,8 @@ class PremiumFeatures {
                                     "></div>
                                 </div>
                             </div>
-                        `).join('')}
+                        `;
+                        }).join('')}
                     </div>
                 </div>
 
@@ -1684,383 +1886,6 @@ class PremiumFeatures {
         return shadows[archetype] || "Unknown shadow aspect";
     }
 
-    // ============================================
-    // WORKOUT TRACKER
-    // ============================================
-
-    renderWorkout() {
-        const container = document.getElementById('workout-content');
-        const stats = APP_DATA.user.workoutStats;
-        const recentWorkouts = APP_DATA.user.workouts?.slice(-5).reverse() || [];
-
-        const html = `
-            <div class="workout-stats">
-                <div class="workout-stat-card">
-                    <div class="workout-stat-icon">💪</div>
-                    <div class="workout-stat-value">${stats.totalWorkouts}</div>
-                    <div class="workout-stat-label">Total Workouts</div>
-                </div>
-                <div class="workout-stat-card">
-                    <div class="workout-stat-icon">🔥</div>
-                    <div class="workout-stat-value">${stats.currentStreak}</div>
-                    <div class="workout-stat-label">Day Streak</div>
-                </div>
-                <div class="workout-stat-card">
-                    <div class="workout-stat-icon">⏱️</div>
-                    <div class="workout-stat-value">${Math.round(stats.totalMinutes / 60)}</div>
-                    <div class="workout-stat-label">Hours Trained</div>
-                </div>
-                <div class="workout-stat-card">
-                    <div class="workout-stat-icon">🏆</div>
-                    <div class="workout-stat-value">${stats.longestStreak}</div>
-                    <div class="workout-stat-label">Best Streak</div>
-                </div>
-            </div>
-
-            <div class="workout-calendar">
-                <div class="calendar-header">
-                    <h2>${new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</h2>
-                    <div style="font-size: 0.85rem; color: var(--color-text-secondary);">
-                        🟢 = Workout logged
-                    </div>
-                </div>
-                <div class="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.25rem; margin-top: 1rem;">
-                    ${this.generateCalendarDays()}
-                </div>
-            </div>
-
-            <div class="log-workout-section">
-                <h2 style="margin-bottom: 1rem;">Log Today's Workout</h2>
-                
-                <div style="margin-bottom: 1rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Workout Type</label>
-                    <select class="workout-input" id="workout-type" style="width: 100%;">
-                        <option value="Strength">Strength Training</option>
-                        <option value="Cardio">Cardio</option>
-                        <option value="HIIT">HIIT</option>
-                        <option value="Mobility">Mobility/Stretching</option>
-                        <option value="Sports">Sports</option>
-                    </select>
-                </div>
-
-                <div style="margin-bottom: 1rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Duration (minutes)</label>
-                    <input type="number" class="workout-input" id="workout-duration" placeholder="60" style="width: 100%;">
-                </div>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Exercises</h3>
-                <p style="color: var(--color-text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">🦵 All exercises are knee-safe! Click ℹ️ for form instructions.</p>
-                <div id="exercise-inputs">
-                    <div class="exercise-input-group" style="display: grid; grid-template-columns: 2fr auto 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 0.75rem; align-items: center;">
-                        <select class="workout-input" id="exercise-name-0" onchange="window.premiumFeatures.handleExerciseSelect(this, 0)">
-                            <option value="">-- Select Exercise --</option>
-                            <optgroup label="🦵 Posterior Chain (Knee-Safe Legs)">
-                                <option value="Romanian Deadlift">Romanian Deadlift</option>
-                                <option value="Hip Thrust">Hip Thrust</option>
-                                <option value="Glute Bridge">Glute Bridge</option>
-                                <option value="Cable Pull-Through">Cable Pull-Through</option>
-                                <option value="Good Mornings">Good Mornings</option>
-                                <option value="Reverse Hyperextension">Reverse Hyperextension</option>
-                                <option value="Single-Leg RDL">Single-Leg RDL</option>
-                            </optgroup>
-                            <optgroup label="💪 Upper Body Push">
-                                <option value="Bench Press">Bench Press</option>
-                                <option value="Incline Bench Press">Incline Bench Press</option>
-                                <option value="Overhead Press">Overhead Press</option>
-                                <option value="Dumbbell Press">Dumbbell Press</option>
-                                <option value="Push-Ups">Push-Ups</option>
-                                <option value="Dips">Dips</option>
-                                <option value="Tricep Pushdown">Tricep Pushdown</option>
-                                <option value="Lateral Raises">Lateral Raises</option>
-                            </optgroup>
-                            <optgroup label="🏋️ Upper Body Pull">
-                                <option value="Deadlift">Deadlift</option>
-                                <option value="Barbell Row">Barbell Row</option>
-                                <option value="Pull-Ups">Pull-Ups</option>
-                                <option value="Lat Pulldown">Lat Pulldown</option>
-                                <option value="Seated Cable Row">Seated Cable Row</option>
-                                <option value="Face Pulls">Face Pulls</option>
-                                <option value="Bicep Curls">Bicep Curls</option>
-                                <option value="Hammer Curls">Hammer Curls</option>
-                            </optgroup>
-                            <optgroup label="🧘 Core">
-                                <option value="Planks">Planks</option>
-                                <option value="Dead Bug">Dead Bug</option>
-                                <option value="Bird Dog">Bird Dog</option>
-                                <option value="Pallof Press">Pallof Press</option>
-                                <option value="Ab Wheel Rollout">Ab Wheel Rollout</option>
-                                <option value="Hanging Leg Raise">Hanging Leg Raise</option>
-                            </optgroup>
-                            <option value="custom">✏️ Custom Exercise...</option>
-                        </select>
-                        <button onclick="window.premiumFeatures.showExerciseInfo(0)" style="background: var(--color-primary); border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; color: white; font-size: 0.8rem;">ℹ️</button>
-                        <input type="number" class="workout-input" placeholder="Sets" id="exercise-sets-0">
-                        <input type="number" class="workout-input" placeholder="Reps" id="exercise-reps-0">
-                        <input type="number" class="workout-input" placeholder="lbs" id="exercise-weight-0">
-                    </div>
-                </div>
-
-                <button class="add-exercise-btn" onclick="window.premiumFeatures.addExerciseInput()" style="width: 100%; padding: 0.75rem; margin-bottom: 0.5rem;">➕ Add Another Exercise</button>
-                <button class="log-workout-btn" style="width: 100%; margin-top: 1rem;" onclick="window.premiumFeatures.logWorkout()">
-                    💾 Log Workout
-                </button>
-
-                <button onclick="window.premiumFeatures.resetWorkoutData()" style="width: 100%; margin-top: 1rem; padding: 0.75rem; background: transparent; border: 1px solid #ef4444; color: #ef4444; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem;">
-                    🔄 Reset All Workout Data
-                </button>
-            </div>
-
-            <div class="workout-history">
-                <h2 style="margin-bottom: 1rem;">Workout History</h2>
-                ${APP_DATA.user.workouts && APP_DATA.user.workouts.length > 0 ?
-                    APP_DATA.user.workouts.slice().reverse().map(workout => `
-                        <div class="workout-entry" style="background: var(--color-bg-secondary); padding: 1.25rem; border-radius: 1rem; margin-bottom: 1rem; border-left: 4px solid #10b981;">
-                            <div class="workout-entry-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                                <div>
-                                    <div style="font-weight: 600; color: var(--color-primary-light);">${this.formatWorkoutDate(workout.date)}</div>
-                                    <div style="font-size: 0.9rem; color: var(--color-text-secondary);">${workout.type}</div>
-                                </div>
-                                <div style="background: var(--color-bg-tertiary); padding: 0.5rem 1rem; border-radius: 2rem; font-weight: 600;">${workout.duration} min</div>
-                            </div>
-                            <div class="exercise-list" style="display: grid; gap: 0.5rem;">
-                                ${workout.exercises.map(ex => `
-                                    <div class="exercise-item" style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-bg-tertiary);">
-                                        <div class="exercise-name" style="font-weight: 500;">${ex.name}</div>
-                                        <div class="exercise-details" style="color: var(--color-text-secondary);">${ex.sets} × ${ex.reps}${ex.weight ? ` @ ${ex.weight}lbs` : ''}</div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                            ${workout.notes ? `<p style="margin-top: 1rem; color: var(--color-text-secondary); font-style: italic;">"${workout.notes}"</p>` : ''}
-                        </div>
-                    `).join('')
-                : '<p style="color: var(--color-text-tertiary); text-align: center; padding: 2rem;">No workouts logged yet. Start tracking today!</p>'}
-            </div>
-        `;
-
-        container.innerHTML = html;
-    }
-
-    resetWorkoutData() {
-        if (!confirm('⚠️ Are you sure you want to reset ALL workout data?\n\nThis will delete:\n- All logged workouts\n- Your streak\n- Total hours\n\nThis cannot be undone!')) {
-            return;
-        }
-
-        APP_DATA.user.workouts = [];
-        APP_DATA.user.workoutStats = {
-            totalWorkouts: 0,
-            currentStreak: 0,
-            longestStreak: 0,
-            totalMinutes: 0
-        };
-
-        saveProgress();
-        toast('✅ Workout data has been reset. Starting fresh!', 'info');
-        this.renderWorkout();
-    }
-
-    formatWorkoutDate(dateString) {
-        // Parse date string without timezone conversion issues
-        // dateString format: "YYYY-MM-DD"
-        const parts = dateString.split('-');
-        const year = parseInt(parts[0]);
-        const month = parseInt(parts[1]) - 1; // JS months are 0-indexed
-        const day = parseInt(parts[2]);
-
-        const date = new Date(year, month, day);
-        const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
-        return date.toLocaleDateString('en-US', options);
-    }
-
-    generateCalendarDays() {
-        const today = new Date();
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
-        const currentDay = today.getDate();
-        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-        // Get workout dates for this month - parse without timezone issues
-        const workoutDates = (APP_DATA.user.workouts || [])
-            .map(w => {
-                const parts = w.date.split('-');
-                return {
-                    year: parseInt(parts[0]),
-                    month: parseInt(parts[1]) - 1,
-                    day: parseInt(parts[2])
-                };
-            })
-            .filter(d => d.month === currentMonth && d.year === currentYear)
-            .map(d => d.day);
-
-        let html = '';
-        for (let i = 1; i <= daysInMonth; i++) {
-            const isToday = i === currentDay;
-            const hasWorkout = workoutDates.includes(i);
-            html += `<div class="calendar-day ${isToday ? 'today' : ''} ${hasWorkout ? 'completed' : ''}" style="${hasWorkout ? 'background: #10b981; color: white; border-radius: 50%;' : ''} ${isToday ? 'border: 2px solid var(--color-primary);' : ''} padding: 0.5rem; text-align: center;">${i}</div>`;
-        }
-        return html;
-    }
-
-    handleExerciseSelect(selectElement, index) {
-        if (selectElement.value === 'custom') {
-            const customName = prompt('Enter custom exercise name:');
-            if (customName) {
-                const option = document.createElement('option');
-                option.value = customName;
-                option.textContent = customName;
-                selectElement.insertBefore(option, selectElement.lastElementChild);
-                selectElement.value = customName;
-            } else {
-                selectElement.value = '';
-            }
-        }
-    }
-
-    showExerciseInfo(index) {
-        const select = document.getElementById(`exercise-name-${index}`);
-        const exerciseName = select.value;
-
-        if (!exerciseName || exerciseName === 'custom') {
-            toast('Please select an exercise first to see instructions.', 'info');
-            return;
-        }
-
-        const exercise = APP_DATA.exercises[exerciseName];
-        if (!exercise) {
-            toast(`No instructions available for "${exerciseName}"`, 'info');
-            return;
-        }
-
-        const cuesList = exercise.cues.map((cue, i) => `${i + 1}. ${cue}`).join('\n');
-
-        toast(`${exercise.icon} ${exerciseName.toUpperCase()}\n` +
-            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-            `📋 WHAT IT DOES:\n${exercise.description}\n\n` +
-            `🎯 HOW TO DO IT:\n${exercise.howTo}\n\n` +
-            `✅ FORM CUES:\n${cuesList}`, 'info');
-    }
-
-    addExerciseInput() {
-        const container = document.getElementById('exercise-inputs');
-        const count = container.querySelectorAll('.exercise-input-group').length;
-
-        const newInput = document.createElement('div');
-        newInput.className = 'exercise-input-group';
-        newInput.style.cssText = 'display: grid; grid-template-columns: 2fr auto 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 0.75rem; align-items: center;';
-        newInput.innerHTML = `
-            <select class="workout-input" id="exercise-name-${count}" onchange="window.premiumFeatures.handleExerciseSelect(this, ${count})">
-                <option value="">-- Select Exercise --</option>
-                <optgroup label="🦵 Posterior Chain (Knee-Safe Legs)">
-                    <option value="Romanian Deadlift">Romanian Deadlift</option>
-                    <option value="Hip Thrust">Hip Thrust</option>
-                    <option value="Glute Bridge">Glute Bridge</option>
-                    <option value="Cable Pull-Through">Cable Pull-Through</option>
-                    <option value="Good Mornings">Good Mornings</option>
-                    <option value="Reverse Hyperextension">Reverse Hyperextension</option>
-                    <option value="Single-Leg RDL">Single-Leg RDL</option>
-                </optgroup>
-                <optgroup label="💪 Upper Body Push">
-                    <option value="Bench Press">Bench Press</option>
-                    <option value="Incline Bench Press">Incline Bench Press</option>
-                    <option value="Overhead Press">Overhead Press</option>
-                    <option value="Dumbbell Press">Dumbbell Press</option>
-                    <option value="Push-Ups">Push-Ups</option>
-                    <option value="Dips">Dips</option>
-                    <option value="Tricep Pushdown">Tricep Pushdown</option>
-                    <option value="Lateral Raises">Lateral Raises</option>
-                </optgroup>
-                <optgroup label="🏋️ Upper Body Pull">
-                    <option value="Deadlift">Deadlift</option>
-                    <option value="Barbell Row">Barbell Row</option>
-                    <option value="Pull-Ups">Pull-Ups</option>
-                    <option value="Lat Pulldown">Lat Pulldown</option>
-                    <option value="Seated Cable Row">Seated Cable Row</option>
-                    <option value="Face Pulls">Face Pulls</option>
-                    <option value="Bicep Curls">Bicep Curls</option>
-                    <option value="Hammer Curls">Hammer Curls</option>
-                </optgroup>
-                <optgroup label="🧘 Core">
-                    <option value="Planks">Planks</option>
-                    <option value="Dead Bug">Dead Bug</option>
-                    <option value="Bird Dog">Bird Dog</option>
-                    <option value="Pallof Press">Pallof Press</option>
-                    <option value="Ab Wheel Rollout">Ab Wheel Rollout</option>
-                    <option value="Hanging Leg Raise">Hanging Leg Raise</option>
-                </optgroup>
-                <option value="custom">✏️ Custom Exercise...</option>
-            </select>
-            <button onclick="window.premiumFeatures.showExerciseInfo(${count})" style="background: var(--color-primary); border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; color: white; font-size: 0.8rem;">ℹ️</button>
-            <input type="number" class="workout-input" placeholder="Sets" id="exercise-sets-${count}">
-            <input type="number" class="workout-input" placeholder="Reps" id="exercise-reps-${count}">
-            <input type="number" class="workout-input" placeholder="lbs" id="exercise-weight-${count}">
-        `;
-        container.appendChild(newInput);
-    }
-
-    logWorkout() {
-        const type = document.getElementById('workout-type').value;
-        const duration = parseInt(document.getElementById('workout-duration').value);
-
-        if (!duration) {
-            toast('Please enter workout duration', 'error');
-            return;
-        }
-
-        const exercises = [];
-        const exerciseGroups = document.querySelectorAll('.exercise-input-group');
-
-        exerciseGroups.forEach((group, index) => {
-            const nameEl = document.getElementById(`exercise-name-${index}`);
-            if (!nameEl) return;
-            const name = nameEl.value;
-            const sets = parseInt(document.getElementById(`exercise-sets-${index}`)?.value) || 0;
-            const reps = parseInt(document.getElementById(`exercise-reps-${index}`)?.value) || 0;
-            const weight = parseInt(document.getElementById(`exercise-weight-${index}`)?.value) || 0;
-
-            if (name && name !== 'custom' && sets && reps) {
-                exercises.push({ name, sets, reps, weight });
-            }
-        });
-
-        if (exercises.length === 0) {
-            toast('Please add at least one exercise with sets and reps', 'error');
-            return;
-        }
-
-        // Fix date issue - use local date format instead of ISO
-        const now = new Date();
-        const localDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-
-        const workout = {
-            date: localDate,
-            type,
-            duration,
-            exercises,
-            notes: ""
-        };
-
-        APP_DATA.user.workouts = APP_DATA.user.workouts || [];
-        APP_DATA.user.workouts.push(workout);
-        APP_DATA.user.workoutStats.totalWorkouts++;
-        APP_DATA.user.workoutStats.totalMinutes += duration;
-
-        // Day-boundary streak: only advance when today is a new day relative
-        // to the last logged workout. Two logs on the same day don't double-count.
-        const stats = APP_DATA.user.workoutStats;
-        const today = new Date().toISOString().slice(0, 10);
-        const last = stats.lastWorkoutDate || null;
-        if (last !== today) {
-            const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-            stats.currentStreak = (last === yesterday) ? (stats.currentStreak || 0) + 1 : 1;
-            stats.lastWorkoutDate = today;
-            if (stats.currentStreak > (stats.longestStreak || 0)) {
-                stats.longestStreak = stats.currentStreak;
-            }
-        }
-
-        saveProgress();
-        toast('💪 Workout logged! Great work!', 'success');
-        this.renderWorkout();
-    }
 }
 
 // premiumFeatures is initialized as window.premiumFeatures in app.js
