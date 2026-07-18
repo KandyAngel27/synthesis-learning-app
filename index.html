@@ -297,6 +297,27 @@
                         <!-- Dynamically populated -->
                     </div>
 
+                    <!-- Mistakes Log Section -->
+                    <div class="backup-section" id="mistakes-log-section" style="display:none;">
+                        <h3 class="backup-section-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="15" y1="9" x2="9" y2="15"/>
+                                <line x1="9" y1="9" x2="15" y2="15"/>
+                            </svg>
+                            Mistakes to Review
+                        </h3>
+                        <p class="backup-section-desc">
+                            Every quiz and exam question you've gotten wrong, in one place, with the correct answer. Mark one reviewed once it's stuck, or quiz yourself on all of them.
+                        </p>
+                        <div class="backup-btn-row" style="margin-bottom: 1rem;">
+                            <button class="backup-btn backup-btn-primary" id="mistakes-quiz-me-btn" onclick="app.startMistakesRetest()">🔁 Quiz Me on These</button>
+                        </div>
+                        <div id="mistakes-log-list">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
                     <!-- My Notes Section -->
                     <div class="backup-section" id="my-notes-section" style="display:none;">
                         <h3 class="backup-section-title">

@@ -753,6 +753,23 @@ class ExamCenter {
 
         this.recordAnswer(q.id, isCorrect);
 
+        if (!isCorrect && this.app && typeof this.app.logMistake === 'function') {
+            const correctOpt = q.options.find(o => o.correct);
+            this.app.logMistake({
+                source: 'exam',
+                qid: q.id,
+                bookId: q.bookId,
+                bookTitle: q.bookTitle,
+                lessonId: q.lessonId,
+                lessonTitle: q.lessonTitle,
+                question: q.question,
+                options: q.options,
+                chosenText: q.options[index].text,
+                correctText: correctOpt ? correctOpt.text : '',
+                explanation: q.explanation || ''
+            });
+        }
+
         const box = document.getElementById('exam-explain');
         const body = document.getElementById('exam-explain-body');
         body.innerHTML = `

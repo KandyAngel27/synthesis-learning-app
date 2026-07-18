@@ -301,7 +301,7 @@ class ActiveRecallSystem {
                 <h2>Quick Quiz Mode</h2>
                 <p>Test your knowledge with random questions from lessons you've completed!</p>
 
-                <div class="quiz-options">
+                <div class="quiz-length-options">
                     <div class="quiz-option-card" onclick="window.activeRecall.startQuiz(5)">
                         <span class="option-number">5</span>
                         <span class="option-label">Quick</span>
