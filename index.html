@@ -147,6 +147,16 @@
                     </div>
                 </section>
 
+                <!-- Saved Lessons (bookmarked from within a lesson, separate from book-level Favorites) -->
+                <section class="favorites-section" id="saved-lessons-section" style="display:none;">
+                    <div class="section-header">
+                        <h2>🔖 Saved for Later</h2>
+                    </div>
+                    <div class="favorites-shelf" id="saved-lessons-shelf">
+                        <!-- Dynamically populated -->
+                    </div>
+                </section>
+
                 <!-- Continue Learning -->
                 <section class="continue-section">
                     <div class="section-header">
@@ -224,11 +234,18 @@
             <!-- Lesson View -->
             <div id="lesson-view" class="view">
                 <div class="lesson-header">
-                    <button class="btn-back" id="lesson-back-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M19 12H5M12 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
+                    <div class="lesson-header-top">
+                        <button class="btn-back" id="lesson-back-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button class="lesson-bookmark-btn" id="lesson-bookmark-btn" onclick="app.toggleLessonBookmark()" title="Save this lesson for later" aria-label="Save this lesson for later">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="lesson-progress">
                         <div class="progress-bar">
                             <div class="progress-fill" id="lesson-progress-fill"></div>

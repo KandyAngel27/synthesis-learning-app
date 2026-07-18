@@ -437,6 +437,7 @@ class SynthesisApp {
             window.activeRecall.updateDueBadge();
         }
 
+        this.renderSavedLessons();
         this.updateExamDueBadge();
     }
 
@@ -794,6 +795,86 @@ class SynthesisApp {
             window.activeRecall.toggleFavorite(bookId);
             this.showBook(bookId); // Refresh the view
         }
+    }
+
+    // ============================================
+    // SAVED LESSONS ("bookmark this specific lesson to come back to")
+    // Distinct from book-level Favorites (capped at 5, links to the book's
+    // lesson list): this saves an exact lesson and jumps straight into it,
+    // with no cap, since it's meant as a genuine "get back to this" list.
+    // ============================================
+    isLessonBookmarked(bookId, lessonId) {
+        return (APP_DATA.user.savedLessons || []).some(s => s.bookId === bookId && s.lessonId === lessonId);
+    }
+
+    toggleLessonBookmark() {
+        if (!this.currentBook || !this.currentLesson) return;
+        if (!APP_DATA.user.savedLessons) APP_DATA.user.savedLessons = [];
+
+        const bookId = this.currentBook.id;
+        const lessonId = this.currentLesson.id;
+        const existingIndex = APP_DATA.user.savedLessons.findIndex(s => s.bookId === bookId && s.lessonId === lessonId);
+
+        if (existingIndex > -1) {
+            APP_DATA.user.savedLessons.splice(existingIndex, 1);
+            toast('Removed from Saved for Later.', 'info');
+        } else {
+            APP_DATA.user.savedLessons.unshift({
+                bookId,
+                lessonId,
+                bookTitle: this.currentBook.title,
+                lessonTitle: this.currentLesson.title,
+                category: this.currentBook.category,
+                savedAt: new Date().toISOString()
+            });
+            toast('🔖 Saved for later!', 'success');
+        }
+
+        saveProgress();
+        this.updateLessonBookmarkButton();
+    }
+
+    updateLessonBookmarkButton() {
+        const btn = document.getElementById('lesson-bookmark-btn');
+        if (!btn || !this.currentBook || !this.currentLesson) return;
+        const bookmarked = this.isLessonBookmarked(this.currentBook.id, this.currentLesson.id);
+        btn.classList.toggle('bookmarked', bookmarked);
+        btn.title = bookmarked ? 'Remove from Saved for Later' : 'Save this lesson for later';
+    }
+
+    removeSavedLesson(bookId, lessonId) {
+        APP_DATA.user.savedLessons = (APP_DATA.user.savedLessons || []).filter(
+            s => !(s.bookId === bookId && s.lessonId === lessonId)
+        );
+        saveProgress();
+        this.renderSavedLessons();
+        if (this.currentBook?.id === bookId && this.currentLesson?.id === lessonId) {
+            this.updateLessonBookmarkButton();
+        }
+    }
+
+    renderSavedLessons() {
+        const section = document.getElementById('saved-lessons-section');
+        const container = document.getElementById('saved-lessons-shelf');
+        if (!section || !container) return;
+
+        const saved = APP_DATA.user.savedLessons || [];
+        if (saved.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        section.style.display = '';
+
+        container.innerHTML = saved.map(s => `
+            <div class="favorite-book-card" onclick="app.startLesson('${s.bookId}', '${s.lessonId}')">
+                <div class="fav-book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(s.category)} 0%, ${this.getCategoryColorDark(s.category)} 100%); position: relative;">
+                    🔖
+                    <button onclick="event.stopPropagation(); app.removeSavedLesson('${s.bookId}', '${s.lessonId}')" title="Remove" aria-label="Remove from saved" style="position:absolute; top:-6px; right:-6px; width:20px; height:20px; border-radius:50%; background:#1a1a2e; border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.7rem; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0;">✕</button>
+                </div>
+                <div class="fav-book-title">${escapeHtml(s.lessonTitle)}</div>
+                <div class="fav-book-progress">${escapeHtml(s.bookTitle)}</div>
+            </div>
+        `).join('');
     }
 
     renderContinueLearning() {
@@ -1475,6 +1556,8 @@ class SynthesisApp {
 
         const totalCards = this.currentLesson.cards.length;
         const progress = ((this.currentCard + 1) / totalCards) * 100;
+
+        this.updateLessonBookmarkButton();
 
         // Update progress bar
         document.getElementById('lesson-progress-fill').style.width = `${progress}%`;
