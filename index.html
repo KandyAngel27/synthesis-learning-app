@@ -264,6 +264,40 @@
                         <!-- Dynamically populated -->
                     </div>
 
+                    <!-- Backup & Restore Section -->
+                    <div class="backup-section">
+                        <h3 class="backup-section-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Backup & Restore
+                        </h3>
+                        <p class="backup-section-desc">
+                            Your progress lives only in this browser unless you sign in with Google above. Download a backup so clearing browser data, switching browsers, or moving devices doesn't mean starting over.
+                        </p>
+                        <div class="backup-btn-row">
+                            <button class="backup-btn backup-btn-primary" onclick="app.exportData()">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                Export Backup
+                            </button>
+                            <button class="backup-btn backup-btn-secondary" onclick="app.triggerImport()">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                                Import Backup
+                            </button>
+                            <input type="file" id="backup-import-input" accept="application/json" style="display:none" onchange="app.importData(this)">
+                        </div>
+                    </div>
+
                     <!-- Reset Section -->
                     <div class="reset-section">
                         <h3 class="reset-section-title">

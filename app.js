@@ -2097,6 +2097,71 @@ class SynthesisApp {
         }
     }
 
+    // ============================================
+    // BACKUP & RESTORE (export/import progress as a JSON file)
+    // ============================================
+    // Progress lives only in this browser's localStorage unless the user
+    // signs in with Google (see firebase-sync.js). This is the safety net
+    // for everyone else: a manual download/restore so clearing browser
+    // data, switching browsers, or moving to a new device doesn't mean
+    // losing every completed lesson, journal entry, and reflection.
+    exportData() {
+        const raw = localStorage.getItem('synthesisProgress');
+        if (!raw) {
+            toast('No progress to export yet — complete a lesson first!', 'info');
+            return;
+        }
+
+        const blob = new Blob([raw], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const dateStr = new Date().toISOString().split('T')[0];
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `synthesis-backup-${dateStr}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+
+        toast('📦 Backup downloaded! Keep it somewhere safe.', 'success');
+    }
+
+    triggerImport() {
+        document.getElementById('backup-import-input')?.click();
+    }
+
+    importData(fileInput) {
+        const file = fileInput.files && fileInput.files[0];
+        fileInput.value = ''; // allow re-selecting the same file later
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            let parsed;
+            try {
+                parsed = JSON.parse(e.target.result);
+            } catch (err) {
+                toast('That file isn\'t valid backup data.', 'error');
+                return;
+            }
+            if (!parsed || typeof parsed !== 'object' || !parsed.user) {
+                toast('That file doesn\'t look like a Synthesis backup.', 'error');
+                return;
+            }
+            if (!confirm('Import this backup? It will replace your current progress on this device — this cannot be undone.')) {
+                return;
+            }
+
+            localStorage.setItem('synthesisProgress', JSON.stringify(parsed));
+            if (typeof loadProgress === 'function') loadProgress();
+            this.rehydrateLessonCompletions();
+            toast('✅ Backup restored! Reloading…', 'success');
+            setTimeout(() => window.location.reload(), 1200);
+        };
+        reader.onerror = () => toast('Could not read that file.', 'error');
+        reader.readAsText(file);
+    }
+
     // MBC track helpers — when the user is anywhere in the Medical Billing,
     // Coding & HIM Track, the "back" buttons land them on the course hub
     // rather than the global home.
