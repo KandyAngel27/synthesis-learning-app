@@ -142,16 +142,25 @@ class SynthesisApp {
             return;
         }
 
-        // Use day of year as seed for consistent daily random selection
-        const now = new Date();
-        const start = new Date(now.getFullYear(), 0, 0);
-        const diff = now - start;
-        const oneDay = 1000 * 60 * 60 * 24;
-        const dayOfYear = Math.floor(diff / oneDay);
+        // Try a data-driven recommendation first (continue in-progress work,
+        // or reinforce a category you're struggling with); fall back to the
+        // original seeded-random "something new" pick if neither applies —
+        // e.g. a brand-new user with no history yet.
+        let todayLesson = this.getRecommendedLesson();
+        let insightReason = todayLesson ? todayLesson.reason : null;
 
-        // Seeded random selection - same lesson all day, different each day
-        const randomIndex = this.seededRandom(dayOfYear, lessonsPool.length);
-        const todayLesson = lessonsPool[randomIndex];
+        if (!todayLesson) {
+            // Use day of year as seed for consistent daily random selection
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 0);
+            const diff = now - start;
+            const oneDay = 1000 * 60 * 60 * 24;
+            const dayOfYear = Math.floor(diff / oneDay);
+
+            // Seeded random selection - same lesson all day, different each day
+            const randomIndex = this.seededRandom(dayOfYear, lessonsPool.length);
+            todayLesson = lessonsPool[randomIndex];
+        }
 
         // Store for startDailyLesson to use
         this.todayInsightLesson = todayLesson;
@@ -161,6 +170,12 @@ class SynthesisApp {
         const insightExcerpt = document.querySelector('.insight-excerpt');
         const insightTime = document.querySelector('.insight-time');
         const insightBadge = document.querySelector('.insight-badge');
+        const insightReasonEl = document.querySelector('.insight-reason');
+
+        if (insightReasonEl) {
+            insightReasonEl.textContent = insightReason || '';
+            insightReasonEl.style.display = insightReason ? 'block' : 'none';
+        }
 
         if (insightTitle) {
             insightTitle.textContent = todayLesson.lessonTitle;
@@ -174,6 +189,101 @@ class SynthesisApp {
         if (insightBadge) {
             insightBadge.textContent = `${todayLesson.categoryIcon} ${todayLesson.category}`;
         }
+    }
+
+    // ============================================
+    // RECOMMENDATIONS ENGINE
+    // Replaces pure day-of-year random selection with a simple, explainable
+    // priority order built entirely from data already tracked: (1) resume
+    // the book you were most recently working in, (2) if nothing's in
+    // progress, reinforce whichever category your recent quiz scores are
+    // weakest in, (3) otherwise fall back to the original "something new"
+    // random pick. Returns null (defer to caller's fallback) when neither
+    // condition applies — e.g. a brand-new user with no history at all.
+    // ============================================
+    getRecommendedLesson() {
+        const continuing = this.getContinueInProgressPick();
+        if (continuing) return continuing;
+
+        const reinforcement = this.getWeakCategoryPick();
+        if (reinforcement) return reinforcement;
+
+        return null;
+    }
+
+    getContinueInProgressPick() {
+        const inProgress = getBooksInProgress();
+        if (inProgress.length === 0) return null;
+
+        const completions = APP_DATA.user.lessonCompletions || {};
+        let targetBook = null;
+        let mostRecentTime = 0;
+        for (const book of inProgress) {
+            for (const lesson of (book.lessonList || [])) {
+                const ts = completions[book.id + '::' + lesson.id];
+                if (!ts) continue;
+                const t = new Date(ts).getTime();
+                if (t > mostRecentTime) { mostRecentTime = t; targetBook = book; }
+            }
+        }
+        if (!targetBook) targetBook = inProgress[0];
+
+        const nextLesson = (targetBook.lessonList || []).find(l => !l.completed && l.cards && l.cards.length > 0);
+        if (!nextLesson) return null;
+
+        return this.buildInsightFromLesson(targetBook, nextLesson, `📚 Continue where you left off in "${targetBook.title}"`);
+    }
+
+    getWeakCategoryPick() {
+        const history = APP_DATA.user.learningStats?.quizHistory || [];
+        if (history.length < 3) return null; // not enough data to draw a conclusion yet
+
+        const byCategory = {};
+        for (const q of history) {
+            const book = getBookById(q.bookId);
+            if (!book || !book.category) continue;
+            if (!byCategory[book.category]) byCategory[book.category] = { sum: 0, count: 0 };
+            byCategory[book.category].sum += q.percentage;
+            byCategory[book.category].count++;
+        }
+
+        let weakest = null;
+        for (const [categoryId, stats] of Object.entries(byCategory)) {
+            if (stats.count < 2) continue; // need at least 2 quizzes to call it a trend
+            const avg = stats.sum / stats.count;
+            if (avg < 70 && (!weakest || avg < weakest.avg)) {
+                weakest = { categoryId, avg };
+            }
+        }
+        if (!weakest) return null;
+
+        const category = APP_DATA.categories.find(c => c.id === weakest.categoryId);
+        if (!category) return null;
+
+        for (const book of (category.books || [])) {
+            const lesson = (book.lessonList || []).find(l => !l.completed && l.cards && l.cards.length > 0);
+            if (lesson) {
+                return this.buildInsightFromLesson(book, lesson, `🎯 Strengthen ${category.name} — your recent quiz average there is ${Math.round(weakest.avg)}%`);
+            }
+        }
+        return null;
+    }
+
+    buildInsightFromLesson(book, lesson, reason) {
+        const category = APP_DATA.categories.find(c => c.id === book.category);
+        return {
+            bookId: book.id,
+            bookTitle: book.title,
+            bookAuthor: book.author,
+            lessonId: lesson.id,
+            lessonTitle: lesson.title,
+            duration: lesson.duration,
+            completed: lesson.completed,
+            category: category ? category.name : (book.category || ''),
+            categoryIcon: category ? category.icon : '📘',
+            excerpt: this.getExcerptFromLesson(lesson),
+            reason
+        };
     }
 
     // Get a preview excerpt from the lesson's first card

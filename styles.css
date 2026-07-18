@@ -355,6 +355,15 @@ body {
     opacity: 0.9;
 }
 
+.insight-reason {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
 .insight-title {
     font-size: 1.5rem;
     font-weight: 700;
