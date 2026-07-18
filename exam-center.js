@@ -190,8 +190,8 @@ class ExamCenter {
         s.lastSeen = new Date().toISOString();
         APP_DATA.user.examStats[qid] = s;
         this.scheduleNext(qid, isCorrect);
-        if (window.app && typeof window.app.recordDailyActivity === 'function') {
-            window.app.recordDailyActivity();
+        if (this.app && typeof this.app.recordDailyActivity === 'function') {
+            this.app.recordDailyActivity();
         }
     }
 

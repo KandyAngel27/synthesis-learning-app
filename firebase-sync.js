@@ -137,10 +137,7 @@ class FirebaseSync {
 
       if (cloudTs > localTs) {
         // Cloud is newer — apply it
-        const merged = { ...(cloud.data || {}), _updatedAt: cloudTs };
-        localStorage.setItem('synthesisProgress', JSON.stringify(merged));
-        if (typeof loadProgress === 'function') loadProgress();
-        if (window.app && typeof window.app.render === 'function') window.app.render();
+        this.applyCloudData(cloud, cloudTs);
         console.log('[sync] Cloud → local (cloud newer)');
       } else if (localTs > cloudTs) {
         // Local is newer — push it
@@ -150,6 +147,27 @@ class FirebaseSync {
       console.error('[sync] Pull failed:', err);
       this.setStatus('Sync error');
     }
+  }
+
+  // Writes cloud data into localStorage, then re-runs the same rehydration
+  // app.js does on a fresh page load so lesson-completed checkmarks and
+  // book progress bars (derived, in-memory state — not re-derived by
+  // loadProgress() alone) reflect the newly-synced data immediately.
+  //
+  // NOTE: `window.app` is NOT the SynthesisApp instance — index.html has a
+  // <div id="app">, and browsers auto-bind elements with an `id` onto
+  // `window` under that name, shadowing any same-named global variable.
+  // The real instance is the bare `app` (declared `let app` in app.js,
+  // sharing this page's global script scope), so we reference that instead.
+  applyCloudData(cloud, cloudTs) {
+    const merged = { ...(cloud.data || {}), _updatedAt: cloudTs };
+    localStorage.setItem('synthesisProgress', JSON.stringify(merged));
+    if (typeof loadProgress === 'function') loadProgress();
+    const liveApp = (typeof app !== 'undefined') ? app : null;
+    if (liveApp && typeof liveApp.rehydrateLessonCompletions === 'function') {
+      liveApp.rehydrateLessonCompletions();
+    }
+    if (liveApp && typeof liveApp.render === 'function') liveApp.render();
   }
 
   // ----- Push current localStorage progress to Firestore -----
@@ -190,10 +208,7 @@ class FirebaseSync {
       const cloudTs = cloud.updatedAt || 0;
       const localTs = local?._updatedAt || 0;
       if (cloudTs > localTs) {
-        const merged = { ...(cloud.data || {}), _updatedAt: cloudTs };
-        localStorage.setItem('synthesisProgress', JSON.stringify(merged));
-        if (typeof loadProgress === 'function') loadProgress();
-        if (window.app && typeof window.app.render === 'function') window.app.render();
+        this.applyCloudData(cloud, cloudTs);
         this.setStatus('Updated from another device');
         console.log('[sync] Live update from cloud');
       }
