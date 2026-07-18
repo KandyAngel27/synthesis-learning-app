@@ -29,6 +29,12 @@ class SynthesisApp {
 
             // Restore last view from localStorage
             this.restoreLastView();
+
+            // Nudge if it's evening and today's activity hasn't happened yet;
+            // re-check periodically in case the tab stays open past the hour
+            // threshold. No-ops entirely if reminders aren't enabled.
+            this.checkStreakReminder();
+            setInterval(() => this.checkStreakReminder(), 15 * 60 * 1000);
         }, 2000);
 
         // Set up event listeners
@@ -430,6 +436,18 @@ class SynthesisApp {
             window.activeRecall.renderFavorites();
             window.activeRecall.updateDueBadge();
         }
+
+        this.renderSavedLessons();
+        this.updateExamDueBadge();
+    }
+
+    updateExamDueBadge() {
+        const badge = document.getElementById('exam-due-badge');
+        if (!badge) return;
+        const dueCount = (window.examCenter && typeof window.examCenter.dailyQueueSize === 'function')
+            ? window.examCenter.dailyQueueSize() : 0;
+        badge.textContent = `${dueCount} due`;
+        badge.style.display = dueCount > 0 ? 'block' : 'none';
     }
 
     // ---------------- Streak + activity heatmap ----------------
@@ -470,6 +488,95 @@ class SynthesisApp {
         if (!last) return false;
         const diff = Math.round((new Date(this.todayKey()) - new Date(last)) / 86400000);
         return diff <= 1; // active if last activity was today or yesterday
+    }
+
+    // ============================================
+    // STREAK REMINDERS
+    // ============================================
+    // This is a static app with no backend/push server, so this can only
+    // fire a Notification while Synthesis is open in a browser tab
+    // (foreground or backgrounded) via the service worker — it cannot
+    // reach the user after the tab is fully closed. Still useful: leave a
+    // tab open and it nudges you in the evening if you haven't studied yet.
+    streakRemindersSupported() {
+        return typeof Notification !== 'undefined';
+    }
+
+    streakRemindersEnabled() {
+        return localStorage.getItem('synthesis_streak_reminders_enabled') === '1'
+            && this.streakRemindersSupported()
+            && Notification.permission === 'granted';
+    }
+
+    async enableStreakReminders() {
+        if (!this.streakRemindersSupported()) {
+            toast("Notifications aren't supported in this browser.", 'error');
+            return;
+        }
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+            toast('Notification permission denied — enable it in your browser settings to use this.', 'info');
+            this.renderStreakReminderControls();
+            return;
+        }
+        localStorage.setItem('synthesis_streak_reminders_enabled', '1');
+        toast('🔔 Streak reminders enabled!', 'success');
+        this.renderStreakReminderControls();
+        this.checkStreakReminder();
+    }
+
+    disableStreakReminders() {
+        localStorage.setItem('synthesis_streak_reminders_enabled', '0');
+        toast('Streak reminders turned off.', 'info');
+        this.renderStreakReminderControls();
+    }
+
+    renderStreakReminderControls() {
+        const container = document.getElementById('streak-reminder-controls');
+        if (!container) return;
+
+        if (!this.streakRemindersSupported()) {
+            container.innerHTML = `<p class="backup-section-desc" style="margin:0;">Notifications aren't supported in this browser.</p>`;
+            return;
+        }
+
+        container.innerHTML = this.streakRemindersEnabled()
+            ? `<button class="backup-btn backup-btn-secondary" onclick="app.disableStreakReminders()">🔕 Turn Off Reminders</button>`
+            : `<button class="backup-btn backup-btn-primary" onclick="app.enableStreakReminders()">🔔 Enable Streak Reminders</button>`;
+    }
+
+    // Called at boot and on a periodic timer while the tab stays open.
+    checkStreakReminder() {
+        if (!this.streakRemindersEnabled()) return;
+
+        const today = this.todayKey();
+        if (APP_DATA.user?.lastActivityDate === today) return; // already studied today
+        if (localStorage.getItem('synthesis_streak_reminder_shown_' + today) === '1') return; // already nudged today
+        if (new Date().getHours() < 19) return; // only nudge in the evening
+
+        const streak = APP_DATA.user?.currentStreak || 0;
+        const title = streak > 0 ? `🔥 Don't lose your ${streak}-day streak!` : '📚 Keep the habit going';
+        const body = streak > 0
+            ? "You haven't studied today yet — a few minutes keeps your streak alive."
+            : "You haven't studied today yet — even one lesson counts.";
+
+        this.showStreakReminderNotification(title, body);
+        localStorage.setItem('synthesis_streak_reminder_shown_' + today, '1');
+    }
+
+    async showStreakReminderNotification(title, body) {
+        try {
+            if ('serviceWorker' in navigator) {
+                const reg = await navigator.serviceWorker.getRegistration();
+                if (reg) {
+                    await reg.showNotification(title, { body, icon: 'icon.svg', tag: 'streak-reminder' });
+                    return;
+                }
+            }
+            new Notification(title, { body, icon: 'icon.svg' });
+        } catch (err) {
+            console.error('Failed to show streak reminder notification:', err);
+        }
     }
 
     renderStreakSection() {
@@ -688,6 +795,203 @@ class SynthesisApp {
             window.activeRecall.toggleFavorite(bookId);
             this.showBook(bookId); // Refresh the view
         }
+    }
+
+    // ============================================
+    // SAVED LESSONS ("bookmark this specific lesson to come back to")
+    // Distinct from book-level Favorites (capped at 5, links to the book's
+    // lesson list): this saves an exact lesson and jumps straight into it,
+    // with no cap, since it's meant as a genuine "get back to this" list.
+    // ============================================
+    isLessonBookmarked(bookId, lessonId) {
+        return (APP_DATA.user.savedLessons || []).some(s => s.bookId === bookId && s.lessonId === lessonId);
+    }
+
+    toggleLessonBookmark() {
+        if (!this.currentBook || !this.currentLesson) return;
+        if (!APP_DATA.user.savedLessons) APP_DATA.user.savedLessons = [];
+
+        const bookId = this.currentBook.id;
+        const lessonId = this.currentLesson.id;
+        const existingIndex = APP_DATA.user.savedLessons.findIndex(s => s.bookId === bookId && s.lessonId === lessonId);
+
+        if (existingIndex > -1) {
+            APP_DATA.user.savedLessons.splice(existingIndex, 1);
+            toast('Removed from Saved for Later.', 'info');
+        } else {
+            APP_DATA.user.savedLessons.unshift({
+                bookId,
+                lessonId,
+                bookTitle: this.currentBook.title,
+                lessonTitle: this.currentLesson.title,
+                category: this.currentBook.category,
+                savedAt: new Date().toISOString()
+            });
+            toast('🔖 Saved for later!', 'success');
+        }
+
+        saveProgress();
+        this.updateLessonBookmarkButton();
+    }
+
+    updateLessonBookmarkButton() {
+        const btn = document.getElementById('lesson-bookmark-btn');
+        if (!btn || !this.currentBook || !this.currentLesson) return;
+        const bookmarked = this.isLessonBookmarked(this.currentBook.id, this.currentLesson.id);
+        btn.classList.toggle('bookmarked', bookmarked);
+        btn.title = bookmarked ? 'Remove from Saved for Later' : 'Save this lesson for later';
+    }
+
+    removeSavedLesson(bookId, lessonId) {
+        APP_DATA.user.savedLessons = (APP_DATA.user.savedLessons || []).filter(
+            s => !(s.bookId === bookId && s.lessonId === lessonId)
+        );
+        saveProgress();
+        this.renderSavedLessons();
+        if (this.currentBook?.id === bookId && this.currentLesson?.id === lessonId) {
+            this.updateLessonBookmarkButton();
+        }
+    }
+
+    renderSavedLessons() {
+        const section = document.getElementById('saved-lessons-section');
+        const container = document.getElementById('saved-lessons-shelf');
+        if (!section || !container) return;
+
+        const saved = APP_DATA.user.savedLessons || [];
+        if (saved.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        section.style.display = '';
+
+        container.innerHTML = saved.map(s => `
+            <div class="favorite-book-card" onclick="app.startLesson('${s.bookId}', '${s.lessonId}')">
+                <div class="fav-book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(s.category)} 0%, ${this.getCategoryColorDark(s.category)} 100%); position: relative;">
+                    🔖
+                    <button onclick="event.stopPropagation(); app.removeSavedLesson('${s.bookId}', '${s.lessonId}')" title="Remove" aria-label="Remove from saved" style="position:absolute; top:-6px; right:-6px; width:20px; height:20px; border-radius:50%; background:#1a1a2e; border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.7rem; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0;">✕</button>
+                </div>
+                <div class="fav-book-title">${escapeHtml(s.lessonTitle)}</div>
+                <div class="fav-book-progress">${escapeHtml(s.bookTitle)}</div>
+            </div>
+        `).join('');
+    }
+
+    // ============================================
+    // LESSON NOTES ("jot a note on this lesson to review later")
+    // Scoped deliberately to whole-lesson free-text notes rather than
+    // in-passage highlighting — highlighting would require tracking DOM
+    // text-selection ranges across re-renders, which is fragile against
+    // this app's markdown-ish card content. A note gets you most of the
+    // value ("review this before the exam") far more robustly.
+    // ============================================
+    lessonNoteKey(bookId, lessonId) {
+        return `${bookId}::${lessonId}`;
+    }
+
+    getLessonNote(bookId, lessonId) {
+        return (APP_DATA.user.lessonNotes || {})[this.lessonNoteKey(bookId, lessonId)] || null;
+    }
+
+    updateLessonNotesButton() {
+        const btn = document.getElementById('lesson-notes-btn');
+        if (!btn || !this.currentBook || !this.currentLesson) return;
+        const hasNote = !!this.getLessonNote(this.currentBook.id, this.currentLesson.id);
+        btn.classList.toggle('bookmarked', hasNote);
+        btn.title = hasNote ? 'Edit your note for this lesson' : 'Add a note to this lesson';
+    }
+
+    openLessonNotes() {
+        if (!this.currentBook || !this.currentLesson) return;
+        const existing = this.getLessonNote(this.currentBook.id, this.currentLesson.id);
+
+        const modal = document.createElement('div');
+        modal.className = 'premium-modal-overlay';
+        modal.innerHTML = `
+            <div class="premium-modal">
+                <h3>📝 ${escapeHtml(this.currentLesson.title)}</h3>
+                <div class="premium-form">
+                    <div class="form-group">
+                        <label>Your Note</label>
+                        <textarea id="lesson-note-input" class="fitness-input" rows="6" placeholder="Anything worth remembering — a key term, something to review before the exam...">${escapeHtml(existing ? existing.text : '')}</textarea>
+                    </div>
+                    <div class="modal-buttons">
+                        ${existing ? '<button class="btn-secondary" id="lesson-note-delete-btn" style="border-color:#ef4444;color:#ef4444;">Delete</button>' : ''}
+                        <button class="btn-secondary" id="lesson-note-cancel-btn">Cancel</button>
+                        <button class="btn-primary" id="lesson-note-save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.querySelector('#lesson-note-input').focus();
+
+        modal.querySelector('#lesson-note-cancel-btn').onclick = () => modal.remove();
+
+        const deleteBtn = modal.querySelector('#lesson-note-delete-btn');
+        if (deleteBtn) {
+            deleteBtn.onclick = () => {
+                this.deleteLessonNote(this.currentBook.id, this.currentLesson.id);
+                modal.remove();
+            };
+        }
+
+        modal.querySelector('#lesson-note-save-btn').onclick = () => {
+            const text = modal.querySelector('#lesson-note-input').value.trim();
+            if (!text) {
+                this.deleteLessonNote(this.currentBook.id, this.currentLesson.id);
+                modal.remove();
+                return;
+            }
+            if (!APP_DATA.user.lessonNotes) APP_DATA.user.lessonNotes = {};
+            APP_DATA.user.lessonNotes[this.lessonNoteKey(this.currentBook.id, this.currentLesson.id)] = {
+                bookId: this.currentBook.id,
+                lessonId: this.currentLesson.id,
+                bookTitle: this.currentBook.title,
+                lessonTitle: this.currentLesson.title,
+                text,
+                updatedAt: new Date().toISOString()
+            };
+            saveProgress();
+            toast('📝 Note saved!', 'success');
+            this.updateLessonNotesButton();
+            modal.remove();
+        };
+    }
+
+    deleteLessonNote(bookId, lessonId) {
+        if (!APP_DATA.user.lessonNotes) return;
+        delete APP_DATA.user.lessonNotes[this.lessonNoteKey(bookId, lessonId)];
+        saveProgress();
+        this.updateLessonNotesButton();
+        this.renderMyNotes();
+        toast('Note deleted.', 'info');
+    }
+
+    renderMyNotes() {
+        const section = document.getElementById('my-notes-section');
+        const container = document.getElementById('my-notes-list');
+        if (!section || !container) return;
+
+        const notes = Object.values(APP_DATA.user.lessonNotes || {})
+            .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+
+        if (notes.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        section.style.display = '';
+
+        container.innerHTML = notes.map(n => `
+            <div class="notes-list-item" onclick="app.startLesson('${n.bookId}', '${n.lessonId}')">
+                <div style="flex:1; min-width:0;">
+                    <div class="notes-list-item-title">${escapeHtml(n.lessonTitle)}</div>
+                    <div class="notes-list-item-book">${escapeHtml(n.bookTitle)}</div>
+                    <div class="notes-list-item-text">${escapeHtml(n.text)}</div>
+                </div>
+                <button class="notes-list-item-remove" onclick="event.stopPropagation(); app.deleteLessonNote('${n.bookId}', '${n.lessonId}')" title="Delete note" aria-label="Delete note">✕</button>
+            </div>
+        `).join('');
     }
 
     renderContinueLearning() {
@@ -1370,6 +1674,9 @@ class SynthesisApp {
         const totalCards = this.currentLesson.cards.length;
         const progress = ((this.currentCard + 1) / totalCards) * 100;
 
+        this.updateLessonBookmarkButton();
+        this.updateLessonNotesButton();
+
         // Update progress bar
         document.getElementById('lesson-progress-fill').style.width = `${progress}%`;
         // Format: "HITT 1305 • Lesson 11 • Card 3 of 6"
@@ -1911,6 +2218,9 @@ class SynthesisApp {
     }
 
     renderProfile() {
+        this.renderStreakReminderControls();
+        this.renderMyNotes();
+
         // Render gamification stats overview
         if (window.gamification) {
             window.gamification.renderStatsOverview();
