@@ -430,6 +430,17 @@ class SynthesisApp {
             window.activeRecall.renderFavorites();
             window.activeRecall.updateDueBadge();
         }
+
+        this.updateExamDueBadge();
+    }
+
+    updateExamDueBadge() {
+        const badge = document.getElementById('exam-due-badge');
+        if (!badge) return;
+        const dueCount = (window.examCenter && typeof window.examCenter.dailyQueueSize === 'function')
+            ? window.examCenter.dailyQueueSize() : 0;
+        badge.textContent = `${dueCount} due`;
+        badge.style.display = dueCount > 0 ? 'block' : 'none';
     }
 
     // ---------------- Streak + activity heatmap ----------------

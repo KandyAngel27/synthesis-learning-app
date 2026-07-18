@@ -94,6 +94,13 @@
                     </div>
                 </section>
 
+                <!-- Streak & Activity -->
+                <section class="streak-overview-section">
+                    <div id="streak-section">
+                        <!-- Dynamically populated -->
+                    </div>
+                </section>
+
                 <!-- Daily Challenges Section -->
                 <section class="challenges-section">
                     <div id="daily-challenges-container">
@@ -116,6 +123,7 @@
                         <button class="quick-action-btn" onclick="app.switchView('exam')">
                             <span class="quick-action-icon">&#128221;</span>
                             <span class="quick-action-label">Exam Center</span>
+                            <span class="quick-action-badge" id="exam-due-badge">0 due</span>
                         </button>
                         <button class="quick-action-btn" onclick="app.switchView('feynman')">
                             <span class="quick-action-icon">&#129504;</span>
