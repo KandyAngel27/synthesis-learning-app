@@ -256,6 +256,10 @@ class SynthesisApp {
             this.switchView('home');
         });
 
+        document.getElementById('glossary-back-btn')?.addEventListener('click', () => {
+            this.switchView('home');
+        });
+
         const examBackBtn = document.getElementById('exam-back-btn');
         if (examBackBtn) {
             examBackBtn.addEventListener('click', () => {
@@ -334,6 +338,8 @@ class SynthesisApp {
             window.fitnessTracker?.renderSupplements();
         } else if (viewName === 'nutrition') {
             window.fitnessTracker?.renderNutrition();
+        } else if (viewName === 'glossary') {
+            this.renderGlossary();
         }
     }
 
@@ -1137,6 +1143,103 @@ class SynthesisApp {
         this._retestQueue = null;
         this._retestIndex = 0;
         this._retestCorrectCount = 0;
+    }
+
+    // ============================================
+    // PERSONAL GLOSSARY
+    // Auto-collected from lessons you've actually completed — bold terms
+    // already exist in the source content, this just surfaces them as a
+    // personal, growing reference instead of re-reading three books to
+    // recall a term. Fully derived from existing data, computed on demand
+    // (not persisted) so it can't drift out of sync or bloat backups.
+    // ============================================
+    buildPersonalGlossary() {
+        const completions = APP_DATA.user.lessonCompletions || {};
+        const terms = new Map(); // lowercased term -> { term, entries: [] }
+
+        for (const cat of APP_DATA.categories) {
+            for (const book of (cat.books || [])) {
+                for (const lesson of (book.lessonList || [])) {
+                    if (!completions[book.id + '::' + lesson.id]) continue;
+                    for (const card of (lesson.cards || [])) {
+                        if (typeof card.content !== 'string') continue;
+                        for (const { term, context } of this.extractBoldTerms(card.content)) {
+                            const lowerKey = term.toLowerCase();
+                            if (!terms.has(lowerKey)) terms.set(lowerKey, { term, entries: [] });
+                            const entry = terms.get(lowerKey);
+                            const alreadyHasThisLesson = entry.entries.some(e => e.bookId === book.id && e.lessonId === lesson.id);
+                            if (!alreadyHasThisLesson && entry.entries.length < 3) {
+                                entry.entries.push({ bookId: book.id, bookTitle: book.title, lessonId: lesson.id, lessonTitle: lesson.title, context });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return [...terms.values()].sort((a, b) => a.term.localeCompare(b.term));
+    }
+
+    // Pulls **bolded** phrases that look like terms (short, not a full
+    // sentence) along with ~80 chars of surrounding context on each side.
+    extractBoldTerms(content) {
+        const results = [];
+        const regex = /\*\*([^*]{2,50})\*\*/g;
+        let m;
+        while ((m = regex.exec(content)) !== null) {
+            const term = m[1].trim();
+            if (!term || /[.!?:]$/.test(term) || term.split(/\s+/).length > 6) continue;
+
+            const start = Math.max(0, m.index - 80);
+            const end = Math.min(content.length, m.index + m[0].length + 80);
+            let context = content.slice(start, end).replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
+            if (start > 0) context = '…' + context;
+            if (end < content.length) context += '…';
+
+            results.push({ term, context });
+        }
+        return results;
+    }
+
+    renderGlossary(filterQuery) {
+        const container = document.getElementById('glossary-content');
+        if (!container) return;
+
+        if (!this._glossaryTerms) {
+            this._glossaryTerms = this.buildPersonalGlossary();
+        }
+        const q = (filterQuery || '').trim().toLowerCase();
+        const terms = q ? this._glossaryTerms.filter(t => t.term.toLowerCase().includes(q)) : this._glossaryTerms;
+
+        if (this._glossaryTerms.length === 0) {
+            container.innerHTML = `<div class="no-favorites"><p>Your glossary builds itself as you complete lessons — key terms from lessons you finish will show up here.</p></div>`;
+            return;
+        }
+        if (terms.length === 0) {
+            container.innerHTML = `<div class="no-favorites"><p>No terms match "${escapeHtml(filterQuery)}".</p></div>`;
+            return;
+        }
+
+        container.innerHTML = `
+            <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">${this._glossaryTerms.length} term${this._glossaryTerms.length === 1 ? '' : 's'} collected from lessons you've completed.</p>
+            ${terms.map(t => `
+                <div class="notes-list-item" style="cursor: default;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="notes-list-item-title">${escapeHtml(t.term)}</div>
+                        ${t.entries.map(e => `
+                            <div style="margin-top: 0.5rem;">
+                                <div class="notes-list-item-text">${escapeHtml(e.context)}</div>
+                                <div class="notes-list-item-book" style="cursor:pointer; color: var(--color-primary-light);" onclick="app.startLesson('${e.bookId}', '${e.lessonId}')">${escapeHtml(e.bookTitle)} &middot; ${escapeHtml(e.lessonTitle)}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('')}
+        `;
+    }
+
+    filterGlossary(query) {
+        this.renderGlossary(query);
     }
 
     renderContinueLearning() {
@@ -2325,6 +2428,7 @@ class SynthesisApp {
         const lessonKey = this.currentBook.id + '::' + this.currentLesson.id;
         if (!APP_DATA.user.lessonCompletions[lessonKey]) {
             APP_DATA.user.lessonCompletions[lessonKey] = new Date().toISOString();
+            this._glossaryTerms = null; // newly-completed lesson may add glossary terms
         }
 
         // Update book progress
@@ -2586,21 +2690,65 @@ class SynthesisApp {
             results.innerHTML = `<div class="search-empty">Start typing to search ${getAllBooks().length} books</div>`;
             return;
         }
-        const matches = getAllBooks().filter(b => {
+
+        const scored = [];
+        const seenBookIds = new Set(); // some books are cross-listed in multiple categories
+        for (const b of getAllBooks()) {
+            if (seenBookIds.has(b.id)) continue;
+            seenBookIds.add(b.id);
             const title = (b.title || '').toLowerCase();
             const author = (b.author || '').toLowerCase();
-            return title.includes(q) || author.includes(q);
-        }).slice(0, 25);
+            const description = (b.description || '').toLowerCase();
+            let score = 0;
+            let matchedLesson = null;
+
+            if (title === q) score = 100;
+            else if (title.startsWith(q)) score = 90;
+            else if (title.includes(q)) score = 70;
+            else {
+                const lesson = (b.lessonList || []).find(l => (l.title || '').toLowerCase().includes(q));
+                if (lesson) { score = 60; matchedLesson = lesson; }
+                else if (author.includes(q)) score = 50;
+                else if (description.includes(q)) score = 30;
+            }
+
+            // Typo-tolerant fallback: every character of the query appears in
+            // order somewhere in the title (a cheap subsequence match, not
+            // true semantic search, but catches "thnking fast slow" ->
+            // "Thinking, Fast and Slow" without needing an embeddings API).
+            if (score === 0 && q.length >= 3 && this.fuzzySubsequenceMatch(title, q)) {
+                score = 10;
+            }
+
+            if (score > 0) scored.push({ book: b, score, matchedLesson });
+        }
+
+        scored.sort((a, b) => b.score - a.score);
+        const matches = scored.slice(0, 25);
+
         if (matches.length === 0) {
-            results.innerHTML = `<div class="search-empty">No books match "${query.replace(/[<>"']/g,'')}"</div>`;
+            results.innerHTML = `<div class="search-empty">No books match "${escapeHtml(query)}"</div>`;
             return;
         }
-        results.innerHTML = matches.map(b => `
+        results.innerHTML = matches.map(({ book: b, matchedLesson }) => `
             <div class="search-result-item" onclick="app.closeSearch(); app.showBook('${b.id}')">
-                <div class="search-result-title">${(b.title || '').replace(/</g,'&lt;')}</div>
-                <div class="search-result-meta">${(b.author || '').replace(/</g,'&lt;')} &middot; ${b.lessons || 0} lessons</div>
+                <div class="search-result-title">${escapeHtml(b.title || '')}</div>
+                <div class="search-result-meta">${escapeHtml(b.author || '')} &middot; ${b.lessons || 0} lessons${matchedLesson ? ` &middot; found in "${escapeHtml(matchedLesson.title)}"` : ''}</div>
             </div>
         `).join('');
+    }
+
+    // Subsequence match: every character of `query` appears in `text` in
+    // order (not necessarily adjacent) — cheap typo/fuzzy tolerance with no
+    // external dependency.
+    fuzzySubsequenceMatch(text, query) {
+        let ti = 0;
+        for (let qi = 0; qi < query.length; qi++) {
+            ti = text.indexOf(query[qi], ti);
+            if (ti === -1) return false;
+            ti++;
+        }
+        return true;
     }
 
     // ============================================

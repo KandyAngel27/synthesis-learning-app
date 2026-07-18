@@ -155,8 +155,38 @@ class ActiveRecallSystem {
         }
     }
 
+    // Round-robins due cards across books so consecutive cards are never
+    // from the same book — interleaved practice (mixing topics) is one of
+    // the best-documented ways to fight forgetting, and reviewing the raw
+    // due-queue in insertion order (previously: cards from whichever book
+    // you finished most recently, back-to-back) is the opposite: blocked
+    // practice.
+    interleaveByBook(cards) {
+        const groups = {};
+        const order = [];
+        for (const card of cards) {
+            const key = card.bookId || 'unknown';
+            if (!groups[key]) { groups[key] = []; order.push(key); }
+            groups[key].push(card);
+        }
+        if (order.length <= 1) return cards;
+
+        const result = [];
+        let added = true;
+        while (added) {
+            added = false;
+            for (const key of order) {
+                if (groups[key].length > 0) {
+                    result.push(groups[key].shift());
+                    added = true;
+                }
+            }
+        }
+        return result;
+    }
+
     startFlashcardReview() {
-        this.flashcardQueue = [...this.getDueFlashcards()];
+        this.flashcardQueue = this.interleaveByBook(this.getDueFlashcards());
         if (this.flashcardQueue.length === 0) return;
 
         this.showNextFlashcard();
