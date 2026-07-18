@@ -2,8 +2,12 @@
 // Network-first for app code (so updates always reach you), cache-first
 // for the heavy data.js so the app launches instantly on second visit.
 
-const CACHE_VERSION = 'synthesis-v2';
-// Relative paths so this works at GitHub Pages subdirectory too
+const CACHE_VERSION = 'synthesis-v3';
+// Relative paths so this works at GitHub Pages subdirectory too.
+// Only the app shell + scripts used across nearly every view go here — the
+// 170+ per-book -data.js/-ext-data.js files are intentionally NOT precached
+// (that would balloon install time); they're picked up lazily by the
+// network-first fetch handler below on first visit to that book.
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -12,6 +16,13 @@ const CORE_ASSETS = [
   './gamification.js',
   './exam-center.js',
   './exam-center.css',
+  './premium-features.js',
+  './fitness-tracker.js',
+  './recipe-assistant.js',
+  './active-recall.js',
+  './random-workout-generator.js',
+  './toast.js',
+  './firebase-sync.js',
   './manifest.json',
   './icon.svg'
 ];
