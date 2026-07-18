@@ -3560,7 +3560,7 @@ body {
     margin-bottom: var(--spacing-lg);
 }
 
-.quiz-options {
+.quiz-length-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
@@ -6488,7 +6488,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .quiz-options {
+    .quiz-length-options {
         grid-template-columns: 1fr;
     }
 

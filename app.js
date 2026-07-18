@@ -994,6 +994,151 @@ class SynthesisApp {
         `).join('');
     }
 
+    // ============================================
+    // MISTAKES LOG
+    // Unified log of wrong quiz/exam answers, aggregated in one place with
+    // the question, your answer, and the correct one — distinct from
+    // flashcards (which review everything evenly) and Exam Center's own
+    // spaced-repetition scheduler (which already resurfaces exam questions
+    // on its own schedule): this specifically targets known weak points,
+    // including from regular lesson quizzes, which had no retest mechanism
+    // of any kind before this.
+    // ============================================
+    logMistake(entry) {
+        if (!APP_DATA.user.mistakesLog) APP_DATA.user.mistakesLog = [];
+        const key = 'mistake::' + (entry.qid || `${entry.bookId}::${entry.lessonId}::${entry.question}`);
+        const existingIndex = APP_DATA.user.mistakesLog.findIndex(m => m.key === key);
+        const missCount = existingIndex > -1 ? (APP_DATA.user.mistakesLog[existingIndex].missCount || 1) + 1 : 1;
+        const record = { ...entry, key, missCount, updatedAt: new Date().toISOString() };
+
+        if (existingIndex > -1) {
+            APP_DATA.user.mistakesLog[existingIndex] = record;
+        } else {
+            APP_DATA.user.mistakesLog.unshift(record);
+        }
+        saveProgress();
+        this.renderMistakesLog();
+    }
+
+    dismissMistake(key, silent) {
+        APP_DATA.user.mistakesLog = (APP_DATA.user.mistakesLog || []).filter(m => m.key !== key);
+        saveProgress();
+        this.renderMistakesLog();
+        if (!silent) toast('Nice — marked as reviewed.', 'success');
+    }
+
+    renderMistakesLog() {
+        const section = document.getElementById('mistakes-log-section');
+        const container = document.getElementById('mistakes-log-list');
+        if (!section || !container) return;
+
+        const mistakes = APP_DATA.user.mistakesLog || [];
+        const quizBtn = document.getElementById('mistakes-quiz-me-btn');
+
+        if (mistakes.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+        section.style.display = '';
+        if (quizBtn) quizBtn.textContent = `🔁 Quiz Me on These (${mistakes.length})`;
+
+        container.innerHTML = mistakes.map(m => `
+            <div class="notes-list-item" onclick="${m.source === 'lesson' ? `app.startLesson('${m.bookId}', '${m.lessonId}')` : `app.switchView('exam')`}">
+                <div style="flex:1; min-width:0;">
+                    <div class="notes-list-item-title">${escapeHtml(m.question)}</div>
+                    <div class="notes-list-item-book">${escapeHtml(m.bookTitle)}${m.lessonTitle ? ' · ' + escapeHtml(m.lessonTitle) : ''}${m.missCount > 1 ? ` · missed ${m.missCount}×` : ''}</div>
+                    <div style="font-size: 0.85rem; margin-top: 0.5rem;">
+                        <div style="color:#ef4444;">✗ You said: ${escapeHtml(m.chosenText)}</div>
+                        <div style="color:#10b981; margin-top: 0.15rem;">✓ Correct: ${escapeHtml(m.correctText)}</div>
+                    </div>
+                </div>
+                <button class="notes-list-item-remove" data-key="${escapeHtml(m.key)}" onclick="event.stopPropagation(); app.dismissMistake(this.dataset.key)" title="I've got this now" aria-label="Mark reviewed" style="color:#10b981;">✓</button>
+            </div>
+        `).join('');
+    }
+
+    startMistakesRetest() {
+        const queue = (APP_DATA.user.mistakesLog || []).filter(m => m.options && m.options.length > 0);
+        if (queue.length === 0) {
+            toast('No mistakes to review right now!', 'info');
+            return;
+        }
+        this._retestQueue = queue;
+        this._retestIndex = 0;
+        this._retestCorrectCount = 0;
+        this.showRetestQuestion();
+    }
+
+    showRetestQuestion() {
+        if (!this._retestQueue || this._retestIndex >= this._retestQueue.length) {
+            this.finishRetest();
+            return;
+        }
+        const item = this._retestQueue[this._retestIndex];
+
+        let modal = document.getElementById('retest-modal-overlay');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'retest-modal-overlay';
+            modal.className = 'premium-modal-overlay';
+            document.body.appendChild(modal);
+        }
+        modal.innerHTML = `
+            <div class="premium-modal">
+                <h3>🔁 Quiz Me: ${this._retestIndex + 1} of ${this._retestQueue.length}</h3>
+                <div class="quiz-question" style="margin-bottom: 1rem;">${escapeHtml(item.question)}</div>
+                <div class="quiz-options" id="retest-options">
+                    ${item.options.map(opt => `
+                        <div class="quiz-option" data-correct="${!!opt.correct}" onclick="app.answerRetest(this)">${escapeHtml(opt.text)}</div>
+                    `).join('')}
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" id="retest-close-btn">Stop</button>
+                    <button class="btn-primary" id="retest-next-btn" style="display:none;">Next →</button>
+                </div>
+            </div>
+        `;
+        modal.querySelector('#retest-close-btn').onclick = () => this.finishRetest();
+    }
+
+    answerRetest(el) {
+        const options = el.closest('#retest-options').querySelectorAll('.quiz-option');
+        options.forEach(o => {
+            o.style.pointerEvents = 'none';
+            if (o.dataset.correct === 'true') o.classList.add('correct');
+        });
+
+        const gotItRight = el.dataset.correct === 'true';
+        if (!gotItRight) {
+            el.classList.add('incorrect');
+        } else {
+            this._retestCorrectCount++;
+            const item = this._retestQueue[this._retestIndex];
+            this.dismissMistake(item.key, true);
+        }
+
+        const nextBtn = document.getElementById('retest-next-btn');
+        if (nextBtn) {
+            nextBtn.style.display = 'block';
+            nextBtn.textContent = (this._retestIndex < this._retestQueue.length - 1) ? 'Next →' : 'Finish';
+            nextBtn.onclick = () => {
+                this._retestIndex++;
+                this.showRetestQuestion();
+            };
+        }
+    }
+
+    finishRetest() {
+        const modal = document.getElementById('retest-modal-overlay');
+        if (modal) modal.remove();
+        if (this._retestQueue && this._retestQueue.length > 0) {
+            toast(`Review complete! ${this._retestCorrectCount}/${this._retestQueue.length} correct.`, 'success');
+        }
+        this._retestQueue = null;
+        this._retestIndex = 0;
+        this._retestCorrectCount = 0;
+    }
+
     renderContinueLearning() {
         const container = document.getElementById('continue-learning');
         const booksInProgress = getBooksInProgress();
@@ -1664,8 +1809,79 @@ class SynthesisApp {
         }
 
         this.currentCard = 0;
-        this.renderLesson();
-        this.switchView('lesson');
+
+        if (this.shouldShowPretest(this.currentLesson)) {
+            this.showPretestPrompt(() => {
+                this.renderLesson();
+                this.switchView('lesson');
+            });
+        } else {
+            this.renderLesson();
+            this.switchView('lesson');
+        }
+    }
+
+    // ============================================
+    // PRE-TEST PROMPT (the "pretesting effect")
+    // Guessing before you've read the material — even wrong guesses —
+    // measurably improves later retention vs. reading cold. Reuses the
+    // lesson's own first quiz question rather than requiring new content;
+    // shown once per lesson, purely for priming (not graded, no XP).
+    // ============================================
+    shouldShowPretest(lesson) {
+        if (!lesson || lesson.completed) return false;
+        if (!APP_DATA.user.pretestsShown) APP_DATA.user.pretestsShown = {};
+        const key = `${this.currentBook.id}::${lesson.id}`;
+        if (APP_DATA.user.pretestsShown[key]) return false;
+        return !!this.findPretestCard(lesson);
+    }
+
+    findPretestCard(lesson) {
+        return (lesson.cards || []).find(c => c.type === 'quiz' && c.question && c.options && c.options.length > 0);
+    }
+
+    showPretestPrompt(onContinue) {
+        const card = this.findPretestCard(this.currentLesson);
+        const key = `${this.currentBook.id}::${this.currentLesson.id}`;
+        if (!APP_DATA.user.pretestsShown) APP_DATA.user.pretestsShown = {};
+        APP_DATA.user.pretestsShown[key] = true;
+        saveProgress();
+
+        if (!card) { onContinue(); return; }
+
+        const modal = document.createElement('div');
+        modal.className = 'premium-modal-overlay';
+        modal.innerHTML = `
+            <div class="premium-modal">
+                <h3>🎯 Quick Guess</h3>
+                <p style="color: var(--color-text-secondary); text-align:center; margin-bottom: 1rem; font-size: 0.9rem;">
+                    Before you read this lesson, take a guess. Just attempting it — right or wrong — helps it stick.
+                </p>
+                <div class="quiz-question" style="margin-bottom: 1rem;">${escapeHtml(card.question)}</div>
+                <div class="quiz-options" id="pretest-options">
+                    ${card.options.map((opt, i) => `
+                        <div class="quiz-option" data-correct="${!!opt.correct}" onclick="app.answerPretest(this)">${escapeHtml(opt.text)}</div>
+                    `).join('')}
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-primary" id="pretest-continue-btn" style="width:100%;">Continue to Lesson →</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.querySelector('#pretest-continue-btn').onclick = () => {
+            modal.remove();
+            onContinue();
+        };
+    }
+
+    answerPretest(el) {
+        const options = el.closest('#pretest-options').querySelectorAll('.quiz-option');
+        options.forEach(o => {
+            o.style.pointerEvents = 'none';
+            if (o.dataset.correct === 'true') o.classList.add('correct');
+        });
+        if (el.dataset.correct !== 'true') el.classList.add('incorrect');
     }
 
     renderLesson() {
@@ -1873,7 +2089,8 @@ class SynthesisApp {
 
     selectContentQuizOption(el, explanationId) {
         const isCorrect = el.dataset.correct === 'true';
-        el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(opt => {
+        const optionsContainer = el.closest('.quiz-options');
+        optionsContainer.querySelectorAll('.quiz-option').forEach(opt => {
             opt.style.pointerEvents = 'none';
             if (opt.dataset.correct === 'true') opt.classList.add('correct');
         });
@@ -1887,6 +2104,28 @@ class SynthesisApp {
                 label.textContent = '✗ Incorrect — see explanation below';
                 label.style.color = 'var(--color-error, #ef4444)';
             }
+        }
+
+        if (!isCorrect && this.currentBook && this.currentLesson) {
+            const stripPrefix = (text) => text.trim().replace(/^[A-D]\)\s*/, '').trim();
+            const questionText = el.closest('.quiz-card')?.querySelector('.quiz-question')?.textContent.trim() || '';
+            const options = [...optionsContainer.querySelectorAll('.quiz-option')].map(opt => ({
+                text: stripPrefix(opt.textContent),
+                correct: opt.dataset.correct === 'true'
+            }));
+            const correctOpt = options.find(o => o.correct);
+            this.logMistake({
+                source: 'lesson',
+                bookId: this.currentBook.id,
+                bookTitle: this.currentBook.title,
+                lessonId: this.currentLesson.id,
+                lessonTitle: this.currentLesson.title,
+                question: questionText,
+                options,
+                chosenText: stripPrefix(el.textContent),
+                correctText: correctOpt ? correctOpt.text : '',
+                explanation: exp?.querySelector('div')?.textContent.trim() || ''
+            });
         }
     }
 
@@ -1913,9 +2152,9 @@ class SynthesisApp {
             }
         } else {
             selectedOption.classList.add('incorrect');
+            const card = this.currentLesson.cards[this.currentCard];
             // Show correct answer
             document.querySelectorAll('.quiz-option').forEach((opt, i) => {
-                const card = this.currentLesson.cards[this.currentCard];
                 if (card.options[i].correct) {
                     opt.classList.add('correct');
                 }
@@ -1929,6 +2168,22 @@ class SynthesisApp {
                     0, // got it wrong
                     1  // out of 1
                 );
+            }
+
+            if (this.currentBook && this.currentLesson) {
+                const correctOpt = card.options.find(o => o.correct);
+                this.logMistake({
+                    source: 'lesson',
+                    bookId: this.currentBook.id,
+                    bookTitle: this.currentBook.title,
+                    lessonId: this.currentLesson.id,
+                    lessonTitle: this.currentLesson.title,
+                    question: card.question,
+                    options: card.options,
+                    chosenText: card.options[index].text,
+                    correctText: correctOpt ? correctOpt.text : '',
+                    explanation: card.explanation || ''
+                });
             }
         }
     }
@@ -2220,6 +2475,7 @@ class SynthesisApp {
     renderProfile() {
         this.renderStreakReminderControls();
         this.renderMyNotes();
+        this.renderMistakesLog();
 
         // Render gamification stats overview
         if (window.gamification) {
