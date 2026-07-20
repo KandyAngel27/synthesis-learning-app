@@ -9360,7 +9360,7 @@ body {
     background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
     display: grid;
     grid-template-columns: minmax(220px, auto) 1fr;
     gap: var(--spacing-xl);
@@ -9368,8 +9368,9 @@ body {
 }
 .streak-stats {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm) var(--spacing-lg);
 }
 .streak-stat {
     display: grid;
@@ -9415,7 +9416,6 @@ body {
 
 @media (max-width: 768px) {
     .streak-card { grid-template-columns: 1fr; gap: var(--spacing-md); }
-    .streak-stats { flex-direction: row; flex-wrap: wrap; }
     .streak-heatmap { max-width: 100%; }
 }
 
