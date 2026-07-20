@@ -1435,13 +1435,17 @@ class SynthesisApp {
         this.renderAiTutorMessages();
     }
 
-    async callAnthropicApi(messages) {
+    async callAnthropicApi(messages, systemPromptOverride) {
         const apiKey = this.getAnthropicApiKey();
         if (!apiKey) throw new Error('No API key saved. Add one in Profile > AI Tutor.');
 
-        const lessonContext = this.currentLesson
-            ? `The user is currently studying the lesson "${this.currentLesson.title}" from "${this.currentBook?.title || 'a book'}" on Synthesis, a personal learning app. Here is the lesson content read so far, for grounding:\n\n${(this.currentLesson.cards || []).slice(0, this.currentCard + 1).map(c => c.content || c.question || '').join('\n\n').slice(0, 3000)}`
-            : 'The user is browsing Synthesis, a personal learning app, and hasn\'t started a specific lesson yet.';
+        let system = systemPromptOverride;
+        if (!system) {
+            const lessonContext = this.currentLesson
+                ? `The user is currently studying the lesson "${this.currentLesson.title}" from "${this.currentBook?.title || 'a book'}" on Synthesis, a personal learning app. Here is the lesson content read so far, for grounding:\n\n${(this.currentLesson.cards || []).slice(0, this.currentCard + 1).map(c => c.content || c.question || '').join('\n\n').slice(0, 3000)}`
+                : 'The user is browsing Synthesis, a personal learning app, and hasn\'t started a specific lesson yet.';
+            system = `You are a friendly, encouraging tutor helping a student inside the Synthesis learning app. ${lessonContext}\n\nKeep answers focused and conversational — this is a chat, not an essay. Ground your answers in the lesson content when relevant, but you can go beyond it if the student asks something adjacent.`;
+        }
 
         const response = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
@@ -1454,7 +1458,7 @@ class SynthesisApp {
             body: JSON.stringify({
                 model: 'claude-sonnet-5',
                 max_tokens: 1024,
-                system: `You are a friendly, encouraging tutor helping a student inside the Synthesis learning app. ${lessonContext}\n\nKeep answers focused and conversational — this is a chat, not an essay. Ground your answers in the lesson content when relevant, but you can go beyond it if the student asks something adjacent.`,
+                system,
                 messages: messages.map(m => ({ role: m.role, content: m.content }))
             })
         });
