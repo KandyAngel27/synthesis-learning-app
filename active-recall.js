@@ -589,7 +589,8 @@ class ActiveRecallSystem {
         const container = document.getElementById('feynman-content');
         if (!container) return;
 
-        const concepts = this.getFeynmanConcepts();
+        const hasApiKey = !!(this.app && typeof this.app.getAnthropicApiKey === 'function' && this.app.getAnthropicApiKey());
+        const hasHistory = (APP_DATA.user.feynmanExplanations || []).length > 0;
 
         const html = `
             <div class="feynman-intro">
@@ -623,30 +624,52 @@ class ActiveRecallSystem {
 
             <div class="feynman-practice">
                 <h3>Practice Now</h3>
-                <p>Select a concept from your completed lessons:</p>
+                <p>Select a concept from your completed lessons or your Glossary:</p>
 
                 <div class="concept-selector">
                     <select id="feynman-concept-select" onchange="window.activeRecall.selectFeynmanConcept(this.value)">
                         <option value="">-- Choose a concept --</option>
-                        ${concepts.map(c => `
-                            <option value="${c.id}">${c.title} (${c.book})</option>
-                        `).join('')}
+                        ${this.renderConceptOptions()}
                     </select>
+                    <button class="btn-secondary" onclick="window.activeRecall.startRevisit()" ${hasHistory ? '' : 'disabled title="Save an explanation first"'} style="margin-top: 0.5rem;">
+                        🔄 Revisit an Old Explanation
+                    </button>
                 </div>
 
                 <div id="feynman-workspace" class="feynman-workspace" style="display: none;">
                     <div class="workspace-header">
                         <h4 id="feynman-concept-title"></h4>
-                        <p class="workspace-prompt">Explain this concept in your own words, as if teaching it to a 5-year-old:</p>
+                        <p id="feynman-revisit-note" class="workspace-prompt" style="display:none; color: var(--color-primary-light);"></p>
                     </div>
 
-                    <textarea id="feynman-explanation" class="feynman-textarea"
-                              placeholder="Start typing your explanation...&#10;&#10;Tips:&#10;- Use simple words&#10;- Give real-world examples&#10;- Avoid jargon&#10;- If you get stuck, that's a gap in your understanding!"></textarea>
+                    <div class="feynman-step-block">
+                        <label class="feynman-step-label">1. Explain it simply — as if teaching a 5-year-old</label>
+                        <textarea id="feynman-explanation" class="feynman-textarea"
+                                  placeholder="Start typing your explanation...&#10;&#10;Tips:&#10;- Use simple words&#10;- Give real-world examples&#10;- Avoid jargon"></textarea>
+                    </div>
+
+                    <div class="feynman-step-block">
+                        <label class="feynman-step-label">2. Where did you get stuck, or what did you gloss over?</label>
+                        <textarea id="feynman-gaps" class="feynman-textarea" style="min-height: 80px;"
+                                  placeholder="Be honest — this is the whole point of the technique. What couldn't you explain cleanly?"></textarea>
+                    </div>
+
+                    <div class="feynman-step-block">
+                        <label class="feynman-step-label">3. Now simplify further — your best version</label>
+                        <textarea id="feynman-simplified" class="feynman-textarea" style="min-height: 80px;"
+                                  placeholder="Rewrite it, now that you've spotted the gaps."></textarea>
+                    </div>
 
                     <div class="workspace-actions">
                         <button class="btn-secondary" onclick="window.activeRecall.clearFeynman()">Clear</button>
+                        ${hasApiKey
+                            ? `<button class="btn-secondary" id="feynman-feedback-btn" onclick="window.activeRecall.getFeynmanFeedback()">🧑‍🏫 Get AI Feedback</button>`
+                            : `<button class="btn-secondary" disabled title="Add an API key in Profile > AI Tutor to unlock this">🧑‍🏫 Get AI Feedback</button>`
+                        }
                         <button class="btn-primary" onclick="window.activeRecall.saveFeynman()">Save Explanation</button>
                     </div>
+
+                    <div id="feynman-feedback-result" class="feynman-feedback-box" style="display:none;"></div>
                 </div>
             </div>
 
@@ -661,6 +684,24 @@ class ActiveRecallSystem {
         container.innerHTML = html;
     }
 
+    // Concept dropdown grouped by source, so a large list (lesson concepts +
+    // glossary terms + samples) stays navigable.
+    renderConceptOptions() {
+        const concepts = this.getFeynmanConcepts();
+        const groups = { sample: [], concept: [], glossary: [] };
+        concepts.forEach(c => groups[c.source || 'concept'].push(c));
+
+        const optGroup = (label, items) => items.length === 0 ? '' : `
+            <optgroup label="${label}">
+                ${items.map(c => `<option value="${c.id}">${escapeHtml(c.title)} (${escapeHtml(c.book)})</option>`).join('')}
+            </optgroup>
+        `;
+
+        return optGroup('From Your Lessons', groups.concept)
+            + optGroup('From Your Glossary', groups.glossary)
+            + optGroup('Sample Concepts', groups.sample);
+    }
+
     getFeynmanConcepts() {
         const concepts = [];
 
@@ -672,7 +713,8 @@ class ActiveRecallSystem {
                     title: concept.title,
                     content: concept.content,
                     book: concept.book,
-                    lesson: concept.lesson
+                    lesson: concept.lesson,
+                    source: 'sample'
                 });
             });
         }
@@ -690,7 +732,8 @@ class ActiveRecallSystem {
                                         title: card.title,
                                         content: card.content,
                                         book: book.title,
-                                        lesson: lesson.title
+                                        lesson: lesson.title,
+                                        source: 'concept'
                                     });
                                 }
                             });
@@ -699,6 +742,23 @@ class ActiveRecallSystem {
                 }
             });
         });
+
+        // Personal Glossary terms — more specific, granular practice targets
+        // than a whole lesson's "concept" card.
+        if (this.app && typeof this.app.buildPersonalGlossary === 'function') {
+            this.app.buildPersonalGlossary().forEach(term => {
+                const entry = term.entries[0];
+                if (!entry) return;
+                concepts.push({
+                    id: `glossary-${term.term}`,
+                    title: term.term,
+                    content: entry.context,
+                    book: entry.bookTitle,
+                    lesson: entry.lessonTitle,
+                    source: 'glossary'
+                });
+            });
+        }
 
         return concepts;
     }
@@ -711,20 +771,102 @@ class ActiveRecallSystem {
 
         const concepts = this.getFeynmanConcepts();
         this.feynmanConcept = concepts.find(c => c.id === conceptId);
+        this._feynmanRevisitOf = null;
 
         if (this.feynmanConcept) {
             document.getElementById('feynman-concept-title').textContent = this.feynmanConcept.title;
+            document.getElementById('feynman-revisit-note').style.display = 'none';
             document.getElementById('feynman-workspace').style.display = 'block';
             document.getElementById('feynman-explanation').value = '';
+            document.getElementById('feynman-gaps').value = '';
+            document.getElementById('feynman-simplified').value = '';
+            document.getElementById('feynman-feedback-result').style.display = 'none';
         }
     }
 
     clearFeynman() {
         document.getElementById('feynman-explanation').value = '';
+        document.getElementById('feynman-gaps').value = '';
+        document.getElementById('feynman-simplified').value = '';
+        document.getElementById('feynman-feedback-result').style.display = 'none';
+    }
+
+    // Resurfaces the least-recently-explained concept so you can try
+    // explaining it again cold — the old answer stays hidden until after
+    // you save, so you're re-deriving the explanation, not copying it.
+    getRevisitCandidate() {
+        const explanations = APP_DATA.user.feynmanExplanations || [];
+        if (explanations.length === 0) return null;
+        return [...explanations].sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+    }
+
+    startRevisit() {
+        const candidate = this.getRevisitCandidate();
+        if (!candidate) {
+            toast('No saved explanations yet to revisit!', 'info');
+            return;
+        }
+
+        this.feynmanConcept = {
+            id: candidate.conceptId,
+            title: candidate.conceptTitle,
+            book: candidate.book,
+            lesson: candidate.lesson || '',
+            content: candidate.sourceContent || ''
+        };
+        this._feynmanRevisitOf = candidate;
+
+        document.getElementById('feynman-concept-select').value = '';
+        document.getElementById('feynman-concept-title').textContent = this.feynmanConcept.title;
+        const note = document.getElementById('feynman-revisit-note');
+        note.textContent = `🔄 You explained this on ${formatDateMMDDYYYY(candidate.date)} — try again without peeking at your old answer. You'll be able to compare after you save.`;
+        note.style.display = 'block';
+        document.getElementById('feynman-workspace').style.display = 'block';
+        document.getElementById('feynman-explanation').value = '';
+        document.getElementById('feynman-gaps').value = '';
+        document.getElementById('feynman-simplified').value = '';
+        document.getElementById('feynman-feedback-result').style.display = 'none';
+    }
+
+    async getFeynmanFeedback() {
+        if (!this.app || !this.app.getAnthropicApiKey()) {
+            toast('Add an API key in Profile > AI Tutor to unlock feedback.', 'info');
+            return;
+        }
+        const explanation = document.getElementById('feynman-explanation').value.trim();
+        if (!explanation) {
+            toast('Write your explanation first.', 'info');
+            return;
+        }
+        if (!this.feynmanConcept) return;
+
+        const btn = document.getElementById('feynman-feedback-btn');
+        const resultBox = document.getElementById('feynman-feedback-result');
+        if (btn) { btn.disabled = true; btn.textContent = 'Thinking...'; }
+
+        const gaps = document.getElementById('feynman-gaps').value.trim();
+        const sourceContent = (this.feynmanConcept.content || '').slice(0, 1500);
+
+        try {
+            const systemPrompt = `You are a supportive tutor grading a student's attempt at the Feynman Technique (explaining a concept in plain language, as if teaching a child). Be encouraging but honest and specific. Keep your whole response to 3-4 short sentences — this is quick feedback, not an essay.`;
+            const userPrompt = `Concept: "${this.feynmanConcept.title}" (from "${this.feynmanConcept.book}"${this.feynmanConcept.lesson ? ' — ' + this.feynmanConcept.lesson : ''}).\n\n${sourceContent ? `Original source material, for grounding:\n${sourceContent}\n\n` : ''}The student's plain-language explanation:\n"${explanation}"\n${gaps ? `\nThe student already flagged this gap themselves: "${gaps}"\n` : ''}\nIdentify: (1) what they got right, (2) any gaps, inaccuracies, or oversimplifications — especially ones they didn't already flag — and (3) one specific way to sharpen the explanation.`;
+
+            const feedback = await this.app.callAnthropicApi([{ role: 'user', content: userPrompt }], systemPrompt);
+            resultBox.innerHTML = `<strong>🧑‍🏫 Feedback</strong><p>${escapeHtml(feedback)}</p>`;
+            resultBox.style.display = 'block';
+            this._lastFeynmanFeedback = feedback;
+        } catch (err) {
+            resultBox.innerHTML = `<strong>⚠️</strong> ${escapeHtml(err.message)}`;
+            resultBox.style.display = 'block';
+        }
+
+        if (btn) { btn.disabled = false; btn.textContent = '🧑‍🏫 Get AI Feedback'; }
     }
 
     saveFeynman() {
         const explanation = document.getElementById('feynman-explanation').value.trim();
+        const gaps = document.getElementById('feynman-gaps').value.trim();
+        const simplified = document.getElementById('feynman-simplified').value.trim();
 
         if (!explanation) {
             toast('Please write an explanation first!', 'info');
@@ -733,7 +875,6 @@ class ActiveRecallSystem {
 
         if (!this.feynmanConcept) return;
 
-        // Initialize feynman array if needed
         if (!APP_DATA.user.feynmanExplanations) {
             APP_DATA.user.feynmanExplanations = [];
         }
@@ -743,11 +884,19 @@ class ActiveRecallSystem {
             conceptId: this.feynmanConcept.id,
             conceptTitle: this.feynmanConcept.title,
             book: this.feynmanConcept.book,
-            explanation: explanation,
+            lesson: this.feynmanConcept.lesson || '',
+            sourceContent: this.feynmanConcept.content || '',
+            explanation,
+            gaps,
+            simplified,
+            feedback: this._lastFeynmanFeedback || null,
+            revisitOfId: this._feynmanRevisitOf ? this._feynmanRevisitOf.id : null,
             date: new Date().toISOString()
         });
 
         saveProgress();
+        this._lastFeynmanFeedback = null;
+        this._feynmanRevisitOf = null;
 
         // Award XP
         if (window.gamification) {
@@ -765,16 +914,22 @@ class ActiveRecallSystem {
             return '<p class="no-explanations">No saved explanations yet. Practice explaining concepts above!</p>';
         }
 
-        return explanations.slice(-5).reverse().map(exp => `
+        return explanations.slice(-5).reverse().map(exp => {
+            const original = exp.revisitOfId ? explanations.find(e => e.id === exp.revisitOfId) : null;
+            return `
             <div class="feynman-saved-item">
                 <div class="saved-header">
-                    <h4>${exp.conceptTitle}</h4>
+                    <h4>${escapeHtml(exp.conceptTitle)}${exp.revisitOfId ? ' <span class="feynman-revisit-badge">🔄 Revisited</span>' : ''}</h4>
                     <span class="saved-date">${formatDateMMDDYYYY(exp.date)}</span>
                 </div>
-                <p class="saved-book">From: ${exp.book}</p>
-                <p class="saved-explanation">${exp.explanation.substring(0, 200)}${exp.explanation.length > 200 ? '...' : ''}</p>
+                <p class="saved-book">From: ${escapeHtml(exp.book)}</p>
+                <p class="saved-explanation">${escapeHtml(exp.explanation.substring(0, 200))}${exp.explanation.length > 200 ? '...' : ''}</p>
+                ${exp.gaps ? `<p class="saved-explanation"><strong>Gaps noted:</strong> ${escapeHtml(exp.gaps.substring(0, 150))}${exp.gaps.length > 150 ? '...' : ''}</p>` : ''}
+                ${exp.feedback ? `<p class="saved-explanation"><strong>🧑‍🏫 AI feedback:</strong> ${escapeHtml(exp.feedback.substring(0, 200))}${exp.feedback.length > 200 ? '...' : ''}</p>` : ''}
+                ${original ? `<p class="saved-explanation" style="opacity:0.7;"><strong>Original (${formatDateMMDDYYYY(original.date)}):</strong> ${escapeHtml(original.explanation.substring(0, 150))}${original.explanation.length > 150 ? '...' : ''}</p>` : ''}
             </div>
-        `).join('');
+        `;
+        }).join('');
     }
 
     // ============================================
