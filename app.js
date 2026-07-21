@@ -966,6 +966,22 @@ class SynthesisApp {
         }
     }
 
+    toggleFavoriteCategory(categoryId) {
+        if (window.activeRecall) {
+            window.activeRecall.toggleFavoriteCategory(categoryId);
+            this.updateCategoryFavoriteButton(categoryId);
+        }
+    }
+
+    updateCategoryFavoriteButton(categoryId) {
+        const btn = document.getElementById('category-favorite-btn');
+        if (!btn) return;
+        const pinned = window.activeRecall && window.activeRecall.isFavoriteCategory(categoryId);
+        btn.classList.toggle('favorited', !!pinned);
+        btn.textContent = pinned ? '⭐ Pinned to Favorites' : '☆ Pin Track to Favorites';
+        btn.setAttribute('onclick', `app.toggleFavoriteCategory('${categoryId}')`);
+    }
+
     // ============================================
     // SAVED LESSONS ("bookmark this specific lesson to come back to")
     // Distinct from book-level Favorites (capped at 5, links to the book's
@@ -1733,6 +1749,7 @@ class SynthesisApp {
         if (!this.currentCategory) return;
 
         document.getElementById('category-title').textContent = this.currentCategory.name;
+        this.updateCategoryFavoriteButton(categoryId);
 
         const container = document.getElementById('category-books');
         // Any category flagged as a "course hub" (legacy MBC, or any of the
