@@ -590,7 +590,6 @@ class SynthesisApp {
 
     renderHome() {
         this.renderDailyDashboard();
-        this.renderStreakSection();
         this.renderContinueLearning();
         this.renderCategories();
         this.renderFeaturedBooks();
@@ -829,88 +828,6 @@ class SynthesisApp {
         } catch (err) {
             console.error('Failed to show streak reminder notification:', err);
         }
-    }
-
-    renderStreakSection() {
-        const container = document.getElementById('streak-section');
-        if (!container) return;
-        if (!APP_DATA.user) APP_DATA.user = {};
-        const days = APP_DATA.user.activityDays || {};
-        const active = this.streakIsActive();
-        const current = active ? (APP_DATA.user.currentStreak || 0) : 0;
-        const longest = APP_DATA.user.longestStreak || 0;
-        const totalActiveDays = Object.keys(days).length;
-
-        // Build a 12-week × 7-day heatmap ending today (Sunday-start columns).
-        const WEEKS = 12;
-        const today = new Date(this.todayKey() + 'T00:00:00');
-        const dayOfWeek = today.getDay(); // 0=Sun ... 6=Sat
-        const end = new Date(today);
-        // Roll forward to Saturday so the rightmost column is a full week.
-        end.setDate(end.getDate() + (6 - dayOfWeek));
-
-        const cells = [];
-        for (let w = WEEKS - 1; w >= 0; w--) {
-            for (let d = 0; d < 7; d++) {
-                const cell = new Date(end);
-                cell.setDate(end.getDate() - (w * 7 + (6 - d)));
-                const key = cell.toISOString().slice(0, 10);
-                const count = days[key] || 0;
-                const future = cell > today;
-                const level = future ? -1 :
-                    count === 0 ? 0 :
-                    count < 3 ? 1 :
-                    count < 8 ? 2 :
-                    count < 20 ? 3 : 4;
-                cells.push({ key, count, level, future });
-            }
-        }
-        const heatHtml = cells.map(c =>
-            `<div class="streak-cell streak-cell-l${c.level}"
-                  title="${c.key}${c.future ? '' : ` · ${c.count} action${c.count === 1 ? '' : 's'}`}"></div>`
-        ).join('');
-
-        const expanded = localStorage.getItem('synthesis_streak_heatmap_open') === '1';
-        container.innerHTML = `
-            <div class="streak-card">
-                <div class="streak-header" onclick="app.toggleStreakHeatmap()" role="button" tabindex="0" aria-expanded="${expanded}" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
-                    <div class="streak-stats">
-                        <div class="streak-stat streak-current ${active && current > 0 ? 'streak-on-fire' : ''}">
-                            <span class="streak-icon">${active && current > 0 ? '🔥' : '⏳'}</span>
-                            <span class="streak-value">${current}</span>
-                            <span class="streak-label">${current === 1 ? 'Day Streak' : 'Day Streak'}</span>
-                        </div>
-                        <div class="streak-stat">
-                            <span class="streak-value">${longest}</span>
-                            <span class="streak-label">Longest</span>
-                        </div>
-                        <div class="streak-stat">
-                            <span class="streak-value">${totalActiveDays}</span>
-                            <span class="streak-label">Active Days</span>
-                        </div>
-                    </div>
-                    <span class="streak-toggle" aria-hidden="true" style="font-size:1.5rem;color:#888;transition:transform 0.2s;transform:rotate(${expanded ? 180 : 0}deg);padding:0 0.5rem;">▾</span>
-                </div>
-                <div class="streak-heatmap-wrap" style="display:${expanded ? 'block' : 'none'};">
-                    <div class="streak-heatmap-title">Activity — last 12 weeks</div>
-                    <div class="streak-heatmap">${heatHtml}</div>
-                    <div class="streak-legend">
-                        <span>Less</span>
-                        <span class="streak-cell streak-cell-l0"></span>
-                        <span class="streak-cell streak-cell-l1"></span>
-                        <span class="streak-cell streak-cell-l2"></span>
-                        <span class="streak-cell streak-cell-l3"></span>
-                        <span class="streak-cell streak-cell-l4"></span>
-                        <span>More</span>
-                    </div>
-                </div>
-            </div>`;
-    }
-
-    toggleStreakHeatmap() {
-        const current = localStorage.getItem('synthesis_streak_heatmap_open') === '1';
-        localStorage.setItem('synthesis_streak_heatmap_open', current ? '0' : '1');
-        this.renderStreakSection();
     }
 
     manageFavorites() {
