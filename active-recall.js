@@ -16,12 +16,12 @@ class ActiveRecallSystem {
     }
 
     setupEventListeners() {
-        // Back buttons
+        // Back buttons — return to wherever the user came from
         const backBtns = ['flashcards', 'quick-quiz', 'feynman'];
         backBtns.forEach(view => {
             const btn = document.getElementById(`${view}-back-btn`);
             if (btn) {
-                btn.addEventListener('click', () => this.app.switchView('home'));
+                btn.addEventListener('click', () => this.app.goBack());
             }
         });
     }

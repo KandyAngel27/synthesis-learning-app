@@ -72,21 +72,21 @@ class PremiumFeatures {
     }
 
     setupEventListeners() {
-        // Back buttons
+        // Back buttons — return to wherever the user came from
         document.getElementById('vision-board-back-btn')?.addEventListener('click', () => {
-            this.app.switchView('home');
+            this.app.goBack();
         });
 
         document.getElementById('manifestation-back-btn')?.addEventListener('click', () => {
-            this.app.switchView('home');
+            this.app.goBack();
         });
 
         document.getElementById('shadow-work-back-btn')?.addEventListener('click', () => {
-            this.app.switchView('home');
+            this.app.goBack();
         });
 
         document.getElementById('workout-back-btn')?.addEventListener('click', () => {
-            this.app.switchView('home');
+            this.app.goBack();
         });
     }
 

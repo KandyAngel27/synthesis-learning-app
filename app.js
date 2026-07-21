@@ -9,6 +9,8 @@ class SynthesisApp {
         this.currentBook = null;
         this.currentLesson = null;
         this.currentCard = 0;
+        this.viewHistory = [];
+        this._suppressHistoryPush = false;
         this.init();
     }
 
@@ -345,39 +347,31 @@ class SynthesisApp {
             this.startDailyLesson();
         });
 
-        // Back buttons
+        // Back buttons — all return to wherever the user actually came from
         document.getElementById('category-back-btn').addEventListener('click', () => {
-            this.switchView('home');
+            this.goBack();
         });
 
         document.getElementById('book-back-btn').addEventListener('click', () => {
-            if (this.currentCategory) {
-                this.showCategory(this.currentCategory.id);
-            } else {
-                this.switchView('home');
-            }
+            this.goBack();
         });
 
         document.getElementById('lesson-back-btn').addEventListener('click', () => {
-            if (this.currentBook && this.isMBCBook(this.currentBook.id)) {
-                this.goToMBCHub();
-            } else {
-                this.showBook(this.currentBook.id);
-            }
+            this.goBack();
         });
 
         document.getElementById('profile-back-btn').addEventListener('click', () => {
-            this.switchView('home');
+            this.goBack();
         });
 
         document.getElementById('glossary-back-btn')?.addEventListener('click', () => {
-            this.switchView('home');
+            this.goBack();
         });
 
         const examBackBtn = document.getElementById('exam-back-btn');
         if (examBackBtn) {
             examBackBtn.addEventListener('click', () => {
-                this.goToMBCHub();
+                this.goBack();
             });
         }
 
@@ -399,6 +393,18 @@ class SynthesisApp {
     }
 
     switchView(viewName) {
+        // Record where we're navigating away from, so any "back" button can
+        // return here regardless of which page that actually is — unless
+        // this call is itself goBack() replaying a popped history entry.
+        if (!this._suppressHistoryPush && this.currentView && this.currentView !== viewName) {
+            const prevState = this.captureViewState();
+            const top = this.viewHistory[this.viewHistory.length - 1];
+            if (!top || JSON.stringify(top) !== JSON.stringify(prevState)) {
+                this.viewHistory.push(prevState);
+                if (this.viewHistory.length > 50) this.viewHistory.shift();
+            }
+        }
+
         // Always scroll to top when switching views
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -460,16 +466,21 @@ class SynthesisApp {
         }
     }
 
-    // Save current view state to localStorage for persistence on refresh
-    saveCurrentView() {
-        const state = {
+    // Snapshot of "where we are right now" — used both to persist across
+    // reloads and as one frame in the in-memory back-button history stack.
+    captureViewState() {
+        return {
             view: this.currentView,
             categoryId: this.currentCategory?.id || null,
             bookId: this.currentBook?.id || null,
             lessonId: this.currentLesson?.id || null,
             cardIndex: this.currentCard
         };
-        localStorage.setItem('synthesis_last_view', JSON.stringify(state));
+    }
+
+    // Save current view state to localStorage for persistence on refresh
+    saveCurrentView() {
+        localStorage.setItem('synthesis_last_view', JSON.stringify(this.captureViewState()));
     }
 
     // Restore last view from localStorage
@@ -483,44 +494,79 @@ class SynthesisApp {
             // Don't restore if we're already on home
             if (!state.view || state.view === 'home') return;
 
-            // Restore based on the saved view
-            if (state.view === 'library') {
-                this.switchView('library');
-                this.renderLibrary();
-            } else if (state.view === 'category' && state.categoryId) {
-                const category = APP_DATA.categories.find(c => c.id === state.categoryId);
-                if (category) {
-                    this.currentCategory = category;
-                    this.switchView('category');
-                    this.renderCategory();
-                }
-            } else if (state.view === 'book' && state.bookId) {
-                const book = this.findBookById(state.bookId);
-                if (book) {
-                    this.currentBook = book;
-                    this.switchView('book');
-                    this.renderBookDetail();
-                }
-            } else if (state.view === 'lesson' && state.bookId && state.lessonId) {
-                const book = this.findBookById(state.bookId);
-                if (book) {
-                    this.currentBook = book;
-                    const lesson = book.lessonList?.find(l => String(l.id) === String(state.lessonId));
-                    if (lesson) {
-                        this.currentLesson = lesson;
-                        this.currentCard = state.cardIndex || 0;
-                        this.switchView('lesson');
-                        this.renderLesson();
-                    }
-                }
-            } else if (state.view === 'profile') {
-                this.switchView('profile');
-            } else {
-                // For other views (premium features, fitness, etc.)
-                this.switchView(state.view);
-            }
+            this.restoreState(state);
         } catch (e) {
             console.log('Could not restore last view:', e);
+        }
+    }
+
+    // Applies a captured view-state snapshot (from history or localStorage),
+    // re-deriving whatever context object (category/book/lesson) that view
+    // needs before switching to it.
+    restoreState(state) {
+        if (!state || !state.view || state.view === 'home') {
+            this.switchView('home');
+            return;
+        }
+
+        if (state.view === 'category' && state.categoryId) {
+            const category = APP_DATA.categories.find(c => c.id === state.categoryId);
+            if (category) {
+                this.showCategory(state.categoryId);
+            } else {
+                this.switchView('home');
+            }
+        } else if (state.view === 'book' && state.bookId) {
+            const book = this.findBookById(state.bookId);
+            if (book) {
+                this.showBook(state.bookId);
+            } else {
+                this.switchView('home');
+            }
+        } else if (state.view === 'lesson' && state.bookId && state.lessonId) {
+            const book = this.findBookById(state.bookId);
+            const lesson = book?.lessonList?.find(l => String(l.id) === String(state.lessonId));
+            if (book && lesson) {
+                this.currentBook = book;
+                this.currentLesson = lesson;
+                this.currentCard = state.cardIndex || 0;
+                this.switchView('lesson');
+                this.renderLesson();
+            } else {
+                this.switchView('home');
+            }
+        } else {
+            // Other views (profile, glossary, flashcards, feynman, premium
+            // features, fitness sub-pages, etc.) carry no extra context.
+            this.switchView(state.view);
+        }
+    }
+
+    // Universal "back" — returns to whatever page was actually visited
+    // before the current one, not a hardcoded parent. Every back button in
+    // the app should call this instead of switchView() directly.
+    goBack() {
+        const state = this.viewHistory.pop();
+        if (state) {
+            this._suppressHistoryPush = true;
+            this.restoreState(state);
+            this._suppressHistoryPush = false;
+            return;
+        }
+
+        // No recorded history — e.g. the app was reloaded straight into this
+        // view. Fall back to this view's logical parent.
+        if (this.currentView === 'lesson' && this.currentBook) {
+            if (this.isMBCBook(this.currentBook.id)) this.goToMBCHub();
+            else this.showBook(this.currentBook.id);
+        } else if (this.currentView === 'book' && this.currentCategory) {
+            this.showCategory(this.currentCategory.id);
+        } else if (this.currentView === 'exam' && this.currentBook && this.isMBCBook(this.currentBook.id)) {
+            this.goToMBCHub();
+        } else if (['body-metrics', 'trt', 'supplements', 'nutrition'].includes(this.currentView)) {
+            this.switchView('workout');
+        } else {
+            this.switchView('home');
         }
     }
 
@@ -543,6 +589,7 @@ class SynthesisApp {
     }
 
     renderHome() {
+        this.renderDailyDashboard();
         this.renderStreakSection();
         this.renderContinueLearning();
         this.renderCategories();
@@ -571,6 +618,88 @@ class SynthesisApp {
             ? window.examCenter.dailyQueueSize() : 0;
         badge.textContent = `${dueCount} due`;
         badge.style.display = dueCount > 0 ? 'block' : 'none';
+    }
+
+    // ---------------- Daily Dashboard ----------------
+    // Everything that's actually "due today" — streak, flashcards, exam
+    // prep, and the next lesson to resume — in one glanceable row, instead
+    // of scattered across separate cards/badges the user has to hunt for.
+    renderDailyDashboard() {
+        const container = document.getElementById('daily-dashboard');
+        if (!container) return;
+
+        const streak = APP_DATA.user?.currentStreak || 0;
+        const streakActive = typeof this.streakIsActive === 'function' ? this.streakIsActive() : true;
+        const streakOn = streakActive && streak > 0;
+
+        const dueFlashcards = window.activeRecall && typeof window.activeRecall.getDueFlashcards === 'function'
+            ? window.activeRecall.getDueFlashcards().length : 0;
+        const dueExam = window.examCenter && typeof window.examCenter.dailyQueueSize === 'function'
+            ? window.examCenter.dailyQueueSize() : 0;
+
+        const inProgress = getBooksInProgress();
+        const nextBook = inProgress[0] || null;
+        const nextLesson = nextBook ? ((nextBook.lessonList || []).find(l => !l.completed) || (nextBook.lessonList || [])[0]) : null;
+
+        const tiles = [];
+
+        tiles.push(`
+            <div class="dashboard-tile ${streakOn ? 'tile-hot' : ''}">
+                <span class="dashboard-tile-icon">${streakOn ? '🔥' : '⏳'}</span>
+                <div class="dashboard-tile-body">
+                    <div class="dashboard-tile-value">${streak}</div>
+                    <div class="dashboard-tile-label">Day Streak</div>
+                </div>
+            </div>
+        `);
+
+        tiles.push(`
+            <div class="dashboard-tile ${dueFlashcards > 0 ? 'tile-actionable' : ''}" ${dueFlashcards > 0 ? `onclick="app.switchView('flashcards')"` : ''}>
+                <span class="dashboard-tile-icon">🗂️</span>
+                <div class="dashboard-tile-body">
+                    <div class="dashboard-tile-value">${dueFlashcards}</div>
+                    <div class="dashboard-tile-label">Flashcards Due</div>
+                </div>
+                <span class="dashboard-tile-cta ${dueFlashcards > 0 ? '' : 'done'}">${dueFlashcards > 0 ? 'Review →' : '✓ Caught up'}</span>
+            </div>
+        `);
+
+        tiles.push(`
+            <div class="dashboard-tile ${dueExam > 0 ? 'tile-actionable' : ''}" ${dueExam > 0 ? `onclick="app.switchView('exam')"` : ''}>
+                <span class="dashboard-tile-icon">📝</span>
+                <div class="dashboard-tile-body">
+                    <div class="dashboard-tile-value">${dueExam}</div>
+                    <div class="dashboard-tile-label">Exam Prep Due</div>
+                </div>
+                <span class="dashboard-tile-cta ${dueExam > 0 ? '' : 'done'}">${dueExam > 0 ? 'Practice →' : '✓ Caught up'}</span>
+            </div>
+        `);
+
+        if (nextBook && nextLesson) {
+            tiles.push(`
+                <div class="dashboard-tile tile-actionable tile-wide" onclick="app.startLesson('${nextBook.id}', '${nextLesson.id}')">
+                    <span class="dashboard-tile-icon">📖</span>
+                    <div class="dashboard-tile-body">
+                        <div class="dashboard-tile-value dashboard-tile-value-text">${escapeHtml(nextLesson.title)}</div>
+                        <div class="dashboard-tile-label">Continue: ${escapeHtml(nextBook.title)}</div>
+                    </div>
+                    <span class="dashboard-tile-cta">Resume →</span>
+                </div>
+            `);
+        } else {
+            tiles.push(`
+                <div class="dashboard-tile tile-actionable tile-wide" onclick="app.showAllBooks()">
+                    <span class="dashboard-tile-icon">📖</span>
+                    <div class="dashboard-tile-body">
+                        <div class="dashboard-tile-value dashboard-tile-value-text">No lesson in progress</div>
+                        <div class="dashboard-tile-label">Browse the library to start one</div>
+                    </div>
+                    <span class="dashboard-tile-cta">Browse →</span>
+                </div>
+            `);
+        }
+
+        container.innerHTML = tiles.join('');
     }
 
     // ---------------- Streak + activity heatmap ----------------
@@ -2264,54 +2393,92 @@ class SynthesisApp {
     // ============================================
     // PRE-TEST PROMPT (the "pretesting effect")
     // Guessing before you've read the material — even wrong guesses —
-    // measurably improves later retention vs. reading cold. Reuses the
-    // lesson's own first quiz question rather than requiring new content;
+    // measurably improves later retention vs. reading cold. Reuses several
+    // of the lesson's own quiz questions rather than requiring new content;
     // shown once per lesson, purely for priming (not graded, no XP).
     // ============================================
+    PRETEST_MAX_QUESTIONS = 3;
+
     shouldShowPretest(lesson) {
         if (!lesson || lesson.completed) return false;
         if (!APP_DATA.user.pretestsShown) APP_DATA.user.pretestsShown = {};
         const key = `${this.currentBook.id}::${lesson.id}`;
         if (APP_DATA.user.pretestsShown[key]) return false;
-        return !!this.findPretestCard(lesson);
+        return this.findPretestCards(lesson).length > 0;
     }
 
-    findPretestCard(lesson) {
-        return (lesson.cards || []).find(c => c.type === 'quiz' && c.question && c.options && c.options.length > 0);
+    // Pulls up to PRETEST_MAX_QUESTIONS quiz cards from the lesson, spread
+    // across it rather than just the first few, so the pretest previews the
+    // range of what the lesson covers instead of only its opening topic.
+    findPretestCards(lesson) {
+        const quizCards = (lesson.cards || []).filter(c => c.type === 'quiz' && c.question && c.options && c.options.length > 0);
+        const max = this.PRETEST_MAX_QUESTIONS;
+        if (quizCards.length <= max) return quizCards;
+
+        const picked = [];
+        for (let i = 0; i < max; i++) {
+            picked.push(quizCards[Math.floor(i * (quizCards.length - 1) / (max - 1))]);
+        }
+        return [...new Set(picked)];
     }
 
     showPretestPrompt(onContinue) {
-        const card = this.findPretestCard(this.currentLesson);
+        const cards = this.findPretestCards(this.currentLesson);
         const key = `${this.currentBook.id}::${this.currentLesson.id}`;
         if (!APP_DATA.user.pretestsShown) APP_DATA.user.pretestsShown = {};
         APP_DATA.user.pretestsShown[key] = true;
         saveProgress();
 
-        if (!card) { onContinue(); return; }
+        if (cards.length === 0) { onContinue(); return; }
+
+        this._pretestCards = cards;
+        this._pretestIndex = 0;
+        this._pretestOnContinue = onContinue;
 
         const modal = document.createElement('div');
         modal.className = 'premium-modal-overlay';
+        modal.id = 'pretest-modal';
+        document.body.appendChild(modal);
+        this.renderPretestStep();
+    }
+
+    renderPretestStep() {
+        const modal = document.getElementById('pretest-modal');
+        if (!modal) return;
+
+        const cards = this._pretestCards;
+        const i = this._pretestIndex;
+        const card = cards[i];
+        const isLast = i === cards.length - 1;
+
         modal.innerHTML = `
             <div class="premium-modal">
-                <h3>🎯 Quick Guess</h3>
+                <h3>🎯 Quick Guess${cards.length > 1 ? ` <span style="opacity:0.6; font-size:0.8em;">(${i + 1}/${cards.length})</span>` : ''}</h3>
                 <p style="color: var(--color-text-secondary); text-align:center; margin-bottom: 1rem; font-size: 0.9rem;">
                     Before you read this lesson, take a guess. Just attempting it — right or wrong — helps it stick.
                 </p>
                 <div class="quiz-question" style="margin-bottom: 1rem;">${escapeHtml(card.question)}</div>
                 <div class="quiz-options" id="pretest-options">
-                    ${card.options.map((opt, i) => `
+                    ${card.options.map((opt) => `
                         <div class="quiz-option" data-correct="${!!opt.correct}" onclick="app.answerPretest(this)">${escapeHtml(opt.text)}</div>
                     `).join('')}
                 </div>
                 <div class="modal-buttons">
-                    <button class="btn-primary" id="pretest-continue-btn" style="width:100%;">Continue to Lesson →</button>
+                    <button class="btn-primary" id="pretest-continue-btn" style="width:100%;">${isLast ? 'Continue to Lesson →' : 'Next Question →'}</button>
                 </div>
             </div>
         `;
-        document.body.appendChild(modal);
         modal.querySelector('#pretest-continue-btn').onclick = () => {
-            modal.remove();
-            onContinue();
+            if (isLast) {
+                modal.remove();
+                const onContinue = this._pretestOnContinue;
+                this._pretestCards = null;
+                this._pretestOnContinue = null;
+                onContinue();
+            } else {
+                this._pretestIndex++;
+                this.renderPretestStep();
+            }
         };
     }
 
