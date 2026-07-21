@@ -98,11 +98,12 @@ class FitnessTracker {
     }
 
     setupEventListeners() {
+        // Back buttons — return to wherever the user came from
         const backBtns = ['body-metrics', 'trt', 'supplements', 'nutrition'];
         backBtns.forEach(view => {
             const btn = document.getElementById(`${view}-back-btn`);
             if (btn) {
-                btn.addEventListener('click', () => this.app.switchView('workout'));
+                btn.addEventListener('click', () => this.app.goBack());
             }
         });
     }
