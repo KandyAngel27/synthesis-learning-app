@@ -940,20 +940,32 @@ class ActiveRecallSystem {
         const container = document.getElementById('favorites-shelf');
         if (!container) return;
 
-        const favorites = APP_DATA.user.favoriteBooks || [];
+        const favoriteBookIds = APP_DATA.user.favoriteBooks || [];
+        const favoriteCategoryIds = APP_DATA.user.favoriteCategories || [];
 
-        if (favorites.length === 0) {
+        if (favoriteBookIds.length === 0 && favoriteCategoryIds.length === 0) {
             container.innerHTML = `
                 <div class="no-favorites">
-                    <p>No favorite books yet. Add books to your favorites from any book detail page!</p>
+                    <p>No favorites yet. Add books from any book detail page, or pin a whole track from its category page!</p>
                 </div>
             `;
             return;
         }
 
-        const favoriteBooks = favorites.map(id => getBookById(id)).filter(b => b);
+        const favoriteCategories = favoriteCategoryIds.map(id => APP_DATA.categories.find(c => c.id === id)).filter(c => c);
+        const favoriteBooks = favoriteBookIds.map(id => getBookById(id)).filter(b => b);
 
-        container.innerHTML = favoriteBooks.map(book => `
+        const categoryCardsHtml = favoriteCategories.map(cat => `
+            <div class="favorite-book-card" onclick="app.showCategory('${cat.id}')">
+                <div class="fav-book-cover" style="background: linear-gradient(135deg, ${cat.color} 0%, ${this.getCategoryColorDark(cat.id)} 100%); font-size: 1.75rem;">
+                    ${cat.icon || '📚'}
+                </div>
+                <div class="fav-book-title">${escapeHtml(cat.name)}</div>
+                <div class="fav-book-progress">${(cat.books || []).length} book${(cat.books || []).length === 1 ? '' : 's'}</div>
+            </div>
+        `).join('');
+
+        const bookCardsHtml = favoriteBooks.map(book => `
             <div class="favorite-book-card" onclick="app.showBook('${book.id}')">
                 <div class="fav-book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(book.category)} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
                     ${book.title.split(' ').slice(0, 2).map(w => w[0]).join('')}
@@ -962,6 +974,8 @@ class ActiveRecallSystem {
                 <div class="fav-book-progress">${book.progress}%</div>
             </div>
         `).join('');
+
+        container.innerHTML = categoryCardsHtml + bookCardsHtml;
     }
 
     toggleFavorite(bookId) {
@@ -986,6 +1000,33 @@ class ActiveRecallSystem {
 
     isFavorite(bookId) {
         return (APP_DATA.user.favoriteBooks || []).includes(bookId);
+    }
+
+    // Pinning a whole category (e.g. a multi-book course track) rather than
+    // a single book — no per-book progress bar makes sense for a track, so
+    // this is a separate list from favoriteBooks, not the same mechanism.
+    toggleFavoriteCategory(categoryId) {
+        if (!APP_DATA.user.favoriteCategories) {
+            APP_DATA.user.favoriteCategories = [];
+        }
+
+        const index = APP_DATA.user.favoriteCategories.indexOf(categoryId);
+        if (index > -1) {
+            APP_DATA.user.favoriteCategories.splice(index, 1);
+        } else {
+            if (APP_DATA.user.favoriteCategories.length >= 3) {
+                toast('You can only pin 3 tracks. Remove one first!', 'info');
+                return;
+            }
+            APP_DATA.user.favoriteCategories.push(categoryId);
+        }
+
+        saveProgress();
+        this.renderFavorites();
+    }
+
+    isFavoriteCategory(categoryId) {
+        return (APP_DATA.user.favoriteCategories || []).includes(categoryId);
     }
 
     getCategoryColor(categoryId) {
