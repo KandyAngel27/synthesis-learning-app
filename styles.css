@@ -3105,10 +3105,6 @@ body {
     min-height: 4rem;
 }
 
-.dashboard-tile.tile-wide {
-    grid-column: span 2;
-}
-
 .dashboard-tile.tile-actionable {
     cursor: pointer;
     transition: all var(--transition-base);
