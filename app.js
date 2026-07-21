@@ -1687,20 +1687,8 @@ class SynthesisApp {
                     <div class="book-title">${book.title}</div>
                     <div class="book-author">${book.author}</div>
                     <div class="book-meta">
-                        <span class="book-lessons">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                            ${book.lessons} lessons
-                        </span>
-                        <span class="book-time">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            ${book.duration} min
-                        </span>
+                        <span class="book-lessons">${book.lessons} lessons</span>
+                        <span class="book-time">${book.duration} min</span>
                     </div>
                 </div>
             </div>
@@ -1724,20 +1712,8 @@ class SynthesisApp {
                     <div class="book-title">${book.title}</div>
                     <div class="book-author">${book.author}</div>
                     <div class="book-meta">
-                        <span class="book-lessons">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                            ${book.lessons} lessons
-                        </span>
-                        <span class="book-time">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            ${book.duration} min
-                        </span>
+                        <span class="book-lessons">${book.lessons} lessons</span>
+                        <span class="book-time">${book.duration} min</span>
                     </div>
                 </div>
             </div>
