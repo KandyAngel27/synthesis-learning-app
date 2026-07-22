@@ -3082,7 +3082,7 @@ body {
 
 .daily-dashboard {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--spacing-sm);
 }
 
@@ -3096,6 +3096,7 @@ body {
     gap: var(--spacing-sm);
     position: relative;
     min-height: 8.6rem;
+    min-width: 0;
 }
 
 .dashboard-tile.tile-actionable {
@@ -3168,7 +3169,7 @@ body {
 
 .quick-actions-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: var(--spacing-md);
 }
 
@@ -3184,6 +3185,7 @@ body {
     cursor: pointer;
     transition: all var(--transition-base);
     position: relative;
+    min-width: 0;
 }
 
 .quick-action-btn:hover {
@@ -6661,7 +6663,7 @@ body {
 
 @media (max-width: 768px) {
     .quick-actions-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .quiz-length-options {
