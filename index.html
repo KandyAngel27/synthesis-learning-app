@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles.css?v=20260624z">
     <link rel="stylesheet" href="random-workout-generator.css?v=20260624z">
     <link rel="stylesheet" href="exam-center.css?v=20260624z">
+    <link rel="stylesheet" href="personalization.css?v=20260726a">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -92,6 +93,20 @@
                         <h3 class="insight-title">The Power of Tiny Habits</h3>
                         <p class="insight-excerpt">Discover how 1% improvements compound into remarkable results over time...</p>
                         <button class="btn-primary" id="daily-lesson-btn">Start Learning</button>
+                    </div>
+                </section>
+
+                <!-- Personalization: CTA (if not set up) or daily-goal tracker -->
+                <div id="personalize-banner" style="display:none;"></div>
+
+                <!-- For You: personalized recommendations -->
+                <section class="featured-section" id="foryou-section" style="display:none;">
+                    <div class="section-header">
+                        <h2>🎯 For You</h2>
+                        <span class="section-subtitle">Based on your plan</span>
+                    </div>
+                    <div class="featured-books" id="foryou-shelf">
+                        <!-- Dynamically populated -->
                     </div>
                 </section>
 
@@ -451,6 +466,13 @@
                             Full Reset - Start Fresh
                         </button>
                     </div>
+                </div>
+            </div>
+
+            <!-- Personalization / Growth Plan View -->
+            <div id="personalize-view" class="view">
+                <div class="personalize-content" id="personalize-content">
+                    <!-- Dynamically populated by personalization.js -->
                 </div>
             </div>
 
@@ -928,6 +950,7 @@
     <script src="fitness-tracker.js?v=20260624z"></script>
     <script src="recipe-assistant.js?v=20260624z"></script>
     <script src="toast.js?v=20260624z"></script>
+    <script src="personalization.js?v=20260726a"></script>
     <script src="app.js?v=20260624z"></script>
     <!-- Firebase compat SDKs — exposes global `firebase` so we can use script tags (no bundler) -->
     <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
