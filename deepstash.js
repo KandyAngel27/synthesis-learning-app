@@ -16,6 +16,7 @@ class DeepstashFeed {
         this.app = app;
         this.tab = 'discover';       // 'discover' | 'saved'
         this.activeTopic = 'all';    // category id or 'all'
+        this.factsOnly = false;      // when true, show only standalone facts (not book ideas)
         this.visibleCount = 24;      // progressive reveal in the discover feed
         this._pool = null;           // cached idea pool (built once)
         this._pageSize = 24;
@@ -197,14 +198,27 @@ class DeepstashFeed {
         const pool = this.buildPool();
         const seed = this.dailySeed();
         if (this.activeTopic !== 'all') {
-            const filtered = pool.filter(i => i.categoryId === this.activeTopic);
+            let filtered = pool.filter(i => i.categoryId === this.activeTopic);
+            if (this.factsOnly) filtered = filtered.filter(i => i.standalone);
             return this.seededShuffle(filtered, seed + this._topicSeedOffset());
         }
         // "All": interleave curated facts through book ideas so both show up.
         const facts = this.seededShuffle(pool.filter(i => i.standalone), seed + 1);
+        if (this.factsOnly) return facts;
         const bookIdeas = this.seededShuffle(pool.filter(i => !i.standalone), seed + 2);
         if (!facts.length) return bookIdeas;
         return this.interleave(facts, bookIdeas, 4);
+    }
+
+    setFactsOnly(v) {
+        this.factsOnly = !!v;
+        // If switching to facts-only while on a book-category topic, reset to All
+        // (a book category has no standalone facts, so it'd show nothing).
+        if (this.factsOnly && this.activeTopic !== 'all' && !String(this.activeTopic).startsWith('topic-')) {
+            this.activeTopic = 'all';
+        }
+        this.visibleCount = this._pageSize;
+        this.render();
     }
     _topicSeedOffset() {
         // Vary order per topic so switching topics doesn't feel identical.
@@ -240,13 +254,22 @@ class DeepstashFeed {
     setTab(t) { this.tab = t; this.visibleCount = this._pageSize; this.render(); }
 
     renderDiscover() {
-        const topics = this.topicsWithIdeas();
+        // When "Facts only" is on, hide book-category chips (they'd be empty).
+        let topics = this.topicsWithIdeas();
+        if (this.factsOnly) topics = topics.filter(t => t.standalone);
         const chips = [`<button class="ds-chip ${this.activeTopic === 'all' ? 'ds-chip-on' : ''}" onclick="window.deepstash.setTopic('all')">✨ All</button>`]
             .concat(topics.map(t => `
                 <button class="ds-chip ${this.activeTopic === t.id ? 'ds-chip-on' : ''}"
                         style="--ds-cat:${t.color}" onclick="window.deepstash.setTopic('${t.id}')">
                     ${t.icon} ${escapeHtml(t.name)}
                 </button>`)).join('');
+
+        const factsToggle = `
+            <label class="ds-toggle ${this.factsOnly ? 'ds-toggle-on' : ''}">
+                <input type="checkbox" ${this.factsOnly ? 'checked' : ''} onchange="window.deepstash.setFactsOnly(this.checked)">
+                <span class="ds-toggle-track"><span class="ds-toggle-thumb"></span></span>
+                <span class="ds-toggle-label">💡 Facts only</span>
+            </label>`;
 
         const all = this.feedIdeas();
         const shown = all.slice(0, this.visibleCount);
@@ -258,8 +281,9 @@ class DeepstashFeed {
         return `
             <div class="ds-intro">
                 <h2 class="ds-heading">Ideas worth stashing</h2>
-                <p class="ds-subheading">Bite-sized insights from across the library. Save the ones that click, then tap to read the full lesson.</p>
+                <p class="ds-subheading">Bite-sized insights and facts from across the library and beyond. Save the ones that click.</p>
             </div>
+            <div class="ds-controls">${factsToggle}</div>
             <div class="ds-chips">${chips}</div>
             <div class="ds-feed">${cards || this.emptyState('No ideas in this topic yet.')}</div>
             ${cards ? moreBtn : ''}`;
