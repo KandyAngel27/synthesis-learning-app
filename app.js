@@ -36,13 +36,6 @@ class SynthesisApp {
             // Restore last view from localStorage
             this.restoreLastView();
 
-            // First-time users: auto-open the personalization wizard once
-            // (only when we're sitting on home, so we don't yank them out of
-            // a restored lesson/view).
-            if (this.currentView === 'home') {
-                window.personalization?.maybeAutoStart();
-            }
-
             // Nudge if it's evening and today's activity hasn't happened yet;
             // re-check periodically in case the tab stays open past the hour
             // threshold. No-ops entirely if reminders aren't enabled.
@@ -83,9 +76,9 @@ class SynthesisApp {
             window.fitnessTracker = new FitnessTracker(this);
         }
 
-        // Initialize personalization / growth plan
-        if (typeof Personalization !== 'undefined') {
-            window.personalization = new Personalization(this);
+        // Initialize Deepstash-style ideas feed
+        if (typeof DeepstashFeed !== 'undefined') {
+            window.deepstash = new DeepstashFeed(this);
         }
     }
 
@@ -475,8 +468,8 @@ class SynthesisApp {
             window.fitnessTracker?.renderNutrition();
         } else if (viewName === 'glossary') {
             this.renderGlossary();
-        } else if (viewName === 'personalize') {
-            window.personalization?.render();
+        } else if (viewName === 'deepstash') {
+            window.deepstash?.render();
         }
     }
 
@@ -623,8 +616,8 @@ class SynthesisApp {
         this.renderSavedLessons();
         this.updateExamDueBadge();
 
-        // Personalization: banner (CTA or daily-goal tracker) + "For You" shelf
-        window.personalization?.renderHomeSections();
+        // Deepstash-style "Ideas for You" strip
+        window.deepstash?.renderHomeStrip();
     }
 
     updateExamDueBadge() {

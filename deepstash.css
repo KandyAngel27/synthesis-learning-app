@@ -1,0 +1,159 @@
+/* ============================================
+   DEEPSTASH-STYLE IDEAS FEED — styles
+   Uses the app's existing CSS variables. All selectors are .ds- prefixed.
+   ============================================ */
+
+#deepstash-view { padding-bottom: 6rem; }
+.ds-wrap { max-width: 680px; margin: 0 auto; padding: 0 var(--spacing-lg); }
+
+/* ---- tabs ---- */
+.ds-tabs {
+    display: flex; gap: 0.5rem;
+    position: sticky; top: 0; z-index: 5;
+    padding: 0.75rem 0;
+    background: var(--color-bg-primary);
+}
+.ds-tab {
+    flex: 1;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    color: var(--color-text-secondary);
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.65rem 1rem; border-radius: var(--radius-full);
+    cursor: pointer; transition: all 150ms ease; font-family: inherit;
+}
+.ds-tab-on {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: #fff; border-color: transparent;
+}
+
+/* ---- intro ---- */
+.ds-intro { margin: 0.5rem 0 1rem; }
+.ds-heading { font-size: 1.35rem; font-weight: 800; margin: 0 0 0.25rem; color: var(--color-text-primary); }
+.ds-subheading { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
+
+/* ---- topic chips ---- */
+.ds-chips {
+    display: flex; gap: 0.5rem; overflow-x: auto;
+    padding: 0.25rem 0 0.9rem; margin-bottom: 0.5rem;
+    scrollbar-width: none;
+}
+.ds-chips::-webkit-scrollbar { display: none; }
+.ds-chip {
+    flex: 0 0 auto;
+    background: var(--color-bg-secondary);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    color: var(--color-text-secondary);
+    font-weight: 600; font-size: 0.85rem;
+    padding: 0.5rem 0.9rem; border-radius: var(--radius-full);
+    cursor: pointer; white-space: nowrap; transition: all 150ms ease; font-family: inherit;
+}
+.ds-chip:hover { border-color: var(--ds-cat, var(--color-primary)); color: var(--color-text-primary); }
+.ds-chip-on {
+    background: color-mix(in srgb, var(--ds-cat, var(--color-primary)) 22%, var(--color-bg-secondary));
+    border-color: var(--ds-cat, var(--color-primary));
+    color: var(--color-text-primary);
+}
+
+/* ---- feed + idea cards ---- */
+.ds-feed { display: flex; flex-direction: column; gap: 1rem; }
+.ds-card {
+    position: relative;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 4px solid var(--ds-cat, var(--color-primary));
+    border-radius: var(--radius-xl);
+    padding: 1.15rem 1.25rem 1rem;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.ds-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.28); }
+.ds-card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.6rem; }
+.ds-tag {
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ds-cat, var(--color-primary-light));
+    background: color-mix(in srgb, var(--ds-cat, var(--color-primary)) 16%, transparent);
+    padding: 0.28rem 0.6rem; border-radius: var(--radius-full);
+}
+.ds-save {
+    flex-shrink: 0;
+    background: none; border: none; cursor: pointer;
+    color: var(--color-text-tertiary);
+    padding: 0.25rem; border-radius: var(--radius-md);
+    transition: color 150ms ease, transform 120ms ease;
+    display: inline-flex;
+}
+.ds-save:hover { color: var(--color-primary-light); transform: scale(1.12); }
+.ds-save-on { color: var(--color-primary-light); }
+.ds-card-title { font-size: 1.05rem; font-weight: 800; line-height: 1.3; margin: 0 0 0.4rem; color: var(--color-text-primary); }
+.ds-card-text { font-size: 0.98rem; line-height: 1.6; color: var(--color-text-primary); margin: 0 0 0.9rem; }
+
+.ds-source {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem;
+    width: 100%; text-align: left;
+    background: var(--color-bg-tertiary);
+    border: none; border-radius: var(--radius-lg);
+    padding: 0.7rem 0.9rem; cursor: pointer;
+    transition: background 150ms ease; font-family: inherit;
+}
+.ds-source:hover { background: var(--color-bg-elevated); }
+.ds-source-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.08em; color: var(--color-text-tertiary); }
+.ds-source-book { font-size: 0.88rem; font-weight: 700; color: var(--color-text-primary); }
+.ds-source-arrow { font-size: 0.8rem; font-weight: 700; color: var(--color-primary-light); margin-top: 0.15rem; }
+
+/* ---- more / end / empty ---- */
+.ds-more {
+    display: block; width: 100%; margin: 1.25rem 0 0;
+    background: var(--color-bg-tertiary); color: var(--color-text-primary);
+    border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);
+    padding: 0.9rem; font-weight: 700; font-size: 0.95rem; cursor: pointer;
+    transition: background 150ms ease; font-family: inherit;
+}
+.ds-more:hover { background: var(--color-bg-elevated); }
+.ds-end { text-align: center; color: var(--color-text-tertiary); font-size: 0.88rem; margin: 1.5rem 0 0; }
+.ds-empty { text-align: center; padding: 3rem 1rem; color: var(--color-text-secondary); }
+.ds-empty-icon { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
+
+/* ============================================
+   HOME STRIP
+   ============================================ */
+.deepstash-home-section { margin: 0 0 var(--spacing-xl); }
+.ds-home-strip, .deepstash-home-strip {
+    display: flex; gap: 0.85rem; overflow-x: auto;
+    padding: 0.25rem 0 0.75rem; scrollbar-width: none;
+}
+.deepstash-home-strip::-webkit-scrollbar { display: none; }
+.ds-mini {
+    flex: 0 0 260px;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-top: 3px solid var(--ds-cat, var(--color-primary));
+    border-radius: var(--radius-lg);
+    padding: 0.9rem 1rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+}
+.ds-mini-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ds-mini-tag {
+    font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+    color: var(--ds-cat, var(--color-primary-light));
+}
+.ds-mini-save { background: none; border: none; cursor: pointer; color: var(--color-text-tertiary); padding: 0; display: inline-flex; }
+.ds-mini-save:hover { color: var(--color-primary-light); }
+.ds-mini-text {
+    font-size: 0.9rem; line-height: 1.5; color: var(--color-text-primary); margin: 0;
+    cursor: pointer;
+    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ds-mini-src { font-size: 0.75rem; color: var(--color-text-tertiary); font-weight: 600; cursor: pointer; margin-top: auto; }
+
+.ds-mini-cta {
+    flex: 0 0 150px;
+    align-items: center; justify-content: center; text-align: center;
+    background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(236,72,153,0.14));
+    border: 1px solid rgba(99,102,241,0.4); border-top-color: var(--color-primary);
+    cursor: pointer; gap: 0.35rem;
+}
+.ds-mini-cta:hover { transform: translateY(-2px); }
+.ds-mini-cta-icon { font-size: 1.6rem; }
+.ds-mini-cta-text { font-weight: 800; font-size: 0.9rem; color: var(--color-text-primary); }
+.ds-mini-cta-arrow { font-size: 1.1rem; color: var(--color-primary-light); }
