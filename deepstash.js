@@ -51,6 +51,32 @@ class DeepstashFeed {
                 });
             });
         });
+
+        // Merge in standalone, book-independent ideas (general knowledge,
+        // trivia, science, life skills, …) from ideas-data.js, if present.
+        const stdTopics = (window.SYNTHESIS_IDEAS && window.SYNTHESIS_IDEAS.topics) || {};
+        const stdIdeas = (window.SYNTHESIS_IDEAS && window.SYNTHESIS_IDEAS.ideas) || [];
+        stdIdeas.forEach(it => {
+            if (!it || !it.text) return;
+            const t = stdTopics[it.topic] || {};
+            ideas.push({
+                key: `fact::${it.id}`,
+                title: (it.title || '').trim(),
+                text: String(it.text).trim(),
+                type: 'fact',
+                standalone: true,
+                source: it.source || '',
+                bookId: null,
+                bookTitle: '',
+                author: '',
+                lessonId: null,
+                categoryId: `topic-${it.topic}`,
+                categoryName: t.name || 'Ideas',
+                categoryIcon: t.icon || '💡',
+                categoryColor: t.color || '#6366f1',
+            });
+        });
+
         this._pool = ideas;
         return ideas;
     }
@@ -104,13 +130,40 @@ class DeepstashFeed {
     }
 
     // ---------- topics ----------
+    // Derived from the pool itself so both book categories AND standalone
+    // knowledge topics (Science, Trivia, …) surface as filter chips. The
+    // curated standalone topics are listed first so they're easy to find.
     topicsWithIdeas() {
-        const counts = {};
-        this.buildPool().forEach(i => { counts[i.categoryId] = (counts[i.categoryId] || 0) + 1; });
-        return (APP_DATA.categories || [])
-            .filter(c => counts[c.id])
-            .map(c => ({ id: c.id, name: c.name, icon: c.icon || '📘', color: c.color || '#6366f1', count: counts[c.id] }))
-            .sort((a, b) => b.count - a.count);
+        const map = {};
+        this.buildPool().forEach(i => {
+            if (!map[i.categoryId]) {
+                map[i.categoryId] = {
+                    id: i.categoryId,
+                    name: i.categoryName,
+                    icon: i.categoryIcon,
+                    color: i.categoryColor,
+                    count: 0,
+                    standalone: !!i.standalone,
+                };
+            }
+            map[i.categoryId].count++;
+        });
+        return Object.values(map).sort((a, b) => {
+            if (a.standalone !== b.standalone) return a.standalone ? -1 : 1;
+            return b.count - a.count;
+        });
+    }
+
+    // Weave curated standalone facts through book ideas so they're always
+    // visible in the "All" feed: one fact roughly every `gap` items.
+    interleave(primary, secondary, gap) {
+        const out = [];
+        let pi = 0, si = 0;
+        while (pi < primary.length || si < secondary.length) {
+            for (let k = 0; k < gap - 1 && si < secondary.length; k++) out.push(secondary[si++]);
+            if (pi < primary.length) out.push(primary[pi++]);
+        }
+        return out;
     }
 
     // ---------- deterministic daily shuffle ----------
@@ -141,9 +194,17 @@ class DeepstashFeed {
 
     // The ordered discover feed for the active topic (daily-stable order).
     feedIdeas() {
-        let pool = this.buildPool();
-        if (this.activeTopic !== 'all') pool = pool.filter(i => i.categoryId === this.activeTopic);
-        return this.seededShuffle(pool, this.dailySeed() + this._topicSeedOffset());
+        const pool = this.buildPool();
+        const seed = this.dailySeed();
+        if (this.activeTopic !== 'all') {
+            const filtered = pool.filter(i => i.categoryId === this.activeTopic);
+            return this.seededShuffle(filtered, seed + this._topicSeedOffset());
+        }
+        // "All": interleave curated facts through book ideas so both show up.
+        const facts = this.seededShuffle(pool.filter(i => i.standalone), seed + 1);
+        const bookIdeas = this.seededShuffle(pool.filter(i => !i.standalone), seed + 2);
+        if (!facts.length) return bookIdeas;
+        return this.interleave(facts, bookIdeas, 4);
     }
     _topicSeedOffset() {
         // Vary order per topic so switching topics doesn't feel identical.
@@ -236,11 +297,13 @@ class DeepstashFeed {
                 </div>
                 ${i.title ? `<h3 class="ds-card-title">${escapeHtml(i.title)}</h3>` : ''}
                 <p class="ds-card-text">${escapeHtml(i.text)}</p>
-                <button class="ds-source" onclick="app.startLesson('${i.bookId}', '${i.lessonId}')">
-                    <span class="ds-source-label">FROM</span>
-                    <span class="ds-source-book">${escapeHtml(i.bookTitle)}${i.author ? ` · ${escapeHtml(i.author)}` : ''}</span>
-                    <span class="ds-source-arrow">Read lesson →</span>
-                </button>
+                ${i.standalone
+                    ? `<div class="ds-fact-note">💡 ${escapeHtml(i.categoryName)}${i.source ? ` · ${escapeHtml(i.source)}` : ' · Good to know'}</div>`
+                    : `<button class="ds-source" onclick="app.startLesson('${i.bookId}', '${i.lessonId}')">
+                        <span class="ds-source-label">FROM</span>
+                        <span class="ds-source-book">${escapeHtml(i.bookTitle)}${i.author ? ` · ${escapeHtml(i.author)}` : ''}</span>
+                        <span class="ds-source-arrow">Read lesson →</span>
+                    </button>`}
             </article>`;
     }
 
@@ -257,10 +320,19 @@ class DeepstashFeed {
     renderHomeStrip() {
         const strip = document.getElementById('deepstash-home-strip');
         if (!strip) return;
-        const daily = this.seededShuffle(this.buildPool(), this.dailySeed()).slice(0, 8);
+        const pool = this.buildPool();
+        const seed = this.dailySeed();
+        // Mix a few curated facts into the daily teaser row.
+        const facts = this.seededShuffle(pool.filter(i => i.standalone), seed + 5);
+        const bookIdeas = this.seededShuffle(pool.filter(i => !i.standalone), seed + 6);
+        const daily = (facts.length ? this.interleave(facts, bookIdeas, 3) : bookIdeas).slice(0, 8);
         if (!daily.length) { strip.innerHTML = ''; return; }
         strip.innerHTML = daily.map(i => {
             const saved = this.isSaved(i.key);
+            const openAction = i.standalone
+                ? `app.switchView('deepstash')`
+                : `app.startLesson('${i.bookId}', '${i.lessonId}')`;
+            const srcLabel = i.standalone ? `💡 ${i.categoryName}` : i.bookTitle;
             return `
                 <div class="ds-mini" style="--ds-cat:${i.categoryColor}">
                     <div class="ds-mini-top">
@@ -273,8 +345,8 @@ class DeepstashFeed {
                             </svg>
                         </button>
                     </div>
-                    <p class="ds-mini-text" onclick="app.startLesson('${i.bookId}', '${i.lessonId}')">${escapeHtml(i.text)}</p>
-                    <div class="ds-mini-src" onclick="app.startLesson('${i.bookId}', '${i.lessonId}')">${escapeHtml(i.bookTitle)}</div>
+                    <p class="ds-mini-text" onclick="${openAction}">${escapeHtml(i.text)}</p>
+                    <div class="ds-mini-src" onclick="${openAction}">${escapeHtml(srcLabel)}</div>
                 </div>`;
         }).join('') + `<div class="ds-mini ds-mini-cta" onclick="app.switchView('deepstash')">
                 <span class="ds-mini-cta-icon">💡</span>

@@ -101,6 +101,14 @@
 .ds-source-book { font-size: 0.88rem; font-weight: 700; color: var(--color-text-primary); }
 .ds-source-arrow { font-size: 0.8rem; font-weight: 700; color: var(--color-primary-light); margin-top: 0.15rem; }
 
+/* Footer for standalone facts (no source lesson to link to) */
+.ds-fact-note {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em;
+    color: var(--ds-cat, var(--color-primary-light));
+    background: color-mix(in srgb, var(--ds-cat, var(--color-primary)) 12%, transparent);
+    padding: 0.5rem 0.75rem; border-radius: var(--radius-lg);
+}
+
 /* ---- more / end / empty ---- */
 .ds-more {
     display: block; width: 100%; margin: 1.25rem 0 0;
