@@ -1566,13 +1566,13 @@ class SynthesisApp {
                     if (!completions[book.id + '::' + lesson.id]) continue;
                     for (const card of (lesson.cards || [])) {
                         if (typeof card.content !== 'string') continue;
-                        for (const { term, context } of this.extractBoldTerms(card.content)) {
+                        for (const { term, definition } of this.extractBoldTerms(card.content)) {
                             const lowerKey = term.toLowerCase();
                             if (!terms.has(lowerKey)) terms.set(lowerKey, { term, entries: [] });
                             const entry = terms.get(lowerKey);
                             const alreadyHasThisLesson = entry.entries.some(e => e.bookId === book.id && e.lessonId === lesson.id);
                             if (!alreadyHasThisLesson && entry.entries.length < 3) {
-                                entry.entries.push({ bookId: book.id, bookTitle: book.title, lessonId: lesson.id, lessonTitle: lesson.title, context });
+                                entry.entries.push({ bookId: book.id, bookTitle: book.title, lessonId: lesson.id, lessonTitle: lesson.title, definition });
                             }
                         }
                     }
@@ -1583,25 +1583,97 @@ class SynthesisApp {
         return [...terms.values()].sort((a, b) => a.term.localeCompare(b.term));
     }
 
-    // Pulls **bolded** phrases that look like terms (short, not a full
-    // sentence) along with ~80 chars of surrounding context on each side.
+    // Pulls **bolded** phrases that are genuine glossary material — a
+    // vocabulary term the text actually defines, a proper name, or a date —
+    // and skips bolded emphasis like "most people", "56% of Americans", or
+    // "money flows out". Returns { term, definition } where the definition is
+    // the sentence that explains the term.
     extractBoldTerms(content) {
         const results = [];
+        const seen = new Set();
         const regex = /\*\*([^*]{2,50})\*\*/g;
         let m;
         while ((m = regex.exec(content)) !== null) {
             const term = m[1].trim();
-            if (!term || /[.!?:]$/.test(term) || term.split(/\s+/).length > 6) continue;
+            if (!this.isGlossaryTerm(term)) continue;
 
-            const start = Math.max(0, m.index - 80);
-            const end = Math.min(content.length, m.index + m[0].length + 80);
-            let context = content.slice(start, end).replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
-            if (start > 0) context = '…' + context;
-            if (end < content.length) context += '…';
+            // Position of the term inside the plain (marker-free) text.
+            const plain = content.replace(/\*\*/g, '');
+            const plainIdx = content.slice(0, m.index).replace(/\*\*/g, '').length;
+            const sentence = this.sentenceAround(plain, plainIdx, term.length);
+            const definition = this.definitionFor(term, sentence);
+            if (!definition) continue;
 
-            results.push({ term, context });
+            const key = term.toLowerCase();
+            if (seen.has(key)) continue;
+            seen.add(key);
+            results.push({ term, definition });
         }
         return results;
+    }
+
+    // A bold phrase earns a glossary slot only if it reads like a term, a
+    // name, or a date — not an emphasis phrase, statistic, or clause.
+    isGlossaryTerm(term) {
+        const t = (term || '').trim();
+        if (!t) return false;
+        if (/[.!?:;,]$/.test(t)) return false;                 // sentence fragment
+        const words = t.split(/\s+/).filter(Boolean);
+        if (words.length > 5) return false;                    // too long to be a term
+        if (/%|\bpercent\b/i.test(t)) return false;            // a statistic
+        // Numbers are allowed only when the phrase is a date/year; reject
+        // quantities like "56", "1.9 million", "20,000 breaths".
+        const isYearish = /\b(1[0-9]{3}|20[0-9]{2})\b/.test(t) || /^\d{1,4}(?:s|st|nd|rd|th)?(?:[-–]\d{1,4}(?:s|st|nd|rd|th)?)?$/.test(t);
+        if (/\d/.test(t) && !isYearish) return false;
+        if (/[.,]/.test(t) && !isYearish) return false;
+        if (/\b(million|billion|thousand|trillion|dozen|hundreds?)\b/i.test(t)) return false;
+        // Leading quantifier / pronoun / connective signals an emphasis clause.
+        const STOP = new Set(['most','many','much','some','few','fewer','all','every','more','less','several','both','either','neither','each','any','no','not','when','why','how','where','what','who','whom','whose','if','because','since','while','although','though','however','therefore','thus','so','but','and','or','yet','also','even','just','only','still','now','then','here','there','this','that','these','those','it','its','they','their','them','we','our','us','you','your','he','she','his','her','about','over','under','up','down','out','in','on','at','by','for','with','from','into','onto','as','of','to','a','an','the']);
+        if (STOP.has(words[0].toLowerCase().replace(/[^a-z]/g, ''))) return false;
+        return true;
+    }
+
+    // Returns the sentence in `text` that contains the span at [idx, idx+len].
+    sentenceAround(text, idx, len) {
+        let s = idx;
+        while (s > 0 && !/[.!?]/.test(text[s - 1])) s--;
+        let e = idx + len;
+        while (e < text.length && !/[.!?]/.test(text[e])) e++;
+        if (e < text.length) e++;                              // include the terminator
+        return text.slice(s, e).replace(/\s+/g, ' ').trim();
+    }
+
+    // A term is glossary-worthy if it is a name, a date, or is genuinely
+    // defined in its sentence (followed by a definitional cue). Returns the
+    // definition sentence, or null to skip the term.
+    definitionFor(term, sentence) {
+        if (!sentence || sentence.split(/\s+/).length < 3) return null;
+        const isName = this.looksLikeName(term);
+        const isDate = /\b(1[0-9]{3}|20[0-9]{2})\b/.test(term) || /^\d{1,4}(?:s|st|nd|rd|th)?(?:[-–]\d{1,4}(?:s|st|nd|rd|th)?)?$/.test(term);
+        const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const defCue = new RegExp(esc + '\\s*(?:\\(|,|—|–|:| is | are | was | were | means | refers to | describes | is called | are called | is a | is an | is the | are the )', 'i');
+        if (isName || isDate || defCue.test(sentence)) return sentence;
+        return null;
+    }
+
+    // True for proper names: every significant word is capitalised (small
+    // connectors like "of"/"the"/"von" are allowed to be lowercase).
+    looksLikeName(term) {
+        const words = term.split(/\s+/).filter(Boolean);
+        if (!words.length) return false;
+        // Eponyms are terms in their own right: "Newton's third law",
+        // "Crohn's disease", "Broca's area", "Parkinson's".
+        if (/^[A-Z][A-Za-z.\-]*['’]s$/.test(words[0])) return true;
+        const CONNECT = new Set(['of','the','and','de','van','von','der','da','di','la','le','du','del','el','al']);
+        let caps = 0;
+        for (const w of words) {
+            const clean = w.replace(/[^A-Za-z]/g, '');
+            if (!clean) continue;
+            if (CONNECT.has(clean.toLowerCase())) continue;
+            if (/^[A-Z]/.test(clean)) caps++;
+            else return false;                                 // a significant lowercase word
+        }
+        return caps >= 1;
     }
 
     renderGlossary(filterQuery) {
@@ -1631,7 +1703,7 @@ class SynthesisApp {
                         <div class="notes-list-item-title">${escapeHtml(t.term)}</div>
                         ${t.entries.map(e => `
                             <div style="margin-top: 0.5rem;">
-                                <div class="notes-list-item-text">${escapeHtml(e.context)}</div>
+                                <div class="notes-list-item-text">${escapeHtml(e.definition)}</div>
                                 <div class="notes-list-item-book" style="cursor:pointer; color: var(--color-primary-light);" onclick="app.startLesson('${e.bookId}', '${e.lessonId}')">${escapeHtml(e.bookTitle)} &middot; ${escapeHtml(e.lessonTitle)}</div>
                             </div>
                         `).join('')}
