@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles.css?v=20260624z">
     <link rel="stylesheet" href="random-workout-generator.css?v=20260624z">
     <link rel="stylesheet" href="exam-center.css?v=20260624z">
+    <link rel="stylesheet" href="deepstash.css?v=20260726b">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -95,6 +96,17 @@
                     </div>
                 </section>
 
+                <!-- Deepstash-style ideas feed: bite-sized insights to swipe through -->
+                <section class="deepstash-home-section">
+                    <div class="section-header">
+                        <h2>💡 Ideas for You</h2>
+                        <button class="btn-text" onclick="app.switchView('deepstash')">See all</button>
+                    </div>
+                    <div class="deepstash-home-strip" id="deepstash-home-strip">
+                        <!-- Dynamically populated -->
+                    </div>
+                </section>
+
                 <!-- Daily Dashboard: everything due today, in one glance -->
                 <section class="daily-dashboard-section">
                     <div class="section-header">
@@ -140,6 +152,10 @@
                         <button class="quick-action-btn" onclick="app.switchView('glossary')">
                             <span class="quick-action-icon">&#128214;</span>
                             <span class="quick-action-label">Glossary</span>
+                        </button>
+                        <button class="quick-action-btn" onclick="app.switchView('deepstash')">
+                            <span class="quick-action-icon">&#128161;</span>
+                            <span class="quick-action-label">Ideas</span>
                         </button>
                     </div>
                 </section>
@@ -451,6 +467,22 @@
                             Full Reset - Start Fresh
                         </button>
                     </div>
+                </div>
+            </div>
+
+            <!-- Deepstash-style Ideas Feed View -->
+            <div id="deepstash-view" class="view">
+                <div class="view-header">
+                    <button class="btn-back" id="deepstash-back-btn" onclick="app.goBack()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Back
+                    </button>
+                    <h1>💡 Ideas</h1>
+                </div>
+                <div class="deepstash-content" id="deepstash-content">
+                    <!-- Dynamically populated by deepstash.js -->
                 </div>
             </div>
 
@@ -928,6 +960,8 @@
     <script src="fitness-tracker.js?v=20260624z"></script>
     <script src="recipe-assistant.js?v=20260624z"></script>
     <script src="toast.js?v=20260624z"></script>
+    <script src="ideas-data.js?v=20260726d"></script>
+    <script src="deepstash.js?v=20260726b"></script>
     <script src="app.js?v=20260624z"></script>
     <!-- Firebase compat SDKs — exposes global `firebase` so we can use script tags (no bundler) -->
     <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>

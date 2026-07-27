@@ -75,6 +75,11 @@ class SynthesisApp {
         if (typeof FitnessTracker !== 'undefined') {
             window.fitnessTracker = new FitnessTracker(this);
         }
+
+        // Initialize Deepstash-style ideas feed
+        if (typeof DeepstashFeed !== 'undefined') {
+            window.deepstash = new DeepstashFeed(this);
+        }
     }
 
     updateHeaderXP() {
@@ -463,6 +468,8 @@ class SynthesisApp {
             window.fitnessTracker?.renderNutrition();
         } else if (viewName === 'glossary') {
             this.renderGlossary();
+        } else if (viewName === 'deepstash') {
+            window.deepstash?.render();
         }
     }
 
@@ -608,6 +615,9 @@ class SynthesisApp {
 
         this.renderSavedLessons();
         this.updateExamDueBadge();
+
+        // Deepstash-style "Ideas for You" strip
+        window.deepstash?.renderHomeStrip();
     }
 
     updateExamDueBadge() {
