@@ -20,6 +20,7 @@ class DeepstashFeed {
         this.visibleCount = 24;      // progressive reveal in the discover feed
         this._pool = null;           // cached idea pool (built once)
         this._pageSize = 24;
+        this.HOME_CARD_COUNT = 4;    // how many teaser cards on the home page (rest via "See all")
     }
 
     // ---------- idea pool ----------
@@ -246,7 +247,7 @@ class DeepstashFeed {
         const savedN = this.savedKeys().length;
         return `
             <div class="ds-tabs">
-                <button class="ds-tab ${this.tab === 'discover' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('discover')">🧭 Discover</button>
+                <button class="ds-tab ${this.tab === 'discover' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('discover')">🧭 For You</button>
                 <button class="ds-tab ${this.tab === 'saved' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('saved')">💾 Saved${savedN ? ` (${savedN})` : ''}</button>
             </div>`;
     }
@@ -254,15 +255,16 @@ class DeepstashFeed {
     setTab(t) { this.tab = t; this.visibleCount = this._pageSize; this.render(); }
 
     renderDiscover() {
-        // When "Facts only" is on, hide book-category chips (they'd be empty).
+        // Topics as a dropdown. When "Facts only" is on, only standalone topics.
         let topics = this.topicsWithIdeas();
         if (this.factsOnly) topics = topics.filter(t => t.standalone);
-        const chips = [`<button class="ds-chip ${this.activeTopic === 'all' ? 'ds-chip-on' : ''}" onclick="window.deepstash.setTopic('all')">✨ All</button>`]
-            .concat(topics.map(t => `
-                <button class="ds-chip ${this.activeTopic === t.id ? 'ds-chip-on' : ''}"
-                        style="--ds-cat:${t.color}" onclick="window.deepstash.setTopic('${t.id}')">
-                    ${t.icon} ${escapeHtml(t.name)}
-                </button>`)).join('');
+        const options = [`<option value="all" ${this.activeTopic === 'all' ? 'selected' : ''}>✨ All topics</option>`]
+            .concat(topics.map(t => `<option value="${t.id}" ${this.activeTopic === t.id ? 'selected' : ''}>${t.icon} ${escapeHtml(t.name)}</option>`)).join('');
+        const topicDropdown = `
+            <div class="ds-topic-field">
+                <label class="ds-topic-label" for="ds-topic-select">Topic</label>
+                <select id="ds-topic-select" class="ds-topic-select" onchange="window.deepstash.setTopic(this.value)">${options}</select>
+            </div>`;
 
         const factsToggle = `
             <label class="ds-toggle ${this.factsOnly ? 'ds-toggle-on' : ''}">
@@ -280,11 +282,10 @@ class DeepstashFeed {
 
         return `
             <div class="ds-intro">
-                <h2 class="ds-heading">Ideas worth stashing</h2>
+                <h2 class="ds-heading">Discover something new</h2>
                 <p class="ds-subheading">Bite-sized insights and facts from across the library and beyond. Save the ones that click.</p>
             </div>
-            <div class="ds-controls">${factsToggle}</div>
-            <div class="ds-chips">${chips}</div>
+            <div class="ds-controls">${topicDropdown}${factsToggle}</div>
             <div class="ds-feed">${cards || this.emptyState('No ideas in this topic yet.')}</div>
             ${cards ? moreBtn : ''}`;
     }
@@ -349,7 +350,9 @@ class DeepstashFeed {
         // Mix a few curated facts into the daily teaser row.
         const facts = this.seededShuffle(pool.filter(i => i.standalone), seed + 5);
         const bookIdeas = this.seededShuffle(pool.filter(i => !i.standalone), seed + 6);
-        const daily = (facts.length ? this.interleave(facts, bookIdeas, 3) : bookIdeas).slice(0, 8);
+        // Only a handful of cards on the home page — they lay out in a grid
+        // that fits the page margin; the header's "See all" opens the rest.
+        const daily = (facts.length ? this.interleave(facts, bookIdeas, 3) : bookIdeas).slice(0, this.HOME_CARD_COUNT);
         if (!daily.length) { strip.innerHTML = ''; return; }
         strip.innerHTML = daily.map(i => {
             const saved = this.isSaved(i.key);
@@ -372,11 +375,7 @@ class DeepstashFeed {
                     <p class="ds-mini-text" onclick="${openAction}">${escapeHtml(i.text)}</p>
                     <div class="ds-mini-src" onclick="${openAction}">${escapeHtml(srcLabel)}</div>
                 </div>`;
-        }).join('') + `<div class="ds-mini ds-mini-cta" onclick="app.switchView('deepstash')">
-                <span class="ds-mini-cta-icon">💡</span>
-                <span class="ds-mini-cta-text">See all ideas</span>
-                <span class="ds-mini-cta-arrow">→</span>
-            </div>`;
+        }).join('');
     }
 }
 
