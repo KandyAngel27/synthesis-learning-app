@@ -14,9 +14,16 @@
 class DeepstashFeed {
     constructor(app) {
         this.app = app;
-        this.tab = 'discover';       // 'discover' | 'saved'
+        this.tab = 'discover';       // 'discover' | 'saved' | 'quiz'
         this.activeTopic = 'all';    // category id or 'all'
         this.factsOnly = false;      // when true, show only standalone facts (not book ideas)
+        this._quizPool = null;       // cached pool of book quiz cards
+        this.quizTopic = 'all';      // topic filter for Quiz Me
+        this.quizOrder = null;       // shuffled order of the filtered quiz pool
+        this.quizPos = 0;            // current position in quizOrder
+        this.quizAnswered = false;   // has the current question been answered
+        this.quizChosen = -1;        // which option the user tapped
+        this.quizScore = { correct: 0, total: 0 };
         this.visibleCount = 24;      // progressive reveal in the discover feed
         this._pool = null;           // cached idea pool (built once)
         this._pageSize = 24;
@@ -234,10 +241,13 @@ class DeepstashFeed {
     render() {
         const host = document.getElementById('deepstash-content');
         if (!host) return;
+        const body = this.tab === 'discover' ? this.renderDiscover()
+                   : this.tab === 'quiz' ? this.renderQuiz()
+                   : this.renderSaved();
         host.innerHTML = `
             <div class="ds-wrap">
                 ${this.renderTabs()}
-                ${this.tab === 'discover' ? this.renderDiscover() : this.renderSaved()}
+                ${body}
             </div>`;
         host.scrollTop = 0;
         window.scrollTo(0, 0);
@@ -248,11 +258,17 @@ class DeepstashFeed {
         return `
             <div class="ds-tabs">
                 <button class="ds-tab ${this.tab === 'discover' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('discover')">🧭 For You</button>
+                <button class="ds-tab ${this.tab === 'quiz' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('quiz')">🧠 Quiz Me</button>
                 <button class="ds-tab ${this.tab === 'saved' ? 'ds-tab-on' : ''}" onclick="window.deepstash.setTab('saved')">💾 Saved${savedN ? ` (${savedN})` : ''}</button>
             </div>`;
     }
 
-    setTab(t) { this.tab = t; this.visibleCount = this._pageSize; this.render(); }
+    setTab(t) {
+        this.tab = t;
+        this.visibleCount = this._pageSize;
+        if (t === 'quiz' && !this.quizOrder) this.restartQuiz();
+        this.render();
+    }
 
     renderDiscover() {
         // Topics as a dropdown. When "Facts only" is on, only standalone topics.
@@ -304,6 +320,152 @@ class DeepstashFeed {
                 <p class="ds-subheading">${ideas.length} idea${ideas.length > 1 ? 's' : ''} you've saved.</p>
             </div>
             <div class="ds-feed">${cards}</div>`;
+    }
+
+    // ============================================
+    // QUIZ ME — swipe through real multiple-choice questions
+    // pulled from the quiz cards authored across every book.
+    // ============================================
+    buildQuizPool() {
+        if (this._quizPool) return this._quizPool;
+        const quizzes = [];
+        (APP_DATA.categories || []).forEach(cat => {
+            (cat.books || []).forEach(book => {
+                (book.lessonList || []).forEach(lesson => {
+                    (lesson.cards || []).forEach((card, ci) => {
+                        if (card.type !== 'quiz' || !card.question || !Array.isArray(card.options)) return;
+                        const opts = card.options.filter(o => o && typeof o.text === 'string');
+                        if (opts.length !== 4 || opts.filter(o => o.correct).length !== 1) return;
+                        quizzes.push({
+                            key: `${book.id}::${lesson.id}::${ci}`,
+                            question: card.question,
+                            options: opts.map(o => ({ text: o.text, correct: !!o.correct })),
+                            explanation: card.explanation || '',
+                            bookId: book.id,
+                            bookTitle: book.title,
+                            lessonId: lesson.id,
+                            lessonTitle: lesson.title || '',
+                            categoryId: cat.id,
+                            categoryName: cat.name,
+                            categoryIcon: cat.icon || '📘',
+                            categoryColor: cat.color || '#6366f1',
+                        });
+                    });
+                });
+            });
+        });
+        this._quizPool = quizzes;
+        return quizzes;
+    }
+
+    quizTopics() {
+        const map = {};
+        this.buildQuizPool().forEach(q => {
+            if (!map[q.categoryId]) map[q.categoryId] = { id: q.categoryId, name: q.categoryName, icon: q.categoryIcon, color: q.categoryColor, count: 0 };
+            map[q.categoryId].count++;
+        });
+        return Object.values(map).sort((a, b) => b.count - a.count);
+    }
+
+    quizFiltered() {
+        const pool = this.buildQuizPool();
+        return this.quizTopic === 'all' ? pool : pool.filter(q => q.categoryId === this.quizTopic);
+    }
+
+    restartQuiz() {
+        const filtered = this.quizFiltered();
+        let offset = 0; const s = String(this.quizTopic);
+        for (let i = 0; i < s.length; i++) offset = (offset * 31 + s.charCodeAt(i)) | 0;
+        const order = this.seededShuffle(filtered.map((_, i) => i), this.dailySeed() + offset + (this._quizNonce || 0));
+        this.quizOrder = order;
+        this.quizPos = 0;
+        this.quizAnswered = false;
+        this.quizChosen = -1;
+        this.quizScore = { correct: 0, total: 0 };
+    }
+
+    setQuizTopic(id) { this.quizTopic = id; this._quizNonce = 0; this.restartQuiz(); this.render(); }
+
+    answerQuiz(idx) {
+        if (this.quizAnswered) return;
+        this.quizChosen = idx;
+        this.quizAnswered = true;
+        this.quizScore.total++;
+        const q = this.quizFiltered()[this.quizOrder[this.quizPos]];
+        if (q && q.options[idx] && q.options[idx].correct) this.quizScore.correct++;
+        this.render();
+    }
+
+    nextQuiz() {
+        if (!this.quizOrder) { this.restartQuiz(); this.render(); return; }
+        this.quizPos++;
+        if (this.quizPos >= this.quizOrder.length) {
+            // Reached the end — reshuffle for a fresh pass.
+            this._quizNonce = (this._quizNonce || 0) + 1;
+            this.restartQuiz();
+        } else {
+            this.quizAnswered = false;
+            this.quizChosen = -1;
+        }
+        this.render();
+    }
+
+    renderQuiz() {
+        let topics = this.quizTopics();
+        const options = [`<option value="all" ${this.quizTopic === 'all' ? 'selected' : ''}>✨ All topics</option>`]
+            .concat(topics.map(t => `<option value="${t.id}" ${this.quizTopic === t.id ? 'selected' : ''}>${t.icon} ${escapeHtml(t.name)}</option>`)).join('');
+        const topicDropdown = `
+            <div class="ds-topic-field">
+                <label class="ds-topic-label" for="ds-quiz-topic">Topic</label>
+                <select id="ds-quiz-topic" class="ds-topic-select" onchange="window.deepstash.setQuizTopic(this.value)">${options}</select>
+            </div>`;
+
+        const filtered = this.quizFiltered();
+        if (!this.quizOrder) this.restartQuiz();
+        if (!filtered.length) {
+            return `
+                <div class="ds-intro"><h2 class="ds-heading">Quiz Me</h2></div>
+                <div class="ds-controls">${topicDropdown}</div>
+                ${this.emptyState('No quiz questions in this topic yet.')}`;
+        }
+
+        const q = filtered[this.quizOrder[this.quizPos]];
+        const scoreStr = this.quizScore.total > 0 ? `${this.quizScore.correct}/${this.quizScore.total}` : '0/0';
+
+        const opts = q.options.map((o, i) => {
+            let cls = 'ds-qopt';
+            if (this.quizAnswered) {
+                if (o.correct) cls += ' ds-qopt-correct';
+                else if (i === this.quizChosen) cls += ' ds-qopt-wrong';
+                else cls += ' ds-qopt-dim';
+            }
+            const mark = this.quizAnswered ? (o.correct ? '✓' : (i === this.quizChosen ? '✗' : '')) : '';
+            return `<button class="${cls}" ${this.quizAnswered ? 'disabled' : ''} onclick="window.deepstash.answerQuiz(${i})">
+                        <span class="ds-qopt-text">${escapeHtml(o.text)}</span>
+                        <span class="ds-qopt-mark">${mark}</span>
+                    </button>`;
+        }).join('');
+
+        const feedback = this.quizAnswered ? `
+            <div class="ds-qexplain">
+                <div class="ds-qexplain-verdict">${q.options[this.quizChosen] && q.options[this.quizChosen].correct ? '✓ Correct!' : '✗ Not quite'}</div>
+                ${q.explanation ? `<p class="ds-qexplain-text">${escapeHtml(q.explanation)}</p>` : ''}
+                <button class="ds-qsource" onclick="app.startLesson('${q.bookId}', '${q.lessonId}')">From ${escapeHtml(q.bookTitle)}${q.lessonTitle ? ` · ${escapeHtml(q.lessonTitle)}` : ''} → Read lesson</button>
+            </div>
+            <button class="ds-more ds-qnext" onclick="window.deepstash.nextQuiz()">Next question →</button>` : '';
+
+        return `
+            <div class="ds-intro">
+                <h2 class="ds-heading">Quiz Me</h2>
+                <p class="ds-subheading">Test yourself on real questions from across the library.</p>
+            </div>
+            <div class="ds-controls">${topicDropdown}<span class="ds-qscore">Score <strong>${scoreStr}</strong></span></div>
+            <article class="ds-qcard" style="--ds-cat:${q.categoryColor}">
+                <span class="ds-tag">${q.categoryIcon} ${escapeHtml(q.categoryName)}</span>
+                <h3 class="ds-qquestion">${escapeHtml(q.question)}</h3>
+                <div class="ds-qopts">${opts}</div>
+            </article>
+            ${feedback}`;
     }
 
     ideaCard(i) {

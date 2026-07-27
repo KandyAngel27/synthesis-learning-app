@@ -136,6 +136,52 @@
     padding: 0.5rem 0.75rem; border-radius: var(--radius-lg);
 }
 
+/* ---- Quiz Me ---- */
+.ds-qscore { font-size: 0.85rem; font-weight: 600; color: var(--color-text-secondary); white-space: nowrap; }
+.ds-qscore strong { color: var(--color-text-primary); }
+.ds-qcard {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-top: 4px solid var(--ds-cat, var(--color-primary));
+    border-radius: var(--radius-xl);
+    padding: 1.15rem 1.25rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.75rem;
+}
+.ds-qquestion { font-size: 1.1rem; font-weight: 800; line-height: 1.35; margin: 0.3rem 0 0.2rem; color: var(--color-text-primary); }
+.ds-qopts { display: flex; flex-direction: column; gap: 0.6rem; }
+.ds-qopt {
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    text-align: left; width: 100%;
+    background: var(--color-bg-tertiary);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-lg);
+    padding: 0.8rem 1rem; cursor: pointer; font-family: inherit;
+    color: var(--color-text-primary); font-size: 0.95rem; font-weight: 600;
+    transition: border-color 150ms ease, background 150ms ease, transform 120ms ease;
+}
+.ds-qopt:not(:disabled):hover { border-color: var(--color-primary); transform: translateY(-1px); }
+.ds-qopt:disabled { cursor: default; }
+.ds-qopt-text { flex: 1; }
+.ds-qopt-mark { font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
+.ds-qopt-correct { border-color: var(--color-success); background: rgba(16,185,129,0.15); color: #fff; }
+.ds-qopt-correct .ds-qopt-mark { color: var(--color-success); }
+.ds-qopt-wrong { border-color: var(--color-error); background: rgba(239,68,68,0.15); }
+.ds-qopt-wrong .ds-qopt-mark { color: var(--color-error); }
+.ds-qopt-dim { opacity: 0.55; }
+.ds-qexplain {
+    margin-top: 1rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.1rem;
+}
+.ds-qexplain-verdict { font-weight: 800; font-size: 1rem; margin-bottom: 0.4rem; color: var(--color-text-primary); }
+.ds-qexplain-text { font-size: 0.92rem; line-height: 1.55; color: var(--color-text-secondary); margin: 0 0 0.6rem; }
+.ds-qsource { background: none; border: none; padding: 0; cursor: pointer; text-align: left;
+    font-size: 0.82rem; font-weight: 700; color: var(--color-primary-light); font-family: inherit; }
+.ds-qnext { margin-top: 0.75rem; }
+
 /* ---- more / end / empty ---- */
 .ds-more {
     display: block; width: 100%; margin: 1.25rem 0 0;
