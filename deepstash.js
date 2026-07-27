@@ -20,7 +20,7 @@ class DeepstashFeed {
         this.visibleCount = 24;      // progressive reveal in the discover feed
         this._pool = null;           // cached idea pool (built once)
         this._pageSize = 24;
-        this.HOME_CARD_COUNT = 4;    // how many teaser cards on the home page (rest via "See all")
+        this.HOME_CARD_COUNT = 5;    // how many teaser cards on the home page (rest via "See all")
     }
 
     // ---------- idea pool ----------
