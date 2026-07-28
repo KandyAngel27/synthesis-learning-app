@@ -750,13 +750,33 @@ class CrosswordSystem {
         const input = this.cellInput(r, c);
         if (input) {
             // Flag the focus as programmatic so onFocus doesn't re-toggle, and
-            // suppress the browser's scroll-to-input so the grid stays put.
+            // suppress the browser's scroll-to-input so the page stays put.
             this._progFocus = true;
             try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); }
             this._progFocus = false;
             this._justFocused = r + ',' + c;
         }
+        this.scrollCellIntoBoard(r, c);
         this.updateHighlight();
+    }
+
+    // Keep the active cell visible by scrolling ONLY the board's own scroll
+    // box (never the page), so navigating to an off-screen cell doesn't move
+    // the whole puzzle out from under you.
+    scrollCellIntoBoard(r, c) {
+        const cell = document.getElementById(`cw-cell-${r}-${c}`);
+        const box = document.getElementById('cw-board-scroll');
+        if (!cell || !box) return;
+        const cR = cell.getBoundingClientRect();
+        const bR = box.getBoundingClientRect();
+        const pad = 6;
+        let dx = 0, dy = 0;
+        if (cR.left < bR.left + pad) dx = cR.left - (bR.left + pad);
+        else if (cR.right > bR.right - pad) dx = cR.right - (bR.right - pad);
+        if (cR.top < bR.top + pad) dy = cR.top - (bR.top + pad);
+        else if (cR.bottom > bR.bottom - pad) dy = cR.bottom - (bR.bottom - pad);
+        if (dx) box.scrollLeft += dx;
+        if (dy) box.scrollTop += dy;
     }
 
     gotoEntry(dir, num) {
@@ -777,6 +797,18 @@ class CrosswordSystem {
         this.focusCell(e.r, e.c);
     }
 
+    // Scroll a clue into view within its own scrollable list box only — never
+    // touching window scroll, so the board stays put when you tap a cell.
+    scrollClueIntoView(li) {
+        const ol = li.parentElement;
+        if (!ol) return;
+        const olR = ol.getBoundingClientRect();
+        const liR = li.getBoundingClientRect();
+        if (liR.top < olR.top || liR.bottom > olR.bottom) {
+            ol.scrollTop += (liR.top - olR.top) - (ol.clientHeight - li.clientHeight) / 2;
+        }
+    }
+
     updateHighlight() {
         if (!this.current) return;
         document.querySelectorAll('.cw-cell.cw-active, .cw-cell.cw-inword').forEach(el => el.classList.remove('cw-active', 'cw-inword'));
@@ -792,9 +824,10 @@ class CrosswordSystem {
             if (li) {
                 li.classList.add('cw-clue-active');
                 // Only pull the clue into view when the active clue actually
-                // changes — not on every keystroke — so the page doesn't jump.
+                // changes — and scroll ONLY its own list box, never the page,
+                // so tapping a cell doesn't scroll the board away.
                 const ek = entry.dir + entry.num;
-                if (this._lastClueKey !== ek) li.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+                if (this._lastClueKey !== ek) this.scrollClueIntoView(li);
                 this._lastClueKey = ek;
             }
             const banner = document.getElementById('cw-active-clue');
