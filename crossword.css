@@ -17,23 +17,19 @@
     max-width: 1200px;
     margin: 0 auto var(--spacing-xl);
 }
+/* A responsive grid that WRAPS within the page margin — no horizontal
+   slider. Cards flow onto as many rows as needed. */
 .cw-home-strip {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 0.75rem;
-    overflow-x: auto;
-    /* No horizontal padding — the section already provides the page margin,
-       so the row stays inside it. */
     padding: 0.25rem 0 0.6rem;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
 }
 .cw-home-card {
-    flex: 0 0 auto;
-    width: 158px;
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
+    min-width: 0;
     text-align: left;
     background: var(--color-bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.07);
