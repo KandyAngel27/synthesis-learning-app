@@ -495,7 +495,7 @@ class CrosswordSystem {
         this.renderPuzzle();
         this.startTimer();
         // Focus the first cell for immediate typing.
-        setTimeout(() => { const el = this.cellInput(this.current.pos.r, this.current.pos.c); if (el) el.focus(); }, 60);
+        setTimeout(() => { const el = this.cellInput(this.current.pos.r, this.current.pos.c); if (el) { try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); } } }, 60);
     }
 
     // ============================================================
@@ -555,6 +555,7 @@ class CrosswordSystem {
                                 autocorrect="off" autocapitalize="characters" spellcheck="false"
                                 inputmode="text" value="${val}"
                                 onfocus="window.crossword.onFocus(${r},${col})"
+                                onclick="window.crossword.onCellClick(${r},${col})"
                                 oninput="window.crossword.onInput(${r},${col},this.value)"
                                 onkeydown="window.crossword.onKey(event,${r},${col})">
                         </div>`;
@@ -631,18 +632,27 @@ class CrosswordSystem {
 
     onFocus(r, c) {
         if (!this.current) return;
-        const p = this.current.pos;
-        // Tapping the current cell again toggles direction if both exist.
-        if (p.r === r && p.c === c) {
-            const other = this.current.dir === 'A' ? 'D' : 'A';
-            if (this.entryAt(r, c, other)) this.current.dir = other;
-        } else {
-            this.current.pos = { r, c };
-            if (!this.entryAt(r, c, this.current.dir)) {
-                this.current.dir = this.current.dir === 'A' ? 'D' : 'A';
-            }
+        // Ignore focus events we triggered ourselves (auto-advance, arrow keys).
+        // Otherwise the programmatic focus() re-enters here and flips direction,
+        // sending the next letters into the wrong squares.
+        if (this._progFocus) return;
+        this.current.pos = { r, c };
+        if (!this.entryAt(r, c, this.current.dir)) {
+            this.current.dir = this.current.dir === 'A' ? 'D' : 'A';
         }
+        this._justFocused = r + ',' + c;
         this.updateHighlight();
+    }
+
+    // A real tap on the cell that already has focus toggles Across/Down.
+    // (A first tap on a new cell fires focus, which we record so this click
+    // doesn't also toggle.)
+    onCellClick(r, c) {
+        if (!this.current) return;
+        const key = r + ',' + c;
+        if (this._justFocused === key) { this._justFocused = null; return; }
+        const other = this.current.dir === 'A' ? 'D' : 'A';
+        if (this.entryAt(r, c, other)) { this.current.dir = other; this.updateHighlight(); }
     }
 
     onInput(r, c, val) {
@@ -738,7 +748,14 @@ class CrosswordSystem {
             this.current.dir = this.current.dir === 'A' ? 'D' : 'A';
         }
         const input = this.cellInput(r, c);
-        if (input) input.focus();
+        if (input) {
+            // Flag the focus as programmatic so onFocus doesn't re-toggle, and
+            // suppress the browser's scroll-to-input so the grid stays put.
+            this._progFocus = true;
+            try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); }
+            this._progFocus = false;
+            this._justFocused = r + ',' + c;
+        }
         this.updateHighlight();
     }
 
@@ -772,7 +789,14 @@ class CrosswordSystem {
                 if (el) el.classList.add('cw-inword');
             });
             const li = document.getElementById(`cw-clue-${entry.dir}-${entry.num}`);
-            if (li) { li.classList.add('cw-clue-active'); li.scrollIntoView({ block: 'nearest' }); }
+            if (li) {
+                li.classList.add('cw-clue-active');
+                // Only pull the clue into view when the active clue actually
+                // changes — not on every keystroke — so the page doesn't jump.
+                const ek = entry.dir + entry.num;
+                if (this._lastClueKey !== ek) li.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+                this._lastClueKey = ek;
+            }
             const banner = document.getElementById('cw-active-clue');
             if (banner) {
                 banner.innerHTML = `<span class="cw-ac-num">${entry.num} ${entry.dir === 'A' ? 'Across' : 'Down'}</span>
