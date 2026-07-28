@@ -80,6 +80,11 @@ class SynthesisApp {
         if (typeof DeepstashFeed !== 'undefined') {
             window.deepstash = new DeepstashFeed(this);
         }
+
+        // Initialize crossword puzzles
+        if (typeof CrosswordSystem !== 'undefined') {
+            window.crossword = new CrosswordSystem(this);
+        }
     }
 
     updateHeaderXP() {
@@ -470,6 +475,8 @@ class SynthesisApp {
             this.renderGlossary();
         } else if (viewName === 'deepstash') {
             window.deepstash?.render();
+        } else if (viewName === 'crossword') {
+            window.crossword?.render();
         }
     }
 
@@ -542,6 +549,10 @@ class SynthesisApp {
             } else {
                 this.switchView('home');
             }
+        } else if (state.view === 'crossword-puzzle') {
+            // The crossword player holds runtime-only state, so a reload lands
+            // back on the puzzle menu rather than an empty grid.
+            this.switchView('crossword');
         } else {
             // Other views (profile, glossary, flashcards, feynman, premium
             // features, fitness sub-pages, etc.) carry no extra context.
