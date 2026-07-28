@@ -26,13 +26,19 @@ class CrosswordSystem {
         this._libWords = null;     // cached library word bank
         this.libNonce = { easy: 0, medium: 0, hard: 0 };
         this.PUZZLES = this.buildCuratedLibrary();
-        // HIM-track mega-puzzles come pre-built (layouts generated offline) from
-        // a separate data module so the huge grids render instantly.
+        // Track-specific mega-puzzles come pre-built (layouts generated offline)
+        // from separate data modules so the huge grids render instantly.
         this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
+        this.apPuzzles = Array.isArray(window.CROSSWORD_AP_PUZZLES) ? window.CROSSWORD_AP_PUZZLES : [];
+        this.tracks = [
+            { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
+            { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
+        ].filter(t => t.puzzles.length);
+        this.trackPuzzles = this.tracks.reduce((a, t) => a.concat(t.puzzles), []);
     }
 
     findPuzzle(id) {
-        return this.PUZZLES.find(x => x.id === id) || this.himPuzzles.find(x => x.id === id) || null;
+        return this.PUZZLES.find(x => x.id === id) || this.trackPuzzles.find(x => x.id === id) || null;
     }
 
     // Rebuild the sol/numAt lookups for a pre-built (stored) layout that only
@@ -329,18 +335,21 @@ class CrosswordSystem {
                 </button>`;
         };
 
-        // HIM-track mega-puzzles (100+ clues each).
-        const himClues = this.himPuzzles.reduce((s, p) => s + (p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : 0)), 0);
-        const himSection = this.himPuzzles.length ? `
+        // Track-specific mega-puzzles (100+ clues each), one section per track.
+        const clueCount = p => p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : 0);
+        const trackSections = this.tracks.map(t => {
+            const clues = t.puzzles.reduce((s, p) => s + clueCount(p), 0);
+            return `
             <section class="cw-group cw-him-group">
                 <div class="cw-group-head">
-                    <h3>🏥 HIM Track — Mega Puzzles</h3>
-                    <span class="cw-group-sub">Health Information Management only — ${himClues.toLocaleString()} clues across ${this.himPuzzles.length} giant grids</span>
+                    <h3>${t.icon} ${t.heading}</h3>
+                    <span class="cw-group-sub">${t.label} only — ${clues.toLocaleString()} clues across ${t.puzzles.length} giant grids</span>
                 </div>
                 <div class="cw-grid-cards">
-                    ${this.himPuzzles.map(p => this.himCard(p, cw)).join('')}
+                    ${t.puzzles.map(p => this.trackCard(p, cw, t.icon)).join('')}
                 </div>
-            </section>` : '';
+            </section>`;
+        }).join('');
 
         host.innerHTML = `
             <div class="cw-wrap">
@@ -349,12 +358,12 @@ class CrosswordSystem {
                     <p class="cw-intro-sub">Test everything you've learned — philosophy, physics, anatomy, history, psychology, business and more — one interlocking grid at a time.</p>
                     <div class="cw-stat-row">
                         <div class="cw-stat"><span class="cw-stat-num">${solvedCount}</span><span class="cw-stat-lbl">Solved</span></div>
-                        <div class="cw-stat"><span class="cw-stat-num">${total + this.himPuzzles.length}</span><span class="cw-stat-lbl">Curated puzzles</span></div>
+                        <div class="cw-stat"><span class="cw-stat-num">${total + this.trackPuzzles.length}</span><span class="cw-stat-lbl">Curated puzzles</span></div>
                         <div class="cw-stat"><span class="cw-stat-num">∞</span><span class="cw-stat-lbl">Library mixes</span></div>
                     </div>
                 </div>
 
-                ${himSection}
+                ${trackSections}
 
                 ${groups.map(g => `
                     <section class="cw-group">
@@ -372,7 +381,7 @@ class CrosswordSystem {
         `;
     }
 
-    himCard(p, cw) {
+    trackCard(p, cw, trackIcon) {
         const meta = this.diffMeta(p.difficulty);
         const best = cw.best[p.id];
         const solved = cw.solved[p.id];
@@ -380,8 +389,8 @@ class CrosswordSystem {
         return `
             <button class="cw-card cw-him-card ${solved ? 'cw-card-solved' : ''}" style="--cw-accent:${p.color || meta.color}" onclick="window.crossword.openPuzzle('${p.id}')">
                 <div class="cw-card-top">
-                    <span class="cw-card-icon">${p.icon || '🏥'}</span>
-                    <span class="cw-diff-pill" style="--cw-accent:${p.color || meta.color}">🏥 ${clues} clues</span>
+                    <span class="cw-card-icon">${p.icon || trackIcon || '🧩'}</span>
+                    <span class="cw-diff-pill" style="--cw-accent:${p.color || meta.color}">${trackIcon || '🧩'} ${clues} clues</span>
                 </div>
                 <div class="cw-card-title">${escapeHtml(p.title)}</div>
                 <div class="cw-card-desc">${escapeHtml(p.desc || '')}</div>
