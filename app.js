@@ -629,6 +629,7 @@ class SynthesisApp {
 
         // Deepstash-style "Ideas for You" strip
         window.deepstash?.renderHomeStrip();
+        window.crossword?.renderCrosswordHomeStrip();
     }
 
     updateExamDueBadge() {
@@ -2441,8 +2442,23 @@ class SynthesisApp {
         const modal = document.createElement('div');
         modal.className = 'premium-modal-overlay';
         modal.id = 'pretest-modal';
+        // Let the user back out: click the dark area outside the card, or Esc.
+        modal.addEventListener('click', (e) => { if (e.target === modal) this.closePretest(); });
+        this._pretestEsc = (e) => { if (e.key === 'Escape') this.closePretest(); };
+        document.addEventListener('keydown', this._pretestEsc);
         document.body.appendChild(modal);
         this.renderPretestStep();
+    }
+
+    // Dismiss the pre-test overlay without entering the lesson, so tapping a
+    // Discover card (or any lesson) is never a one-way trap.
+    closePretest() {
+        const modal = document.getElementById('pretest-modal');
+        if (modal) modal.remove();
+        if (this._pretestEsc) { document.removeEventListener('keydown', this._pretestEsc); this._pretestEsc = null; }
+        this._pretestCards = null;
+        this._pretestIndex = 0;
+        this._pretestOnContinue = null;
     }
 
     renderPretestStep() {
@@ -2455,7 +2471,9 @@ class SynthesisApp {
         const isLast = i === cards.length - 1;
 
         modal.innerHTML = `
-            <div class="premium-modal">
+            <div class="premium-modal" style="position:relative;">
+                <button onclick="app.closePretest()" aria-label="Close" title="Close"
+                    style="position:absolute; top:8px; right:10px; width:32px; height:32px; border:none; border-radius:50%; background:rgba(255,255,255,0.1); color:var(--color-text-secondary); font-size:1.4rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
                 <h3>🎯 Quick Guess${cards.length > 1 ? ` <span style="opacity:0.6; font-size:0.8em;">(${i + 1}/${cards.length})</span>` : ''}</h3>
                 <p style="color: var(--color-text-secondary); text-align:center; margin-bottom: 1rem; font-size: 0.9rem;">
                     Before you read this lesson, take a guess. Just attempting it — right or wrong — helps it stick.
@@ -2474,6 +2492,7 @@ class SynthesisApp {
         modal.querySelector('#pretest-continue-btn').onclick = () => {
             if (isLast) {
                 modal.remove();
+                if (this._pretestEsc) { document.removeEventListener('keydown', this._pretestEsc); this._pretestEsc = null; }
                 const onContinue = this._pretestOnContinue;
                 this._pretestCards = null;
                 this._pretestOnContinue = null;
