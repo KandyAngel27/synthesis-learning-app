@@ -31,10 +31,12 @@ class CrosswordSystem {
         this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
         this.apPuzzles = Array.isArray(window.CROSSWORD_AP_PUZZLES) ? window.CROSSWORD_AP_PUZZLES : [];
         this.philPuzzles = Array.isArray(window.CROSSWORD_PHIL_PUZZLES) ? window.CROSSWORD_PHIL_PUZZLES : [];
+        this.histPuzzles = Array.isArray(window.CROSSWORD_HIST_PUZZLES) ? window.CROSSWORD_HIST_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
             { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
+            { key: 'hist', icon: '🏛️', heading: 'History Track — Mega Puzzles', label: 'History', puzzles: this.histPuzzles },
         ].filter(t => t.puzzles.length);
         this.trackPuzzles = this.tracks.reduce((a, t) => a.concat(t.puzzles), []);
     }
@@ -381,6 +383,31 @@ class CrosswordSystem {
                 `).join('')}
             </div>
         `;
+    }
+
+    // Full-width teaser row on the home screen: a few puzzles across the
+    // general set and each mega-track. app.renderHome() calls this.
+    renderCrosswordHomeStrip() {
+        const strip = document.getElementById('crossword-home-strip');
+        if (!strip) return;
+        const cw = this.store();
+        const picks = [];
+        // A couple of quick general puzzles to start...
+        (this.PUZZLES.filter(p => p.difficulty === 'easy').slice(0, 2)).forEach(p => picks.push(p));
+        // ...then the flagship (first) puzzle of each mega-track.
+        this.tracks.forEach(t => { if (t.puzzles[0]) picks.push(t.puzzles[0]); });
+        if (!picks.length) { strip.innerHTML = ''; return; }
+        strip.innerHTML = picks.slice(0, 10).map(p => {
+            const meta = this.diffMeta(p.difficulty);
+            const clues = p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : (p.words ? p.words.length : 0));
+            const solved = cw.solved[p.id];
+            return `
+                <button class="cw-home-card" style="--cw-accent:${p.color || meta.color}" onclick="window.crossword.openPuzzle('${p.id}')">
+                    <span class="cw-home-icon">${p.icon || '🧩'}</span>
+                    <span class="cw-home-title">${escapeHtml(p.title)}</span>
+                    <span class="cw-home-meta">${clues} clues${solved ? ' · ✓ solved' : ''}</span>
+                </button>`;
+        }).join('');
     }
 
     trackCard(p, cw, trackIcon) {
