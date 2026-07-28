@@ -10,13 +10,20 @@
     padding: 0 var(--spacing-lg) var(--spacing-2xl);
 }
 
-/* ---------- Home teaser strip (full-width row of a few puzzles) ---------- */
-.crossword-home-section { margin-bottom: var(--spacing-lg); }
+/* ---------- Home teaser strip (a row of a few puzzles) ---------- */
+/* Match the page margins used by every other home section. */
+.crossword-home-section {
+    padding: 0 var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl);
+}
 .cw-home-strip {
     display: flex;
     gap: 0.75rem;
     overflow-x: auto;
-    padding: 0.25rem var(--spacing-lg) 0.6rem;
+    /* No horizontal padding — the section already provides the page margin,
+       so the row stays inside it. */
+    padding: 0.25rem 0 0.6rem;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
 }
