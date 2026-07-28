@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="random-workout-generator.css?v=20260624z">
     <link rel="stylesheet" href="exam-center.css?v=20260624z">
     <link rel="stylesheet" href="deepstash.css?v=20260727c">
-    <link rel="stylesheet" href="crossword.css?v=20260728j">
+    <link rel="stylesheet" href="crossword.css?v=20260728k">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -97,28 +97,6 @@
                     </div>
                 </section>
 
-                <!-- Deepstash-style ideas feed: bite-sized insights to swipe through -->
-                <section class="deepstash-home-section">
-                    <div class="section-header">
-                        <h2>💡 Discover</h2>
-                        <button class="btn-text" onclick="app.switchView('deepstash')">See all</button>
-                    </div>
-                    <div class="deepstash-home-strip" id="deepstash-home-strip">
-                        <!-- Dynamically populated -->
-                    </div>
-                </section>
-
-                <!-- Crosswords: full-width teaser row of a few puzzles -->
-                <section class="crossword-home-section">
-                    <div class="section-header">
-                        <h2>🧩 Crosswords</h2>
-                        <button class="btn-text" onclick="app.switchView('crossword')">See all</button>
-                    </div>
-                    <div class="cw-home-strip" id="crossword-home-strip">
-                        <!-- Dynamically populated by crossword.js -->
-                    </div>
-                </section>
-
                 <!-- Daily Dashboard: everything due today, in one glance -->
                 <section class="daily-dashboard-section">
                     <div class="section-header">
@@ -133,6 +111,28 @@
                 <section class="challenges-section">
                     <div id="daily-challenges-container">
                         <!-- Dynamically populated by gamification.js -->
+                    </div>
+                </section>
+
+                <!-- Crosswords: a wrapping grid of a few puzzles (no slider) -->
+                <section class="crossword-home-section">
+                    <div class="section-header">
+                        <h2>🧩 Crosswords</h2>
+                        <button class="btn-text" onclick="app.switchView('crossword')">See all</button>
+                    </div>
+                    <div class="cw-home-strip" id="crossword-home-strip">
+                        <!-- Dynamically populated by crossword.js -->
+                    </div>
+                </section>
+
+                <!-- Deepstash-style ideas feed: bite-sized insights to swipe through -->
+                <section class="deepstash-home-section">
+                    <div class="section-header">
+                        <h2>💡 Discover</h2>
+                        <button class="btn-text" onclick="app.switchView('deepstash')">See all</button>
+                    </div>
+                    <div class="deepstash-home-strip" id="deepstash-home-strip">
+                        <!-- Dynamically populated -->
                     </div>
                 </section>
 
