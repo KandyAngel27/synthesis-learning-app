@@ -30,9 +30,11 @@ class CrosswordSystem {
         // from separate data modules so the huge grids render instantly.
         this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
         this.apPuzzles = Array.isArray(window.CROSSWORD_AP_PUZZLES) ? window.CROSSWORD_AP_PUZZLES : [];
+        this.philPuzzles = Array.isArray(window.CROSSWORD_PHIL_PUZZLES) ? window.CROSSWORD_PHIL_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
+            { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
         ].filter(t => t.puzzles.length);
         this.trackPuzzles = this.tracks.reduce((a, t) => a.concat(t.puzzles), []);
     }
