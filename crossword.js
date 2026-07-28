@@ -513,6 +513,20 @@ class CrosswordSystem {
     }
     stopTimer() { if (this._timer) { clearInterval(this._timer); this._timer = null; } }
 
+    // ---------- grid zoom ----------
+    // Fixed, readable square cells; the user can size them to taste (persisted).
+    cellSize() {
+        let n = parseInt(localStorage.getItem('synthesis_cw_cell'), 10);
+        if (!n || isNaN(n)) n = 40;
+        return Math.max(24, Math.min(72, n));
+    }
+    zoom(dir) {
+        const next = Math.max(24, Math.min(72, this.cellSize() + dir * 6));
+        localStorage.setItem('synthesis_cw_cell', String(next));
+        const scroll = document.getElementById('cw-board-scroll');
+        if (scroll) scroll.style.setProperty('--cw-size', next + 'px');
+    }
+
     // ============================================================
     // RENDER THE PLAYABLE PUZZLE
     // ============================================================
@@ -561,8 +575,6 @@ class CrosswordSystem {
                 </ol>
             </div>`;
 
-        const boardWidth = `min(94vw, ${L.cols * 42}px, 620px)`;
-
         host.innerHTML = `
             <div class="cw-play-wrap">
                 <div class="cw-play-head">
@@ -584,10 +596,14 @@ class CrosswordSystem {
                     <button class="cw-tool" onclick="window.crossword.revealWord()">🔎 Word</button>
                     <button class="cw-tool cw-tool-danger" onclick="window.crossword.clearPuzzle()">✕ Clear</button>
                     ${c.dynamic ? `<button class="cw-tool" onclick="window.crossword.newLibraryMix()">🎲 New Mix</button>` : ''}
+                    <span class="cw-zoom">
+                        <button class="cw-tool cw-zoom-btn" title="Smaller grid" aria-label="Smaller grid" onclick="window.crossword.zoom(-1)">🔍−</button>
+                        <button class="cw-tool cw-zoom-btn" title="Bigger grid" aria-label="Bigger grid" onclick="window.crossword.zoom(1)">🔍+</button>
+                    </span>
                 </div>
 
-                <div class="cw-board-scroll">
-                    <div class="cw-board" style="width:${boardWidth}; grid-template-columns:repeat(${L.cols},1fr);">
+                <div class="cw-board-scroll" id="cw-board-scroll" style="--cw-size:${this.cellSize()}px;">
+                    <div class="cw-board" style="grid-template-columns:repeat(${L.cols}, var(--cw-size));">
                         ${board}
                     </div>
                 </div>
