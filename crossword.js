@@ -26,6 +26,26 @@ class CrosswordSystem {
         this._libWords = null;     // cached library word bank
         this.libNonce = { easy: 0, medium: 0, hard: 0 };
         this.PUZZLES = this.buildCuratedLibrary();
+        // HIM-track mega-puzzles come pre-built (layouts generated offline) from
+        // a separate data module so the huge grids render instantly.
+        this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
+    }
+
+    findPuzzle(id) {
+        return this.PUZZLES.find(x => x.id === id) || this.himPuzzles.find(x => x.id === id) || null;
+    }
+
+    // Rebuild the sol/numAt lookups for a pre-built (stored) layout that only
+    // carries its across/down entries, to keep the data file compact.
+    hydrateLayout(L) {
+        if (L.sol && L.numAt) return L;
+        const sol = {}, numAt = {};
+        [...(L.across || []), ...(L.down || [])].forEach(e => {
+            numAt[e.r + ',' + e.c] = e.num;
+            e.cells.forEach((cell, i) => { sol[cell.r + ',' + cell.c] = e.answer[i]; });
+        });
+        L.sol = sol; L.numAt = numAt;
+        return L;
     }
 
     // ---------- persistence ----------
@@ -309,6 +329,19 @@ class CrosswordSystem {
                 </button>`;
         };
 
+        // HIM-track mega-puzzles (100+ clues each).
+        const himClues = this.himPuzzles.reduce((s, p) => s + (p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : 0)), 0);
+        const himSection = this.himPuzzles.length ? `
+            <section class="cw-group cw-him-group">
+                <div class="cw-group-head">
+                    <h3>🏥 HIM Track — Mega Puzzles</h3>
+                    <span class="cw-group-sub">Health Information Management only — ${himClues.toLocaleString()} clues across ${this.himPuzzles.length} giant grids</span>
+                </div>
+                <div class="cw-grid-cards">
+                    ${this.himPuzzles.map(p => this.himCard(p, cw)).join('')}
+                </div>
+            </section>` : '';
+
         host.innerHTML = `
             <div class="cw-wrap">
                 <div class="cw-intro">
@@ -316,10 +349,12 @@ class CrosswordSystem {
                     <p class="cw-intro-sub">Test everything you've learned — philosophy, physics, anatomy, history, psychology, business and more — one interlocking grid at a time.</p>
                     <div class="cw-stat-row">
                         <div class="cw-stat"><span class="cw-stat-num">${solvedCount}</span><span class="cw-stat-lbl">Solved</span></div>
-                        <div class="cw-stat"><span class="cw-stat-num">${total}</span><span class="cw-stat-lbl">Curated puzzles</span></div>
+                        <div class="cw-stat"><span class="cw-stat-num">${total + this.himPuzzles.length}</span><span class="cw-stat-lbl">Curated puzzles</span></div>
                         <div class="cw-stat"><span class="cw-stat-num">∞</span><span class="cw-stat-lbl">Library mixes</span></div>
                     </div>
                 </div>
+
+                ${himSection}
 
                 ${groups.map(g => `
                     <section class="cw-group">
@@ -335,6 +370,26 @@ class CrosswordSystem {
                 `).join('')}
             </div>
         `;
+    }
+
+    himCard(p, cw) {
+        const meta = this.diffMeta(p.difficulty);
+        const best = cw.best[p.id];
+        const solved = cw.solved[p.id];
+        const clues = p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : 0);
+        return `
+            <button class="cw-card cw-him-card ${solved ? 'cw-card-solved' : ''}" style="--cw-accent:${p.color || meta.color}" onclick="window.crossword.openPuzzle('${p.id}')">
+                <div class="cw-card-top">
+                    <span class="cw-card-icon">${p.icon || '🏥'}</span>
+                    <span class="cw-diff-pill" style="--cw-accent:${p.color || meta.color}">🏥 ${clues} clues</span>
+                </div>
+                <div class="cw-card-title">${escapeHtml(p.title)}</div>
+                <div class="cw-card-desc">${escapeHtml(p.desc || '')}</div>
+                <div class="cw-card-foot">
+                    ${solved ? '<span class="cw-solved-tag">✓ Solved</span>' : `<span class="cw-card-meta">${clues} across &amp; down</span>`}
+                    ${best ? `<span class="cw-card-meta">⏱ ${this.fmtTime(best)}</span>` : ''}
+                </div>
+            </button>`;
     }
 
     puzzleCard(p, cw) {
@@ -360,13 +415,15 @@ class CrosswordSystem {
     // OPEN A PUZZLE
     // ============================================================
     openPuzzle(id) {
-        const p = this.PUZZLES.find(x => x.id === id);
+        const p = this.findPuzzle(id);
         if (!p) return;
-        const layout = this.buildLayout(p.id, p.words, 0);
+        // HIM mega-puzzles ship with a pre-built layout; small curated puzzles
+        // are generated on the fly.
+        const layout = p.layout ? this.hydrateLayout(p.layout) : this.buildLayout(p.id, p.words, 0);
         if (!layout) { if (window.toast) window.toast('Could not build that puzzle.', 'error'); return; }
         this.startPuzzle({
             id: p.id, title: p.title, difficulty: p.difficulty,
-            icon: p.icon, color: p.color, layout, dynamic: false,
+            icon: p.icon, color: p.color, layout, dynamic: false, xp: p.xp,
         });
     }
 
@@ -414,6 +471,7 @@ class CrosswordSystem {
         const firstEntry = state.layout.across[0] || state.layout.down[0];
         this.current = {
             ...state,
+            xp: state.xp,
             user,
             revealed: new Set(),
             pos: firstEntry ? { r: firstEntry.r, c: firstEntry.c } : { r: 0, c: 0 },
@@ -803,7 +861,7 @@ class CrosswordSystem {
 
         // Award XP the first time each puzzle is solved cleanly.
         if (!already && !usedReveals && window.gamification && typeof window.gamification.awardXP === 'function') {
-            const xp = this.diffMeta(c.difficulty).xp;
+            const xp = c.xp || this.diffMeta(c.difficulty).xp;
             window.gamification.awardXP(xp, `Crossword solved: ${c.title}`);
         }
         this.save();
@@ -825,7 +883,7 @@ class CrosswordSystem {
                 <p class="cw-win-name">${escapeHtml(c.title)}</p>
                 <div class="cw-win-stats">
                     <div><span>⏱</span> ${this.fmtTime(c.elapsed)}</div>
-                    ${!usedReveals ? `<div><span>⭐</span> +${meta.xp} XP</div>` : '<div><span>💡</span> Used reveals</div>'}
+                    ${!usedReveals ? `<div><span>⭐</span> +${c.xp || meta.xp} XP</div>` : '<div><span>💡</span> Used reveals</div>'}
                 </div>
                 <div class="cw-win-actions">
                     ${c.dynamic ? `<button class="cw-win-btn" onclick="window.crossword.newLibraryMix()">🎲 New Mix</button>` : ''}
