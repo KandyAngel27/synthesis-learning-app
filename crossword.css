@@ -266,6 +266,7 @@
     --cw-size: 40px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
     margin-bottom: var(--spacing-xl);
     padding: 0.25rem;
     max-height: 80vh;
@@ -311,11 +312,14 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: calc(var(--cw-size) * 0.55);
+    /* Never below 16px, or iOS Safari auto-zooms the whole page on focus. */
+    font-size: max(16px, calc(var(--cw-size) * 0.55));
     color: #0f172a;
     caret-color: var(--color-primary);
     padding: 0;
     border-radius: 2px;
+    /* Stop double-tap-to-zoom on cells (keeps normal panning/pinch). */
+    touch-action: manipulation;
 }
 .cw-input:focus { outline: none; }
 .cw-cell.cw-inword { background: #dbeafe; }
@@ -424,4 +428,25 @@
 @media (max-width: 620px) {
     .cw-clues { grid-template-columns: 1fr; }
     .cw-wrap, .cw-play-wrap { padding: 0 var(--spacing-md) var(--spacing-2xl); }
+}
+
+/* On phones the tapped box's clue rides a fixed bar at the BOTTOM of the
+   screen, lifted above the on-screen keyboard (positioned from JS via the
+   visual viewport). The top of the screen is where iOS scrolls the focused
+   cell to, so a bottom bar is the one place the keyboard can't hide it. */
+@media (max-width: 768px) {
+    .cw-active-clue {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        border-radius: 14px 14px 0 0;
+        z-index: 60;
+        box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.5);
+        font-size: 1rem;
+    }
+    /* Leave room so the bottom bar never hides the last clues. */
+    .cw-play-wrap { padding-bottom: 4.5rem; }
 }
