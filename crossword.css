@@ -218,6 +218,14 @@
     padding: 0.55rem 0.9rem;
     margin-bottom: var(--spacing-md);
     border-left: 3px solid var(--color-primary);
+    /* Pin the tapped box's clue just below the app header so it stays visible
+       no matter how far you scroll the board. */
+    position: sticky;
+    top: 80px;
+    z-index: 30;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--color-primary);
 }
 .cw-ac-num {
     font-weight: 800;
