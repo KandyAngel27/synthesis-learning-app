@@ -17,15 +17,18 @@
     max-width: 1200px;
     margin: 0 auto var(--spacing-xl);
 }
-/* A responsive grid that WRAPS within the page margin — no horizontal
-   slider. Cards flow onto as many rows as needed. */
+/* A single row of teaser cards — no wrapping to a second line and no
+   slider. As many fixed-width cards as fit the page width show; the rest
+   are clipped (the "See all" button opens the full set). */
 .cw-home-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 0.75rem;
     padding: 0.25rem 0 0.6rem;
+    overflow: hidden;
 }
 .cw-home-card {
+    flex: 0 0 150px;
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
