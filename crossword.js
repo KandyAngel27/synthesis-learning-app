@@ -33,10 +33,12 @@ class CrosswordSystem {
         this.philPuzzles = Array.isArray(window.CROSSWORD_PHIL_PUZZLES) ? window.CROSSWORD_PHIL_PUZZLES : [];
         this.histPuzzles = Array.isArray(window.CROSSWORD_HIST_PUZZLES) ? window.CROSSWORD_HIST_PUZZLES : [];
         this.sciPuzzles = Array.isArray(window.CROSSWORD_SCI_PUZZLES) ? window.CROSSWORD_SCI_PUZZLES : [];
+        this.mathPuzzles = Array.isArray(window.CROSSWORD_MATH_PUZZLES) ? window.CROSSWORD_MATH_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
             { key: 'sci', icon: '🔬', heading: 'Science Track — Mega Puzzles', label: 'Science (all branches)', puzzles: this.sciPuzzles },
+            { key: 'math', icon: '🔢', heading: 'Math Track — Mega Puzzles', label: 'Math (all branches)', puzzles: this.mathPuzzles },
             { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
             { key: 'hist', icon: '🏛️', heading: 'History Track — Mega Puzzles', label: 'History', puzzles: this.histPuzzles },
         ].filter(t => t.puzzles.length);
