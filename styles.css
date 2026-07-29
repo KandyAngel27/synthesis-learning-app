@@ -97,6 +97,9 @@ html {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Clip horizontal overflow at the root too (see body note); `clip` keeps
+       position: sticky working, unlike `hidden`. */
+    overflow-x: clip;
 }
 
 /* Text size: everything else in this stylesheet is sized in rem, so
@@ -124,7 +127,12 @@ body {
     background: var(--color-bg-primary);
     color: var(--color-text-primary);
     line-height: 1.6;
+    /* `clip` blocks sideways scrolling like `hidden` but, unlike `hidden`, it
+       does NOT make <body> a scroll container — which is what silently breaks
+       position: sticky on iOS Safari. `hidden` stays as a fallback for old
+       browsers that don't support `clip`. */
     overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* ============================================
