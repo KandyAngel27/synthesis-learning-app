@@ -542,6 +542,23 @@ class CrosswordSystem {
     }
     stopTimer() { if (this._timer) { clearInterval(this._timer); this._timer = null; } }
 
+    // Pin the active-clue banner exactly below the app header. The header's
+    // height varies by device (notch/safe-area on phones), so measure it and
+    // set the sticky offset from JS instead of hardcoding a value.
+    positionActiveClue() {
+        const banner = document.getElementById('cw-active-clue');
+        if (!banner) return;
+        const header = document.querySelector('.main-header');
+        const h = header ? Math.round(header.getBoundingClientRect().height) : 56;
+        banner.style.setProperty('--cw-clue-top', h + 'px');
+        if (!this._clueReposBound) {
+            this._clueReposBound = true;
+            const reflow = () => this.positionActiveClue();
+            window.addEventListener('resize', reflow);
+            window.addEventListener('orientationchange', reflow);
+        }
+    }
+
     // ---------- grid zoom ----------
     // Fixed, readable square cells; the user can size them to taste (persisted).
     cellSize() {
@@ -645,6 +662,7 @@ class CrosswordSystem {
             </div>
         `;
         this.updateHighlight();
+        this.positionActiveClue();
     }
 
     // ============================================================

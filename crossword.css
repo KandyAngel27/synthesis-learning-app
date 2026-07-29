@@ -219,9 +219,11 @@
     margin-bottom: var(--spacing-md);
     border-left: 3px solid var(--color-primary);
     /* Pin the tapped box's clue just below the app header so it stays visible
-       no matter how far you scroll the board. */
+       no matter how far you scroll the board. The exact offset is set from JS
+       to the header's real height (which varies on phones with a notch/safe
+       area), with a safe fallback here. */
     position: sticky;
-    top: 80px;
+    top: var(--cw-clue-top, 64px);
     z-index: 30;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.08);
