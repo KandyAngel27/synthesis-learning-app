@@ -550,14 +550,34 @@ class CrosswordSystem {
     positionActiveClue() {
         const banner = document.getElementById('cw-active-clue');
         if (!banner) return;
+        // Desktop: sticky offset = header height.
         const header = document.querySelector('.main-header');
         const h = header ? Math.round(header.getBoundingClientRect().height) : 56;
         banner.style.setProperty('--cw-clue-top', h + 'px');
+        // Phones: the clue is a fixed bottom bar — raise it above the on-screen
+        // keyboard (the visual viewport shrinks when the keyboard is up) or,
+        // when there's no keyboard, above the bottom nav.
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            const vv = window.visualViewport;
+            const keyboard = vv ? Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop)) : 0;
+            let offset = keyboard;
+            if (keyboard < 4) {
+                const nav = document.querySelector('.bottom-nav');
+                offset = nav ? Math.round(nav.getBoundingClientRect().height) : 0;
+            }
+            banner.style.bottom = offset + 'px';
+        } else {
+            banner.style.bottom = '';
+        }
         if (!this._clueReposBound) {
             this._clueReposBound = true;
             const reflow = () => this.positionActiveClue();
             window.addEventListener('resize', reflow);
             window.addEventListener('orientationchange', reflow);
+            if (window.visualViewport) {
+                window.visualViewport.addEventListener('resize', reflow);
+                window.visualViewport.addEventListener('scroll', reflow);
+            }
         }
     }
 
