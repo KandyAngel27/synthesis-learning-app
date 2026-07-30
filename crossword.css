@@ -18,8 +18,9 @@
     margin: 0 auto var(--spacing-xl);
 }
 /* A single row of teaser cards — no wrapping to a second line and no
-   slider. As many fixed-width cards as fit the page width show; the rest
-   are clipped (the "See all" button opens the full set). */
+   slider. Cards are sized to a fraction of the row so a WHOLE number fills
+   the width exactly (no half-visible card); any extras start fully past the
+   edge and are clipped. The "See all" button opens the full set. */
 .cw-home-strip {
     display: flex;
     flex-wrap: nowrap;
@@ -28,7 +29,8 @@
     overflow: hidden;
 }
 .cw-home-card {
-    flex: 0 0 150px;
+    /* 2 across on phones; the 3rd card sits fully off-screen and is clipped */
+    flex: 0 0 calc(50% - 0.375rem);
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
@@ -51,6 +53,11 @@
 .cw-home-icon { font-size: 1.8rem; }
 .cw-home-title { font-weight: 700; font-size: 0.92rem; line-height: 1.25; flex: 1; }
 .cw-home-meta { font-size: 0.74rem; color: var(--color-text-tertiary); }
+/* Wider screens fit more WHOLE cards (each fraction sums to 100% with the
+   0.75rem gaps, so the row is filled exactly and extras clip off-screen). */
+@media (min-width: 600px)  { .cw-home-card { flex-basis: calc(33.3333% - 0.5rem); } }
+@media (min-width: 900px)  { .cw-home-card { flex-basis: calc(25% - 0.5625rem); } }
+@media (min-width: 1200px) { .cw-home-card { flex-basis: calc(20% - 0.6rem); } }
 
 /* ---------- Menu / intro ---------- */
 .cw-intro {
