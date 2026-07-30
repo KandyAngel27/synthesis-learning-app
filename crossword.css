@@ -59,6 +59,21 @@
 @media (min-width: 900px)  { .cw-home-card { flex-basis: calc(25% - 0.5625rem); } }
 @media (min-width: 1200px) { .cw-home-card { flex-basis: calc(20% - 0.6rem); } }
 
+/* Match the Crosswords and Discover home-section headings to the Daily
+   Challenges heading size (1.25rem), and give consistent spacing so the
+   Crosswords row is clearly separated from the Daily Challenges section
+   above it. (crossword.css loads last, so these override styles.css.) */
+.crossword-home-section .section-header h2,
+.deepstash-home-section .section-header h2 {
+    font-size: 1.25rem;
+}
+.challenges-section,
+.crossword-home-section,
+.deepstash-home-section {
+    margin-top: 0;
+    margin-bottom: var(--spacing-xl);
+}
+
 /* ---------- Menu / intro ---------- */
 .cw-intro {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(236, 72, 153, 0.12));
