@@ -37,10 +37,12 @@ class CrosswordSystem {
         this.geoPuzzles = Array.isArray(window.CROSSWORD_GEO_PUZZLES) ? window.CROSSWORD_GEO_PUZZLES : [];
         this.laPuzzles = Array.isArray(window.CROSSWORD_LA_PUZZLES) ? window.CROSSWORD_LA_PUZZLES : [];
         this.hwPuzzles = Array.isArray(window.CROSSWORD_HW_PUZZLES) ? window.CROSSWORD_HW_PUZZLES : [];
+        this.stePuzzles = Array.isArray(window.CROSSWORD_STE_PUZZLES) ? window.CROSSWORD_STE_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
             { key: 'sci', icon: '🔬', heading: 'Science Track — Mega Puzzles', label: 'Science (all branches)', puzzles: this.sciPuzzles },
+            { key: 'ste', icon: '🛠️', heading: 'Science, Technology & Engineering Track — Mega Puzzles', label: 'Science, Technology & Engineering (all types)', puzzles: this.stePuzzles },
             { key: 'math', icon: '🔢', heading: 'Math Track — Mega Puzzles', label: 'Math (all branches)', puzzles: this.mathPuzzles },
             { key: 'geo', icon: '🌍', heading: 'Geography Track — Mega Puzzles', label: 'Geography (all types)', puzzles: this.geoPuzzles },
             { key: 'la', icon: '📖', heading: 'Language Arts Track — Mega Puzzles', label: 'Language Arts (all types)', puzzles: this.laPuzzles },
