@@ -36,6 +36,7 @@ class CrosswordSystem {
         this.mathPuzzles = Array.isArray(window.CROSSWORD_MATH_PUZZLES) ? window.CROSSWORD_MATH_PUZZLES : [];
         this.geoPuzzles = Array.isArray(window.CROSSWORD_GEO_PUZZLES) ? window.CROSSWORD_GEO_PUZZLES : [];
         this.laPuzzles = Array.isArray(window.CROSSWORD_LA_PUZZLES) ? window.CROSSWORD_LA_PUZZLES : [];
+        this.hwPuzzles = Array.isArray(window.CROSSWORD_HW_PUZZLES) ? window.CROSSWORD_HW_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
@@ -43,6 +44,7 @@ class CrosswordSystem {
             { key: 'math', icon: '🔢', heading: 'Math Track — Mega Puzzles', label: 'Math (all branches)', puzzles: this.mathPuzzles },
             { key: 'geo', icon: '🌍', heading: 'Geography Track — Mega Puzzles', label: 'Geography (all types)', puzzles: this.geoPuzzles },
             { key: 'la', icon: '📖', heading: 'Language Arts Track — Mega Puzzles', label: 'Language Arts (all types)', puzzles: this.laPuzzles },
+            { key: 'hw', icon: '🩺', heading: 'Health & Wellness Track — Mega Puzzles', label: 'Health & Wellness (all types)', puzzles: this.hwPuzzles },
             { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
             { key: 'hist', icon: '🏛️', heading: 'History Track — Mega Puzzles', label: 'History', puzzles: this.histPuzzles },
         ].filter(t => t.puzzles.length);
@@ -76,9 +78,26 @@ class CrosswordSystem {
         cw.solved = cw.solved || {};
         cw.best = cw.best || {};
         cw.progress = cw.progress || {};
+        cw.pinned = cw.pinned || [];   // puzzle ids pinned to the home screen
         return cw;
     }
     save() { if (typeof saveProgress === 'function') saveProgress(); }
+
+    // ---------- pin to home ----------
+    isPinned(id) { return this.store().pinned.includes(id); }
+    togglePin(id) {
+        const cw = this.store();
+        const i = cw.pinned.indexOf(id);
+        if (i >= 0) cw.pinned.splice(i, 1);
+        else cw.pinned.unshift(id);    // newest pin shows first
+        this.save();
+        // Update the button label in place (don't re-render the whole board).
+        const btn = document.getElementById('cw-pin-btn');
+        if (btn) btn.innerHTML = this.isPinned(id) ? '📌 Pinned' : '📌 Pin to Home';
+        // Refresh the home teaser row so the pin shows up there.
+        this.renderCrosswordHomeStrip();
+        if (window.toast) window.toast(this.isPinned(id) ? '📌 Pinned to your home screen' : 'Unpinned from home', 'success');
+    }
 
     // ---------- small utils ----------
     cleanWord(w) {
@@ -400,20 +419,26 @@ class CrosswordSystem {
         if (!strip) return;
         const cw = this.store();
         const picks = [];
-        // A couple of quick general puzzles to start...
-        (this.PUZZLES.filter(p => p.difficulty === 'easy').slice(0, 2)).forEach(p => picks.push(p));
+        const seen = new Set();
+        const add = (p, pinned) => { if (p && !seen.has(p.id)) { picks.push({ p, pinned }); seen.add(p.id); } };
+        // Pinned puzzles first, in pin order, so what you're working on leads.
+        (cw.pinned || []).forEach(id => add(this.findPuzzle(id), true));
+        // A couple of quick general puzzles...
+        this.PUZZLES.filter(p => p.difficulty === 'easy').slice(0, 2).forEach(p => add(p, false));
         // ...then the flagship (first) puzzle of each mega-track.
-        this.tracks.forEach(t => { if (t.puzzles[0]) picks.push(t.puzzles[0]); });
+        this.tracks.forEach(t => add(t.puzzles[0], false));
         if (!picks.length) { strip.innerHTML = ''; return; }
-        strip.innerHTML = picks.slice(0, 10).map(p => {
+        strip.innerHTML = picks.slice(0, 12).map(({ p, pinned }) => {
             const meta = this.diffMeta(p.difficulty);
             const clues = p.wordCount || (p.layout ? (p.layout.across.length + p.layout.down.length) : (p.words ? p.words.length : 0));
             const solved = cw.solved[p.id];
+            const inProgress = cw.progress && cw.progress[p.id] && Object.keys(cw.progress[p.id].grid || {}).length;
+            const status = solved ? ' · ✓ solved' : (inProgress ? ' · resume' : '');
             return `
-                <button class="cw-home-card" style="--cw-accent:${p.color || meta.color}" onclick="window.crossword.openPuzzle('${p.id}')">
-                    <span class="cw-home-icon">${p.icon || '🧩'}</span>
+                <button class="cw-home-card ${pinned ? 'cw-home-pinned' : ''}" style="--cw-accent:${p.color || meta.color}" onclick="window.crossword.openPuzzle('${p.id}')">
+                    <span class="cw-home-icon">${p.icon || '🧩'}${pinned ? '<span class="cw-home-pin">📌</span>' : ''}</span>
                     <span class="cw-home-title">${escapeHtml(p.title)}</span>
-                    <span class="cw-home-meta">${clues} clues${solved ? ' · ✓ solved' : ''}</span>
+                    <span class="cw-home-meta">${clues} clues${status}</span>
                 </button>`;
         }).join('');
     }
@@ -668,7 +693,8 @@ class CrosswordSystem {
                     <button class="cw-tool" onclick="window.crossword.revealCell()">💡 Letter</button>
                     <button class="cw-tool" onclick="window.crossword.revealWord()">🔎 Word</button>
                     <button class="cw-tool cw-tool-danger" onclick="window.crossword.clearPuzzle()">✕ Clear</button>
-                    ${c.dynamic ? `<button class="cw-tool" onclick="window.crossword.newLibraryMix()">🎲 New Mix</button>` : ''}
+                    ${c.dynamic ? `<button class="cw-tool" onclick="window.crossword.newLibraryMix()">🎲 New Mix</button>`
+                        : `<button class="cw-tool" id="cw-pin-btn" onclick="window.crossword.togglePin('${c.id}')">${this.isPinned(c.id) ? '📌 Pinned' : '📌 Pin to Home'}</button>`}
                     <span class="cw-zoom">
                         <button class="cw-tool cw-zoom-btn" title="Smaller grid" aria-label="Smaller grid" onclick="window.crossword.zoom(-1)">🔍−</button>
                         <button class="cw-tool cw-zoom-btn" title="Bigger grid" aria-label="Bigger grid" onclick="window.crossword.zoom(1)">🔍+</button>
