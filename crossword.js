@@ -38,6 +38,7 @@ class CrosswordSystem {
         this.laPuzzles = Array.isArray(window.CROSSWORD_LA_PUZZLES) ? window.CROSSWORD_LA_PUZZLES : [];
         this.hwPuzzles = Array.isArray(window.CROSSWORD_HW_PUZZLES) ? window.CROSSWORD_HW_PUZZLES : [];
         this.stePuzzles = Array.isArray(window.CROSSWORD_STE_PUZZLES) ? window.CROSSWORD_STE_PUZZLES : [];
+        this.bfPuzzles = Array.isArray(window.CROSSWORD_BF_PUZZLES) ? window.CROSSWORD_BF_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
@@ -47,6 +48,7 @@ class CrosswordSystem {
             { key: 'geo', icon: '🌍', heading: 'Geography Track — Mega Puzzles', label: 'Geography (all types)', puzzles: this.geoPuzzles },
             { key: 'la', icon: '📖', heading: 'Language Arts Track — Mega Puzzles', label: 'Language Arts (all types)', puzzles: this.laPuzzles },
             { key: 'hw', icon: '🩺', heading: 'Health & Wellness Track — Mega Puzzles', label: 'Health & Wellness (all types)', puzzles: this.hwPuzzles },
+            { key: 'bf', icon: '💼', heading: 'Business & Finance Track — Mega Puzzles', label: 'Business & Finance (all types)', puzzles: this.bfPuzzles },
             { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
             { key: 'hist', icon: '🏛️', heading: 'History Track — Mega Puzzles', label: 'History', puzzles: this.histPuzzles },
         ].filter(t => t.puzzles.length);
