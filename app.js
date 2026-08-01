@@ -2611,6 +2611,7 @@ class SynthesisApp {
                     "${card.content}"
                     ${card.author ? `<div style="margin-top: 1rem; text-align: right; font-style: normal; font-size: 1rem;">— ${card.author}</div>` : ''}
                 </div>
+                ${this.getVisualHtml(card.visual)}
             `;
         } else if (card.type === 'example') {
             html += `
@@ -2628,8 +2629,10 @@ class SynthesisApp {
                 </div>
             `;
         } else if (card.type === 'quiz' && card.options) {
+            html += this.getVisualHtml(card.visual);
             html += this.renderQuiz(card);
         } else if (card.type === 'quiz' && card.content) {
+            html += this.getVisualHtml(card.visual);
             html += this.renderContentQuiz(card);
         } else {
             html += this.formatContent(card.content);
