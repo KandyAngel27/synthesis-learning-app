@@ -99,7 +99,7 @@ class FitnessTracker {
 
     setupEventListeners() {
         // Back buttons — return to wherever the user came from
-        const backBtns = ['body-metrics', 'trt', 'supplements', 'nutrition'];
+        const backBtns = ['body-metrics', 'trt', 'supplements', 'nutrition', 'nutrition-research'];
         backBtns.forEach(view => {
             const btn = document.getElementById(`${view}-back-btn`);
             if (btn) {
@@ -125,8 +125,8 @@ class FitnessTracker {
         const progressData = this.getExerciseProgressData();
 
         const html = `
-            <!-- Row 1: Body Metrics, Supplements, Nutrition -->
-            <div class="fitness-hub-row three-col">
+            <!-- Row 1: Body Metrics, Supplements, Nutrition, Research -->
+            <div class="fitness-hub-row four-col">
                 <div class="hub-card" onclick="app.switchView('body-metrics')">
                     <span class="hub-icon">📊</span>
                     <span class="hub-title">Body Metrics</span>
@@ -141,6 +141,11 @@ class FitnessTracker {
                     <span class="hub-icon">🥗</span>
                     <span class="hub-title">Nutrition</span>
                     <span class="hub-desc">Macro tracking</span>
+                </div>
+                <div class="hub-card" onclick="app.switchView('nutrition-research')">
+                    <span class="hub-icon">🔬</span>
+                    <span class="hub-title">Research</span>
+                    <span class="hub-desc">Food facts & studies</span>
                 </div>
             </div>
 
@@ -9618,6 +9623,218 @@ Serve as is or over rice.`,
             toast('Data has been reset.', 'info');
             this.renderWorkoutHub();
         }
+    }
+
+    // ============================================
+    // NUTRITION RESEARCH / FOOD FACTS
+    // ============================================
+
+    getNutritionResearch() {
+        const stored = localStorage.getItem('synthesis_nutrition_research');
+        return stored ? JSON.parse(stored) : [];
+    }
+
+    saveNutritionResearch(entries) {
+        localStorage.setItem('synthesis_nutrition_research', JSON.stringify(entries));
+    }
+
+    renderNutritionResearch() {
+        window.scrollTo(0, 0);
+        const container = document.getElementById('nutrition-research-content');
+        if (!container) return;
+
+        const entries = this.getNutritionResearch();
+        const searchVal = (this._nrSearchTerm || '').toLowerCase();
+        const filtered = searchVal
+            ? entries.filter(e =>
+                e.topic.toLowerCase().includes(searchVal) ||
+                (e.notes || '').toLowerCase().includes(searchVal) ||
+                (e.tags || []).some(t => t.toLowerCase().includes(searchVal)) ||
+                (e.foods || []).some(f => f.food.toLowerCase().includes(searchVal)))
+            : entries;
+
+        const sorted = [...filtered].sort((a, b) => new Date(b.updated || b.created) - new Date(a.updated || a.created));
+
+        container.innerHTML = `
+            <div class="nr-search-row">
+                <input type="text" id="nr-search" placeholder="Search topics, foods, tags..." value="${this._nrSearchTerm || ''}" oninput="window.fitnessTracker._nrSearchTerm=this.value; window.fitnessTracker.renderNutritionResearch()">
+                <button class="nr-add-btn" onclick="window.fitnessTracker.showNRForm()">+ Add</button>
+            </div>
+            ${sorted.length === 0 ? `
+                <div class="nr-empty">
+                    <div class="nr-empty-icon">🔬</div>
+                    <p><strong>${searchVal ? 'No matches found' : 'No research notes yet'}</strong></p>
+                    <p>${searchVal ? 'Try a different search term' : 'Save studies, food facts, and nutrient info you want to remember'}</p>
+                </div>
+            ` : sorted.map(entry => this.renderNRCard(entry)).join('')}
+        `;
+
+        const searchInput = document.getElementById('nr-search');
+        if (searchInput && document.activeElement !== searchInput) {
+            searchInput.focus();
+            searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+        }
+    }
+
+    renderNRCard(entry) {
+        const foods = entry.foods || [];
+        const tags = entry.tags || [];
+        const dateStr = new Date(entry.updated || entry.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+        return `
+            <div class="nr-card">
+                <div class="nr-card-header">
+                    <div>
+                        <h3 class="nr-card-title">${this.escapeHTML(entry.topic)}</h3>
+                        ${entry.dailyTarget ? `<span class="nr-target">🎯 Daily target: ${this.escapeHTML(entry.dailyTarget)}</span>` : ''}
+                    </div>
+                    <div class="nr-card-actions">
+                        <button onclick="window.fitnessTracker.showNRForm('${entry.id}')" title="Edit">✏️</button>
+                        <button onclick="window.fitnessTracker.deleteNREntry('${entry.id}')" title="Delete">🗑️</button>
+                    </div>
+                </div>
+                ${tags.length > 0 ? `<div class="nr-tags">${tags.map(t => `<span class="nr-tag">${this.escapeHTML(t)}</span>`).join('')}</div>` : ''}
+                ${entry.notes ? `<div class="nr-card-notes">${this.escapeHTML(entry.notes)}</div>` : ''}
+                ${foods.length > 0 ? `
+                    <table class="nr-foods-table">
+                        <thead><tr><th>Food Source</th><th>Serving</th><th>Amount</th></tr></thead>
+                        <tbody>${foods.map(f => `
+                            <tr>
+                                <td>${this.escapeHTML(f.food)}</td>
+                                <td>${this.escapeHTML(f.serving || '')}</td>
+                                <td><strong>${this.escapeHTML(f.amount || '')}</strong></td>
+                            </tr>
+                        `).join('')}</tbody>
+                    </table>
+                ` : ''}
+                <div style="text-align:right;font-size:0.72rem;color:var(--color-text-tertiary);margin-top:0.5rem;">${dateStr}</div>
+            </div>
+        `;
+    }
+
+    showNRForm(editId) {
+        let entry = null;
+        if (editId) {
+            entry = this.getNutritionResearch().find(e => e.id === editId);
+        }
+        const foods = entry ? (entry.foods || []) : [{ food: '', serving: '', amount: '' }];
+
+        const overlay = document.createElement('div');
+        overlay.className = 'nr-modal-overlay';
+        overlay.id = 'nr-modal-overlay';
+        overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+
+        overlay.innerHTML = `
+            <div class="nr-modal">
+                <h3>${entry ? 'Edit' : 'New'} Research Note</h3>
+                <div class="nr-form-group">
+                    <label>Topic / Nutrient</label>
+                    <input type="text" id="nr-topic" placeholder="e.g. Choline & Anxiety" value="${entry ? this.escapeHTML(entry.topic) : ''}">
+                </div>
+                <div class="nr-form-group">
+                    <label>Daily Target (optional)</label>
+                    <input type="text" id="nr-target" placeholder="e.g. 550mg" value="${entry ? this.escapeHTML(entry.dailyTarget || '') : ''}">
+                </div>
+                <div class="nr-form-group">
+                    <label>Notes / Study Details</label>
+                    <textarea id="nr-notes" placeholder="What did you learn? Link to the study, key findings...">${entry ? this.escapeHTML(entry.notes || '') : ''}</textarea>
+                </div>
+                <div class="nr-form-group">
+                    <label>Tags (comma separated)</label>
+                    <input type="text" id="nr-tags" placeholder="e.g. anxiety, brain health, B-vitamins" value="${entry ? (entry.tags || []).join(', ') : ''}">
+                </div>
+                <div class="nr-form-group">
+                    <label>Food Sources</label>
+                    <div id="nr-foods-list">
+                        ${foods.map((f, i) => this.renderNRFoodRow(f, i)).join('')}
+                    </div>
+                    <button class="nr-add-food-btn" onclick="window.fitnessTracker.addNRFoodRow()">+ Add food source</button>
+                </div>
+                <div class="nr-modal-actions">
+                    <button class="nr-btn-cancel" onclick="document.getElementById('nr-modal-overlay').remove()">Cancel</button>
+                    <button class="nr-btn-save" onclick="window.fitnessTracker.saveNREntry('${editId || ''}')">Save</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(overlay);
+        document.getElementById('nr-topic').focus();
+    }
+
+    renderNRFoodRow(food, index) {
+        return `
+            <div class="nr-food-entry-row" data-food-index="${index}">
+                <input type="text" placeholder="Food (e.g. Eggs)" class="nr-food-name" value="${this.escapeHTML(food.food || '')}">
+                <input type="text" placeholder="Serving (e.g. 2 large)" class="nr-food-serving" value="${this.escapeHTML(food.serving || '')}">
+                <input type="text" placeholder="Amount (e.g. 294mg)" class="nr-food-amount" value="${this.escapeHTML(food.amount || '')}">
+                <button onclick="this.closest('.nr-food-entry-row').remove()" title="Remove">✕</button>
+            </div>
+        `;
+    }
+
+    addNRFoodRow() {
+        const list = document.getElementById('nr-foods-list');
+        if (!list) return;
+        const index = list.children.length;
+        const div = document.createElement('div');
+        div.innerHTML = this.renderNRFoodRow({ food: '', serving: '', amount: '' }, index);
+        list.appendChild(div.firstElementChild);
+    }
+
+    saveNREntry(editId) {
+        const topic = document.getElementById('nr-topic')?.value.trim();
+        if (!topic) {
+            toast('Please enter a topic', 'error');
+            return;
+        }
+
+        const target = document.getElementById('nr-target')?.value.trim();
+        const notes = document.getElementById('nr-notes')?.value.trim();
+        const tagsRaw = document.getElementById('nr-tags')?.value.trim();
+        const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean) : [];
+
+        const foodRows = document.querySelectorAll('.nr-food-entry-row');
+        const foods = [];
+        foodRows.forEach(row => {
+            const food = row.querySelector('.nr-food-name')?.value.trim();
+            const serving = row.querySelector('.nr-food-serving')?.value.trim();
+            const amount = row.querySelector('.nr-food-amount')?.value.trim();
+            if (food) foods.push({ food, serving, amount });
+        });
+
+        const entries = this.getNutritionResearch();
+        const now = new Date().toISOString();
+
+        if (editId) {
+            const idx = entries.findIndex(e => e.id === editId);
+            if (idx >= 0) {
+                entries[idx] = { ...entries[idx], topic, dailyTarget: target, notes, tags, foods, updated: now };
+            }
+        } else {
+            entries.push({
+                id: 'nr_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+                topic, dailyTarget: target, notes, tags, foods,
+                created: now, updated: now
+            });
+        }
+
+        this.saveNutritionResearch(entries);
+        document.getElementById('nr-modal-overlay')?.remove();
+        this.renderNutritionResearch();
+        toast(editId ? 'Research note updated' : 'Research note saved', 'success');
+    }
+
+    deleteNREntry(id) {
+        if (!confirm('Delete this research note?')) return;
+        const entries = this.getNutritionResearch().filter(e => e.id !== id);
+        this.saveNutritionResearch(entries);
+        this.renderNutritionResearch();
+        toast('Research note deleted', 'info');
+    }
+
+    escapeHTML(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 }
 

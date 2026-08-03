@@ -25,13 +25,24 @@ class SynthesisApp {
         // in-memory lesson objects that drive the UI.
         this.rehydrateLessonCompletions();
 
-        // Hide loading screen after 2 seconds
-        setTimeout(() => {
-            document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('app').style.display = 'flex';
+        // Show the app once everything is loaded and initialized.
+        // Use requestAnimationFrame to ensure the browser has painted the
+        // loading screen at least once before we swap to the app content,
+        // then a short delay so the loading animation is briefly visible.
+        const showApp = () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const appEl = document.getElementById('app');
+            appEl.style.display = 'flex';
             this.render();
             this.updateGreeting();
             this.updateDailyInsight();
+
+            // Fade out loading screen via CSS transition (set in styles.css)
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+            loadingScreen.addEventListener('transitionend', () => {
+                loadingScreen.style.display = 'none';
+            }, { once: true });
 
             // Restore last view from localStorage
             this.restoreLastView();
@@ -41,7 +52,8 @@ class SynthesisApp {
             // threshold. No-ops entirely if reminders aren't enabled.
             this.checkStreakReminder();
             setInterval(() => this.checkStreakReminder(), 15 * 60 * 1000);
-        }, 2000);
+        };
+        requestAnimationFrame(() => setTimeout(showApp, 300));
 
         // Set up event listeners
         this.setupEventListeners();
@@ -471,6 +483,8 @@ class SynthesisApp {
             window.fitnessTracker?.renderSupplements();
         } else if (viewName === 'nutrition') {
             window.fitnessTracker?.renderNutrition();
+        } else if (viewName === 'nutrition-research') {
+            window.fitnessTracker?.renderNutritionResearch();
         } else if (viewName === 'glossary') {
             this.renderGlossary();
         } else if (viewName === 'deepstash') {
@@ -581,7 +595,7 @@ class SynthesisApp {
             this.showCategory(this.currentCategory.id);
         } else if (this.currentView === 'exam' && this.currentBook && this.isMBCBook(this.currentBook.id)) {
             this.goToMBCHub();
-        } else if (['body-metrics', 'trt', 'supplements', 'nutrition'].includes(this.currentView)) {
+        } else if (['body-metrics', 'trt', 'supplements', 'nutrition', 'nutrition-research'].includes(this.currentView)) {
             this.switchView('workout');
         } else {
             this.switchView('home');
