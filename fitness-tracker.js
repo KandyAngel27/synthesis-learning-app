@@ -8346,6 +8346,550 @@ Top with green onions and sesame seeds.
 Serve as is or over rice.`,
                 notes: 'All the egg roll flavor without the wrapper! Low carb and ready in 20 minutes. Great leftover too!',
                 isSuggested: true
+            },
+            // ========================================
+            // SUPERAGE LONGEVITY RECIPES
+            // ========================================
+            // LUNCH — EASY
+            {
+                id: 'superage-1',
+                name: 'Mediterranean Lentil & Greens Bowl',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '25 min',
+                calories: 420,
+                protein: 22,
+                carbs: 52,
+                fats: 16,
+                ingredients: `2 cups brown or green lentils, rinsed
+4 cups vegetable broth
+4 cups arugula or mixed greens
+1 cup cherry tomatoes, halved
+1 cucumber, diced
+1/2 red onion, thinly sliced
+1/2 cup kalamata olives
+1/4 cup pumpkin seeds
+4 tbsp extra virgin olive oil
+2 tbsp lemon juice
+1 tsp dried oregano
+Salt and pepper`,
+                instructions: `Cook lentils in vegetable broth for 20-25 minutes until tender but not mushy.
+Drain any excess liquid and let cool slightly.
+Whisk together olive oil, lemon juice, oregano, salt, and pepper.
+Divide greens among 4 bowls.
+Top each with warm lentils, tomatoes, cucumber, onion, and olives.
+Drizzle with dressing and scatter pumpkin seeds on top.`,
+                notes: 'SuperAge longevity bowl — lentils for fiber, EVOO for healthy fats, pumpkin seeds for magnesium. Keeps 3 days in fridge (store dressing separately).',
+                isSuggested: true
+            },
+            {
+                id: 'superage-2',
+                name: 'Salmon & Quinoa Power Bowl',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '20 min',
+                calories: 480,
+                protein: 38,
+                carbs: 36,
+                fats: 22,
+                ingredients: `4 salmon fillets (5 oz each)
+2 cups quinoa, rinsed
+4 cups baby spinach
+1 avocado, sliced
+2 tbsp hemp seeds
+2 tbsp chia seeds
+4 tbsp extra virgin olive oil, divided
+2 tbsp lemon juice
+1 tsp turmeric
+1/2 tsp black pepper
+Salt to taste`,
+                instructions: `Cook quinoa according to package directions.
+Season salmon with turmeric, salt, and black pepper.
+Heat 1 tbsp olive oil in a skillet over medium-high heat.
+Cook salmon 4 minutes per side until flaky.
+Whisk remaining olive oil with lemon juice.
+Divide quinoa among 4 bowls, top with spinach, salmon, and avocado.
+Sprinkle with hemp and chia seeds, drizzle with lemon dressing.`,
+                notes: 'SuperAge powerhouse — salmon for omega-3s and vitamin D, quinoa for complete plant protein, turmeric for anti-inflammatory benefits. Black pepper boosts turmeric absorption 2000%.',
+                isSuggested: true
+            },
+            // LUNCH — QUICK
+            {
+                id: 'superage-3',
+                name: 'Quick Sardine & Arugula Tartines',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '3 min',
+                calories: 340,
+                protein: 24,
+                carbs: 28,
+                fats: 16,
+                ingredients: `2 cans sardines in olive oil, drained
+4 slices whole grain sourdough bread
+4 cups arugula
+2 tbsp extra virgin olive oil
+1 lemon, juiced
+1 tbsp capers
+1/4 red onion, paper-thin slices
+2 tbsp walnuts, roughly chopped
+Flaky salt and black pepper
+Red pepper flakes (optional)`,
+                instructions: `Toast bread until golden and crisp.
+Toss arugula with olive oil, half the lemon juice, salt, and pepper.
+Place sardines on toast, gently break apart with a fork.
+Squeeze remaining lemon over sardines.
+Top with dressed arugula, capers, red onion, and walnuts.
+Finish with flaky salt and red pepper flakes.`,
+                notes: 'SuperAge quick lunch — sardines are one of the most nutrient-dense foods on earth: omega-3s, calcium, vitamin D, and selenium in one tiny fish. Ready in under 15 minutes.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-4',
+                name: '10-Minute Miso Soup with Greens & Tofu',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '5 min',
+                cookTime: '5 min',
+                calories: 180,
+                protein: 14,
+                carbs: 12,
+                fats: 8,
+                ingredients: `4 cups water
+4 tbsp white or red miso paste
+14 oz firm tofu, cubed small
+4 cups baby spinach or chard, roughly chopped
+2 green onions, sliced
+1 sheet nori, cut into thin strips
+1 tbsp fresh ginger, grated
+1 tsp sesame oil`,
+                instructions: `Bring water to a gentle simmer (not boiling — boiling kills miso probiotics).
+Add ginger and tofu, simmer 2 minutes.
+Remove from heat, add miso paste and stir until dissolved.
+Add greens and let them wilt in the hot broth, about 1 minute.
+Ladle into bowls, top with green onions, nori strips, and a drizzle of sesame oil.`,
+                notes: 'SuperAge comfort bowl — miso is a probiotic-rich fermented food. Keep the broth under a boil to preserve the beneficial bacteria. Pair with wild rice for a complete meal.',
+                isSuggested: true
+            },
+            // LUNCH — AIR FRYER
+            {
+                id: 'superage-5',
+                name: 'Air Fryer Tempeh Bowl with Sweet Potato',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '20 min',
+                calories: 440,
+                protein: 26,
+                carbs: 48,
+                fats: 18,
+                equipment: 'Air fryer',
+                ingredients: `2 packages tempeh (8 oz each), sliced into strips
+2 large sweet potatoes, cubed (3/4 inch)
+2 tbsp soy sauce or tamari
+1 tbsp maple syrup
+1 tbsp rice vinegar
+1 tsp smoked paprika
+3 tbsp extra virgin olive oil, divided
+4 cups collard greens or kale, stemmed and chopped
+2 tbsp pumpkin seeds
+Sriracha or tahini for drizzle`,
+                instructions: `Toss sweet potato cubes with 1 tbsp olive oil, salt, and paprika.
+Air fry sweet potatoes at 400°F for 12 minutes, shaking halfway.
+Mix soy sauce, maple syrup, rice vinegar, and 1 tbsp olive oil.
+Toss tempeh strips in the marinade.
+Add tempeh to air fryer basket, cook at 390°F for 8 minutes, flipping once.
+Massage remaining olive oil into chopped greens with a pinch of salt.
+Divide greens among bowls, top with sweet potato and crispy tempeh.
+Scatter pumpkin seeds, drizzle with sriracha or tahini.`,
+                notes: 'SuperAge air fryer bowl — tempeh is a fermented protein powerhouse, sweet potatoes provide low-glycemic energy and antioxidants. Collards are a Blue Zones staple.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-6',
+                name: 'Air Fryer Turmeric Salmon Bites',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '10 min',
+                calories: 380,
+                protein: 34,
+                carbs: 24,
+                fats: 18,
+                equipment: 'Air fryer',
+                ingredients: `1.5 lbs salmon, cut into 1-inch cubes
+1 tsp turmeric
+1/2 tsp black pepper
+1/2 tsp garlic powder
+1 tbsp extra virgin olive oil
+Salt to taste
+For the bowl:
+2 cups cooked wild rice or black rice
+2 cups edamame, shelled
+1 cup kimchi
+2 tbsp sesame seeds
+Lime wedges`,
+                instructions: `Toss salmon cubes with olive oil, turmeric, black pepper, garlic powder, and salt.
+Arrange in a single layer in the air fryer basket.
+Air fry at 400°F for 8-10 minutes until golden and just cooked through.
+Divide rice among 4 bowls.
+Top with salmon bites, edamame, and kimchi.
+Sprinkle with sesame seeds and serve with lime wedges.`,
+                notes: 'SuperAge air fryer lunch — turmeric and black pepper are an anti-inflammatory power duo, kimchi adds gut-healthy probiotics, black rice has more antioxidants than blueberries.',
+                isSuggested: true
+            },
+            // LUNCH — COMPLEX
+            {
+                id: 'superage-7',
+                name: 'Longevity Grain Bowl with Miso-Tahini',
+                category: 'Lunch',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '20 min',
+                cookTime: '40 min',
+                calories: 520,
+                protein: 24,
+                carbs: 58,
+                fats: 24,
+                ingredients: `1 cup barley, rinsed
+2 sweet potatoes, cubed
+1 block firm tofu, pressed and cubed
+4 cups kale, stemmed and chopped
+1 cup sauerkraut
+1/4 cup walnuts, toasted
+2 tbsp flaxseed, ground
+For miso-tahini dressing:
+2 tbsp white miso paste
+2 tbsp tahini
+1 tbsp extra virgin olive oil
+2 tbsp warm water
+1 tbsp rice vinegar
+1 tsp grated fresh ginger`,
+                instructions: `Cook barley in salted water for 35-40 minutes until tender, drain.
+Toss sweet potato cubes with olive oil, salt, and pepper.
+Roast at 425°F for 25 minutes until caramelized.
+Meanwhile, pan-sear tofu in olive oil until golden on all sides, about 8 minutes.
+Massage kale with a drizzle of olive oil and pinch of salt until softened.
+Whisk all dressing ingredients until smooth (add more water if too thick).
+Build bowls: barley base, kale, sweet potato, tofu, sauerkraut, walnuts.
+Drizzle with miso-tahini dressing, sprinkle ground flaxseed on top.`,
+                notes: 'SuperAge complex bowl — hits nearly every longevity pantry category: prebiotic fiber (barley), fermented food (miso, sauerkraut), omega fats (walnuts, flaxseed), polyphenols (kale), and smart carbs (sweet potato).',
+                isSuggested: true
+            },
+            // DINNER — EASY
+            {
+                id: 'superage-8',
+                name: 'One-Pan Turmeric Salmon & Greens',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '20 min',
+                calories: 440,
+                protein: 36,
+                carbs: 18,
+                fats: 26,
+                ingredients: `4 salmon fillets (6 oz each)
+6 cups mixed greens (spinach, chard, collards), roughly chopped
+1 can chickpeas, drained and rinsed
+4 cloves garlic, sliced
+1 tsp turmeric
+1/2 tsp cumin
+1/2 tsp black pepper
+4 tbsp extra virgin olive oil, divided
+1 lemon, juiced
+2 Brazil nuts per person (8 total), roughly chopped
+Salt to taste`,
+                instructions: `Preheat oven to 400°F.
+Season salmon with turmeric, cumin, black pepper, and salt.
+Toss chickpeas with 1 tbsp olive oil and spread on a sheet pan.
+Nestle salmon fillets among the chickpeas.
+Drizzle salmon with 1 tbsp olive oil and half the lemon juice.
+Roast for 15 minutes.
+Meanwhile, sauté garlic in remaining olive oil for 30 seconds.
+Add greens, toss until just wilted, 2-3 minutes.
+Plate greens, top with salmon and chickpeas.
+Finish with remaining lemon juice and chopped Brazil nuts.`,
+                notes: 'SuperAge easy dinner — Brazil nuts provide your entire daily selenium in just 2 nuts. The turmeric-black pepper combo maximizes anti-inflammatory absorption.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-9',
+                name: 'EVOO Poached White Fish with Beans',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '5 min',
+                cookTime: '20 min',
+                calories: 390,
+                protein: 32,
+                carbs: 28,
+                fats: 18,
+                ingredients: `4 white fish fillets (cod, halibut, or sea bass)
+2 cans cannellini beans, drained
+4 cups baby spinach
+1/2 cup extra virgin olive oil
+6 cloves garlic, smashed
+1 pint cherry tomatoes
+1 tsp red pepper flakes
+Zest and juice of 1 lemon
+Fresh parsley
+Salt and pepper`,
+                instructions: `Heat olive oil in a deep skillet over medium-low heat.
+Add garlic and red pepper flakes, cook 2 minutes until fragrant (don't brown).
+Add cherry tomatoes, cook 5 minutes until they start to burst.
+Add beans and stir gently to warm through.
+Season fish with salt and pepper, nestle into the bean mixture.
+Cover and cook 10-12 minutes until fish flakes easily.
+Remove lid, add spinach, let it wilt in the residual heat.
+Finish with lemon zest, lemon juice, and fresh parsley.`,
+                notes: 'SuperAge Mediterranean classic — EVOO poaching keeps fish incredibly moist while delivering heart-healthy monounsaturated fats. Beans provide prebiotic fiber for gut health.',
+                isSuggested: true
+            },
+            // DINNER — QUICK
+            {
+                id: 'superage-10',
+                name: '15-Min Green Tea Ginger Shrimp',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '5 min',
+                cookTime: '10 min',
+                calories: 320,
+                protein: 30,
+                carbs: 28,
+                fats: 12,
+                ingredients: `1.5 lbs large shrimp, peeled and deveined
+1 cup brewed green tea, cooled
+2 tbsp soy sauce or tamari
+1 tbsp fresh ginger, grated
+3 cloves garlic, minced
+1 tbsp honey
+1 tbsp sesame oil
+4 cups bok choy or spinach, chopped
+2 cups cooked wild rice
+2 green onions, sliced
+1 tbsp sesame seeds`,
+                instructions: `Mix green tea, soy sauce, ginger, garlic, and honey in a bowl.
+Heat sesame oil in a large skillet or wok over high heat.
+Add shrimp in a single layer, sear 2 minutes per side.
+Pour in the green tea sauce, let it simmer 2 minutes until reduced slightly.
+Push shrimp to one side, add bok choy, toss 1-2 minutes until wilted.
+Serve over wild rice, pour pan sauce over everything.
+Top with green onions and sesame seeds.`,
+                notes: 'SuperAge quick dinner — green tea linked to 40% lower cardiovascular mortality, ginger is anti-inflammatory, and wild rice has more antioxidants than white rice.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-11',
+                name: 'Quick Kale & White Bean Skillet',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '5 min',
+                cookTime: '12 min',
+                calories: 350,
+                protein: 18,
+                carbs: 38,
+                fats: 16,
+                ingredients: `2 cans cannellini or navy beans, drained
+1 large bunch kale, stemmed and chopped (about 6 cups)
+4 cloves garlic, sliced
+1/4 cup extra virgin olive oil
+1/4 cup sun-dried tomatoes, chopped
+2 tbsp lemon juice
+1/4 tsp red pepper flakes
+1/4 cup parmesan cheese, grated
+Salt and black pepper
+Crusty whole grain bread for serving`,
+                instructions: `Heat olive oil in a large skillet over medium heat.
+Add garlic and red pepper flakes, cook 1 minute.
+Add kale in batches, tossing until wilted, about 3-4 minutes.
+Add beans and sun-dried tomatoes, cook 5 minutes until heated through and flavors meld.
+Season with salt, pepper, and lemon juice.
+Serve in shallow bowls topped with parmesan.
+Scoop up with crusty bread.`,
+                notes: 'SuperAge 15-minute dinner — this is essentially how people eat in the Mediterranean Blue Zones. Simple, whole ingredients, loaded with fiber and polyphenols.',
+                isSuggested: true
+            },
+            // DINNER — AIR FRYER
+            {
+                id: 'superage-12',
+                name: 'Air Fryer Walnut-Crusted Salmon',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '12 min',
+                calories: 460,
+                protein: 38,
+                carbs: 8,
+                fats: 30,
+                equipment: 'Air fryer',
+                ingredients: `4 salmon fillets (6 oz each)
+1 cup walnuts, finely chopped
+2 tbsp Dijon mustard
+1 tbsp extra virgin olive oil
+1 tbsp fresh dill, minced (or 1 tsp dried)
+1 tsp lemon zest
+Salt and black pepper
+Side: steamed broccoli with lemon
+Side: roasted sweet potato wedges`,
+                instructions: `Pat salmon dry, season with salt and pepper.
+Spread a thin layer of Dijon on top of each fillet.
+Mix chopped walnuts with olive oil, dill, lemon zest, and a pinch of salt.
+Press walnut mixture firmly onto the mustard-coated salmon.
+Place fillets in air fryer basket (don't overcrowd, do in batches if needed).
+Air fry at 380°F for 10-12 minutes until crust is golden and salmon is cooked.
+Serve with steamed broccoli and sweet potato wedges.`,
+                notes: 'SuperAge air fryer dinner — walnuts are the #1 nut for brain health (omega-3 ALA), and the crust keeps salmon incredibly moist. No breading needed.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-13',
+                name: 'Air Fryer Miso-Glazed Tofu Steaks',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '15 min',
+                calories: 360,
+                protein: 22,
+                carbs: 32,
+                fats: 18,
+                equipment: 'Air fryer',
+                ingredients: `2 blocks extra-firm tofu, pressed and sliced into 1/2" steaks
+3 tbsp white miso paste
+1 tbsp sesame oil
+1 tbsp maple syrup
+1 tbsp rice vinegar
+1 tsp grated fresh ginger
+Side: 2 cups cooked black rice
+Side: steamed bok choy with sesame
+Garnish: sesame seeds, sliced green onions`,
+                instructions: `Press tofu for at least 15 minutes (wrap in towel, press with heavy object).
+Whisk together miso, sesame oil, maple syrup, rice vinegar, and ginger.
+Brush tofu steaks generously with miso glaze on both sides.
+Arrange in air fryer basket in a single layer.
+Air fry at 400°F for 12-15 minutes, flipping halfway and brushing with more glaze.
+Tofu should be golden and slightly crispy at the edges.
+Serve on black rice with steamed bok choy.
+Garnish with sesame seeds and green onions.`,
+                notes: 'SuperAge air fryer dinner — miso is a probiotic fermented food linked to gut health, tofu provides plant protein, and black rice (forbidden rice) has more antioxidants than any other grain.',
+                isSuggested: true
+            },
+            // DINNER — COMPLEX
+            {
+                id: 'superage-14',
+                name: 'Longevity Barley Risotto with Mushrooms',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '45 min',
+                calories: 420,
+                protein: 14,
+                carbs: 56,
+                fats: 18,
+                ingredients: `1.5 cups pearled barley
+1 lb mixed mushrooms (shiitake, cremini, oyster), sliced
+5 cups vegetable broth, warmed
+1/2 cup dry white wine
+1 onion, finely diced
+4 cloves garlic, minced
+3 tbsp extra virgin olive oil, divided
+2 tbsp nutritional yeast or parmesan
+2 cups baby spinach
+1/4 cup walnuts, toasted and chopped
+2 tbsp fresh thyme leaves
+Salt and pepper`,
+                instructions: `Heat 1 tbsp olive oil in a large pan, sauté mushrooms until golden, 6-7 minutes. Season and set aside.
+In a heavy-bottomed pot, heat remaining olive oil over medium heat.
+Sauté onion 5 minutes, add garlic for 1 minute.
+Add barley, stir to coat in oil for 2 minutes.
+Pour in wine, stir until absorbed.
+Add warm broth one ladle at a time, stirring frequently, waiting for each addition to absorb before adding the next (about 30-35 minutes total).
+When barley is tender but still slightly chewy, stir in mushrooms, spinach, and nutritional yeast.
+Season with salt and pepper, let spinach wilt.
+Serve topped with toasted walnuts and fresh thyme.`,
+                notes: 'SuperAge complex dinner — barley is a prebiotic fiber champion that feeds beneficial gut bacteria. Mushrooms support immune function. This is worth the slow stirring — deeply comforting.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-15',
+                name: 'Okinawan-Inspired Longevity Bowl',
+                category: 'Dinner',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '25 min',
+                cookTime: '35 min',
+                calories: 480,
+                protein: 28,
+                carbs: 52,
+                fats: 20,
+                ingredients: `1 block firm tofu, cubed
+2 sweet potatoes, cubed
+1 cup cooked barley or wild rice
+4 cups bok choy and spinach mix
+1 cup edamame, shelled
+1/2 cup kimchi
+2 tbsp white miso paste
+1 tbsp fresh turmeric, grated (or 1 tsp ground)
+1 tbsp sesame oil
+2 tbsp extra virgin olive oil
+For the turmeric-miso broth:
+2 cups vegetable broth
+2 tbsp miso paste
+1 tsp turmeric
+1 tbsp fresh ginger, grated`,
+                instructions: `Roast sweet potato cubes at 425°F with 1 tbsp olive oil for 25 minutes.
+Press tofu, cube, and pan-fry in sesame oil until golden on all sides, 8 minutes.
+Cook barley or wild rice according to package directions.
+Prepare broth: warm vegetable broth gently (don't boil), whisk in miso, turmeric, and ginger.
+Wilt bok choy and spinach in remaining olive oil with a pinch of salt, 2-3 minutes.
+Build bowls: grain base, sweet potato, tofu, greens, edamame.
+Ladle warm turmeric-miso broth over each bowl.
+Top with kimchi and a drizzle of sesame oil.`,
+                notes: 'SuperAge complex dinner — inspired by Okinawa, the Blue Zone with the longest-lived women on earth. Combines fermented foods (miso, kimchi), turmeric, sweet potato, and plant protein in one healing bowl.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-16',
+                name: 'Dark Chocolate Berry Bark (Dessert)',
+                category: 'Snack',
+                tags: ['superage'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '0 min (30 min freeze)',
+                calories: 220,
+                protein: 4,
+                carbs: 22,
+                fats: 16,
+                ingredients: `8 oz dark chocolate (70%+ cacao), chopped
+1 cup mixed berries (blueberries, raspberries, sliced strawberries)
+2 tbsp walnuts, chopped
+1 tbsp chia seeds
+1 tbsp hemp seeds
+1 tbsp unsweetened coconut flakes
+Flaky sea salt`,
+                instructions: `Melt dark chocolate in a double boiler or microwave (30-second intervals, stirring).
+Line a baking sheet with parchment paper.
+Pour melted chocolate in a thin, even layer (about 1/4 inch thick).
+Immediately scatter berries, walnuts, chia seeds, hemp seeds, and coconut on top.
+Press toppings gently into the chocolate.
+Sprinkle with flaky sea salt.
+Freeze 30 minutes until firm.
+Break into irregular pieces and store in fridge.`,
+                notes: 'SuperAge treat — dark chocolate (70%+) is loaded with polyphenols and flavonoids linked to lower blood pressure and better brain function. Combined with antioxidant-rich berries and omega-3 seeds.',
+                isSuggested: true
             }
         ];
 
@@ -8367,6 +8911,10 @@ Serve as is or over rice.`,
         categories.forEach(cat => {
             html += `<button class="filter-btn" onclick="window.fitnessTracker.filterSuggestedRecipes('${cat}')">${cat}</button>`;
         });
+        const hasSuperage = suggested.some(r => r.tags && r.tags.includes('superage'));
+        if (hasSuperage) {
+            html += '<button class="filter-btn superage-btn" onclick="window.fitnessTracker.filterSuggestedRecipes(\'superage\')">SuperAge</button>';
+        }
         html += '</div>';
 
         // Recipe cards
@@ -8380,11 +8928,15 @@ Serve as is or over rice.`,
     }
 
     renderSuggestedRecipeCard(recipe) {
+        const tags = (recipe.tags || []).join(',');
+        const superageTag = recipe.tags && recipe.tags.includes('superage')
+            ? '<span class="src-tag superage-tag">SuperAge</span>' : '';
         return `
-            <div class="suggested-recipe-card" data-category="${recipe.category}" onclick="window.fitnessTracker.viewSuggestedRecipe('${recipe.id}')">
+            <div class="suggested-recipe-card" data-category="${recipe.category}" data-tags="${tags}" onclick="window.fitnessTracker.viewSuggestedRecipe('${recipe.id}')">
                 <div class="src-header">
                     <span class="src-name">${recipe.name}</span>
                     <span class="src-category">${recipe.category}</span>
+                    ${superageTag}
                 </div>
                 <div class="src-meta">
                     <span class="src-time">${recipe.prepTime} prep</span>
@@ -8407,10 +8959,13 @@ Serve as is or over rice.`,
         event.target.classList.add('active');
 
         cards.forEach(card => {
-            if (category === 'all' || card.dataset.category === category) {
+            if (category === 'all') {
                 card.style.display = 'block';
+            } else if (category === 'superage') {
+                const tags = (card.dataset.tags || '').split(',');
+                card.style.display = tags.includes('superage') ? 'block' : 'none';
             } else {
-                card.style.display = 'none';
+                card.style.display = card.dataset.category === category ? 'block' : 'none';
             }
         });
     }

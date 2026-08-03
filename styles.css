@@ -7944,6 +7944,28 @@ body {
     white-space: nowrap;
 }
 
+.src-tag.superage-tag {
+    background: linear-gradient(135deg, #2d8a4e, #1a6b3c);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.superage-btn {
+    background: linear-gradient(135deg, #2d8a4e, #1a6b3c) !important;
+    color: white !important;
+    border-color: #2d8a4e !important;
+}
+
+.superage-btn.active {
+    box-shadow: 0 2px 8px rgba(45, 138, 78, 0.4);
+}
+
 .src-meta {
     display: flex;
     gap: var(--spacing-md);
