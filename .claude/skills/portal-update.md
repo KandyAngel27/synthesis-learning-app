@@ -65,13 +65,13 @@ Update to the 1st of the following month:
 Skip for `pm` (Internal) and `sunbright` (if still pre-launch with null invoice).
 
 #### 2d. Stats
-Ask the user if they have fresh GSC data to provide. If not, note that the automated `monthly-reset.yml` GitHub Action handles GSC pulls on the 1st of each month. For a manual update:
+Ask the user if they have fresh GSC data to provide. If so:
 - Update `sessions`, `keywords`, `position`, `impressions`, `ctr` with new values
 - Calculate `*_change` as difference from previous values (prefix with `+` or `-`)
 - Set `*_trend`: `"up"` if improving, `"down"` if declining, `"neutral"` if unchanged
 - For position, LOWER is better: a decrease in position number = `"up"` trend
 
-If no fresh data is available, keep existing stats and note they'll auto-update via the GitHub Action.
+If no fresh data is available, keep existing stats unchanged and note they can be updated later when data is provided.
 
 #### 2e. Deliverables
 Reset recurring deliverables for the new month:
@@ -111,7 +111,7 @@ If fresh GSC data is available, update `gsc_keywords` with the top 20 keywords b
 ```json
 {"keyword": "...", "position": 0.0, "clicks": 0, "impressions": 0}
 ```
-Otherwise keep existing data — the monthly-reset Action will refresh it.
+Otherwise keep existing data — stats can be updated later when the user provides fresh GSC data.
 
 #### 2i. Tracked Keywords
 If fresh data is available, for each entry in `keywords`:
@@ -192,7 +192,7 @@ Present a summary table:
 | PM | ... | Yes/Pending | Yes | Yes | Yes | Yes |
 | Sunbright | ... | N/A (pre-launch) | N/A | N/A | Yes | Yes |
 
-Note: If stats say "Pending", remind the user that the `monthly-reset.yml` GitHub Action auto-pulls GSC data on the 1st of each month. If running mid-month, stats can be manually provided.
+Note: If stats say "Pending", remind the user that fresh GSC data can be provided to update them. Stats are updated manually via this skill.
 
 ### Important Rules
 
