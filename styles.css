@@ -151,7 +151,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    animation: fadeOut 0.5s ease-out 2s forwards;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
 .logo-animation {
@@ -4486,6 +4486,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.fitness-hub-row.four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .fitness-hub-row.two-col {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -5370,8 +5374,9 @@ body {
     }
 
     .fitness-hub-row.three-col,
+    .fitness-hub-row.four-col,
     .fitness-hub-row.two-col {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .exercise-row {
@@ -7939,6 +7944,50 @@ body {
     white-space: nowrap;
 }
 
+.src-tag.superage-tag {
+    background: linear-gradient(135deg, #2d8a4e, #1a6b3c);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.superage-btn {
+    background: linear-gradient(135deg, #2d8a4e, #1a6b3c) !important;
+    color: white !important;
+    border-color: #2d8a4e !important;
+}
+
+.superage-btn.active {
+    box-shadow: 0 2px 8px rgba(45, 138, 78, 0.4);
+}
+
+.src-tag.high-protein-tag {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.high-protein-btn {
+    background: linear-gradient(135deg, #c0392b, #e74c3c) !important;
+    color: white !important;
+    border-color: #c0392b !important;
+}
+
+.high-protein-btn.active {
+    box-shadow: 0 2px 8px rgba(192, 57, 43, 0.4);
+}
+
 .src-meta {
     display: flex;
     gap: var(--spacing-md);
@@ -9820,4 +9869,304 @@ body {
 .reset-btn-primary:focus-visible {
     outline: 2px solid #ef4444;
     outline-offset: 2px;
+}
+
+/* ============================================
+   NUTRITION RESEARCH / FOOD FACTS
+   ============================================ */
+
+.nutrition-research-content {
+    padding: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nr-search-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.nr-search-row input {
+    flex: 1;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem 1rem;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+}
+
+.nr-search-row input::placeholder { color: var(--color-text-tertiary); }
+
+.nr-add-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.nr-add-btn:hover { background: var(--color-primary-dark); }
+
+.nr-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    transition: border-color 0.15s;
+}
+
+.nr-card:hover { border-color: rgba(255,255,255,0.12); }
+
+.nr-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.nr-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.nr-card-actions {
+    display: flex;
+    gap: 0.25rem;
+    flex-shrink: 0;
+}
+
+.nr-card-actions button {
+    background: transparent;
+    border: none;
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.nr-card-actions button:hover {
+    color: var(--color-text-primary);
+    background: rgba(255,255,255,0.08);
+}
+
+.nr-card-notes {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    white-space: pre-line;
+}
+
+.nr-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.nr-tag {
+    background: rgba(99,102,241,0.15);
+    color: var(--color-primary-light);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+}
+
+.nr-foods-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.nr-foods-table th {
+    text-align: left;
+    color: var(--color-text-tertiary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nr-foods-table td {
+    padding: 0.4rem 0.5rem;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.nr-foods-table tr:last-child td { border-bottom: none; }
+
+.nr-target {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(16,185,129,0.12);
+    color: var(--color-success);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+}
+
+.nr-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-text-tertiary);
+}
+
+.nr-empty-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+
+.nr-empty p { margin: 0.25rem 0; }
+
+/* Nutrition Research Form Modal */
+.nr-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nr-modal {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    max-width: 560px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.nr-modal h3 {
+    margin: 0 0 var(--spacing-lg);
+    color: var(--color-text-primary);
+}
+
+.nr-form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.nr-form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.nr-form-group input,
+.nr-form-group textarea {
+    width: 100%;
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    padding: 0.65rem 0.75rem;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.nr-form-group textarea { min-height: 80px; resize: vertical; }
+
+.nr-form-group input::placeholder,
+.nr-form-group textarea::placeholder { color: var(--color-text-tertiary); }
+
+.nr-food-entry-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 0.5rem;
+    align-items: end;
+    margin-bottom: 0.5rem;
+}
+
+.nr-food-entry-row input {
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0.6rem;
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+}
+
+.nr-food-entry-row button {
+    background: rgba(239,68,68,0.15);
+    color: var(--color-error);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.nr-add-food-btn {
+    background: rgba(99,102,241,0.12);
+    color: var(--color-primary-light);
+    border: 1px dashed rgba(99,102,241,0.3);
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    transition: background 0.15s;
+}
+
+.nr-add-food-btn:hover { background: rgba(99,102,241,0.2); }
+
+.nr-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: var(--spacing-lg);
+}
+
+.nr-modal-actions button {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.nr-btn-save {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.nr-btn-cancel {
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 600px) {
+    .nr-food-entry-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nr-food-entry-row input:first-child {
+        grid-column: 1 / -1;
+    }
 }
