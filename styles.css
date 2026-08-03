@@ -7966,6 +7966,28 @@ body {
     box-shadow: 0 2px 8px rgba(45, 138, 78, 0.4);
 }
 
+.src-tag.high-protein-tag {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.high-protein-btn {
+    background: linear-gradient(135deg, #c0392b, #e74c3c) !important;
+    color: white !important;
+    border-color: #c0392b !important;
+}
+
+.high-protein-btn.active {
+    box-shadow: 0 2px 8px rgba(192, 57, 43, 0.4);
+}
+
 .src-meta {
     display: flex;
     gap: var(--spacing-md);

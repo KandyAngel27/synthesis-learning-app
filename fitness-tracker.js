@@ -8890,6 +8890,496 @@ Freeze 30 minutes until firm.
 Break into irregular pieces and store in fridge.`,
                 notes: 'SuperAge treat — dark chocolate (70%+) is loaded with polyphenols and flavonoids linked to lower blood pressure and better brain function. Combined with antioxidant-rich berries and omega-3 seeds.',
                 isSuggested: true
+            },
+            // HIGH-PROTEIN SUPERAGE — LUNCH (target ~65g protein per serving)
+            {
+                id: 'superage-17',
+                name: 'Lemon-Herb Chicken Breast & Lentil Bowl',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '25 min',
+                calories: 520,
+                protein: 64,
+                carbs: 38,
+                fats: 14,
+                ingredients: `2 lbs boneless skinless chicken breasts
+1.5 cups green or brown lentils, rinsed
+3 cups chicken broth
+4 cups baby spinach
+1 lemon, juiced + zest
+3 cloves garlic, minced
+2 tbsp extra virgin olive oil
+1 tsp dried oregano
+1 tsp dried thyme
+Salt and pepper
+Optional: 2 tbsp crumbled feta per bowl`,
+                instructions: `Cook lentils in chicken broth for 20-25 minutes until tender. Drain any excess.
+Slice chicken breasts in half horizontally to make thin cutlets (cooks faster and more evenly).
+Season with salt, pepper, oregano, thyme, and lemon zest.
+Heat olive oil in a large skillet over medium-high heat.
+Cook chicken 4-5 minutes per side until golden and cooked through (165°F).
+Let rest 3 minutes, then slice.
+Toss spinach into the warm lentils — it wilts right in.
+Divide lentils and spinach among 4 bowls, top with sliced chicken.
+Squeeze lemon juice over everything.`,
+                notes: 'SuperAge high-protein lunch — 64g protein per serving. Lentils add 18g protein plus prebiotic fiber. Pair with a SuperAge dinner for 130g+ daily protein.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-18',
+                name: 'Salmon & Edamame Power Plate',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '5 min',
+                cookTime: '15 min',
+                calories: 540,
+                protein: 62,
+                carbs: 24,
+                fats: 28,
+                ingredients: `2 lbs salmon fillets (4 × 8 oz)
+2 cups shelled edamame (frozen is fine)
+4 cups mixed greens or arugula
+1 avocado, sliced
+2 tbsp extra virgin olive oil
+2 tbsp soy sauce or tamari
+1 tbsp sesame oil
+1 tbsp rice vinegar
+1 tsp fresh ginger, grated
+Sesame seeds for garnish`,
+                instructions: `Season salmon with salt and pepper.
+Heat olive oil in a large skillet over medium-high heat.
+Cook salmon skin-side down 4 minutes, flip, cook 3-4 minutes more.
+While salmon cooks, boil edamame 3-4 minutes, drain.
+Whisk soy sauce, sesame oil, rice vinegar, and ginger for dressing.
+Plate greens, top with salmon and edamame.
+Add avocado slices and drizzle with dressing.
+Sprinkle with sesame seeds.`,
+                notes: 'SuperAge high-protein lunch — 62g protein per serving. Salmon provides omega-3s for brain and heart health, edamame adds 17g plant protein. Ready in 15 minutes.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-19',
+                name: 'Garlic Shrimp & White Bean Kale Bowl',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '12 min',
+                calories: 460,
+                protein: 63,
+                carbs: 32,
+                fats: 14,
+                ingredients: `2.5 lbs large shrimp, peeled and deveined
+2 cans (15 oz each) cannellini beans, drained and rinsed
+1 large bunch kale, stemmed and chopped (6 cups)
+6 cloves garlic, sliced
+3 tbsp extra virgin olive oil
+1/4 tsp red pepper flakes
+2 tbsp lemon juice
+Salt and pepper`,
+                instructions: `Heat 2 tbsp olive oil in a large skillet over medium-high heat.
+Season shrimp with salt and pepper, cook 2 minutes per side until pink. Remove and set aside.
+Add remaining oil and garlic to the pan, cook 30 seconds.
+Add kale, toss until wilted, about 3 minutes.
+Add beans and red pepper flakes, cook 3 minutes until warmed through.
+Return shrimp to the pan, toss everything together.
+Squeeze lemon juice over the top.
+Divide among 4 bowls.`,
+                notes: 'SuperAge high-protein lunch — 63g protein per serving. Shrimp is one of the leanest proteins available (practically zero fat), beans add fiber and extra protein. One-pan, 12 minutes.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-20',
+                name: 'Turkey Taco Lettuce Boats',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '12 min',
+                calories: 440,
+                protein: 65,
+                carbs: 22,
+                fats: 16,
+                ingredients: `2.5 lbs ground turkey (93% lean)
+1 can (15 oz) black beans, drained and rinsed
+2 heads butter lettuce or romaine hearts
+1 cup cherry tomatoes, diced
+1 avocado, diced
+1/4 cup red onion, finely diced
+2 tbsp extra virgin olive oil
+2 tsp chili powder
+1 tsp cumin
+1 tsp garlic powder
+1 tsp smoked paprika
+Salt and pepper
+Lime wedges
+Optional: hot sauce, plain Greek yogurt`,
+                instructions: `Heat olive oil in a large skillet over medium-high heat.
+Add ground turkey, break it up with a spatula, cook 5-6 minutes until no longer pink.
+Add chili powder, cumin, garlic powder, paprika, salt, and pepper. Stir to coat.
+Add black beans, cook 3-4 minutes until heated through.
+Separate lettuce leaves into cups/boats.
+Spoon turkey-bean mixture into lettuce cups.
+Top with tomatoes, avocado, and red onion.
+Squeeze lime over each and add hot sauce or yogurt if desired.`,
+                notes: 'SuperAge high-protein lunch — 65g protein per serving. Ground turkey + black beans is a protein powerhouse. Low-carb lettuce wraps keep you alert for the afternoon.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-21',
+                name: 'Greek Chicken Thigh & Quinoa Bowl',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '20 min',
+                calories: 530,
+                protein: 62,
+                carbs: 34,
+                fats: 22,
+                ingredients: `2 lbs boneless skinless chicken thighs
+1 cup quinoa, rinsed
+2 cups chicken broth
+1 cucumber, diced
+1 cup cherry tomatoes, halved
+1/4 cup kalamata olives, halved
+1/4 cup red onion, thinly sliced
+1/4 cup crumbled feta cheese
+2 tbsp extra virgin olive oil
+2 tbsp lemon juice
+1 tsp dried oregano
+1 tsp garlic powder
+Salt and pepper`,
+                instructions: `Cook quinoa in chicken broth per package directions (about 15 min). Fluff with a fork.
+Season thighs with oregano, garlic powder, salt, and pepper.
+Heat olive oil in a skillet over medium-high heat.
+Cook thighs 5-6 minutes per side until golden and cooked through (165°F).
+Let rest 3 minutes, then slice.
+Divide quinoa among 4 bowls.
+Top with sliced chicken, cucumber, tomatoes, olives, and onion.
+Sprinkle feta and drizzle with lemon juice.`,
+                notes: 'SuperAge high-protein lunch — 62g protein per serving. Greek-style bowl with thighs (more iron and zinc than breast), quinoa for complete plant protein, and EVOO for heart health.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-22',
+                name: 'Sole Piccata with Cannellini & Arugula',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '15 min',
+                calories: 470,
+                protein: 60,
+                carbs: 28,
+                fats: 16,
+                ingredients: `2 lbs Alaskan sole fillets
+2 cans (15 oz each) cannellini beans, drained
+4 cups arugula
+3 tbsp capers, drained
+4 cloves garlic, minced
+3 tbsp extra virgin olive oil, divided
+3 tbsp lemon juice (about 1.5 lemons)
+1/4 cup chicken broth
+2 tbsp fresh parsley, chopped
+Salt and pepper`,
+                instructions: `Pat sole fillets very dry. Season with salt and pepper.
+Heat 2 tbsp olive oil in a large nonstick skillet over medium-high heat.
+Cook sole 2-3 minutes per side (it's thin — don't overcook). Remove to a plate.
+In the same pan, add remaining oil and garlic, cook 30 seconds.
+Add beans, capers, lemon juice, and broth. Cook 3-4 minutes until warmed and sauce reduces slightly.
+Add arugula, toss just until it begins to wilt.
+Plate the bean-arugula mixture, lay sole fillets on top.
+Garnish with parsley.`,
+                notes: 'SuperAge high-protein lunch — 60g protein per serving. Sole is ultra-lean white fish, beans bridge the protein gap. The piccata sauce (lemon, capers, EVOO) is classic Mediterranean longevity cooking.',
+                isSuggested: true
+            },
+            // HIGH-PROTEIN SUPERAGE — DINNER (target ~65g protein per serving)
+            {
+                id: 'superage-23',
+                name: 'Seared Backstrap with Mushrooms & Spinach',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '15 min',
+                calories: 480,
+                protein: 66,
+                carbs: 18,
+                fats: 18,
+                ingredients: `2 lbs venison backstrap, cut into 1-inch medallions
+1 lb mixed mushrooms (cremini, shiitake), sliced
+6 cups fresh spinach
+4 cloves garlic, minced
+2 tbsp extra virgin olive oil, divided
+2 tbsp balsamic vinegar
+1 tbsp fresh rosemary, minced (or 1 tsp dried)
+1 tbsp butter
+1 cup low-sodium beef or chicken broth
+Salt and pepper`,
+                instructions: `Pat backstrap medallions dry. Season generously with salt, pepper, and rosemary.
+Heat 1 tbsp olive oil in a cast iron or heavy skillet over high heat until smoking.
+Sear medallions 2-3 minutes per side for medium-rare (130°F internal). Don't crowd the pan — do in batches.
+Remove to a plate and tent with foil.
+Reduce heat to medium, add remaining oil and butter.
+Add mushrooms, cook 5-6 minutes until golden. Add garlic, cook 30 seconds.
+Pour in broth and balsamic, scrape up the fond, let reduce 2 minutes.
+Add spinach, toss until wilted.
+Serve mushroom-spinach mixture topped with sliced backstrap and pan sauce.`,
+                notes: 'SuperAge high-protein dinner — 66g protein per serving. Venison backstrap is one of the leanest, highest-protein meats (33g per 4 oz). Mushrooms support immune function. Pairs with any SuperAge lunch for 130g+ protein.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-24',
+                name: 'Air Fryer Chicken Tenders & Sweet Potato',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '15 min',
+                calories: 510,
+                protein: 65,
+                carbs: 36,
+                fats: 14,
+                equipment: 'Air fryer',
+                ingredients: `2.5 lbs chicken tenders
+2 large sweet potatoes, cut into wedges
+1 cup whole wheat panko breadcrumbs
+1/4 cup grated parmesan cheese
+2 eggs, beaten
+1 tsp garlic powder
+1 tsp smoked paprika
+1 tsp onion powder
+2 tbsp extra virgin olive oil
+Salt and pepper
+Side: steamed broccoli or green beans`,
+                instructions: `Toss sweet potato wedges with 1 tbsp olive oil, salt, and pepper.
+Air fry sweet potatoes at 400°F for 12-15 minutes, shaking halfway.
+While potatoes cook, set up breading station: beaten eggs in one bowl, panko + parmesan + garlic powder + paprika + onion powder in another.
+Dip each chicken tender in egg, then press into the panko mixture.
+Remove sweet potatoes, set aside.
+Arrange chicken tenders in the air fryer basket in a single layer (batches if needed).
+Air fry at 400°F for 10-12 minutes, flipping halfway, until golden and cooked through.
+Serve tenders with sweet potato wedges and steamed greens.`,
+                notes: 'SuperAge high-protein dinner — 65g protein per serving. Air-fried for crunch without deep-frying. Sweet potatoes are a Blue Zone staple (Okinawa). Kids love this one too.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-25',
+                name: 'Ground Chicken Spinach Meatballs',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '20 min',
+                calories: 490,
+                protein: 62,
+                carbs: 30,
+                fats: 18,
+                ingredients: `2.5 lbs ground chicken
+2 cups fresh spinach, finely chopped
+1/2 cup whole wheat breadcrumbs
+1/4 cup grated parmesan cheese
+2 eggs
+4 cloves garlic, minced
+1 tsp Italian seasoning
+1 jar (24 oz) marinara sauce (no sugar added)
+1 cup cooked lentils (optional protein boost)
+2 tbsp extra virgin olive oil
+Salt and pepper
+Optional: serve over whole grain pasta or zucchini noodles`,
+                instructions: `In a large bowl, combine ground chicken, chopped spinach, breadcrumbs, parmesan, eggs, garlic, Italian seasoning, salt, and pepper.
+Mix gently — don't overwork.
+Form into about 20 meatballs (roughly golf ball size).
+Heat olive oil in a large skillet over medium-high heat.
+Brown meatballs on all sides, about 6-8 minutes total (they don't need to cook through yet).
+Pour marinara sauce over the meatballs, add lentils if using.
+Reduce heat to medium-low, cover, and simmer 12-15 minutes until meatballs are cooked through (165°F).
+Serve over your choice of base.`,
+                notes: 'SuperAge high-protein dinner — 62g protein per serving. Ground chicken keeps it lean, spinach hides greens inside, lentils add extra protein and fiber without changing the flavor.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-26',
+                name: 'One-Pan Turmeric Chicken Thighs & Beans',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '25 min',
+                calories: 520,
+                protein: 63,
+                carbs: 30,
+                fats: 20,
+                ingredients: `2 lbs boneless skinless chicken thighs
+2 cans (15 oz each) chickpeas, drained and rinsed
+4 cups baby spinach or kale
+1 can (14 oz) diced tomatoes
+4 cloves garlic, minced
+2 tbsp extra virgin olive oil
+1 tsp ground turmeric
+1 tsp cumin
+1 tsp smoked paprika
+1/2 tsp black pepper (helps absorb turmeric)
+Salt
+Lemon wedges for serving`,
+                instructions: `Season chicken thighs with turmeric, cumin, paprika, salt, and pepper.
+Heat olive oil in a large oven-safe skillet or deep pan over medium-high heat.
+Sear thighs 4-5 minutes per side until golden. Remove temporarily.
+Add garlic to the pan, cook 30 seconds.
+Add chickpeas and diced tomatoes, stir to combine.
+Nestle thighs back into the chickpea mixture.
+Cover and cook on medium 12-15 minutes until chicken is cooked through (165°F).
+Remove lid, add spinach or kale, toss until wilted.
+Serve with lemon wedges.`,
+                notes: 'SuperAge high-protein dinner — 63g protein per serving. Turmeric + black pepper together increases curcumin absorption by 2000%. True one-pan meal — minimal cleanup.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-27',
+                name: 'Sheet Pan Salmon & Broccoli with Miso',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '15 min',
+                calories: 500,
+                protein: 62,
+                carbs: 22,
+                fats: 26,
+                ingredients: `2 lbs salmon fillets (4 × 8 oz)
+1 lb broccoli florets
+1 can (15 oz) edamame, drained (or 2 cups frozen shelled)
+2 tbsp white miso paste
+1 tbsp sesame oil
+1 tbsp honey or maple syrup
+1 tbsp rice vinegar
+1 tbsp soy sauce or tamari
+1 tbsp extra virgin olive oil
+Sesame seeds and sliced green onions for garnish`,
+                instructions: `Preheat oven to 425°F. Line a sheet pan with parchment.
+Whisk miso, sesame oil, honey, rice vinegar, and soy sauce together.
+Toss broccoli with olive oil, salt, and pepper. Spread on one side of the sheet pan.
+Place salmon fillets on the other side.
+Brush salmon generously with the miso glaze.
+Roast 12-15 minutes until salmon flakes easily and broccoli is charred at the edges.
+While roasting, warm edamame (microwave 2 min or boil 3 min).
+Plate salmon over edamame and broccoli.
+Drizzle with remaining miso glaze, top with sesame seeds and green onions.`,
+                notes: 'SuperAge high-protein dinner — 62g protein per serving. Miso is a probiotic fermented food, salmon delivers omega-3s, edamame adds 17g plant protein. Sheet pan = easy cleanup.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-28',
+                name: 'Ginger-Garlic Shrimp Stir-Fry',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '10 min',
+                calories: 430,
+                protein: 64,
+                carbs: 26,
+                fats: 12,
+                ingredients: `2.5 lbs large shrimp, peeled and deveined
+1 cup shelled edamame
+4 cups bok choy, chopped
+1 red bell pepper, sliced
+1 cup snap peas
+2 tbsp fresh ginger, grated
+4 cloves garlic, minced
+2 tbsp soy sauce or tamari
+1 tbsp sesame oil
+1 tbsp rice vinegar
+1 tbsp cornstarch + 2 tbsp water (slurry)
+2 cups cooked wild rice or brown rice`,
+                instructions: `Whisk soy sauce, rice vinegar, and cornstarch slurry together. Set aside.
+Heat sesame oil in a large wok or skillet over high heat.
+Add shrimp in a single layer, sear 2 minutes per side. Remove and set aside.
+Add ginger and garlic, stir 30 seconds.
+Add bell pepper and snap peas, stir-fry 2 minutes.
+Add bok choy and edamame, cook 2 minutes until bok choy wilts.
+Return shrimp, pour in sauce, toss everything together for 1 minute until sauce thickens.
+Serve immediately over rice.`,
+                notes: 'SuperAge high-protein dinner — 64g protein per serving. Shrimp + edamame combo delivers massive protein with almost no fat. Ginger is anti-inflammatory, garlic supports cardiovascular health. 10 minutes flat.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-29',
+                name: 'Turkey-Stuffed Bell Peppers',
+                category: 'Dinner',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '15 min',
+                cookTime: '30 min',
+                calories: 480,
+                protein: 64,
+                carbs: 28,
+                fats: 16,
+                ingredients: `2 lbs ground turkey (93% lean)
+4 large bell peppers, tops cut off and seeded
+1 can (15 oz) black beans, drained and rinsed
+1 can (14 oz) diced tomatoes
+1 cup cooked quinoa or brown rice
+1 cup baby spinach, chopped
+1/2 cup shredded mozzarella or Mexican blend cheese
+4 cloves garlic, minced
+1 tsp cumin
+1 tsp chili powder
+1 tbsp extra virgin olive oil
+Salt and pepper`,
+                instructions: `Preheat oven to 375°F.
+Heat olive oil in a skillet over medium-high heat.
+Cook ground turkey 5-6 minutes, breaking it up, until no longer pink.
+Add garlic, cumin, chili powder, salt, and pepper. Cook 1 minute.
+Stir in black beans, diced tomatoes, quinoa, and spinach. Cook 2-3 minutes.
+Stand bell peppers upright in a baking dish.
+Fill each pepper with the turkey mixture, packing it in.
+Top each with shredded cheese.
+Add 1/4 cup water to the bottom of the baking dish, cover with foil.
+Bake 25 minutes covered, then 5 minutes uncovered to brown the cheese.`,
+                notes: 'SuperAge high-protein dinner — 64g protein per serving. Ground turkey + black beans + quinoa = triple protein sources. Stuffed peppers meal-prep beautifully for 3-4 days.',
+                isSuggested: true
+            },
+            {
+                id: 'superage-30',
+                name: 'Chicken Breast & Lentil Soup (Big Batch)',
+                category: 'Lunch',
+                tags: ['superage', 'high-protein'],
+                servings: 4,
+                prepTime: '10 min',
+                cookTime: '30 min',
+                calories: 460,
+                protein: 66,
+                carbs: 40,
+                fats: 10,
+                ingredients: `2 lbs boneless skinless chicken breasts
+1.5 cups red or green lentils, rinsed
+6 cups chicken broth
+2 carrots, diced
+2 celery stalks, diced
+1 onion, diced
+4 cloves garlic, minced
+4 cups baby spinach
+2 tbsp extra virgin olive oil
+1 tsp turmeric
+1 tsp cumin
+Salt and pepper
+Lemon wedges`,
+                instructions: `Heat olive oil in a large pot over medium heat.
+Sauté onion, carrots, and celery 5 minutes until softened.
+Add garlic, turmeric, and cumin, cook 1 minute.
+Add chicken broth, lentils, and whole chicken breasts.
+Bring to a boil, then reduce heat and simmer 20-25 minutes until lentils are tender and chicken reaches 165°F.
+Remove chicken, shred with two forks, return to pot.
+Stir in spinach until wilted.
+Season with salt, pepper, and a squeeze of lemon.
+Ladle into large bowls.`,
+                notes: 'SuperAge high-protein lunch — 66g protein per serving. This is the easiest meal on the list — dump everything in a pot. Makes great leftovers. Turmeric + lentils = longevity staples.',
+                isSuggested: true
             }
         ];
 
@@ -8915,6 +9405,10 @@ Break into irregular pieces and store in fridge.`,
         if (hasSuperage) {
             html += '<button class="filter-btn superage-btn" onclick="window.fitnessTracker.filterSuggestedRecipes(\'superage\')">SuperAge</button>';
         }
+        const hasHighProtein = suggested.some(r => r.tags && r.tags.includes('high-protein'));
+        if (hasHighProtein) {
+            html += '<button class="filter-btn high-protein-btn" onclick="window.fitnessTracker.filterSuggestedRecipes(\'high-protein\')">High Protein</button>';
+        }
         html += '</div>';
 
         // Recipe cards
@@ -8931,12 +9425,14 @@ Break into irregular pieces and store in fridge.`,
         const tags = (recipe.tags || []).join(',');
         const superageTag = recipe.tags && recipe.tags.includes('superage')
             ? '<span class="src-tag superage-tag">SuperAge</span>' : '';
+        const highProteinTag = recipe.tags && recipe.tags.includes('high-protein')
+            ? '<span class="src-tag high-protein-tag">130g</span>' : '';
         return `
             <div class="suggested-recipe-card" data-category="${recipe.category}" data-tags="${tags}" onclick="window.fitnessTracker.viewSuggestedRecipe('${recipe.id}')">
                 <div class="src-header">
                     <span class="src-name">${recipe.name}</span>
                     <span class="src-category">${recipe.category}</span>
-                    ${superageTag}
+                    ${superageTag}${highProteinTag}
                 </div>
                 <div class="src-meta">
                     <span class="src-time">${recipe.prepTime} prep</span>
@@ -8961,9 +9457,9 @@ Break into irregular pieces and store in fridge.`,
         cards.forEach(card => {
             if (category === 'all') {
                 card.style.display = 'block';
-            } else if (category === 'superage') {
+            } else if (category === 'superage' || category === 'high-protein') {
                 const tags = (card.dataset.tags || '').split(',');
-                card.style.display = tags.includes('superage') ? 'block' : 'none';
+                card.style.display = tags.includes(category) ? 'block' : 'none';
             } else {
                 card.style.display = card.dataset.category === category ? 'block' : 'none';
             }
