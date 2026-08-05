@@ -274,7 +274,7 @@ window.QUANTUM_REALITY_BOOK = {
     {
      "type": "quiz",
      "title": "Quiz: Applying the Born Rule",
-     "question": "A qubit is in the state |&#968;&#10217; = 0.5|0&#10217; + b|1&#10217;. If the state is normalized, what is the probability of measuring outcome 1?",
+     "question": "A qubit is in the state |ψ⟩ = 0.5|0⟩ + b|1⟩. If the state is normalized, what is the probability of measuring outcome 1?",
      "options": [
       {
        "text": "0.50, because b must equal 0.5 as well",

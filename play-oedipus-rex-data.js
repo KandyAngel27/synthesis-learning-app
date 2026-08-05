@@ -665,7 +665,7 @@ window.PLAY_OEDIPUS_BOOK = {
         },
         {
           "type": "quiz",
-          "question": "What is &quot;stichomythia&quot; in Greek drama?",
+          "question": "What is \"stichomythia\" in Greek drama?",
           "options": [
             {
               "text": "A long monologue revealing inner thoughts (also called rhesis)",

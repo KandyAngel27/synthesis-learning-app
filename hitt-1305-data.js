@@ -1095,7 +1095,7 @@ window.HITT_1305_BOOK = {
                       "correct": false
                     },
                     {
-                      "text": "Vesicles — small fluid-filled blisters &lt; 1 cm",
+                      "text": "Vesicles — small fluid-filled blisters < 1 cm",
                       "correct": true
                     },
                     {
