@@ -2,8 +2,8 @@
 
 ## FIRST THING TO DO
 Before making ANY changes to this app, ALWAYS read these files first:
-1. `LESSON-CREATION-STANDARDS.md` — The gold standard for all book/lesson/card creation
-2. `BOOK-CREATION-TEMPLATE.md` — Step-by-step playbook for creating new books
+1. `docs/LESSON-CREATION-STANDARDS.md` — The gold standard for all book/lesson/card creation
+2. `docs/BOOK-CREATION-TEMPLATE.md` — Step-by-step playbook for creating new books
 
 These files define ALL requirements: card minimums, SVG standards, color palette, text padding rules, college-depth category rules, and quality checklists.
 
@@ -12,6 +12,20 @@ These files define ALL requirements: card minimums, SVG standards, color palette
 - **Main data file**: `data.js` (loaded via `<script>` tag in `index.html`)
 - Do NOT edit `booksData.ts` — it's unused TypeScript source
 - App renders from `APP_DATA.categories` in `data.js`
+
+## CRITICAL: data.js is near GitHub's 100 MB hard cap
+`data.js` is ~90 MB. GitHub rejects any file over **100 MB**, so **never add a new
+book inline to `data.js`.** New books ship as their own external module:
+
+1. Write the book to `<book-id>-data.js` in the repo root, assigning a single global:
+   ```javascript
+   window.MY_BOOK = { id: "...", title: "...", category: "him", lessonList: [...] };
+   ```
+2. Register it in the `externalBooks` array inside `integrateExternalCategories()`
+   in `data.js`: `{ global: 'MY_BOOK', categoryId: 'him' }`
+3. Add a `<script>` tag in `index.html` **before** the `data.js` tag.
+
+A missing global is skipped safely, so the app still loads if a module is absent.
 
 ## Data Structure
 ```
