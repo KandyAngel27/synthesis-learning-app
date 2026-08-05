@@ -8438,7 +8438,7 @@ If Alex trades **100 round-trips per year** at 0.5% friction each: that's **50% 
           { text: "Hold all of it — the company has been a great performer and you believe in management.", correct: false },
           { text: "Sell enough to bring employer stock to ≤10% of net worth and reinvest in a diversified index fund.", correct: true },
           { text: "Sell everything immediately regardless of taxes — concentration is always wrong.", correct: false },
-          { text: "Borrow against the shares with a margin loan to keep upside while &quot;diversifying&quot;.", correct: false }
+          { text: "Borrow against the shares with a margin loan to keep upside while \"diversifying\".", correct: false }
         ],
         explanation: "The 10% rule says no single stock — especially employer stock, where your paycheck is already tied to the same company — should exceed 10% of net worth. 10% of $510k = $51k. You'd sell roughly $129,000 of RSUs (paying capital gains tax on the gain) and roll the proceeds into VTI/VXUS. Holding all of it (Enron-style) risks paycheck and portfolio together. Selling 100% may overpay tax with no benefit. Margin loans add risk on top of risk.",
         visual: {
@@ -8551,7 +8551,7 @@ If she **bumps contributions 3%/yr** with raises (which she should), she crosses
       {
         type: "quiz",
         title: "Quick Check",
-        question: "Sarah's friend says, &quot;Skip the credit card payoff — invest the $10k in VTI instead, the market returns 10%.&quot; Why is this wrong?",
+        question: "Sarah's friend says, \"Skip the credit card payoff — invest the $10k in VTI instead, the market returns 10%.\" Why is this wrong?",
         options: [
           { text: "VTI doesn't actually return 10%.", correct: false },
           { text: "The 22% guaranteed APR on the card beats any expected stock return, and stocks aren't guaranteed.", correct: true },
