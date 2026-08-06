@@ -3,11 +3,12 @@ window.BREATH_HEALTH_EXT_BOOK = {
  "id": "breath",
  "title": "Breath",
  "author": "James Nestor",
- "description": "The new science of a lost art.",
+ "description": "The new science of a lost art - how breathing properly transforms health.",
  "lessons": 12,
  "duration": "160",
  "progress": 0,
  "category": "health",
+ "featured": true,
  "lessonList": [
   {
    "id": "breath-lesson-1",

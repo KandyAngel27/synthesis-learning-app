@@ -1,6 +1,6 @@
 // External extended book — obstacle-is-way (auto-generated, replaces the in-data.js copy)
 window.OBSTACLE_WAY_STOIC_EXT_BOOK = {
- "id": "obstacle-is-way",
+ "id": "obstacle-is-way-stoic",
  "title": "The Obstacle Is the Way",
  "author": "Ryan Holiday",
  "description": "The timeless art of turning trials into triumph - how to use Stoic principles to transform obstacles into advantages.",
