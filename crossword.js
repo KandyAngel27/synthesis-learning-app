@@ -425,12 +425,22 @@ class CrosswordSystem {
         const picks = [];
         const seen = new Set();
         const add = (p, pinned) => { if (p && !seen.has(p.id)) { picks.push({ p, pinned }); seen.add(p.id); } };
+        // The strip has room for one puzzle per track, so which one it picks
+        // decides what is reachable from the home page at all. Taking the first
+        // of each track meant everything added afterwards — puzzles land at the
+        // end — could never appear here. Rotate instead, so every puzzle gets
+        // its turn. Keyed on the day so it is stable within a visit, and offset
+        // by track index so the tracks don't all advance in lockstep.
+        const day = Math.floor(new Date().setHours(0, 0, 0, 0) / 86400000);
         // Pinned puzzles first, in pin order, so what you're working on leads.
         (cw.pinned || []).forEach(id => add(this.findPuzzle(id), true));
-        // A couple of quick general puzzles...
-        this.PUZZLES.filter(p => p.difficulty === 'easy').slice(0, 2).forEach(p => add(p, false));
-        // ...then the flagship (first) puzzle of each mega-track.
-        this.tracks.forEach(t => add(t.puzzles[0], false));
+        // A couple of quick general puzzles, rotating through the easy set...
+        const easy = this.PUZZLES.filter(p => p.difficulty === 'easy');
+        for (let i = 0; i < 2 && i < easy.length; i++) add(easy[(day + i) % easy.length], false);
+        // ...then today's puzzle from each mega-track.
+        this.tracks.forEach((t, ti) => {
+            if (t.puzzles.length) add(t.puzzles[(day + ti) % t.puzzles.length], false);
+        });
         if (!picks.length) { strip.innerHTML = ''; return; }
         strip.innerHTML = picks.slice(0, 12).map(({ p, pinned }) => {
             const meta = this.diffMeta(p.difficulty);
