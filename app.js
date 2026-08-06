@@ -626,6 +626,7 @@ class SynthesisApp {
         this.renderCategories();
         this.renderFeaturedBooks();
         this.renderWhatsNewBooks();
+        this.renderFeaturedPicks();
 
         // Render daily challenges
         if (window.gamification) {
@@ -1782,11 +1783,42 @@ class SynthesisApp {
         `).join('');
     }
 
+    // Renders the "Trending This Week" shelf. The element id is historical —
+    // the books come from getTrendingBooks(), not the `featured` flag.
+    // The `featured` flag drives renderFeaturedPicks() below.
     renderFeaturedBooks() {
         const container = document.getElementById('featured-books');
         const featured = getTrendingBooks();
 
         container.innerHTML = featured.map(book => `
+            <div class="featured-book-card" onclick="app.showBook('${book.id}')">
+                <div class="book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(book.category)} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
+                    <div class="book-cover-text">${book.title}</div>
+                </div>
+                <div class="book-info">
+                    <div class="book-title">${book.title}</div>
+                    <div class="book-author">${book.author}</div>
+                    <div class="book-meta">
+                        <span class="book-lessons">${book.lessons} lessons</span>
+                        <span class="book-time">${book.duration} min</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // "Featured Picks" — the editorial shelf, driven by the `featured` flag.
+    // Same row length as Trending, and getFeaturedBooks() excludes anything
+    // already on that shelf so no book shows up twice on the home page.
+    renderFeaturedPicks() {
+        const container = document.getElementById('featured-picks');
+        if (!container) return;
+        const books = (typeof getFeaturedBooks === 'function') ? getFeaturedBooks() : [];
+        if (books.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        container.innerHTML = books.map(book => `
             <div class="featured-book-card" onclick="app.showBook('${book.id}')">
                 <div class="book-cover" style="background: linear-gradient(135deg, ${this.getCategoryColor(book.category)} 0%, ${this.getCategoryColorDark(book.category)} 100%)">
                     <div class="book-cover-text">${book.title}</div>
