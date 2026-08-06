@@ -3,7 +3,7 @@ window.LIFESPAN_HEALTH_EXT_BOOK = {
  "id": "lifespan",
  "title": "Lifespan",
  "author": "David Sinclair",
- "description": "Why we age—and why we don't have to.",
+ "description": "Why we age and why we don't have to - cutting-edge longevity science.",
  "lessons": 12,
  "duration": "180",
  "progress": 0,

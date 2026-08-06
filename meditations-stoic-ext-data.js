@@ -1,6 +1,6 @@
 // External extended book — meditations (auto-generated, replaces the in-data.js copy)
 window.MEDITATIONS_STOIC_EXT_BOOK = {
- "id": "meditations",
+ "id": "meditations-stoic",
  "title": "Meditations",
  "author": "Marcus Aurelius",
  "description": "Personal writings of the Roman Emperor and philosopher - the cornerstone of Stoic philosophy and practical wisdom for inner peace.",
