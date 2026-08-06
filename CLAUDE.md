@@ -24,8 +24,19 @@ book inline to `data.js`.** New books ship as their own external module:
 2. Register it in the `externalBooks` array inside `integrateExternalCategories()`
    in `data.js`: `{ global: 'MY_BOOK', categoryId: 'him' }`
 3. Add a `<script>` tag in `index.html` **before** the `data.js` tag.
+4. After committing, run `node tools/gen-book-added-on.cjs` and commit the
+   regenerated `book-added-on-data.js`. It reads git for the commit that added
+   each book module, and "What's New" on the home page sorts on it — a book with
+   no entry never shows up there. Run it *after* the commit, since that is where
+   the date comes from.
 
 A missing global is skipped safely, so the app still loads if a module is absent.
+
+## Home-page shelves
+`SHELF_SIZE` in `data.js` sets how many books Trending, Featured Picks and
+What's New each show — change it once and all three follow. Trending rotates
+every 3 days and Featured daily, both over the whole library; Featured excludes
+whatever is on Trending so no cover appears twice.
 
 ## Data Structure
 ```
