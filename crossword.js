@@ -30,23 +30,31 @@ class CrosswordSystem {
         // from separate data modules so the huge grids render instantly.
         this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
         this.apPuzzles = Array.isArray(window.CROSSWORD_AP_PUZZLES) ? window.CROSSWORD_AP_PUZZLES : [];
+        this.pathoPuzzles = Array.isArray(window.CROSSWORD_PATHO_PUZZLES) ? window.CROSSWORD_PATHO_PUZZLES : [];
         this.philPuzzles = Array.isArray(window.CROSSWORD_PHIL_PUZZLES) ? window.CROSSWORD_PHIL_PUZZLES : [];
         this.histPuzzles = Array.isArray(window.CROSSWORD_HIST_PUZZLES) ? window.CROSSWORD_HIST_PUZZLES : [];
         this.sciPuzzles = Array.isArray(window.CROSSWORD_SCI_PUZZLES) ? window.CROSSWORD_SCI_PUZZLES : [];
         this.mathPuzzles = Array.isArray(window.CROSSWORD_MATH_PUZZLES) ? window.CROSSWORD_MATH_PUZZLES : [];
         this.geoPuzzles = Array.isArray(window.CROSSWORD_GEO_PUZZLES) ? window.CROSSWORD_GEO_PUZZLES : [];
         this.laPuzzles = Array.isArray(window.CROSSWORD_LA_PUZZLES) ? window.CROSSWORD_LA_PUZZLES : [];
+        this.vocabPuzzles = Array.isArray(window.CROSSWORD_VOCAB_PUZZLES) ? window.CROSSWORD_VOCAB_PUZZLES : [];
         this.hwPuzzles = Array.isArray(window.CROSSWORD_HW_PUZZLES) ? window.CROSSWORD_HW_PUZZLES : [];
         this.stePuzzles = Array.isArray(window.CROSSWORD_STE_PUZZLES) ? window.CROSSWORD_STE_PUZZLES : [];
         this.bfPuzzles = Array.isArray(window.CROSSWORD_BF_PUZZLES) ? window.CROSSWORD_BF_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
+            // Sits next to A&P deliberately: that track covers the healthy body,
+            // this one is the disease layer on top of the same systems.
+            { key: 'patho', icon: '🦠', heading: 'Pathophysiology Track — Mega Puzzles', label: 'Pathophysiology & Disease', puzzles: this.pathoPuzzles },
             { key: 'sci', icon: '🔬', heading: 'Science Track — Mega Puzzles', label: 'Science (all branches)', puzzles: this.sciPuzzles },
             { key: 'ste', icon: '🛠️', heading: 'Science, Technology & Engineering Track — Mega Puzzles', label: 'Science, Technology & Engineering (all types)', puzzles: this.stePuzzles },
             { key: 'math', icon: '🔢', heading: 'Math Track — Mega Puzzles', label: 'Math (all branches)', puzzles: this.mathPuzzles },
             { key: 'geo', icon: '🌍', heading: 'Geography Track — Mega Puzzles', label: 'Geography (all types)', puzzles: this.geoPuzzles },
             { key: 'la', icon: '📖', heading: 'Language Arts Track — Mega Puzzles', label: 'Language Arts (all types)', puzzles: this.laPuzzles },
+            // Word study pulled together: the roots puzzle moved here out of
+            // Language Arts, which now keeps to grammar, writing and literature.
+            { key: 'vocab', icon: '📚', heading: 'Vocabulary Track — Mega Puzzles', label: 'Vocabulary & Word Study', puzzles: this.vocabPuzzles },
             { key: 'hw', icon: '🩺', heading: 'Health & Wellness Track — Mega Puzzles', label: 'Health & Wellness (all types)', puzzles: this.hwPuzzles },
             { key: 'bf', icon: '💼', heading: 'Business & Finance Track — Mega Puzzles', label: 'Business & Finance (all types)', puzzles: this.bfPuzzles },
             { key: 'phil', icon: '📜', heading: 'Philosophy Track — Mega Puzzles', label: 'Philosophy', puzzles: this.philPuzzles },
