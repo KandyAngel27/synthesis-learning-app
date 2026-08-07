@@ -7,9 +7,10 @@
 // ============================================
 window.BOOK_ADDED_ON = {
  "1491": "2026-07-27",
- "spanish-foundations": "2026-08-07",
+ "french-foundations": "2026-08-07",
  "him-graduation-review": "2026-08-06",
  "him-privacy-beyond-hipaa": "2026-08-06",
+ "spanish-foundations": "2026-08-06",
  "vocabulary-builder": "2026-08-06",
  "ahima-domains": "2026-08-05",
  "anatomy-physiology-mastery": "2026-08-05",
