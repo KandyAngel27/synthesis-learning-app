@@ -7,7 +7,8 @@
 // ============================================
 window.BOOK_ADDED_ON = {
  "1491": "2026-07-27",
- "french-foundations": "2026-08-07",
+ "german-foundations": "2026-08-09",
+ "french-foundations": "2026-08-06",
  "him-graduation-review": "2026-08-06",
  "him-privacy-beyond-hipaa": "2026-08-06",
  "spanish-foundations": "2026-08-06",
