@@ -1774,7 +1774,25 @@ class SynthesisApp {
 
     renderCategories() {
         const container = document.getElementById('categories-grid');
-        container.innerHTML = APP_DATA.categories.map(category => `
+        // Display order: categories with the newest additions first, so a
+        // just-shipped section (e.g. Languages) is not buried at the bottom.
+        // Recency = the latest BOOK_ADDED_ON date across a category's books;
+        // that map only covers external modules, so long-static categories
+        // have no date and keep their original relative order at the end.
+        // Sorts a copy — APP_DATA.categories itself must keep its order,
+        // which book lookup and cross-listing rely on.
+        const addedOn = window.BOOK_ADDED_ON || {};
+        const display = APP_DATA.categories
+            .map((category, index) => {
+                let newest = '';
+                category.books.forEach(book => {
+                    const d = addedOn[book.id];
+                    if (d && d > newest) newest = d;
+                });
+                return { category, newest, index };
+            })
+            .sort((a, b) => b.newest.localeCompare(a.newest) || (a.index - b.index));
+        container.innerHTML = display.map(({ category }) => `
             <div class="category-card" style="--category-color: ${category.color}" onclick="app.showCategory('${category.id}')">
                 <span class="category-icon">${category.icon}</span>
                 <div class="category-name">${category.name}</div>
