@@ -8,6 +8,7 @@
 window.BOOK_ADDED_ON = {
  "1491": "2026-07-28",
  "german-foundations": "2026-08-09",
+ "longevity-code": "2026-08-09",
  "metabolic-health-aging": "2026-08-09",
  "french-foundations": "2026-08-06",
  "him-graduation-review": "2026-08-06",
