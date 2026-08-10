@@ -1,10 +1,10 @@
 // External book module — The Body's Messengers (hormones)
 // Registered in integrateExternalCategories() in data.js; loaded via index.html.
 window.HORMONES_MESSENGERS_BOOK = {
-    id: "hormones-code",
+    id: "hormones-messengers",
     title: "The Body's Messengers: How Hormones Run Your Life",
     author: "Synthesis Curriculum",
-    description: "The proven science of a longer healthspan — the new 2025-2030 food pyramid, the protein revolution, fitness, sleep, connection, and an honest guide to the hormones-drug frontier.",
+    description: "Insulin, cortisol, thyroid, estrogen, testosterone and the rest of your chemical messengers — what they do, how they change with age, and the proven inputs that keep them balanced.",
     lessons: 12,
     duration: 84,
     progress: 0,
