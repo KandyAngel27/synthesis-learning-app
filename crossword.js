@@ -29,6 +29,7 @@ class CrosswordSystem {
         // Track-specific mega-puzzles come pre-built (layouts generated offline)
         // from separate data modules so the huge grids render instantly.
         this.himPuzzles = Array.isArray(window.CROSSWORD_HIM_PUZZLES) ? window.CROSSWORD_HIM_PUZZLES : [];
+        this.himCoursePuzzles = Array.isArray(window.CROSSWORD_HIM_COURSE_PUZZLES) ? window.CROSSWORD_HIM_COURSE_PUZZLES : [];
         this.apPuzzles = Array.isArray(window.CROSSWORD_AP_PUZZLES) ? window.CROSSWORD_AP_PUZZLES : [];
         this.pathoPuzzles = Array.isArray(window.CROSSWORD_PATHO_PUZZLES) ? window.CROSSWORD_PATHO_PUZZLES : [];
         this.philPuzzles = Array.isArray(window.CROSSWORD_PHIL_PUZZLES) ? window.CROSSWORD_PHIL_PUZZLES : [];
@@ -43,6 +44,9 @@ class CrosswordSystem {
         this.bfPuzzles = Array.isArray(window.CROSSWORD_BF_PUZZLES) ? window.CROSSWORD_BF_PUZZLES : [];
         this.tracks = [
             { key: 'him', icon: '🏥', heading: 'HIM Track — Mega Puzzles', label: 'Health Information Management', puzzles: this.himPuzzles },
+            // One puzzle per college course book (HITT/BIOL/HPRS/AHIMA), each
+            // built from that book's own lessons — a per-course exam review.
+            { key: 'himCourse', icon: '🎓', heading: 'HIM College Courses — Course Puzzles', label: 'One mega-puzzle per college course book', puzzles: this.himCoursePuzzles },
             { key: 'ap', icon: '🫀', heading: 'A&P Track — Mega Puzzles', label: 'Anatomy & Physiology', puzzles: this.apPuzzles },
             // Sits next to A&P deliberately: that track covers the healthy body,
             // this one is the disease layer on top of the same systems.
