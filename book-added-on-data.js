@@ -7,6 +7,7 @@
 // ============================================
 window.BOOK_ADDED_ON = {
  "1491": "2026-07-28",
+ "strength-blueprint": "2026-08-16",
  "hormones-messengers": "2026-08-10",
  "german-foundations": "2026-08-09",
  "longevity-code": "2026-08-09",
