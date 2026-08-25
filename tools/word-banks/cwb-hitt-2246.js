@@ -223,5 +223,22 @@
   { answer: "TABULAR", clue: "List where every code must be verified before assignment" },
   { answer: "INDEX", clue: "Alphabetic starting point — never code from it alone" },
   { answer: "EPONYM", clue: "Disease named for a person, findable alphabetically" },
-  { answer: "DKA", clue: "Emergent diabetic crisis with acidosis, for short" }
+  { answer: "DKA", clue: "Emergent diabetic crisis with acidosis, for short" },
+  { answer: "RULEMAKING", clue: "The public path from proposed rule to final rule" },
+  { answer: "NPRM", clue: "Notice of proposed rulemaking, briefly" },
+  { answer: "TRANSMITTAL", clue: "Numbered CMS instruction updating a manual section" },
+  { answer: "NCD", clue: "Nationwide Medicare coverage policy, briefly" },
+  { answer: "LCD", clue: "Coverage policy issued by your MAC, briefly" },
+  { answer: "WORKPLAN", clue: "OIG document listing reviews it intends to conduct" },
+  { answer: "UPIC", clue: "Contractor investigating suspected Medicare fraud" },
+  { answer: "FACTSHEET", clue: "Plain-language CMS summary released with a major rule" },
+  { answer: "COMMENT", clue: "___ period: 60 days to respond to a proposed rule" },
+  { answer: "GEMS", clue: "Mappings that bridged ICD-9 and ICD-10, sunset after FY2018" },
+  { answer: "DUALCODING", clue: "Coding a case in both systems during a transition" },
+  { answer: "SUPERSEDED", clue: "What a later Coding Clinic can do to earlier advice" },
+  { answer: "EFFECTIVE", clue: "___ date: when a change actually applies" },
+  { answer: "TRANSPARENCY", clue: "Price ___: rule putting the chargemaster in public view" },
+  { answer: "SDOH", clue: "Z55-Z65 factors like housing and food insecurity, briefly" },
+  { answer: "HRRP", clue: "Medicare program penalizing excess readmissions, briefly" },
+  { answer: "IQR", clue: "Hospital inpatient quality reporting program, briefly" }
 ]
