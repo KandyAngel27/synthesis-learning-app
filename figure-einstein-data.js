@@ -5,10 +5,10 @@ window.FIGURE_EINSTEIN_BOOK = {
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
   "description": "College seminar on Einstein (1879-1955) — childhood, miracle year, general relativity, quantum debates, public life.",
-  "duration": "120",
-  "lessons": 6,
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 111,
+  "cards": 141,
   "lessonList": [
     {
       "id": "figure-einstein-lesson-1",

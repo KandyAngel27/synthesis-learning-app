@@ -4,11 +4,11 @@ window.FIGURE_TRUTH_BOOK = {
   "title": "Sojourner Truth",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Sojourner Truth (c.1797-1883) — enslaved in NY, escape, abolitionist preacher, Akron 1851 speech, capstone on legacy.",
-  "duration": "120",
+  "description": "12-lesson seminar on Sojourner Truth (c.1797-1883) — enslaved in NY, escape, abolitionist preacher, Akron 1851 speech, capstone on legacy.",
+  "duration": "210",
   "lessons": 12,
   "progress": 0,
-  "cards": 99,
+  "cards": 129,
   "lessonList": [
     {
       "id": "figure-sojourner-truth-lesson-1",

@@ -4,11 +4,11 @@ window.FIGURE_GALILEO_BOOK = {
   "title": "Galileo Galilei",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Galileo (1564-1642) — Pisa origins, telescope, Dialogue, Inquisition trial.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Galileo (1564-1642) — Pisa origins, telescope, Dialogue, Inquisition trial.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 100,
+  "cards": 130,
   "lessonList": [
     {
       "id": "figure-galileo-lesson-1",

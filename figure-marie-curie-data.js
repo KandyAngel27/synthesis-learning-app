@@ -5,10 +5,10 @@ window.FIGURE_CURIE_BOOK = {
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
   "description": "College seminar on Marie Curie (1867-1934) — two Nobels, radium, WWI X-rays, women in science.",
-  "duration": "120",
-  "lessons": 6,
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 118,
+  "cards": 148,
   "lessonList": [
     {
       "id": "figure-marie-curie-lesson-1",

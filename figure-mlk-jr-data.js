@@ -5,10 +5,10 @@ window.FIGURE_MLK_BOOK = {
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
   "description": "College seminar on MLK (1929-1968) — Montgomery to Memphis, the real radical King vs simplified memory.",
-  "duration": "120",
-  "lessons": 6,
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 112,
+  "cards": 142,
   "lessonList": [
     {
       "id": "figure-mlk-jr-lesson-1",

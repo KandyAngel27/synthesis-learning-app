@@ -4,11 +4,11 @@ window.FIGURE_WASHINGTON_BOOK = {
   "title": "George Washington",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Washington (1732-1799) — Virginia origins, Continental Army, Constitutional Convention, presidency, slavery, legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Washington (1732-1799) — Virginia origins, Continental Army, Constitutional Convention, presidency, slavery, legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 102,
+  "cards": 132,
   "lessonList": [
     {
       "id": "figure-washington-lesson-1",

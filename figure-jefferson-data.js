@@ -4,11 +4,11 @@ window.FIGURE_JEFFERSON_BOOK = {
   "title": "Thomas Jefferson",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson college seminar on Thomas Jefferson (1743-1826) — author of the Declaration, Louisiana Purchase, Monticello, slavery contradictions and the Hemings family.",
-  "duration": "120",
+  "description": "12-lesson college seminar on Thomas Jefferson (1743-1826) — author of the Declaration, Louisiana Purchase, Monticello, slavery contradictions and the Hemings family.",
+  "duration": "210",
   "lessons": 12,
   "progress": 0,
-  "cards": 112,
+  "cards": 142,
   "lessonList": [
     {
       "id": "figure-jefferson-lesson-1",

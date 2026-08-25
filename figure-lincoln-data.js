@@ -5,10 +5,10 @@ window.FIGURE_LINCOLN_BOOK = {
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
   "description": "College seminar on Lincoln (1809-1865) — frontier origins through Gettysburg and legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 129,
+  "cards": 159,
   "lessonList": [
     {
       "id": "figure-lincoln-lesson-1",

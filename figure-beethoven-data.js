@@ -4,11 +4,11 @@ window.FIGURE_BEETHOVEN_BOOK = {
   "title": "Ludwig van Beethoven",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Beethoven (1770-1827) — Bonn, Vienna, Heiligenstadt, heroic decade, late period, 9th Symphony, legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Beethoven (1770-1827) — Bonn, Vienna, Heiligenstadt, heroic decade, late period, 9th Symphony, legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 101,
+  "cards": 131,
   "lessonList": [
     {
       "id": "figure-beethoven-lesson-1",

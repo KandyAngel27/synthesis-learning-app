@@ -4,11 +4,11 @@ window.FIGURE_HAWKING_BOOK = {
   "title": "Stephen Hawking",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Stephen Hawking (1942-2018) — ALS, Hawking radiation, public scientist, late career and complications.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Stephen Hawking (1942-2018) — ALS, Hawking radiation, public scientist, late career and complications.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 106,
+  "cards": 136,
   "lessonList": [
     {
       "id": "figure-hawking-lesson-1",

@@ -4,11 +4,11 @@ window.FIGURE_NEWTON_BOOK = {
   "title": "Isaac Newton",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Isaac Newton (1643-1727) — Woolsthorpe boyhood, plague years, Principia, Mint years, alchemy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Isaac Newton (1643-1727) — Woolsthorpe boyhood, plague years, Principia, Mint years, alchemy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 101,
+  "cards": 131,
   "lessonList": [
     {
       "id": "figure-newton-lesson-1",

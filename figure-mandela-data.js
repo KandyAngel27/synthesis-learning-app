@@ -4,11 +4,11 @@ window.FIGURE_MANDELA_BOOK = {
   "title": "Nelson Mandela",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Mandela (1918-2013) — Transkei origins, 27 years on Robben Island, Truth and Reconciliation, Springbok rugby, legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Mandela (1918-2013) — Transkei origins, 27 years on Robben Island, Truth and Reconciliation, Springbok rugby, legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 103,
+  "cards": 133,
   "lessonList": [
     {
       "id": "figure-mandela-lesson-1",

@@ -4,11 +4,11 @@ window.FIGURE_DOUGLASS_BOOK = {
   "title": "Frederick Douglass",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson college seminar on Frederick Douglass (1818-1895) — born enslaved, escape, abolitionist, statesman, the radical Douglass and modern rediscovery.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson college seminar on Frederick Douglass (1818-1895) — born enslaved, escape, abolitionist, statesman, the radical Douglass and modern rediscovery.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 101,
+  "cards": 131,
   "lessonList": [
     {
       "id": "figure-frederick-douglass-lesson-1",
