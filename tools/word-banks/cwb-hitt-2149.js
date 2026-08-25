@@ -226,5 +226,21 @@
   { answer: "EXCLUSION", clue: "OIG list barring people from federal health programs" },
   { answer: "CIA", clue: "Settlement-imposed integrity agreement, briefly" },
   { answer: "RAC", clue: "Contingency-fee Medicare payment auditor, briefly" },
-  { answer: "PEPPER", clue: "Comparative billing report flagging outlier patterns" }
+  { answer: "PEPPER", clue: "Comparative billing report flagging outlier patterns" },
+  { answer: "RETRIEVAL", clue: "___ practice: producing an answer from memory beats rereading" },
+  { answer: "SPACING", clue: "Distributing study across days rather than massing it" },
+  { answer: "INTERLEAVING", clue: "Mixing topics instead of studying one block at a time" },
+  { answer: "ERRORLOG", clue: "Running record of every question you have missed" },
+  { answer: "REMEDIATION", clue: "The work of actually closing a identified gap" },
+  { answer: "FLUENCY", clue: "The comfortable feeling of familiarity that rereading creates" },
+  { answer: "CRAMMING", clue: "Massed study that buys today and forgets next week" },
+  { answer: "CLUSTER", clue: "Group of related misses that together form one gap" },
+  { answer: "CLOSURE", clue: "Proven mastery: cold, delayed, novel and mixed" },
+  { answer: "BLOCKED", clue: "___ practice: one topic at a time, and less durable" },
+  { answer: "PACING", clue: "Knowing where you should be at the quarter marks" },
+  { answer: "TRIAGE", clue: "Flag it and move on rather than sinking four minutes" },
+  { answer: "READINESS", clue: "Criteria best written while you are calm" },
+  { answer: "SUBSCORE", clue: "Per-domain result that can hide under a passing average" },
+  { answer: "CONSOLIDATE", clue: "What memory does with sleep and spaced retrieval" },
+  { answer: "MISCONCEPTION", clue: "What a twice-missed item usually reveals" }
 ]
