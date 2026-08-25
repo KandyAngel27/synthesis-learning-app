@@ -4,11 +4,11 @@ window.FIGURE_GANDHI_BOOK = {
   "title": "Mohandas K. Gandhi",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Gandhi (1869-1948) — Porbandar to South Africa to Salt March to Partition trauma to assassination and complicated legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Gandhi (1869-1948) — Porbandar to South Africa to Salt March to Partition trauma to assassination and complicated legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 104,
+  "cards": 134,
   "lessonList": [
     {
       "id": "figure-gandhi-lesson-1",

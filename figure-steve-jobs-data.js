@@ -4,11 +4,11 @@ window.FIGURE_JOBS_BOOK = {
   "title": "Steve Jobs",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Steve Jobs (1955-2011) — adoption, Reed, Apple founding, NeXT/Pixar wilderness, return, capstone.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Steve Jobs (1955-2011) — adoption, Reed, Apple founding, NeXT/Pixar wilderness, return, capstone.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 101,
+  "cards": 131,
   "lessonList": [
     {
       "id": "figure-steve-jobs-lesson-1",

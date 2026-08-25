@@ -4,11 +4,11 @@ window.FIGURE_CHURCHILL_BOOK = {
   "title": "Winston Churchill",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Churchill (1874-1965) — aristocratic boyhood, wilderness years, wartime PM 1940-45, Iron Curtain, imperial complications.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Churchill (1874-1965) — aristocratic boyhood, wilderness years, wartime PM 1940-45, Iron Curtain, imperial complications.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 98,
+  "cards": 128,
   "lessonList": [
     {
       "id": "figure-churchill-lesson-1",

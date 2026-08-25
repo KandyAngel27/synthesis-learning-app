@@ -4,11 +4,11 @@ window.FIGURE_FDR_BOOK = {
   "title": "Franklin D. Roosevelt",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on FDR (1882-1945) — Hyde Park aristocrat, polio, governorship, New Deal, WWII, internment legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on FDR (1882-1945) — Hyde Park aristocrat, polio, governorship, New Deal, WWII, internment legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 105,
+  "cards": 135,
   "lessonList": [
     {
       "id": "figure-fdr-lesson-1",

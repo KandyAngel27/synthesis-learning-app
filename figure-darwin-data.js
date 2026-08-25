@@ -4,11 +4,11 @@ window.FIGURE_DARWIN_BOOK = {
   "title": "Charles Darwin",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Darwin (1809-1882) — Beagle voyage, Origin of Species, the eclipse and modern synthesis.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Darwin (1809-1882) — Beagle voyage, Origin of Species, the eclipse and modern synthesis.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 104,
+  "cards": 134,
   "lessonList": [
     {
       "id": "figure-darwin-lesson-1",

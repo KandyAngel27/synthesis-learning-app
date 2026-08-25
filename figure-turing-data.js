@@ -4,11 +4,11 @@ window.FIGURE_TURING_BOOK = {
   "title": "Alan Turing",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Alan Turing (1912-1954) — Bletchley, Turing test, morphogenesis, the trial and legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Alan Turing (1912-1954) — Bletchley, Turing test, morphogenesis, the trial and legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 104,
+  "cards": 134,
   "lessonList": [
     {
       "id": "figure-turing-lesson-1",

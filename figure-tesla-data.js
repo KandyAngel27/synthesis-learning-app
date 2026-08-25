@@ -4,11 +4,11 @@ window.FIGURE_TESLA_BOOK = {
   "title": "Nikola Tesla",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Tesla (1856-1943) — Smiljan origins through Edison apprenticeship, AC War of Currents, Wardenclyffe, decline, and posthumous vindication.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Tesla (1856-1943) — Smiljan origins through Edison apprenticeship, AC War of Currents, Wardenclyffe, decline, and posthumous vindication.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 100,
+  "cards": 130,
   "lessonList": [
     {
       "id": "figure-tesla-lesson-1",

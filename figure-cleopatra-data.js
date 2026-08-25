@@ -4,11 +4,11 @@ window.FIGURE_CLEOPATRA_BOOK = {
   "title": "Cleopatra VII",
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
-  "description": "6-lesson seminar on Cleopatra (69-30 BCE) — Ptolemaic Egypt, Caesar, Antony, Actium, suicide, legacy.",
-  "duration": "120",
-  "lessons": 6,
+  "description": "12-lesson seminar on Cleopatra (69-30 BCE) — Ptolemaic Egypt, Caesar, Antony, Actium, suicide, legacy.",
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 105,
+  "cards": 135,
   "lessonList": [
     {
       "id": "figure-cleopatra-lesson-1",

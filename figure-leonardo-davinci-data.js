@@ -5,10 +5,10 @@ window.FIGURE_LEONARDO_BOOK = {
   "author": "Synthesis Curriculum",
   "category": "famous-figures",
   "description": "College Renaissance Studies seminar on Leonardo (1452-1519) — Verrocchio to Cloux, notebooks to Mona Lisa.",
-  "duration": "120",
-  "lessons": 6,
+  "duration": "210",
+  "lessons": 12,
   "progress": 0,
-  "cards": 108,
+  "cards": 138,
   "lessonList": [
     {
       "id": "figure-leonardo-davinci-lesson-1",
